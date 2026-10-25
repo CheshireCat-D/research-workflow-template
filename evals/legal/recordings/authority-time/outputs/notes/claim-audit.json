@@ -1,0 +1,53 @@
+{
+  "case_id": "authority-time",
+  "actor": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+  "synthetic": true,
+  "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+  "draft_claims": [
+    {
+      "id": "C-A1",
+      "claim": "受理前公布使6月申请完全适用新法",
+      "assessment": "challenged",
+      "locations": "L-A-2024第41条、第42条1款；F-A§2",
+      "revision": "公布不是施行；施行前受理的实体条件按旧法。"
+    },
+    {
+      "id": "C-A2",
+      "claim": "2025重编页证明旧规则全部废止",
+      "assessment": "challenged",
+      "locations": "L-A-COMP-2025编者说明§1—2",
+      "revision": "页面分类与更新时间不决定条文时间适用；全法校勘表缺失。"
+    },
+    {
+      "id": "C-A3",
+      "claim": "平台通知贴近管理，优先于中央法",
+      "assessment": "challenged",
+      "locations": "L-A-ORDER第4条2款；P-A-2024§1—3",
+      "revision": "技术通知不得改实体条件；人工便利不是授权依据。"
+    },
+    {
+      "id": "C-A4",
+      "claim": "地方有效标签允许任何人永久提交副本",
+      "assessment": "challenged",
+      "locations": "L-A-ORDER第4条1款；L-A-2021第8/12条；L-A-2024第40条、42条2款；R-A-2019第1/7条及编者标记",
+      "revision": "标签不补权限；普通/特别、实体条件/后续处理分开；未得所有例外。"
+    },
+    {
+      "id": "C-A5",
+      "claim": "任何时点和馆藏类别拒绝均合法",
+      "assessment": "challenged",
+      "locations": "F-A§2—5；L-A-2021第8条；L-A-2024第40—42条",
+      "revision": "给定普通申请的唯一理由与已读中央规则冲突；不裁定所有事实及类别。"
+    },
+    {
+      "id": "C-A6",
+      "claim": "申请人必然无任何救济",
+      "assessment": "insufficient",
+      "locations": "F-A§6；SEARCH-A§4—5",
+      "revision": "无救济/送达规则，不能保证无救济或必然胜诉。"
+    }
+  ],
+  "next_action": "先补原馆藏目录以核实普通开放分类，再取得N-A-2025正文、施行/修改清单及R-A-2019完整授权材料，逐条重查第7条与中央规则；若需救济判断，另补送达和救济规范。新输入保存新版本，复核受影响主张与活动后更新检查点。",
+  "independent_review": "not-performed",
+  "legal_validity_certification": false
+}

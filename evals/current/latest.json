@@ -1,229 +1,80 @@
 {
   "format_version": 1,
   "edition": "current",
-  "status": "passed-in-checked-software-scope",
-  "checked_at_utc": "2026-10-25T15:38:40.782372+00:00",
-  "scope": "Current source software, guidance contracts and replayed synthetic materials only. No old release pass is relabeled as a new execution.",
+  "status": "passed-in-checked-software-and-synthetic-task-scope",
+  "checked_at_utc": "2026-10-25T21:14:21.288473+00:00",
+  "scope": "Current legal adaptation software, documentation links and separately executed synthetic task review. No prior platform run is relabeled as execution of this update.",
   "scientific_validity": "not-assessed",
   "publication_style": {
     "archive_name": "research-workflow-template.zip",
     "archive_root": "research-workflow-template",
     "update_identity": "Source inventory and SHA-256 content identity",
-    "project_schema_record_and_dependency_versions": "Preserved technical compatibility fields, not extra software editions."
+    "schema_record_dependency_versions": "Preserved technical compatibility information."
+  },
+  "catalog": {
+    "implemented_skills": 8,
+    "discipline_portraits": 7,
+    "method_guidance_profiles": 10,
+    "architecture_scenarios": 18
   },
   "software_checks": {
-    "macos": [
-      {
-        "runtime": {
-          "python": "3.11.17",
-          "platform": "darwin"
-        },
-        "passed": true,
-        "test_methods": 124,
-        "check_groups": 7,
-        "receipt": {
-          "identifier": "private-evidence:mac-python311.json",
-          "sha256": "b90e9d283fa3e5d678165eae1e315808d09a30934ad4f39e73fd6c8acccc5949"
-        }
+    "local": {
+      "passed": true,
+      "runtime": {
+        "python": "3.14.6",
+        "platform": "darwin"
       },
-      {
-        "runtime": {
-          "python": "3.14.6",
-          "platform": "darwin"
-        },
-        "passed": true,
-        "test_methods": 124,
-        "check_groups": 7,
-        "receipt": {
-          "identifier": "private-evidence:mac-python314.json",
-          "sha256": "05f68c41c11239390864e711ab9cabf56986038c0470e9c3087293bcf95b667d"
-        }
+      "test_methods": 131,
+      "check_groups": 7,
+      "receipt": {
+        "identifier": "private-evidence:full-check.json",
+        "sha256": "5491ff8bebcade2e7056dbc0f1b50aa25e1c4abacaa3d700b8c28e0758c48895"
       }
-    ],
-    "linux": [
-      {
-        "label": "glibc-311",
-        "python": "3.11.17",
-        "kernel": "6.12.114-0-virt",
-        "architecture": "aarch64",
-        "libc": [
-          "glibc",
-          "2.36"
-        ],
-        "identity": {
-          "uid": 1000,
-          "euid": 1000,
-          "gid": 1000,
-          "egid": 1000,
-          "groups": []
-        },
-        "passed": true,
-        "test_methods": 124,
-        "check_groups": 7,
-        "actual_commands": 34,
-        "expected_nonzero_branches": 7,
-        "expected_exit_codes_matched": true,
-        "full_suite_timing": "Ran 124 tests in 140.887s",
-        "fixed_archive_root": "research-workflow-template",
-        "built_archive_sha256": "b28d871df53a89a775dbe17a8fb1f3ea8e696b3329f233c41064c0174a92d337",
-        "previous_prefix_archive_verification_passed": true,
-        "source_sha_mtime_unchanged": true,
-        "readonly_project_sha_mtime_unchanged": true,
-        "relocated_copied_runtime_worked": true,
-        "network_interfaces_observed": [
-          "lo"
-        ],
-        "case_sensitive": true,
-        "raw_complete_receipt_sha256": "7f134a30b1988a241cb7be094ae667379c0303cc62c8957d298ba882f4b78b65"
-      },
-      {
-        "label": "glibc-314",
-        "python": "3.14.9",
-        "kernel": "6.12.114-0-virt",
-        "architecture": "aarch64",
-        "libc": [
-          "glibc",
-          "2.36"
-        ],
-        "identity": {
-          "uid": 1000,
-          "euid": 1000,
-          "gid": 1000,
-          "egid": 1000,
-          "groups": []
-        },
-        "passed": true,
-        "test_methods": 124,
-        "check_groups": 7,
-        "actual_commands": 34,
-        "expected_nonzero_branches": 7,
-        "expected_exit_codes_matched": true,
-        "full_suite_timing": "Ran 124 tests in 208.443s",
-        "fixed_archive_root": "research-workflow-template",
-        "built_archive_sha256": "b28d871df53a89a775dbe17a8fb1f3ea8e696b3329f233c41064c0174a92d337",
-        "previous_prefix_archive_verification_passed": true,
-        "source_sha_mtime_unchanged": true,
-        "readonly_project_sha_mtime_unchanged": true,
-        "relocated_copied_runtime_worked": true,
-        "network_interfaces_observed": [
-          "lo"
-        ],
-        "case_sensitive": true,
-        "raw_complete_receipt_sha256": "fbf1365ec6958ec5c7827320f40f4c5a0c6569723378dfda4af745098411665c"
-      }
-    ]
-  },
-  "current_tested_inputs": {
-    "frozen_source_files": 472,
-    "source_archive_sha256": "a7d5fa6aa908712248f8635822c6b8d55137d2836701b415ca288ced8ddc16ca",
-    "software_guidance_test_files": {
-      "core/__init__.py": "747401e8a3ec02843d8ab825c1322b786a8c0e39a13d6d28affc57bbd4d3fd04",
-      "core/bundle.py": "0a277e23713d120ecd8d533c213e5b3d30a4a39e0f89f3838fa81e358d6e97e1",
-      "core/cli.py": "9b6f95c56e8fd49eff5fca3257839caa2448dc9c967864d0384f3e35057d3dad",
-      "core/model.py": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31",
-      "core/project.py": "ef7d0c6e5ada59a5a1b08ba3d4f83b1efa454a959c58a55f4851aaf0e6b2be99",
-      "core/protocol.md": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
-      "core/schemas/activity.schema.json": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
-      "core/schemas/artifact.schema.json": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
-      "core/schemas/decision.schema.json": "c3f913c83476a4d63ff6e34f9dc4a835a3547dbbb9feb8896773fc72ce0d6f49",
-      "core/schemas/evidence.schema.json": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
-      "core/schemas/method-binding.schema.json": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
-      "core/schemas/project.schema.json": "d3aea9cc6055a5e97776be07cf101ad35d8b764405042372439c3445aa80a558",
-      "core/schemas/registry.schema.json": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
-      "core/schemas/relation.schema.json": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
-      "core/schemas/source.schema.json": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
-      "core/schemas/statement.schema.json": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
-      "core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
-      "core/storage.py": "344a3c15fa7c4ded67a90fb0cf715d9947a714942f155673e45b6420a10bbb74",
-      "design/catalog.json": "1d7f643bbc15597d37873b7d00fd48fde61c40d020c7b2800f2c9b7f913b89e6",
-      "design/project.example.json": "055a9a074b4a9300628abc38f3e4e4d86ad97a605f62204921ff97662de4658f",
-      "design/scenarios.json": "a90be0a8f471d16f6ae254f694ac807fc5a031985f21bd51c4f0698e880596ae",
-      "profiles/disciplines/agriculture-life.md": "66d86ef5e1f6deaa2af354e36e188469f9e1cf3423c14d31b4b48c854d46d583",
-      "profiles/disciplines/engineering.md": "0c776e883840960b7eeb6c4dcb6a3be4974c1834d8bb142d0b3cde2acf502e30",
-      "profiles/disciplines/humanities.md": "58ff12188e1aae8cea8fc090839d0727509ff4e86bdf3d2d2c075d6ae61dcece",
-      "profiles/disciplines/medicine-health.md": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
-      "profiles/disciplines/natural-sciences.md": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a",
-      "profiles/disciplines/social-sciences.md": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8",
-      "profiles/governance.md": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
-      "profiles/methods/computational.md": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
-      "profiles/methods/conceptual-normative.md": "609f444f364e638a0e61c49f160a4912ecd56ab9310a6937cef9b7abadae8b72",
-      "profiles/methods/empirical-quantitative.md": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
-      "profiles/methods/engineering-design.md": "693c7a1a42001bdf87ce3684c866863c81b089af9bd6e521b813667de24423c8",
-      "profiles/methods/evidence-synthesis.md": "0a9fccdfea15ffd8b30c30a56bcb8e5511d40d30bf8ea094ee47cf8ce8e4fbdc",
-      "profiles/methods/formal-theory.md": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
-      "profiles/methods/historical-interpretive.md": "0894387de28c40bbf2e5913dbf260b1df15f6eaed45abdd8df2a9c1360c8f4d9",
-      "profiles/methods/measurement-experiment.md": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd",
-      "profiles/methods/qualitative.md": "069f3880300a754dc2e8dd26eb64290278045ce2cabadd394160c68d02efb2c6",
-      "profiles/sources.json": "d48c5bb14cbd5297832868ce6c6659405229b5e8a7cd80742c51e475b63c9829",
-      "skills/rw-candidates/SKILL.md": "82e9930a22e5a5ba4ef61844ce9627da1763d5738f0f364dc3c9f3b9efa25c63",
-      "skills/rw-innovation/SKILL.md": "337c368c2ec48309027b3a2fc3724fab5e3c559e714c7293b19642588ae11575",
-      "skills/rw-literature/SKILL.md": "101b756a9374c3ba3e319695c8b03685e68709e422d34d8659b896edbb42e5ef",
-      "skills/rw-question/SKILL.md": "fcd2d3deba00e116c6da96bdf79802f2de8383e2dc4410173328ea534f5ee4c9",
-      "skills/rw-review/SKILL.md": "84d8d4a10a03843e62182b3fcb5bd90cb41dd4f0a42cdec35c3f30af8dcb2db2",
-      "skills/rw-validation/SKILL.md": "2eb8d16f18a564140e9fd32bbc3748057644a5ce9592c57edc4462c5e8a72db6",
-      "skills/rw-workflow/SKILL.md": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
-      "skills/rw-writing/SKILL.md": "a26e0b87b20151175d143b7a6ebcde7ba17f4b228504513faf70405037aec71b",
-      "tests/replay_support.py": "6656a19eff0455089818789c02a0b03607ac434ee2bc9c115fbc854940b49de6",
-      "tests/test_check_runner.py": "e54191694208826f87ec584a711ba8552789040d24e8c547c3aef69359116f72",
-      "tests/test_core.py": "155d73b2263ea577960444679eb82ffbd3268f60abd8b6471f06cb85941d2a85",
-      "tests/test_d3_evaluations.py": "f4e4c727beddb91ca651c8f909420ed260a61e2eb25d279194bed083e9acc679",
-      "tests/test_examples.py": "4d5593732cd099a8a3b3826496b319d604c1545870ede1d2849ada870911939a",
-      "tests/test_release_package.py": "55eb06f5d92a00f16ccee6e1c59df69326f9b8e8f9106451373a9d82acc8e640",
-      "tests/test_skill_connection.py": "68539bbe1f24530d1e0df2d01a34f676a450eea1b92996959885d882700e7b89",
-      "tests/test_task_replays.py": "8ffbc5ffbf7de9142a1602888f68aa3348ebb4d789a735a24157f294b48ced56",
-      "tools/check_core.py": "a3f1adfa9659ffbc21e9c48f483bcee0739caa0beb3305f46703d7d5253a16b5",
-      "tools/connect_skills.py": "d56b58c2564e965c3e56254b91d36022d1571a02cec4d0e2f1412ecdea36f133",
-      "tools/release_package.py": "2b58798037d93d158a938905e35abd510fad869a8151985f4475689b21c3647d",
-      "tools/research.py": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b"
     },
-    "unchanged_frozen_test_material_files": 382,
-    "post_execution_bookkeeping_changes": [
-      "evals/current/latest.json",
-      "provenance/file-origins.json"
-    ],
-    "all_other_frozen_source_bytes_unchanged": true
-  },
-  "current_cleanup": {
-    "old_release_stage_files_removed": 20,
-    "manual_personal_evaluation_archive_removed_from_separate_package": true,
-    "current_regression_fixtures_retained": true,
-    "previous_release_archives_not_distributed": true
-  },
-  "independent_usage_review": {
-    "passed": true,
-    "guide_empty_home_startup_commands": 4,
-    "local_markdown_links_checked": 194,
-    "receipt": {
-      "identifier": "private-evidence:independent-history-review/result.json",
-      "sha256": "5226603bf2600f5456efb8770d4a8364826430c890115846ff5ce10415620243"
+    "post_suite_document_checks": {
+      "local_and_installed_links_passed": true,
+      "change": "Replaced an obsolete numeric count with all checks in docs/02; no runtime guidance or test-code change after suite execution."
     }
   },
-  "linux_environment": {
-    "vm_exit_code": 0,
-    "vm_timed_out": false,
-    "guest_network_devices": 0,
-    "host_shared_directories": 0,
-    "disk_devices": 0,
-    "cpio_inputs_verified": 294,
-    "raw_serial_reports": 80,
-    "decode_errors": []
+  "legal_tasks": {
+    "coverage": "evals/legal/coverage.json",
+    "independent_review": "evals/legal/independent-review.json",
+    "case_statuses": {
+      "authority-time": "pass-in-scope",
+      "comparative-precedent": "pass-in-scope"
+    },
+    "actual_cli_registrations": 129,
+    "source_and_executed_resource_identity_separated": true,
+    "substantive_output_changes_after_execution": false,
+    "publication_link_presentation_normalizations": 6,
+    "input_and_output_fingerprints_bound_by_review": true,
+    "limits": [
+      "Fictional jurisdictions and source packets only; no real law or real case validation.",
+      "The independent reviewer is an AI agent who also reviewed method/source guidance, not a human legal expert or the task executor.",
+      "Two cases cover the stated variants only in these supplied settings; they do not establish all-jurisdiction or all-subfield coverage.",
+      "Checks of byte identity do not alone establish execution chronology or legal correctness."
+    ]
   },
-  "linux_raw_evidence": {
-    "console_sha256": "703aac3184dd0a90b306811f738c1b4f0fab501d30f7bb46a1b45ef3a2dd2360",
-    "vm_receipt_sha256": "4582976083350d8076a076eca46047ed87fb4fc3eb7dc81e059cf5c9a2e20c55",
-    "scope": "Full raw receipts are retained outside the distribution; the executed guest script checked readonly project snapshots and serialized complete source snapshots."
+  "skill_creator_validation": {
+    "modified_skills": 5,
+    "passed": true,
+    "scope": "Frontmatter and skill scaffold checks. PyYAML used only in a transient validator environment, not a toolkit runtime dependency."
   },
-  "regression_materials": [
-    "evals/d2",
-    "evals/d3"
-  ],
-  "new_scientific_content_reviews": false,
+  "preservation": {
+    "old_d2_d3_files_byte_identical": 384,
+    "old_governance_file_unchanged": true,
+    "separate_personal_nonruntime_files_verified_unchanged": 452,
+    "scope": "Recorded nonruntime files only; no claim of a full personal runtime audit."
+  },
+  "hosted_ci": {
+    "source_of_truth": "https://github.com/CheshireCat-D/research-workflow-template/actions",
+    "binding": "Read the run matching the selected exact commit. Generated dist/release-validation.json records actual archive and hosted-run acceptance separately to avoid self-referential commit/archive identities."
+  },
   "archive_acceptance": "dist/release-validation.json",
-  "hosted_ci_executed": false,
-  "remote_repository_created_or_pushed": false,
   "limits": [
-    "Both GNU Python configurations share one Linux ARM64 kernel and glibc userland; no fresh musl or hosted Ubuntu x86_64 check is claimed.",
-    "Final public ZIP is accepted separately after current receipt/index bookkeeping; Linux source execution is not represented as a final-ZIP run.",
-    "Directory upgrade uses a staged POSIX switch with a short reader gap and caught-error rollback; no power-loss transaction guarantee."
+    "Synthetic legal tasks and independent AI-agent review do not certify real legal conclusions or all jurisdictions.",
+    "Local full suite executed on macOS Python 3.14.6; other platforms require their own matching hosted or local runs.",
+    "Method version strings and free-form legal metadata do not automatically validate legal currency, authority or substantive correctness.",
+    "Directory upgrade retains its documented short reader gap and caught-failure rollback; no power-loss transaction guarantee."
   ]
 }

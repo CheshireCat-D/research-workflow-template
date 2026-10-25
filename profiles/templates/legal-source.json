@@ -1,0 +1,38 @@
+{
+  "id": "SRC-LEGAL-1",
+  "title": "待替换：实际法律来源标题",
+  "locator": "https://example.invalid/replace-with-actual-source",
+  "version": "待核实：分析所用正文或历史时点版本",
+  "content_access": "not-read",
+  "rights": "unknown",
+  "limitations": "占位样例尚未核对任何真实法律来源。按材料类型选择字段，不能由登记成功推断法律有效性。",
+  "extensions": {
+    "legal": {
+      "jurisdiction": null,
+      "territorial_scope": null,
+      "authority_type": null,
+      "issuer_or_court": null,
+      "identifier": null,
+      "relevant_facts_dates": [],
+      "analysis_as_of": null,
+      "research_cutoff": null,
+      "publication_date": null,
+      "effective_from": null,
+      "effective_to": null,
+      "transitional_provisions": [],
+      "authority_status": "unverified",
+      "authority_basis": [],
+      "pinpoints": [],
+      "case_procedural_status": null,
+      "opinion_part": null,
+      "subsequent_treatment": {
+        "checked_through": null,
+        "searched_sources": [],
+        "coverage": "not-checked",
+        "items": []
+      },
+      "language_and_translation": null,
+      "fictional": false
+    }
+  }
+}

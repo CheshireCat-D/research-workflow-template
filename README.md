@@ -2,7 +2,7 @@
 
 [English](README.en.md) · [中文介绍与使用说明](中文介绍与使用说明.md) · [English user guide](USER_GUIDE.en.md)
 
-一套面向理工医农与人文社科的本地科研工作流：从研究兴趣、文献定位、创新与候选比较，到最小验证、证明或实验、写作与审阅。八个技能由宿主助手执行实际任务，标准库 Python 工具保存主张、材料、引用、进度和恢复状态。
+一套面向理工医农、人文社科与法学的本地科研工作流：从研究兴趣、文献定位、创新与候选比较，到最小验证、证明或实验、写作与审阅。八个技能由宿主助手执行实际任务，标准库 Python 工具保存主张、材料、引用、进度和恢复状态。
 
 本目录只维护一份当前内容，发行包固定为 `research-workflow-template.zip`。更新由来源清单和 SHA-256 内容指纹标识；项目数据格式、记录与依赖的必要版本字段继续保留。
 
@@ -26,7 +26,8 @@ python3 tools/connect_skills.py check --root ../my-research
 | [English user guide](USER_GUIDE.en.md) | 与中文指南对应的完整英文介绍与使用说明 |
 | [命令行详细用法](docs/07-core-usage.md) | 查询、标准输入、原子批量登记、配置与检查点 |
 | [技能与方法](docs/08-skills-and-methods.md) | 八个技能、项目内接入、方法资源与升级边界 |
-| [学科适配](docs/02-disciplinary-adaptation.md) | 六类学科、九类方法及跨学科组合 |
+| [学科适配](docs/02-disciplinary-adaptation.md) | 七类学科、十类方法及跨学科组合 |
+| [法学项目模板](profiles/templates/legal-research.md) | 法域、法条时效、效力依据、判例与引证台账 |
 | [证据契约](docs/03-evidence-contract.md) | 主张、材料、支持关系和研究进度的边界 |
 | [当前验收](evals/current/latest.json) | 当前内容的实际检查结果与执行范围 |
 | [发行验收](docs/10-release-readiness.md) | 来源、归档、干净环境与可交付检查 |

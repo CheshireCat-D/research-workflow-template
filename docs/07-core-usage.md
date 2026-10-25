@@ -66,6 +66,20 @@ python3 tools/research.py check --root ../demo-history
 
 批次沿用单条登记的版本、依赖和本地文件规则，每项各增加一次 registry revision 和历史条目，但只在全部校验成功后原子替换一次 `records/registry.json`。任何一项失败均不写回整个候选登记；不会留下只导入前半段的主张。批次不接受空数组、未知选项或以字符串代替布尔值的 `replace`。同一批次中，按实际版本顺序替换同一 ID 也必须逐项提供准确版本。
 
+## 法学：法域、时点与法源台账
+
+从完整工具包根运行：
+
+```sh
+python3 tools/research.py init --output ../demo-law --title '有时点边界的法律解释问题' --discipline law --method legal-analysis
+python3 tools/connect_skills.py install --root ../demo-law
+python3 tools/connect_skills.py check --root ../demo-law
+```
+
+再使用[法学项目模板](../profiles/templates/legal-research.md)和[source样例](../profiles/templates/legal-source.json)，按实际材料记录法域、相关事实时点、公布／施行／修废与过渡、效力地位依据、裁判理由及后续检索范围。示例的 `not-read`、`null` 和未知状态应在实际核对后才显式更新。`source.extensions.legal` 可保存这些元数据，CLI只验证通用结构并原样保存，不判断法律含义。具体条款、段落或页码与实际访问程度一起保留。
+
+`legal-analysis` 的变体 `doctrinal`、`case-analysis`、`comparative-law` 用在具体 method-binding 中。法律解释可登记为 `interpretive` 主张；规范建议与经验效果按实际性质分别登记。画像版本字符串不是自动新旧判断；若需检测正文或指导变化，把实际使用的本地文件登记为 evidence 并作为活动输入，恢复时再复核漂移，而不自动改写法律结论。两项实际离线合成任务见[法学素材](../evals/legal/README.md)。
+
 ## 更新记录与输入变更
 
 每次 `register` 都登记单个对象；类型与最小字段见 [正式模式目录](../core/schemas/)。常用引用写为 `statement:S1`、`evidence:E1`、`activity:A1`，包含类型以区分重名 ID。关系引用、活动输入输出及依赖必须能在当前登记中解析，因此先登记被引用对象。活动的 `depends_on` 只填活动 ID；方法绑定的 `applies_to` 使用带类型引用。

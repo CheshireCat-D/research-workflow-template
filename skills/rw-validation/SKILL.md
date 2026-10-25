@@ -1,6 +1,6 @@
 ---
 name: rw-validation
-description: Validate research arguments, designs and evidence with the applicable method. Use for 数学证明、计算实验、医学与田间设计、量化实证、定性与规范论证、证据综合 or 最小验证; registration integrity alone uses the core check command.
+description: Validate research arguments, designs and evidence with the applicable method. Use for 数学证明、计算实验、医学与田间设计、量化实证、定性与规范论证、法源与判例分析、证据综合 or 最小验证; registration integrity alone uses the core check command.
 ---
 
 # 方法验证
@@ -19,9 +19,10 @@ description: Validate research arguments, designs and evidence with the applicab
 | 访谈、民族志、案例或参与式材料 | [定性研究](../../profiles/methods/qualitative.md)：语境、反身性、材料到解释及反向案例 |
 | 档案、文本与竞争解释 | [历史与阐释](../../profiles/methods/historical-interpretive.md)：材料定位、语境与解释支持；不代表全部人文方法 |
 | 概念重构、价值前提或规范建议 | [概念与规范论证](../../profiles/methods/conceptual-normative.md)：定义、前提链、反例与有力异议 |
+| 法律解释、裁判或比较法研究 | [法律解释与法源分析](../../profiles/methods/legal-analysis.md)：法域、相关时点、效力依据、裁判地位和精确引证 |
 | 系统／范围／叙述／解释性综述 | [证据与文献综合](../../profiles/methods/evidence-synthesis.md)：覆盖范围、研究去重、偏倚与合成依据 |
 
-九类方法均有指导画像，具体变体的实际测试覆盖以核验记录为准，不能将目录完整称为全部学科已验证。学科语境按需读 [六类画像目录](../../profiles/disciplines/)；涉及招募、干预、受限资料或外发等实际动作时查 [治理](../../profiles/governance.md)。混合研究分别检验各部分，再检查连接结论是否跨越了依据范围。
+各类方法均有指导画像，具体变体的实际测试覆盖以核验记录为准，不能将目录完整称为全部学科已验证。学科语境按需读 [画像目录](../../profiles/disciplines/)；涉及招募、干预、受限资料或外发等实际动作时查 [治理](../../profiles/governance.md)。混合研究分别检验各部分，再检查连接结论是否跨越了依据范围。
 
 ## 执行与结果
 

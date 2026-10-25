@@ -67,6 +67,18 @@
         "evidence-synthesis"
       ],
       "profile": "profiles/disciplines/social-sciences.md"
+    },
+    {
+      "id": "law",
+      "label": "法学",
+      "suggested_methods": [
+        "legal-analysis",
+        "conceptual-normative",
+        "historical-interpretive",
+        "empirical-quantitative",
+        "qualitative"
+      ],
+      "profile": "profiles/disciplines/law.md"
     }
   ],
   "methods": [
@@ -310,6 +322,33 @@
           ]
         }
       }
+    },
+    {
+      "id": "legal-analysis",
+      "label": "法律解释与法源分析",
+      "variants": [
+        "doctrinal",
+        "case-analysis",
+        "comparative-law"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/legal-analysis.md",
+        "supported_variants": [
+          "doctrinal",
+          "case-analysis",
+          "comparative-law"
+        ],
+        "validation_scope": "Task-scoped execution and independent agent review are recorded in evals/legal/independent-review.json. Read their actual status and limits; synthetic jurisdictions do not validate real legal conclusions or complete legal-system coverage.",
+        "task_evidence": {
+          "coverage": "evals/legal/coverage.json",
+          "review": "evals/legal/independent-review.json",
+          "cases": [
+            "legal:authority-time",
+            "legal:comparative-precedent"
+          ]
+        }
+      }
     }
   ],
   "skills": [
@@ -406,5 +445,5 @@
     "unknown_governance_is_not_approval": true,
     "venue_is_optional": true
   },
-  "runtime_scope": "Offline metadata core, eight host-executed research skills, six discipline portraits and nine method-guidance profiles. Actual validation is task scoped with declared limitations. No built-in model or external database client."
+  "runtime_scope": "Offline metadata core, eight host-executed research skills, seven discipline portraits and ten method-guidance profiles. Actual validation is task scoped with declared limitations. No built-in model or external database client."
 }

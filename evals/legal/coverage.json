@@ -1,0 +1,50 @@
+{
+  "format_version": 1,
+  "status": "executed-and-reviewed",
+  "checked_at_utc": "2026-10-25T21:10:37.565811+00:00",
+  "scope": "Two independently executed and independently agent-reviewed offline synthetic legal tasks. Program replay checks identity and registration; it does not recreate content review or certify real legal conclusions.",
+  "cases": [
+    "authority-time",
+    "comparative-precedent"
+  ],
+  "method_cases": {
+    "legal-analysis": [
+      "legal:authority-time",
+      "legal:comparative-precedent"
+    ]
+  },
+  "variant_cases": {
+    "doctrinal": [
+      "authority-time"
+    ],
+    "case-analysis": [
+      "comparative-precedent"
+    ],
+    "comparative-law": [
+      "comparative-precedent"
+    ]
+  },
+  "scenarios": {
+    "L01": {
+      "case_id": "authority-time",
+      "status": "pass-in-scope"
+    },
+    "L02": {
+      "case_id": "comparative-precedent",
+      "status": "pass-in-scope"
+    }
+  },
+  "inputs": "cases/",
+  "outputs": "recordings/",
+  "review": "independent-review.json",
+  "original_material_groups_preserved": [
+    "evals/d2",
+    "evals/d3"
+  ],
+  "limits": [
+    "Fictional jurisdictions and source packets only; no real law or real case validation.",
+    "The independent reviewer is an AI agent who also reviewed method/source guidance, not a human legal expert or the task executor.",
+    "Two cases cover the stated variants only in these supplied settings; they do not establish all-jurisdiction or all-subfield coverage.",
+    "Checks of byte identity do not alone establish execution chronology or legal correctness."
+  ]
+}

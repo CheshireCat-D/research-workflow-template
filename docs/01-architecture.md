@@ -1,6 +1,6 @@
 # 整体架构与目录
 
-当前维护一套通用核心、八个技能、九类方法指导和六类学科画像；实际检查结果见[当前核验记录](../evals/current/latest.json)。稳定 ID 与实现状态的唯一目录见 [catalog.json](../design/catalog.json)；本文解释职责，不另建同义路由表。
+当前维护一套通用核心、八个技能、十类方法指导和七类学科画像；实际检查结果见[当前核验记录](../evals/current/latest.json)。稳定 ID 与实现状态的唯一目录见 [catalog.json](../design/catalog.json)；本文解释职责，不另建同义路由表。
 
 ## 四层职责
 
@@ -60,8 +60,9 @@ research-workflow-template/
 │       ├── SKILL.md             短入口，按任务加载
 │       └── references/          有需要才增加脚本或素材
 ├── profiles/
-│   ├── methods/                 九类方法指导
-│   ├── disciplines/             六类画像，不复制工作流
+│   ├── methods/                 十类方法指导
+│   ├── disciplines/             七类画像，不复制工作流
+│   ├── templates/               按需复制的专业台账与项目模板
 │   ├── governance.md            按实际行动处理权限与责任
 │   └── sources.json             方法来源与访问范围
 ├── tools/                       初始化、记录、只读检查、接入与打包

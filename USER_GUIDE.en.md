@@ -4,7 +4,7 @@
 
 This toolkit helps researchers work with an AI assistant from an initial research interest through question formation, literature comparison, candidate validation, proofs or experiments, manuscript writing, and delivery checks.
 
-It supports natural sciences, engineering, medicine and health, agriculture and life sciences, humanities, and social sciences. These fields share question management and source traceability, while proofs, statistical analysis, experiments, and historical interpretation require their own validation methods.
+It supports natural sciences, engineering, medicine and health, agriculture and life sciences, humanities, social sciences, and law. These fields share question management and source traceability, while proofs, statistical analysis, experiments, historical interpretation, and legal analysis require their own validation methods.
 
 ## How the toolkit works
 
@@ -58,6 +58,8 @@ For a manuscript that has not been registered, you can begin with a local task. 
 | `rw-review` | Review claim support, limitations, structure, and delivery completeness |
 
 Combine specialist methods as needed. Finite numerical checks cannot replace a mathematical proof. Clinical, field, interview, and historical materials each have their own evidence, permission, and ethics requirements. See [disciplinary and method adaptation](docs/02-disciplinary-adaptation.md) for details.
+
+For legal research, initialize with `--discipline law --method legal-analysis` and use the [legal project template](profiles/templates/legal-research.md). Record jurisdiction, relevant dates, the basis for authority and precedential status, and precise citations. Keep doctrinal interpretation, comparative description, normative proposals, and empirical effects distinct. Legal metadata can use `source.extensions.legal`; successful registration does not certify legal meaning or validity. The added [legal tasks](evals/legal/README.md) use fictional jurisdictions and have a limited testing scope.
 
 ## Common daily operations
 

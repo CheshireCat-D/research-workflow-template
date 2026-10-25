@@ -1,6 +1,6 @@
 # 技能与方法接入
 
-当前实现八个 `rw-*` 技能、九类方法指导和六类学科画像，维护源分别在仓库 `skills/` 与 `profiles/`。它们由宿主代理根据任务读取并执行。共享登记规则位于[接入协议](../core/skill-bridge.md)，统一处理记录版本、检查点和只读命令。软件只维护当前一份；研究记录版本仍按兼容契约保留。
+当前实现八个 `rw-*` 技能、十类方法指导和七类学科画像，维护源分别在仓库 `skills/` 与 `profiles/`。它们由宿主代理根据任务读取并执行。共享登记规则位于[接入协议](../core/skill-bridge.md)，统一处理记录版本、检查点和只读命令。软件只维护当前一份；研究记录版本仍按兼容契约保留。
 
 ## 在新研究项目中使用
 
@@ -47,6 +47,7 @@ python3 tools/connect_skills.py check --root ../my-research
 - [工程设计](../profiles/methods/engineering-design.md)：需求、工况、验收、失效与实际用途的对应。
 - [定性研究](../profiles/methods/qualitative.md)：材料到解释的路径、反身性、反向案例及引用范围。
 - [概念与规范论证](../profiles/methods/conceptual-normative.md)：概念、经验前提、价值桥梁、异议与条件性结论。
+- [法律解释与法源分析](../profiles/methods/legal-analysis.md)：法域、相关时间、效力依据、裁判理由与后续处理、可定位引证；[项目与台账模板](../profiles/templates/legal-research.md)随运行副本复制。
 - [证据综合](../profiles/methods/evidence-synthesis.md)：综述类型、实际检索范围、研究级去重、分母及综合适用性。
 
 按研究对象选择 [学科画像](../profiles/disciplines/)，再按证据义务组合方法；跨学科结果可能一致、互补或冲突，整合结论需另行给理由。[治理说明](../profiles/governance.md) 按具体行动处理材料与参与者权限，[来源记录](../profiles/sources.json) 区分已读范围和适用性。画像是工作的指导；选择方法 ID 或登记 `done` 都不能代替实际工作，代表性任务通过也不覆盖所有变体或取代专业责任。
@@ -71,4 +72,4 @@ python3 tools/connect_skills.py check --root ../my-research
 
 POSIX通用接口不能用一次 `rename` 交换两个非空目录。这里每次目录改名都是原子的，整次升级采用两次改名；两者之间路径可能短暂不存在，同时读取的代理应重试。执行前暂停正在读取该项目技能的宿主。捕获到发布失败时会尝试恢复旧目录；若返回 `upgrade_recovery_required`，先按错误中保留的 `.agents/.rw-skills-backup-*` 位置审阅并恢复，再重试。若返回 `upgrade_cleanup_required`，新副本已发布，仅旧备份清理失败。进程强制终止、断电和绕过写锁的外部目录替换没有完整事务保证。
 
-三项基础回归任务保存在[基础素材](../evals/d2/README.md)，跨学科任务及场景映射在[覆盖记录](../evals/d3/coverage.json)。这些是当前测试依赖的不同材料组，不是旧软件副本。执行者只获得任务、原始材料和技能；内容复核与自动回归分开。自动测试重跑代码和登记流程，不能重新产生一次独立模型评估。
+三项基础回归任务保存在[基础素材](../evals/d2/README.md)，跨学科任务及场景映射在[覆盖记录](../evals/d3/coverage.json)，法学新增场景在[法学覆盖](../evals/legal/coverage.json)。这些是当前测试依赖的不同材料组，不是旧软件副本。执行者只获得任务、原始材料和技能；内容复核与自动回归分开。旧任务的冻结材料与审阅指纹保持原样，新增方法用新任务核验，不继承旧任务的执行结论。自动测试重跑代码和登记流程，不能重新产生一次独立模型评估。

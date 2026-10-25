@@ -1,0 +1,96 @@
+{
+  "actor": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+  "resources": {
+    ".agents/skills/rw-workflow/SKILL.md": {
+      "path": ".agents/skills/rw-workflow/SKILL.md",
+      "source_path": "skills/rw-workflow/SKILL.md",
+      "sha256": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+      "source_sha256": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+      "executed_sha256": "7ad0a0a6da2c05a169f484d5317337b857696aa4df99477541d8b1c1e2e495b1",
+      "same_bytes_as_source": false,
+      "actual_read": true
+    },
+    ".agents/skills/rw-literature/SKILL.md": {
+      "path": ".agents/skills/rw-literature/SKILL.md",
+      "source_path": "skills/rw-literature/SKILL.md",
+      "sha256": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+      "source_sha256": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+      "executed_sha256": "e330e77c16ca93b68f13c2b371a04fbd08f2a97d54d954d97a95d637eaaa3420",
+      "same_bytes_as_source": false,
+      "actual_read": true
+    },
+    ".agents/skills/rw-validation/SKILL.md": {
+      "path": ".agents/skills/rw-validation/SKILL.md",
+      "source_path": "skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "source_sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "executed_sha256": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2",
+      "same_bytes_as_source": false,
+      "actual_read": true
+    },
+    ".agents/skills/rw-writing/SKILL.md": {
+      "path": ".agents/skills/rw-writing/SKILL.md",
+      "source_path": "skills/rw-writing/SKILL.md",
+      "sha256": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+      "source_sha256": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+      "executed_sha256": "51dd9195c40ea5003f666ffadf53da9717f19e6c8b6079b06065cb833f7cf8b3",
+      "same_bytes_as_source": false,
+      "actual_read": true
+    },
+    ".agents/skills/rw-review/SKILL.md": {
+      "path": ".agents/skills/rw-review/SKILL.md",
+      "source_path": "skills/rw-review/SKILL.md",
+      "sha256": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+      "source_sha256": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+      "executed_sha256": "1fe1c58f219b4b7a309fcb1be34d29727c4a2e643c130cd46f7e93db61ec02ae",
+      "same_bytes_as_source": false,
+      "actual_read": true
+    },
+    ".agents/skills/_rw-runtime/core/skill-bridge.md": {
+      "path": ".agents/skills/_rw-runtime/core/skill-bridge.md",
+      "source_path": "core/skill-bridge.md",
+      "sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+      "source_sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+      "executed_sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+      "same_bytes_as_source": true,
+      "actual_read": true
+    },
+    ".agents/skills/_rw-runtime/core/protocol.md": {
+      "path": ".agents/skills/_rw-runtime/core/protocol.md",
+      "source_path": "core/protocol.md",
+      "sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+      "source_sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+      "executed_sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+      "same_bytes_as_source": true,
+      "actual_read": true
+    },
+    ".agents/skills/_rw-runtime/profiles/disciplines/law.md": {
+      "path": ".agents/skills/_rw-runtime/profiles/disciplines/law.md",
+      "source_path": "profiles/disciplines/law.md",
+      "sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+      "source_sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+      "executed_sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+      "same_bytes_as_source": true,
+      "actual_read": true
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md": {
+      "path": ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md",
+      "source_path": "profiles/methods/legal-analysis.md",
+      "sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+      "source_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+      "executed_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+      "same_bytes_as_source": true,
+      "actual_read": true
+    },
+    ".agents/skills/_rw-runtime/profiles/templates/legal-research.md": {
+      "path": ".agents/skills/_rw-runtime/profiles/templates/legal-research.md",
+      "source_path": "profiles/templates/legal-research.md",
+      "sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+      "source_sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+      "executed_sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+      "same_bytes_as_source": true,
+      "actual_read": true
+    }
+  },
+  "normalization": "映射键与path相对PROJECT；source_path相对工具包根；sha256及source_sha256为源字节，executed_sha256为实际项目字节，技能重写差异不声明同字节。"
+}

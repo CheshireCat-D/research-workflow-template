@@ -170,16 +170,109 @@
       ],
       "limits": "Not a universal law or a replacement for project-specific jurisdiction and institutional review.",
       "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "prc-legislation-law-2023",
+      "title": "中华人民共和国立法法（2023年修正）",
+      "version": "2023 revision; official consolidated text consulted 2026-10-25",
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5211769/content.html",
+      "access": "Official State Taxation Administration legal database full text.",
+      "checked_scope": "Articles 61–63 and 98–106: publication/commencement, text versions, scoped hierarchy, temporal application and conflict-resolution mechanisms.",
+      "applicability": [
+        "legal-analysis"
+      ],
+      "limits": "PRC legislation only; not a universal hierarchy, exhaustive subsequent-law search or legal advice.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "spc-guiding-cases-2015",
+      "title": "最高人民法院关于案例指导工作的规定实施细则",
+      "version": "2015 text; official court republication consulted 2026-10-25",
+      "url": "https://www.hncourt.gov.cn/public/detail.php?id=157832",
+      "access": "Official Henan High People’s Court republication of SPC text.",
+      "checked_scope": "Articles 9–12: similarity, reasoning use, case-number/point identification and withdrawal/replacement conditions.",
+      "applicability": [
+        "legal-analysis"
+      ],
+      "limits": "Specific PRC guiding-case framework; not equivalent to every court judgment, typical case or a common-law binding precedent.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "uk-legislation-help",
+      "title": "legislation.gov.uk: Help",
+      "version": "Official help index consulted 2026-10-25",
+      "url": "https://www.legislation.gov.uk/help",
+      "access": "Official search-index text; direct fetch failed on XHTML content type.",
+      "checked_scope": "Point-in-time and prospective views, commencement information, territorial extent and application distinctions.",
+      "applicability": [
+        "legal-analysis"
+      ],
+      "limits": "Partial retrieval through search indexing; no claim of complete current law or availability of every historical provision.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "uk-legislation-changes",
+      "title": "legislation.gov.uk: Changes to Legislation",
+      "version": "Official changes index consulted 2026-10-25",
+      "url": "https://www.legislation.gov.uk/changes",
+      "access": "Official search-index text; direct fetch failed on XHTML content type.",
+      "checked_scope": "Unapplied changes and the need to distinguish revised text from all relevant amending effects.",
+      "applicability": [
+        "legal-analysis"
+      ],
+      "limits": "UK database workflow only; database coverage and unincorporated changes require task-specific checking.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "ca9-court-decisions",
+      "title": "United States Court of Appeals for the Ninth Circuit: Court Decisions",
+      "version": "Official decisions page consulted 2026-10-25",
+      "url": "https://www.ca9.uscourts.gov/decisions",
+      "access": "Official court page.",
+      "checked_scope": "Published opinions versus memorandum dispositions and court-specific precedential scope.",
+      "applicability": [
+        "legal-analysis"
+      ],
+      "limits": "Court-specific statement, not a rule for all US courts or other jurisdictions; subsequent treatment must be checked separately.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "scotus-opinions",
+      "title": "Supreme Court of the United States: Opinions",
+      "version": "Official opinions page consulted 2026-10-25",
+      "url": "https://www.supremecourt.gov/opinions/opinions.aspx",
+      "access": "Official court explanation.",
+      "checked_scope": "Majority/principal, concurring and dissenting opinions, plus slip-opinion and later-publication versions.",
+      "applicability": [
+        "legal-analysis"
+      ],
+      "limits": "Does not classify an arbitrary passage as holding or establish a case’s later precedential status.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "oscola-5",
+      "title": "Oxford Standard for Citation of Legal Authorities, fifth edition",
+      "version": "Fifth edition; official PDF consulted 2026-10-25",
+      "url": "https://www.law.ox.ac.uk/sites/default/files/2026-03/OSCOLA%205.pdf",
+      "access": "Official Oxford PDF and official OSCOLA index.",
+      "checked_scope": "Identifying cases and legislation with precise page, paragraph and provision references when that citation style is selected.",
+      "applicability": [
+        "legal-analysis"
+      ],
+      "limits": "Optional venue-specific style; not a universal citation mandate or a check of substantive legal authority.",
+      "accessed_on": "2026-10-25"
     }
   ],
   "original_guidance": [
     "conceptual-normative profile is original argument-audit guidance; no universal normative-research checklist is claimed.",
-    "Discipline portraits compose methods and provide context; names alone do not establish methodological or governance validity."
+    "Discipline portraits compose methods and provide context; names alone do not establish methodological or governance validity.",
+    "Legal-analysis is original research guidance. Legal status, temporal scope and precedential force require jurisdiction-specific source checking; the metadata CLI does not certify them."
   ],
   "retrieval_limitations": [
     "The PMC mirror of the CONSORT article returned a browser challenge; the primary PLOS publication and author site were used instead.",
     "The TRIPOD+AI expanded supplement timed out; the official dated checklist was successfully fetched instead.",
     "The CONSORT editable Word checklist was unsupported by the retrieval tool; the primary article and official scope were used.",
-    "COREQ full text and SRQR full text/supplement were not obtained; their limited access is explicit in the records."
+    "COREQ full text and SRQR full text/supplement were not obtained; their limited access is explicit in the records.",
+    "UK legislation help/changes were read through official search-index text; direct XHTML retrieval failed. This access limit is retained in the legal source records."
   ]
 }

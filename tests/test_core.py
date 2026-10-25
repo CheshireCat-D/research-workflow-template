@@ -124,7 +124,7 @@ class CoreCLITests(unittest.TestCase):
         self.assertEqual(config["governance"]["applicability"], "unknown")
         self.assertEqual(self.check()["scientific_validity"], "not-assessed")
 
-    def test_all_six_disciplines_accept_different_methods_and_modes(self):
+    def test_all_disciplines_accept_different_methods_and_modes(self):
         combinations = [
             ("natural-sciences", "formal-theory", "light"),
             ("engineering", "engineering-design", "structured"),
@@ -132,6 +132,7 @@ class CoreCLITests(unittest.TestCase):
             ("agriculture-life", "measurement-experiment", "structured"),
             ("humanities", "historical-interpretive", "light"),
             ("social-sciences", "qualitative", "reproducible"),
+            ("law", "legal-analysis", "structured"),
         ]
         for discipline, method, mode in combinations:
             with self.subTest(discipline=discipline):

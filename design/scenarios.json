@@ -344,6 +344,57 @@
         "已登记待审即获准上传",
         "不能外发就等于整个研究失败"
       ]
+    },
+    {
+      "id": "L01",
+      "disciplines": [
+        "law"
+      ],
+      "methods": [
+        "legal-analysis"
+      ],
+      "method_variants": {
+        "legal-analysis": [
+          "doctrinal"
+        ]
+      },
+      "task": "用有限规范材料分析修订、过渡规则、不同事项时间和权限冲突",
+      "must_preserve": [
+        "法域与相关事实时点",
+        "版本、施行和过渡范围",
+        "法源地位依据与未取得正文",
+        "精确定位和条件性结论"
+      ],
+      "must_not_infer": [
+        "公布即施行或新规范自动溯及",
+        "文件数量或登记通过确立法律效力"
+      ]
+    },
+    {
+      "id": "L02",
+      "disciplines": [
+        "law"
+      ],
+      "methods": [
+        "legal-analysis"
+      ],
+      "method_variants": {
+        "legal-analysis": [
+          "case-analysis",
+          "comparative-law"
+        ]
+      },
+      "task": "在有限后续检索下比较不同法院与法域的裁判理由和适用地位",
+      "must_preserve": [
+        "法院、地域、程序状态与当地先例规则",
+        "裁判正文与摘要、理由与其他意见的区别",
+        "后续处理检索范围",
+        "事实差异、引证和比较边界"
+      ],
+      "must_not_infer": [
+        "外国最高法院结论在本地自动拘束",
+        "未查到后续即确认判例现行有效"
+      ]
     }
   ],
   "execution_evidence": "evals/d3/coverage.json"

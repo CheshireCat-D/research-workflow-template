@@ -1,0 +1,533 @@
+{
+  "format_version": 1,
+  "status": "executed-and-independently-reviewed-in-scope",
+  "reviewer": "Codex legal_sources_review (AI agent; separate from case author and task executor)",
+  "reviewed_at_utc": "2026-10-25T21:09:54.916628+00:00",
+  "scope": "Independent content and byte-identity review of two original fictional offline legal-research tasks. No real-law opinion, exhaustive legal-domain validation, human expert review or legal-validity certification.",
+  "independence": {
+    "case_input_author": false,
+    "task_executor": false,
+    "prior_role": "Reviewed official method sources and guidance quality before reviewing these task outputs; this is not a claim of fully blind professional legal review.",
+    "scoring_oracle_supplied": false
+  },
+  "scientific_validity": "not-assessed",
+  "legal_validity_certification": false,
+  "cases": {
+    "authority-time": {
+      "status": "pass-in-scope",
+      "reviewer": "Codex legal_sources_review (AI agent; separate from case author and task executor)",
+      "scope": "Only the frozen supplied legal scenario, current published outputs and actually recorded resources; software success is not the basis of the content judgment.",
+      "checks": [
+        {
+          "check": "jurisdiction-and-timeline",
+          "result": "pass-in-scope",
+          "basis": [
+            "F-A §§1–4",
+            "L-A-2024 arts 41,42(1)"
+          ],
+          "finding": "Correctly fixes fictional forum and separates promulgation, commencement, acceptance and decision dates. Acceptance on 2024-06-21 connects the substantive application conditions to the old art 8; a later refusal does not itself change that connection."
+        },
+        {
+          "check": "later-data-processing",
+          "result": "pass-in-scope",
+          "basis": [
+            "F-A §5",
+            "L-A-2024 arts 40,42(2)"
+          ],
+          "finding": "Correctly applies the later collection/use/retention rule conditionally to post-commencement conduct. The output does not turn an email demand into evidence that a copy was actually collected or harm occurred."
+        },
+        {
+          "check": "authority-and-conflict",
+          "result": "pass-in-scope",
+          "basis": [
+            "L-A-ORDER art 4(1),(2),art 5",
+            "L-A-2021 art 8(1),(2),art 12",
+            "R-A-2019 arts 1,7",
+            "P-A-2024 §§1–3"
+          ],
+          "finding": "The ordinary-access condition, delegated local power and technical-notice limitations support a scoped challenge to the sole stated refusal reason. The report does not declare the entire local instrument repealed or determine final remedies."
+        },
+        {
+          "check": "version-and-access",
+          "result": "pass-in-scope",
+          "basis": [
+            "L-A-COMP-2025 editorial notes §§1–2",
+            "R-A-2019 editorial marker §1",
+            "N-A-2025 §§1–2",
+            "SEARCH-A §§1–5"
+          ],
+          "finding": "Database maintenance labels and recompile dates are separated from legal commencement and effect. Missing amendment text, authorization material and full-law comparison remain unknown; source access is partial or metadata-only as appropriate."
+        },
+        {
+          "check": "claim-support-and-delivery",
+          "result": "pass-in-scope",
+          "basis": [
+            "D-A",
+            "F-A §§2,5,6",
+            "notes/claim-audit.json",
+            "manuscript/report.md",
+            "review.md",
+            "recording.json statements S-TIME,S-AUTHORITY,S-DATA,S-VERSION,S-LIMIT"
+          ],
+          "finding": "All six draft assertions are challenged or limited using identifiable provisions. The five registered interpretations agree with the authority table, timeline, manuscript and self-review. Missing catalog classification and remedies prevent universal conclusions. The actual short report remains below 1200 Han characters."
+        }
+      ],
+      "issues": [],
+      "revision_history": [
+        {
+          "kind": "publication-link-presentation-only",
+          "identified_by": "maintainer before final review binding",
+          "review_result": "Confirmed independently: exactly three project-local Markdown input links in report.md were converted to labelled inline project-relative paths. No substantive research text, identifiers or pinpoints changed; actual project and command logs retain raw execution bytes.",
+          "new_research_execution": false,
+          "normalizations": [
+            {
+              "path": "manuscript/report.md",
+              "kind": "publication-link-presentation-only",
+              "raw_sha256": "0376688b08a94cf3c80da52413d1ae4835a143492cd46d90ad10495eb00b8524",
+              "published_sha256": "b984fa3e6ba6c35a9463e714b4227b3c9e6ad9c9e2f846c25b51a73b91c3eeab",
+              "changes": 3,
+              "description": "Project-local input Markdown links became labelled inline project-relative paths in the published replay snapshot, which does not duplicate case inputs. Source identities, pinpoints and substantive analysis are unchanged; actual project artifacts and command logs retain their original bytes."
+            }
+          ]
+        }
+      ],
+      "input_sha256": {
+        "draft.md": "e74d8a9ec7044a0301badc4d8b5d7d676c58d819b36f787b6b15fe32ce256abe",
+        "facts.md": "42f8acb8e62a77be135d806a05bb674cb9f39d8472c0dbe34973606ac5845e17",
+        "input-manifest.json": "a0c6e121580f498e8364beac6983ca81e04b17f78c56815f2d1c04315aeee604",
+        "sources/administrative-materials.md": "9ff9e9a098affbd758b19687f80dac1e92685c557f075bde661209ad08d79c4d",
+        "sources/legislation.md": "04bbe59fbd11b7ddfe2b3c71e17809155444f91a1e402c9bd371f390decc83a0",
+        "sources/retrieval-log.md": "844f957d3ed193c8481e4f0006a730ecc60383b85ec953cee564af143831e9bd",
+        "task.md": "139315d9df4cfe219738ec3fd938f6d5fecb868e64efb1043d448a05183fe0fc"
+      },
+      "published_output_sha256": {
+        "manuscript/report.md": "b984fa3e6ba6c35a9463e714b4227b3c9e6ad9c9e2f846c25b51a73b91c3eeab",
+        "notes/authority-table.md": "b7351496ad545d39c1059f7346a63d044349d8e3088c109a6ec6a242fee8cf77",
+        "notes/claim-audit.json": "42c95224c099c528c935357ab5f8af30910a043c05fea896e575a810cf46f8d3",
+        "notes/issue.md": "72e5531f2e96866afb033339a3072e130a6719eabe599d45ea1caf9fbe315a68",
+        "notes/runtime-resources.json": "a61540756435506a2238eb5b8d6cab343bf21a3538d441928d1c0f83c6ef28ed",
+        "notes/time-matrix.md": "10133701eb83c8e0a88a00ebfba453a50bd40391bb4cc33249e39870f78586c9",
+        "review.md": "f8e2345d15cf020756c84348535e15df6005e359442df2e29e7ef9b6d8d1488f"
+      },
+      "raw_execution_output_sha256": {
+        "manuscript/report.md": "0376688b08a94cf3c80da52413d1ae4835a143492cd46d90ad10495eb00b8524",
+        "notes/authority-table.md": "b7351496ad545d39c1059f7346a63d044349d8e3088c109a6ec6a242fee8cf77",
+        "notes/claim-audit.json": "42c95224c099c528c935357ab5f8af30910a043c05fea896e575a810cf46f8d3",
+        "notes/issue.md": "72e5531f2e96866afb033339a3072e130a6719eabe599d45ea1caf9fbe315a68",
+        "notes/runtime-resources.json": "a61540756435506a2238eb5b8d6cab343bf21a3538d441928d1c0f83c6ef28ed",
+        "notes/time-matrix.md": "10133701eb83c8e0a88a00ebfba453a50bd40391bb4cc33249e39870f78586c9",
+        "review.md": "f8e2345d15cf020756c84348535e15df6005e359442df2e29e7ef9b6d8d1488f"
+      },
+      "runtime_resources": {
+        ".agents/skills/rw-workflow/SKILL.md": {
+          "path": ".agents/skills/rw-workflow/SKILL.md",
+          "source_path": "skills/rw-workflow/SKILL.md",
+          "sha256": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+          "source_sha256": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+          "executed_sha256": "7ad0a0a6da2c05a169f484d5317337b857696aa4df99477541d8b1c1e2e495b1",
+          "same_bytes_as_source": false,
+          "actual_read": true
+        },
+        ".agents/skills/rw-literature/SKILL.md": {
+          "path": ".agents/skills/rw-literature/SKILL.md",
+          "source_path": "skills/rw-literature/SKILL.md",
+          "sha256": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+          "source_sha256": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+          "executed_sha256": "e330e77c16ca93b68f13c2b371a04fbd08f2a97d54d954d97a95d637eaaa3420",
+          "same_bytes_as_source": false,
+          "actual_read": true
+        },
+        ".agents/skills/rw-validation/SKILL.md": {
+          "path": ".agents/skills/rw-validation/SKILL.md",
+          "source_path": "skills/rw-validation/SKILL.md",
+          "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+          "source_sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+          "executed_sha256": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2",
+          "same_bytes_as_source": false,
+          "actual_read": true
+        },
+        ".agents/skills/rw-writing/SKILL.md": {
+          "path": ".agents/skills/rw-writing/SKILL.md",
+          "source_path": "skills/rw-writing/SKILL.md",
+          "sha256": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+          "source_sha256": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+          "executed_sha256": "51dd9195c40ea5003f666ffadf53da9717f19e6c8b6079b06065cb833f7cf8b3",
+          "same_bytes_as_source": false,
+          "actual_read": true
+        },
+        ".agents/skills/rw-review/SKILL.md": {
+          "path": ".agents/skills/rw-review/SKILL.md",
+          "source_path": "skills/rw-review/SKILL.md",
+          "sha256": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+          "source_sha256": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+          "executed_sha256": "1fe1c58f219b4b7a309fcb1be34d29727c4a2e643c130cd46f7e93db61ec02ae",
+          "same_bytes_as_source": false,
+          "actual_read": true
+        },
+        ".agents/skills/_rw-runtime/core/skill-bridge.md": {
+          "path": ".agents/skills/_rw-runtime/core/skill-bridge.md",
+          "source_path": "core/skill-bridge.md",
+          "sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          "source_sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          "executed_sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          "same_bytes_as_source": true,
+          "actual_read": true
+        },
+        ".agents/skills/_rw-runtime/core/protocol.md": {
+          "path": ".agents/skills/_rw-runtime/core/protocol.md",
+          "source_path": "core/protocol.md",
+          "sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          "source_sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          "executed_sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          "same_bytes_as_source": true,
+          "actual_read": true
+        },
+        ".agents/skills/_rw-runtime/profiles/disciplines/law.md": {
+          "path": ".agents/skills/_rw-runtime/profiles/disciplines/law.md",
+          "source_path": "profiles/disciplines/law.md",
+          "sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          "source_sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          "executed_sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          "same_bytes_as_source": true,
+          "actual_read": true
+        },
+        ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md": {
+          "path": ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md",
+          "source_path": "profiles/methods/legal-analysis.md",
+          "sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          "source_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          "executed_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          "same_bytes_as_source": true,
+          "actual_read": true
+        },
+        ".agents/skills/_rw-runtime/profiles/templates/legal-research.md": {
+          "path": ".agents/skills/_rw-runtime/profiles/templates/legal-research.md",
+          "source_path": "profiles/templates/legal-research.md",
+          "sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+          "source_sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+          "executed_sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+          "same_bytes_as_source": true,
+          "actual_read": true
+        }
+      },
+      "artifact_binding": {
+        "reviewed_source_resource_sha256": {
+          ".agents/skills/rw-workflow/SKILL.md": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+          ".agents/skills/rw-literature/SKILL.md": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+          ".agents/skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+          ".agents/skills/rw-writing/SKILL.md": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+          ".agents/skills/rw-review/SKILL.md": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+          ".agents/skills/_rw-runtime/core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          ".agents/skills/_rw-runtime/core/protocol.md": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          ".agents/skills/_rw-runtime/profiles/disciplines/law.md": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          ".agents/skills/_rw-runtime/profiles/templates/legal-research.md": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2"
+        },
+        "reviewed_executed_resource_sha256": {
+          ".agents/skills/rw-workflow/SKILL.md": "7ad0a0a6da2c05a169f484d5317337b857696aa4df99477541d8b1c1e2e495b1",
+          ".agents/skills/rw-literature/SKILL.md": "e330e77c16ca93b68f13c2b371a04fbd08f2a97d54d954d97a95d637eaaa3420",
+          ".agents/skills/rw-validation/SKILL.md": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2",
+          ".agents/skills/rw-writing/SKILL.md": "51dd9195c40ea5003f666ffadf53da9717f19e6c8b6079b06065cb833f7cf8b3",
+          ".agents/skills/rw-review/SKILL.md": "1fe1c58f219b4b7a309fcb1be34d29727c4a2e643c130cd46f7e93db61ec02ae",
+          ".agents/skills/_rw-runtime/core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          ".agents/skills/_rw-runtime/core/protocol.md": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          ".agents/skills/_rw-runtime/profiles/disciplines/law.md": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          ".agents/skills/_rw-runtime/profiles/templates/legal-research.md": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2"
+        },
+        "resource_key": "Actual project-relative destination; runtime_resources retains the corresponding maintained source_path.",
+        "source_and_executed_bytes_checked_independently": true,
+        "registered_records_match_actual_project": true,
+        "published_normalization_verified_against_raw_project": true
+      },
+      "execution_evidence": {
+        "record_count": 63,
+        "record_counts": {
+          "activities": 4,
+          "artifacts": 7,
+          "decisions": 0,
+          "evidence": 21,
+          "method_bindings": 1,
+          "relations": 14,
+          "sources": 11,
+          "statements": 5
+        },
+        "actual_recorded_commands": 9,
+        "observed_check_passed": true,
+        "observed_resume_needs_review": false,
+        "scientific_validity": "not-assessed",
+        "han_characters_in_published_report": 598,
+        "scope": "Read recorded commands and actual project registry/resources; did not reexecute the research or rerun the full software suite."
+      },
+      "limits": [
+        "Synthetic materials establish only the internally supplied scenario, not current law in any actual jurisdiction.",
+        "Independent reviewer is an AI agent, not a human legal expert or responsible tribunal.",
+        "Input chronology relies on the frozen-input and execution records; hashes establish byte identity rather than independent proof of recording time.",
+        "Presentation normalization is not relabeled as a new research execution."
+      ]
+    },
+    "comparative-precedent": {
+      "status": "pass-in-scope",
+      "reviewer": "Codex legal_sources_review (AI agent; separate from case author and task executor)",
+      "scope": "Only the frozen supplied legal scenario, current published outputs and actually recorded resources; software success is not the basis of the content judgment.",
+      "checks": [
+        {
+          "check": "forum-and-precedential-scope",
+          "result": "pass-in-scope",
+          "basis": [
+            "F-B §§1–3",
+            "J-A arts 3,9(1),(2)"
+          ],
+          "finding": "Correctly distinguishes the target eastern first-instance forum, other-region appellate opinions and a foreign supreme court. Neither foreign court title nor later date creates local binding force; the local art 9 conditions remain explicit."
+        },
+        {
+          "check": "withdrawal-and-version",
+          "result": "pass-in-scope",
+          "basis": [
+            "J-A art 10",
+            "A-EAST-2024-ORDER §§1–2",
+            "A-EAST-2023 archive notice §1"
+          ],
+          "finding": "The 2023 published opinion is treated as withdrawn for art 9 purposes despite its still-accessible copy. The unavailable replacement opinion is not reconstructed and withdrawal is not extended into a claim that every old idea was substantively rejected."
+        },
+        {
+          "check": "opinion-parts-and-pinpoints",
+          "result": "pass-in-scope",
+          "basis": [
+            "J-A art 11",
+            "J-B §§1–2",
+            "A-EAST-2023 §§12,16,20",
+            "B-SUPREME-2025 §§7,18,24,H1"
+          ],
+          "finding": "The disposition and necessary reasons are distinguished from the explicitly unnecessary broad-prohibition discussion and the reporter summary. The source identifiers, court, date, docket and supplied paragraphs are retained without invented pinpoint numbers."
+        },
+        {
+          "check": "materially-different-cases-and-comparison",
+          "result": "pass-in-scope",
+          "basis": [
+            "A-EAST-2025 §§8,11,14",
+            "A-WEST-2025 §§6,9",
+            "B-SUPREME-2025 §§7,18,24",
+            "F-B §§1,4"
+          ],
+          "finding": "Independent human review and specific reasons in the eastern case, confidential special-material facts in the western case, and different foreign statutory conditions limit the comparison. The output provides a substantive reasons-giving issue for the target without guaranteeing annulment or assuming identical substantive law."
+        },
+        {
+          "check": "subsequent-treatment-and-unknowns",
+          "result": "pass-in-scope",
+          "basis": [
+            "SEARCH-B §§1–5",
+            "notes/treatment-and-gaps.md",
+            "recording.json statement S-GAPS"
+          ],
+          "finding": "No-warning labels and two limited directories are not turned into confirmation that an opinion was never reversed. Missing replacement text, local substantive law, actual reasons/review facts and foreign art 31 are preserved, with concrete next retrieval steps. The later foreign decision is used as later-visible scholarly comparison rather than retroactively binding law."
+        },
+        {
+          "check": "claim-support-and-delivery",
+          "result": "pass-in-scope",
+          "basis": [
+            "D-B",
+            "notes/claim-audit.json",
+            "manuscript/report.md",
+            "review.md",
+            "recording.json statements S-FORUM,S-WITHDRAWN,S-TARGET,S-WEST,S-COMPARE,S-GAPS"
+          ],
+          "finding": "All five draft assertions receive scoped correction. The six registered interpretations agree with the ledger, treatment note, manuscript and self-review; the report does not abandon all analysis merely because materials are incomplete. It remains below 1200 Han characters."
+        }
+      ],
+      "issues": [],
+      "revision_history": [
+        {
+          "kind": "publication-link-presentation-only",
+          "identified_by": "maintainer before final review binding",
+          "review_result": "Confirmed independently: exactly three project-local Markdown input links in report.md were converted to labelled inline project-relative paths. No substantive research text, identifiers or pinpoints changed; actual project and command logs retain raw execution bytes.",
+          "new_research_execution": false,
+          "normalizations": [
+            {
+              "path": "manuscript/report.md",
+              "kind": "publication-link-presentation-only",
+              "raw_sha256": "592b47b8d80a0fc5f0c0374ddb70fed5fad3e6d672f262021b81e628e2ed5f86",
+              "published_sha256": "714d77889c5446afbba93ef87f94f86a9921e585cadc9e99d055f267d06cbe3d",
+              "changes": 3,
+              "description": "Project-local input Markdown links became labelled inline project-relative paths in the published replay snapshot, which does not duplicate case inputs. Source identities, pinpoints and substantive analysis are unchanged; actual project artifacts and command logs retain their original bytes."
+            }
+          ]
+        }
+      ],
+      "input_sha256": {
+        "draft.md": "508f649bbf79c1338fc02fb48227d3ada20de55b87cf0b05a409503ebb41e0f6",
+        "facts.md": "cb9d451edb2f8fda76abd4c55404af27be5b264996752b3ba2d883b2769c3e66",
+        "input-manifest.json": "2828bece37b60a3bfb2dd90d49b1b063f0176f4b9eee72a0f0e54cc72dfbc92c",
+        "sources/cases.md": "c61a160650785d6fcb7bf893a051f2ea306325e8d536530e4e61798234a6e6e7",
+        "sources/forum-rules.md": "17b88384f66c6123c5d6ef0cd08fe27216fd3a1866d7439f2012b3c16646981e",
+        "sources/retrieval-log.md": "2690f9b0e1124e215c01ef5ee18dcfc4867616c8fad8244a12b081da957ac00c",
+        "task.md": "89a3c5724349d0852a46252f78c52981baf2157f563efa8b31386ad3e3a9e0e3"
+      },
+      "published_output_sha256": {
+        "manuscript/report.md": "714d77889c5446afbba93ef87f94f86a9921e585cadc9e99d055f267d06cbe3d",
+        "notes/authority-table.md": "c822067193a74ee7a00d036d300dea46ea27f2b3b9e4533364467b8d74eb43be",
+        "notes/claim-audit.json": "089bfd753f2d3ebd7c981a422073b14a8f24d01b84d4c465378ea956933a9696",
+        "notes/issue.md": "39a7132671a1064d3ff9c69ea4973386f3048f1e142d8e5256fc76277752f273",
+        "notes/runtime-resources.json": "a61540756435506a2238eb5b8d6cab343bf21a3538d441928d1c0f83c6ef28ed",
+        "notes/treatment-and-gaps.md": "2a19ebf546890be94fda03cb97847c7576b9f7eda1cce7a4546d3a801368370e",
+        "review.md": "6822ad699942ca38dd032dac995116713cbb94281890a80b18c793d5286258af"
+      },
+      "raw_execution_output_sha256": {
+        "manuscript/report.md": "592b47b8d80a0fc5f0c0374ddb70fed5fad3e6d672f262021b81e628e2ed5f86",
+        "notes/authority-table.md": "c822067193a74ee7a00d036d300dea46ea27f2b3b9e4533364467b8d74eb43be",
+        "notes/claim-audit.json": "089bfd753f2d3ebd7c981a422073b14a8f24d01b84d4c465378ea956933a9696",
+        "notes/issue.md": "39a7132671a1064d3ff9c69ea4973386f3048f1e142d8e5256fc76277752f273",
+        "notes/runtime-resources.json": "a61540756435506a2238eb5b8d6cab343bf21a3538d441928d1c0f83c6ef28ed",
+        "notes/treatment-and-gaps.md": "2a19ebf546890be94fda03cb97847c7576b9f7eda1cce7a4546d3a801368370e",
+        "review.md": "6822ad699942ca38dd032dac995116713cbb94281890a80b18c793d5286258af"
+      },
+      "runtime_resources": {
+        ".agents/skills/rw-workflow/SKILL.md": {
+          "path": ".agents/skills/rw-workflow/SKILL.md",
+          "source_path": "skills/rw-workflow/SKILL.md",
+          "sha256": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+          "source_sha256": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+          "executed_sha256": "7ad0a0a6da2c05a169f484d5317337b857696aa4df99477541d8b1c1e2e495b1",
+          "same_bytes_as_source": false,
+          "actual_read": true
+        },
+        ".agents/skills/rw-literature/SKILL.md": {
+          "path": ".agents/skills/rw-literature/SKILL.md",
+          "source_path": "skills/rw-literature/SKILL.md",
+          "sha256": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+          "source_sha256": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+          "executed_sha256": "e330e77c16ca93b68f13c2b371a04fbd08f2a97d54d954d97a95d637eaaa3420",
+          "same_bytes_as_source": false,
+          "actual_read": true
+        },
+        ".agents/skills/rw-validation/SKILL.md": {
+          "path": ".agents/skills/rw-validation/SKILL.md",
+          "source_path": "skills/rw-validation/SKILL.md",
+          "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+          "source_sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+          "executed_sha256": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2",
+          "same_bytes_as_source": false,
+          "actual_read": true
+        },
+        ".agents/skills/rw-writing/SKILL.md": {
+          "path": ".agents/skills/rw-writing/SKILL.md",
+          "source_path": "skills/rw-writing/SKILL.md",
+          "sha256": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+          "source_sha256": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+          "executed_sha256": "51dd9195c40ea5003f666ffadf53da9717f19e6c8b6079b06065cb833f7cf8b3",
+          "same_bytes_as_source": false,
+          "actual_read": true
+        },
+        ".agents/skills/rw-review/SKILL.md": {
+          "path": ".agents/skills/rw-review/SKILL.md",
+          "source_path": "skills/rw-review/SKILL.md",
+          "sha256": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+          "source_sha256": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+          "executed_sha256": "1fe1c58f219b4b7a309fcb1be34d29727c4a2e643c130cd46f7e93db61ec02ae",
+          "same_bytes_as_source": false,
+          "actual_read": true
+        },
+        ".agents/skills/_rw-runtime/core/skill-bridge.md": {
+          "path": ".agents/skills/_rw-runtime/core/skill-bridge.md",
+          "source_path": "core/skill-bridge.md",
+          "sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          "source_sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          "executed_sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          "same_bytes_as_source": true,
+          "actual_read": true
+        },
+        ".agents/skills/_rw-runtime/core/protocol.md": {
+          "path": ".agents/skills/_rw-runtime/core/protocol.md",
+          "source_path": "core/protocol.md",
+          "sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          "source_sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          "executed_sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          "same_bytes_as_source": true,
+          "actual_read": true
+        },
+        ".agents/skills/_rw-runtime/profiles/disciplines/law.md": {
+          "path": ".agents/skills/_rw-runtime/profiles/disciplines/law.md",
+          "source_path": "profiles/disciplines/law.md",
+          "sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          "source_sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          "executed_sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          "same_bytes_as_source": true,
+          "actual_read": true
+        },
+        ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md": {
+          "path": ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md",
+          "source_path": "profiles/methods/legal-analysis.md",
+          "sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          "source_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          "executed_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          "same_bytes_as_source": true,
+          "actual_read": true
+        },
+        ".agents/skills/_rw-runtime/profiles/templates/legal-research.md": {
+          "path": ".agents/skills/_rw-runtime/profiles/templates/legal-research.md",
+          "source_path": "profiles/templates/legal-research.md",
+          "sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+          "source_sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+          "executed_sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+          "same_bytes_as_source": true,
+          "actual_read": true
+        }
+      },
+      "artifact_binding": {
+        "reviewed_source_resource_sha256": {
+          ".agents/skills/rw-workflow/SKILL.md": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+          ".agents/skills/rw-literature/SKILL.md": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+          ".agents/skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+          ".agents/skills/rw-writing/SKILL.md": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+          ".agents/skills/rw-review/SKILL.md": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+          ".agents/skills/_rw-runtime/core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          ".agents/skills/_rw-runtime/core/protocol.md": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          ".agents/skills/_rw-runtime/profiles/disciplines/law.md": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          ".agents/skills/_rw-runtime/profiles/templates/legal-research.md": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2"
+        },
+        "reviewed_executed_resource_sha256": {
+          ".agents/skills/rw-workflow/SKILL.md": "7ad0a0a6da2c05a169f484d5317337b857696aa4df99477541d8b1c1e2e495b1",
+          ".agents/skills/rw-literature/SKILL.md": "e330e77c16ca93b68f13c2b371a04fbd08f2a97d54d954d97a95d637eaaa3420",
+          ".agents/skills/rw-validation/SKILL.md": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2",
+          ".agents/skills/rw-writing/SKILL.md": "51dd9195c40ea5003f666ffadf53da9717f19e6c8b6079b06065cb833f7cf8b3",
+          ".agents/skills/rw-review/SKILL.md": "1fe1c58f219b4b7a309fcb1be34d29727c4a2e643c130cd46f7e93db61ec02ae",
+          ".agents/skills/_rw-runtime/core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          ".agents/skills/_rw-runtime/core/protocol.md": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          ".agents/skills/_rw-runtime/profiles/disciplines/law.md": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          ".agents/skills/_rw-runtime/profiles/templates/legal-research.md": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2"
+        },
+        "resource_key": "Actual project-relative destination; runtime_resources retains the corresponding maintained source_path.",
+        "source_and_executed_bytes_checked_independently": true,
+        "registered_records_match_actual_project": true,
+        "published_normalization_verified_against_raw_project": true
+      },
+      "execution_evidence": {
+        "record_count": 66,
+        "record_counts": {
+          "activities": 4,
+          "artifacts": 7,
+          "decisions": 0,
+          "evidence": 21,
+          "method_bindings": 2,
+          "relations": 15,
+          "sources": 11,
+          "statements": 6
+        },
+        "actual_recorded_commands": 9,
+        "observed_check_passed": true,
+        "observed_resume_needs_review": false,
+        "scientific_validity": "not-assessed",
+        "han_characters_in_published_report": 620,
+        "scope": "Read recorded commands and actual project registry/resources; did not reexecute the research or rerun the full software suite."
+      },
+      "limits": [
+        "Synthetic materials establish only the internally supplied scenario, not current law in any actual jurisdiction.",
+        "Independent reviewer is an AI agent, not a human legal expert or responsible tribunal.",
+        "Input chronology relies on the frozen-input and execution records; hashes establish byte identity rather than independent proof of recording time.",
+        "Presentation normalization is not relabeled as a new research execution."
+      ]
+    }
+  }
+}

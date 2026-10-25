@@ -79,7 +79,9 @@ class D3Evaluations(unittest.TestCase):
                     self.assertEqual(sha(ROOT/resource['source_path']), resource['sha256'])
                     self.assertEqual(resource['sha256'], review['artifact_binding']['reviewed_runtime_resource_sha256'][name])
         scenarios=json.loads((ROOT/'design/scenarios.json').read_text())['cases']
-        self.assertEqual(set(COVERAGE['original_scenarios']),{item['id'] for item in scenarios})
+        # D3 owns its frozen original scenarios. Later suites must account for
+        # additions in their own coverage, without rewriting this old review.
+        self.assertLessEqual(set(COVERAGE['original_scenarios']),{item['id'] for item in scenarios})
         for item in COVERAGE['original_scenarios'].values():
             self.assertEqual(item['status'],'pass-in-scope')
             if item['phase']=='d3':self.assertIn(item['case_id'],reviews['cases'])
@@ -87,8 +89,10 @@ class D3Evaluations(unittest.TestCase):
                 older=json.loads((ROOT/'evals/d2/independent-review.json').read_text())
                 self.assertEqual(older['cases'][item['case_id']]['status'],'pass')
         catalog=json.loads((ROOT/'design/catalog.json').read_text())
-        for method in catalog['methods']:
-            cases=COVERAGE['method_cases'][method['id']]
+        methods={item['id']:item for item in catalog['methods']}
+        for method_id,cases in COVERAGE['method_cases'].items():
+            self.assertIn(method_id,methods)
+            method=methods[method_id]
             self.assertEqual(method['implementation']['task_evidence']['cases'],cases)
             self.assertTrue(cases)
             for case in cases:

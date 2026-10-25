@@ -619,7 +619,7 @@ class ProjectSkillConnection(unittest.TestCase):
         result=self.invoke(runtime,'options',cwd=self.base)
         self.assertTrue(result['read_only'])
         self.assertEqual({x['id'] for x in result['disciplines']},
-                         {'natural-sciences','engineering','medicine-health','agriculture-life','humanities','social-sciences'})
+                         {'natural-sciences','engineering','medicine-health','agriculture-life','humanities','social-sciences','law'})
         self.assertIn('formal-theory',{x['id'] for x in result['methods']})
         self.assertEqual({x['id'] for x in result['skills'] if x['status']=='implemented'},SKILLS)
         for item in result['skills']:

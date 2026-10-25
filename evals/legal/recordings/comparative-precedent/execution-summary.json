@@ -1,0 +1,1152 @@
+{
+  "format_version": 1,
+  "case_id": "comparative-precedent",
+  "actor": "Codex legal_forward_executor（AI代理；分析、起草、自审均为同一执行者）",
+  "project": "PROJECT",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "自动信息拒绝：东区先例与跨法域比较",
+        "--interest",
+        "自动信息拒绝：东区先例与跨法域比较",
+        "--discipline",
+        "law",
+        "--method",
+        "legal-analysis",
+        "--language",
+        "zh"
+      ],
+      "exit_code": 0,
+      "result": {
+        "initialized": true,
+        "project_id": "P77b788b99007476abd3ba63ea28ee472",
+        "revision": 0,
+        "scientific_validity": "not-assessed",
+        "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "TOOLKIT/tools/connect_skills.py",
+        "install",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "installed": true,
+        "scope": "Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.",
+        "target": ".agents/skills",
+        "skills": [
+          "rw-workflow",
+          "rw-question",
+          "rw-literature",
+          "rw-innovation",
+          "rw-candidates",
+          "rw-validation",
+          "rw-writing",
+          "rw-review"
+        ],
+        "files": 50,
+        "payload_sha256": "2f6cd3f68b401e67a9c28ba6d33a1d4b29b83f4e82dda0d3377b4fca639d208d",
+        "global_installation": false,
+        "project_records_modified": false
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "TOOLKIT/tools/connect_skills.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "result": {
+        "passed": true,
+        "read_only": true,
+        "scope": "Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.",
+        "installed_integrity": true,
+        "source_version_matches": true,
+        "source_comparison_performed": true,
+        "target": ".agents/skills",
+        "skills": [
+          "rw-workflow",
+          "rw-question",
+          "rw-literature",
+          "rw-innovation",
+          "rw-candidates",
+          "rw-validation",
+          "rw-writing",
+          "rw-review"
+        ],
+        "files": 50,
+        "payload_sha256": "2f6cd3f68b401e67a9c28ba6d33a1d4b29b83f4e82dda0d3377b4fca639d208d",
+        "findings": []
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "register-batch",
+        "--root",
+        "PROJECT",
+        "--file",
+        "PROJECT-batch.json"
+      ],
+      "exit_code": 0,
+      "result": {
+        "registered": true,
+        "registered_count": 66,
+        "records": [
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "TASK",
+            "version": 1,
+            "revision": 1,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-TASK",
+            "version": 1,
+            "revision": 2,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "FACTS",
+            "version": 1,
+            "revision": 3,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-FACTS",
+            "version": 1,
+            "revision": 4,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "DRAFT",
+            "version": 1,
+            "revision": 5,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-DRAFT",
+            "version": 1,
+            "revision": 6,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "SEARCH",
+            "version": 1,
+            "revision": 7,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-SEARCH",
+            "version": 1,
+            "revision": 8,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "J-A",
+            "version": 1,
+            "revision": 9,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-J-A",
+            "version": 1,
+            "revision": 10,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "J-B",
+            "version": 1,
+            "revision": 11,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-J-B",
+            "version": 1,
+            "revision": 12,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "A-EAST-2023",
+            "version": 1,
+            "revision": 13,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-A-EAST-2023",
+            "version": 1,
+            "revision": 14,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "A-EAST-2024-ORDER",
+            "version": 1,
+            "revision": 15,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-A-EAST-2024-ORDER",
+            "version": 1,
+            "revision": 16,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "A-EAST-2025",
+            "version": 1,
+            "revision": 17,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-A-EAST-2025",
+            "version": 1,
+            "revision": 18,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "A-WEST-2025",
+            "version": 1,
+            "revision": 19,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-A-WEST-2025",
+            "version": 1,
+            "revision": 20,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "source",
+            "id": "B-SUPREME-2025",
+            "version": 1,
+            "revision": 21,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-B-SUPREME-2025",
+            "version": 1,
+            "revision": 22,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-RUNTIME-1",
+            "version": 1,
+            "revision": 23,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-RUNTIME-2",
+            "version": 1,
+            "revision": 24,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-RUNTIME-3",
+            "version": 1,
+            "revision": 25,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-RUNTIME-4",
+            "version": 1,
+            "revision": 26,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-RUNTIME-5",
+            "version": 1,
+            "revision": 27,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-RUNTIME-6",
+            "version": 1,
+            "revision": 28,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-RUNTIME-7",
+            "version": 1,
+            "revision": 29,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-RUNTIME-8",
+            "version": 1,
+            "revision": 30,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-RUNTIME-9",
+            "version": 1,
+            "revision": 31,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "evidence",
+            "id": "E-RUNTIME-10",
+            "version": 1,
+            "revision": 32,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "statement",
+            "id": "S-FORUM",
+            "version": 1,
+            "revision": 33,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "statement",
+            "id": "S-WITHDRAWN",
+            "version": 1,
+            "revision": 34,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "statement",
+            "id": "S-TARGET",
+            "version": 1,
+            "revision": 35,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "statement",
+            "id": "S-WEST",
+            "version": 1,
+            "revision": 36,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "statement",
+            "id": "S-COMPARE",
+            "version": 1,
+            "revision": 37,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "statement",
+            "id": "S-GAPS",
+            "version": 1,
+            "revision": 38,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-1",
+            "version": 1,
+            "revision": 39,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-2",
+            "version": 1,
+            "revision": 40,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-3",
+            "version": 1,
+            "revision": 41,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-4",
+            "version": 1,
+            "revision": 42,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-5",
+            "version": 1,
+            "revision": 43,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-6",
+            "version": 1,
+            "revision": 44,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-7",
+            "version": 1,
+            "revision": 45,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-8",
+            "version": 1,
+            "revision": 46,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-9",
+            "version": 1,
+            "revision": 47,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-10",
+            "version": 1,
+            "revision": 48,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-11",
+            "version": 1,
+            "revision": 49,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-12",
+            "version": 1,
+            "revision": 50,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-13",
+            "version": 1,
+            "revision": 51,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-14",
+            "version": 1,
+            "revision": 52,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "relation",
+            "id": "REL-15",
+            "version": 1,
+            "revision": 53,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "artifact",
+            "id": "A-ISSUE",
+            "version": 1,
+            "revision": 54,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "artifact",
+            "id": "A-AUTHORITY",
+            "version": 1,
+            "revision": 55,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "artifact",
+            "id": "A-DETAIL",
+            "version": 1,
+            "revision": 56,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "artifact",
+            "id": "A-AUDIT",
+            "version": 1,
+            "revision": 57,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "artifact",
+            "id": "A-RUNTIME",
+            "version": 1,
+            "revision": 58,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "artifact",
+            "id": "A-REPORT",
+            "version": 1,
+            "revision": 59,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "artifact",
+            "id": "A-REVIEW",
+            "version": 1,
+            "revision": 60,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "method-binding",
+            "id": "MB-CASE",
+            "version": 1,
+            "revision": 61,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "method-binding",
+            "id": "MB-COMPARATIVE",
+            "version": 1,
+            "revision": 62,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "activity",
+            "id": "ACT-READ",
+            "version": 1,
+            "revision": 63,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "activity",
+            "id": "ACT-ANALYZE",
+            "version": 1,
+            "revision": 64,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "activity",
+            "id": "ACT-WRITE",
+            "version": 1,
+            "revision": 65,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          },
+          {
+            "registered": true,
+            "kind": "activity",
+            "id": "ACT-REVIEW",
+            "version": 1,
+            "revision": 66,
+            "scientific_validity": "not-assessed",
+            "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+          }
+        ],
+        "revision": 66,
+        "scientific_validity": "not-assessed",
+        "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "result": {
+        "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+        "schema_version": "0.1",
+        "project_id": "P77b788b99007476abd3ba63ea28ee472",
+        "revision": 66,
+        "passed": true,
+        "read_only": true,
+        "scientific_validity": "not-assessed",
+        "governance_approval": "not-assessed",
+        "venue_compliance": "not-assessed",
+        "errors": [],
+        "warnings": [],
+        "findings": [],
+        "counts": {
+          "activities": 4,
+          "artifacts": 7,
+          "decisions": 0,
+          "evidence": 21,
+          "method_bindings": 2,
+          "relations": 15,
+          "sources": 11,
+          "statements": 6
+        },
+        "activities": [
+          {
+            "id": "ACT-ANALYZE",
+            "title": "执行有范围的法源解释与草稿命题核对",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-READ",
+            "title": "读取并定位离线法源、事实与项目方法资源",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-REVIEW",
+            "title": "执行者自审并交接具体下一项",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-WRITE",
+            "title": "撰写限定范围的研究短稿",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          }
+        ],
+        "cursor": {
+          "activity_id": null,
+          "next_action": "Clarify the current question, scope and next evidence check."
+        },
+        "checkpoint": {
+          "recorded": false,
+          "status": "not-recorded",
+          "changed": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "checkpoint",
+        "--root",
+        "PROJECT",
+        "--next-action",
+        "先补林案2024替代全文、本地普通申请理由条款及目标完整理由/复核/保密记录；按东行上25-11扩查后续季度、最高法院处理和复审/未公布覆盖，再评估第9条条件；比较部分补岚湾第31条与后续处理。",
+        "--note",
+        "同一AI执行者完成离线裁判/比较分析与自审，等待独立审阅；核心检查不认证法律结论。"
+      ],
+      "exit_code": 0,
+      "result": {
+        "checkpoint_saved": true,
+        "revision": 67,
+        "cursor": {
+          "activity_id": null,
+          "next_action": "先补林案2024替代全文、本地普通申请理由条款及目标完整理由/复核/保密记录；按东行上25-11扩查后续季度、最高法院处理和复审/未公布覆盖，再评估第9条条件；比较部分补岚湾第31条与后续处理。"
+        },
+        "scientific_validity": "not-assessed",
+        "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "status",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "result": {
+        "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+        "schema_version": "0.1",
+        "project_id": "P77b788b99007476abd3ba63ea28ee472",
+        "revision": 67,
+        "passed": true,
+        "read_only": true,
+        "scientific_validity": "not-assessed",
+        "governance_approval": "not-assessed",
+        "venue_compliance": "not-assessed",
+        "errors": [],
+        "warnings": [],
+        "findings": [],
+        "counts": {
+          "activities": 4,
+          "artifacts": 7,
+          "decisions": 0,
+          "evidence": 21,
+          "method_bindings": 2,
+          "relations": 15,
+          "sources": 11,
+          "statements": 6
+        },
+        "activities": [
+          {
+            "id": "ACT-ANALYZE",
+            "title": "执行有范围的法源解释与草稿命题核对",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-READ",
+            "title": "读取并定位离线法源、事实与项目方法资源",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-REVIEW",
+            "title": "执行者自审并交接具体下一项",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-WRITE",
+            "title": "撰写限定范围的研究短稿",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          }
+        ],
+        "cursor": {
+          "activity_id": null,
+          "next_action": "先补林案2024替代全文、本地普通申请理由条款及目标完整理由/复核/保密记录；按东行上25-11扩查后续季度、最高法院处理和复审/未公布覆盖，再评估第9条条件；比较部分补岚湾第31条与后续处理。"
+        },
+        "checkpoint": {
+          "recorded": true,
+          "status": "current",
+          "changed": []
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "result": {
+        "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+        "schema_version": "0.1",
+        "project_id": "P77b788b99007476abd3ba63ea28ee472",
+        "revision": 67,
+        "passed": true,
+        "read_only": true,
+        "scientific_validity": "not-assessed",
+        "governance_approval": "not-assessed",
+        "venue_compliance": "not-assessed",
+        "errors": [],
+        "warnings": [],
+        "findings": [],
+        "counts": {
+          "activities": 4,
+          "artifacts": 7,
+          "decisions": 0,
+          "evidence": 21,
+          "method_bindings": 2,
+          "relations": 15,
+          "sources": 11,
+          "statements": 6
+        },
+        "activities": [
+          {
+            "id": "ACT-ANALYZE",
+            "title": "执行有范围的法源解释与草稿命题核对",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-READ",
+            "title": "读取并定位离线法源、事实与项目方法资源",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-REVIEW",
+            "title": "执行者自审并交接具体下一项",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-WRITE",
+            "title": "撰写限定范围的研究短稿",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          }
+        ],
+        "cursor": {
+          "activity_id": null,
+          "next_action": "先补林案2024替代全文、本地普通申请理由条款及目标完整理由/复核/保密记录；按东行上25-11扩查后续季度、最高法院处理和复审/未公布覆盖，再评估第9条条件；比较部分补岚湾第31条与后续处理。"
+        },
+        "checkpoint": {
+          "recorded": true,
+          "status": "current",
+          "changed": []
+        },
+        "next_action": "先补林案2024替代全文、本地普通申请理由条款及目标完整理由/复核/保密记录；按东行上25-11扩查后续季度、最高法院处理和复审/未公布覆盖，再评估第9条条件；比较部分补岚湾第31条与后续处理。",
+        "needs_review": false,
+        "recovery_instruction": "Continue the recorded next action within its existing scope."
+      },
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "result": {
+        "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+        "schema_version": "0.1",
+        "project_id": "P77b788b99007476abd3ba63ea28ee472",
+        "revision": 67,
+        "passed": true,
+        "read_only": true,
+        "scientific_validity": "not-assessed",
+        "governance_approval": "not-assessed",
+        "venue_compliance": "not-assessed",
+        "errors": [],
+        "warnings": [],
+        "findings": [],
+        "counts": {
+          "activities": 4,
+          "artifacts": 7,
+          "decisions": 0,
+          "evidence": 21,
+          "method_bindings": 2,
+          "relations": 15,
+          "sources": 11,
+          "statements": 6
+        },
+        "activities": [
+          {
+            "id": "ACT-ANALYZE",
+            "title": "执行有范围的法源解释与草稿命题核对",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-READ",
+            "title": "读取并定位离线法源、事实与项目方法资源",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-REVIEW",
+            "title": "执行者自审并交接具体下一项",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "ACT-WRITE",
+            "title": "撰写限定范围的研究短稿",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          }
+        ],
+        "cursor": {
+          "activity_id": null,
+          "next_action": "先补林案2024替代全文、本地普通申请理由条款及目标完整理由/复核/保密记录；按东行上25-11扩查后续季度、最高法院处理和复审/未公布覆盖，再评估第9条条件；比较部分补岚湾第31条与后续处理。"
+        },
+        "checkpoint": {
+          "recorded": true,
+          "status": "current",
+          "changed": []
+        }
+      },
+      "stderr": ""
+    }
+  ],
+  "actual_cli_failures": [],
+  "normalizations": [
+    "原始命令/输出完整保留于私有临时目录；本发布副本将项目绝对路径替为PROJECT、工具包根替为TOOLKIT、私有运行目录替为PRIVATE_RUN。",
+    "研究输出与登记原本已使用相对路径，无正文改写或答案归一化。",
+    "runtime_resources.sha256/source_sha256是原始源文件字节；executed_sha256是实际读取的项目副本；SKILL安装重写链接引起差异。",
+    "Project-local input Markdown links became labelled inline project-relative paths in the published replay snapshot, which does not duplicate case inputs. Source identities, pinpoints and substantive analysis are unchanged; actual project artifacts and command logs retain their original bytes."
+  ],
+  "input_manifest_6_verified": {
+    "draft.md": true,
+    "facts.md": true,
+    "sources/cases.md": true,
+    "sources/forum-rules.md": true,
+    "sources/retrieval-log.md": true,
+    "task.md": true
+  },
+  "all_7_case_input_sha256": {
+    "draft.md": "508f649bbf79c1338fc02fb48227d3ada20de55b87cf0b05a409503ebb41e0f6",
+    "facts.md": "cb9d451edb2f8fda76abd4c55404af27be5b264996752b3ba2d883b2769c3e66",
+    "input-manifest.json": "2828bece37b60a3bfb2dd90d49b1b063f0176f4b9eee72a0f0e54cc72dfbc92c",
+    "sources/cases.md": "c61a160650785d6fcb7bf893a051f2ea306325e8d536530e4e61798234a6e6e7",
+    "sources/forum-rules.md": "17b88384f66c6123c5d6ef0cd08fe27216fd3a1866d7439f2012b3c16646981e",
+    "sources/retrieval-log.md": "2690f9b0e1124e215c01ef5ee18dcfc4867616c8fad8244a12b081da957ac00c",
+    "task.md": "89a3c5724349d0852a46252f78c52981baf2157f563efa8b31386ad3e3a9e0e3"
+  },
+  "copied_7_inputs_unchanged": true,
+  "record_counts": {
+    "activities": 4,
+    "artifacts": 7,
+    "decisions": 0,
+    "evidence": 21,
+    "method_bindings": 2,
+    "relations": 15,
+    "sources": 11,
+    "statements": 6
+  },
+  "report_han_characters": 620,
+  "observed_status": {
+    "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+    "schema_version": "0.1",
+    "project_id": "P77b788b99007476abd3ba63ea28ee472",
+    "revision": 67,
+    "passed": true,
+    "read_only": true,
+    "scientific_validity": "not-assessed",
+    "governance_approval": "not-assessed",
+    "venue_compliance": "not-assessed",
+    "errors": [],
+    "warnings": [],
+    "findings": [],
+    "counts": {
+      "activities": 4,
+      "artifacts": 7,
+      "decisions": 0,
+      "evidence": 21,
+      "method_bindings": 2,
+      "relations": 15,
+      "sources": 11,
+      "statements": 6
+    },
+    "activities": [
+      {
+        "id": "ACT-ANALYZE",
+        "title": "执行有范围的法源解释与草稿命题核对",
+        "declared_status": "done",
+        "effective_status": "done",
+        "stale_reasons": []
+      },
+      {
+        "id": "ACT-READ",
+        "title": "读取并定位离线法源、事实与项目方法资源",
+        "declared_status": "done",
+        "effective_status": "done",
+        "stale_reasons": []
+      },
+      {
+        "id": "ACT-REVIEW",
+        "title": "执行者自审并交接具体下一项",
+        "declared_status": "done",
+        "effective_status": "done",
+        "stale_reasons": []
+      },
+      {
+        "id": "ACT-WRITE",
+        "title": "撰写限定范围的研究短稿",
+        "declared_status": "done",
+        "effective_status": "done",
+        "stale_reasons": []
+      }
+    ],
+    "cursor": {
+      "activity_id": null,
+      "next_action": "先补林案2024替代全文、本地普通申请理由条款及目标完整理由/复核/保密记录；按东行上25-11扩查后续季度、最高法院处理和复审/未公布覆盖，再评估第9条条件；比较部分补岚湾第31条与后续处理。"
+    },
+    "checkpoint": {
+      "recorded": true,
+      "status": "current",
+      "changed": []
+    }
+  },
+  "material_failures_and_gaps": "见outputs/review.md；所给获取缺口并非本执行者实时检索失败。",
+  "independent_review": "pending",
+  "scientific_validity": "not-assessed",
+  "published_output_normalizations": [
+    {
+      "path": "manuscript/report.md",
+      "kind": "publication-link-presentation-only",
+      "raw_sha256": "592b47b8d80a0fc5f0c0374ddb70fed5fad3e6d672f262021b81e628e2ed5f86",
+      "published_sha256": "714d77889c5446afbba93ef87f94f86a9921e585cadc9e99d055f267d06cbe3d",
+      "changes": 3,
+      "description": "Project-local input Markdown links became labelled inline project-relative paths in the published replay snapshot, which does not duplicate case inputs. Source identities, pinpoints and substantive analysis are unchanged; actual project artifacts and command logs retain their original bytes."
+    }
+  ]
+}

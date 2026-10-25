@@ -1,0 +1,63 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pa3bb95ec91284c6d8d1332dabccc2d56",
+  "revision": 64,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 4,
+    "artifacts": 7,
+    "decisions": 0,
+    "evidence": 21,
+    "method_bindings": 1,
+    "relations": 14,
+    "sources": 11,
+    "statements": 5
+  },
+  "activities": [
+    {
+      "id": "ACT-ANALYZE",
+      "title": "执行有范围的法源解释与草稿命题核对",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-READ",
+      "title": "读取并定位离线法源、事实与项目方法资源",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-REVIEW",
+      "title": "执行者自审并交接具体下一项",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-WRITE",
+      "title": "撰写限定范围的研究短稿",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "先补原馆藏目录以核实普通开放分类，再取得N-A-2025正文、施行/修改清单及R-A-2019完整授权材料，逐条重查第7条与中央规则；若需救济判断，另补送达和救济规范。新输入保存新版本，复核受影响主张与活动后更新检查点。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

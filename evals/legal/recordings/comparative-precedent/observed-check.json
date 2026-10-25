@@ -1,0 +1,63 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P77b788b99007476abd3ba63ea28ee472",
+  "revision": 67,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 4,
+    "artifacts": 7,
+    "decisions": 0,
+    "evidence": 21,
+    "method_bindings": 2,
+    "relations": 15,
+    "sources": 11,
+    "statements": 6
+  },
+  "activities": [
+    {
+      "id": "ACT-ANALYZE",
+      "title": "执行有范围的法源解释与草稿命题核对",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-READ",
+      "title": "读取并定位离线法源、事实与项目方法资源",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-REVIEW",
+      "title": "执行者自审并交接具体下一项",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-WRITE",
+      "title": "撰写限定范围的研究短稿",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "先补林案2024替代全文、本地普通申请理由条款及目标完整理由/复核/保密记录；按东行上25-11扩查后续季度、最高法院处理和复审/未公布覆盖，再评估第9条条件；比较部分补岚湾第31条与后续处理。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

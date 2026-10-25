@@ -1,0 +1,1498 @@
+{
+  "format_version": 1,
+  "case_id": "comparative-precedent",
+  "kind": "normalized-final-project-replay",
+  "scope": "实际离线任务最终状态的规范化重放；所有法律材料为原创虚构，不认证真实法律或独立专业审阅。",
+  "executed_bundle_sha256": "2f6cd3f68b401e67a9c28ba6d33a1d4b29b83f4e82dda0d3377b4fca639d208d",
+  "project_init": {
+    "title": "自动信息拒绝：东区先例与跨法域比较",
+    "interest": "自动信息拒绝：东区先例与跨法域比较",
+    "disciplines": [
+      "law"
+    ],
+    "methods": [
+      "legal-analysis"
+    ],
+    "workflow_mode": "light",
+    "entry_activity": "question",
+    "language": "zh"
+  },
+  "case_files": {
+    "inputs/draft.md": "draft.md",
+    "inputs/facts.md": "facts.md",
+    "inputs/input-manifest.json": "input-manifest.json",
+    "inputs/sources/cases.md": "sources/cases.md",
+    "inputs/sources/forum-rules.md": "sources/forum-rules.md",
+    "inputs/sources/retrieval-log.md": "sources/retrieval-log.md",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "draft.md": "508f649bbf79c1338fc02fb48227d3ada20de55b87cf0b05a409503ebb41e0f6",
+    "facts.md": "cb9d451edb2f8fda76abd4c55404af27be5b264996752b3ba2d883b2769c3e66",
+    "input-manifest.json": "2828bece37b60a3bfb2dd90d49b1b063f0176f4b9eee72a0f0e54cc72dfbc92c",
+    "sources/cases.md": "c61a160650785d6fcb7bf893a051f2ea306325e8d536530e4e61798234a6e6e7",
+    "sources/forum-rules.md": "17b88384f66c6123c5d6ef0cd08fe27216fd3a1866d7439f2012b3c16646981e",
+    "sources/retrieval-log.md": "2690f9b0e1124e215c01ef5ee18dcfc4867616c8fad8244a12b081da957ac00c",
+    "task.md": "89a3c5724349d0852a46252f78c52981baf2157f563efa8b31386ad3e3a9e0e3"
+  },
+  "output_files": [
+    "manuscript/report.md",
+    "notes/authority-table.md",
+    "notes/claim-audit.json",
+    "notes/issue.md",
+    "notes/runtime-resources.json",
+    "notes/treatment-and-gaps.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "manuscript/report.md": "714d77889c5446afbba93ef87f94f86a9921e585cadc9e99d055f267d06cbe3d",
+    "notes/authority-table.md": "c822067193a74ee7a00d036d300dea46ea27f2b3b9e4533364467b8d74eb43be",
+    "notes/claim-audit.json": "089bfd753f2d3ebd7c981a422073b14a8f24d01b84d4c465378ea956933a9696",
+    "notes/issue.md": "39a7132671a1064d3ff9c69ea4973386f3048f1e142d8e5256fc76277752f273",
+    "notes/runtime-resources.json": "a61540756435506a2238eb5b8d6cab343bf21a3538d441928d1c0f83c6ef28ed",
+    "notes/treatment-and-gaps.md": "2a19ebf546890be94fda03cb97847c7576b9f7eda1cce7a4546d3a801368370e",
+    "review.md": "6822ad699942ca38dd032dac995116713cbb94281890a80b18c793d5286258af"
+  },
+  "output_normalizations": [
+    {
+      "path": "manuscript/report.md",
+      "kind": "publication-link-presentation-only",
+      "raw_sha256": "592b47b8d80a0fc5f0c0374ddb70fed5fad3e6d672f262021b81e628e2ed5f86",
+      "published_sha256": "714d77889c5446afbba93ef87f94f86a9921e585cadc9e99d055f267d06cbe3d",
+      "changes": 3,
+      "description": "Project-local input Markdown links became labelled inline project-relative paths in the published replay snapshot, which does not duplicate case inputs. Source identities, pinpoints and substantive analysis are unchanged; actual project artifacts and command logs retain their original bytes."
+    }
+  ],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "id": "TASK",
+        "title": "合成任务要求",
+        "locator": "inputs/task.md；全文",
+        "version": "冻结输入",
+        "content_access": "full",
+        "rights": "unknown",
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {},
+          "read_range": "全文",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-TASK",
+        "type": "synthetic-local-input",
+        "description": "合成任务要求；已读范围：全文",
+        "provenance": "source:TASK；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/task.md",
+          "extensions": {
+            "section": "全文"
+          }
+        },
+        "source_ids": [
+          "TASK"
+        ],
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "id": "FACTS",
+        "title": "合成事实范围",
+        "locator": "inputs/facts.md；F-B§1—4",
+        "version": "冻结输入",
+        "content_access": "full",
+        "rights": "unknown",
+        "limitations": "条件性合成事实；未取得原始案卷或其他事实证明。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {},
+          "read_range": "F-B§1—4",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-FACTS",
+        "type": "synthetic-local-input",
+        "description": "合成事实范围；已读范围：F-B§1—4",
+        "provenance": "source:FACTS；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/facts.md",
+          "extensions": {
+            "section": "F-B§1—4"
+          }
+        },
+        "source_ids": [
+          "FACTS"
+        ],
+        "limitations": "条件性合成事实；未取得原始案卷或其他事实证明。"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "id": "DRAFT",
+        "title": "待审合成草稿",
+        "locator": "inputs/draft.md；正文及说明",
+        "version": "冻结输入",
+        "content_access": "full",
+        "rights": "unknown",
+        "limitations": "待审对象，不作为法律结论依据。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {},
+          "read_range": "正文及说明",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-DRAFT",
+        "type": "synthetic-local-input",
+        "description": "待审合成草稿；已读范围：正文及说明",
+        "provenance": "source:DRAFT；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md",
+          "extensions": {
+            "section": "正文及说明"
+          }
+        },
+        "source_ids": [
+          "DRAFT"
+        ],
+        "limitations": "待审对象，不作为法律结论依据。"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "id": "SEARCH",
+        "title": "合成获取记录",
+        "locator": "inputs/sources/retrieval-log.md；SEARCH-B§1—5",
+        "version": "截止2026-06-30",
+        "content_access": "full",
+        "rights": "unknown",
+        "limitations": "任务包叙述的获取范围，非本执行者实时访问真实数据库。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {},
+          "read_range": "SEARCH-B§1—5",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-SEARCH",
+        "type": "synthetic-local-input",
+        "description": "合成获取记录；已读范围：SEARCH-B§1—5",
+        "provenance": "source:SEARCH；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/sources/retrieval-log.md",
+          "extensions": {
+            "section": "SEARCH-B§1—5"
+          }
+        },
+        "source_ids": [
+          "SEARCH"
+        ],
+        "limitations": "任务包叙述的获取范围，非本执行者实时访问真实数据库。"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "id": "J-A",
+        "title": "澜屿国行政审判组织规则",
+        "locator": "inputs/sources/forum-rules.md；第3、9—11条",
+        "version": "任务包所给节录",
+        "content_access": "partial",
+        "rights": "unknown",
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {
+            "jurisdiction": "澜屿国",
+            "issuing_body": "全国议事会",
+            "document_type": "中央组织规则",
+            "promulgated_on": "2021-11-02",
+            "effective_on": "2022-01-01"
+          },
+          "read_range": "第3、9—11条",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-J-A",
+        "type": "legal-source-excerpt",
+        "description": "澜屿国行政审判组织规则；已读范围：第3、9—11条",
+        "provenance": "source:J-A；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/sources/forum-rules.md",
+          "extensions": {
+            "section": "第3、9—11条"
+          }
+        },
+        "source_ids": [
+          "J-A"
+        ],
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "id": "J-B",
+        "title": "岚湾国案例报告编纂说明",
+        "locator": "inputs/sources/forum-rules.md；§1—2",
+        "version": "任务包所给节录",
+        "content_access": "partial",
+        "rights": "unknown",
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {
+            "jurisdiction": "岚湾国",
+            "issuing_body": null,
+            "document_type": "案例编纂说明",
+            "version_year": "2024",
+            "effective_on": null
+          },
+          "read_range": "§1—2",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-J-B",
+        "type": "legal-source-excerpt",
+        "description": "岚湾国案例报告编纂说明；已读范围：§1—2",
+        "provenance": "source:J-B；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/sources/forum-rules.md",
+          "extensions": {
+            "section": "§1—2"
+          }
+        },
+        "source_ids": [
+          "J-B"
+        ],
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "id": "A-EAST-2023",
+        "title": "林某诉汀城信息局旧公布意见",
+        "locator": "inputs/sources/cases.md；裁判§12、16、20及档案页§1",
+        "version": "任务包所给节录",
+        "content_access": "partial",
+        "rights": "unknown",
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {
+            "jurisdiction": "澜屿国东区",
+            "court": "东区上诉法院",
+            "level": "地区上诉",
+            "case_number": "东行上23-04",
+            "decision_date": "2023-04-10",
+            "treatment": "2024-02-02撤回并替代",
+            "binding_basis": "J-A第9—11条"
+          },
+          "read_range": "裁判§12、16、20及档案页§1",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-A-EAST-2023",
+        "type": "legal-source-excerpt",
+        "description": "林某诉汀城信息局旧公布意见；已读范围：裁判§12、16、20及档案页§1",
+        "provenance": "source:A-EAST-2023；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/sources/cases.md",
+          "extensions": {
+            "section": "裁判§12、16、20及档案页§1"
+          }
+        },
+        "source_ids": [
+          "A-EAST-2023"
+        ],
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "id": "A-EAST-2024-ORDER",
+        "title": "林案撤回及替代通知",
+        "locator": "inputs/sources/cases.md；通知§1—2",
+        "version": "任务包所给节录",
+        "content_access": "partial",
+        "rights": "unknown",
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {
+            "jurisdiction": "澜屿国东区",
+            "court": "东区上诉法院",
+            "case_number": "东行上23-04",
+            "decision_date": "2024-02-02",
+            "replacement_full_text": "not-obtained"
+          },
+          "read_range": "通知§1—2",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-A-EAST-2024-ORDER",
+        "type": "legal-source-excerpt",
+        "description": "林案撤回及替代通知；已读范围：通知§1—2",
+        "provenance": "source:A-EAST-2024-ORDER；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/sources/cases.md",
+          "extensions": {
+            "section": "通知§1—2"
+          }
+        },
+        "source_ids": [
+          "A-EAST-2024-ORDER"
+        ],
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "id": "A-EAST-2025",
+        "title": "许某诉川岸公开处",
+        "locator": "inputs/sources/cases.md；裁判§8、11、14",
+        "version": "任务包所给节录",
+        "content_access": "partial",
+        "rights": "unknown",
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {
+            "jurisdiction": "澜屿国东区",
+            "court": "东区上诉法院",
+            "level": "地区上诉",
+            "case_number": "东行上25-11",
+            "decision_date": "2025-03-03",
+            "precedential_status": "conditional; incomplete treatment search",
+            "binding_basis": "J-A第9条1款"
+          },
+          "read_range": "裁判§8、11、14",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-A-EAST-2025",
+        "type": "legal-source-excerpt",
+        "description": "许某诉川岸公开处；已读范围：裁判§8、11、14",
+        "provenance": "source:A-EAST-2025；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/sources/cases.md",
+          "extensions": {
+            "section": "裁判§8、11、14"
+          }
+        },
+        "source_ids": [
+          "A-EAST-2025"
+        ],
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "id": "A-WEST-2025",
+        "title": "唐某诉坡南资料署",
+        "locator": "inputs/sources/cases.md；裁判§6、9",
+        "version": "任务包所给节录",
+        "content_access": "partial",
+        "rights": "unknown",
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {
+            "jurisdiction": "澜屿国西区",
+            "court": "西区上诉法院",
+            "level": "地区上诉",
+            "case_number": "西行上25-08",
+            "decision_date": "2025-05-05",
+            "binding_basis": "J-A第9条2款；东区仅可考虑"
+          },
+          "read_range": "裁判§6、9",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-A-WEST-2025",
+        "type": "legal-source-excerpt",
+        "description": "唐某诉坡南资料署；已读范围：裁判§6、9",
+        "provenance": "source:A-WEST-2025；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/sources/cases.md",
+          "extensions": {
+            "section": "裁判§6、9"
+          }
+        },
+        "source_ids": [
+          "A-WEST-2025"
+        ],
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "id": "B-SUPREME-2025",
+        "title": "艾某诉岚湾交通署",
+        "locator": "inputs/sources/cases.md；裁判§7、18、24及报告摘要H1",
+        "version": "任务包所给节录",
+        "content_access": "partial",
+        "rights": "unknown",
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。",
+        "extensions": {
+          "synthetic": true,
+          "legal": {
+            "jurisdiction": "岚湾国",
+            "court": "岚湾国最高法院",
+            "level": "该国最高法院",
+            "case_number": "岚最审25-17",
+            "decision_date": "2025-09-09",
+            "binding_basis": "对澜屿国不依J-A第9条产生拘束；仅比较材料",
+            "statute_full_text": "公平法31条未取得"
+          },
+          "read_range": "裁判§7、18、24及报告摘要H1",
+          "retrieval_cutoff": "2026-06-30",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-B-SUPREME-2025",
+        "type": "legal-source-excerpt",
+        "description": "艾某诉岚湾交通署；已读范围：裁判§7、18、24及报告摘要H1",
+        "provenance": "source:B-SUPREME-2025；离线任务包实际读取；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": "inputs/sources/cases.md",
+          "extensions": {
+            "section": "裁判§7、18、24及报告摘要H1"
+          }
+        },
+        "source_ids": [
+          "B-SUPREME-2025"
+        ],
+        "limitations": "仅给定合成资料，不是完整原文或实时法律状态认证。"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-RUNTIME-1",
+        "type": "executed-research-guidance",
+        "description": "实际读取项目资源：.agents/skills/rw-workflow/SKILL.md",
+        "provenance": "skills/rw-workflow/SKILL.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": ".agents/skills/rw-workflow/SKILL.md"
+        },
+        "limitations": "指导与指纹依赖，不是法律材料或法律结论认证。",
+        "extensions": {
+          "source_sha256": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+          "executed_sha256": "7ad0a0a6da2c05a169f484d5317337b857696aa4df99477541d8b1c1e2e495b1"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-RUNTIME-2",
+        "type": "executed-research-guidance",
+        "description": "实际读取项目资源：.agents/skills/rw-literature/SKILL.md",
+        "provenance": "skills/rw-literature/SKILL.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": ".agents/skills/rw-literature/SKILL.md"
+        },
+        "limitations": "指导与指纹依赖，不是法律材料或法律结论认证。",
+        "extensions": {
+          "source_sha256": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+          "executed_sha256": "e330e77c16ca93b68f13c2b371a04fbd08f2a97d54d954d97a95d637eaaa3420"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-RUNTIME-3",
+        "type": "executed-research-guidance",
+        "description": "实际读取项目资源：.agents/skills/rw-validation/SKILL.md",
+        "provenance": "skills/rw-validation/SKILL.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": ".agents/skills/rw-validation/SKILL.md"
+        },
+        "limitations": "指导与指纹依赖，不是法律材料或法律结论认证。",
+        "extensions": {
+          "source_sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+          "executed_sha256": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-RUNTIME-4",
+        "type": "executed-research-guidance",
+        "description": "实际读取项目资源：.agents/skills/rw-writing/SKILL.md",
+        "provenance": "skills/rw-writing/SKILL.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": ".agents/skills/rw-writing/SKILL.md"
+        },
+        "limitations": "指导与指纹依赖，不是法律材料或法律结论认证。",
+        "extensions": {
+          "source_sha256": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+          "executed_sha256": "51dd9195c40ea5003f666ffadf53da9717f19e6c8b6079b06065cb833f7cf8b3"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-RUNTIME-5",
+        "type": "executed-research-guidance",
+        "description": "实际读取项目资源：.agents/skills/rw-review/SKILL.md",
+        "provenance": "skills/rw-review/SKILL.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": ".agents/skills/rw-review/SKILL.md"
+        },
+        "limitations": "指导与指纹依赖，不是法律材料或法律结论认证。",
+        "extensions": {
+          "source_sha256": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+          "executed_sha256": "1fe1c58f219b4b7a309fcb1be34d29727c4a2e643c130cd46f7e93db61ec02ae"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-RUNTIME-6",
+        "type": "executed-research-guidance",
+        "description": "实际读取项目资源：.agents/skills/_rw-runtime/core/skill-bridge.md",
+        "provenance": "core/skill-bridge.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": ".agents/skills/_rw-runtime/core/skill-bridge.md"
+        },
+        "limitations": "指导与指纹依赖，不是法律材料或法律结论认证。",
+        "extensions": {
+          "source_sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+          "executed_sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-RUNTIME-7",
+        "type": "executed-research-guidance",
+        "description": "实际读取项目资源：.agents/skills/_rw-runtime/core/protocol.md",
+        "provenance": "core/protocol.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": ".agents/skills/_rw-runtime/core/protocol.md"
+        },
+        "limitations": "指导与指纹依赖，不是法律材料或法律结论认证。",
+        "extensions": {
+          "source_sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+          "executed_sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-RUNTIME-8",
+        "type": "executed-research-guidance",
+        "description": "实际读取项目资源：.agents/skills/_rw-runtime/profiles/disciplines/law.md",
+        "provenance": "profiles/disciplines/law.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": ".agents/skills/_rw-runtime/profiles/disciplines/law.md"
+        },
+        "limitations": "指导与指纹依赖，不是法律材料或法律结论认证。",
+        "extensions": {
+          "source_sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+          "executed_sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-RUNTIME-9",
+        "type": "executed-research-guidance",
+        "description": "实际读取项目资源：.agents/skills/_rw-runtime/profiles/methods/legal-analysis.md",
+        "provenance": "profiles/methods/legal-analysis.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md"
+        },
+        "limitations": "指导与指纹依赖，不是法律材料或法律结论认证。",
+        "extensions": {
+          "source_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          "executed_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea"
+        }
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "id": "E-RUNTIME-10",
+        "type": "executed-research-guidance",
+        "description": "实际读取项目资源：.agents/skills/_rw-runtime/profiles/templates/legal-research.md",
+        "provenance": "profiles/templates/legal-research.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "location": {
+          "kind": "local",
+          "path": ".agents/skills/_rw-runtime/profiles/templates/legal-research.md"
+        },
+        "limitations": "指导与指纹依赖，不是法律材料或法律结论认证。",
+        "extensions": {
+          "source_sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+          "executed_sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2"
+        }
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "id": "S-FORUM",
+        "text": "本国第9条按地域、状态、必要规则及事实适配给拘束；没有跨国名称或日期层级。",
+        "type": "interpretive",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "role": "修订稿的条件性法律研究判断",
+        "work_status": "reviewed",
+        "use": "included",
+        "assessment": {
+          "status": "supported-in-scope",
+          "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+          "rationale": "已按所给条款/段落人工式文本核对；支持与限制见登记relation及claim-audit，未作独立专业认证。",
+          "reviewer": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        },
+        "formal_verification": {
+          "status": "not-applicable",
+          "scope": "文本法源解释",
+          "tool": "未使用形式化证明工具"
+        }
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "id": "S-WITHDRAWN",
+        "text": "林案2023旧公布意见已撤回，不再依第9条拘束；旧网页与摘要不恢复，替代全文缺失。",
+        "type": "interpretive",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "role": "修订稿的条件性法律研究判断",
+        "work_status": "reviewed",
+        "use": "included",
+        "assessment": {
+          "status": "supported-in-scope",
+          "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+          "rationale": "已按所给条款/段落人工式文本核对；支持与限制见登记relation及claim-audit，未作独立专业认证。",
+          "reviewer": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        },
+        "formal_verification": {
+          "status": "not-applicable",
+          "scope": "文本法源解释",
+          "tool": "未使用形式化证明工具"
+        }
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "id": "S-TARGET",
+        "text": "许案片段支持自动辅助不当然无效，并区分仅系统结论；目标材料未给出具体理由及复核情况，应研究其理由充分性，当前不能保证撤销。",
+        "type": "interpretive",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "role": "修订稿的条件性法律研究判断",
+        "work_status": "reviewed",
+        "use": "included",
+        "assessment": {
+          "status": "supported-in-scope",
+          "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+          "rationale": "已按所给条款/段落人工式文本核对；支持与限制见登记relation及claim-audit，未作独立专业认证。",
+          "reviewer": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        },
+        "formal_verification": {
+          "status": "not-applicable",
+          "scope": "文本法源解释",
+          "tool": "未使用形式化证明工具"
+        }
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "id": "S-WEST",
+        "text": "西区保密资料案仅可考虑，特殊事实/条文不能推广普通申请四字充分标准。",
+        "type": "interpretive",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "role": "修订稿的条件性法律研究判断",
+        "work_status": "reviewed",
+        "use": "included",
+        "assessment": {
+          "status": "supported-in-scope",
+          "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+          "rationale": "已按所给条款/段落人工式文本核对；支持与限制见登记relation及claim-audit，未作独立专业认证。",
+          "reviewer": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        },
+        "formal_verification": {
+          "status": "not-applicable",
+          "scope": "文本法源解释",
+          "tool": "未使用形式化证明工具"
+        }
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "id": "S-COMPARE",
+        "text": "岚湾案限错误资料、最低说明与更正机会及该国31条；可作功能比较，摘要和外国地位不能建立本地一律无效规则。",
+        "type": "interpretive",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "role": "修订稿的条件性法律研究判断",
+        "work_status": "reviewed",
+        "use": "included",
+        "assessment": {
+          "status": "supported-in-scope",
+          "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+          "rationale": "已按所给条款/段落人工式文本核对；支持与限制见登记relation及claim-audit，未作独立专业认证。",
+          "reviewer": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        },
+        "formal_verification": {
+          "status": "not-applicable",
+          "scope": "文本法源解释",
+          "tool": "未使用形式化证明工具"
+        }
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "id": "S-GAPS",
+        "text": "无负面标签与两份有限目录不足确认许案从未推翻；本地实体法、替代全文、目标其他理由及外国31条缺失限制结果判断。",
+        "type": "interpretive",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "role": "修订稿的条件性法律研究判断",
+        "work_status": "reviewed",
+        "use": "included",
+        "assessment": {
+          "status": "supported-in-scope",
+          "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+          "rationale": "已按所给条款/段落人工式文本核对；支持与限制见登记relation及claim-audit，未作独立专业认证。",
+          "reviewer": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        },
+        "formal_verification": {
+          "status": "not-applicable",
+          "scope": "文本法源解释",
+          "tool": "未使用形式化证明工具"
+        }
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-1",
+        "statement_id": "S-FORUM",
+        "evidence_id": "E-J-A",
+        "relation": "supports",
+        "rationale": "第3、9—11条区分层级地域和必要规则",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-2",
+        "statement_id": "S-FORUM",
+        "evidence_id": "E-FACTS",
+        "relation": "qualifies",
+        "rationale": "§3明确独立法域且无互认规则",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-3",
+        "statement_id": "S-WITHDRAWN",
+        "evidence_id": "E-A-EAST-2024-ORDER",
+        "relation": "supports",
+        "rationale": "通知§1—2明确撤回/替代",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-4",
+        "statement_id": "S-WITHDRAWN",
+        "evidence_id": "E-J-A",
+        "relation": "supports",
+        "rationale": "第10条规定撤回不再约束、第11条排除摘要",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-5",
+        "statement_id": "S-WITHDRAWN",
+        "evidence_id": "E-A-EAST-2023",
+        "relation": "qualifies",
+        "rationale": "旧§12/16可历史使用，§20旁论且旧页提示未合并后续",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-6",
+        "statement_id": "S-TARGET",
+        "evidence_id": "E-A-EAST-2025",
+        "relation": "supports",
+        "rationale": "§8/11/14拒绝一切辅助无效并保留系统结论区分",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-7",
+        "statement_id": "S-TARGET",
+        "evidence_id": "E-FACTS",
+        "relation": "qualifies",
+        "rationale": "目标只有四字说明，独立复核和其他渠道理由未知",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-8",
+        "statement_id": "S-TARGET",
+        "evidence_id": "E-SEARCH",
+        "relation": "qualifies",
+        "rationale": "完整普通信息实体法与替代全文缺失",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-9",
+        "statement_id": "S-WEST",
+        "evidence_id": "E-A-WEST-2025",
+        "relation": "supports",
+        "rationale": "§6/9限定特殊保密资料与初步条件",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-10",
+        "statement_id": "S-WEST",
+        "evidence_id": "E-J-A",
+        "relation": "supports",
+        "rationale": "第9条2款他区仅可考虑",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-11",
+        "statement_id": "S-COMPARE",
+        "evidence_id": "E-B-SUPREME-2025",
+        "relation": "supports",
+        "rationale": "§7/18/24给条文与条件；H1压缩范围",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-12",
+        "statement_id": "S-COMPARE",
+        "evidence_id": "E-J-B",
+        "relation": "supports",
+        "rationale": "§1—2区分摘要且不定跨国效力",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-13",
+        "statement_id": "S-COMPARE",
+        "evidence_id": "E-J-A",
+        "relation": "qualifies",
+        "rationale": "第9条2款不生跨国先例约束",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-14",
+        "statement_id": "S-GAPS",
+        "evidence_id": "E-SEARCH",
+        "relation": "supports",
+        "rationale": "§2—5明确全文、覆盖与事实缺口",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "id": "REL-15",
+        "statement_id": "S-GAPS",
+        "evidence_id": "E-FACTS",
+        "relation": "supports",
+        "rationale": "§4保留事实未知",
+        "scope": "仅本任务原创虚构离线材料；研究检索截止2026-06-30；不是现实法律意见。",
+        "limitations": "关系数量不构成法律有效性分数；精确位置由evidence/source与对照表返回。"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "id": "A-ISSUE",
+        "type": "research-scope",
+        "description": "notes/issue.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "path": "notes/issue.md",
+        "derived_from": [
+          "evidence:E-TASK",
+          "evidence:E-FACTS",
+          "evidence:E-DRAFT",
+          "evidence:E-SEARCH",
+          "evidence:E-J-A",
+          "evidence:E-J-B",
+          "evidence:E-A-EAST-2023",
+          "evidence:E-A-EAST-2024-ORDER",
+          "evidence:E-A-EAST-2025",
+          "evidence:E-A-WEST-2025",
+          "evidence:E-B-SUPREME-2025"
+        ]
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "id": "A-AUTHORITY",
+        "type": "authority-table",
+        "description": "notes/authority-table.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "path": "notes/authority-table.md",
+        "derived_from": [
+          "evidence:E-TASK",
+          "evidence:E-FACTS",
+          "evidence:E-DRAFT",
+          "evidence:E-SEARCH",
+          "evidence:E-J-A",
+          "evidence:E-J-B",
+          "evidence:E-A-EAST-2023",
+          "evidence:E-A-EAST-2024-ORDER",
+          "evidence:E-A-EAST-2025",
+          "evidence:E-A-WEST-2025",
+          "evidence:E-B-SUPREME-2025"
+        ]
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "id": "A-DETAIL",
+        "type": "legal-analysis",
+        "description": "notes/treatment-and-gaps.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "path": "notes/treatment-and-gaps.md",
+        "derived_from": [
+          "evidence:E-TASK",
+          "evidence:E-FACTS",
+          "evidence:E-DRAFT",
+          "evidence:E-SEARCH",
+          "evidence:E-J-A",
+          "evidence:E-J-B",
+          "evidence:E-A-EAST-2023",
+          "evidence:E-A-EAST-2024-ORDER",
+          "evidence:E-A-EAST-2025",
+          "evidence:E-A-WEST-2025",
+          "evidence:E-B-SUPREME-2025"
+        ]
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "id": "A-AUDIT",
+        "type": "claim-audit",
+        "description": "notes/claim-audit.json；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "path": "notes/claim-audit.json",
+        "derived_from": [
+          "statement:S-FORUM",
+          "statement:S-WITHDRAWN",
+          "statement:S-TARGET",
+          "statement:S-WEST",
+          "statement:S-COMPARE",
+          "statement:S-GAPS"
+        ]
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "id": "A-RUNTIME",
+        "type": "resource-provenance",
+        "description": "notes/runtime-resources.json；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "path": "notes/runtime-resources.json",
+        "derived_from": [
+          "evidence:E-TASK",
+          "evidence:E-FACTS",
+          "evidence:E-DRAFT",
+          "evidence:E-SEARCH",
+          "evidence:E-J-A",
+          "evidence:E-J-B",
+          "evidence:E-A-EAST-2023",
+          "evidence:E-A-EAST-2024-ORDER",
+          "evidence:E-A-EAST-2025",
+          "evidence:E-A-WEST-2025",
+          "evidence:E-B-SUPREME-2025"
+        ]
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "id": "A-REPORT",
+        "type": "manuscript",
+        "description": "manuscript/report.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "path": "manuscript/report.md",
+        "derived_from": [
+          "statement:S-FORUM",
+          "statement:S-WITHDRAWN",
+          "statement:S-TARGET",
+          "statement:S-WEST",
+          "statement:S-COMPARE",
+          "statement:S-GAPS"
+        ]
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "id": "A-REVIEW",
+        "type": "self-review",
+        "description": "review.md；Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）",
+        "path": "review.md",
+        "derived_from": [
+          "statement:S-FORUM",
+          "statement:S-WITHDRAWN",
+          "statement:S-TARGET",
+          "statement:S-WEST",
+          "statement:S-COMPARE",
+          "statement:S-GAPS"
+        ]
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "id": "MB-CASE",
+        "method_id": "legal-analysis",
+        "profile_version": "0.1",
+        "variant": "case-analysis",
+        "reason": "分清裁判结果、必要理由、旁论、摘要，核对撤回及有限后续检索。",
+        "applies_to": [
+          "artifact:A-AUTHORITY",
+          "artifact:A-DETAIL",
+          "artifact:A-REPORT",
+          "statement:S-FORUM",
+          "statement:S-WITHDRAWN",
+          "statement:S-TARGET",
+          "statement:S-WEST",
+          "statement:S-COMPARE",
+          "statement:S-GAPS"
+        ],
+        "extensions": {
+          "executed_profile": ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md",
+          "executed_profile_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          "discipline": "law",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "id": "MB-COMPARATIVE",
+        "method_id": "legal-analysis",
+        "profile_version": "0.1",
+        "variant": "comparative-law",
+        "reason": "分别依据两法域规则定位，将外国案作为有范围的制度功能比较。",
+        "applies_to": [
+          "artifact:A-AUTHORITY",
+          "artifact:A-DETAIL",
+          "artifact:A-REPORT",
+          "statement:S-FORUM",
+          "statement:S-WITHDRAWN",
+          "statement:S-TARGET",
+          "statement:S-WEST",
+          "statement:S-COMPARE",
+          "statement:S-GAPS"
+        ],
+        "extensions": {
+          "executed_profile": ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md",
+          "executed_profile_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+          "discipline": "law",
+          "performed_by": "Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）"
+        }
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT-READ",
+        "title": "读取并定位离线法源、事实与项目方法资源",
+        "status": "done",
+        "depends_on": [],
+        "inputs": [
+          "evidence:E-TASK",
+          "evidence:E-FACTS",
+          "evidence:E-DRAFT",
+          "evidence:E-SEARCH",
+          "evidence:E-J-A",
+          "evidence:E-J-B",
+          "evidence:E-A-EAST-2023",
+          "evidence:E-A-EAST-2024-ORDER",
+          "evidence:E-A-EAST-2025",
+          "evidence:E-A-WEST-2025",
+          "evidence:E-B-SUPREME-2025",
+          "evidence:E-RUNTIME-1",
+          "evidence:E-RUNTIME-2",
+          "evidence:E-RUNTIME-3",
+          "evidence:E-RUNTIME-4",
+          "evidence:E-RUNTIME-5",
+          "evidence:E-RUNTIME-6",
+          "evidence:E-RUNTIME-7",
+          "evidence:E-RUNTIME-8",
+          "evidence:E-RUNTIME-9",
+          "evidence:E-RUNTIME-10"
+        ],
+        "outputs": [
+          "artifact:A-ISSUE",
+          "artifact:A-AUTHORITY",
+          "artifact:A-RUNTIME"
+        ],
+        "note": "实际执行者：Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）；读取全部给定片段，未声称取得文书全文或真实查库。"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT-ANALYZE",
+        "title": "执行有范围的法源解释与草稿命题核对",
+        "status": "done",
+        "depends_on": [
+          "ACT-READ"
+        ],
+        "inputs": [
+          "evidence:E-TASK",
+          "evidence:E-FACTS",
+          "evidence:E-DRAFT",
+          "evidence:E-SEARCH",
+          "evidence:E-J-A",
+          "evidence:E-J-B",
+          "evidence:E-A-EAST-2023",
+          "evidence:E-A-EAST-2024-ORDER",
+          "evidence:E-A-EAST-2025",
+          "evidence:E-A-WEST-2025",
+          "evidence:E-B-SUPREME-2025",
+          "evidence:E-RUNTIME-1",
+          "evidence:E-RUNTIME-2",
+          "evidence:E-RUNTIME-3",
+          "evidence:E-RUNTIME-4",
+          "evidence:E-RUNTIME-5",
+          "evidence:E-RUNTIME-6",
+          "evidence:E-RUNTIME-7",
+          "evidence:E-RUNTIME-8",
+          "evidence:E-RUNTIME-9",
+          "evidence:E-RUNTIME-10",
+          "artifact:A-ISSUE",
+          "artifact:A-AUTHORITY"
+        ],
+        "outputs": [
+          "artifact:A-DETAIL",
+          "artifact:A-AUDIT",
+          "statement:S-FORUM",
+          "statement:S-WITHDRAWN",
+          "statement:S-TARGET",
+          "statement:S-WEST",
+          "statement:S-COMPARE",
+          "statement:S-GAPS"
+        ],
+        "note": "实际执行者：Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）；原始法源文件与实际项目legal-analysis画像是直接输入；保留竞争解释与缺失正文。"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT-WRITE",
+        "title": "撰写限定范围的研究短稿",
+        "status": "done",
+        "depends_on": [
+          "ACT-ANALYZE"
+        ],
+        "inputs": [
+          "artifact:A-DETAIL",
+          "artifact:A-AUDIT",
+          "artifact:A-AUTHORITY"
+        ],
+        "outputs": [
+          "artifact:A-REPORT"
+        ],
+        "note": "实际执行者：Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）；汉字长度按实际输出计，未许诺救济结果或全称法律结论。"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT-REVIEW",
+        "title": "执行者自审并交接具体下一项",
+        "status": "done",
+        "depends_on": [
+          "ACT-WRITE"
+        ],
+        "inputs": [
+          "artifact:A-REPORT",
+          "artifact:A-AUDIT",
+          "artifact:A-DETAIL",
+          "evidence:E-TASK",
+          "evidence:E-FACTS",
+          "evidence:E-DRAFT",
+          "evidence:E-SEARCH",
+          "evidence:E-J-A",
+          "evidence:E-J-B",
+          "evidence:E-A-EAST-2023",
+          "evidence:E-A-EAST-2024-ORDER",
+          "evidence:E-A-EAST-2025",
+          "evidence:E-A-WEST-2025",
+          "evidence:E-B-SUPREME-2025",
+          "evidence:E-RUNTIME-1",
+          "evidence:E-RUNTIME-2",
+          "evidence:E-RUNTIME-3",
+          "evidence:E-RUNTIME-4",
+          "evidence:E-RUNTIME-5",
+          "evidence:E-RUNTIME-6",
+          "evidence:E-RUNTIME-7",
+          "evidence:E-RUNTIME-8",
+          "evidence:E-RUNTIME-9",
+          "evidence:E-RUNTIME-10"
+        ],
+        "outputs": [
+          "artifact:A-REVIEW"
+        ],
+        "note": "实际执行者：Codex legal_forward_executor（AI代理；同一执行者分析与自审，非人类或独立审阅）；这是同一执行者的自审，不是独立审阅或法律认证。"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 4,
+    "artifacts": 7,
+    "decisions": 0,
+    "evidence": 21,
+    "method_bindings": 2,
+    "relations": 15,
+    "sources": 11,
+    "statements": 6
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "先补林案2024替代全文、本地普通申请理由条款及目标完整理由/复核/保密记录；按东行上25-11扩查后续季度、最高法院处理和复审/未公布覆盖，再评估第9条条件；比较部分补岚湾第31条与后续处理。"
+  },
+  "runtime_resources": {
+    ".agents/skills/rw-workflow/SKILL.md": {
+      "path": ".agents/skills/rw-workflow/SKILL.md",
+      "source_path": "skills/rw-workflow/SKILL.md",
+      "sha256": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+      "source_sha256": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952",
+      "executed_sha256": "7ad0a0a6da2c05a169f484d5317337b857696aa4df99477541d8b1c1e2e495b1",
+      "same_bytes_as_source": false,
+      "actual_read": true
+    },
+    ".agents/skills/rw-literature/SKILL.md": {
+      "path": ".agents/skills/rw-literature/SKILL.md",
+      "source_path": "skills/rw-literature/SKILL.md",
+      "sha256": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+      "source_sha256": "f1079430301b0b3408cf82b3d420171b1943e170d048173b966fc3192d6e32a2",
+      "executed_sha256": "e330e77c16ca93b68f13c2b371a04fbd08f2a97d54d954d97a95d637eaaa3420",
+      "same_bytes_as_source": false,
+      "actual_read": true
+    },
+    ".agents/skills/rw-validation/SKILL.md": {
+      "path": ".agents/skills/rw-validation/SKILL.md",
+      "source_path": "skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "source_sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "executed_sha256": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2",
+      "same_bytes_as_source": false,
+      "actual_read": true
+    },
+    ".agents/skills/rw-writing/SKILL.md": {
+      "path": ".agents/skills/rw-writing/SKILL.md",
+      "source_path": "skills/rw-writing/SKILL.md",
+      "sha256": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+      "source_sha256": "06bde9afb788141168f3f1c68dfa66cab0295efcf0fe35d164f203753feecb09",
+      "executed_sha256": "51dd9195c40ea5003f666ffadf53da9717f19e6c8b6079b06065cb833f7cf8b3",
+      "same_bytes_as_source": false,
+      "actual_read": true
+    },
+    ".agents/skills/rw-review/SKILL.md": {
+      "path": ".agents/skills/rw-review/SKILL.md",
+      "source_path": "skills/rw-review/SKILL.md",
+      "sha256": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+      "source_sha256": "e1dc4d633603a263c7eaa19163da478616e0ade45f0fbab44385a69643964292",
+      "executed_sha256": "1fe1c58f219b4b7a309fcb1be34d29727c4a2e643c130cd46f7e93db61ec02ae",
+      "same_bytes_as_source": false,
+      "actual_read": true
+    },
+    ".agents/skills/_rw-runtime/core/skill-bridge.md": {
+      "path": ".agents/skills/_rw-runtime/core/skill-bridge.md",
+      "source_path": "core/skill-bridge.md",
+      "sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+      "source_sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+      "executed_sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+      "same_bytes_as_source": true,
+      "actual_read": true
+    },
+    ".agents/skills/_rw-runtime/core/protocol.md": {
+      "path": ".agents/skills/_rw-runtime/core/protocol.md",
+      "source_path": "core/protocol.md",
+      "sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+      "source_sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+      "executed_sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d",
+      "same_bytes_as_source": true,
+      "actual_read": true
+    },
+    ".agents/skills/_rw-runtime/profiles/disciplines/law.md": {
+      "path": ".agents/skills/_rw-runtime/profiles/disciplines/law.md",
+      "source_path": "profiles/disciplines/law.md",
+      "sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+      "source_sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+      "executed_sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+      "same_bytes_as_source": true,
+      "actual_read": true
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md": {
+      "path": ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md",
+      "source_path": "profiles/methods/legal-analysis.md",
+      "sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+      "source_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+      "executed_sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+      "same_bytes_as_source": true,
+      "actual_read": true
+    },
+    ".agents/skills/_rw-runtime/profiles/templates/legal-research.md": {
+      "path": ".agents/skills/_rw-runtime/profiles/templates/legal-research.md",
+      "source_path": "profiles/templates/legal-research.md",
+      "sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+      "source_sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+      "executed_sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+      "same_bytes_as_source": true,
+      "actual_read": true
+    }
+  },
+  "raw_execution_output_sha256": {
+    "manuscript/report.md": "592b47b8d80a0fc5f0c0374ddb70fed5fad3e6d672f262021b81e628e2ed5f86",
+    "notes/authority-table.md": "c822067193a74ee7a00d036d300dea46ea27f2b3b9e4533364467b8d74eb43be",
+    "notes/claim-audit.json": "089bfd753f2d3ebd7c981a422073b14a8f24d01b84d4c465378ea956933a9696",
+    "notes/issue.md": "39a7132671a1064d3ff9c69ea4973386f3048f1e142d8e5256fc76277752f273",
+    "notes/runtime-resources.json": "a61540756435506a2238eb5b8d6cab343bf21a3538d441928d1c0f83c6ef28ed",
+    "notes/treatment-and-gaps.md": "2a19ebf546890be94fda03cb97847c7576b9f7eda1cce7a4546d3a801368370e",
+    "review.md": "6822ad699942ca38dd032dac995116713cbb94281890a80b18c793d5286258af"
+  }
+}
