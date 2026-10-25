@@ -20,7 +20,8 @@ from core import __version__
 DIRECTORIES = ('core', 'tools', 'skills', 'profiles', 'design', 'docs',
                'examples', 'evals', 'tests', 'provenance', '.github')
 TOP_FILES = ('README.md', 'README.en.md', 'LICENSE', 'CONTRIBUTING.md',
-             'SECURITY.md', 'CITATION.cff', '.gitignore', '中文介绍与使用说明.md')
+             'SECURITY.md', 'CITATION.cff', '.gitignore', '中文介绍与使用说明.md',
+             'USER_GUIDE.en.md')
 REQUIRED = ('README.md', 'LICENSE', 'CONTRIBUTING.md', 'SECURITY.md', 'CITATION.cff',
             '.github/workflows/check.yml', 'core/cli.py', 'core/bundle.py',
             'tools/research.py', 'tools/connect_skills.py', 'tools/check_core.py',

@@ -1,8 +1,10 @@
 # Research Workflow Template
 
-[中文](README.md) · [Chinese introduction and user guide](中文介绍与使用说明.md)
+[中文](README.md) · [English user guide](USER_GUIDE.en.md) · [中文使用说明](中文介绍与使用说明.md)
 
 A local toolkit for research-agent workflows across sciences, engineering, health, agriculture, humanities and social sciences. Eight skills guide question formation, literature work, innovation, candidate comparison, method validation, writing and review. A standard-library Python CLI records statements, sources, evidence, artifacts and recovery state; the host assistant performs the research work.
+
+The [English user guide](USER_GUIDE.en.md) covers first use, all eight skills, daily commands, recovery, and upgrades. Detailed technical documents under `docs/` are currently in Chinese.
 
 Only one current edition is maintained. The distribution is named `research-workflow-template.zip`, with content identity recorded by the source inventory and SHA-256. Record, schema and dependency versions remain where required for compatibility and traceability.
 
