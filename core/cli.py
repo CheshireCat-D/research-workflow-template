@@ -108,7 +108,7 @@ def main(argv=None):
                         (toolkit.parent / item['id'] / 'SKILL.md').is_file()):
                     item['entrypoint'] = '../' + item['id'] + '/SKILL.md'
             result = {'passed': True, 'read_only': True, 'version': __version__,
-                      'scope': 'Stable configuration choices and declared guidance availability only.',
+                      'scope': 'Stable choices, declared guidance and explicit recorded binding availability only; not task validity.',
                       'resource_base': 'toolkit-root',
                       'scientific_validity': 'not-assessed',
                       'disciplines': choices['disciplines'], 'methods': choices['methods'],

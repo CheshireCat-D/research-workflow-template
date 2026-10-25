@@ -1,6 +1,6 @@
 # 核心用法
 
-本页说明当前元数据与恢复接口。需要让宿主执行科研技能时，另按 [技能与方法接入](08-skills-and-methods.md) 显式接入项目；本页的两个示例仅演示登记与恢复。
+本页说明当前元数据与恢复接口。需要让宿主执行科研技能时，另按 [技能与方法接入](08-skills-and-methods.md) 显式接入项目；本页的示例演示登记与恢复，不认证研究结论。
 
 本页从模板仓库根目录运行命令。需要 Python 3.11+，仅依赖标准库；写入锁使用 `fcntl`，平台目标为 macOS/Linux。当前实际测试平台以验证记录为准。命令中的新项目路径可更换，不需要个人目录、数据库账户或模型密钥。
 
@@ -8,6 +8,7 @@
 
 | 命令 | 作用 | 是否写入项目 |
 |---|---|---|
+| `options` | 查看稳定ID、指导范围与显式任务变体记录摘要 | 否 |
 | `init` | 创建全新项目；已存在的目标不覆盖 | 是 |
 | `register` | 登记一个 JSON 对象，检查字段、引用和本地路径 | 是 |
 | `register-batch` | 顺序校验一个记录数组，在一次写锁内整体登记；任一项失败不提交 | 是 |
@@ -22,6 +23,8 @@
 `show`、`check`、`status`、`resume` 不创建锁、不更新文件、不自动修复记录。保存检查报告时将输出重定向至项目外，例如 `check --root ../my-research > ../my-research-check.json`；重定向本身是调用者写文件，不属于只读命令内部行为。
 
 单条和批量登记均可用 `--file -` 从标准输入读取 JSON，例如 `python3 tools/research.py register --root ../demo-formal --kind statement --file - < examples/synthetic/math-statement.json`。文件和标准输入共用严格 UTF-8 JSON 校验及 8 MiB **字节**上限，拒绝重复键、NaN／Infinity及非法编码。输入只是数据，不会被当作命令执行。
+
+`options` 不需要项目。每个方法的 `implementation.variant_evidence` 区分 `guidance_declared`（画像声明）、`explicit_case_bindings`（记录中显式填写变体的任务）、`method_only_cases`（只记录方法的任务）和 `unavailable_cases`（记录缺失或不可读）。有显式记录不等于整个变体已验证；没有变体字段也不等于该工作没有执行。摘要仅查看登记，内容支持与审阅范围另查相应任务证据。复制到研究项目的运行时不携带 `evals/`，其摘要为 `not-included-in-project-runtime`，不能借用完整发行包的记录假装已在项目内核对。
 
 ## 数学候选命题：从零到恢复
 

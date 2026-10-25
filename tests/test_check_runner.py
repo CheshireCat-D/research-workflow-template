@@ -1,5 +1,6 @@
 """Check-runner completion, timeout reporting and CLI timeout validation."""
 from pathlib import Path
+from copy import deepcopy
 import contextlib
 import importlib.util
 import io
@@ -34,6 +35,111 @@ class CheckRunnerTests(unittest.TestCase):
         for field in invalid:
             with self.subTest(field=field), self.assertRaises(ValueError):
                 runner.skill_metadata('---\nname: rw-example\n' + field + '---\n')
+
+    def test_frontmatter_rejects_ambiguous_yaml_plain_scalars_and_syntax(self):
+        invalid = ('123', '-1.5', '.Inf', '+.inf', '.NaN', '0xFF', '1e3', '12:34',
+                   'True', 'YES', 'off', 'NULL', '~', '2026-10-25',
+                   '2026-10-25T09:15:00Z', 'true # boolean comment',
+                   'Validate: research arguments', 'Read # a comment', '- item',
+                   '@reserved', '%directive', '`code`', ']closing', '}closing', ',flow')
+        for value in invalid:
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                runner.skill_metadata('---\nname: rw-example\ndescription: ' + value + '\n---\n')
+
+    def test_frontmatter_keeps_quoted_scalars_and_safe_prose_as_strings(self):
+        examples = {
+            '"123"': '123',
+            "'true # literal'": 'true # literal',
+            '"Validate: research arguments"': 'Validate: research arguments',
+            'Review C# and https://example.invalid/source': 'Review C# and https://example.invalid/source',
+            '2026-10-25 migration guide': '2026-10-25 migration guide',
+            '检查数学与法学论证：保留限定': '检查数学与法学论证：保留限定',
+        }
+        for value, expected in examples.items():
+            with self.subTest(value=value):
+                fields = runner.skill_metadata('---\nname: rw-example\ndescription: ' + value + '\n---\n')
+                self.assertEqual(fields['description'], expected)
+
+    def test_catalog_rejects_duplicate_stable_ids_without_dictionary_collapse(self):
+        catalog = json.loads((ROOT/'design/catalog.json').read_text())
+        cases = json.loads((ROOT/'design/scenarios.json').read_text())['cases']
+        self.assertEqual(runner.catalog_reference_errors(catalog, cases), [])
+        for group, label in (('disciplines', 'discipline'), ('methods', 'method'), ('skills', 'skill')):
+            with self.subTest(group=group):
+                changed = deepcopy(catalog)
+                changed[group].append(deepcopy(changed[group][0]))
+                errors = runner.catalog_reference_errors(changed, cases)
+                self.assertIn('Repeated '+label+' ID: '+changed[group][0]['id'], errors)
+        duplicate_cases = deepcopy(cases) + [deepcopy(cases[0])]
+        self.assertIn('Repeated scenario ID: '+cases[0]['id'],
+                      runner.catalog_reference_errors(catalog, duplicate_cases))
+
+    def test_catalog_rejects_bad_suggestions_and_variant_lists(self):
+        catalog = json.loads((ROOT/'design/catalog.json').read_text())
+        cases = json.loads((ROOT/'design/scenarios.json').read_text())['cases']
+        for mutation, expected in (
+            ('unknown-suggestion', 'Unknown suggested method: '),
+            ('repeated-suggestion', 'Repeated suggested methods: '),
+            ('repeated-variant', 'Repeated method variants: '),
+            ('repeated-supported', 'Repeated supported variants: '),
+            ('unknown-supported', 'Unknown supported variant: '),
+        ):
+            with self.subTest(mutation=mutation):
+                changed = deepcopy(catalog)
+                discipline = changed['disciplines'][0]
+                method = changed['methods'][0]
+                if mutation == 'unknown-suggestion':
+                    discipline['suggested_methods'].append('not-a-real-method')
+                elif mutation == 'repeated-suggestion':
+                    discipline['suggested_methods'].append(discipline['suggested_methods'][0])
+                elif mutation == 'repeated-variant':
+                    method['variants'].append(method['variants'][0])
+                elif mutation == 'repeated-supported':
+                    method['implementation']['supported_variants'].append(method['implementation']['supported_variants'][0])
+                else:
+                    method['implementation']['supported_variants'].append('not-a-real-variant')
+                errors = runner.catalog_reference_errors(changed, cases)
+                self.assertTrue(any(error.startswith(expected) for error in errors), errors)
+
+    def test_ignored_generated_and_private_trees_do_not_break_source_links(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root/'guide.md').write_text('# Maintained guide\n')
+            for name in ('.git', '.venv', 'venv', 'build', 'dist', '__pycache__',
+                         '.agents', '.research', 'private-data', 'local-config', 'node_modules'):
+                folder = root/name
+                folder.mkdir()
+                (folder/'generated.md').write_text('[Generated only](missing.md)\n')
+                (folder/'generated.py').write_text('not valid Python!!!\n')
+            self.assertEqual(runner.source_link_errors(root), [])
+            self.assertEqual(list(runner.source_files(root, '.py')), [])
+            (root/'docs').mkdir()
+            (root/'docs'/'maintained.md').write_text('[Missing maintained target](missing.md)\n')
+            self.assertEqual(runner.source_link_errors(root),
+                             [{'document': 'docs/maintained.md', 'link': 'missing.md'}])
+
+    def test_bad_catalog_file_fails_the_real_static_check_even_when_suite_succeeds(self):
+        # A real temporary catalog is read by main; only the expensive unittest
+        # child is stubbed. Existing resources are copied without Git/build data.
+        from tools.release_package import inventory
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            for name, data in inventory(ROOT).items():
+                target = root/name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(data)
+            path = root/'design/catalog.json'
+            catalog = json.loads(path.read_text())
+            catalog['disciplines'][0]['suggested_methods'].append('not-a-real-method')
+            path.write_text(json.dumps(catalog))
+            complete = subprocess.CompletedProcess(['unittest'], 0, '', 'Ran 2 tests in 0.001s\n\nOK\n')
+            with mock.patch.object(runner, 'ROOT', root):
+                status, report, _ = self.invoke(lambda *args, **kwargs: complete, [])
+            self.assertEqual(status, 1)
+            check = next(item for item in report['checks'] if item['check']=='design-reference-consistency')
+            self.assertFalse(check['passed'])
+            self.assertTrue(any('Unknown suggested method:' in error
+                                for error in check['detail']['invalid_references']))
 
     def test_installed_links_use_nested_document_parent_and_decoded_paths(self):
         payload = {

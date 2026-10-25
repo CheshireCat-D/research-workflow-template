@@ -76,20 +76,20 @@ research-workflow-template/
 
 项目初始化由程序生成必要文件，不另维护一套重复的静态项目模板。根目录包含许可证、贡献说明和引用元数据；构建产生的 `dist/` 与个人状态不作为维护源。
 
-## 生成的研究项目目录
+## 初始化与按需创建的项目文件
+
+`init` 实际创建以下文件；其中 `.research/write.lock` 是本地写锁文件，命令退出后文件仍可保留，不表示仍有写入者持锁：
 
 ```text
 my-research/
+├── .gitignore                   忽略本地状态和私有配置／材料
 ├── PROJECT.md                   人可读的问题、边界、决策与当前行动
 ├── project.json                 项目配置及所选画像
-├── literature/                  来源记录；受限全文可只登记索引
-├── notes/                       推导、田野笔记或论证记录
 ├── records/registry.json        统一登记簿，轻量模式也有空簿，不强制填表
-├── analysis/                    有计算分析才增加
-├── manuscript/                  稿件与附件
-├── artifacts/                   可审阅图表和交付产物
-└── .research/                   本地写锁；不作为研究证据
+└── .research/write.lock         本地锁文件；不作为研究证据
 ```
+
+`literature/`、`notes/`、`analysis/`、`manuscript/`、`artifacts/` 等目录由研究者或助手根据实际材料按需创建，分别用于来源材料、研究笔记、分析、稿件和交付产物；`init` 不预建这些空目录。来源登记保存在统一登记簿中，受限全文可以只保留索引，不强制复制到 `literature/`。
 
 显式接入技能后，项目另有 `.agents/skills/rw-*/` 和 `_rw-runtime/`；它们属于带清单的生成副本，不是研究证据或自动完成的活动。具体操作见[技能接入](08-skills-and-methods.md)。
 

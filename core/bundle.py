@@ -31,6 +31,61 @@ SCOPE = 'Project-local instruction/runtime copies and their integrity only; not 
 _HASH = re.compile(r'[0-9a-f]{64}\Z')
 
 
+def variant_evidence(method, toolkit, *, project_runtime=False):
+    """Describe explicit recorded bindings without inferring task validity.
+
+    A missing variant is method-level evidence, not an unexecuted method. The
+    portable runtime has guidance but does not contain evaluation recordings.
+    """
+    implementation = method.get('implementation', {})
+    declared = set(implementation.get('supported_variants', []))
+    rows = {name: {'id': name, 'guidance_declared': name in declared,
+                   'explicit_case_bindings': []} for name in method['variants']}
+    result = {'availability': 'not-included-in-project-runtime' if project_runtime else 'available',
+              'scope': 'Recorded method-binding declarations only; not a new execution, review or scientific validation.',
+              'variants': list(rows.values()), 'method_only_cases': [],
+              'unavailable_cases': [], 'unrecognized_variant_records': []}
+    if project_runtime:
+        return result
+    evidence = implementation.get('task_evidence', {})
+    cases = evidence.get('cases', []) if isinstance(evidence, dict) else []
+    read_cases = 0
+    for reference in dict.fromkeys(cases):
+        phase, identifier = reference.split(':', 1) if ':' in reference else ('d3', reference)
+        if not all(re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]*', value) for value in (phase, identifier)):
+            result['unavailable_cases'].append({'case': reference, 'reason': 'invalid-case-reference'})
+            continue
+        relative = 'evals/' + phase + '/recordings/' + identifier + '/recording.json'
+        try:
+            recording = parse_json(_source_bytes(Path(toolkit), relative))
+            entries = recording.get('records') if isinstance(recording, dict) else None
+            if not isinstance(entries, list):
+                raise ValueError('Recording needs a record list')
+            bindings = [item['record'] for item in entries
+                        if isinstance(item, dict) and item.get('kind') == 'method-binding'
+                        and isinstance(item.get('record'), dict)
+                        and item['record'].get('method_id') == method['id']]
+            if not bindings:
+                raise ValueError('No matching method binding')
+        except (OSError, ValueError, CoreError):
+            result['unavailable_cases'].append({'case': reference, 'reason': 'missing-or-invalid-recording'})
+            continue
+        read_cases += 1
+        for binding in bindings:
+            if 'variant' not in binding:
+                if reference not in result['method_only_cases']:
+                    result['method_only_cases'].append(reference)
+            elif isinstance(binding['variant'], str) and binding['variant'] in rows:
+                bound = rows[binding['variant']]['explicit_case_bindings']
+                if reference not in bound:
+                    bound.append(reference)
+            else:
+                result['unrecognized_variant_records'].append({'case': reference, 'variant': binding['variant']})
+    if result['unavailable_cases'] or result['unrecognized_variant_records'] or not cases:
+        result['availability'] = 'partial' if read_cases else 'not-found-in-distribution'
+    return result
+
+
 def catalog_view(choices, toolkit, *, project_runtime=False):
     """Keep full-distribution evidence distinct from portable local guidance."""
     result = deepcopy(choices)
@@ -41,6 +96,7 @@ def catalog_view(choices, toolkit, *, project_runtime=False):
         evidence = implementation.get('task_evidence')
         if not isinstance(evidence, dict):
             continue
+        implementation['variant_evidence'] = variant_evidence(method, toolkit, project_runtime=project_runtime)
         evidence['resource_base'] = 'full-distribution-root'
         evidence.setdefault('review', 'evals/d3/independent-review.json')
         if project_runtime:

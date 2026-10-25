@@ -77,6 +77,8 @@ Usually, you can describe the task in chat and let the assistant register the wo
 
 Replace `PROJECT` with your actual project path and quote paths containing spaces. Replace `S1` with an existing statement ID. JSON examples for single and batch registration, standard input, and explicit version replacement are in the [detailed CLI guide](docs/07-core-usage.md).
 
+`options` also separates declared method guidance from explicit variant bindings in task records. Records without a variant remain method-level evidence; neither category certifies an entire specialty or method. [Subfield navigation](profiles/selection.md) gives entry examples for education, economics/management, psychology, philosophy and arts. Project copies do not include the full evaluation materials and report that evidence as unavailable locally.
+
 The project's `project.json` and `records/registry.json` are the authoritative machine-readable records. `PROJECT.md` holds author notes. Recording a target journal or governance requirement records a choice; it does not certify compliance or approval.
 
 ## Understanding check results
@@ -112,7 +114,7 @@ Pause agents using the project before upgrading. If the installed copy has local
 - `docs/`: technical documentation to consult as needed. These detailed documents are currently in Chinese; this English guide covers the main user workflow.
 - `tests/`, `examples/`, `evals/`: synthetic inputs, execution evidence, and regression fixtures needed by the current tests. Retained stage IDs locate those materials; they do not represent additional old software editions.
 - `provenance/`, `LICENSE`, `CITATION.cff`: source declarations, licensing, citation information, and content fingerprints.
-- `dist/`: the current ZIP, its SHA-256 sidecar, and the current distribution acceptance record. These are generated locally and excluded from Git source control.
+- `dist/`: the current ZIP, its SHA-256 sidecar, and the current distribution acceptance record. These are generated locally and excluded from Git source control. A GitHub source checkout or download normally has no `dist/`; follow the [distribution acceptance guide](docs/10-release-readiness.md) when you need to build an archive.
 
 Obsolete release-only records and duplicate candidate packages have been removed from the current package. Original materials and frozen fingerprints referenced by current tests remain. Actual version information for external standards and sources also remains.
 

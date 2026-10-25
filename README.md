@@ -27,6 +27,7 @@ python3 tools/connect_skills.py check --root ../my-research
 | [命令行详细用法](docs/07-core-usage.md) | 查询、标准输入、原子批量登记、配置与检查点 |
 | [技能与方法](docs/08-skills-and-methods.md) | 八个技能、项目内接入、方法资源与升级边界 |
 | [学科适配](docs/02-disciplinary-adaptation.md) | 七类学科、十类方法及跨学科组合 |
+| [专业与问题导航](profiles/selection.md) | 教育、经管、心理、哲学与艺术的现有入口及未专测范围 |
 | [法学项目模板](profiles/templates/legal-research.md) | 法域、法条时效、效力依据、判例与引证台账 |
 | [证据契约](docs/03-evidence-contract.md) | 主张、材料、支持关系和研究进度的边界 |
 | [当前验收](evals/current/latest.json) | 当前内容的实际检查结果与执行范围 |

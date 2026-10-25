@@ -19,6 +19,29 @@ sys.path.insert(0, str(ROOT))
 from core.model import export_schemas
 from core.bundle import SKILLS, build_payload
 
+IGNORED_SOURCE_DIRS = {
+    '.git', '.venv', 'venv', 'build', 'dist', '__pycache__',
+    '.pytest_cache', '.mypy_cache', '.ruff_cache', 'node_modules',
+    '.agents', '.research', 'private-data', 'local-config',
+}
+
+
+def plain_discovery_string(value):
+    """Accept unambiguous YAML strings without adding a YAML runtime dependency.
+
+    A host may interpret numeric/date/boolean-looking scalars as other types.
+    Require quotes for them and for YAML mapping/comment syntax instead of
+    silently accepting a description the host cannot discover as a string.
+    """
+    reserved = {'null', '~', 'true', 'false', 'yes', 'no', 'on', 'off',
+                '.nan', '.inf', '+.inf', '-.inf'}
+    number = r'[-+]?(?:(?:[0-9][0-9_]*(?::[0-5]?[0-9])*(?:\.[0-9_]*)?|\.[0-9_]+)(?:[eE][-+]?[0-9]+)?|0[xX][0-9a-fA-F_]+|0[bB][01_]+|0[oO][0-7_]+)'
+    date = r'[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}(?:(?:[Tt]|[ \t]+)[0-9]{1,2}:[0-9]{2}:[0-9]{2}(?:\.[0-9]*)?(?:[ \t]*(?:[Zz]|[-+][0-9]{1,2}(?::[0-9]{2})?))?)?'
+    return (bool(value) and value[0] not in '|>!&*[]{},#@%`' and
+            value.lower() not in reserved and
+            re.fullmatch(number, value) is None and re.fullmatch(date, value) is None and
+            re.search(r':(?:\s|$)|(?:^|\s)#|^[-?:](?:\s|$)', value) is None)
+
 
 def positive_seconds(value):
     try:
@@ -75,8 +98,8 @@ def skill_metadata(content):
             if re.fullmatch(r"'(?:[^']|'')*'", value) is None:
                 raise ValueError('Invalid quoted skill discovery string')
             value = value[1:-1].replace("''", "'")
-        elif not value or value[0] in '|>!&*[{#' or value in ('null', '~', 'true', 'false'):
-            raise ValueError('Discovery fields need a string or an indented description block')
+        elif not plain_discovery_string(value):
+            raise ValueError('Discovery fields need an unambiguous string; quote scalar-like values and YAML syntax')
         if not isinstance(value, str) or not value.strip():
             raise ValueError('Empty skill discovery field: ' + key)
         fields[key] = value
@@ -125,10 +148,23 @@ def payload_link_errors(payload):
     return missing
 
 
+def source_files(root, suffix):
+    """Walk maintained sources, excluding generated/private trees and links."""
+    root = Path(root)
+    for current, directories, files in os.walk(root, followlinks=False):
+        directories[:] = sorted(name for name in directories
+                                if name not in IGNORED_SOURCE_DIRS and
+                                not (Path(current)/name).is_symlink())
+        for name in sorted(files):
+            path = Path(current)/name
+            if path.suffix == suffix and path.is_file() and not path.is_symlink():
+                yield path
+
+
 def source_link_errors(root):
     """Resolve source Markdown with the same link syntax as generated copies."""
     missing = []
-    for document in Path(root).rglob('*.md'):
+    for document in source_files(root, '.md'):
         for link in markdown_links(document.read_text(encoding='utf-8')):
             url = urlsplit(link)
             if url.scheme or url.netloc or not url.path:
@@ -136,6 +172,69 @@ def source_link_errors(root):
             if not (document.parent / unquote(url.path)).exists():
                 missing.append({'document': document.relative_to(root).as_posix(), 'link': link})
     return missing
+
+
+def catalog_reference_errors(catalog, cases):
+    """Check stable IDs before dictionary/set views can hide duplicates."""
+    errors = []
+
+    def unique_ids(entries, label):
+        result = {}
+        if not isinstance(entries, list):
+            errors.append('Invalid ' + label + ' entries')
+            return result
+        for item in entries:
+            if not isinstance(item, dict):
+                errors.append('Invalid ' + label + ' entry')
+                continue
+            identifier = item.get('id')
+            if not isinstance(identifier, str) or not identifier.strip():
+                errors.append('Invalid ' + label + ' ID')
+            elif identifier in result:
+                errors.append('Repeated ' + label + ' ID: ' + identifier)
+            else:
+                result[identifier] = item
+        return result
+
+    def string_list(value, label):
+        if (not isinstance(value, list) or
+                any(not isinstance(item, str) or not item.strip() for item in value)):
+            errors.append('Invalid ' + label + ' list')
+            return []
+        if len(set(value)) != len(value):
+            errors.append('Repeated ' + label)
+        return value
+
+    methods = unique_ids(catalog['methods'], 'method')
+    disciplines = unique_ids(catalog['disciplines'], 'discipline')
+    unique_ids(catalog['skills'], 'skill')
+    unique_ids(cases, 'scenario')
+    for identifier, discipline in disciplines.items():
+        suggested = string_list(discipline.get('suggested_methods', []), 'suggested methods: ' + identifier)
+        if not set(suggested) <= methods.keys():
+            errors.append('Unknown suggested method: ' + identifier)
+    method_variants = {}
+    for identifier, method in methods.items():
+        variants = string_list(method.get('variants', []), 'method variants: ' + identifier)
+        method_variants[identifier] = variants
+        implementation = method.get('implementation', {})
+        supported = string_list(implementation.get('supported_variants', []), 'supported variants: ' + identifier)
+        if not set(supported) <= set(variants):
+            errors.append('Unknown supported variant: ' + identifier)
+    for case in cases:
+        if not isinstance(case, dict):
+            continue  # Already reported by unique_ids.
+        identifier = str(case.get('id', '<missing>'))
+        selected_disciplines = string_list(case.get('disciplines'), 'scenario disciplines: ' + identifier)
+        selected_methods = string_list(case.get('methods'), 'scenario methods: ' + identifier)
+        if not set(selected_disciplines) <= disciplines.keys() or not set(selected_methods) <= methods.keys():
+            errors.append('Unknown scenario reference: ' + identifier)
+            continue
+        for owner, variants in case.get('method_variants', {}).items():
+            variants = string_list(variants, 'scenario variants: ' + identifier)
+            if owner not in selected_methods or not set(variants) <= set(method_variants[owner]):
+                errors.append('Unknown scenario method variant: ' + identifier)
+    return errors
 
 
 def main(argv=None):
@@ -157,17 +256,8 @@ def main(argv=None):
         add('schema-source-consistency', not errors and not extras,
             {'schemas': len(generated), 'different_or_missing': errors, 'unexpected': extras})
     catalog = json.loads((ROOT / 'design/catalog.json').read_text())
-    methods = {item['id']: item for item in catalog['methods']}
-    disciplines = {item['id'] for item in catalog['disciplines']}
     cases = json.loads((ROOT / 'design/scenarios.json').read_text())['cases']
-    errors = []
-    for case in cases:
-        if not set(case['disciplines']) <= disciplines or not set(case['methods']) <= methods.keys():
-            errors.append(case['id'])
-            continue
-        for owner, variants in case.get('method_variants', {}).items():
-            if owner not in case['methods'] or not set(variants) <= set(methods[owner]['variants']):
-                errors.append(case['id'])
+    errors = catalog_reference_errors(catalog, cases)
     add('design-reference-consistency', not errors,
         {'planned_scenarios': len(cases), 'invalid_references': errors,
          'scope': 'Design ID consistency only; task execution and content audit are checked separately in recorded evaluation regressions'})
@@ -214,10 +304,8 @@ def main(argv=None):
          'bundle_files': len(payload), 'errors': errors,
          'scope': 'Metadata, resources and generated connection contract; source declarations are not re-fetched and task success is separately tested'})
     syntax_errors = []
-    python_files = list(ROOT.rglob('*.py'))
+    python_files = list(source_files(ROOT, '.py'))
     for source in python_files:
-        if any(part in {'__pycache__','.venv','venv','dist','build'} for part in source.relative_to(ROOT).parts):
-            continue
         try:
             ast.parse(source.read_text(encoding='utf-8'), filename=source.relative_to(ROOT).as_posix(), feature_version=(3,11))
         except SyntaxError as exc:
