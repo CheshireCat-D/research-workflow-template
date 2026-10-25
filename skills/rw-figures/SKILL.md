@@ -52,7 +52,9 @@ description: >-
 
 默认交付用户所需的可编辑源、可用导出图与刚检查过的预览，简述依据、必要的运行
 方式及尚未确认的内容。原生可编辑意味着文字和图元可分别修改；把整张 PNG 放入
-SVG/PPTX 不算完成此要求。SVG 可使用只读结构检查器：
+SVG/PPTX 不算完成此要求。SVG 可使用只读结构检查器；`SKILL_DIR` 指本次实际使用的
+`rw-figures` 目录，仓库中为 `TOOLKIT/skills/rw-figures`，项目副本中为
+`PROJECT/.agents/skills/rw-figures`，运行时替换为实际路径：
 
 ```text
 python3 SKILL_DIR/scripts/audit_svg_schematic.py figure.svg

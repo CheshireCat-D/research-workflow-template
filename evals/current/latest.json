@@ -2,8 +2,8 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-25T23:19:27.362956+00:00",
-  "scope": "Current nine-skill integration, editable SVG structure and rendered examples, source-index/terminology/search guidance, software regression and frozen synthetic task replay. No new disciplinary certification.",
+  "checked_at_utc": "2026-10-25T23:43:53.877629+00:00",
+  "scope": "Current nine-skill routing, use-guide consistency, duplicate/redundant-file audit and full software regression. Earlier forward/content records retain their original scopes and are not renewed by this audit.",
   "scientific_validity": "not-assessed",
   "publication_style": {
     "archive_name": "research-workflow-template.zip",
@@ -27,13 +27,12 @@
       "test_methods": 157,
       "check_groups": 7,
       "receipt": {
-        "identifier": "private-evidence:general-full-final.json",
-        "sha256": "a74bf27e4101433bfcf59b8cad5aca8be9ee12dce5ac2305200a0f2b64f8b1ae"
+        "identifier": "private-evidence:general-full.json",
+        "sha256": "2d2ee956cc0b00a06ff1b5ca5a9894e51ca14050c3e95ff25fd68864a46f518f"
       }
     },
     "post_execution_bookkeeping_changes": [
       "evals/current/latest.json",
-      "evals/current/skill-task-checks.json",
       "provenance/file-origins.json"
     ]
   },
@@ -105,5 +104,19 @@
     "visual_examples_actually_rendered_and_inspected": true,
     "upstream_scripts_or_figure_assets_copied": false,
     "personal_package_contents_included": false
+  },
+  "current_rule_audit": {
+    "implemented_skill_entrypoints": 9,
+    "unnecessary_duplicate_skills_found": 0,
+    "safe_redundant_file_candidates": 0,
+    "files_deleted": 0,
+    "repairs": [
+      "Implemented figure capability distinguished from planned table/format extensions",
+      "Actual source and installed SKILL_DIR paths explained",
+      "Independent implementation clarified without automatic cross-package sync",
+      "Frozen representative research cases distinguished from maintenance requests"
+    ],
+    "existing_forward_task_records_retained_not_rerun": true,
+    "scientific_or_legal_content_certification": false
   }
 }
