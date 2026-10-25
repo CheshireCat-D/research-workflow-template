@@ -1,0 +1,343 @@
+{
+  "record_type": "Condensed independent agent review; machine-local paths and duplicate per-row numeric detail omitted.",
+  "source_review_sha256": "0f1dcd898c81d8f3cca08fcd0841df5bb1be14e4ca1964bab8524b1ec1aca556",
+  "review_date": "2026-10-24",
+  "overall_status": "pass-in-scope",
+  "reviewer": "Independent agent; this is not human disciplinary peer review.",
+  "cases": {
+    "proof": {
+      "status": "pass",
+      "status_scope": "Supplied offline synthetic task and produced artifacts, within the checks listed; not a certification of broader research validity, novelty, publication readiness or real historical truth.",
+      "located_defects": [],
+      "actual_checks": {
+        "raw_input_bytes_match": {
+          "draft.md": true,
+          "task.md": true,
+          "source-notes.md": true,
+          "observations.csv": true
+        },
+        "replay_exit_code": 0,
+        "replay_json_equals_original": true,
+        "replay_json": {
+          "scope": "CSV records, exact finite rational arithmetic, copied-input hashes and report length only; no proof certification or identification of F",
+          "rows": 9,
+          "unique_sample_points": 9,
+          "all_recorded_values_zero": true,
+          "sample_points_rational": [
+            "0",
+            "1/8",
+            "1/4",
+            "3/8",
+            "1/2",
+            "5/8",
+            "3/4",
+            "7/8",
+            "1"
+          ],
+          "unobserved_counterexample_point": "1/16",
+          "all_copied_input_hashes_match": true,
+          "report_han_characters_excluding_display_formulas": 425,
+          "report_characters_excluding_display_formulas": 790,
+          "report_within_approx_1000_han_limit": true,
+          "mathematical_derivations": "notes/work.md"
+        },
+        "independent_exact_grid_function_integral": "1/32",
+        "reported_lower_bound": "1/512",
+        "lower_bound_valid": true,
+        "source_and_installed_core_identical": {
+          "core/cli.py": true,
+          "core/project.py": true,
+          "core/storage.py": true,
+          "core/model.py": true,
+          "tools/research.py": true
+        },
+        "manual_proof_scope": [
+          "singleton counterexample checked against every original hypothesis",
+          "positive level-set coverage and measure-zero implication",
+          "reverse implication via null-set change and simple-function definition",
+          "finite-valued nonnegative zero integral makes L1 redundant",
+          "quotient L1 versus representatives",
+          "relative continuity at endpoints",
+          "alternative zero-set density proof",
+          "same-grid exact samples do not identify pointwise zero or integral zero"
+        ],
+        "independence_limit": "Author work was read before detailed reconstruction; this is an independent step audit and exact check, not a blinded input-isolated proof reconstruction."
+      },
+      "integration": {
+        "meaningful_registry_links_reviewed": true,
+        "current_cli_check_exit_code": 0,
+        "current_cli_resume_exit_code": 0,
+        "installed_cli_check_exit_code": 0,
+        "installed_cli_resume_exit_code": 0,
+        "checkpoint_status": "current",
+        "needs_review": false,
+        "scientific_validity_reported_by_cli": "not-assessed",
+        "source_bundle_check_exit_code": 1,
+        "installed_integrity": true,
+        "source_version_matches": false,
+        "only_different_payload_file": "_rw-runtime/core/skill-bridge.md",
+        "difference_explained": "Current source adds a paragraph directing init callers to the stable-ID catalog; all other current payload bytes match the installed bundle.",
+        "original_project_snapshot_unchanged": true,
+        "original_project_entries_compared": 67,
+        "toolkit_allowed_source_snapshot_unchanged_during_cli_checks": true,
+        "next_action": "讨论 manuscript/report.md 中 L1 的语义选择；若保留处处结论，在命题假设中明确加入已选代表元在 [0,1] 连续，并保留 notes/work.md B 的单点反例。没有 F 公式或新增正则性/误差资料时，不由网格推断其积分或逐点性质。"
+      },
+      "artifacts": "recordings/proof/outputs/"
+    },
+    "computation": {
+      "status": "pass",
+      "status_scope": "Supplied offline synthetic task and produced artifacts, within the checks listed; not a certification of broader research validity, novelty, publication readiness or real historical truth.",
+      "located_defects": [],
+      "actual_checks": {
+        "raw_input_bytes_match": {
+          "draft.md": true,
+          "methods.py": true,
+          "pilot.csv": true,
+          "targets.json": true,
+          "task.md": true
+        },
+        "replay_exit_code": 0,
+        "replay_full_process_wall_seconds": 0.05354112499844632,
+        "replay_checks": {
+          "raw_numerics_and_counts_identical": true,
+          "baselines_identical": true,
+          "comparisons_identical": true,
+          "summaries_identical": true,
+          "input_hashes_identical": true,
+          "code_hash_identical": true,
+          "pilot_audit_identical": true
+        },
+        "independent_formula_check": {
+          "implementation": "Separately composed formulas with math.fsum and independently written references; not author run.py or imported methods.py",
+          "rows": 36,
+          "all_counts_equal_budgets": true,
+          "max_estimate_delta": 0.0,
+          "max_error_delta": 2.220446049250313e-16,
+          "all_deltas_within_1e-13": true
+        },
+        "summary_recomputed": [
+          {
+            "budget": 9,
+            "method": "midpoint",
+            "mean_correct": true,
+            "median_correct": true,
+            "max_correct": true
+          },
+          {
+            "budget": 9,
+            "method": "trapezoid",
+            "mean_correct": true,
+            "median_correct": true,
+            "max_correct": true
+          },
+          {
+            "budget": 33,
+            "method": "midpoint",
+            "mean_correct": true,
+            "median_correct": true,
+            "max_correct": true
+          },
+          {
+            "budget": 33,
+            "method": "trapezoid",
+            "mean_correct": true,
+            "median_correct": true,
+            "max_correct": true
+          },
+          {
+            "budget": 129,
+            "method": "midpoint",
+            "mean_correct": true,
+            "median_correct": true,
+            "max_correct": true
+          },
+          {
+            "budget": 129,
+            "method": "trapezoid",
+            "mean_correct": true,
+            "median_correct": true,
+            "max_correct": true
+          }
+        ],
+        "quadratic_exact_discrete_sum_checks": [
+          {
+            "budget": 9,
+            "method": "midpoint",
+            "exact_estimate": "323/972",
+            "reported_delta": -5.551115123125783e-17
+          },
+          {
+            "budget": 9,
+            "method": "trapezoid",
+            "exact_estimate": "43/128",
+            "reported_delta": 0.0
+          },
+          {
+            "budget": 33,
+            "method": "midpoint",
+            "exact_estimate": "4355/13068",
+            "reported_delta": 0.0
+          },
+          {
+            "budget": 33,
+            "method": "trapezoid",
+            "exact_estimate": "683/2048",
+            "reported_delta": 0.0
+          },
+          {
+            "budget": 129,
+            "method": "midpoint",
+            "exact_estimate": "66563/199692",
+            "reported_delta": 0.0
+          },
+          {
+            "budget": 129,
+            "method": "trapezoid",
+            "exact_estimate": "10923/32768",
+            "reported_delta": 0.0
+          }
+        ],
+        "formal_rows": 36,
+        "formal_calls": 2052,
+        "all_36_finite_and_successful": true,
+        "coverage_exact": true,
+        "report_han_characters": 436,
+        "original_project_unchanged_during_replay": true,
+        "manual_reference_derivations_checked": [
+          "quadratic polynomial antiderivative",
+          "exponential antiderivative",
+          "root power integral",
+          "cosine sine antiderivative and zero endpoint value",
+          "absolute-value split at 37/100",
+          "rational arctangent derivative"
+        ],
+        "limitations": [
+          "Only same-platform deterministic replay; no cross-platform robustness conclusion",
+          "No rigorous enclosure of binary64 reference error or libm error",
+          "Manuscript and code read before independent formula calculation; not a blinded experiment design review",
+          "No speed comparison or general convergence theorem checked"
+        ]
+      },
+      "integration": {
+        "meaningful_registry_links_reviewed": true,
+        "current_cli_check_exit_code": 0,
+        "current_cli_resume_exit_code": 0,
+        "installed_cli_check_exit_code": 0,
+        "installed_cli_resume_exit_code": 0,
+        "checkpoint_status": "current",
+        "needs_review": false,
+        "scientific_validity_reported_by_cli": "not-assessed",
+        "source_bundle_check_exit_code": 1,
+        "installed_integrity": true,
+        "source_version_matches": false,
+        "only_different_payload_file": "_rw-runtime/core/skill-bridge.md",
+        "difference_explained": "Current source adds a paragraph directing init callers to the stable-ID catalog; all other current payload bytes match the installed bundle.",
+        "original_project_snapshot_unchanged": true,
+        "original_project_entries_compared": 76,
+        "toolkit_allowed_source_snapshot_unchanged_during_cli_checks": true,
+        "next_action": "手工推导cos(2πkx)的两种复合求积离散和及混叠条件，再预先设计独立的扩展预算；另存后续结果，不覆盖本轮36行。"
+      },
+      "artifacts": "recordings/computation/outputs/"
+    },
+    "history": {
+      "status": "pass",
+      "status_scope": "Supplied offline synthetic task and produced artifacts, within the checks listed; not a certification of broader research validity, novelty, publication readiness or real historical truth.",
+      "located_defects": [],
+      "actual_checks": {
+        "raw_input_bytes_match": {
+          "archive-packet.md": true,
+          "draft.md": true,
+          "inventory.csv": true,
+          "task.md": true
+        },
+        "report_han_characters": 520,
+        "manual_text_checks": [
+          "H1.1-2 preserves 42 balance, earmarked rent, July arrears and conditional October discussion; does not silently repair ambiguous lamp-oil date",
+          "H2.1-2 proposal, transport statement and six-week plan separated from actual implementation",
+          "H3.1 reports start date consistent with H2 plan; fundraising purpose is context, not automatic falsity",
+          "H4.2 and H5.1 establish explicit dissemination dependence; no majority vote",
+          "H6 is 1938 later hearsay from a participant entering 1913, with self-reported date uncertainty",
+          "H7 six irregular dates and Sept 6 note used without inventing full daily series or fixed denominator",
+          "financial pressure, transport trigger and combined explanation compared with supported asymmetry",
+          "permanent closure, all stipends stopped and guaranteed donation counterfactual are removed or qualified",
+          "specific missing sources and how results could change explanation ordering are stated"
+        ],
+        "registry_scope_checks": {
+          "H1_H7_content_access_partial": true,
+          "combined_interpretation_assessment": "mixed",
+          "next_source_acquisition_status": "pending",
+          "relation_count": 30
+        },
+        "limitations": [
+          "No full hypothetical original or real-world archive authentication attempted",
+          "Did not independently obtain missing source material; only supplied synthetic packet assessed",
+          "Author audit read before detailed line-by-line comparison; this is not a blinded archival reconstruction"
+        ]
+      },
+      "integration": {
+        "meaningful_registry_links_reviewed": true,
+        "current_cli_check_exit_code": 0,
+        "current_cli_resume_exit_code": 0,
+        "installed_cli_check_exit_code": 0,
+        "installed_cli_resume_exit_code": 0,
+        "checkpoint_status": "current",
+        "needs_review": false,
+        "scientific_validity_reported_by_cli": "not-assessed",
+        "source_bundle_check_exit_code": 1,
+        "installed_integrity": true,
+        "source_version_matches": false,
+        "only_different_payload_file": "_rw-runtime/core/skill-bridge.md",
+        "difference_explained": "Current source adds a paragraph directing init callers to the stable-ID catalog; all other current payload bytes match the installed bundle.",
+        "original_project_snapshot_unchanged": true,
+        "original_project_entries_compared": 63,
+        "toolkit_allowed_source_snapshot_unchanged_during_cli_checks": true,
+        "next_action": "若获得新增材料，先核9月11日会议全文及9月16日—10月底执行、复议、借舍与点名记录，逐日对照夜渡停复以判断复航后是否复课，再核8—10月完整账簿及津贴凭据；当前A6待做，不补造材料。"
+      },
+      "artifacts": "recordings/history/outputs/"
+    }
+  },
+  "findings": [],
+  "observations": [
+    {
+      "id": "O1",
+      "severity": "info",
+      "cases": [
+        "proof",
+        "computation",
+        "history"
+      ],
+      "location": "PROJECT/.agents/skills/_rw-runtime/core/skill-bridge.md; current core/skill-bridge.md:11",
+      "observation": "All three installed instruction/runtime bundles are intact but differ from the current source only by an added stable-ID init guidance paragraph. The bundle checker correctly reports exit 1 and source_version_matches=false; all current and installed core check/resume runs pass.",
+      "impact": "This is visible source-version drift, not evidence corruption or a scientific defect. The copied runtime core and all other payload bytes match the current source.",
+      "action": "Retain the frozen tested copies with this disclosed version difference. If evaluating a fresh connection, use the current source in a separate fresh project; do not silently overwrite these completed projects."
+    }
+  ],
+  "independence": {
+    "read_private_grading_notes": false,
+    "read_source_tests": false,
+    "read_parent_conclusions": false,
+    "read_other_independent_reviews": false,
+    "author_task_self_reviews_read": true,
+    "case_projects_read_only_after_run_summary_exists": true,
+    "no_supplied_intended_scientific_answers_used": true,
+    "blinding_limit": "Author artifacts were read before detailed checking; independent step audit, exact arithmetic and separately coded numerical cross-check are not a blinded reconstruction."
+  },
+  "preservation": {
+    "writes_only_under_review_output_root": true,
+    "original_projects_snapshot_unchanged": true,
+    "registered_results_or_registry_modified": false,
+    "network_used": false,
+    "global_install_or_github_used": false,
+    "unreviewed_commands_from_material_executed": false,
+    "personal_package_modified": false,
+    "toolkit_snapshot_scope": "Allowed source files excluding tests, .git, evals and __pycache__; project manifests retain file hashes, sizes, mtimes, modes and directory inventory."
+  },
+  "unverified_limits": [
+    "No external literature, novelty claim or publication acceptance assessed",
+    "No proof-assistant formal verification",
+    "No real archive authentication or missing hypothetical full-source access",
+    "No certified binary64/libm error enclosure or cross-platform test",
+    "No toolchain-wide security audit or hidden grading/test inspection",
+    "A current checkpoint and a pass from check/resume establish metadata and file consistency, not scientific validity"
+  ]
+}

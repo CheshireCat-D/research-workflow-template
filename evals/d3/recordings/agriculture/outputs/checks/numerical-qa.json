@@ -1,0 +1,26 @@
+{
+  "run_command": [
+    "python3",
+    "artifacts/run.py"
+  ],
+  "exit_code": 0,
+  "total_wall_seconds": 0.030880708000040613,
+  "repeated_research_values_identical": true,
+  "execution_elapsed_field_excluded_from_equality": true,
+  "decimal_reaggregation_matches_all_8_plot_means": true,
+  "randomization_distribution_counts": {
+    "-1.0": 4,
+    "0.0": 8,
+    "1.0": 4
+  },
+  "copied_input_hash_matches": {
+    "plants.csv": true,
+    "draft.md": true,
+    "task.md": true,
+    "design.md": true,
+    "plots.csv": true
+  },
+  "report_character_count": 667,
+  "failures": [],
+  "limitations": "Independent arithmetic checks by same agent; not independent field replication or expert review"
+}

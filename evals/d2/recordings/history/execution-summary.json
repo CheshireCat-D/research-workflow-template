@@ -1,0 +1,64 @@
+{
+  "project": "PROJECT",
+  "task": "history: 东埠夜校1912年9月停课的史料解释（离线虚构练习）",
+  "completed": [
+    "notes/issue.md",
+    "notes/source-audit.md",
+    "manuscript/report.md",
+    "review.md"
+  ],
+  "skills_actually_read": [
+    "PROJECT/.agents/skills/rw-workflow/SKILL.md",
+    "PROJECT/.agents/skills/rw-question/SKILL.md",
+    "PROJECT/.agents/skills/rw-literature/SKILL.md",
+    "PROJECT/.agents/skills/rw-validation/SKILL.md",
+    "PROJECT/.agents/skills/rw-writing/SKILL.md",
+    "PROJECT/.agents/skills/rw-review/SKILL.md"
+  ],
+  "references_actually_read": [
+    "PROJECT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+    "PROJECT/.agents/skills/_rw-runtime/core/protocol.md",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/historical-interpretive.md",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/source.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/method-binding.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/project.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/design/catalog.json"
+  ],
+  "command_metadata": "logs/*.json (argv, cwd, exit_status, stdout/stderr files); register calls separately in logs/reg-*.json",
+  "command_driver": "run-command.py",
+  "registration_payloads": "registration-inputs",
+  "registered_records": 70,
+  "input_integrity": "input-integrity.json; all four local copies byte-identical to supplied inputs",
+  "checks": {
+    "registration_check": "check.json",
+    "checkpoint": "checkpoint.json",
+    "actual_resume": "resume.md",
+    "project_runtime": ".agents/skills/_rw-runtime/tools/research.py",
+    "check_exit_status": 0,
+    "checkpoint_exit_status": 0,
+    "resume_exit_status": 0
+  },
+  "report_cjk_characters": 520,
+  "failures": [
+    {
+      "command": "logs/009-register-actual-work.json",
+      "exit_status": 1,
+      "reason": "SyntaxError in driver before any registration; missing title key in pending-activity dictionary.",
+      "recovery": "Corrected driver; logs/010-register-retry-after-syntax-fix.json and every reg-* command exited 0."
+    }
+  ],
+  "limitations": [
+    "Only supplied seven synthetic excerpts and metadata were read; no full hypothetical originals, authentication, external searches or professional peer review.",
+    "Stop start date relatively well supported, actual duration and reopening unknown; financial and transport causal weights unidentifiable.",
+    "H3-H4-H5 are a dependent dissemination chain; H6 is late hearsay and uncertain in date.",
+    "Registration integrity is separate from historical validity; completed interpretation is bounded and partly uncertain."
+  ],
+  "next_action": "若获得新增材料，先核9月11日会议全文及9月16日—10月底执行、复议、借舍与点名记录，逐日对照夜渡停复以判断复航后是否复课，再核8—10月完整账簿及津贴凭据；当前A6待做，不补造材料。",
+  "writes_limited_to": "this output directory",
+  "registered_artifacts_changed_after_registration": false
+}

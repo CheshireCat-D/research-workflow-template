@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "artifacts/run.py",
+    "--output-dir",
+    "artifacts"
+  ],
+  "cwd": "PROJECT",
+  "exit_status": 0,
+  "timeout_seconds": 10.0,
+  "wall_seconds": 0.06479645900253672,
+  "stdout": "Independent baselines: 18/18 passed\nPilot recomputation: 4/4 rows consistent; budgets unequal\nFormal rows: 36/36; successful=36; failures=0\nActual formal function calls: 2052\nWall seconds: 0.000827; CPU seconds: 0.000827\nRandom seed: not applicable (deterministic)\nNo inference about relative speed\n[\n  {\n    \"budget\": 9,\n    \"method\": \"midpoint\",\n    \"successful_targets\": 6,\n    \"mean_absolute_error\": 0.16754750379286795,\n    \"median_absolute_error\": 0.00118662551440335,\n    \"max_absolute_error\": 1.0,\n    \"wins_and_ties\": {\n      \"midpoint\": 4,\n      \"trapezoid\": 2,\n      \"tie\": 0,\n      \"unavailable\": 0\n    }\n  },\n  {\n    \"budget\": 9,\n    \"method\": \"trapezoid\",\n    \"successful_targets\": 6,\n    \"mean_absolute_error\": 0.002341061166457048,\n    \"median_absolute_error\": 0.0014183818526283531,\n    \"max_absolute_error\": 0.008536445042212293,\n    \"wins_and_ties\": {\n      \"midpoint\": 4,\n      \"trapezoid\": 2,\n      \"tie\": 0,\n      \"unavailable\": 0\n    }\n  },\n  {\n    \"budget\": 33,\n    \"method\": \"midpoint\",\n    \"successful_targets\": 6,\n    \"mean_absolute_error\": 8.127520010973957e-05,\n    \"median_absolute_error\": 5.3118989303241326e-05,\n    \"max_absolute_error\": 0.0003020612397075517,\n    \"wins_and_ties\": {\n      \"midpoint\": 5,\n      \"trapezoid\": 0,\n      \"tie\": 1,\n      \"unavailable\": 0\n    }\n  },\n  {\n    \"budget\": 33,\n    \"method\": \"trapezoid\",\n    \"successful_targets\": 6,\n    \"mean_absolute_error\": 0.00025793181083304365,\n    \"median_absolute_error\": 0.00013554092864112577,\n    \"max_absolute_error\": 0.0011077303877248257,\n    \"wins_and_ties\": {\n      \"midpoint\": 5,\n      \"trapezoid\": 0,\n      \"tie\": 1,\n      \"unavailable\": 0\n    }\n  },\n  {\n    \"budget\": 129,\n    \"method\": \"midpoint\",\n    \"successful_targets\": 6,\n    \"mean_absolute_error\": 9.030274675989746e-06,\n    \"median_absolute_error\": 4.341534484114673e-06,\n    \"max_absolute_error\": 4.0305674223306553e-05,\n    \"wins_and_ties\": {\n      \"midpoint\": 5,\n      \"trapezoid\": 0,\n      \"tie\": 1,\n      \"unavailable\": 0\n    }\n  },\n  {\n    \"budget\": 129,\n    \"method\": \"trapezoid\",\n    \"successful_targets\": 6,\n    \"mean_absolute_error\": 2.9060036521004706e-05,\n    \"median_absolute_error\": 9.456075237473938e-06,\n    \"max_absolute_error\": 0.00014100936984062784,\n    \"wins_and_ties\": {\n      \"midpoint\": 5,\n      \"trapezoid\": 0,\n      \"tie\": 1,\n      \"unavailable\": 0\n    }\n  }\n]\n",
+  "stderr": "",
+  "timing_scope": "complete formal subprocess, including interpreter startup and serialization; results.json timing covers computation before output serialization"
+}

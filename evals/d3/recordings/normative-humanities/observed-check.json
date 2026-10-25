@@ -1,0 +1,65 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pae907cc6428548b08bacdadfd58ea65a",
+  "revision": 103,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 5,
+    "artifacts": 7,
+    "decisions": 0,
+    "evidence": 12,
+    "method_bindings": 2,
+    "relations": 40,
+    "sources": 7,
+    "statements": 22
+  },
+  "activities": [
+    {
+      "id": "ACT-ARG",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-ARITH",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-READ",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-REVIEW",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-WRITE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "在真实执行前核实各时段等待/拒入原因、未注册者障碍、1600可支付的排班及匿名分流新增成本；新材料保存为新版本输入并更新R-C1/R-C2。若主要缺口为时段则评估1600有偿延时；若为等待且辅助预约可及则重比1100系统加电话；只有具体严重伤害与替代不足证据成立才逐项重审最小身份资料。当前不启动调查或部署。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

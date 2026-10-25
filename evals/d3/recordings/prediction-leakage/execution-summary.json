@@ -1,0 +1,422 @@
+{
+  "case": "prediction-leakage",
+  "status": "complete-in-requested-synthetic-scope",
+  "project": "PROJECT",
+  "read_skills": [
+    "PROJECT/.agents/skills/rw-workflow/SKILL.md",
+    "PROJECT/.agents/skills/rw-validation/SKILL.md",
+    "PROJECT/.agents/skills/rw-writing/SKILL.md",
+    "PROJECT/.agents/skills/rw-review/SKILL.md"
+  ],
+  "read_profiles": [
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/computational.md",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/governance.md"
+  ],
+  "read_protocols": [
+    "PROJECT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+    "PROJECT/.agents/skills/_rw-runtime/core/protocol.md"
+  ],
+  "outputs": [
+    "PROJECT/PROJECT.md",
+    "PROJECT/notes/issue.md",
+    "PROJECT/notes/work-performed.md",
+    "PROJECT/notes/arithmetic-check.json",
+    "PROJECT/manuscript/report.md",
+    "PROJECT/review.md",
+    "PROJECT/artifacts/run.py",
+    "PROJECT/artifacts/config.json",
+    "PROJECT/artifacts/results.json",
+    "PROJECT/artifacts/subject_predictions.csv",
+    "PROJECT/artifacts/record_predictions.csv",
+    "PROJECT/records/registry.json",
+    "frozen-artifacts.json"
+  ],
+  "input_copies": [
+    "PROJECT/inputs/task.md",
+    "PROJECT/inputs/draft.md",
+    "PROJECT/inputs/model-card.md",
+    "PROJECT/inputs/visits.csv"
+  ],
+  "logs_directory": "logs",
+  "registration_inputs_directory": "registration-inputs",
+  "command_statuses": [
+    {
+      "path": "logs/01-init.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/02-connect.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/03-initial-resume.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/04-installed-check.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/05-formal-run.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/06-arithmetic-check.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-001.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-002.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-003.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-004.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-005.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-006.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-007.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-008.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-009.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-010.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-011.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-012.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-013.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-014.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-015.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-016.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-017.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-018.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-019.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-020.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-021.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-022.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-023.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-024.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-025.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-026.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-027.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-028.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-029.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-030.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-031.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-032.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-033.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-034.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-035.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-036.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-037.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-038.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-039.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/07-register-040.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/08-pre-check.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/09-checkpoint.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/10-final-check.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/11-final-resume.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "path": "logs/12-final-installed-check.status.json",
+      "exit_code": 0,
+      "timed_out": false
+    }
+  ],
+  "numerical_scope": {
+    "formal_runs": 1,
+    "records": 24,
+    "subjects": 12,
+    "outcome_events": 6,
+    "sites": [
+      "Synth-A"
+    ],
+    "periods": [
+      "2024"
+    ],
+    "R": {
+      "n_train_subjects": 12,
+      "n_train_records": 12,
+      "n_test_subjects": 12,
+      "n_test_records": 12,
+      "n_overlap_subjects": 12,
+      "accuracy": 1.0,
+      "brier_score": 0.0,
+      "mean_predicted_probability": 0.5,
+      "observed_event_rate": 0.5,
+      "calibration_bins": [
+        {
+          "interval": "[0.0,0.25)",
+          "n_subjects": 6,
+          "mean_predicted_probability": 0.0,
+          "event_rate": 0.0
+        },
+        {
+          "interval": "[0.25,0.5)",
+          "n_subjects": 0,
+          "mean_predicted_probability": null,
+          "event_rate": null
+        },
+        {
+          "interval": "[0.5,0.75)",
+          "n_subjects": 0,
+          "mean_predicted_probability": null,
+          "event_rate": null
+        },
+        {
+          "interval": "[0.75,1.0]",
+          "n_subjects": 6,
+          "mean_predicted_probability": 1.0,
+          "event_rate": 1.0
+        }
+      ]
+    },
+    "S": {
+      "n_train_subjects": 8,
+      "n_train_records": 16,
+      "n_test_subjects": 4,
+      "n_test_records": 8,
+      "n_overlap_subjects": 0,
+      "accuracy": 0.5,
+      "brier_score": 0.25,
+      "mean_predicted_probability": 0.5,
+      "observed_event_rate": 0.5,
+      "calibration_bins": [
+        {
+          "interval": "[0.0,0.25)",
+          "n_subjects": 0,
+          "mean_predicted_probability": null,
+          "event_rate": null
+        },
+        {
+          "interval": "[0.25,0.5)",
+          "n_subjects": 0,
+          "mean_predicted_probability": null,
+          "event_rate": null
+        },
+        {
+          "interval": "[0.5,0.75)",
+          "n_subjects": 4,
+          "mean_predicted_probability": 0.5,
+          "event_rate": 0.5
+        },
+        {
+          "interval": "[0.75,1.0]",
+          "n_subjects": 0,
+          "mean_predicted_probability": null,
+          "event_rate": null
+        }
+      ]
+    },
+    "randomness": false,
+    "internal_elapsed_seconds": 0.010133042000234127,
+    "outer_timeout_seconds": 10,
+    "failures": []
+  },
+  "registry_check": {
+    "exit_code": 0,
+    "passed": true,
+    "errors": [],
+    "warnings": [],
+    "scientific_validity": "not-assessed",
+    "checkpoint": {
+      "recorded": true,
+      "status": "current",
+      "changed": []
+    },
+    "counts": {
+      "activities": 5,
+      "artifacts": 11,
+      "decisions": 0,
+      "evidence": 5,
+      "method_bindings": 2,
+      "relations": 8,
+      "sources": 4,
+      "statements": 5
+    }
+  },
+  "failures": [],
+  "saved_next_action": "制定锁定的首次接触验证协议：明确目标人群与day0可用信息，规定独立主体、后续时期和外部机构队列、样本量、区分度/校准及不确定性标准；任何真实数据访问或收集前由责任方核定治理条件。此项尚未执行。",
+  "limits": [
+    "Original R remembers a training subject outcome and cannot validate first-contact generalization.",
+    "S describes four synthetic unseen subjects with constant p=0.5; no population inference, temporal/external validation, clinical utility or deployment support.",
+    "Self-review by the same Codex agent; no independent human/clinical expert review.",
+    "Offline standard library only; no network, global install, personal skills, source tests, private grading, other cases or other outputs accessed.",
+    "Registered content is read-only frozen; reproduce in an unfrozen new working copy and explicitly refresh evidence/activity/checkpoint versions."
+  ]
+}

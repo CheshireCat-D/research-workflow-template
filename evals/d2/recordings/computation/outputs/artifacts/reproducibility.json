@@ -1,0 +1,22 @@
+{
+  "path_base": "forward-computation output root",
+  "original_project": "PROJECT",
+  "relocated_project": "relocation-check/PROJECT",
+  "relocated_outputs": "relocation-check/outputs",
+  "commands": [
+    "logs/025.command.txt",
+    "logs/026.command.txt",
+    "logs/027.command.txt"
+  ],
+  "checks": {
+    "raw_numerics_and_calls_identical": true,
+    "baselines_identical": true,
+    "comparisons_identical": true,
+    "summaries_identical": true,
+    "inputs_identical": true,
+    "code_identical": true,
+    "pilot_identical": true
+  },
+  "timing_excluded_from_numeric_identity": true,
+  "passed": true
+}

@@ -1,0 +1,15 @@
+{
+  "id": "S1",
+  "text": "候选命题：对每个整数 n≥0，n²+n+41 都是素数。",
+  "type": "formal",
+  "scope": "整数 n≥0；当前仅有 n=0,1,2,3,4 的有限观察。",
+  "role": "conjecture",
+  "work_status": "draft",
+  "assessment": {
+    "status": "not-assessed",
+    "scope": "全称命题尚未评估。",
+    "rationale": "有限观察不能建立全称命题；需要证明或反例。",
+    "reviewer": "synthetic-example-author"
+  },
+  "notes": "教学快照刻意保留初始有限观察阶段；核心用法另给出 n=40 的已知反例，不代表实际开放问题。"
+}

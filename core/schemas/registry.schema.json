@@ -1,0 +1,1592 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://research-workflow-template.invalid/schemas/registry.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "records": {
+      "type": "object",
+      "properties": {
+        "sources": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/envelope-source"
+          }
+        },
+        "statements": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/envelope-statement"
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/envelope-evidence"
+          }
+        },
+        "relations": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/envelope-relation"
+          }
+        },
+        "activities": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/envelope-activity"
+          }
+        },
+        "decisions": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/envelope-decision"
+          }
+        },
+        "artifacts": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/envelope-artifact"
+          }
+        },
+        "method_bindings": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/envelope-method-binding"
+          }
+        }
+      },
+      "required": [
+        "sources",
+        "statements",
+        "evidence",
+        "relations",
+        "activities",
+        "decisions",
+        "artifacts",
+        "method_bindings"
+      ],
+      "additionalProperties": false
+    },
+    "cursor": {
+      "type": "object",
+      "properties": {
+        "activity_id": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+            }
+          ]
+        },
+        "next_action": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "activity_id",
+        "next_action"
+      ],
+      "additionalProperties": false
+    },
+    "checkpoint": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "created_at": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "config_sha256": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+            },
+            "records_sha256": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+            },
+            "files": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+              }
+            },
+            "note": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "extensions": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "created_at",
+            "config_sha256",
+            "records_sha256",
+            "files",
+            "note"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "at": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "kind": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            ]
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+              }
+            ]
+          },
+          "previous": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/$defs/envelope"
+              }
+            ]
+          },
+          "extensions": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "revision",
+          "at",
+          "action",
+          "kind",
+          "id",
+          "previous"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "extensions": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "project_id",
+    "revision",
+    "records",
+    "cursor",
+    "checkpoint",
+    "history"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "content_access": {
+          "type": "string",
+          "enum": [
+            "not-read",
+            "metadata-only",
+            "partial",
+            "full"
+          ]
+        },
+        "rights": {
+          "type": "string",
+          "enum": [
+            "unknown",
+            "public",
+            "restricted"
+          ]
+        },
+        "limitations": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "locator",
+        "version",
+        "content_access"
+      ],
+      "additionalProperties": false
+    },
+    "statement": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "question",
+            "formal",
+            "empirical",
+            "interpretive",
+            "normative",
+            "design"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "work_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "in-progress",
+            "reviewed",
+            "archived"
+          ]
+        },
+        "use": {
+          "type": "string",
+          "enum": [
+            "included",
+            "background",
+            "excluded"
+          ]
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          }
+        },
+        "assessment": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "not-assessed",
+                "supported-in-scope",
+                "mixed",
+                "challenged",
+                "insufficient",
+                "not-applicable"
+              ]
+            },
+            "scope": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "reviewer": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "extensions": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "status",
+            "scope",
+            "rationale",
+            "reviewer"
+          ],
+          "additionalProperties": false
+        },
+        "formal_verification": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "not-applicable",
+                "not-started",
+                "partial",
+                "complete-in-scope"
+              ]
+            },
+            "scope": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "tool": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "extensions": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "status",
+            "scope",
+            "tool"
+          ],
+          "additionalProperties": false
+        },
+        "notes": {
+          "type": "string"
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "type",
+        "scope"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "location": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "local"
+                },
+                "path": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "kind",
+                "path"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "external"
+                },
+                "locator": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "access_note": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "kind",
+                "locator",
+                "access_note"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "controlled"
+                },
+                "reference": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "access_note": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "kind",
+                "reference",
+                "access_note"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          }
+        },
+        "limitations": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "description",
+        "provenance",
+        "location"
+      ],
+      "additionalProperties": false
+    },
+    "relation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+        },
+        "statement_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+        },
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+        },
+        "relation": {
+          "type": "string",
+          "enum": [
+            "supports",
+            "qualifies",
+            "challenges",
+            "contextualizes",
+            "derived_from"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "limitations": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "statement_id",
+        "evidence_id",
+        "relation",
+        "rationale",
+        "scope"
+      ],
+      "additionalProperties": false
+    },
+    "activity": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "in-progress",
+            "done",
+            "failed",
+            "skipped"
+          ]
+        },
+        "depends_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          }
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          }
+        },
+        "note": {
+          "type": "string"
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+        },
+        "choice": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "responsible": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "decided_at": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          }
+        },
+        "revisit_when": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "choice",
+        "rationale",
+        "responsible",
+        "decided_at"
+      ],
+      "additionalProperties": false
+    },
+    "artifact": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "derived_from": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          }
+        },
+        "notes": {
+          "type": "string"
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "description",
+        "path"
+      ],
+      "additionalProperties": false
+    },
+    "method-binding": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+        },
+        "method_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "profile_version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "applies_to": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+          }
+        },
+        "variant": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "method_id",
+        "profile_version",
+        "reason",
+        "applies_to"
+      ],
+      "additionalProperties": false
+    },
+    "envelope-source": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "registered_at": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "data": {
+          "$ref": "#/$defs/source"
+        },
+        "bindings": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "files": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "records",
+                "files"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "registered_at",
+        "data",
+        "bindings"
+      ],
+      "additionalProperties": false
+    },
+    "envelope-statement": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "registered_at": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "data": {
+          "$ref": "#/$defs/statement"
+        },
+        "bindings": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "files": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "records",
+                "files"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "registered_at",
+        "data",
+        "bindings"
+      ],
+      "additionalProperties": false
+    },
+    "envelope-evidence": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "registered_at": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "data": {
+          "$ref": "#/$defs/evidence"
+        },
+        "bindings": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "files": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "records",
+                "files"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "registered_at",
+        "data",
+        "bindings"
+      ],
+      "additionalProperties": false
+    },
+    "envelope-relation": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "registered_at": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "data": {
+          "$ref": "#/$defs/relation"
+        },
+        "bindings": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "files": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "records",
+                "files"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "registered_at",
+        "data",
+        "bindings"
+      ],
+      "additionalProperties": false
+    },
+    "envelope-activity": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "registered_at": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "data": {
+          "$ref": "#/$defs/activity"
+        },
+        "bindings": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "files": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "records",
+                "files"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "registered_at",
+        "data",
+        "bindings"
+      ],
+      "additionalProperties": false
+    },
+    "envelope-decision": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "registered_at": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "data": {
+          "$ref": "#/$defs/decision"
+        },
+        "bindings": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "files": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "records",
+                "files"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "registered_at",
+        "data",
+        "bindings"
+      ],
+      "additionalProperties": false
+    },
+    "envelope-artifact": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "registered_at": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "data": {
+          "$ref": "#/$defs/artifact"
+        },
+        "bindings": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "files": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "records",
+                "files"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "registered_at",
+        "data",
+        "bindings"
+      ],
+      "additionalProperties": false
+    },
+    "envelope-method-binding": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "registered_at": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "data": {
+          "$ref": "#/$defs/method-binding"
+        },
+        "bindings": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "files": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "records",
+                "files"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "registered_at",
+        "data",
+        "bindings"
+      ],
+      "additionalProperties": false
+    },
+    "envelope": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "registered_at": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "data": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/source"
+            },
+            {
+              "$ref": "#/$defs/statement"
+            },
+            {
+              "$ref": "#/$defs/evidence"
+            },
+            {
+              "$ref": "#/$defs/relation"
+            },
+            {
+              "$ref": "#/$defs/activity"
+            },
+            {
+              "$ref": "#/$defs/decision"
+            },
+            {
+              "$ref": "#/$defs/artifact"
+            },
+            {
+              "$ref": "#/$defs/method-binding"
+            }
+          ]
+        },
+        "bindings": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "records": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "files": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[0-9a-f]{64}$(?![\\s\\S])"
+                  }
+                },
+                "extensions": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "records",
+                "files"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "registered_at",
+        "data",
+        "bindings"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

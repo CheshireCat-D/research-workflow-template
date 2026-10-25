@@ -1,0 +1,394 @@
+{
+  "case": "digital-humanities",
+  "direction": "forward",
+  "project": "PROJECT",
+  "completed_utc": "2026-10-24T20:44:39.598723+00:00",
+  "scientific_artifacts_frozen": true,
+  "freeze_manifest": "scientific-freeze.json",
+  "raw_inputs": [
+    "inputs/corpus.json",
+    "inputs/draft.md",
+    "inputs/editorial-note.md",
+    "inputs/task.md"
+  ],
+  "bootstrap_reads": [
+    "README.md",
+    "docs/07-core-usage.md",
+    "docs/08-skills-and-methods.md"
+  ],
+  "actual_skill_reads": [
+    ".agents/skills/rw-workflow/SKILL.md",
+    ".agents/skills/rw-question/SKILL.md",
+    ".agents/skills/rw-literature/SKILL.md",
+    ".agents/skills/rw-validation/SKILL.md",
+    ".agents/skills/rw-writing/SKILL.md",
+    ".agents/skills/rw-review/SKILL.md"
+  ],
+  "actual_profile_reads": [
+    ".agents/skills/_rw-runtime/profiles/methods/computational.md",
+    ".agents/skills/_rw-runtime/profiles/methods/historical-interpretive.md",
+    ".agents/skills/_rw-runtime/profiles/disciplines/humanities.md"
+  ],
+  "actual_core_reads": [
+    ".agents/skills/_rw-runtime/core/skill-bridge.md",
+    ".agents/skills/_rw-runtime/core/protocol.md"
+  ],
+  "actual_schema_reads": [
+    ".agents/skills/_rw-runtime/core/schemas/source.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/method-binding.schema.json"
+  ],
+  "read_evidence": "logs/04-local-reading.json; initial schema/project reads retained in session tool output",
+  "actor": "Codex agent; no independent human or specialist review",
+  "routing": "rw-workflow coordinating bounded question, actual source checks, computational plus historical-interpretive validation, bounded redraft and review; no forced innovation/candidate competition",
+  "main_files": [
+    "PROJECT/notes/issue.md",
+    "PROJECT/notes/source-work.md",
+    "PROJECT/notes/computation-work.md",
+    "PROJECT/artifacts/run.py",
+    "PROJECT/artifacts/results.json",
+    "PROJECT/artifacts/input-fingerprints.json",
+    "PROJECT/manuscript/report.md",
+    "PROJECT/review.md"
+  ],
+  "command_output_exit_logs": [
+    "logs/01-bootstrap.json",
+    "logs/02-bootstrap.json",
+    "logs/03-initial-resume.json",
+    "logs/04-local-reading.json",
+    "logs/05-analysis.json",
+    "logs/06-result-inspection.json",
+    "logs/07-delivery-inspection.json",
+    "logs/08-installed-check.json",
+    "logs/09-precheckpoint-check.json",
+    "logs/10-checkpoint.json",
+    "logs/11-final-check.json",
+    "logs/12-final-resume.json",
+    "logs/reg-01-source-PACK.json",
+    "logs/reg-02-source-EDIT.json",
+    "logs/reg-03-source-DRAFT.json",
+    "logs/reg-04-source-TASK.json",
+    "logs/reg-05-source-D01.json",
+    "logs/reg-06-source-D02.json",
+    "logs/reg-07-source-D03.json",
+    "logs/reg-08-source-D04.json",
+    "logs/reg-09-source-D05.json",
+    "logs/reg-10-source-D06.json",
+    "logs/reg-11-statement-Q1.json",
+    "logs/reg-12-statement-S1.json",
+    "logs/reg-13-statement-S2.json",
+    "logs/reg-14-statement-S3.json",
+    "logs/reg-15-statement-S4.json",
+    "logs/reg-16-statement-OLD.json",
+    "logs/reg-17-evidence-EVD01.json",
+    "logs/reg-18-evidence-EVD02.json",
+    "logs/reg-19-evidence-EVD03.json",
+    "logs/reg-20-evidence-EVD04.json",
+    "logs/reg-21-evidence-EVD05.json",
+    "logs/reg-22-evidence-EVD06.json",
+    "logs/reg-23-evidence-EVEDIT.json",
+    "logs/reg-24-evidence-EVRESULT.json",
+    "logs/reg-25-evidence-EVSOURCE.json",
+    "logs/reg-26-relation-R1.json",
+    "logs/reg-27-relation-R2.json",
+    "logs/reg-28-relation-R3.json",
+    "logs/reg-29-relation-R4.json",
+    "logs/reg-30-relation-R5.json",
+    "logs/reg-31-relation-R6.json",
+    "logs/reg-32-relation-R7.json",
+    "logs/reg-33-relation-R8.json",
+    "logs/reg-34-artifact-ARISSUE.json",
+    "logs/reg-35-artifact-ARSOURCE.json",
+    "logs/reg-36-artifact-ARCODE.json",
+    "logs/reg-37-artifact-ARRESULT.json",
+    "logs/reg-38-artifact-ARHASH.json",
+    "logs/reg-39-artifact-ARCOMPUTE.json",
+    "logs/reg-40-artifact-ARREPORT.json",
+    "logs/reg-41-artifact-ARREVIEW.json",
+    "logs/reg-42-method-binding-MCOMP.json",
+    "logs/reg-43-method-binding-MHIST.json",
+    "logs/reg-44-activity-A1.json",
+    "logs/reg-45-activity-A2.json",
+    "logs/reg-46-activity-A3.json",
+    "logs/reg-47-activity-A4.json"
+  ],
+  "execution": {
+    "command": [
+      "python3",
+      "artifacts/run.py"
+    ],
+    "script_exit_code": 0,
+    "analysis_elapsed_seconds": 0.011716790999344084,
+    "process_elapsed_seconds": 0.03771449999840115,
+    "timeout_seconds": 10,
+    "failures": [],
+    "environment_record": "PROJECT/artifacts/results.json",
+    "network_used": false,
+    "dependencies": "Python standard library",
+    "input_hashes_record": "PROJECT/artifacts/input-fingerprints.json"
+  },
+  "numerical_scope": {
+    "catalogue_rows": 6,
+    "readable_excerpt_pairs": 5,
+    "original_scans": 0,
+    "tokens_per_layer": 22,
+    "missing_text_ids": [
+      "D03"
+    ],
+    "per_document_measurements": {
+      "D01": [
+        5,
+        2,
+        40.0,
+        5,
+        2,
+        40.0
+      ],
+      "D02": [
+        4,
+        0,
+        0.0,
+        4,
+        2,
+        50.0
+      ],
+      "D03": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "D04": [
+        5,
+        3,
+        60.0,
+        5,
+        3,
+        60.0
+      ],
+      "D05": [
+        5,
+        4,
+        80.0,
+        5,
+        4,
+        80.0
+      ],
+      "D06": [
+        3,
+        1,
+        33.333333333333336,
+        3,
+        1,
+        33.333333333333336
+      ]
+    },
+    "document_measurement_order": [
+      "ocr_tokens",
+      "ocr_liberty",
+      "ocr_per100",
+      "corrected_tokens",
+      "corrected_liberty",
+      "corrected_per100"
+    ],
+    "all_period_totals": [
+      {
+        "period": 1900,
+        "edition_id": "all-available",
+        "layer": "ocr",
+        "catalogued_count": 3,
+        "available_count": 2,
+        "available_ids": [
+          "D01",
+          "D02"
+        ],
+        "missing_ids": [
+          "D03"
+        ],
+        "total_tokens": 9,
+        "liberty_count": 2,
+        "per_100_tokens": 22.22222222222222
+      },
+      {
+        "period": 1900,
+        "edition_id": "all-available",
+        "layer": "corrected",
+        "catalogued_count": 3,
+        "available_count": 2,
+        "available_ids": [
+          "D01",
+          "D02"
+        ],
+        "missing_ids": [
+          "D03"
+        ],
+        "total_tokens": 9,
+        "liberty_count": 4,
+        "per_100_tokens": 44.44444444444444
+      },
+      {
+        "period": 1910,
+        "edition_id": "all-available",
+        "layer": "ocr",
+        "catalogued_count": 3,
+        "available_count": 3,
+        "available_ids": [
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "missing_ids": [],
+        "total_tokens": 13,
+        "liberty_count": 8,
+        "per_100_tokens": 61.53846153846154
+      },
+      {
+        "period": 1910,
+        "edition_id": "all-available",
+        "layer": "corrected",
+        "catalogued_count": 3,
+        "available_count": 3,
+        "available_ids": [
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "missing_ids": [],
+        "total_tokens": 13,
+        "liberty_count": 8,
+        "per_100_tokens": 61.53846153846154
+      }
+    ],
+    "E1_period_totals": [
+      {
+        "period": 1900,
+        "edition_id": "E1",
+        "layer": "ocr",
+        "catalogued_count": 2,
+        "available_count": 2,
+        "available_ids": [
+          "D01",
+          "D02"
+        ],
+        "missing_ids": [],
+        "total_tokens": 9,
+        "liberty_count": 2,
+        "per_100_tokens": 22.22222222222222
+      },
+      {
+        "period": 1900,
+        "edition_id": "E1",
+        "layer": "corrected",
+        "catalogued_count": 2,
+        "available_count": 2,
+        "available_ids": [
+          "D01",
+          "D02"
+        ],
+        "missing_ids": [],
+        "total_tokens": 9,
+        "liberty_count": 4,
+        "per_100_tokens": 44.44444444444444
+      },
+      {
+        "period": 1910,
+        "edition_id": "E1",
+        "layer": "ocr",
+        "catalogued_count": 1,
+        "available_count": 1,
+        "available_ids": [
+          "D04"
+        ],
+        "missing_ids": [],
+        "total_tokens": 5,
+        "liberty_count": 3,
+        "per_100_tokens": 60.0
+      },
+      {
+        "period": 1910,
+        "edition_id": "E1",
+        "layer": "corrected",
+        "catalogued_count": 1,
+        "available_count": 1,
+        "available_ids": [
+          "D04"
+        ],
+        "missing_ids": [],
+        "total_tokens": 5,
+        "liberty_count": 3,
+        "per_100_tokens": 60.0
+      }
+    ],
+    "period_difference": {
+      "all_available": {
+        "ocr": 39.31623931623932,
+        "corrected": 17.094017094017097
+      },
+      "common_E1": {
+        "ocr": 37.77777777777778,
+        "corrected": 15.555555555555557
+      }
+    },
+    "report_Han_characters": 457
+  },
+  "substantive_findings": [
+    "D02 provided revisions add two exact liberty tokens to 1900 with denominator unchanged.",
+    "D03 retains metadata-only access and null measurements.",
+    "E1 corrected comparison is 4/9 versus 3/5; asymmetric coverage/genre persists.",
+    "Whole-corpus to E1 change is material-subset sensitivity, not an identified edition effect.",
+    "Draft causal, complete-source and missingness claims withdrawn; no real historical/novelty/publication conclusion."
+  ],
+  "persistence": {
+    "registered_records": 47,
+    "record_counts": {
+      "activities": 4,
+      "artifacts": 8,
+      "decisions": 0,
+      "evidence": 9,
+      "method_bindings": 2,
+      "relations": 8,
+      "sources": 10,
+      "statements": 6
+    },
+    "final_check_exit": 0,
+    "check_passed": true,
+    "errors": [],
+    "warnings": [],
+    "checkpoint_status": "current",
+    "resume_exit": 0,
+    "check_report": "check.json",
+    "resume_report": "resume.md",
+    "scientific_validity": "not-assessed"
+  },
+  "operational_failures": [
+    {
+      "action": "spawn independent reviewer subagent",
+      "result": "agent thread limit reached",
+      "consequence": "explicit Codex self-review performed; independent review not claimed"
+    }
+  ],
+  "limitations": [
+    "All text and catalogue information are newly authored fictional exercise inputs.",
+    "Only supplied excerpts, no scans or full original texts; editorial corrected layer not independently verified against originals.",
+    "D03 has metadata only; no E2 readable 1900 comparison.",
+    "No sampling frame or balanced genre/token coverage; E1 comparison remains descriptive.",
+    "No independent reform-event source, semantic context or causal identification.",
+    "Copied CLI integrity checks registration and file identities, not scientific certification."
+  ],
+  "next_action": "先为D03及E1两期同文类可比节录建立补料字段表，核对材料身份、period/辑本、实际访问范围和OCR修订依据；仅获新增文本后逐字复核、重算并显式更新受影响登记。",
+  "constraints": {
+    "input_or_toolkit_edits": false,
+    "other_case_outputs_accessed": false,
+    "tests_or_grading_accessed": false,
+    "personal_skill_package_used": false,
+    "global_install": false,
+    "external_messages_or_network": false,
+    "writes_restricted_to_run_directory": true
+  }
+}

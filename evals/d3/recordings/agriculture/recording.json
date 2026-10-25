@@ -1,0 +1,667 @@
+{
+  "format_version": 1,
+  "case_id": "agriculture",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "3a94f447176d2c2d3113c070d9663ce449fae58e82795853ef3128da71d714ea",
+  "project_init": {
+    "title": "覆膜田间试验的区组分析",
+    "interest": "单季单地点随机区组内的覆膜处理效应",
+    "disciplines": [],
+    "methods": [],
+    "workflow_mode": "light",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/design.md": "design.md",
+    "inputs/draft.md": "draft.md",
+    "inputs/plants.csv": "plants.csv",
+    "inputs/plots.csv": "plots.csv",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "plants.csv": "fcceeb53090e131439750551f90c2632353df33f8242275987a295a295001270",
+    "draft.md": "4f078aad562726d8545eb095668e7c5815847cf37c579f67d5c5a8dbf496c870",
+    "task.md": "a23489cdfda0651f7fb707ddbd7dcaa415f544a4b18c2462af339f1b1f356f8b",
+    "design.md": "e25357bca66f4d45f2fae36218e4885e618a496de10f2fcf9db8f94cf4bae32a",
+    "plots.csv": "d983c6390aa3734ce15661ba7b988b3ce7fb32a65387052633a27ecb45bf8a78"
+  },
+  "output_files": [
+    "artifacts/block-contrasts.csv",
+    "artifacts/input-sha256.json",
+    "artifacts/plot-means.csv",
+    "artifacts/randomization-distribution.csv",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "checks/numerical-qa.json",
+    "manuscript/report.md",
+    "notes/analysis.md",
+    "notes/followup-design.md",
+    "notes/issue.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/block-contrasts.csv": "7b0e5c2698005e1f5fc91dce6f51bf134e4098b9bd72f0f843ae79c2453b7e78",
+    "artifacts/input-sha256.json": "603dba13a9e225e8c2fa6c7b48241231846f6e90a07167f6b5baaa200661d037",
+    "artifacts/plot-means.csv": "c86eedfffe2f59626b064eb6b4689e9bc84249144d468935349d1e04442a647d",
+    "artifacts/randomization-distribution.csv": "cfbe3f8fd8552f736fdb3e73d8ac5d291156f1101f804748ccf3edd36b17d090",
+    "artifacts/results.json": "8bead7cb03829f574d798358afab453f76b1fbbcf8588aea75f8b1fa645f5265",
+    "artifacts/run.py": "2e3b00004dcea44affd40bda9cbbc4c06b688c637ba73aea514925134cea3076",
+    "checks/numerical-qa.json": "21f3c7439558e8769dc704d5744eab127a5c7e4c45be87c5d587a4556bd64072",
+    "manuscript/report.md": "50af5d3c374e355c51f3872d54771e5fef9b04b25ea9b89affe9386f43b59cda",
+    "notes/analysis.md": "d62e27b9a0727aed6e573a5859464c061fc8ee03363e431832e6c75681f53ab8",
+    "notes/followup-design.md": "c77ba7c6ccffa4ea452461f23c9dbff466a0a080735a8d8394985d7eb5a62b84",
+    "notes/issue.md": "586eeb87c0d05991112795c13bc16b0743d7ad30ded0cedc91e18e5f4b9edf62",
+    "review.md": "05f3de4e5de405663a54c11e20148cdb021d31c38af6e071706e5bc7f79974eb"
+  },
+  "output_normalizations": [],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC1",
+        "limitations": "Synthetic finite materials only; not independently field verified.",
+        "locator": "inputs/task.md",
+        "notes": "Provided as original synthetic offline task material; full copied content read. User authorizes copying within this isolated project; no external dissemination claimed.",
+        "rights": "unknown",
+        "title": "Original synthetic agriculture input: task.md",
+        "version": "v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC2",
+        "limitations": "Synthetic finite materials only; not independently field verified.",
+        "locator": "inputs/design.md",
+        "notes": "Provided as original synthetic offline task material; full copied content read. User authorizes copying within this isolated project; no external dissemination claimed.",
+        "rights": "unknown",
+        "title": "Original synthetic agriculture input: design.md",
+        "version": "v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC3",
+        "limitations": "Synthetic finite materials only; not independently field verified.",
+        "locator": "inputs/plots.csv",
+        "notes": "Provided as original synthetic offline task material; full copied content read. User authorizes copying within this isolated project; no external dissemination claimed.",
+        "rights": "unknown",
+        "title": "Original synthetic agriculture input: plots.csv",
+        "version": "v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC4",
+        "limitations": "Synthetic finite materials only; not independently field verified.",
+        "locator": "inputs/plants.csv",
+        "notes": "Provided as original synthetic offline task material; full copied content read. User authorizes copying within this isolated project; no external dissemination claimed.",
+        "rights": "unknown",
+        "title": "Original synthetic agriculture input: plants.csv",
+        "version": "v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC5",
+        "limitations": "Synthetic finite materials only; not independently field verified.",
+        "locator": "inputs/draft.md",
+        "notes": "Provided as original synthetic offline task material; full copied content read. User authorizes copying within this isolated project; no external dissemination claimed.",
+        "rights": "unknown",
+        "title": "Original synthetic agriculture input: draft.md",
+        "version": "v1"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "小区均值及等权区组差复算为2,2,0,0，均值1。",
+          "reviewer": "offline-agent-self-review",
+          "scope": "给定8小区4区组；不外推站点季节。",
+          "status": "supported-in-scope"
+        },
+        "id": "S1",
+        "scope": "给定8小区4区组；不外推站点季节。",
+        "text": "本站本季四区组所给六株均值的覆膜减对照观察差为1 g/株；作为有限小区平均因果效应估计需一致性与无溢出。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "8小区受处理；4独立区组硬币；48株是子样本。",
+          "reviewer": "offline-agent-self-review",
+          "scope": "原稿第一句与真实分配机制。",
+          "status": "challenged"
+        },
+        "id": "S2",
+        "scope": "原稿第一句与真实分配机制。",
+        "text": "原草稿称48个独立随机化单位。",
+        "type": "design",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "处理均值19，对照18，均值比变化5.5556%，非30%。",
+          "reviewer": "offline-agent-self-review",
+          "scope": "所给主要终点与观察均值。",
+          "status": "challenged"
+        },
+        "id": "S3",
+        "scope": "所给主要终点与观察均值。",
+        "text": "原草稿称提高30%。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "p=.003缺可复查算法；合法16分配尖锐零效应双侧p=.5，不支持显著主张。",
+          "reviewer": "offline-agent-self-review",
+          "scope": "给定资料的设计有效检验。",
+          "status": "challenged"
+        },
+        "id": "S4",
+        "scope": "给定资料的设计有效检验。",
+        "text": "原草稿称显著且p=0.003。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "仅单站单季四区组的六株均值，没有推广与经济环境资料。",
+          "reviewer": "offline-agent-self-review",
+          "scope": "跨地点季节、面积产量及应用。",
+          "status": "insufficient"
+        },
+        "id": "S5",
+        "scope": "跨地点季节、面积产量及应用。",
+        "text": "原草稿称所有地区必然增产并推荐推广。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "枚举分布−1:4、0:8、1:4；任意常数偏移双侧p>=2/16。",
+          "reviewer": "offline-agent-self-review",
+          "scope": "16种实际分配；尖锐零假设与常数加性模型。",
+          "status": "supported-in-scope"
+        },
+        "id": "S6",
+        "scope": "16种实际分配；尖锐零假设与常数加性模型。",
+        "text": "本次双侧Fisher尖锐零假设p=.5；常数效应95%精确反演集合为R，不能把t参考区间称设计保证。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "All 48 plant observations with plot IDs",
+        "id": "Edata",
+        "limitations": "Plant subsamples are not independent treatment assignments.",
+        "location": {
+          "kind": "local",
+          "path": "inputs/plants.csv"
+        },
+        "provenance": "Full copied inputs read; deterministic stdlib analysis and documented reasoning by this agent.",
+        "source_ids": [
+          "SRC3",
+          "SRC4"
+        ],
+        "type": "raw-data"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Original block randomization and target definitions",
+        "id": "Edesign",
+        "limitations": "User-provided synthetic record, not verified field execution.",
+        "location": {
+          "kind": "local",
+          "path": "inputs/design.md"
+        },
+        "provenance": "Full copied inputs read; deterministic stdlib analysis and documented reasoning by this agent.",
+        "source_ids": [
+          "SRC2"
+        ],
+        "type": "design-record"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Actual aggregation, enumeration, sensitivity and invalid-unit comparison",
+        "id": "Eresults",
+        "limitations": "Exact test addresses sharp null; t reference requires extra model.",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Full copied inputs read; deterministic stdlib analysis and documented reasoning by this agent.",
+        "source_ids": [
+          "SRC2",
+          "SRC3",
+          "SRC4"
+        ],
+        "type": "executed-analysis"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Scoped review of original draft and revised manuscript",
+        "id": "Ereview",
+        "limitations": "Same-agent self-review; no expert or external literature certification.",
+        "location": {
+          "kind": "local",
+          "path": "review.md"
+        },
+        "provenance": "Full copied inputs read; deterministic stdlib analysis and documented reasoning by this agent.",
+        "source_ids": [
+          "SRC1",
+          "SRC2",
+          "SRC3",
+          "SRC4",
+          "SRC5"
+        ],
+        "type": "claim-audit"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC2",
+          "source:SRC3",
+          "source:SRC4"
+        ],
+        "description": "标准库相对路径复算脚本",
+        "id": "Acode",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC2",
+          "source:SRC3",
+          "source:SRC4"
+        ],
+        "description": "问题、单位、方法选择与边界",
+        "id": "Aissue",
+        "path": "notes/issue.md",
+        "type": "issue"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eresults",
+        "id": "R1",
+        "rationale": "逐小区聚合与四区组均值差实际复算为1。",
+        "relation": "supports",
+        "scope": "只覆盖给定合成试验及本次实际分析。",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Edesign",
+        "id": "R2",
+        "rationale": "因果解释限于有限小区及无溢出等条件；一个站季。",
+        "relation": "qualifies",
+        "scope": "只覆盖给定合成试验及本次实际分析。",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Edesign",
+        "id": "R3",
+        "rationale": "随机分配位于小区层，4次独立区组硬币，非48次。",
+        "relation": "challenges",
+        "scope": "只覆盖给定合成试验及本次实际分析。",
+        "statement_id": "S2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eresults",
+        "id": "R4",
+        "rationale": "均值比实际5.56%，逐区组百分比均值8.125%，均非30%。",
+        "relation": "challenges",
+        "scope": "只覆盖给定合成试验及本次实际分析。",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eresults",
+        "id": "R5",
+        "rationale": "合法分配精确双侧p=.5；错误单位可制造小p但无效。",
+        "relation": "challenges",
+        "scope": "只覆盖给定合成试验及本次实际分析。",
+        "statement_id": "S4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Edesign",
+        "id": "R6",
+        "rationale": "单站单季、六株均值，没有全国抽样或面积产量。",
+        "relation": "qualifies",
+        "scope": "只覆盖给定合成试验及本次实际分析。",
+        "statement_id": "S5"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Ereview",
+        "id": "R7",
+        "rationale": "推广所需地点季节、经济与环境依据缺失。",
+        "relation": "challenges",
+        "scope": "只覆盖给定合成试验及本次实际分析。",
+        "statement_id": "S5"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eresults",
+        "id": "R8",
+        "rationale": "实际完整16分配和t参考结果，结合最小双侧p分辨率论证。",
+        "relation": "supports",
+        "scope": "只覆盖给定合成试验及本次实际分析。",
+        "statement_id": "S6"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Edesign",
+        "id": "R9",
+        "rationale": "尖锐零假设与异质平均零效应不同；未获得后者的精确有限区间。",
+        "relation": "qualifies",
+        "scope": "只覆盖给定合成试验及本次实际分析。",
+        "statement_id": "S6"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:Eresults"
+        ],
+        "description": "有限目标、公式、错误单位与执行偏差",
+        "id": "Aanalysis",
+        "path": "notes/analysis.md",
+        "type": "analysis-note"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:Eresults"
+        ],
+        "description": "逐区组主要比较",
+        "id": "Ablocks",
+        "path": "artifacts/block-contrasts.csv",
+        "type": "table"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:Eresults"
+        ],
+        "description": "五份输入内容身份",
+        "id": "Ahash",
+        "path": "artifacts/input-sha256.json",
+        "type": "manifest"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:Eresults"
+        ],
+        "description": "已保存未执行的后续试验入口",
+        "id": "Anext",
+        "path": "notes/followup-design.md",
+        "type": "design-note"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:Eresults"
+        ],
+        "description": "逐小区聚合值",
+        "id": "Aplots",
+        "path": "artifacts/plot-means.csv",
+        "type": "table"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:Eresults"
+        ],
+        "description": "重复运行与Decimal独立重算核对",
+        "id": "Aqa",
+        "path": "checks/numerical-qa.json",
+        "type": "validation"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:Eresults"
+        ],
+        "description": "全部16种合法随机分配",
+        "id": "Arandomization",
+        "path": "artifacts/randomization-distribution.csv",
+        "type": "table"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:Eresults"
+        ],
+        "description": "667字中文修订短稿",
+        "id": "Areport",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:Eresults"
+        ],
+        "description": "正式执行结果与种子不适用说明",
+        "id": "Aresults",
+        "path": "artifacts/results.json",
+        "type": "results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:Eresults"
+        ],
+        "description": "逐项错误与范围审阅",
+        "id": "Areview",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACTanalysis",
+        "inputs": [
+          "source:SRC2",
+          "source:SRC3",
+          "source:SRC4",
+          "evidence:Edesign",
+          "evidence:Edata"
+        ],
+        "note": "两次实际运行相同研究数值；单次约1毫秒脚本计算，整个重跑约0.03秒。计时不同已明确排除语义比较。",
+        "outputs": [
+          "artifact:Aissue",
+          "artifact:Aanalysis",
+          "artifact:Acode",
+          "artifact:Aresults",
+          "artifact:Aplots",
+          "artifact:Ablocks",
+          "artifact:Arandomization",
+          "artifact:Ahash",
+          "artifact:Aqa",
+          "statement:S1",
+          "statement:S6"
+        ],
+        "status": "done",
+        "title": "完整输入核对、实际区组分析及复跑核验"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACTanalysis"
+        ],
+        "id": "ACTwriting",
+        "inputs": [
+          "source:SRC5",
+          "evidence:Eresults",
+          "statement:S1",
+          "statement:S6"
+        ],
+        "outputs": [
+          "artifact:Areport"
+        ],
+        "status": "done",
+        "title": "修订短稿并删除无支持显著性和推广表述"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "activity:ACTanalysis",
+          "statement:S1",
+          "statement:S2"
+        ],
+        "id": "MBfield",
+        "method_id": "measurement-experiment",
+        "notes": "画像来自项目内生成副本；不是已执行真实田间试验或专家认证。",
+        "profile_version": "0.1",
+        "reason": "实际核对小区分配、植株子样本、区组、B4偏差与适用地点季节；相应画像全文已读。",
+        "variant": "field-trial"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "activity:ACTanalysis",
+          "statement:S6",
+          "artifact:Aresults"
+        ],
+        "id": "MBquant",
+        "method_id": "empirical-quantitative",
+        "profile_version": "0.1",
+        "reason": "实际定义有限目标、配对聚合、16分配尖锐零效应检验、敏感性与推断限制；相应画像全文已读。",
+        "variant": "randomized-intervention"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACTwriting"
+        ],
+        "id": "ACTreview",
+        "inputs": [
+          "artifact:Areport",
+          "source:SRC5",
+          "evidence:Eresults",
+          "evidence:Edesign"
+        ],
+        "note": "同一代理实质自审；补记复制connect检查退出2、源码连接检查安装完整性为真但源版本不同退出1，以及两项日志缺口；不声称独立专家审查。",
+        "outputs": [
+          "artifact:Areview",
+          "artifact:Anext",
+          "evidence:Ereview"
+        ],
+        "status": "done",
+        "title": "核对主张、数字、误差层级与精确推断范围"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 3,
+    "artifacts": 12,
+    "decisions": 0,
+    "evidence": 4,
+    "method_bindings": 2,
+    "relations": 9,
+    "sources": 5,
+    "statements": 6
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "先在notes/followup-design.md由实际作物研究者确定最小实用效应与主要终点，再比较更多独立区组、地点和季节的方差情景与设计；核查连接检查的源版本差异后再决定是否新建快照，保持现有快照不被覆盖。"
+  }
+}

@@ -1,0 +1,867 @@
+{
+  "format_version": 1,
+  "case_id": "medicine",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "3a94f447176d2c2d3113c070d9663ce449fae58e82795853ef3128da71d714ea",
+  "project_init": {
+    "title": "合成配对集群随机研究的效应与终点审阅",
+    "interest": "重建预设等权站点效应并审阅摘要",
+    "disciplines": [
+      "medicine-health"
+    ],
+    "methods": [
+      "empirical-quantitative"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/allocation.csv": "allocation.csv",
+    "inputs/draft.md": "draft.md",
+    "inputs/participants.csv": "participants.csv",
+    "inputs/protocol.md": "protocol.md",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "participants.csv": "7425759c933802a0b8de14546dcff60759dbf173349b472aa1b39405d0bac04e",
+    "draft.md": "e2e1de6169bed3151f3f9edf69c09918603636511e971b8f10ede112b720f7d6",
+    "allocation.csv": "324c4bff4275915c90383e89e96d137820de0b23151470efcbaf7cd648f6dbe4",
+    "task.md": "bf0e263c42e74c9700b75bd921e5d2b9de100a3bb4895a5024a402b96fec896b",
+    "protocol.md": "c753a279f1fb5726fc2225c2f12e883a0cf0b42e87a799608aa058f315a88dd5"
+  },
+  "output_files": [
+    "artifacts/pairs.csv",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "artifacts/sites.csv",
+    "artifacts/verify.py",
+    "artifacts/verify_revision.py",
+    "checks/analysis-verification.json",
+    "checks/input-copy-integrity.json",
+    "checks/revision-verification.json",
+    "manuscript/report.md",
+    "notes/analysis.md",
+    "notes/issue.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/pairs.csv": "e157cc47f041644001615e1a8de1c9ea8b5a52ede10a3157393e6bef8f58de7c",
+    "artifacts/results.json": "4919400f3a86f2990cf9598dacbf850100bf9d7d12920735cd33590a9fad7116",
+    "artifacts/run.py": "d8b95d3f5b94b154d275be8815df81fb7dc5767a2d8181c449e3e0ed97f66dfb",
+    "artifacts/sites.csv": "c0a9cfcd6053fb70368e42257f7f7e736957b0023ab05b30ea7e9c4090b61be0",
+    "artifacts/verify.py": "8af473a52b79d41bbc78d08ea468813494f66072369a4d87052d74a047c56104",
+    "artifacts/verify_revision.py": "e39d192d0ef832b40262c695190651d05d59e3890511c19aeb9d41c1443e42bb",
+    "checks/analysis-verification.json": "8a509ac35689fbeca89d029c500be2927c8157562967ded6d68d0039547865fa",
+    "checks/input-copy-integrity.json": "6c799dacb7c3114f3ac2019a87083318aa1809e53e8b538eeec7ff1db552c9f6",
+    "checks/revision-verification.json": "bede8e0d7b259ca3d8205f2fb52b569b2175a9f55e0791796e6c800472f3ac7f",
+    "manuscript/report.md": "5e115a09a4da4ef343624b9bd504a3293c021f827b597d2b3c05745c128dfdab",
+    "notes/analysis.md": "03d591fb3d4917db47ae44859a6f6c249f6d4361a6aefccb1bdcd09ae236006b",
+    "notes/issue.md": "2e727b426556935a53f24638290bd5fb8fd158d32594db17650eec182bca703c",
+    "review.md": "cb12e2b552c1a1e8b472320ff9d1ee7ec6199e8e64883a39ef844e5f36accbe0"
+  },
+  "output_normalizations": [
+    {
+      "path": "checks/analysis-verification.json",
+      "original_sha256": "c024397685fa9673fe3d906be3b5bf74c754c6b7db140f2d68871a8a4ef52f91",
+      "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+    },
+    {
+      "path": "checks/revision-verification.json",
+      "original_sha256": "ece4d4e439ad165747cda88bd3239d1def7a2c3b9f1c26340eddecf8add121e1",
+      "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+    }
+  ],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-allocation",
+        "limitations": "本任务原创合成材料；本地分析复制获用户授权，不声称真实临床或外部文献核查。",
+        "locator": "inputs/allocation.csv",
+        "rights": "unknown",
+        "title": "站点配对分配与固定人数",
+        "version": "provided-v1-sha256-324c4bff4275"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-draft",
+        "limitations": "本任务原创合成材料；本地分析复制获用户授权，不声称真实临床或外部文献核查。",
+        "locator": "inputs/draft.md",
+        "rights": "unknown",
+        "title": "待核查原摘要",
+        "version": "provided-v1-sha256-e2e1de6169be"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-method",
+        "limitations": "方法指导已读，画像存在不等于统计或临床认证；画像外链未访问。",
+        "locator": ".agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md",
+        "title": "项目内量化实证方法画像",
+        "version": "0.1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-outcomes",
+        "limitations": "本任务原创合成材料；本地分析复制获用户授权，不声称真实临床或外部文献核查。",
+        "locator": "inputs/participants.csv",
+        "rights": "unknown",
+        "title": "全部64人两时点结局",
+        "version": "provided-v1-sha256-7425759c9338"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-protocol",
+        "limitations": "本任务原创合成材料；本地分析复制获用户授权，不声称真实临床或外部文献核查。",
+        "locator": "inputs/protocol.md",
+        "rights": "unknown",
+        "title": "结局生成前冻结方案v1",
+        "version": "provided-v1-sha256-c753a279f1fb"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-task",
+        "limitations": "本任务原创合成材料；本地分析复制获用户授权，不声称真实临床或外部文献核查。",
+        "locator": "inputs/task.md",
+        "rights": "unknown",
+        "title": "委托与离线合成范围",
+        "version": "provided-v1-sha256-bf0e263c42e7"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "现有点估计、精确检验、合成样本和未测结局均不能支持该断言。",
+          "reviewer": "Codex offline methods analyst",
+          "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+          "status": "insufficient"
+        },
+        "formal_verification": {
+          "scope": "量化合成研究分析，未执行定理形式化",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-benefit",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "text": "研究确认项目有效，并可推广到所有社区患者负担、安全或长期受益。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "方案未预设第7天为主要或次要疗效终点，数字从完整记录重算。",
+          "reviewer": "Codex offline methods analyst",
+          "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "量化合成研究分析，未执行定理形式化",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-day7",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "text": "第7天差−2.00分、双侧精确p=0.125，只是揭盲后探索性附加结果，不能替代预设第30天。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "Decimal从64行原始记录重算，且原脚本隔离完整重跑确认同值；修正旧版分析笔记转录错误。",
+          "reviewer": "Codex revision analyst",
+          "scope": "原始逐人记录及既存results.json",
+          "status": "supported-in-scope"
+        },
+        "id": "S-day7-pooled",
+        "scope": "给定64人两组各32人的第7天合成结局；非预设主要或次要疗效终点。",
+        "text": "第7天按个人合并项目均值3.75、对照6.25、项目减对照−2.50；仅为探索性权重诊断。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "原始人数及站点均值可重建两种权重结果。",
+          "reviewer": "Codex offline methods analyst",
+          "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "量化合成研究分析，未执行定理形式化",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-pooling",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "text": "草稿按个人合并第30天差−1.75分，但与冻结方案的等权站点目标不同且方向相反。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "独立随机化只有4次，16分配使本双侧检验最小p至少0.125，无法据人数断言窄区间。",
+          "reviewer": "Codex offline methods analyst",
+          "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "量化合成研究分析，未执行定理形式化",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-precision",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "text": "64人足以保证很窄的置信区间。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "Fraction主计算与Decimal复算、16合法分配枚举一致。",
+          "reviewer": "Codex offline methods analyst",
+          "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "量化合成研究分析，未执行定理形式化",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-primary",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "text": "第30天预设站点等权项目减对照估计为+0.50分；尖锐无效应零假设双侧配对随机化p=0.75。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "冻结方案明确8站点配成4对，4次独立硬币，个人未重随机。",
+          "reviewer": "Codex offline methods analyst",
+          "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "量化合成研究分析，未执行定理形式化",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-randomization",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "text": "64位参与者分别独立随机化。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "八站点、四配对与固定站点人数",
+        "id": "E-allocation",
+        "limitations": "不含站点潜在结局或外推抽样框。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/allocation.csv"
+        },
+        "provenance": "本次离线读取/分析；完整材料身份与运行命令另有日志。",
+        "source_ids": [
+          "SRC-allocation"
+        ],
+        "type": "provided-synthetic-material"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "权重反转与推断边界推导",
+        "id": "E-analysis",
+        "limitations": "不证明真实临床益处、伤害、等效或外推。",
+        "location": {
+          "kind": "local",
+          "path": "notes/analysis.md"
+        },
+        "notes": "v2：独立审阅确认旧版第25行第7天个人合并项目均值及差值转录错误。现为3.75与−2.50；原计算结果此前正确。按原始记录Decimal复算并隔离完整重跑，见checks/revision-verification.json。",
+        "provenance": "本次离线读取/分析；完整材料身份与运行命令另有日志。",
+        "source_ids": [
+          "SRC-protocol",
+          "SRC-allocation",
+          "SRC-outcomes"
+        ],
+        "type": "synthetic-local-analysis"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "原摘要的五类断言",
+        "id": "E-draft",
+        "limitations": "待核查文本，不是有效结论。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "本次离线读取/分析；完整材料身份与运行命令另有日志。",
+        "source_ids": [
+          "SRC-draft"
+        ],
+        "type": "provided-synthetic-material"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "64人完整结局",
+        "id": "E-outcomes",
+        "limitations": "只见分配后的两个测量时点。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/participants.csv"
+        },
+        "provenance": "本次离线读取/分析；完整材料身份与运行命令另有日志。",
+        "source_ids": [
+          "SRC-outcomes"
+        ],
+        "type": "provided-synthetic-material"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "冻结方案的分配、目标量和终点身份",
+        "id": "E-protocol",
+        "limitations": "依从/无交叉过程仅为方案陈述；未独立查现场记录。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/protocol.md"
+        },
+        "provenance": "本次离线读取/分析；完整材料身份与运行命令另有日志。",
+        "source_ids": [
+          "SRC-protocol"
+        ],
+        "type": "provided-synthetic-material"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "站点/配对结果和全部随机化分布",
+        "id": "E-results",
+        "limitations": "精确检验限尖锐零假设；不是弱平均零效应检验。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "本次离线读取/分析；完整材料身份与运行命令另有日志。",
+        "source_ids": [
+          "SRC-protocol",
+          "SRC-allocation",
+          "SRC-outcomes"
+        ],
+        "type": "synthetic-local-analysis"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "第7天原始结局Decimal汇总：项目120/32=3.75，对照200/32=6.25，差−2.50；原代码隔离重跑全部数字相同",
+        "id": "E-revision-check",
+        "limitations": "纠正文稿转录与数值复核，既不改变等权主要估计，也不是临床或研究有效性认证。",
+        "location": {
+          "kind": "local",
+          "path": "checks/revision-verification.json"
+        },
+        "provenance": "实际运行artifacts/verify_revision.py，命令、退出0、stdout、stderr、耗时在项目旁logs/19-revision-recompute.json；旧版已归档。",
+        "source_ids": [
+          "SRC-allocation",
+          "SRC-outcomes"
+        ],
+        "type": "synthetic-local-revision-verification"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "独立Decimal算术和结果重跑",
+        "id": "E-verify",
+        "limitations": "数值核对，不是专业统计/临床认证。",
+        "location": {
+          "kind": "local",
+          "path": "checks/analysis-verification.json"
+        },
+        "provenance": "本次离线读取/分析；完整材料身份与运行命令另有日志。",
+        "source_ids": [
+          "SRC-allocation",
+          "SRC-outcomes"
+        ],
+        "type": "synthetic-local-analysis"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-allocation",
+          "source:SRC-outcomes"
+        ],
+        "description": "标准库Fraction完整重算程序",
+        "id": "A-code",
+        "path": "artifacts/run.py",
+        "type": "analysis-code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-task"
+        ],
+        "description": "复制前后五文件SHA-256一致",
+        "id": "A-copycheck",
+        "path": "checks/input-copy-integrity.json",
+        "type": "input-integrity"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-protocol"
+        ],
+        "description": "问题、目标量、实际方法与范围",
+        "id": "A-issue",
+        "path": "notes/issue.md",
+        "type": "question-and-method-card"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-results",
+        "id": "R01",
+        "rationale": "预设目标量+0.5、极端分配12/16。",
+        "relation": "supports",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-primary"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-verify",
+        "id": "R02",
+        "rationale": "独立Decimal复算与重跑一致。",
+        "relation": "supports",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-primary"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-analysis",
+        "id": "R03",
+        "rationale": "尖锐零假设与未知异质平均效应的区别；非等效证明。",
+        "relation": "qualifies",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-primary"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-analysis",
+        "id": "R04",
+        "rationale": "实际按人数加权−1.75，与等权站点+0.5对照。",
+        "relation": "supports",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-pooling"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-protocol",
+        "id": "R05",
+        "rationale": "冻结主要目标明确站点等权。",
+        "relation": "qualifies",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-pooling"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-protocol",
+        "id": "R06",
+        "rationale": "每对只随机分配站点而非个人。",
+        "relation": "challenges",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-randomization"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-allocation",
+        "id": "R07",
+        "rationale": "配对与组分配吻合站点设计。",
+        "relation": "challenges",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-randomization"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-results",
+        "id": "R08",
+        "rationale": "四对均−2，极端2/16。",
+        "relation": "supports",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-day7"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-protocol",
+        "id": "R09",
+        "rationale": "揭盲后选择不改变预设终点身份。",
+        "relation": "qualifies",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-day7"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-results",
+        "id": "R10",
+        "rationale": "第30天点估计不利方向且p=0.75，不支持确认有益。",
+        "relation": "challenges",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-benefit"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-protocol",
+        "id": "R11",
+        "rationale": "只覆盖此地点集合一轮随访，未测安全和长期结局。",
+        "relation": "qualifies",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-benefit"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-analysis",
+        "id": "R12",
+        "rationale": "只有4次独立硬币，本双侧随机化p最小0.125。",
+        "relation": "challenges",
+        "scope": "冻结方案、所给8合成站点4配对、全部64人，单轮第30天结局；非真实临床证据。",
+        "statement_id": "S-precision"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-results",
+        "id": "R13",
+        "rationale": "原计算文件已正确记录3.75、6.25与−2.50。",
+        "relation": "supports",
+        "scope": "仅第7天探索性个人加权诊断，不替代等权主要效应。",
+        "statement_id": "S-day7-pooled"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-revision-check",
+        "id": "R14",
+        "rationale": "独立Decimal原始记录求和和原脚本隔离完整重跑再次确认。",
+        "relation": "supports",
+        "scope": "仅第7天探索性个人加权诊断，不替代等权主要效应。",
+        "statement_id": "S-day7-pooled"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-code"
+        ],
+        "description": "最终数值、配置和16分配",
+        "id": "A-results",
+        "path": "artifacts/results.json",
+        "type": "computed-results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-code"
+        ],
+        "description": "Decimal独立算术与可复现性核对",
+        "id": "A-verifier",
+        "path": "artifacts/verify.py",
+        "type": "verification-code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-results"
+        ],
+        "description": "手算路径、权重反转与不确定性边界",
+        "id": "A-analysis",
+        "notes": "v2：仅纠正第7天个人合并项目均值3.75、差−2.50，并补完整人数加权算式；第30天、配对分析与推断文字不变。旧版已存项目旁revisions/v1。",
+        "path": "notes/analysis.md",
+        "type": "method-analysis"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-results"
+        ],
+        "description": "配对中间结果",
+        "id": "A-pairs",
+        "path": "artifacts/pairs.csv",
+        "type": "pair-intermediate"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-results"
+        ],
+        "description": "站点中间结果",
+        "id": "A-sites",
+        "path": "artifacts/sites.csv",
+        "type": "site-intermediate"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-verifier"
+        ],
+        "description": "独立算术和重跑检查结果",
+        "id": "A-verification",
+        "path": "checks/analysis-verification.json",
+        "type": "verification-output"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:S-primary",
+          "statement:S-pooling",
+          "statement:S-day7",
+          "artifact:A-code",
+          "artifact:A-results"
+        ],
+        "id": "MB-randomized",
+        "method_id": "empirical-quantitative",
+        "notes": "已实际读取项目内v0.1；仅绑定本次分析，不暗示所有方法变体已验证。",
+        "profile_version": "0.1",
+        "reason": "实际配对集群随机分配；等权站点目标量及16合法分配尖锐零假设检验。",
+        "variant": "randomized-intervention"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT-analysis",
+        "inputs": [
+          "source:SRC-protocol",
+          "source:SRC-allocation",
+          "source:SRC-outcomes",
+          "source:SRC-method"
+        ],
+        "note": "v2复核：原计算代码和结果字节不变；纠正A-analysis第7天个人合并均值/差的转录错误，E-analysis与A-analysis更新到v2并已按原记录核实。",
+        "outputs": [
+          "artifact:A-code",
+          "artifact:A-results",
+          "artifact:A-sites",
+          "artifact:A-pairs",
+          "artifact:A-analysis",
+          "artifact:A-issue",
+          "method-binding:MB-randomized",
+          "evidence:E-analysis"
+        ],
+        "status": "done",
+        "title": "重建站点/配对效应和设计精确检验"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-results",
+          "artifact:A-analysis"
+        ],
+        "description": "约1000汉字以内修订中文短稿",
+        "id": "A-report",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-code",
+          "artifact:A-results",
+          "artifact:A-analysis"
+        ],
+        "description": "v2针对独立审阅发现的转录错误复核：Decimal原始记录汇总和原脚本隔离重跑",
+        "id": "A-revision-code",
+        "path": "artifacts/verify_revision.py",
+        "type": "revision-verification-code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-report",
+          "source:SRC-draft"
+        ],
+        "description": "已确认错误、支持、限制、失败与下一步",
+        "id": "A-review",
+        "notes": "v2：补录独立审阅发现的分析笔记转录失败与实际修正、复核；不再以退出0暗示文稿所有数字正确。",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-revision-code",
+          "artifact:A-analysis"
+        ],
+        "description": "v2正确个人合并均值与差、完整重跑一致性及原计算产物字节不变核对",
+        "id": "A-revision-check",
+        "path": "checks/revision-verification.json",
+        "type": "revision-verification-output"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-analysis"
+        ],
+        "id": "ACT-verification",
+        "inputs": [
+          "artifact:A-code",
+          "artifact:A-results",
+          "artifact:A-analysis",
+          "evidence:E-analysis"
+        ],
+        "note": "v2重新审阅：原Decimal/重跑检查仍有效；另执行原始记录个人合并Decimal核对和原代码隔离完整重跑，所有结果除耗时相同，官方结果和输入字节未变。项目旁logs/19。",
+        "outputs": [
+          "artifact:A-verifier",
+          "artifact:A-verification",
+          "artifact:A-copycheck",
+          "artifact:A-revision-code",
+          "artifact:A-revision-check",
+          "evidence:E-revision-check"
+        ],
+        "status": "done",
+        "title": "独立Decimal算术与重跑数值一致性核验"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-analysis",
+          "ACT-verification"
+        ],
+        "id": "ACT-writing-review",
+        "inputs": [
+          "source:SRC-draft",
+          "artifact:A-results",
+          "artifact:A-analysis",
+          "artifact:A-verification",
+          "evidence:E-revision-check",
+          "statement:S-day7-pooled"
+        ],
+        "note": "v2重新审阅：notes/analysis.md修正第7天个人合并项目均值为3.75及差−2.50，review.md保留已发现转录失败与修复；短稿不含原错误数字，哈希未变。依分析→验证→写作审阅次序显式重新登记。",
+        "outputs": [
+          "artifact:A-report",
+          "artifact:A-review"
+        ],
+        "status": "done",
+        "title": "修订中文短稿并审查原摘要断言"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 3,
+    "artifacts": 13,
+    "decisions": 0,
+    "evidence": 8,
+    "method_bindings": 1,
+    "relations": 14,
+    "sources": 6,
+    "statements": 7
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "独立复核者核对notes/analysis.md第25行第7天个人合并项目120/32=3.75、对照200/32=6.25、差−2.50，审查checks/revision-verification.json与项目旁revision-note.md及revisions/v1；确认第30天+0.50及p=0.75、原results.json和短稿未变，再作限定范围内的重新审阅。"
+  }
+}

@@ -1,0 +1,825 @@
+{
+  "format_version": 1,
+  "case_id": "observational-policy",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "807be4a45acfc0fb76139e4f0b1b762803e4585ebf03e46c24b0ab5525322749",
+  "project_init": {
+    "title": "观察性恢复比例与政策时期指标的估量及识别审计",
+    "interest": "区分描述估量与观察性因果解释；两个独立合成例子",
+    "disciplines": [
+      "medicine-health",
+      "social-sciences"
+    ],
+    "methods": [
+      "empirical-quantitative",
+      "computational"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/design-note.md": "design-note.md",
+    "inputs/medical-strata.csv": "medical-strata.csv",
+    "inputs/policy-periods.csv": "policy-periods.csv",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "medical-strata.csv": "0602ea3992895ca9f8136eb70f3cf1ca37642ca49998fe2d4c38e1f046f08cdb",
+    "design-note.md": "e37d081e6dab5d85a0a0fd974f8a08853b682d6e8a57518f503716a364653651",
+    "task.md": "cb8d4ff92425b105ab2fee1ebecf396934888e568371dd2c0f80b47ddd48324c",
+    "policy-periods.csv": "bb72ca02327e4a0e83e22c12eafe80e088cde6f170d705b527255bd4563ac0fc"
+  },
+  "output_files": [
+    "PROJECT.md",
+    "artifacts/README.md",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "artifacts/verification.json",
+    "manuscript/report.md",
+    "notes/issue.md",
+    "notes/source-audit.md",
+    "notes/working.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "PROJECT.md": "92b9f2b7024c693d81d69472b50b4d1fa2aa5f7fa36164f1fcfd3c4de5c66e56",
+    "artifacts/README.md": "24cfdc825ba8e7688ac007884ea89a978aca36773503a47123743b98fb4e848e",
+    "artifacts/results.json": "c9240c965ae919834fe0511e005eb7a83fe9f1a64c33e6abe947a43bc9edaf28",
+    "artifacts/run.py": "f1a0d4aa3edbf3a9cfc0a5c3a728426e1067cb6ce35b640809b53af225c687d8",
+    "artifacts/verification.json": "363f4a928316ba7ce093a90fb28919dbe93dfa1c01af752637fbddd98b904b3f",
+    "manuscript/report.md": "57b37f21ef61ff315bb02c85a69d031276c1cd632d32e4fabb819fcf964cf249",
+    "notes/issue.md": "3d7fcb5317a41a0a851173201cb0ba556ab5aa8e9fe49ae35f63287ea68d864d",
+    "notes/source-audit.md": "153de0134ae353c12597ce343d1ef6011b69e1d5f580472f1f5f9475d3335154",
+    "notes/working.md": "fd7f2594fc075a81dd2ad23108ec257843dc109c1cf2bd169456a1ab2f673530",
+    "review.md": "76da5b946012fd8fedffc0c734f6382dc2fad3d2ef244c2b5fd03070ef4b5535"
+  },
+  "output_normalizations": [
+    {
+      "path": "artifacts/verification.json",
+      "original_sha256": "80421bfea9417359f08340131e458a06843c3480594b8da44a4cc5ccfbb40572",
+      "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+    }
+  ],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_DESIGN",
+        "limitations": "Case-author synthetic material; authorized local task copy, no claim of external source verification or unrestricted redistribution.",
+        "locator": "inputs/design-note.md",
+        "rights": "unknown",
+        "title": "两个独立的合成设计说明",
+        "version": "v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_MED",
+        "limitations": "Case-author synthetic material; authorized local task copy, no claim of external source verification or unrestricted redistribution.",
+        "locator": "inputs/medical-strata.csv",
+        "rights": "unknown",
+        "title": "医疗严重程度四格合成计数",
+        "version": "provided synthetic snapshot"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_POLICY",
+        "limitations": "Case-author synthetic material; authorized local task copy, no claim of external source verification or unrestricted redistribution.",
+        "locator": "inputs/policy-periods.csv",
+        "rights": "unknown",
+        "title": "两镇年度合成机会指数",
+        "version": "provided synthetic snapshot"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_TASK",
+        "limitations": "Case-author synthetic material; authorized local task copy, no claim of external source verification or unrestricted redistribution.",
+        "locator": "inputs/task.md",
+        "rights": "unknown",
+        "title": "受托任务",
+        "version": "provided task snapshot"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "粗差正但层内与标准化差负；显著性和因果有效性没有依据。",
+          "reviewer": "Codex agent; actual calculation and source audit, no independent human review",
+          "scope": "粗比例数字部分成立，因果及所有患者外推不足",
+          "status": "mixed"
+        },
+        "id": "DRAFT_M",
+        "role": "original draft claim",
+        "scope": "design-note M2原始待审表述",
+        "text": "接受方案的恢复比例明显较高，已经说明方案有效；粗差可作为所有患者的治疗获益。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "同期B也上升且设计存在同期冲击、既有趋势和测量问题。",
+          "reviewer": "Codex agent; actual calculation and source audit, no independent human review",
+          "scope": "前后上升描述成立，全部因果归因及自动消除混杂不足",
+          "status": "mixed"
+        },
+        "id": "DRAFT_P",
+        "role": "original draft claim",
+        "scope": "design-note P3原始待审表述",
+        "text": "A镇政策后指数上升，因此政策造成了全部增幅；加上B镇作比较便已自动消除混杂。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "非随机治疗，仅粗严重程度，缺细预后及分配和测量资料；可交换性等条件未建立。",
+          "reviewer": "Codex agent; actual calculation and source audit, no independent human review",
+          "scope": "识别依据审计",
+          "status": "supported-in-scope"
+        },
+        "id": "M_CAUSAL",
+        "scope": "给定M1/M2及四格计数；不声称真实世界无因果效果",
+        "text": "该观察性汇总没有识别所有患者的治疗获益，也未识别标准化差的因果解释。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "Fraction精确计算与工作笔记手算锚点一致。",
+          "reviewer": "Codex agent; actual calculation and source audit, no independent human review",
+          "scope": "描述比例和算术差",
+          "status": "supported-in-scope"
+        },
+        "id": "M_NUM",
+        "scope": "仅指定合成医疗表及合并严重程度分布",
+        "text": "方案84/120=70%、常规48/120=40%，粗差+30个百分点；轻、重层差均−10个百分点；合并分布权重各1/2，标准化50%与60%，差−10个百分点。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "已有变化差异、工厂扩张、异步测量口径变化；反事实平行趋势及可比测量未建立。",
+          "reviewer": "Codex agent; actual calculation and source audit, no independent human review",
+          "scope": "识别依据审计",
+          "status": "supported-in-scope"
+        },
+        "id": "P_CAUSAL",
+        "scope": "P1至P3给定设计；不声称真实政策无效",
+        "text": "加入B镇及计算变化差未自动识别A镇政策的因果效应。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "实际结果并以年度水平差8−7、7−10、6−7独立核对。",
+          "reviewer": "Codex agent; actual calculation and source audit, no independent human review",
+          "scope": "描述变化与差中差算术",
+          "status": "supported-in-scope"
+        },
+        "id": "P_NUM",
+        "scope": "指定两镇年度合成机会指数，固定基线及端点",
+        "text": "2023→2024 A+12、B+11、差+1指数点；2022→2023 A+5、B+8、差−3；2023→2025 A+16、B+17、差−1。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "id": "Q_M",
+        "scope": "240名合成主体；30日恢复；treated减usual",
+        "text": "对这张合成医疗表，粗、层内与合并严重程度分布标准化后的恢复比例差各是多少？",
+        "type": "question",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "id": "Q_P",
+        "scope": "A、B两镇年度合成机会指数；单位指数点",
+        "text": "两镇2023至2024、实施前2022至2023及固定2023改用2025时的指数变化差分别是多少？",
+        "type": "question",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "M1/M2、P1/P2/P3定义和限制及原稿表述",
+        "id": "E_DESIGN",
+        "limitations": "仅给定合成设计，不是伦理或随机化记录。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/design-note.md"
+        },
+        "provenance": "Codex agent read case-author synthetic inputs and actually executed stdlib code; see sibling logs for commands.",
+        "source_ids": [
+          "SRC_DESIGN"
+        ],
+        "type": "synthetic-design-note"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "四格主体数与30日恢复事件数",
+        "id": "E_MED",
+        "limitations": "非随机、只有粗层，无个体因果识别。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/medical-strata.csv"
+        },
+        "provenance": "Codex agent read case-author synthetic inputs and actually executed stdlib code; see sibling logs for commands.",
+        "source_ids": [
+          "SRC_MED",
+          "SRC_DESIGN"
+        ],
+        "type": "synthetic-counts"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "两镇2022至2025年度机会指数及政策标记",
+        "id": "E_POLICY",
+        "limitations": "无样本方差、测量口径异步变化。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/policy-periods.csv"
+        },
+        "provenance": "Codex agent read case-author synthetic inputs and actually executed stdlib code; see sibling logs for commands.",
+        "source_ids": [
+          "SRC_POLICY",
+          "SRC_DESIGN"
+        ],
+        "type": "synthetic-town-index"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "medical对象：粗、分层、合并权重标准化估量",
+        "id": "E_RESULT_M",
+        "limitations": "描述算术，不是因果识别或显著性检验。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Codex agent read case-author synthetic inputs and actually executed stdlib code; see sibling logs for commands.",
+        "source_ids": [
+          "SRC_MED",
+          "SRC_DESIGN"
+        ],
+        "type": "executed-exact-arithmetic"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "policy对象：主比较、已有趋势、替换结局及补充增量",
+        "id": "E_RESULT_P",
+        "limitations": "指数点，年度地区数据，非个体效果。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Codex agent read case-author synthetic inputs and actually executed stdlib code; see sibling logs for commands.",
+        "source_ids": [
+          "SRC_POLICY",
+          "SRC_DESIGN"
+        ],
+        "type": "executed-exact-arithmetic"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "原句与来源逐条支持边界对照",
+        "id": "E_SUPPORT",
+        "limitations": "本地全文范围，未外部检索。",
+        "location": {
+          "kind": "local",
+          "path": "notes/source-audit.md"
+        },
+        "provenance": "Codex agent read case-author synthetic inputs and actually executed stdlib code; see sibling logs for commands.",
+        "source_ids": [
+          "SRC_TASK",
+          "SRC_DESIGN",
+          "SRC_MED",
+          "SRC_POLICY"
+        ],
+        "type": "source-support-audit"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "手算锚点、目标量、识别假设、执行失败与恢复",
+        "id": "E_WORK",
+        "limitations": "Codex代理审计，无独立专家复核。",
+        "location": {
+          "kind": "local",
+          "path": "notes/working.md"
+        },
+        "provenance": "Codex agent read case-author synthetic inputs and actually executed stdlib code; see sibling logs for commands.",
+        "source_ids": [
+          "SRC_TASK",
+          "SRC_DESIGN",
+          "SRC_MED",
+          "SRC_POLICY"
+        ],
+        "type": "calculation-and-identification-notes"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:Q_M",
+          "statement:Q_P"
+        ],
+        "description": "独立两例问题、对象、单位、范围及下一检查",
+        "id": "AR_ISSUE",
+        "path": "notes/issue.md",
+        "type": "issue-card"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:M_NUM",
+          "statement:M_CAUSAL",
+          "statement:P_NUM",
+          "statement:P_CAUSAL"
+        ],
+        "description": "约1000汉字以内的独立两例修订短稿",
+        "id": "AR_REPORT",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_SUPPORT",
+        "id": "R_M_AUDIT",
+        "rationale": "本地逐条支持对照区分数字与解释。",
+        "relation": "supports",
+        "scope": "本次访问范围",
+        "statement_id": "M_CAUSAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_DESIGN",
+        "id": "R_M_CAUSAL",
+        "rationale": "M1/M2明确非随机及未测信息，不能把调整当成识别。",
+        "relation": "supports",
+        "scope": "给定设计缺口",
+        "statement_id": "M_CAUSAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULT_M",
+        "id": "R_M_DRAFT",
+        "rationale": "粗差方向与层内及标准化差反向，不能称所有患者获益。",
+        "relation": "challenges",
+        "scope": "原稿因果及外推部分",
+        "statement_id": "DRAFT_M"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_DESIGN",
+        "id": "R_M_QUALIFY",
+        "rationale": "严重程度、预后、偏好、转诊及误差限制解释。",
+        "relation": "qualifies",
+        "scope": "原稿解释",
+        "statement_id": "DRAFT_M"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_MED",
+        "id": "R_M_RAW",
+        "rationale": "四格整数构成粗及层内比例的分子分母。",
+        "relation": "supports",
+        "scope": "指定四格",
+        "statement_id": "M_NUM"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULT_M",
+        "id": "R_M_RESULT",
+        "rationale": "实际精确运算产生所报告数字。",
+        "relation": "supports",
+        "scope": "描述算术",
+        "statement_id": "M_NUM"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_WORK",
+        "id": "R_P_AUDIT",
+        "rationale": "工作笔记逐项列反事实、测量与同期冲击义务。",
+        "relation": "supports",
+        "scope": "本次分析范围",
+        "statement_id": "P_CAUSAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_DESIGN",
+        "id": "R_P_CAUSAL",
+        "rationale": "P2中的工厂扩张、异步口径、结构差异未被对照自动去除。",
+        "relation": "supports",
+        "scope": "给定识别限制",
+        "statement_id": "P_CAUSAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_DESIGN",
+        "id": "R_P_CHALLENGE",
+        "rationale": "同期冲击和口径变化使自动消除混杂表述缺依据。",
+        "relation": "challenges",
+        "scope": "原稿因果部分",
+        "statement_id": "DRAFT_P"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULT_P",
+        "id": "R_P_DRAFT",
+        "rationale": "B同期也上升，A全部前后变化不等于比较后的变化差。",
+        "relation": "qualifies",
+        "scope": "原稿数值与归因范围",
+        "statement_id": "DRAFT_P"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_POLICY",
+        "id": "R_P_RAW",
+        "rationale": "各年度表值足以计算相应变化差。",
+        "relation": "supports",
+        "scope": "两镇指定年度",
+        "statement_id": "P_NUM"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULT_P",
+        "id": "R_P_RESULT",
+        "rationale": "实际结果为+1、−3、−1指数点。",
+        "relation": "supports",
+        "scope": "描述算术",
+        "statement_id": "P_NUM"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [],
+        "id": "A_SCOPE",
+        "inputs": [
+          "source:SRC_TASK",
+          "source:SRC_DESIGN",
+          "source:SRC_MED",
+          "source:SRC_POLICY"
+        ],
+        "note": "Codex代理实际全文读取并定义目标；没有外部检索。",
+        "outputs": [
+          "artifact:AR_ISSUE",
+          "statement:Q_M",
+          "statement:Q_P"
+        ],
+        "status": "done",
+        "title": "阅读原始材料并固定两个独立问题"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_MED",
+          "evidence:E_POLICY"
+        ],
+        "description": "标准库确定性可搬移精确估量脚本",
+        "id": "AR_CODE",
+        "path": "artifacts/run.py",
+        "type": "analysis-code"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Q_M",
+          "statement:M_NUM",
+          "statement:M_CAUSAL",
+          "artifact:AR_REPORT"
+        ],
+        "id": "MB_M",
+        "method_id": "empirical-quantitative",
+        "profile_version": "0.1",
+        "reason": "严重程度调整前后描述量与医疗观察性因果解释分开，保留混杂及目标群体义务。",
+        "variant": "observational"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Q_P",
+          "statement:P_NUM",
+          "statement:P_CAUSAL",
+          "artifact:AR_REPORT"
+        ],
+        "id": "MB_P",
+        "method_id": "empirical-quantitative",
+        "profile_version": "0.1",
+        "reason": "审计变化差的识别义务，报告前趋势、同期冲击、测量可比与替换端点；未声称识别因果。",
+        "variant": "causal-inference"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AR_CODE"
+        ],
+        "description": "离线相对路径重跑与指纹边界",
+        "id": "AR_README",
+        "path": "artifacts/README.md",
+        "type": "rerun-instructions"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AR_CODE",
+          "evidence:E_MED",
+          "evidence:E_POLICY"
+        ],
+        "description": "实际结果、指纹、参数、环境、耗时和失败",
+        "id": "AR_RESULTS",
+        "path": "artifacts/results.json",
+        "type": "results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_DESIGN",
+          "artifact:AR_RESULTS"
+        ],
+        "description": "原句支持及限定映射",
+        "id": "AR_SOURCE",
+        "path": "notes/source-audit.md",
+        "type": "source-audit"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AR_CODE",
+          "artifact:AR_RESULTS",
+          "artifact:AR_REPORT"
+        ],
+        "description": "实际搬移重跑、科学字段一致性、复制运行时检查及短稿长度核验",
+        "id": "AR_VERIFY",
+        "notes": "Command stdout/stderr/exit logs preserved alongside PROJECT; finite synthetic arithmetic scope only.",
+        "path": "artifacts/verification.json",
+        "type": "verification-report"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AR_RESULTS",
+          "evidence:E_DESIGN"
+        ],
+        "description": "实际推导、手算、识别假设及失败恢复",
+        "id": "AR_WORK",
+        "path": "notes/working.md",
+        "type": "working-notes"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AR_REPORT",
+          "artifact:AR_SOURCE"
+        ],
+        "description": "支持审阅、实际修订与仍存缺口",
+        "id": "AR_REVIEW",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "artifact:AR_CODE",
+          "artifact:AR_RESULTS",
+          "artifact:AR_WORK"
+        ],
+        "id": "MB_C",
+        "method_id": "computational",
+        "profile_version": "0.1",
+        "reason": "用标准库实际执行精确算术、输入指纹、环境、参数、失败及搬移复跑。",
+        "variant": "empirical-algorithm"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_SCOPE"
+        ],
+        "id": "A_COMPUTE",
+        "inputs": [
+          "evidence:E_MED",
+          "evidence:E_POLICY",
+          "artifact:AR_CODE",
+          "method-binding:MB_C"
+        ],
+        "note": "实际进程退出0，0.046秒内；科学计时0.0114秒内；见项目旁logs/005-computation.json。",
+        "outputs": [
+          "artifact:AR_RESULTS",
+          "statement:M_NUM",
+          "statement:P_NUM"
+        ],
+        "status": "done",
+        "title": "编写并实际运行标准库估量脚本"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AR_REPORT",
+          "artifact:AR_REVIEW"
+        ],
+        "description": "交付导航、结论和下一步",
+        "id": "AR_PROJECT",
+        "path": "PROJECT.md",
+        "type": "project-overview"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_COMPUTE"
+        ],
+        "id": "A_SUPPORT",
+        "inputs": [
+          "evidence:E_DESIGN",
+          "artifact:AR_RESULTS",
+          "method-binding:MB_M",
+          "method-binding:MB_P"
+        ],
+        "note": "保留反向结果和政策口径/同期冲击；未识别因果、显著性或新颖性。",
+        "outputs": [
+          "artifact:AR_SOURCE",
+          "artifact:AR_WORK",
+          "statement:M_CAUSAL",
+          "statement:P_CAUSAL"
+        ],
+        "status": "done",
+        "title": "审计原稿的数值支持与识别限制"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_SUPPORT"
+        ],
+        "id": "A_WRITE",
+        "inputs": [
+          "artifact:AR_SOURCE",
+          "artifact:AR_WORK",
+          "statement:M_NUM",
+          "statement:P_NUM",
+          "statement:M_CAUSAL",
+          "statement:P_CAUSAL"
+        ],
+        "note": "以实际结果改写原句，保持两例独立。",
+        "outputs": [
+          "artifact:AR_REPORT"
+        ],
+        "status": "done",
+        "title": "修订1000汉字以内短稿"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_WRITE"
+        ],
+        "id": "A_REVIEW",
+        "inputs": [
+          "artifact:AR_REPORT",
+          "artifact:AR_RESULTS",
+          "artifact:AR_SOURCE"
+        ],
+        "note": "Codex代理实际内容复核，非独立人类审阅；没有投稿。",
+        "outputs": [
+          "artifact:AR_REVIEW",
+          "artifact:AR_README",
+          "artifact:AR_PROJECT"
+        ],
+        "status": "done",
+        "title": "逐项对读短稿数字与支持边界"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_REVIEW"
+        ],
+        "id": "A_REPRO",
+        "inputs": [
+          "artifact:AR_CODE",
+          "artifact:AR_RESULTS",
+          "artifact:AR_REPORT",
+          "artifact:AR_README"
+        ],
+        "note": "Codex代理实际复制项目至独立同级目录，重跑科学脚本与复制CLI，科学字段一致；短稿477汉字；每次进程低于10秒。",
+        "outputs": [
+          "artifact:AR_VERIFY"
+        ],
+        "status": "done",
+        "title": "搬移项目后实际重跑并核对交付"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 6,
+    "artifacts": 10,
+    "decisions": 0,
+    "evidence": 7,
+    "method_bindings": 3,
+    "relations": 12,
+    "sources": 4,
+    "statements": 8
+  },
+  "cursor": {
+    "activity_id": "A_REPRO",
+    "next_action": "收到新增设计材料后，先核对医疗治疗起点、分配与更细预后资料，并把两镇2022—2025线上岗位口径桥接表及工厂扩张记录与现有年度表逐年对齐；重定目标量和识别方案后再复算。在此之前保留当前描述版本，不升级因果措辞。"
+  }
+}

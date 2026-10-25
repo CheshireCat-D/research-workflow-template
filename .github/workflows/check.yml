@@ -1,0 +1,63 @@
+name: Check template
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.11', '3.14']
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -B tools/check_core.py --test-timeout 360
+      - run: python -B tools/release_package.py check
+      - name: Build and verify local archive
+        run: |
+          mkdir -p dist
+          python -B tools/release_package.py build --output dist/research-workflow-template.zip
+          python -B tools/release_package.py verify --archive dist/research-workflow-template.zip
+      - name: Check extracted archive with an empty home
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import os
+          import subprocess
+          import sys
+          import tempfile
+          import zipfile
+
+          archive = Path('dist/research-workflow-template.zip').resolve()
+          with tempfile.TemporaryDirectory(prefix='rw-release-') as temporary:
+              base = Path(temporary)
+              with zipfile.ZipFile(archive) as package:
+                  prefix = package.namelist()[0].split('/')[0]
+                  package.extractall(base / 'source')
+              home = base / 'home'
+              scratch = base / 'tmp'
+              home.mkdir()
+              scratch.mkdir()
+              environment = dict(os.environ, HOME=str(home), TMPDIR=str(scratch),
+                                 PYTHONDONTWRITEBYTECODE='1')
+              root = base / 'source' / prefix
+              subprocess.run([sys.executable, '-I', '-B', 'tools/check_core.py',
+                              '--test-timeout', '360'], cwd=root, env=environment, check=True)
+              subprocess.run([sys.executable, '-I', '-B', 'tools/release_package.py', 'check'],
+                             cwd=root, env=environment, check=True)
+          PY

@@ -1,0 +1,126 @@
+{
+  "scope": "Supplied synthetic aggregates only; classification and process completion are distinct outcomes",
+  "prediction": {
+    "source": "inputs/quantitative.csv:2-3; inputs/design-and-draft.md Q1",
+    "site": "A",
+    "period": "2023-retrospective",
+    "n": 100,
+    "unit": "subject",
+    "design": "retrospective fixed-classifier agreement with existing labels; training/development independence unknown",
+    "matrix_orientation": {
+      "rows": [
+        "true positive label",
+        "true negative label"
+      ],
+      "columns": [
+        "predicted positive",
+        "predicted negative"
+      ]
+    },
+    "confusion_matrix": [
+      [
+        32,
+        8
+      ],
+      [
+        8,
+        52
+      ]
+    ],
+    "counts": {
+      "TP": 32,
+      "FN": 8,
+      "FP": 8,
+      "TN": 52
+    },
+    "sensitivity": {
+      "numerator": 32,
+      "denominator": 40,
+      "proportion": 0.8,
+      "percent": 80.0
+    },
+    "specificity": {
+      "numerator": 52,
+      "denominator": 60,
+      "proportion": 0.8666666666666667,
+      "percent": 86.66666666666667
+    },
+    "positive_predictive_value": {
+      "numerator": 32,
+      "denominator": 40,
+      "proportion": 0.8,
+      "percent": 80.0
+    },
+    "accuracy": {
+      "numerator": 84,
+      "denominator": 100,
+      "proportion": 0.84,
+      "percent": 84.0
+    },
+    "unassessed": [
+      "calibration",
+      "training/validation separation and leakage",
+      "external performance",
+      "downstream workflow benefit"
+    ]
+  },
+  "pilot": {
+    "source": "inputs/quantitative.csv:4-5; inputs/design-and-draft.md Q2",
+    "site": "B",
+    "period": "2024-two-week-pilot",
+    "unit": "volunteer",
+    "design": "same eight volunteers, pre/post aggregate; tool and reminder calls bundled; no randomized or concurrent control",
+    "pre": {
+      "numerator": 2,
+      "denominator": 8,
+      "proportion": 0.25,
+      "percent": 25.0
+    },
+    "post": {
+      "numerator": 5,
+      "denominator": 8,
+      "proportion": 0.625,
+      "percent": 62.5
+    },
+    "difference": {
+      "numerator_change": 3,
+      "denominator": 8,
+      "proportion_difference": 0.375,
+      "percentage_point_difference": 37.5
+    },
+    "uptake": {
+      "numerator": 8,
+      "denominator": 13,
+      "proportion": 0.6153846153846154,
+      "percent": 61.53846153846154
+    },
+    "nonparticipants": {
+      "count": 5,
+      "outcome": "not collected; neither zero nor excluded from recruitment account"
+    },
+    "compatible_paired_tables_not_observed": [
+      {
+        "completed_both": 0,
+        "pre_only": 2,
+        "post_only": 5,
+        "neither": 1
+      },
+      {
+        "completed_both": 1,
+        "pre_only": 1,
+        "post_only": 4,
+        "neither": 2
+      },
+      {
+        "completed_both": 2,
+        "pre_only": 0,
+        "post_only": 3,
+        "neither": 3
+      }
+    ],
+    "paired_transition_status": "not identifiable from marginal counts",
+    "causal_effect": "not identified"
+  },
+  "failures": [],
+  "elapsed_seconds": 0.012458583998522954
+}

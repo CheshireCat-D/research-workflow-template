@@ -1,0 +1,581 @@
+{
+  "schema_version": "1",
+  "configuration": {
+    "input_paths": [
+      "inputs/allocation.csv",
+      "inputs/participants.csv"
+    ],
+    "primary_endpoint": "burden_day30",
+    "direction": "program minus control; negative favors program",
+    "weighting": "sites equal, four pairs equal",
+    "allocation": "four independent fair pair-level coins",
+    "seed": "not applicable: complete deterministic enumeration of all 16 assignments",
+    "adjustment": "none",
+    "exclusion": "none",
+    "missing_handling": "assert complete; no imputation"
+  },
+  "input_sha256": {
+    "inputs/allocation.csv": "324c4bff4275915c90383e89e96d137820de0b23151470efcbaf7cd648f6dbe4",
+    "inputs/draft.md": "e2e1de6169bed3151f3f9edf69c09918603636511e971b8f10ede112b720f7d6",
+    "inputs/participants.csv": "7425759c933802a0b8de14546dcff60759dbf173349b472aa1b39405d0bac04e",
+    "inputs/protocol.md": "c753a279f1fb5726fc2225c2f12e883a0cf0b42e87a799608aa058f315a88dd5",
+    "inputs/task.md": "bf0e263c42e74c9700b75bd921e5d2b9de100a3bb4895a5024a402b96fec896b"
+  },
+  "flow": {
+    "allocated_sites": 8,
+    "analyzed_sites": 8,
+    "pairs": 4,
+    "listed_participants": 64,
+    "analyzed_participants": 64,
+    "participants_by_arm": {
+      "program": 32,
+      "control": 32
+    },
+    "missing_outcomes": 0,
+    "crossovers": "not independently observable; protocol states none"
+  },
+  "site_results": [
+    {
+      "clinic_id": "C01",
+      "pair_id": "P1",
+      "arm": "control",
+      "enrolled_n": "12",
+      "observed_n": 12,
+      "day30_sum": 120.0,
+      "day7_sum": 72.0,
+      "day30_mean": 10.0,
+      "day7_mean": 6.0
+    },
+    {
+      "clinic_id": "C02",
+      "pair_id": "P1",
+      "arm": "program",
+      "enrolled_n": "4",
+      "observed_n": 4,
+      "day30_sum": 44.0,
+      "day7_sum": 16.0,
+      "day30_mean": 11.0,
+      "day7_mean": 4.0
+    },
+    {
+      "clinic_id": "C03",
+      "pair_id": "P2",
+      "arm": "control",
+      "enrolled_n": "12",
+      "observed_n": 12,
+      "day30_sum": 168.0,
+      "day7_sum": 84.0,
+      "day30_mean": 14.0,
+      "day7_mean": 7.0
+    },
+    {
+      "clinic_id": "C04",
+      "pair_id": "P2",
+      "arm": "program",
+      "enrolled_n": "4",
+      "observed_n": 4,
+      "day30_sum": 52.0,
+      "day7_sum": 20.0,
+      "day30_mean": 13.0,
+      "day7_mean": 5.0
+    },
+    {
+      "clinic_id": "C05",
+      "pair_id": "P3",
+      "arm": "control",
+      "enrolled_n": "4",
+      "observed_n": 4,
+      "day30_sum": 24.0,
+      "day7_sum": 20.0,
+      "day30_mean": 6.0,
+      "day7_mean": 5.0
+    },
+    {
+      "clinic_id": "C06",
+      "pair_id": "P3",
+      "arm": "program",
+      "enrolled_n": "12",
+      "observed_n": 12,
+      "day30_sum": 96.0,
+      "day7_sum": 36.0,
+      "day30_mean": 8.0,
+      "day7_mean": 3.0
+    },
+    {
+      "clinic_id": "C07",
+      "pair_id": "P4",
+      "arm": "control",
+      "enrolled_n": "4",
+      "observed_n": 4,
+      "day30_sum": 32.0,
+      "day7_sum": 24.0,
+      "day30_mean": 8.0,
+      "day7_mean": 6.0
+    },
+    {
+      "clinic_id": "C08",
+      "pair_id": "P4",
+      "arm": "program",
+      "enrolled_n": "12",
+      "observed_n": 12,
+      "day30_sum": 96.0,
+      "day7_sum": 48.0,
+      "day30_mean": 8.0,
+      "day7_mean": 4.0
+    }
+  ],
+  "pair_results": [
+    {
+      "pair_id": "P1",
+      "program_clinic": "C02",
+      "control_clinic": "C01",
+      "day30_difference": 1.0,
+      "day7_difference": -2.0
+    },
+    {
+      "pair_id": "P2",
+      "program_clinic": "C04",
+      "control_clinic": "C03",
+      "day30_difference": -1.0,
+      "day7_difference": -2.0
+    },
+    {
+      "pair_id": "P3",
+      "program_clinic": "C06",
+      "control_clinic": "C05",
+      "day30_difference": 2.0,
+      "day7_difference": -2.0
+    },
+    {
+      "pair_id": "P4",
+      "program_clinic": "C08",
+      "control_clinic": "C07",
+      "day30_difference": 0.0,
+      "day7_difference": -2.0
+    }
+  ],
+  "endpoints": {
+    "burden_day30": {
+      "prespecified": true,
+      "status": "primary",
+      "pair_differences": [
+        1.0,
+        -1.0,
+        2.0,
+        0.0
+      ],
+      "effect": 0.5,
+      "effect_exact": "1/2",
+      "site_equal_arm_means": {
+        "control": 9.5,
+        "program": 10.0
+      },
+      "participant_pooled_arm_means": {
+        "control": 10.75,
+        "program": 9.0
+      },
+      "participant_pooled_difference": -1.75,
+      "randomization": {
+        "null": "sharp null: no program effect at any site/participant",
+        "statistic": "equal mean of program minus control site means across four pairs",
+        "alternative": "two-sided, absolute statistic, ties included",
+        "assignments": 16,
+        "extreme_assignments": 12,
+        "p_value": 0.75,
+        "p_value_exact": "3/4",
+        "minimal_attainable_two_sided_p": 0.125,
+        "distribution": [
+          {
+            "pair_signs": [
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "statistic": -0.5,
+            "statistic_exact": "-1/2",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "statistic": -0.5,
+            "statistic_exact": "-1/2",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              -1,
+              -1,
+              1,
+              -1
+            ],
+            "statistic": 0.5,
+            "statistic_exact": "1/2",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              -1,
+              -1,
+              1,
+              1
+            ],
+            "statistic": 0.5,
+            "statistic_exact": "1/2",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              -1,
+              1,
+              -1,
+              -1
+            ],
+            "statistic": -1.0,
+            "statistic_exact": "-1",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              -1,
+              1,
+              -1,
+              1
+            ],
+            "statistic": -1.0,
+            "statistic_exact": "-1",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              -1,
+              1,
+              1,
+              -1
+            ],
+            "statistic": 0.0,
+            "statistic_exact": "0",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              -1,
+              1,
+              1,
+              1
+            ],
+            "statistic": 0.0,
+            "statistic_exact": "0",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            "statistic": 0.0,
+            "statistic_exact": "0",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "statistic": 0.0,
+            "statistic_exact": "0",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              -1,
+              1,
+              -1
+            ],
+            "statistic": 1.0,
+            "statistic_exact": "1",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              1,
+              -1,
+              1,
+              1
+            ],
+            "statistic": 1.0,
+            "statistic_exact": "1",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              1,
+              1,
+              -1,
+              -1
+            ],
+            "statistic": -0.5,
+            "statistic_exact": "-1/2",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              1,
+              1,
+              -1,
+              1
+            ],
+            "statistic": -0.5,
+            "statistic_exact": "-1/2",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              1,
+              1,
+              1,
+              -1
+            ],
+            "statistic": 0.5,
+            "statistic_exact": "1/2",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "statistic": 0.5,
+            "statistic_exact": "1/2",
+            "at_least_as_extreme": true
+          }
+        ],
+        "scope": "design-exact test of the sharp null, not a CI or a test of weak zero average effect under arbitrary heterogeneity"
+      }
+    },
+    "burden_day7": {
+      "prespecified": false,
+      "status": "post-unblinding exploratory; operational monitoring, not prespecified efficacy endpoint",
+      "pair_differences": [
+        -2.0,
+        -2.0,
+        -2.0,
+        -2.0
+      ],
+      "effect": -2.0,
+      "effect_exact": "-2",
+      "site_equal_arm_means": {
+        "control": 6.0,
+        "program": 4.0
+      },
+      "participant_pooled_arm_means": {
+        "control": 6.25,
+        "program": 3.75
+      },
+      "participant_pooled_difference": -2.5,
+      "randomization": {
+        "null": "sharp null: no program effect at any site/participant",
+        "statistic": "equal mean of program minus control site means across four pairs",
+        "alternative": "two-sided, absolute statistic, ties included",
+        "assignments": 16,
+        "extreme_assignments": 2,
+        "p_value": 0.125,
+        "p_value_exact": "1/8",
+        "minimal_attainable_two_sided_p": 0.125,
+        "distribution": [
+          {
+            "pair_signs": [
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "statistic": 2.0,
+            "statistic_exact": "2",
+            "at_least_as_extreme": true
+          },
+          {
+            "pair_signs": [
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "statistic": 1.0,
+            "statistic_exact": "1",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              -1,
+              -1,
+              1,
+              -1
+            ],
+            "statistic": 1.0,
+            "statistic_exact": "1",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              -1,
+              -1,
+              1,
+              1
+            ],
+            "statistic": 0.0,
+            "statistic_exact": "0",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              -1,
+              1,
+              -1,
+              -1
+            ],
+            "statistic": 1.0,
+            "statistic_exact": "1",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              -1,
+              1,
+              -1,
+              1
+            ],
+            "statistic": 0.0,
+            "statistic_exact": "0",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              -1,
+              1,
+              1,
+              -1
+            ],
+            "statistic": 0.0,
+            "statistic_exact": "0",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              -1,
+              1,
+              1,
+              1
+            ],
+            "statistic": -1.0,
+            "statistic_exact": "-1",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              -1,
+              -1,
+              -1
+            ],
+            "statistic": 1.0,
+            "statistic_exact": "1",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "statistic": 0.0,
+            "statistic_exact": "0",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              -1,
+              1,
+              -1
+            ],
+            "statistic": 0.0,
+            "statistic_exact": "0",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              -1,
+              1,
+              1
+            ],
+            "statistic": -1.0,
+            "statistic_exact": "-1",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              1,
+              -1,
+              -1
+            ],
+            "statistic": 0.0,
+            "statistic_exact": "0",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              1,
+              -1,
+              1
+            ],
+            "statistic": -1.0,
+            "statistic_exact": "-1",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              1,
+              1,
+              -1
+            ],
+            "statistic": -1.0,
+            "statistic_exact": "-1",
+            "at_least_as_extreme": false
+          },
+          {
+            "pair_signs": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "statistic": -2.0,
+            "statistic_exact": "-2",
+            "at_least_as_extreme": true
+          }
+        ],
+        "scope": "design-exact test of the sharp null, not a CI or a test of weak zero average effect under arbitrary heterogeneity"
+      }
+    }
+  },
+  "failures": [],
+  "elapsed_seconds": 0.0008886249997885898
+}

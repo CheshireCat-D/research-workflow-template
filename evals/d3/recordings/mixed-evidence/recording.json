@@ -1,0 +1,1072 @@
+{
+  "format_version": 1,
+  "case_id": "mixed-evidence",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "807be4a45acfc0fb76139e4f0b1b762803e4585ebf03e46c24b0ab5525322749",
+  "project_init": {
+    "title": "跨机构服务研究混合证据审计",
+    "interest": "区分预测表现、试点完成比例与访谈经验的可连接范围",
+    "disciplines": [],
+    "methods": [],
+    "workflow_mode": "light",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/design-and-draft.md": "design-and-draft.md",
+    "inputs/interviews.md": "interviews.md",
+    "inputs/quantitative.csv": "quantitative.csv",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "interviews.md": "b1d387349f847d9cbf61440bf7c081eeba1235772be42f5774ce5e6d7a29d8a5",
+    "quantitative.csv": "602febedb2ee9e5ec396f656e6c21e8be0ab3d8258c2357e7e446387dfd881ac",
+    "design-and-draft.md": "ba2a6c2a64ca350d3fd88893e06bf704058d3e893e207a156422097e90f40bf4",
+    "task.md": "8e998f43210cdc518a88b39b002a6e9e2fdff449a1240e8e34faebc6c5868e8d"
+  },
+  "output_files": [
+    "artifacts/config.json",
+    "artifacts/environment.json",
+    "artifacts/failures.json",
+    "artifacts/input-fingerprints.json",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "manuscript/report.md",
+    "notes/audit.md",
+    "notes/connection-check.md",
+    "notes/issue.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/config.json": "429de404878e10450e76ebe6a0ab3062664263ea81809fb4a3882f201c8f78ec",
+    "artifacts/environment.json": "04bf5c555aaff2ff2152e26fe14bb33743973bbe3527a33e2ccfe4b357047c94",
+    "artifacts/failures.json": "eaa6153f6193791d03a04bbac30347df940c35dfdf8d55879bd3b4f155ee97d4",
+    "artifacts/input-fingerprints.json": "20baad0c4640c67ac7aec6f027e1b85acbddef37cafdcc1a427f4c3207497cc6",
+    "artifacts/results.json": "bf73da7de32590ac62b33aae1c6c7eefc4d8da87d008c5f044eae988d92d5d22",
+    "artifacts/run.py": "a976bd41e7a5f977810dc9d2abb27be29e51c4edb6f5e067d37ee7b82dda25ca",
+    "manuscript/report.md": "622ad41a9b31ac617a27f9aacdebbef77b880e826b7ca3eefe98ca99f89d91f9",
+    "notes/audit.md": "a99dc189f1b502e16860c5dcf44b93137e9b4ab6fe2a8c944cb9cb91f673f9a9",
+    "notes/connection-check.md": "7f67bd79345ec53c9bcee3b5f6ff4f69569044e0a1e34a1463c5dd87a07b93e2",
+    "notes/issue.md": "a139d11f3b95fd788fb7256393e836ec410f2ec52ee89285c72a340b7cf2c19a",
+    "review.md": "a483c132f3a4845b3a3242b0c3bd17acd65b13bb7717086463efcfd4bf2746cc"
+  },
+  "output_normalizations": [],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SDesign",
+        "limitations": "仅所供设计说明，无方案/日志原件",
+        "locator": "inputs/design-and-draft.md",
+        "notes": "用户明确说明为新写合成材料；仅用于当前离线练习。",
+        "rights": "unknown",
+        "title": "设计与待修订草稿 v1",
+        "version": "supplied-v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SInterviews",
+        "limitations": "完整读取所供节录，不等于完整访谈；I4只允许团队编码与概括，不得研究稿直接引语",
+        "locator": "inputs/interviews.md",
+        "notes": "用户明确说明为新写合成材料；仅用于当前离线练习。",
+        "rights": "restricted",
+        "title": "合成访谈节录 v1",
+        "version": "supplied-v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SQuant",
+        "limitations": "四行汇总，非逐人资料",
+        "locator": "inputs/quantitative.csv",
+        "notes": "用户明确说明为新写合成材料；仅用于当前离线练习。",
+        "rights": "unknown",
+        "title": "合成量化汇总 v1",
+        "version": "supplied-v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "STask",
+        "limitations": "离线合成材料任务，不含真实参与者或实施授权",
+        "locator": "inputs/task.md",
+        "notes": "用户明确说明为新写合成材料；仅用于当前离线练习。",
+        "rights": "unknown",
+        "title": "本轮方法练习委托",
+        "version": "supplied-v1"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "问题形成，不将提问作为已获实证支持的结论",
+          "reviewer": "Codex agent; self-audit, not independent human review",
+          "scope": "所供合成材料内的问题审计",
+          "status": "not-applicable"
+        },
+        "formal_verification": {
+          "scope": "No formal proof claim",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "QCurrent",
+        "scope": "所供合成材料内的问题审计",
+        "text": "A标签分类、B志愿者完成变化和四段访谈各能回答什么，局部结论怎样连接？",
+        "type": "question",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "提醒共同引入且无对照；三个配对表均相容，不能补造逐人数据",
+          "reviewer": "Codex agent; self-audit, not independent human review",
+          "scope": "给定前后边际与设计的可识别边界",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No formal proof claim",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "SCausal",
+        "scope": "给定前后边际与设计的可识别边界",
+        "text": "B前后变化未识别工具独立因果效果或个体净改善转变。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "没有A/B工具输出和同一结局连接资料；目前只是待检验机制提议",
+          "reviewer": "Codex agent; self-audit, not independent human review",
+          "scope": "拟议共同命题的支持范围",
+          "status": "insufficient"
+        },
+        "formal_verification": {
+          "scope": "No formal proof claim",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "SConnection",
+        "scope": "拟议共同命题的支持范围",
+        "text": "现材料可确立分类输出到响应动作再到流程完成的跨机构共同机制。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "设计Q2与I3.1一致，参与比例8/13；没有未参加者结局",
+          "reviewer": "Codex agent; self-audit, not independent human review",
+          "scope": "B招募分母13、参与者8、未参加者5",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No formal proof claim",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "SNonpart",
+        "scope": "B招募分母13、参与者8、未参加者5",
+        "text": "13名合格联络者中5人未参加，结局未收集，不能当零或从招募流消失。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "实际脚本及手算得到TP32/FN8/FP8/TN52；不含外部验证/实际获益",
+          "reviewer": "Codex agent; self-audit, not independent human review",
+          "scope": "固定分类器与既有标签一致，单一回顾样本",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No formal proof claim",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "SP1",
+        "scope": "固定分类器与既有标签一致，单一回顾样本",
+        "text": "A机构2023年100条主体记录中，敏感度80%、特异度86.67%、阳性预测值80%、准确率84%。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "保留同组重复测量，未观察配对转变",
+          "reviewer": "Codex agent; self-audit, not independent human review",
+          "scope": "两周前后汇总描述，分析分母为8人",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No formal proof claim",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "SP2",
+        "scope": "两周前后汇总描述，分析分母为8人",
+        "text": "B机构2024年同8名志愿者的流程完成由2/8升至5/8，增加37.5个百分点。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "I1—I4逐条定位，保留I1响应缺口及I4适配障碍；I2与P2重叠",
+          "reviewer": "Codex agent; self-audit, not independent human review",
+          "scope": "四段节录的透明描述性编码，无代表性或饱和声明",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No formal proof claim",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "SQual",
+        "scope": "四段节录的透明描述性编码，无代表性或饱和声明",
+        "text": "访谈为流程响应、电话协助、参与选择及提醒适配提供局部解释和反向个案。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "I4.2明确不许研究稿直接引语，I3按带出处转述使用",
+          "reviewer": "Codex agent; self-audit, not independent human review",
+          "scope": "原稿待审引用判断",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "No formal proof claim",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "SQuoteAll",
+        "scope": "原稿待审引用判断",
+        "text": "访谈原话均可直接放进研究稿正文。",
+        "type": "interpretive",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "对象/结局/地点/时间/设计不同，工具身份未连接，无因果对照且有不利个案",
+          "reviewer": "Codex agent; self-audit, not independent human review",
+          "scope": "原稿待审的跨机构因果与普遍性主张",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "No formal proof claim",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "SUniversal",
+        "scope": "原稿待审的跨机构因果与普遍性主张",
+        "text": "三类资料已相互验证同一工具造成跨机构普遍获益。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "逐条访谈编码、数值手算与连接判定",
+        "id": "EAudit",
+        "limitations": "同一Codex代理的审计，没有独立人类复核",
+        "location": {
+          "kind": "local",
+          "path": "notes/audit.md"
+        },
+        "provenance": "Supplied synthetic inputs; analysis by Codex agent where derived",
+        "source_ids": [
+          "SQuant",
+          "SDesign",
+          "SInterviews"
+        ],
+        "type": "support-audit"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "实际标准库运行结果及三张兼容但未观察的配对表",
+        "id": "ECalc",
+        "limitations": "算术描述和不识别性演示；不作因果或总体推断",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Supplied synthetic inputs; analysis by Codex agent where derived",
+        "source_ids": [
+          "SQuant",
+          "SDesign"
+        ],
+        "type": "computed-result"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Q1—Q3及待修订草稿",
+        "id": "EDesign",
+        "limitations": "仅合成说明；没有随机/同期对照，工具身份桥接未知",
+        "location": {
+          "kind": "local",
+          "path": "inputs/design-and-draft.md"
+        },
+        "provenance": "Supplied synthetic inputs; analysis by Codex agent where derived",
+        "source_ids": [
+          "SDesign"
+        ],
+        "type": "design-description"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "I1.1原材料与I1.2语境/权限",
+        "id": "EI1",
+        "limitations": "A/2024-01，非B参加者；团队研究稿允许引用，非完整访谈",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "provenance": "Supplied synthetic inputs; analysis by Codex agent where derived",
+        "source_ids": [
+          "SInterviews"
+        ],
+        "type": "interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "I2.1原材料与I2.2语境/权限",
+        "id": "EI2",
+        "limitations": "B/2024-06，P2参加者之一；不构成独立研究或全体代表",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "provenance": "Supplied synthetic inputs; analysis by Codex agent where derived",
+        "source_ids": [
+          "SInterviews"
+        ],
+        "type": "interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "I3.1组织者陈述与I3.2允许用途",
+        "id": "EI3",
+        "limitations": "B/2024-06，带出处转述；没有未参加者结局",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "provenance": "Supplied synthetic inputs; analysis by Codex agent where derived",
+        "source_ids": [
+          "SInterviews"
+        ],
+        "type": "interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "I4.1材料仅供团队编码，I4.2限制正文直接引语",
+        "id": "EI4",
+        "limitations": "B/2024-05未参加者；只作无原话概括，无后续完成结局",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "provenance": "Supplied synthetic inputs; analysis by Codex agent where derived",
+        "source_ids": [
+          "SInterviews"
+        ],
+        "type": "interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P1两条标签分组汇总，CSV第2—3行",
+        "id": "EP1",
+        "limitations": "A/2023，真实标签阳40阴60，event为判阳人数；不说明开发/验证独立性",
+        "location": {
+          "kind": "local",
+          "path": "inputs/quantitative.csv"
+        },
+        "provenance": "Supplied synthetic inputs; analysis by Codex agent where derived",
+        "source_ids": [
+          "SQuant",
+          "SDesign"
+        ],
+        "type": "aggregate"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P2前后汇总，CSV第4—5行",
+        "id": "EP2",
+        "limitations": "B/2024，同8人，无配对转变，未参加五人结局未知",
+        "location": {
+          "kind": "local",
+          "path": "inputs/quantitative.csv"
+        },
+        "provenance": "Supplied synthetic inputs; analysis by Codex agent where derived",
+        "source_ids": [
+          "SQuant",
+          "SDesign"
+        ],
+        "type": "aggregate"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SDesign"
+        ],
+        "description": "确定性分析配置与限制",
+        "id": "AConfig",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "artifacts/config.json",
+        "type": "configuration"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:QCurrent"
+        ],
+        "description": "当前问题与边界",
+        "id": "AIssue",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "notes/issue.md",
+        "type": "question-card"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:SConnection"
+        ],
+        "description": "具体连接检查计划，未执行",
+        "id": "ANext",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "notes/connection-check.md",
+        "type": "next-check-plan"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EP1",
+        "id": "R01",
+        "rationale": "提供40/60真实标签分母和32/8判阳计数",
+        "relation": "supports",
+        "scope": "A/2023标签一致性",
+        "statement_id": "SP1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "ECalc",
+        "id": "R02",
+        "rationale": "实际计算混淆矩阵和四指标",
+        "relation": "supports",
+        "scope": "100条已供记录",
+        "statement_id": "SP1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI1",
+        "id": "R03",
+        "rationale": "提供回顾分类演示使用者语境，不验证四指标",
+        "relation": "contextualizes",
+        "scope": "A/2024-01节录",
+        "statement_id": "SP1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EP2",
+        "id": "R04",
+        "rationale": "前后同8人完成2与5，差异3/8",
+        "relation": "supports",
+        "scope": "B两周志愿者描述",
+        "statement_id": "SP2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "ECalc",
+        "id": "R05",
+        "rationale": "实际计算25%至62.5%及37.5个百分点",
+        "relation": "supports",
+        "scope": "同8人边际",
+        "statement_id": "SP2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI2",
+        "id": "R06",
+        "rationale": "一个重叠参加者陈述与完成者存在相容，并提示选择/协助",
+        "relation": "qualifies",
+        "scope": "不是独立效果复制",
+        "statement_id": "SP2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EDesign",
+        "id": "R07",
+        "rationale": "Q2给出13→8+5，五人结局未收集",
+        "relation": "supports",
+        "scope": "B招募流",
+        "statement_id": "SNonpart"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI3",
+        "id": "R08",
+        "rationale": "I3.1核对招募和未收集情况",
+        "relation": "supports",
+        "scope": "组织者回顾，不是缺失结局替代",
+        "statement_id": "SNonpart"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EP1",
+        "id": "R09",
+        "rationale": "分类一致并非流程或生活改善",
+        "relation": "qualifies",
+        "scope": "A既有标签样本",
+        "statement_id": "SUniversal"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EDesign",
+        "id": "R10",
+        "rationale": "对象结局不同且无因果对照，提醒共同加入",
+        "relation": "challenges",
+        "scope": "拒绝跨机构普遍因果结论",
+        "statement_id": "SUniversal"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI4",
+        "id": "R11",
+        "rationale": "适配障碍反向个案限制普遍可接受叙事",
+        "relation": "challenges",
+        "scope": "不推算总体比例或后续完成",
+        "statement_id": "SUniversal"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI4",
+        "id": "R12",
+        "rationale": "I4.2明示不得研究稿直接引语",
+        "relation": "challenges",
+        "scope": "可团队编码及无原话概括",
+        "statement_id": "SQuoteAll"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI3",
+        "id": "R13",
+        "rationale": "I3允许带出处转述",
+        "relation": "qualifies",
+        "scope": "不扩张引用条件",
+        "statement_id": "SQuoteAll"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EDesign",
+        "id": "R14",
+        "rationale": "没有给出A/B工具输出和同一完成结局映射",
+        "relation": "qualifies",
+        "scope": "机制尚需连接检查",
+        "statement_id": "SConnection"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI1",
+        "id": "R15",
+        "rationale": "I1指出分类之外还有响应安排缺口",
+        "relation": "qualifies",
+        "scope": "一段经验提示，不确立机制",
+        "statement_id": "SConnection"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI1",
+        "id": "R16",
+        "rationale": "提示分类与流程响应缺口",
+        "relation": "supports",
+        "scope": "I1.1/1.2",
+        "statement_id": "SQual"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI2",
+        "id": "R17",
+        "rationale": "个人完成、协助与参与选择",
+        "relation": "supports",
+        "scope": "I2.1/2.2",
+        "statement_id": "SQual"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI3",
+        "id": "R18",
+        "rationale": "招募、缺失与新增提醒",
+        "relation": "supports",
+        "scope": "I3.1/3.2",
+        "statement_id": "SQual"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EI4",
+        "id": "R19",
+        "rationale": "提醒适配的反向个案；仅概括",
+        "relation": "supports",
+        "scope": "I4.1/4.2",
+        "statement_id": "SQual"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EDesign",
+        "id": "R20",
+        "rationale": "无随机/同期对照，联合措施，选择性参加",
+        "relation": "supports",
+        "scope": "设计识别边界",
+        "statement_id": "SCausal"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "ECalc",
+        "id": "R21",
+        "rationale": "三种配对表均满足已给边际",
+        "relation": "supports",
+        "scope": "兼容表不是观察资料",
+        "statement_id": "SCausal"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [],
+        "id": "AScope",
+        "inputs": [
+          "source:STask",
+          "source:SDesign"
+        ],
+        "note": "实际执行者为Codex代理；完成仅指所列工作已做，不是独立人类验证或科学认证。",
+        "outputs": [
+          "statement:QCurrent",
+          "artifact:AIssue"
+        ],
+        "status": "done",
+        "title": "明确当前问题与方法范围"
+      }
+    },
+    {
+      "kind": "decision",
+      "record": {
+        "choice": "分别报告P1预测、P2完成和访谈解释，只对局部可连接命题作说明。",
+        "decided_at": "2026-10-24T20:39:16.430191+00:00",
+        "evidence_refs": [
+          "EDesign",
+          "EP1",
+          "EP2",
+          "EI4"
+        ],
+        "id": "DSeparate",
+        "rationale": "对象、结局、设计和资料依赖不同，且缺少工具/响应/完成连接资料。",
+        "responsible": "Codex agent within supplied task scope",
+        "revisit_when": "取得可定位的A/B工具输出身份与共同结局连接表后重新判断共同命题。"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:ECalc",
+          "evidence:EI1",
+          "evidence:EI2",
+          "evidence:EI3",
+          "evidence:EI4"
+        ],
+        "description": "实际数值/材料/整合审计",
+        "id": "AAudit",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "notes/audit.md",
+        "type": "analysis-notes"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:EP1",
+          "evidence:EP2"
+        ],
+        "description": "实际执行的标准库算术代码",
+        "id": "ACode",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:SP2",
+          "statement:SNonpart",
+          "statement:SCausal",
+          "evidence:EP2"
+        ],
+        "id": "MDesc",
+        "method_id": "empirical-quantitative",
+        "notes": "实际读取项目内该画像；学科语境为social-sciences 0.1",
+        "profile_version": "0.1",
+        "reason": "同组边际、招募与因果识别边界",
+        "variant": "descriptive"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:SP1",
+          "evidence:EP1"
+        ],
+        "id": "MPred",
+        "method_id": "empirical-quantitative",
+        "notes": "实际读取项目内该画像；学科语境为social-sciences 0.1",
+        "profile_version": "0.1",
+        "reason": "回顾标签分类表现与目标量",
+        "variant": "prediction"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:SQual",
+          "evidence:EI1",
+          "evidence:EI2",
+          "evidence:EI3",
+          "evidence:EI4"
+        ],
+        "id": "MQual",
+        "method_id": "qualitative",
+        "notes": "实际读取项目内该画像；学科语境为social-sciences 0.1",
+        "profile_version": "0.1",
+        "reason": "节录到编码及反向案例、引用限制",
+        "variant": "interview"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ACode"
+        ],
+        "description": "实际Python/平台/命令环境",
+        "id": "AEnvironment",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "artifacts/environment.json",
+        "type": "environment"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ACode"
+        ],
+        "description": "实际运行耗时和失败空列表",
+        "id": "AFailures",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "artifacts/failures.json",
+        "type": "run-record"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ACode",
+          "artifact:AConfig"
+        ],
+        "description": "输入、配置和代码SHA256",
+        "id": "AFingerprints",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "artifacts/input-fingerprints.json",
+        "type": "fingerprints"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ACode",
+          "artifact:AConfig",
+          "evidence:EP1",
+          "evidence:EP2"
+        ],
+        "description": "逐项结果、分子分母和配对不识别性",
+        "id": "AResults",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "artifacts/results.json",
+        "type": "result"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:SUniversal",
+          "statement:SConnection",
+          "artifact:AAudit"
+        ],
+        "id": "MSynth",
+        "method_id": "evidence-synthesis",
+        "notes": "实际读取项目内该画像；学科语境为social-sciences 0.1",
+        "profile_version": "0.1",
+        "reason": "仅所供材料内的结构化整合，不称系统综述",
+        "variant": "interpretive-synthesis"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "AScope"
+        ],
+        "id": "ACompute",
+        "inputs": [
+          "evidence:EP1",
+          "evidence:EP2",
+          "artifact:ACode",
+          "artifact:AConfig"
+        ],
+        "note": "实际执行者为Codex代理；完成仅指所列工作已做，不是独立人类验证或科学认证。",
+        "outputs": [
+          "evidence:ECalc",
+          "artifact:AResults",
+          "artifact:AFingerprints",
+          "artifact:AEnvironment",
+          "artifact:AFailures"
+        ],
+        "status": "done",
+        "title": "实际运行标准库数值审计"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AAudit",
+          "artifact:AResults"
+        ],
+        "description": "团队讨论短稿，569汉字",
+        "id": "AReport",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "artifact:ACode",
+          "artifact:AResults"
+        ],
+        "id": "MComp",
+        "method_id": "computational",
+        "notes": "实际读取项目内该画像；学科语境为social-sciences 0.1",
+        "profile_version": "0.1",
+        "reason": "用于确定性算术的可复查运行，不声称算法基准研究",
+        "variant": "empirical-algorithm"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "AScope",
+          "ACompute"
+        ],
+        "id": "AMaterials",
+        "inputs": [
+          "evidence:EI1",
+          "evidence:EI2",
+          "evidence:EI3",
+          "evidence:EI4",
+          "evidence:EDesign",
+          "evidence:ECalc"
+        ],
+        "note": "实际执行者为Codex代理；完成仅指所列工作已做，不是独立人类验证或科学认证。",
+        "outputs": [
+          "artifact:AAudit",
+          "artifact:ANext",
+          "statement:SQual",
+          "statement:SConnection"
+        ],
+        "status": "done",
+        "title": "逐条定位访谈并审计跨证据连接"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AReport",
+          "artifact:AAudit"
+        ],
+        "description": "原稿问题与修订稿自审",
+        "id": "AReview",
+        "notes": "Codex agent execution; synthetic offline task only",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "AMaterials"
+        ],
+        "id": "AWrite",
+        "inputs": [
+          "artifact:AAudit",
+          "artifact:AResults",
+          "decision:DSeparate"
+        ],
+        "note": "实际执行者为Codex代理；完成仅指所列工作已做，不是独立人类验证或科学认证。",
+        "outputs": [
+          "artifact:AReport"
+        ],
+        "status": "done",
+        "title": "形成团队短稿"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "AWrite"
+        ],
+        "id": "AReviewActivity",
+        "inputs": [
+          "artifact:AReport",
+          "artifact:AAudit",
+          "source:SInterviews"
+        ],
+        "note": "实际执行者为Codex代理；完成仅指所列工作已做，不是独立人类验证或科学认证。",
+        "outputs": [
+          "artifact:AReview"
+        ],
+        "status": "done",
+        "title": "自审结果、范围、反向材料和引用条件"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 5,
+    "artifacts": 11,
+    "decisions": 1,
+    "evidence": 9,
+    "method_bindings": 5,
+    "relations": 21,
+    "sources": 4,
+    "statements": 9
+  },
+  "cursor": {
+    "activity_id": "AReviewActivity",
+    "next_action": "核对notes/connection-check.md中A分类器/输出与B工具/提醒的身份、动作和同一完成结局映射；每格给出可定位方案或日志依据，未知保留未知。先判是否存在共同构念，再决定维持分层问题还是设计可分离提醒与参与选择的比较。此检查尚未执行。"
+  }
+}

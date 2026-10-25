@@ -1,0 +1,13 @@
+field,unit,definition,proposed_values,limits
+record_id,两类表,新建工作记录编号,本地不携带身份的编号,方案；不等同匿名认证
+source_setting,两类表,材料类别,followup/interview,原件仅受控定位
+permission_status,两类表,当前动作权限,confirmed/pending/not-covered,须按具体动作核对；本轮无原件确认
+controlled_ref,两类表,授权环境中的原件定位,受控索引,共享空表不填真实定位或身份映射
+time_band,随访事件,按研究必要性拟定时间范围,待负责人定义,不用精确日期；是否足够需具体风险评估
+symptom_domain,随访事件,症状描述类别,待临床团队定义,未从原件提取；非诊断量表
+treatment_category,随访事件,治疗选择类别,待临床团队定义,不作治疗效果推断
+followup_status,随访事件,后续情况描述,待临床团队定义/未知,不等于临床结局有效测量
+context_summary,访谈片段,必要语境的汇总改写,授权后填写,本轮仅新创虚构例子；共享范围另核
+descriptive_code,访谈片段,尽量贴近材料的初码,本地可追溯编码,不从主题次数推总体率
+interpretive_memo,访谈片段,解释与竞争解释,分析者备忘,与参与者陈述分开
+countercase_note,访谈片段,反向片段或替代解释,受控定位与备忘,没有反向材料时写未查，不能编造

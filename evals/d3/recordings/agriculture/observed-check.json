@@ -1,0 +1,53 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pe57845c5500940d88699fef738a3228d",
+  "revision": 45,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 3,
+    "artifacts": 12,
+    "decisions": 0,
+    "evidence": 4,
+    "method_bindings": 2,
+    "relations": 9,
+    "sources": 5,
+    "statements": 6
+  },
+  "activities": [
+    {
+      "id": "ACTanalysis",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACTreview",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACTwriting",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "先在notes/followup-design.md由实际作物研究者确定最小实用效应与主要终点，再比较更多独立区组、地点和季节的方差情景与设计；核查连接检查的源版本差异后再决定是否新建快照，保持现有快照不被覆盖。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

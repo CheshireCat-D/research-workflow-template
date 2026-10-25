@@ -1,0 +1,86 @@
+{
+  "data_origin": "Original synthetic offline task inputs; not field-collected evidence",
+  "design": {
+    "site_seasons": 1,
+    "blocks": 4,
+    "plots": 8,
+    "plants": 48,
+    "assignment": "Independent fair within-block L/R flip; one mulch plot and one control",
+    "randomization_unit": "plot",
+    "inference_replicates": "4 block contrasts",
+    "endpoint": "Mean dry seed mass of six prespecified central plants, g/plant",
+    "estimand": "Equal-weight average plot-level treatment effect in these four blocks at this site-season; causal interpretation assumes consistency and no spillover"
+  },
+  "data_audit": {
+    "missing": 0,
+    "excluded": 0,
+    "duplicate_plant_keys": 0,
+    "all_plots_have_six_numbered_plants": true
+  },
+  "primary": {
+    "control_mean_g": 18.0,
+    "mulch_mean_g": 19.0,
+    "difference_g": 1.0,
+    "ratio_of_observed_means_percent": 5.555555555555555,
+    "mean_of_block_percent_changes": 8.125,
+    "block_differences_g": [
+      2.0,
+      2.0,
+      0.0,
+      0.0
+    ],
+    "block_difference_sd_g": 1.1547005383792515,
+    "block_se_g": 0.5773502691896257,
+    "fisher_sharp_null_two_sided_p": 0.5,
+    "fisher_one_sided_positive_p": 0.25,
+    "enumerated_assignments": 16,
+    "t3_critical_975": 3.1824463052837064,
+    "paired_t_reference_95_interval_g": [
+      -0.8373862310370777,
+      2.837386231037078
+    ],
+    "paired_t_reference_two_sided_p": 0.18169011381620948,
+    "interval_limit": "t reference interval requires extra modeling of block differences; no exact finite-design 95% coverage claim",
+    "exact_95_constant_effect_inversion": "All real numbers: with only 16 assignments a nonrandomized two-sided absolute-mean sign-flip p is at least 2/16, so no constant additive effect is rejected at alpha=.05"
+  },
+  "invalid_comparators": {
+    "plant_number_pseudopairs": {
+      "n": 24,
+      "effect_g": 1.0,
+      "se_g": 0.2085144140570748,
+      "hypothetical_signflip_p": 0.00048828125,
+      "invalid_reason": "Six subsamples share one plot-level assignment; plant-number matching across plots is not a randomized pairing"
+    },
+    "all_rows_unblocked": {
+      "n_per_treatment": 24,
+      "effect_g": 1.0,
+      "se_g": 1.6019146153221178,
+      "invalid_reason": "Ignores plot dependence and block matching; not design-valid despite larger SE here"
+    },
+    "draft_p_003": {
+      "reproduced": false,
+      "reason": "No bootstrap algorithm, seed, resampling unit, null construction or code supplied; cannot verify the exact claimed p"
+    }
+  },
+  "exploratory_excluding_B4": {
+    "effect_g": 1.3333333333333333,
+    "two_sided_signflip_p": 0.5,
+    "status": "Sensitivity only; retains B4 in primary analysis; dropping changes finite target"
+  },
+  "scope_limits": [
+    "One site-season only; blocks are not a national random sample",
+    "Crop species, calibration and blinding not supplied; cannot infer measurement traceability",
+    "No area yield, economic, pest, or environmental endpoint",
+    "B4 supplementary irrigation affected both plots; not an independent irrigation comparison",
+    "No external references accessed"
+  ],
+  "execution": {
+    "command": "python3 artifacts/run.py",
+    "working_directory": "PROJECT",
+    "python": "stdlib only",
+    "random_seed": null,
+    "seed_reason": "No Monte Carlo: complete enumeration and deterministic arithmetic",
+    "failures": [],
+    "elapsed_seconds": 0.0007675419983570464
+  }
+}

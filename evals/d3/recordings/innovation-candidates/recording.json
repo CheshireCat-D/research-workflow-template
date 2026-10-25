@@ -1,0 +1,892 @@
+{
+  "format_version": 1,
+  "case_id": "innovation-candidates",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "3a94f447176d2c2d3113c070d9663ce449fae58e82795853ef3128da71d714ea",
+  "project_init": {
+    "title": "历史辅助总和估计：预算与失配边界",
+    "interest": "固定访问预算下辅助分数何时改善总和估计",
+    "disciplines": [
+      "natural-sciences"
+    ],
+    "methods": [
+      "computational",
+      "formal-theory"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/candidates.json": "candidates.json",
+    "inputs/draft.md": "draft.md",
+    "inputs/known-results.md": "known-results.md",
+    "inputs/task.md": "task.md",
+    "inputs/workloads.json": "workloads.json"
+  },
+  "case_input_sha256": {
+    "candidates.json": "47946e550b2a378e8bf746a164f0b3fd076c4bbb22846a8384c5a7dab5f822f3",
+    "draft.md": "cd6272f1290af01360075bd30fbd505ae960845257c6f6fd53193ed4cb1e03dd",
+    "known-results.md": "66961beb99fe5ded0e883bf58049076179bb940f0422e16d05f514a0b1ae9447",
+    "task.md": "63b177660e605dd93795e3e39fc5fc3c340129217b525de03e95656aa8b2b4b7",
+    "workloads.json": "8c8ac93ffadc4c2e8172d28616ebf4241adf25a55fd3f6ccc5dda9dac861dea9"
+  },
+  "output_files": [
+    "README.md",
+    "artifacts/config.json",
+    "artifacts/minimum-check.json",
+    "artifacts/minimum_check.py",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "artifacts/verify_relocation.py",
+    "manuscript/report.md",
+    "notes/candidates.md",
+    "notes/issue.md",
+    "notes/mechanism.md",
+    "notes/results.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "README.md": "ba89ef03cf38bc999e483d56ccd11e6949dcc869160e9847dc7a0e73eed7ab3a",
+    "artifacts/config.json": "3e49aa45bb90405add2f048f16d0eb6ffb80fa228fd768240e8a94c8f7d6fa7e",
+    "artifacts/minimum-check.json": "73a13d1196f626d678ebfc2046680ea2b22453e0d0ce8e482507f7aa7c6d0c9e",
+    "artifacts/minimum_check.py": "046cf61ea3f0bf2ec48e15b72a0c58e409195b9001a3a5c64016369fa7c3b02c",
+    "artifacts/results.json": "44e5dc30a0b637bb7efbce50b10964dfb5137f412e1d7151d94333ca73c34cdd",
+    "artifacts/run.py": "486a0c2f66b2efb8abebe259659f6e7d2fdecc711cb06b93b5835213c53908b0",
+    "artifacts/verify_relocation.py": "6d9074e7c38eab39c55e4d97472b6ce8d432cafd812a39588005d2d74fb5491e",
+    "manuscript/report.md": "387f83f2f1d19eb5bd8c7e8bae336a36b0b745b3c3a41d8e6cbcaee3b6273c5d",
+    "notes/candidates.md": "ceaa1f387ff2b5cc607e611f78f6d49edefb9511c877c6fd0205a45de8978dbd",
+    "notes/issue.md": "7d8fdf7d1b5dde2675cd6436f97365fd242fb645549dfd14bb09a0e280c77b49",
+    "notes/mechanism.md": "39eb839a18da4576cc6cb8b8795465148f56f78ff25b492755c4d71ad2bd74f6",
+    "notes/results.md": "3e98b984cdf6ad766dd09411cf7db8408a2d4ad0950fd0c4cbfd84b78f55efdf",
+    "review.md": "1dd4345e37ea34174e0787d85ba83c474cd494f56eab58ccec67d92d43713ef6"
+  },
+  "output_normalizations": [],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "IN_CAND",
+        "limitations": "本案例合成材料；无外部文献覆盖或真实数据泛化",
+        "locator": "inputs/candidates.json",
+        "title": "三个候选与资源边界",
+        "version": "copied-1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "IN_DRAFT",
+        "limitations": "本案例合成材料；无外部文献覆盖或真实数据泛化",
+        "locator": "inputs/draft.md",
+        "title": "待审草稿片段",
+        "version": "copied-1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "IN_KNOWN",
+        "limitations": "本案例合成材料；无外部文献覆盖或真实数据泛化",
+        "locator": "inputs/known-results.md",
+        "title": "本地方法笔记K1-K3",
+        "version": "copied-1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "IN_TASK",
+        "limitations": "本案例合成材料；无外部文献覆盖或真实数据泛化",
+        "locator": "inputs/task.md",
+        "title": "委托及交付约束",
+        "version": "copied-1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "IN_WORK",
+        "limitations": "本案例合成材料；无外部文献覆盖或真实数据泛化",
+        "locator": "inputs/workloads.json",
+        "title": "六场景与预算",
+        "version": "copied-1"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "K1直接覆盖相同原理",
+          "reviewer": "Codex本次离线执行者",
+          "scope": "草稿首创主张与本地K1比较",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "只有手工推导及有限枚举；未运行形式化证明器",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "A_NEW",
+        "scope": "草稿首创主张与本地K1比较",
+        "text": "均匀差值估计可作为本次首次提出的主贡献。",
+        "type": "interpretive",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "输入说明数据和训练资源不可取得；未检验模型学理性能",
+          "reviewer": "Codex本次离线执行者",
+          "scope": "本任务离线标准库CPU资源",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "只有手工推导及有限枚举；未运行形式化证明器",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "B_FIRST",
+        "scope": "本任务离线标准库CPU资源",
+        "text": "大型跨城市预训练应作为本次首选可执行路线。",
+        "type": "design",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "new_hotspot和quiet反例；最低概率不提供误差优势",
+          "reviewer": "Codex本次离线执行者",
+          "scope": "固定历史，任意有限当前向量",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "只有手工推导及有限枚举；未运行形式化证明器",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "C_DOM",
+        "scope": "固定历史，任意有限当前向量",
+        "text": "历史优先加正探索概率可保证任意当前向量MSE严格小于A。",
+        "type": "formal",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "全部12条件保留，未按当前真值调参",
+          "reviewer": "Codex本次离线执行者",
+          "scope": "六个给定工作负载、两预算、固定半预算分配",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "只有手工推导及有限枚举；未运行形式化证明器",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "C_LOCAL",
+        "scope": "六个给定工作负载、两预算、固定半预算分配",
+        "text": "C_strata在匹配场景改善，在新热点和移位场景变差。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "有限和手工推导；全场景解析矩与有限枚举相符",
+          "reviewer": "Codex本次离线执行者",
+          "scope": "notes/mechanism.md所列有限值、正概率与分层预算条件",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "只有手工推导及有限枚举；未运行形式化证明器",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "C_UNB",
+        "scope": "notes/mechanism.md所列有限值、正概率与分层预算条件",
+        "text": "当前读取前固定概率的C_mix与独立层内不放回C_strata均无偏并具有所列方差。",
+        "type": "formal",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "问题由有限输入界定",
+          "reviewer": "Codex本次离线执行者",
+          "scope": "六个N12合成向量、k4/6",
+          "status": "not-applicable"
+        },
+        "formal_verification": {
+          "scope": "只有手工推导及有限枚举；未运行形式化证明器",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "Q1",
+        "scope": "六个N12合成向量、k4/6",
+        "text": "历史分数在固定位置访问预算下何时改善总和估计，失配代价是什么？",
+        "type": "question",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "三个候选的支持、反驳与取舍",
+        "id": "E_CAND",
+        "limitations": "本地有限范围；不提供全球新颖性、真实数据或科学认证",
+        "location": {
+          "kind": "local",
+          "path": "notes/candidates.md"
+        },
+        "provenance": "本次执行生成；命令与退出码在项目旁logs",
+        "source_ids": [
+          "IN_CAND",
+          "IN_KNOWN",
+          "IN_WORK"
+        ],
+        "type": "adversarial-comparison"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "无偏性、方差及失败修订推导",
+        "id": "E_DER",
+        "limitations": "本地有限范围；不提供全球新颖性、真实数据或科学认证",
+        "location": {
+          "kind": "local",
+          "path": "notes/mechanism.md"
+        },
+        "provenance": "本次执行生成；命令与退出码在项目旁logs",
+        "source_ids": [
+          "IN_KNOWN"
+        ],
+        "type": "manual-derivation"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "三个候选与资源边界",
+        "id": "E_IN_CAND",
+        "location": {
+          "kind": "local",
+          "path": "inputs/candidates.json"
+        },
+        "provenance": "任务提供的原件逐字复制并全文读取",
+        "source_ids": [
+          "IN_CAND"
+        ],
+        "type": "raw-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "待审草稿片段",
+        "id": "E_IN_DRAFT",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "任务提供的原件逐字复制并全文读取",
+        "source_ids": [
+          "IN_DRAFT"
+        ],
+        "type": "raw-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "本地方法笔记K1-K3",
+        "id": "E_IN_KNOWN",
+        "location": {
+          "kind": "local",
+          "path": "inputs/known-results.md"
+        },
+        "provenance": "任务提供的原件逐字复制并全文读取",
+        "source_ids": [
+          "IN_KNOWN"
+        ],
+        "type": "raw-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "委托及交付约束",
+        "id": "E_IN_TASK",
+        "location": {
+          "kind": "local",
+          "path": "inputs/task.md"
+        },
+        "provenance": "任务提供的原件逐字复制并全文读取",
+        "source_ids": [
+          "IN_TASK"
+        ],
+        "type": "raw-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "六场景与预算",
+        "id": "E_IN_WORK",
+        "location": {
+          "kind": "local",
+          "path": "inputs/workloads.json"
+        },
+        "provenance": "任务提供的原件逐字复制并全文读取",
+        "source_ids": [
+          "IN_WORK"
+        ],
+        "type": "raw-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "new_hotspot解析有理数反例",
+        "id": "E_MIN",
+        "limitations": "本地有限范围；不提供全球新颖性、真实数据或科学认证",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/minimum-check.json"
+        },
+        "provenance": "本次执行生成；命令与退出码在项目旁logs",
+        "source_ids": [
+          "IN_WORK"
+        ],
+        "type": "counterexample"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "48行解析矩、枚举与计费审计",
+        "id": "E_RUN",
+        "limitations": "本地有限范围；不提供全球新颖性、真实数据或科学认证",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "本次执行生成；命令与退出码在项目旁logs",
+        "source_ids": [
+          "IN_WORK"
+        ],
+        "type": "exact-computation"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "候选对抗比较",
+        "id": "AR_CAND",
+        "path": "notes/candidates.md",
+        "type": "research-material"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "计费估计器及实验驱动",
+        "id": "AR_CODE",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "正式配置",
+        "id": "AR_CONFIG",
+        "path": "artifacts/config.json",
+        "type": "research-material"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "问题卡与方法选择",
+        "id": "AR_ISSUE",
+        "path": "notes/issue.md",
+        "type": "research-material"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "公式、假设、推导和修订",
+        "id": "AR_MECH",
+        "path": "notes/mechanism.md",
+        "type": "research-material"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "已执行反例",
+        "id": "AR_MIN",
+        "path": "artifacts/minimum-check.json",
+        "type": "research-material"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "便宜反驳代码",
+        "id": "AR_MINCODE",
+        "path": "artifacts/minimum_check.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "相对路径重建说明",
+        "id": "AR_README",
+        "path": "README.md",
+        "type": "research-material"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "749字符中文短稿",
+        "id": "AR_REPORT",
+        "path": "manuscript/report.md",
+        "type": "research-material"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "全48条件计算结果",
+        "id": "AR_RESULTS",
+        "path": "artifacts/results.json",
+        "type": "research-material"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "主张支持及失败限制",
+        "id": "AR_REVIEW",
+        "path": "review.md",
+        "type": "research-material"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "逐场景MSE表",
+        "id": "AR_TABLE",
+        "path": "notes/results.md",
+        "type": "research-material"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:IN_WORK",
+          "source:IN_KNOWN"
+        ],
+        "description": "移位复算代码",
+        "id": "AR_VERIFY",
+        "path": "artifacts/verify_relocation.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_IN_KNOWN",
+        "id": "R_A",
+        "rationale": "K1已给出均匀差值估计原理",
+        "relation": "challenges",
+        "scope": "本次离线有限材料与明确推导条件",
+        "statement_id": "A_NEW"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_IN_CAND",
+        "id": "R_B",
+        "rationale": "资源许可与算力不满足本次约束",
+        "relation": "challenges",
+        "scope": "本次离线有限材料与明确推导条件",
+        "statement_id": "B_FIRST"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_MIN",
+        "id": "R_C",
+        "rationale": "新热点MSE828/552大于A288/144",
+        "relation": "challenges",
+        "scope": "本次离线有限材料与明确推导条件",
+        "statement_id": "C_DOM"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_IN_KNOWN",
+        "id": "R_C_K3",
+        "rationale": "K3明确探索概率只保证可访问性",
+        "relation": "qualifies",
+        "scope": "本次离线有限材料与明确推导条件",
+        "statement_id": "C_DOM"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RUN",
+        "id": "R_L",
+        "rationale": "全6场景×2预算保留收益与反向结果",
+        "relation": "supports",
+        "scope": "本次离线有限材料与明确推导条件",
+        "statement_id": "C_LOCAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_IN_WORK",
+        "id": "R_L_SCOPE",
+        "rationale": "只有给定合成N12与两个预算",
+        "relation": "qualifies",
+        "scope": "本次离线有限材料与明确推导条件",
+        "statement_id": "C_LOCAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_CAND",
+        "id": "R_Q",
+        "rationale": "重合、缺资源和失配决定推进范围",
+        "relation": "contextualizes",
+        "scope": "本次离线有限材料与明确推导条件",
+        "statement_id": "Q1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_DER",
+        "id": "R_U",
+        "rationale": "有限和证明展开期望与二阶矩",
+        "relation": "supports",
+        "scope": "本次离线有限材料与明确推导条件",
+        "statement_id": "C_UNB"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RUN",
+        "id": "R_U_NUM",
+        "rationale": "有限枚举与矩相符，但不能替代一般证明",
+        "relation": "qualifies",
+        "scope": "本次离线有限材料与明确推导条件",
+        "statement_id": "C_UNB"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [],
+        "id": "ACT_SCOPE",
+        "inputs": [
+          "source:IN_TASK",
+          "source:IN_CAND",
+          "source:IN_KNOWN"
+        ],
+        "note": "已读五份输入",
+        "outputs": [
+          "statement:Q1",
+          "artifact:AR_ISSUE"
+        ],
+        "status": "done",
+        "title": "界定问题与资源"
+      }
+    },
+    {
+      "kind": "decision",
+      "record": {
+        "choice": "A作已知基线；本次不实施B；删除C一致优势并修订为C_strata做条件收益研究",
+        "decided_at": "2026-10-24T20:05:48.856306+00:00",
+        "evidence_refs": [
+          "E_IN_KNOWN",
+          "E_IN_CAND",
+          "E_MIN",
+          "E_RUN"
+        ],
+        "id": "D1",
+        "rationale": "K1重合、B资源不可得、C_mix和C_strata失配反例直接影响取舍",
+        "responsible": "Codex本次建议；不冒充作者既有决定",
+        "revisit_when": "取得B数据许可与资源，或对历史校准假设与C风险界有新证据"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:C_LOCAL",
+          "evidence:E_RUN",
+          "artifact:AR_CODE",
+          "artifact:AR_RESULTS"
+        ],
+        "id": "MB_COMP",
+        "method_id": "computational",
+        "profile_version": "0.1",
+        "reason": "预算计费实现、解析矩、有限枚举和移位复算",
+        "variant": "empirical-algorithm"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:C_UNB",
+          "statement:C_DOM",
+          "evidence:E_DER",
+          "artifact:AR_MECH"
+        ],
+        "id": "MB_FORMAL",
+        "method_id": "formal-theory",
+        "profile_version": "0.1",
+        "reason": "展开固定有限向量的无偏性、方差和反例；未运行形式化工具",
+        "variant": "proof"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_SCOPE"
+        ],
+        "id": "ACT_B",
+        "inputs": [
+          "source:IN_CAND"
+        ],
+        "note": "必要数据许可、数据和8 GPU×72h不可得；超出本次离线CPU预算",
+        "outputs": [],
+        "status": "skipped",
+        "title": "训练大型跨城市预测器"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_SCOPE"
+        ],
+        "id": "ACT_MECH",
+        "inputs": [
+          "statement:C_DOM",
+          "source:IN_WORK"
+        ],
+        "note": "进程成功；科学一致优势主张失败，保留反例",
+        "outputs": [
+          "evidence:E_MIN",
+          "artifact:AR_MINCODE",
+          "artifact:AR_MIN"
+        ],
+        "status": "done",
+        "title": "写出C_mix机制并执行最小反驳"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_MECH"
+        ],
+        "id": "ACT_REV",
+        "inputs": [
+          "evidence:E_MIN",
+          "source:IN_KNOWN"
+        ],
+        "note": "修订不再声称一致优势",
+        "outputs": [
+          "evidence:E_DER",
+          "artifact:AR_MECH"
+        ],
+        "status": "done",
+        "title": "修订为历史分层无放回机制"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_REV"
+        ],
+        "id": "ACT_EXP",
+        "inputs": [
+          "source:IN_WORK",
+          "artifact:AR_CODE",
+          "artifact:AR_CONFIG"
+        ],
+        "note": "48条件；精确矩主终点；正式0.706秒；移位数值相同",
+        "outputs": [
+          "evidence:E_RUN",
+          "artifact:AR_RESULTS",
+          "artifact:AR_TABLE",
+          "artifact:AR_VERIFY"
+        ],
+        "status": "done",
+        "title": "执行全场景预算比较及移位复算"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_EXP"
+        ],
+        "id": "ACT_COMPARE",
+        "inputs": [
+          "evidence:E_IN_CAND",
+          "evidence:E_IN_KNOWN",
+          "evidence:E_MIN",
+          "evidence:E_RUN"
+        ],
+        "note": "同一执行者正反论证，非独立专家意见",
+        "outputs": [
+          "artifact:AR_CAND",
+          "decision:D1"
+        ],
+        "status": "done",
+        "title": "对抗比较三个候选"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_COMPARE"
+        ],
+        "id": "ACT_WRITE",
+        "inputs": [
+          "evidence:E_DER",
+          "evidence:E_RUN",
+          "artifact:AR_CAND"
+        ],
+        "note": "749字符；保留反向结果",
+        "outputs": [
+          "artifact:AR_REPORT"
+        ],
+        "status": "done",
+        "title": "撰写中文短稿"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_WRITE"
+        ],
+        "id": "ACT_REVIEW",
+        "inputs": [
+          "artifact:AR_REPORT",
+          "artifact:AR_CODE",
+          "evidence:E_RUN"
+        ],
+        "note": "核对首创、普适优势、预算和有限范围；无科学认证",
+        "outputs": [
+          "artifact:AR_REVIEW",
+          "artifact:AR_README"
+        ],
+        "status": "done",
+        "title": "审阅主张与交付范围"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 8,
+    "artifacts": 13,
+    "decisions": 1,
+    "evidence": 9,
+    "method_bindings": 2,
+    "relations": 9,
+    "sources": 5,
+    "statements": 6
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "在 notes/mechanism.md 的H/L框架中定义层内变化方差上界与历史失配集合，推导固定预算分配的最坏MSE并与A比较；不读取当前真值来选择分配。若得不到有条件界，删除保证改善路线；全球新颖性仍待另行检索。"
+  }
+}

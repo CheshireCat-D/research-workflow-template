@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "all_36_cells_without_duplicates": true,
+    "all_actual_calls_match_budgets": true,
+    "all_n_match_policy": true,
+    "all_errors_recompute": true,
+    "no_experiment_failures": true,
+    "all_18_baselines_pass": true,
+    "2052_formal_calls": true,
+    "fixed_input_hashes_unchanged": true,
+    "executed_code_unchanged": true,
+    "report_under_1000_CJK_characters": true
+  },
+  "passed": true,
+  "report_total_characters": 725,
+  "report_CJK_characters": 436,
+  "human_review": "review.md; reference antiderivatives and scientific scope checked manually, without formal proof tooling"
+}

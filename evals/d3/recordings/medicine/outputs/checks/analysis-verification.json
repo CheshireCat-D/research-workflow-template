@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "endpoint": "burden_day30",
+      "decimal_effect": "0.5",
+      "decimal_exact_p": "0.75",
+      "passed": true
+    },
+    {
+      "endpoint": "burden_day7",
+      "decimal_effect": "-2.0",
+      "decimal_exact_p": "0.125",
+      "passed": true
+    }
+  ],
+  "deterministic_results_equal_excluding_elapsed": true,
+  "rerun": {
+    "command": [
+      "PYTHON",
+      "artifacts/run.py"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "stdout": "{\"day30_effect\": 0.5, \"day30_exact_two_sided_p\": 0.75, \"pooled_day30_difference\": -1.75, \"day7_exploratory_effect\": -2.0, \"day7_exploratory_two_sided_p\": 0.125, \"elapsed_seconds\": 0.0008886249997885898, \"failure_count\": 0}\n",
+    "stderr": ""
+  },
+  "elapsed_seconds": 0.023366625002381625,
+  "scope": "arithmetic, legal paired allocation enumeration and repeatability only; no clinical validation"
+}

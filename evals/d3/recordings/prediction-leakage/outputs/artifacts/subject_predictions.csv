@@ -1,0 +1,17 @@
+split,subject_id,test_records,p,y,predicted,seen_in_training,squared_error
+R,P01,1,0.0,0,0,True,0.0
+R,P02,1,1.0,1,1,True,0.0
+R,P03,1,0.0,0,0,True,0.0
+R,P04,1,1.0,1,1,True,0.0
+R,P05,1,0.0,0,0,True,0.0
+R,P06,1,1.0,1,1,True,0.0
+R,P07,1,0.0,0,0,True,0.0
+R,P08,1,1.0,1,1,True,0.0
+R,P09,1,0.0,0,0,True,0.0
+R,P10,1,1.0,1,1,True,0.0
+R,P11,1,0.0,0,0,True,0.0
+R,P12,1,1.0,1,1,True,0.0
+S,P09,2,0.5,0,1,False,0.25
+S,P10,2,0.5,1,1,False,0.25
+S,P11,2,0.5,0,1,False,0.25
+S,P12,2,0.5,1,1,False,0.25

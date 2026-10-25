@@ -1,0 +1,815 @@
+{
+  "format_version": 1,
+  "case_id": "digital-humanities",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "807be4a45acfc0fb76139e4f0b1b762803e4585ebf03e46c24b0ab5525322749",
+  "project_init": {
+    "title": "合成节录中的 liberty：OCR 修订、版次与覆盖",
+    "interest": "在固定分词规则下区分OCR修订、版次构成与历史解释",
+    "disciplines": [
+      "humanities"
+    ],
+    "methods": [
+      "computational",
+      "historical-interpretive"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/corpus.json": "corpus.json",
+    "inputs/draft.md": "draft.md",
+    "inputs/editorial-note.md": "editorial-note.md",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "corpus.json": "585bf0eeb94f133b6416567bbde04b2a19545759b4b20c0c37adc1ef4949eda3",
+    "draft.md": "007329c9251dfd6aaf6c0cb4f223b66c7fae377b50f572e8ba0b02cfb3934333",
+    "editorial-note.md": "76f6d0f12d70b4642ef8e9a0302879e446bec1b592d15ca21151b5710ddafaa2",
+    "task.md": "1216d4a2a61caefc798325490b1ba35448e6acffb003b63230b2a2a29bc75d76"
+  },
+  "output_files": [
+    "artifacts/input-fingerprints.json",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "manuscript/report.md",
+    "notes/computation-work.md",
+    "notes/issue.md",
+    "notes/source-work.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/input-fingerprints.json": "94939093c96921519095917c1e2e94521c630cd820c62ce1122a2c611be50c2e",
+    "artifacts/results.json": "f153f0c201a905e4981bd561cdd4a6371c54435f92c1d756ebafd7d33461cf92",
+    "artifacts/run.py": "1604aecdbdd9d798f336b4a2a7d27b015208461185d624df1145304b115b779b",
+    "manuscript/report.md": "842515102182f1a72944e23109a1da3db2ddc85679cb40375f940f235194d29f",
+    "notes/computation-work.md": "aaa5fc30c9f5e658fe1f8b7533a5b375949a9648148ffcb113353a7a4ee5796f",
+    "notes/issue.md": "9ca292d2b727d6c14272556a60d32b0b984a66e0393aa7d07baabd4b127f8a9f",
+    "notes/source-work.md": "c8b34400cfa86bbbfc743aa44bf385d05a475e54da21f541bd72d8ee2ede40e2",
+    "review.md": "01f9108b579dac581208ef289f4ecb0de89430f9d850e6b028cb509c1164c2fa"
+  },
+  "output_normalizations": [],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "extensions": {
+          "edition_id": "E1",
+          "edition_year": 1915,
+          "genre": "meeting-note",
+          "period": 1900,
+          "provided_access": "supplied-excerpt"
+        },
+        "id": "D01",
+        "limitations": "新写虚构；仅给定短节录和给定编辑修订，无扫描或全文；未独立核对原件。",
+        "locator": "inputs/corpus.json documents[id=D01]",
+        "rights": "unknown",
+        "title": "议事摘要一",
+        "version": "corpus v1; E1/1915"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "extensions": {
+          "edition_id": "E1",
+          "edition_year": 1915,
+          "genre": "letter",
+          "period": 1900,
+          "provided_access": "supplied-excerpt"
+        },
+        "id": "D02",
+        "limitations": "新写虚构；仅给定短节录和给定编辑修订，无扫描或全文；未独立核对原件。",
+        "locator": "inputs/corpus.json documents[id=D02]",
+        "rights": "unknown",
+        "title": "通信节录",
+        "version": "corpus v1; E1/1915"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "metadata-only",
+        "extensions": {
+          "edition_id": "E2",
+          "edition_year": 1935,
+          "genre": "catalogue-only",
+          "period": 1900,
+          "provided_access": "metadata-only"
+        },
+        "id": "D03",
+        "limitations": "新写虚构；仅编目，无OCR或修订文本。",
+        "locator": "inputs/corpus.json documents[id=D03]",
+        "rights": "unknown",
+        "title": "增订件目录项",
+        "version": "corpus v1; E2/1935"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "extensions": {
+          "edition_id": "E1",
+          "edition_year": 1915,
+          "genre": "speech",
+          "period": 1910,
+          "provided_access": "supplied-excerpt"
+        },
+        "id": "D04",
+        "limitations": "新写虚构；仅给定短节录和给定编辑修订，无扫描或全文；未独立核对原件。",
+        "locator": "inputs/corpus.json documents[id=D04]",
+        "rights": "unknown",
+        "title": "短讲节录",
+        "version": "corpus v1; E1/1915"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "extensions": {
+          "edition_id": "E2",
+          "edition_year": 1935,
+          "genre": "editorial",
+          "period": 1910,
+          "provided_access": "supplied-excerpt"
+        },
+        "id": "D05",
+        "limitations": "新写虚构；仅给定短节录和给定编辑修订，无扫描或全文；未独立核对原件。",
+        "locator": "inputs/corpus.json documents[id=D05]",
+        "rights": "unknown",
+        "title": "社论节录",
+        "version": "corpus v1; E2/1935"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "extensions": {
+          "edition_id": "E2",
+          "edition_year": 1935,
+          "genre": "letter",
+          "period": 1910,
+          "provided_access": "supplied-excerpt"
+        },
+        "id": "D06",
+        "limitations": "新写虚构；仅给定短节录和给定编辑修订，无扫描或全文；未独立核对原件。",
+        "locator": "inputs/corpus.json documents[id=D06]",
+        "rights": "unknown",
+        "title": "来信节录",
+        "version": "corpus v1; E2/1935"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "DRAFT",
+        "limitations": "完整读取提供文件；文件内编目和节录不等于取得历史原件，全部为新写虚构练习。",
+        "locator": "inputs/draft.md",
+        "rights": "unknown",
+        "title": "待修订草稿",
+        "version": "supplied"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "EDIT",
+        "limitations": "完整读取提供文件；文件内编目和节录不等于取得历史原件，全部为新写虚构练习。",
+        "locator": "inputs/editorial-note.md",
+        "rights": "unknown",
+        "title": "合成语料编辑说明",
+        "version": "v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "PACK",
+        "limitations": "完整读取提供文件；文件内编目和节录不等于取得历史原件，全部为新写虚构练习。",
+        "locator": "inputs/corpus.json",
+        "rights": "unknown",
+        "title": "语料包",
+        "version": "1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "TASK",
+        "limitations": "完整读取提供文件；文件内编目和节录不等于取得历史原件，全部为新写虚构练习。",
+        "locator": "inputs/task.md",
+        "rights": "unknown",
+        "title": "委托说明",
+        "version": "supplied"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "输入明确没有该改革独立事件资料，计数与设计均不足支持因果；并未证明历史反命题。",
+          "reviewer": "Codex agent; not independent human peer review",
+          "scope": "原草稿第1段，待审作者解释",
+          "status": "insufficient"
+        },
+        "id": "OLD",
+        "scope": "原草稿第1段，待审作者解释",
+        "text": "1910词频增加证明1905改革造成观念转型。",
+        "type": "interpretive",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "任务问题已按可用材料界定。",
+          "reviewer": "Codex agent; not independent human peer review",
+          "scope": "六条目录、五对节录；不推真实历史",
+          "status": "not-applicable"
+        },
+        "id": "Q1",
+        "scope": "六条目录、五对节录；不推真实历史",
+        "text": "固定规则下，所给节录的时期差在OCR/修订及全可用/E1范围间怎样变化？",
+        "type": "question",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "实际脚本输出及逐串手工基准一致。",
+          "reviewer": "Codex agent; not independent human peer review",
+          "scope": "给定节录精确token描述",
+          "status": "supported-in-scope"
+        },
+        "id": "S1",
+        "scope": "给定节录精确token描述",
+        "text": "全可用1900 OCR为2/9、修订4/9；1910两层8/13；E1的1910为3/5。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "D02 token1/4替换；总token不变，其他给定两层一致。",
+          "reviewer": "Codex agent; not independent human peer review",
+          "scope": "给定两层的差异；不认证原扫描准确性",
+          "status": "supported-in-scope"
+        },
+        "id": "S2",
+        "scope": "给定两层的差异；不认证原扫描准确性",
+        "text": "1900提供的修订多出2次liberty，均来自D02两个错拼，时期差缩小22.2222个每百token频率单位。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "无改革独立资料、完整句境、采样框或因果设计；E1两期不平衡。",
+          "reviewer": "Codex agent; not independent human peer review",
+          "scope": "本包访问、语境和覆盖边界",
+          "status": "supported-in-scope"
+        },
+        "id": "S3",
+        "scope": "本包访问、语境和覆盖边界",
+        "text": "现有词频不足以识别改革因果、总体观念转型或代表性时期趋势。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "限定E1只对齐一个版次条件，时期件数、文类和覆盖仍不对称。",
+          "reviewer": "Codex agent; not independent human peer review",
+          "scope": "已有E1可读节录，1900两件9token/1910一件5token",
+          "status": "supported-in-scope"
+        },
+        "id": "S4",
+        "scope": "已有E1可读节录，1900两件9token/1910一件5token",
+        "text": "E1限定后修订词频仍44.4444对60，但不同材料构成不能当成纯版次效应。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "D01的实际编目与提供文本状态；定位 documents[id=D01]。",
+        "id": "EVD01",
+        "limitations": "所给OCR与修订短节录；非完整原文，未核原扫描。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/corpus.json"
+        },
+        "provenance": "用户提供新写虚构 corpus v1；本轮代理读取。",
+        "source_ids": [
+          "D01"
+        ],
+        "type": "provided-text-pair"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "D02的实际编目与提供文本状态；定位 documents[id=D02]。",
+        "id": "EVD02",
+        "limitations": "所给OCR与修订短节录；非完整原文，未核原扫描。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/corpus.json"
+        },
+        "provenance": "用户提供新写虚构 corpus v1；本轮代理读取。",
+        "source_ids": [
+          "D02"
+        ],
+        "type": "provided-text-pair"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "D03的实际编目与提供文本状态；定位 documents[id=D03]。",
+        "id": "EVD03",
+        "limitations": "仅元数据，无文本，测量保持null。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/corpus.json"
+        },
+        "provenance": "用户提供新写虚构 corpus v1；本轮代理读取。",
+        "source_ids": [
+          "D03"
+        ],
+        "type": "catalogue-metadata"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "D04的实际编目与提供文本状态；定位 documents[id=D04]。",
+        "id": "EVD04",
+        "limitations": "所给OCR与修订短节录；非完整原文，未核原扫描。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/corpus.json"
+        },
+        "provenance": "用户提供新写虚构 corpus v1；本轮代理读取。",
+        "source_ids": [
+          "D04"
+        ],
+        "type": "provided-text-pair"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "D05的实际编目与提供文本状态；定位 documents[id=D05]。",
+        "id": "EVD05",
+        "limitations": "所给OCR与修订短节录；非完整原文，未核原扫描。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/corpus.json"
+        },
+        "provenance": "用户提供新写虚构 corpus v1；本轮代理读取。",
+        "source_ids": [
+          "D05"
+        ],
+        "type": "provided-text-pair"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "D06的实际编目与提供文本状态；定位 documents[id=D06]。",
+        "id": "EVD06",
+        "limitations": "所给OCR与修订短节录；非完整原文，未核原扫描。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/corpus.json"
+        },
+        "provenance": "用户提供新写虚构 corpus v1；本轮代理读取。",
+        "source_ids": [
+          "D06"
+        ],
+        "type": "provided-text-pair"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "分词、辑本与访问边界说明",
+        "id": "EVEDIT",
+        "limitations": "只覆盖给定节录和说明；不认证原件、历史因果或新颖性。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/editorial-note.md"
+        },
+        "provenance": "本轮代理实际读取/执行；离线合成练习",
+        "source_ids": [
+          "EDIT"
+        ],
+        "type": "editorial-note"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "实际运行产生逐件、全可用和E1计数及指纹/参数/环境/耗时/失败",
+        "id": "EVRESULT",
+        "limitations": "只覆盖给定节录和说明；不认证原件、历史因果或新颖性。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "本轮代理实际读取/执行；离线合成练习",
+        "source_ids": [
+          "PACK",
+          "EDIT"
+        ],
+        "type": "computation"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "六件身份、版本、访问与解释边界实际核对",
+        "id": "EVSOURCE",
+        "limitations": "只覆盖给定节录和说明；不认证原件、历史因果或新颖性。",
+        "location": {
+          "kind": "local",
+          "path": "notes/source-work.md"
+        },
+        "provenance": "本轮代理实际读取/执行；离线合成练习",
+        "source_ids": [
+          "PACK",
+          "EDIT",
+          "DRAFT"
+        ],
+        "type": "source-audit"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:PACK",
+          "source:EDIT"
+        ],
+        "description": "标准库确定性重算，路径相对项目",
+        "id": "ARCODE",
+        "notes": "新写虚构练习；非真实历史/新颖性/发表结论。",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:PACK",
+          "source:EDIT",
+          "source:DRAFT",
+          "source:TASK"
+        ],
+        "description": "四个原始输入SHA-256",
+        "id": "ARHASH",
+        "notes": "新写虚构练习；非真实历史/新颖性/发表结论。",
+        "path": "artifacts/input-fingerprints.json",
+        "type": "fingerprints"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:Q1"
+        ],
+        "description": "限定的问题与下一项辨别检查",
+        "id": "ARISSUE",
+        "notes": "新写虚构练习；非真实历史/新颖性/发表结论。",
+        "path": "notes/issue.md",
+        "type": "question-card"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EVRESULT",
+        "id": "R1",
+        "rationale": "实际计数和加权汇总，D03不进分母",
+        "relation": "supports",
+        "scope": "所给五件短节录",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EVD02",
+        "id": "R2",
+        "rationale": "给定两层token1/4由错拼改为目标词",
+        "relation": "supports",
+        "scope": "提供文本层间差异",
+        "statement_id": "S2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EVRESULT",
+        "id": "R3",
+        "rationale": "1900增加2/9×100=22.2222，其他计数不变",
+        "relation": "supports",
+        "scope": "精确token计算",
+        "statement_id": "S2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EVEDIT",
+        "id": "R4",
+        "rationale": "说明没有扫描/全文，非时期总体采样框",
+        "relation": "supports",
+        "scope": "材料所能支持的解释范围",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EVRESULT",
+        "id": "R5",
+        "rationale": "E1可用两期分别9和5token",
+        "relation": "supports",
+        "scope": "给定E1子集",
+        "statement_id": "S4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EVSOURCE",
+        "id": "R6",
+        "rationale": "同辑本仍文类和件数不平衡，不可识别纯版次效应",
+        "relation": "qualifies",
+        "scope": "材料构成与解释",
+        "statement_id": "S4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EVSOURCE",
+        "id": "R7",
+        "rationale": "无改革独立记录与可识别设计，原稿因果证据链缺失",
+        "relation": "challenges",
+        "scope": "挑战从本包计数到因果的推论，非证明改革未发生",
+        "statement_id": "OLD"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EVD03",
+        "id": "R8",
+        "rationale": "D03只有元数据，不能计零或视作全文",
+        "relation": "qualifies",
+        "scope": "1900 E2覆盖缺失",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ARCODE",
+          "evidence:EVRESULT"
+        ],
+        "description": "实际运行结果与环境、计时、失败",
+        "id": "ARRESULT",
+        "notes": "新写虚构练习；非真实历史/新颖性/发表结论。",
+        "path": "artifacts/results.json",
+        "type": "results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:EVSOURCE"
+        ],
+        "description": "实际来源与解释检查",
+        "id": "ARSOURCE",
+        "notes": "新写虚构练习；非真实历史/新颖性/发表结论。",
+        "path": "notes/source-work.md",
+        "type": "source-audit"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [],
+        "id": "A1",
+        "inputs": [
+          "source:PACK",
+          "source:EDIT",
+          "source:DRAFT",
+          "source:TASK",
+          "statement:Q1"
+        ],
+        "note": "Codex代理本轮实际完成；不是独立人类审核；登记完成不等于科学认证。",
+        "outputs": [
+          "artifact:ARISSUE",
+          "artifact:ARSOURCE"
+        ],
+        "status": "done",
+        "title": "范围与来源逐件核对"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ARRESULT"
+        ],
+        "description": "手工基准、逐件和汇总表以及重跑说明",
+        "id": "ARCOMPUTE",
+        "notes": "新写虚构练习；非真实历史/新颖性/发表结论。",
+        "path": "notes/computation-work.md",
+        "type": "work-notes"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:S1",
+          "statement:S2",
+          "artifact:ARCODE",
+          "artifact:ARRESULT"
+        ],
+        "id": "MCOMP",
+        "method_id": "computational",
+        "notes": "实际读取项目内画像并应用；非专业史学同行复核。",
+        "profile_version": "0.1",
+        "reason": "固定词形计数、保存输入/参数/环境/计时/失败、手工基准"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:S3",
+          "statement:S4",
+          "statement:OLD",
+          "artifact:ARSOURCE"
+        ],
+        "id": "MHIST",
+        "method_id": "historical-interpretive",
+        "notes": "实际读取项目内画像并应用；非专业史学同行复核。",
+        "profile_version": "0.1",
+        "reason": "核对版次、节录访问与竞争解释，阻断词频到因果的越界"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A1"
+        ],
+        "id": "A2",
+        "inputs": [
+          "artifact:ARSOURCE",
+          "source:PACK",
+          "source:EDIT",
+          "artifact:ARCODE"
+        ],
+        "note": "Codex代理本轮实际完成；不是独立人类审核；登记完成不等于科学认证。",
+        "outputs": [
+          "artifact:ARRESULT",
+          "artifact:ARHASH",
+          "artifact:ARCOMPUTE",
+          "statement:S1",
+          "statement:S2",
+          "statement:S4"
+        ],
+        "status": "done",
+        "title": "标准库实算、token对照与手工基准"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:S1",
+          "statement:S2",
+          "statement:S3",
+          "statement:S4",
+          "artifact:ARSOURCE",
+          "artifact:ARCOMPUTE"
+        ],
+        "description": "1000汉字以内有界修订短稿",
+        "id": "ARREPORT",
+        "notes": "新写虚构练习；非真实历史/新颖性/发表结论。",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A2"
+        ],
+        "id": "A3",
+        "inputs": [
+          "artifact:ARRESULT",
+          "artifact:ARCOMPUTE",
+          "artifact:ARSOURCE",
+          "source:DRAFT"
+        ],
+        "note": "Codex代理本轮实际完成；不是独立人类审核；登记完成不等于科学认证。",
+        "outputs": [
+          "artifact:ARREPORT",
+          "statement:S3"
+        ],
+        "status": "done",
+        "title": "据实修订短稿"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ARREPORT",
+          "source:DRAFT"
+        ],
+        "description": "实际代理自审与旧稿修订定位",
+        "id": "ARREVIEW",
+        "notes": "新写虚构练习；非真实历史/新颖性/发表结论。",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A3"
+        ],
+        "id": "A4",
+        "inputs": [
+          "artifact:ARREPORT",
+          "artifact:ARRESULT",
+          "source:DRAFT",
+          "source:EDIT"
+        ],
+        "note": "Codex代理本轮实际完成；不是独立人类审核；登记完成不等于科学认证。",
+        "outputs": [
+          "artifact:ARREVIEW"
+        ],
+        "status": "done",
+        "title": "代理自审数值、来源与断语"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 4,
+    "artifacts": 8,
+    "decisions": 0,
+    "evidence": 9,
+    "method_bindings": 2,
+    "relations": 8,
+    "sources": 10,
+    "statements": 6
+  },
+  "cursor": {
+    "activity_id": "A4",
+    "next_action": "先为D03及E1两期同文类可比节录建立补料字段表，核对材料身份、period/辑本、实际访问范围和OCR修订依据；仅获新增文本后逐字复核、重算并显式更新受影响登记。"
+  }
+}

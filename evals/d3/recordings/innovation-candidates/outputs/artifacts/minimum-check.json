@@ -1,0 +1,21 @@
+{
+  "workload": "new_hotspot",
+  "alpha": "1/2",
+  "evaluation": "exact rational moments; no simulation seed needed",
+  "rows": [
+    {
+      "k": 4,
+      "A_mse": "288",
+      "C_mix_mse": "828",
+      "ratio": "23/8",
+      "claim_falsified": true
+    },
+    {
+      "k": 6,
+      "A_mse": "144",
+      "C_mix_mse": "552",
+      "ratio": "23/6",
+      "claim_falsified": true
+    }
+  ]
+}

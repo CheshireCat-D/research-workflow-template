@@ -1,0 +1,71 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pc68556c6683648c9808db0b4c2136ece",
+  "revision": 51,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 6,
+    "artifacts": 10,
+    "decisions": 0,
+    "evidence": 7,
+    "method_bindings": 3,
+    "relations": 12,
+    "sources": 4,
+    "statements": 8
+  },
+  "activities": [
+    {
+      "id": "A_COMPUTE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_REPRO",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_REVIEW",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_SCOPE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_SUPPORT",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_WRITE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "A_REPRO",
+    "next_action": "收到新增设计材料后，先核对医疗治疗起点、分配与更细预后资料，并把两镇2022—2025线上岗位口径桥接表及工厂扩张记录与现有年度表逐年对齐；重定目标量和识别方案后再复算。在此之前保留当前描述版本，不升级因果措辞。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

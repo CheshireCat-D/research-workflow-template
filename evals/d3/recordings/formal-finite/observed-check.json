@@ -1,0 +1,59 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P784480cc90d5408aa45279f8e81a2625",
+  "revision": 44,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 4,
+    "artifacts": 12,
+    "decisions": 1,
+    "evidence": 6,
+    "method_bindings": 2,
+    "relations": 8,
+    "sources": 4,
+    "statements": 6
+  },
+  "activities": [
+    {
+      "id": "ACT-COMPUTE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-INPUT",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-PROOF",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-WRITE-REVIEW",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "ACT-WRITE-REVIEW",
+    "next_action": "在可写副本逐行独立复核 notes/derivation.md 第3–5节的最小素因子引理、平方剩余表与模17反例族；若只做审阅则记录意见，若修改受登记文件则先重跑 artifacts/run.py 并按版本重新登记受影响证据和活动。不要继续证明已被n=17反驳的P。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

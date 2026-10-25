@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://research-workflow-template.invalid/schemas/method-binding.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+    },
+    "method_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "profile_version": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "applies_to": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(?:source|statement|evidence|relation|activity|decision|artifact|method-binding):[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+      }
+    },
+    "variant": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "method_id",
+    "profile_version",
+    "reason",
+    "applies_to"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://research-workflow-template.invalid/schemas/source.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$(?![\\s\\S])"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "locator": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "content_access": {
+      "type": "string",
+      "enum": [
+        "not-read",
+        "metadata-only",
+        "partial",
+        "full"
+      ]
+    },
+    "rights": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "public",
+        "restricted"
+      ]
+    },
+    "limitations": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "extensions": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "locator",
+    "version",
+    "content_access"
+  ],
+  "additionalProperties": false
+}

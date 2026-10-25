@@ -1,0 +1,40 @@
+{
+  "version": "1",
+  "model": {
+    "capacity_J_per_K": 500.0,
+    "loss_W_per_K": 5.0,
+    "gain_W_per_K": 40.0,
+    "target_C": 25.0,
+    "actuator_min_W": 0.0,
+    "actuator_max_W": 80.0,
+    "horizon_s": 240.0,
+    "dt_s": 0.1
+  },
+  "scenarios": [
+    {
+      "id": "nominal",
+      "ambient_C": 20.0,
+      "initial_C": 24.0,
+      "sensor_delay_s": 0.0
+    },
+    {
+      "id": "delayed",
+      "ambient_C": 20.0,
+      "initial_C": 24.0,
+      "sensor_delay_s": 15.0
+    },
+    {
+      "id": "cold",
+      "ambient_C": 5.0,
+      "initial_C": 24.0,
+      "sensor_delay_s": 15.0
+    },
+    {
+      "id": "hot",
+      "ambient_C": 35.0,
+      "initial_C": 24.0,
+      "sensor_delay_s": 15.0
+    }
+  ],
+  "provenance": "全部原创合成；没有实物观测。场景是固定验证集合，不是随机环境样本。"
+}

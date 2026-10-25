@@ -1,0 +1,168 @@
+{
+  "case": "qualitative-social",
+  "project": "PROJECT",
+  "completed": true,
+  "scope": "Offline synthetic excerpt interpretation performed by an AI agent; no independent human coding/validation, population inference, causal estimation, new interviews, saturation or independent fact verification",
+  "actual_skills_read": [
+    "rw-workflow",
+    "rw-question",
+    "rw-validation",
+    "rw-writing",
+    "rw-review"
+  ],
+  "actual_profiles_read": [
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/disciplines/social-sciences.md",
+      "version": "0.1"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/methods/qualitative.md",
+      "version": "0.1"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/governance.md",
+      "version": "0.1"
+    }
+  ],
+  "other_resources_read": [
+    "core/skill-bridge.md",
+    "core/protocol.md",
+    "design/catalog.json",
+    "core/schemas/source.schema.json",
+    "core/schemas/statement.schema.json",
+    "core/schemas/evidence.schema.json",
+    "core/schemas/relation.schema.json",
+    "core/schemas/artifact.schema.json",
+    "core/schemas/activity.schema.json",
+    "core/schemas/method-binding.schema.json"
+  ],
+  "principal_project_files": [
+    "notes/issue.md",
+    "analysis/codebook.md",
+    "analysis/coding.json",
+    "analysis/traceability.md",
+    "analysis/interpretive-memo.md",
+    "manuscript/report.md",
+    "review.md",
+    "artifacts/run.py",
+    "artifacts/results.json",
+    "checks/check.json",
+    "checks/resume.json",
+    "records/registry.json"
+  ],
+  "principal_sibling_files": [
+    "revision-note.md",
+    "identity-replacements.json",
+    "revisions/v1/",
+    "command.py",
+    "revise_identity.py",
+    "register_identity_revision.py",
+    "rebind_identity_activities.py",
+    "finalize_identity_revision.py",
+    "registrations/",
+    "logs/",
+    "freeze-manifest.json"
+  ],
+  "check_passed": true,
+  "resume_exit": 0,
+  "scientific_validity": "not-assessed",
+  "registered_counts": {
+    "activities": 4,
+    "artifacts": 9,
+    "decisions": 0,
+    "evidence": 20,
+    "method_bindings": 1,
+    "relations": 25,
+    "sources": 4,
+    "statements": 6
+  },
+  "actual_findings": [
+    "P5 emergency use/thanks coexists with continuing refusal of routine photos, changing acceptance/nonacceptance framing",
+    "P2 skilled phone use and P3 scheduling conditions challenge skill-only explanation",
+    "P4 old phone processing and after-hours administration qualify replacement and net time-saving claims",
+    "Positive convenience and P6 full-online support retained as tensions, not excluded"
+  ],
+  "failures_or_limits": [
+    "logs/005 records genuine initial runtime-root FileNotFoundError; recovered by reading .agents/skills/_rw-runtime",
+    "Nested logging wrapper initially reused the first source registration log number; the outer driver raw summary overwrote that one individual raw stdout/meta. Its executed argv is preserved in register_records.py and the source JSON and success summary in logs/010.stdout; later record logs and final command logs remain. Logger now reserves its metadata before execution.",
+    "Only selected excerpts and a synthetic contextual memo exist; no recordings/full transcripts/member feedback/saturation record/backend verification",
+    "Single AI-agent interpretive coding; no independent human coding or human validation, and no intercoder reliability coefficient claimed",
+    "No external COREQ/SRQR or governance links read; no network or global installs",
+    "artifacts/run.py reconstructs literal traceability and checks document scope only; it does not reproduce interpretive judgment or constitute a numerical experiment",
+    "v1 incorrectly implied human coding/provenance/reviewer identity. Corrected explicitly in v2; archived v1 and registry history intentionally retain the original wording.",
+    "Interim check exit1 for stale activities/checkpoint stopped the first revision driver; logged continuation explicitly rebound activities in dependency order. Final check/resume exit0 and all activities done."
+  ],
+  "next_action": "针对P5-Q1至Q3制作情境性权衡／服务场景礼貌感谢的竞争解释卡，列出所需原问句、前后话轮与反向证据；卡片须明确AI代理解释及未经独立人类验证，现有节录不能裁决，不联络或索取真实材料。",
+  "final_marker": "V2 IDENTITY REVISION FROZEN: no further scientific artifact writes after this marker",
+  "revision": "v2-identity-correction",
+  "executor": "Codex AI agent performed interpretive coding, thematic interpretation and self-review; Python performed deterministic document reconstruction only",
+  "human_coding_or_validation_performed": false,
+  "registry_revision": 136,
+  "original_input_files_byte_identical": true,
+  "all_18_coding_entries_unchanged": true,
+  "replaced_record_count": 64,
+  "changed_project_paths": [
+    "analysis/codebook.md",
+    "analysis/coding.json",
+    "analysis/interpretive-memo.md",
+    "analysis/traceability.md",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "checks/check.json",
+    "checks/identity-before-rebind.json",
+    "checks/resume.json",
+    "manuscript/report.md",
+    "notes/issue.md",
+    "records/registry.json",
+    "review.md"
+  ],
+  "revision_failure_logs": [
+    {
+      "metadata": "logs/005.meta.json",
+      "exit_code": 1,
+      "command": [
+        "python3",
+        "-"
+      ]
+    },
+    {
+      "metadata": "logs/085.meta.json",
+      "exit_code": 0,
+      "command": [
+        "python3",
+        "RUN/revise_identity.py"
+      ]
+    },
+    {
+      "metadata": "logs/087.meta.json",
+      "exit_code": 1,
+      "command": [
+        "python3",
+        "RUN/register_identity_revision.py"
+      ]
+    },
+    {
+      "metadata": "logs/148.meta.json",
+      "exit_code": 1,
+      "command": [
+        "PYTHON",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ]
+    },
+    {
+      "metadata": "logs/149.meta.json",
+      "exit_code": 0,
+      "command": [
+        "python3",
+        "RUN/rebind_identity_activities.py"
+      ]
+    }
+  ],
+  "_path_normalization": {
+    "original_summary_sha256": "16de001fc2db8f6db49cc04c6de4c81af8b14a864e68bd7a69e7bd910b45df90",
+    "scope": "Only local execution path prefixes normalized to PROJECT/RUN/TOOLKIT/PYTHON; all execution results and failures retained. Original summary remains in isolated run."
+  }
+}

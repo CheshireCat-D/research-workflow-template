@@ -1,0 +1,252 @@
+{
+  "case": "observational-policy",
+  "status": "completed",
+  "completion_marker": "SCIENTIFIC_ARTIFACTS_FROZEN_NO_REGISTERED_WRITES_AFTER_THIS_MARKER",
+  "completed_at_utc": "2026-10-24T20:38:37.119111+00:00",
+  "project": "PROJECT",
+  "primary_files": {
+    "issue": "PROJECT/notes/issue.md",
+    "working": "PROJECT/notes/working.md",
+    "source_audit": "PROJECT/notes/source-audit.md",
+    "manuscript": "PROJECT/manuscript/report.md",
+    "review": "PROJECT/review.md",
+    "code": "PROJECT/artifacts/run.py",
+    "results": "PROJECT/artifacts/results.json",
+    "verification": "PROJECT/artifacts/verification.json",
+    "registry": "PROJECT/records/registry.json",
+    "check": "check.json",
+    "resume": "resume.md",
+    "frozen_files": "freeze-manifest.json"
+  },
+  "skills_actually_read": [
+    {
+      "path": ".agents/skills/rw-workflow/SKILL.md",
+      "sha256": "7ad0a0a6da2c05a169f484d5317337b857696aa4df99477541d8b1c1e2e495b1",
+      "bytes": 3468
+    },
+    {
+      "path": ".agents/skills/rw-question/SKILL.md",
+      "sha256": "e35ce8ff835d79804eadebcb8482c7400d52ccba8b4a7cb6c32bff9e6d0ff191",
+      "bytes": 2547
+    },
+    {
+      "path": ".agents/skills/rw-literature/SKILL.md",
+      "sha256": "041fbb9a624e576417ec398ed4c36aa4fc07a5b145848d85fd4e5f70d6d4b4f0",
+      "bytes": 2278
+    },
+    {
+      "path": ".agents/skills/rw-validation/SKILL.md",
+      "sha256": "e75e91b8e19dfe32d51841b000360a16fbf3091273465a4852abc3bb637d7b0e",
+      "bytes": 3609
+    },
+    {
+      "path": ".agents/skills/rw-writing/SKILL.md",
+      "sha256": "d46b0228f02b5be0c44cbb047fad7effd036531359f238d622801037f336d0e7",
+      "bytes": 2472
+    },
+    {
+      "path": ".agents/skills/rw-review/SKILL.md",
+      "sha256": "40f20bb095130a3aaefbf55b5f6cafe6232433c58f293767970b5060a2401acd",
+      "bytes": 2344
+    }
+  ],
+  "contexts_actually_read": [
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md",
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+      "bytes": 2986
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/methods/computational.md",
+      "sha256": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+      "bytes": 2282
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md",
+      "sha256": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
+      "bytes": 1332
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/disciplines/social-sciences.md",
+      "sha256": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8",
+      "bytes": 1214
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/governance.md",
+      "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+      "bytes": 2998
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/core/skill-bridge.md",
+      "sha256": "d147f635c180db54ad2e00c41e3078a500be4bbabbe5504a8630f1042f8ada39",
+      "bytes": 5181
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/core/protocol.md",
+      "sha256": "303e112440e764f6e47368435265311cf1c5588a14394d50554dc971fc59b705",
+      "bytes": 3100
+    }
+  ],
+  "source_access": "Full supplied task, design-note and two CSVs only; no external literature or network. Local toolkit documentation/runtime/schema read as needed; no graders/tests/other case outputs/personal package read.",
+  "input_fingerprints": {
+    "inputs/task.md": {
+      "sha256": "cb8d4ff92425b105ab2fee1ebecf396934888e568371dd2c0f80b47ddd48324c",
+      "bytes": 1660
+    },
+    "inputs/design-note.md": {
+      "sha256": "e37d081e6dab5d85a0a0fd974f8a08853b682d6e8a57518f503716a364653651",
+      "bytes": 1506
+    },
+    "inputs/medical-strata.csv": {
+      "sha256": "0602ea3992895ca9f8136eb70f3cf1ca37642ca49998fe2d4c38e1f046f08cdb",
+      "bytes": 114
+    },
+    "inputs/policy-periods.csv": {
+      "sha256": "bb72ca02327e4a0e83e22c12eafe80e088cde6f170d705b527255bd4563ac0fc",
+      "bytes": 151
+    }
+  },
+  "runtime": "Project-local copied .agents/skills/_rw-runtime; no global installation or toolkit/input writes.",
+  "numerical_scope": {
+    "medical": {
+      "n_treated": 120,
+      "n_usual": 120,
+      "events_treated": 84,
+      "events_usual": 48,
+      "crude_percentage_points": 30,
+      "mild_percentage_points": -10,
+      "severe_percentage_points": -10,
+      "pooled_severity_weights": [
+        0.5,
+        0.5
+      ],
+      "standardized_treated_percent": 50,
+      "standardized_usual_percent": 60,
+      "standardized_percentage_points": -10
+    },
+    "policy_index_point_differences": {
+      "2023_to_2024": 1,
+      "2022_to_2023_pretrend": -3,
+      "2023_to_2025": -1
+    },
+    "scientific_run_elapsed_seconds": 0.011333041999023408,
+    "primary_process_elapsed_seconds": 0.04580537500078208,
+    "relocated_rerun": "passed",
+    "manuscript_hanzi_count": 477
+  },
+  "failures_and_recovery": [
+    {
+      "log": "logs/000-preflight-failure.json",
+      "failure": "Direct core/cli.py --help: relative import with no known parent package; exit 1.",
+      "recovery": "Used documented tools/research.py entrypoint; subsequent copied-runtime commands passed."
+    },
+    {
+      "log": "logs/001-setup.json",
+      "failure": "Incorrect guessed discipline medical-health: Unknown or repeated project disciplines; exit 2, no project created.",
+      "recovery": "Read stable ID catalog, used medicine-health and social-sciences; initialization and connection passed."
+    }
+  ],
+  "scientific_run_failures": [],
+  "final_registration": {
+    "counts": {
+      "activities": 6,
+      "artifacts": 10,
+      "decisions": 0,
+      "evidence": 7,
+      "method_bindings": 3,
+      "relations": 12,
+      "sources": 4,
+      "statements": 8
+    },
+    "revision": 51,
+    "errors": [],
+    "warnings": [],
+    "checkpoint": {
+      "recorded": true,
+      "status": "current",
+      "changed": []
+    },
+    "all_activities_effectively_done": true,
+    "scientific_validity": "not-assessed"
+  },
+  "saved_next_action": "收到新增设计材料后，先核对医疗治疗起点、分配与更细预后资料，并把两镇2022—2025线上岗位口径桥接表及工厂扩张记录与现有年度表逐年对齐；重定目标量和识别方案后再复算。在此之前保留当前描述版本，不升级因果措辞。",
+  "limits": [
+    "Two independent newly written synthetic examples, never pooled into one effect.",
+    "Descriptive proportions and index-point contrasts; no causal identification, statistical significance, individual clinical advice or real policy evaluation.",
+    "No external source/novelty/publication verification; no independent human review.",
+    "CLI check establishes record/file consistency only.",
+    "Relocated rerun verified scientific fields; environment and elapsed time intentionally excluded."
+  ],
+  "actual_command_logs": [
+    "logs/000-preflight-failure.json",
+    "logs/001-setup.json",
+    "logs/002-setup.json",
+    "logs/003-setup.json",
+    "logs/004-initial-resume.json",
+    "logs/005-computation.json",
+    "logs/006-installed-skill-check.json",
+    "logs/007-registration-batch.json",
+    "logs/010-register-SRC_TASK.json",
+    "logs/011-register-SRC_DESIGN.json",
+    "logs/012-register-SRC_MED.json",
+    "logs/013-register-SRC_POLICY.json",
+    "logs/014-register-Q_M.json",
+    "logs/015-register-Q_P.json",
+    "logs/016-register-M_NUM.json",
+    "logs/017-register-M_CAUSAL.json",
+    "logs/018-register-P_NUM.json",
+    "logs/019-register-P_CAUSAL.json",
+    "logs/020-register-DRAFT_M.json",
+    "logs/021-register-DRAFT_P.json",
+    "logs/022-register-E_MED.json",
+    "logs/023-register-E_POLICY.json",
+    "logs/024-register-E_DESIGN.json",
+    "logs/025-register-E_RESULT_M.json",
+    "logs/026-register-E_RESULT_P.json",
+    "logs/027-register-E_SUPPORT.json",
+    "logs/028-register-E_WORK.json",
+    "logs/029-register-R_M_RAW.json",
+    "logs/030-register-R_M_RESULT.json",
+    "logs/031-register-R_M_CAUSAL.json",
+    "logs/032-register-R_M_DRAFT.json",
+    "logs/033-register-R_M_QUALIFY.json",
+    "logs/034-register-R_P_RAW.json",
+    "logs/035-register-R_P_RESULT.json",
+    "logs/036-register-R_P_CAUSAL.json",
+    "logs/037-register-R_P_DRAFT.json",
+    "logs/038-register-R_P_CHALLENGE.json",
+    "logs/039-register-R_M_AUDIT.json",
+    "logs/040-register-R_P_AUDIT.json",
+    "logs/041-register-AR_ISSUE.json",
+    "logs/042-register-AR_CODE.json",
+    "logs/043-register-AR_RESULTS.json",
+    "logs/044-register-AR_WORK.json",
+    "logs/045-register-AR_SOURCE.json",
+    "logs/046-register-AR_REPORT.json",
+    "logs/047-register-AR_REVIEW.json",
+    "logs/048-register-AR_README.json",
+    "logs/049-register-AR_PROJECT.json",
+    "logs/050-register-MB_M.json",
+    "logs/051-register-MB_P.json",
+    "logs/052-register-MB_C.json",
+    "logs/053-register-A_SCOPE.json",
+    "logs/054-register-A_COMPUTE.json",
+    "logs/055-register-A_SUPPORT.json",
+    "logs/056-register-A_WRITE.json",
+    "logs/057-register-A_REVIEW.json",
+    "logs/069-delivery-verification.json",
+    "logs/070-relocated-computation.json",
+    "logs/071-relocated-runtime-check.json",
+    "logs/072-register-AR_VERIFY.json",
+    "logs/073-register-A_REPRO.json",
+    "logs/074-check-before-checkpoint.json",
+    "logs/075-checkpoint.json",
+    "logs/076-final-check.json",
+    "logs/077-final-resume.json"
+  ],
+  "freeze_manifest": {
+    "sha256": "58d412ab3527472bf713accb618a7a5a91f30be88a2814a8096ba23f990c8d28",
+    "bytes": 2272
+  },
+  "post_marker_registered_writes_permitted": false
+}

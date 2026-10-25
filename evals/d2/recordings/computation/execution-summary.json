@@ -1,0 +1,109 @@
+{
+  "project": "PROJECT",
+  "task": "offline synthetic fixed-budget numerical quadrature comparison",
+  "skills_actually_read": [
+    "PROJECT/.agents/skills/rw-workflow/SKILL.md",
+    "PROJECT/.agents/skills/rw-question/SKILL.md",
+    "PROJECT/.agents/skills/rw-validation/SKILL.md",
+    "PROJECT/.agents/skills/rw-writing/SKILL.md",
+    "PROJECT/.agents/skills/rw-review/SKILL.md"
+  ],
+  "references_actually_read": [
+    "PROJECT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+    "PROJECT/.agents/skills/_rw-runtime/core/protocol.md",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/computational.md",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/source.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/method-binding.schema.json"
+  ],
+  "commands": {
+    "log_directory": "logs",
+    "per_command_files": [
+      "ID.command.txt",
+      "ID.result.json",
+      "ID.stdout.txt",
+      "ID.stderr.txt"
+    ],
+    "main_command_ids": "001 through 036",
+    "registration_command_ids": "r001 through r045",
+    "source_read_init_and_skill_logs": "001 through 021",
+    "copy_and_formal_run": "022 through 024",
+    "relocation_and_content_checks": "025 through 028",
+    "registration_driver": "029",
+    "checks_checkpoint_resume": "030 through 034",
+    "finalization": "035 through 036",
+    "expected_nonzero_statuses": [
+      {
+        "log": "logs/001.result.json",
+        "exit_status": 1,
+        "reason": "Memory keyword search found no relevant hits"
+      }
+    ]
+  },
+  "finalization_command_log": "logs/036.command.txt",
+  "registration_inputs": "registration-inputs",
+  "primary_files": [
+    "PROJECT/notes/issue.md",
+    "PROJECT/artifacts/run.py",
+    "PROJECT/artifacts/results.json",
+    "PROJECT/artifacts/summary.csv",
+    "PROJECT/artifacts/summary.md",
+    "PROJECT/artifacts/run.log",
+    "PROJECT/manuscript/report.md",
+    "PROJECT/review.md"
+  ],
+  "main_results": {
+    "formal_rows": 36,
+    "formal_function_calls": 2052,
+    "successful_baselines": 18,
+    "formal_failed_or_nonfinite": 0,
+    "formal_complete_process_wall_seconds": 0.06479645900253672,
+    "budget9_wins": {
+      "midpoint": 4,
+      "trapezoid": 2,
+      "tie": 0
+    },
+    "budget33_and129_each_wins": {
+      "midpoint": 5,
+      "trapezoid": 0,
+      "tie": 1
+    },
+    "relocated_rerun_passed": true
+  },
+  "failures": [
+    {
+      "command": "logs/011.command.txt",
+      "exit_status": 2,
+      "reason": "Initial free-form discipline/method rejected",
+      "recovery": "Successful init command015; method-binding M_COMPUTE registered"
+    },
+    {
+      "command": "logs/012.command.txt",
+      "exit_status": 2,
+      "reason": "Search included nonexistent source schemas/ path",
+      "recovery": "Read copied runtime core/schemas; raw search output retained"
+    }
+  ],
+  "checks": {
+    "check": "check.json",
+    "resume": "resume.json",
+    "resume_markdown": "resume.md",
+    "checkpoint": "checkpoint.json",
+    "passed": true,
+    "warnings": [],
+    "checkpoint_status": "current",
+    "scientific_validity": "not-assessed"
+  },
+  "boundaries": [
+    "Only six supplied synthetic targets and three fixed budgets; no universal accuracy result",
+    "References are supplied mathematical expressions evaluated in binary64 without certified error bounds",
+    "Timing used only for 10-second execution constraint; no speed ranking",
+    "No network, dependency install, external messages, or template source modification",
+    "All research file paths relative to PROJECT; command logs retain actual command argv"
+  ],
+  "next_action": "手工推导cos(2πkx)的两种复合求积离散和及混叠条件，再预先设计独立的扩展预算；另存后续结果，不覆盖本轮36行。"
+}

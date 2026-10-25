@@ -1,0 +1,39 @@
+{
+  "scope": "Independent arithmetic readback of default CSV records; not physical validation or numerical convergence proof. All tested delays align with grid; non-grid interpolation code not separately exercised.",
+  "scenarios": [
+    {
+      "scenario": "nominal",
+      "rows": 2401,
+      "max_delay_read_error_C": 0.0,
+      "max_request_error_W": 0.0,
+      "max_clamp_error_W": 0.0,
+      "max_euler_update_error_C": 0.0
+    },
+    {
+      "scenario": "delayed",
+      "rows": 2401,
+      "max_delay_read_error_C": 3.552713678800501e-15,
+      "max_request_error_W": 1.4210854715202004e-13,
+      "max_clamp_error_W": 1.4210854715202004e-13,
+      "max_euler_update_error_C": 0.0
+    },
+    {
+      "scenario": "cold",
+      "rows": 2401,
+      "max_delay_read_error_C": 3.552713678800501e-15,
+      "max_request_error_W": 1.4210854715202004e-13,
+      "max_clamp_error_W": 0.0,
+      "max_euler_update_error_C": 0.0
+    },
+    {
+      "scenario": "hot",
+      "rows": 2401,
+      "max_delay_read_error_C": 7.105427357601002e-15,
+      "max_request_error_W": 2.8421709430404007e-13,
+      "max_clamp_error_W": 0.0,
+      "max_euler_update_error_C": 0.0
+    }
+  ],
+  "threshold": 1e-10,
+  "passed": true
+}

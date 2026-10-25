@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "artifacts/run.py"
+  ],
+  "numeric_outputs_identical": true,
+  "first_sha256": {
+    "plot_season.csv": "2ff1d3396b1c34610ab5b2c2a6ee29b2427675e08e2ccf8cc9cd5a619144afd3",
+    "block_contrasts.csv": "1281736f43cfe9437cf9e423780fb456e3f171293e1fdd89c4586909cbe0db3a",
+    "results.json": "5d51315934cb4290fe6b5f448a7d1dcdda83b37f37bdd1c954b1688ebd97fa20",
+    "visit_contrasts.csv": "180e9f1f177a63bb70edd7134d35f0046cea50c77b14a0574ba500ad7c385e5a",
+    "plot_primary.csv": "9198c026a9c6bd868baf85e5f770429d59955f060c79e3a5167c83cfcb878244"
+  },
+  "second_sha256": {
+    "plot_season.csv": "2ff1d3396b1c34610ab5b2c2a6ee29b2427675e08e2ccf8cc9cd5a619144afd3",
+    "block_contrasts.csv": "1281736f43cfe9437cf9e423780fb456e3f171293e1fdd89c4586909cbe0db3a",
+    "results.json": "5d51315934cb4290fe6b5f448a7d1dcdda83b37f37bdd1c954b1688ebd97fa20",
+    "visit_contrasts.csv": "180e9f1f177a63bb70edd7134d35f0046cea50c77b14a0574ba500ad7c385e5a",
+    "plot_primary.csv": "9198c026a9c6bd868baf85e5f770429d59955f060c79e3a5167c83cfcb878244"
+  },
+  "run_count": 2
+}

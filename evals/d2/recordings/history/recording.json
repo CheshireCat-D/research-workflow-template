@@ -1,0 +1,1228 @@
+{
+  "format_version": 1,
+  "case_id": "history",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create a fresh project identity, version-one records and a new checkpoint; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "22a5c72c80233b743dfb31f7fa2e4be566c1f1d0a4443212364ef4f32948c2be",
+  "project_init": {
+    "title": "东埠夜校1912年9月停课的史料解释",
+    "interest": "比较七份节录对停课原因、过程与确定程度的支持",
+    "disciplines": [
+      "humanities"
+    ],
+    "methods": [
+      "historical-interpretive"
+    ],
+    "workflow_mode": "light",
+    "language": "zh",
+    "entry_activity": "review"
+  },
+  "case_files": {
+    "inputs/archive-packet.md": "archive-packet.md",
+    "inputs/draft.md": "draft.md",
+    "inputs/inventory.csv": "inventory.csv",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "draft.md": "fe21b168f47125b289e50207b21aca4e6890ba6248e3bef34b6707b9be6c8abb",
+    "task.md": "193ebb599b7889cdf88890790ba60326ed4c61a13930deae6b03e028fb649e92",
+    "inventory.csv": "d916a85b752dffa58383e27967eb363ef13511a22b95719fe860d4bd91d90b6a",
+    "archive-packet.md": "5f1ab99b1d2870b918cf326d8e87b78d224891350ca2a456a02db989fdef83e0"
+  },
+  "output_files": [
+    "manuscript/report.md",
+    "notes/issue.md",
+    "notes/source-audit.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "manuscript/report.md": "492d601bff268d5656a5c27efee3f4b3eb8982002879a5444c8fd02bef6ccd65",
+    "notes/issue.md": "e4210505e37664e3735326be51ec7a939f282482adfa98ff78152139d8cf7a9b",
+    "notes/source-audit.md": "20983f9c39c213676f6bb56eb2e879b349251e9f046c43de2e83ac25e06b7b93",
+    "review.md": "1a097a7c422b9a73e9837ce363f68ce0c6dec0a15a0b7ed0eaf38505e4751561"
+  },
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "DRAFT",
+        "limitations": "草稿是审查对象，不是停课史实的独立证据。",
+        "locator": "inputs/draft.md:L1-5",
+        "rights": "unknown",
+        "title": "合作者草稿v0.1",
+        "version": "v0.1；未发表合成稿"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "H1",
+        "limitations": "只有末页、未见九月后记录；灯油本月十五日期疑义。",
+        "locator": "inputs/archive-packet.md:L7-11; inputs/inventory.csv:L2",
+        "notes": "离线虚构材料；完整阅读所供节录，未读假想原件全文，也未验证真实档案身份。",
+        "rights": "unknown",
+        "title": "收支册末页节录",
+        "version": "合成档案节录包v1；1912-08-31；同年誊本，誊写日期不详"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "H2",
+        "limitations": "未见签名页、会议全文及执行回报；拟议不同于实施。",
+        "locator": "inputs/archive-packet.md:L15-19; inputs/inventory.csv:L3",
+        "notes": "离线虚构材料；完整阅读所供节录，未读假想原件全文，也未验证真实档案身份。",
+        "rights": "unknown",
+        "title": "理事会议记录节录",
+        "version": "合成档案节录包v1；1912-09-11；书记当日手稿节录"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "H3",
+        "limitations": "只见两段，募捐目的，未见发出或收到证明及另函。",
+        "locator": "inputs/archive-packet.md:L23-27; inputs/inventory.csv:L4",
+        "notes": "离线虚构材料；完整阅读所供节录，未读假想原件全文，也未验证真实档案身份。",
+        "rights": "unknown",
+        "title": "理事长致外埠捐助人信节录",
+        "version": "合成档案节录包v1；1912-09-18；发信底稿"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "H4",
+        "limitations": "明注摘录H3；无独立采访，地名数额删节。",
+        "locator": "inputs/archive-packet.md:L31-35; inputs/inventory.csv:L5",
+        "notes": "离线虚构材料；完整阅读所供节录，未读假想原件全文，也未验证真实档案身份。",
+        "rights": "unknown",
+        "title": "岚湾旬报短讯节录",
+        "version": "合成档案节录包v1；1912-09-20；剪报短讯"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "H5",
+        "limitations": "明引H4；捐款地点和时辰部分未收入。",
+        "locator": "inputs/archive-packet.md:L39-43; inputs/inventory.csv:L6",
+        "notes": "离线虚构材料；完整阅读所供节录，未读假想原件全文，也未验证真实档案身份。",
+        "rights": "unknown",
+        "title": "商会门前布告节录",
+        "version": "合成档案节录包v1；1912-09-21；未署名布告抄存"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "H6",
+        "limitations": "受访者1913年入校，1912停课主要听前任；日期不稳，未见录音和逐字底稿。",
+        "locator": "inputs/archive-packet.md:L47-51; inputs/inventory.csv:L7",
+        "notes": "离线虚构材料；完整阅读所供节录，未读假想原件全文，也未验证真实档案身份。",
+        "rights": "unknown",
+        "title": "老管理员回忆记录节录",
+        "version": "合成档案节录包v1；1938-05-06；掌故编辑笔录"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "H7",
+        "limitations": "仅六个出席日期，姓名及签名列省略；无停课后记录。",
+        "locator": "inputs/archive-packet.md:L55-59; inputs/inventory.csv:L8",
+        "notes": "离线虚构材料；完整阅读所供节录，未读假想原件全文，也未验证真实档案身份。",
+        "rights": "unknown",
+        "title": "点名册与值日注记节录",
+        "version": "合成档案节录包v1；1912-08-19至09-10；当日点名记录节录"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "INV",
+        "limitations": "编目信息不替代原文或原件鉴定。",
+        "locator": "inputs/inventory.csv:L1-8",
+        "notes": "全部本地编目已读；合成练习。",
+        "rights": "unknown",
+        "title": "七份节录的编目说明",
+        "version": "本次给定文件"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "id": "Q1",
+        "notes": "本轮已形成有界答案；原件与后续时间链仍待获取。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "现有材料支持何种停课开始时间、事件性质与原因解释，原草稿的确定程度是否恰当？",
+        "type": "question",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "H1.1—2直接记欠项、余额、封存及十月条件性减课。",
+          "reviewer": "本轮执行代理的限定材料解释与自审；非独立专业史学同行审查",
+          "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "史料解释不属形式证明；本轮未执行形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S1",
+        "notes": "定位及比较见notes/source-audit.md；稿件支持回查见review.md。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "八月底已存在欠津贴及捐助不足等财务压力；不能仅据H1断定九月已无钱开课。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "没有反事实或实施全程，H3的募捐话语不能识别必然效果。",
+          "reviewer": "本轮执行代理的限定材料解释与自审；非独立专业史学同行审查",
+          "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+          "status": "insufficient"
+        },
+        "formal_verification": {
+          "scope": "史料解释不属形式证明；本轮未执行形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S10",
+        "notes": "定位及比较见notes/source-audit.md；稿件支持回查见review.md。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "增加捐助本来必定能够避免停办。",
+        "type": "interpretive",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "H2.2拟议与H3.1已停课报告相合；无复课或持续停课全程。",
+          "reviewer": "本轮执行代理的限定材料解释与自审；非独立专业史学同行审查",
+          "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "史料解释不属形式证明；本轮未执行形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S2",
+        "notes": "定位及比较见notes/source-audit.md；稿件支持回查见review.md。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "材料较有力支持1912年9月16日起暂时停课；六周为拟议安排，实际结束时间未知。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "H2直接连接夜渡、缺课与暂止提议，H7时间及注记相合；仍无因果份额或单因识别。",
+          "reviewer": "本轮执行代理的限定材料解释与自审；非独立专业史学同行审查",
+          "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "史料解释不属形式证明；本轮未执行形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S3",
+        "notes": "定位及比较见notes/source-audit.md；稿件支持回查见review.md。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "夜航中断与到校困难作为近期触发获得比经费唯一解释更直接的材料支持。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "能容纳H1、H2、H3、H7；交互机制、必要性和相对作用尚未证成。",
+          "reviewer": "本轮执行代理的限定材料解释与自审；非独立专业史学同行审查",
+          "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+          "status": "mixed"
+        },
+        "formal_verification": {
+          "scope": "史料解释不属形式证明；本轮未执行形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S4",
+        "notes": "定位及比较见notes/source-audit.md；稿件支持回查见review.md。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "财务压力和交通障碍可能并存：前者是既有约束，后者可能触发此次暂停；作用权重不明。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "H4.2明注十八日函，H5.1明引二十日旬报。",
+          "reviewer": "本轮执行代理的限定材料解释与自审；非独立专业史学同行审查",
+          "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "史料解释不属形式证明；本轮未执行形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S5",
+        "notes": "定位及比较见notes/source-audit.md；稿件支持回查见review.md。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "H3到H4再到H5的明示传播关系，限制把三份材料计为独立因果佐证。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "1913年入校、主要听前任、年代和涨水记不真；欠付、停发和停教须区分。",
+          "reviewer": "本轮执行代理的限定材料解释与自审；非独立专业史学同行审查",
+          "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "史料解释不属形式证明；本轮未执行形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S6",
+        "notes": "定位及比较见notes/source-audit.md；稿件支持回查见review.md。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "H6不能确证1912年先停发全部津贴再停课的顺序。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "募捐诉求非反事实观察；交通和借舍困难仍可能独立限制开课。",
+          "reviewer": "本轮执行代理的限定材料解释与自审；非独立专业史学同行审查",
+          "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "史料解释不属形式证明；本轮未执行形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S7",
+        "notes": "定位及比较见notes/source-audit.md；稿件支持回查见review.md。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "现有材料不足以断言增加捐助必能避免停课。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "H1和H3支持财务部分，但H2与H7提供交通触发；H4—H5依赖，不能多数表决。",
+          "reviewer": "本轮执行代理的限定材料解释与自审；非独立专业史学同行审查",
+          "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "史料解释不属形式证明；本轮未执行形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S8",
+        "notes": "定位及比较见notes/source-audit.md；稿件支持回查见review.md。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "经费不足是此次停课的唯一原因。",
+        "type": "interpretive",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "H2拟停六周且复航再议；H3只记停课，H4—H5暂停，无长期终止记录。",
+          "reviewer": "本轮执行代理的限定材料解释与自审；非独立专业史学同行审查",
+          "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "史料解释不属形式证明；本轮未执行形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S9",
+        "notes": "定位及比较见notes/source-audit.md；稿件支持回查见review.md。",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "text": "夜校在1912年9月16日永久停办。",
+        "type": "interpretive",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "草稿L5的六组绝对化与依赖性主张",
+        "id": "E_DRAFT",
+        "limitations": "仅证明草稿作过何种断言。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "合作者v0.1，全文读取，保留未修改副本。",
+        "source_ids": [
+          "DRAFT"
+        ],
+        "type": "draft-under-review"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "收支册末页节录；实际节录及具体位置见notes/source-audit.md",
+        "extensions": {
+          "excerpt_locator": "H1.1—2; L7-11"
+        },
+        "id": "E_H1",
+        "limitations": "只有末页、未见九月后记录；灯油本月十五日期疑义。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/archive-packet.md"
+        },
+        "provenance": "来源H1；档案包L7-11及编目L2，未访问全文。",
+        "source_ids": [
+          "H1",
+          "INV"
+        ],
+        "type": "historical-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "理事会议记录节录；实际节录及具体位置见notes/source-audit.md",
+        "extensions": {
+          "excerpt_locator": "H2.1—2; L15-19"
+        },
+        "id": "E_H2",
+        "limitations": "未见签名页、会议全文及执行回报；拟议不同于实施。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/archive-packet.md"
+        },
+        "provenance": "来源H2；档案包L15-19及编目L3，未访问全文。",
+        "source_ids": [
+          "H2",
+          "INV"
+        ],
+        "type": "historical-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "理事长致外埠捐助人信节录；实际节录及具体位置见notes/source-audit.md",
+        "extensions": {
+          "excerpt_locator": "H3.1—2; L23-27"
+        },
+        "id": "E_H3",
+        "limitations": "只见两段，募捐目的，未见发出或收到证明及另函。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/archive-packet.md"
+        },
+        "provenance": "来源H3；档案包L23-27及编目L4，未访问全文。",
+        "source_ids": [
+          "H3",
+          "INV"
+        ],
+        "type": "historical-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "岚湾旬报短讯节录；实际节录及具体位置见notes/source-audit.md",
+        "extensions": {
+          "excerpt_locator": "H4.1—2; L31-35"
+        },
+        "id": "E_H4",
+        "limitations": "明注摘录H3；无独立采访，地名数额删节。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/archive-packet.md"
+        },
+        "provenance": "来源H4；档案包L31-35及编目L5，未访问全文。",
+        "source_ids": [
+          "H4",
+          "INV"
+        ],
+        "type": "historical-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "商会门前布告节录；实际节录及具体位置见notes/source-audit.md",
+        "extensions": {
+          "excerpt_locator": "H5.1—2; L39-43"
+        },
+        "id": "E_H5",
+        "limitations": "明引H4；捐款地点和时辰部分未收入。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/archive-packet.md"
+        },
+        "provenance": "来源H5；档案包L39-43及编目L6，未访问全文。",
+        "source_ids": [
+          "H5",
+          "INV"
+        ],
+        "type": "historical-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "老管理员回忆记录节录；实际节录及具体位置见notes/source-audit.md",
+        "extensions": {
+          "excerpt_locator": "H6.1—2; L47-51"
+        },
+        "id": "E_H6",
+        "limitations": "受访者1913年入校，1912停课主要听前任；日期不稳，未见录音和逐字底稿。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/archive-packet.md"
+        },
+        "provenance": "来源H6；档案包L47-51及编目L7，未访问全文。",
+        "source_ids": [
+          "H6",
+          "INV"
+        ],
+        "type": "historical-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "点名册与值日注记节录；实际节录及具体位置见notes/source-audit.md",
+        "extensions": {
+          "excerpt_locator": "H7.1—2; L55-59"
+        },
+        "id": "E_H7",
+        "limitations": "仅六个出席日期，姓名及签名列省略；无停课后记录。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/archive-packet.md"
+        },
+        "provenance": "来源H7；档案包L55-59及编目L8，未访问全文。",
+        "source_ids": [
+          "H7",
+          "INV"
+        ],
+        "type": "historical-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "全部七条编目与表头",
+        "id": "E_INV",
+        "limitations": "身份线索，非独立历史事件证明。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/inventory.csv"
+        },
+        "provenance": "案例随附本地编目，完整读到所供文件。",
+        "source_ids": [
+          "INV"
+        ],
+        "type": "inventory"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:Q1"
+        ],
+        "description": "问题范围和本轮工作计划",
+        "id": "O_ISSUE",
+        "notes": "完成内容仅限本轮本地材料；后续查档计划并未执行。",
+        "path": "notes/issue.md",
+        "type": "question-note"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Q1",
+          "statement:S1",
+          "statement:S2",
+          "statement:S3",
+          "statement:S4",
+          "statement:S5",
+          "statement:S6",
+          "statement:S7",
+          "statement:S8",
+          "statement:S9",
+          "statement:S10"
+        ],
+        "id": "M1",
+        "method_id": "historical-interpretive",
+        "notes": "方法指导不是自动专家审查或史实认证。",
+        "profile_version": "0.1",
+        "reason": "需要来源批判、时间线、传播依赖和竞争解释，已读取并实际依画像实施。",
+        "variant": "archival"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H1",
+        "id": "R1",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "余额、欠项及不足捐助直接支持财务压力；不推出资金用尽。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H1",
+        "id": "R10",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "提供早于停课的财务压力背景。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H2",
+        "id": "R11",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "同一会议同时处理渡船、借舍和欠项。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H3",
+        "id": "R12",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "水势另函说明，支持不能排除交通；募捐目的限制财务强调的唯一性。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H7",
+        "id": "R13",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "提供到校困难的同期观察；不识别交互效应。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H4",
+        "id": "R14",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "H4.2明说据理事长18日函节录。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S5"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H5",
+        "id": "R15",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "H5.1明确引20日旬报。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S5"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H6",
+        "id": "R16",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "H6前任消息来源未知；不可自动宣称其独立，也不可补接为H3直接派生。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S5"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H6",
+        "id": "R17",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "非亲历、晚出、年代不稳且未看会议簿，限制精确顺序的证明。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S6"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H1",
+        "id": "R18",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "只能确认两位教习七月欠项，不等于全停发。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S6"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H7",
+        "id": "R19",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "6日二教习到齐不能证明已全面停教，也不证明无欠薪。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S6"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H2",
+        "id": "R2",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "欠项仍须催捐，显示尚存在，但未给完整预算。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H2",
+        "id": "R20",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "渡船与待询日间借舍表明加钱以外可能仍有约束。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S7"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H3",
+        "id": "R21",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "常年费的募捐诉求本身不支持必然避免的反事实。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S7"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H1",
+        "id": "R22",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "有财务压力，但不支持唯一原因，且十月减课为条件句。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S8"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H3",
+        "id": "R23",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "有理事长财务归因，但同段组仍提水势，不能排他。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S8"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H2",
+        "id": "R24",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "直接记录交通原因与临时安排。",
+        "relation": "challenges",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S8"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H7",
+        "id": "R25",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "夜渡、东岸缺席及到齐教师提供替代解释线索。",
+        "relation": "challenges",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S8"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H6",
+        "id": "R26",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "晚出转述确有财务解释，但不具可靠单因识别力。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S8"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H2",
+        "id": "R27",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "拟停六周、候复航再议，不能改成永久。",
+        "relation": "challenges",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S9"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H4",
+        "id": "R28",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "H4.1说暂停，不说永久；属H3派生传播。",
+        "relation": "challenges",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S9"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H3",
+        "id": "R29",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "求捐期待不是必然效果证据。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S10"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H2",
+        "id": "R3",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "H2.2为16日起停六周的安排；只支持拟议。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H2",
+        "id": "R30",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "渡船与借舍尚需解决，反事实必然性没有依据。",
+        "relation": "challenges",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S10"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H3",
+        "id": "R4",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "H3.1称已于16日起停课，与计划相合。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H4",
+        "id": "R5",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "暂停和日期相合，但摘自H3，不增加独立实施证据。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H2",
+        "id": "R6",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "H2.1—2明确由夜航、学生缺课连至教习暂止请求。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H7",
+        "id": "R7",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "9月2日32人与6日12人及夜渡、东岸缺席注记相合。",
+        "relation": "supports",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H7",
+        "id": "R8",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "非连续日期；9日雨；没有固定名册分母或停复全程。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_H1",
+        "id": "R9",
+        "limitations": "仅所给节录；未认定完整来源独立性或精确因果权重。",
+        "rationale": "财务压力先存在，交通解释不能消除其他约束。",
+        "relation": "qualifies",
+        "scope": "仅H1—H7给定虚构节录、编目及草稿；无完整原件或外部史实核验。",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [],
+        "id": "A1",
+        "inputs": [
+          "statement:Q1"
+        ],
+        "note": "本轮实际完成问题卡、范围及下一项辨别性检查设计。",
+        "outputs": [
+          "artifact:O_ISSUE"
+        ],
+        "status": "done",
+        "title": "问题细化和研究边界确认"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_H1",
+          "evidence:E_H2",
+          "evidence:E_H3",
+          "evidence:E_H4",
+          "evidence:E_H5",
+          "evidence:E_H6",
+          "evidence:E_H7",
+          "evidence:E_INV"
+        ],
+        "description": "七材料逐件审计、来源链、时间线和竞争解释",
+        "id": "O_AUDIT",
+        "notes": "完成内容仅限本轮本地材料；后续查档计划并未执行。",
+        "path": "notes/source-audit.md",
+        "type": "source-audit"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A1"
+        ],
+        "id": "A2",
+        "inputs": [
+          "source:H1",
+          "source:H2",
+          "source:H3",
+          "source:H4",
+          "source:H5",
+          "source:H6",
+          "source:H7",
+          "source:INV",
+          "evidence:E_INV"
+        ],
+        "note": "实际逐字读取七份节录与编目；未读完整原件。",
+        "outputs": [
+          "artifact:O_AUDIT"
+        ],
+        "status": "done",
+        "title": "逐件来源审计、传播关系和时间线"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:S1",
+          "statement:S2",
+          "statement:S3",
+          "statement:S4",
+          "statement:S5",
+          "statement:S6",
+          "statement:S7",
+          "artifact:O_AUDIT"
+        ],
+        "description": "限定材料的中文短稿；约520汉字",
+        "id": "O_REPORT",
+        "notes": "完成内容仅限本轮本地材料；后续查档计划并未执行。",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A2"
+        ],
+        "id": "A3",
+        "inputs": [
+          "artifact:O_AUDIT",
+          "evidence:E_DRAFT",
+          "method-binding:M1",
+          "evidence:E_H1",
+          "evidence:E_H2",
+          "evidence:E_H3",
+          "evidence:E_H4",
+          "evidence:E_H5",
+          "evidence:E_H6",
+          "evidence:E_H7"
+        ],
+        "note": "实际对比财务、交通、并存约束与津贴顺序解释；保留相对权重未知及不足结论。",
+        "outputs": [
+          "statement:S1",
+          "statement:S2",
+          "statement:S3",
+          "statement:S4",
+          "statement:S5",
+          "statement:S6",
+          "statement:S7",
+          "statement:S8",
+          "statement:S9",
+          "statement:S10",
+          "relation:R1",
+          "relation:R2",
+          "relation:R3",
+          "relation:R4",
+          "relation:R5",
+          "relation:R6",
+          "relation:R7",
+          "relation:R8",
+          "relation:R9",
+          "relation:R10",
+          "relation:R11",
+          "relation:R12",
+          "relation:R13",
+          "relation:R14",
+          "relation:R15",
+          "relation:R16",
+          "relation:R17",
+          "relation:R18",
+          "relation:R19",
+          "relation:R20",
+          "relation:R21",
+          "relation:R22",
+          "relation:R23",
+          "relation:R24",
+          "relation:R25",
+          "relation:R26",
+          "relation:R27",
+          "relation:R28",
+          "relation:R29",
+          "relation:R30"
+        ],
+        "status": "done",
+        "title": "竞争解释及原草稿主张支持审计"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:O_REPORT",
+          "evidence:E_DRAFT",
+          "artifact:O_AUDIT"
+        ],
+        "description": "原草稿问题处理及修订短稿逐项支持回查",
+        "id": "O_REVIEW",
+        "notes": "完成内容仅限本轮本地材料；后续查档计划并未执行。",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A3"
+        ],
+        "id": "A4",
+        "inputs": [
+          "artifact:O_AUDIT",
+          "statement:S1",
+          "statement:S2",
+          "statement:S3",
+          "statement:S4",
+          "statement:S5",
+          "statement:S6",
+          "statement:S7"
+        ],
+        "note": "实际写出带H定位的520汉字短稿，并统计长度。",
+        "outputs": [
+          "artifact:O_REPORT"
+        ],
+        "status": "done",
+        "title": "修订不超过1000汉字等量短稿"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A4"
+        ],
+        "id": "A5",
+        "inputs": [
+          "artifact:O_REPORT",
+          "artifact:O_AUDIT",
+          "evidence:E_DRAFT",
+          "evidence:E_H1",
+          "evidence:E_H2",
+          "evidence:E_H3",
+          "evidence:E_H4",
+          "evidence:E_H5",
+          "evidence:E_H6",
+          "evidence:E_H7"
+        ],
+        "note": "实际回读稿件与审阅记录；四份输入副本与原给定文件逐字节相同。自审不是独立专家审查。",
+        "outputs": [
+          "artifact:O_REVIEW"
+        ],
+        "status": "done",
+        "title": "修订稿逐段回查与输入一致性核对"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A5"
+        ],
+        "id": "A6",
+        "inputs": [
+          "artifact:O_AUDIT",
+          "artifact:O_REVIEW"
+        ],
+        "note": "尚未获得或检索。若获材料，先逐日对照会议执行、复议和夜渡停复，再核账簿及津贴凭据；不可记为完成。",
+        "outputs": [],
+        "status": "pending",
+        "title": "获取后续执行、复课、夜渡停复与财务材料"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 6,
+    "artifacts": 4,
+    "decisions": 0,
+    "evidence": 9,
+    "method_bindings": 1,
+    "relations": 30,
+    "sources": 9,
+    "statements": 11
+  },
+  "cursor": {
+    "activity_id": "A6",
+    "next_action": "若获得新增材料，先核9月11日会议全文及9月16日—10月底执行、复议、借舍与点名记录，逐日对照夜渡停复以判断复航后是否复课，再核8—10月完整账簿及津贴凭据；当前A6待做，不补造材料。"
+  },
+  "output_normalizations": []
+}

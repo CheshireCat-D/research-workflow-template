@@ -1,0 +1,350 @@
+{
+  "design_version": "0.1",
+  "status": "executed-and-independently-reviewed-in-scope",
+  "scope": "Synthetic architecture acceptance scenarios with actual D2/D3 tasks and independent agent audits; not scientific or disciplinary certification.",
+  "cases": [
+    {
+      "id": "T01",
+      "disciplines": [
+        "natural-sciences"
+      ],
+      "methods": [
+        "formal-theory",
+        "computational"
+      ],
+      "task": "有限整数范围全部检验通过，作者拟将猜想改成定理",
+      "must_preserve": [
+        "已检验范围",
+        "未解决证明义务",
+        "可继续探索"
+      ],
+      "must_not_infer": [
+        "数值通过即证明"
+      ]
+    },
+    {
+      "id": "T02",
+      "disciplines": [
+        "engineering"
+      ],
+      "methods": [
+        "computational",
+        "empirical-quantitative"
+      ],
+      "task": "同一主体多行记录随机切分后获得高预测准确率",
+      "must_preserve": [
+        "目标泛化对象",
+        "主体划分与调参关系",
+        "负面评估"
+      ],
+      "must_not_infer": [
+        "高准确率即新主体泛化"
+      ]
+    },
+    {
+      "id": "T03",
+      "disciplines": [
+        "natural-sciences"
+      ],
+      "methods": [
+        "measurement-experiment",
+        "formal-theory"
+      ],
+      "task": "仪器校准误差可解释一部分模型残差",
+      "must_preserve": [
+        "校准依据",
+        "测量不确定性",
+        "竞争解释"
+      ],
+      "must_not_infer": [
+        "拟合即唯一机制"
+      ]
+    },
+    {
+      "id": "T04",
+      "disciplines": [
+        "engineering"
+      ],
+      "methods": [
+        "engineering-design",
+        "computational"
+      ],
+      "task": "仿真满足性能指标，但实物极端工况未测",
+      "must_preserve": [
+        "需求和工况",
+        "成本与安全权衡",
+        "未测失效范围"
+      ],
+      "must_not_infer": [
+        "仿真通过即安全认证"
+      ]
+    },
+    {
+      "id": "T05",
+      "disciplines": [
+        "medicine-health"
+      ],
+      "methods": [
+        "empirical-quantitative"
+      ],
+      "task": "研究者在看到结果后更改主要终点",
+      "must_preserve": [
+        "协议与分析版本",
+        "变更时间和理由",
+        "确认性与探索性区分",
+        "适用治理要求"
+      ],
+      "must_not_infer": [
+        "登记号存在即研究质量或伦理获批"
+      ],
+      "method_variants": {
+        "empirical-quantitative": [
+          "randomized-intervention"
+        ]
+      }
+    },
+    {
+      "id": "T06",
+      "disciplines": [
+        "medicine-health"
+      ],
+      "methods": [
+        "empirical-quantitative"
+      ],
+      "task": "观察数据中干预与结局显著相关，但存在混杂",
+      "must_preserve": [
+        "识别假设",
+        "选择和测量限制",
+        "关联的适用范围"
+      ],
+      "must_not_infer": [
+        "显著关联即治疗有效"
+      ],
+      "method_variants": {
+        "empirical-quantitative": [
+          "observational"
+        ]
+      }
+    },
+    {
+      "id": "T07",
+      "disciplines": [
+        "agriculture-life"
+      ],
+      "methods": [
+        "measurement-experiment",
+        "empirical-quantitative"
+      ],
+      "task": "多个地块、季节与区组中，每株均有重复测量",
+      "must_preserve": [
+        "独立实验单位",
+        "重复与分配层级",
+        "地点季节外推限制"
+      ],
+      "must_not_infer": [
+        "每株每次测量均为独立重复"
+      ],
+      "method_variants": {
+        "measurement-experiment": [
+          "field-trial"
+        ]
+      }
+    },
+    {
+      "id": "T08",
+      "disciplines": [
+        "humanities"
+      ],
+      "methods": [
+        "historical-interpretive"
+      ],
+      "task": "不同版本史料支持两种有争议的历史解释",
+      "must_preserve": [
+        "版本与来源批判",
+        "语境和译释",
+        "竞争解释与缺口"
+      ],
+      "must_not_infer": [
+        "史料多数决定唯一正确解释"
+      ]
+    },
+    {
+      "id": "T09",
+      "disciplines": [
+        "social-sciences"
+      ],
+      "methods": [
+        "qualitative"
+      ],
+      "task": "访谈材料出现负面案例，研究者需要修订分析框架",
+      "must_preserve": [
+        "编码和解释变更",
+        "研究者位置",
+        "负面案例",
+        "同意与引用权限"
+      ],
+      "must_not_infer": [
+        "编码一致即解释真确或具有总体代表性"
+      ],
+      "method_variants": {
+        "qualitative": [
+          "interview"
+        ]
+      }
+    },
+    {
+      "id": "T10",
+      "disciplines": [
+        "social-sciences"
+      ],
+      "methods": [
+        "empirical-quantitative"
+      ],
+      "task": "某政策实施前后指标发生变化",
+      "must_preserve": [
+        "识别设计与假设",
+        "测量和趋势",
+        "效应与不确定性范围"
+      ],
+      "must_not_infer": [
+        "前后差异即政策因果效应"
+      ],
+      "method_variants": {
+        "empirical-quantitative": [
+          "causal-inference"
+        ]
+      }
+    },
+    {
+      "id": "T11",
+      "disciplines": [
+        "medicine-health",
+        "social-sciences"
+      ],
+      "methods": [
+        "computational",
+        "empirical-quantitative",
+        "qualitative"
+      ],
+      "task": "预测模型、访谈和试点测量给出不一致结果",
+      "must_preserve": [
+        "每种证据的对象和范围",
+        "不一致与整合论证",
+        "相关责任与权限"
+      ],
+      "must_not_infer": [
+        "多种方法出现即已完成相互验证"
+      ]
+    },
+    {
+      "id": "T12",
+      "disciplines": [
+        "humanities",
+        "social-sciences"
+      ],
+      "methods": [
+        "conceptual-normative"
+      ],
+      "task": "作者用一组经验相关性直接论证公共政策应当实施",
+      "must_preserve": [
+        "价值前提",
+        "推理桥梁",
+        "反对意见",
+        "可修订建议"
+      ],
+      "must_not_infer": [
+        "经验事实单独证明应当结论"
+      ]
+    },
+    {
+      "id": "T13",
+      "disciplines": [
+        "humanities"
+      ],
+      "methods": [
+        "computational",
+        "historical-interpretive"
+      ],
+      "task": "数字人文语料词频变化伴有OCR和版次差异",
+      "must_preserve": [
+        "材料版本",
+        "计算与原文核对",
+        "语料覆盖限制"
+      ],
+      "must_not_infer": [
+        "词频差异直接确立历史原因"
+      ]
+    },
+    {
+      "id": "T14",
+      "disciplines": [
+        "medicine-health"
+      ],
+      "methods": [
+        "computational",
+        "empirical-quantitative"
+      ],
+      "task": "医学模型在单机构回顾性数据上表现较好",
+      "must_preserve": [
+        "患者机构时间划分",
+        "校准和外部适用性",
+        "受控数据权利"
+      ],
+      "must_not_infer": [
+        "预测性能即临床获益"
+      ],
+      "method_variants": {
+        "empirical-quantitative": [
+          "prediction"
+        ]
+      }
+    },
+    {
+      "id": "T15",
+      "disciplines": [
+        "medicine-health",
+        "social-sciences"
+      ],
+      "methods": [
+        "evidence-synthesis"
+      ],
+      "task": "作者要求叙述性文献综述，未声称系统检索",
+      "must_preserve": [
+        "选取范围和理由",
+        "来源限制",
+        "实际采用的方法名称"
+      ],
+      "must_not_infer": [
+        "所有综述必须套系统综述清单",
+        "未做系统检索却声称系统综述"
+      ],
+      "method_variants": {
+        "evidence-synthesis": [
+          "narrative-review"
+        ]
+      }
+    },
+    {
+      "id": "T16",
+      "disciplines": [
+        "medicine-health",
+        "social-sciences"
+      ],
+      "methods": [
+        "qualitative",
+        "empirical-quantitative"
+      ],
+      "task": "研究者准备把受限访谈或患者材料上传外部模型，但材料使用许可和相应授权范围未明",
+      "must_preserve": [
+        "暂停这项外发并说明需要澄清的权限",
+        "继续离线结构设计、一般方法讨论或使用合成材料",
+        "待决适用性与责任记录"
+      ],
+      "must_not_infer": [
+        "已登记待审即获准上传",
+        "不能外发就等于整个研究失败"
+      ]
+    }
+  ],
+  "execution_evidence": "evals/d3/coverage.json"
+}

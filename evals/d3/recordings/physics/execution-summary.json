@@ -1,0 +1,1209 @@
+{
+  "case": "forward-physics",
+  "project_path": "PROJECT",
+  "status": "complete-in-scope; frozen",
+  "actual_skills_read": [
+    ".agents/skills/rw-workflow/SKILL.md",
+    ".agents/skills/rw-validation/SKILL.md",
+    ".agents/skills/rw-writing/SKILL.md",
+    ".agents/skills/rw-review/SKILL.md"
+  ],
+  "actual_profiles_read": [
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/disciplines/natural-sciences.md",
+      "version": "0.1"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/methods/formal-theory.md",
+      "version": "0.1"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/methods/computational.md",
+      "version": "0.1"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/methods/measurement-experiment.md",
+      "version": "0.1"
+    }
+  ],
+  "other_instruction_reads": [
+    "toolkit skills/rw-workflow/SKILL.md before initialization",
+    "core/skill-bridge.md",
+    "core/protocol.md",
+    "design/catalog.json",
+    "core/schemas/{source,statement,evidence,relation,artifact,activity,method-binding}.schema.json"
+  ],
+  "files": [
+    ".agents/skills/_rw-runtime/bundle-manifest.json",
+    ".agents/skills/_rw-runtime/core/__init__.py",
+    ".agents/skills/_rw-runtime/core/bundle.py",
+    ".agents/skills/_rw-runtime/core/cli.py",
+    ".agents/skills/_rw-runtime/core/model.py",
+    ".agents/skills/_rw-runtime/core/project.py",
+    ".agents/skills/_rw-runtime/core/protocol.md",
+    ".agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/decision.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/method-binding.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/project.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/registry.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/source.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+    ".agents/skills/_rw-runtime/core/skill-bridge.md",
+    ".agents/skills/_rw-runtime/core/storage.py",
+    ".agents/skills/_rw-runtime/design/catalog.json",
+    ".agents/skills/_rw-runtime/profiles/disciplines/agriculture-life.md",
+    ".agents/skills/_rw-runtime/profiles/disciplines/engineering.md",
+    ".agents/skills/_rw-runtime/profiles/disciplines/humanities.md",
+    ".agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md",
+    ".agents/skills/_rw-runtime/profiles/disciplines/natural-sciences.md",
+    ".agents/skills/_rw-runtime/profiles/disciplines/social-sciences.md",
+    ".agents/skills/_rw-runtime/profiles/governance.md",
+    ".agents/skills/_rw-runtime/profiles/methods/computational.md",
+    ".agents/skills/_rw-runtime/profiles/methods/conceptual-normative.md",
+    ".agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md",
+    ".agents/skills/_rw-runtime/profiles/methods/engineering-design.md",
+    ".agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md",
+    ".agents/skills/_rw-runtime/profiles/methods/formal-theory.md",
+    ".agents/skills/_rw-runtime/profiles/methods/historical-interpretive.md",
+    ".agents/skills/_rw-runtime/profiles/methods/measurement-experiment.md",
+    ".agents/skills/_rw-runtime/profiles/methods/qualitative.md",
+    ".agents/skills/_rw-runtime/profiles/sources.json",
+    ".agents/skills/_rw-runtime/tools/connect_skills.py",
+    ".agents/skills/_rw-runtime/tools/research.py",
+    ".agents/skills/rw-candidates/SKILL.md",
+    ".agents/skills/rw-innovation/SKILL.md",
+    ".agents/skills/rw-literature/SKILL.md",
+    ".agents/skills/rw-question/SKILL.md",
+    ".agents/skills/rw-review/SKILL.md",
+    ".agents/skills/rw-validation/SKILL.md",
+    ".agents/skills/rw-workflow/SKILL.md",
+    ".agents/skills/rw-writing/SKILL.md",
+    ".gitignore",
+    ".research/write.lock",
+    "PROJECT.md",
+    "artifacts/README.md",
+    "artifacts/results.json",
+    "artifacts/run-metadata.json",
+    "artifacts/run.py",
+    "checks/check.json",
+    "checks/installed-skills.json",
+    "checks/resume.json",
+    "inputs/calibration.json",
+    "inputs/model.md",
+    "inputs/observations.csv",
+    "inputs/pilot.csv",
+    "inputs/task.md",
+    "manuscript/report.md",
+    "notes/derivation.md",
+    "notes/input-manifest.json",
+    "notes/issue.md",
+    "notes/numerical-results.md",
+    "notes/reproducibility.json",
+    "project.json",
+    "records/registry.json",
+    "records/submissions/activity-ACTcompute.json",
+    "records/submissions/activity-ACTderive.json",
+    "records/submissions/activity-ACTreview.json",
+    "records/submissions/activity-ACTwrite.json",
+    "records/submissions/artifact-Acode.json",
+    "records/submissions/artifact-Aderive.json",
+    "records/submissions/artifact-Aissue.json",
+    "records/submissions/artifact-Amanifest.json",
+    "records/submissions/artifact-Ameta.json",
+    "records/submissions/artifact-Areadme.json",
+    "records/submissions/artifact-Areport.json",
+    "records/submissions/artifact-Arepro.json",
+    "records/submissions/artifact-Aresult.json",
+    "records/submissions/artifact-Areview.json",
+    "records/submissions/artifact-Atable.json",
+    "records/submissions/evidence-Ecal.json",
+    "records/submissions/evidence-Ecompute.json",
+    "records/submissions/evidence-Ederive.json",
+    "records/submissions/evidence-Emodel.json",
+    "records/submissions/evidence-Eobs.json",
+    "records/submissions/evidence-Epilot.json",
+    "records/submissions/evidence-Etask.json",
+    "records/submissions/method-binding-Mcompute.json",
+    "records/submissions/method-binding-Mmeasure.json",
+    "records/submissions/method-binding-Mtheory.json",
+    "records/submissions/relation-Rcal.json",
+    "records/submissions/relation-Rcalderive.json",
+    "records/submissions/relation-Rdraft1.json",
+    "records/submissions/relation-Rdraft2.json",
+    "records/submissions/relation-Rlimit.json",
+    "records/submissions/relation-Rlimitnum.json",
+    "records/submissions/relation-Rpred.json",
+    "records/submissions/relation-Rpredqual.json",
+    "records/submissions/relation-Rsol.json",
+    "records/submissions/relation-Runiv.json",
+    "records/submissions/relation-Runivqual.json",
+    "records/submissions/source-SRCcal.json",
+    "records/submissions/source-SRCmodel.json",
+    "records/submissions/source-SRCobs.json",
+    "records/submissions/source-SRCpilot.json",
+    "records/submissions/source-SRCtask.json",
+    "records/submissions/statement-Scalibration.json",
+    "records/submissions/statement-Sdraft.json",
+    "records/submissions/statement-Slimits.json",
+    "records/submissions/statement-Sprediction.json",
+    "records/submissions/statement-Ssolution.json",
+    "records/submissions/statement-Suniversal.json",
+    "review.md"
+  ],
+  "logs": [
+    {
+      "log": "logs/00-workflow-read.json",
+      "command": [
+        "cat",
+        "TOOLKIT/skills/rw-workflow/SKILL.md",
+        "TOOLKIT/core/skill-bridge.md",
+        "TOOLKIT/core/protocol.md",
+        "TOOLKIT/design/catalog.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.00253224999687518
+    },
+    {
+      "log": "logs/01-init.json",
+      "command": [
+        "python3",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "合成加热模型的量纲校准与动态核查",
+        "--discipline",
+        "natural-sciences",
+        "--method",
+        "formal-theory",
+        "--method",
+        "computational",
+        "--method",
+        "measurement-experiment",
+        "--mode",
+        "reproducible",
+        "--language",
+        "zh"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03755283300051815
+    },
+    {
+      "log": "logs/02-connect-help.json",
+      "command": [
+        "python3",
+        "TOOLKIT/tools/connect_skills.py",
+        "install",
+        "--help"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03595458299969323
+    },
+    {
+      "log": "logs/03-connect.json",
+      "command": [
+        "python3",
+        "TOOLKIT/tools/connect_skills.py",
+        "install",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.05161237499851268
+    },
+    {
+      "log": "logs/04-local-skills.json",
+      "command": [
+        "cat",
+        "PROJECT/.agents/skills/rw-workflow/SKILL.md",
+        "PROJECT/.agents/skills/rw-validation/SKILL.md",
+        "PROJECT/.agents/skills/rw-writing/SKILL.md",
+        "PROJECT/.agents/skills/rw-review/SKILL.md",
+        "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/natural-sciences.md",
+        "PROJECT/.agents/skills/_rw-runtime/profiles/methods/formal-theory.md",
+        "PROJECT/.agents/skills/_rw-runtime/profiles/methods/computational.md",
+        "PROJECT/.agents/skills/_rw-runtime/profiles/methods/measurement-experiment.md"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.002902791999076726
+    },
+    {
+      "log": "logs/05-schemas.json",
+      "command": [
+        "cat",
+        "PROJECT/.agents/skills/_rw-runtime/core/schemas/source.schema.json",
+        "PROJECT/.agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+        "PROJECT/.agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+        "PROJECT/.agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+        "PROJECT/.agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+        "PROJECT/.agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+        "PROJECT/.agents/skills/_rw-runtime/core/schemas/method-binding.schema.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.0021910830000706483
+    },
+    {
+      "log": "logs/06-copy-inputs.json",
+      "command": [
+        "python3",
+        "setup_inputs.py"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.02452679199996055
+    },
+    {
+      "log": "logs/07-inputs-and-local-protocol.json",
+      "command": [
+        "cat",
+        "PROJECT/inputs/task.md",
+        "PROJECT/inputs/model.md",
+        "PROJECT/inputs/calibration.json",
+        "PROJECT/inputs/observations.csv",
+        "PROJECT/inputs/pilot.csv",
+        "PROJECT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+        "PROJECT/.agents/skills/_rw-runtime/core/protocol.md",
+        "PROJECT/.agents/skills/_rw-runtime/design/catalog.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.0022511670031235553
+    },
+    {
+      "log": "logs/08-formal-run.json",
+      "command": [
+        "python3",
+        "PROJECT/artifacts/run.py"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.035763208998105256
+    },
+    {
+      "log": "logs/09-write-materials.json",
+      "command": [
+        "python3",
+        "write_materials.py"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.020113375001528766
+    },
+    {
+      "log": "logs/10-read-results.json",
+      "command": [
+        "cat",
+        "PROJECT/notes/numerical-results.md",
+        "PROJECT/manuscript/report.md"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.0022746249996998813
+    },
+    {
+      "log": "logs/11-relocation-setup.json",
+      "command": [
+        "python3",
+        "relocation_check.py"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.06522570800007088
+    },
+    {
+      "log": "logs/12-relocated-run.json",
+      "command": [
+        "python3",
+        "RUN/relocation-check/PROJECT/artifacts/run.py"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03517120799733675
+    },
+    {
+      "log": "logs/13-register-ACTcompute.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "activity",
+        "--file",
+        "records/submissions/activity-ACTcompute.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.046154832998581696
+    },
+    {
+      "log": "logs/13-register-ACTderive.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "activity",
+        "--file",
+        "records/submissions/activity-ACTderive.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04793666700061294
+    },
+    {
+      "log": "logs/13-register-ACTreview.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "activity",
+        "--file",
+        "records/submissions/activity-ACTreview.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.047351875000458676
+    },
+    {
+      "log": "logs/13-register-ACTwrite.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "activity",
+        "--file",
+        "records/submissions/activity-ACTwrite.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04775504200006253
+    },
+    {
+      "log": "logs/13-register-Acode.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Acode.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04133295800056658
+    },
+    {
+      "log": "logs/13-register-Aderive.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Aderive.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04106641700127511
+    },
+    {
+      "log": "logs/13-register-Aissue.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Aissue.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04175987499911571
+    },
+    {
+      "log": "logs/13-register-Amanifest.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Amanifest.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.043325083002855536
+    },
+    {
+      "log": "logs/13-register-Ameta.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Ameta.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.042500875002588145
+    },
+    {
+      "log": "logs/13-register-Areadme.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Areadme.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.042322332999901846
+    },
+    {
+      "log": "logs/13-register-Areport.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Areport.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.042451917001017136
+    },
+    {
+      "log": "logs/13-register-Arepro.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Arepro.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04792620799707947
+    },
+    {
+      "log": "logs/13-register-Aresult.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Aresult.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04161470799954259
+    },
+    {
+      "log": "logs/13-register-Areview.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Areview.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04401737500302261
+    },
+    {
+      "log": "logs/13-register-Atable.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "records/submissions/artifact-Atable.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04336825000063982
+    },
+    {
+      "log": "logs/13-register-Ecal.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "records/submissions/evidence-Ecal.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03917445800107089
+    },
+    {
+      "log": "logs/13-register-Ecompute.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "records/submissions/evidence-Ecompute.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.041072292002354516
+    },
+    {
+      "log": "logs/13-register-Ederive.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "records/submissions/evidence-Ederive.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03959808299987344
+    },
+    {
+      "log": "logs/13-register-Emodel.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "records/submissions/evidence-Emodel.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03825820799829671
+    },
+    {
+      "log": "logs/13-register-Eobs.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "records/submissions/evidence-Eobs.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03936674999931711
+    },
+    {
+      "log": "logs/13-register-Epilot.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "records/submissions/evidence-Epilot.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03917224999895552
+    },
+    {
+      "log": "logs/13-register-Etask.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "records/submissions/evidence-Etask.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03769958299744758
+    },
+    {
+      "log": "logs/13-register-Mcompute.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "method-binding",
+        "--file",
+        "records/submissions/method-binding-Mcompute.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.042859500001213746
+    },
+    {
+      "log": "logs/13-register-Mmeasure.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "method-binding",
+        "--file",
+        "records/submissions/method-binding-Mmeasure.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.05956608300039079
+    },
+    {
+      "log": "logs/13-register-Mtheory.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "method-binding",
+        "--file",
+        "records/submissions/method-binding-Mtheory.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04480583300028229
+    },
+    {
+      "log": "logs/13-register-Rcal.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Rcal.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04045320899967919
+    },
+    {
+      "log": "logs/13-register-Rcalderive.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Rcalderive.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.039707500000076834
+    },
+    {
+      "log": "logs/13-register-Rdraft1.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Rdraft1.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04009362500073621
+    },
+    {
+      "log": "logs/13-register-Rdraft2.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Rdraft2.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.040546374999394175
+    },
+    {
+      "log": "logs/13-register-Rlimit.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Rlimit.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04668799999853945
+    },
+    {
+      "log": "logs/13-register-Rlimitnum.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Rlimitnum.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04362258399851271
+    },
+    {
+      "log": "logs/13-register-Rpred.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Rpred.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.041753041001356905
+    },
+    {
+      "log": "logs/13-register-Rpredqual.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Rpredqual.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.040337750000617234
+    },
+    {
+      "log": "logs/13-register-Rsol.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Rsol.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04165941600149381
+    },
+    {
+      "log": "logs/13-register-Runiv.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Runiv.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.040944415999547346
+    },
+    {
+      "log": "logs/13-register-Runivqual.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "records/submissions/relation-Runivqual.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.048933915997622535
+    },
+    {
+      "log": "logs/13-register-SRCcal.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "source",
+        "--file",
+        "records/submissions/source-SRCcal.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.0412518330012972
+    },
+    {
+      "log": "logs/13-register-SRCmodel.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "source",
+        "--file",
+        "records/submissions/source-SRCmodel.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03819058299995959
+    },
+    {
+      "log": "logs/13-register-SRCobs.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "source",
+        "--file",
+        "records/submissions/source-SRCobs.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03771870800119359
+    },
+    {
+      "log": "logs/13-register-SRCpilot.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "source",
+        "--file",
+        "records/submissions/source-SRCpilot.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03726045800067368
+    },
+    {
+      "log": "logs/13-register-SRCtask.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "source",
+        "--file",
+        "records/submissions/source-SRCtask.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.0390138750008191
+    },
+    {
+      "log": "logs/13-register-Scalibration.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "records/submissions/statement-Scalibration.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03822766700250213
+    },
+    {
+      "log": "logs/13-register-Sdraft.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "records/submissions/statement-Sdraft.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.038601500000368105
+    },
+    {
+      "log": "logs/13-register-Slimits.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "records/submissions/statement-Slimits.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.0378268329986895
+    },
+    {
+      "log": "logs/13-register-Sprediction.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "records/submissions/statement-Sprediction.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.0379090830028872
+    },
+    {
+      "log": "logs/13-register-Ssolution.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "records/submissions/statement-Ssolution.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03791970900056185
+    },
+    {
+      "log": "logs/13-register-Suniversal.json",
+      "command": [
+        "python3",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "records/submissions/statement-Suniversal.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.03822229100114782
+    },
+    {
+      "log": "logs/13-register-all.json",
+      "command": [
+        "python3",
+        "register_records.py"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 2.008818040998449
+    },
+    {
+      "log": "logs/14-pre-check.json",
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04616987500048708
+    },
+    {
+      "log": "logs/15-installed-copy-check.json",
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+        "check",
+        "--installed-only",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04377879100138671
+    },
+    {
+      "log": "logs/16-checkpoint.json",
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "checkpoint",
+        "--root",
+        "PROJECT",
+        "--next-action",
+        "在当前合成模型中对校准温差D的相对u从5%增至10%、20%作正值局部敏感性分析，比较t=50 s均值和u与一阶传播，明确非线性近似失效范围；尚未执行。"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04287533399838139
+    },
+    {
+      "log": "logs/17-final-check.json",
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04118229199957568
+    },
+    {
+      "log": "logs/18-final-resume.json",
+      "command": [
+        "python3",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.04025220800031093
+    }
+  ],
+  "log_scope": "Setup/read commands were recaptured in00-07; calculation, registration, relocation and recovery commands have raw stdout/stderr plus command/exit/duration JSON. Preliminary unlogged discovery included task/input reading,help and directory inventory; no research outputs were inferred from it.",
+  "results": {
+    "H_W_per_K": 10,
+    "u_H": 0.5385164807134505,
+    "tau_s": 50,
+    "u_tau_s": 2.8722813232690148,
+    "prediction_t50_C": 45.86548982325788,
+    "u_prediction_t50_K": 1.3514392967471944,
+    "noninitial_max_residual_K": 0.091894705222912,
+    "formal_run_wall_s": 0.035763208998105256,
+    "formal_computation_elapsed_s": 0.0005261660007818136,
+    "relocated_rerun_byte_equal": true
+  },
+  "failures": {
+    "execution_failures": [],
+    "recoveries": [],
+    "substantive_failures_found": [
+      "trial exponent lacks C and is dimensionful",
+      "heater forcing omitted and powered steady limit wrong",
+      "pilot disagrees markedly with three noninitial readings",
+      "universal calibration-error neglect unsupported"
+    ]
+  },
+  "registry_counts": {
+    "activities": 4,
+    "artifacts": 11,
+    "decisions": 0,
+    "evidence": 7,
+    "method_bindings": 3,
+    "relations": 11,
+    "sources": 5,
+    "statements": 6
+  },
+  "check_exit_code": 0,
+  "resume_exit_code": 0,
+  "checkpoint_status": "current",
+  "scientific_validity": "not-assessed by CLI",
+  "scope": "Only supplied offline synthetic material; manual analytic derivation plus deterministic closed-form calculations, first-order uncertainty and model-internal limits. No real experiment,external literature,mechanism uniqueness or engineering certification.",
+  "next_action": "在当前合成模型中对校准温差D的相对u从5%增至10%、20%作正值局部敏感性分析，比较t=50 s均值和u与一阶传播，明确非线性近似失效范围；尚未执行。",
+  "next_action_executed": false,
+  "freeze": {
+    "marker": "ARTIFACTS_FROZEN",
+    "registered_local_files_sha256": {
+      "artifacts/README.md": "dbdcb81355c5b8288db060306858ad51d0999731be61b9188d4d865b908c61f5",
+      "artifacts/results.json": "ffa859b72011401c954626b3f9fc87725f7b95212e087ef06361bc4af10c1ef9",
+      "artifacts/run-metadata.json": "e37179ed4459998e3282eaa14f837f67a1b1b807daa510fb053f9f5f8b014f2a",
+      "artifacts/run.py": "7e730dbd7f74f89859ced351c5650b2d14e3b8d4d3e05bac64e7271a32a3eb94",
+      "inputs/calibration.json": "ef70a4abb7325b73b8b4f8a85b6bc9559a838ff9e4b9f2063f317b38a2e363d2",
+      "inputs/model.md": "ad50aa7711a1d3535a4a6ba5ddf65afc08680cc0fc547c1b7a32d2398dd2b2d3",
+      "inputs/observations.csv": "1bf2f66e7b6c4ce62fb7b4e618f96575a5daac7a443f2ddc114222863de42618",
+      "inputs/pilot.csv": "ef93675ee9087975c0ac75c7bf6987562bab5b4142aec0ca0acf027ad228925f",
+      "inputs/task.md": "06ae6919b65b555cc4307ec3ee1555d68d3092e282f4de17ea2fb492bc55dab6",
+      "manuscript/report.md": "e345cbd8dee99c37f8397e6623b95efade9d2ab293588115a3ab7cd64fa8d74e",
+      "notes/derivation.md": "64921b5e31527b316e273d14e8356d4305f05716e0296f1baa072fb0a052c438",
+      "notes/input-manifest.json": "ab7d96b6673a5b7a0f114ebb7ad8a5be22758e8a6faeb85dd63aa16bed612245",
+      "notes/issue.md": "9d172061dadf408e847f8fd79bdd728b0be7927782d90363e410396319119cc3",
+      "notes/numerical-results.md": "702f1eebdc6d9a718ce1ae1a55af06cc51e221c7fa66b6f37e28f39edabdb064",
+      "notes/reproducibility.json": "836818850033ee73aac70734fe6eff9d2accf595855ef86da0f73a5e2475038a",
+      "review.md": "99567519303e26a6d2a60c6ce2dab9ae92acfbec2846c2ebf0844f1edeb5e7fb"
+    },
+    "all_registered_local_files_read_only": true,
+    "no_artifact_writes_after_marker": true,
+    "created_utc": "2026-10-24T20:21:04.754323+00:00"
+  }
+}

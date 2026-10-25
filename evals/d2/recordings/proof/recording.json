@@ -1,0 +1,734 @@
+{
+  "format_version": 1,
+  "case_id": "proof",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create a fresh project identity, version-one records and a new checkpoint; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "22a5c72c80233b743dfb31f7fa2e4be566c1f1d0a4443212364ef4f32948c2be",
+  "project_init": {
+    "title": "零积分与代表元的逐点性质",
+    "interest": "非负可测函数的零积分能确定什么",
+    "disciplines": [
+      "natural-sciences"
+    ],
+    "methods": [
+      "formal-theory"
+    ],
+    "workflow_mode": "structured",
+    "language": "zh-CN",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/draft.md": "draft.md",
+    "inputs/observations.csv": "observations.csv",
+    "inputs/source-notes.md": "source-notes.md",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "draft.md": "73c576912f8fb7df5f884519126e53816d61c984eed85dfbeed932e6bc2bf53e",
+    "task.md": "e3b6cf6990dfb28476bfb1be97406ec92986bba1ebce62e41686ded6d3e8648c",
+    "source-notes.md": "a0f09a0002995870b934fabbf34d3c6170ec842db433d747935fdb26f4f9b44e",
+    "observations.csv": "810362f54c9b11d55781c01c0ce084d47ae1e4eecf501613e7179b4ce03344d9"
+  },
+  "output_files": [
+    "code/check_inputs.py",
+    "manuscript/report.md",
+    "notes/input-check.json",
+    "notes/issue.md",
+    "notes/source-map.json",
+    "notes/work.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "code/check_inputs.py": "c5f5622c7dc3d844af7989042be4ffe5d0a07af195cf07ecc59df9a0629606c7",
+    "manuscript/report.md": "22bb6e3ac3cadd43820a8bdbe3c4491a9879fbea3189d52167706ddd2d6f7411",
+    "notes/input-check.json": "762b7099d0630140331e25592ad49b94e55754e589a6f77b3641479bf97890b2",
+    "notes/issue.md": "3724ad9bfdb5654602ce0bbbfca98ca63954f1ea9116fbc7614eea2ea4f6d832",
+    "notes/source-map.json": "d509671bed95eab3b9adbe1ab018a0e6f7018cdf7c1e0c3a23422e9633708ab9",
+    "notes/work.md": "fd6d7d7651c3244e8f7544a3ff51dae55cfc14e13e806c8912ed71c21adfecdc",
+    "review.md": "6fc5b0b9183f7a7923f63c51b6d04ba2e5ed309e6d5d7c9f0307ad5779028528"
+  },
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-draft",
+        "limitations": "本任务授权的合成材料；无真实发表或新颖性结论。",
+        "locator": "inputs/draft.md",
+        "notes": "全文读取；项目副本字节一致性见 notes/source-map.json。",
+        "rights": "restricted",
+        "title": "合作者草稿 v0.1，合成未发表材料",
+        "version": "case-supplied-v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-grid",
+        "limitations": "本任务授权的合成材料；无真实发表或新颖性结论。",
+        "locator": "inputs/observations.csv",
+        "notes": "全文读取；项目副本字节一致性见 notes/source-map.json。",
+        "rights": "restricted",
+        "title": "未知代表元 F 的合成网格记录",
+        "version": "case-supplied-v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-notes",
+        "limitations": "本任务授权的合成材料；无真实发表或新颖性结论。",
+        "locator": "inputs/source-notes.md",
+        "notes": "全文读取；项目副本字节一致性见 notes/source-map.json。",
+        "rights": "restricted",
+        "title": "本地基础摘记 N，版本1，合成教学材料",
+        "version": "case-supplied-v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-task",
+        "limitations": "本任务授权的合成材料；无真实发表或新颖性结论。",
+        "locator": "inputs/task.md",
+        "notes": "全文读取；项目副本字节一致性见 notes/source-map.json。",
+        "rights": "restricted",
+        "title": "离线分析札记委托",
+        "version": "case-supplied-v1"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "code/check_inputs.py 精确有理数解析，notes/input-check.json 保存有界检查结果。",
+          "reviewer": "host-agent: manual proof and separate backward audit",
+          "scope": "仅限 inputs/observations.csv 的文件内容；不是未知 F 的全区间真值。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "本任务未使用机器证明器；手工推导不等于形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "O-grid",
+        "role": "分析课讨论",
+        "scope": "仅限 inputs/observations.csv 的文件内容；不是未知 F 的全区间真值。",
+        "text": "CSV的9个互异记录点是 k/8 (k=0,…,8)，所列记录值均为0。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "notes/work.md B 的 f=1_{ {1/16} } 逐项满足假设而在 1/16 取1。",
+          "reviewer": "host-agent: manual proof and separate backward audit",
+          "scope": "原稿 inputs/draft.md 的完整假设和逐点结论。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "本任务未使用机器证明器；手工推导不等于形式化验证。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "P-original",
+        "role": "分析课讨论",
+        "scope": "原稿 inputs/draft.md 的完整假设和逐点结论。",
+        "text": "原稿 P：非负可测可积且积分零，则已选 f 在每一点为零。",
+        "type": "formal",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "问题卡 notes/issue.md 已细化；问题本身不是待判真命题。",
+          "reviewer": "host-agent: manual proof and separate backward audit",
+          "scope": "仅限 inputs/task.md 所列离线基础分析练习。",
+          "status": "not-applicable"
+        },
+        "formal_verification": {
+          "scope": "本任务未使用机器证明器；手工推导不等于形式化验证。",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "Q1",
+        "role": "分析课讨论",
+        "scope": "仅限 inputs/task.md 所列离线基础分析练习。",
+        "text": "原非负可测条件下零积分确定什么？L1 类与代表元怎样区分，逐点结论需何新增条件？",
+        "type": "question",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "已在 notes/work.md 展开证明并在 F 节复核。",
+          "reviewer": "host-agent: manual proof and separate backward audit",
+          "scope": "有限值、非负、Lebesgue 可测函数；Lebesgue 区间 [0,1]。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "本任务未使用机器证明器；手工推导不等于形式化验证。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "T-ae",
+        "role": "分析课讨论",
+        "scope": "有限值、非负、Lebesgue 可测函数；Lebesgue 区间 [0,1]。",
+        "text": "非负可测 f:[0,1]→[0,+∞) 的积分为零，当且仅当 f 几乎处处为零；在此条件下 L1 可积假设冗余。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "已在 notes/work.md 展开证明并在 F 节复核。",
+          "reviewer": "host-agent: manual proof and separate backward audit",
+          "scope": "L1 商空间与已选代表元分别陈述；不以类相等推出代表元处处零。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "本任务未使用机器证明器；手工推导不等于形式化验证。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "T-class",
+        "role": "分析课讨论",
+        "scope": "L1 商空间与已选代表元分别陈述；不以类相等推出代表元处处零。",
+        "text": "L1 取商空间含义时，非负零积分类等于 [0]；等价类并无代表元无关的点值。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "已在 notes/work.md 展开证明并在 F 节复核。",
+          "reviewer": "host-agent: manual proof and separate backward audit",
+          "scope": "连续性是新增充分条件，采用相对 [0,1] 定义，包含两个端点；非最弱性主张。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "本任务未使用机器证明器；手工推导不等于形式化验证。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "T-continuity",
+        "role": "分析课讨论",
+        "scope": "连续性是新增充分条件，采用相对 [0,1] 定义，包含两个端点；非最弱性主张。",
+        "text": "新增已选 f 在 x0 连续且其余零积分条件成立，则 f(x0)=0；新增全区间连续可推出处处零。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "已在 notes/work.md 展开证明并在 F 节复核。",
+          "reviewer": "host-agent: manual proof and separate backward audit",
+          "scope": "仅对附件有限网格的非识别性；不给未知 F 编造公式。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "本任务未使用机器证明器；手工推导不等于形式化验证。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "T-grid-limit",
+        "role": "分析课讨论",
+        "scope": "仅对附件有限网格的非识别性；不给未知 F 编造公式。",
+        "text": "即便网格值精确，有限零采样也不能判断未知 F 处处零或积分零。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "原拟议命题、证明尝试与计算补充，作为被审对象。",
+        "id": "EV-draft",
+        "limitations": "草稿自身不是正确性的证明。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "离线给定材料或本项目实际生成；定位均为项目相对路径。",
+        "source_ids": [
+          "SRC-draft"
+        ],
+        "type": "supplied-draft"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "9个网格记录及代表元公式不可用的注释。",
+        "id": "EV-grid",
+        "limitations": "只支持记录描述；无误差模型。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/observations.csv"
+        },
+        "provenance": "离线给定材料或本项目实际生成；定位均为项目相对路径。",
+        "source_ids": [
+          "SRC-grid"
+        ],
+        "type": "recorded-grid"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "CSV有理数解析、输入副本摘要与短稿长度。",
+        "id": "EV-inputcheck",
+        "limitations": "脚本结果不证明数学定理，不识别 F。",
+        "location": {
+          "kind": "local",
+          "path": "notes/input-check.json"
+        },
+        "provenance": "离线给定材料或本项目实际生成；定位均为项目相对路径。",
+        "source_ids": [
+          "SRC-grid",
+          "SRC-task"
+        ],
+        "type": "bounded-record-check"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "N1–N6 的给定基础事实与材料限制。",
+        "id": "EV-notes",
+        "limitations": "合成摘记，无真实文献身份或外部覆盖结论。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/source-notes.md"
+        },
+        "provenance": "离线给定材料或本项目实际生成；定位均为项目相对路径。",
+        "source_ids": [
+          "SRC-notes"
+        ],
+        "type": "local-foundation-notes"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "对短稿v1的量词、条件、证明与证据边界审阅。",
+        "id": "EV-review",
+        "limitations": "同一执行者的独立路线复核，无外部审稿或证明器。",
+        "location": {
+          "kind": "local",
+          "path": "review.md"
+        },
+        "provenance": "离线给定材料或本项目实际生成；定位均为项目相对路径。",
+        "source_ids": [
+          "SRC-task"
+        ],
+        "type": "manual-review"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "B反例、C等价命题、D类语义、E连续性修复、F独立复核、G有限网格反例。",
+        "id": "EV-work",
+        "limitations": "手工数学工作，未形式化；不是独立人类审稿。",
+        "location": {
+          "kind": "local",
+          "path": "notes/work.md"
+        },
+        "provenance": "离线给定材料或本项目实际生成；定位均为项目相对路径。",
+        "source_ids": [
+          "SRC-draft",
+          "SRC-notes",
+          "SRC-grid"
+        ],
+        "type": "manual-mathematical-derivation"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-grid",
+          "source:SRC-task"
+        ],
+        "description": "只检查CSV、精确有限算术、源摘要与字数的脚本。",
+        "id": "AR-code",
+        "path": "code/check_inputs.py",
+        "type": "bounded-check-script"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-task",
+          "statement:Q1"
+        ],
+        "description": "细化问题、材料定位、方法与范围。",
+        "id": "AR-issue",
+        "path": "notes/issue.md",
+        "type": "question-card"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-task",
+          "source:SRC-draft",
+          "source:SRC-notes",
+          "source:SRC-grid"
+        ],
+        "description": "输入副本字节一致性及SHA256。",
+        "id": "AR-manifest",
+        "path": "notes/source-map.json",
+        "type": "copied-source-hashes"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:P-original",
+          "statement:T-ae",
+          "statement:T-class",
+          "statement:T-continuity",
+          "statement:T-grid-limit"
+        ],
+        "id": "M-proof",
+        "method_id": "formal-theory",
+        "notes": "画像是指导，不是内置证明器；形式化验证未开始。",
+        "profile_version": "0.1",
+        "reason": "反例、命题修订与完整手工证明；按画像进行量词和边界复核。",
+        "variant": "proof"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-notes",
+        "id": "R-ae-basis",
+        "rationale": "使用 N1–N3 的测度与积分基础事实；定理本身在工作笔记中推导。",
+        "relation": "derived_from",
+        "scope": "仅列实际基础依赖，不把摘记当成已审证明。",
+        "statement_id": "T-ae"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-work",
+        "id": "R-ae-proof",
+        "rationale": "正水平集论证给出正向，零测集不变性及简单函数定义核对反向。",
+        "relation": "supports",
+        "scope": "notes/work.md C、F2。",
+        "statement_id": "T-ae"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-work",
+        "id": "R-class-proof",
+        "rationale": "零函数与单点函数同类而点值不同，展示类值与点值区别。",
+        "relation": "supports",
+        "scope": "notes/work.md D。",
+        "statement_id": "T-class"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-notes",
+        "id": "R-cont-condition",
+        "rationale": "N5 明确相对连续的定义；它是新增条件而非原稿已有条件。",
+        "relation": "qualifies",
+        "scope": "不声称连续性是必要或最弱条件。",
+        "statement_id": "T-continuity"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-work",
+        "id": "R-cont-proof",
+        "rationale": "直接局部正下界反证，并用零点稠密性作第二路线复核。",
+        "relation": "supports",
+        "scope": "notes/work.md E、F3，包括端点。",
+        "statement_id": "T-continuity"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-notes",
+        "id": "R-grid-basis",
+        "rationale": "N6说明F公式与误差模型缺失。",
+        "relation": "qualifies",
+        "scope": "实际信息比理想精确采样更少。",
+        "statement_id": "T-grid-limit"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-work",
+        "id": "R-grid-proof",
+        "rationale": "同采样的零函数、单点指示函数与正积分连续 h 构成非识别反例。",
+        "relation": "supports",
+        "scope": "notes/work.md G；h 不被认作未知 F。",
+        "statement_id": "T-grid-limit"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-grid",
+        "id": "R-observation",
+        "rationale": "文件实际只给出9条零记录。",
+        "relation": "supports",
+        "scope": "限定为记录值而非全区间观测。",
+        "statement_id": "O-grid"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-work",
+        "id": "R-original-counterexample",
+        "rationale": "单点反例满足全部原假设且反驳逐点结论。",
+        "relation": "challenges",
+        "scope": "notes/work.md B 与 F1。",
+        "statement_id": "P-original"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-draft",
+        "id": "R-original-identity",
+        "rationale": "原命题逐字范围来自草稿拟议命题。",
+        "relation": "derived_from",
+        "scope": "只定位原作者提出的内容，不支持真值。",
+        "statement_id": "P-original"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-inputcheck",
+        "id": "R-recordcheck",
+        "rationale": "脚本精确读取9个互异有理采样点与零值。",
+        "relation": "supports",
+        "scope": "仅有限文件检查。",
+        "statement_id": "O-grid"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "A-question",
+        "inputs": [
+          "source:SRC-task",
+          "source:SRC-draft",
+          "source:SRC-notes",
+          "source:SRC-grid"
+        ],
+        "note": "离线全文读取四份指定材料；无外部检索。",
+        "outputs": [
+          "artifact:AR-issue",
+          "artifact:AR-manifest"
+        ],
+        "status": "done",
+        "title": "细化问题并逐项定位合成材料"
+      }
+    },
+    {
+      "kind": "decision",
+      "record": {
+        "alternatives": [
+          "原稿逐点命题：被反例否定，不采用。",
+          "声称网格确认结论：被非识别构造否定，不采用。"
+        ],
+        "choice": "保留几乎处处结论作为主命题；连续性作为明确新增的逐点充分条件。",
+        "decided_at": "2026-10-24T19:08:25.979220+00:00",
+        "evidence_refs": [
+          "EV-work",
+          "EV-review"
+        ],
+        "id": "D-scope",
+        "rationale": "单点反例否定原命题，水平集证明和连续性修复有完整手工依据。",
+        "responsible": "host-agent within authorized synthetic task",
+        "revisit_when": "讨论作者的 L1 记号选择，或有新增的 F 公式及正则性/误差信息。"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:T-ae",
+          "statement:T-class",
+          "statement:T-continuity",
+          "statement:T-grid-limit",
+          "evidence:EV-work"
+        ],
+        "description": "约1000汉字以内的中文讨论稿v1。",
+        "id": "AR-report",
+        "path": "manuscript/report.md",
+        "type": "discussion-manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:P-original",
+          "statement:T-ae",
+          "statement:T-class",
+          "statement:T-continuity",
+          "statement:T-grid-limit",
+          "evidence:EV-notes"
+        ],
+        "description": "原稿审计、完整证明、反例与独立手工复核。",
+        "id": "AR-work",
+        "path": "notes/work.md",
+        "type": "proof-notes"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A-question"
+        ],
+        "id": "A-record-check",
+        "inputs": [
+          "artifact:AR-code",
+          "artifact:AR-manifest",
+          "evidence:EV-grid"
+        ],
+        "note": "实际运行脚本；退出0。输出仅限记录、摘要与长度；不是证明。",
+        "outputs": [
+          "evidence:EV-inputcheck"
+        ],
+        "status": "done",
+        "title": "执行精确有限输入检查脚本"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A-question"
+        ],
+        "id": "A-research",
+        "inputs": [
+          "statement:P-original",
+          "evidence:EV-notes",
+          "evidence:EV-grid"
+        ],
+        "note": "实际推导见工作笔记 B–G。",
+        "outputs": [
+          "artifact:AR-work"
+        ],
+        "status": "done",
+        "title": "反例、正确命题、语义澄清与连续性修复"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AR-report",
+          "evidence:EV-work",
+          "evidence:EV-inputcheck"
+        ],
+        "description": "已核查内容、限制与具体下一步。",
+        "id": "AR-review",
+        "path": "review.md",
+        "type": "manuscript-review"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A-research"
+        ],
+        "id": "A-writing",
+        "inputs": [
+          "evidence:EV-work",
+          "statement:T-ae",
+          "statement:T-class",
+          "statement:T-continuity",
+          "statement:T-grid-limit"
+        ],
+        "note": "篇幅记录见 notes/input-check.json。",
+        "outputs": [
+          "artifact:AR-report"
+        ],
+        "status": "done",
+        "title": "形成中文讨论短稿v1"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A-research",
+          "A-record-check",
+          "A-writing"
+        ],
+        "id": "A-review",
+        "inputs": [
+          "artifact:AR-report",
+          "evidence:EV-work",
+          "evidence:EV-inputcheck"
+        ],
+        "note": "零点稠密性重证连续性修复，并逆向核对量词与反例；未使用证明器。",
+        "outputs": [
+          "artifact:AR-review"
+        ],
+        "status": "done",
+        "title": "独立路线手工复核与短稿审阅"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 5,
+    "artifacts": 6,
+    "decisions": 1,
+    "evidence": 6,
+    "method_bindings": 1,
+    "relations": 11,
+    "sources": 4,
+    "statements": 7
+  },
+  "cursor": {
+    "activity_id": "A-review",
+    "next_action": "讨论 manuscript/report.md 中 L1 的语义选择；若保留处处结论，在命题假设中明确加入已选代表元在 [0,1] 连续，并保留 notes/work.md B 的单点反例。没有 F 公式或新增正则性/误差资料时，不由网格推断其积分或逐点性质。"
+  },
+  "output_normalizations": []
+}

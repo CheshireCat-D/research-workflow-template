@@ -1,0 +1,83 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pdd54bbc3aac94499ae86d46fcfedc52e",
+  "revision": 54,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 8,
+    "artifacts": 13,
+    "decisions": 1,
+    "evidence": 9,
+    "method_bindings": 2,
+    "relations": 9,
+    "sources": 5,
+    "statements": 6
+  },
+  "activities": [
+    {
+      "id": "ACT_B",
+      "declared_status": "skipped",
+      "effective_status": "skipped",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_COMPARE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_EXP",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_MECH",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_REV",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_REVIEW",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_SCOPE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_WRITE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "在 notes/mechanism.md 的H/L框架中定义层内变化方差上界与历史失配集合，推导固定预算分配的最坏MSE并与A比较；不读取当前真值来选择分配。若得不到有条件界，删除保证改善路线；全球新颖性仍待另行检索。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

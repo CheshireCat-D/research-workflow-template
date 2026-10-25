@@ -1,0 +1,8 @@
+record_id,title,study,decision,destination,reason,source_location,access
+R01,短信提醒与成人复诊：主结果,H1,include,R01,成人个体随机、一次短信对不提醒；结果完整,inputs/full-extracts.md §R01 M1/T1,abstract + marked excerpts only
+R02,成人复诊提醒项目：会议结果,H1,merge-report,R01,同一100人、站点、招募期；C1明确无新增批次或终点，作为佐证报告不重复计人,inputs/abstracts.md §R02; inputs/full-extracts.md §R02 C1,abstract + marked excerpts only
+R03,儿科复诊提醒随机研究,H2,exclude,,6至15岁儿童；未提供成人亚组,inputs/abstracts.md §R03,abstract only; no further full text supplied
+R04,预约提醒平台上线前后分析,H3,exclude,,非随机前后比较，同时改变收费与挂号流程,inputs/abstracts.md §R04,abstract only; no further full text supplied
+R05,成人短信提醒：试点随机研究,H4,include,R05,成人个体随机；缺失状态进入敏感性，不能默用62/65代表70/70,inputs/full-extracts.md §R05 M1/R1/D1,abstract + marked excerpts only
+R06,成人门诊短信提醒比较,H5,include,R06,成人随机短信对不提醒；80人状态完整,inputs/full-extracts.md §R06 M1/T1,abstract + marked excerpts only
+R07,提醒系统随机试验方案,H6,exclude,,尚未开始招募的方案，无结果,inputs/abstracts.md §R07,abstract only; no further full text supplied

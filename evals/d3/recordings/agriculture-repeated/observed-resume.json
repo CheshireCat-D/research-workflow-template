@@ -1,0 +1,62 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P96b1c50e556b4899b1635f35599e2440",
+  "revision": 67,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 4,
+    "artifacts": 14,
+    "decisions": 0,
+    "evidence": 7,
+    "method_bindings": 2,
+    "relations": 9,
+    "sources": 4,
+    "statements": 6
+  },
+  "activities": [
+    {
+      "id": "ACTanalysis",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACTdesign",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACTtrace",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACTwriting",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "保持主要终点冻结，由另一位审阅者从artifacts/plot_season.csv独立复核4区组主要/分季/季差及16种原分配枚举，重点区分尖锐零假设与平均效应；后续新增站点/季节前预设年龄、累计处理与气候识别设计及定量气象/灌溉记录。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "next_action": "保持主要终点冻结，由另一位审阅者从artifacts/plot_season.csv独立复核4区组主要/分季/季差及16种原分配枚举，重点区分尖锐零假设与平均效应；后续新增站点/季节前预设年龄、累计处理与气候识别设计及定量气象/灌溉记录。",
+  "needs_review": false,
+  "recovery_instruction": "Continue the recorded next action within its existing scope."
+}

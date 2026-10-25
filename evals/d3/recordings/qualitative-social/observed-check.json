@@ -1,0 +1,59 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P6c0082bb34224b14b58630d205f90865",
+  "revision": 136,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 4,
+    "artifacts": 9,
+    "decisions": 0,
+    "evidence": 20,
+    "method_bindings": 1,
+    "relations": 25,
+    "sources": 4,
+    "statements": 6
+  },
+  "activities": [
+    {
+      "id": "ACT-CODING",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-QUESTION",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-TRACE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-WRITE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "针对P5-Q1至Q3制作情境性权衡／服务场景礼貌感谢的竞争解释卡，列出所需原问句、前后话轮与反向证据；卡片须明确AI代理解释及未经独立人类验证，现有节录不能裁决，不联络或索取真实材料。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "case": "mixed-evidence",
+  "project_path": "PROJECT",
+  "status": "completed-in-scope",
+  "freeze_marker": "FINALIZED.json",
+  "skills_actually_read": [
+    {
+      "id": "rw-workflow",
+      "path": "PROJECT/.agents/skills/rw-workflow/SKILL.md"
+    },
+    {
+      "id": "rw-question",
+      "path": "PROJECT/.agents/skills/rw-question/SKILL.md"
+    },
+    {
+      "id": "rw-validation",
+      "path": "PROJECT/.agents/skills/rw-validation/SKILL.md"
+    },
+    {
+      "id": "rw-writing",
+      "path": "PROJECT/.agents/skills/rw-writing/SKILL.md"
+    },
+    {
+      "id": "rw-review",
+      "path": "PROJECT/.agents/skills/rw-review/SKILL.md"
+    }
+  ],
+  "profiles_actually_read": [
+    {
+      "id": "empirical-quantitative",
+      "version": "0.1",
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md"
+    },
+    {
+      "id": "qualitative",
+      "version": "0.1",
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/methods/qualitative.md"
+    },
+    {
+      "id": "evidence-synthesis",
+      "version": "0.1",
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md"
+    },
+    {
+      "id": "computational",
+      "version": "0.1",
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/methods/computational.md"
+    },
+    {
+      "id": "social-sciences",
+      "version": "0.1",
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/social-sciences.md"
+    },
+    {
+      "id": "governance",
+      "version": "0.1",
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/governance.md"
+    }
+  ],
+  "other_guidance_actually_read": [
+    "toolkit README.md for bootstrap only",
+    "PROJECT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+    "PROJECT/.agents/skills/_rw-runtime/core/protocol.md",
+    "PROJECT/.agents/skills/_rw-runtime/design/catalog.json",
+    "project-local schemas for source, statement, evidence, relation, artifact, activity, method-binding, decision",
+    "copied CLI --help/register --help/checkpoint --help"
+  ],
+  "raw_input_paths": [
+    "PROJECT/inputs/task.md",
+    "PROJECT/inputs/design-and-draft.md",
+    "PROJECT/inputs/quantitative.csv",
+    "PROJECT/inputs/interviews.md"
+  ],
+  "output_paths": [
+    "PROJECT/notes/issue.md",
+    "PROJECT/notes/audit.md",
+    "PROJECT/notes/connection-check.md",
+    "PROJECT/manuscript/report.md",
+    "PROJECT/review.md",
+    "PROJECT/artifacts/run.py",
+    "PROJECT/artifacts/results.json",
+    "PROJECT/artifacts/config.json",
+    "PROJECT/artifacts/input-fingerprints.json",
+    "PROJECT/artifacts/environment.json",
+    "PROJECT/artifacts/failures.json",
+    "PROJECT/records/registry.json",
+    "delivery-verification.json",
+    "scientific-freeze-manifest.json"
+  ],
+  "command_logs": {
+    "directory": "logs",
+    "format": "JSON command argv, cwd, timestamp, stdout, stderr, elapsed, exit_code plus separate stdout/stderr files",
+    "analysis": "logs/013-actual-analysis.json",
+    "registry_batch": "logs/015-register-records.json",
+    "installed_integrity": "logs/081-installed-skill-check.json",
+    "initial_check": "logs/082-check.json",
+    "checkpoint": "logs/083-checkpoint.json",
+    "resume": "logs/084-resume.json",
+    "delivery_verification": "logs/085-verify-delivery.json",
+    "final_check": "logs/086-final-check.json",
+    "finalization": "logs/finalization.json"
+  },
+  "numerical_scope": {
+    "analysis_runs": 1,
+    "stdlib_only": true,
+    "elapsed_seconds": 0.012458583998522954,
+    "runtime_limit_seconds": 10,
+    "P1": {
+      "site": "A",
+      "period": "2023-retrospective",
+      "unit": "subject",
+      "n": 100,
+      "confusion_matrix_rows_true_columns_prediction": [
+        [
+          32,
+          8
+        ],
+        [
+          8,
+          52
+        ]
+      ],
+      "sensitivity": "32/40 = 80%",
+      "specificity": "52/60 = 86.6666666667%",
+      "PPV": "32/40 = 80%",
+      "accuracy": "84/100 = 84%",
+      "target": "agreement with existing labels"
+    },
+    "P2": {
+      "site": "B",
+      "period": "2024-two-week-pilot",
+      "same_volunteers": 8,
+      "eligible_contactable": 13,
+      "nonparticipants_outcomes_missing": 5,
+      "pre": "2/8 = 25%",
+      "post": "5/8 = 62.5%",
+      "difference_percentage_points": 37.5,
+      "paired_tables": "three mathematically compatible tables enumerated, none claimed observed",
+      "target": "within-time process completion"
+    },
+    "report_chinese_characters": 569,
+    "report_total_characters": 786
+  },
+  "registration_scope": {
+    "records": 65,
+    "revision": 66,
+    "check_passed": true,
+    "errors": [],
+    "warnings": [],
+    "all_five_activities_effective_status": "done",
+    "checkpoint_status": "current",
+    "scientific_validity": "not-assessed"
+  },
+  "failures": [],
+  "limits": [
+    "Synthetic/offline materials only; no external literature retrieval or external messages.",
+    "A classification and B completion differ in objects, site, time, outcome and design; no common causal universal-benefit claim established.",
+    "B volunteer selection, bundled reminders and no random/concurrent control prevent tool-only causal attribution.",
+    "No individual transition table or outcomes for five nonparticipants supplied; no fabricated records or imputation.",
+    "Four supplied excerpts only; I2 overlaps P2; no representativeness, saturation or independent human review claimed.",
+    "I4 direct quote excluded from deliverables; permission restriction retained despite synthetic context.",
+    "Training/assessment independence, calibration, label quality and external prediction performance unassessed.",
+    "Evidence synthesis limited to supplied materials; no systematic-review claim.",
+    "Installed-only check does not compare current source version.",
+    "No service/clinical implementation, publication or governance approval performed."
+  ],
+  "next_action": "核对notes/connection-check.md中A分类器/输出与B工具/提醒的身份、动作和同一完成结局映射；每格给出可定位方案或日志依据，未知保留未知。先判是否存在共同构念，再决定维持分层问题还是设计可分离提醒与参与选择的比较。此检查尚未执行。",
+  "next_action_path": "PROJECT/notes/connection-check.md",
+  "freeze": {
+    "all_project_files_read_only": true,
+    "project_directories_read_only": true,
+    "writes_after_final_marker": "prohibited; none performed by this run"
+  }
+}

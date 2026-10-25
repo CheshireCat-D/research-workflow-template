@@ -1,0 +1,2833 @@
+{
+  "excluded_self": "provenance/file-origins.json",
+  "files": {
+    ".github/workflows/check.yml": {
+      "classification": "original-workflow-referencing-pinned-external-actions",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b8307d0a6fa7452ecd7f30cbb7d27c34540dbf72e02a71e94194e2a4262fb519"
+    },
+    ".gitignore": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a008fbd7786c32057afa85117e59ccb02c531a49ecdb7d978c8e7d2acce6fa70"
+    },
+    "CITATION.cff": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7b7e6004ca8bba8315ac122098a3da324baddcfd6adbc543d53ba5ae1975b813"
+    },
+    "CONTRIBUTING.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3f676c54c3ccbfc455daa576ed364ac91e73e9632e30c2d2980d6c201a3213e4"
+    },
+    "LICENSE": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "5aecdc2793e005a66fb3bd5dcc601f5392b51b0a85bb56becc169fc9df8bd16c"
+    },
+    "README.en.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4d46458b35e6c5e208667cbfd34a4efc3465dd77ef52f35fb353cdd04b843aec"
+    },
+    "README.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d3d2217c1a8ceaea9b973f3f95e173cb4ce22d557e0374065cee475adcb91333"
+    },
+    "SECURITY.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f38c645e163a4686358b3d5534c791b2ffbc9268939f34e414e7d3fd4e3456fc"
+    },
+    "core/__init__.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "747401e8a3ec02843d8ab825c1322b786a8c0e39a13d6d28affc57bbd4d3fd04"
+    },
+    "core/bundle.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0a277e23713d120ecd8d533c213e5b3d30a4a39e0f89f3838fa81e358d6e97e1"
+    },
+    "core/cli.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "9b6f95c56e8fd49eff5fca3257839caa2448dc9c967864d0384f3e35057d3dad"
+    },
+    "core/model.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31"
+    },
+    "core/project.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ef7d0c6e5ada59a5a1b08ba3d4f83b1efa454a959c58a55f4851aaf0e6b2be99"
+    },
+    "core/protocol.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d"
+    },
+    "core/schemas/activity.schema.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a"
+    },
+    "core/schemas/artifact.schema.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c"
+    },
+    "core/schemas/decision.schema.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c3f913c83476a4d63ff6e34f9dc4a835a3547dbbb9feb8896773fc72ce0d6f49"
+    },
+    "core/schemas/evidence.schema.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823"
+    },
+    "core/schemas/method-binding.schema.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d"
+    },
+    "core/schemas/project.schema.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d3aea9cc6055a5e97776be07cf101ad35d8b764405042372439c3445aa80a558"
+    },
+    "core/schemas/registry.schema.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b"
+    },
+    "core/schemas/relation.schema.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f"
+    },
+    "core/schemas/source.schema.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e"
+    },
+    "core/schemas/statement.schema.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44"
+    },
+    "core/skill-bridge.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf"
+    },
+    "core/storage.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "344a3c15fa7c4ded67a90fb0cf715d9947a714942f155673e45b6420a10bbb74"
+    },
+    "design/catalog.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1d7f643bbc15597d37873b7d00fd48fde61c40d020c7b2800f2c9b7f913b89e6"
+    },
+    "design/project.example.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "055a9a074b4a9300628abc38f3e4e4d86ad97a605f62204921ff97662de4658f"
+    },
+    "design/scenarios.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a90be0a8f471d16f6ae254f694ac807fc5a031985f21bd51c4f0698e880596ae"
+    },
+    "docs/01-architecture.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c2bad2a100ea5cd2732292e740ff7471874088246edb46f5fca50dd87a583735"
+    },
+    "docs/02-disciplinary-adaptation.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "242102db905beaefcff5bf9539777ed65b0ae7fcc64b9a21a58354a2b7fe8129"
+    },
+    "docs/03-evidence-contract.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "cf31be096b2a7ad824bec2fb0f2477a4c156c73cf4112cddeedbae23ea1c2a58"
+    },
+    "docs/04-migration-release.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "88cb11359b68ead0f4eb04b9337dccbf679322a9700efaa82bf7a985780bb775"
+    },
+    "docs/05-evaluation-roadmap.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e6822cf3f996882d52219a2eda027d5634ccdea14dc6591eb0cc94b55176031c"
+    },
+    "docs/06-source-map.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "46f2be444cbce0124df48ce8fa5a07dc7b30bffb07685ac65a1b6e9fdbcfe482"
+    },
+    "docs/07-core-usage.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0afd72d743e8fa97b056dd67a08ed51ac8090e9a8214c857cc5a9c16eca2cec5"
+    },
+    "docs/08-skills-and-methods.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "51b496c4a67ae62620fe0fe66f079d1fcc3c86307aea3b0f025eafe921f238c6"
+    },
+    "docs/10-release-readiness.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "85b3bd58f01139751a08d3544f00163ead3eb42ed97a433ca956e5083fdb3157"
+    },
+    "docs/11-linux-validation.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c741a654894d1b506de55aef1a887d219d7acbe5999a527755ba84590dd206d4"
+    },
+    "evals/current/README.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "bdb25281a57f8846c429a110a95cd6173f579510dac1cd300ec9f3d1630e4ba7"
+    },
+    "evals/current/latest.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e48e65d9eff26ac813b0fa4b559cbc23f0f5be1c5f403aef4d9e0dfa0ba493a4"
+    },
+    "evals/d2/README.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "70faaea15baa2cdb0884cf4b91a255aa86e4c5ed4c320cce1fb2ac1e339a3275"
+    },
+    "evals/d2/cases/computation/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8542092fba7756d65aff9bb6398105c87f10744284b75a84e51a111d8f56fbdf"
+    },
+    "evals/d2/cases/computation/methods.py": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0d7dd82ab9a0cd60c120eef9800390fec84d9b30135d5ee9ce18a3f92e628695"
+    },
+    "evals/d2/cases/computation/pilot.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2a5ca4d772033969fc2812fe80192d3afb1a9e86690b598ce4b30fe2c6a3e00a"
+    },
+    "evals/d2/cases/computation/targets.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "097da57112f7619b22c29228f912b6f8786909263fa310ca65dd998c657db731"
+    },
+    "evals/d2/cases/computation/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "590d3dfdef8b213e33fb18f44f1aa1a62ddc19b9800b6b954e9f882c50f6752b"
+    },
+    "evals/d2/cases/history/archive-packet.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "5f1ab99b1d2870b918cf326d8e87b78d224891350ca2a456a02db989fdef83e0"
+    },
+    "evals/d2/cases/history/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "fe21b168f47125b289e50207b21aca4e6890ba6248e3bef34b6707b9be6c8abb"
+    },
+    "evals/d2/cases/history/inventory.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d916a85b752dffa58383e27967eb363ef13511a22b95719fe860d4bd91d90b6a"
+    },
+    "evals/d2/cases/history/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "193ebb599b7889cdf88890790ba60326ed4c61a13930deae6b03e028fb649e92"
+    },
+    "evals/d2/cases/proof/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "73c576912f8fb7df5f884519126e53816d61c984eed85dfbeed932e6bc2bf53e"
+    },
+    "evals/d2/cases/proof/observations.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "810362f54c9b11d55781c01c0ce084d47ae1e4eecf501613e7179b4ce03344d9"
+    },
+    "evals/d2/cases/proof/source-notes.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a0f09a0002995870b934fabbf34d3c6170ec842db433d747935fdb26f4f9b44e"
+    },
+    "evals/d2/cases/proof/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e3b6cf6990dfb28476bfb1be97406ec92986bba1ebce62e41686ded6d3e8648c"
+    },
+    "evals/d2/independent-review.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "73a6ec4c36c0f3fbeb3b993302f689b624b5a43bac92bbaddadc2119d2256e46"
+    },
+    "evals/d2/recordings/computation/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "56e71a52b149651c284f2d43bb02602f699234d112f74bad705db181272ec737"
+    },
+    "evals/d2/recordings/computation/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7d196a1d972068cde90aaff072f440deff9be34d8dbfe59edd921f0ce0d42521"
+    },
+    "evals/d2/recordings/computation/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "310606f8803f2cfe2a796f7229d8932519b4887a1f00e0008adb96ca82b25a73"
+    },
+    "evals/d2/recordings/computation/outputs/README.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "5546768e6aee19e0f178e202d4b1c4f5a27812ba4cf039e34fbe586de0b5fe99"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/content-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4939d96398a704ac6b187519098b7892195d6fe159f4661db028205394785bf0"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/execution-envelope.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "576c515eef58e55131cd12afbe40c7f72af1c882f3031ebfa85e7217152611a4"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/input-manifest.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "9d54bbcb63741b4f9ae0cff06e9acec052fa888642ecaf6c68555b8fc8da5dd1"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/pilot-audit.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2f74d97e9dccd3a241e36f397685eb606c99d36e5507fb423c2977336610134f"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/reproducibility.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c1daface85bbcccdeaf7b75240fe0e703c4a689ee2038e9a4094e04a9d5e0482"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b89bfebe8e5c10a1d11919763c383bb5d4cabb6073010ecf46cbad2acd7cf6ea"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/run.log": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6fbdc781057717305a8355f139a3617ac6aee42da6e9cbc2246494191b8766db"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "46d41eb38e7f7d7f01473795440a5468a2745d420bd6a28792549e58d17107c1"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/setup-incidents.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "cc68f35bc6f68f3a27be061cc8c6bb6b63eb5c732a25ca87f5667f0a56f6c375"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/summary.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d8e4b9f3b392fd009f08c46fec7b66768b80edda5a3ef0665ca545537facc34c"
+    },
+    "evals/d2/recordings/computation/outputs/artifacts/summary.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1501991493d8dd537160def3efe4b8d203a6fd16f484c78dc163a021cc18a75b"
+    },
+    "evals/d2/recordings/computation/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "043388cfb00724dc992550217fe4a76d21871264982f344b8f1edd5967527fff"
+    },
+    "evals/d2/recordings/computation/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "028e70586f584a5d927bc16f9744eb3962d089aea084ba45d623f274b1c8fd9c"
+    },
+    "evals/d2/recordings/computation/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1c769ee3f493e3fac5aa43c2b4b3005bba6188537b805a8a8392e433bd929a6e"
+    },
+    "evals/d2/recordings/computation/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "71793468aa7fe7020d2eb5a257d76b8a1981c1f674003c072c31526a4baf733b"
+    },
+    "evals/d2/recordings/history/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7b62015bb8023764289d896496029facd65c83c143227fca84ac3faccc0953ff"
+    },
+    "evals/d2/recordings/history/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4c7d38d728646779163da0fd52183110c5249774c933930d3dbf7ac4d6f5f511"
+    },
+    "evals/d2/recordings/history/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "610d663963651c0942d213339be75130a49ffd2a7014c0520fcd463ad5d264a3"
+    },
+    "evals/d2/recordings/history/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "492d601bff268d5656a5c27efee3f4b3eb8982002879a5444c8fd02bef6ccd65"
+    },
+    "evals/d2/recordings/history/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e4210505e37664e3735326be51ec7a939f282482adfa98ff78152139d8cf7a9b"
+    },
+    "evals/d2/recordings/history/outputs/notes/source-audit.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "20983f9c39c213676f6bb56eb2e879b349251e9f046c43de2e83ac25e06b7b93"
+    },
+    "evals/d2/recordings/history/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1a097a7c422b9a73e9837ce363f68ce0c6dec0a15a0b7ed0eaf38505e4751561"
+    },
+    "evals/d2/recordings/history/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c138cd4bd4c1eb52c182938d9e0ad965962e68575962a9d295f37b786377a321"
+    },
+    "evals/d2/recordings/proof/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "dc50ea9c4997a7ad719db12cf215eba139753de342194a2ff7f8d2d0e3676ced"
+    },
+    "evals/d2/recordings/proof/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d8ae5765e26607241197e228d3563a87bf30bc082be29ea87cd13bdfdc3efbc6"
+    },
+    "evals/d2/recordings/proof/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2a6ec18bdf3061020393642fa13a2f8ff63315841b2aa6446aa8371264a7253e"
+    },
+    "evals/d2/recordings/proof/outputs/code/check_inputs.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c5f5622c7dc3d844af7989042be4ffe5d0a07af195cf07ecc59df9a0629606c7"
+    },
+    "evals/d2/recordings/proof/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "22bb6e3ac3cadd43820a8bdbe3c4491a9879fbea3189d52167706ddd2d6f7411"
+    },
+    "evals/d2/recordings/proof/outputs/notes/input-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "762b7099d0630140331e25592ad49b94e55754e589a6f77b3641479bf97890b2"
+    },
+    "evals/d2/recordings/proof/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3724ad9bfdb5654602ce0bbbfca98ca63954f1ea9116fbc7614eea2ea4f6d832"
+    },
+    "evals/d2/recordings/proof/outputs/notes/source-map.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d509671bed95eab3b9adbe1ab018a0e6f7018cdf7c1e0c3a23422e9633708ab9"
+    },
+    "evals/d2/recordings/proof/outputs/notes/work.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "fd6d7d7651c3244e8f7544a3ff51dae55cfc14e13e806c8912ed71c21adfecdc"
+    },
+    "evals/d2/recordings/proof/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6fc5b0b9183f7a7923f63c51b6d04ba2e5ed309e6d5d7c9f0307ad5779028528"
+    },
+    "evals/d2/recordings/proof/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "11086824c19ec1030c8d1f3e97b997641cc8cc91426877f9595731082074f5f2"
+    },
+    "evals/d3/README.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "fc233e9b941505decf89d5813cce0e6a2d378dcfae3ed438aa6e9b6fbfe4dde6"
+    },
+    "evals/d3/cases/agriculture-repeated/observations.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "995d630c1039013319096a8df7d7dd84a7deb02aa9e6eb5bd317c80811bfec1c"
+    },
+    "evals/d3/cases/agriculture-repeated/plots.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2f7d75afac512cf9d98d27499c26e4816351429a1a4d8dcbd34bc48c9db25a45"
+    },
+    "evals/d3/cases/agriculture-repeated/protocol.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "5e66412bcadaaf6e88d92ef5ccb95034fc6bb9d6f73c44ff93dc6a89eebd21f7"
+    },
+    "evals/d3/cases/agriculture-repeated/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "cbfc6acc0857e10484169c3e696498420093a75ee1775bd674633dec3748de93"
+    },
+    "evals/d3/cases/agriculture/design.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e25357bca66f4d45f2fae36218e4885e618a496de10f2fcf9db8f94cf4bae32a"
+    },
+    "evals/d3/cases/agriculture/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4f078aad562726d8545eb095668e7c5815847cf37c579f67d5c5a8dbf496c870"
+    },
+    "evals/d3/cases/agriculture/plants.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "fcceeb53090e131439750551f90c2632353df33f8242275987a295a295001270"
+    },
+    "evals/d3/cases/agriculture/plots.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d983c6390aa3734ce15661ba7b988b3ce7fb32a65387052633a27ecb45bf8a78"
+    },
+    "evals/d3/cases/agriculture/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a23489cdfda0651f7fb707ddbd7dcaa415f544a4b18c2462af339f1b1f356f8b"
+    },
+    "evals/d3/cases/digital-humanities/corpus.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "585bf0eeb94f133b6416567bbde04b2a19545759b4b20c0c37adc1ef4949eda3"
+    },
+    "evals/d3/cases/digital-humanities/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "007329c9251dfd6aaf6c0cb4f223b66c7fae377b50f572e8ba0b02cfb3934333"
+    },
+    "evals/d3/cases/digital-humanities/editorial-note.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "76f6d0f12d70b4642ef8e9a0302879e446bec1b592d15ca21151b5710ddafaa2"
+    },
+    "evals/d3/cases/digital-humanities/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1216d4a2a61caefc798325490b1ba35448e6acffb003b63230b2a2a29bc75d76"
+    },
+    "evals/d3/cases/engineering-simulation/requirements.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8ecaf2beb69608ad4c00888602d27dc26b47101f87b5bf7abbaf5a253bd9a582"
+    },
+    "evals/d3/cases/engineering-simulation/scenarios.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "153a677d3568e61793c882413f416536dfce7fc34a4744763b8a59ec963815e4"
+    },
+    "evals/d3/cases/engineering-simulation/simulator.py": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "deaccc68d9a6d7f348f4b71fb0996f7201a08825e43d41baee748bd152835225"
+    },
+    "evals/d3/cases/engineering-simulation/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1ab1fd5c891c4f7470422f7d854a77bf3231888b688057a4a0593588e4ba93a6"
+    },
+    "evals/d3/cases/engineering/demo-traffic.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "37ca3df1634bece67981b9c7319c5ce106fc121674884de5370596f1db0bdd1c"
+    },
+    "evals/d3/cases/engineering/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8cb11f616eafa9b1e9ef0d32b33fccb2a51931f5706d8183a4b1c56ff2d1dc22"
+    },
+    "evals/d3/cases/engineering/gate.py": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "17983001703c099357e4962d55b249685dc911f81ae375e2d883c00b02be8d5b"
+    },
+    "evals/d3/cases/engineering/requirements.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7fd59a0a9e57f21e6ded87a57f46992d7a328cedd0d7022ebb1d7a062f652641"
+    },
+    "evals/d3/cases/engineering/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "183a64b259eea7fa2b594d0139328bbd3abe3b2e3459e93a2de8cc0c59d23312"
+    },
+    "evals/d3/cases/evidence-synthesis/abstracts.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "90d43d0d04bea1fe022c69ce2947fc025f313f933a94f4070beb2a24b1dc4e92"
+    },
+    "evals/d3/cases/evidence-synthesis/full-extracts.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2c3cdf018c0991b7a199f40efb673a12b527a0d6f63b52c2c4d882224d9047c5"
+    },
+    "evals/d3/cases/evidence-synthesis/scope.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7847205e8882fe12618681a8cb782b7d76d266e328439541448458d211fcb607"
+    },
+    "evals/d3/cases/evidence-synthesis/search-export.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b675c239989e8da470b9cd480d6c99214b863bd7e6d9448b045505cf0871b5ab"
+    },
+    "evals/d3/cases/evidence-synthesis/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "141e8ec12d6c43c62a3cc743d284e30aa2da6577689aebc2f122bfbcc1c18cff"
+    },
+    "evals/d3/cases/formal-finite/definition.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d30a80a34091173d00b71ccad66d1a67e37aed2054b1cc4de0756cfb4a7c9305"
+    },
+    "evals/d3/cases/formal-finite/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "43c011bbae5f17c483f6f5ee96742f1d7fbeb10fcd923176d976d7ef63373aa0"
+    },
+    "evals/d3/cases/formal-finite/observations.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0cd2665dfb5591d835974e19dd3ad89a796d597f841286de156f23c669b8bbe9"
+    },
+    "evals/d3/cases/formal-finite/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "9d2c61332bf4330d9972651f659e909ccfffd7ec50a3f6f5ce49a7a077b6bb55"
+    },
+    "evals/d3/cases/innovation-candidates/candidates.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "47946e550b2a378e8bf746a164f0b3fd076c4bbb22846a8384c5a7dab5f822f3"
+    },
+    "evals/d3/cases/innovation-candidates/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "cd6272f1290af01360075bd30fbd505ae960845257c6f6fd53193ed4cb1e03dd"
+    },
+    "evals/d3/cases/innovation-candidates/known-results.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "66961beb99fe5ded0e883bf58049076179bb940f0422e16d05f514a0b1ae9447"
+    },
+    "evals/d3/cases/innovation-candidates/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "63b177660e605dd93795e3e39fc5fc3c340129217b525de03e95656aa8b2b4b7"
+    },
+    "evals/d3/cases/innovation-candidates/workloads.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8c8ac93ffadc4c2e8172d28616ebf4241adf25a55fd3f6ccc5dda9dac861dea9"
+    },
+    "evals/d3/cases/medicine/allocation.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "324c4bff4275915c90383e89e96d137820de0b23151470efcbaf7cd648f6dbe4"
+    },
+    "evals/d3/cases/medicine/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e2e1de6169bed3151f3f9edf69c09918603636511e971b8f10ede112b720f7d6"
+    },
+    "evals/d3/cases/medicine/participants.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7425759c933802a0b8de14546dcff60759dbf173349b472aa1b39405d0bac04e"
+    },
+    "evals/d3/cases/medicine/protocol.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c753a279f1fb5726fc2225c2f12e883a0cf0b42e87a799608aa058f315a88dd5"
+    },
+    "evals/d3/cases/medicine/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "bf0e263c42e74c9700b75bd921e5d2b9de100a3bb4895a5024a402b96fec896b"
+    },
+    "evals/d3/cases/mixed-evidence/design-and-draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ba2a6c2a64ca350d3fd88893e06bf704058d3e893e207a156422097e90f40bf4"
+    },
+    "evals/d3/cases/mixed-evidence/interviews.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b1d387349f847d9cbf61440bf7c081eeba1235772be42f5774ce5e6d7a29d8a5"
+    },
+    "evals/d3/cases/mixed-evidence/quantitative.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "602febedb2ee9e5ec396f656e6c21e8be0ab3d8258c2357e7e446387dfd881ac"
+    },
+    "evals/d3/cases/mixed-evidence/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8e998f43210cdc518a88b39b002a6e9e2fdff449a1240e8e34faebc6c5868e8d"
+    },
+    "evals/d3/cases/normative-humanities/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b7f405c23e2fa9f15af9a37150b09346fe5a0b927d89075778675afaabe40fea"
+    },
+    "evals/d3/cases/normative-humanities/facts.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "cf20c52fc973fd7de2646fbd9ca599089ed2f029a03f22150236282838e42916"
+    },
+    "evals/d3/cases/normative-humanities/source-packet.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "473ef444bc2d7e61805b594c38012540417c0b5ee78a5970a04c2cce709135d4"
+    },
+    "evals/d3/cases/normative-humanities/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6d63545778c98a7b426d29803d813df63bd0b0b003a5a4164b3581d1fb9cb031"
+    },
+    "evals/d3/cases/observational-policy/design-note.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e37d081e6dab5d85a0a0fd974f8a08853b682d6e8a57518f503716a364653651"
+    },
+    "evals/d3/cases/observational-policy/medical-strata.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0602ea3992895ca9f8136eb70f3cf1ca37642ca49998fe2d4c38e1f046f08cdb"
+    },
+    "evals/d3/cases/observational-policy/policy-periods.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "bb72ca02327e4a0e83e22c12eafe80e088cde6f170d705b527255bd4563ac0fc"
+    },
+    "evals/d3/cases/observational-policy/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "cb8d4ff92425b105ab2fee1ebecf396934888e568371dd2c0f80b47ddd48324c"
+    },
+    "evals/d3/cases/physics/calibration.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ef70a4abb7325b73b8b4f8a85b6bc9559a838ff9e4b9f2063f317b38a2e363d2"
+    },
+    "evals/d3/cases/physics/model.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ad50aa7711a1d3535a4a6ba5ddf65afc08680cc0fc547c1b7a32d2398dd2b2d3"
+    },
+    "evals/d3/cases/physics/observations.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1bf2f66e7b6c4ce62fb7b4e618f96575a5daac7a443f2ddc114222863de42618"
+    },
+    "evals/d3/cases/physics/pilot.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ef93675ee9087975c0ac75c7bf6987562bab5b4142aec0ca0acf027ad228925f"
+    },
+    "evals/d3/cases/physics/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "06ae6919b65b555cc4307ec3ee1555d68d3092e282f4de17ea2fb492bc55dab6"
+    },
+    "evals/d3/cases/prediction-leakage/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "390100d72521547eeb93ecabe0b06c778fec3ef03e78c86abe6f15f940a67a8c"
+    },
+    "evals/d3/cases/prediction-leakage/model-card.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c1727d89e86e1a9deb78941168c65261d386f17170c7b4531354c8b4bde945e7"
+    },
+    "evals/d3/cases/prediction-leakage/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f272a2fffb5dbc5dd9b6ebfc56e2b79ecf720c89a35bdf8989e9cc16628b873f"
+    },
+    "evals/d3/cases/prediction-leakage/visits.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "5073b7f979716a2bd62ed05f856d363210d266c6a95aef570f3f3d9eedb3d56f"
+    },
+    "evals/d3/cases/qualitative-social/draft.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1a3d204fb2c3d99d8be278f4abf554e12015e4ee3d864bd0c441a4ddfbed12e4"
+    },
+    "evals/d3/cases/qualitative-social/interviews.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "771de76ba19277b0bbaa816ea7b27fc09417fd3574d76c985d6cde9d2a9c952c"
+    },
+    "evals/d3/cases/qualitative-social/sampling-and-reflexivity.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e0ab6f339a3a7329c26d15b987bf233d0202bbe98a7e7145b413d3eac004d76a"
+    },
+    "evals/d3/cases/qualitative-social/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f573eff001967746bfe4184801bef7bf24037d06471c5c53d2ebb516da7c91fc"
+    },
+    "evals/d3/cases/restricted-materials/permissions.csv": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "522fad324fefe42d71be61b4df7b1b5890be03ad433072066641e83309fcc5e1"
+    },
+    "evals/d3/cases/restricted-materials/request.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0917dbb8bc5d8215512f28bf12dd8d764c793ca48f4c337230114d10b42927c8"
+    },
+    "evals/d3/cases/restricted-materials/synthetic-excerpts.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3038a05fffb6221ae33025f68be82e5aee3570c641235ee9c830a07da87fabeb"
+    },
+    "evals/d3/cases/restricted-materials/task.md": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ab9e642e320175c12b188f8d244d6f4c7897a39d9d990ce7c810bbd1a7a2f9b3"
+    },
+    "evals/d3/coverage.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "132494715dc05435bc79f569eaea67d430751655861386bd09767a0dad1ef166"
+    },
+    "evals/d3/independent-review.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "eebec5b6a0e3046739db5efba1a2d8b7305efd92f20308f18d4d013d1daa7785"
+    },
+    "evals/d3/recordings/agriculture-repeated/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "69864d83124b3db634b7cba3fdf1c2df20818db855e0c5f51a107afc1f8befa4"
+    },
+    "evals/d3/recordings/agriculture-repeated/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "85fde90ec5dc795db758c835b5ad7d9db8cc9d0b76dc7ebf243b78a8d6891c92"
+    },
+    "evals/d3/recordings/agriculture-repeated/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b92d9d763f20f9cd08a16a7c70f8d0e9dc597896436688c924fa8da4ee03b58e"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/artifacts/README.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a91ca8b4c6b62584ad150678cd44fe2f45c2861245800d2d12da6716ab18186c"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/artifacts/block_contrasts.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1281736f43cfe9437cf9e423780fb456e3f171293e1fdd89c4586909cbe0db3a"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/artifacts/execution.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b9b1ecc22ffadcbe4c951a92dbba4a1b5b22e04af5d8639c81c2738f9dd85291"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/artifacts/plot_primary.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "9198c026a9c6bd868baf85e5f770429d59955f060c79e3a5167c83cfcb878244"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/artifacts/plot_season.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2ff1d3396b1c34610ab5b2c2a6ee29b2427675e08e2ccf8cc9cd5a619144afd3"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "5d51315934cb4290fe6b5f448a7d1dcdda83b37f37bdd1c954b1688ebd97fa20"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b0275b7dfeb6fa931b0d02998677949d7f6aa13c56ff8f82bbdeb01ed2d47204"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/artifacts/visit_contrasts.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "180e9f1f177a63bb70edd7134d35f0046cea50c77b14a0574ba500ad7c385e5a"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/checks/rerun.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "921f3d69c2b0ec12044b0436d8f43306695d93503c33f36ca95d02546521ee14"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "043aa8047826eabe6db77cce62b186682722ec6138bab1cc23d7e18231a2846a"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/notes/access.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "aeb6293d11e643ffd044535a7b7442234f38533e480e59b10f07bf165a372888"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/notes/input-manifest.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "48f7386acd8d8f9f11fe8b313139fa87a5bf93cca4d3c09ac3b91cd686a8ba70"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ffe08c0cbdc296064c2f15292cba64fbc6469244d4851e4b8fa580995a62ddd1"
+    },
+    "evals/d3/recordings/agriculture-repeated/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "495d68bed1811217cac6618e5609305c1aa712eaf2aad0a83aeb5e30a480c0af"
+    },
+    "evals/d3/recordings/agriculture-repeated/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7ff1dadd882cacbb59b44512b5fecf85fd882f3071eb1a15f4ae99d217003718"
+    },
+    "evals/d3/recordings/agriculture/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c33f03683d6bceeae83bc68e3fc0d62b474eecec449e71a8d2978771bb96e7cb"
+    },
+    "evals/d3/recordings/agriculture/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "48fb0dce38866621d58ab5f27cbde874b4181e8868d6fb89df80a22d55cc6c0d"
+    },
+    "evals/d3/recordings/agriculture/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f1d5707fd7021d877af6590d66c8214e29cc1545292c2d188402b08a90ed4a06"
+    },
+    "evals/d3/recordings/agriculture/outputs/artifacts/block-contrasts.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7b0e5c2698005e1f5fc91dce6f51bf134e4098b9bd72f0f843ae79c2453b7e78"
+    },
+    "evals/d3/recordings/agriculture/outputs/artifacts/input-sha256.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "603dba13a9e225e8c2fa6c7b48241231846f6e90a07167f6b5baaa200661d037"
+    },
+    "evals/d3/recordings/agriculture/outputs/artifacts/plot-means.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c86eedfffe2f59626b064eb6b4689e9bc84249144d468935349d1e04442a647d"
+    },
+    "evals/d3/recordings/agriculture/outputs/artifacts/randomization-distribution.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "cfbe3f8fd8552f736fdb3e73d8ac5d291156f1101f804748ccf3edd36b17d090"
+    },
+    "evals/d3/recordings/agriculture/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8bead7cb03829f574d798358afab453f76b1fbbcf8588aea75f8b1fa645f5265"
+    },
+    "evals/d3/recordings/agriculture/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2e3b00004dcea44affd40bda9cbbc4c06b688c637ba73aea514925134cea3076"
+    },
+    "evals/d3/recordings/agriculture/outputs/checks/numerical-qa.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "21f3c7439558e8769dc704d5744eab127a5c7e4c45be87c5d587a4556bd64072"
+    },
+    "evals/d3/recordings/agriculture/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "50af5d3c374e355c51f3872d54771e5fef9b04b25ea9b89affe9386f43b59cda"
+    },
+    "evals/d3/recordings/agriculture/outputs/notes/analysis.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d62e27b9a0727aed6e573a5859464c061fc8ee03363e431832e6c75681f53ab8"
+    },
+    "evals/d3/recordings/agriculture/outputs/notes/followup-design.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c77ba7c6ccffa4ea452461f23c9dbff466a0a080735a8d8394985d7eb5a62b84"
+    },
+    "evals/d3/recordings/agriculture/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "586eeb87c0d05991112795c13bc16b0743d7ad30ded0cedc91e18e5f4b9edf62"
+    },
+    "evals/d3/recordings/agriculture/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "05f3de4e5de405663a54c11e20148cdb021d31c38af6e071706e5bc7f79974eb"
+    },
+    "evals/d3/recordings/agriculture/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b4e3e0a8dc5048db65b23e2e17077d5275faf72a5c9f6b94f179c2943dddb405"
+    },
+    "evals/d3/recordings/digital-humanities/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "900edb48b760c7a9989fa6b03e1d70d872f90b5626c7a7d450dfb76c1ca88289"
+    },
+    "evals/d3/recordings/digital-humanities/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d75c2337cca62b9a2402cb95b89a08914406f2bb304b7a65b7dcb11b4521f29a"
+    },
+    "evals/d3/recordings/digital-humanities/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "023a5e1d85a933be1eae124b19c1fbd20a0af0b9a310ec3b82b060ad2395a6c1"
+    },
+    "evals/d3/recordings/digital-humanities/outputs/artifacts/input-fingerprints.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "94939093c96921519095917c1e2e94521c630cd820c62ce1122a2c611be50c2e"
+    },
+    "evals/d3/recordings/digital-humanities/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f153f0c201a905e4981bd561cdd4a6371c54435f92c1d756ebafd7d33461cf92"
+    },
+    "evals/d3/recordings/digital-humanities/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1604aecdbdd9d798f336b4a2a7d27b015208461185d624df1145304b115b779b"
+    },
+    "evals/d3/recordings/digital-humanities/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "842515102182f1a72944e23109a1da3db2ddc85679cb40375f940f235194d29f"
+    },
+    "evals/d3/recordings/digital-humanities/outputs/notes/computation-work.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "aaa5fc30c9f5e658fe1f8b7533a5b375949a9648148ffcb113353a7a4ee5796f"
+    },
+    "evals/d3/recordings/digital-humanities/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "9ca292d2b727d6c14272556a60d32b0b984a66e0393aa7d07baabd4b127f8a9f"
+    },
+    "evals/d3/recordings/digital-humanities/outputs/notes/source-work.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c8b34400cfa86bbbfc743aa44bf385d05a475e54da21f541bd72d8ee2ede40e2"
+    },
+    "evals/d3/recordings/digital-humanities/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "01f9108b579dac581208ef289f4ecb0de89430f9d850e6b028cb509c1164c2fa"
+    },
+    "evals/d3/recordings/digital-humanities/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8cecfadd4e8e725bf66f97cb4a359d8d45dd3cfd7f70aae6a9c0370c0896ae8e"
+    },
+    "evals/d3/recordings/engineering-simulation/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "edad0fd77d5275a7bc5c888aca4cb09e0b182952dbe6c20b060d846c94cab088"
+    },
+    "evals/d3/recordings/engineering-simulation/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b88cb95390acc83b3c8003e370812053fdb25c09387fc949f26ddd4f24651659"
+    },
+    "evals/d3/recordings/engineering-simulation/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6ed044c938bc87d800072f116af668412d7631c707ad0142c82896bcc52f4c92"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/README-replay.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c64b9e1dcdcd12b1e2f4935b6b812d804d7347270e6644bb2535f58a1af1b1e0"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/artifacts/readback.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c26f628f67a773c2a6edb67bcf17c4ee0b73a166b31a5ba5a708f1eb67facd92"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/artifacts/register_records.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "22f220082ac46e2e917a93342fbb9ff03eda408f7cbf2f742fce9070795fc2e4"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/artifacts/results.first-run.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d9f771c581db7269eaddb1eedb91bb6280857c7d90a2f81d4be1a36c248e6691"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a3d810945e6968b9db78b9fe493a0863f6eedb1a45f3c605567004b3e590d2af"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "9d554e2ecd028e11c4684aa9da0cd87f9fa3e8061511166755deed6ddfa410bd"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/artifacts/simulator.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4c6c2244fa04c6cb75510f6925bf4013e1e9f6fc3048aa566acb8f7ac1ed2082"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/artifacts/traces/cold.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ec85c42471149dd757ec51d11d14e48524e427ecbbd97302367372250fc29188"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/artifacts/traces/delayed.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "93107366649760c7d968d54d14e3bf3d3f1e755b0932e7ad9eca5f1f62bd15b4"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/artifacts/traces/hot.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "91250582023c2bf14fb12a5267cbd42e9332e8cff4e6beb1411e5f3e459df3fd"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/artifacts/traces/nominal.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2ab3cb7be4a968116a63effd8e9602d2b5cfff1c353fc8d1d98a2749b53c204b"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/checks/replay.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2a79e09d58858ca7f706545ef1d4ea51ee39de053900e16ac9b66fb3d3d4f168"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/checks/trace-readback.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7706249f24224add945185e5e8eaac965556254a620a53a370206ab214614dc7"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/logs/baseline.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "72504f5af94e997dd0d3ef7c97c819e79f4d7028b19d5f685e4bc6eb112de3f7"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "893164e48966fc226e7f84b43a74e16ba6a559effb7cd03d8613d489f4e83d21"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/notes/analytic.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8398b29b11b94961ea09ed89b78de94ec03857ca0d646f536815cb39be184025"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/notes/cost-safety.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "46287026a9a02ccb48c369b024c27c6f4dd6d5053d6c67d41bfddc27c14f621e"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e5ae76aab07b48156c52e82254ad7c8283e0b60c0ad54d380f4349b0a108b564"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/notes/traceability.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2cc7b96805f2426442f8ee421c0fff042b87ad508cd9ac79050826329d2c13b5"
+    },
+    "evals/d3/recordings/engineering-simulation/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1278a49f22cc4cc3bdb5fcdb4eca61e536ff8d8160c375d962d177ed20ca88a6"
+    },
+    "evals/d3/recordings/engineering-simulation/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f939f704aebd529b3378e3d9a284bed651ffba720decf579a7314e2144e8f41d"
+    },
+    "evals/d3/recordings/engineering/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4f52fa57837dc5f015bd7b78a527b364e0fbb7058b532f5f4f3a6349ae83e497"
+    },
+    "evals/d3/recordings/engineering/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e084b7670a51471ecd4be207f56a67ca5114619308b62a94eeda25ee52ea34c7"
+    },
+    "evals/d3/recordings/engineering/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "99471f1f610a6c237104427e74c2c7d33d1175f23453a6e2c7394628890e1472"
+    },
+    "evals/d3/recordings/engineering/outputs/README.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ebed5ad249ad6eee4a86a99a38b7a405fc1ba9bbd4066dc7d061e949eff8d157"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/gate.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7b846bfee5423763d72138f1ba6147710bda8267102a150b705a20ec25ba54e2"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/logs/fixed.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6c681eb76eb417a787e501458ea55edeb8cf5b22c22adc5aa64c025a0be3c75f"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/logs/fixed.stderr.log": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/logs/fixed.stdout.log": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a85c58c570d3a9f197a2342a9f7393aa122c95c77f933693573fd5083dfe334d"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/logs/prototype.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "324a0160cc7f484ca4ac27097cb613d5f9d0c4f035fec32fda312001a2178f31"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/logs/prototype.stderr.log": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/logs/prototype.stdout.log": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f85a6ca94e897920d5cffbb9c942fabb00aa954a28a12314686ba48815435bb2"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/logs/relocated.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "18ab406932b427283d209c5fbca3a6c93655139132304b75b64dda1468c0cb4d"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/logs/relocated.stderr.log": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/logs/relocated.stdout.log": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "379eb326bbcd026173f883454a5add16fb666d709b249d4ab14348937bcd5815"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/prototype-results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "37e8222ccb77f796160dadfa20183a425c5a901b01edbb200245b364b222b883"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0621b14b77e7a0ed19cd5b0f2d790205f89b27adc7b22d5d6eeee42fee1fe5b8"
+    },
+    "evals/d3/recordings/engineering/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "db3fa81e8f5e88fb8d0a7954a5144926815b5526a787ae1e258ebec3ed0c61e2"
+    },
+    "evals/d3/recordings/engineering/outputs/checks/input-integrity.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "10c6c1381c0d70e9d26e37e5d3ec2be84cdee24bf1f0b980ccbdd9aebe90ec32"
+    },
+    "evals/d3/recordings/engineering/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7f1762b9d40f750424d5471608ace37ae495e91a10d2c966490fe4a24bd14f61"
+    },
+    "evals/d3/recordings/engineering/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e9baa7c58610bedff5ad7e8d9425370af7e0356d9c95289995f6b5373133c7d8"
+    },
+    "evals/d3/recordings/engineering/outputs/notes/work.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e92becb58a9b3deba25b44d6720a182b47e737c32121a914b41b95618cf21ddd"
+    },
+    "evals/d3/recordings/engineering/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0768cfd48b36cf1e327d1d81c2b29239022c5b52a169c63ea4554b9e0f0d1651"
+    },
+    "evals/d3/recordings/engineering/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4afa860667bcc9a0ad8579aa78f0b2aa2438f9103e5afed93dfebd3b29f57d3b"
+    },
+    "evals/d3/recordings/evidence-synthesis/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "800aa34b2125455267ba4f7a8408d9649a9ead2108762c96beb6311fd45def1d"
+    },
+    "evals/d3/recordings/evidence-synthesis/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6c3561dcbe1faa5a65894ad66aa78f048bb61098c1b98d734ef27c7bdb947a79"
+    },
+    "evals/d3/recordings/evidence-synthesis/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "979390373679fb8543338c90b602d6acac4e6b62df77035552c0dac780836f64"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "df813101ebad7036f88032f7e7af1ec44bdb4827208319e2e861e96a2d4a0852"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/artifacts/run-config.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "03b2f3b3010ff70281c4ff5fb9b50cb63feb8be1b226dac7cf6c3e2cfdeff19a"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0f0e3fbd31f221cf074b83de198c68e70c72ff884e040961b067ac22cfa3c143"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f0d8d4794a5452a12fd28df16bc9e8647cdcbb635f35552ad54d43d7f1ab41d6"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/notes/extraction.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f6c7edabcf14a0eb142a5bbc12278631396938f9f5b4293af52ae3a80a44a933"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/notes/guidance-read.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b331f280d3e0d952fee031d5b841bfec1bbc77ad1347e398f5591e88b2e3f837"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "13686c7dca86055f901e5f103c89e2638f2b1ab322991f8735bfbace1bff05e7"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/notes/numerical-results.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c3e2221265cc7394920c70c545b2fea08bdcf458359b26425d1a24601a399eb9"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/notes/risk-of-bias.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ef9409f447503e64fbe234f67ab2bdd9ebb67ba03c7c08557903ab4927de26c3"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/notes/screening.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "040af28015dc5d82951094ac8212bb60438987814f14e4263e95dc4b30cf7feb"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/notes/synthesis.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "9e1d6803c84eeaa508040b87c658c85b553d6270cbd88e8b0d3efab907ef0f5d"
+    },
+    "evals/d3/recordings/evidence-synthesis/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "39a4f3181c3d0b60532a43f8a5ed420204de8e9544482ee9cacfd564df9fe4c1"
+    },
+    "evals/d3/recordings/evidence-synthesis/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "11707a9a7e27ad1b768dd5c4fdcf714215ce967388e187e0539b4bab4bbb39d0"
+    },
+    "evals/d3/recordings/formal-finite/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "91008a805f93428d0aec58bf32752f004d906c5fcd1cac62dd39aa3a5ba12384"
+    },
+    "evals/d3/recordings/formal-finite/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "85dbc45d7882b6a2d7eb3a54a34f2aac5635b3c107e38574abc4e45677aae01e"
+    },
+    "evals/d3/recordings/formal-finite/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "201a1c313ac8234fa82cef5ddb529f44726492fb5c7e5daf046dec4f710a7019"
+    },
+    "evals/d3/recordings/formal-finite/outputs/artifacts/config.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "07a3f3dd4cc475d3e649b50720d098c953c53ec88d1bbb4dc969906471dde4b3"
+    },
+    "evals/d3/recordings/formal-finite/outputs/artifacts/environment.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1e36972d07b717dc297ec0c36a54e2f2dce81976eb67f870132648f7e475a796"
+    },
+    "evals/d3/recordings/formal-finite/outputs/artifacts/input-fingerprints.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0f5d88fe6f91a0dc539c8e27b75d34a437ee76981d2a6c9e157540394c7d6e48"
+    },
+    "evals/d3/recordings/formal-finite/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "336a50569091df6c2c4d50ef445bcd173572166d5dd482b818bcf487c6980844"
+    },
+    "evals/d3/recordings/formal-finite/outputs/artifacts/review-checks.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "720d4b04430f6b885dbedae12f29b689d2f8defe19b3d3919501a3878c4f5afc"
+    },
+    "evals/d3/recordings/formal-finite/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7009d3013394bc8705daf2ccec1bec51bb3cc6a417f29cdcc7679b586eba62d0"
+    },
+    "evals/d3/recordings/formal-finite/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b6ea14c0a1e9f381177cdcc5161f6afb3a09aa9cd513ba6678dbf1b3333358a1"
+    },
+    "evals/d3/recordings/formal-finite/outputs/notes/derivation.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "beedff401d4eea571d8113abaa659068c71c0cb62534d61ebf1a94489b2eef69"
+    },
+    "evals/d3/recordings/formal-finite/outputs/notes/guidance-read.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2fc9f5c83ae0c92a764cd606ae29431b9c5706db4add2b750ea635e8c56b0da5"
+    },
+    "evals/d3/recordings/formal-finite/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "939eec15bbb18314b277a1bfc82375cd582a1056898bc0ad1cc9feb6e1115fcf"
+    },
+    "evals/d3/recordings/formal-finite/outputs/notes/run-notes.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "62afedefd688a033ad9033d3b664dec9f893a6f408d129a38cd5ecb82eced144"
+    },
+    "evals/d3/recordings/formal-finite/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "808acefa0637981bdb0d96bd9d52c928ae022fbdea7709292627a3c9066b48c7"
+    },
+    "evals/d3/recordings/formal-finite/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8448ca4041d8e8da2b55c59b3df2fdab427ed55031056e6d71997c87356418bd"
+    },
+    "evals/d3/recordings/innovation-candidates/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "34a45686da20c050e51294ee7a60406d5d5b152df756210bf77ff67d5eb5d29e"
+    },
+    "evals/d3/recordings/innovation-candidates/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f99fd68bdb7dd2f4891768e618b89df4611214c6875815e8e3042cb61fba5e82"
+    },
+    "evals/d3/recordings/innovation-candidates/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "fdf9447ce66d93bdfa439c0ca03972fcc6e5fdb32b6421f5a260a6092c893fab"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/README.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ba89ef03cf38bc999e483d56ccd11e6949dcc869160e9847dc7a0e73eed7ab3a"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/artifacts/config.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3e49aa45bb90405add2f048f16d0eb6ffb80fa228fd768240e8a94c8f7d6fa7e"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/artifacts/minimum-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "73a13d1196f626d678ebfc2046680ea2b22453e0d0ce8e482507f7aa7c6d0c9e"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/artifacts/minimum_check.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "046cf61ea3f0bf2ec48e15b72a0c58e409195b9001a3a5c64016369fa7c3b02c"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "44e5dc30a0b637bb7efbce50b10964dfb5137f412e1d7151d94333ca73c34cdd"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "486a0c2f66b2efb8abebe259659f6e7d2fdecc711cb06b93b5835213c53908b0"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/artifacts/verify_relocation.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6d9074e7c38eab39c55e4d97472b6ce8d432cafd812a39588005d2d74fb5491e"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "387f83f2f1d19eb5bd8c7e8bae336a36b0b745b3c3a41d8e6cbcaee3b6273c5d"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/notes/candidates.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ceaa1f387ff2b5cc607e611f78f6d49edefb9511c877c6fd0205a45de8978dbd"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7d8fdf7d1b5dde2675cd6436f97365fd242fb645549dfd14bb09a0e280c77b49"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/notes/mechanism.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "39eb839a18da4576cc6cb8b8795465148f56f78ff25b492755c4d71ad2bd74f6"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/notes/results.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3e98b984cdf6ad766dd09411cf7db8408a2d4ad0950fd0c4cbfd84b78f55efdf"
+    },
+    "evals/d3/recordings/innovation-candidates/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1dd4345e37ea34174e0787d85ba83c474cd494f56eab58ccec67d92d43713ef6"
+    },
+    "evals/d3/recordings/innovation-candidates/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1967f1efdd366455bbb0e371b999a492e6171e8a4e880e435fe82897ee065bee"
+    },
+    "evals/d3/recordings/medicine/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b9cb8cbdcb65f4d3811fec7464589eae49258251eb95ab01b542694189fdc3ed"
+    },
+    "evals/d3/recordings/medicine/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a5cac5552e019425fdb916053d83ca3f3eb2add90774a567d7e7bcd995c4365e"
+    },
+    "evals/d3/recordings/medicine/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "56d84a89c2d9d39e8634c3f12605a290d9570a3cfd45ced63f833364d99fe3ab"
+    },
+    "evals/d3/recordings/medicine/outputs/artifacts/pairs.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e157cc47f041644001615e1a8de1c9ea8b5a52ede10a3157393e6bef8f58de7c"
+    },
+    "evals/d3/recordings/medicine/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4919400f3a86f2990cf9598dacbf850100bf9d7d12920735cd33590a9fad7116"
+    },
+    "evals/d3/recordings/medicine/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d8b95d3f5b94b154d275be8815df81fb7dc5767a2d8181c449e3e0ed97f66dfb"
+    },
+    "evals/d3/recordings/medicine/outputs/artifacts/sites.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c0a9cfcd6053fb70368e42257f7f7e736957b0023ab05b30ea7e9c4090b61be0"
+    },
+    "evals/d3/recordings/medicine/outputs/artifacts/verify.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8af473a52b79d41bbc78d08ea468813494f66072369a4d87052d74a047c56104"
+    },
+    "evals/d3/recordings/medicine/outputs/artifacts/verify_revision.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e39d192d0ef832b40262c695190651d05d59e3890511c19aeb9d41c1443e42bb"
+    },
+    "evals/d3/recordings/medicine/outputs/checks/analysis-verification.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8a509ac35689fbeca89d029c500be2927c8157562967ded6d68d0039547865fa"
+    },
+    "evals/d3/recordings/medicine/outputs/checks/input-copy-integrity.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6c799dacb7c3114f3ac2019a87083318aa1809e53e8b538eeec7ff1db552c9f6"
+    },
+    "evals/d3/recordings/medicine/outputs/checks/revision-verification.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "bede8e0d7b259ca3d8205f2fb52b569b2175a9f55e0791796e6c800472f3ac7f"
+    },
+    "evals/d3/recordings/medicine/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "5e115a09a4da4ef343624b9bd504a3293c021f827b597d2b3c05745c128dfdab"
+    },
+    "evals/d3/recordings/medicine/outputs/notes/analysis.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "03d591fb3d4917db47ae44859a6f6c249f6d4361a6aefccb1bdcd09ae236006b"
+    },
+    "evals/d3/recordings/medicine/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2e727b426556935a53f24638290bd5fb8fd158d32594db17650eec182bca703c"
+    },
+    "evals/d3/recordings/medicine/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "cb12e2b552c1a1e8b472320ff9d1ee7ec6199e8e64883a39ef844e5f36accbe0"
+    },
+    "evals/d3/recordings/medicine/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d2a8eb85952b218b47ed762f09c349ea9b03f629fb45b0d364e44eac8904163f"
+    },
+    "evals/d3/recordings/mixed-evidence/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "362cf6d9ba32a04a91a600f5c159849f28be719256e7367dee2ffa6477e4f359"
+    },
+    "evals/d3/recordings/mixed-evidence/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "79068ff887748cef8345b44100023025eb093d855221860db4be201454038083"
+    },
+    "evals/d3/recordings/mixed-evidence/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "91b1120f34ad3a1b17cdf2420c39e87427f177a8f9996dbef60b8ff016b843cd"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/artifacts/config.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "429de404878e10450e76ebe6a0ab3062664263ea81809fb4a3882f201c8f78ec"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/artifacts/environment.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "04bf5c555aaff2ff2152e26fe14bb33743973bbe3527a33e2ccfe4b357047c94"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/artifacts/failures.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "eaa6153f6193791d03a04bbac30347df940c35dfdf8d55879bd3b4f155ee97d4"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/artifacts/input-fingerprints.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "20baad0c4640c67ac7aec6f027e1b85acbddef37cafdcc1a427f4c3207497cc6"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "bf73da7de32590ac62b33aae1c6c7eefc4d8da87d008c5f044eae988d92d5d22"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a976bd41e7a5f977810dc9d2abb27be29e51c4edb6f5e067d37ee7b82dda25ca"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "622ad41a9b31ac617a27f9aacdebbef77b880e826b7ca3eefe98ca99f89d91f9"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/notes/audit.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a99dc189f1b502e16860c5dcf44b93137e9b4ab6fe2a8c944cb9cb91f673f9a9"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/notes/connection-check.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7f67bd79345ec53c9bcee3b5f6ff4f69569044e0a1e34a1463c5dd87a07b93e2"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a139d11f3b95fd788fb7256393e836ec410f2ec52ee89285c72a340b7cf2c19a"
+    },
+    "evals/d3/recordings/mixed-evidence/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a483c132f3a4845b3a3242b0c3bd17acd65b13bb7717086463efcfd4bf2746cc"
+    },
+    "evals/d3/recordings/mixed-evidence/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b87e093088d9101b8a48299587c9c1cb2688fb94cbb94cb6724f1ee338f88939"
+    },
+    "evals/d3/recordings/normative-humanities/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "72be4826dc44775a65ed29c54e76e40eb7cfb879092f11bad9106b39dd164ce3"
+    },
+    "evals/d3/recordings/normative-humanities/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "cfab42a9b85be3693fe1635b6ce28eaa538c968bc44e2b5717fecc155815b96f"
+    },
+    "evals/d3/recordings/normative-humanities/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "429ef7c9a065d6c9b26ee8500bd49471f04eddf9a8efb9cc066447e57f641770"
+    },
+    "evals/d3/recordings/normative-humanities/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a825c39622f36299e795781eeb2f03e9be5fc33a79b4a3465336ff5f916e35bf"
+    },
+    "evals/d3/recordings/normative-humanities/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "14a2617c002e1f145a5837de599ad0b1bef758179995a3afb5cf7c4c900909ee"
+    },
+    "evals/d3/recordings/normative-humanities/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "38bbc1acab9f328b5db594c7c499675c27f2b66a012fdaba22f12bc54df1f605"
+    },
+    "evals/d3/recordings/normative-humanities/outputs/notes/argument.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "92102adebfbbaa7d7e47746590d6ee5e9d4647e0ce0e7cb27be9bb50b21ecd8b"
+    },
+    "evals/d3/recordings/normative-humanities/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "bc301f86c70ece2796e1302424ea4ee155434510b110cfcea3c970b50298af7e"
+    },
+    "evals/d3/recordings/normative-humanities/outputs/notes/propositions.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2d2912ebf3f53dc31863d58330a13759f7b776ac54dcdcfea68d209a0ffe3d56"
+    },
+    "evals/d3/recordings/normative-humanities/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "fd1510ebed33ba62ef70b846578194811b3f2d2485c63884a2be7f16efe20954"
+    },
+    "evals/d3/recordings/normative-humanities/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "559daf4239fc47fc18b1222e0e7c0e6610ac9f2297428f34801f156fd962a0f3"
+    },
+    "evals/d3/recordings/observational-policy/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0b87a722a0625aa26f10bb8dd095b6444bce6e2c4992c329ce5a0184bf3f05aa"
+    },
+    "evals/d3/recordings/observational-policy/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "55d74121d8b90410e854207fd8979e644ed3d3a57cd48165cee6fe96fcbe6103"
+    },
+    "evals/d3/recordings/observational-policy/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "dec27d30df17605bbf7df25a287d8546e373565ac1f66cf4b1d158012370258b"
+    },
+    "evals/d3/recordings/observational-policy/outputs/PROJECT.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "92b9f2b7024c693d81d69472b50b4d1fa2aa5f7fa36164f1fcfd3c4de5c66e56"
+    },
+    "evals/d3/recordings/observational-policy/outputs/artifacts/README.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "24cfdc825ba8e7688ac007884ea89a978aca36773503a47123743b98fb4e848e"
+    },
+    "evals/d3/recordings/observational-policy/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c9240c965ae919834fe0511e005eb7a83fe9f1a64c33e6abe947a43bc9edaf28"
+    },
+    "evals/d3/recordings/observational-policy/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f1a0d4aa3edbf3a9cfc0a5c3a728426e1067cb6ce35b640809b53af225c687d8"
+    },
+    "evals/d3/recordings/observational-policy/outputs/artifacts/verification.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "363f4a928316ba7ce093a90fb28919dbe93dfa1c01af752637fbddd98b904b3f"
+    },
+    "evals/d3/recordings/observational-policy/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "57b37f21ef61ff315bb02c85a69d031276c1cd632d32e4fabb819fcf964cf249"
+    },
+    "evals/d3/recordings/observational-policy/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3d7fcb5317a41a0a851173201cb0ba556ab5aa8e9fe49ae35f63287ea68d864d"
+    },
+    "evals/d3/recordings/observational-policy/outputs/notes/source-audit.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "153de0134ae353c12597ce343d1ef6011b69e1d5f580472f1f5f9475d3335154"
+    },
+    "evals/d3/recordings/observational-policy/outputs/notes/working.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "fd7f2594fc075a81dd2ad23108ec257843dc109c1cf2bd169456a1ab2f673530"
+    },
+    "evals/d3/recordings/observational-policy/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "76da5b946012fd8fedffc0c734f6382dc2fad3d2ef244c2b5fd03070ef4b5535"
+    },
+    "evals/d3/recordings/observational-policy/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1db349f2420163911f6421249818bb4c775d08d482495a367f82434c02aa7887"
+    },
+    "evals/d3/recordings/physics/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1901e4b04538d82e3716d1c69f15309a4077aa8a5ecd72f651cf96d04c277f2d"
+    },
+    "evals/d3/recordings/physics/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "bffe23f37e4f15320820df4e9a2e882867b31c7b1942a1f551a55c02a4d57976"
+    },
+    "evals/d3/recordings/physics/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4c5e0aefb1a88c66ff987b8eaea57b8cfaad8e2e44338bb55dff5a919719e8b8"
+    },
+    "evals/d3/recordings/physics/outputs/artifacts/README.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "dbdcb81355c5b8288db060306858ad51d0999731be61b9188d4d865b908c61f5"
+    },
+    "evals/d3/recordings/physics/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ffa859b72011401c954626b3f9fc87725f7b95212e087ef06361bc4af10c1ef9"
+    },
+    "evals/d3/recordings/physics/outputs/artifacts/run-metadata.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e37179ed4459998e3282eaa14f837f67a1b1b807daa510fb053f9f5f8b014f2a"
+    },
+    "evals/d3/recordings/physics/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7e730dbd7f74f89859ced351c5650b2d14e3b8d4d3e05bac64e7271a32a3eb94"
+    },
+    "evals/d3/recordings/physics/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e345cbd8dee99c37f8397e6623b95efade9d2ab293588115a3ab7cd64fa8d74e"
+    },
+    "evals/d3/recordings/physics/outputs/notes/derivation.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "64921b5e31527b316e273d14e8356d4305f05716e0296f1baa072fb0a052c438"
+    },
+    "evals/d3/recordings/physics/outputs/notes/input-manifest.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "ab7d96b6673a5b7a0f114ebb7ad8a5be22758e8a6faeb85dd63aa16bed612245"
+    },
+    "evals/d3/recordings/physics/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "9d172061dadf408e847f8fd79bdd728b0be7927782d90363e410396319119cc3"
+    },
+    "evals/d3/recordings/physics/outputs/notes/numerical-results.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "702f1eebdc6d9a718ce1ae1a55af06cc51e221c7fa66b6f37e28f39edabdb064"
+    },
+    "evals/d3/recordings/physics/outputs/notes/reproducibility.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "836818850033ee73aac70734fe6eff9d2accf595855ef86da0f73a5e2475038a"
+    },
+    "evals/d3/recordings/physics/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "99567519303e26a6d2a60c6ce2dab9ae92acfbec2846c2ebf0844f1edeb5e7fb"
+    },
+    "evals/d3/recordings/physics/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "7a9ae6850514a79dc1d0e6d7f07441a96128adde55f002e8cf4bcbeb08f85153"
+    },
+    "evals/d3/recordings/prediction-leakage/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d923bc94fee6abff3f566a25bcd5447c7afd6de602da12c656d80c6f4cebaf82"
+    },
+    "evals/d3/recordings/prediction-leakage/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d17b09ddefd8cb39f75013d8439d08b148f0fdd5f770bc2ee0a3c8cf1b427736"
+    },
+    "evals/d3/recordings/prediction-leakage/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b55e83440681a0a32cbfd28b0c1e02058e6e829b3cff9b6cdbf6e2e5a92b2e1b"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/PROJECT.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0f99aaba98e4bafda8be5812aea1dc92ab75868763a67d1fe0c17d8f435147e1"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/artifacts/config.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6f0e47b0afb4d85409b62d98399985619acf27b6a52270222c09a7783eedabf2"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/artifacts/record_predictions.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4194eb98db8922566f0ddc0076e75f48a1812e18b861a16c503476dc3b54bbe8"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6d2676817947ecfd8d67fe438a790d8aad7ec03126c8d798935d6679c6a0f6b0"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "18cea2933f68483fd3f2dd79f5e65c19b52fd992ddec1916483f54da36125a2b"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/artifacts/subject_predictions.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "168475923688a20b195e3de0e56570c1453d65a8efd4bc01f3358ae7b19e9a94"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "9b89f273c14b9a0093236f9341971fb16a0c6d931a45d86541893d4aaede816b"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/notes/arithmetic-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "52f1b744d53986c458ab758454e6c21db3a7ad4ffc4f523ac46391990cdde468"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3564baeff62d9b2cacce3b2bf0b7a8fc80df004f04c59a71fe32364e22a46b2b"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/notes/work-performed.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d9b41a402a2439ab05437ebe338f90d0bda31c13856752b38db0c0e98af5eab5"
+    },
+    "evals/d3/recordings/prediction-leakage/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1f61d1a682f0cd7ceeb20beed4fb273a121fc133548490c4076aa5f04e90897f"
+    },
+    "evals/d3/recordings/prediction-leakage/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "751ceac41f7061030cc08f358d1ef020ad50136836587625e9142a3e5809b643"
+    },
+    "evals/d3/recordings/qualitative-social/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "51586fffaf13f8e207872ee014bd0a3f2704d55f481c22a4990cc02eb2001f9d"
+    },
+    "evals/d3/recordings/qualitative-social/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "024e86cf1bdd4354b0c927a8be6d01d00be1d15cfbf5735d465b4df05c084df5"
+    },
+    "evals/d3/recordings/qualitative-social/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "fd8d90da90847907d97cdae042bb5a99dcaac4faf42c2609ecf7b2b3c493d2bd"
+    },
+    "evals/d3/recordings/qualitative-social/outputs/analysis/codebook.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8f6533e88fa594f48e34a78a21b63e4d38d17ecf91a8c3d1dd9a57a0719074f3"
+    },
+    "evals/d3/recordings/qualitative-social/outputs/analysis/coding.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "542df527283e2681f22356842877610e86d6dca641d5d615f38d5ec2eddf5cf0"
+    },
+    "evals/d3/recordings/qualitative-social/outputs/analysis/interpretive-memo.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f20710f8f7a8bc9575444fb28f9a46b4808ffd956921b8635142e01190afdb43"
+    },
+    "evals/d3/recordings/qualitative-social/outputs/analysis/traceability.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3d230b6d8949b251256832ff2b7dced304a966e4fd9a8aaa4ebc026a003582ef"
+    },
+    "evals/d3/recordings/qualitative-social/outputs/artifacts/results.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "86ddd6e6a298dfcc57db51fb82be8358f9c1370f35cfab29f11dff3ef6951d0c"
+    },
+    "evals/d3/recordings/qualitative-social/outputs/artifacts/run.py": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "73377d8ead79fd2c5d08291aafd23d5cb4f4ca0a1bf62c60342d1862d153fa28"
+    },
+    "evals/d3/recordings/qualitative-social/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3f5c1e944fc71c9efb63acf7d174e4f2e8ac8d3ddce91339b33da93c67a3e6d3"
+    },
+    "evals/d3/recordings/qualitative-social/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "954edc7c34599d7290e3e8f5343c8dfa3689244a0e1e2b4fd5806df9b519e007"
+    },
+    "evals/d3/recordings/qualitative-social/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "c51d3134a7e61513c4c2d2a6a71c5847e1d71179cc1ddb31e6636fd3bf08a6a0"
+    },
+    "evals/d3/recordings/qualitative-social/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4db5564b161faba12747b20800aac7b76b2b86a53de5920abc3f4268ce14544b"
+    },
+    "evals/d3/recordings/restricted-materials/execution-summary.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "65964a24ed9839ab378f66da2ddd77caa1719d80ae1efddd690fcc9a43ce515d"
+    },
+    "evals/d3/recordings/restricted-materials/observed-check.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a7bbc7b57edd49dbe7fa17874549823a9047b9ca2bd6a0db7ee1da40ab72c7af"
+    },
+    "evals/d3/recordings/restricted-materials/observed-resume.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "eb1bfcb0f351119ea99f8217c30422e52b5c9b87f1df2bfb7e85a66ac11f3dd6"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/PROJECT.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "154e7d158490f1964dc172e63bdeabdc4796eea4ea537cad6ef09467eac191b2"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/manuscript/report.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4d56ae0ec3a7b6f5017860454c414f5214f54a23e738645028b31efc7a798b06"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/notes/coding-guide.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "801aaabb15aa5a3a60c8787e3eb5cd31f3c59132d9126ffba9e82829df996f25"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/notes/field-dictionary.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a7dd77eead04ad8a7e1ffc4fdeeb0b10659df29b9766252c280a7856a5b57198"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/notes/followup-empty.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e19b4272c66134f726288b52e55f175552714f49db6a2d57d6d1264f856f7d3a"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/notes/interview-empty.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "eada4e7ca5987d8eda5e2d900b11459e42a45fe6cb3437f6cac228e739749710"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/notes/issue.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "9539a9b765156ec99ce1a60ff4292739fa8d6ccfcd063b6fe64351855c1f6a90"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/notes/new-fictional-examples.csv": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "15217c77d8ccfa1489a4358627b7cc0e36d00d2c823c5da3be1f095dd26869ed"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/notes/offline-plan.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b9439d38c86163a0f46d08418dfd26bb8ab570ac32c2376ac457e06625e944ab"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/notes/permission-decision.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "1a26cbbe245f89579243537f71800c1ed0b7b9fa2a7184eccd2422fd7e0c9272"
+    },
+    "evals/d3/recordings/restricted-materials/outputs/review.md": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b2359b413553e649dbdb84400997ca30799374511e698de3aec8dd4e1216cfaa"
+    },
+    "evals/d3/recordings/restricted-materials/recording.json": {
+      "classification": "synthetic-task-output-or-normalized-record",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "29cb41cb0f55890e10a999d4bae2f3cd2f104698e0c16d79321799864294861d"
+    },
+    "evals/d3/reproduction.json": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0790ef6a315c4d8bcd1873770041f54228ed2ee6e0059f77876ea7c9ea23d291"
+    },
+    "examples/synthetic/fictional-excerpts.txt": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4d8ec6a8cd61442a15e0ffe835ec5daf4ac6a3c8992e7baa710b99c6f1bcdfb1"
+    },
+    "examples/synthetic/finite-observations.txt": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "287dca8ea3bd19b7cb84f2d37bb4804ec0e8085310ed510e0136cb982b50b55b"
+    },
+    "examples/synthetic/history-records.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "952203bfb3c8c4cd91b7b51b16391c71d3119baa9987cf3a152cc2afe1438aeb"
+    },
+    "examples/synthetic/math-activity.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "08cdb49cca9bc4bf4a50f32b94448d11b8f23fb0f5955e44a09ce8e80c81cdc1"
+    },
+    "examples/synthetic/math-evidence.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "adc9418a50c7d5b98c13d32e5aff87409b599ffbec46b4d75a409c91c5112dc5"
+    },
+    "examples/synthetic/math-relation.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0ba0fef8b722d52ee2dc9b0d1d12caac0f762f878a037ea29bc507ebedd9acf7"
+    },
+    "examples/synthetic/math-statement.json": {
+      "classification": "original-synthetic-input",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d4150bedb00718e471ea2811805caeb9f47d0c2e789c232fdb3f087a13e580fc"
+    },
+    "profiles/disciplines/agriculture-life.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "66d86ef5e1f6deaa2af354e36e188469f9e1cf3423c14d31b4b48c854d46d583"
+    },
+    "profiles/disciplines/engineering.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0c776e883840960b7eeb6c4dcb6a3be4974c1834d8bb142d0b3cde2acf502e30"
+    },
+    "profiles/disciplines/humanities.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "58ff12188e1aae8cea8fc090839d0727509ff4e86bdf3d2d2c075d6ae61dcece"
+    },
+    "profiles/disciplines/medicine-health.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223"
+    },
+    "profiles/disciplines/natural-sciences.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a"
+    },
+    "profiles/disciplines/social-sciences.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8"
+    },
+    "profiles/governance.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e"
+    },
+    "profiles/methods/computational.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab"
+    },
+    "profiles/methods/conceptual-normative.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "609f444f364e638a0e61c49f160a4912ecd56ab9310a6937cef9b7abadae8b72"
+    },
+    "profiles/methods/empirical-quantitative.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b"
+    },
+    "profiles/methods/engineering-design.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "693c7a1a42001bdf87ce3684c866863c81b089af9bd6e521b813667de24423c8"
+    },
+    "profiles/methods/evidence-synthesis.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0a9fccdfea15ffd8b30c30a56bcb8e5511d40d30bf8ea094ee47cf8ce8e4fbdc"
+    },
+    "profiles/methods/formal-theory.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c"
+    },
+    "profiles/methods/historical-interpretive.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "0894387de28c40bbf2e5913dbf260b1df15f6eaed45abdd8df2a9c1360c8f4d9"
+    },
+    "profiles/methods/measurement-experiment.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd"
+    },
+    "profiles/methods/qualitative.md": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "069f3880300a754dc2e8dd26eb64290278045ce2cabadd394160c68d02efb2c6"
+    },
+    "profiles/sources.json": {
+      "classification": "original-guidance-with-external-source-references",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d48c5bb14cbd5297832868ce6c6659405229b5e8a7cd80742c51e475b63c9829"
+    },
+    "provenance/ORIGIN.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "3eed0aba82206f8dd852a930eda570fa7d52b55347d932265695c6d29ab9d977"
+    },
+    "skills/rw-candidates/SKILL.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "82e9930a22e5a5ba4ef61844ce9627da1763d5738f0f364dc3c9f3b9efa25c63"
+    },
+    "skills/rw-innovation/SKILL.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "337c368c2ec48309027b3a2fc3724fab5e3c559e714c7293b19642588ae11575"
+    },
+    "skills/rw-literature/SKILL.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "101b756a9374c3ba3e319695c8b03685e68709e422d34d8659b896edbb42e5ef"
+    },
+    "skills/rw-question/SKILL.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "fcd2d3deba00e116c6da96bdf79802f2de8383e2dc4410173328ea534f5ee4c9"
+    },
+    "skills/rw-review/SKILL.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "84d8d4a10a03843e62182b3fcb5bd90cb41dd4f0a42cdec35c3f30af8dcb2db2"
+    },
+    "skills/rw-validation/SKILL.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2eb8d16f18a564140e9fd32bbc3748057644a5ce9592c57edc4462c5e8a72db6"
+    },
+    "skills/rw-workflow/SKILL.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8ce5d304f9ae472c61d02546c09afb85ff3c08f0d77a390853bcd8cff5366952"
+    },
+    "skills/rw-writing/SKILL.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a26e0b87b20151175d143b7a6ebcde7ba17f4b228504513faf70405037aec71b"
+    },
+    "tests/replay_support.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "6656a19eff0455089818789c02a0b03607ac434ee2bc9c115fbc854940b49de6"
+    },
+    "tests/test_check_runner.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "e54191694208826f87ec584a711ba8552789040d24e8c547c3aef69359116f72"
+    },
+    "tests/test_core.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "155d73b2263ea577960444679eb82ffbd3268f60abd8b6471f06cb85941d2a85"
+    },
+    "tests/test_d3_evaluations.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f4e4c727beddb91ca651c8f909420ed260a61e2eb25d279194bed083e9acc679"
+    },
+    "tests/test_examples.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4d5593732cd099a8a3b3826496b319d604c1545870ede1d2849ada870911939a"
+    },
+    "tests/test_release_package.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "55eb06f5d92a00f16ccee6e1c59df69326f9b8e8f9106451373a9d82acc8e640"
+    },
+    "tests/test_skill_connection.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "68539bbe1f24530d1e0df2d01a34f676a450eea1b92996959885d882700e7b89"
+    },
+    "tests/test_task_replays.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "8ffbc5ffbf7de9142a1602888f68aa3348ebb4d789a735a24157f294b48ced56"
+    },
+    "tools/check_core.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "a3f1adfa9659ffbc21e9c48f483bcee0739caa0beb3305f46703d7d5253a16b5"
+    },
+    "tools/connect_skills.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d56b58c2564e965c3e56254b91d36022d1571a02cec4d0e2f1412ecdea36f133"
+    },
+    "tools/release_package.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2b58798037d93d158a938905e35abd510fad869a8151985f4475689b21c3647d"
+    },
+    "tools/research.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b"
+    },
+    "中文介绍与使用说明.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "2ccb008d508224b6cacda064191d849f469e0b983065475fd47cafd08c379e1e"
+    }
+  },
+  "format_version": 1,
+  "scope": "Declared project origin and byte identity; external linked works retain their own rights."
+}

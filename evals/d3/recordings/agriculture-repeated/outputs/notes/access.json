@@ -1,0 +1,48 @@
+{
+  "actually_read_skills": [
+    "rw-workflow",
+    "rw-validation",
+    "rw-writing",
+    "rw-review"
+  ],
+  "actually_read_profiles": [
+    {
+      "id": "agriculture-life",
+      "version": "0.1",
+      "kind": "discipline"
+    },
+    {
+      "id": "measurement-experiment",
+      "version": "0.1",
+      "kind": "method",
+      "variant": "field-trial"
+    },
+    {
+      "id": "empirical-quantitative",
+      "version": "0.1",
+      "kind": "method",
+      "variant": "randomized-intervention"
+    }
+  ],
+  "project_local_guidance": [
+    ".agents/skills/rw-workflow/SKILL.md",
+    ".agents/skills/rw-validation/SKILL.md",
+    ".agents/skills/rw-writing/SKILL.md",
+    ".agents/skills/rw-review/SKILL.md",
+    ".agents/skills/_rw-runtime/core/skill-bridge.md",
+    ".agents/skills/_rw-runtime/core/protocol.md",
+    ".agents/skills/_rw-runtime/design/catalog.json",
+    ".agents/skills/_rw-runtime/profiles/disciplines/agriculture-life.md",
+    ".agents/skills/_rw-runtime/profiles/methods/measurement-experiment.md",
+    ".agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md",
+    ".agents/skills/_rw-runtime/core/schemas/source.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/method-binding.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/project.schema.json"
+  ],
+  "access_scope": "Only task/raw siblings and toolkit source integration instructions/catalog plus project-local workflow/runtime, selected profiles, schema, and our own outputs. No tests, graders, other cases, network, external reference URLs or personal/global package read."
+}

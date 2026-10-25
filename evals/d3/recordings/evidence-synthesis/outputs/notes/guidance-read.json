@@ -1,0 +1,29 @@
+{
+  "actual_read_files": [
+    ".agents/skills/rw-workflow/SKILL.md",
+    ".agents/skills/rw-literature/SKILL.md",
+    ".agents/skills/rw-validation/SKILL.md",
+    ".agents/skills/rw-writing/SKILL.md",
+    ".agents/skills/rw-review/SKILL.md",
+    ".agents/skills/_rw-runtime/core/skill-bridge.md",
+    ".agents/skills/_rw-runtime/core/protocol.md",
+    ".agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md",
+    ".agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md",
+    ".agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md",
+    ".agents/skills/_rw-runtime/profiles/governance.md",
+    ".agents/skills/_rw-runtime/design/catalog.json",
+    ".agents/skills/_rw-runtime/core/schemas/source.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+    ".agents/skills/_rw-runtime/core/schemas/method-binding.schema.json"
+  ],
+  "profiles": {
+    "medicine-health": "0.1",
+    "evidence-synthesis": "0.1",
+    "empirical-quantitative": "0.1"
+  },
+  "external_guidance_urls": "not opened; offline scope"
+}

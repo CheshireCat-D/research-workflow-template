@@ -1,0 +1,10 @@
+{
+  "methods": ["A", "U_wr", "C_mix", "C_strata"],
+  "alpha_C_mix": "1/2",
+  "repetitions": 1000,
+  "primary_endpoint": "exact MSE over sampling randomness, not Monte Carlo MSE",
+  "stratum_rule": "history_scores > 0 versus zero",
+  "allocation": "half budget to positive-history stratum, capacity adjusted, at least one each",
+  "budget_rule": "every read of a current position including repeats costs one",
+  "tuning": "fixed before full run; C_strata revision follows minimum-check rejection of C_mix dominance"
+}

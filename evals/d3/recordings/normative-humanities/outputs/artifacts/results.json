@@ -1,0 +1,116 @@
+{
+  "input": "inputs/facts.csv",
+  "input_sha256": "cf20c52fc973fd7de2646fbd9ca599089ed2f029a03f22150236282838e42916",
+  "mode": "deterministic arithmetic only",
+  "configuration": {
+    "seed": null,
+    "seed_reason": "No random operations; no statistical experiment",
+    "dependencies": "Python standard library",
+    "scope": "Point estimates copied from F1-F5; no uncertainty model"
+  },
+  "visits": {
+    "before": 500,
+    "pilot": 610,
+    "difference": 110,
+    "percent_change": 22.0,
+    "unit": "entries, not independent residents",
+    "causal_identification": false
+  },
+  "preference": {
+    "surveyed_existing_users": 20,
+    "prefer_phone": 16,
+    "percent_in_this_sample": 80.0,
+    "population_or_mandatory_identity_support": "not identified"
+  },
+  "budget": {
+    "available": 2000,
+    "estimates": {
+      "paid_extended_hours": 1600,
+      "reservation_system": 600,
+      "telephone_assistance": 500
+    },
+    "combinations": [
+      {
+        "items": [],
+        "cost": 0,
+        "within_budget": true,
+        "unallocated_or_shortfall": 2000
+      },
+      {
+        "items": [
+          "paid_extended_hours"
+        ],
+        "cost": 1600,
+        "within_budget": true,
+        "unallocated_or_shortfall": 400
+      },
+      {
+        "items": [
+          "reservation_system"
+        ],
+        "cost": 600,
+        "within_budget": true,
+        "unallocated_or_shortfall": 1400
+      },
+      {
+        "items": [
+          "telephone_assistance"
+        ],
+        "cost": 500,
+        "within_budget": true,
+        "unallocated_or_shortfall": 1500
+      },
+      {
+        "items": [
+          "paid_extended_hours",
+          "reservation_system"
+        ],
+        "cost": 2200,
+        "within_budget": false,
+        "unallocated_or_shortfall": -200
+      },
+      {
+        "items": [
+          "paid_extended_hours",
+          "telephone_assistance"
+        ],
+        "cost": 2100,
+        "within_budget": false,
+        "unallocated_or_shortfall": -100
+      },
+      {
+        "items": [
+          "reservation_system",
+          "telephone_assistance"
+        ],
+        "cost": 1100,
+        "within_budget": true,
+        "unallocated_or_shortfall": 900
+      },
+      {
+        "items": [
+          "paid_extended_hours",
+          "reservation_system",
+          "telephone_assistance"
+        ],
+        "cost": 2700,
+        "within_budget": false,
+        "unallocated_or_shortfall": -700
+      }
+    ],
+    "anonymous_count_increment": "reported already covered by existing duty; other new work not priced",
+    "normative_weights": "not assigned",
+    "optimal_allocation": "not inferred"
+  },
+  "incidents": {
+    "queue_conflicts": 2,
+    "emergencies": 0,
+    "comparative_effect": "not identified",
+    "zero_risk_claim": "not supported"
+  },
+  "capacity": {
+    "seats": 40,
+    "staff_suggested_limit": 40,
+    "independent_safety_assessment": "not provided"
+  }
+}

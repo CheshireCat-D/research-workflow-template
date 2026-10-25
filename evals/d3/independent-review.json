@@ -1,0 +1,1849 @@
+{
+  "format_version": 1,
+  "kind": "condensed-summary-of-actual-independent-agent-reviews",
+  "status": "executed-and-reviewed",
+  "assembled_utc": "2026-10-25T10:32:14.533618+00:00",
+  "scope": "Sixteen actually executed synthetic offline tasks. This summary binds independently reviewed frozen artifacts to the normalized public recordings. It does not turn reference/freshness checks, deterministic repeats or agent agreement into scientific, professional, clinical, legal, ethical or publication certification.",
+  "review_independence": {
+    "reviewers": "Four separate reviewer agents, distinct from forward executors; medicine, qualitative authorship, agriculture trace and engineering cost/safety extensions separately rechecked.",
+    "excluded_inputs": "Private graders/expected answers were not supplied to forward executors or reviewers. Each content review was against its assigned raw request, sources, code and actual outputs.",
+    "context_disclosures": [
+      "Group2 initially read two generic personal-package workflow/physics skills before the raw/template-only restriction was clarified; no expected answers, personal modifications/copies or deliverable dependency resulted.",
+      "Some initial read-only inventories displayed unrelated filenames without reading those cases.",
+      "Historical logging gaps, overwritten initial capture, connector failures and interim stale-state checks remain disclosed in actual run/review receipts; no complete lossless original transcript is claimed.",
+      "Review sources and frozen inventories are retained privately by identifier and hash. They are not public links. Public task inputs, authored outputs and deterministic replay plans remain in evals/d3.",
+      "Group4 withdrew the initial characterization of sibling raw execution logs as a task violation: that arrangement complied with the original wrapper. The separately authorized project-local trace addition is a portability/publication enhancement. The initial report is preserved alongside its correction."
+    ]
+  },
+  "binding_summary": {
+    "case_count": 16,
+    "raw_input_files_checked": 70,
+    "published_output_files_checked": 193,
+    "path_only_normalized_files": 7,
+    "runtime_resource_files_checked": 1,
+    "unmatched_files": 0,
+    "scope": "All16 current recordings bind to independent reviewer frozen identities, including separately reviewed revisions and the engineering cost/safety extension. One actually read governance runtime resource is deduplicated from authored outputs and bound by its independent reviewer/source identity."
+  },
+  "review_sources": {
+    "review-group1/report": {
+      "identifier": "private-evidence:review-group1/review.json",
+      "sha256": "17763cb289a4869696598556a79f55b49da50e3cf4b7db4426a7f0e39ba0319e",
+      "kind": "independent-agent-review-report",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group2/report": {
+      "identifier": "private-evidence:review-group2/review.json",
+      "sha256": "14d2402e80f91b8eb39d3aa40b69cbf7ac5bd1c2b809a27b837b202be4cf9fd4",
+      "kind": "independent-agent-review-report",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group3/report": {
+      "identifier": "private-evidence:review-group3/review.json",
+      "sha256": "758ca7887bfa5f6fc6d96f2e93782054c0b77919770491cc2e10c388ab07e5a5",
+      "kind": "independent-agent-review-report",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group4/report": {
+      "identifier": "private-evidence:review-group4/review.json",
+      "sha256": "f6b0b96790de46a2c1791eb5a6f9578cd11ac2213904c885be99974266c114d0",
+      "kind": "independent-agent-review-report",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group1/recheck/report": {
+      "identifier": "private-evidence:review-group1/recheck/review.json",
+      "sha256": "e1dd5a67b4aff1efdd3dfefc42d2f2362823fb9201a321d03ab977bac759cf31",
+      "kind": "independent-agent-revision-recheck-report",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group1/innovation-candidates/report": {
+      "identifier": "private-evidence:review-group1/innovation-candidates/review.json",
+      "sha256": "206adf9987ac8535a385a7915bce8dacdb46d0b775f1289967247b57352a0459",
+      "kind": "case-review-detail",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group1/medicine/report": {
+      "identifier": "private-evidence:review-group1/medicine/review.json",
+      "sha256": "d60f21c383350036139dbaa326aac8e8bc231892809d5cb1f3b100d945c43f98",
+      "kind": "case-review-detail",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group1/agriculture/report": {
+      "identifier": "private-evidence:review-group1/agriculture/review.json",
+      "sha256": "79420e24b14c5bd46cd6cb406c21d0eb33e9cbd1c03e7ac41166158a267b9c10",
+      "kind": "case-review-detail",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group1/qualitative-social/report": {
+      "identifier": "private-evidence:review-group1/qualitative-social/review.json",
+      "sha256": "f4abfca862b9aeb941cf68078160e55df06bc5b7fc75cb18b9ee12163d2b78f5",
+      "kind": "case-review-detail",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group1/recheck/medicine/report": {
+      "identifier": "private-evidence:review-group1/recheck/medicine/review.json",
+      "sha256": "321e4bee54b1f9b6da76ae41ef43b885de4f59ec111936a957c65a9d55d0ba3b",
+      "kind": "case-revision-recheck-detail",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group1/recheck/qualitative-social/report": {
+      "identifier": "private-evidence:review-group1/recheck/qualitative-social/review.json",
+      "sha256": "dccef4c6386aa4cde7688f7cee1901e9b64c82eb2b88fd40a1def72802971030",
+      "kind": "case-revision-recheck-detail",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group1/input-manifest-before.json": {
+      "identifier": "private-evidence:review-group1/input-manifest-before.json",
+      "sha256": "6fc7d2c724f3e0117ea9132d7dfb7c6e9cad80a01df16df684245180bf7dde63",
+      "kind": "reviewer-frozen-input-and-project-inventory",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group1/recheck/input-manifest-before.json": {
+      "identifier": "private-evidence:review-group1/recheck/input-manifest-before.json",
+      "sha256": "3d7c8cd1b310549dff27dce0f9949a47a5a9003d931c6066f4bb18ea8c5f4030",
+      "kind": "reviewer-frozen-input-and-project-inventory",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group2/before.json": {
+      "identifier": "private-evidence:review-group2/before.json",
+      "sha256": "3b1f439c35d276ce86929b2c07954785c681fabd4bfe347f0210b0b07c0ef81f",
+      "kind": "reviewer-frozen-input-and-project-inventory",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group3/sha-before.json": {
+      "identifier": "private-evidence:review-group3/sha-before.json",
+      "sha256": "49cf97910212f5430b7b927fea4421e8f101ca9424593f0fd49bae537c4b18f2",
+      "kind": "reviewer-frozen-input-and-project-inventory",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group4/snapshot-before.json": {
+      "identifier": "private-evidence:review-group4/snapshot-before.json",
+      "sha256": "1b85d8d5975eac4f75a6e8eecdad5a0f873db47b222689f42df56a066e55fc8c",
+      "kind": "reviewer-frozen-input-and-project-inventory",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group4/snapshot-agriculture-before.json": {
+      "identifier": "private-evidence:review-group4/snapshot-agriculture-before.json",
+      "sha256": "9fb4b12ce0c42237fd357ee5698a3c0085a56fffefb097932a51f096172d0ca0",
+      "kind": "reviewer-frozen-input-and-project-inventory",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group4/recheck/report": {
+      "identifier": "private-evidence:review-group4/recheck/review.json",
+      "sha256": "e6c2a2f3d3b26ae8f96f4fdabacb0c5da01b174ce6a74aa011f86279af601d57",
+      "kind": "independent-agent-trace-revision-recheck-report",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group4/recheck/snapshot-before.json": {
+      "identifier": "private-evidence:review-group4/recheck/snapshot-before.json",
+      "sha256": "ae16f032901be59b1460dce2c47d73c8d29bf26c3948e573dbd5bf9b625ab0ba",
+      "kind": "reviewer-frozen-input-and-project-inventory",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group4/recheck/output-manifest.json": {
+      "identifier": "private-evidence:review-group4/recheck/output-manifest.json",
+      "sha256": "2356b581d62111f094fd6acfe85267c02f8cf4cebf75036d2c1c90071fb8993b",
+      "kind": "independent-review-output-inventory",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group4/cost-recheck/report": {
+      "identifier": "private-evidence:review-group4/cost-recheck/review.json",
+      "sha256": "81a55608ce4635ec1d7191555983996680ad748e13a23d69ec0507555c3c8cbf",
+      "kind": "independent-agent-cost-and-safety-supplement-recheck-report",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group4/cost-recheck/snapshot-before.json": {
+      "identifier": "private-evidence:review-group4/cost-recheck/snapshot-before.json",
+      "sha256": "52d37ea37d87157a2fdb81f2e2c764a352ff7bf7b22312f5da581cd9f7f20191",
+      "kind": "reviewer-frozen-input-and-project-inventory",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    },
+    "review-group4/cost-recheck/output-manifest.json": {
+      "identifier": "private-evidence:review-group4/cost-recheck/output-manifest.json",
+      "sha256": "863d780b13b00ba8d0e569540608c5d735619db18affce44034df6a06bf3853b",
+      "kind": "independent-review-output-inventory",
+      "availability": "Retained private audit receipt, not a public file or resolvable URL."
+    }
+  },
+  "cases": {
+    "innovation-candidates": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "candidates.json": "47946e550b2a378e8bf746a164f0b3fd076c4bbb22846a8384c5a7dab5f822f3",
+        "draft.md": "cd6272f1290af01360075bd30fbd505ae960845257c6f6fd53193ed4cb1e03dd",
+        "known-results.md": "66961beb99fe5ded0e883bf58049076179bb940f0422e16d05f514a0b1ae9447",
+        "task.md": "63b177660e605dd93795e3e39fc5fc3c340129217b525de03e95656aa8b2b4b7",
+        "workloads.json": "8c8ac93ffadc4c2e8172d28616ebf4241adf25a55fd3f6ccc5dda9dac861dea9"
+      },
+      "published_output_sha256": {
+        "README.md": "ba89ef03cf38bc999e483d56ccd11e6949dcc869160e9847dc7a0e73eed7ab3a",
+        "artifacts/config.json": "3e49aa45bb90405add2f048f16d0eb6ffb80fa228fd768240e8a94c8f7d6fa7e",
+        "artifacts/minimum-check.json": "73a13d1196f626d678ebfc2046680ea2b22453e0d0ce8e482507f7aa7c6d0c9e",
+        "artifacts/minimum_check.py": "046cf61ea3f0bf2ec48e15b72a0c58e409195b9001a3a5c64016369fa7c3b02c",
+        "artifacts/results.json": "44e5dc30a0b637bb7efbce50b10964dfb5137f412e1d7151d94333ca73c34cdd",
+        "artifacts/run.py": "486a0c2f66b2efb8abebe259659f6e7d2fdecc711cb06b93b5835213c53908b0",
+        "artifacts/verify_relocation.py": "6d9074e7c38eab39c55e4d97472b6ce8d432cafd812a39588005d2d74fb5491e",
+        "manuscript/report.md": "387f83f2f1d19eb5bd8c7e8bae336a36b0b745b3c3a41d8e6cbcaee3b6273c5d",
+        "notes/candidates.md": "ceaa1f387ff2b5cc607e611f78f6d49edefb9511c877c6fd0205a45de8978dbd",
+        "notes/issue.md": "7d8fdf7d1b5dde2675cd6436f97365fd242fb645549dfd14bb09a0e280c77b49",
+        "notes/mechanism.md": "39eb839a18da4576cc6cb8b8795465148f56f78ff25b492755c4d71ad2bd74f6",
+        "notes/results.md": "3e98b984cdf6ad766dd09411cf7db8408a2d4ad0950fd0c4cbfd84b78f55efdf",
+        "review.md": "1dd4345e37ea34174e0787d85ba83c474cd494f56eab58ccec67d92d43713ef6"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group1/input-manifest-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "README.md": "ba89ef03cf38bc999e483d56ccd11e6949dcc869160e9847dc7a0e73eed7ab3a",
+          "artifacts/config.json": "3e49aa45bb90405add2f048f16d0eb6ffb80fa228fd768240e8a94c8f7d6fa7e",
+          "artifacts/minimum-check.json": "73a13d1196f626d678ebfc2046680ea2b22453e0d0ce8e482507f7aa7c6d0c9e",
+          "artifacts/minimum_check.py": "046cf61ea3f0bf2ec48e15b72a0c58e409195b9001a3a5c64016369fa7c3b02c",
+          "artifacts/results.json": "44e5dc30a0b637bb7efbce50b10964dfb5137f412e1d7151d94333ca73c34cdd",
+          "artifacts/run.py": "486a0c2f66b2efb8abebe259659f6e7d2fdecc711cb06b93b5835213c53908b0",
+          "artifacts/verify_relocation.py": "6d9074e7c38eab39c55e4d97472b6ce8d432cafd812a39588005d2d74fb5491e",
+          "manuscript/report.md": "387f83f2f1d19eb5bd8c7e8bae336a36b0b745b3c3a41d8e6cbcaee3b6273c5d",
+          "notes/candidates.md": "ceaa1f387ff2b5cc607e611f78f6d49edefb9511c877c6fd0205a45de8978dbd",
+          "notes/issue.md": "7d8fdf7d1b5dde2675cd6436f97365fd242fb645549dfd14bb09a0e280c77b49",
+          "notes/mechanism.md": "39eb839a18da4576cc6cb8b8795465148f56f78ff25b492755c4d71ad2bd74f6",
+          "notes/results.md": "3e98b984cdf6ad766dd09411cf7db8408a2d4ad0950fd0c4cbfd84b78f55efdf",
+          "review.md": "1dd4345e37ea34174e0787d85ba83c474cd494f56eab58ccec67d92d43713ef6"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group1/report",
+        "review-group1/innovation-candidates/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": [
+        "Concrete C_mix formula, pre-read fixed probabilities, fallback when all history scores vanish, charged repeated reads and explicit assumptions are present. The new-hotspot check genuinely falsifies uniform dominance, and C_strata is an explicit implemented revision rather than a future-work placeholder.",
+        "All three candidates receive pro/con reasons: A overlaps supplied K1; B is infeasible under unavailable data/GPU resources without fabricated experiments; C loses its dominance claim after the counterexample. Global novelty is left unknown.",
+        "All six workloads, two budgets and four methods are retained (48 rows). Independent exact rational reconstruction agrees for every MSE and zero bias. Code inspection keeps full-current truth/moment work in the driver; estimator plans depend only on old/history/budget/RNG. Duplicates are charged; the next over-budget read raises.",
+        "Exact moments, full sample-set enumeration for A/strata, single-draw enumeration for with-replacement estimators and seeded implementation repetitions are distinguished. The finite checks do not establish future-data robustness or global novelty."
+      ],
+      "limits": [
+        "Review is confined to supplied offline synthetic materials and code inspected; no network, uploads or installs occurred.",
+        "Replays ran only in this review output copy, each subprocess timeout 10 seconds and stdlib only; original projects received read-only core check/resume.",
+        "Original command receipts support actual steps but disclosed missing or overwritten historical log output cannot be reconstructed by this audit.",
+        "Independent finite computation and source-reading are not a universal proof or human professional certification."
+      ]
+    },
+    "medicine": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "participants.csv": "7425759c933802a0b8de14546dcff60759dbf173349b472aa1b39405d0bac04e",
+        "draft.md": "e2e1de6169bed3151f3f9edf69c09918603636511e971b8f10ede112b720f7d6",
+        "allocation.csv": "324c4bff4275915c90383e89e96d137820de0b23151470efcbaf7cd648f6dbe4",
+        "task.md": "bf0e263c42e74c9700b75bd921e5d2b9de100a3bb4895a5024a402b96fec896b",
+        "protocol.md": "c753a279f1fb5726fc2225c2f12e883a0cf0b42e87a799608aa058f315a88dd5"
+      },
+      "published_output_sha256": {
+        "artifacts/pairs.csv": "e157cc47f041644001615e1a8de1c9ea8b5a52ede10a3157393e6bef8f58de7c",
+        "artifacts/results.json": "4919400f3a86f2990cf9598dacbf850100bf9d7d12920735cd33590a9fad7116",
+        "artifacts/run.py": "d8b95d3f5b94b154d275be8815df81fb7dc5767a2d8181c449e3e0ed97f66dfb",
+        "artifacts/sites.csv": "c0a9cfcd6053fb70368e42257f7f7e736957b0023ab05b30ea7e9c4090b61be0",
+        "artifacts/verify.py": "8af473a52b79d41bbc78d08ea468813494f66072369a4d87052d74a047c56104",
+        "artifacts/verify_revision.py": "e39d192d0ef832b40262c695190651d05d59e3890511c19aeb9d41c1443e42bb",
+        "checks/analysis-verification.json": "8a509ac35689fbeca89d029c500be2927c8157562967ded6d68d0039547865fa",
+        "checks/input-copy-integrity.json": "6c799dacb7c3114f3ac2019a87083318aa1809e53e8b538eeec7ff1db552c9f6",
+        "checks/revision-verification.json": "bede8e0d7b259ca3d8205f2fb52b569b2175a9f55e0791796e6c800472f3ac7f",
+        "manuscript/report.md": "5e115a09a4da4ef343624b9bd504a3293c021f827b597d2b3c05745c128dfdab",
+        "notes/analysis.md": "03d591fb3d4917db47ae44859a6f6c249f6d4361a6aefccb1bdcd09ae236006b",
+        "notes/issue.md": "2e727b426556935a53f24638290bd5fb8fd158d32594db17650eec182bca703c",
+        "review.md": "cb12e2b552c1a1e8b472320ff9d1ee7ec6199e8e64883a39ef844e5f36accbe0"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group1/recheck/input-manifest-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "artifacts/pairs.csv": "e157cc47f041644001615e1a8de1c9ea8b5a52ede10a3157393e6bef8f58de7c",
+          "artifacts/results.json": "4919400f3a86f2990cf9598dacbf850100bf9d7d12920735cd33590a9fad7116",
+          "artifacts/run.py": "d8b95d3f5b94b154d275be8815df81fb7dc5767a2d8181c449e3e0ed97f66dfb",
+          "artifacts/sites.csv": "c0a9cfcd6053fb70368e42257f7f7e736957b0023ab05b30ea7e9c4090b61be0",
+          "artifacts/verify.py": "8af473a52b79d41bbc78d08ea468813494f66072369a4d87052d74a047c56104",
+          "artifacts/verify_revision.py": "e39d192d0ef832b40262c695190651d05d59e3890511c19aeb9d41c1443e42bb",
+          "checks/analysis-verification.json": "c024397685fa9673fe3d906be3b5bf74c754c6b7db140f2d68871a8a4ef52f91",
+          "checks/input-copy-integrity.json": "6c799dacb7c3114f3ac2019a87083318aa1809e53e8b538eeec7ff1db552c9f6",
+          "checks/revision-verification.json": "ece4d4e439ad165747cda88bd3239d1def7a2c3b9f1c26340eddecf8add121e1",
+          "manuscript/report.md": "5e115a09a4da4ef343624b9bd504a3293c021f827b597d2b3c05745c128dfdab",
+          "notes/analysis.md": "03d591fb3d4917db47ae44859a6f6c249f6d4361a6aefccb1bdcd09ae236006b",
+          "notes/issue.md": "2e727b426556935a53f24638290bd5fb8fd158d32594db17650eec182bca703c",
+          "review.md": "cb12e2b552c1a1e8b472320ff9d1ee7ec6199e8e64883a39ef844e5f36accbe0"
+        },
+        "path_only_normalizations": [
+          {
+            "path": "checks/analysis-verification.json",
+            "original_sha256": "c024397685fa9673fe3d906be3b5bf74c754c6b7db140f2d68871a8a4ef52f91",
+            "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+          },
+          {
+            "path": "checks/revision-verification.json",
+            "original_sha256": "ece4d4e439ad165747cda88bd3239d1def7a2c3b9f1c26340eddecf8add121e1",
+            "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+          }
+        ],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group1/report",
+        "review-group1/medicine/report",
+        "review-group1/recheck/report",
+        "review-group1/recheck/medicine/report"
+      ],
+      "findings": [],
+      "prior_findings": [
+        {
+          "id": "MED-01",
+          "initial_status": "partial",
+          "status": "resolved-in-separately-reviewed-v2",
+          "resolution": "Corrected auxiliary day7 pooled prose matches independent exact raw-record calculation: program total120, n32, mean3.75; control total200, n32, mean6.25; contrast−2.50. The main script, official results, site/pair CSVs and manuscript retain their initial audit SHA identities. Day30+0.5/p=.75 and exploratory day7−2/p=.125 independently reproduce.",
+          "original_partial_review_preserved": true,
+          "v1_history_prefix_preserved": true,
+          "registry_revisions": {
+            "v1": 47,
+            "v2": 60
+          }
+        }
+      ],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": [
+        "Independently reconstruct all eight site means and four pair differences from the supplied64 participants. Primary day30 pair differences[1,-1,2,0] yield equal-site effect+0.5 and sharp-null exact two-sided p=.75 over16 pair-level assignments.",
+        "Exploratory post-unblinding day7 equal-site effect remains-2 with exact p=.125. Corrected auxiliary participant-pooled prose is program120/32=3.75, control200/32=6.25, contrast-2.50.",
+        "The v2 notes and file bindings were separately rechecked; the main script/results/site-pair CSVs and manuscript retain their initial-review identities. Preserved v1 history and explicit expected-version replacements were inspected."
+      ],
+      "limits": [
+        "Only eight synthetic sites, four independent matched-pair coins and 64 listed participants.",
+        "Exact p values test the sharp no-effect null; they are not arbitrary-heterogeneity average-effect tests, narrow effect intervals, clinical efficacy/safety certification or external-community inference.",
+        "Day7 remains post-unblinding exploratory/diagnostic; correcting auxiliary pooled arithmetic does not change its endpoint status.",
+        "Historical initial logging/capture limits remain disclosed."
+      ]
+    },
+    "agriculture": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "plants.csv": "fcceeb53090e131439750551f90c2632353df33f8242275987a295a295001270",
+        "draft.md": "4f078aad562726d8545eb095668e7c5815847cf37c579f67d5c5a8dbf496c870",
+        "task.md": "a23489cdfda0651f7fb707ddbd7dcaa415f544a4b18c2462af339f1b1f356f8b",
+        "design.md": "e25357bca66f4d45f2fae36218e4885e618a496de10f2fcf9db8f94cf4bae32a",
+        "plots.csv": "d983c6390aa3734ce15661ba7b988b3ce7fb32a65387052633a27ecb45bf8a78"
+      },
+      "published_output_sha256": {
+        "artifacts/block-contrasts.csv": "7b0e5c2698005e1f5fc91dce6f51bf134e4098b9bd72f0f843ae79c2453b7e78",
+        "artifacts/input-sha256.json": "603dba13a9e225e8c2fa6c7b48241231846f6e90a07167f6b5baaa200661d037",
+        "artifacts/plot-means.csv": "c86eedfffe2f59626b064eb6b4689e9bc84249144d468935349d1e04442a647d",
+        "artifacts/randomization-distribution.csv": "cfbe3f8fd8552f736fdb3e73d8ac5d291156f1101f804748ccf3edd36b17d090",
+        "artifacts/results.json": "8bead7cb03829f574d798358afab453f76b1fbbcf8588aea75f8b1fa645f5265",
+        "artifacts/run.py": "2e3b00004dcea44affd40bda9cbbc4c06b688c637ba73aea514925134cea3076",
+        "checks/numerical-qa.json": "21f3c7439558e8769dc704d5744eab127a5c7e4c45be87c5d587a4556bd64072",
+        "manuscript/report.md": "50af5d3c374e355c51f3872d54771e5fef9b04b25ea9b89affe9386f43b59cda",
+        "notes/analysis.md": "d62e27b9a0727aed6e573a5859464c061fc8ee03363e431832e6c75681f53ab8",
+        "notes/followup-design.md": "c77ba7c6ccffa4ea452461f23c9dbff466a0a080735a8d8394985d7eb5a62b84",
+        "notes/issue.md": "586eeb87c0d05991112795c13bc16b0743d7ad30ded0cedc91e18e5f4b9edf62",
+        "review.md": "05f3de4e5de405663a54c11e20148cdb021d31c38af6e071706e5bc7f79974eb"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group1/input-manifest-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "artifacts/block-contrasts.csv": "7b0e5c2698005e1f5fc91dce6f51bf134e4098b9bd72f0f843ae79c2453b7e78",
+          "artifacts/input-sha256.json": "603dba13a9e225e8c2fa6c7b48241231846f6e90a07167f6b5baaa200661d037",
+          "artifacts/plot-means.csv": "c86eedfffe2f59626b064eb6b4689e9bc84249144d468935349d1e04442a647d",
+          "artifacts/randomization-distribution.csv": "cfbe3f8fd8552f736fdb3e73d8ac5d291156f1101f804748ccf3edd36b17d090",
+          "artifacts/results.json": "8bead7cb03829f574d798358afab453f76b1fbbcf8588aea75f8b1fa645f5265",
+          "artifacts/run.py": "2e3b00004dcea44affd40bda9cbbc4c06b688c637ba73aea514925134cea3076",
+          "checks/numerical-qa.json": "21f3c7439558e8769dc704d5744eab127a5c7e4c45be87c5d587a4556bd64072",
+          "manuscript/report.md": "50af5d3c374e355c51f3872d54771e5fef9b04b25ea9b89affe9386f43b59cda",
+          "notes/analysis.md": "d62e27b9a0727aed6e573a5859464c061fc8ee03363e431832e6c75681f53ab8",
+          "notes/followup-design.md": "c77ba7c6ccffa4ea452461f23c9dbff466a0a080735a8d8394985d7eb5a62b84",
+          "notes/issue.md": "586eeb87c0d05991112795c13bc16b0743d7ad30ded0cedc91e18e5f4b9edf62",
+          "review.md": "05f3de4e5de405663a54c11e20148cdb021d31c38af6e071706e5bc7f79974eb"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group1/report",
+        "review-group1/agriculture/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": [
+        "The original four within-block coins allocate eight plots. The 48 central plants are subsamples; the target is the equal-block average plot-level endpoint at the one supplied site-season.",
+        "Independent raw plot means are control [10,16,20,26] and mulch [12,18,20,26]; differences [2,2,0,0], effect 1 g/plant, observed means 18 and 19, ratio 5.5556%, mean block percentage 8.125%. No 30% result is supported.",
+        "The exact legal 16-assignment sharp-null distribution is {-1:4,0:8,1:4}, giving two-sided p=.5. The block SE .5773503 and t3 reference interval are explicitly conditional on extra modeling; independent Simpson integration of the t3 density confirms the critical probability and reference p.",
+        "B4 is retained in the primary target; omitting it is exploratory and changes the target. The three-block effect 4/3 and exact p=.5 reproduce. The pseudopair p=.000488 is clearly labeled invalid; the original draft p=.003 is not falsely declared reproduced.",
+        "Actual connector failures are retained: copied-runtime source discovery exit2, current-source comparison exit1, then installed-only integrity success. These are tooling/version observations, not numerical or field-science failures. The original log also discloses an initial capture gap and a first-registration raw-output collision; a fully lossless original transcript cannot be claimed."
+      ],
+      "limits": [
+        "Review is confined to supplied offline synthetic materials and code inspected; no network, uploads or installs occurred.",
+        "Replays ran only in this review output copy, each subprocess timeout 10 seconds and stdlib only; original projects received read-only core check/resume.",
+        "Original command receipts support actual steps but disclosed missing or overwritten historical log output cannot be reconstructed by this audit.",
+        "Independent finite computation and source-reading are not a universal proof or human professional certification."
+      ]
+    },
+    "qualitative-social": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "sampling-and-reflexivity.md": "e0ab6f339a3a7329c26d15b987bf233d0202bbe98a7e7145b413d3eac004d76a",
+        "draft.md": "1a3d204fb2c3d99d8be278f4abf554e12015e4ee3d864bd0c441a4ddfbed12e4",
+        "interviews.md": "771de76ba19277b0bbaa816ea7b27fc09417fd3574d76c985d6cde9d2a9c952c",
+        "task.md": "f573eff001967746bfe4184801bef7bf24037d06471c5c53d2ebb516da7c91fc"
+      },
+      "published_output_sha256": {
+        "analysis/codebook.md": "8f6533e88fa594f48e34a78a21b63e4d38d17ecf91a8c3d1dd9a57a0719074f3",
+        "analysis/coding.json": "542df527283e2681f22356842877610e86d6dca641d5d615f38d5ec2eddf5cf0",
+        "analysis/interpretive-memo.md": "f20710f8f7a8bc9575444fb28f9a46b4808ffd956921b8635142e01190afdb43",
+        "analysis/traceability.md": "3d230b6d8949b251256832ff2b7dced304a966e4fd9a8aaa4ebc026a003582ef",
+        "artifacts/results.json": "86ddd6e6a298dfcc57db51fb82be8358f9c1370f35cfab29f11dff3ef6951d0c",
+        "artifacts/run.py": "73377d8ead79fd2c5d08291aafd23d5cb4f4ca0a1bf62c60342d1862d153fa28",
+        "manuscript/report.md": "3f5c1e944fc71c9efb63acf7d174e4f2e8ac8d3ddce91339b33da93c67a3e6d3",
+        "notes/issue.md": "954edc7c34599d7290e3e8f5343c8dfa3689244a0e1e2b4fd5806df9b519e007",
+        "review.md": "c51d3134a7e61513c4c2d2a6a71c5847e1d71179cc1ddb31e6636fd3bf08a6a0"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group1/recheck/input-manifest-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "analysis/codebook.md": "8f6533e88fa594f48e34a78a21b63e4d38d17ecf91a8c3d1dd9a57a0719074f3",
+          "analysis/coding.json": "542df527283e2681f22356842877610e86d6dca641d5d615f38d5ec2eddf5cf0",
+          "analysis/interpretive-memo.md": "f20710f8f7a8bc9575444fb28f9a46b4808ffd956921b8635142e01190afdb43",
+          "analysis/traceability.md": "3d230b6d8949b251256832ff2b7dced304a966e4fd9a8aaa4ebc026a003582ef",
+          "artifacts/results.json": "86ddd6e6a298dfcc57db51fb82be8358f9c1370f35cfab29f11dff3ef6951d0c",
+          "artifacts/run.py": "73377d8ead79fd2c5d08291aafd23d5cb4f4ca0a1bf62c60342d1862d153fa28",
+          "manuscript/report.md": "3f5c1e944fc71c9efb63acf7d174e4f2e8ac8d3ddce91339b33da93c67a3e6d3",
+          "notes/issue.md": "954edc7c34599d7290e3e8f5343c8dfa3689244a0e1e2b4fd5806df9b519e007",
+          "review.md": "c51d3134a7e61513c4c2d2a6a71c5847e1d71179cc1ddb31e6636fd3bf08a6a0"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group1/report",
+        "review-group1/qualitative-social/report",
+        "review-group1/recheck/report",
+        "review-group1/recheck/qualitative-social/report"
+      ],
+      "findings": [],
+      "prior_findings": [
+        {
+          "id": "QUAL-01",
+          "initial_status": "partial",
+          "status": "resolved-in-separately-reviewed-v2",
+          "resolution": "Current coding metadata, executable reconstruction descriptions, manuscript, excerpt provenance and assessment.reviewer fields identify Codex AI agent and explicitly disclaim independent human coding/validation. Old labels remain in preserved history/archive or explanations of the correction. All18 complete entries, literal quotes/locations, codebook/table rows, statement texts and relation targets/types/rationales are unchanged.",
+          "original_partial_review_preserved": true,
+          "v1_history_prefix_preserved": true,
+          "registry_revisions": {
+            "v1": 70,
+            "v2": 136
+          }
+        }
+      ],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": [
+        "Independently locate and preserve all18 excerpt IDs, literal quotes and locations; verify codebook/theme definitions and consequential counter-materials including skilled older users, timetable exclusion, unpaid work, telephone-first records, emergency benefits and sustained privacy boundaries.",
+        "Separately inspect v2 coding metadata, executable descriptions, manuscript, excerpt provenance and reviewer fields: authorship now states AI-agent interpretation and explicitly disclaims independent human coding/validation.",
+        "All18 complete coded entries, literal quotation/location content, codebook/table rows, statement texts and relation targets/types/rationales remain unchanged. Prior labels survive only in the retained v1 history or explicit correction explanations."
+      ],
+      "limits": [
+        "Only selected synthetic excerpts and a contextual memo exist; no recordings/full transcripts, member feedback, saturation record or backend/timing verification.",
+        "Coding and thematic judgment were performed by an AI agent; this separate agent recheck is not human coder validation or intercoder reliability.",
+        "The interpretation remains bounded to the supplied text; no resident prevalence, causal effects, universal trust or nationwide generalization follows.",
+        "Original path/logging failures and revision interim-stale-state failure remain historical records."
+      ]
+    },
+    "engineering": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "requirements.md": "7fd59a0a9e57f21e6ded87a57f46992d7a328cedd0d7022ebb1d7a062f652641",
+        "draft.md": "8cb11f616eafa9b1e9ef0d32b33fccb2a51931f5706d8183a4b1c56ff2d1dc22",
+        "gate.py": "17983001703c099357e4962d55b249685dc911f81ae375e2d883c00b02be8d5b",
+        "task.md": "183a64b259eea7fa2b594d0139328bbd3abe3b2e3459e93a2de8cc0c59d23312",
+        "demo-traffic.csv": "37ca3df1634bece67981b9c7319c5ce106fc121674884de5370596f1db0bdd1c"
+      },
+      "published_output_sha256": {
+        "README.md": "ebed5ad249ad6eee4a86a99a38b7a405fc1ba9bbd4066dc7d061e949eff8d157",
+        "artifacts/gate.py": "7b846bfee5423763d72138f1ba6147710bda8267102a150b705a20ec25ba54e2",
+        "artifacts/logs/fixed.json": "6c681eb76eb417a787e501458ea55edeb8cf5b22c22adc5aa64c025a0be3c75f",
+        "artifacts/logs/fixed.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifacts/logs/fixed.stdout.log": "a85c58c570d3a9f197a2342a9f7393aa122c95c77f933693573fd5083dfe334d",
+        "artifacts/logs/prototype.json": "324a0160cc7f484ca4ac27097cb613d5f9d0c4f035fec32fda312001a2178f31",
+        "artifacts/logs/prototype.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifacts/logs/prototype.stdout.log": "f85a6ca94e897920d5cffbb9c942fabb00aa954a28a12314686ba48815435bb2",
+        "artifacts/logs/relocated.json": "18ab406932b427283d209c5fbca3a6c93655139132304b75b64dda1468c0cb4d",
+        "artifacts/logs/relocated.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifacts/logs/relocated.stdout.log": "379eb326bbcd026173f883454a5add16fb666d709b249d4ab14348937bcd5815",
+        "artifacts/prototype-results.json": "37e8222ccb77f796160dadfa20183a425c5a901b01edbb200245b364b222b883",
+        "artifacts/results.json": "0621b14b77e7a0ed19cd5b0f2d790205f89b27adc7b22d5d6eeee42fee1fe5b8",
+        "artifacts/run.py": "db3fa81e8f5e88fb8d0a7954a5144926815b5526a787ae1e258ebec3ed0c61e2",
+        "checks/input-integrity.json": "10c6c1381c0d70e9d26e37e5d3ec2be84cdee24bf1f0b980ccbdd9aebe90ec32",
+        "manuscript/report.md": "7f1762b9d40f750424d5471608ace37ae495e91a10d2c966490fe4a24bd14f61",
+        "notes/issue.md": "e9baa7c58610bedff5ad7e8d9425370af7e0356d9c95289995f6b5373133c7d8",
+        "notes/work.md": "e92becb58a9b3deba25b44d6720a182b47e737c32121a914b41b95618cf21ddd",
+        "review.md": "0768cfd48b36cf1e327d1d81c2b29239022c5b52a169c63ea4554b9e0f0d1651"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group2/before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "README.md": "ebed5ad249ad6eee4a86a99a38b7a405fc1ba9bbd4066dc7d061e949eff8d157",
+          "artifacts/gate.py": "7b846bfee5423763d72138f1ba6147710bda8267102a150b705a20ec25ba54e2",
+          "artifacts/logs/fixed.json": "6c681eb76eb417a787e501458ea55edeb8cf5b22c22adc5aa64c025a0be3c75f",
+          "artifacts/logs/fixed.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "artifacts/logs/fixed.stdout.log": "a85c58c570d3a9f197a2342a9f7393aa122c95c77f933693573fd5083dfe334d",
+          "artifacts/logs/prototype.json": "324a0160cc7f484ca4ac27097cb613d5f9d0c4f035fec32fda312001a2178f31",
+          "artifacts/logs/prototype.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "artifacts/logs/prototype.stdout.log": "f85a6ca94e897920d5cffbb9c942fabb00aa954a28a12314686ba48815435bb2",
+          "artifacts/logs/relocated.json": "18ab406932b427283d209c5fbca3a6c93655139132304b75b64dda1468c0cb4d",
+          "artifacts/logs/relocated.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "artifacts/logs/relocated.stdout.log": "379eb326bbcd026173f883454a5add16fb666d709b249d4ab14348937bcd5815",
+          "artifacts/prototype-results.json": "18c1fa6dd9a9e12e76f22375dc1da1dc4ba97e33da5ddddb02ce6748a1c524ec",
+          "artifacts/results.json": "0621b14b77e7a0ed19cd5b0f2d790205f89b27adc7b22d5d6eeee42fee1fe5b8",
+          "artifacts/run.py": "db3fa81e8f5e88fb8d0a7954a5144926815b5526a787ae1e258ebec3ed0c61e2",
+          "checks/input-integrity.json": "10c6c1381c0d70e9d26e37e5d3ec2be84cdee24bf1f0b980ccbdd9aebe90ec32",
+          "manuscript/report.md": "7f1762b9d40f750424d5471608ace37ae495e91a10d2c966490fe4a24bd14f61",
+          "notes/issue.md": "e9baa7c58610bedff5ad7e8d9425370af7e0356d9c95289995f6b5373133c7d8",
+          "notes/work.md": "e92becb58a9b3deba25b44d6720a182b47e737c32121a914b41b95618cf21ddd",
+          "review.md": "0768cfd48b36cf1e327d1d81c2b29239022c5b52a169c63ea4554b9e0f0d1651"
+        },
+        "path_only_normalizations": [
+          {
+            "path": "artifacts/prototype-results.json",
+            "original_sha256": "18c1fa6dd9a9e12e76f22375dc1da1dc4ba97e33da5ddddb02ce6748a1c524ec",
+            "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+          }
+        ],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group2/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": {
+        "interleaved_calls": 20000,
+        "trials": 200,
+        "seed": 90311,
+        "invalid_state_checks": 800,
+        "extra_boundaries": [
+          "negative zero",
+          "smallest positive float window",
+          "maximum finite float",
+          "large integers"
+        ],
+        "result": "all matched literal-interval history reference"
+      },
+      "scope_observations": [
+        "Finite single-thread memory verification; production, security, performance and distributed behavior are outside the requested and asserted scope."
+      ],
+      "isolated_producer_replay": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.06563624999762396,
+        "matched_substantive_results": true
+      },
+      "limits": [
+        "Finite source/data audit does not establish correctness outside supplied contracts/model regimes.",
+        "No new experimental/clinical/legal/safety/ethics validation, literature coverage or novelty determination.",
+        "Core check/resume validate references/freshness and explicitly leave scientific validity unassessed.",
+        "No personal/global filesystem immutability claim; no global writes were performed."
+      ],
+      "reviewer_context_disclosure": "Before the template-only restriction was clarified, this reviewer read generic research-workflow and physics-validation instructions in the personal package. No expected answers were supplied, no personal content was copied or modified, and the deliverable has no dependency on that package. Subsequent review used the assigned raw materials and this template only."
+    },
+    "physics": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "model.md": "ad50aa7711a1d3535a4a6ba5ddf65afc08680cc0fc547c1b7a32d2398dd2b2d3",
+        "calibration.json": "ef70a4abb7325b73b8b4f8a85b6bc9559a838ff9e4b9f2063f317b38a2e363d2",
+        "pilot.csv": "ef93675ee9087975c0ac75c7bf6987562bab5b4142aec0ca0acf027ad228925f",
+        "task.md": "06ae6919b65b555cc4307ec3ee1555d68d3092e282f4de17ea2fb492bc55dab6",
+        "observations.csv": "1bf2f66e7b6c4ce62fb7b4e618f96575a5daac7a443f2ddc114222863de42618"
+      },
+      "published_output_sha256": {
+        "artifacts/README.md": "dbdcb81355c5b8288db060306858ad51d0999731be61b9188d4d865b908c61f5",
+        "artifacts/results.json": "ffa859b72011401c954626b3f9fc87725f7b95212e087ef06361bc4af10c1ef9",
+        "artifacts/run-metadata.json": "e37179ed4459998e3282eaa14f837f67a1b1b807daa510fb053f9f5f8b014f2a",
+        "artifacts/run.py": "7e730dbd7f74f89859ced351c5650b2d14e3b8d4d3e05bac64e7271a32a3eb94",
+        "manuscript/report.md": "e345cbd8dee99c37f8397e6623b95efade9d2ab293588115a3ab7cd64fa8d74e",
+        "notes/derivation.md": "64921b5e31527b316e273d14e8356d4305f05716e0296f1baa072fb0a052c438",
+        "notes/input-manifest.json": "ab7d96b6673a5b7a0f114ebb7ad8a5be22758e8a6faeb85dd63aa16bed612245",
+        "notes/issue.md": "9d172061dadf408e847f8fd79bdd728b0be7927782d90363e410396319119cc3",
+        "notes/numerical-results.md": "702f1eebdc6d9a718ce1ae1a55af06cc51e221c7fa66b6f37e28f39edabdb064",
+        "notes/reproducibility.json": "836818850033ee73aac70734fe6eff9d2accf595855ef86da0f73a5e2475038a",
+        "review.md": "99567519303e26a6d2a60c6ce2dab9ae92acfbec2846c2ebf0844f1edeb5e7fb"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group2/before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "artifacts/README.md": "dbdcb81355c5b8288db060306858ad51d0999731be61b9188d4d865b908c61f5",
+          "artifacts/results.json": "ffa859b72011401c954626b3f9fc87725f7b95212e087ef06361bc4af10c1ef9",
+          "artifacts/run-metadata.json": "e37179ed4459998e3282eaa14f837f67a1b1b807daa510fb053f9f5f8b014f2a",
+          "artifacts/run.py": "7e730dbd7f74f89859ced351c5650b2d14e3b8d4d3e05bac64e7271a32a3eb94",
+          "manuscript/report.md": "e345cbd8dee99c37f8397e6623b95efade9d2ab293588115a3ab7cd64fa8d74e",
+          "notes/derivation.md": "64921b5e31527b316e273d14e8356d4305f05716e0296f1baa072fb0a052c438",
+          "notes/input-manifest.json": "ab7d96b6673a5b7a0f114ebb7ad8a5be22758e8a6faeb85dd63aa16bed612245",
+          "notes/issue.md": "9d172061dadf408e847f8fd79bdd728b0be7927782d90363e410396319119cc3",
+          "notes/numerical-results.md": "702f1eebdc6d9a718ce1ae1a55af06cc51e221c7fa66b6f37e28f39edabdb064",
+          "notes/reproducibility.json": "836818850033ee73aac70734fe6eff9d2accf595855ef86da0f73a5e2475038a",
+          "review.md": "99567519303e26a6d2a60c6ce2dab9ae92acfbec2846c2ebf0844f1edeb5e7fb"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group2/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": {
+        "independent_predictions": [
+          {
+            "time_s": 0,
+            "temperature": 80.0,
+            "u_finite_difference": 0.19999999999953388,
+            "rk4_temperature": 80.0
+          },
+          {
+            "time_s": 1,
+            "temperature": 78.93072835856478,
+            "u_finite_difference": 0.20721822262028958,
+            "rk4_temperature": 78.93072835856485
+          },
+          {
+            "time_s": 5,
+            "temperature": 74.86122057394181,
+            "u_finite_difference": 0.3599531177340979,
+            "rk4_temperature": 74.8612205739419
+          },
+          {
+            "time_s": 20,
+            "temperature": 62.197282485924525,
+            "u_finite_difference": 0.9476878080744755,
+            "rk4_temperature": 62.19728248592457
+          },
+          {
+            "time_s": 50,
+            "temperature": 45.86548982325789,
+            "u_finite_difference": 1.3514392967957558,
+            "rk4_temperature": 45.86548982325789
+          },
+          {
+            "time_s": 100,
+            "temperature": 33.308105294777086,
+            "u_finite_difference": 1.1394511087728734,
+            "rk4_temperature": 33.30810529477716
+          }
+        ],
+        "max_covariance_error": 1.6084555909401388e-10,
+        "nominal_H": 10.0,
+        "independent_u_H": 0.5385164807134504,
+        "limits": {
+          "initial": 80,
+          "heater_off_equilibrium": 20,
+          "powered_equilibrium": 26,
+          "H0_t100": 92,
+          "initial_slope": -1.08
+        },
+        "analytic_review": "Energy units W; H/C has s^-1; integrating factor gives stated unique solution; H->0 at fixed t differs from long-time limit."
+      },
+      "scope_observations": [
+        "One-model first-order local input uncertainty excludes structural model error, time uncertainty, environmental drift and real equipment validity."
+      ],
+      "isolated_producer_replay": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.030497291998472065,
+        "matched_substantive_results": true
+      },
+      "limits": [
+        "Finite source/data audit does not establish correctness outside supplied contracts/model regimes.",
+        "No new experimental/clinical/legal/safety/ethics validation, literature coverage or novelty determination.",
+        "Core check/resume validate references/freshness and explicitly leave scientific validity unassessed.",
+        "No personal/global filesystem immutability claim; no global writes were performed."
+      ],
+      "reviewer_context_disclosure": "Before the template-only restriction was clarified, this reviewer read generic research-workflow and physics-validation instructions in the personal package. No expected answers were supplied, no personal content was copied or modified, and the deliverable has no dependency on that package. Subsequent review used the assigned raw materials and this template only."
+    },
+    "normative-humanities": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "draft.md": "b7f405c23e2fa9f15af9a37150b09346fe5a0b927d89075778675afaabe40fea",
+        "task.md": "6d63545778c98a7b426d29803d813df63bd0b0b003a5a4164b3581d1fb9cb031",
+        "source-packet.md": "473ef444bc2d7e61805b594c38012540417c0b5ee78a5970a04c2cce709135d4",
+        "facts.csv": "cf20c52fc973fd7de2646fbd9ca599089ed2f029a03f22150236282838e42916"
+      },
+      "published_output_sha256": {
+        "artifacts/results.json": "a825c39622f36299e795781eeb2f03e9be5fc33a79b4a3465336ff5f916e35bf",
+        "artifacts/run.py": "14a2617c002e1f145a5837de599ad0b1bef758179995a3afb5cf7c4c900909ee",
+        "manuscript/report.md": "38bbc1acab9f328b5db594c7c499675c27f2b66a012fdaba22f12bc54df1f605",
+        "notes/argument.md": "92102adebfbbaa7d7e47746590d6ee5e9d4647e0ce0e7cb27be9bb50b21ecd8b",
+        "notes/issue.md": "bc301f86c70ece2796e1302424ea4ee155434510b110cfcea3c970b50298af7e",
+        "notes/propositions.md": "2d2912ebf3f53dc31863d58330a13759f7b776ac54dcdcfea68d209a0ffe3d56",
+        "review.md": "fd1510ebed33ba62ef70b846578194811b3f2d2485c63884a2be7f16efe20954"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group2/before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "artifacts/results.json": "a825c39622f36299e795781eeb2f03e9be5fc33a79b4a3465336ff5f916e35bf",
+          "artifacts/run.py": "14a2617c002e1f145a5837de599ad0b1bef758179995a3afb5cf7c4c900909ee",
+          "manuscript/report.md": "38bbc1acab9f328b5db594c7c499675c27f2b66a012fdaba22f12bc54df1f605",
+          "notes/argument.md": "92102adebfbbaa7d7e47746590d6ee5e9d4647e0ce0e7cb27be9bb50b21ecd8b",
+          "notes/issue.md": "bc301f86c70ece2796e1302424ea4ee155434510b110cfcea3c970b50298af7e",
+          "notes/propositions.md": "2d2912ebf3f53dc31863d58330a13759f7b776ac54dcdcfea68d209a0ffe3d56",
+          "review.md": "fd1510ebed33ba62ef70b846578194811b3f2d2485c63884a2be7f16efe20954"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group2/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": {
+        "entry_change_percent": 22,
+        "sample_preference_percent": 80,
+        "budget_combinations": [
+          {
+            "indices": [],
+            "cost": 0,
+            "feasible": true
+          },
+          {
+            "indices": [
+              0
+            ],
+            "cost": 1600,
+            "feasible": true
+          },
+          {
+            "indices": [
+              1
+            ],
+            "cost": 600,
+            "feasible": true
+          },
+          {
+            "indices": [
+              2
+            ],
+            "cost": 500,
+            "feasible": true
+          },
+          {
+            "indices": [
+              0,
+              1
+            ],
+            "cost": 2200,
+            "feasible": false
+          },
+          {
+            "indices": [
+              0,
+              2
+            ],
+            "cost": 2100,
+            "feasible": false
+          },
+          {
+            "indices": [
+              1,
+              2
+            ],
+            "cost": 1100,
+            "feasible": true
+          },
+          {
+            "indices": [
+              0,
+              1,
+              2
+            ],
+            "cost": 2700,
+            "feasible": false
+          }
+        ],
+        "logical_checks": [
+          "Empirical, value, bridge and conclusion propositions distinguished at notes/propositions.md:7-26.",
+          "A facts-compatible countermodel at notes/argument.md:9 defeats entailment from increased entries to compulsory identity.",
+          "The adopted necessity/minimum-burden principle is explicit and defeasible at argument.md:19.",
+          "Assisted reservation rival targets waiting-related exclusion at argument.md:27-31.",
+          "Staff cost and conditional extension/1100 rival budget choices remain unresolved empirically at argument.md:35-39."
+        ]
+      },
+      "scope_observations": [
+        "The defended default and conditional 1600 extension budget are explicit defeasible normative commitments; waiting/access and staffing facts remain unknown."
+      ],
+      "isolated_producer_replay": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.018544916998507688,
+        "matched_substantive_results": true
+      },
+      "limits": [
+        "Finite source/data audit does not establish correctness outside supplied contracts/model regimes.",
+        "No new experimental/clinical/legal/safety/ethics validation, literature coverage or novelty determination.",
+        "Core check/resume validate references/freshness and explicitly leave scientific validity unassessed.",
+        "No personal/global filesystem immutability claim; no global writes were performed."
+      ],
+      "reviewer_context_disclosure": "Before the template-only restriction was clarified, this reviewer read generic research-workflow and physics-validation instructions in the personal package. No expected answers were supplied, no personal content was copied or modified, and the deliverable has no dependency on that package. Subsequent review used the assigned raw materials and this template only."
+    },
+    "evidence-synthesis": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "search-export.csv": "b675c239989e8da470b9cd480d6c99214b863bd7e6d9448b045505cf0871b5ab",
+        "scope.md": "7847205e8882fe12618681a8cb782b7d76d266e328439541448458d211fcb607",
+        "full-extracts.md": "2c3cdf018c0991b7a199f40efb673a12b527a0d6f63b52c2c4d882224d9047c5",
+        "task.md": "141e8ec12d6c43c62a3cc743d284e30aa2da6577689aebc2f122bfbcc1c18cff",
+        "abstracts.md": "90d43d0d04bea1fe022c69ce2947fc025f313f933a94f4070beb2a24b1dc4e92"
+      },
+      "published_output_sha256": {
+        "artifacts/results.json": "df813101ebad7036f88032f7e7af1ec44bdb4827208319e2e861e96a2d4a0852",
+        "artifacts/run-config.json": "03b2f3b3010ff70281c4ff5fb9b50cb63feb8be1b226dac7cf6c3e2cfdeff19a",
+        "artifacts/run.py": "0f0e3fbd31f221cf074b83de198c68e70c72ff884e040961b067ac22cfa3c143",
+        "manuscript/report.md": "f0d8d4794a5452a12fd28df16bc9e8647cdcbb635f35552ad54d43d7f1ab41d6",
+        "notes/extraction.csv": "f6c7edabcf14a0eb142a5bbc12278631396938f9f5b4293af52ae3a80a44a933",
+        "notes/guidance-read.json": "b331f280d3e0d952fee031d5b841bfec1bbc77ad1347e398f5591e88b2e3f837",
+        "notes/issue.md": "13686c7dca86055f901e5f103c89e2638f2b1ab322991f8735bfbace1bff05e7",
+        "notes/numerical-results.md": "c3e2221265cc7394920c70c545b2fea08bdcf458359b26425d1a24601a399eb9",
+        "notes/risk-of-bias.md": "ef9409f447503e64fbe234f67ab2bdd9ebb67ba03c7c08557903ab4927de26c3",
+        "notes/screening.csv": "040af28015dc5d82951094ac8212bb60438987814f14e4263e95dc4b30cf7feb",
+        "notes/synthesis.md": "9e1d6803c84eeaa508040b87c658c85b553d6270cbd88e8b0d3efab907ef0f5d",
+        "review.md": "39a4f3181c3d0b60532a43f8a5ed420204de8e9544482ee9cacfd564df9fe4c1"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group2/before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "artifacts/results.json": "df813101ebad7036f88032f7e7af1ec44bdb4827208319e2e861e96a2d4a0852",
+          "artifacts/run-config.json": "03b2f3b3010ff70281c4ff5fb9b50cb63feb8be1b226dac7cf6c3e2cfdeff19a",
+          "artifacts/run.py": "0f0e3fbd31f221cf074b83de198c68e70c72ff884e040961b067ac22cfa3c143",
+          "manuscript/report.md": "f0d8d4794a5452a12fd28df16bc9e8647cdcbb635f35552ad54d43d7f1ab41d6",
+          "notes/extraction.csv": "f6c7edabcf14a0eb142a5bbc12278631396938f9f5b4293af52ae3a80a44a933",
+          "notes/guidance-read.json": "b331f280d3e0d952fee031d5b841bfec1bbc77ad1347e398f5591e88b2e3f837",
+          "notes/issue.md": "13686c7dca86055f901e5f103c89e2638f2b1ab322991f8735bfbace1bff05e7",
+          "notes/numerical-results.md": "c3e2221265cc7394920c70c545b2fea08bdcf458359b26425d1a24601a399eb9",
+          "notes/risk-of-bias.md": "ef9409f447503e64fbe234f67ab2bdd9ebb67ba03c7c08557903ab4927de26c3",
+          "notes/screening.csv": "040af28015dc5d82951094ac8212bb60438987814f14e4263e95dc4b30cf7feb",
+          "notes/synthesis.md": "9e1d6803c84eeaa508040b87c658c85b553d6270cbd88e8b0d3efab907ef0f5d",
+          "review.md": "39a4f3181c3d0b60532a43f8a5ed420204de8e9544482ee9cacfd564df9fe4c1"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group2/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": {
+        "counts_transcribed_from_raw_excerpts": {
+          "H1": [
+            40,
+            50,
+            35,
+            50
+          ],
+          "H4_complete_case": [
+            50,
+            62,
+            45,
+            65
+          ],
+          "H5": [
+            28,
+            40,
+            20,
+            40
+          ]
+        },
+        "effects": {
+          "H1": {
+            "RR": 1.142857142857143,
+            "RD": 0.10000000000000009,
+            "RR_CI": [
+              0.9095570995642049,
+              1.4359983002775671
+            ],
+            "variance": 0.01357142857142857
+          },
+          "H4_complete_case": {
+            "RR": 1.1648745519713262,
+            "RD": 0.11414392059553347,
+            "RR_CI": [
+              0.9510315242456567,
+              1.426800991593518
+            ],
+            "variance": 0.010708574579542322
+          },
+          "H5": {
+            "RR": 1.4,
+            "RD": 0.19999999999999996,
+            "RR_CI": [
+              0.9666428976212497,
+              2.027636063765885
+            ],
+            "variance": 0.035714285714285705
+          }
+        },
+        "H4_count_assignments": 54,
+        "H4_bounds": {
+          "RD": [
+            0.0,
+            0.18571428571428572
+          ],
+          "RR": [
+            1.0,
+            1.288888888888889
+          ]
+        },
+        "secondary_complete_case_pool": {
+          "RR": 1.1874362195668717,
+          "CI": [
+            1.0319650818157329,
+            1.3663299276157423
+          ]
+        },
+        "flow": {
+          "records": 7,
+          "reports": 7,
+          "all_studies": 6,
+          "included_reports": 4,
+          "included_studies": 3,
+          "randomized": 320,
+          "observed": 307
+        },
+        "scope_review": "R02 same H1 participants; R03 child; R04 nonrandom; R07 no outcomes. H4 62/65 observed denominators differ from 70/70 randomized. Pool labelled exploratory; no exhaustive-search or full-text claim."
+      },
+      "scope_observations": [
+        "The secondary complete-case pool relies on a common-effect comparison and mixes observed-outcome with full randomized populations; these limits and adverse missingness sensitivity are disclosed."
+      ],
+      "isolated_producer_replay": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.021867166997253662,
+        "matched_substantive_results": true
+      },
+      "limits": [
+        "Finite source/data audit does not establish correctness outside supplied contracts/model regimes.",
+        "No new experimental/clinical/legal/safety/ethics validation, literature coverage or novelty determination.",
+        "Core check/resume validate references/freshness and explicitly leave scientific validity unassessed.",
+        "No personal/global filesystem immutability claim; no global writes were performed."
+      ],
+      "reviewer_context_disclosure": "Before the template-only restriction was clarified, this reviewer read generic research-workflow and physics-validation instructions in the personal package. No expected answers were supplied, no personal content was copied or modified, and the deliverable has no dependency on that package. Subsequent review used the assigned raw materials and this template only."
+    },
+    "prediction-leakage": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "model-card.md": "c1727d89e86e1a9deb78941168c65261d386f17170c7b4531354c8b4bde945e7",
+        "draft.md": "390100d72521547eeb93ecabe0b06c778fec3ef03e78c86abe6f15f940a67a8c",
+        "task.md": "f272a2fffb5dbc5dd9b6ebfc56e2b79ecf720c89a35bdf8989e9cc16628b873f",
+        "visits.csv": "5073b7f979716a2bd62ed05f856d363210d266c6a95aef570f3f3d9eedb3d56f"
+      },
+      "published_output_sha256": {
+        "PROJECT.md": "0f99aaba98e4bafda8be5812aea1dc92ab75868763a67d1fe0c17d8f435147e1",
+        "artifacts/config.json": "6f0e47b0afb4d85409b62d98399985619acf27b6a52270222c09a7783eedabf2",
+        "artifacts/record_predictions.csv": "4194eb98db8922566f0ddc0076e75f48a1812e18b861a16c503476dc3b54bbe8",
+        "artifacts/results.json": "6d2676817947ecfd8d67fe438a790d8aad7ec03126c8d798935d6679c6a0f6b0",
+        "artifacts/run.py": "18cea2933f68483fd3f2dd79f5e65c19b52fd992ddec1916483f54da36125a2b",
+        "artifacts/subject_predictions.csv": "168475923688a20b195e3de0e56570c1453d65a8efd4bc01f3358ae7b19e9a94",
+        "manuscript/report.md": "9b89f273c14b9a0093236f9341971fb16a0c6d931a45d86541893d4aaede816b",
+        "notes/arithmetic-check.json": "52f1b744d53986c458ab758454e6c21db3a7ad4ffc4f523ac46391990cdde468",
+        "notes/issue.md": "3564baeff62d9b2cacce3b2bf0b7a8fc80df004f04c59a71fe32364e22a46b2b",
+        "notes/work-performed.md": "d9b41a402a2439ab05437ebe338f90d0bda31c13856752b38db0c0e98af5eab5",
+        "review.md": "1f61d1a682f0cd7ceeb20beed4fb273a121fc133548490c4076aa5f04e90897f"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group2/before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "PROJECT.md": "0f99aaba98e4bafda8be5812aea1dc92ab75868763a67d1fe0c17d8f435147e1",
+          "artifacts/config.json": "6f0e47b0afb4d85409b62d98399985619acf27b6a52270222c09a7783eedabf2",
+          "artifacts/record_predictions.csv": "4194eb98db8922566f0ddc0076e75f48a1812e18b861a16c503476dc3b54bbe8",
+          "artifacts/results.json": "6d2676817947ecfd8d67fe438a790d8aad7ec03126c8d798935d6679c6a0f6b0",
+          "artifacts/run.py": "18cea2933f68483fd3f2dd79f5e65c19b52fd992ddec1916483f54da36125a2b",
+          "artifacts/subject_predictions.csv": "168475923688a20b195e3de0e56570c1453d65a8efd4bc01f3358ae7b19e9a94",
+          "manuscript/report.md": "9b89f273c14b9a0093236f9341971fb16a0c6d931a45d86541893d4aaede816b",
+          "notes/arithmetic-check.json": "52f1b744d53986c458ab758454e6c21db3a7ad4ffc4f523ac46391990cdde468",
+          "notes/issue.md": "3564baeff62d9b2cacce3b2bf0b7a8fc80df004f04c59a71fe32364e22a46b2b",
+          "notes/work-performed.md": "d9b41a402a2439ab05437ebe338f90d0bda31c13856752b38db0c0e98af5eab5",
+          "review.md": "1f61d1a682f0cd7ceeb20beed4fb273a121fc133548490c4076aa5f04e90897f"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group2/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": {
+        "R": {
+          "train_subjects": 12,
+          "test_subjects": 12,
+          "overlap": 12,
+          "accuracy": 1.0,
+          "brier": 0.0,
+          "bin_counts": [
+            6,
+            0,
+            0,
+            6
+          ],
+          "predictions": {
+            "P01": 0.0,
+            "P02": 1.0,
+            "P03": 0.0,
+            "P04": 1.0,
+            "P05": 0.0,
+            "P06": 1.0,
+            "P07": 0.0,
+            "P08": 1.0,
+            "P09": 0.0,
+            "P10": 1.0,
+            "P11": 0.0,
+            "P12": 1.0
+          }
+        },
+        "S": {
+          "train_subjects": 8,
+          "test_subjects": 4,
+          "overlap": 0,
+          "accuracy": 0.5,
+          "brier": 0.25,
+          "bin_counts": [
+            0,
+            0,
+            4,
+            0
+          ],
+          "predictions": {
+            "P09": 0.5,
+            "P10": 0.5,
+            "P11": 0.5,
+            "P12": 0.5
+          }
+        }
+      },
+      "scope_observations": [
+        "Four synthetic new subjects do not establish population calibration, clinical benefit, temporal validity or external-site deployment; the report explicitly confines the evidence."
+      ],
+      "isolated_producer_replay": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.035908999998355284,
+        "matched_substantive_results": true
+      },
+      "limits": [
+        "Finite source/data audit does not establish correctness outside supplied contracts/model regimes.",
+        "No new experimental/clinical/legal/safety/ethics validation, literature coverage or novelty determination.",
+        "Core check/resume validate references/freshness and explicitly leave scientific validity unassessed.",
+        "No personal/global filesystem immutability claim; no global writes were performed."
+      ],
+      "reviewer_context_disclosure": "Before the template-only restriction was clarified, this reviewer read generic research-workflow and physics-validation instructions in the personal package. No expected answers were supplied, no personal content was copied or modified, and the deliverable has no dependency on that package. Subsequent review used the assigned raw materials and this template only."
+    },
+    "observational-policy": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "medical-strata.csv": "0602ea3992895ca9f8136eb70f3cf1ca37642ca49998fe2d4c38e1f046f08cdb",
+        "design-note.md": "e37d081e6dab5d85a0a0fd974f8a08853b682d6e8a57518f503716a364653651",
+        "task.md": "cb8d4ff92425b105ab2fee1ebecf396934888e568371dd2c0f80b47ddd48324c",
+        "policy-periods.csv": "bb72ca02327e4a0e83e22c12eafe80e088cde6f170d705b527255bd4563ac0fc"
+      },
+      "published_output_sha256": {
+        "PROJECT.md": "92b9f2b7024c693d81d69472b50b4d1fa2aa5f7fa36164f1fcfd3c4de5c66e56",
+        "artifacts/README.md": "24cfdc825ba8e7688ac007884ea89a978aca36773503a47123743b98fb4e848e",
+        "artifacts/results.json": "c9240c965ae919834fe0511e005eb7a83fe9f1a64c33e6abe947a43bc9edaf28",
+        "artifacts/run.py": "f1a0d4aa3edbf3a9cfc0a5c3a728426e1067cb6ce35b640809b53af225c687d8",
+        "artifacts/verification.json": "363f4a928316ba7ce093a90fb28919dbe93dfa1c01af752637fbddd98b904b3f",
+        "manuscript/report.md": "57b37f21ef61ff315bb02c85a69d031276c1cd632d32e4fabb819fcf964cf249",
+        "notes/issue.md": "3d7fcb5317a41a0a851173201cb0ba556ab5aa8e9fe49ae35f63287ea68d864d",
+        "notes/source-audit.md": "153de0134ae353c12597ce343d1ef6011b69e1d5f580472f1f5f9475d3335154",
+        "notes/working.md": "fd7f2594fc075a81dd2ad23108ec257843dc109c1cf2bd169456a1ab2f673530",
+        "review.md": "76da5b946012fd8fedffc0c734f6382dc2fad3d2ef244c2b5fd03070ef4b5535"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group3/sha-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "PROJECT.md": "92b9f2b7024c693d81d69472b50b4d1fa2aa5f7fa36164f1fcfd3c4de5c66e56",
+          "artifacts/README.md": "24cfdc825ba8e7688ac007884ea89a978aca36773503a47123743b98fb4e848e",
+          "artifacts/results.json": "c9240c965ae919834fe0511e005eb7a83fe9f1a64c33e6abe947a43bc9edaf28",
+          "artifacts/run.py": "f1a0d4aa3edbf3a9cfc0a5c3a728426e1067cb6ce35b640809b53af225c687d8",
+          "artifacts/verification.json": "80421bfea9417359f08340131e458a06843c3480594b8da44a4cc5ccfbb40572",
+          "manuscript/report.md": "57b37f21ef61ff315bb02c85a69d031276c1cd632d32e4fabb819fcf964cf249",
+          "notes/issue.md": "3d7fcb5317a41a0a851173201cb0ba556ab5aa8e9fe49ae35f63287ea68d864d",
+          "notes/source-audit.md": "153de0134ae353c12597ce343d1ef6011b69e1d5f580472f1f5f9475d3335154",
+          "notes/working.md": "fd7f2594fc075a81dd2ad23108ec257843dc109c1cf2bd169456a1ab2f673530",
+          "review.md": "76da5b946012fd8fedffc0c734f6382dc2fad3d2ef244c2b5fd03070ef4b5535"
+        },
+        "path_only_normalizations": [
+          {
+            "path": "artifacts/verification.json",
+            "original_sha256": "80421bfea9417359f08340131e458a06843c3480594b8da44a4cc5ccfbb40572",
+            "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+          }
+        ],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group3/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": [
+        "Independently aggregate four raw medical cells using exact rational arithmetic. Group counts120/120 and events84/48; crude RD3/10; pooled mild/severe weights1/2; standardized risks1/2 and3/5; RD-1/10.",
+        "Independently difference raw town-years:2023-24 A12/B11/DID1;2022-23 A5/B8/DID-3;2023-25 A16/B17/DID-1;2024-25 A4/B6/DID-2.",
+        "Audit treatment/measurement/parallel-trend claims against design-note M1-M2/P1-P3; no causal upgrade found."
+      ],
+      "scope_observations": [
+        "Crude RD +30pp reverses to -10pp within both severity strata and after pooled standardization. The report retains descriptive estimands and does not upgrade negative standardized association to harm. Nonrandom treatment, unmeasured prognosis and differential index construction remain explicit identification limits.",
+        "2025 endpoint uses fixed2023 baseline and a two-year window; +1,-3,-1 contrasts are index points. No individual denominator, sampling variance or significance claim is invented."
+      ],
+      "limits": [
+        "Agent-step review; no independent human/domain expert certification.",
+        "Original task sources are deliberately synthetic; conclusions do not certify real clinical, policy, historical, privacy or publication validity."
+      ],
+      "isolated_producer_replay": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.04151958299917169,
+        "science_results_equal": true
+      }
+    },
+    "mixed-evidence": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "interviews.md": "b1d387349f847d9cbf61440bf7c081eeba1235772be42f5774ce5e6d7a29d8a5",
+        "quantitative.csv": "602febedb2ee9e5ec396f656e6c21e8be0ab3d8258c2357e7e446387dfd881ac",
+        "design-and-draft.md": "ba2a6c2a64ca350d3fd88893e06bf704058d3e893e207a156422097e90f40bf4",
+        "task.md": "8e998f43210cdc518a88b39b002a6e9e2fdff449a1240e8e34faebc6c5868e8d"
+      },
+      "published_output_sha256": {
+        "artifacts/config.json": "429de404878e10450e76ebe6a0ab3062664263ea81809fb4a3882f201c8f78ec",
+        "artifacts/environment.json": "04bf5c555aaff2ff2152e26fe14bb33743973bbe3527a33e2ccfe4b357047c94",
+        "artifacts/failures.json": "eaa6153f6193791d03a04bbac30347df940c35dfdf8d55879bd3b4f155ee97d4",
+        "artifacts/input-fingerprints.json": "20baad0c4640c67ac7aec6f027e1b85acbddef37cafdcc1a427f4c3207497cc6",
+        "artifacts/results.json": "bf73da7de32590ac62b33aae1c6c7eefc4d8da87d008c5f044eae988d92d5d22",
+        "artifacts/run.py": "a976bd41e7a5f977810dc9d2abb27be29e51c4edb6f5e067d37ee7b82dda25ca",
+        "manuscript/report.md": "622ad41a9b31ac617a27f9aacdebbef77b880e826b7ca3eefe98ca99f89d91f9",
+        "notes/audit.md": "a99dc189f1b502e16860c5dcf44b93137e9b4ab6fe2a8c944cb9cb91f673f9a9",
+        "notes/connection-check.md": "7f67bd79345ec53c9bcee3b5f6ff4f69569044e0a1e34a1463c5dd87a07b93e2",
+        "notes/issue.md": "a139d11f3b95fd788fb7256393e836ec410f2ec52ee89285c72a340b7cf2c19a",
+        "review.md": "a483c132f3a4845b3a3242b0c3bd17acd65b13bb7717086463efcfd4bf2746cc"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group3/sha-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "artifacts/config.json": "429de404878e10450e76ebe6a0ab3062664263ea81809fb4a3882f201c8f78ec",
+          "artifacts/environment.json": "04bf5c555aaff2ff2152e26fe14bb33743973bbe3527a33e2ccfe4b357047c94",
+          "artifacts/failures.json": "eaa6153f6193791d03a04bbac30347df940c35dfdf8d55879bd3b4f155ee97d4",
+          "artifacts/input-fingerprints.json": "20baad0c4640c67ac7aec6f027e1b85acbddef37cafdcc1a427f4c3207497cc6",
+          "artifacts/results.json": "bf73da7de32590ac62b33aae1c6c7eefc4d8da87d008c5f044eae988d92d5d22",
+          "artifacts/run.py": "a976bd41e7a5f977810dc9d2abb27be29e51c4edb6f5e067d37ee7b82dda25ca",
+          "manuscript/report.md": "622ad41a9b31ac617a27f9aacdebbef77b880e826b7ca3eefe98ca99f89d91f9",
+          "notes/audit.md": "a99dc189f1b502e16860c5dcf44b93137e9b4ab6fe2a8c944cb9cb91f673f9a9",
+          "notes/connection-check.md": "7f67bd79345ec53c9bcee3b5f6ff4f69569044e0a1e34a1463c5dd87a07b93e2",
+          "notes/issue.md": "a139d11f3b95fd788fb7256393e836ec410f2ec52ee89285c72a340b7cf2c19a",
+          "review.md": "a483c132f3a4845b3a3242b0c3bd17acd65b13bb7717086463efcfd4bf2746cc"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group3/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": [
+        "Independently reconstructTP32,FN8,FP8,TN52; sensitivity4/5,specificity13/15,PPV4/5,accuracy21/25.",
+        "Independently enumerate all four-cell paired tables compatible with n8,pre2,post5; exactly three tables. Completion difference3/8=37.5pp.",
+        "Read each I1-I4 source/permission/context and track claims into audit, report and registry; preserve nonparticipants and negative cases."
+      ],
+      "scope_observations": [
+        "Confusion matrix and metrics are label-agreement outcomes atA/2023. B/2024 completion margins have denominator8; recruitment remains13=8+5. Three compatible paired tables are mathematical possibilities and not observations.",
+        "I4 is paraphrased without its raw quotation, I3 is attributed paraphrase, I2 overlaps with P2. Negative and limiting material is preserved. No common cross-site causal mechanism is claimed; next connection check is tool/output identity and the response-to-completion chain.",
+        "SConnection retains a positively worded candidate proposition, marked assessment=insufficient and scoped as a proposed mechanism. Its use=included must be read with that assessment; the actual report lines11-13 explicitly denies establishment. This is not counted as an erroneous established finding."
+      ],
+      "limits": [
+        "Agent-step review; no independent human/domain expert certification.",
+        "Original task sources are deliberately synthetic; conclusions do not certify real clinical, policy, historical, privacy or publication validity."
+      ],
+      "isolated_producer_replay": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.029091333999531344,
+        "science_results_equal": true
+      }
+    },
+    "digital-humanities": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "corpus.json": "585bf0eeb94f133b6416567bbde04b2a19545759b4b20c0c37adc1ef4949eda3",
+        "draft.md": "007329c9251dfd6aaf6c0cb4f223b66c7fae377b50f572e8ba0b02cfb3934333",
+        "editorial-note.md": "76f6d0f12d70b4642ef8e9a0302879e446bec1b592d15ca21151b5710ddafaa2",
+        "task.md": "1216d4a2a61caefc798325490b1ba35448e6acffb003b63230b2a2a29bc75d76"
+      },
+      "published_output_sha256": {
+        "artifacts/input-fingerprints.json": "94939093c96921519095917c1e2e94521c630cd820c62ce1122a2c611be50c2e",
+        "artifacts/results.json": "f153f0c201a905e4981bd561cdd4a6371c54435f92c1d756ebafd7d33461cf92",
+        "artifacts/run.py": "1604aecdbdd9d798f336b4a2a7d27b015208461185d624df1145304b115b779b",
+        "manuscript/report.md": "842515102182f1a72944e23109a1da3db2ddc85679cb40375f940f235194d29f",
+        "notes/computation-work.md": "aaa5fc30c9f5e658fe1f8b7533a5b375949a9648148ffcb113353a7a4ee5796f",
+        "notes/issue.md": "9ca292d2b727d6c14272556a60d32b0b984a66e0393aa7d07baabd4b127f8a9f",
+        "notes/source-work.md": "c8b34400cfa86bbbfc743aa44bf385d05a475e54da21f541bd72d8ee2ede40e2",
+        "review.md": "01f9108b579dac581208ef289f4ecb0de89430f9d850e6b028cb509c1164c2fa"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group3/sha-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "artifacts/input-fingerprints.json": "94939093c96921519095917c1e2e94521c630cd820c62ce1122a2c611be50c2e",
+          "artifacts/results.json": "f153f0c201a905e4981bd561cdd4a6371c54435f92c1d756ebafd7d33461cf92",
+          "artifacts/run.py": "1604aecdbdd9d798f336b4a2a7d27b015208461185d624df1145304b115b779b",
+          "manuscript/report.md": "842515102182f1a72944e23109a1da3db2ddc85679cb40375f940f235194d29f",
+          "notes/computation-work.md": "aaa5fc30c9f5e658fe1f8b7533a5b375949a9648148ffcb113353a7a4ee5796f",
+          "notes/issue.md": "9ca292d2b727d6c14272556a60d32b0b984a66e0393aa7d07baabd4b127f8a9f",
+          "notes/source-work.md": "c8b34400cfa86bbbfc743aa44bf385d05a475e54da21f541bd72d8ee2ede40e2",
+          "review.md": "01f9108b579dac581208ef289f4ecb0de89430f9d850e6b028cb509c1164c2fa"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group3/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": [
+        "Independently tokenize raw strings with required lowercase[a-z]+ rule; compare each document/layer and all/E1 period totals. D03 stays null; liberal is excluded.",
+        "Raw totals1900OCR2/9,corrected4/9;1910both8/13;E1/1910both3/5. All producer fields match.",
+        "Inspect source access and edition/period distinction, D02 edits, coverage and unsupported reform interpretation."
+      ],
+      "scope_observations": [
+        "Five excerpt pairs are partial source access; D03 remains metadata-only/null. Complete reading of local corpus.json is distinguished from original/full-text access. Provided corrected text is not authenticated against nonexistent scans.",
+        "D02 accounts exactly for the22.2222-per100token shrinkage. E1 narrows one edition condition but leaves genre/coverage imbalance. Token-frequency differences are not promoted to representative conceptual change or reform causality."
+      ],
+      "limits": [
+        "Agent-step review; no independent human/domain expert certification.",
+        "Original task sources are deliberately synthetic; conclusions do not certify real clinical, policy, historical, privacy or publication validity."
+      ],
+      "isolated_producer_replay": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.029264958000567276,
+        "science_results_equal": true
+      }
+    },
+    "restricted-materials": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "synthetic-excerpts.md": "3038a05fffb6221ae33025f68be82e5aee3570c641235ee9c830a07da87fabeb",
+        "permissions.csv": "522fad324fefe42d71be61b4df7b1b5890be03ad433072066641e83309fcc5e1",
+        "task.md": "ab9e642e320175c12b188f8d244d6f4c7897a39d9d990ce7c810bbd1a7a2f9b3",
+        "request.md": "0917dbb8bc5d8215512f28bf12dd8d764c793ca48f4c337230114d10b42927c8"
+      },
+      "published_output_sha256": {
+        "PROJECT.md": "154e7d158490f1964dc172e63bdeabdc4796eea4ea537cad6ef09467eac191b2",
+        "manuscript/report.md": "4d56ae0ec3a7b6f5017860454c414f5214f54a23e738645028b31efc7a798b06",
+        "notes/coding-guide.md": "801aaabb15aa5a3a60c8787e3eb5cd31f3c59132d9126ffba9e82829df996f25",
+        "notes/field-dictionary.csv": "a7dd77eead04ad8a7e1ffc4fdeeb0b10659df29b9766252c280a7856a5b57198",
+        "notes/followup-empty.csv": "e19b4272c66134f726288b52e55f175552714f49db6a2d57d6d1264f856f7d3a",
+        "notes/interview-empty.csv": "eada4e7ca5987d8eda5e2d900b11459e42a45fe6cb3437f6cac228e739749710",
+        "notes/issue.md": "9539a9b765156ec99ce1a60ff4292739fa8d6ccfcd063b6fe64351855c1f6a90",
+        "notes/new-fictional-examples.csv": "15217c77d8ccfa1489a4358627b7cc0e36d00d2c823c5da3be1f095dd26869ed",
+        "notes/offline-plan.md": "b9439d38c86163a0f46d08418dfd26bb8ab570ac32c2376ac457e06625e944ab",
+        "notes/permission-decision.md": "1a26cbbe245f89579243537f71800c1ed0b7b9fa2a7184eccd2422fd7e0c9272",
+        "review.md": "b2359b413553e649dbdb84400997ca30799374511e698de3aec8dd4e1216cfaa"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group3/sha-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "PROJECT.md": "154e7d158490f1964dc172e63bdeabdc4796eea4ea537cad6ef09467eac191b2",
+          "manuscript/report.md": "4d56ae0ec3a7b6f5017860454c414f5214f54a23e738645028b31efc7a798b06",
+          "notes/coding-guide.md": "801aaabb15aa5a3a60c8787e3eb5cd31f3c59132d9126ffba9e82829df996f25",
+          "notes/field-dictionary.csv": "a7dd77eead04ad8a7e1ffc4fdeeb0b10659df29b9766252c280a7856a5b57198",
+          "notes/followup-empty.csv": "e19b4272c66134f726288b52e55f175552714f49db6a2d57d6d1264f856f7d3a",
+          "notes/interview-empty.csv": "eada4e7ca5987d8eda5e2d900b11459e42a45fe6cb3437f6cac228e739749710",
+          "notes/issue.md": "9539a9b765156ec99ce1a60ff4292739fa8d6ccfcd063b6fe64351855c1f6a90",
+          "notes/new-fictional-examples.csv": "15217c77d8ccfa1489a4358627b7cc0e36d00d2c823c5da3be1f095dd26869ed",
+          "notes/offline-plan.md": "b9439d38c86163a0f46d08418dfd26bb8ab570ac32c2376ac457e06625e944ab",
+          "notes/permission-decision.md": "1a26cbbe245f89579243537f71800c1ed0b7b9fa2a7184eccd2422fd7e0c9272",
+          "review.md": "b2359b413553e649dbdb84400997ca30799374511e698de3aec8dd4e1216cfaa"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true,
+        "reviewed_runtime_resource_sha256": {
+          ".agents/skills/_rw-runtime/profiles/governance.md": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e"
+        },
+        "runtime_resource_verification": "The installed governance resource was actually read in the original project and its SHA matches the independent reviewer project snapshot, reviewer toolkit snapshot, current source file and recording mapping. Replay obtains this same-byte file from the installed runtime; authored outputs do not overwrite generated .agents state."
+      },
+      "review_sources": [
+        "review-group3/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below.",
+        "expected_warnings": [
+          "evidence_not_inspected: controlled EV-PAT original unavailable",
+          "evidence_not_inspected: controlled EV-INT original unavailable"
+        ]
+      },
+      "independent_checks": [
+        "Independently map permissions.csv/request to nine action decisions and six pending questions. No statutory/current external-service advice or real-world permission assertion is inferred.",
+        "Count dictionary12 unique fields, empty-table data rows0/0 and new examples2; check fictional/proposal labels and absence of original empirical claims.",
+        "Inspect artifact generator imports and write statements; replay unchanged copy in review directory reproduces11 authored files byte-for-byte, no original or external actions."
+      ],
+      "scope_observations": [
+        "All nine action rows distinguish unavailable PAT/INT originals from new fictional inputs. Local-team analysis, external processing, raw quotation and cross-institution sharing are kept separate. Oral PI opinion, internal number, name deletion and no-training wording do not fill documented scope gaps.",
+        "Six specific questions are saved but not sent. No original-record analysis, approval, formal rejection, external action or real results are claimed. Twelve-field dictionary, two empty tables and two explicit new fictional examples are usable actual offline artifacts.",
+        "Current core check retains evidence_not_inspected for controlled EV-PAT/EV-INT. These warnings correctly record access boundaries, not an omitted available input."
+      ],
+      "limits": [
+        "Agent-step review; no independent human/domain expert certification.",
+        "Original task sources are deliberately synthetic; conclusions do not certify real clinical, policy, historical, privacy or publication validity."
+      ],
+      "producer_replay_scope": "Separate artifact-generator repeat reproduced11 authored files; no numeric producer is claimed and no unavailable original was accessed.",
+      "runtime_resources": {
+        ".agents/skills/_rw-runtime/profiles/governance.md": {
+          "source_path": "profiles/governance.md",
+          "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+          "scope": "Actually read installed method resource; use the same-byte project runtime copy, not an authored research output or duplicate generated state."
+        }
+      },
+      "normalization_mapping_note": "Removed one duplicate exported runtime guidance file from authored output files and represented it as an actually read runtime resource. The original frozen PROJECT, all46 records, all4 raw inputs and all11 authored outputs remain unchanged. This deduplicates generated runtime state without deleting research evidence; the prior normalized copy is retained privately."
+    },
+    "formal-finite": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "definition.md": "d30a80a34091173d00b71ccad66d1a67e37aed2054b1cc4de0756cfb4a7c9305",
+        "draft.md": "43c011bbae5f17c483f6f5ee96742f1d7fbeb10fcd923176d976d7ef63373aa0",
+        "task.md": "9d2c61332bf4330d9972651f659e909ccfffd7ec50a3f6f5ce49a7a077b6bb55",
+        "observations.csv": "0cd2665dfb5591d835974e19dd3ad89a796d597f841286de156f23c669b8bbe9"
+      },
+      "published_output_sha256": {
+        "artifacts/config.json": "07a3f3dd4cc475d3e649b50720d098c953c53ec88d1bbb4dc969906471dde4b3",
+        "artifacts/environment.json": "1e36972d07b717dc297ec0c36a54e2f2dce81976eb67f870132648f7e475a796",
+        "artifacts/input-fingerprints.json": "0f5d88fe6f91a0dc539c8e27b75d34a437ee76981d2a6c9e157540394c7d6e48",
+        "artifacts/results.json": "336a50569091df6c2c4d50ef445bcd173572166d5dd482b818bcf487c6980844",
+        "artifacts/review-checks.json": "720d4b04430f6b885dbedae12f29b689d2f8defe19b3d3919501a3878c4f5afc",
+        "artifacts/run.py": "7009d3013394bc8705daf2ccec1bec51bb3cc6a417f29cdcc7679b586eba62d0",
+        "manuscript/report.md": "b6ea14c0a1e9f381177cdcc5161f6afb3a09aa9cd513ba6678dbf1b3333358a1",
+        "notes/derivation.md": "beedff401d4eea571d8113abaa659068c71c0cb62534d61ebf1a94489b2eef69",
+        "notes/guidance-read.json": "2fc9f5c83ae0c92a764cd606ae29431b9c5706db4add2b750ea635e8c56b0da5",
+        "notes/issue.md": "939eec15bbb18314b277a1bfc82375cd582a1056898bc0ad1cc9feb6e1115fcf",
+        "notes/run-notes.md": "62afedefd688a033ad9033d3b664dec9f893a6f408d129a38cd5ecb82eced144",
+        "review.md": "808acefa0637981bdb0d96bd9d52c928ae022fbdea7709292627a3c9066b48c7"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group3/sha-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "reviewed_original_output_sha256": {
+          "artifacts/config.json": "07a3f3dd4cc475d3e649b50720d098c953c53ec88d1bbb4dc969906471dde4b3",
+          "artifacts/environment.json": "84e63d4103549493c3eaeff45ba84bfe443b6b6ec9724a3f17e92a65562d5244",
+          "artifacts/input-fingerprints.json": "0f5d88fe6f91a0dc539c8e27b75d34a437ee76981d2a6c9e157540394c7d6e48",
+          "artifacts/results.json": "71e652e906441d6e8b1b495391aed8cc04cc289eabe41be1ab308d98ad5c9ecc",
+          "artifacts/review-checks.json": "720d4b04430f6b885dbedae12f29b689d2f8defe19b3d3919501a3878c4f5afc",
+          "artifacts/run.py": "7009d3013394bc8705daf2ccec1bec51bb3cc6a417f29cdcc7679b586eba62d0",
+          "manuscript/report.md": "b6ea14c0a1e9f381177cdcc5161f6afb3a09aa9cd513ba6678dbf1b3333358a1",
+          "notes/derivation.md": "beedff401d4eea571d8113abaa659068c71c0cb62534d61ebf1a94489b2eef69",
+          "notes/guidance-read.json": "2fc9f5c83ae0c92a764cd606ae29431b9c5706db4add2b750ea635e8c56b0da5",
+          "notes/issue.md": "939eec15bbb18314b277a1bfc82375cd582a1056898bc0ad1cc9feb6e1115fcf",
+          "notes/run-notes.md": "62afedefd688a033ad9033d3b664dec9f893a6f408d129a38cd5ecb82eced144",
+          "review.md": "808acefa0637981bdb0d96bd9d52c928ae022fbdea7709292627a3c9066b48c7"
+        },
+        "path_only_normalizations": [
+          {
+            "path": "artifacts/environment.json",
+            "original_sha256": "84e63d4103549493c3eaeff45ba84bfe443b6b6ec9724a3f17e92a65562d5244",
+            "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+          },
+          {
+            "path": "artifacts/results.json",
+            "original_sha256": "71e652e906441d6e8b1b495391aed8cc04cc289eabe41be1ab308d98ad5c9ecc",
+            "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+          }
+        ],
+        "verification_rule": "Each current input hash equals the reviewer frozen raw-input hash. For reviewed outputs, each published file equals its reviewer-frozen project hash, or its declared path-only transformation cites that exact original hash. Current public files were recomputed rather than trusting recording.json alone. Hash identity is provenance binding, not a new content judgment.",
+        "all_current_outputs_bind_independent_review": true
+      },
+      "review_sources": [
+        "review-group3/report"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only integration/freshness checks at independent review time; substantive judgment is separately summarized below."
+      },
+      "independent_checks": [
+        "Independently construct prime basis<=199 then test only prime divisors<=sqrt(q), distinct from producer all-integer trial and bytearray sieve implementation; compare all201 finite rows and all17CSV statuses.",
+        "Counts106prime/95composite; first composite n17,q289; final n200,q39817 with factor29. Every producer composite witness multiplies back.",
+        "Independently reconstruct mathematical proof obligations: minimal-factor lemma, polynomial identity, all square-residue sets,257<17^2, modulo17 roots and both factorizations with strict cofactor lower bounds."
+      ],
+      "scope_observations": [
+        "The small-prime-factor lemma and identity4q=(2n-1)^2+67 are valid. Independent residue enumeration excludes3,5,7,11,13; oddness excludes2. On0..16,17<=q<=257<17^2 completes the finite theorem. n17=289 proves the longest initial segment and refutesP.",
+        "For k>=1 the two exact factorizations give nontrivial factors, so the two residue classes give infinitely many composites. n0,1 are correctly excluded; n21=437 shows other classes need not be prime. No claim of infinitely many prime values, full classification or proof-assistant validation is made."
+      ],
+      "limits": [
+        "Agent-step review; no independent human/domain expert certification.",
+        "Original task sources are deliberately synthetic; conclusions do not certify real clinical, policy, historical, privacy or publication validity."
+      ],
+      "isolated_producer_replay": {
+        "exit_code": 0,
+        "elapsed_seconds": 0.037333083997509675,
+        "science_results_equal": true
+      }
+    },
+    "engineering-simulation": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "requirements.md": "8ecaf2beb69608ad4c00888602d27dc26b47101f87b5bf7abbaf5a253bd9a582",
+        "simulator.py": "deaccc68d9a6d7f348f4b71fb0996f7201a08825e43d41baee748bd152835225",
+        "task.md": "1ab1fd5c891c4f7470422f7d854a77bf3231888b688057a4a0593588e4ba93a6",
+        "scenarios.json": "153a677d3568e61793c882413f416536dfce7fc34a4744763b8a59ec963815e4"
+      },
+      "published_output_sha256": {
+        "README-replay.md": "c64b9e1dcdcd12b1e2f4935b6b812d804d7347270e6644bb2535f58a1af1b1e0",
+        "artifacts/readback.py": "c26f628f67a773c2a6edb67bcf17c4ee0b73a166b31a5ba5a708f1eb67facd92",
+        "artifacts/register_records.py": "22f220082ac46e2e917a93342fbb9ff03eda408f7cbf2f742fce9070795fc2e4",
+        "artifacts/results.first-run.json": "d9f771c581db7269eaddb1eedb91bb6280857c7d90a2f81d4be1a36c248e6691",
+        "artifacts/results.json": "a3d810945e6968b9db78b9fe493a0863f6eedb1a45f3c605567004b3e590d2af",
+        "artifacts/run.py": "9d554e2ecd028e11c4684aa9da0cd87f9fa3e8061511166755deed6ddfa410bd",
+        "artifacts/simulator.py": "4c6c2244fa04c6cb75510f6925bf4013e1e9f6fc3048aa566acb8f7ac1ed2082",
+        "artifacts/traces/cold.csv": "ec85c42471149dd757ec51d11d14e48524e427ecbbd97302367372250fc29188",
+        "artifacts/traces/delayed.csv": "93107366649760c7d968d54d14e3bf3d3f1e755b0932e7ad9eca5f1f62bd15b4",
+        "artifacts/traces/hot.csv": "91250582023c2bf14fb12a5267cbd42e9332e8cff4e6beb1411e5f3e459df3fd",
+        "artifacts/traces/nominal.csv": "2ab3cb7be4a968116a63effd8e9602d2b5cfff1c353fc8d1d98a2749b53c204b",
+        "checks/replay.json": "2a79e09d58858ca7f706545ef1d4ea51ee39de053900e16ac9b66fb3d3d4f168",
+        "checks/trace-readback.json": "7706249f24224add945185e5e8eaac965556254a620a53a370206ab214614dc7",
+        "logs/baseline.json": "72504f5af94e997dd0d3ef7c97c819e79f4d7028b19d5f685e4bc6eb112de3f7",
+        "manuscript/report.md": "893164e48966fc226e7f84b43a74e16ba6a559effb7cd03d8613d489f4e83d21",
+        "notes/analytic.md": "8398b29b11b94961ea09ed89b78de94ec03857ca0d646f536815cb39be184025",
+        "notes/cost-safety.md": "46287026a9a02ccb48c369b024c27c6f4dd6d5053d6c67d41bfddc27c14f621e",
+        "notes/issue.md": "e5ae76aab07b48156c52e82254ad7c8283e0b60c0ad54d380f4349b0a108b564",
+        "notes/traceability.md": "2cc7b96805f2426442f8ee421c0fff042b87ad508cd9ac79050826329d2c13b5",
+        "review.md": "1278a49f22cc4cc3bdb5fcdb4eca61e536ff8d8160c375d962d177ed20ca88a6"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group4/cost-recheck/snapshot-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "all_current_outputs_bind_independent_review": true,
+        "reviewed_original_output_sha256": {
+          "README-replay.md": "c64b9e1dcdcd12b1e2f4935b6b812d804d7347270e6644bb2535f58a1af1b1e0",
+          "artifacts/readback.py": "c26f628f67a773c2a6edb67bcf17c4ee0b73a166b31a5ba5a708f1eb67facd92",
+          "artifacts/register_records.py": "22f220082ac46e2e917a93342fbb9ff03eda408f7cbf2f742fce9070795fc2e4",
+          "artifacts/results.first-run.json": "d9f771c581db7269eaddb1eedb91bb6280857c7d90a2f81d4be1a36c248e6691",
+          "artifacts/results.json": "a3d810945e6968b9db78b9fe493a0863f6eedb1a45f3c605567004b3e590d2af",
+          "artifacts/run.py": "9d554e2ecd028e11c4684aa9da0cd87f9fa3e8061511166755deed6ddfa410bd",
+          "artifacts/simulator.py": "4c6c2244fa04c6cb75510f6925bf4013e1e9f6fc3048aa566acb8f7ac1ed2082",
+          "artifacts/traces/cold.csv": "ec85c42471149dd757ec51d11d14e48524e427ecbbd97302367372250fc29188",
+          "artifacts/traces/delayed.csv": "93107366649760c7d968d54d14e3bf3d3f1e755b0932e7ad9eca5f1f62bd15b4",
+          "artifacts/traces/hot.csv": "91250582023c2bf14fb12a5267cbd42e9332e8cff4e6beb1411e5f3e459df3fd",
+          "artifacts/traces/nominal.csv": "2ab3cb7be4a968116a63effd8e9602d2b5cfff1c353fc8d1d98a2749b53c204b",
+          "checks/replay.json": "2a79e09d58858ca7f706545ef1d4ea51ee39de053900e16ac9b66fb3d3d4f168",
+          "checks/trace-readback.json": "7706249f24224add945185e5e8eaac965556254a620a53a370206ab214614dc7",
+          "logs/baseline.json": "72504f5af94e997dd0d3ef7c97c819e79f4d7028b19d5f685e4bc6eb112de3f7",
+          "manuscript/report.md": "893164e48966fc226e7f84b43a74e16ba6a559effb7cd03d8613d489f4e83d21",
+          "notes/analytic.md": "8398b29b11b94961ea09ed89b78de94ec03857ca0d646f536815cb39be184025",
+          "notes/cost-safety.md": "46287026a9a02ccb48c369b024c27c6f4dd6d5053d6c67d41bfddc27c14f621e",
+          "notes/issue.md": "e5ae76aab07b48156c52e82254ad7c8283e0b60c0ad54d380f4349b0a108b564",
+          "notes/traceability.md": "2cc7b96805f2426442f8ee421c0fff042b87ad508cd9ac79050826329d2c13b5",
+          "review.md": "1278a49f22cc4cc3bdb5fcdb4eca61e536ff8d8160c375d962d177ed20ca88a6"
+        },
+        "path_only_normalizations": [],
+        "verification_rule": "All20 current public authored outputs and four raw inputs match both the independent v2 frozen snapshot and corresponding reviewed report identities. The original19 outputs retain their original scientific review identities; the new cost/safety note is covered by the separate scope-extension recheck. Current public file hashes were recomputed rather than trusting recording.json."
+      },
+      "review_sources": [
+        "review-group4/report",
+        "review-group4/cost-recheck/report",
+        "review-group4/cost-recheck/output-manifest.json"
+      ],
+      "findings": [],
+      "prior_findings": [],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Independent readonly check/resume of the frozen v2 project match saved outputs, all five activities are current and checkpoint dependencies unchanged. This metadata check does not itself certify engineering safety or economic validity."
+      },
+      "content_verdict": "pass",
+      "integration_verdict": "pass",
+      "independent_checks": [
+        "Raw copied inputs preserve all four scenes, model and actuator ratings. Basis: All four raw/copy SHA identities match; no changed scenarios or nominal values.",
+        "Actual delay and 0-80 W clipping are implemented and requested/actual power remain distinct. Basis: Static code review; independently reconstructed integer-delay recurrence and CSV readback across all 20 runs/default traces; maximum metric discrepancy 7.11e-15 and maximum row discrepancy 2.85e-13.",
+        "R1 passes, R2 fails at cold/hot, R3 passes as implemented, R4 fails in hot; R5 has scoped numerical resolution support. Basis: Five-step labels stable. Independently computed finest adjacent maximum differences: nominal .000207224 C, delayed .000780670 C, cold .000068989 C, hot .000252957 C.",
+        "R2 and R4 failures are not artifacts of the selected gain or Euler step. Basis: Energy balance and ODE comparison independently give cold T(120)<=21.903582636 C and hot T(120)>=31.686863669 C, with hot T>28 C after 45.198512374 s. Required 25 C equilibrium powers are 100 W and -50 W at cold/hot extremes.",
+        "Manuscript and records support the finite-model conclusions and withdraw the premature device release claim. Basis: Traceability table, bounded manuscript, self-review, sources/evidence/relations and method versions agree. Current readonly core check/resume both pass with scientific_validity=not-assessed."
+      ],
+      "scope_observations": [
+        "Continuous-time delayed-solution error, arbitrary timestep stability, fractional-delay branch coverage and physical performance/safety are outside this audit. Author expressly limits these claims; all supplied 15 s lags align with all tested steps. This is not a defect."
+      ],
+      "limits": [
+        "Finite synthetic offline input and model scope; no human expert, physical field/hardware, clinical, regulatory or universal validity certification."
+      ],
+      "revision_scope_extension": {
+        "status": "completed-and-independently-reviewed",
+        "added_outputs": [
+          "notes/cost-safety.md"
+        ],
+        "unchanged_reviewed_output_count": 19,
+        "coverage_gap_addressed": "The initial engineering task exercised model feasibility, delay, clipping, analytic limits and numerical convergence, but did not provide a substantive resource/cost/safety comparison among alternatives. The v2 note now supplies that requested comparison and its evidence limits; the initial review is preserved without retroactively attributing the new work to it.",
+        "actual_new_work": "Read the original requirements/scenarios; derive thermal-rating and heat-removal lower-bound arithmetic; compare narrowed-use/heating-only/bidirectional alternatives and an unpriced common-period cost framework; register the actual note and explicit method-binding v1-to-v2 update.",
+        "independent_recheck": {
+          "verdict": "pass",
+          "checks": [
+            {
+              "id": "COST-01",
+              "status": "pass",
+              "claim": "Cold-end target25 steady-load calculation is correct and its limits are retained."
+            },
+            {
+              "id": "COST-02",
+              "status": "pass",
+              "claim": "Hot-end heat-removal and heater-off safety analysis follows the model."
+            },
+            {
+              "id": "COST-03",
+              "status": "pass",
+              "claim": "Three actual alternatives have a substantive capability/resource/safety comparison."
+            },
+            {
+              "id": "COST-04",
+              "status": "pass",
+              "claim": "Decision and economics remain bounded by unknown evidence."
+            },
+            {
+              "id": "COST-05",
+              "status": "pass",
+              "claim": "The supplement is tied to actual current records and file identities."
+            },
+            {
+              "id": "COST-06",
+              "status": "pass",
+              "claim": "Original independently audited science, raw inputs, code, manuscript and installed runtime are unchanged."
+            },
+            {
+              "id": "COST-07",
+              "status": "pass",
+              "claim": "Current installed-runtime readonly check and resume pass, match saved outputs and leave originals unchanged."
+            }
+          ],
+          "independent_thermal_arithmetic": {
+            "current_heater_max_W": 80,
+            "cold_target_steady_heat_W": 100,
+            "cold_shortfall_W": 20,
+            "thermal_rating_increase_percent": 25,
+            "hot_target_thermal_removal_W": 50,
+            "heat_ingress_at28C_W": 35,
+            "heater_off_rise_at28_C_per_s": 0.07
+          },
+          "scope": "Text-only scope extension with independent analytic arithmetic; no new simulation, hardware test, quote lookup, price estimate or deployment approval was performed. Original numerical results retain the prior independently reviewed identities.",
+          "limits": [
+            "100 W is a steady thermal load, not a sufficient validated dynamic specification for all requirements.",
+            "50 W denotes thermal removal, not electrical cooler input.",
+            "Heater cutoff alone cannot preserve28 C at35 C ambient in the stated model; physical failure protection remains unvalidated.",
+            "Money, duty cycle, cooling efficiency, maintenance and failure probabilities remain unspecified; no cheapest/optimal alternative or payback is asserted."
+          ]
+        }
+      }
+    },
+    "agriculture-repeated": {
+      "status": "pass-in-scope",
+      "review_type": "Independent AI-agent step review of a synthetic offline task; no human/domain-expert certification.",
+      "input_sha256": {
+        "task.md": "cbfc6acc0857e10484169c3e696498420093a75ee1775bd674633dec3748de93",
+        "plots.csv": "2f7d75afac512cf9d98d27499c26e4816351429a1a4d8dcbd34bc48c9db25a45",
+        "observations.csv": "995d630c1039013319096a8df7d7dd84a7deb02aa9e6eb5bd317c80811bfec1c",
+        "protocol.md": "5e66412bcadaaf6e88d92ef5ccb95034fc6bb9d6f73c44ff93dc6a89eebd21f7"
+      },
+      "published_output_sha256": {
+        "artifacts/README.md": "a91ca8b4c6b62584ad150678cd44fe2f45c2861245800d2d12da6716ab18186c",
+        "artifacts/block_contrasts.csv": "1281736f43cfe9437cf9e423780fb456e3f171293e1fdd89c4586909cbe0db3a",
+        "artifacts/execution.json": "b9b1ecc22ffadcbe4c951a92dbba4a1b5b22e04af5d8639c81c2738f9dd85291",
+        "artifacts/plot_primary.csv": "9198c026a9c6bd868baf85e5f770429d59955f060c79e3a5167c83cfcb878244",
+        "artifacts/plot_season.csv": "2ff1d3396b1c34610ab5b2c2a6ee29b2427675e08e2ccf8cc9cd5a619144afd3",
+        "artifacts/results.json": "5d51315934cb4290fe6b5f448a7d1dcdda83b37f37bdd1c954b1688ebd97fa20",
+        "artifacts/run.py": "b0275b7dfeb6fa931b0d02998677949d7f6aa13c56ff8f82bbdeb01ed2d47204",
+        "artifacts/visit_contrasts.csv": "180e9f1f177a63bb70edd7134d35f0046cea50c77b14a0574ba500ad7c385e5a",
+        "checks/rerun.json": "921f3d69c2b0ec12044b0436d8f43306695d93503c33f36ca95d02546521ee14",
+        "manuscript/report.md": "043aa8047826eabe6db77cce62b186682722ec6138bab1cc23d7e18231a2846a",
+        "notes/access.json": "aeb6293d11e643ffd044535a7b7442234f38533e480e59b10f07bf165a372888",
+        "notes/input-manifest.json": "48f7386acd8d8f9f11fe8b313139fa87a5bf93cca4d3c09ac3b91cd686a8ba70",
+        "notes/issue.md": "ffe08c0cbdc296064c2f15292cba64fbc6469244d4851e4b8fa580995a62ddd1",
+        "review.md": "495d68bed1811217cac6618e5609305c1aa712eaf2aad0a83aeb5e30a480c0af"
+      },
+      "artifact_binding": {
+        "verified_against": "review-group4/recheck/snapshot-before.json",
+        "raw_inputs_match_reviewer_snapshot": true,
+        "all_published_output_hashes_checked": true,
+        "all_current_outputs_bind_independent_review": true,
+        "reviewed_original_output_sha256": {
+          "artifacts/README.md": "a91ca8b4c6b62584ad150678cd44fe2f45c2861245800d2d12da6716ab18186c",
+          "artifacts/block_contrasts.csv": "1281736f43cfe9437cf9e423780fb456e3f171293e1fdd89c4586909cbe0db3a",
+          "artifacts/execution.json": "50088a35b63d7fb053160971fe50809264b9231e74ba596f994f31da3fdbb931",
+          "artifacts/plot_primary.csv": "9198c026a9c6bd868baf85e5f770429d59955f060c79e3a5167c83cfcb878244",
+          "artifacts/plot_season.csv": "2ff1d3396b1c34610ab5b2c2a6ee29b2427675e08e2ccf8cc9cd5a619144afd3",
+          "artifacts/results.json": "5d51315934cb4290fe6b5f448a7d1dcdda83b37f37bdd1c954b1688ebd97fa20",
+          "artifacts/run.py": "b0275b7dfeb6fa931b0d02998677949d7f6aa13c56ff8f82bbdeb01ed2d47204",
+          "artifacts/visit_contrasts.csv": "180e9f1f177a63bb70edd7134d35f0046cea50c77b14a0574ba500ad7c385e5a",
+          "checks/rerun.json": "921f3d69c2b0ec12044b0436d8f43306695d93503c33f36ca95d02546521ee14",
+          "manuscript/report.md": "043aa8047826eabe6db77cce62b186682722ec6138bab1cc23d7e18231a2846a",
+          "notes/access.json": "aeb6293d11e643ffd044535a7b7442234f38533e480e59b10f07bf165a372888",
+          "notes/input-manifest.json": "48f7386acd8d8f9f11fe8b313139fa87a5bf93cca4d3c09ac3b91cd686a8ba70",
+          "notes/issue.md": "ffe08c0cbdc296064c2f15292cba64fbc6469244d4851e4b8fa580995a62ddd1",
+          "review.md": "495d68bed1811217cac6618e5609305c1aa712eaf2aad0a83aeb5e30a480c0af"
+        },
+        "path_only_normalizations": [
+          {
+            "path": "artifacts/execution.json",
+            "original_sha256": "50088a35b63d7fb053160971fe50809264b9231e74ba596f994f31da3fdbb931",
+            "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+          }
+        ],
+        "verification_rule": "Every current input and original output hash equals the independently frozen v2 review snapshot and report. Each public output hash was independently recomputed; the execution receipt is a declared path-only normalization of original_sha25650088a35b63d7fb053160971fe50809264b9231e74ba596f994f31da3fdbb931. Hash identity binds the published data to that review, not to a new scientific certification."
+      },
+      "review_sources": [
+        "review-group4/report",
+        "review-group4/recheck/report",
+        "review-group4/recheck/output-manifest.json"
+      ],
+      "findings": [],
+      "prior_findings": [
+        {
+          "id": "AGR-INTEGRATION-01",
+          "initial_status": "partial-under-added-portability-criterion",
+          "status": "task-violation-characterization-withdrawn; authorized-portability-enhancement-completed",
+          "clarification": "The original sibling execution-log arrangement was compliant with the original task. The earlier partial verdict imposed an additional standalone-PROJECT portability criterion and overstated that arrangement as a task violation. That violation characterization is withdrawn here; the historical report is retained unchanged. The present revision is an authorized portability and publication-trace enhancement, not a retroactive compliance fix.",
+          "resolution": "A project-local registered execution.json now retains the two actual original execution objects; notes, artifact/evidence/activity bindings and checkpoint were explicitly updated. The original logs and v1 project remain preserved. Independent trace recheck passed.",
+          "original_partial_review_preserved": true,
+          "scientific_content_unchanged": true,
+          "missing_historical_metadata": "The original runs did not record exact Python/platform/start-UTC fields. The attestation marks those unknown rather than substituting the revision environment or filesystem time."
+        }
+      ],
+      "original_project_check_resume": {
+        "check_exit_code": 0,
+        "resume_exit_code": 0,
+        "passed": true,
+        "scientific_validity": "not-assessed",
+        "scope": "Read-only check/resume independently passed on the frozen v2 project and isolated replay copy, with all four declared activities current and no changed checkpoint dependencies."
+      },
+      "content_verdict": "pass-in-original-finite-statistical-scope",
+      "integration_verdict": "pass-after-independently-reviewed-portability-enhancement",
+      "independent_checks": [
+        "Primary endpoint and repeated experimental structure match the frozen protocol. Basis: All raw/input hashes identical. Independently reconstructed 192 unique repeated observations, 32 unchanged plants, 8 plots and 4 independent randomized block pairs. Day 90 is preserved; seasons are jointly retained under original assignment.",
+        "Primary, per-season and season-change estimates and uncertainty agree with raw data. Basis: Independent rational arithmetic gives block primary [1,0,1,0], 2025 [4,2,1,-1], 2026 [-2,-2,1,1], change [-6,-4,0,2] cm. Mean estimates .5,1.5,-.5,-2 cm; SEs .288675135,1.040833,.866025404,1.825741858. Independently inverted df3 CDF reproduces all approximate intervals within 1.02e-12.",
+        "Exact randomization p values and confidence-set limitation are correctly scoped. Basis: Independent full 16-assignment joint flips reproduce p .50/.375/.75/.50 and the entire null distributions. Symmetry supplies at least two tail assignments, so unrandomized absolute-statistic p>=.125; inversion at .05 excludes no constant shift. Sharp-null and heterogeneous mean-effect distinctions are explicit.",
+        "All intermediate outputs and draft diagnostic are reproducible. Basis: Four CSVs reconstruct with maximum roundoff 1.78e-15. All five replay output files are byte-identical. All-visit effect 2.833333333 cm answers a different endpoint; naive row independence is explicitly marked invalid. Sample block covariance is -3 cm2.",
+        "Interpretation does not attribute year differences to rainfall or generalize to climates/nationwide effects. Basis: Current manuscript and registry maintain single-site/two-year scope, age/cumulative treatment confounding, approximate t coverage and lack of physical field verification."
+      ],
+      "scope_observations": [
+        "Approximate t intervals from four fixed block pairs and finite exact-test resolution remain substantial limitations. These are disclosed limitations, not errors; no exact t-coverage or weak-null exact p claim is made."
+      ],
+      "limits": [
+        "Finite synthetic offline input and model scope; no human expert, physical field/hardware, clinical, regulatory or universal validity certification."
+      ],
+      "revision_recheck": {
+        "verdict": "pass",
+        "checks": [
+          {
+            "id": "TRACE-01",
+            "status": "pass",
+            "claim": "The two execution objects reproduce the actual original logs exactly."
+          },
+          {
+            "id": "TRACE-02",
+            "status": "pass",
+            "claim": "Unknown original environment and UTC fields are not fabricated."
+          },
+          {
+            "id": "TRACE-03",
+            "status": "pass",
+            "claim": "Execution evidence is portable and registered with current file identities."
+          },
+          {
+            "id": "TRACE-04",
+            "status": "pass",
+            "claim": "Scientific source, raw inputs, all numerical outputs, manuscript and scientific self-review retain their original independently audited identities."
+          },
+          {
+            "id": "TRACE-05",
+            "status": "pass",
+            "claim": "Full preserved v1 PROJECT exactly matches the earlier audit snapshot; installed runtime is unchanged."
+          },
+          {
+            "id": "TRACE-06",
+            "status": "pass",
+            "claim": "Isolated replay of current final PROJECT gives byte-identical numerical outputs."
+          },
+          {
+            "id": "TRACE-07",
+            "status": "pass",
+            "claim": "Current installed-runtime readonly check/resume pass for frozen final PROJECT and isolated post-replay copy."
+          },
+          {
+            "id": "TRACE-08",
+            "status": "pass",
+            "claim": "This recheck changed no frozen/original inputs, artifacts, original logs, preserved v1 or original partial report."
+          }
+        ],
+        "actual_original_runs": [
+          {
+            "run": 1,
+            "original_log_sha256": "bb3b114d73e3f75122db5ca116e806c9237f0b09204682320d2fcb9ca5b07d5c",
+            "original_execution_exactly_equal": true,
+            "exit_code": 0,
+            "elapsed_seconds": 0.03524320799988345
+          },
+          {
+            "run": 2,
+            "original_log_sha256": "a96afc375054e07e79c524829917bbe478816413a2bbcd2541dae0739866ec3e",
+            "original_execution_exactly_equal": true,
+            "exit_code": 0,
+            "elapsed_seconds": 0.02887929099961184
+          }
+        ],
+        "source_receipt_original_sha256": "50088a35b63d7fb053160971fe50809264b9231e74ba596f994f31da3fdbb931",
+        "published_receipt_sha256": "b9b1ecc22ffadcbe4c951a92dbba4a1b5b22e04af5d8639c81c2738f9dd85291",
+        "isolated_replay_byte_identical_scientific_output_count": 5,
+        "scope": "Original scientific recomputation remains supported by unchanged identities; this recheck independently verifies actual execution receipt provenance, portability, explicit file/record bindings, preserved history and isolated repeatability."
+      }
+    }
+  },
+  "limitations": [
+    "Synthetic tasks probe concrete required behaviors; the result does not establish exhaustive coverage of any discipline.",
+    "The core check/resume reports scientific_validity=not-assessed; its success only supports integration and freshness within the stated record model.",
+    "Private report hashes bind a retained local audit trail; they do not make unavailable receipts publicly reproducible. Published producer reruns verify specified stable fields without invoking a model.",
+    "A pass-in-scope means no located unresolved defect within the assigned finite content review, not a promise of correctness on future projects or acceptance by a journal."
+  ]
+}

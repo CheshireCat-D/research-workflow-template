@@ -1,0 +1,2501 @@
+{
+  "scope": "six provided synthetic fixed vectors; all two budgets; exact randomization MSE; no global guarantee",
+  "input_sha256": "8c8ac93ffadc4c2e8172d28616ebf4241adf25a55fd3f6ccc5dda9dac861dea9",
+  "config": {
+    "methods": [
+      "A",
+      "U_wr",
+      "C_mix",
+      "C_strata"
+    ],
+    "alpha_C_mix": "1/2",
+    "repetitions": 1000,
+    "primary_endpoint": "exact MSE over sampling randomness, not Monte Carlo MSE",
+    "stratum_rule": "history_scores > 0 versus zero",
+    "allocation": "half budget to positive-history stratum, capacity adjusted, at least one each",
+    "budget_rule": "every read of a current position including repeats costs one",
+    "tuning": "fixed before full run; C_strata revision follows minimum-check rejection of C_mix dominance"
+  },
+  "seed": 8123,
+  "environment": {
+    "python": "3.14.6",
+    "implementation": "CPython",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "rows": [
+    {
+      "workload": "carryover",
+      "N": 12,
+      "budget": 4,
+      "method": "A",
+      "truth": 203,
+      "exact_mse": "1942/11",
+      "mse": 176.54545454545453,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 495,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 8523,
+        "mean_error": 0.601,
+        "mse": 186.619,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            3,
+            6,
+            11
+          ],
+          "estimate": 213.0,
+          "calls": 4
+        }
+      }
+    },
+    {
+      "workload": "carryover",
+      "N": 12,
+      "budget": 4,
+      "method": "U_wr",
+      "truth": 203,
+      "exact_mse": "971/4",
+      "mse": 242.75,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 8524,
+        "mean_error": -0.191,
+        "mse": 237.937,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 421,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            7,
+            10,
+            1,
+            5
+          ],
+          "estimate": 204.0,
+          "calls": 4
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "carryover",
+      "N": 12,
+      "budget": 4,
+      "method": "C_mix",
+      "truth": 203,
+      "exact_mse": "16409/380",
+      "mse": 43.18157894736842,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 8525,
+        "mean_error": -0.12821052631578947,
+        "mse": 45.01582714681441,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 631,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            1,
+            10,
+            10
+          ],
+          "estimate": 200.77894736842106,
+          "calls": 4
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "carryover",
+      "N": 12,
+      "budget": 4,
+      "method": "C_strata",
+      "truth": 203,
+      "exact_mse": "131/3",
+      "mse": 43.666666666666664,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 168,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 8526,
+        "mean_error": 0.026,
+        "mse": 45.304,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "estimate": 202.0,
+          "calls": 4
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 2
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 2
+        }
+      ]
+    },
+    {
+      "workload": "carryover",
+      "N": 12,
+      "budget": 6,
+      "method": "A",
+      "truth": 203,
+      "exact_mse": "971/11",
+      "mse": 88.27272727272727,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 924,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 8723,
+        "mean_error": 0.146,
+        "mse": 87.936,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            11,
+            0,
+            3,
+            10,
+            7,
+            1
+          ],
+          "estimate": 216.0,
+          "calls": 6
+        }
+      }
+    },
+    {
+      "workload": "carryover",
+      "N": 12,
+      "budget": 6,
+      "method": "U_wr",
+      "truth": 203,
+      "exact_mse": "971/6",
+      "mse": 161.83333333333334,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 8724,
+        "mean_error": 0.144,
+        "mse": 172.344,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 786,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            2,
+            9,
+            4,
+            7,
+            9,
+            11
+          ],
+          "estimate": 190.0,
+          "calls": 6
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "carryover",
+      "N": 12,
+      "budget": 6,
+      "method": "C_mix",
+      "truth": 203,
+      "exact_mse": "16409/570",
+      "mse": 28.787719298245612,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 8725,
+        "mean_error": 0.28513684210526313,
+        "mse": 30.83206864881502,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 904,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            6,
+            0,
+            5,
+            2,
+            1,
+            7
+          ],
+          "estimate": 198.51929824561404,
+          "calls": 6
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "carryover",
+      "N": 12,
+      "budget": 6,
+      "method": "C_strata",
+      "truth": 203,
+      "exact_mse": "131/9",
+      "mse": 14.555555555555555,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 224,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 8726,
+        "mean_error": 0.0066666666666665595,
+        "mse": 14.177777777777777,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            3,
+            2,
+            0,
+            10,
+            4,
+            7
+          ],
+          "estimate": 200.66666666666666,
+          "calls": 6
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 3
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 3
+        }
+      ]
+    },
+    {
+      "workload": "new_hotspot",
+      "N": 12,
+      "budget": 4,
+      "method": "A",
+      "truth": 198,
+      "exact_mse": "288",
+      "mse": 288.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 495,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 18523,
+        "mean_error": -0.372,
+        "mse": 283.536,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            8,
+            1,
+            11,
+            2
+          ],
+          "estimate": 186.0,
+          "calls": 4
+        }
+      }
+    },
+    {
+      "workload": "new_hotspot",
+      "N": 12,
+      "budget": 4,
+      "method": "U_wr",
+      "truth": 198,
+      "exact_mse": "396",
+      "mse": 396.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 18524,
+        "mean_error": 0.276,
+        "mse": 384.624,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 398,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            7,
+            5,
+            5,
+            7
+          ],
+          "estimate": 186.0,
+          "calls": 4
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "new_hotspot",
+      "N": 12,
+      "budget": 4,
+      "method": "C_mix",
+      "truth": 198,
+      "exact_mse": "828",
+      "mse": 828.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 18525,
+        "mean_error": 0.312,
+        "mse": 849.024,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 631,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            0,
+            1,
+            6
+          ],
+          "estimate": 186.0,
+          "calls": 4
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "new_hotspot",
+      "N": 12,
+      "budget": 4,
+      "method": "C_strata",
+      "truth": 198,
+      "exact_mse": "432",
+      "mse": 432.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 168,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 18526,
+        "mean_error": 0.048,
+        "mse": 433.152,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            2,
+            10,
+            8
+          ],
+          "estimate": 234.0,
+          "calls": 4
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 2
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 2
+        }
+      ]
+    },
+    {
+      "workload": "new_hotspot",
+      "N": 12,
+      "budget": 6,
+      "method": "A",
+      "truth": 198,
+      "exact_mse": "144",
+      "mse": 144.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 924,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 18723,
+        "mean_error": -0.288,
+        "mse": 144.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            2,
+            3,
+            8,
+            1,
+            9
+          ],
+          "estimate": 186.0,
+          "calls": 6
+        }
+      }
+    },
+    {
+      "workload": "new_hotspot",
+      "N": 12,
+      "budget": 6,
+      "method": "U_wr",
+      "truth": 198,
+      "exact_mse": "264",
+      "mse": 264.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 18724,
+        "mean_error": 0.408,
+        "mse": 270.72,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 774,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            2,
+            2,
+            2,
+            2,
+            4,
+            5
+          ],
+          "estimate": 186.0,
+          "calls": 6
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "new_hotspot",
+      "N": 12,
+      "budget": 6,
+      "method": "C_mix",
+      "truth": 198,
+      "exact_mse": "552",
+      "mse": 552.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 18725,
+        "mean_error": -0.048,
+        "mse": 550.656,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 911,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            2,
+            0,
+            0,
+            9,
+            2,
+            0
+          ],
+          "estimate": 186.0,
+          "calls": 6
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "new_hotspot",
+      "N": 12,
+      "budget": 6,
+      "method": "C_strata",
+      "truth": 198,
+      "exact_mse": "240",
+      "mse": 240.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 224,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 18726,
+        "mean_error": -0.64,
+        "mse": 234.88,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            2,
+            1,
+            0,
+            5,
+            9,
+            11
+          ],
+          "estimate": 186.0,
+          "calls": 6
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 3
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 3
+        }
+      ]
+    },
+    {
+      "workload": "diffuse",
+      "N": 12,
+      "budget": 4,
+      "method": "A",
+      "truth": 198,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 495,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 28523,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            9,
+            0,
+            10,
+            11
+          ],
+          "estimate": 198.0,
+          "calls": 4
+        }
+      }
+    },
+    {
+      "workload": "diffuse",
+      "N": 12,
+      "budget": 4,
+      "method": "U_wr",
+      "truth": 198,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 28524,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 442,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            6,
+            2,
+            5,
+            7
+          ],
+          "estimate": 198.0,
+          "calls": 4
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "diffuse",
+      "N": 12,
+      "budget": 4,
+      "method": "C_mix",
+      "truth": 198,
+      "exact_mse": "1876/95",
+      "mse": 19.74736842105263,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 28525,
+        "mean_error": -0.1009684210526316,
+        "mse": 19.941077451523547,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 616,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            3,
+            2,
+            0
+          ],
+          "estimate": 193.49473684210525,
+          "calls": 4
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "diffuse",
+      "N": 12,
+      "budget": 4,
+      "method": "C_strata",
+      "truth": 198,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 168,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 28526,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            3,
+            2,
+            10,
+            5
+          ],
+          "estimate": 198.0,
+          "calls": 4
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 2
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 2
+        }
+      ]
+    },
+    {
+      "workload": "diffuse",
+      "N": 12,
+      "budget": 6,
+      "method": "A",
+      "truth": 198,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 924,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 28723,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            4,
+            1,
+            3,
+            11,
+            10,
+            5
+          ],
+          "estimate": 198.0,
+          "calls": 6
+        }
+      }
+    },
+    {
+      "workload": "diffuse",
+      "N": 12,
+      "budget": 6,
+      "method": "U_wr",
+      "truth": 198,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 28724,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 773,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            10,
+            7,
+            5,
+            7,
+            8,
+            8
+          ],
+          "estimate": 198.0,
+          "calls": 6
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "diffuse",
+      "N": 12,
+      "budget": 6,
+      "method": "C_mix",
+      "truth": 198,
+      "exact_mse": "3752/285",
+      "mse": 13.164912280701754,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 28725,
+        "mean_error": 0.036912280701754396,
+        "mse": 13.193619107417668,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 911,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            2,
+            0,
+            0,
+            8,
+            0
+          ],
+          "estimate": 193.859649122807,
+          "calls": 6
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "diffuse",
+      "N": 12,
+      "budget": 6,
+      "method": "C_strata",
+      "truth": 198,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 224,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 28726,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            2,
+            0,
+            3,
+            6,
+            10,
+            11
+          ],
+          "estimate": 198.0,
+          "calls": 6
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 3
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 3
+        }
+      ]
+    },
+    {
+      "workload": "signed_carryover",
+      "N": 12,
+      "budget": 4,
+      "method": "A",
+      "truth": 190,
+      "exact_mse": "2608/11",
+      "mse": 237.0909090909091,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 495,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 38523,
+        "mean_error": 0.347,
+        "mse": 241.171,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            5,
+            3,
+            11,
+            4
+          ],
+          "estimate": 183.0,
+          "calls": 4
+        }
+      }
+    },
+    {
+      "workload": "signed_carryover",
+      "N": 12,
+      "budget": 4,
+      "method": "U_wr",
+      "truth": 190,
+      "exact_mse": "326",
+      "mse": 326.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 38524,
+        "mean_error": 0.098,
+        "mse": 330.508,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 421,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            1,
+            8,
+            11,
+            3
+          ],
+          "estimate": 165.0,
+          "calls": 4
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "signed_carryover",
+      "N": 12,
+      "budget": 4,
+      "method": "C_mix",
+      "truth": 190,
+      "exact_mse": "11536/95",
+      "mse": 121.43157894736842,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 38525,
+        "mean_error": 0.03686315789473686,
+        "mse": 124.75116808864266,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 631,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "estimate": 188.77894736842106,
+          "calls": 4
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "signed_carryover",
+      "N": 12,
+      "budget": 4,
+      "method": "C_strata",
+      "truth": 190,
+      "exact_mse": "424/3",
+      "mse": 141.33333333333334,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 168,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 38526,
+        "mean_error": 0.626,
+        "mse": 143.26,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            3,
+            2,
+            4,
+            11
+          ],
+          "estimate": 190.0,
+          "calls": 4
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 2
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 2
+        }
+      ]
+    },
+    {
+      "workload": "signed_carryover",
+      "N": 12,
+      "budget": 6,
+      "method": "A",
+      "truth": 190,
+      "exact_mse": "1304/11",
+      "mse": 118.54545454545455,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 924,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 38723,
+        "mean_error": -0.484,
+        "mse": 117.904,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            6,
+            4,
+            1,
+            10,
+            5,
+            9
+          ],
+          "estimate": 174.0,
+          "calls": 6
+        }
+      }
+    },
+    {
+      "workload": "signed_carryover",
+      "N": 12,
+      "budget": 6,
+      "method": "U_wr",
+      "truth": 190,
+      "exact_mse": "652/3",
+      "mse": 217.33333333333334,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 38724,
+        "mean_error": 0.34,
+        "mse": 246.392,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 777,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            11,
+            2,
+            1,
+            3,
+            7,
+            6
+          ],
+          "estimate": 178.0,
+          "calls": 6
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "signed_carryover",
+      "N": 12,
+      "budget": 6,
+      "method": "C_mix",
+      "truth": 190,
+      "exact_mse": "23072/285",
+      "mse": 80.95438596491228,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 38725,
+        "mean_error": 0.11604210526315786,
+        "mse": 83.41740853185595,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 923,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            0,
+            8,
+            3,
+            0,
+            8
+          ],
+          "estimate": 198.7578947368421,
+          "calls": 6
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "signed_carryover",
+      "N": 12,
+      "budget": 6,
+      "method": "C_strata",
+      "truth": 190,
+      "exact_mse": "424/9",
+      "mse": 47.111111111111114,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 224,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 38726,
+        "mean_error": 0.19733333333333333,
+        "mse": 46.471111111111114,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            3,
+            0,
+            1,
+            6,
+            10,
+            7
+          ],
+          "estimate": 187.33333333333334,
+          "calls": 6
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 3
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 3
+        }
+      ]
+    },
+    {
+      "workload": "quiet",
+      "N": 12,
+      "budget": 4,
+      "method": "A",
+      "truth": 186,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 495,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 48523,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            1,
+            8,
+            3,
+            2
+          ],
+          "estimate": 186.0,
+          "calls": 4
+        }
+      }
+    },
+    {
+      "workload": "quiet",
+      "N": 12,
+      "budget": 4,
+      "method": "U_wr",
+      "truth": 186,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 48524,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 421,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            3,
+            4,
+            11
+          ],
+          "estimate": 186.0,
+          "calls": 4
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "quiet",
+      "N": 12,
+      "budget": 4,
+      "method": "C_mix",
+      "truth": 186,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 48525,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 611,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            9,
+            3,
+            0,
+            2
+          ],
+          "estimate": 186.0,
+          "calls": 4
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "quiet",
+      "N": 12,
+      "budget": 4,
+      "method": "C_strata",
+      "truth": 186,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 168,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 48526,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            1,
+            10,
+            6
+          ],
+          "estimate": 186.0,
+          "calls": 4
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 2
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 2
+        }
+      ]
+    },
+    {
+      "workload": "quiet",
+      "N": 12,
+      "budget": 6,
+      "method": "A",
+      "truth": 186,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 924,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 48723,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            4,
+            3,
+            6,
+            0,
+            7,
+            11
+          ],
+          "estimate": 186.0,
+          "calls": 6
+        }
+      }
+    },
+    {
+      "workload": "quiet",
+      "N": 12,
+      "budget": 6,
+      "method": "U_wr",
+      "truth": 186,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 48724,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 780,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            7,
+            6,
+            5,
+            4,
+            11,
+            1
+          ],
+          "estimate": 186.0,
+          "calls": 6
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "quiet",
+      "N": 12,
+      "budget": 6,
+      "method": "C_mix",
+      "truth": 186,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 48725,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 908,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            4,
+            0,
+            10,
+            0,
+            0
+          ],
+          "estimate": 186.0,
+          "calls": 6
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "quiet",
+      "N": 12,
+      "budget": 6,
+      "method": "C_strata",
+      "truth": 186,
+      "exact_mse": "0",
+      "mse": 0.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 224,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 48726,
+        "mean_error": 0.0,
+        "mse": 0.0,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            2,
+            1,
+            3,
+            4,
+            10,
+            6
+          ],
+          "estimate": 186.0,
+          "calls": 6
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 3
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 3
+        }
+      ]
+    },
+    {
+      "workload": "shifted_pair",
+      "N": 12,
+      "budget": 4,
+      "method": "A",
+      "truth": 186,
+      "exact_mse": "2352/11",
+      "mse": 213.8181818181818,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 495,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 58523,
+        "mean_error": 0.0,
+        "mse": 207.27,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            8,
+            1,
+            9,
+            10
+          ],
+          "estimate": 186.0,
+          "calls": 4
+        }
+      }
+    },
+    {
+      "workload": "shifted_pair",
+      "N": 12,
+      "budget": 4,
+      "method": "U_wr",
+      "truth": 186,
+      "exact_mse": "294",
+      "mse": 294.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 58524,
+        "mean_error": 0.294,
+        "mse": 300.762,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 433,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            5,
+            8,
+            2,
+            1
+          ],
+          "estimate": 207.0,
+          "calls": 4
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "shifted_pair",
+      "N": 12,
+      "budget": 4,
+      "method": "C_mix",
+      "truth": 186,
+      "exact_mse": "588",
+      "mse": 588.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 58525,
+        "mean_error": 0.504,
+        "mse": 575.064,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 616,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "estimate": 186.0,
+          "calls": 4
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "shifted_pair",
+      "N": 12,
+      "budget": 4,
+      "method": "C_strata",
+      "truth": 186,
+      "exact_mse": "336",
+      "mse": 336.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 168,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 58526,
+        "mean_error": 0.84,
+        "mse": 319.872,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 4,
+        "max_calls": 4,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            2,
+            11,
+            5
+          ],
+          "estimate": 186.0,
+          "calls": 4
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 2
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 2
+        }
+      ]
+    },
+    {
+      "workload": "shifted_pair",
+      "N": 12,
+      "budget": 6,
+      "method": "A",
+      "truth": 186,
+      "exact_mse": "1176/11",
+      "mse": 106.9090909090909,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 924,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 58723,
+        "mean_error": -0.154,
+        "mse": 109.956,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            0,
+            3,
+            10,
+            5,
+            8,
+            1
+          ],
+          "estimate": 200.0,
+          "calls": 6
+        }
+      }
+    },
+    {
+      "workload": "shifted_pair",
+      "N": 12,
+      "budget": 6,
+      "method": "U_wr",
+      "truth": 186,
+      "exact_mse": "196",
+      "mse": 196.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 58724,
+        "mean_error": 0.798,
+        "mse": 189.532,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 779,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            6,
+            0,
+            10,
+            0,
+            11,
+            6
+          ],
+          "estimate": 186.0,
+          "calls": 6
+        }
+      },
+      "p": [
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12",
+        "1/12"
+      ]
+    },
+    {
+      "workload": "shifted_pair",
+      "N": 12,
+      "budget": 6,
+      "method": "C_mix",
+      "truth": 186,
+      "exact_mse": "392",
+      "mse": 392.0,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "single_draw_outcomes": 12,
+        "joint_factorization": "k independent draws",
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 58725,
+        "mean_error": 0.756,
+        "mse": 403.76,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 909,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "estimate": 186.0,
+          "calls": 6
+        }
+      },
+      "p": [
+        "19/72",
+        "5/24",
+        "1/8",
+        "5/72",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24",
+        "1/24"
+      ]
+    },
+    {
+      "workload": "shifted_pair",
+      "N": 12,
+      "budget": 6,
+      "method": "C_strata",
+      "truth": 186,
+      "exact_mse": "560/3",
+      "mse": 186.66666666666666,
+      "exact_bias": "0",
+      "moment_crosscheck": {
+        "joint_sample_sets_enumerated": 224,
+        "exact_bias": "0"
+      },
+      "simulation": {
+        "repetitions": 1000,
+        "seed": 58726,
+        "mean_error": -0.26133333333333336,
+        "mse": 188.16000000000003,
+        "purpose": "implementation/audit only; conclusions use exact moments"
+      },
+      "access_audit": {
+        "min_calls": 6,
+        "max_calls": 6,
+        "trials_with_repeated_indices": 0,
+        "repeat_reads_are_charged": true,
+        "first_trace": {
+          "indices_0_based": [
+            3,
+            0,
+            2,
+            10,
+            6,
+            9
+          ],
+          "estimate": 167.33333333333334,
+          "calls": 6
+        }
+      },
+      "allocation": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "sample_size": 3
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sample_size": 3
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "elapsed_seconds": 0.7056843749996915
+}

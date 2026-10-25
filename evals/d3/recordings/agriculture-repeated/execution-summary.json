@@ -1,0 +1,271 @@
+{
+  "case": "agriculture-repeated",
+  "status": "completed-in-scope",
+  "project": "PROJECT",
+  "created_new": true,
+  "offline": true,
+  "stdlib_only": true,
+  "network_or_external_messages": false,
+  "global_installation": false,
+  "actually_read_skills": [
+    "rw-workflow",
+    "rw-validation",
+    "rw-writing",
+    "rw-review"
+  ],
+  "actually_read_profiles": [
+    {
+      "id": "agriculture-life",
+      "version": "0.1",
+      "kind": "discipline"
+    },
+    {
+      "id": "measurement-experiment",
+      "version": "0.1",
+      "kind": "method",
+      "variant": "field-trial"
+    },
+    {
+      "id": "empirical-quantitative",
+      "version": "0.1",
+      "kind": "method",
+      "variant": "randomized-intervention"
+    }
+  ],
+  "source_access": "All four copied raw inputs; protocol/task read as text, observations/plots fully parsed. Toolkit source workflow/bridge/protocol/catalog for setup, then project-local selected workflow/validation/writing/review, two core protocols, selected profiles/catalog/schema. No tests/graders/other case outputs/personal package/external URLs.",
+  "files": {
+    "registered_artifacts": [
+      {
+        "id": "Aaccess",
+        "path": "notes/access.json",
+        "sha256": "aeb6293d11e643ffd044535a7b7442234f38533e480e59b10f07bf165a372888",
+        "registered_version": 1
+      },
+      {
+        "id": "Ablocks",
+        "path": "artifacts/block_contrasts.csv",
+        "sha256": "1281736f43cfe9437cf9e423780fb456e3f171293e1fdd89c4586909cbe0db3a",
+        "registered_version": 1
+      },
+      {
+        "id": "Acode",
+        "path": "artifacts/run.py",
+        "sha256": "b0275b7dfeb6fa931b0d02998677949d7f6aa13c56ff8f82bbdeb01ed2d47204",
+        "registered_version": 1
+      },
+      {
+        "id": "Aexecution",
+        "path": "artifacts/execution.json",
+        "sha256": "50088a35b63d7fb053160971fe50809264b9231e74ba596f994f31da3fdbb931",
+        "registered_version": 1
+      },
+      {
+        "id": "Ainputs",
+        "path": "notes/input-manifest.json",
+        "sha256": "48f7386acd8d8f9f11fe8b313139fa87a5bf93cca4d3c09ac3b91cd686a8ba70",
+        "registered_version": 1
+      },
+      {
+        "id": "Aissue",
+        "path": "notes/issue.md",
+        "sha256": "ffe08c0cbdc296064c2f15292cba64fbc6469244d4851e4b8fa580995a62ddd1",
+        "registered_version": 2
+      },
+      {
+        "id": "Amanuscript",
+        "path": "manuscript/report.md",
+        "sha256": "043aa8047826eabe6db77cce62b186682722ec6138bab1cc23d7e18231a2846a",
+        "registered_version": 1
+      },
+      {
+        "id": "Aplotprimary",
+        "path": "artifacts/plot_primary.csv",
+        "sha256": "9198c026a9c6bd868baf85e5f770429d59955f060c79e3a5167c83cfcb878244",
+        "registered_version": 1
+      },
+      {
+        "id": "Aplotseason",
+        "path": "artifacts/plot_season.csv",
+        "sha256": "2ff1d3396b1c34610ab5b2c2a6ee29b2427675e08e2ccf8cc9cd5a619144afd3",
+        "registered_version": 1
+      },
+      {
+        "id": "Areadme",
+        "path": "artifacts/README.md",
+        "sha256": "a91ca8b4c6b62584ad150678cd44fe2f45c2861245800d2d12da6716ab18186c",
+        "registered_version": 2
+      },
+      {
+        "id": "Arerun",
+        "path": "checks/rerun.json",
+        "sha256": "921f3d69c2b0ec12044b0436d8f43306695d93503c33f36ca95d02546521ee14",
+        "registered_version": 1
+      },
+      {
+        "id": "Aresults",
+        "path": "artifacts/results.json",
+        "sha256": "5d51315934cb4290fe6b5f448a7d1dcdda83b37f37bdd1c954b1688ebd97fa20",
+        "registered_version": 1
+      },
+      {
+        "id": "Areview",
+        "path": "review.md",
+        "sha256": "495d68bed1811217cac6618e5609305c1aa712eaf2aad0a83aeb5e30a480c0af",
+        "registered_version": 1
+      },
+      {
+        "id": "Avisits",
+        "path": "artifacts/visit_contrasts.csv",
+        "sha256": "180e9f1f177a63bb70edd7134d35f0046cea50c77b14a0574ba500ad7c385e5a",
+        "registered_version": 1
+      }
+    ],
+    "raw_inputs": [
+      "PROJECT/inputs/task.md",
+      "PROJECT/inputs/protocol.md",
+      "PROJECT/inputs/plots.csv",
+      "PROJECT/inputs/observations.csv"
+    ],
+    "checks": [
+      "PROJECT/checks/check.json",
+      "PROJECT/checks/resume.json",
+      "PROJECT/checks/rerun.json"
+    ],
+    "records": "PROJECT/records/registry.json",
+    "registration_payloads": "registration-inputs/",
+    "freeze_manifest": "freeze-manifest.json"
+  },
+  "logs": [
+    "logs/001-init.json",
+    "logs/002-connect-help.json",
+    "logs/003-connect-install.json",
+    "logs/004-analysis-run-1.json",
+    "logs/005-analysis-run-2.json",
+    "logs/006-local-guidance-read.json",
+    "logs/007-registration.json",
+    "logs/008-installed-integrity.json",
+    "logs/009-check.json",
+    "logs/010-checkpoint.json",
+    "logs/011-resume.json",
+    "logs/012-final-check.json",
+    "logs/013-record-amendments.json",
+    "logs/014-checkpoint-final.json",
+    "logs/015-check-final.json",
+    "logs/016-resume-final.json",
+    "logs/017-revision-environment.json",
+    "logs/018-trace-register-Aissue.json",
+    "logs/019-trace-register-Areadme.json",
+    "logs/020-trace-register-Eissue.json",
+    "logs/021-trace-register-Eobservations.json",
+    "logs/022-trace-register-Eplots.json",
+    "logs/023-trace-register-Eprotocol.json",
+    "logs/024-trace-register-Ererun.json",
+    "logs/025-trace-register-Eresults.json",
+    "logs/026-trace-register-Aexecution.json",
+    "logs/027-trace-register-Eexecution.json",
+    "logs/028-trace-register-ACTdesign.json",
+    "logs/029-trace-register-ACTanalysis.json",
+    "logs/030-trace-register-ACTwriting.json",
+    "logs/031-trace-register-ACTtrace.json",
+    "logs/032-trace-checkpoint.json",
+    "logs/033-trace-check-final.json",
+    "logs/034-trace-resume-final.json"
+  ],
+  "results": {
+    "primary_cm": 0.5,
+    "primary_approximate_t95_cm": [
+      -0.4186931155186995,
+      1.4186931155186995
+    ],
+    "primary_exact_sharp_null_p": 0.5,
+    "season_2025_cm": 1.5,
+    "season_2026_cm": -0.5,
+    "paired_season_difference_cm": -2.0,
+    "paired_season_difference_t95_cm": [
+      -7.810325431510544,
+      3.8103254315105444
+    ],
+    "paired_season_difference_exact_p": 0.5,
+    "all_visit_changed_endpoint_cm": 2.8333333333333335,
+    "randomized_pairs": 4,
+    "assignments": 16,
+    "rows_not_randomized_replicates": 192,
+    "numeric_rerun_identical": true,
+    "run_times": [
+      {
+        "log": "logs/004-analysis-run-1.json",
+        "elapsed_seconds": 0.03524320799988345,
+        "exit_code": 0
+      },
+      {
+        "log": "logs/005-analysis-run-2.json",
+        "elapsed_seconds": 0.02887929099961184,
+        "exit_code": 0
+      }
+    ],
+    "manuscript_characters": 818
+  },
+  "limits": [
+    "Only this synthetic site, four randomized pairs and two fixed seasons.",
+    "t(df=3) intervals are working approximations, not exact coverage guarantees.",
+    "Exact p-values test endpoint-specific sharp nulls; at 4 pairs minimum two-sided p=.125 and exact 95% constant-additive-effect confidence set is all real numbers.",
+    "No identified rainfall/climate mechanism; year differences confound age, cumulative treatment and other annual changes.",
+    "No universal/national/economic/ecological claims, independent human verification, external literature or novelty certification.",
+    "Core check/resume passed only metadata/reference/fingerprint/freshness scope; scientific_validity remains not-assessed."
+  ],
+  "failures": [],
+  "failure_note": "No actual command, assertion, timeout or analysis failure occurred. Source rights metadata was explicitly amended from public to unknown and affected done activities rebound; old versions retained in registry history and all CLI outputs retained.",
+  "checks": {
+    "check_passed": true,
+    "resume_passed": true,
+    "errors": [],
+    "warnings": [],
+    "checkpoint_status": "current",
+    "scientific_validity": "not-assessed"
+  },
+  "saved_next_action": "保持主要终点冻结，由另一位审阅者从artifacts/plot_season.csv独立复核4区组主要/分季/季差及16种原分配枚举，重点区分尖锐零假设与平均效应；后续新增站点/季节前预设年龄、累计处理与气候识别设计及定量气象/灌溉记录。",
+  "freeze_marker": "FROZEN",
+  "no_writes_after_marker": true,
+  "trace_revision": {
+    "version": 2,
+    "revision_kind": "portable-execution-credential-packaging",
+    "original_revision": "revisions/v1",
+    "original_registry_revision": 52,
+    "current_registry_revision": 67,
+    "scientific_analysis_rerun": false,
+    "numeric_outputs_and_raw_inputs_unchanged": true,
+    "original_command_log_convention": "The original task requested raw CLI logs alongside PROJECT; that was followed. This revision adds a registered minimal scientific-run attestation within PROJECT for portable handoff.",
+    "project_execution_attestation": "PROJECT/artifacts/execution.json",
+    "attestation_sha256": "50088a35b63d7fb053160971fe50809264b9231e74ba596f994f31da3fdbb931",
+    "original_environment_limit": "Original per-run exact Python version and start UTC were not recorded; they remain explicitly not-recorded. Revision environment is labelled separately.",
+    "original_run_logs_unchanged": true,
+    "preserved_project_file_count": 71,
+    "unchanged_preexisting_protected_file_count": 65,
+    "changed_preexisting_project_files": [
+      "artifacts/README.md",
+      "checks/check.json",
+      "checks/resume.json",
+      "notes/issue.md",
+      "records/registry.json"
+    ],
+    "registered_records": 46,
+    "new_artifact_record": "artifact:Aexecution",
+    "new_evidence_record": "evidence:Eexecution",
+    "new_activity_record": "activity:ACTtrace",
+    "explicit_replacements": [
+      "artifact:Aissue",
+      "artifact:Areadme",
+      "evidence:Eissue",
+      "evidence:Eobservations",
+      "evidence:Eplots",
+      "evidence:Eprotocol",
+      "evidence:Ererun",
+      "evidence:Eresults",
+      "activity:ACTdesign",
+      "activity:ACTanalysis",
+      "activity:ACTwriting"
+    ],
+    "history_preserved": true,
+    "scientific_or_human_expert_certification": false
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "format_version": 1,
+  "status": "executed-and-reviewed",
+  "scope": "Representative bounded synthetic research tasks and original architecture scenarios; no field-wide or human expert certification.",
+  "d3_cases": [
+    "innovation-candidates",
+    "medicine",
+    "agriculture",
+    "qualitative-social",
+    "normative-humanities",
+    "evidence-synthesis",
+    "engineering",
+    "physics",
+    "prediction-leakage",
+    "observational-policy",
+    "mixed-evidence",
+    "digital-humanities",
+    "restricted-materials",
+    "formal-finite",
+    "engineering-simulation",
+    "agriculture-repeated"
+  ],
+  "original_scenarios": {
+    "T01": {
+      "phase": "d3",
+      "case_id": "formal-finite",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/formal-finite/task.md",
+      "observed_behavior": "保留初始0至16有限检验；找到n=17反例，改为有手工证明的受限命题及无穷合数族。",
+      "output": "../d3/recordings/formal-finite/outputs/notes/derivation.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T02": {
+      "phase": "d3",
+      "case_id": "prediction-leakage",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/prediction-leakage/task.md",
+      "observed_behavior": "有主体重叠的按访视行划分出现12主体重叠与100%准确率；主体互斥划分50%，不声称新主体泛化。",
+      "output": "../d3/recordings/prediction-leakage/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json",
+      "scope_difference": "Original design mentions random row splitting; the executed example uses a fixed visit-row split to expose subject leakage. It does not test a random splitting algorithm."
+    },
+    "T03": {
+      "phase": "d3",
+      "case_id": "physics",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/physics/task.md",
+      "observed_behavior": "校准传播共享协方差、量纲/极限和残差比较；未将拟合视为唯一机制。",
+      "output": "../d3/recordings/physics/outputs/notes/derivation.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T04": {
+      "phase": "d3",
+      "case_id": "engineering-simulation",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/engineering-simulation/task.md",
+      "observed_behavior": "名义仿真通过，冷/热极端工况因执行器界限失败；保留成本/安全权衡及实物未测范围。",
+      "output": "../d3/recordings/engineering-simulation/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T05": {
+      "phase": "d3",
+      "case_id": "medicine",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/medicine/task.md",
+      "observed_behavior": "保留第30天原主要终点和变更时序，第7天结果仅探索性；无伦理批准或临床有效性推论。",
+      "output": "../d3/recordings/medicine/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T06": {
+      "phase": "d3",
+      "case_id": "observational-policy",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/observational-policy/task.md",
+      "observed_behavior": "粗分组风险差+0.30与分层/标准化-0.10相反；明确混杂、选择和测量范围，不作治疗有效结论。",
+      "output": "../d3/recordings/observational-policy/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T07": {
+      "phase": "d3",
+      "case_id": "agriculture-repeated",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/agriculture-repeated/task.md",
+      "observed_behavior": "192次观测仍是32株、8地块、4独立区组对；保留跨季同分配和地点/季节外推限制。",
+      "output": "../d3/recordings/agriculture-repeated/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T08": {
+      "phase": "d2",
+      "case_id": "history",
+      "status": "pass-in-scope",
+      "task": "../d2/cases/history/task.md",
+      "observed_behavior": "逐项核对七份节录、版本与转抄链，保留两种竞争解释及尚缺语境。",
+      "output": "../d2/recordings/history/outputs/manuscript/report.md",
+      "review": "../d2/independent-review.json"
+    },
+    "T09": {
+      "phase": "d3",
+      "case_id": "qualitative-social",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/qualitative-social/task.md",
+      "observed_behavior": "18项编码保留负面材料、框架修订、研究者位置及引用权限；明确代理编码并无人类独立验证。",
+      "output": "../d3/recordings/qualitative-social/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T10": {
+      "phase": "d3",
+      "case_id": "observational-policy",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/observational-policy/task.md",
+      "observed_behavior": "政策DID当年+1、前期-3、后期固定基准-1；识别依据未建立，前后变化不写成因果。",
+      "output": "../d3/recordings/observational-policy/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T11": {
+      "phase": "d3",
+      "case_id": "mixed-evidence",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/mixed-evidence/task.md",
+      "observed_behavior": "预测、志愿者前后观测与访谈的对象分开，保留缺失/引用限制与不一致，不宣称自动三角验证。",
+      "output": "../d3/recordings/mixed-evidence/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T12": {
+      "phase": "d3",
+      "case_id": "normative-humanities",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/normative-humanities/task.md",
+      "observed_behavior": "写明价值前提、事实至规范的推理桥梁、反对意见与可修订政策，经验关联不单独推出应当。",
+      "output": "../d3/recordings/normative-humanities/outputs/notes/argument.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T13": {
+      "phase": "d3",
+      "case_id": "digital-humanities",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/digital-humanities/task.md",
+      "observed_behavior": "逐条保留OCR/修订层及共同节录比较；目录缺失不能当零值，词频差不推历史原因。",
+      "output": "../d3/recordings/digital-humanities/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T14": {
+      "phase": "d3",
+      "case_id": "prediction-leakage",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/prediction-leakage/task.md",
+      "observed_behavior": "患者主体切分、校准指标和单机构回顾范围明确；合成数据无真实权限获批或临床获益主张。",
+      "output": "../d3/recordings/prediction-leakage/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T15": {
+      "phase": "d3",
+      "case_id": "evidence-synthesis",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/evidence-synthesis/task.md",
+      "observed_behavior": "仅纳入给定有限材料，去重并做缺失敏感性；按实际范围命名，不声称全球系统检索。",
+      "output": "../d3/recordings/evidence-synthesis/outputs/manuscript/report.md",
+      "review": "../d3/independent-review.json"
+    },
+    "T16": {
+      "phase": "d3",
+      "case_id": "restricted-materials",
+      "status": "pass-in-scope",
+      "task": "../d3/cases/restricted-materials/task.md",
+      "observed_behavior": "暂停许可未明的患者/访谈外发，继续离线数据字典、空表和新合成材料；未把待审当获准。",
+      "output": "../d3/recordings/restricted-materials/outputs/notes/permission-decision.md",
+      "review": "../d3/independent-review.json"
+    }
+  },
+  "method_cases": {
+    "formal-theory": [
+      "formal-finite",
+      "physics"
+    ],
+    "computational": [
+      "innovation-candidates",
+      "prediction-leakage",
+      "digital-humanities"
+    ],
+    "measurement-experiment": [
+      "agriculture",
+      "physics",
+      "agriculture-repeated"
+    ],
+    "engineering-design": [
+      "engineering",
+      "engineering-simulation"
+    ],
+    "empirical-quantitative": [
+      "medicine",
+      "observational-policy",
+      "prediction-leakage",
+      "agriculture-repeated"
+    ],
+    "qualitative": [
+      "qualitative-social",
+      "mixed-evidence"
+    ],
+    "historical-interpretive": [
+      "d2:history",
+      "digital-humanities"
+    ],
+    "conceptual-normative": [
+      "normative-humanities"
+    ],
+    "evidence-synthesis": [
+      "evidence-synthesis"
+    ]
+  },
+  "discipline_cases": {
+    "natural-sciences": [
+      "physics",
+      "formal-finite"
+    ],
+    "engineering": [
+      "engineering",
+      "prediction-leakage",
+      "engineering-simulation"
+    ],
+    "medicine-health": [
+      "medicine",
+      "prediction-leakage",
+      "evidence-synthesis"
+    ],
+    "agriculture-life": [
+      "agriculture",
+      "agriculture-repeated"
+    ],
+    "humanities": [
+      "normative-humanities",
+      "digital-humanities",
+      "d2:history"
+    ],
+    "social-sciences": [
+      "qualitative-social",
+      "observational-policy",
+      "mixed-evidence"
+    ]
+  }
+}

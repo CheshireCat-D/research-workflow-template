@@ -1,0 +1,62 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pe7c8fdc547c340d09a199529783c9b70",
+  "revision": 48,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 4,
+    "artifacts": 8,
+    "decisions": 0,
+    "evidence": 9,
+    "method_bindings": 2,
+    "relations": 8,
+    "sources": 10,
+    "statements": 6
+  },
+  "activities": [
+    {
+      "id": "A1",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A2",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A3",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A4",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "A4",
+    "next_action": "先为D03及E1两期同文类可比节录建立补料字段表，核对材料身份、period/辑本、实际访问范围和OCR修订依据；仅获新增文本后逐字复核、重算并显式更新受影响登记。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "next_action": "先为D03及E1两期同文类可比节录建立补料字段表，核对材料身份、period/辑本、实际访问范围和OCR修订依据；仅获新增文本后逐字复核、重算并显式更新受影响登记。",
+  "needs_review": false,
+  "recovery_instruction": "Continue the recorded next action within its existing scope."
+}

@@ -1,0 +1,1220 @@
+{
+  "status": "completed-in-scope",
+  "project": "PROJECT",
+  "final_marker": "FINALIZED.json",
+  "frozen_manifest": "frozen-project-files.json",
+  "registered_writes_after_final_marker": 0,
+  "task_input": "PROJECT/inputs/task.md",
+  "scope": "Original offline synthetic supplied-material review only; no external network/messages/database access/global installation; source toolkit and raw inputs not modified.",
+  "actual_skills_read": [
+    "rw-workflow",
+    "rw-literature",
+    "rw-validation",
+    "rw-writing",
+    "rw-review"
+  ],
+  "actual_project_skill_paths": [
+    ".agents/skills/rw-workflow/SKILL.md",
+    ".agents/skills/rw-literature/SKILL.md",
+    ".agents/skills/rw-validation/SKILL.md",
+    ".agents/skills/rw-writing/SKILL.md",
+    ".agents/skills/rw-review/SKILL.md"
+  ],
+  "actual_profiles_read": [
+    {
+      "id": "medicine-health",
+      "kind": "discipline",
+      "version": "0.1",
+      "path": ".agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md"
+    },
+    {
+      "id": "evidence-synthesis",
+      "kind": "method",
+      "version": "0.1",
+      "variant_used": "narrative-review",
+      "path": ".agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md"
+    },
+    {
+      "id": "empirical-quantitative",
+      "kind": "method",
+      "version": "0.1",
+      "variant_used": "randomized-intervention",
+      "path": ".agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md"
+    }
+  ],
+  "other_guidance_read": [
+    "core/skill-bridge.md",
+    "core/protocol.md",
+    "profiles/governance.md",
+    "design/catalog.json",
+    "core/schemas/source.schema.json",
+    "core/schemas/statement.schema.json",
+    "core/schemas/evidence.schema.json",
+    "core/schemas/relation.schema.json",
+    "core/schemas/activity.schema.json",
+    "core/schemas/artifact.schema.json",
+    "core/schemas/method-binding.schema.json"
+  ],
+  "local_guidance_read_detail": "PROJECT/notes/guidance-read.json",
+  "all_eight_skills_installed_but_used_only": [
+    "rw-workflow",
+    "rw-literature",
+    "rw-validation",
+    "rw-writing",
+    "rw-review"
+  ],
+  "deliverable_files": [
+    "notes/issue.md",
+    "notes/screening.csv",
+    "notes/extraction.csv",
+    "notes/risk-of-bias.md",
+    "notes/synthesis.md",
+    "notes/numerical-results.md",
+    "notes/guidance-read.json",
+    "artifacts/run.py",
+    "artifacts/run-config.json",
+    "artifacts/results.json",
+    "manuscript/report.md",
+    "review.md",
+    "checks/check.json",
+    "checks/resume.json",
+    "checks/checkpoint.json",
+    "checks/installed-integrity.json"
+  ],
+  "inputs": {
+    "search-export.csv": {
+      "copy_sha256": "b675c239989e8da470b9cd480d6c99214b863bd7e6d9448b045505cf0871b5ab",
+      "source_sha256": "b675c239989e8da470b9cd480d6c99214b863bd7e6d9448b045505cf0871b5ab",
+      "equal": true
+    },
+    "scope.md": {
+      "copy_sha256": "7847205e8882fe12618681a8cb782b7d76d266e328439541448458d211fcb607",
+      "source_sha256": "7847205e8882fe12618681a8cb782b7d76d266e328439541448458d211fcb607",
+      "equal": true
+    },
+    "full-extracts.md": {
+      "copy_sha256": "2c3cdf018c0991b7a199f40efb673a12b527a0d6f63b52c2c4d882224d9047c5",
+      "source_sha256": "2c3cdf018c0991b7a199f40efb673a12b527a0d6f63b52c2c4d882224d9047c5",
+      "equal": true
+    },
+    "task.md": {
+      "copy_sha256": "141e8ec12d6c43c62a3cc743d284e30aa2da6577689aebc2f122bfbcc1c18cff",
+      "source_sha256": "141e8ec12d6c43c62a3cc743d284e30aa2da6577689aebc2f122bfbcc1c18cff",
+      "equal": true
+    },
+    "abstracts.md": {
+      "copy_sha256": "90d43d0d04bea1fe022c69ce2947fc025f313f933a94f4070beb2a24b1dc4e92",
+      "source_sha256": "90d43d0d04bea1fe022c69ce2947fc025f313f933a94f4070beb2a24b1dc4e92",
+      "equal": true
+    }
+  },
+  "flow": {
+    "export_records": 7,
+    "unique_reports": 7,
+    "exact_export_duplicates": 0,
+    "same_study_report_links": 1,
+    "unique_studies_all": 6,
+    "excluded_reports": 3,
+    "included_reports": 4,
+    "included_independent_studies": 3,
+    "randomized_total": 320,
+    "observed_total": 307
+  },
+  "main_results": {
+    "H1": {
+      "events_sms": 40,
+      "n_sms": 50,
+      "events_control": 35,
+      "n_control": 50,
+      "p_sms": 0.8,
+      "p_control": 0.7,
+      "risk_difference": 0.10000000000000009,
+      "rd_95_ci": [
+        -0.06991135259194153,
+        0.2630165794272212
+      ],
+      "risk_ratio": 1.142857142857143,
+      "rr_95_ci": [
+        0.9095570995642048,
+        1.4359983002775674
+      ],
+      "log_rr": 0.13353139262452277,
+      "var_log_rr": 0.01357142857142857
+    },
+    "H4_complete_case": {
+      "events_sms": 50,
+      "n_sms": 62,
+      "events_control": 45,
+      "n_control": 65,
+      "p_sms": 0.8064516129032258,
+      "p_control": 0.6923076923076923,
+      "risk_difference": 0.11414392059553347,
+      "rd_95_ci": [
+        -0.037460134783742494,
+        0.2581666349286862
+      ],
+      "risk_ratio": 1.1648745519713262,
+      "rr_95_ci": [
+        0.9510315242456567,
+        1.426800991593518
+      ],
+      "log_rr": 0.15261340050837185,
+      "var_log_rr": 0.010708574579542322
+    },
+    "H5": {
+      "events_sms": 28,
+      "n_sms": 40,
+      "events_control": 20,
+      "n_control": 40,
+      "p_sms": 0.7,
+      "p_control": 0.5,
+      "risk_difference": 0.19999999999999996,
+      "rd_95_ci": [
+        -0.013808204641805877,
+        0.3900692819178616
+      ],
+      "risk_ratio": 1.4,
+      "rr_95_ci": [
+        0.9666428976212497,
+        2.0276360637658852
+      ],
+      "log_rr": 0.3364722366212129,
+      "var_log_rr": 0.035714285714285705
+    }
+  },
+  "missingness_bounds": {
+    "RD": [
+      0.0,
+      0.18571428571428572
+    ],
+    "RR": [
+      1.0,
+      1.288888888888889
+    ],
+    "note": "point-identification bounds conditional on observed outcomes; not 95% confidence limits"
+  },
+  "sensitivity_assignments": 54,
+  "exploratory_pool": {
+    "k": 3,
+    "rr": 1.1874362195668717,
+    "rr_95_ci": [
+      1.0319650818157329,
+      1.3663299276157423
+    ],
+    "Q": 0.9015607031479084,
+    "df": 2,
+    "I2_percent": 0,
+    "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+  },
+  "execution": {
+    "official_command": [
+      "python3",
+      "artifacts/run.py"
+    ],
+    "cwd": "PROJECT",
+    "stdlib_only": true,
+    "seed": "not applicable, deterministic",
+    "run_elapsed_seconds": 0.000839084001199808,
+    "wall_process_log": "execution-logs/05-analysis-command.json",
+    "single_formal_run_under_10_seconds": true,
+    "all_command_logs": [
+      {
+        "log": "execution-logs/00-command.json",
+        "argv": [
+          "python3",
+          "TOOLKIT/tools/research.py",
+          "init",
+          "--output",
+          "PROJECT",
+          "--title",
+          "有限离线短信提醒证据综合",
+          "--discipline",
+          "medicine-health",
+          "--method",
+          "evidence-synthesis",
+          "--method",
+          "empirical-quantitative",
+          "--mode",
+          "reproducible",
+          "--language",
+          "zh"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03985183300028439
+      },
+      {
+        "log": "execution-logs/01-command.json",
+        "argv": [
+          "python3",
+          "TOOLKIT/tools/connect_skills.py",
+          "install",
+          "--root",
+          "PROJECT"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.049758791999920504
+      },
+      {
+        "log": "execution-logs/02-local-guidance-command.json",
+        "argv": [
+          "cat",
+          ".agents/skills/rw-workflow/SKILL.md",
+          ".agents/skills/rw-literature/SKILL.md",
+          ".agents/skills/rw-validation/SKILL.md",
+          ".agents/skills/rw-writing/SKILL.md",
+          ".agents/skills/rw-review/SKILL.md",
+          "_rw-runtime/core/skill-bridge.md",
+          "_rw-runtime/core/protocol.md",
+          "_rw-runtime/profiles/disciplines/medicine-health.md",
+          "_rw-runtime/profiles/methods/evidence-synthesis.md",
+          "_rw-runtime/profiles/methods/empirical-quantitative.md",
+          "_rw-runtime/profiles/governance.md",
+          "_rw-runtime/design/catalog.json"
+        ],
+        "exit_code": 1,
+        "elapsed_seconds": 0.0021823749993927777
+      },
+      {
+        "log": "execution-logs/03-local-guidance-command.json",
+        "argv": [
+          "cat",
+          ".agents/skills/_rw-runtime/core/skill-bridge.md",
+          ".agents/skills/_rw-runtime/core/protocol.md",
+          ".agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md",
+          ".agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md",
+          ".agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md",
+          ".agents/skills/_rw-runtime/profiles/governance.md",
+          ".agents/skills/_rw-runtime/design/catalog.json",
+          ".agents/skills/_rw-runtime/core/schemas/source.schema.json",
+          ".agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+          ".agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+          ".agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+          ".agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+          ".agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+          ".agents/skills/_rw-runtime/core/schemas/method-binding.schema.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.002443249999487307
+      },
+      {
+        "log": "execution-logs/04-prepare-command.json",
+        "argv": [
+          "python3",
+          "prepare.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.022718791999068344
+      },
+      {
+        "log": "execution-logs/05-analysis-command.json",
+        "argv": [
+          "python3",
+          "artifacts/run.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.021472874999744818
+      },
+      {
+        "log": "execution-logs/06-manuscript-command.json",
+        "argv": [
+          "python3",
+          "finalize-materials.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.02847062500222819
+      },
+      {
+        "log": "execution-logs/07-register-000-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "source",
+          "--file",
+          "record-inputs/000-source-Scope.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03806350000013481
+      },
+      {
+        "log": "execution-logs/07-register-001-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "source",
+          "--file",
+          "record-inputs/001-source-Export.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03612766600053874
+      },
+      {
+        "log": "execution-logs/07-register-002-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "source",
+          "--file",
+          "record-inputs/002-source-R01.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03653816600126447
+      },
+      {
+        "log": "execution-logs/07-register-003-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "source",
+          "--file",
+          "record-inputs/003-source-R02.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.036615666998841334
+      },
+      {
+        "log": "execution-logs/07-register-004-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "source",
+          "--file",
+          "record-inputs/004-source-R03.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.0366609589982545
+      },
+      {
+        "log": "execution-logs/07-register-005-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "source",
+          "--file",
+          "record-inputs/005-source-R04.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.037219833000563085
+      },
+      {
+        "log": "execution-logs/07-register-006-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "source",
+          "--file",
+          "record-inputs/006-source-R05.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.037535750001552515
+      },
+      {
+        "log": "execution-logs/07-register-007-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "source",
+          "--file",
+          "record-inputs/007-source-R06.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03749045800213935
+      },
+      {
+        "log": "execution-logs/07-register-008-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "source",
+          "--file",
+          "record-inputs/008-source-R07.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03697758400085149
+      },
+      {
+        "log": "execution-logs/07-register-009-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "statement",
+          "--file",
+          "record-inputs/009-statement-Q1.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03699104100087425
+      },
+      {
+        "log": "execution-logs/07-register-010-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "statement",
+          "--file",
+          "record-inputs/010-statement-OldClaim.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03708724999887636
+      },
+      {
+        "log": "execution-logs/07-register-011-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "statement",
+          "--file",
+          "record-inputs/011-statement-BoundedClaim.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.037665042000298854
+      },
+      {
+        "log": "execution-logs/07-register-012-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "statement",
+          "--file",
+          "record-inputs/012-statement-StudyCount.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03772370899969246
+      },
+      {
+        "log": "execution-logs/07-register-013-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "statement",
+          "--file",
+          "record-inputs/013-statement-Missingness.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.037610291998134926
+      },
+      {
+        "log": "execution-logs/07-register-014-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "evidence",
+          "--file",
+          "record-inputs/014-evidence-EScope.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.037944708001305116
+      },
+      {
+        "log": "execution-logs/07-register-015-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "evidence",
+          "--file",
+          "record-inputs/015-evidence-EAbstracts.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03846279199933633
+      },
+      {
+        "log": "execution-logs/07-register-016-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "evidence",
+          "--file",
+          "record-inputs/016-evidence-EExcerpts.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.038497208999615395
+      },
+      {
+        "log": "execution-logs/07-register-017-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "evidence",
+          "--file",
+          "record-inputs/017-evidence-EScreen.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03893866699945647
+      },
+      {
+        "log": "execution-logs/07-register-018-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "evidence",
+          "--file",
+          "record-inputs/018-evidence-EExtract.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03892979100055527
+      },
+      {
+        "log": "execution-logs/07-register-019-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "evidence",
+          "--file",
+          "record-inputs/019-evidence-ECalc.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.040540291996876476
+      },
+      {
+        "log": "execution-logs/07-register-020-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "evidence",
+          "--file",
+          "record-inputs/020-evidence-EBias.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.040730958000494866
+      },
+      {
+        "log": "execution-logs/07-register-021-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "relation",
+          "--file",
+          "record-inputs/021-relation-L1.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03975637499752338
+      },
+      {
+        "log": "execution-logs/07-register-022-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "relation",
+          "--file",
+          "record-inputs/022-relation-L2.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.03976787500141654
+      },
+      {
+        "log": "execution-logs/07-register-023-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "relation",
+          "--file",
+          "record-inputs/023-relation-L3.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.039662416998908157
+      },
+      {
+        "log": "execution-logs/07-register-024-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "relation",
+          "--file",
+          "record-inputs/024-relation-L4.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.039784666998457396
+      },
+      {
+        "log": "execution-logs/07-register-025-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "relation",
+          "--file",
+          "record-inputs/025-relation-L5.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04014862500116578
+      },
+      {
+        "log": "execution-logs/07-register-026-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "relation",
+          "--file",
+          "record-inputs/026-relation-L6.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04028620800090721
+      },
+      {
+        "log": "execution-logs/07-register-027-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "relation",
+          "--file",
+          "record-inputs/027-relation-L7.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04068487500262563
+      },
+      {
+        "log": "execution-logs/07-register-028-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "relation",
+          "--file",
+          "record-inputs/028-relation-L8.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.0405849999988277
+      },
+      {
+        "log": "execution-logs/07-register-029-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "relation",
+          "--file",
+          "record-inputs/029-relation-L9.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.040719457996601705
+      },
+      {
+        "log": "execution-logs/07-register-030-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "relation",
+          "--file",
+          "record-inputs/030-relation-L10.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04044204199817614
+      },
+      {
+        "log": "execution-logs/07-register-031-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/031-artifact-Issue.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04051920900019468
+      },
+      {
+        "log": "execution-logs/07-register-032-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/032-artifact-Screening.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04048158399746171
+      },
+      {
+        "log": "execution-logs/07-register-033-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/033-artifact-Extraction.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.040620125000714324
+      },
+      {
+        "log": "execution-logs/07-register-034-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/034-artifact-Code.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04839866700058337
+      },
+      {
+        "log": "execution-logs/07-register-035-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/035-artifact-Config.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.05421212500004913
+      },
+      {
+        "log": "execution-logs/07-register-036-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/036-artifact-Numbers.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.044526084002427524
+      },
+      {
+        "log": "execution-logs/07-register-037-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/037-artifact-NumericalNote.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.043051666998508153
+      },
+      {
+        "log": "execution-logs/07-register-038-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/038-artifact-Bias.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04205208300118102
+      },
+      {
+        "log": "execution-logs/07-register-039-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/039-artifact-Synthesis.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04508945800262154
+      },
+      {
+        "log": "execution-logs/07-register-040-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/040-artifact-Guidance.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04274504199929652
+      },
+      {
+        "log": "execution-logs/07-register-041-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/041-artifact-Manuscript.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.0430990409986407
+      },
+      {
+        "log": "execution-logs/07-register-042-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "artifact",
+          "--file",
+          "record-inputs/042-artifact-Review.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.044741416997567285
+      },
+      {
+        "log": "execution-logs/07-register-043-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "method-binding",
+          "--file",
+          "record-inputs/043-method-binding-MBsynthesis.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.044597750002139946
+      },
+      {
+        "log": "execution-logs/07-register-044-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "method-binding",
+          "--file",
+          "record-inputs/044-method-binding-MBrandomized.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.046632958998088725
+      },
+      {
+        "log": "execution-logs/07-register-045-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "activity",
+          "--file",
+          "record-inputs/045-activity-ApathFailure.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04432612500022515
+      },
+      {
+        "log": "execution-logs/07-register-046-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "activity",
+          "--file",
+          "record-inputs/046-activity-Ascreen.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04466087499895366
+      },
+      {
+        "log": "execution-logs/07-register-047-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "activity",
+          "--file",
+          "record-inputs/047-activity-Aanalysis.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04489250000187894
+      },
+      {
+        "log": "execution-logs/07-register-048-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          ".",
+          "--kind",
+          "activity",
+          "--file",
+          "record-inputs/048-activity-AwriteReview.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04648662500039791
+      },
+      {
+        "log": "execution-logs/07-register-driver-command.json",
+        "argv": [
+          "python3",
+          "register-project.py"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 2.0359168750001118
+      },
+      {
+        "log": "execution-logs/08-check-pre-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "check",
+          "--root",
+          "."
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04215716599719599
+      },
+      {
+        "log": "execution-logs/09-checkpoint-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "checkpoint",
+          "--root",
+          ".",
+          "--next-action",
+          "核对R05 M1/R1/D1；若补充13位缺失者登记状态或预设缺失处理文本，更新来源访问范围与notes/extraction.csv，重跑artifacts/run.py，复核H4全随机效应及合并敏感性后修订manuscript/report.md；材料未补齐前保持有限离线综合。"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04463562499950058
+      },
+      {
+        "log": "execution-logs/10-check-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "check",
+          "--root",
+          "."
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.041924166998796863
+      },
+      {
+        "log": "execution-logs/11-resume-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/research.py",
+          "resume",
+          "--root",
+          "."
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04142470800070441
+      },
+      {
+        "log": "execution-logs/12-installed-integrity-command.json",
+        "argv": [
+          "python3",
+          ".agents/skills/_rw-runtime/tools/connect_skills.py",
+          "check",
+          "--installed-only",
+          "--root",
+          "."
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.04497787500076811
+      }
+    ]
+  },
+  "failures": [
+    {
+      "action": "project-local guidance read",
+      "exit_code": 1,
+      "reason": "Guessed PROJECT/_rw-runtime path absent; correct installed layout is .agents/skills/_rw-runtime.",
+      "raw_logs": [
+        "execution-logs/02-local-guidance-command.json",
+        "execution-logs/02-local-guidance-stdout.txt",
+        "execution-logs/02-local-guidance-stderr.txt"
+      ],
+      "recovered_by": "execution-logs/03-local-guidance-command.json"
+    }
+  ],
+  "limitations": [
+    "Only supplied two-directory export; no comprehensive systematic review or external search.",
+    "Only abstracts and marked excerpts; no full reports/appendices/preregistration.",
+    "Single-executor screening/extraction, no independent duplicate review.",
+    "Allocation concealment and outcome-prespecification details unknown; no full formal risk-of-bias/GRADE assessment.",
+    "H4 missing outcome mechanism unknown; complete-case target differs from full randomized population.",
+    "95% intervals are approximate sampling intervals, not coverage of study bias or missingness mechanism.",
+    "Secondary common-effect pooling is conditional exploratory illustration; adverse H4 missing scenario makes pooled CI cross null.",
+    "CLI checks concern metadata/fingerprints; scientific_validity remains not-assessed."
+  ],
+  "final_checks": {
+    "check_exit_code": 0,
+    "resume_exit_code": 0,
+    "errors": [],
+    "warnings": [],
+    "stale_activities": [],
+    "recorded_technical_failure": "ApathFailure",
+    "checkpoint_status": "current",
+    "installed_integrity": true,
+    "source_comparison_performed": false
+  },
+  "saved_next_action": "核对R05 M1/R1/D1；若补充13位缺失者登记状态或预设缺失处理文本，更新来源访问范围与notes/extraction.csv，重跑artifacts/run.py，复核H4全随机效应及合并敏感性后修订manuscript/report.md；材料未补齐前保持有限离线综合。",
+  "no_registered_mutations_after_marker": true
+}

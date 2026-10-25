@@ -1,0 +1,78 @@
+[
+  {
+    "supplied": {
+      "provenance": "synthetic-fixture",
+      "target_id": "quadratic",
+      "method": "midpoint",
+      "subintervals": "128",
+      "function_calls": "128",
+      "estimate": "0.3333282470703125",
+      "absolute_error": "5.08626302081483e-06"
+    },
+    "actual_function_calls": 128,
+    "recomputed_estimate": 0.3333282470703125,
+    "recomputed_absolute_error": 5.08626302081483e-06,
+    "estimate_delta": 0.0,
+    "absolute_error_delta": 0.0,
+    "agreement_tolerance": 2e-14,
+    "numerically_consistent": true,
+    "failure": null
+  },
+  {
+    "supplied": {
+      "provenance": "synthetic-fixture",
+      "target_id": "quadratic",
+      "method": "trapezoid",
+      "subintervals": "8",
+      "function_calls": "9",
+      "estimate": "0.3359375",
+      "absolute_error": "0.002604166666666685"
+    },
+    "actual_function_calls": 9,
+    "recomputed_estimate": 0.3359375,
+    "recomputed_absolute_error": 0.002604166666666685,
+    "estimate_delta": 0.0,
+    "absolute_error_delta": 0.0,
+    "agreement_tolerance": 2e-14,
+    "numerically_consistent": true,
+    "failure": null
+  },
+  {
+    "supplied": {
+      "provenance": "synthetic-fixture",
+      "target_id": "exponential",
+      "method": "midpoint",
+      "subintervals": "128",
+      "function_calls": "128",
+      "estimate": "1.7182774586501626",
+      "absolute_error": "4.369808882520587e-06"
+    },
+    "actual_function_calls": 128,
+    "recomputed_estimate": 1.7182774586501626,
+    "recomputed_absolute_error": 4.369808882520587e-06,
+    "estimate_delta": 0.0,
+    "absolute_error_delta": 0.0,
+    "agreement_tolerance": 2e-14,
+    "numerically_consistent": true,
+    "failure": null
+  },
+  {
+    "supplied": {
+      "provenance": "synthetic-fixture",
+      "target_id": "exponential",
+      "method": "trapezoid",
+      "subintervals": "8",
+      "function_calls": "9",
+      "estimate": "1.7205185921643018",
+      "absolute_error": "0.002236763705256717"
+    },
+    "actual_function_calls": 9,
+    "recomputed_estimate": 1.7205185921643018,
+    "recomputed_absolute_error": 0.002236763705256717,
+    "estimate_delta": 0.0,
+    "absolute_error_delta": 0.0,
+    "agreement_tolerance": 2e-14,
+    "numerically_consistent": true,
+    "failure": null
+  }
+]

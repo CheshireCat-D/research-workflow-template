@@ -1,0 +1,97 @@
+{
+  "task": "offline synthetic proof-note revision from assigned case only",
+  "project": "PROJECT",
+  "principal_files": [
+    "PROJECT/notes/issue.md",
+    "PROJECT/notes/work.md",
+    "PROJECT/manuscript/report.md",
+    "PROJECT/review.md",
+    "PROJECT/notes/input-check.json",
+    "PROJECT/notes/source-map.json",
+    "PROJECT/code/check_inputs.py",
+    "PROJECT/records/registry.json",
+    "PROJECT/project.json"
+  ],
+  "skills_read": [
+    "rw-workflow",
+    "rw-question",
+    "rw-literature",
+    "rw-validation",
+    "rw-writing",
+    "rw-review"
+  ],
+  "skill_files_read": [
+    "PROJECT/.agents/skills/rw-workflow/SKILL.md",
+    "PROJECT/.agents/skills/rw-question/SKILL.md",
+    "PROJECT/.agents/skills/rw-literature/SKILL.md",
+    "PROJECT/.agents/skills/rw-validation/SKILL.md",
+    "PROJECT/.agents/skills/rw-writing/SKILL.md",
+    "PROJECT/.agents/skills/rw-review/SKILL.md"
+  ],
+  "references_read": [
+    "PROJECT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+    "PROJECT/.agents/skills/_rw-runtime/core/protocol.md",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/formal-theory.md"
+  ],
+  "commands": {
+    "manifest_glob": "logs/*.command.json",
+    "registration_manifest": "registration-run.json",
+    "raw_stdout_stderr": "logs/*.stdout.txt and logs/*.stderr.txt",
+    "log_runner": "run_logged.py",
+    "initial_discovery": "logs/bootstrap-probes.json"
+  },
+  "research_result": "Original pointwise theorem refuted; nonnegative zero-integral iff zero almost everywhere established with full proof; L1 quotient versus representative separated; continuity added explicitly for pointwise result; finite-grid nonidentification proved.",
+  "scientific_status": "manual derivation and separate proof-route/backward review, not machine-formalized or independently human reviewed",
+  "check": {
+    "exit_status": 0,
+    "output": "logs/019-check.stdout.txt",
+    "revision": 42,
+    "passed": true,
+    "findings": []
+  },
+  "resume": {
+    "exit_status": 0,
+    "output": "logs/020-resume.stdout.txt",
+    "passed": true,
+    "needs_review": false,
+    "checkpoint_status": "current"
+  },
+  "source_bundle_check": {
+    "exit_status": 1,
+    "output": "logs/022-bundle-check-corrected.stdout.txt",
+    "installed_integrity": true,
+    "source_version_matches": false,
+    "copied_payload_sha256": "22a5c72c80233b743dfb31f7fa2e4be566c1f1d0a4443212364ef4f32948c2be"
+  },
+  "failures": [
+    {
+      "command": "logs/004-init.command.json",
+      "exit_status": 2,
+      "cause": "Initial discipline/method/entry arguments were not catalog IDs.",
+      "resolution": "Read catalog; initialize with natural-sciences/formal-theory/question in logs/009-init.command.json (exit0)."
+    },
+    {
+      "command": "logs/021-bundle-check.command.json",
+      "exit_status": 2,
+      "cause": "The copied project runtime does not include tools/connect_skills.py.",
+      "resolution": "Used source connector read-only in logs/022-bundle-check-corrected.command.json."
+    },
+    {
+      "command": "logs/022-bundle-check-corrected.command.json",
+      "exit_status": 1,
+      "cause": "Installed project copy is intact, but source bundle differs from installed payload.",
+      "resolution": "No reinstall or source mutation performed; retained copied runtime and disclosed version mismatch. Core check/resume remain current."
+    }
+  ],
+  "actual_limitations": [
+    "Only supplied synthetic sources; no external literature or novelty assessment.",
+    "Unknown F cannot be identified from records or absent error model.",
+    "Proof manually derived and checked; no proof assistant.",
+    "Optional bundle source comparison detected source-version drift; installed copy integrity is true.",
+    "Initial three read-only discovery probes predate full per-command logging and are summarized; subsequent complete input reread and execution logs are retained."
+  ],
+  "next_action": "讨论 manuscript/report.md 中 L1 的语义选择；若保留处处结论，在命题假设中明确加入已选代表元在 [0,1] 连续，并保留 notes/work.md B 的单点反例。没有 F 公式或新增正则性/误差资料时，不由网格推断其积分或逐点性质。",
+  "no_network_or_external_messages": true,
+  "runtime_used_for_registration_check_checkpoint_resume": "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+  "registered_files_modified_after_registration": false
+}

@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.research/
+local-config/
+private-data/
+# Generated release ZIPs (dist/*.zip), SHA sidecars (dist/*.sha256),
+# and local release-validation.json remain outside source control together.
+dist/
+build/

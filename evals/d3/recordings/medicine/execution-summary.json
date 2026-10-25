@@ -1,0 +1,546 @@
+{
+  "status": "complete-revised-after-confirmed-independent-review-finding",
+  "final_marker": true,
+  "completed_at_utc": "2026-10-24T20:26:02.188022+00:00",
+  "project": "PROJECT",
+  "original_case": "evals/d3/cases/medicine/task.md and four same-directory siblings only",
+  "toolkit": "TOOLKIT",
+  "actual_skills_read": [
+    {
+      "id": "rw-workflow",
+      "project_path": ".agents/skills/rw-workflow/SKILL.md"
+    },
+    {
+      "id": "rw-validation",
+      "project_path": ".agents/skills/rw-validation/SKILL.md"
+    },
+    {
+      "id": "rw-writing",
+      "project_path": ".agents/skills/rw-writing/SKILL.md"
+    },
+    {
+      "id": "rw-review",
+      "project_path": ".agents/skills/rw-review/SKILL.md"
+    }
+  ],
+  "source_workflow_read_before_init": "skills/rw-workflow/SKILL.md",
+  "actual_profiles_read": [
+    {
+      "id": "empirical-quantitative",
+      "version": "0.1",
+      "variant": "randomized-intervention",
+      "project_path": ".agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md"
+    },
+    {
+      "id": "medicine-health",
+      "version": "0.1",
+      "project_path": ".agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md"
+    },
+    {
+      "id": "governance",
+      "version": "0.1",
+      "project_path": ".agents/skills/_rw-runtime/profiles/governance.md"
+    }
+  ],
+  "protocol_catalog_schemas_read": [
+    ".agents/skills/_rw-runtime/core/skill-bridge.md",
+    ".agents/skills/_rw-runtime/core/protocol.md",
+    ".agents/skills/_rw-runtime/design/catalog.json",
+    ".agents/skills/_rw-runtime/core/schemas/{source,statement,evidence,relation,artifact,activity,decision,method-binding}.schema.json"
+  ],
+  "deliverables": [
+    "notes/issue.md",
+    "notes/analysis.md",
+    "artifacts/run.py",
+    "artifacts/results.json",
+    "artifacts/sites.csv",
+    "artifacts/pairs.csv",
+    "artifacts/verify.py",
+    "manuscript/report.md",
+    "review.md",
+    "checks/analysis-verification.json",
+    "checks/input-copy-integrity.json",
+    "checks/check.json",
+    "checks/resume.json",
+    "artifacts/verify_revision.py",
+    "checks/revision-verification.json"
+  ],
+  "main_results": {
+    "day30_pair_contrasts": [
+      1,
+      -1,
+      2,
+      0
+    ],
+    "day30_equal_site_effect": 0.5,
+    "day30_exact_two_sided_p": 0.75,
+    "day30_participant_pooled_difference": -1.75,
+    "day7_exploratory_equal_site_effect": -2,
+    "day7_exploratory_two_sided_p": 0.125,
+    "day7_participant_pooled_program_mean": 3.75,
+    "day7_participant_pooled_control_mean": 6.25,
+    "day7_participant_pooled_difference": -2.5
+  },
+  "reproduction": {
+    "cwd": "PROJECT",
+    "command": [
+      "python3",
+      "artifacts/run.py"
+    ],
+    "dependencies": "Python standard library only",
+    "seed": "not applicable, deterministic 16-assignment enumeration",
+    "formal_run_elapsed_seconds": 0.0008886249997885898,
+    "independent_decimal_and_rerun_check": "checks/analysis-verification.json",
+    "rerun_warning": "To keep this final review snapshot unchanged, run in a copy; analysis rerun updates results elapsed time."
+  },
+  "registrations": {
+    "activities": 3,
+    "artifacts": 13,
+    "decisions": 0,
+    "evidence": 8,
+    "method_bindings": 1,
+    "relations": 14,
+    "sources": 6,
+    "statements": 7
+  },
+  "checks": {
+    "check": {
+      "path": "checks/check.json",
+      "exit_code": 0,
+      "passed": true,
+      "warnings": []
+    },
+    "resume": {
+      "path": "checks/resume.json",
+      "exit_code": 0,
+      "passed": true,
+      "checkpoint": "current"
+    },
+    "bundle": {
+      "log": "logs/12-project-local-bundle-check.json",
+      "exit_code": 0,
+      "installed_integrity": true,
+      "source_comparison_performed": false
+    }
+  },
+  "command_logs": [
+    {
+      "path": "logs/00-prebootstrap-command-index.json",
+      "exit_code": null,
+      "has_raw_output": false
+    },
+    {
+      "path": "logs/01-setup.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/02-setup.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/02-task-toolkit-read.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/03-workflow-setup-read.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/04-protocol-cli-read.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/05-catalog-input-read.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/06-local-protocol-and-schema.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/07-local-skills-and-inputs.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/08-formal-analysis.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/09-independent-arithmetic-and-rerun.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/10-register-final-records.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/11-precheckpoint-check.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/12-project-local-bundle-check.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/13-checkpoint.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/14-final-check.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/15-final-resume.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/16-final-freeze.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/17-revision-authorized.json",
+      "exit_code": null,
+      "has_raw_output": false
+    },
+    {
+      "path": "logs/18-verify-revision-inputs.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/19-revision-recompute.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/20-revision-register-and-refresh-activities.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/21-revision-checkpoint.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/22-revision-final-check.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/23-revision-final-resume.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    },
+    {
+      "path": "logs/24-revision-final-integrity.json",
+      "exit_code": 0,
+      "has_raw_output": true
+    }
+  ],
+  "failures": {
+    "execution_failures": [],
+    "recovery": "No CLI/environment execution failure. Independent review exposed v1 prose transcription failure missed by initial verification. v1 preserved, raw data recomputed, prose corrected, affected evidence/artifact records explicitly version-replaced, dependent completed activities reviewed/refreshed, new check/resume current.",
+    "substantive_failures": [
+      "individual-randomization claim contradicted",
+      "pooled-person target substituted for equal-site estimand",
+      "post-unblinding day7 endpoint substitution",
+      "unsupported precision, efficacy and universal extrapolation claims",
+      "v1 prose transcription error in day7 participant-pooled mean/difference, found by independent review and corrected in v2"
+    ]
+  },
+  "scope": "Offline original synthetic data, 8 sites/4 paired coins/64 people. Design-exact sharp-null test, not arbitrary-heterogeneity weak-null test, clinical evidence or externally validated study. No network, installations, clinical action, external messaging, other cases, tests, grading, personal/global skills or toolkit mutation.",
+  "next_action": "独立复核者核对notes/analysis.md第25行第7天个人合并项目120/32=3.75、对照200/32=6.25、差−2.50，审查checks/revision-verification.json与项目旁revision-note.md及revisions/v1；确认第30天+0.50及p=0.75、原results.json和短稿未变，再作限定范围内的重新审阅。",
+  "scientific_validity": "not-assessed",
+  "freeze_policy": "Explicitly authorized v2 revision complete. All files remain unchanged after this current final marker for independent re-review. Previous v1 marker and affected outputs preserved under revisions/v1.",
+  "snapshot_sha256_excluding_this_marker": {
+    "PROJECT/.agents/skills/_rw-runtime/bundle-manifest.json": "b1bb8769acfabca9d2e0fc376fb1386786ca85ff84a30f0ed38fb595db3ebc27",
+    "PROJECT/.agents/skills/_rw-runtime/core/__init__.py": "f892d7429425a8357bb983b95f098b540a08ba36ffa21fcf3215903a6aaed4f9",
+    "PROJECT/.agents/skills/_rw-runtime/core/bundle.py": "2582efd21c60b6b26c393dc19130e0ef1bef82ed3b4b2b53aa0122db4cbd62b0",
+    "PROJECT/.agents/skills/_rw-runtime/core/cli.py": "cd23c1ba0f3c5a052cf664e62526ef43da5003ffb089520118b6a30db1b3e9b5",
+    "PROJECT/.agents/skills/_rw-runtime/core/model.py": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31",
+    "PROJECT/.agents/skills/_rw-runtime/core/project.py": "3b177d56a9968958ed553f699558e2a697f44441f013ea19c3d2ff8911dec29f",
+    "PROJECT/.agents/skills/_rw-runtime/core/protocol.md": "c71a671146b2515e083827947aaf9953c57932d078685750dfac980d3bf176b1",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/activity.schema.json": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/artifact.schema.json": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/decision.schema.json": "c3f913c83476a4d63ff6e34f9dc4a835a3547dbbb9feb8896773fc72ce0d6f49",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/evidence.schema.json": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/method-binding.schema.json": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/project.schema.json": "d3aea9cc6055a5e97776be07cf101ad35d8b764405042372439c3445aa80a558",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/registry.schema.json": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/relation.schema.json": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/source.schema.json": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/statement.schema.json": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    "PROJECT/.agents/skills/_rw-runtime/core/skill-bridge.md": "26fd2fbd51ea5a0e5334735c1d90840d8ffa1be1d0cecf23abf560d60e7be2ae",
+    "PROJECT/.agents/skills/_rw-runtime/core/storage.py": "eb6e8a474fce242aa72a5f826ef2614de6d967c129f49b6c26adb13dbf9c354a",
+    "PROJECT/.agents/skills/_rw-runtime/design/catalog.json": "a1cab22c9e495605d9bfa390ca401f13185c694cd01098cb9976afa7c9302af8",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/agriculture-life.md": "66d86ef5e1f6deaa2af354e36e188469f9e1cf3423c14d31b4b48c854d46d583",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/engineering.md": "0c776e883840960b7eeb6c4dcb6a3be4974c1834d8bb142d0b3cde2acf502e30",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/humanities.md": "58ff12188e1aae8cea8fc090839d0727509ff4e86bdf3d2d2c075d6ae61dcece",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/natural-sciences.md": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/social-sciences.md": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/governance.md": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/computational.md": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/conceptual-normative.md": "609f444f364e638a0e61c49f160a4912ecd56ab9310a6937cef9b7abadae8b72",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/engineering-design.md": "693c7a1a42001bdf87ce3684c866863c81b089af9bd6e521b813667de24423c8",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md": "0a9fccdfea15ffd8b30c30a56bcb8e5511d40d30bf8ea094ee47cf8ce8e4fbdc",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/formal-theory.md": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/historical-interpretive.md": "0894387de28c40bbf2e5913dbf260b1df15f6eaed45abdd8df2a9c1360c8f4d9",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/measurement-experiment.md": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/qualitative.md": "069f3880300a754dc2e8dd26eb64290278045ce2cabadd394160c68d02efb2c6",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/sources.json": "d48c5bb14cbd5297832868ce6c6659405229b5e8a7cd80742c51e475b63c9829",
+    "PROJECT/.agents/skills/_rw-runtime/tools/connect_skills.py": "266063fd44a9fe950a2e24f5da6ef695e055872a1079bc2a964cb9b9458654ec",
+    "PROJECT/.agents/skills/_rw-runtime/tools/research.py": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b",
+    "PROJECT/.agents/skills/rw-candidates/SKILL.md": "1e63dd370770263d981ee03678c54a3cbba6c8add0ca85d8552ef2e98ba63005",
+    "PROJECT/.agents/skills/rw-innovation/SKILL.md": "3817216a0d99514e78f6c9520d51ea0b2b279d7d83c6f55d82ee8aaeed418a09",
+    "PROJECT/.agents/skills/rw-literature/SKILL.md": "041fbb9a624e576417ec398ed4c36aa4fc07a5b145848d85fd4e5f70d6d4b4f0",
+    "PROJECT/.agents/skills/rw-question/SKILL.md": "e35ce8ff835d79804eadebcb8482c7400d52ccba8b4a7cb6c32bff9e6d0ff191",
+    "PROJECT/.agents/skills/rw-review/SKILL.md": "40f20bb095130a3aaefbf55b5f6cafe6232433c58f293767970b5060a2401acd",
+    "PROJECT/.agents/skills/rw-validation/SKILL.md": "e75e91b8e19dfe32d51841b000360a16fbf3091273465a4852abc3bb637d7b0e",
+    "PROJECT/.agents/skills/rw-workflow/SKILL.md": "f27200d93f78c663974780bdbbbd74a993a9bde051ff92be876e54bbaa2fc4ce",
+    "PROJECT/.agents/skills/rw-writing/SKILL.md": "d46b0228f02b5be0c44cbb047fad7effd036531359f238d622801037f336d0e7",
+    "PROJECT/.gitignore": "281aec9c2b5c9d3d07eadb93cef95f417535828b8f1be777c626722d27eb35dc",
+    "PROJECT/.research/write.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "PROJECT/PROJECT.md": "771e4e8482450fdc46737f3d015955a3e2a24263b71ee35ae1e9583c49a7e5f5",
+    "PROJECT/artifacts/pairs.csv": "e157cc47f041644001615e1a8de1c9ea8b5a52ede10a3157393e6bef8f58de7c",
+    "PROJECT/artifacts/results.json": "4919400f3a86f2990cf9598dacbf850100bf9d7d12920735cd33590a9fad7116",
+    "PROJECT/artifacts/run.py": "d8b95d3f5b94b154d275be8815df81fb7dc5767a2d8181c449e3e0ed97f66dfb",
+    "PROJECT/artifacts/sites.csv": "c0a9cfcd6053fb70368e42257f7f7e736957b0023ab05b30ea7e9c4090b61be0",
+    "PROJECT/artifacts/verify.py": "8af473a52b79d41bbc78d08ea468813494f66072369a4d87052d74a047c56104",
+    "PROJECT/artifacts/verify_revision.py": "e39d192d0ef832b40262c695190651d05d59e3890511c19aeb9d41c1443e42bb",
+    "PROJECT/checks/analysis-verification.json": "c024397685fa9673fe3d906be3b5bf74c754c6b7db140f2d68871a8a4ef52f91",
+    "PROJECT/checks/check.json": "a5cac5552e019425fdb916053d83ca3f3eb2add90774a567d7e7bcd995c4365e",
+    "PROJECT/checks/input-copy-integrity.json": "6c799dacb7c3114f3ac2019a87083318aa1809e53e8b538eeec7ff1db552c9f6",
+    "PROJECT/checks/precheckpoint.json": "67674e6c0e0084ed644d90a97dd9ddffbb94b3794ddb401b4e1309569d702b49",
+    "PROJECT/checks/resume.json": "56d84a89c2d9d39e8634c3f12605a290d9570a3cfd45ced63f833364d99fe3ab",
+    "PROJECT/checks/revision-verification.json": "ece4d4e439ad165747cda88bd3239d1def7a2c3b9f1c26340eddecf8add121e1",
+    "PROJECT/inputs/allocation.csv": "324c4bff4275915c90383e89e96d137820de0b23151470efcbaf7cd648f6dbe4",
+    "PROJECT/inputs/draft.md": "e2e1de6169bed3151f3f9edf69c09918603636511e971b8f10ede112b720f7d6",
+    "PROJECT/inputs/participants.csv": "7425759c933802a0b8de14546dcff60759dbf173349b472aa1b39405d0bac04e",
+    "PROJECT/inputs/protocol.md": "c753a279f1fb5726fc2225c2f12e883a0cf0b42e87a799608aa058f315a88dd5",
+    "PROJECT/inputs/task.md": "bf0e263c42e74c9700b75bd921e5d2b9de100a3bb4895a5024a402b96fec896b",
+    "PROJECT/manuscript/report.md": "5e115a09a4da4ef343624b9bd504a3293c021f827b597d2b3c05745c128dfdab",
+    "PROJECT/notes/analysis.md": "03d591fb3d4917db47ae44859a6f6c249f6d4361a6aefccb1bdcd09ae236006b",
+    "PROJECT/notes/issue.md": "2e727b426556935a53f24638290bd5fb8fd158d32594db17650eec182bca703c",
+    "PROJECT/project.json": "d4af023fd2011e1757c738bc5d2c356e76cef3714e4d7f4be07880e9930b98a0",
+    "PROJECT/record-inputs/001-source-SRC-task.json": "f79051ca966125d55a23b85d1cc056bc3d3f7199ecd066be1e4bff993f7f6159",
+    "PROJECT/record-inputs/002-source-SRC-protocol.json": "965c382fa2fd59c6881f8759abe7dfb330dc7eeebc26d8a702aa68b6ff8c16c6",
+    "PROJECT/record-inputs/003-source-SRC-allocation.json": "533dd240bf41294154eb5c2066768c9d10a295eed22d45764119cbbb6f17a471",
+    "PROJECT/record-inputs/004-source-SRC-outcomes.json": "de2aea1f644c8f048d14b61bf26cacd82e4516dd58bd385f5bd0755e550be695",
+    "PROJECT/record-inputs/005-source-SRC-draft.json": "18cfb64d2a623b32675a876d2f30b9c285f10fb57ad91f1c7be3870389443da3",
+    "PROJECT/record-inputs/006-source-SRC-method.json": "f4ae7903daee111cc7e4672adca6864c4e389ad6fa6b4ee37c12295d594d8069",
+    "PROJECT/record-inputs/007-statement-S-primary.json": "961377f43dcc15f488d2a0107add9b8547d995147af1539a1198273dadb7855d",
+    "PROJECT/record-inputs/008-statement-S-pooling.json": "e348cd50579cfb26b42c121bc256338f70f045f1d1542929f67c3a1aa03f24e3",
+    "PROJECT/record-inputs/009-statement-S-randomization.json": "f8ddbc6af9782dff97354c892680a2c026b0facee7bf2194beb5e7b24e3c2524",
+    "PROJECT/record-inputs/010-statement-S-day7.json": "45a484ec42438fb9025a4d5e11d5fc21bd75c3fd07b43b55313fa83fdec0c862",
+    "PROJECT/record-inputs/011-statement-S-benefit.json": "cbaac5d1af9023a35d0ba72d62b83539d07a6bd32edbe4fd665091f531e99d88",
+    "PROJECT/record-inputs/012-statement-S-precision.json": "6f3e374eb87c746a1d44774b7ed1197f5fc9c345daeed4f48d33961a61d9dcb2",
+    "PROJECT/record-inputs/013-evidence-E-protocol.json": "cf60ffa543584648da75aa7149849ba03dd5525703ec2b67397d9862137fc852",
+    "PROJECT/record-inputs/014-evidence-E-allocation.json": "d4a9492a35f23ed11d0aa9566b93bd607d9bc3d454b8a862dc4e45b96a3fc757",
+    "PROJECT/record-inputs/015-evidence-E-outcomes.json": "8fbb0b6b473628d1f48d6f87c7b354381f9ba0fcd42906ca00b88ed14d8204b4",
+    "PROJECT/record-inputs/016-evidence-E-results.json": "efd3a7a8a3523800395c6c28185d2d6708a7f4e9c8602aa2faa344f4b72eda89",
+    "PROJECT/record-inputs/017-evidence-E-analysis.json": "67ff686a738a23fddfbdd02a52db7c2ae6329f2b80cf08ef66aeb9dc54c56ad6",
+    "PROJECT/record-inputs/018-evidence-E-draft.json": "0a279ef33f78f4712f740861e64151ad163fd1d0e5cff3defdbbf08fd0d3a774",
+    "PROJECT/record-inputs/019-evidence-E-verify.json": "5572c8c156301c1b1c02145c95d6fb00ff59b58bfa9eba9c8014eabd2e4c01d3",
+    "PROJECT/record-inputs/020-relation-R01.json": "7ad202110d087f777f5faab2449fab274931fcbe914b6862f11411884de7d63c",
+    "PROJECT/record-inputs/021-relation-R02.json": "edc45e8453f4517e4ae9f146fb073de967502e36fbe2e35eca41cd56f5109285",
+    "PROJECT/record-inputs/022-relation-R03.json": "d1904bbdd4e02dafd29f09e19f84d014a50fd5875686ff223a87fcf882b8a558",
+    "PROJECT/record-inputs/023-relation-R04.json": "ba7d531d58f3100c2365fc3856593e6717c692bb47327107afd5b2b4beb8458b",
+    "PROJECT/record-inputs/024-relation-R05.json": "95d98016ee1baaf03b33bdce16c94c0fab2e1db9de4cddac7584c150c12c01b6",
+    "PROJECT/record-inputs/025-relation-R06.json": "36ed88482ac519cbc015c4bcef033fbdc4a92b291dd7f88fad710e0a772d409d",
+    "PROJECT/record-inputs/026-relation-R07.json": "acbb6e50317c1229672a2ba340a92cdfd4ea821d1688df1aa3d047e3697d40ed",
+    "PROJECT/record-inputs/027-relation-R08.json": "ff2b9baa86e4c23502820d7d050892b0e2436a24948cbf2f0196b4dc5af0936f",
+    "PROJECT/record-inputs/028-relation-R09.json": "9611071d89e615c5b24a3a5bfd712f777aa95f0eaa782e9de228bd5ea7ba72b2",
+    "PROJECT/record-inputs/029-relation-R10.json": "2c8144d5ea324813b97312819ae49aced2044dc618c41e4a8bc8bd39b021deae",
+    "PROJECT/record-inputs/030-relation-R11.json": "0613c54e01a2e7d13dd5b75337c2bae857908a1ad368e6c9008f27de1154b056",
+    "PROJECT/record-inputs/031-relation-R12.json": "f0d3013a9212321150342ebc18b18340361faca129d88a200457138d2b5568d9",
+    "PROJECT/record-inputs/032-artifact-A-issue.json": "b924b5af813186c8409710a42de049049b2fb71e70642380a726e82001957753",
+    "PROJECT/record-inputs/033-artifact-A-code.json": "c3b319dee9acb634f8672e846a05377361b65583ed306ee7dc29b8f94cef1a42",
+    "PROJECT/record-inputs/034-artifact-A-results.json": "2d418d522bb392e5f22f1a4145b41e49843ce3ffb6481e34e92ee5d9f1f23f7a",
+    "PROJECT/record-inputs/035-artifact-A-sites.json": "e7c11ea62d96092e6aa22972607ff2d9297243d9e054a0a1b6235aa2fb8f24da",
+    "PROJECT/record-inputs/036-artifact-A-pairs.json": "813f5b2a456827cca77fc567840ab4a137e6fab2a3a0439cefee71e1f158d4ea",
+    "PROJECT/record-inputs/037-artifact-A-analysis.json": "820ddba20b20c9b22aecdae505f40f5f154950a384f3a74196bb5a3b579f8eed",
+    "PROJECT/record-inputs/038-artifact-A-verifier.json": "16fe1b36eb1d73621670e3d0f28a730e4b1f88a7e4f9cd5ef8b0c7ffe7625475",
+    "PROJECT/record-inputs/039-artifact-A-verification.json": "f935e39cf597a17c8e9b8da1aacf3f14ff1701a3c079506745eceea89544321e",
+    "PROJECT/record-inputs/040-artifact-A-copycheck.json": "497da04a9ec4b05e6f028788fda478664522d086dbdd78b69d6eb09138ae6843",
+    "PROJECT/record-inputs/041-artifact-A-report.json": "d1cb7e411df529d3f9d4b1c746106ff24817581271d007361342a4abdc54c352",
+    "PROJECT/record-inputs/042-artifact-A-review.json": "d27dcef61f4813f564d740e49d2464fce707c5cf6422cbb41971a0ad8b280718",
+    "PROJECT/record-inputs/043-method-binding-MB-randomized.json": "fc480b319ed38ecaf0eec32d516df78ec42570044473227e235b20dbee2d9d64",
+    "PROJECT/record-inputs/044-activity-ACT-analysis.json": "612b31c45f912af0e9173dd6cbface2a5a5cabbaa7de7b11ca9d6142884dc110",
+    "PROJECT/record-inputs/045-activity-ACT-verification.json": "42134eff1786b78af1537af4b6e23ee6c46088b80428173b4939df59c91b9bbe",
+    "PROJECT/record-inputs/046-activity-ACT-writing-review.json": "a64065582939752f5c39c36e89abc0116ea246ca26d6a0d9941d674907d0b332",
+    "PROJECT/record-inputs/index.json": "eb01033fa744e855542ace323b3191f9c4715ca217bcda726f00c11963b72b8b",
+    "PROJECT/record-inputs/revision-v2/A-analysis.json": "d2871c902301d75654d006b9c9f5507096cc79b2455e475a4926e9bfc45cef1c",
+    "PROJECT/record-inputs/revision-v2/A-review.json": "3bbb2ee20ab4affc34529b34e6857b2ad8fc3a66925c087eea0bef2c1103c3cf",
+    "PROJECT/record-inputs/revision-v2/A-revision-check.json": "a27b949ecec19e98938bef00c16ebb85f2b713737d4c10a00b5c500ed555a067",
+    "PROJECT/record-inputs/revision-v2/A-revision-code.json": "7d094a5265a77979d60161ed9d9d27a7c17a430d64f60f565f6fb7eb11e8e305",
+    "PROJECT/record-inputs/revision-v2/ACT-analysis.json": "8f4635cf6f47009e5b33e5a634adfe1ec2b8abd50bdb6d139ab70d731e2603fb",
+    "PROJECT/record-inputs/revision-v2/ACT-verification.json": "a1a01af428c78b7758d372b3484a1a011a8191e2072e89cae1c2bf82332b4f05",
+    "PROJECT/record-inputs/revision-v2/ACT-writing-review.json": "1d1e4dbfa0fc9c5d85d050c3c785fbee3da126bf39048a871811587aabf3ea1d",
+    "PROJECT/record-inputs/revision-v2/E-analysis.json": "d3f69bd75293e3e64dc0c8de847eb61dfa858a59f2983dd4c7459bd8117b0aca",
+    "PROJECT/record-inputs/revision-v2/E-revision-check.json": "86a6cedd1f48a69ae8161a24f25462140a9b125ff8b1f109e565282529daf5ec",
+    "PROJECT/record-inputs/revision-v2/R13.json": "ef1b9c2262940a867a805b829f62991d5295ec2f912b032bb4e15b5e456c864b",
+    "PROJECT/record-inputs/revision-v2/R14.json": "9141c7bae2752b7e0e24eaa7927c26774800beb5d125a325b651a171a0b058a6",
+    "PROJECT/record-inputs/revision-v2/S-day7-pooled.json": "5e1cc13cc57af485196cd712137c1cdc6a6a3dcf4aae48b70eb8625dca5c6d0c",
+    "PROJECT/record-inputs/revision-v2/index.json": "d7dd792b5bcaa434717c7da160c260df2fc39ad8a70056dcb3a92e7c05160101",
+    "PROJECT/records/registry.json": "f6f35e680aaa844f20d1858be01a87fa1157ec501d62b29c4adcd98a8796dad3",
+    "PROJECT/review.md": "cb12e2b552c1a1e8b472320ff9d1ee7ec6199e8e64883a39ef844e5f36accbe0",
+    "PROJECT/revision-work/v2-recompute/artifacts/pairs.csv": "e157cc47f041644001615e1a8de1c9ea8b5a52ede10a3157393e6bef8f58de7c",
+    "PROJECT/revision-work/v2-recompute/artifacts/results.json": "868dc35043fbdc86d79d3fda4034622176a75da3a5591281c6c76addef193f56",
+    "PROJECT/revision-work/v2-recompute/artifacts/run.py": "d8b95d3f5b94b154d275be8815df81fb7dc5767a2d8181c449e3e0ed97f66dfb",
+    "PROJECT/revision-work/v2-recompute/artifacts/sites.csv": "c0a9cfcd6053fb70368e42257f7f7e736957b0023ab05b30ea7e9c4090b61be0",
+    "PROJECT/revision-work/v2-recompute/inputs/allocation.csv": "324c4bff4275915c90383e89e96d137820de0b23151470efcbaf7cd648f6dbe4",
+    "PROJECT/revision-work/v2-recompute/inputs/draft.md": "e2e1de6169bed3151f3f9edf69c09918603636511e971b8f10ede112b720f7d6",
+    "PROJECT/revision-work/v2-recompute/inputs/participants.csv": "7425759c933802a0b8de14546dcff60759dbf173349b472aa1b39405d0bac04e",
+    "PROJECT/revision-work/v2-recompute/inputs/protocol.md": "c753a279f1fb5726fc2225c2f12e883a0cf0b42e87a799608aa058f315a88dd5",
+    "PROJECT/revision-work/v2-recompute/inputs/task.md": "bf0e263c42e74c9700b75bd921e5d2b9de100a3bb4895a5024a402b96fec896b",
+    "finalize-v2.py": "06da8e31a0664ddd5e11a2e24e081b142b3ea20a2b8725d1d54fba9c4efdb466",
+    "finalize.py": "0bdad78edc2f0d09815e4c0ce3405cc25950e50818555de46e2b13fa1347c503",
+    "logs/00-prebootstrap-command-index.json": "11c0b6b7adbfe6a11ba27295cc277bb113fa1d9a620c336675eb0d3ccd030759",
+    "logs/01-setup.json": "ea96163e96109ff3a1f73b2061d2cfc2f62bdeca8475cc0a6f4665c95a86411d",
+    "logs/02-setup.json": "4d2ba3670cf1e8ebdf3c93c6fe5e1c18da58b99a9635043c00a9fa1889578dfd",
+    "logs/02-task-toolkit-read.json": "7afedd8583630d71e6bb04b30b278368da59ae87780bbd5eae4ca627e0282dd8",
+    "logs/03-workflow-setup-read.json": "0108b68ce7169783c97a25f4f0dc4876805ac7ecc35325dc0264dfca2fbdf898",
+    "logs/04-protocol-cli-read.json": "0901efa68687c72fbc7a69f549de62110e0fdfe6c275f707e1901d2f98ab03a5",
+    "logs/05-catalog-input-read.json": "5b4e30098d93c65d10e9556cf848fb23cb1a635dce44948d73ba96b80c4963c3",
+    "logs/06-local-protocol-and-schema.json": "713db8dd80ff5ae0973027542aadf5537e7d54c5cdfd92357722467bd56db13d",
+    "logs/07-local-skills-and-inputs.json": "6a6cdfa2f9c2efd0dc810c9582599d04e086a4a59e546befeef89226ed6e24d4",
+    "logs/08-formal-analysis.json": "e51df1f52790df42ac1a263d2736e99b5267af7546707ae46601463c32511607",
+    "logs/09-independent-arithmetic-and-rerun.json": "ba6e0ab857d929bd1019aa045a65e6e5359bbb97e080adcbf555403935f64d53",
+    "logs/10-register-final-records.json": "5a71eb156b6472740159bfe43e3eefc514a333444c762acea6092e2ede897147",
+    "logs/11-precheckpoint-check.json": "a20f4e7972d81910f523782068e459ffe401ca41c5e90fbf0378b71a2293c93c",
+    "logs/12-project-local-bundle-check.json": "02d2966d3432cb9619ce0285ddd91d7f0a7f394e556737a10882b28e084aaf98",
+    "logs/13-checkpoint.json": "19471c5d7fd41403864a75cf441d2d45fadffd525a40b840d266e68871bfc6bf",
+    "logs/14-final-check.json": "24b293795d553862d59a06477cedb726606d10cbc5a04db21cbee9fc516c82de",
+    "logs/15-final-resume.json": "90f59decd9b01ef689a814f21f6052c064eacdf636b87fcd559180a60f5c44c2",
+    "logs/16-final-freeze.json": "33ab18c456266f8dc2782fbbe97c3628bc6cf5e89a31bf5f913ce9f8368a4775",
+    "logs/17-revision-authorized.json": "0cf70bb1d5a05d9de8f3784053162f4e48f94163cba5627982162f66e9283d2d",
+    "logs/18-verify-revision-inputs.json": "ef697268b8dfe02b3aacec2c35b59745cb5bd9ee52e3ce58300b68b9aa529907",
+    "logs/19-revision-recompute.json": "bca6f5dd8edcacc9fdf9bb0a688c857b879574f0e77665832feaa7272865f6bf",
+    "logs/20-revision-register-and-refresh-activities.json": "062489a8c71cca453009dd50547ec64d331ec4fb0cdcc00a65663e04dd944fb9",
+    "logs/21-revision-checkpoint.json": "3673c443dbf343a2a7d1b8574c0b9f015bcff2af9f1f828234cb2258bcf6b343",
+    "logs/22-revision-final-check.json": "2a83e774b3920e6531cc3b3c02b9fb1344ce418a00f79bb5d7fad5bffc698615",
+    "logs/23-revision-final-resume.json": "34b48e3c91a7519f700128e112d4cc8c25e103a30dd8a926cfd618c2d4a51815",
+    "logs/24-revision-final-integrity.json": "536bca86225c0bb44b34bec7133f627d0962fd64d33d5622fdb450dbbeedffa4",
+    "revision-note.md": "ba2bc0cf94ef05f4027d28408e12311874400ecbfc5633c31a131b85655a250f",
+    "revisions/v1/PROJECT/checks/check.json": "74dba5b2ae7320c62721c003090f6400a4b66bcbd9da35910293ccfa06efc722",
+    "revisions/v1/PROJECT/checks/resume.json": "aa63caa7051f1ffd7d442984a10663699a4c7435b7b8687f808f54671ddef856",
+    "revisions/v1/PROJECT/notes/analysis.md": "e9ad8d027eae8a94c136266cd25d23a42509752f27b1af2fd23ded34aa277b96",
+    "revisions/v1/PROJECT/record-inputs/001-source-SRC-task.json": "f79051ca966125d55a23b85d1cc056bc3d3f7199ecd066be1e4bff993f7f6159",
+    "revisions/v1/PROJECT/record-inputs/002-source-SRC-protocol.json": "965c382fa2fd59c6881f8759abe7dfb330dc7eeebc26d8a702aa68b6ff8c16c6",
+    "revisions/v1/PROJECT/record-inputs/003-source-SRC-allocation.json": "533dd240bf41294154eb5c2066768c9d10a295eed22d45764119cbbb6f17a471",
+    "revisions/v1/PROJECT/record-inputs/004-source-SRC-outcomes.json": "de2aea1f644c8f048d14b61bf26cacd82e4516dd58bd385f5bd0755e550be695",
+    "revisions/v1/PROJECT/record-inputs/005-source-SRC-draft.json": "18cfb64d2a623b32675a876d2f30b9c285f10fb57ad91f1c7be3870389443da3",
+    "revisions/v1/PROJECT/record-inputs/006-source-SRC-method.json": "f4ae7903daee111cc7e4672adca6864c4e389ad6fa6b4ee37c12295d594d8069",
+    "revisions/v1/PROJECT/record-inputs/007-statement-S-primary.json": "961377f43dcc15f488d2a0107add9b8547d995147af1539a1198273dadb7855d",
+    "revisions/v1/PROJECT/record-inputs/008-statement-S-pooling.json": "e348cd50579cfb26b42c121bc256338f70f045f1d1542929f67c3a1aa03f24e3",
+    "revisions/v1/PROJECT/record-inputs/009-statement-S-randomization.json": "f8ddbc6af9782dff97354c892680a2c026b0facee7bf2194beb5e7b24e3c2524",
+    "revisions/v1/PROJECT/record-inputs/010-statement-S-day7.json": "45a484ec42438fb9025a4d5e11d5fc21bd75c3fd07b43b55313fa83fdec0c862",
+    "revisions/v1/PROJECT/record-inputs/011-statement-S-benefit.json": "cbaac5d1af9023a35d0ba72d62b83539d07a6bd32edbe4fd665091f531e99d88",
+    "revisions/v1/PROJECT/record-inputs/012-statement-S-precision.json": "6f3e374eb87c746a1d44774b7ed1197f5fc9c345daeed4f48d33961a61d9dcb2",
+    "revisions/v1/PROJECT/record-inputs/013-evidence-E-protocol.json": "cf60ffa543584648da75aa7149849ba03dd5525703ec2b67397d9862137fc852",
+    "revisions/v1/PROJECT/record-inputs/014-evidence-E-allocation.json": "d4a9492a35f23ed11d0aa9566b93bd607d9bc3d454b8a862dc4e45b96a3fc757",
+    "revisions/v1/PROJECT/record-inputs/015-evidence-E-outcomes.json": "8fbb0b6b473628d1f48d6f87c7b354381f9ba0fcd42906ca00b88ed14d8204b4",
+    "revisions/v1/PROJECT/record-inputs/016-evidence-E-results.json": "efd3a7a8a3523800395c6c28185d2d6708a7f4e9c8602aa2faa344f4b72eda89",
+    "revisions/v1/PROJECT/record-inputs/017-evidence-E-analysis.json": "67ff686a738a23fddfbdd02a52db7c2ae6329f2b80cf08ef66aeb9dc54c56ad6",
+    "revisions/v1/PROJECT/record-inputs/018-evidence-E-draft.json": "0a279ef33f78f4712f740861e64151ad163fd1d0e5cff3defdbbf08fd0d3a774",
+    "revisions/v1/PROJECT/record-inputs/019-evidence-E-verify.json": "5572c8c156301c1b1c02145c95d6fb00ff59b58bfa9eba9c8014eabd2e4c01d3",
+    "revisions/v1/PROJECT/record-inputs/020-relation-R01.json": "7ad202110d087f777f5faab2449fab274931fcbe914b6862f11411884de7d63c",
+    "revisions/v1/PROJECT/record-inputs/021-relation-R02.json": "edc45e8453f4517e4ae9f146fb073de967502e36fbe2e35eca41cd56f5109285",
+    "revisions/v1/PROJECT/record-inputs/022-relation-R03.json": "d1904bbdd4e02dafd29f09e19f84d014a50fd5875686ff223a87fcf882b8a558",
+    "revisions/v1/PROJECT/record-inputs/023-relation-R04.json": "ba7d531d58f3100c2365fc3856593e6717c692bb47327107afd5b2b4beb8458b",
+    "revisions/v1/PROJECT/record-inputs/024-relation-R05.json": "95d98016ee1baaf03b33bdce16c94c0fab2e1db9de4cddac7584c150c12c01b6",
+    "revisions/v1/PROJECT/record-inputs/025-relation-R06.json": "36ed88482ac519cbc015c4bcef033fbdc4a92b291dd7f88fad710e0a772d409d",
+    "revisions/v1/PROJECT/record-inputs/026-relation-R07.json": "acbb6e50317c1229672a2ba340a92cdfd4ea821d1688df1aa3d047e3697d40ed",
+    "revisions/v1/PROJECT/record-inputs/027-relation-R08.json": "ff2b9baa86e4c23502820d7d050892b0e2436a24948cbf2f0196b4dc5af0936f",
+    "revisions/v1/PROJECT/record-inputs/028-relation-R09.json": "9611071d89e615c5b24a3a5bfd712f777aa95f0eaa782e9de228bd5ea7ba72b2",
+    "revisions/v1/PROJECT/record-inputs/029-relation-R10.json": "2c8144d5ea324813b97312819ae49aced2044dc618c41e4a8bc8bd39b021deae",
+    "revisions/v1/PROJECT/record-inputs/030-relation-R11.json": "0613c54e01a2e7d13dd5b75337c2bae857908a1ad368e6c9008f27de1154b056",
+    "revisions/v1/PROJECT/record-inputs/031-relation-R12.json": "f0d3013a9212321150342ebc18b18340361faca129d88a200457138d2b5568d9",
+    "revisions/v1/PROJECT/record-inputs/032-artifact-A-issue.json": "b924b5af813186c8409710a42de049049b2fb71e70642380a726e82001957753",
+    "revisions/v1/PROJECT/record-inputs/033-artifact-A-code.json": "c3b319dee9acb634f8672e846a05377361b65583ed306ee7dc29b8f94cef1a42",
+    "revisions/v1/PROJECT/record-inputs/034-artifact-A-results.json": "2d418d522bb392e5f22f1a4145b41e49843ce3ffb6481e34e92ee5d9f1f23f7a",
+    "revisions/v1/PROJECT/record-inputs/035-artifact-A-sites.json": "e7c11ea62d96092e6aa22972607ff2d9297243d9e054a0a1b6235aa2fb8f24da",
+    "revisions/v1/PROJECT/record-inputs/036-artifact-A-pairs.json": "813f5b2a456827cca77fc567840ab4a137e6fab2a3a0439cefee71e1f158d4ea",
+    "revisions/v1/PROJECT/record-inputs/037-artifact-A-analysis.json": "820ddba20b20c9b22aecdae505f40f5f154950a384f3a74196bb5a3b579f8eed",
+    "revisions/v1/PROJECT/record-inputs/038-artifact-A-verifier.json": "16fe1b36eb1d73621670e3d0f28a730e4b1f88a7e4f9cd5ef8b0c7ffe7625475",
+    "revisions/v1/PROJECT/record-inputs/039-artifact-A-verification.json": "f935e39cf597a17c8e9b8da1aacf3f14ff1701a3c079506745eceea89544321e",
+    "revisions/v1/PROJECT/record-inputs/040-artifact-A-copycheck.json": "497da04a9ec4b05e6f028788fda478664522d086dbdd78b69d6eb09138ae6843",
+    "revisions/v1/PROJECT/record-inputs/041-artifact-A-report.json": "d1cb7e411df529d3f9d4b1c746106ff24817581271d007361342a4abdc54c352",
+    "revisions/v1/PROJECT/record-inputs/042-artifact-A-review.json": "d27dcef61f4813f564d740e49d2464fce707c5cf6422cbb41971a0ad8b280718",
+    "revisions/v1/PROJECT/record-inputs/043-method-binding-MB-randomized.json": "fc480b319ed38ecaf0eec32d516df78ec42570044473227e235b20dbee2d9d64",
+    "revisions/v1/PROJECT/record-inputs/044-activity-ACT-analysis.json": "612b31c45f912af0e9173dd6cbface2a5a5cabbaa7de7b11ca9d6142884dc110",
+    "revisions/v1/PROJECT/record-inputs/045-activity-ACT-verification.json": "42134eff1786b78af1537af4b6e23ee6c46088b80428173b4939df59c91b9bbe",
+    "revisions/v1/PROJECT/record-inputs/046-activity-ACT-writing-review.json": "a64065582939752f5c39c36e89abc0116ea246ca26d6a0d9941d674907d0b332",
+    "revisions/v1/PROJECT/record-inputs/index.json": "eb01033fa744e855542ace323b3191f9c4715ca217bcda726f00c11963b72b8b",
+    "revisions/v1/PROJECT/records/registry.json": "4b57cd78e6147e96594b39d64a24fe1e454f9cb9fd8de2ef4735a2d5eebb52c5",
+    "revisions/v1/PROJECT/review.md": "b1bbdd729902132420e95e5f7925898903919ba0c8b4089e4588e8ed77421f13",
+    "revisions/v1/logs/16-final-freeze.json": "33ab18c456266f8dc2782fbbe97c3628bc6cf5e89a31bf5f913ce9f8368a4775",
+    "revisions/v1/run-summary.json": "67358da945d5001ad30418d26f10a6062eb1237d498c88d45917d375fe4eb72b",
+    "run_command.py": "4dc993bcd6c3537980798aeca900fb331a7b74dc1a25886ed9850ed82f040e62"
+  },
+  "revision": 2,
+  "revision_details": {
+    "issue": "v1 notes/analysis.md line25 day7 participant-pooled program mean and contrast were transcribed as 3.875 and -2.375 despite correct raw data/code/results",
+    "confirmed_correct_values": {
+      "program": 3.75,
+      "control": 6.25,
+      "difference": -2.5
+    },
+    "corrected_research_files": [
+      "PROJECT/notes/analysis.md",
+      "PROJECT/review.md"
+    ],
+    "revision_note": "revision-note.md",
+    "previous_final_marker": "revisions/v1/run-summary.json",
+    "previous_marker_sha256": "67358da945d5001ad30418d26f10a6062eb1237d498c88d45917d375fe4eb72b",
+    "prior_affected_artifacts_and_metadata": "revisions/v1/",
+    "recalculation": "Decimal raw-record aggregation plus unchanged full script rerun into PROJECT/revision-work/v2-recompute; results match official v1 JSON excluding elapsed",
+    "verification": "PROJECT/checks/revision-verification.json",
+    "primary_code_results_inputs_manuscript_unchanged": [
+      "artifacts/run.py",
+      "artifacts/results.json",
+      "artifacts/sites.csv",
+      "artifacts/pairs.csv",
+      "artifacts/verify.py",
+      "checks/analysis-verification.json",
+      "manuscript/report.md",
+      "notes/issue.md",
+      "inputs/participants.csv",
+      "inputs/draft.md",
+      "inputs/allocation.csv",
+      "inputs/task.md",
+      "inputs/protocol.md"
+    ],
+    "replacement_expected_version": 1,
+    "updated_record_versions": {
+      "E-analysis": 2,
+      "A-analysis": 2,
+      "A-review": 2,
+      "ACT-analysis": 2,
+      "ACT-verification": 2,
+      "ACT-writing-review": 2
+    },
+    "registry_revision": 60,
+    "recovery": "All affected local record fingerprints explicitly replaced through CLI, completed activities refreshed in dependency order, fresh checkpoint current with no stale activities."
+  }
+}

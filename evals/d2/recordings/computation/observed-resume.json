@@ -1,0 +1,68 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P2a37d79073ae487f8ee05114fff0d77f",
+  "revision": 46,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 5,
+    "artifacts": 10,
+    "decisions": 0,
+    "evidence": 12,
+    "method_bindings": 1,
+    "relations": 7,
+    "sources": 5,
+    "statements": 5
+  },
+  "activities": [
+    {
+      "id": "A_AUDIT",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_REVIEW",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_RUN",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_SETUP_FAILED",
+      "declared_status": "failed",
+      "effective_status": "failed",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_WRITE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "A_REVIEW",
+    "next_action": "手工推导cos(2πkx)的两种复合求积离散和及混叠条件，再预先设计独立的扩展预算；另存后续结果，不覆盖本轮36行。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "next_action": "手工推导cos(2πkx)的两种复合求积离散和及混叠条件，再预先设计独立的扩展预算；另存后续结果，不覆盖本轮36行。",
+  "needs_review": false,
+  "recovery_instruction": "Continue the recorded next action within its existing scope."
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "CSV records, exact finite rational arithmetic, copied-input hashes and report length only; no proof certification or identification of F",
+  "rows": 9,
+  "unique_sample_points": 9,
+  "all_recorded_values_zero": true,
+  "sample_points_rational": [
+    "0",
+    "1/8",
+    "1/4",
+    "3/8",
+    "1/2",
+    "5/8",
+    "3/4",
+    "7/8",
+    "1"
+  ],
+  "unobserved_counterexample_point": "1/16",
+  "all_copied_input_hashes_match": true,
+  "report_han_characters_excluding_display_formulas": 425,
+  "report_characters_excluding_display_formulas": 790,
+  "report_within_approx_1000_han_limit": true,
+  "mathematical_derivations": "notes/work.md"
+}

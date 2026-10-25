@@ -1,0 +1,1153 @@
+{
+  "format_version": 1,
+  "case_id": "qualitative-social",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "11c40895e128a57ddee7e99f4d8a2eb06b345ab062a470b398a8a07f33cf5e5e",
+  "project_init": {
+    "title": "互助平台访谈的条件性安心与表达成本",
+    "interest": "六份合成访谈中的平台互助经验与解释张力",
+    "disciplines": [
+      "social-sciences"
+    ],
+    "methods": [
+      "qualitative"
+    ],
+    "workflow_mode": "structured",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/draft.md": "draft.md",
+    "inputs/interviews.md": "interviews.md",
+    "inputs/sampling-and-reflexivity.md": "sampling-and-reflexivity.md",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "sampling-and-reflexivity.md": "e0ab6f339a3a7329c26d15b987bf233d0202bbe98a7e7145b413d3eac004d76a",
+    "draft.md": "1a3d204fb2c3d99d8be278f4abf554e12015e4ee3d864bd0c441a4ddfbed12e4",
+    "interviews.md": "771de76ba19277b0bbaa816ea7b27fc09417fd3574d76c985d6cde9d2a9c952c",
+    "task.md": "f573eff001967746bfe4184801bef7bf24037d06471c5c53d2ebb516da7c91fc"
+  },
+  "output_files": [
+    "analysis/codebook.md",
+    "analysis/coding.json",
+    "analysis/interpretive-memo.md",
+    "analysis/traceability.md",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "manuscript/report.md",
+    "notes/issue.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "analysis/codebook.md": "8f6533e88fa594f48e34a78a21b63e4d38d17ecf91a8c3d1dd9a57a0719074f3",
+    "analysis/coding.json": "542df527283e2681f22356842877610e86d6dca641d5d615f38d5ec2eddf5cf0",
+    "analysis/interpretive-memo.md": "f20710f8f7a8bc9575444fb28f9a46b4808ffd956921b8635142e01190afdb43",
+    "analysis/traceability.md": "3d230b6d8949b251256832ff2b7dced304a966e4fd9a8aaa4ebc026a003582ef",
+    "artifacts/results.json": "86ddd6e6a298dfcc57db51fb82be8358f9c1370f35cfab29f11dff3ef6951d0c",
+    "artifacts/run.py": "73377d8ead79fd2c5d08291aafd23d5cb4f4ca0a1bf62c60342d1862d153fa28",
+    "manuscript/report.md": "3f5c1e944fc71c9efb63acf7d174e4f2e8ac8d3ddce91339b33da93c67a3e6d3",
+    "notes/issue.md": "954edc7c34599d7290e3e8f5343c8dfa3689244a0e1e2b4fd5806df9b519e007",
+    "review.md": "c51d3134a7e61513c4c2d2a6a71c5847e1d71179cc1ddb31e6636fd3bf08a6a0"
+  },
+  "output_normalizations": [],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-C",
+        "limitations": "reported context; not independently verified",
+        "locator": "inputs/sampling-and-reflexivity.md",
+        "notes": "原创合成；本地任务范围可复制分析，无公开权利声明",
+        "rights": "restricted",
+        "title": "样本与现场备忘",
+        "version": "supplied snapshot"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-D",
+        "limitations": "audit target, unsupported claims not adopted as facts",
+        "locator": "inputs/draft.md",
+        "notes": "原创合成；本地任务范围可复制分析，无公开权利声明",
+        "rights": "restricted",
+        "title": "原始讨论稿",
+        "version": "supplied snapshot"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-I",
+        "limitations": "full access to selected excerpts only; no audio/full transcripts",
+        "locator": "inputs/interviews.md",
+        "notes": "原创合成；本地任务范围可复制分析，无公开权利声明",
+        "rights": "restricted",
+        "title": "访谈节录（原创合成）",
+        "version": "2026-09 supplied snapshot"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-T",
+        "limitations": "authorizes only scoped synthetic task",
+        "locator": "inputs/task.md",
+        "notes": "原创合成；本地任务范围可复制分析，无公开权利声明",
+        "rights": "restricted",
+        "title": "委托与离线合成授权边界",
+        "version": "supplied snapshot"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "与多段原话冲突且无相应取样、效果或饱和证据；保留为被审主张",
+          "reviewer": "Codex AI代理；解释性编码与自审，未经过独立人类编码或人类验证",
+          "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "定性节录解释",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "D1",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "text": "原草稿声称全体欢迎、技能是唯一原因、培训必增参与、人人节时、隐私无影响、电话已替代、普遍信任及全国饱和结论。",
+        "type": "interpretive",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "已进行有边界的解释练习，问题本身非待证事实",
+          "reviewer": "Codex AI代理；解释性编码与自审，未经过独立人类编码或人类验证",
+          "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+          "status": "not-applicable"
+        },
+        "formal_verification": {
+          "scope": "定性节录解释",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "Q1",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "text": "六名受访者怎样界定平台便利、互助参加条件与代价，哪些材料改变技能门槛解释？",
+        "type": "question",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "P1拒照及P5-Q1至Q3支持；P6全面支持限制普遍化",
+          "reviewer": "Codex AI代理；解释性编码与自审，未经过独立人类编码或人类验证",
+          "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "定性节录解释",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S1",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "text": "平台使用、感谢与持续信息边界可在同一人叙述中并存，使用不能直接等同无条件接受。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "P2熟练手机与P3夜班核验冲突反驳唯一原因",
+          "reviewer": "Codex AI代理；解释性编码与自审，未经过独立人类编码或人类验证",
+          "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "定性节录解释",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S2",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "text": "给定材料不能把不使用唯一归因为老年技能不足；核验时段与生活节奏也是被表达的条件。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "P1/P2/P4/P6提示代填、补录、劳动和旧关系；无后台验证",
+          "reviewer": "Codex AI代理；解释性编码与自审，未经过独立人类编码或人类验证",
+          "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "定性节录解释",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S3",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "text": "旧电话与线下渠道仍组织互助，平台条目和净节时或新生信任不能直接等同。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "P6被提示成功与现场备忘支持可能性，但不能裁决动机或否定正面经验",
+          "reviewer": "Codex AI代理；解释性编码与自审，未经过独立人类编码或人类验证",
+          "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+          "status": "mixed"
+        },
+        "formal_verification": {
+          "scope": "定性节录解释",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S4",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "text": "成功与学习门槛叙事可能受招募、场地、功能展示及研究者期待塑造。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "对全部节录的可追踪AI代理解释性编码与解释范围",
+        "id": "E-ANALYSIS",
+        "limitations": "单一AI代理解释，未经过独立人类编码或人类验证；不是独立材料或一致性认证",
+        "location": {
+          "kind": "local",
+          "path": "analysis/traceability.md"
+        },
+        "provenance": "Codex AI-agent-performed interpretive coding derived from SRC-I and SRC-C; quotation/line reconstruction by Python only",
+        "source_ids": [
+          "SRC-I",
+          "SRC-C"
+        ],
+        "type": "interpretive-analysis"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "取样、场地、访谈位置、研究者培训期待与缺失材料",
+        "id": "E-CONTEXT",
+        "limitations": "现场备忘的合成陈述；无其他记录交叉验证",
+        "location": {
+          "kind": "local",
+          "path": "inputs/sampling-and-reflexivity.md"
+        },
+        "provenance": "SRC-C supplied memo",
+        "source_ids": [
+          "SRC-C"
+        ],
+        "type": "synthetic-field-memo"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P1-Q1 “买菜接龙比逐户敲门快，我一周能用四五次。”",
+        "id": "E-P1-Q1",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P1-Q1, line 6; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P1-Q2 “送药时我只写楼栋，不愿上传家门照片。管理员说是为了确认，我还是没有传。”",
+        "id": "E-P1-Q2",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P1-Q2, line 7; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P1-Q3 “没注册的人会打我电话，我替他们填。有些帮助根本不经过平台。”",
+        "id": "E-P1-Q3",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P1-Q3, line 8; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P2-Q1 “我每天用手机，也教过隔壁年轻人扫码。年龄不是我这里的问题。”",
+        "id": "E-P2-Q1",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P2-Q1, line 11; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P2-Q2 “一次找修灯师傅等了两天。后来熟人直接打电话，半小时就来了。”",
+        "id": "E-P2-Q2",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P2-Q2, line 12; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P2-Q3 “有人回我，我才信这件事；按钮好看没有用。”",
+        "id": "E-P2-Q3",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P2-Q3, line 13; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P3-Q1 “不是不会用。我白天睡觉，核验只在工作日下午开，我总赶不上。”",
+        "id": "E-P3-Q1",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P3-Q1, line 16; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P3-Q2 “邻居上门时我会帮忙。我没装这个软件，不等于我不参加互助。”",
+        "id": "E-P3-Q2",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P3-Q2, line 17; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P3-Q3 “如果能晚上核验，我也许试一次，但现在没时间。”",
+        "id": "E-P3-Q3",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P3-Q3, line 18; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P4-Q1 “通知一发就有回应，这一点确实方便。”",
+        "id": "E-P4-Q1",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P4-Q1, line 21; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P4-Q2 “我下班后还要核实照片、删重复单。平台账上说节省时间，节省的是谁的时间？”",
+        "id": "E-P4-Q2",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P4-Q2, line 22; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P4-Q3 “遇到急事我们还是在旧电话群处理，然后补录。月报只看到补录的那条。”",
+        "id": "E-P4-Q3",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P4-Q3, line 23; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P5-Q1 “我平时反对把家庭情况放上去，怕不熟的人看到。”",
+        "id": "E-P5-Q1",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P5-Q1, line 26; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P5-Q2 “家里停电那晚，我在平台求助，十分钟就有人来。我很感谢他们。”",
+        "id": "E-P5-Q2",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P5-Q2, line 27; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P5-Q3 “急的时候用了，不代表我同意以后每次都交照片。电话和平台都应该留着。”",
+        "id": "E-P5-Q3",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P5-Q3, line 28; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P6-Q1 “我完全支持统一在线办理，每个人多学一会儿就行。”",
+        "id": "E-P6-Q1",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P6-Q1, line 31; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P6-Q2 “现在联系的人大半是我以前志愿队里认识的，陌生居民我接触得少。”",
+        "id": "E-P6-Q2",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P6-Q2, line 32; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "P6-Q3 “采访前工作人员告诉我今天主要聊成功经验。我确实先想到了成功的几次。”",
+        "id": "E-P6-Q3",
+        "limitations": "不是完整访谈；参与者事件、背景及时长未经独立核实",
+        "location": {
+          "kind": "local",
+          "path": "inputs/interviews.md"
+        },
+        "notes": "P6-Q3, line 33; coding in analysis/coding.json",
+        "provenance": "SRC-I supplied synthetic selected excerpt; Codex AI agent selected the provided excerpt ID; Python enumerated lines and checked literal quotation identity; no human coding or human validation",
+        "source_ids": [
+          "SRC-I"
+        ],
+        "type": "synthetic-interview-excerpt"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-I",
+          "source:SRC-C"
+        ],
+        "description": "含排除规则的简洁编码本",
+        "id": "A-CODEBOOK",
+        "notes": "v2修正执行者身份：编码、主题判断和自审由Codex AI代理进行；标准库脚本仅执行文档重建与引文/篇幅检查；无独立人类编码或人类验证。",
+        "path": "analysis/codebook.md",
+        "type": "codebook"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-I",
+          "source:SRC-C"
+        ],
+        "description": "18段多码的AI代理解释性分析决定，未经独立人类验证",
+        "id": "A-CODING",
+        "notes": "v2修正执行者身份：编码、主题判断和自审由Codex AI代理进行；标准库脚本仅执行文档重建与引文/篇幅检查；无独立人类编码或人类验证。",
+        "path": "analysis/coding.json",
+        "type": "agent-interpretive-coding"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-I",
+          "source:SRC-C"
+        ],
+        "description": "问题与方法、反身性及范围",
+        "id": "A-ISSUE",
+        "notes": "v2修正执行者身份：编码、主题判断和自审由Codex AI代理进行；标准库脚本仅执行文档重建与引文/篇幅检查；无独立人类编码或人类验证。",
+        "path": "notes/issue.md",
+        "type": "question-method"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-I",
+          "source:SRC-C"
+        ],
+        "description": "反向案例和主导解释修订轨迹",
+        "id": "A-MEMO",
+        "notes": "v2修正执行者身份：编码、主题判断和自审由Codex AI代理进行；标准库脚本仅执行文档重建与引文/篇幅检查；无独立人类编码或人类验证。",
+        "path": "analysis/interpretive-memo.md",
+        "type": "interpretive-memo"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-I",
+          "source:SRC-C"
+        ],
+        "description": "条件性使用、旧通道和研究情境中文短稿",
+        "id": "A-REPORT",
+        "notes": "v2修正执行者身份：编码、主题判断和自审由Codex AI代理进行；标准库脚本仅执行文档重建与引文/篇幅检查；无独立人类编码或人类验证。",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-I",
+          "source:SRC-C"
+        ],
+        "description": "AI代理编码的逐字定位、覆盖和长度文档检查结果；不是独立人类验证或数值研究",
+        "id": "A-RESULT",
+        "notes": "v2修正执行者身份：编码、主题判断和自审由Codex AI代理进行；标准库脚本仅执行文档重建与引文/篇幅检查；无独立人类编码或人类验证。",
+        "path": "artifacts/results.json",
+        "type": "document-check-result"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-I",
+          "source:SRC-C",
+          "source:SRC-D"
+        ],
+        "description": "原稿逐项支持审计与已修订结果",
+        "id": "A-REVIEW",
+        "notes": "v2修正执行者身份：编码、主题判断和自审由Codex AI代理进行；标准库脚本仅执行文档重建与引文/篇幅检查；无独立人类编码或人类验证。",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-I",
+          "source:SRC-C"
+        ],
+        "description": "从AI代理既定编码重建引文表并核对逐字定位；脚本不执行主题推断",
+        "id": "A-RUN",
+        "notes": "v2修正执行者身份：编码、主题判断和自审由Codex AI代理进行；标准库脚本仅执行文档重建与引文/篇幅检查；无独立人类编码或人类验证。",
+        "path": "artifacts/run.py",
+        "type": "reconstruction-script"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-I",
+          "source:SRC-C"
+        ],
+        "description": "逐字原话位置、代码、主题、解释范围",
+        "id": "A-TABLE",
+        "notes": "v2修正执行者身份：编码、主题判断和自审由Codex AI代理进行；标准库脚本仅执行文档重建与引文/篇幅检查；无独立人类编码或人类验证。",
+        "path": "analysis/traceability.md",
+        "type": "traceability-table"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P1-Q1",
+        "id": "R01",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "便利体验是条件性使用解释的正面部分",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P1-Q2",
+        "id": "R02",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "高频用户仍拒照，信息边界有实际表现",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P5-Q1",
+        "id": "R03",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "与紧急使用对读保留隐私顾虑",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P5-Q2",
+        "id": "R04",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "紧急使用与感谢不被反向偏好删除",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P5-Q3",
+        "id": "R05",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "明确区分紧急使用与未来每次照片同意",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P6-Q1",
+        "id": "R06",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "存在全面支持者，不能把有条件使用说成所有人的同一态度",
+        "relation": "qualifies",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P2-Q1",
+        "id": "R07",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "老人熟练手机挑战年龄即技能不足",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P3-Q1",
+        "id": "R08",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "夜班与核验时段是明确表达的制度障碍",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P3-Q3",
+        "id": "R09",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "改时段只是也许试一次，非效果承诺",
+        "relation": "qualifies",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P1-Q3",
+        "id": "R10",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "代填与平台外互助仍在",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P3-Q2",
+        "id": "R11",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "不注册仍参与互助",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P2-Q2",
+        "id": "R12",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "熟人电话仍是可用通道；时长仅自述",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P2-Q3",
+        "id": "R13",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "信任被表达为回应条件，非界面效果",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P4-Q1",
+        "id": "R14",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "保留管理员自述方便，不将额外劳动等于完全无益",
+        "relation": "qualifies",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P4-Q2",
+        "id": "R15",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "班后管理劳动限制一致净节时结论",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P4-Q3",
+        "id": "R16",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "先电话后补录限制平台替代与记录归因",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P6-Q2",
+        "id": "R17",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "旧志愿队关系限制新生信任的解释",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P6-Q3",
+        "id": "R18",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "参与者自己说明成功提示影响先想到的经验",
+        "relation": "supports",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-CONTEXT",
+        "id": "R19",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "管理方推荐、场地与研究者培训期待提供生成情境",
+        "relation": "contextualizes",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P4-Q1",
+        "id": "R20",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "情境偏向不能直接否定真实方便体验",
+        "relation": "qualifies",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "S4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P3-Q1",
+        "id": "R21",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "唯一技能原因与可见的时段障碍冲突",
+        "relation": "challenges",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "D1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P5-Q3",
+        "id": "R22",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "紧急使用不代表持续照片同意",
+        "relation": "challenges",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "D1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P4-Q2",
+        "id": "R23",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "一致节省志愿者时间与班后劳动叙述冲突",
+        "relation": "challenges",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "D1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-P4-Q3",
+        "id": "R24",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "电话仍处理急事，不支持已经取代",
+        "relation": "challenges",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "D1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-CONTEXT",
+        "id": "R25",
+        "limitations": "定性支持关系由本次Codex AI代理解释，未经独立人类编码或人类验证；CLI不裁决其真伪",
+        "rationale": "无随机抽样、饱和记录或全国材料",
+        "relation": "challenges",
+        "scope": "仅六名合成受访者的18段挑选节录；参与者经验及本次AI代理解释，非总体或因果估计",
+        "statement_id": "D1"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT-QUESTION",
+        "inputs": [
+          "source:SRC-I",
+          "source:SRC-C",
+          "source:SRC-T"
+        ],
+        "note": "身份修订中复核范围与角色说明；给定材料中的现场研究者是合成角色，本次执行者为Codex AI代理；无完整访谈访问或独立人类验证",
+        "outputs": [
+          "statement:Q1",
+          "artifact:A-ISSUE"
+        ],
+        "status": "done",
+        "title": "AI代理根据给定样本界定问题，并区分合成现场研究者与本次执行者"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Q1",
+          "statement:S1",
+          "statement:S2",
+          "statement:S3",
+          "statement:S4",
+          "artifact:A-CODEBOOK",
+          "artifact:A-TABLE",
+          "artifact:A-MEMO",
+          "artifact:A-REPORT"
+        ],
+        "id": "M-QUAL",
+        "method_id": "qualitative",
+        "notes": "实际读取social-sciences与qualitative画像0.1；方法绑定不替代实质工作，未经过独立人类验证",
+        "profile_version": "0.1",
+        "reason": "Codex AI代理对挑选的访谈节录进行语境说明、逐段解释性编码、反向案例与竞争解释；未开展新访谈或人类编码",
+        "variant": "interview"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-QUESTION"
+        ],
+        "id": "ACT-CODING",
+        "inputs": [
+          "statement:Q1",
+          "source:SRC-I",
+          "source:SRC-C",
+          "method-binding:M-QUAL"
+        ],
+        "note": "v2与v1逐项对照18条编码entries，原话、代码、主题及解释范围保持一致；明确是AI代理判断，无独立人类编码或人类验证；非统计分析",
+        "outputs": [
+          "artifact:A-CODEBOOK",
+          "artifact:A-CODING",
+          "artifact:A-TABLE",
+          "artifact:A-MEMO",
+          "evidence:E-ANALYSIS"
+        ],
+        "status": "done",
+        "title": "AI代理逐段解释性编码、主题整合与反向案例修订"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-CODING"
+        ],
+        "id": "ACT-WRITE",
+        "inputs": [
+          "source:SRC-D",
+          "statement:S1",
+          "statement:S2",
+          "statement:S3",
+          "statement:S4",
+          "statement:D1",
+          "artifact:A-MEMO",
+          "artifact:A-TABLE"
+        ],
+        "note": "v2逐项对读v1和原输入，保留P5/P3/P4等主题论证，只纠正AI代理执行身份及验证边界；未核验平台事实或进行独立人类审阅",
+        "outputs": [
+          "artifact:A-REPORT",
+          "artifact:A-REVIEW"
+        ],
+        "status": "done",
+        "title": "AI代理审计原稿并按文本证据修订短稿及执行者身份"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-WRITE"
+        ],
+        "id": "ACT-TRACE",
+        "inputs": [
+          "artifact:A-RUN",
+          "artifact:A-CODING",
+          "source:SRC-I",
+          "artifact:A-REPORT"
+        ],
+        "note": "修改artifacts/run.py执行者身份后实际重新运行；标准库脚本核对引文、覆盖和536个汉字篇幅；不推断主题或验证解释真伪",
+        "outputs": [
+          "artifact:A-RESULT"
+        ],
+        "status": "done",
+        "title": "执行AI代理编码材料的确定性引文、覆盖和篇幅文档重建"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 4,
+    "artifacts": 9,
+    "decisions": 0,
+    "evidence": 20,
+    "method_bindings": 1,
+    "relations": 25,
+    "sources": 4,
+    "statements": 6
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "针对P5-Q1至Q3制作情境性权衡／服务场景礼貌感谢的竞争解释卡，列出所需原问句、前后话轮与反向证据；卡片须明确AI代理解释及未经独立人类验证，现有节录不能裁决，不联络或索取真实材料。"
+  }
+}

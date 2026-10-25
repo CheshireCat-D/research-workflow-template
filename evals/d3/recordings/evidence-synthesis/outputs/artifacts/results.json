@@ -1,0 +1,2209 @@
+{
+  "scope": "supplied synthetic offline materials only; not complete systematic review",
+  "input_sha256": {
+    "search-export.csv": "b675c239989e8da470b9cd480d6c99214b863bd7e6d9448b045505cf0871b5ab",
+    "abstracts.md": "90d43d0d04bea1fe022c69ce2947fc025f313f933a94f4070beb2a24b1dc4e92",
+    "full-extracts.md": "2c3cdf018c0991b7a199f40efb673a12b527a0d6f63b52c2c4d882224d9047c5",
+    "scope.md": "7847205e8882fe12618681a8cb782b7d76d266e328439541448458d211fcb607"
+  },
+  "flow": {
+    "export_records": 7,
+    "unique_reports": 7,
+    "exact_export_duplicates": 0,
+    "same_study_report_links": 1,
+    "unique_studies_all": 6,
+    "excluded_reports": 3,
+    "included_reports": 4,
+    "included_independent_studies": 3,
+    "randomized_total": 320,
+    "observed_total": 307
+  },
+  "effects": {
+    "H1": {
+      "events_sms": 40,
+      "n_sms": 50,
+      "events_control": 35,
+      "n_control": 50,
+      "p_sms": 0.8,
+      "p_control": 0.7,
+      "risk_difference": 0.10000000000000009,
+      "rd_95_ci": [
+        -0.06991135259194153,
+        0.2630165794272212
+      ],
+      "risk_ratio": 1.142857142857143,
+      "rr_95_ci": [
+        0.9095570995642048,
+        1.4359983002775674
+      ],
+      "log_rr": 0.13353139262452277,
+      "var_log_rr": 0.01357142857142857
+    },
+    "H4_complete_case": {
+      "events_sms": 50,
+      "n_sms": 62,
+      "events_control": 45,
+      "n_control": 65,
+      "p_sms": 0.8064516129032258,
+      "p_control": 0.6923076923076923,
+      "risk_difference": 0.11414392059553347,
+      "rd_95_ci": [
+        -0.037460134783742494,
+        0.2581666349286862
+      ],
+      "risk_ratio": 1.1648745519713262,
+      "rr_95_ci": [
+        0.9510315242456567,
+        1.426800991593518
+      ],
+      "log_rr": 0.15261340050837185,
+      "var_log_rr": 0.010708574579542322
+    },
+    "H5": {
+      "events_sms": 28,
+      "n_sms": 40,
+      "events_control": 20,
+      "n_control": 40,
+      "p_sms": 0.7,
+      "p_control": 0.5,
+      "risk_difference": 0.19999999999999996,
+      "rd_95_ci": [
+        -0.013808204641805877,
+        0.3900692819178616
+      ],
+      "risk_ratio": 1.4,
+      "rr_95_ci": [
+        0.9666428976212497,
+        2.0276360637658852
+      ],
+      "log_rr": 0.3364722366212129,
+      "var_log_rr": 0.035714285714285705
+    }
+  },
+  "H4_missing_scenarios": {
+    "all_missing_absent": {
+      "missing_sms_attend": 0,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 50,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.7142857142857143,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.0714285714285714,
+        "rd_95_ci": [
+          -0.08220265661077619,
+          0.22055105105141293
+        ],
+        "risk_ratio": 1.1111111111111112,
+        "rr_95_ci": [
+          0.8837023034917362,
+          1.3970404924333355
+        ],
+        "log_rr": 0.10536051565782635,
+        "var_log_rr": 0.013650793650793656
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1667435255510872,
+        "rr_95_ci": [
+          1.0060500388855875,
+          1.3531041218618673
+        ],
+        "Q": 1.1364626624549334,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    "all_missing_attend": {
+      "missing_sms_attend": 8,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 58,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.8285714285714286,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.11428571428571432,
+        "rd_95_ci": [
+          -0.025445509062759386,
+          0.24902138501158375
+        ],
+        "risk_ratio": 1.1600000000000001,
+        "rr_95_ci": [
+          0.9664968117637046,
+          1.3922446340453953
+        ],
+        "log_rr": 0.1484200051182734,
+        "var_log_rr": 0.008669950738916254
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1824954927866227,
+        "rr_95_ci": [
+          1.0351886753970707,
+          1.3507639947126826
+        ],
+        "Q": 0.9264529135381154,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    "sms_worst_control_best": {
+      "missing_sms_attend": 0,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 50,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.7142857142857143,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.0,
+        "rd_95_ci": [
+          -0.14741437081443848,
+          0.14741437081443848
+        ],
+        "risk_ratio": 1.0,
+        "rr_95_ci": [
+          0.8109661507196612,
+          1.2330970893329987
+        ],
+        "log_rr": 0.0,
+        "var_log_rr": 0.011428571428571432
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1071703581367107,
+        "rr_95_ci": [
+          0.96012725864735,
+          1.27673304855811
+        ],
+        "Q": 2.522964383260444,
+        "df": 2,
+        "I2_percent": 20.728171460930948,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    "sms_best_control_worst": {
+      "missing_sms_attend": 8,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 58,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.8285714285714286,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.18571428571428572,
+        "rd_95_ci": [
+          0.03943929713208727,
+          0.32231669481528924
+        ],
+        "risk_ratio": 1.288888888888889,
+        "rr_95_ci": [
+          1.0504595711441689,
+          1.581435986243435
+        ],
+        "log_rr": 0.25378052077609964,
+        "var_log_rr": 0.01089217296113848
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2460201181893245,
+        "rr_95_ci": [
+          1.082261907395911,
+          1.4345567596186135
+        ],
+        "Q": 1.0355305440880733,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    }
+  },
+  "H4_all_54_assignments": [
+    {
+      "missing_sms_attend": 0,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 50,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.7142857142857143,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.0714285714285714,
+        "rd_95_ci": [
+          -0.08220265661077619,
+          0.22055105105141293
+        ],
+        "risk_ratio": 1.1111111111111112,
+        "rr_95_ci": [
+          0.8837023034917362,
+          1.3970404924333355
+        ],
+        "log_rr": 0.10536051565782635,
+        "var_log_rr": 0.013650793650793656
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1667435255510872,
+        "rr_95_ci": [
+          1.0060500388855875,
+          1.3531041218618673
+        ],
+        "Q": 1.1364626624549334,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 0,
+      "missing_control_attend": 1,
+      "effect": {
+        "events_sms": 50,
+        "n_sms": 70,
+        "events_control": 46,
+        "n_control": 70,
+        "p_sms": 0.7142857142857143,
+        "p_control": 0.6571428571428571,
+        "risk_difference": 0.05714285714285716,
+        "rd_95_ci": [
+          -0.09535573393820132,
+          0.20608825426654592
+        ],
+        "risk_ratio": 1.0869565217391304,
+        "rr_95_ci": [
+          0.8680330851920942,
+          1.3610938342168954
+        ],
+        "log_rr": 0.083381608939051,
+        "var_log_rr": 0.013167701863354038
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.154976989681615,
+        "rr_95_ci": [
+          0.9970254308515993,
+          1.3379516764728931
+        ],
+        "Q": 1.3244105582277086,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 0,
+      "missing_control_attend": 2,
+      "effect": {
+        "events_sms": 50,
+        "n_sms": 70,
+        "events_control": 47,
+        "n_control": 70,
+        "p_sms": 0.7142857142857143,
+        "p_control": 0.6714285714285714,
+        "risk_difference": 0.04285714285714293,
+        "rd_95_ci": [
+          -0.10845302614014321,
+          0.1915454699610291
+        ],
+        "risk_ratio": 1.0638297872340428,
+        "rr_95_ci": [
+          0.8529569099107018,
+          1.326835861292117
+        ],
+        "log_rr": 0.06187540371808766,
+        "var_log_rr": 0.012705167173252284
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1431260136184516,
+        "rr_95_ci": [
+          0.9879121416702928,
+          1.3227260076001015
+        ],
+        "Q": 1.5573028997560359,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 0,
+      "missing_control_attend": 3,
+      "effect": {
+        "events_sms": 50,
+        "n_sms": 70,
+        "events_control": 48,
+        "n_control": 70,
+        "p_sms": 0.7142857142857143,
+        "p_control": 0.6857142857142857,
+        "risk_difference": 0.02857142857142858,
+        "rd_95_ci": [
+          -0.1214949270149841,
+          0.17692054328887488
+        ],
+        "risk_ratio": 1.0416666666666667,
+        "rr_95_ci": [
+          0.8384405098737506,
+          1.2941519781860618
+        ],
+        "log_rr": 0.0408219945202552,
+        "var_log_rr": 0.012261904761904762
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1312012231386959,
+        "rr_95_ci": [
+          0.9787190627370725,
+          1.307439750536711
+        ],
+        "Q": 1.834877452306364,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 0,
+      "missing_control_attend": 4,
+      "effect": {
+        "events_sms": 50,
+        "n_sms": 70,
+        "events_control": 49,
+        "n_control": 70,
+        "p_sms": 0.7142857142857143,
+        "p_control": 0.7,
+        "risk_difference": 0.014285714285714346,
+        "rd_95_ci": [
+          -0.1344818746185428,
+          0.16221107137553048
+        ],
+        "risk_ratio": 1.0204081632653061,
+        "rr_95_ci": [
+          0.824453100229514,
+          1.2629375999297157
+        ],
+        "log_rr": 0.02020270731751947,
+        "var_log_rr": 0.011836734693877552
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.119212771418162,
+        "rr_95_ci": [
+          0.9694547139803454,
+          1.2921049427492068
+        ],
+        "Q": 2.1568596836496137,
+        "df": 2,
+        "I2_percent": 7.272595655559383,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 0,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 50,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.7142857142857143,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.0,
+        "rd_95_ci": [
+          -0.14741437081443848,
+          0.14741437081443848
+        ],
+        "risk_ratio": 1.0,
+        "rr_95_ci": [
+          0.8109661507196612,
+          1.2330970893329987
+        ],
+        "log_rr": 0.0,
+        "var_log_rr": 0.011428571428571432
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1071703581367107,
+        "rr_95_ci": [
+          0.96012725864735,
+          1.27673304855811
+        ],
+        "Q": 2.522964383260444,
+        "df": 2,
+        "I2_percent": 20.728171460930948,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 1,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 51,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.7285714285714285,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.08571428571428563,
+        "rd_95_ci": [
+          -0.06734014711945882,
+          0.23344595536903937
+        ],
+        "risk_ratio": 1.1333333333333333,
+        "rr_95_ci": [
+          0.9043677737941022,
+          1.4202678176554249
+        ],
+        "log_rr": 0.125163142954006,
+        "var_log_rr": 0.01325863678804855
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1759213681742886,
+        "rr_95_ci": [
+          1.014886183828464,
+          1.3625085119521243
+        ],
+        "Q": 1.0143983764836078,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 1,
+      "missing_control_attend": 1,
+      "effect": {
+        "events_sms": 51,
+        "n_sms": 70,
+        "events_control": 46,
+        "n_control": 70,
+        "p_sms": 0.7285714285714285,
+        "p_control": 0.6571428571428571,
+        "risk_difference": 0.0714285714285714,
+        "rd_95_ci": [
+          -0.08048892415007833,
+          0.21898148944258375
+        ],
+        "risk_ratio": 1.108695652173913,
+        "rr_95_ci": [
+          0.8883864425033564,
+          1.3836389102084867
+        ],
+        "log_rr": 0.1031842362352308,
+        "var_log_rr": 0.01277554500060894
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1640525064742384,
+        "rr_95_ci": [
+          1.005820501634536,
+          1.3471769919453296
+        ],
+        "Q": 1.1644981225044524,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 1,
+      "missing_control_attend": 2,
+      "effect": {
+        "events_sms": 51,
+        "n_sms": 70,
+        "events_control": 47,
+        "n_control": 70,
+        "p_sms": 0.7285714285714285,
+        "p_control": 0.6714285714285714,
+        "risk_difference": 0.05714285714285716,
+        "rd_95_ci": [
+          -0.09358163463989347,
+          0.20443627487450175
+        ],
+        "risk_ratio": 1.0851063829787235,
+        "rr_95_ci": [
+          0.8730107393773897,
+          1.3487301006410315
+        ],
+        "log_rr": 0.0816780310142673,
+        "var_log_rr": 0.01231301031050718
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1520863339392025,
+        "rr_95_ci": [
+          0.9966554494345279,
+          1.3317570496429265
+        ],
+        "Q": 1.3597158724709808,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 1,
+      "missing_control_attend": 3,
+      "effect": {
+        "events_sms": 51,
+        "n_sms": 70,
+        "events_control": 48,
+        "n_control": 70,
+        "p_sms": 0.7285714285714285,
+        "p_control": 0.6857142857142857,
+        "risk_difference": 0.042857142857142816,
+        "rd_95_ci": [
+          -0.10661866207519005,
+          0.18980812831680738
+        ],
+        "risk_ratio": 1.0625,
+        "rr_95_ci": [
+          0.8582067297803563,
+          1.315424606713262
+        ],
+        "log_rr": 0.06062462181643484,
+        "var_log_rr": 0.011869747899159662
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1400338542855717,
+        "rr_95_ci": [
+          0.9874001996029417,
+          1.3162618251848124
+        ],
+        "Q": 1.5998525606222693,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 1,
+      "missing_control_attend": 4,
+      "effect": {
+        "events_sms": 51,
+        "n_sms": 70,
+        "events_control": 49,
+        "n_control": 70,
+        "p_sms": 0.7285714285714285,
+        "p_control": 0.7,
+        "risk_difference": 0.02857142857142858,
+        "rd_95_ci": [
+          -0.11960043343201399,
+          0.17509461294941744
+        ],
+        "risk_ratio": 1.0408163265306123,
+        "rr_95_ci": [
+          0.8439430132959472,
+          1.2836158466931886
+        ],
+        "log_rr": 0.040005334613699206,
+        "var_log_rr": 0.01144457783113245
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.127905607658131,
+        "rr_95_ci": [
+          0.9780635629217432,
+          1.3007038683522112
+        ],
+        "Q": 1.8846952591500084,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 1,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 51,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.7285714285714285,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.014285714285714235,
+        "rd_95_ci": [
+          -0.13252743874833087,
+          0.16029300524316362
+        ],
+        "risk_ratio": 1.02,
+        "rr_95_ci": [
+          0.8301904908215408,
+          1.253206356254984
+        ],
+        "log_rr": 0.01980262729617973,
+        "var_log_rr": 0.01103641456582633
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1157116884563256,
+        "rr_95_ci": [
+          0.9686540023753583,
+          1.2850951616423447
+        ],
+        "Q": 2.2140188560581646,
+        "df": 2,
+        "I2_percent": 9.666532670783274,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 2,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 52,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.7428571428571429,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.09999999999999998,
+        "rd_95_ci": [
+          -0.05238807424733627,
+          0.2462886486783113
+        ],
+        "risk_ratio": 1.1555555555555554,
+        "rr_95_ci": [
+          0.9250858355041462,
+          1.4434429657520398
+        ],
+        "log_rr": 0.1445812288111075,
+        "var_log_rr": 0.012881562881562884
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1853101027504256,
+        "rr_95_ci": [
+          1.0239199875068188,
+          1.3721385038133833
+        ],
+        "Q": 0.9241191937728984,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 2,
+      "missing_control_attend": 1,
+      "effect": {
+        "events_sms": 52,
+        "n_sms": 70,
+        "events_control": 46,
+        "n_control": 70,
+        "p_sms": 0.7428571428571429,
+        "p_control": 0.6571428571428571,
+        "risk_difference": 0.08571428571428574,
+        "rd_95_ci": [
+          -0.06553184225480158,
+          0.2318224173414986
+        ],
+        "risk_ratio": 1.1304347826086958,
+        "rr_95_ci": [
+          0.9087942347224545,
+          1.4061299564932148
+        ],
+        "log_rr": 0.12260232209233247,
+        "var_log_rr": 0.012398471094123271
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1733473504031255,
+        "rr_95_ci": [
+          1.0148224713129228,
+          1.3566353166351133
+        ],
+        "Q": 1.0364104077402083,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 2,
+      "missing_control_attend": 2,
+      "effect": {
+        "events_sms": 52,
+        "n_sms": 70,
+        "events_control": 47,
+        "n_control": 70,
+        "p_sms": 0.7428571428571429,
+        "p_control": 0.6714285714285714,
+        "risk_difference": 0.07142857142857151,
+        "rd_95_ci": [
+          -0.0786192149127169,
+          0.2172746321234489
+        ],
+        "risk_ratio": 1.1063829787234043,
+        "rr_95_ci": [
+          0.8931209165820669,
+          1.370568388761271
+        ],
+        "log_rr": 0.10109611687136881,
+        "var_log_rr": 0.011935936404021508
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1612740185982298,
+        "rr_95_ci": [
+          1.0056146663315053,
+          1.3410279219483099
+        ],
+        "Q": 1.1939230280253543,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 2,
+      "missing_control_attend": 3,
+      "effect": {
+        "events_sms": 52,
+        "n_sms": 70,
+        "events_control": 48,
+        "n_control": 70,
+        "p_sms": 0.7428571428571429,
+        "p_control": 0.6857142857142857,
+        "risk_difference": 0.05714285714285716,
+        "rd_95_ci": [
+          -0.09165056348763073,
+          0.2026430792757173
+        ],
+        "risk_ratio": 1.0833333333333333,
+        "rr_95_ci": [
+          0.8780312836705533,
+          1.3366392894395576
+        ],
+        "log_rr": 0.08004270767353636,
+        "var_log_rr": 0.011492673992673992
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1491014674840352,
+        "rr_95_ci": [
+          0.9963060085470046,
+          1.325329940044888
+        ],
+        "Q": 1.3965217279231903,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 2,
+      "missing_control_attend": 4,
+      "effect": {
+        "events_sms": 52,
+        "n_sms": 70,
+        "events_control": 49,
+        "n_control": 70,
+        "p_sms": 0.7428571428571429,
+        "p_control": 0.7,
+        "risk_difference": 0.04285714285714293,
+        "rd_95_ci": [
+          -0.10462630181485985,
+          0.18792528571907946
+        ],
+        "risk_ratio": 1.0612244897959184,
+        "rr_95_ci": [
+          0.8634933243813863,
+          1.3042340756362238
+        ],
+        "log_rr": 0.059423420470800806,
+        "var_log_rr": 0.011067503924646782
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1368406047964759,
+        "rr_95_ci": [
+          0.9869055841356613,
+          1.3095544107655606
+        ],
+        "Q": 1.6440559214342543,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 2,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 52,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.7428571428571429,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.02857142857142858,
+        "rd_95_ci": [
+          -0.11754690589262975,
+          0.17311848501284624
+        ],
+        "risk_ratio": 1.04,
+        "rr_95_ci": [
+          0.8494773754578248,
+          1.273253451178818
+        ],
+        "log_rr": 0.03922071315328133,
+        "var_log_rr": 0.01065934065934066
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1245019023901601,
+        "rr_95_ci": [
+          0.977422142294628,
+          1.2937138149034535
+        ],
+        "Q": 1.9363614946101377,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 3,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 53,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.7571428571428571,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.11428571428571421,
+        "rd_95_ci": [
+          -0.03734290865637485,
+          0.25908002940243835
+        ],
+        "risk_ratio": 1.1777777777777776,
+        "rr_95_ci": [
+          0.9458557373776926,
+          1.4665666644608497
+        ],
+        "log_rr": 0.16362942378180192,
+        "var_log_rr": 0.012518718179095542
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1949086443743566,
+        "rr_95_ci": [
+          1.033151090101951,
+          1.3819921230104564
+        ],
+        "Q": 0.8653794461920136,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 3,
+      "missing_control_attend": 1,
+      "effect": {
+        "events_sms": 53,
+        "n_sms": 70,
+        "events_control": 46,
+        "n_control": 70,
+        "p_sms": 0.7571428571428571,
+        "p_control": 0.6571428571428571,
+        "risk_difference": 0.09999999999999998,
+        "rd_95_ci": [
+          -0.050480913567615276,
+          0.24461193272199142
+        ],
+        "risk_ratio": 1.1521739130434783,
+        "rr_95_ci": [
+          0.9292557736047397,
+          1.4285676383244907
+        ],
+        "log_rr": 0.14165051706302684,
+        "var_log_rr": 0.01203562639165592
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1828606830123636,
+        "rr_95_ci": [
+          1.0240312820333646,
+          1.366324857418651
+        ],
+        "Q": 0.9399500561386459,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 3,
+      "missing_control_attend": 2,
+      "effect": {
+        "events_sms": 53,
+        "n_sms": 70,
+        "events_control": 47,
+        "n_control": 70,
+        "p_sms": 0.7571428571428571,
+        "p_control": 0.6714285714285714,
+        "risk_difference": 0.08571428571428574,
+        "rd_95_ci": [
+          -0.06356214346468236,
+          0.23006143109031552
+        ],
+        "risk_ratio": 1.127659574468085,
+        "rr_95_ci": [
+          0.9132868246971093,
+          1.3923513199823867
+        ],
+        "log_rr": 0.12014431184206321,
+        "var_log_rr": 0.01157309170155417
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.170688486665205,
+        "rr_95_ci": [
+          1.0147900572641435,
+          1.3505370130501113
+        ],
+        "Q": 1.0597761685184615,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 3,
+      "missing_control_attend": 3,
+      "effect": {
+        "events_sms": 53,
+        "n_sms": 70,
+        "events_control": 48,
+        "n_control": 70,
+        "p_sms": 0.7571428571428571,
+        "p_control": 0.6857142857142857,
+        "risk_difference": 0.0714285714285714,
+        "rd_95_ci": [
+          -0.07658695527529794,
+          0.21542627835026673
+        ],
+        "risk_ratio": 1.1041666666666665,
+        "rr_95_ci": [
+          0.8979136353533392,
+          1.3577965405303314
+        ],
+        "log_rr": 0.09909090264423077,
+        "var_log_rr": 0.011129829290206651
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1584037483959713,
+        "rr_95_ci": [
+          1.0054370971783022,
+          1.3346426624438215
+        ],
+        "Q": 1.2247865338380501,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 3,
+      "missing_control_attend": 4,
+      "effect": {
+        "events_sms": 53,
+        "n_sms": 70,
+        "events_control": 49,
+        "n_control": 70,
+        "p_sms": 0.7571428571428571,
+        "p_control": 0.7,
+        "risk_difference": 0.05714285714285716,
+        "rd_95_ci": [
+          -0.08955574740000227,
+          0.20070396270911436
+        ],
+        "risk_ratio": 1.0816326530612246,
+        "rr_95_ci": [
+          0.8831035880396833,
+          1.3247927106323696
+        ],
+        "log_rr": 0.07847161544149531,
+        "var_log_rr": 0.01070465922217944
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1460177221050876,
+        "rr_95_ci": [
+          0.9959817470714872,
+          1.318655309939798
+        ],
+        "Q": 1.4348934153935422,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 3,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 53,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.7571428571428571,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.042857142857142816,
+        "rd_95_ci": [
+          -0.1024689793269056,
+          0.1858916718488279
+        ],
+        "risk_ratio": 1.0599999999999998,
+        "rr_95_ci": [
+          0.8688264610211173,
+          1.293238696574056
+        ],
+        "log_rr": 0.058268908123975616,
+        "var_log_rr": 0.010296495956873318
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.133541237765704,
+        "rr_95_ci": [
+          0.9864330280619711,
+          1.302587911355581
+        ],
+        "Q": 1.6899943698088078,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 4,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 54,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.7714285714285715,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.12857142857142856,
+        "rd_95_ci": [
+          -0.022200672165373497,
+          0.2718211982394608
+        ],
+        "risk_ratio": 1.2,
+        "rr_95_ci": [
+          0.9666767730983274,
+          1.4896395983371036
+        ],
+        "log_rr": 0.1823215567939546,
+        "var_log_rr": 0.012169312169312168
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.204716052467789,
+        "rr_95_ci": [
+          1.042579257253385,
+          1.392067564145719
+        ],
+        "Q": 0.8379232835421634,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 4,
+      "missing_control_attend": 1,
+      "effect": {
+        "events_sms": 54,
+        "n_sms": 70,
+        "events_control": 46,
+        "n_control": 70,
+        "p_sms": 0.7714285714285715,
+        "p_control": 0.6571428571428571,
+        "risk_difference": 0.11428571428571432,
+        "rd_95_ci": [
+          -0.03533210689016786,
+          0.2573511325579608
+        ],
+        "risk_ratio": 1.173913043478261,
+        "rr_95_ci": [
+          0.9497704169078681,
+          1.4509525766605051
+        ],
+        "log_rr": 0.16034265007517948,
+        "var_log_rr": 0.011686220381872557
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1925918161429154,
+        "rr_95_ci": [
+          1.0334470098975628,
+          1.3762439934603286
+        ],
+        "Q": 0.8749078531424165,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 4,
+      "missing_control_attend": 2,
+      "effect": {
+        "events_sms": 54,
+        "n_sms": 70,
+        "events_control": 47,
+        "n_control": 70,
+        "p_sms": 0.7714285714285715,
+        "p_control": 0.6714285714285714,
+        "risk_difference": 0.10000000000000009,
+        "rd_95_ci": [
+          -0.04840633198653496,
+          0.2427977632809134
+        ],
+        "risk_ratio": 1.148936170212766,
+        "rr_95_ci": [
+          0.9335078945275317,
+          1.4140794426717578
+        ],
+        "log_rr": 0.1388364448542159,
+        "var_log_rr": 0.011223685691770798
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1803293144377054,
+        "rr_95_ci": [
+          1.0241820312707397,
+          1.3602828872055277
+        ],
+        "Q": 0.9571136801804876,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 4,
+      "missing_control_attend": 3,
+      "effect": {
+        "events_sms": 54,
+        "n_sms": 70,
+        "events_control": 48,
+        "n_control": 70,
+        "p_sms": 0.7714285714285715,
+        "p_control": 0.6857142857142857,
+        "risk_difference": 0.08571428571428574,
+        "rd_95_ci": [
+          -0.061423687666816745,
+          0.2281588097175957
+        ],
+        "risk_ratio": 1.125,
+        "rr_95_ci": [
+          0.9178532985746488,
+          1.3788968258494165
+        ],
+        "log_rr": 0.11778303565638346,
+        "var_log_rr": 0.010780423280423277
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1679405478106077,
+        "rr_95_ci": [
+          1.0147942292583136,
+          1.3441987389080012
+        ],
+        "Q": 1.0845337042484053,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 4,
+      "missing_control_attend": 4,
+      "effect": {
+        "events_sms": 54,
+        "n_sms": 70,
+        "events_control": 49,
+        "n_control": 70,
+        "p_sms": 0.7714285714285715,
+        "p_control": 0.7,
+        "risk_difference": 0.07142857142857151,
+        "rd_95_ci": [
+          -0.07438455431838045,
+          0.2134317187571752
+        ],
+        "risk_ratio": 1.1020408163265307,
+        "rr_95_ci": [
+          0.902773411878056,
+          1.345292124103558
+        ],
+        "log_rr": 0.09716374845364788,
+        "var_log_rr": 0.010355253212396066
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1554370928438413,
+        "rr_95_ci": [
+          1.0052931913459966,
+          1.3280054883609995
+        ],
+        "Q": 1.2571433198490138,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 4,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 54,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.7714285714285715,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.05714285714285716,
+        "rd_95_ci": [
+          -0.0872893721355388,
+          0.19861362904891652
+        ],
+        "risk_ratio": 1.08,
+        "rr_95_ci": [
+          0.8882374610475627,
+          1.313162359336185
+        ],
+        "log_rr": 0.0769610411361284,
+        "var_log_rr": 0.009947089947089946
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.142830116198718,
+        "rr_95_ci": [
+          0.9956881956866757,
+          1.3117165395237527
+        ],
+        "Q": 1.474902202725122,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 5,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 55,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.7857142857142857,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.1428571428571428,
+        "rd_95_ci": [
+          -0.006956858916128655,
+          0.2845135173445199
+        ],
+        "risk_ratio": 1.222222222222222,
+        "rr_95_ci": [
+          0.9875482788651746,
+          1.5126624110068163
+        ],
+        "log_rr": 0.20067069546215105,
+        "var_log_rr": 0.011832611832611833
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2147315220222226,
+        "rr_95_ci": [
+          1.0522043732095336,
+          1.4023631797817886
+        ],
+        "Q": 0.8414859764272901,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 5,
+      "missing_control_attend": 1,
+      "effect": {
+        "events_sms": 55,
+        "n_sms": 70,
+        "events_control": 46,
+        "n_control": 70,
+        "p_sms": 0.7857142857142857,
+        "p_control": 0.6571428571428571,
+        "risk_difference": 0.12857142857142856,
+        "rd_95_ci": [
+          -0.020080854223527705,
+          0.2700413753035052
+        ],
+        "risk_ratio": 1.1956521739130435,
+        "rr_95_ci": [
+          0.9703375661032563,
+          1.473285350297219
+        ],
+        "log_rr": 0.1786917887433759,
+        "var_log_rr": 0.01134952004517222
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2025402032283536,
+        "rr_95_ci": [
+          1.0430698582907123,
+          1.3863912650589212
+        ],
+        "Q": 0.8410640903245441,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 5,
+      "missing_control_attend": 2,
+      "effect": {
+        "events_sms": 55,
+        "n_sms": 70,
+        "events_control": 47,
+        "n_control": 70,
+        "p_sms": 0.7857142857142857,
+        "p_control": 0.6714285714285714,
+        "risk_difference": 0.11428571428571432,
+        "rd_95_ci": [
+          -0.03314714548588152,
+          0.2554849817094354
+        ],
+        "risk_ratio": 1.1702127659574468,
+        "rr_95_ci": [
+          0.9537836023817904,
+          1.4357532612115735
+        ],
+        "log_rr": 0.15718558352241235,
+        "var_log_rr": 0.010886985355070461
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1901962268260171,
+        "rr_95_ci": [
+          1.0337911351191953,
+          1.37026427314794
+        ],
+        "Q": 0.8857619498491653,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 5,
+      "missing_control_attend": 3,
+      "effect": {
+        "events_sms": 55,
+        "n_sms": 70,
+        "events_control": 48,
+        "n_control": 70,
+        "p_sms": 0.7857142857142857,
+        "p_control": 0.6857142857142857,
+        "risk_difference": 0.09999999999999998,
+        "rd_95_ci": [
+          -0.04615605350936178,
+          0.24084201909051603
+        ],
+        "risk_ratio": 1.1458333333333333,
+        "rr_95_ci": [
+          0.9378498350964402,
+          1.3999405647309913
+        ],
+        "log_rr": 0.1361321743245799,
+        "var_log_rr": 0.01044372294372294
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1777118731605756,
+        "rr_95_ci": [
+          1.0243783186718391,
+          1.3539970837939224
+        ],
+        "Q": 0.9756365754441118,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 5,
+      "missing_control_attend": 4,
+      "effect": {
+        "events_sms": 55,
+        "n_sms": 70,
+        "events_control": 49,
+        "n_control": 70,
+        "p_sms": 0.7857142857142857,
+        "p_control": 0.7,
+        "risk_difference": 0.08571428571428574,
+        "rd_95_ci": [
+          -0.059107937742025746,
+          0.22610989025443104
+        ],
+        "risk_ratio": 1.1224489795918369,
+        "rr_95_ci": [
+          0.9225024549104456,
+          1.3657326385207975
+        ],
+        "log_rr": 0.11551288712184443,
+        "var_log_rr": 0.010018552875695731
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1650990159556982,
+        "rr_95_ci": [
+          1.0148412212284992,
+          1.3376040395143696
+        ],
+        "Q": 1.1107265540606381,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 5,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 55,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.7857142857142857,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.0714285714285714,
+        "rd_95_ci": [
+          -0.0720032159167048,
+          0.2112856814611329
+        ],
+        "risk_ratio": 1.0999999999999999,
+        "rr_95_ci": [
+          0.9077101449322209,
+          1.333024651928233
+        ],
+        "log_rr": 0.09531017980432474,
+        "var_log_rr": 0.009610389610389609
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1523691350203011,
+        "rr_95_ci": [
+          1.0051893626991768,
+          1.321098961673806
+        ],
+        "Q": 1.291053908765279,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 6,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 56,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.8,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.15714285714285714,
+        "rd_95_ci": [
+          0.008393663728907486,
+          0.2971586866523313
+        ],
+        "risk_ratio": 1.2444444444444445,
+        "rr_95_ci": [
+          1.0084696311871875,
+          1.5356357072305238
+        ],
+        "log_rr": 0.2186892009648295,
+        "var_log_rr": 0.011507936507936505
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2249543755454015,
+        "rr_95_ci": [
+          1.0620264345544186,
+          1.4128774702273554
+        ],
+        "Q": 0.8757950894351532,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 6,
+      "missing_control_attend": 1,
+      "effect": {
+        "events_sms": 56,
+        "n_sms": 70,
+        "events_control": 46,
+        "n_control": 70,
+        "p_sms": 0.8,
+        "p_control": 0.6571428571428571,
+        "risk_difference": 0.1428571428571429,
+        "rd_95_ci": [
+          -0.004721949815669257,
+          0.2826843573352076
+        ],
+        "risk_ratio": 1.2173913043478262,
+        "rr_95_ci": [
+          0.9909566642949011,
+          1.4955664978107026
+        ],
+        "log_rr": 0.1967102942460543,
+        "var_log_rr": 0.011024844720496895
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2127054312941639,
+        "rr_95_ci": [
+          1.0529001517923557,
+          1.3967653633508015
+        ],
+        "Q": 0.8381897957285793,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 6,
+      "missing_control_attend": 2,
+      "effect": {
+        "events_sms": 56,
+        "n_sms": 70,
+        "events_control": 47,
+        "n_control": 70,
+        "p_sms": 0.8,
+        "p_control": 0.6714285714285714,
+        "risk_difference": 0.12857142857142867,
+        "rd_95_ci": [
+          -0.017779299320201142,
+          0.2681247775148116
+        ],
+        "risk_ratio": 1.1914893617021278,
+        "rr_95_ci": [
+          0.9741134681538177,
+          1.4573732377809339
+        ],
+        "log_rr": 0.1752040890250908,
+        "var_log_rr": 0.010562310030395134
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2002890894421636,
+        "rr_95_ci": [
+          1.0436180474945886,
+          1.3804800536868527
+        ],
+        "Q": 0.8455366463190013,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 6,
+      "missing_control_attend": 3,
+      "effect": {
+        "events_sms": 56,
+        "n_sms": 70,
+        "events_control": 48,
+        "n_control": 70,
+        "p_sms": 0.8,
+        "p_control": 0.6857142857142857,
+        "risk_difference": 0.11428571428571432,
+        "rd_95_ci": [
+          -0.030778683108719562,
+          0.25347759056379093
+        ],
+        "risk_ratio": 1.1666666666666667,
+        "rr_95_ci": [
+          0.9579028529953775,
+          1.4209281315478863
+        ],
+        "log_rr": 0.15415067982725836,
+        "var_log_rr": 0.010119047619047614
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1877178807437976,
+        "rr_95_ci": [
+          1.0341904240088355,
+          1.3640367687512893
+        ],
+        "Q": 0.8979564208160659,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 6,
+      "missing_control_attend": 4,
+      "effect": {
+        "events_sms": 56,
+        "n_sms": 70,
+        "events_control": 49,
+        "n_control": 70,
+        "p_sms": 0.8,
+        "p_control": 0.7,
+        "risk_difference": 0.10000000000000009,
+        "rd_95_ci": [
+          -0.043720436336690205,
+          0.23874015227939963
+        ],
+        "risk_ratio": 1.142857142857143,
+        "rr_95_ci": [
+          0.9422904261454279,
+          1.3861145276859816
+        ],
+        "log_rr": 0.13353139262452277,
+        "var_log_rr": 0.009693877551020405
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1750039484705883,
+        "rr_95_ci": [
+          1.024627300764262,
+          1.347450217158637
+        ],
+        "Q": 0.9955507446375453,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 6,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 56,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.8,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.08571428571428574,
+        "rd_95_ci": [
+          -0.05660495063498422,
+          0.2239094929646753
+        ],
+        "risk_ratio": 1.12,
+        "rr_95_ci": [
+          0.9272443369035226,
+          1.3528257332786682
+        ],
+        "log_rr": 0.11332868530700327,
+        "var_log_rr": 0.009285714285714284
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1621590599174978,
+        "rr_95_ci": [
+          1.014938423999087,
+          1.3307346028211235
+        ],
+        "Q": 1.1384040002566076,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 7,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 57,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.8142857142857143,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.17142857142857137,
+        "rd_95_ci": [
+          0.02385678154095039,
+          0.3097588435413211
+        ],
+        "risk_ratio": 1.2666666666666666,
+        "rr_95_ci": [
+          1.0294402448650788,
+          1.5585600547943674
+        ],
+        "log_rr": 0.23638877806423034,
+        "var_log_rr": 0.011194653299916457
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.235384055644854,
+        "rr_95_ci": [
+          1.0720455444570447,
+          1.4236090741037348
+        ],
+        "Q": 0.9405715384254405,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 7,
+      "missing_control_attend": 1,
+      "effect": {
+        "events_sms": 57,
+        "n_sms": 70,
+        "events_control": 46,
+        "n_control": 70,
+        "p_sms": 0.8142857142857143,
+        "p_control": 0.6571428571428571,
+        "risk_difference": 0.15714285714285714,
+        "rd_95_ci": [
+          0.010750578577811115,
+          0.29528221278872635
+        ],
+        "risk_ratio": 1.2391304347826086,
+        "rr_95_ci": [
+          1.0116271943273591,
+          1.5177965193249563
+        ],
+        "log_rr": 0.2144098713454551,
+        "var_log_rr": 0.010711561512476847
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2230872135943034,
+        "rr_95_ci": [
+          1.0629383306167588,
+          1.407365120787273
+        ],
+        "Q": 0.86604784564838,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 7,
+      "missing_control_attend": 2,
+      "effect": {
+        "events_sms": 57,
+        "n_sms": 70,
+        "events_control": 47,
+        "n_control": 70,
+        "p_sms": 0.8142857142857143,
+        "p_control": 0.6714285714285714,
+        "risk_difference": 0.1428571428571429,
+        "rd_95_ci": [
+          -0.00229672785854082,
+          0.28071928004816016
+        ],
+        "risk_ratio": 1.2127659574468086,
+        "rr_95_ci": [
+          0.9944970535989935,
+          1.4789397939583426
+        ],
+        "log_rr": 0.19290366612449164,
+        "var_log_rr": 0.010249026822375086
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2106079013269613,
+        "rr_95_ci": [
+          1.0536635737279565,
+          1.3909292560716948
+        ],
+        "Q": 0.8362438807343583,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 7,
+      "missing_control_attend": 3,
+      "effect": {
+        "events_sms": 57,
+        "n_sms": 70,
+        "events_control": 48,
+        "n_control": 70,
+        "p_sms": 0.8142857142857143,
+        "p_control": 0.6857142857142857,
+        "risk_difference": 0.12857142857142856,
+        "rd_95_ci": [
+          -0.015285410059016097,
+          0.2660676470335108
+        ],
+        "risk_ratio": 1.1875,
+        "rr_95_ci": [
+          0.9780120051651483,
+          1.4418598570902812
+        ],
+        "log_rr": 0.17185025692665923,
+        "var_log_rr": 0.009805764411027566
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1979588685851386,
+        "rr_95_ci": [
+          1.0442317437064164,
+          1.3743170129343074
+        ],
+        "Q": 0.8513436544265593,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 7,
+      "missing_control_attend": 4,
+      "effect": {
+        "events_sms": 57,
+        "n_sms": 70,
+        "events_control": 49,
+        "n_control": 70,
+        "p_sms": 0.8142857142857143,
+        "p_control": 0.7,
+        "risk_difference": 0.11428571428571432,
+        "rd_95_ci": [
+          -0.02821577500525485,
+          0.2513246194333848
+        ],
+        "risk_ratio": 1.163265306122449,
+        "rr_95_ci": [
+          0.962137083394768,
+          1.4064380178068017
+        ],
+        "log_rr": 0.1512309697239235,
+        "var_log_rr": 0.009380594343000355
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.185152498552176,
+        "rr_95_ci": [
+          1.0346530494876787,
+          1.3575434253250054
+        ],
+        "Q": 0.911511467350422,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 7,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 57,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.8142857142857143,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.09999999999999998,
+        "rd_95_ci": [
+          -0.041088183999847844,
+          0.23648716780906318
+        ],
+        "risk_ratio": 1.14,
+        "rr_95_ci": [
+          0.946839915246065,
+          1.3725657094444095
+        ],
+        "log_rr": 0.131028262406404,
+        "var_log_rr": 0.008972431077694234
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1722008182217463,
+        "rr_95_ci": [
+          1.02493744833774,
+          1.3406230404286577
+        ],
+        "Q": 1.016893862115941,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 8,
+      "missing_control_attend": 0,
+      "effect": {
+        "events_sms": 58,
+        "n_sms": 70,
+        "events_control": 45,
+        "n_control": 70,
+        "p_sms": 0.8285714285714286,
+        "p_control": 0.6428571428571429,
+        "risk_difference": 0.18571428571428572,
+        "rd_95_ci": [
+          0.03943929713208727,
+          0.32231669481528924
+        ],
+        "risk_ratio": 1.288888888888889,
+        "rr_95_ci": [
+          1.0504595711441689,
+          1.581435986243435
+        ],
+        "log_rr": 0.25378052077609964,
+        "var_log_rr": 0.01089217296113848
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2460201181893245,
+        "rr_95_ci": [
+          1.082261907395911,
+          1.4345567596186135
+        ],
+        "Q": 1.0355305440880733,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 8,
+      "missing_control_attend": 1,
+      "effect": {
+        "events_sms": 58,
+        "n_sms": 70,
+        "events_control": 46,
+        "n_control": 70,
+        "p_sms": 0.8285714285714286,
+        "p_control": 0.6571428571428571,
+        "risk_difference": 0.17142857142857149,
+        "rd_95_ci": [
+          0.026343636519559788,
+          0.307837645788258
+        ],
+        "risk_ratio": 1.2608695652173914,
+        "rr_95_ci": [
+          1.0323486770668118,
+          1.5399758781195252
+        ],
+        "log_rr": 0.23180161405732438,
+        "var_log_rr": 0.010409081173698867
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2336853828259144,
+        "rr_95_ci": [
+          1.0731849455357747,
+          1.4181895023121973
+        ],
+        "Q": 0.9243939701870416,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 8,
+      "missing_control_attend": 2,
+      "effect": {
+        "events_sms": 58,
+        "n_sms": 70,
+        "events_control": 47,
+        "n_control": 70,
+        "p_sms": 0.8285714285714286,
+        "p_control": 0.6714285714285714,
+        "risk_difference": 0.15714285714285725,
+        "rd_95_ci": [
+          0.013307585745916645,
+          0.2932711894630814
+        ],
+        "risk_ratio": 1.2340425531914896,
+        "rr_95_ci": [
+          1.0149339607889118,
+          1.5004533121580097
+        ],
+        "log_rr": 0.21029540883636094,
+        "var_log_rr": 0.009946546483597106
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2211527882560964,
+        "rr_95_ci": [
+          1.0639286410200968,
+          1.4016110430450106
+        ],
+        "Q": 0.857681258529369,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 8,
+      "missing_control_attend": 3,
+      "effect": {
+        "events_sms": 58,
+        "n_sms": 70,
+        "events_control": 48,
+        "n_control": 70,
+        "p_sms": 0.8285714285714286,
+        "p_control": 0.6857142857142857,
+        "risk_difference": 0.1428571428571429,
+        "rd_95_ci": [
+          0.00033090269473656786,
+          0.2786148832655011
+        ],
+        "risk_ratio": 1.2083333333333335,
+        "rr_95_ci": [
+          0.9981769880086769,
+          1.4627360297668501
+        ],
+        "log_rr": 0.18924199963852853,
+        "var_log_rr": 0.009503284072249586
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.2084352698789258,
+        "rr_95_ci": [
+          1.054503611706287,
+          1.3848371738854672
+        ],
+        "Q": 0.8356389241131531,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 8,
+      "missing_control_attend": 4,
+      "effect": {
+        "events_sms": 58,
+        "n_sms": 70,
+        "events_control": 49,
+        "n_control": 70,
+        "p_sms": 0.8285714285714286,
+        "p_control": 0.7,
+        "risk_difference": 0.12857142857142867,
+        "rd_95_ci": [
+          -0.012586686902781058,
+          0.26386597950930923
+        ],
+        "risk_ratio": 1.1836734693877553,
+        "rr_95_ci": [
+          0.982042232291067,
+          1.426703288374648
+        ],
+        "log_rr": 0.1686227124357929,
+        "var_log_rr": 0.009078114004222376
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1955454191287556,
+        "rr_95_ci": [
+          1.0449202386829197,
+          1.3678832089627855
+        ],
+        "Q": 0.8584933766463064,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    },
+    {
+      "missing_sms_attend": 8,
+      "missing_control_attend": 5,
+      "effect": {
+        "events_sms": 58,
+        "n_sms": 70,
+        "events_control": 50,
+        "n_control": 70,
+        "p_sms": 0.8285714285714286,
+        "p_control": 0.7142857142857143,
+        "risk_difference": 0.11428571428571432,
+        "rd_95_ci": [
+          -0.025445509062759386,
+          0.24902138501158375
+        ],
+        "risk_ratio": 1.1600000000000001,
+        "rr_95_ci": [
+          0.9664968117637046,
+          1.3922446340453953
+        ],
+        "log_rr": 0.1484200051182734,
+        "var_log_rr": 0.008669950738916254
+      },
+      "pooled_with_H1_H5": {
+        "k": 3,
+        "rr": 1.1824954927866227,
+        "rr_95_ci": [
+          1.0351886753970707,
+          1.3507639947126826
+        ],
+        "Q": 0.9264529135381154,
+        "df": 2,
+        "I2_percent": 0,
+        "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+      }
+    }
+  ],
+  "H4_identification_bounds": {
+    "RD": [
+      0.0,
+      0.18571428571428572
+    ],
+    "RR": [
+      1.0,
+      1.288888888888889
+    ],
+    "note": "point-identification bounds conditional on observed outcomes; not 95% confidence limits"
+  },
+  "exploratory_complete_case_pool": {
+    "k": 3,
+    "rr": 1.1874362195668717,
+    "rr_95_ci": [
+      1.0319650818157329,
+      1.3663299276157423
+    ],
+    "Q": 0.9015607031479084,
+    "df": 2,
+    "I2_percent": 0,
+    "model": "exploratory inverse-variance fixed common-effect log risk ratio; no missingness adjustment"
+  },
+  "uncertainty": {
+    "RR": "Katz log risk ratio normal approximation; no zero cells",
+    "RD": "Newcombe independent Wilson-score intervals without continuity correction",
+    "level": 0.95,
+    "Z": 1.959963984540054,
+    "missing": "enumeration of all 54 binary outcome-count assignments; no missing-at-random assumption",
+    "pool": "secondary fixed common effect illustrative only; estimate targets differ for complete cases"
+  },
+  "seed": "not applicable: deterministic extraction/enumeration; no random simulation",
+  "failures": [],
+  "elapsed_seconds": 0.000839084001199808
+}

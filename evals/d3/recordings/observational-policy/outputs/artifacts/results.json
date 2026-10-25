@@ -1,0 +1,293 @@
+{
+  "schema_version": "1",
+  "synthetic": true,
+  "parameters": {
+    "medical_endpoint": "30-day recorded recovery",
+    "contrast": "treated minus usual",
+    "standard_population": "pooled severity distribution across the 240 synthetic subjects",
+    "policy_baseline_year": 2023,
+    "policy_endpoint_years": [
+      2024,
+      2025
+    ],
+    "policy_pretrend_years": [
+      2022,
+      2023
+    ],
+    "policy_contrast": "(A endpoint - A baseline) - (B endpoint - B baseline)",
+    "randomness": "none",
+    "inference": "descriptive exact arithmetic; no sampling or causal uncertainty model"
+  },
+  "environment": {
+    "python": "3.14.6",
+    "implementation": "CPython",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "dependencies": "Python standard library only",
+    "network_used": false
+  },
+  "input_fingerprints": {
+    "inputs/task.md": {
+      "sha256": "cb8d4ff92425b105ab2fee1ebecf396934888e568371dd2c0f80b47ddd48324c",
+      "bytes": 1660
+    },
+    "inputs/design-note.md": {
+      "sha256": "e37d081e6dab5d85a0a0fd974f8a08853b682d6e8a57518f503716a364653651",
+      "bytes": 1506
+    },
+    "inputs/medical-strata.csv": {
+      "sha256": "0602ea3992895ca9f8136eb70f3cf1ca37642ca49998fe2d4c38e1f046f08cdb",
+      "bytes": 114
+    },
+    "inputs/policy-periods.csv": {
+      "sha256": "bb72ca02327e4a0e83e22c12eafe80e088cde6f170d705b527255bd4563ac0fc",
+      "bytes": 151
+    }
+  },
+  "medical": {
+    "target": "Observed synthetic table subjects; standardized values use pooled severity composition, not all patients",
+    "endpoint": "30-day recovery",
+    "total_n": 240,
+    "groups": {
+      "treated": {
+        "n": 120,
+        "event_count": 84,
+        "recovery": {
+          "exact": "7/10",
+          "value": 0.7,
+          "percent": 70.0,
+          "unit": "proportion (percent also supplied)"
+        }
+      },
+      "usual": {
+        "n": 120,
+        "event_count": 48,
+        "recovery": {
+          "exact": "2/5",
+          "value": 0.4,
+          "percent": 40.0,
+          "unit": "proportion (percent also supplied)"
+        }
+      }
+    },
+    "crude_risk_difference": {
+      "exact": "3/10",
+      "value": 0.3,
+      "percentage_points": 30.0,
+      "unit": "proportion difference (percentage points also supplied)"
+    },
+    "strata": {
+      "mild": {
+        "cells": {
+          "treated": {
+            "n": 100,
+            "event_count": 80,
+            "recovery": {
+              "exact": "4/5",
+              "value": 0.8,
+              "percent": 80.0,
+              "unit": "proportion (percent also supplied)"
+            }
+          },
+          "usual": {
+            "n": 20,
+            "event_count": 18,
+            "recovery": {
+              "exact": "9/10",
+              "value": 0.9,
+              "percent": 90.0,
+              "unit": "proportion (percent also supplied)"
+            }
+          }
+        },
+        "risk_difference": {
+          "exact": "-1/10",
+          "value": -0.1,
+          "percentage_points": -10.0,
+          "unit": "proportion difference (percentage points also supplied)"
+        },
+        "pooled_n": 120,
+        "pooled_weight": {
+          "exact": "1/2",
+          "value": 0.5
+        }
+      },
+      "severe": {
+        "cells": {
+          "treated": {
+            "n": 20,
+            "event_count": 4,
+            "recovery": {
+              "exact": "1/5",
+              "value": 0.2,
+              "percent": 20.0,
+              "unit": "proportion (percent also supplied)"
+            }
+          },
+          "usual": {
+            "n": 100,
+            "event_count": 30,
+            "recovery": {
+              "exact": "3/10",
+              "value": 0.3,
+              "percent": 30.0,
+              "unit": "proportion (percent also supplied)"
+            }
+          }
+        },
+        "risk_difference": {
+          "exact": "-1/10",
+          "value": -0.1,
+          "percentage_points": -10.0,
+          "unit": "proportion difference (percentage points also supplied)"
+        },
+        "pooled_n": 120,
+        "pooled_weight": {
+          "exact": "1/2",
+          "value": 0.5
+        }
+      }
+    },
+    "standardized_recovery": {
+      "treated": {
+        "exact": "1/2",
+        "value": 0.5,
+        "percent": 50.0,
+        "unit": "proportion (percent also supplied)"
+      },
+      "usual": {
+        "exact": "3/5",
+        "value": 0.6,
+        "percent": 60.0,
+        "unit": "proportion (percent also supplied)"
+      }
+    },
+    "standardized_risk_difference": {
+      "exact": "-1/10",
+      "value": -0.1,
+      "percentage_points": -10.0,
+      "unit": "proportion difference (percentage points also supplied)"
+    }
+  },
+  "policy": {
+    "target": "Two synthetic town-level annual opportunity indices; not individual outcomes",
+    "unit": "index points",
+    "values": {
+      "A": {
+        "2022": {
+          "exact": "40",
+          "value": 40.0
+        },
+        "2023": {
+          "exact": "45",
+          "value": 45.0
+        },
+        "2024": {
+          "exact": "57",
+          "value": 57.0
+        },
+        "2025": {
+          "exact": "61",
+          "value": 61.0
+        }
+      },
+      "B": {
+        "2022": {
+          "exact": "30",
+          "value": 30.0
+        },
+        "2023": {
+          "exact": "38",
+          "value": 38.0
+        },
+        "2024": {
+          "exact": "49",
+          "value": 49.0
+        },
+        "2025": {
+          "exact": "55",
+          "value": 55.0
+        }
+      }
+    },
+    "primary_2023_to_2024": {
+      "baseline_year": 2023,
+      "endpoint_year": 2024,
+      "unit": "index points",
+      "A_change": {
+        "exact": "12",
+        "value": 12.0
+      },
+      "B_change": {
+        "exact": "11",
+        "value": 11.0
+      },
+      "difference_in_changes_A_minus_B": {
+        "exact": "1",
+        "value": 1.0
+      }
+    },
+    "pretrend_2022_to_2023": {
+      "baseline_year": 2022,
+      "endpoint_year": 2023,
+      "unit": "index points",
+      "A_change": {
+        "exact": "5",
+        "value": 5.0
+      },
+      "B_change": {
+        "exact": "8",
+        "value": 8.0
+      },
+      "difference_in_changes_A_minus_B": {
+        "exact": "-3",
+        "value": -3.0
+      }
+    },
+    "alternative_endpoint_2023_to_2025": {
+      "baseline_year": 2023,
+      "endpoint_year": 2025,
+      "unit": "index points",
+      "A_change": {
+        "exact": "16",
+        "value": 16.0
+      },
+      "B_change": {
+        "exact": "17",
+        "value": 17.0
+      },
+      "difference_in_changes_A_minus_B": {
+        "exact": "-1",
+        "value": -1.0
+      }
+    },
+    "post_increment_2024_to_2025": {
+      "baseline_year": 2024,
+      "endpoint_year": 2025,
+      "unit": "index points",
+      "A_change": {
+        "exact": "4",
+        "value": 4.0
+      },
+      "B_change": {
+        "exact": "6",
+        "value": 6.0
+      },
+      "difference_in_changes_A_minus_B": {
+        "exact": "-2",
+        "value": -2.0
+      }
+    }
+  },
+  "arithmetic_anchors": {
+    "medical_treated_total": true,
+    "medical_usual_total": true,
+    "standardization": true,
+    "policy_primary": true,
+    "policy_pretrend": true,
+    "policy_alternative": true
+  },
+  "status": "success",
+  "failures": [],
+  "elapsed_seconds": 0.011333041999023408
+}

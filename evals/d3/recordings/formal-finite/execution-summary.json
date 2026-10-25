@@ -1,0 +1,952 @@
+{
+  "case": "formal-finite",
+  "run_directory": "RUN",
+  "project": "PROJECT",
+  "executor": "Codex subagent d3_forward_finite",
+  "completed_at_utc": "2026-10-24T20:47:52.396060+00:00",
+  "task_scope": "Synthetic offline elementary integer note; no network, installs, external messages, tests or graders",
+  "toolkit_source": "TOOLKIT",
+  "runtime": ".agents/skills/_rw-runtime",
+  "toolkit_install_global": false,
+  "actual_skills_read": [
+    "rw-workflow",
+    "rw-validation",
+    "rw-writing",
+    "rw-review"
+  ],
+  "actual_method_profiles_read": [
+    {
+      "id": "formal-theory",
+      "version": "0.1"
+    },
+    {
+      "id": "computational",
+      "version": "0.1"
+    }
+  ],
+  "actual_discipline_profiles_read": [
+    {
+      "id": "natural-sciences",
+      "version": "0.1"
+    }
+  ],
+  "additional_guidance_read": [
+    "core/skill-bridge.md",
+    "core/protocol.md",
+    "profiles/governance.md",
+    "schemas source, statement, evidence, relation, artifact, activity, method-binding",
+    "toolkit README.md and docs/07-core-usage.md, docs/08-skills-and-methods.md for bootstrap"
+  ],
+  "inputs_unchanged_vs_raw": {
+    "definition.md": true,
+    "draft.md": true,
+    "task.md": true,
+    "observations.csv": true
+  },
+  "scientific_results": {
+    "original_P": "false; n=17 yields 289=17×17",
+    "csv_checked_count": 17,
+    "csv_value_and_status_discrepancies": 0,
+    "finite_range": [
+      0,
+      200
+    ],
+    "completed_count": 201,
+    "prime_count": 106,
+    "composite_count": 95,
+    "first_composite_n": 17,
+    "sieve_disagreements": [],
+    "handwritten_results": [
+      "0..16 is the longest initial consecutive prime segment, proved by small-prime exclusion with square residue table",
+      "q(17k)=17(17k²−k+1) and q(17k+1)=17(17k²+k+1), k≥1, give infinite composite families",
+      "n=0,1 are exceptions to the composite family; outside residues0,1, n=21 still gives437=19×23"
+    ],
+    "not_claimed": [
+      "infinitely many prime values",
+      "full classification over all n",
+      "machine formal proof",
+      "human independent verification",
+      "novelty or real publication"
+    ]
+  },
+  "files": {
+    "issue": "PROJECT/notes/issue.md",
+    "derivation": "PROJECT/notes/derivation.md",
+    "code": "PROJECT/artifacts/run.py",
+    "config": "PROJECT/artifacts/config.json",
+    "results": "PROJECT/artifacts/results.json",
+    "input_fingerprints": "PROJECT/artifacts/input-fingerprints.json",
+    "environment": "PROJECT/artifacts/environment.json",
+    "manuscript": "PROJECT/manuscript/report.md",
+    "review": "PROJECT/review.md",
+    "review_checks": "PROJECT/artifacts/review-checks.json",
+    "registry": "PROJECT/records/registry.json",
+    "check": "check.json",
+    "resume": "resume.md",
+    "frozen_manifest": "frozen-project-manifest.json"
+  },
+  "run_count": 2,
+  "internal_final_run_elapsed_seconds": 0.01002508300007321,
+  "all_external_commands_under_10_seconds": true,
+  "command_logs": [
+    {
+      "path": "logs/01-bootstrap.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "有限素数观察、反例与修正版",
+        "--interest",
+        "核对 q(n)=n²−n+17 的有限观察和全称命题",
+        "--discipline",
+        "natural-sciences",
+        "--method",
+        "formal-theory",
+        "--method",
+        "computational",
+        "--mode",
+        "reproducible"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04828529200312914
+    },
+    {
+      "path": "logs/02-bootstrap.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "install",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.05374325000229874
+    },
+    {
+      "path": "logs/03-initial-resume.json",
+      "argv": [
+        "PYTHON",
+        "PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT",
+        "--format",
+        "markdown"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04154745800042292
+    },
+    {
+      "path": "logs/04-installed-skills-check.json",
+      "argv": [
+        "PYTHON",
+        "PROJECT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+        "check",
+        "--root",
+        "PROJECT",
+        "--installed-only"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04137550000086776
+    },
+    {
+      "path": "logs/05-finite-run.json",
+      "argv": [
+        "PYTHON",
+        "artifacts/run.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.044765083002857864
+    },
+    {
+      "path": "logs/06-finite-rerun.json",
+      "argv": [
+        "PYTHON",
+        "artifacts/run.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04133662499953061
+    },
+    {
+      "path": "logs/07-register-SRC-TASK.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "source",
+        "--file",
+        "registration/07-SRC-TASK.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03949474999899394
+    },
+    {
+      "path": "logs/08-register-SRC-DEF.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "source",
+        "--file",
+        "registration/08-SRC-DEF.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03764058399974601
+    },
+    {
+      "path": "logs/09-register-SRC-DRAFT.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "source",
+        "--file",
+        "registration/09-SRC-DRAFT.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.037452625001606066
+    },
+    {
+      "path": "logs/10-register-SRC-CSV.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "source",
+        "--file",
+        "registration/10-SRC-CSV.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.037140833999728784
+    },
+    {
+      "path": "logs/11-register-S-P.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "registration/11-S-P.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.0365165410003101
+    },
+    {
+      "path": "logs/12-register-S-F.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "registration/12-S-F.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03675233299873071
+    },
+    {
+      "path": "logs/13-register-S-C.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "registration/13-S-C.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03625816600106191
+    },
+    {
+      "path": "logs/14-register-S-SMALL.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "registration/14-S-SMALL.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03808874999958789
+    },
+    {
+      "path": "logs/15-register-S-FINITE.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "registration/15-S-FINITE.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.037953499999275664
+    },
+    {
+      "path": "logs/16-register-S-BOUNDARY.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "statement",
+        "--file",
+        "registration/16-S-BOUNDARY.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03828399999838439
+    },
+    {
+      "path": "logs/17-register-E-DEF.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "registration/17-E-DEF.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.038486417000967776
+    },
+    {
+      "path": "logs/18-register-E-CSV.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "registration/18-E-CSV.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03826974999901722
+    },
+    {
+      "path": "logs/19-register-E-DRAFT.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "registration/19-E-DRAFT.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03860483300013584
+    },
+    {
+      "path": "logs/20-register-E-PROOF.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "registration/20-E-PROOF.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.038651250000839354
+    },
+    {
+      "path": "logs/21-register-E-RUN.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "registration/21-E-RUN.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03854970799875446
+    },
+    {
+      "path": "logs/22-register-E-REVIEW.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "evidence",
+        "--file",
+        "registration/22-E-REVIEW.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.038358875000994885
+    },
+    {
+      "path": "logs/23-register-R-P-CHALLENGE.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "registration/23-R-P-CHALLENGE.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.038186417001270456
+    },
+    {
+      "path": "logs/24-register-R-P-FINITE.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "registration/24-R-P-FINITE.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03826841699992656
+    },
+    {
+      "path": "logs/25-register-R-F-PROOF.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "registration/25-R-F-PROOF.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.038632084000710165
+    },
+    {
+      "path": "logs/26-register-R-F-RUN.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "registration/26-R-F-RUN.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03888224999900558
+    },
+    {
+      "path": "logs/27-register-R-C-PROOF.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "registration/27-R-C-PROOF.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03922533299919451
+    },
+    {
+      "path": "logs/28-register-R-SMALL.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "registration/28-R-SMALL.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03951312500066706
+    },
+    {
+      "path": "logs/29-register-R-FINITE.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "registration/29-R-FINITE.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03924008300236892
+    },
+    {
+      "path": "logs/30-register-R-BOUNDARY.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "relation",
+        "--file",
+        "registration/30-R-BOUNDARY.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03950875000009546
+    },
+    {
+      "path": "logs/31-register-ART-ISSUE.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/31-ART-ISSUE.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03978366699811886
+    },
+    {
+      "path": "logs/32-register-ART-CODE.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/32-ART-CODE.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.040047249996860046
+    },
+    {
+      "path": "logs/33-register-ART-CONFIG.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/33-ART-CONFIG.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.039647125002375105
+    },
+    {
+      "path": "logs/34-register-ART-RESULTS.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/34-ART-RESULTS.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04001925000193296
+    },
+    {
+      "path": "logs/35-register-ART-PROOF.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/35-ART-PROOF.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04003370799910044
+    },
+    {
+      "path": "logs/36-register-ART-REPORT.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/36-ART-REPORT.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04079141600232106
+    },
+    {
+      "path": "logs/37-register-ART-REVIEWCHECKS.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/37-ART-REVIEWCHECKS.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04137929200078361
+    },
+    {
+      "path": "logs/38-register-ART-REVIEW.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/38-ART-REVIEW.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04142425000100047
+    },
+    {
+      "path": "logs/39-register-ART-FINGERPRINTS.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/39-ART-FINGERPRINTS.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.041507916001137346
+    },
+    {
+      "path": "logs/40-register-ART-ENV.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/40-ART-ENV.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04140716699839686
+    },
+    {
+      "path": "logs/41-register-ART-GUIDANCE.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/41-ART-GUIDANCE.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04061845799878938
+    },
+    {
+      "path": "logs/42-register-ART-RUNNOTES.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "artifact",
+        "--file",
+        "registration/42-ART-RUNNOTES.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.041563167000276735
+    },
+    {
+      "path": "logs/43-register-ACT-INPUT.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "activity",
+        "--file",
+        "registration/43-ACT-INPUT.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04189316700285417
+    },
+    {
+      "path": "logs/44-register-ACT-PROOF.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "activity",
+        "--file",
+        "registration/44-ACT-PROOF.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04249524999977439
+    },
+    {
+      "path": "logs/45-register-ACT-COMPUTE.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "activity",
+        "--file",
+        "registration/45-ACT-COMPUTE.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.044015540999680525
+    },
+    {
+      "path": "logs/46-register-ACT-WRITE-REVIEW.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "activity",
+        "--file",
+        "registration/46-ACT-WRITE-REVIEW.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04454720799913048
+    },
+    {
+      "path": "logs/47-register-M-FORMAL.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "method-binding",
+        "--file",
+        "registration/47-M-FORMAL.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04600883400053135
+    },
+    {
+      "path": "logs/48-register-M-COMPUTE.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "method-binding",
+        "--file",
+        "registration/48-M-COMPUTE.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04563633300131187
+    },
+    {
+      "path": "logs/49-register-D-REVISION.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        ".",
+        "--kind",
+        "decision",
+        "--file",
+        "registration/49-D-REVISION.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.044581250000192085
+    },
+    {
+      "path": "logs/50-pre-check.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "check",
+        "--root",
+        "."
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04422145799981081
+    },
+    {
+      "path": "logs/51-checkpoint.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "checkpoint",
+        "--root",
+        ".",
+        "--activity",
+        "ACT-WRITE-REVIEW",
+        "--next-action",
+        "在可写副本逐行独立复核 notes/derivation.md 第3–5节的最小素因子引理、平方剩余表与模17反例族；若只做审阅则记录意见，若修改受登记文件则先重跑 artifacts/run.py 并按版本重新登记受影响证据和活动。不要继续证明已被n=17反驳的P。",
+        "--note",
+        "本轮CSV、0..200计算、手工修正版证明、短札记与自审实际完成；无证明器与人类独立复核。"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04234954200001084
+    },
+    {
+      "path": "logs/52-final-check.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "check",
+        "--root",
+        "."
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04099462500016671
+    },
+    {
+      "path": "logs/53-resume.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "resume",
+        "--root",
+        ".",
+        "--format",
+        "markdown"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.0405724160009413
+    },
+    {
+      "path": "logs/54-installed-check.json",
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/connect_skills.py",
+        "check",
+        "--root",
+        ".",
+        "--installed-only"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.03790283299895236
+    }
+  ],
+  "failures": [],
+  "execution_boundary_note": "Initial path discovery listed other cases task filenames; no other-case file contents were read or used. No tests or graders were read or executed.",
+  "check_result": {
+    "passed": true,
+    "errors": [],
+    "warnings": [],
+    "scientific_validity": "not-assessed",
+    "activity_count": 4,
+    "all_activities_done": true
+  },
+  "saved_next_action": "在可写副本逐行独立复核 notes/derivation.md 第3–5节的最小素因子引理、平方剩余表与模17反例族；若只做审阅则记录意见，若修改受登记文件则先重跑 artifacts/run.py 并按版本重新登记受影响证据和活动。不要继续证明已被n=17反驳的P。",
+  "freeze": {
+    "project_content_manifest_written": true,
+    "project_files_read_only": true,
+    "project_directories_read_only": true,
+    "no_further_writes_after_final_marker": true
+  },
+  "_path_normalization": {
+    "original_summary_sha256": "f5dcc51ec7ff917e9accadfa62b7439decfdfeccd514b3ad22171ddb7525e520",
+    "scope": "Only local execution path prefixes normalized to PROJECT/RUN/TOOLKIT/PYTHON; all execution results and failures retained. Original summary remains in isolated run."
+  }
+}

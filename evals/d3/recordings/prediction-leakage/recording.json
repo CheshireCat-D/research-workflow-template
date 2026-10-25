@@ -1,0 +1,670 @@
+{
+  "format_version": 1,
+  "case_id": "prediction-leakage",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "807be4a45acfc0fb76139e4f0b1b762803e4585ebf03e46c24b0ab5525322749",
+  "project_init": {
+    "title": "合成院内预测评估：主体泄漏与用途边界",
+    "interest": "固定模型在重复主体与首次接触主体上的评估有何区别",
+    "disciplines": [
+      "medicine-health"
+    ],
+    "methods": [
+      "empirical-quantitative",
+      "computational"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/draft.md": "draft.md",
+    "inputs/model-card.md": "model-card.md",
+    "inputs/task.md": "task.md",
+    "inputs/visits.csv": "visits.csv"
+  },
+  "case_input_sha256": {
+    "model-card.md": "c1727d89e86e1a9deb78941168c65261d386f17170c7b4531354c8b4bde945e7",
+    "draft.md": "390100d72521547eeb93ecabe0b06c778fec3ef03e78c86abe6f15f940a67a8c",
+    "task.md": "f272a2fffb5dbc5dd9b6ebfc56e2b79ecf720c89a35bdf8989e9cc16628b873f",
+    "visits.csv": "5073b7f979716a2bd62ed05f856d363210d266c6a95aef570f3f3d9eedb3d56f"
+  },
+  "output_files": [
+    "PROJECT.md",
+    "artifacts/config.json",
+    "artifacts/record_predictions.csv",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "artifacts/subject_predictions.csv",
+    "manuscript/report.md",
+    "notes/arithmetic-check.json",
+    "notes/issue.md",
+    "notes/work-performed.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "PROJECT.md": "0f99aaba98e4bafda8be5812aea1dc92ab75868763a67d1fe0c17d8f435147e1",
+    "artifacts/config.json": "6f0e47b0afb4d85409b62d98399985619acf27b6a52270222c09a7783eedabf2",
+    "artifacts/record_predictions.csv": "4194eb98db8922566f0ddc0076e75f48a1812e18b861a16c503476dc3b54bbe8",
+    "artifacts/results.json": "6d2676817947ecfd8d67fe438a790d8aad7ec03126c8d798935d6679c6a0f6b0",
+    "artifacts/run.py": "18cea2933f68483fd3f2dd79f5e65c19b52fd992ddec1916483f54da36125a2b",
+    "artifacts/subject_predictions.csv": "168475923688a20b195e3de0e56570c1453d65a8efd4bc01f3358ae7b19e9a94",
+    "manuscript/report.md": "9b89f273c14b9a0093236f9341971fb16a0c6d931a45d86541893d4aaede816b",
+    "notes/arithmetic-check.json": "52f1b744d53986c458ab758454e6c21db3a7ad4ffc4f523ac46391990cdde468",
+    "notes/issue.md": "3564baeff62d9b2cacce3b2bf0b7a8fc80df004f04c59a71fe32364e22a46b2b",
+    "notes/work-performed.md": "d9b41a402a2439ab05437ebe338f90d0bda31c13856752b38db0c0e98af5eab5",
+    "review.md": "1f61d1a682f0cd7ceeb20beed4fb273a121fc133548490c4076aa5f04e90897f"
+  },
+  "output_normalizations": [],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_CARD",
+        "limitations": "仅提供者新写合成练习；无真实患者权利或外部临床证据。",
+        "locator": "inputs/model-card.md",
+        "notes": "本轮由Codex代理完整读取，原样保存。",
+        "rights": "unknown",
+        "title": "合成模型卡v1",
+        "version": "case-provided snapshot; sha256 c1727d89e86e1a9deb78941168c65261d386f17170c7b4531354c8b4bde945e7"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_DATA",
+        "limitations": "仅提供者新写合成练习；无真实患者权利或外部临床证据。",
+        "locator": "inputs/visits.csv",
+        "notes": "本轮由Codex代理完整读取，原样保存。",
+        "rights": "unknown",
+        "title": "24条合成重复主体记录",
+        "version": "case-provided snapshot; sha256 5073b7f979716a2bd62ed05f856d363210d266c6a95aef570f3f3d9eedb3d56f"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_DRAFT",
+        "limitations": "仅提供者新写合成练习；无真实患者权利或外部临床证据。",
+        "locator": "inputs/draft.md",
+        "notes": "本轮由Codex代理完整读取，原样保存。",
+        "rights": "unknown",
+        "title": "待修订作者草稿",
+        "version": "case-provided snapshot; sha256 390100d72521547eeb93ecabe0b06c778fec3ef03e78c86abe6f15f940a67a8c"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_TASK",
+        "limitations": "仅提供者新写合成练习；无真实患者权利或外部临床证据。",
+        "locator": "inputs/task.md",
+        "notes": "本轮由Codex代理完整读取，原样保存。",
+        "rights": "unknown",
+        "title": "任务委托",
+        "version": "case-provided snapshot; sha256 f272a2fffb5dbc5dd9b6ebfc56e2b79ecf720c89a35bdf8989e9cc16628b873f"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "逐主体实际计算与独立有限算术一致。",
+          "reviewer": "Codex代理（本轮执行及有界自审）",
+          "scope": "当前离线输入及确定性R/S运行，不含总体推断、真实临床验证或独立专家审查",
+          "status": "supported-in-scope"
+        },
+        "id": "C1",
+        "scope": "输入模型卡v1及24行/12主体的合成有限练习；首次接触用途只作证据边界判断。",
+        "text": "本次确定性合成数据上，R准确率1、Brier0；S准确率0.5、Brier0.25；平均预测和事件比例均0.5。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "R训练/测试主体交集12，预测直接使用同一90日标签。",
+          "reviewer": "Codex代理（本轮执行及有界自审）",
+          "scope": "当前离线输入及确定性R/S运行，不含总体推断、真实临床验证或独立专家审查",
+          "status": "supported-in-scope"
+        },
+        "id": "C2",
+        "scope": "输入模型卡v1及24行/12主体的合成有限练习；首次接触用途只作证据边界判断。",
+        "text": "原R评估不支持已经证明可推广到首次接触新患者的草稿主张。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "S只有第三箱4主体，其他箱无观测；R的极端预测来自标签记忆。",
+          "reviewer": "Codex代理（本轮执行及有界自审）",
+          "scope": "当前离线输入及确定性R/S运行，不含总体推断、真实临床验证或独立专家审查",
+          "status": "supported-in-scope"
+        },
+        "id": "C3",
+        "scope": "输入模型卡v1及24行/12主体的合成有限练习；首次接触用途只作证据边界判断。",
+        "text": "整体平均概率与事件比例吻合不足以证明所有风险段可靠。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "合成、单机构单窗、无干预或外部/时间队列。",
+          "reviewer": "Codex代理（本轮执行及有界自审）",
+          "scope": "当前离线输入及确定性R/S运行，不含总体推断、真实临床验证或独立专家审查",
+          "status": "supported-in-scope"
+        },
+        "id": "C4",
+        "scope": "输入模型卡v1及24行/12主体的合成有限练习；首次接触用途只作证据边界判断。",
+        "text": "此数据不足以确认真实临床受益、跨机构或后续时期的部署有效性。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "问题范围已在notes/issue.md明确；不代表用途被验证。",
+          "reviewer": "Codex代理（本轮执行及有界自审）",
+          "scope": "当前离线输入及确定性R/S运行，不含总体推断、真实临床验证或独立专家审查",
+          "status": "supported-in-scope"
+        },
+        "id": "Q1",
+        "scope": "输入模型卡v1及24行/12主体的合成有限练习；首次接触用途只作证据边界判断。",
+        "text": "固定L在记录切分R与主体隔离S下分别评估什么，能否支持首次接触新主体用途？",
+        "type": "question",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "实际单次正式运行逐项结果、配置、环境、输入指纹、耗时和失败",
+        "id": "E_RESULTS",
+        "limitations": "合成有限数据；不提供真实医学效用、总体抽样或外部验证。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Codex代理离线Python标准库实际执行；旁置logs保存stdout/stderr/状态",
+        "source_ids": [],
+        "type": "executed-computation"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "单独有限算术复核、校准计数与空箱null检查",
+        "id": "E_VERIFY",
+        "limitations": "合成有限数据；不提供真实医学效用、总体抽样或外部验证。",
+        "location": {
+          "kind": "local",
+          "path": "notes/arithmetic-check.json"
+        },
+        "provenance": "Codex代理离线Python标准库实际执行；旁置logs保存stdout/stderr/状态",
+        "source_ids": [],
+        "type": "finite-arithmetic-check"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "固定L/R/S、阈值、分箱、汇总与合成身份原文",
+        "id": "E_CARD",
+        "limitations": "合成有限数据；不提供真实医学效用、总体抽样或外部验证。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/model-card.md"
+        },
+        "provenance": "原始案例本地副本",
+        "source_ids": [
+          "SRC_CARD"
+        ],
+        "type": "analysis-specification"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "24行、12主体、同一主体90日结局重复",
+        "id": "E_DATA",
+        "limitations": "合成有限数据；不提供真实医学效用、总体抽样或外部验证。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/visits.csv"
+        },
+        "provenance": "原始案例本地副本",
+        "source_ids": [
+          "SRC_DATA"
+        ],
+        "type": "synthetic-records"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "本轮被修订的泛化/独立/校准/效益主张",
+        "id": "E_DRAFT",
+        "limitations": "合成有限数据；不提供真实医学效用、总体抽样或外部验证。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "原始案例本地副本",
+        "source_ids": [
+          "SRC_DRAFT"
+        ],
+        "type": "author-draft"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULTS",
+        "id": "REL2",
+        "limitations": "支持有限案例结论，不能替代真实人群验证。",
+        "rationale": "实际结果包含全部主体预测和所要求指标。",
+        "relation": "supports",
+        "scope": "当前合成案例及实际离线运行",
+        "statement_id": "C1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_VERIFY",
+        "id": "REL3",
+        "limitations": "支持有限案例结论，不能替代真实人群验证。",
+        "rationale": "有限算术独立核对准确率/Brier/均值/箱计数。",
+        "relation": "supports",
+        "scope": "当前合成案例及实际离线运行",
+        "statement_id": "C1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULTS",
+        "id": "REL4",
+        "limitations": "支持有限案例结论，不能替代真实人群验证。",
+        "rationale": "R主体交集12并预测已知标签；S交集0。",
+        "relation": "supports",
+        "scope": "当前合成案例及实际离线运行",
+        "statement_id": "C2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULTS",
+        "id": "REL6",
+        "limitations": "支持有限案例结论，不能替代真实人群验证。",
+        "rationale": "S仅[0.5,0.75)有观测，其他箱空。",
+        "relation": "supports",
+        "scope": "当前合成案例及实际离线运行",
+        "statement_id": "C3"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS"
+        ],
+        "description": "研究问题与边界",
+        "id": "ART_ISSUE",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "notes/issue.md",
+        "type": "question-card"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS"
+        ],
+        "description": "人读交付入口",
+        "id": "ART_PROJECT",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "PROJECT.md",
+        "type": "project-note"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS"
+        ],
+        "description": "逐行预测追溯",
+        "id": "ART_RECORD",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "artifacts/record_predictions.csv",
+        "type": "predictions"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS"
+        ],
+        "description": "修订短稿与全部所需表",
+        "id": "ART_REPORT",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS"
+        ],
+        "description": "单次正式结果和输入环境记录",
+        "id": "ART_RESULTS",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "artifacts/results.json",
+        "type": "analysis-results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS"
+        ],
+        "description": "草稿问题与修订范围的有界自审",
+        "id": "ART_REVIEW",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS"
+        ],
+        "description": "逐主体预测",
+        "id": "ART_SUBJECT",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "artifacts/subject_predictions.csv",
+        "type": "predictions"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS"
+        ],
+        "description": "实际有限算术核对",
+        "id": "ART_VERIFY",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "notes/arithmetic-check.json",
+        "type": "verification"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS"
+        ],
+        "description": "实际工作与复跑说明",
+        "id": "ART_WORK",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "notes/work-performed.md",
+        "type": "execution-note"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Q1",
+          "statement:C1",
+          "statement:C2",
+          "statement:C3",
+          "statement:C4"
+        ],
+        "id": "M_PRED",
+        "method_id": "empirical-quantitative",
+        "profile_version": "0.1",
+        "reason": "主体隔离、开发/测试/阈值关系、校准与用途外推义务",
+        "variant": "prediction"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_CARD",
+        "id": "REL1",
+        "limitations": "支持有限案例结论，不能替代真实人群验证。",
+        "rationale": "模型卡固定目标、模型与所需评估设计。",
+        "relation": "contextualizes",
+        "scope": "当前合成案例及实际离线运行",
+        "statement_id": "Q1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_CARD",
+        "id": "REL5",
+        "limitations": "支持有限案例结论，不能替代真实人群验证。",
+        "rationale": "L记忆同一event90，R按visit分行而未隔离主体。",
+        "relation": "supports",
+        "scope": "当前合成案例及实际离线运行",
+        "statement_id": "C2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_CARD",
+        "id": "REL7",
+        "limitations": "支持有限案例结论，不能替代真实人群验证。",
+        "rationale": "明确仅Synth-A/2024合成，无外部或后续时期队列。",
+        "relation": "supports",
+        "scope": "当前合成案例及实际离线运行",
+        "statement_id": "C4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_DRAFT",
+        "id": "REL8",
+        "limitations": "支持有限案例结论，不能替代真实人群验证。",
+        "rationale": "保留原稿未经支持的临床效益及上线主张，修订稿已删除。",
+        "relation": "contextualizes",
+        "scope": "当前合成案例及实际离线运行",
+        "statement_id": "C4"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "A_SCOPE",
+        "inputs": [
+          "source:SRC_TASK",
+          "source:SRC_CARD",
+          "source:SRC_DATA",
+          "source:SRC_DRAFT"
+        ],
+        "note": "Codex代理实际完成；已有明确路线未强制新增候选。",
+        "outputs": [
+          "artifact:ART_ISSUE"
+        ],
+        "status": "done",
+        "title": "读取原始材料、固定问题与分析单位"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_CARD",
+          "evidence:E_DATA"
+        ],
+        "description": "确定性固定模型和主体汇总实现",
+        "id": "ART_CODE",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_CARD",
+          "evidence:E_DATA"
+        ],
+        "description": "正式运行前保存固定设定",
+        "id": "ART_CONFIG",
+        "notes": "Codex代理执行；独立临床/人类专家审查未发生。",
+        "path": "artifacts/config.json",
+        "type": "configuration"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_SCOPE"
+        ],
+        "id": "A_RUN",
+        "inputs": [
+          "evidence:E_CARD",
+          "evidence:E_DATA",
+          "artifact:ART_CODE",
+          "artifact:ART_CONFIG"
+        ],
+        "note": "Python标准库，timeout10秒，实际退出0、无超时、无随机；日志项目旁。",
+        "outputs": [
+          "evidence:E_RESULTS",
+          "evidence:E_VERIFY",
+          "artifact:ART_RESULTS",
+          "artifact:ART_SUBJECT",
+          "artifact:ART_RECORD"
+        ],
+        "status": "done",
+        "title": "执行固定R/S单次分析与算术核对"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "artifact:ART_CODE",
+          "evidence:E_RESULTS",
+          "evidence:E_VERIFY"
+        ],
+        "id": "M_COMP",
+        "method_id": "computational",
+        "profile_version": "0.1",
+        "reason": "保存输入、固定配置、代码、环境、运行状态及独立算术基准"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_RUN"
+        ],
+        "id": "A_WRITE",
+        "inputs": [
+          "evidence:E_RESULTS",
+          "evidence:E_DRAFT",
+          "statement:C1",
+          "statement:C2",
+          "statement:C3",
+          "statement:C4"
+        ],
+        "note": "Codex代理起草；删去不支持的新主体泛化、全风险段可靠、临床获益和上线断言。",
+        "outputs": [
+          "artifact:ART_REPORT",
+          "artifact:ART_WORK",
+          "artifact:ART_PROJECT"
+        ],
+        "status": "done",
+        "title": "修订约1000汉字以内的结果短稿"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_WRITE"
+        ],
+        "id": "A_REVIEW",
+        "inputs": [
+          "artifact:ART_REPORT",
+          "evidence:E_RESULTS",
+          "evidence:E_VERIFY"
+        ],
+        "note": "同一Codex代理自审，不称独立人类或临床专家复核；尚缺真实用途验证。",
+        "outputs": [
+          "artifact:ART_REVIEW"
+        ],
+        "status": "done",
+        "title": "有界自审当前修订稿与支持范围"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_REVIEW"
+        ],
+        "id": "A_NEXT",
+        "inputs": [
+          "artifact:ART_REVIEW",
+          "statement:C4"
+        ],
+        "note": "尚未执行。明确目标人群/day0信息、主体独立、后续时期及外部机构、样本量和校准/区分度/不确定性标准；真实操作前核定治理。",
+        "status": "pending",
+        "title": "制定独立首次接触验证协议"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 5,
+    "artifacts": 11,
+    "decisions": 0,
+    "evidence": 5,
+    "method_bindings": 2,
+    "relations": 8,
+    "sources": 4,
+    "statements": 5
+  },
+  "cursor": {
+    "activity_id": "A_NEXT",
+    "next_action": "制定锁定的首次接触验证协议：明确目标人群与day0可用信息，规定独立主体、后续时期和外部机构队列、样本量、区分度/校准及不确定性标准；任何真实数据访问或收集前由责任方核定治理条件。此项尚未执行。"
+  }
+}

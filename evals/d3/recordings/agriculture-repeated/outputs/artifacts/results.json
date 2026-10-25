@@ -1,0 +1,272 @@
+{
+  "configuration": {
+    "assertions": "design completeness and full repeated plant identity checked",
+    "excluded_rows": 0,
+    "imputed_rows": 0,
+    "seed": "not applicable: deterministic complete enumeration",
+    "stdlib_only": true
+  },
+  "design": {
+    "blocks": 4,
+    "complete_no_replacement": true,
+    "independent_randomized_pairs": 4,
+    "plants": 32,
+    "randomized_plots": 8,
+    "rows": 192,
+    "seasons": 2,
+    "treatment_reassigned_between_seasons": false,
+    "visits_per_season": 3
+  },
+  "draft_diagnostic": {
+    "all_visit_equal_weight_effect": {
+      "approximate_t95_cm": [
+        2.1485799144130406,
+        3.5180867522536263
+      ],
+      "approximate_t95_df": 3,
+      "assignments_enumerated": 16,
+      "block_differences_cm": [
+        3.3333333333333335,
+        2.9999999999999996,
+        2.6666666666666665,
+        2.333333333333334
+      ],
+      "estimate_cm": 2.8333333333333335,
+      "exact_additive_shift_95_confidence_set": "all real numbers: only 16 assignments, minimum p=0.125",
+      "exact_sign_flip_two_sided_p": 0.125,
+      "minimum_possible_two_sided_p": 0.125,
+      "n_randomized_pairs": 4,
+      "null_distribution_cm": [
+        -2.8333333333333335,
+        -1.6666666666666665,
+        -1.5,
+        -0.33333333333333315,
+        -1.3333333333333335,
+        -0.16666666666666663,
+        -3.3306690738754696e-16,
+        1.1666666666666665,
+        -1.1666666666666665,
+        3.3306690738754696e-16,
+        0.16666666666666663,
+        1.3333333333333335,
+        0.33333333333333315,
+        1.5,
+        1.6666666666666665,
+        2.8333333333333335
+      ],
+      "randomization_se_estimate_cm": 0.2151657414559675
+    },
+    "naive_192_independent_rows": {
+      "estimate_cm": 2.833333333333332,
+      "invalid_independence_se_cm": 1.0570122297311273,
+      "invalid_normal95_cm": [
+        0.7615893630603225,
+        4.905077303606342
+      ],
+      "n_per_treatment": {
+        "control": 96,
+        "mulch": 96
+      },
+      "status": "invalid inference; diagnostic only"
+    },
+    "reason": "All-visit pooling changes the endpoint. Its sign and interval cannot replace the frozen mature day-90 two-season endpoint."
+  },
+  "estimand": "Equal weight over this site's four blocks and specified 2025/2026 seasons; mulch minus control at day 90 after averaging 4 plants per plot-season. Randomization targets paired finite-plot treatment effect, assuming no cross-plot interference and a well-defined held treatment.",
+  "inference_notes": [
+    "Enumeration flips both seasons jointly within each original block; plant/day/season rows are never independent treatment replicates.",
+    "Sign-flip p is exact for the endpoint-specific sharp null, not the weak null of zero average heterogeneous effect.",
+    "The t(df=3) interval uses sample SD of four block differences/2 and a small-sample working approximation; no exact 95% coverage claim. Sample variance includes possible block effect heterogeneity.",
+    "For the change endpoint the sharp null means no treatment effect on the 2026-minus-2025 within-plot change, allowing equal effects across seasons.",
+    "Additive-shift inversion at two-sided alpha=.05 cannot exclude any value with 4 pairs; the exact 95% set is uninformative.",
+    "Season-specific and interaction comparisons were specified but no multiplicity-adjusted confirmatory claim is made."
+  ],
+  "input_sha256": {
+    "inputs/observations.csv": "995d630c1039013319096a8df7d7dd84a7deb02aa9e6eb5bd317c80811bfec1c",
+    "inputs/plots.csv": "2f7d75afac512cf9d98d27499c26e4816351429a1a4d8dcbd34bc48c9db25a45",
+    "inputs/protocol.md": "5e66412bcadaaf6e88d92ef5ccb95034fc6bb9d6f73c44ff93dc6a89eebd21f7"
+  },
+  "primary": {
+    "approximate_t95_cm": [
+      -0.4186931155186995,
+      1.4186931155186995
+    ],
+    "approximate_t95_df": 3,
+    "assignments_enumerated": 16,
+    "block_differences_cm": [
+      1.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "estimate_cm": 0.5,
+    "exact_additive_shift_95_confidence_set": "all real numbers: only 16 assignments, minimum p=0.125",
+    "exact_sign_flip_two_sided_p": 0.5,
+    "minimum_possible_two_sided_p": 0.125,
+    "n_randomized_pairs": 4,
+    "null_distribution_cm": [
+      -0.5,
+      -0.5,
+      0.0,
+      0.0,
+      -0.5,
+      -0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.5,
+      0.0,
+      0.0,
+      0.5,
+      0.5
+    ],
+    "randomization_se_estimate_cm": 0.28867513459481287
+  },
+  "season_2025": {
+    "approximate_t95_cm": [
+      -1.8123951344184333,
+      4.812395134418433
+    ],
+    "approximate_t95_df": 3,
+    "assignments_enumerated": 16,
+    "block_differences_cm": [
+      4.0,
+      2.0,
+      1.0,
+      -1.0
+    ],
+    "estimate_cm": 1.5,
+    "exact_additive_shift_95_confidence_set": "all real numbers: only 16 assignments, minimum p=0.125",
+    "exact_sign_flip_two_sided_p": 0.375,
+    "minimum_possible_two_sided_p": 0.125,
+    "n_randomized_pairs": 4,
+    "null_distribution_cm": [
+      -1.5,
+      -2.0,
+      -1.0,
+      -1.5,
+      -0.5,
+      -1.0,
+      0.0,
+      -0.5,
+      0.5,
+      0.0,
+      1.0,
+      0.5,
+      1.5,
+      1.0,
+      2.0,
+      1.5
+    ],
+    "randomization_se_estimate_cm": 1.0408329997330663
+  },
+  "season_2026": {
+    "approximate_t95_cm": [
+      -3.2560793465560987,
+      2.2560793465560987
+    ],
+    "approximate_t95_df": 3,
+    "assignments_enumerated": 16,
+    "block_differences_cm": [
+      -2.0,
+      -2.0,
+      1.0,
+      1.0
+    ],
+    "estimate_cm": -0.5,
+    "exact_additive_shift_95_confidence_set": "all real numbers: only 16 assignments, minimum p=0.125",
+    "exact_sign_flip_two_sided_p": 0.75,
+    "minimum_possible_two_sided_p": 0.125,
+    "n_randomized_pairs": 4,
+    "null_distribution_cm": [
+      0.5,
+      1.0,
+      1.0,
+      1.5,
+      -0.5,
+      0.0,
+      0.0,
+      0.5,
+      -0.5,
+      0.0,
+      0.0,
+      0.5,
+      -1.5,
+      -1.0,
+      -1.0,
+      -0.5
+    ],
+    "randomization_se_estimate_cm": 0.8660254037844386
+  },
+  "season_difference_2026_minus_2025": {
+    "approximate_t95_cm": [
+      -7.810325431510544,
+      3.8103254315105444
+    ],
+    "approximate_t95_df": 3,
+    "assignments_enumerated": 16,
+    "block_differences_cm": [
+      -6.0,
+      -4.0,
+      0.0,
+      2.0
+    ],
+    "estimate_cm": -2.0,
+    "exact_additive_shift_95_confidence_set": "all real numbers: only 16 assignments, minimum p=0.125",
+    "exact_sign_flip_two_sided_p": 0.5,
+    "minimum_possible_two_sided_p": 0.125,
+    "n_randomized_pairs": 4,
+    "null_distribution_cm": [
+      2.0,
+      3.0,
+      2.0,
+      3.0,
+      0.0,
+      1.0,
+      0.0,
+      1.0,
+      -1.0,
+      0.0,
+      -1.0,
+      0.0,
+      -3.0,
+      -2.0,
+      -3.0,
+      -2.0
+    ],
+    "randomization_se_estimate_cm": 1.8257418583505538
+  },
+  "trajectory_descriptive": [
+    {
+      "day": 30,
+      "mean_block_difference_cm": 4.5,
+      "season": 2025
+    },
+    {
+      "day": 60,
+      "mean_block_difference_cm": 3.5000000000000004,
+      "season": 2025
+    },
+    {
+      "day": 90,
+      "mean_block_difference_cm": 1.5,
+      "season": 2025
+    },
+    {
+      "day": 30,
+      "mean_block_difference_cm": 4.5,
+      "season": 2026
+    },
+    {
+      "day": 60,
+      "mean_block_difference_cm": 3.4999999999999996,
+      "season": 2026
+    },
+    {
+      "day": 90,
+      "mean_block_difference_cm": -0.5,
+      "season": 2026
+    }
+  ]
+}

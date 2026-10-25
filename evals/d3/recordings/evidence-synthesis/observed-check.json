@@ -1,0 +1,59 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pebdd2cbf675d4174862d73640c89a43e",
+  "revision": 50,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 4,
+    "artifacts": 12,
+    "decisions": 0,
+    "evidence": 7,
+    "method_bindings": 2,
+    "relations": 10,
+    "sources": 9,
+    "statements": 5
+  },
+  "activities": [
+    {
+      "id": "Aanalysis",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ApathFailure",
+      "declared_status": "failed",
+      "effective_status": "failed",
+      "stale_reasons": []
+    },
+    {
+      "id": "Ascreen",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "AwriteReview",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "核对R05 M1/R1/D1；若补充13位缺失者登记状态或预设缺失处理文本，更新来源访问范围与notes/extraction.csv，重跑artifacts/run.py，复核H4全随机效应及合并敏感性后修订manuscript/report.md；材料未补齐前保持有限离线综合。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

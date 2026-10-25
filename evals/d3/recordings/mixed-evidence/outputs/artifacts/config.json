@@ -1,0 +1,31 @@
+{
+  "analysis": "mixed-evidence descriptive audit",
+  "classification": {
+    "source_id": "P1",
+    "site": "A",
+    "period": "2023-retrospective",
+    "unit": "subject",
+    "reference_positive_group": "label-positive",
+    "reference_negative_group": "label-negative",
+    "event_count_meaning": "classifier-predicted-positive",
+    "threshold": "fixed classifier; numerical threshold not supplied"
+  },
+  "pilot": {
+    "source_id": "P2",
+    "site": "B",
+    "period": "2024-two-week-pilot",
+    "unit": "volunteer",
+    "same_participants_pre_post": true,
+    "eligible_contactable": 13,
+    "volunteers": 8,
+    "cointerventions": [
+      "process tool",
+      "new reminder calls"
+    ],
+    "comparison": "descriptive repeated aggregate, no control"
+  },
+  "runtime_limit_seconds": 10,
+  "randomness": "none; deterministic arithmetic",
+  "transition_tables": "enumerate compatible aggregate tables only; not observed individual data",
+  "inference": "no significance test, causal effect or population extrapolation"
+}

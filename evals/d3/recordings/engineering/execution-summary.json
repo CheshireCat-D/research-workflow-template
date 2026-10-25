@@ -1,0 +1,170 @@
+{
+  "case": "engineering",
+  "status": "completed-with-preserved-baseline-failure",
+  "completed_at_utc": "2026-10-24T20:14:58.634066+00:00",
+  "project_path": "PROJECT",
+  "skills_read": [
+    {
+      "id": "rw-workflow",
+      "path": "PROJECT/.agents/skills/rw-workflow/SKILL.md"
+    },
+    {
+      "id": "rw-validation",
+      "path": "PROJECT/.agents/skills/rw-validation/SKILL.md"
+    },
+    {
+      "id": "rw-writing",
+      "path": "PROJECT/.agents/skills/rw-writing/SKILL.md"
+    },
+    {
+      "id": "rw-review",
+      "path": "PROJECT/.agents/skills/rw-review/SKILL.md"
+    }
+  ],
+  "guidance_read": [
+    "PROJECT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+    "PROJECT/.agents/skills/_rw-runtime/core/protocol.md",
+    "PROJECT/.agents/skills/_rw-runtime/design/catalog.json",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/engineering-design.md",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/methods/computational.md",
+    "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/engineering.md",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/decision.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/method-binding.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/source.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/statement.schema.json"
+  ],
+  "method_bindings": [
+    {
+      "method_id": "engineering-design",
+      "profile_version": "0.1",
+      "variant": "software-prototype"
+    },
+    {
+      "method_id": "computational",
+      "profile_version": "0.1",
+      "variant": "empirical-algorithm"
+    }
+  ],
+  "substantive_results": {
+    "prototype": {
+      "total_cases": 1578,
+      "passed_cases": 987,
+      "failed_cases": 591,
+      "elapsed_seconds": 0.05694191699876683
+    },
+    "fixed": {
+      "total_cases": 1578,
+      "passed_cases": 1578,
+      "failed_cases": 0,
+      "elapsed_seconds": 0.01896958300130791
+    },
+    "relocation_replay": {
+      "passed": true,
+      "total_cases": 1578,
+      "command_log": "logs/08-relocated.json"
+    },
+    "confirmed_defects": [
+      "incorrect inclusion of t-window endpoint",
+      "loss of large-integer precision by float conversion",
+      "OverflowError for valid arbitrary-size integer timestamp/window"
+    ],
+    "baseline_activity_status": "failed",
+    "formal_process_elapsed_seconds": 0.06396698951721191,
+    "seed": null,
+    "seed_note": "deterministic; not applicable"
+  },
+  "results_and_failures": [
+    {
+      "path": "PROJECT/artifacts/prototype-results.json",
+      "exit_code": 1,
+      "failed_cases": 591,
+      "status": "preserved engineering acceptance failure"
+    },
+    {
+      "path": "PROJECT/artifacts/results.json",
+      "exit_code": 0,
+      "failed_cases": 0,
+      "status": "finite acceptance passed"
+    },
+    {
+      "path": "PROJECT/checks/check.json",
+      "exit_code": 0,
+      "passed": true,
+      "scientific_validity": "not-assessed"
+    },
+    {
+      "path": "PROJECT/checks/resume.json",
+      "exit_code": 0,
+      "passed": true,
+      "checkpoint_status": "current"
+    },
+    {
+      "path": "logs/16-finalization-failure.json",
+      "exit_code": 1,
+      "status": "post-work finalizer metadata traversal bug preserved; corrected and verified before freeze"
+    }
+  ],
+  "process_notes": [
+    "Source rights initially over-inferred as public, corrected to unknown with CLI version history; completed activities reviewed and rebound without content changes.",
+    "Core CLI operations all exited0; required prototype acceptance exited1. A finalizer failure is separately preserved, corrected before completion.",
+    "Source toolkit and raw input contents not edited; five copied files verified equal to raw sources.",
+    "Only engineering raw packet and toolkit instructions/runtime/schema read; no grader/test/other case content or personal skill package read."
+  ],
+  "files": {
+    "issue": "PROJECT/notes/issue.md",
+    "work": "PROJECT/notes/work.md",
+    "gate": "PROJECT/artifacts/gate.py",
+    "runner": "PROJECT/artifacts/run.py",
+    "results": "PROJECT/artifacts/results.json",
+    "prototype_results": "PROJECT/artifacts/prototype-results.json",
+    "manuscript": "PROJECT/manuscript/report.md",
+    "review": "PROJECT/review.md",
+    "registry": "PROJECT/records/registry.json",
+    "check": "PROJECT/checks/check.json",
+    "resume": "PROJECT/checks/resume.json",
+    "input_integrity": "PROJECT/checks/input-integrity.json",
+    "installed_integrity": "PROJECT/checks/installed.json",
+    "freeze_manifest": "registered-artifacts.sha256.json"
+  },
+  "logs": {
+    "all_commands": "logs/",
+    "formal_baseline": "logs/06-prototype.json",
+    "formal_fixed": "logs/07-fixed.json",
+    "prototype_raw_stdout": "PROJECT/artifacts/logs/prototype.stdout.log",
+    "fixed_raw_stdout": "PROJECT/artifacts/logs/fixed.stdout.log",
+    "registration": "logs/registration-summary.json",
+    "checkpoint": "logs/13-checkpoint.json",
+    "final_check": "logs/14-final-check.json",
+    "resume": "logs/15-resume.json",
+    "repaired_process_failure": "logs/16-finalization-failure.json",
+    "finalizer_code": "finalize.py"
+  },
+  "record_counts": {
+    "activities": 6,
+    "artifacts": 14,
+    "decisions": 0,
+    "evidence": 6,
+    "method_bindings": 2,
+    "relations": 8,
+    "sources": 5,
+    "statements": 4
+  },
+  "record_revision": 56,
+  "next_action": "在新副本补充负零、最小正浮点窗口、最大有限浮点和多客户非同步时间轨迹；对照定义参考逐项记录，若发现反例则保留失败并重新审阅。本次冻结组件继续限于单线程内存演示。",
+  "limits": [
+    "Only Python standard library and offline original synthetic materials.",
+    "Single process, single thread, in-memory component; no distributed or production deployment.",
+    "Finite deterministic execution and agent code review; no universal proof, expert certification or performance/security validation.",
+    "Fraction preserves actual binary float value. Arithmetic costs grow with input bit length; no resource quota contract tested."
+  ],
+  "freeze": {
+    "registered_artifacts_read_only": true,
+    "registered_file_count": 16,
+    "no_changes_after_completion_marker": true,
+    "replay_policy": "copy project before rerunning to preserve frozen registered result fingerprints"
+  }
+}

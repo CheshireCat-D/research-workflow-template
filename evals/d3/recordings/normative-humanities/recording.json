@@ -1,0 +1,1601 @@
+{
+  "format_version": 1,
+  "case_id": "normative-humanities",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "8f31cd9b8fa987f885d137ccf3ccfc6e47038b16474969495bb5bd9a00d52b9d",
+  "project_init": {
+    "title": "降温阅览室政策：匿名、公平、责任与预算的有限论证",
+    "interest": "降温阅览室政策：匿名、公平、责任与预算的有限论证",
+    "disciplines": [
+      "humanities"
+    ],
+    "methods": [
+      "conceptual-normative"
+    ],
+    "workflow_mode": "light",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/draft.md": "draft.md",
+    "inputs/facts.csv": "facts.csv",
+    "inputs/source-packet.md": "source-packet.md",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "draft.md": "b7f405c23e2fa9f15af9a37150b09346fe5a0b927d89075778675afaabe40fea",
+    "task.md": "6d63545778c98a7b426d29803d813df63bd0b0b003a5a4164b3581d1fb9cb031",
+    "source-packet.md": "473ef444bc2d7e61805b594c38012540417c0b5ee78a5970a04c2cce709135d4",
+    "facts.csv": "cf20c52fc973fd7de2646fbd9ca599089ed2f029a03f22150236282838e42916"
+  },
+  "output_files": [
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "manuscript/report.md",
+    "notes/argument.md",
+    "notes/issue.md",
+    "notes/propositions.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/results.json": "a825c39622f36299e795781eeb2f03e9be5fc33a79b4a3465336ff5f916e35bf",
+    "artifacts/run.py": "14a2617c002e1f145a5837de599ad0b1bef758179995a3afb5cf7c4c900909ee",
+    "manuscript/report.md": "38bbc1acab9f328b5db594c7c499675c27f2b66a012fdaba22f12bc54df1f605",
+    "notes/argument.md": "92102adebfbbaa7d7e47746590d6ee5e9d4647e0ce0e7cb27be9bb50b21ecd8b",
+    "notes/issue.md": "bc301f86c70ece2796e1302424ea4ee155434510b110cfcea3c970b50298af7e",
+    "notes/propositions.md": "2d2912ebf3f53dc31863d58330a13759f7b776ac54dcdcfea68d209a0ffe3d56",
+    "review.md": "fd1510ebed33ba62ef70b846578194811b3f2d2485c63884a2be7f16efe20954"
+  },
+  "output_normalizations": [],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-DRAFT",
+        "limitations": "待审主张，不作为效果或价值权威",
+        "locator": "inputs/draft.md",
+        "notes": "原创合成材料，本轮按委托复制与离线分析；不据此推断一般发布许可。",
+        "rights": "unknown",
+        "title": "必须统一实名手机预约：待审草稿",
+        "version": "supplied synthetic case snapshot"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-FACTS",
+        "limitations": "无对照、无未注册者资料；全部费用为估算",
+        "locator": "inputs/facts.csv",
+        "notes": "原创合成材料，本轮按委托复制与离线分析；不据此推断一般发布许可。",
+        "rights": "unknown",
+        "title": "单轮合成数字事实表F1-F5",
+        "version": "supplied synthetic case snapshot"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "SRC-N1",
+        "limitations": "仅提供段1-3；未见不存在的完整原始备忘",
+        "locator": "inputs/source-packet.md#N1-1--N1-3",
+        "notes": "原创合成材料，本轮按委托复制与离线分析；不据此推断一般发布许可。",
+        "rights": "unknown",
+        "title": "居民权利小组备忘节录",
+        "version": "2026-08-04 synthetic excerpt"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "SRC-N2",
+        "limitations": "仅提供段1-3，不代表全部居民立场",
+        "locator": "inputs/source-packet.md#N2-1--N2-3",
+        "notes": "原创合成材料，本轮按委托复制与离线分析；不据此推断一般发布许可。",
+        "rights": "unknown",
+        "title": "公平可及倡议节录",
+        "version": "2026-08-05 synthetic excerpt"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "SRC-N3",
+        "limitations": "仅提供段1-3，不是工时调查或正式排班",
+        "locator": "inputs/source-packet.md#N3-1--N3-3",
+        "notes": "原创合成材料，本轮按委托复制与离线分析；不据此推断一般发布许可。",
+        "rights": "unknown",
+        "title": "工作人员联名便笺节录",
+        "version": "2026-08-06 synthetic excerpt"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-PACKET",
+        "limitations": "全文指给定来源包，不等于完整原始备忘；不是法律或代表授权",
+        "locator": "inputs/source-packet.md",
+        "notes": "原创合成材料，本轮按委托复制与离线分析；不据此推断一般发布许可。",
+        "rights": "unknown",
+        "title": "本地讨论材料N1-N3",
+        "version": "supplied synthetic excerpts"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-TASK",
+        "limitations": "全文件读取，限定离线合成分析",
+        "locator": "inputs/task.md",
+        "notes": "原创合成材料，本轮按委托复制与离线分析；不据此推断一般发布许可。",
+        "rights": "unknown",
+        "title": "原始委托",
+        "version": "supplied synthetic case snapshot"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "与同数据相容的排除反例及替代措施表明还需必要性和负担理由。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-D-B1",
+        "role": "draft reconstruction",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "重构桥梁：多数偏好且访问增加便足以强制全体用手机并交全部资料。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "缺机会成本、边际效果及人员责任理由；预算不是价值证明。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-D-B2",
+        "role": "draft reconstruction",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "重构桥梁：访问量增加的工具理应获得全部预算。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "当前材料未证明普遍资料门槛必要；本轮连接原则支持较窄结论。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-D-C1",
+        "notes": "待审草稿的实质命题；assessment评价其内容而非草稿是否说过这句话。",
+        "role": "draft reconstruction",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "不使用手机或不交姓名、住址和亲属联系方式者应不得进入。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "F1不识别系统效果，F3列人员费用，N3反对默认无限自愿劳动。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-D-C2",
+        "notes": "待审草稿的实质命题；assessment评价其内容而非草稿是否说过这句话。",
+        "role": "draft reconstruction",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "预算应全部购买系统，额外工时应由现员自行吸收。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "F1及确定性算术；只指次数，不是独立人数或因果效应。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-D-E1",
+        "role": "draft reconstruction",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "前后入场次数由500到610，增加22%。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "F1同时改变热浪与延时，F4无比较期；两项因果／公平推论不获识别。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-D-E2",
+        "notes": "待审草稿的实质命题；assessment评价其内容而非草稿是否说过这句话。",
+        "role": "draft reconstruction",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "实名手机导致居民更安全、更公平。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "F2只给已预约者偏好，没有未注册者或强制实名态度。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-D-E3",
+        "notes": "待审草稿的实质命题；assessment评价其内容而非草稿是否说过这句话。",
+        "role": "draft reconstruction",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "20名预约者的偏好可以代表居民支持强制实名。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "F4事件稀少且无对照，不能推零风险或实名效果。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-D-E4",
+        "notes": "待审草稿的实质命题；assessment评价其内容而非草稿是否说过这句话。",
+        "role": "draft reconstruction",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "零急救意味着实名已经消除了风险。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "未给排班或工时证据；N3提出劳动边界，F3还列明人员费用。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "insufficient"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-D-E5",
+        "notes": "待审草稿的实质命题；assessment评价其内容而非草稿是否说过这句话。",
+        "role": "draft reconstruction",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "工作人员能够自行吸收额外工时。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "F2不能证明价值排序；基本保护、匿名负担与劳动要求给出未被草稿回答的理由。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-D-V1",
+        "notes": "待审草稿的实质命题；assessment评价其内容而非草稿是否说过这句话。",
+        "role": "draft reconstruction",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "多数便利应当是无条件最高价值。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "有范围的研究问题，非已解决的一般政策理论。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "not-assessed"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-QUESTION",
+        "role": "question",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "本轮能否以实名手机及全套家庭资料作为入场条件，何种修订可辩护？",
+        "type": "question",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "由明确的基本保护及负担理由展开；严重伤害证据可能推翻，非匿名绝对优先。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-B1",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "基本服务普遍身份门槛负有说明具体伤害、最低资料及替代不足的初始举证负担。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "是比较规则而非措施有效的经验判断；匿名分流效果及成本未证。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "mixed"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-B2",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "同样控制风险时先考虑较少身份负担的办法，并支付新增劳动。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "仅在已明示的价值与连接原则下获得辩护；不证明真实安全、合法性或无排队伤害。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-C1",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "当前应拒绝统一实名手机门槛，以匿名现场进入为默认并保留容量及必要应急限制。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "触发条件尚未核实；预算算术成立不等于最终拨款或最优政策已证。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "mixed"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-C2",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "核实时间缺口与有偿排班后建议1600延时、400暂留；若等待障碍为主则重比1100辅助预约。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "只支持合成单轮估算与组合可列，不证明实际成本或政策效果。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-E1",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "预算2000，延时1600，系统600，电话500；匿名计数由原值班完成。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "可作当前管理建议，缺独立安全评估，不能据此认证安全。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "mixed"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-E2",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "40座且工作人员建议同时在场不超过40。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "N2/N3给出有力度竞争理由，F2/F4不识别该条件及措施效果。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "mixed"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-RIVAL",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "若不能等待者主要受现场排队伤害，系统600加电话500的辅助预约可能优于延时。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "本轮采纳N1提出的理由，价值承诺可争辩，非数据证明或法律。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "mixed"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-V1",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "基本降温不宜以例行解释家庭状况及身份记录为条件。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "本轮明确论证的可反驳正当化原则；范围限基本公共服务入场，不是客观已证伦理定律。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-V2",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "限制应针对具体伤害，说明必要性、负担及较少负担替代。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "N2提供规范理由，非居民共识；需等待与接入分布证据落实。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "mixed"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-V3",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "公平应关注实际降温需要及不能等候者，而非手机熟练程度。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "N3与本轮劳动责任理由支持此承诺，不声称已核实排班。",
+          "reviewer": "本轮同一代理自审，非独立专家",
+          "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "规范与经验材料范围审查，未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S-R-V4",
+        "role": "author conditional argument",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "text": "额外劳动须明确安排并付费，不应默认现员无限自愿补足。",
+        "type": "normative",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "A-E节论证、相容假想反例、竞争理由及条件性修订",
+        "id": "E-ARG",
+        "limitations": "自审而非独立专家；反例为逻辑构造非新观察",
+        "location": {
+          "kind": "local",
+          "path": "notes/argument.md"
+        },
+        "provenance": "本轮手工概念与规范分析",
+        "source_ids": [
+          "SRC-DRAFT",
+          "SRC-FACTS",
+          "SRC-PACKET"
+        ],
+        "type": "reasoned-argument"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "复制CSV重新计算的描述比率与全部预算组合",
+        "id": "E-ARITH",
+        "limitations": "不估计因果、价值权重或最优政策",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "实际运行 artifacts/run.py；命令与耗时保存于交付日志",
+        "source_ids": [
+          "SRC-FACTS"
+        ],
+        "type": "deterministic-arithmetic"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "原稿各主张，行1/3",
+        "id": "E-DRAFT",
+        "limitations": "待审政策主张不是效果证据",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "逐字读取复制草稿",
+        "source_ids": [
+          "SRC-DRAFT"
+        ],
+        "type": "text"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "F1行2：前后次数、同时延时/预约/热浪与无对照",
+        "id": "E-F1",
+        "limitations": "不能识别预约或实名因果效应",
+        "location": {
+          "kind": "local",
+          "path": "inputs/facts.csv"
+        },
+        "provenance": "复制事实表F1",
+        "source_ids": [
+          "SRC-FACTS"
+        ],
+        "type": "synthetic-observation"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "F2行3：20名现有预约者中16名偏好手机及样本限定",
+        "id": "E-F2",
+        "limitations": "没有未注册者；偏好不等于支持强制实名",
+        "location": {
+          "kind": "local",
+          "path": "inputs/facts.csv"
+        },
+        "provenance": "复制事实表F2",
+        "source_ids": [
+          "SRC-FACTS"
+        ],
+        "type": "synthetic-observation"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "F3行4：预算和三项费用估算，现有匿名计数",
+        "id": "E-F3",
+        "limitations": "只有单轮估算，其他新增劳动未定价",
+        "location": {
+          "kind": "local",
+          "path": "inputs/facts.csv"
+        },
+        "provenance": "复制事实表F3",
+        "source_ids": [
+          "SRC-FACTS"
+        ],
+        "type": "synthetic-estimate"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "F4行5：2次冲突、0急救及无比较记录",
+        "id": "E-F4",
+        "limitations": "不能估计实名效果或零风险",
+        "location": {
+          "kind": "local",
+          "path": "inputs/facts.csv"
+        },
+        "provenance": "复制事实表F4",
+        "source_ids": [
+          "SRC-FACTS"
+        ],
+        "type": "synthetic-observation"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "F5行6：40座及工作人员容量建议",
+        "id": "E-F5",
+        "limitations": "无独立安全评估",
+        "location": {
+          "kind": "local",
+          "path": "inputs/facts.csv"
+        },
+        "provenance": "复制事实表F5",
+        "source_ids": [
+          "SRC-FACTS"
+        ],
+        "type": "synthetic-management-advice"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "四类命题、原文与作者重构定位表",
+        "id": "E-MAP",
+        "limitations": "解释与规范前提非原文逐字引述",
+        "location": {
+          "kind": "local",
+          "path": "notes/propositions.md"
+        },
+        "provenance": "本轮实际文本重构",
+        "source_ids": [
+          "SRC-DRAFT",
+          "SRC-FACTS",
+          "SRC-PACKET"
+        ],
+        "type": "claim-map"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "N1-1/2/3行4-6：匿名负担、替代与限制理由",
+        "id": "E-N1",
+        "limitations": "立场与建议，不是法律或负担测量",
+        "location": {
+          "kind": "local",
+          "path": "inputs/source-packet.md"
+        },
+        "provenance": "全文读取给定来源包中的N1节录",
+        "source_ids": [
+          "SRC-N1"
+        ],
+        "type": "normative-position"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "N2-1/2/3行9-11：实际需要、预约的可能利益与机会成本",
+        "id": "E-N2",
+        "limitations": "不是代表授权，预约效果只是可能",
+        "location": {
+          "kind": "local",
+          "path": "inputs/source-packet.md"
+        },
+        "provenance": "全文读取给定来源包中的N2节录",
+        "source_ids": [
+          "SRC-N2"
+        ],
+        "type": "normative-position"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "N3-1/2/3行14-16：劳动、秩序及替代措施",
+        "id": "E-N3",
+        "limitations": "未提供正式排班或措施成本",
+        "location": {
+          "kind": "local",
+          "path": "inputs/source-packet.md"
+        },
+        "provenance": "全文读取给定来源包中的N3节录",
+        "source_ids": [
+          "SRC-N3"
+        ],
+        "type": "normative-position"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-FACTS"
+        ],
+        "description": "复制事实表的确定性算术与预算枚举代码",
+        "id": "A-CODE",
+        "path": "artifacts/run.py",
+        "type": "arithmetic-code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:S-QUESTION"
+        ],
+        "description": "问题、概念与实际方法选择",
+        "id": "A-ISSUE",
+        "path": "notes/issue.md",
+        "type": "problem-and-method"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F1",
+        "id": "REL-01",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "F1直接给次数，百分比另由E-ARITH复核",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-E1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARITH",
+        "id": "REL-02",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "610相对500的增幅为22%",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-E1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F1",
+        "id": "REL-03",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "热浪与延时同时变化，归因不能成立",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-E2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F4",
+        "id": "REL-04",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "无比较事件记录不能断定安全收益",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-E2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F2",
+        "id": "REL-05",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "限定到已预约者偏好，不能扩为居民支持强制",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-E3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F4",
+        "id": "REL-06",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "零小样本事件不说明零风险",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-E4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N3",
+        "id": "REL-07",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "工作人员反对无限额外工时，实际排班尚无依据",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-E5"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F3",
+        "id": "REL-08",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "已列人员费用说明工时有预算需求",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-E5"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N1",
+        "id": "REL-09",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "匿名与基本保护的理由未被绝对便利排序回答",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-V1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N2",
+        "id": "REL-10",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "实际需要与技术便利的区分挑战该绝对排序",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-V1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARG",
+        "id": "REL-11",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "A节相容假想反例显示事实不蕴含强制应当",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-B1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARG",
+        "id": "REL-12",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "机会成本和劳动责任阻断全预算桥梁",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-B2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-DRAFT",
+        "id": "REL-13",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "被审建议确在草稿",
+        "relation": "contextualizes",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-C1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARG",
+        "id": "REL-14",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "B节必要性举证未完成，支持缩小政策",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-C1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F3",
+        "id": "REL-15",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "费用约束与人员责任不可省略",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-C2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N3",
+        "id": "REL-16",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "现员不能视为无限自愿劳动",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-D-C2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F3",
+        "id": "REL-17",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "直接给预算与点估算",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-E1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARITH",
+        "id": "REL-18",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "只给可列组合，未推最优效果",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-E1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F5",
+        "id": "REL-19",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "有40座及建议上限",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-E2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F5",
+        "id": "REL-20",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "独立安全评估不存在",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-E2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N1",
+        "id": "REL-21",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "提供本轮采纳的匿名与基本保护理由，不使该价值成为事实定理",
+        "relation": "contextualizes",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-V1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N1",
+        "id": "REL-22",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "N1-3提出限制须说明必要性与替代",
+        "relation": "contextualizes",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-V2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARG",
+        "id": "REL-23",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "B节展开可反驳理由，不是数值证明",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-V2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N2",
+        "id": "REL-24",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "N2-1/2提出需要与便利区分",
+        "relation": "contextualizes",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-V3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N3",
+        "id": "REL-25",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "N3-1提出劳动责任",
+        "relation": "contextualizes",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-V4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARG",
+        "id": "REL-26",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "B/D节不以无偿补足实现政策",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-V4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARG",
+        "id": "REL-27",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "B节用错误拒入基本保护落空与替代可行性解释举证负担",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-B1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N1",
+        "id": "REL-28",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "限制仍可被具体伤害必要性正当化，匿名非绝对",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-B1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N3",
+        "id": "REL-29",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "替代需估价，不能凭建议称有效或免费",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-B2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARG",
+        "id": "REL-30",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "比较原则明确保留措施有效性未知",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-B2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARG",
+        "id": "REL-31",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "在明示价值与必要性桥梁下，当前统一门槛缺足够理由",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-C1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N2",
+        "id": "REL-32",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "C节等待伤害竞争论证表明匿名非公平保证",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-C1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F5",
+        "id": "REL-33",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "容量限制可保留但上限未获独立认证",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-C1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARITH",
+        "id": "REL-34",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "预算组合只有会计可列性，不证明时间缺口与效果",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-C2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARG",
+        "id": "REL-35",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "D节明示条件取舍与机会成本",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-C2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N2",
+        "id": "REL-36",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "若等候为主要障碍，辅助预约可优于延时",
+        "relation": "challenges",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-C2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N2",
+        "id": "REL-37",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "不能等待者的实际可及与减少无谓排队的理由",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-RIVAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-N3",
+        "id": "REL-38",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "秩序联络目标是有力公共利益",
+        "relation": "supports",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-RIVAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-F2",
+        "id": "REL-39",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "缺未注册者证据，尚不足确认辅助方案覆盖",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-RIVAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-ARG",
+        "id": "REL-40",
+        "limitations": "关系只标明有限支持、限定或挑战；数量不是有效性分数。",
+        "rationale": "C/E节保留人力费用与效果触发条件",
+        "relation": "qualifies",
+        "scope": "仅给定虚构阅览室单轮材料；不作真实法律、民意、因果或现实部署认证。",
+        "statement_id": "S-R-RIVAL"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [],
+        "id": "ACT-READ",
+        "inputs": [
+          "source:SRC-TASK",
+          "source:SRC-DRAFT",
+          "source:SRC-FACTS",
+          "source:SRC-PACKET"
+        ],
+        "note": "只读取给定合成文件及项目工作流；N1-N3只有节录。",
+        "outputs": [
+          "artifact:A-ISSUE",
+          "evidence:E-F1",
+          "evidence:E-F2",
+          "evidence:E-F3",
+          "evidence:E-F4",
+          "evidence:E-F5",
+          "evidence:E-N1",
+          "evidence:E-N2",
+          "evidence:E-N3"
+        ],
+        "status": "done",
+        "title": "读取给定材料并界定问题"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E-ARG"
+        ],
+        "description": "重建、反例、最强竞争论证、修订及压力测试",
+        "id": "A-ARG",
+        "path": "notes/argument.md",
+        "type": "normative-analysis"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E-MAP"
+        ],
+        "description": "经验／价值／连接／结论及来源定位表",
+        "id": "A-MAP",
+        "path": "notes/propositions.md",
+        "type": "argument-map"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-CODE",
+          "evidence:E-ARITH"
+        ],
+        "description": "实际运行的百分比与预算组合",
+        "id": "A-RESULTS",
+        "path": "artifacts/results.json",
+        "type": "arithmetic-results"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-READ"
+        ],
+        "id": "ACT-ARITH",
+        "inputs": [
+          "source:SRC-FACTS"
+        ],
+        "note": "实际正式运行退出0，耗时0.022649秒，无随机种子；不作价值、因果或政策效果验证。",
+        "outputs": [
+          "artifact:A-CODE",
+          "artifact:A-RESULTS",
+          "evidence:E-ARITH"
+        ],
+        "status": "done",
+        "title": "运行确定性百分比与预算复核"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:S-R-C1",
+          "statement:S-R-C2",
+          "statement:S-R-RIVAL",
+          "artifact:A-ARG",
+          "artifact:A-RESULTS"
+        ],
+        "description": "约1000汉字以内的有限中文规范短稿",
+        "id": "A-REPORT",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "artifact:A-MAP",
+          "artifact:A-ARG",
+          "statement:S-D-B1",
+          "statement:S-R-B1"
+        ],
+        "id": "MB-CONCEPT",
+        "method_id": "conceptual-normative",
+        "profile_version": "0.1",
+        "reason": "已实际区分匿名／可及／安全／责任，拆分四类命题并给事实到应当的相容反例。",
+        "variant": "conceptual-analysis"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-READ",
+          "ACT-ARITH"
+        ],
+        "id": "ACT-ARG",
+        "inputs": [
+          "evidence:E-F1",
+          "evidence:E-F2",
+          "evidence:E-F3",
+          "evidence:E-F4",
+          "evidence:E-F5",
+          "evidence:E-N1",
+          "evidence:E-N2",
+          "evidence:E-N3"
+        ],
+        "note": "A节实际处理事实到应当跳跃，C节提出有力竞争论证，D/E节给条件和失败分支；无独立专家。",
+        "outputs": [
+          "artifact:A-MAP",
+          "artifact:A-ARG",
+          "statement:S-R-C1",
+          "statement:S-R-C2",
+          "statement:S-R-RIVAL"
+        ],
+        "status": "done",
+        "title": "重建与执行规范论证压力测试"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A-REPORT",
+          "artifact:A-ARG",
+          "artifact:A-RESULTS"
+        ],
+        "description": "主张支持、失败、限制及具体下一步",
+        "id": "A-REVIEW",
+        "path": "review.md",
+        "type": "self-review"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-ARG"
+        ],
+        "id": "ACT-WRITE",
+        "inputs": [
+          "artifact:A-MAP",
+          "artifact:A-ARG",
+          "artifact:A-RESULTS"
+        ],
+        "note": "短稿659个汉字含标题；未把未核实效果写成结果。",
+        "outputs": [
+          "artifact:A-REPORT"
+        ],
+        "status": "done",
+        "title": "起草有限中文短稿"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "artifact:A-ARG",
+          "artifact:A-REPORT",
+          "artifact:A-REVIEW",
+          "statement:S-R-C1",
+          "statement:S-R-C2",
+          "statement:S-R-RIVAL"
+        ],
+        "id": "MB-NORM",
+        "method_id": "conceptual-normative",
+        "profile_version": "0.1",
+        "reason": "已实际重构竞争理由、压力测试匿名与预算取舍，并给有条件的规范结论及短稿。",
+        "variant": "normative-argument"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-WRITE"
+        ],
+        "id": "ACT-REVIEW",
+        "inputs": [
+          "artifact:A-REPORT",
+          "artifact:A-ARG",
+          "artifact:A-RESULTS"
+        ],
+        "note": "同一代理自审，不是外部或盲审；保留三类操作失败与经验缺口。",
+        "outputs": [
+          "artifact:A-REVIEW"
+        ],
+        "status": "done",
+        "title": "复核支持范围、失败及交付"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 5,
+    "artifacts": 7,
+    "decisions": 0,
+    "evidence": 12,
+    "method_bindings": 2,
+    "relations": 40,
+    "sources": 7,
+    "statements": 22
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "在真实执行前核实各时段等待/拒入原因、未注册者障碍、1600可支付的排班及匿名分流新增成本；新材料保存为新版本输入并更新R-C1/R-C2。若主要缺口为时段则评估1600有偿延时；若为等待且辅助预约可及则重比1100系统加电话；只有具体严重伤害与替代不足证据成立才逐项重审最小身份资料。当前不启动调查或部署。"
+  }
+}

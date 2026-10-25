@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "relocation-project/artifacts/run.py"
+  ],
+  "cwd": ".",
+  "exit_code": 0,
+  "elapsed_seconds": 0.06498599052429199,
+  "stdout": "{\"implementation\": \"artifacts/gate.py\", \"passed\": true, \"total_cases\": 1578, \"passed_cases\": 1578, \"failed_cases\": 0, \"elapsed_seconds\": 0.019212957999116043, \"under_time_limit\": true}\n",
+  "stderr": ""
+}

@@ -1,0 +1,778 @@
+{
+  "format_version": 1,
+  "case_id": "engineering",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "11c40895e128a57ddee7e99f4d8a2eb06b345ab062a470b398a8a07f33cf5e5e",
+  "project_init": {
+    "title": "离线滚动配额组件：合同验收与修复",
+    "interest": "在单进程单线程内存范围验证滚动配额合同",
+    "disciplines": [
+      "engineering"
+    ],
+    "methods": [
+      "engineering-design",
+      "computational"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/demo-traffic.csv": "demo-traffic.csv",
+    "inputs/draft.md": "draft.md",
+    "inputs/gate.py": "gate.py",
+    "inputs/requirements.md": "requirements.md",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "requirements.md": "7fd59a0a9e57f21e6ded87a57f46992d7a328cedd0d7022ebb1d7a062f652641",
+    "draft.md": "8cb11f616eafa9b1e9ef0d32b33fccb2a51931f5706d8183a4b1c56ff2d1dc22",
+    "gate.py": "17983001703c099357e4962d55b249685dc911f81ae375e2d883c00b02be8d5b",
+    "task.md": "183a64b259eea7fa2b594d0139328bbd3abe3b2e3459e93a2de8cc0c59d23312",
+    "demo-traffic.csv": "37ca3df1634bece67981b9c7319c5ce106fc121674884de5370596f1db0bdd1c"
+  },
+  "output_files": [
+    "README.md",
+    "artifacts/gate.py",
+    "artifacts/logs/fixed.json",
+    "artifacts/logs/fixed.stderr.log",
+    "artifacts/logs/fixed.stdout.log",
+    "artifacts/logs/prototype.json",
+    "artifacts/logs/prototype.stderr.log",
+    "artifacts/logs/prototype.stdout.log",
+    "artifacts/logs/relocated.json",
+    "artifacts/logs/relocated.stderr.log",
+    "artifacts/logs/relocated.stdout.log",
+    "artifacts/prototype-results.json",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "checks/input-integrity.json",
+    "manuscript/report.md",
+    "notes/issue.md",
+    "notes/work.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "README.md": "ebed5ad249ad6eee4a86a99a38b7a405fc1ba9bbd4066dc7d061e949eff8d157",
+    "artifacts/gate.py": "7b846bfee5423763d72138f1ba6147710bda8267102a150b705a20ec25ba54e2",
+    "artifacts/logs/fixed.json": "6c681eb76eb417a787e501458ea55edeb8cf5b22c22adc5aa64c025a0be3c75f",
+    "artifacts/logs/fixed.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/logs/fixed.stdout.log": "a85c58c570d3a9f197a2342a9f7393aa122c95c77f933693573fd5083dfe334d",
+    "artifacts/logs/prototype.json": "324a0160cc7f484ca4ac27097cb613d5f9d0c4f035fec32fda312001a2178f31",
+    "artifacts/logs/prototype.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/logs/prototype.stdout.log": "f85a6ca94e897920d5cffbb9c942fabb00aa954a28a12314686ba48815435bb2",
+    "artifacts/logs/relocated.json": "18ab406932b427283d209c5fbca3a6c93655139132304b75b64dda1468c0cb4d",
+    "artifacts/logs/relocated.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/logs/relocated.stdout.log": "379eb326bbcd026173f883454a5add16fb666d709b249d4ab14348937bcd5815",
+    "artifacts/prototype-results.json": "37e8222ccb77f796160dadfa20183a425c5a901b01edbb200245b364b222b883",
+    "artifacts/results.json": "0621b14b77e7a0ed19cd5b0f2d790205f89b27adc7b22d5d6eeee42fee1fe5b8",
+    "artifacts/run.py": "db3fa81e8f5e88fb8d0a7954a5144926815b5526a787ae1e258ebec3ed0c61e2",
+    "checks/input-integrity.json": "10c6c1381c0d70e9d26e37e5d3ec2be84cdee24bf1f0b980ccbdd9aebe90ec32",
+    "manuscript/report.md": "7f1762b9d40f750424d5471608ace37ae495e91a10d2c966490fe4a24bd14f61",
+    "notes/issue.md": "e9baa7c58610bedff5ad7e8d9425370af7e0356d9c95289995f6b5373133c7d8",
+    "notes/work.md": "e92becb58a9b3deba25b44d6720a182b47e737c32121a914b41b95618cf21ddd",
+    "review.md": "0768cfd48b36cf1e327d1d81c2b29239022c5b52a169c63ea4554b9e0f0d1651"
+  },
+  "output_normalizations": [
+    {
+      "path": "artifacts/prototype-results.json",
+      "original_sha256": "18c1fa6dd9a9e12e76f22375dc1da1dc4ba97e33da5ddddb02ce6748a1c524ec",
+      "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+    }
+  ],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_DEMO",
+        "limitations": "Task states original synthetic offline material and no private data; no publication licence or public rights grant was stated. No external rights verification.",
+        "locator": "inputs/demo-traffic.csv",
+        "notes": "Entire copied file read; original source not modified.",
+        "rights": "unknown",
+        "title": "演示流量，按CSV行调用",
+        "version": "frozen synthetic task input; SHA-256 in checks/input-integrity.json"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_DRAFT",
+        "limitations": "Task states original synthetic offline material and no private data; no publication licence or public rights grant was stated. No external rights verification.",
+        "locator": "inputs/draft.md",
+        "notes": "Entire copied file read; original source not modified.",
+        "rights": "unknown",
+        "title": "过早的初稿发布说明",
+        "version": "frozen synthetic task input; SHA-256 in checks/input-integrity.json"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_ORIG",
+        "limitations": "Task states original synthetic offline material and no private data; no publication licence or public rights grant was stated. No external rights verification.",
+        "locator": "inputs/gate.py",
+        "notes": "Entire copied file read; original source not modified.",
+        "rights": "unknown",
+        "title": "冻结滚动配额原型",
+        "version": "frozen synthetic task input; SHA-256 in checks/input-integrity.json"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_REQ",
+        "limitations": "Task states original synthetic offline material and no private data; no publication licence or public rights grant was stated. No external rights verification.",
+        "locator": "inputs/requirements.md",
+        "notes": "Entire copied file read; original source not modified.",
+        "rights": "unknown",
+        "title": "滚动配额需求 v1",
+        "version": "frozen synthetic task input; SHA-256 in checks/input-integrity.json"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_TASK",
+        "limitations": "Task states original synthetic offline material and no private data; no publication licence or public rights grant was stated. No external rights verification.",
+        "locator": "inputs/task.md",
+        "notes": "Entire copied file read; original source not modified.",
+        "rights": "unknown",
+        "title": "工程修复原始委托",
+        "version": "frozen synthetic task input; SHA-256 in checks/input-integrity.json"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "Actual artifacts/results.json has zero failures; independent history-based oracle and explicit hand expectations agree.",
+          "reviewer": "executing agent; not independent expert review",
+          "scope": "This acceptance suite and relocated replay only",
+          "status": "supported-in-scope"
+        },
+        "id": "S_FIXED",
+        "scope": "Finite deterministic execution on current Python/macOS; not all possible inputs",
+        "text": "修复版在指定单进程单线程内存范围通过本轮1578项合同验收，含1512个定义参考轨迹。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "591 failures including left-endpoint retention, integer precision loss and OverflowError on valid huge integers.",
+          "reviewer": "executing agent; finite runtime checks plus code inspection",
+          "scope": "1578 deterministic cases; three confirmed implementation problems",
+          "status": "challenged"
+        },
+        "id": "S_ORIGINAL",
+        "scope": "inputs/gate.py; supplied requirements only",
+        "text": "冻结原型满足滚动配额需求v1的全部输入合同。",
+        "type": "design",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "Requirements restrict use to a single process and single thread; no distributed, security or production load evidence was executed.",
+          "reviewer": "executing agent",
+          "scope": "Scope mismatch and actual prototype failures",
+          "status": "challenged"
+        },
+        "id": "S_RELEASE",
+        "scope": "Original inputs/draft.md broad release assertion",
+        "text": "初稿声称组件完全可靠，可保护任意规模分布式收费接口且无需额外状态管理或安全检查。",
+        "type": "design",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "Requirement scope, actual tests and revised manuscript agree; no deployment occurred.",
+          "reviewer": "executing agent",
+          "scope": "Delivery classification only",
+          "status": "supported-in-scope"
+        },
+        "id": "S_SCOPE",
+        "scope": "Actual delivered artifacts and requirements v1",
+        "text": "本轮可交付的是经过有限验收的单线程内存演示组件；扩大用途须另定共享状态与故障合同。",
+        "type": "design",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Unmodified prototype actual acceptance: 1578 total, 591 failed, exit1.",
+        "id": "E_BASE",
+        "limitations": "Composite case tags do not establish independent failure of every tagged requirement.",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/prototype-results.json"
+        },
+        "provenance": "Executed offline in this project; commands and raw logs preserved under artifacts/logs and sibling logs.",
+        "source_ids": [
+          "SRC_ORIG",
+          "SRC_REQ",
+          "SRC_DEMO"
+        ],
+        "type": "execution"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Repaired implementation actual acceptance: 1578 total, zero failures, exit0.",
+        "id": "E_FIXED",
+        "limitations": "Finite deterministic coverage; no universal proof, production, concurrency, performance or security validation.",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Executed offline in this project; commands and raw logs preserved under artifacts/logs and sibling logs.",
+        "source_ids": [
+          "SRC_REQ",
+          "SRC_DEMO"
+        ],
+        "type": "execution"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "All five copied input byte hashes match raw sources after substantive work.",
+        "id": "E_INPUT",
+        "limitations": "Only equality to supplied original inputs, not authorship authentication.",
+        "location": {
+          "kind": "local",
+          "path": "checks/input-integrity.json"
+        },
+        "provenance": "Executed offline in this project; commands and raw logs preserved under artifacts/logs and sibling logs.",
+        "source_ids": [
+          "SRC_TASK",
+          "SRC_REQ",
+          "SRC_ORIG",
+          "SRC_DEMO",
+          "SRC_DRAFT"
+        ],
+        "type": "fingerprint-check"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Actual execution after copying code and inputs to separate relocation-project; exit0 and 1578 passes.",
+        "id": "E_RELOC",
+        "limitations": "Small deterministic relocation replay, no environment portability matrix.",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/logs/relocated.json"
+        },
+        "provenance": "Executed offline in this project; commands and raw logs preserved under artifacts/logs and sibling logs.",
+        "source_ids": [
+          "SRC_REQ",
+          "SRC_DEMO"
+        ],
+        "type": "execution"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Full supplied requirements including exact window, validation and scope contract.",
+        "id": "E_REQ",
+        "limitations": "Task-defined synthetic contract, no external standard certification.",
+        "location": {
+          "kind": "local",
+          "path": "inputs/requirements.md"
+        },
+        "provenance": "Executed offline in this project; commands and raw logs preserved under artifacts/logs and sibling logs.",
+        "source_ids": [
+          "SRC_REQ"
+        ],
+        "type": "contract"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Actual code inspection and review of original release assertion and revised scope.",
+        "id": "E_REVIEW",
+        "limitations": "Agent review; no third-party expert assessment or formal proof.",
+        "location": {
+          "kind": "local",
+          "path": "review.md"
+        },
+        "provenance": "Executed offline in this project; commands and raw logs preserved under artifacts/logs and sibling logs.",
+        "source_ids": [
+          "SRC_DRAFT",
+          "SRC_REQ"
+        ],
+        "type": "code-and-claim-review"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_REQ",
+          "source:SRC_TASK"
+        ],
+        "description": "Pre-run requirement-to-check plan and method/design choice.",
+        "id": "ART_PLAN",
+        "path": "notes/issue.md",
+        "type": "method-plan"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_REQ",
+          "source:SRC_DEMO"
+        ],
+        "description": "Standalone deterministic acceptance and independent definition-based oracle.",
+        "id": "ART_RUN",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_BASE",
+        "id": "R_BASE",
+        "rationale": "Actual counterexamples violate the supplied interface contract.",
+        "relation": "challenges",
+        "scope": "Frozen implementation, exact tested inputs",
+        "statement_id": "S_ORIGINAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_FIXED",
+        "id": "R_FIXED",
+        "rationale": "Zero failures in the fixed precommitted suite and defined reference traces.",
+        "relation": "supports",
+        "scope": "1578 cases only",
+        "statement_id": "S_FIXED"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_REQ",
+        "id": "R_LIMIT",
+        "rationale": "Contract explicitly restricts round to single-process single-thread in-memory demo.",
+        "relation": "qualifies",
+        "scope": "No distributed/production claim",
+        "statement_id": "S_FIXED"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_BASE",
+        "id": "R_OLDFAIL",
+        "rationale": "Actual original failures contradict complete reliability assertion.",
+        "relation": "challenges",
+        "scope": "Prototype reliability claim",
+        "statement_id": "S_RELEASE"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_REQ",
+        "id": "R_OLDSCOPE",
+        "rationale": "Specified use environment excludes the proposed multi-machine release scope.",
+        "relation": "challenges",
+        "scope": "Scope assertion; no production test",
+        "statement_id": "S_RELEASE"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RELOC",
+        "id": "R_RELOC",
+        "rationale": "Same code/inputs execute after relocation.",
+        "relation": "supports",
+        "scope": "Relocation replay only",
+        "statement_id": "S_FIXED"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_REVIEW",
+        "id": "R_SCOPE",
+        "rationale": "Review retracts broad release language and tracks observed checks.",
+        "relation": "supports",
+        "scope": "Revised manuscript and delivery",
+        "statement_id": "S_SCOPE"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_REQ",
+        "id": "R_SCOPECONTRACT",
+        "rationale": "Delivered scope matches explicitly requested local component boundary.",
+        "relation": "supports",
+        "scope": "Task contract",
+        "statement_id": "S_SCOPE"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT_PLAN",
+        "inputs": [
+          "source:SRC_TASK",
+          "source:SRC_REQ"
+        ],
+        "note": "Actual local workflow/validation/writing/review guidance read; method versions 0.1; no candidate or novelty work required. Reviewed narrowed source-rights metadata (unknown); file contents/hashes unchanged, no analysis rerun required.",
+        "outputs": [
+          "artifact:ART_PLAN",
+          "artifact:ART_RUN"
+        ],
+        "status": "done",
+        "title": "Read copied guidance and freeze executable requirements acceptance before baseline"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_ORIG",
+          "artifact:ART_RUN"
+        ],
+        "description": "Preserved failed unmodified prototype result.",
+        "id": "ART_BASE",
+        "path": "artifacts/prototype-results.json",
+        "type": "results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_BASE"
+        ],
+        "description": "Baseline actual command, exit, elapsed, stdout and stderr.",
+        "id": "ART_BASECMD",
+        "path": "artifacts/logs/prototype.json",
+        "type": "command-log"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_BASE"
+        ],
+        "description": "Full baseline failure stdout.",
+        "id": "ART_BASELOG",
+        "path": "artifacts/logs/prototype.stdout.log",
+        "type": "raw-log"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_ORIG",
+          "evidence:E_BASE"
+        ],
+        "description": "Repaired local rolling quota implementation.",
+        "id": "ART_CODE",
+        "path": "artifacts/gate.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_FIXED"
+        ],
+        "description": "Fixed actual command, exit, elapsed, stdout and stderr.",
+        "id": "ART_FIXCMD",
+        "path": "artifacts/logs/fixed.json",
+        "type": "command-log"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_FIXED"
+        ],
+        "description": "Full fixed run stdout.",
+        "id": "ART_FIXLOG",
+        "path": "artifacts/logs/fixed.stdout.log",
+        "type": "raw-log"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RELOC"
+        ],
+        "description": "Relocation replay actual command, exit and raw output.",
+        "id": "ART_RELOCCMD",
+        "path": "artifacts/logs/relocated.json",
+        "type": "command-log"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:S_FIXED",
+          "statement:S_SCOPE",
+          "evidence:E_BASE",
+          "evidence:E_FIXED"
+        ],
+        "description": "624-character Chinese technical manuscript with bounded release statement.",
+        "id": "ART_REPORT",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_DRAFT",
+          "evidence:E_BASE",
+          "evidence:E_FIXED"
+        ],
+        "description": "Claim support, confirmed defects, finite validation limits and next action.",
+        "id": "ART_REVIEW",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_BASE",
+          "evidence:E_FIXED"
+        ],
+        "description": "Actual failure diagnosis, patch, run outcome and limits.",
+        "id": "ART_WORK",
+        "path": "notes/work.md",
+        "type": "technical-note"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_PLAN"
+        ],
+        "id": "ACT_BASELINE",
+        "inputs": [
+          "source:SRC_ORIG",
+          "artifact:ART_RUN",
+          "source:SRC_DEMO"
+        ],
+        "note": "Executed successfully as an experiment, but target acceptance failed: exit1, 591 of1578 cases failed; preserved, not reclassified as pass.",
+        "outputs": [
+          "evidence:E_BASE",
+          "artifact:ART_BASE",
+          "artifact:ART_BASELOG",
+          "artifact:ART_BASECMD"
+        ],
+        "status": "failed",
+        "title": "Run unmodified prototype acceptance; acceptance target failed"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_PLAN"
+        ],
+        "id": "ACT_REPAIR",
+        "inputs": [
+          "evidence:E_BASE",
+          "source:SRC_REQ",
+          "source:SRC_ORIG"
+        ],
+        "note": "Baseline failure used as input without claiming baseline acceptance completed. Left-open endpoint and exact int/float value handling fixed. Reviewed narrowed source-rights metadata (unknown); file contents/hashes unchanged, no analysis rerun required.",
+        "outputs": [
+          "artifact:ART_CODE",
+          "artifact:ART_WORK"
+        ],
+        "status": "done",
+        "title": "Diagnose and repair confirmed local implementation defects"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART_RUN",
+          "artifact:ART_CODE"
+        ],
+        "description": "Formal repaired run result and requirement coverage.",
+        "id": "ART_FIXED",
+        "path": "artifacts/results.json",
+        "type": "results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART_RUN",
+          "artifact:ART_CODE"
+        ],
+        "description": "Relocatable reproduction instructions and preserved-input notice.",
+        "id": "ART_README",
+        "path": "README.md",
+        "type": "reproduction-guide"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_REPAIR"
+        ],
+        "id": "ACT_ACCEPT",
+        "inputs": [
+          "artifact:ART_CODE",
+          "artifact:ART_RUN",
+          "source:SRC_DEMO"
+        ],
+        "note": "1578/1578 each; formal process below10s. Deterministic, seed not applicable. Reviewed narrowed source-rights metadata (unknown); file contents/hashes unchanged, no analysis rerun required.",
+        "outputs": [
+          "evidence:E_FIXED",
+          "evidence:E_RELOC",
+          "artifact:ART_FIXED",
+          "artifact:ART_FIXLOG",
+          "artifact:ART_FIXCMD",
+          "artifact:ART_RELOCCMD"
+        ],
+        "status": "done",
+        "title": "Run same finite acceptance on repair and repeat from relocation copy"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_ACCEPT"
+        ],
+        "id": "ACT_WRITE",
+        "inputs": [
+          "statement:S_FIXED",
+          "statement:S_SCOPE",
+          "evidence:E_FIXED",
+          "evidence:E_BASE"
+        ],
+        "note": "Original broad release claim removed; report 624 total Unicode characters including Markdown. Reviewed narrowed source-rights metadata (unknown); file contents/hashes unchanged, no analysis rerun required.",
+        "outputs": [
+          "artifact:ART_REPORT",
+          "artifact:ART_README"
+        ],
+        "status": "done",
+        "title": "Write actual Chinese technical report and reproduction scope"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "activity:ACT_ACCEPT",
+          "artifact:ART_RUN",
+          "evidence:E_BASE",
+          "evidence:E_FIXED"
+        ],
+        "id": "METHOD_COMPUTE",
+        "method_id": "computational",
+        "notes": "Read copied profiles/methods/computational.md v0.1; no statistical or performance inference.",
+        "profile_version": "0.1",
+        "reason": "Deterministic independent oracle traces, exact hand cases, hashes, actual command/elapsed/failure logs and relocated replay.",
+        "variant": "empirical-algorithm"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "activity:ACT_PLAN",
+          "activity:ACT_BASELINE",
+          "activity:ACT_REPAIR",
+          "activity:ACT_ACCEPT",
+          "statement:S_SCOPE"
+        ],
+        "id": "METHOD_ENGINEERING",
+        "method_id": "engineering-design",
+        "notes": "Read copied profiles/methods/engineering-design.md and engineering discipline portrait v0.1.",
+        "profile_version": "0.1",
+        "reason": "Requirements/design/acceptance mapping, baseline failure, exact local patch, anomaly state recovery and bounded use evidence.",
+        "variant": "software-prototype"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_WRITE"
+        ],
+        "id": "ACT_REVIEW",
+        "inputs": [
+          "source:SRC_DRAFT",
+          "artifact:ART_REPORT",
+          "artifact:ART_CODE",
+          "artifact:ART_RUN",
+          "evidence:E_FIXED"
+        ],
+        "note": "Finite testing and local record consistency kept separate; no deployment or production claims. Reviewed narrowed source-rights metadata (unknown); file contents/hashes unchanged, no analysis rerun required.",
+        "outputs": [
+          "artifact:ART_REVIEW",
+          "evidence:E_REVIEW"
+        ],
+        "status": "done",
+        "title": "Review claim support and actual delivery limits"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 6,
+    "artifacts": 14,
+    "decisions": 0,
+    "evidence": 6,
+    "method_bindings": 2,
+    "relations": 8,
+    "sources": 5,
+    "statements": 4
+  },
+  "cursor": {
+    "activity_id": "ACT_REVIEW",
+    "next_action": "在新副本补充负零、最小正浮点窗口、最大有限浮点和多客户非同步时间轨迹；对照定义参考逐项记录，若发现反例则保留失败并重新审阅。本次冻结组件继续限于单线程内存演示。"
+  }
+}

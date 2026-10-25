@@ -1,0 +1,103 @@
+{
+  "status": "passed-in-scope",
+  "approach": "separate direct finite arithmetic from model-card and raw labels, not a second formal fitted analysis",
+  "n_rows": 24,
+  "n_subjects": 12,
+  "n_events": 6,
+  "checks": [
+    {
+      "split": "R",
+      "field": "accuracy",
+      "expected_by_direct_arithmetic": 1.0,
+      "actual": 1.0,
+      "equal": true
+    },
+    {
+      "split": "R",
+      "field": "brier_score",
+      "expected_by_direct_arithmetic": 0.0,
+      "actual": 0.0,
+      "equal": true
+    },
+    {
+      "split": "R",
+      "field": "mean_predicted_probability",
+      "expected_by_direct_arithmetic": 0.5,
+      "actual": 0.5,
+      "equal": true
+    },
+    {
+      "split": "R",
+      "field": "observed_event_rate",
+      "expected_by_direct_arithmetic": 0.5,
+      "actual": 0.5,
+      "equal": true
+    },
+    {
+      "split": "R",
+      "field": "bins",
+      "expected_by_direct_arithmetic": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "actual": [
+        6,
+        0,
+        0,
+        6
+      ],
+      "equal": true
+    },
+    {
+      "split": "S",
+      "field": "accuracy",
+      "expected_by_direct_arithmetic": 0.5,
+      "actual": 0.5,
+      "equal": true
+    },
+    {
+      "split": "S",
+      "field": "brier_score",
+      "expected_by_direct_arithmetic": 0.25,
+      "actual": 0.25,
+      "equal": true
+    },
+    {
+      "split": "S",
+      "field": "mean_predicted_probability",
+      "expected_by_direct_arithmetic": 0.5,
+      "actual": 0.5,
+      "equal": true
+    },
+    {
+      "split": "S",
+      "field": "observed_event_rate",
+      "expected_by_direct_arithmetic": 0.5,
+      "actual": 0.5,
+      "equal": true
+    },
+    {
+      "split": "S",
+      "field": "bins",
+      "expected_by_direct_arithmetic": [
+        0,
+        0,
+        4,
+        0
+      ],
+      "actual": [
+        0,
+        0,
+        4,
+        0
+      ],
+      "equal": true
+    }
+  ],
+  "empty_bins_are_null": true,
+  "report_cjk_count": 477,
+  "elapsed_seconds": 0.000228208999033086,
+  "failures": []
+}

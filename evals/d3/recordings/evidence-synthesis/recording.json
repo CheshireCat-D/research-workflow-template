@@ -1,0 +1,778 @@
+{
+  "format_version": 1,
+  "case_id": "evidence-synthesis",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "8f31cd9b8fa987f885d137ccf3ccfc6e47038b16474969495bb5bd9a00d52b9d",
+  "project_init": {
+    "title": "有限离线短信提醒证据综合",
+    "interest": "有限离线短信提醒证据综合",
+    "disciplines": [
+      "medicine-health"
+    ],
+    "methods": [
+      "evidence-synthesis",
+      "empirical-quantitative"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/abstracts.md": "abstracts.md",
+    "inputs/full-extracts.md": "full-extracts.md",
+    "inputs/scope.md": "scope.md",
+    "inputs/search-export.csv": "search-export.csv",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "search-export.csv": "b675c239989e8da470b9cd480d6c99214b863bd7e6d9448b045505cf0871b5ab",
+    "scope.md": "7847205e8882fe12618681a8cb782b7d76d266e328439541448458d211fcb607",
+    "full-extracts.md": "2c3cdf018c0991b7a199f40efb673a12b527a0d6f63b52c2c4d882224d9047c5",
+    "task.md": "141e8ec12d6c43c62a3cc743d284e30aa2da6577689aebc2f122bfbcc1c18cff",
+    "abstracts.md": "90d43d0d04bea1fe022c69ce2947fc025f313f933a94f4070beb2a24b1dc4e92"
+  },
+  "output_files": [
+    "artifacts/results.json",
+    "artifacts/run-config.json",
+    "artifacts/run.py",
+    "manuscript/report.md",
+    "notes/extraction.csv",
+    "notes/guidance-read.json",
+    "notes/issue.md",
+    "notes/numerical-results.md",
+    "notes/risk-of-bias.md",
+    "notes/screening.csv",
+    "notes/synthesis.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/results.json": "df813101ebad7036f88032f7e7af1ec44bdb4827208319e2e861e96a2d4a0852",
+    "artifacts/run-config.json": "03b2f3b3010ff70281c4ff5fb9b50cb63feb8be1b226dac7cf6c3e2cfdeff19a",
+    "artifacts/run.py": "0f0e3fbd31f221cf074b83de198c68e70c72ff884e040961b067ac22cfa3c143",
+    "manuscript/report.md": "f0d8d4794a5452a12fd28df16bc9e8647cdcbb635f35552ad54d43d7f1ab41d6",
+    "notes/extraction.csv": "f6c7edabcf14a0eb142a5bbc12278631396938f9f5b4293af52ae3a80a44a933",
+    "notes/guidance-read.json": "b331f280d3e0d952fee031d5b841bfec1bbc77ad1347e398f5591e88b2e3f837",
+    "notes/issue.md": "13686c7dca86055f901e5f103c89e2638f2b1ab322991f8735bfbace1bff05e7",
+    "notes/numerical-results.md": "c3e2221265cc7394920c70c545b2fea08bdcf458359b26425d1a24601a399eb9",
+    "notes/risk-of-bias.md": "ef9409f447503e64fbe234f67ab2bdd9ebb67ba03c7c08557903ab4927de26c3",
+    "notes/screening.csv": "040af28015dc5d82951094ac8212bb60438987814f14e4263e95dc4b30cf7feb",
+    "notes/synthesis.md": "9e1d6803c84eeaa508040b87c658c85b553d6270cbd88e8b0d3efab907ef0f5d",
+    "review.md": "39a4f3181c3d0b60532a43f8a5ed420204de8e9544482ee9cacfd564df9fe4c1"
+  },
+  "output_normalizations": [],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "Export",
+        "limitations": "Full CSV read; this does not imply database access or exhaustive search.",
+        "locator": "inputs/search-export.csv",
+        "title": "两个人工教学目录的7条导出",
+        "version": "2026-09-30 supplied export"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "R01",
+        "limitations": "Abstract and explicitly marked excerpts only; no full report, appendix or preregistration read.",
+        "locator": "inputs/abstracts.md §R01 + inputs/full-extracts.md §R01",
+        "notes": "Original synthetic material authorized for this offline exercise, no real participants; no public redistribution executed.",
+        "rights": "unknown",
+        "title": "短信提醒与成人复诊：主结果",
+        "version": "2024 supplied synthetic report"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "R02",
+        "limitations": "Abstract and explicitly marked excerpts only; no full report, appendix or preregistration read.",
+        "locator": "inputs/abstracts.md §R02 + inputs/full-extracts.md §R02",
+        "notes": "Original synthetic material authorized for this offline exercise, no real participants; no public redistribution executed.",
+        "rights": "unknown",
+        "title": "成人复诊提醒项目：会议结果",
+        "version": "2023 supplied synthetic report"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "R03",
+        "limitations": "Abstract only; no further report material supplied.",
+        "locator": "inputs/abstracts.md §R03",
+        "notes": "Original synthetic material authorized for this offline exercise, no real participants; no public redistribution executed.",
+        "rights": "unknown",
+        "title": "儿科复诊提醒随机研究",
+        "version": "2024 supplied synthetic report"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "R04",
+        "limitations": "Abstract only; no further report material supplied.",
+        "locator": "inputs/abstracts.md §R04",
+        "notes": "Original synthetic material authorized for this offline exercise, no real participants; no public redistribution executed.",
+        "rights": "unknown",
+        "title": "预约提醒平台上线前后分析",
+        "version": "2025 supplied synthetic report"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "R05",
+        "limitations": "Abstract and explicitly marked excerpts only; no full report, appendix or preregistration read.",
+        "locator": "inputs/abstracts.md §R05 + inputs/full-extracts.md §R05",
+        "notes": "Original synthetic material authorized for this offline exercise, no real participants; no public redistribution executed.",
+        "rights": "unknown",
+        "title": "成人短信提醒：试点随机研究",
+        "version": "2025 supplied synthetic report"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "R06",
+        "limitations": "Abstract and explicitly marked excerpts only; no full report, appendix or preregistration read.",
+        "locator": "inputs/abstracts.md §R06 + inputs/full-extracts.md §R06",
+        "notes": "Original synthetic material authorized for this offline exercise, no real participants; no public redistribution executed.",
+        "rights": "unknown",
+        "title": "成人门诊短信提醒比较",
+        "version": "2022 supplied synthetic report"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "R07",
+        "limitations": "Abstract only; no further report material supplied.",
+        "locator": "inputs/abstracts.md §R07",
+        "notes": "Original synthetic material authorized for this offline exercise, no real participants; no public redistribution executed.",
+        "rights": "unknown",
+        "title": "提醒系统随机试验方案",
+        "version": "2026 supplied synthetic report"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "Scope",
+        "limitations": "Only this supplied scope document read in full; underlying external literature not searched.",
+        "locator": "inputs/scope.md",
+        "title": "冻结范围与导出说明",
+        "version": "v1 supplied"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "Observed point estimates favour SMS; study-level intervals cross null, H4 missing outcomes can eliminate its point difference, and exploratory pooled CI can cross null.",
+          "reviewer": "Codex scoped evidence audit",
+          "scope": "Study-level estimates and all 54 H4 missing-outcome assignments",
+          "status": "mixed"
+        },
+        "id": "BoundedClaim",
+        "scope": "H1/H4/H5; 320 randomized adults; synthetic evidence only, no general clinical recommendation.",
+        "text": "所供三项成人随机研究提示短信可能改善该次预约出席，但效应精度、H4缺失状态、方法报告不足及覆盖边界限制结论。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "8 and 5 unknown binary outcomes yield 9×6 assignments; worst/best count differences are 0 and 13. Bounds are not confidence intervals.",
+          "reviewer": "Codex scoped evidence audit",
+          "scope": "Analytic bounds plus deterministic enumeration",
+          "status": "supported-in-scope"
+        },
+        "id": "Missingness",
+        "scope": "H4 R05 M1/R1/D1; conditional on observed outcome counts.",
+        "text": "H4完整病例50/62对45/65不能识别全随机140人的唯一效应；54种缺失出席计数指派的RD点边界为0至13/70。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "Two teaching directories and partial reports cannot establish complete coverage; missingness and intervals limit efficacy conclusion.",
+          "reviewer": "Codex scoped evidence audit",
+          "scope": "Supplied offline materials",
+          "status": "challenged"
+        },
+        "id": "OldClaim",
+        "scope": "Original plan wording supplied in inputs/task.md; not endorsed.",
+        "text": "完整系统综述证明短信提醒有效。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "id": "Q1",
+        "scope": "Only supplied offline synthetic adult individually randomized studies; one appointment outcome.",
+        "text": "成人普通门诊一次预约前短信相对不提醒，对该次预约出席有什么影响？",
+        "type": "question",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "Matching cohort, dates, site, intervention, sample and explicit same-participant statement.",
+          "reviewer": "Codex scoped evidence audit",
+          "scope": "R01/R02 abstracts and R02 C1",
+          "status": "supported-in-scope"
+        },
+        "id": "StudyCount",
+        "scope": "Supplied seven records only.",
+        "text": "7条导出对应6项研究；纳入4份报告对应3项研究，R02属于R01相同H1数据。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ApathFailure",
+        "note": "cat returned exit 1 because guessed PROJECT/_rw-runtime paths were absent. First five skill files read; missing runtime resources reread successfully from .agents/skills/_rw-runtime. Raw failure retained in sibling execution-logs/02-local-guidance-*.",
+        "status": "failed",
+        "title": "Initial project-local runtime guidance read"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [],
+        "description": "实际读取的技能及画像",
+        "id": "Guidance",
+        "path": "notes/guidance-read.json",
+        "type": "provenance-note"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "All seven supplied abstracts read and screened",
+        "id": "EAbstracts",
+        "limitations": "Abstracts only; not complete reports.",
+        "location": {
+          "kind": "local",
+          "path": "inputs/abstracts.md"
+        },
+        "provenance": "Derived in this project from copied raw inputs; exact sections and analysis described in notes.",
+        "source_ids": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07"
+        ],
+        "type": "abstract-material"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Domain-level limitations and evidence-body scope",
+        "id": "EBias",
+        "limitations": "Not a complete formal risk-of-bias instrument or GRADE assessment.",
+        "location": {
+          "kind": "local",
+          "path": "notes/risk-of-bias.md"
+        },
+        "provenance": "Derived in this project from copied raw inputs; exact sections and analysis described in notes.",
+        "source_ids": [
+          "Scope",
+          "R01",
+          "R02",
+          "R05",
+          "R06"
+        ],
+        "type": "bounded-bias-review"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Study effects, 95% approximate intervals, 54 missing assignments and conditional secondary pooling",
+        "id": "ECalc",
+        "limitations": "Approximate binomial sampling intervals; no correction for unknown study bias or missingness mechanism.",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Derived in this project from copied raw inputs; exact sections and analysis described in notes.",
+        "source_ids": [
+          "R01",
+          "R02",
+          "R05",
+          "R06"
+        ],
+        "type": "reproducible-numeric-analysis"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Marked R01/R02/R05/R06 excerpts actually read",
+        "id": "EExcerpts",
+        "limitations": "Sections only; no appendices or protocols.",
+        "location": {
+          "kind": "local",
+          "path": "inputs/full-extracts.md"
+        },
+        "provenance": "Derived in this project from copied raw inputs; exact sections and analysis described in notes.",
+        "source_ids": [
+          "R01",
+          "R02",
+          "R05",
+          "R06"
+        ],
+        "type": "report-excerpts"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Randomized, observed, attended, missing and design by study",
+        "id": "EExtract",
+        "limitations": "No participant-level data; extraction from supplied excerpts.",
+        "location": {
+          "kind": "local",
+          "path": "notes/extraction.csv"
+        },
+        "provenance": "Derived in this project from copied raw inputs; exact sections and analysis described in notes.",
+        "source_ids": [
+          "R01",
+          "R02",
+          "R05",
+          "R06"
+        ],
+        "type": "study-extraction"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Actual offline coverage and eligibility",
+        "id": "EScope",
+        "limitations": "No external search or full coverage established.",
+        "location": {
+          "kind": "local",
+          "path": "inputs/scope.md"
+        },
+        "provenance": "Derived in this project from copied raw inputs; exact sections and analysis described in notes.",
+        "source_ids": [
+          "Scope"
+        ],
+        "type": "scope-document"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "Per-record decisions, reasons, report-study linkage and source positions",
+        "id": "EScreen",
+        "limitations": "Single-executor screening; no independent dual review.",
+        "location": {
+          "kind": "local",
+          "path": "notes/screening.csv"
+        },
+        "provenance": "Derived in this project from copied raw inputs; exact sections and analysis described in notes.",
+        "source_ids": [
+          "Export",
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05",
+          "R06",
+          "R07"
+        ],
+        "type": "screening-lineage"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EScope",
+        "id": "L1",
+        "rationale": "Actual two-directory coverage cannot establish a complete systematic search.",
+        "relation": "challenges",
+        "scope": "Supplied offline synthetic materials and declared numerical assumptions only.",
+        "statement_id": "OldClaim"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EScope",
+        "id": "L10",
+        "rationale": "Freezes adult individually randomized one-appointment question.",
+        "relation": "contextualizes",
+        "scope": "Supplied offline synthetic materials and declared numerical assumptions only.",
+        "statement_id": "Q1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "ECalc",
+        "id": "L2",
+        "rationale": "Individual intervals and missing-outcome sensitivity do not prove universal efficacy.",
+        "relation": "challenges",
+        "scope": "Supplied offline synthetic materials and declared numerical assumptions only.",
+        "statement_id": "OldClaim"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EExcerpts",
+        "id": "L3",
+        "rationale": "R02 C1 identifies the same 100 participants and no new batch or endpoint.",
+        "relation": "supports",
+        "scope": "Supplied offline synthetic materials and declared numerical assumptions only.",
+        "statement_id": "StudyCount"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EScreen",
+        "id": "L4",
+        "rationale": "All seven record dispositions account for four eligible reports and three independent studies.",
+        "relation": "supports",
+        "scope": "Supplied offline synthetic materials and declared numerical assumptions only.",
+        "statement_id": "StudyCount"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "ECalc",
+        "id": "L5",
+        "rationale": "Observed study point estimates favour attendance; effect magnitudes are computed.",
+        "relation": "supports",
+        "scope": "Supplied offline synthetic materials and declared numerical assumptions only.",
+        "statement_id": "BoundedClaim"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EBias",
+        "id": "L6",
+        "rationale": "Incomplete concealment reporting, unknown prespecification and source coverage limit confidence.",
+        "relation": "qualifies",
+        "scope": "Supplied offline synthetic materials and declared numerical assumptions only.",
+        "statement_id": "BoundedClaim"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "ECalc",
+        "id": "L7",
+        "rationale": "Intervals cross null and most adverse H4 assignment removes its point advantage and changes pooled inference.",
+        "relation": "qualifies",
+        "scope": "Supplied offline synthetic materials and declared numerical assumptions only.",
+        "statement_id": "BoundedClaim"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EExcerpts",
+        "id": "L8",
+        "rationale": "R05 M1 randomized 70/70 and R1 observed 62/65 with 8/5 missing.",
+        "relation": "supports",
+        "scope": "Supplied offline synthetic materials and declared numerical assumptions only.",
+        "statement_id": "Missingness"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "ECalc",
+        "id": "L9",
+        "rationale": "Enumeration of all count assignments reproduces analytic RD bounds.",
+        "relation": "supports",
+        "scope": "Supplied offline synthetic materials and declared numerical assumptions only.",
+        "statement_id": "Missingness"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:EExcerpts"
+        ],
+        "description": "材料可支持的偏倚判断",
+        "id": "Bias",
+        "path": "notes/risk-of-bias.md",
+        "type": "bias-note"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:EExcerpts"
+        ],
+        "description": "标准库原始输入解析与计算",
+        "id": "Code",
+        "path": "artifacts/run.py",
+        "type": "analysis-code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:EExcerpts"
+        ],
+        "description": "研究设计、分母、事件、缺失与访问范围",
+        "id": "Extraction",
+        "path": "notes/extraction.csv",
+        "type": "extraction-table"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:EScope"
+        ],
+        "description": "问题与实际方法",
+        "id": "Issue",
+        "path": "notes/issue.md",
+        "type": "method-note"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:EScreen",
+          "evidence:ECalc",
+          "evidence:EBias"
+        ],
+        "description": "约1000字以内中文短稿",
+        "id": "Manuscript",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:ECalc"
+        ],
+        "description": "可读数值汇总",
+        "id": "NumericalNote",
+        "path": "notes/numerical-results.md",
+        "type": "numerical-summary"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:EAbstracts",
+          "evidence:EExcerpts"
+        ],
+        "description": "逐记录去向与研究报告链接",
+        "id": "Screening",
+        "path": "notes/screening.csv",
+        "type": "screening-table"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:ECalc"
+        ],
+        "description": "效应与边界公式、合成选择",
+        "id": "Synthesis",
+        "path": "notes/synthesis.md",
+        "type": "analysis-rationale"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:Code"
+        ],
+        "description": "实际命令与环境、无随机种子说明",
+        "id": "Config",
+        "path": "artifacts/run-config.json",
+        "type": "run-configuration"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:EExcerpts",
+          "artifact:Code"
+        ],
+        "description": "完整数值与缺失枚举",
+        "id": "Numbers",
+        "path": "artifacts/results.json",
+        "type": "analysis-results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:Manuscript",
+          "evidence:ECalc",
+          "evidence:EBias"
+        ],
+        "description": "主张支持、失败、限制、下一步",
+        "id": "Review",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Q1",
+          "artifact:Screening",
+          "artifact:Synthesis",
+          "artifact:Manuscript"
+        ],
+        "id": "MBsynthesis",
+        "method_id": "evidence-synthesis",
+        "profile_version": "0.1",
+        "reason": "Bounded supplied-material screening, report-study deduplication, domain limitations and structured synthesis; no exhaustive review claim.",
+        "variant": "narrative-review"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "Ascreen",
+        "inputs": [
+          "source:Scope",
+          "source:Export",
+          "evidence:EAbstracts",
+          "evidence:EExcerpts",
+          "method-binding:MBsynthesis"
+        ],
+        "note": "Actually screened all supplied records; no fresh database search or full-text access.",
+        "outputs": [
+          "artifact:Screening",
+          "artifact:Extraction",
+          "statement:StudyCount"
+        ],
+        "status": "done",
+        "title": "Screen 7 records and link reports to studies"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Missingness",
+          "artifact:Extraction",
+          "artifact:Numbers"
+        ],
+        "id": "MBrandomized",
+        "method_id": "empirical-quantitative",
+        "profile_version": "0.1",
+        "reason": "Checks randomized and observed denominators, computes study effects and uncertainty, and enumerates H4 missing outcomes.",
+        "variant": "randomized-intervention"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "Ascreen"
+        ],
+        "id": "Aanalysis",
+        "inputs": [
+          "artifact:Extraction",
+          "artifact:Code",
+          "method-binding:MBrandomized"
+        ],
+        "note": "Executed python3 artifacts/run.py using standard library; no random simulation, 54 H4 assignments. No analysis execution failures.",
+        "outputs": [
+          "artifact:Numbers",
+          "artifact:NumericalNote",
+          "artifact:Synthesis",
+          "statement:Missingness"
+        ],
+        "status": "done",
+        "title": "Extract counts, compute effects and missingness sensitivity"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "Aanalysis"
+        ],
+        "id": "AwriteReview",
+        "inputs": [
+          "artifact:Numbers",
+          "artifact:Bias",
+          "artifact:Screening",
+          "method-binding:MBsynthesis"
+        ],
+        "note": "Original complete-review/proof wording replaced; exact access boundaries and technical failure retained.",
+        "outputs": [
+          "artifact:Manuscript",
+          "artifact:Review",
+          "statement:BoundedClaim"
+        ],
+        "status": "done",
+        "title": "Draft short bounded report and audit claim support"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 4,
+    "artifacts": 12,
+    "decisions": 0,
+    "evidence": 7,
+    "method_bindings": 2,
+    "relations": 10,
+    "sources": 9,
+    "statements": 5
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "核对R05 M1/R1/D1；若补充13位缺失者登记状态或预设缺失处理文本，更新来源访问范围与notes/extraction.csv，重跑artifacts/run.py，复核H4全随机效应及合并敏感性后修订manuscript/report.md；材料未补齐前保持有限离线综合。"
+  }
+}

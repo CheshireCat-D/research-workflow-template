@@ -1,0 +1,185 @@
+{
+  "format_version": "1",
+  "purpose": "Versioned source pointers for the original method/discipline guidance; no external checklists, figures or full source texts are bundled.",
+  "selection_rule": "Choose sources by actual design and action. Scope/metadata access is distinguished from reading a full checklist. Recheck current venue and institutional requirements when needed.",
+  "sources": [
+    {
+      "id": "consort-2025",
+      "title": "CONSORT 2025 statement: updated guideline for reporting randomised trials",
+      "version": "2025 statement; published 2025-04-14",
+      "url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1004587",
+      "official_context_url": "https://www.consort-spirit.org/",
+      "access": "primary article relevant sections and official guideline site",
+      "checked_scope": "Scope of randomised-trial reporting; protocol, analysis-plan access, post-start changes, participant/outcome denominators and relevant extensions.",
+      "applicability": [
+        "randomized-intervention"
+      ],
+      "limits": "Reporting recommendations, not a design-quality score, local ethics approval or proof of treatment benefit.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "strobe",
+      "title": "STROBE Statement: combined checklist for cohort, case-control and cross-sectional studies",
+      "version": "2007 statement; combined checklist fetched 2026-10-24",
+      "url": "https://www.strobe-statement.org/download/strobe-checklist-cohort-case-control-and-cross-sectional-studies-combined",
+      "official_context_url": "https://www.strobe-statement.org/checklists/",
+      "access": "official two-page checklist",
+      "checked_scope": "Design, participant selection, confounders, bias, missing data, estimates/precision and interpretation.",
+      "applicability": [
+        "observational cohort/case-control/cross-sectional reports; descriptive/survey work only when using those designs"
+      ],
+      "limits": "Applies to stated observational designs; reporting completion does not identify a causal effect.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "tripod-ai",
+      "title": "TRIPOD+AI checklist",
+      "version": "11-January-2024 (printed in the fetched PDF)",
+      "url": "https://www.tripod-statement.org/wp-content/uploads/2019/12/TRIPODAI_checklist.pdf",
+      "official_context_url": "https://www.tripod-statement.org/",
+      "access": "official two-page checklist and author-maintained site",
+      "checked_scope": "Development/evaluation data, predictor timing, preprocessing, model evaluation, calibration/discrimination, ethics and model availability.",
+      "applicability": [
+        "prediction"
+      ],
+      "limits": "Clinical prediction reporting; not evidence of clinical usefulness or deployment approval. URL folder year is not the checklist version.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "prisma-2020",
+      "title": "PRISMA 2020 checklist",
+      "version": "PRISMA 2020; statement published 2021",
+      "url": "https://www.prisma-statement.org/s/PRISMA_2020_checklist-ab3g.pdf",
+      "official_context_url": "https://www.prisma-statement.org/prisma-2020",
+      "access": "official two-page checklist and scope page",
+      "checked_scope": "Question, eligibility, information sources and dates, search, selection/extraction, risk of bias, synthesis and protocol changes.",
+      "applicability": [
+        "systematic-review"
+      ],
+      "limits": "Main guideline primarily addresses reviews of intervention effects. Not every narrative or interpretive review has this full scope. No checklist text is reproduced here.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "prisma-scr",
+      "title": "PRISMA extension for scoping reviews (PRISMA-ScR)",
+      "version": "2018 extension; official overview accessed 2026-10-24",
+      "url": "https://www.prisma-statement.org/scoping",
+      "access": "official scope and checklist index",
+      "checked_scope": "Purpose and coverage of scoping-review reporting; links to checklist and original paper.",
+      "applicability": [
+        "scoping-review"
+      ],
+      "limits": "Overview/index checked; not a claim of full item-by-item compliance or quality appraisal.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "coreq",
+      "title": "Consolidated criteria for reporting qualitative research (COREQ): a 32-item checklist for interviews and focus groups",
+      "version": "Tong, Sainsbury and Craig, 2007; DOI 10.1093/intqhc/mzm042",
+      "url": "https://academic.oup.com/intqhc/article/19/6/349/1791966",
+      "official_context_url": "https://www.equator-network.org/reporting-guidelines/coreq/",
+      "access": "publisher abstract plus official reporting-guideline scope record; full article not obtained",
+      "checked_scope": "Interview/focus-group scope and three domains: research team/reflexivity, study design, analysis/reporting.",
+      "applicability": [
+        "interview"
+      ],
+      "limits": "Does not mandate this checklist for every qualitative tradition; no full checklist is copied or claimed checked.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "srqr",
+      "title": "Standards for reporting qualitative research: a synthesis of recommendations",
+      "version": "O'Brien et al., 2014; official record updated 2023-01-18",
+      "url": "https://www.equator-network.org/reporting-guidelines/srqr/",
+      "access": "official reporting-guideline metadata and scope record",
+      "checked_scope": "Broad qualitative-reporting scope and original-publication identity.",
+      "applicability": [
+        "interview",
+        "ethnography",
+        "case-study",
+        "participatory"
+      ],
+      "limits": "Full source/supplement not obtained; this is a pointer for task-specific checking, not item-level verification.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "fao-trial-design",
+      "title": "The farming systems approach: Trial methods (direct measurements), sections 9.4–9.5",
+      "version": "FAO-hosted HTML chapter; publication date not established from fetched page",
+      "url": "https://www.fao.org/4/v5330e/V5330e0C.HTM",
+      "access": "official chapter text, sections 9.4–9.5",
+      "checked_scope": "Trial objectives, controls/randomisation, field replication, CRD/RCBD/split-plot and on-farm context.",
+      "applicability": [
+        "field-trial"
+      ],
+      "limits": "Older design guidance, not a current local agricultural permit or universal prescription for replication counts.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "nasa-validation",
+      "title": "NASA Systems Engineering Handbook, 5.4 Product Validation",
+      "version": "web chapter 5.4 accessed 2026-10-24; print-edition date not verified",
+      "url": "https://www.nasa.gov/reference/5-4-product-validation/",
+      "official_context_url": "https://www.nasa.gov/reference/systems-engineering-handbook/",
+      "access": "official chapter relevant sections",
+      "checked_scope": "Specification verification versus intended-use validation, validation evidence and handling discrepancies.",
+      "applicability": [
+        "system",
+        "device",
+        "software-prototype"
+      ],
+      "limits": "NASA institutional procedures are not imposed as mandatory for unrelated engineering projects.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "arrive-2",
+      "title": "The ARRIVE guidelines 2.0",
+      "version": "2.0; official overview accessed 2026-10-24",
+      "url": "https://arriveguidelines.org/arrive-guidelines",
+      "access": "official overview and scope, not every linked explanation page",
+      "checked_scope": "Animal-research reporting scope, Essential 10 and Recommended Set, planning relevance.",
+      "applicability": [
+        "animal-study"
+      ],
+      "limits": "Does not grant animal-ethics approval or establish compliance with every reporting item.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "helsinki-2024",
+      "title": "WMA Declaration of Helsinki: Ethical Principles for Medical Research Involving Human Participants",
+      "version": "2024 revision adopted by the 75th WMA General Assembly",
+      "url": "https://www.wma.net/policies-post/wma-declaration-of-helsinki/",
+      "access": "official text relevant sections, including paragraphs 9–10 and 21–23",
+      "checked_scope": "Participant/data protections, relevant national/institutional context, protocols and prospective ethics review.",
+      "applicability": [
+        "human-participant research",
+        "identifiable human material or data"
+      ],
+      "limits": "Principle source; does not replace applicable local law, institutional decisions, informed-consent scope or project approval.",
+      "accessed_on": "2026-10-24"
+    },
+    {
+      "id": "belmont",
+      "title": "The Belmont Report: Ethical Principles and Guidelines for the Protection of Human Subjects of Research",
+      "version": "1979 report; HHS official text accessed 2026-10-24",
+      "url": "https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/read-the-belmont-report/index.html",
+      "access": "official text relevant principles and applications",
+      "checked_scope": "Respect for persons, beneficence and justice as US-origin human-research ethics principles.",
+      "applicability": [
+        "human-participant research"
+      ],
+      "limits": "Not a universal law or a replacement for project-specific jurisdiction and institutional review.",
+      "accessed_on": "2026-10-24"
+    }
+  ],
+  "original_guidance": [
+    "conceptual-normative profile is original argument-audit guidance; no universal normative-research checklist is claimed.",
+    "Discipline portraits compose methods and provide context; names alone do not establish methodological or governance validity."
+  ],
+  "retrieval_limitations": [
+    "The PMC mirror of the CONSORT article returned a browser challenge; the primary PLOS publication and author site were used instead.",
+    "The TRIPOD+AI expanded supplement timed out; the official dated checklist was successfully fetched instead.",
+    "The CONSORT editable Word checklist was unsupported by the retrieval tool; the primary article and official scope were used.",
+    "COREQ full text and SRQR full text/supplement were not obtained; their limited access is explicit in the records."
+  ]
+}

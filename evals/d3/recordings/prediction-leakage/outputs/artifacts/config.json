@@ -1,0 +1,68 @@
+{
+  "version": "1",
+  "model": "L",
+  "model_definition": "memorize each distinct training subject event90; unseen subject probability = training distinct-subject event rate",
+  "threshold": 0.5,
+  "prediction_rule": "p >= threshold",
+  "aggregation": "arithmetic mean per test subject; one consistent subject outcome",
+  "splits": {
+    "R": {
+      "train": "visit == 1",
+      "test": "visit == 2"
+    },
+    "S": {
+      "train_subjects": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "test_subjects": [
+        "P09",
+        "P10",
+        "P11",
+        "P12"
+      ]
+    }
+  },
+  "bins": [
+    {
+      "lower": 0.0,
+      "upper": 0.25,
+      "right_closed": false
+    },
+    {
+      "lower": 0.25,
+      "upper": 0.5,
+      "right_closed": false
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.75,
+      "right_closed": false
+    },
+    {
+      "lower": 0.75,
+      "upper": 1.0,
+      "right_closed": true
+    }
+  ],
+  "formal_run_timeout_seconds": 10,
+  "randomness": {
+    "used": false,
+    "seed": null,
+    "reason": "all rows, splits, model, aggregation, threshold and bins fixed by model-card v1"
+  },
+  "selection": "No tuning, model or threshold selection; split S prescribed in the supplied card before formal execution; no independent validation cohort. Initial raw input was viewed before execution, so this is not claimed as a prospective preregistration.",
+  "data": "inputs/visits.csv",
+  "input_paths": [
+    "inputs/task.md",
+    "inputs/model-card.md",
+    "inputs/draft.md",
+    "inputs/visits.csv"
+  ]
+}

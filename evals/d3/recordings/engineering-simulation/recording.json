@@ -1,0 +1,921 @@
+{
+  "format_version": 1,
+  "case_id": "engineering-simulation",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "71655fc5525049725f62da473cd0a795e569df7d2a4065fb24d0f39331520d65",
+  "project_init": {
+    "title": "合成加热箱：执行器极限与延迟仿真",
+    "interest": "合成加热箱：执行器极限与延迟仿真",
+    "disciplines": [
+      "engineering"
+    ],
+    "methods": [
+      "engineering-design",
+      "computational"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/requirements.md": "requirements.md",
+    "inputs/scenarios.json": "scenarios.json",
+    "inputs/simulator.py": "simulator.py",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "requirements.md": "8ecaf2beb69608ad4c00888602d27dc26b47101f87b5bf7abbaf5a253bd9a582",
+    "simulator.py": "deaccc68d9a6d7f348f4b71fb0996f7201a08825e43d41baee748bd152835225",
+    "task.md": "1ab1fd5c891c4f7470422f7d854a77bf3231888b688057a4a0593588e4ba93a6",
+    "scenarios.json": "153a677d3568e61793c882413f416536dfce7fc34a4744763b8a59ec963815e4"
+  },
+  "runtime_resources": {},
+  "output_files": [
+    "README-replay.md",
+    "artifacts/readback.py",
+    "artifacts/register_records.py",
+    "artifacts/results.first-run.json",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "artifacts/simulator.py",
+    "artifacts/traces/cold.csv",
+    "artifacts/traces/delayed.csv",
+    "artifacts/traces/hot.csv",
+    "artifacts/traces/nominal.csv",
+    "checks/replay.json",
+    "checks/trace-readback.json",
+    "logs/baseline.json",
+    "manuscript/report.md",
+    "notes/analytic.md",
+    "notes/cost-safety.md",
+    "notes/issue.md",
+    "notes/traceability.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "README-replay.md": "c64b9e1dcdcd12b1e2f4935b6b812d804d7347270e6644bb2535f58a1af1b1e0",
+    "artifacts/readback.py": "c26f628f67a773c2a6edb67bcf17c4ee0b73a166b31a5ba5a708f1eb67facd92",
+    "artifacts/register_records.py": "22f220082ac46e2e917a93342fbb9ff03eda408f7cbf2f742fce9070795fc2e4",
+    "artifacts/results.first-run.json": "d9f771c581db7269eaddb1eedb91bb6280857c7d90a2f81d4be1a36c248e6691",
+    "artifacts/results.json": "a3d810945e6968b9db78b9fe493a0863f6eedb1a45f3c605567004b3e590d2af",
+    "artifacts/run.py": "9d554e2ecd028e11c4684aa9da0cd87f9fa3e8061511166755deed6ddfa410bd",
+    "artifacts/simulator.py": "4c6c2244fa04c6cb75510f6925bf4013e1e9f6fc3048aa566acb8f7ac1ed2082",
+    "artifacts/traces/cold.csv": "ec85c42471149dd757ec51d11d14e48524e427ecbbd97302367372250fc29188",
+    "artifacts/traces/delayed.csv": "93107366649760c7d968d54d14e3bf3d3f1e755b0932e7ad9eca5f1f62bd15b4",
+    "artifacts/traces/hot.csv": "91250582023c2bf14fb12a5267cbd42e9332e8cff4e6beb1411e5f3e459df3fd",
+    "artifacts/traces/nominal.csv": "2ab3cb7be4a968116a63effd8e9602d2b5cfff1c353fc8d1d98a2749b53c204b",
+    "checks/replay.json": "2a79e09d58858ca7f706545ef1d4ea51ee39de053900e16ac9b66fb3d3d4f168",
+    "checks/trace-readback.json": "7706249f24224add945185e5e8eaac965556254a620a53a370206ab214614dc7",
+    "logs/baseline.json": "72504f5af94e997dd0d3ef7c97c819e79f4d7028b19d5f685e4bc6eb112de3f7",
+    "manuscript/report.md": "893164e48966fc226e7f84b43a74e16ba6a559effb7cd03d8613d489f4e83d21",
+    "notes/analytic.md": "8398b29b11b94961ea09ed89b78de94ec03857ca0d646f536815cb39be184025",
+    "notes/cost-safety.md": "46287026a9a02ccb48c369b024c27c6f4dd6d5053d6c67d41bfddc27c14f621e",
+    "notes/issue.md": "e5ae76aab07b48156c52e82254ad7c8283e0b60c0ad54d380f4349b0a108b564",
+    "notes/traceability.md": "2cc7b96805f2426442f8ee421c0fff042b87ad508cd9ac79050826329d2c13b5",
+    "review.md": "1278a49f22cc4cc3bdb5fcdb4eca61e536ff8d8160c375d962d177ed20ca88a6"
+  },
+  "output_normalizations": [],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_config",
+        "limitations": "Task-original synthetic material; no physical observations or external source verification.",
+        "locator": "inputs/scenarios.json",
+        "notes": "Synthetic task authorization does not itself establish a public license; access scope full.",
+        "rights": "unknown",
+        "title": "固定模型与四场景v1",
+        "version": "1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_original",
+        "limitations": "Task-original synthetic material; no physical observations or external source verification.",
+        "locator": "inputs/simulator.py",
+        "notes": "Synthetic task authorization does not itself establish a public license; access scope full.",
+        "rights": "unknown",
+        "title": "原始标称原型",
+        "version": "1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_req",
+        "limitations": "Task-original synthetic material; no physical observations or external source verification.",
+        "locator": "inputs/requirements.md",
+        "notes": "Synthetic task authorization does not itself establish a public license; access scope full.",
+        "rights": "unknown",
+        "title": "原创合成加热箱需求v1",
+        "version": "1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_task",
+        "limitations": "Task-original synthetic material; no physical observations or external source verification.",
+        "locator": "inputs/task.md",
+        "notes": "Synthetic task authorization does not itself establish a public license; access scope full.",
+        "rights": "unknown",
+        "title": "委托与离线合成边界",
+        "version": "1"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "五步长及无延迟解析解一致；不代表实物。",
+          "reviewer": "Codex agent",
+          "scope": "Agent self-review of stated model/implementation only",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No formal proof assistant used; ODE comparison manually derived",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_R1",
+        "scope": "Only supplied synthetic lumped model, four mandatory scenarios, 240s; no physical validation.",
+        "text": "给定模型标称场景在120至240秒内满足24.5至25.5°C。",
+        "type": "design",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "cold、hot失败；任意允许功率的有限时间比较界反驳此声明。",
+          "reviewer": "Codex agent",
+          "scope": "Agent self-review of stated model/implementation only",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "No formal proof assistant used; ODE comparison manually derived",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_R2",
+        "scope": "Only supplied synthetic lumped model, four mandatory scenarios, 240s; no physical validation.",
+        "text": "0–80W纯加热设备可在5至35°C、延迟不超过15秒满足同一温带。",
+        "type": "design",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "20次实际计算及默认轨迹算术回读合规。",
+          "reviewer": "Codex agent",
+          "scope": "Agent self-review of stated model/implementation only",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No formal proof assistant used; ODE comparison manually derived",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_R3",
+        "scope": "Only supplied synthetic lumped model, four mandatory scenarios, 240s; no physical validation.",
+        "text": "补充仿真区分请求与实际功率，实际功率在0至80W。",
+        "type": "design",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "hot模型越过28°C；没有独立保护与故障硬件资料。",
+          "reviewer": "Codex agent",
+          "scope": "Agent self-review of stated model/implementation only",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "No formal proof assistant used; ODE comparison manually derived",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_R4",
+        "scope": "Only supplied synthetic lumped model, four mandatory scenarios, 240s; no physical validation.",
+        "text": "全场景全程温度不超过28°C且可宣布实物安全。",
+        "type": "design",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "五步长验收标签相同；最细相邻最大差0.000781°C以内；非连续误差认证。",
+          "reviewer": "Codex agent",
+          "scope": "Agent self-review of stated model/implementation only",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No formal proof assistant used; ODE comparison manually derived",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_R5",
+        "scope": "Only supplied synthetic lumped model, four mandatory scenarios, 240s; no physical validation.",
+        "text": "本轮数值判断检查时间步长影响。",
+        "type": "design",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "notes/cost-safety.md traces original power limits, three alternatives and cost/safety evidence gaps; monetary values and hardware tests remain unknown.",
+          "reviewer": "Codex agent",
+          "scope": "Agent followthrough on model capability and absent cost evidence, not human engineering approval.",
+          "status": "supported-in-scope"
+        },
+        "id": "S_cost_safety",
+        "scope": "Only the supplied synthetic thermal model, current original requirements and quoted unknown cost inputs; no hardware/cost measurement.",
+        "text": "给定全域用途下，单独提升加热器不能解决热端失败；现有材料不足以选择成本最优或获安全批准的改型，需在功能/安全约束下取得真实成本与验证资料。",
+        "type": "design",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "原型漏延迟和钳位；R2/R4被模型反例挑战，实物材料缺失。",
+          "reviewer": "Codex agent",
+          "scope": "Agent self-review of stated model/implementation only",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "No formal proof assistant used; ODE comparison manually derived",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_release",
+        "scope": "Only supplied synthetic lumped model, four mandatory scenarios, 240s; no physical validation.",
+        "text": "标称仿真可支持5至35°C全域安全并立即宣布实物通过。",
+        "type": "design",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "原标称代码实际运行与退出0",
+        "id": "E_baseline",
+        "limitations": "No hardware performance, safety, external novelty or certification evidence.",
+        "location": {
+          "kind": "local",
+          "path": "logs/baseline.json"
+        },
+        "provenance": "Codex agent executed offline with Python standard library; raw source synthetic.",
+        "source_ids": [
+          "SRC_original"
+        ],
+        "type": "execution-log"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "任意0–80W控制的冷热有限时间比较界",
+        "id": "E_bounds",
+        "limitations": "No hardware performance, safety, external novelty or certification evidence.",
+        "location": {
+          "kind": "local",
+          "path": "notes/analytic.md"
+        },
+        "provenance": "Codex agent executed offline with Python standard library; raw source synthetic.",
+        "source_ids": [
+          "SRC_req",
+          "SRC_config"
+        ],
+        "type": "analytic-derivation"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "对现有80W纯加热、加热升级及双向热管理进行同用途能力与资源比较",
+        "id": "E_cost_safety",
+        "limitations": "Prices, budget, electric tariffs, duty distribution, cooling efficiency, maintenance and fault probabilities are not supplied; no cost ranking, deployment or certification.",
+        "location": {
+          "kind": "local",
+          "path": "notes/cost-safety.md"
+        },
+        "provenance": "Codex agent actually read task-owned requirements, scenarios, analytic derivation and recorded simulation outputs; no external sources, quotation or hardware testing.",
+        "source_ids": [
+          "SRC_req",
+          "SRC_config"
+        ],
+        "type": "bounded-design-analysis"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "默认轨迹独立算术回读",
+        "id": "E_readback",
+        "limitations": "No hardware performance, safety, external novelty or certification evidence.",
+        "location": {
+          "kind": "local",
+          "path": "checks/trace-readback.json"
+        },
+        "provenance": "Codex agent executed offline with Python standard library; raw source synthetic.",
+        "source_ids": [
+          "SRC_config"
+        ],
+        "type": "arithmetic-readback"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "两次正式结果去除耗时后完全一致",
+        "id": "E_replay",
+        "limitations": "No hardware performance, safety, external novelty or certification evidence.",
+        "location": {
+          "kind": "local",
+          "path": "checks/replay.json"
+        },
+        "provenance": "Codex agent executed offline with Python standard library; raw source synthetic.",
+        "source_ids": [
+          "SRC_config"
+        ],
+        "type": "replay-check"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "额定值、R1–R5与无实物资料声明",
+        "id": "E_req",
+        "limitations": "No hardware performance, safety, external novelty or certification evidence.",
+        "location": {
+          "kind": "local",
+          "path": "inputs/requirements.md"
+        },
+        "provenance": "Codex agent executed offline with Python standard library; raw source synthetic.",
+        "source_ids": [
+          "SRC_req"
+        ],
+        "type": "synthetic-specification"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "20次完整配置/逐场景指标、步长及解析核对",
+        "id": "E_results",
+        "limitations": "No hardware performance, safety, external novelty or certification evidence.",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Codex agent executed offline with Python standard library; raw source synthetic.",
+        "source_ids": [
+          "SRC_config",
+          "SRC_original"
+        ],
+        "type": "numerical-simulation"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "执行器能力与有限时间界",
+        "id": "A_bounds",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "notes/analytic.md",
+        "type": "derivation"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "首次正式结果保留",
+        "id": "A_first",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "artifacts/results.first-run.json",
+        "type": "results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "范围/方法/预先判据",
+        "id": "A_issue",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "notes/issue.md",
+        "type": "method-plan"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "独立算术回读",
+        "id": "A_readback",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "artifacts/readback.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "项目相对重放步骤",
+        "id": "A_replay",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "README-replay.md",
+        "type": "reproduction-guide"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "776字符中文短技术稿",
+        "id": "A_report",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "当前完整数值结果",
+        "id": "A_results",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "artifacts/results.json",
+        "type": "results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "证据支持/失败/限制与发布修订",
+        "id": "A_review",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "实际执行主程序与配置/失败保存",
+        "id": "A_run",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "补充钳位与延迟模型",
+        "id": "A_sim",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "artifacts/simulator.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config"
+        ],
+        "description": "逐需求/逐场景追踪",
+        "id": "A_trace",
+        "notes": "Actual file; no source-toolkit or hardware edits.",
+        "path": "notes/traceability.md",
+        "type": "traceability"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_results",
+        "id": "L_R1",
+        "rationale": "所测标称全部步长后120秒达标。",
+        "relation": "supports",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_R1"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_results",
+        "id": "L_R2",
+        "rationale": "cold/hot均不达标。",
+        "relation": "challenges",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_R2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_bounds",
+        "id": "L_R2_bound",
+        "rationale": "有限时间界说明当前额定设备根本不可满足。",
+        "relation": "challenges",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_R2"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_results",
+        "id": "L_R3",
+        "rationale": "全部实际功率钳位0至80W。",
+        "relation": "supports",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_R3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_readback",
+        "id": "L_R3_check",
+        "rationale": "回读确认延迟/请求/钳位/更新算术。",
+        "relation": "supports",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_R3"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_results",
+        "id": "L_R4",
+        "rationale": "hot最高34.003300°C超过28°C。",
+        "relation": "challenges",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_R4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_req",
+        "id": "L_R4_missing",
+        "rationale": "没有真实温度保护/故障/断电资料；无法物理安全认证。",
+        "relation": "qualifies",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_R4"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_results",
+        "id": "L_R5",
+        "rationale": "实际运行五步长且标签一致。",
+        "relation": "supports",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_R5"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_bounds",
+        "id": "L_R5_scope",
+        "rationale": "延迟场景未给连续误差界；必要条件非全域充分保证。",
+        "relation": "qualifies",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_R5"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_cost_safety",
+        "id": "L_cost_safety",
+        "rationale": "原物理负荷排除只加热即可覆盖热端；按相同用途列资源、安全与未提供成本，保留待决选择。",
+        "relation": "supports",
+        "scope": "Explicit synthetic model assumptions and unknown economics only; proposed alternatives not implemented or validated.",
+        "statement_id": "S_cost_safety"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_bounds",
+        "id": "L_release",
+        "rationale": "原全域声明与额定能力矛盾。",
+        "relation": "challenges",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_release"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_req",
+        "id": "L_release_scope",
+        "rationale": "输入明确无实物证据。",
+        "relation": "qualifies",
+        "scope": "Finite supplied synthetic evidence only",
+        "statement_id": "S_release"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "X_plan",
+        "inputs": [
+          "source:SRC_task",
+          "source:SRC_req",
+          "source:SRC_config",
+          "source:SRC_original"
+        ],
+        "note": "Executed by Codex agent; source access full. Reaffirmed after source-rights metadata correction; scientific files unchanged and reviewed.",
+        "outputs": [
+          "artifact:A_issue"
+        ],
+        "status": "done",
+        "title": "Read copied inputs/profiles and set scope plus acceptance plan"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_req",
+          "source:SRC_config",
+          "evidence:E_bounds",
+          "evidence:E_results"
+        ],
+        "description": "原模型约束下三方案的成本、功能与安全权衡；不虚构报价或选择结果",
+        "id": "A_cost_safety",
+        "path": "notes/cost-safety.md",
+        "type": "design-tradeoff-analysis"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_sim",
+          "artifact:A_run",
+          "source:SRC_config"
+        ],
+        "description": "Default0.1s full trace cold",
+        "id": "A_csv_cold",
+        "path": "artifacts/traces/cold.csv",
+        "type": "trajectory"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_sim",
+          "artifact:A_run",
+          "source:SRC_config"
+        ],
+        "description": "Default0.1s full trace delayed",
+        "id": "A_csv_delayed",
+        "path": "artifacts/traces/delayed.csv",
+        "type": "trajectory"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_sim",
+          "artifact:A_run",
+          "source:SRC_config"
+        ],
+        "description": "Default0.1s full trace hot",
+        "id": "A_csv_hot",
+        "path": "artifacts/traces/hot.csv",
+        "type": "trajectory"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_sim",
+          "artifact:A_run",
+          "source:SRC_config"
+        ],
+        "description": "Default0.1s full trace nominal",
+        "id": "A_csv_nominal",
+        "path": "artifacts/traces/nominal.csv",
+        "type": "trajectory"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "artifact:A_run",
+          "artifact:A_sim",
+          "artifact:A_results",
+          "statement:S_R1",
+          "statement:S_R3",
+          "statement:S_R5"
+        ],
+        "id": "M_computational",
+        "method_id": "computational",
+        "notes": "Actually read project-local profile; deterministic offline stdlib.",
+        "profile_version": "0.1",
+        "reason": "Baseline plus20 runs, five-step sensitivity and analytic special-case readback",
+        "variant": "numerical-simulation"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "X_plan"
+        ],
+        "id": "X_simulate",
+        "inputs": [
+          "artifact:A_issue",
+          "source:SRC_config",
+          "source:SRC_original",
+          "artifact:A_run",
+          "artifact:A_sim",
+          "artifact:A_readback"
+        ],
+        "note": "Actual exits0; R2/R4 scientific requirement failures retained; no runtime exceptions. Reaffirmed after source-rights metadata correction; scientific files unchanged and reviewed.",
+        "outputs": [
+          "evidence:E_results",
+          "evidence:E_baseline",
+          "evidence:E_readback",
+          "evidence:E_replay",
+          "artifact:A_first",
+          "artifact:A_bounds",
+          "artifact:A_trace"
+        ],
+        "status": "done",
+        "title": "Execute original baseline,20 runs, replay and independent readback"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:S_R2",
+          "statement:S_R4",
+          "artifact:A_trace",
+          "artifact:A_bounds",
+          "artifact:A_review",
+          "statement:S_cost_safety",
+          "artifact:A_cost_safety"
+        ],
+        "id": "M_engineering",
+        "method_id": "engineering-design",
+        "notes": "Actually read project-local profile; no actual hardware design change/testing. Cost/safety supplement uses the actually read profile and original model; no pricing or deployment evidence is invented.",
+        "profile_version": "0.1",
+        "reason": "Requirements traceability, rating feasibility and release review; actual followthrough compares cost/resource/safety alternatives with unknown prices and retains undecided selection",
+        "variant": "system"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "X_simulate"
+        ],
+        "id": "X_write",
+        "inputs": [
+          "evidence:E_results",
+          "evidence:E_bounds",
+          "artifact:A_trace"
+        ],
+        "note": "Drafted by Codex agent, under1000 Chinese characters. Reaffirmed after source-rights metadata correction; scientific files unchanged and reviewed.",
+        "outputs": [
+          "artifact:A_report"
+        ],
+        "status": "done",
+        "title": "Write bounded Chinese technical manuscript"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "X_write"
+        ],
+        "id": "X_review",
+        "inputs": [
+          "artifact:A_report",
+          "evidence:E_results",
+          "evidence:E_bounds",
+          "source:SRC_req"
+        ],
+        "note": "Same-agent self-review; not independent expert/human approval or physical certification. Reaffirmed after source-rights metadata correction; scientific files unchanged and reviewed.",
+        "outputs": [
+          "artifact:A_review",
+          "artifact:A_replay"
+        ],
+        "status": "done",
+        "title": "Self-review claim support and replace premature release opinion"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "X_review"
+        ],
+        "id": "X_cost_safety",
+        "inputs": [
+          "source:SRC_req",
+          "source:SRC_config",
+          "evidence:E_bounds",
+          "evidence:E_results",
+          "method-binding:M_engineering"
+        ],
+        "note": "Actual Codex agent analysis in this revision. Original scientific files and manuscript unchanged. No external price lookup, new experiment, hardware change, human review or deployment decision.",
+        "outputs": [
+          "artifact:A_cost_safety",
+          "evidence:E_cost_safety",
+          "statement:S_cost_safety",
+          "relation:L_cost_safety"
+        ],
+        "status": "done",
+        "title": "补齐三方案成本、能力与安全权衡并保留未知与待决选择"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 5,
+    "artifacts": 16,
+    "decisions": 0,
+    "evidence": 7,
+    "method_bindings": 2,
+    "relations": 12,
+    "sources": 4,
+    "statements": 7
+  },
+  "cursor": {
+    "activity_id": "X_cost_safety",
+    "next_action": "先由需求所有者确认能否缩窄5–35°C用途及共同成本口径；若必须全域，取得含热端主动冷却与故障安全处置的改型资料/报价。硬件、采购与测试责任人分别补功率/效率/维护/验证数据，再比较可行方案并重跑原失败工况；没有成本最优、部署或安全批准结论。"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "artifact consistency checks; not an infinite proof",
+  "checks": {
+    "range_complete": true,
+    "counts_match": true,
+    "csv_17_values_and_statuses": true,
+    "first_counterexample": true,
+    "all_composite_witnesses": true,
+    "mod17_families_in_enumerated_range": true,
+    "residue_table_nonsquares": true,
+    "independent_sieve_agrees": true,
+    "no_run_failures": true,
+    "runtime_under_10_seconds": true,
+    "report_below_1000_CJK": true
+  },
+  "all_passed": true,
+  "executor": "Codex agent"
+}

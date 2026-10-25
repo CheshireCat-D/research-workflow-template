@@ -1,0 +1,68 @@
+{
+  "executor": "Codex subagent d3_forward_finite",
+  "actual_skills_read": [
+    "rw-workflow",
+    "rw-validation",
+    "rw-writing",
+    "rw-review"
+  ],
+  "method_profiles": [
+    {
+      "id": "formal-theory",
+      "version": "0.1"
+    },
+    {
+      "id": "computational",
+      "version": "0.1"
+    }
+  ],
+  "discipline_profiles": [
+    {
+      "id": "natural-sciences",
+      "version": "0.1"
+    }
+  ],
+  "read_files": [
+    {
+      "path": ".agents/skills/rw-workflow/SKILL.md",
+      "sha256": "7ad0a0a6da2c05a169f484d5317337b857696aa4df99477541d8b1c1e2e495b1"
+    },
+    {
+      "path": ".agents/skills/rw-validation/SKILL.md",
+      "sha256": "e75e91b8e19dfe32d51841b000360a16fbf3091273465a4852abc3bb637d7b0e"
+    },
+    {
+      "path": ".agents/skills/rw-writing/SKILL.md",
+      "sha256": "d46b0228f02b5be0c44cbb047fad7effd036531359f238d622801037f336d0e7"
+    },
+    {
+      "path": ".agents/skills/rw-review/SKILL.md",
+      "sha256": "40f20bb095130a3aaefbf55b5f6cafe6232433c58f293767970b5060a2401acd"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/core/skill-bridge.md",
+      "sha256": "37903b3e2efaa907a6612bf0ca6ad0dd4c88bdc88faba7486033492d9237f512"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/core/protocol.md",
+      "sha256": "303e112440e764f6e47368435265311cf1c5588a14394d50554dc971fc59b705"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/methods/formal-theory.md",
+      "sha256": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/methods/computational.md",
+      "sha256": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/disciplines/natural-sciences.md",
+      "sha256": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a"
+    },
+    {
+      "path": ".agents/skills/_rw-runtime/profiles/governance.md",
+      "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e"
+    }
+  ],
+  "scope": "Project-local copies read after install; installed other skills were not read/applied."
+}

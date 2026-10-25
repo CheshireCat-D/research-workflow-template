@@ -1,0 +1,95 @@
+[
+  {
+    "kind": "source",
+    "record": {
+      "id": "HSRC",
+      "title": "虚构云桥里街灯与夜巡合成摘录",
+      "locator": "自建教学材料 fictional-excerpts.txt；非真实档案",
+      "version": "1",
+      "content_access": "full",
+      "rights": "public",
+      "limitations": "完全虚构，不作为历史事实的证据。"
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "H1",
+      "text": "解释候选：街灯计划延后主要与经费协商有关。",
+      "type": "interpretive",
+      "scope": "仅解释虚构摘录所描述的事件，保留其他解释。",
+      "role": "competing-interpretation",
+      "work_status": "draft"
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "H2",
+      "text": "解释候选：街灯计划延后主要与轮值组织协调有关。",
+      "type": "interpretive",
+      "scope": "仅解释虚构摘录所描述的事件，保留其他解释。",
+      "role": "competing-interpretation",
+      "work_status": "draft"
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "HE1",
+      "type": "synthetic-excerpt",
+      "description": "两份完全虚构的街灯与夜巡短摘录。",
+      "provenance": "为本通用模板新编的合成材料，未使用任何真实人名、档案或个人包内容。",
+      "location": {
+        "kind": "local",
+        "path": "notes/fictional-excerpts.txt"
+      },
+      "source_ids": [
+        "HSRC"
+      ],
+      "limitations": "缺少完整上下文和时间顺序；不能确定唯一主因。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "HR1",
+      "statement_id": "H1",
+      "evidence_id": "HE1",
+      "relation": "supports",
+      "rationale": "材料甲提及经费未获议定，为经费解释提供有限依据，但未确立唯一或主要原因。",
+      "scope": "材料甲的字面内容；不外推到真实历史。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "HR2",
+      "statement_id": "H2",
+      "evidence_id": "HE1",
+      "relation": "supports",
+      "rationale": "材料乙提及轮值未排定，为组织解释提供有限依据，但两份材料的先后及关联尚不清楚。",
+      "scope": "材料乙的字面内容；不以支持关系数量裁定主因。"
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "HA1",
+      "title": "并列登记竞争解释与材料局限",
+      "status": "done",
+      "inputs": [
+        "source:HSRC",
+        "evidence:HE1"
+      ],
+      "outputs": [
+        "statement:H1",
+        "statement:H2",
+        "relation:HR1",
+        "relation:HR2"
+      ],
+      "depends_on": [],
+      "note": "仅完成并列整理；未完成历史因果判定或专家复核。"
+    }
+  }
+]

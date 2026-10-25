@@ -1,0 +1,355 @@
+{
+  "config": {
+    "base_order": [
+      "C",
+      "Qc",
+      "D",
+      "P",
+      "Ta",
+      "T0"
+    ],
+    "base_values": [
+      500,
+      100,
+      10,
+      60,
+      20,
+      80
+    ],
+    "base_standard_u": [
+      10,
+      2,
+      0.5,
+      1,
+      0.3,
+      0.2
+    ],
+    "uncertainty": "first-order delta method; independent base inputs, shared across all times; observation residual readout independence assumed only for descriptive scales",
+    "seed_from_input": 29017,
+    "seed_used": false,
+    "seed_reason": "fully deterministic; no random sampling",
+    "time_u": "not provided; exact time treated as an assumption"
+  },
+  "calibration": {
+    "H_W_per_K": 10.0,
+    "u_H_W_per_K": 0.5385164807134505,
+    "tau_s": 50.0,
+    "u_tau_s": 2.8722813232690148,
+    "steady_excess_K": 6.0,
+    "u_steady_excess_K": 0.33823069050575527,
+    "steady_temperature_C": 26.0,
+    "u_steady_temperature_K": 0.45210618221829263,
+    "cov_tau_steady_excess_sK": 0.8700000000000002,
+    "corr_tau_steady_excess": 0.8955281997325439,
+    "steady_only_identifies_H_not_C": true
+  },
+  "predictions": [
+    {
+      "time_s": 0,
+      "predicted_C": 80.0,
+      "u_prediction_K": 0.2,
+      "sensitivity_by_base_input": {
+        "C": 0.0,
+        "Qc": -0.0,
+        "D": 0.0,
+        "P": 0.0,
+        "Ta": 0.0,
+        "T0": 1.0
+      },
+      "variance_contribution_K2": {
+        "C": 0.0,
+        "Qc": 0.0,
+        "D": 0.0,
+        "P": 0.0,
+        "Ta": 0.0,
+        "T0": 0.04000000000000001
+      },
+      "trial_recomputed_C": 80.0,
+      "pilot_C": 80.0,
+      "trial_minus_pilot_K": 0.0,
+      "corrected_minus_pilot_K": 0.0,
+      "observed_C": 80.0,
+      "observed_minus_prediction_K": 0.0,
+      "observed_minus_pilot_K": 0.0
+    },
+    {
+      "time_s": 1,
+      "predicted_C": 78.93072835856479,
+      "u_prediction_K": 0.20721822261450945,
+      "sensitivity_by_base_input": {
+        "C": 0.0021172291343425913,
+        "Qc": -0.011774225273307643,
+        "D": 0.11774225273307642,
+        "P": 0.0019801326693244747,
+        "Ta": 0.019801326693244747,
+        "T0": 0.9801986733067553
+      },
+      "variance_contribution_K2": {
+        "C": 0.0004482659207309078,
+        "Qc": 0.0005545295231463858,
+        "D": 0.0034658095196649107,
+        "P": 3.920925388126069e-06,
+        "Ta": 3.528832849313463e-05,
+        "T0": 0.038431577566092924
+      },
+      "trial_recomputed_C": 20.00272399578575,
+      "pilot_C": 20.0027239958,
+      "trial_minus_pilot_K": -1.424993456566881e-11,
+      "corrected_minus_pilot_K": 58.928004362764796
+    },
+    {
+      "time_s": 5,
+      "predicted_C": 74.86122057394181,
+      "u_prediction_K": 0.35995311770458344,
+      "sensitivity_by_base_input": {
+        "C": 0.009772244114788362,
+        "Qc": -0.054570975491784246,
+        "D": 0.5457097549178425,
+        "P": 0.009516258196404049,
+        "Ta": 0.09516258196404048,
+        "T0": 0.9048374180359595
+      },
+      "variance_contribution_K2": {
+        "C": 0.009549675503901577,
+        "Qc": 0.011911965464499668,
+        "D": 0.07444978415312292,
+        "P": 9.055917006062724e-05,
+        "Ta": 0.000815032530545645,
+        "T0": 0.032749230123119276
+      },
+      "trial_recomputed_C": 20.0,
+      "pilot_C": 20.0,
+      "trial_minus_pilot_K": 0.0,
+      "corrected_minus_pilot_K": 54.86122057394181
+    },
+    {
+      "time_s": 20,
+      "predicted_C": 62.19728248592452,
+      "u_prediction_K": 0.9476878079897767,
+      "sensitivity_by_base_input": {
+        "C": 0.02895782598873962,
+        "Qc": -0.16456992718155974,
+        "D": 1.6456992718155974,
+        "P": 0.032967995396436064,
+        "Ta": 0.3296799539643607,
+        "T0": 0.6703200460356393
+      },
+      "variance_contribution_K2": {
+        "C": 0.08385556859941239,
+        "Qc": 0.10833304373017551,
+        "D": 0.6770815233135968,
+        "P": 0.0010868887204594296,
+        "Ta": 0.009781998484134866,
+        "T0": 0.017973158564688868
+      },
+      "trial_recomputed_C": 20.0,
+      "pilot_C": 20.0,
+      "trial_minus_pilot_K": 0.0,
+      "corrected_minus_pilot_K": 42.19728248592452,
+      "observed_C": 62.2,
+      "observed_minus_prediction_K": 0.002717514075484928,
+      "observed_minus_pilot_K": 42.2,
+      "u_residual_K_assuming_independent_readout": 0.9685619140831772,
+      "descriptive_standardized_residual": 0.0028057205594928607
+    },
+    {
+      "time_s": 50,
+      "predicted_C": 45.86548982325788,
+      "u_prediction_K": 1.3514392967471944,
+      "sensitivity_by_base_input": {
+        "C": 0.03973097964651577,
+        "Qc": -0.23658213176229234,
+        "D": 2.3658213176229235,
+        "P": 0.06321205588285576,
+        "Ta": 0.6321205588285577,
+        "T0": 0.36787944117144233
+      },
+      "variance_contribution_K2": {
+        "C": 0.15785507436718507,
+        "Qc": 0.2238844202767626,
+        "D": 1.3992776267297664,
+        "P": 0.00399576400893728,
+        "Ta": 0.03596187608043552,
+        "T0": 0.0054134113294645085
+      },
+      "trial_recomputed_C": 20.0,
+      "pilot_C": 20.0,
+      "trial_minus_pilot_K": 0.0,
+      "corrected_minus_pilot_K": 25.86548982325788,
+      "observed_C": 45.9,
+      "observed_minus_prediction_K": 0.03451017674211698,
+      "observed_minus_pilot_K": 25.9,
+      "u_residual_K_assuming_independent_readout": 1.3661581800042597,
+      "descriptive_standardized_residual": 0.025260747435563707
+    },
+    {
+      "time_s": 100,
+      "predicted_C": 33.308105294777086,
+      "u_prediction_K": 1.1394511087661425,
+      "sensitivity_by_base_input": {
+        "C": 0.029232421179108344,
+        "Qc": -0.19804198890134497,
+        "D": 1.98041988901345,
+        "P": 0.08646647167633872,
+        "Ta": 0.8646647167633873,
+        "T0": 0.1353352832366127
+      },
+      "variance_contribution_K2": {
+        "C": 0.0854534447992782,
+        "Qc": 0.15688251747200177,
+        "D": 0.9805157342000113,
+        "P": 0.0074764507241550865,
+        "Ta": 0.06728805651739579,
+        "T0": 0.0007326255555493673
+      },
+      "trial_recomputed_C": 20.0,
+      "pilot_C": 20.0,
+      "trial_minus_pilot_K": 0.0,
+      "corrected_minus_pilot_K": 13.308105294777086,
+      "observed_C": 33.4,
+      "observed_minus_prediction_K": 0.09189470522291288,
+      "observed_minus_pilot_K": 13.399999999999999,
+      "u_residual_K_assuming_independent_readout": 1.1568702733100162,
+      "descriptive_standardized_residual": 0.07943388929856882
+    }
+  ],
+  "prediction_covariance_K2": [
+    [
+      0.04000000000000001,
+      0.03920794693227021,
+      0.03619349672143839,
+      0.02681280184142558,
+      0.014715177646857695,
+      0.0054134113294645085
+    ],
+    [
+      0.03920794693227021,
+      0.04293939178351639,
+      0.05636765780681247,
+      0.0892585366045048,
+      0.10486900707601764,
+      0.08082948157170991
+    ],
+    [
+      0.03619349672143839,
+      0.05636765780681247,
+      0.1295662469452497,
+      0.31613834283654024,
+      0.43256136271116463,
+      0.3551062565687215
+    ],
+    [
+      0.02681280184142558,
+      0.0892585366045048,
+      0.31613834283654024,
+      0.8981121814124678,
+      1.2748507274284928,
+      1.0619466321858917
+    ],
+    [
+      0.014715177646857695,
+      0.10486900707601764,
+      0.43256136271116463,
+      1.2748507274284928,
+      1.8263881727925513,
+      1.5315346716882572
+    ],
+    [
+      0.0054134113294645085,
+      0.08082948157170991,
+      0.3551062565687215,
+      1.0619466321858917,
+      1.5315346716882572,
+      1.2983488292683916
+    ]
+  ],
+  "jacobian_finite_difference_checks": [
+    {
+      "relative_step": 0.0001,
+      "max_absolute_gradient_error": 1.0359575197682602e-08
+    },
+    {
+      "relative_step": 1e-05,
+      "max_absolute_gradient_error": 8.427925024534488e-11
+    }
+  ],
+  "limit_checks": [
+    {
+      "case": "initial",
+      "T_C": 80.0,
+      "target_C": 80
+    },
+    {
+      "case": "heater_off_t100",
+      "T_C": 28.120116994196763,
+      "target_C": 28.120116994196763
+    },
+    {
+      "case": "long_time_50tau",
+      "time_s": 2500.0,
+      "T_C": 26.0,
+      "target_C": 26.0,
+      "trial_limit_C": 20
+    },
+    {
+      "case": "insulation_fixed_time",
+      "H_W_per_K": 1.0,
+      "time_s": 100,
+      "T_C": 80.0,
+      "H0_target_C": 92.0,
+      "absolute_error_to_limit_K": 12.0
+    },
+    {
+      "case": "insulation_fixed_time",
+      "H_W_per_K": 0.01,
+      "time_s": 100,
+      "T_C": 91.86812791604159,
+      "H0_target_C": 92.0,
+      "absolute_error_to_limit_K": 0.1318720839584131
+    },
+    {
+      "case": "insulation_fixed_time",
+      "H_W_per_K": 1e-05,
+      "time_s": 100,
+      "T_C": 91.999868000128,
+      "H0_target_C": 92.0,
+      "absolute_error_to_limit_K": 0.00013199987199641328
+    },
+    {
+      "case": "insulation_fixed_time",
+      "H_W_per_K": 1e-09,
+      "time_s": 100,
+      "T_C": 91.99999998679999,
+      "H0_target_C": 92.0,
+      "absolute_error_to_limit_K": 1.3200008197600255e-08
+    },
+    {
+      "case": "insulation_fixed_time",
+      "H_W_per_K": 0.0,
+      "time_s": 100,
+      "T_C": 92.0,
+      "H0_target_C": 92.0,
+      "absolute_error_to_limit_K": 0.0
+    }
+  ],
+  "energy_finite_difference_checks": [
+    {
+      "derivative_step_s": 0.01,
+      "max_balance_residual_W": 3.528729848767398e-06
+    },
+    {
+      "derivative_step_s": 0.001,
+      "max_balance_residual_W": 3.889920208166586e-08
+    }
+  ],
+  "initial_slope_K_per_s": -1.08,
+  "dimensionally_invalid_trial_numerical_initial_slope": -600.0,
+  "failures_found": [
+    "Trial exponent H*t is dimensionful; missing C.",
+    "Trial omits heater forcing and has wrong powered steady limit.",
+    "Pilot disagreement with three noninitial observations is large.",
+    "Universal negligibility of calibration uncertainty unsupported."
+  ],
+  "execution_failures": [],
+  "scope": "one supplied offline synthetic system; analytic model and local first-order input uncertainty only; no mechanism uniqueness or hardware certification"
+}

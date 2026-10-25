@@ -1,0 +1,53 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P4ecf2c2295864092badcd904f1cf5e35",
+  "revision": 60,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 3,
+    "artifacts": 13,
+    "decisions": 0,
+    "evidence": 8,
+    "method_bindings": 1,
+    "relations": 14,
+    "sources": 6,
+    "statements": 7
+  },
+  "activities": [
+    {
+      "id": "ACT-analysis",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-verification",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-writing-review",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "独立复核者核对notes/analysis.md第25行第7天个人合并项目120/32=3.75、对照200/32=6.25、差−2.50，审查checks/revision-verification.json与项目旁revision-note.md及revisions/v1；确认第30天+0.50及p=0.75、原results.json和短稿未变，再作限定范围内的重新审阅。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

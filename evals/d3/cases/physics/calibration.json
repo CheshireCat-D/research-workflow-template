@@ -1,0 +1,51 @@
+{
+  "version": "1",
+  "uncertainty_convention": "所有u为1个标准不确定度；列出的基础输入相互独立，使用相同标记的量应视为同一变量，而非每次独立重抽。高斯局部近似适用于本练习；不是认证的仪器校准。",
+  "calibration": {
+    "heat_capacity": {
+      "value": 500,
+      "u": 10,
+      "unit": "J/K"
+    },
+    "steady_electrical_power": {
+      "value": 100,
+      "u": 2,
+      "unit": "W"
+    },
+    "steady_excess_temperature": {
+      "value": 10,
+      "u": 0.5,
+      "unit": "K"
+    }
+  },
+  "operation": {
+    "heater_power": {
+      "value": 60,
+      "u": 1,
+      "unit": "W"
+    },
+    "ambient_temperature": {
+      "value": 20,
+      "u": 0.3,
+      "unit": "degC"
+    },
+    "initial_temperature": {
+      "value": 80,
+      "u": 0.2,
+      "unit": "degC"
+    }
+  },
+  "observation_u": {
+    "value": 0.2,
+    "unit": "K"
+  },
+  "requested_times_s": [
+    0,
+    1,
+    5,
+    20,
+    50,
+    100
+  ],
+  "seed": 29017
+}

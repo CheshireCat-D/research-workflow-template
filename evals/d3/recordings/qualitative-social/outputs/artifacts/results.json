@@ -1,0 +1,35 @@
+{
+  "operation": "exact quotation/location and coverage check; rebuild traceability table from AI-agent-performed interpretive coding",
+  "not_a_numerical_experiment": true,
+  "seed": "not-applicable: deterministic document reconstruction",
+  "inputs": {
+    "inputs/interviews.md": "771de76ba19277b0bbaa816ea7b27fc09417fd3574d76c985d6cde9d2a9c952c",
+    "analysis/coding.json": "542df527283e2681f22356842877610e86d6dca641d5d615f38d5ec2eddf5cf0",
+    "manuscript/report.md": "3f5c1e944fc71c9efb63acf7d174e4f2e8ac8d3ddce91339b33da93c67a3e6d3"
+  },
+  "coded_excerpt_ids": [
+    "P1-Q1",
+    "P1-Q2",
+    "P1-Q3",
+    "P2-Q1",
+    "P2-Q2",
+    "P2-Q3",
+    "P3-Q1",
+    "P3-Q2",
+    "P3-Q3",
+    "P4-Q1",
+    "P4-Q2",
+    "P4-Q3",
+    "P5-Q1",
+    "P5-Q2",
+    "P5-Q3",
+    "P6-Q1",
+    "P6-Q2",
+    "P6-Q3"
+  ],
+  "all_supplied_excerpt_ids_preserved": true,
+  "report_chinese_characters": 536,
+  "interpretation": "Codex AI agent interpretive coding fixed in analysis/coding.json; no independent human coding or human validation; this script does not infer codes, themes, prevalence or causality",
+  "failures": [],
+  "elapsed_seconds": 0.0003807079992839135
+}

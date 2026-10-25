@@ -1,0 +1,68 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P13268ba146a8475e84a88a3e67c784b4",
+  "revision": 41,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 5,
+    "artifacts": 11,
+    "decisions": 0,
+    "evidence": 5,
+    "method_bindings": 2,
+    "relations": 8,
+    "sources": 4,
+    "statements": 5
+  },
+  "activities": [
+    {
+      "id": "A_NEXT",
+      "declared_status": "pending",
+      "effective_status": "pending",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_REVIEW",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_RUN",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_SCOPE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A_WRITE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "A_NEXT",
+    "next_action": "制定锁定的首次接触验证协议：明确目标人群与day0可用信息，规定独立主体、后续时期和外部机构队列、样本量、区分度/校准及不确定性标准；任何真实数据访问或收集前由责任方核定治理条件。此项尚未执行。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "next_action": "制定锁定的首次接触验证协议：明确目标人群与day0可用信息，规定独立主体、后续时期和外部机构队列、样本量、区分度/校准及不确定性标准；任何真实数据访问或收集前由责任方核定治理条件。此项尚未执行。",
+  "needs_review": false,
+  "recovery_instruction": "Continue the recorded next action within its existing scope."
+}

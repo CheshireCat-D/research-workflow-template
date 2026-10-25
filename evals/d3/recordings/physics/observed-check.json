@@ -1,0 +1,59 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P51d32d5990434ece9b689b160ea6e502",
+  "revision": 48,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 4,
+    "artifacts": 11,
+    "decisions": 0,
+    "evidence": 7,
+    "method_bindings": 3,
+    "relations": 11,
+    "sources": 5,
+    "statements": 6
+  },
+  "activities": [
+    {
+      "id": "ACTcompute",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACTderive",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACTreview",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACTwrite",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "在当前合成模型中对校准温差D的相对u从5%增至10%、20%作正值局部敏感性分析，比较t=50 s均值和u与一阶传播，明确非线性近似失效范围；尚未执行。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

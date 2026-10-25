@@ -1,0 +1,816 @@
+{
+  "format_version": 1,
+  "case_id": "agriculture-repeated",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "1c72f830ba36ad8208fa36588fba97c4eeba50d43a20622223f809579acc7b2e",
+  "project_init": {
+    "title": "两季固定分配覆膜田间试验方法札记",
+    "interest": "两季固定分配覆膜田间试验方法札记",
+    "disciplines": [
+      "agriculture-life"
+    ],
+    "methods": [
+      "measurement-experiment",
+      "empirical-quantitative"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/observations.csv": "observations.csv",
+    "inputs/plots.csv": "plots.csv",
+    "inputs/protocol.md": "protocol.md",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "task.md": "cbfc6acc0857e10484169c3e696498420093a75ee1775bd674633dec3748de93",
+    "plots.csv": "2f7d75afac512cf9d98d27499c26e4816351429a1a4d8dcbd34bc48c9db25a45",
+    "observations.csv": "995d630c1039013319096a8df7d7dd84a7deb02aa9e6eb5bd317c80811bfec1c",
+    "protocol.md": "5e66412bcadaaf6e88d92ef5ccb95034fc6bb9d6f73c44ff93dc6a89eebd21f7"
+  },
+  "output_files": [
+    "artifacts/README.md",
+    "artifacts/block_contrasts.csv",
+    "artifacts/execution.json",
+    "artifacts/plot_primary.csv",
+    "artifacts/plot_season.csv",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "artifacts/visit_contrasts.csv",
+    "checks/rerun.json",
+    "manuscript/report.md",
+    "notes/access.json",
+    "notes/input-manifest.json",
+    "notes/issue.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/README.md": "a91ca8b4c6b62584ad150678cd44fe2f45c2861245800d2d12da6716ab18186c",
+    "artifacts/block_contrasts.csv": "1281736f43cfe9437cf9e423780fb456e3f171293e1fdd89c4586909cbe0db3a",
+    "artifacts/execution.json": "b9b1ecc22ffadcbe4c951a92dbba4a1b5b22e04af5d8639c81c2738f9dd85291",
+    "artifacts/plot_primary.csv": "9198c026a9c6bd868baf85e5f770429d59955f060c79e3a5167c83cfcb878244",
+    "artifacts/plot_season.csv": "2ff1d3396b1c34610ab5b2c2a6ee29b2427675e08e2ccf8cc9cd5a619144afd3",
+    "artifacts/results.json": "5d51315934cb4290fe6b5f448a7d1dcdda83b37f37bdd1c954b1688ebd97fa20",
+    "artifacts/run.py": "b0275b7dfeb6fa931b0d02998677949d7f6aa13c56ff8f82bbdeb01ed2d47204",
+    "artifacts/visit_contrasts.csv": "180e9f1f177a63bb70edd7134d35f0046cea50c77b14a0574ba500ad7c385e5a",
+    "checks/rerun.json": "921f3d69c2b0ec12044b0436d8f43306695d93503c33f36ca95d02546521ee14",
+    "manuscript/report.md": "043aa8047826eabe6db77cce62b186682722ec6138bab1cc23d7e18231a2846a",
+    "notes/access.json": "aeb6293d11e643ffd044535a7b7442234f38533e480e59b10f07bf165a372888",
+    "notes/input-manifest.json": "48f7386acd8d8f9f11fe8b313139fa87a5bf93cca4d3c09ac3b91cd686a8ba70",
+    "notes/issue.md": "ffe08c0cbdc296064c2f15292cba64fbc6469244d4851e4b8fa580995a62ddd1",
+    "review.md": "495d68bed1811217cac6618e5609305c1aa712eaf2aad0a83aeb5e30a480c0af"
+  },
+  "output_normalizations": [
+    {
+      "path": "artifacts/execution.json",
+      "original_sha256": "50088a35b63d7fb053160971fe50809264b9231e74ba596f994f31da3fdbb931",
+      "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+    }
+  ],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRCobservations",
+        "limitations": "原创离线合成材料；全部文件读入。CSV完整访问为程序载入与设计核对，不代表实地真实性验证。",
+        "locator": "inputs/observations.csv",
+        "notes": "本任务授权离线分析与复制；未推断公开许可证；没有外部文献或网络访问。",
+        "rights": "unknown",
+        "title": "同32株两季三访视全量测量",
+        "version": "copied-original"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRCplots",
+        "limitations": "原创离线合成材料；全部文件读入。CSV完整访问为程序载入与设计核对，不代表实地真实性验证。",
+        "locator": "inputs/plots.csv",
+        "notes": "本任务授权离线分析与复制；未推断公开许可证；没有外部文献或网络访问。",
+        "rights": "unknown",
+        "title": "一次区组内小区分配",
+        "version": "copied-original"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRCprotocol",
+        "limitations": "原创离线合成材料；全部文件读入。CSV完整访问为程序载入与设计核对，不代表实地真实性验证。",
+        "locator": "inputs/protocol.md",
+        "notes": "本任务授权离线分析与复制；未推断公开许可证；没有外部文献或网络访问。",
+        "rights": "unknown",
+        "title": "冻结方案与观察备忘",
+        "version": "v1"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRCtask",
+        "limitations": "原创离线合成材料；全部文件读入。CSV完整访问为程序载入与设计核对，不代表实地真实性验证。",
+        "locator": "inputs/task.md",
+        "notes": "本任务授权离线分析与复制；未推断公开许可证；没有外部文献或网络访问。",
+        "rights": "unknown",
+        "title": "任务委托",
+        "version": "copied-original"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "实际计算问题，结果另以经验主张记录。",
+          "reviewer": "Codex代理，当前分析与自审；非独立人类验证",
+          "scope": "固定方案、本站、2025和2026；不按有利访视或季节重定终点。",
+          "status": "not-assessed"
+        },
+        "formal_verification": {
+          "scope": "统计配对汇总与有限随机化枚举，不是形式证明。",
+          "status": "not-applicable",
+          "tool": "Python标准库；非形式化证明工具"
+        },
+        "id": "Q1",
+        "scope": "固定方案、本站、2025和2026；不按有利访视或季节重定终点。",
+        "text": "本站四区组指定两季第90天等权持续覆膜差及其分季/季差为多少？",
+        "type": "question",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "protocol给定环境证据缺口，年龄/累计处理和其他年度变化不可分离。",
+          "reviewer": "Codex代理，当前分析与自审；非独立人类验证",
+          "scope": "一个站点两个固定年份、没有量化气象/灌溉或气候干预。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "统计配对汇总与有限随机化枚举，不是形式证明。",
+          "status": "not-applicable",
+          "tool": "Python标准库；非形式化证明工具"
+        },
+        "id": "Sclimate",
+        "scope": "一个站点两个固定年份、没有量化气象/灌溉或气候干预。",
+        "text": "这些数据不能将两季差异归因于单一降水机制，也不足以推广干湿气候或全国。",
+        "type": "interpretive",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "方案明确4个独立区组硬币分配，身份/完整性由脚本核对。",
+          "reviewer": "Codex代理，当前分析与自审；非独立人类验证",
+          "scope": "所给protocol、plots和完整观测组合。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "统计配对汇总与有限随机化枚举，不是形式证明。",
+          "status": "not-applicable",
+          "tool": "Python标准库；非形式化证明工具"
+        },
+        "id": "Sdesign",
+        "scope": "所给protocol、plots和完整观测组合。",
+        "text": "处理独立随机化数为4个配对，32株192行与两季属于同一固定分配的重复测量。",
+        "type": "design",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "实际分配重复仅4；全访视改变终点；气候机制无可识别设计。",
+          "reviewer": "Codex代理，当前分析与自审；非独立人类验证",
+          "scope": "inputs/protocol.md末尾未核查草稿；作为被挑战对象记录。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "统计配对汇总与有限随机化枚举，不是形式证明。",
+          "status": "not-applicable",
+          "tool": "Python标准库；非形式化证明工具"
+        },
+        "id": "Sdraft",
+        "scope": "inputs/protocol.md末尾未核查草稿；作为被挑战对象记录。",
+        "text": "草稿称192个独立随机观察及两次新实验，所有访视平均可证明干湿气候中普遍增高。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "从四区组主要差[1,0,1,0]和16种原分配翻转实际计算。",
+          "reviewer": "Codex代理，当前分析与自审；非独立人类验证",
+          "scope": "本站4配对合成数据；无跨小区干扰与持续处理定义一致；t区间仅近似。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "统计配对汇总与有限随机化枚举，不是形式证明。",
+          "status": "not-applicable",
+          "tool": "Python标准库；非形式化证明工具"
+        },
+        "id": "Sprimary",
+        "scope": "本站4配对合成数据；无跨小区干扰与持续处理定义一致；t区间仅近似。",
+        "text": "预设两季等权第90天配对差为0.50 cm；近似t3区间[-0.419,1.419]，精确尖锐零假设p=.50，不能据此确认普遍增高。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "每区组先作2026差-2025差，再在4区组汇总，保留相关。",
+          "reviewer": "Codex代理，当前分析与自审；非独立人类验证",
+          "scope": "本站指定两季；季节非新随机化；方向差异为描述结果。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "统计配对汇总与有限随机化枚举，不是形式证明。",
+          "status": "not-applicable",
+          "tool": "Python标准库；非形式化证明工具"
+        },
+        "id": "Sseason",
+        "scope": "本站指定两季；季节非新随机化；方向差异为描述结果。",
+        "text": "2025差1.50 cm，2026差-0.50 cm，配对季差-2.00 cm，季差近似区间[-7.810,3.810]，无法确认季节交互。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "可移植的原两次运行command/cwd/stdout/stderr/exit/elapsed及原日志SHA",
+        "id": "Eexecution",
+        "limitations": "执行追踪与登记完整性证据；不构成统计正确性、现场真实性、原环境认证或独立人类验证。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/execution.json"
+        },
+        "provenance": "从原工作目录已存在的两条真实运行日志原样提取，原日志SHA保留。未记录的Python版本及开始UTC明确为not-recorded。",
+        "source_ids": [
+          "SRCprotocol",
+          "SRCplots",
+          "SRCobservations"
+        ],
+        "type": "execution-attestation"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "目标量、设计、推断假设、选择与失败边界",
+        "id": "Eissue",
+        "limitations": "有限本站两季4个随机化配对；未检验现场真实性、干扰、测量校准、气候机制或全国外推。",
+        "location": {
+          "kind": "local",
+          "path": "notes/issue.md"
+        },
+        "provenance": "所给原创离线合成输入及Codex代理实际标准库执行；科学代码见artifacts/run.py，两次原始执行凭据见已登记的artifacts/execution.json。修订仅补项目内追踪，没有重新分析。",
+        "source_ids": [
+          "SRCprotocol",
+          "SRCplots",
+          "SRCobservations"
+        ],
+        "type": "method-note"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "全192行同32株数据；完整读取并核验组合",
+        "id": "Eobservations",
+        "limitations": "有限本站两季4个随机化配对；未检验现场真实性、干扰、测量校准、气候机制或全国外推。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/observations.csv"
+        },
+        "provenance": "所给原创离线合成输入及Codex代理实际标准库执行；科学代码见artifacts/run.py，两次原始执行凭据见已登记的artifacts/execution.json。修订仅补项目内追踪，没有重新分析。",
+        "source_ids": [
+          "SRCobservations"
+        ],
+        "type": "repeated-measurements"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "4区组8小区一次分配与两季保持",
+        "id": "Eplots",
+        "limitations": "有限本站两季4个随机化配对；未检验现场真实性、干扰、测量校准、气候机制或全国外推。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/plots.csv"
+        },
+        "provenance": "所给原创离线合成输入及Codex代理实际标准库执行；科学代码见artifacts/run.py，两次原始执行凭据见已登记的artifacts/execution.json。修订仅补项目内追踪，没有重新分析。",
+        "source_ids": [
+          "SRCplots"
+        ],
+        "type": "allocation-table"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "冻结方案、固定处理/终点/范围与错误草稿",
+        "id": "Eprotocol",
+        "limitations": "有限本站两季4个随机化配对；未检验现场真实性、干扰、测量校准、气候机制或全国外推。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/protocol.md"
+        },
+        "provenance": "所给原创离线合成输入及Codex代理实际标准库执行；科学代码见artifacts/run.py，两次原始执行凭据见已登记的artifacts/execution.json。修订仅补项目内追踪，没有重新分析。",
+        "source_ids": [
+          "SRCprotocol"
+        ],
+        "type": "design-document"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "两次标准库数值/CSV内容哈希相同，原命令/退出/输出/耗时可在项目内artifacts/execution.json核对",
+        "id": "Ererun",
+        "limitations": "有限本站两季4个随机化配对；未检验现场真实性、干扰、测量校准、气候机制或全国外推。",
+        "location": {
+          "kind": "local",
+          "path": "checks/rerun.json"
+        },
+        "provenance": "所给原创离线合成输入及Codex代理实际标准库执行；科学代码见artifacts/run.py，两次原始执行凭据见已登记的artifacts/execution.json。修订仅补项目内追踪，没有重新分析。",
+        "source_ids": [
+          "SRCprotocol",
+          "SRCplots",
+          "SRCobservations"
+        ],
+        "type": "reproducibility-check"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "主/各季/配对季差、16分配零分布、近似区间及错误汇总诊断",
+        "id": "Eresults",
+        "limitations": "有限本站两季4个随机化配对；未检验现场真实性、干扰、测量校准、气候机制或全国外推。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "所给原创离线合成输入及Codex代理实际标准库执行；科学代码见artifacts/run.py，两次原始执行凭据见已登记的artifacts/execution.json。修订仅补项目内追踪，没有重新分析。",
+        "source_ids": [
+          "SRCprotocol",
+          "SRCplots",
+          "SRCobservations"
+        ],
+        "type": "computed-statistics"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "实际读取技能/画像与边界",
+        "id": "Aaccess",
+        "path": "notes/access.json",
+        "type": "access-scope"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "逐区组主要、分季及季差",
+        "id": "Ablocks",
+        "path": "artifacts/block_contrasts.csv",
+        "type": "intermediate"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "可重跑标准库分析",
+        "id": "Acode",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "四原始复制输入哈希一致",
+        "id": "Ainputs",
+        "path": "notes/input-manifest.json",
+        "type": "input-identity"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "目标量、设计与推断义务",
+        "id": "Aissue",
+        "path": "notes/issue.md",
+        "type": "method-note"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "818字符中文方法札记",
+        "id": "Amanuscript",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "逐小区两季等权终点",
+        "id": "Aplotprimary",
+        "path": "artifacts/plot_primary.csv",
+        "type": "intermediate"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "逐小区/季节第90天四株均值",
+        "id": "Aplotseason",
+        "path": "artifacts/plot_season.csv",
+        "type": "intermediate"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "运行指令、文件与冻结后复跑说明",
+        "id": "Areadme",
+        "path": "artifacts/README.md",
+        "type": "reproduction-guide"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "两次数值哈希一致",
+        "id": "Arerun",
+        "path": "checks/rerun.json",
+        "type": "check"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "实际数值及枚举分布",
+        "id": "Aresults",
+        "path": "artifacts/results.json",
+        "type": "results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "主张支持、确认错误、未检查与下一步",
+        "id": "Areview",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations"
+        ],
+        "description": "逐区组季节访视描述",
+        "id": "Avisits",
+        "path": "artifacts/visit_contrasts.csv",
+        "type": "intermediate"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eprotocol",
+        "id": "R1",
+        "rationale": "方案明确一次区组分配长期保持、植株子样本与重复访视。",
+        "relation": "supports",
+        "scope": "本次离线合成设计/数值/解释范围；不作外部事实或研究认证。",
+        "statement_id": "Sdesign"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eplots",
+        "id": "R2",
+        "rationale": "8小区在4区组各一处理一对照且分配时间相同。",
+        "relation": "supports",
+        "scope": "本次离线合成设计/数值/解释范围；不作外部事实或研究认证。",
+        "statement_id": "Sdesign"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eresults",
+        "id": "R3",
+        "rationale": "主要差[1,0,1,0]得0.5cm及所述不确定性。",
+        "relation": "supports",
+        "scope": "本次离线合成设计/数值/解释范围；不作外部事实或研究认证。",
+        "statement_id": "Sprimary"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eissue",
+        "id": "R4",
+        "rationale": "t区间仅近似，精确p只对应尖锐零假设，精确95%加性集合全实数。",
+        "relation": "qualifies",
+        "scope": "本次离线合成设计/数值/解释范围；不作外部事实或研究认证。",
+        "statement_id": "Sprimary"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eresults",
+        "id": "R5",
+        "rationale": "分季差与同区组季差已实际计算，季节配对不拆开。",
+        "relation": "supports",
+        "scope": "本次离线合成设计/数值/解释范围；不作外部事实或研究认证。",
+        "statement_id": "Sseason"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eprotocol",
+        "id": "R6",
+        "rationale": "只有定性雨量记忆，没有定量气象、气候分配或第二站。",
+        "relation": "supports",
+        "scope": "本次离线合成设计/数值/解释范围；不作外部事实或研究认证。",
+        "statement_id": "Sclimate"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eresults",
+        "id": "R7",
+        "rationale": "全访视2.833cm改变终点且与主要0.5不同；192行独立分析为错误诊断。",
+        "relation": "challenges",
+        "scope": "本次离线合成设计/数值/解释范围；不作外部事实或研究认证。",
+        "statement_id": "Sdraft"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Eprotocol",
+        "id": "R8",
+        "rationale": "冻结方案明确只有4次硬币、固定处理和不可归因于降水。",
+        "relation": "challenges",
+        "scope": "本次离线合成设计/数值/解释范围；不作外部事实或研究认证。",
+        "statement_id": "Sdraft"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "Ererun",
+        "id": "R9",
+        "rationale": "复跑一致只支持数值可重建，不认证统计推断和实地真值。",
+        "relation": "qualifies",
+        "scope": "本次离线合成设计/数值/解释范围；不作外部事实或研究认证。",
+        "statement_id": "Sprimary"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:Acode",
+          "artifact:Arerun"
+        ],
+        "description": "两次原始科学执行日志及原SHA、未记录环境边界；修订环境单独标记",
+        "id": "Aexecution",
+        "notes": "来自既有真实日志；无新科学运行，不增加独立科学或人类核验。",
+        "path": "artifacts/execution.json",
+        "type": "execution-attestation"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Sdesign",
+          "statement:Q1",
+          "evidence:Eprotocol",
+          "artifact:Aissue",
+          "artifact:Acode"
+        ],
+        "id": "Mfield",
+        "method_id": "measurement-experiment",
+        "profile_version": "0.1",
+        "reason": "尊重4区组一次固定小区分配、植株子样本/访视重复与终点冻结。",
+        "variant": "field-trial"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Sprimary",
+          "statement:Sseason",
+          "statement:Sclimate",
+          "artifact:Acode",
+          "artifact:Aresults",
+          "artifact:Amanuscript"
+        ],
+        "id": "Mquant",
+        "method_id": "empirical-quantitative",
+        "profile_version": "0.1",
+        "reason": "按实际配对随机化进行本站固定两季的目标量、估计、精确检验与有限推断。",
+        "variant": "randomized-intervention"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACTdesign",
+        "inputs": [
+          "source:SRCprotocol",
+          "source:SRCplots",
+          "source:SRCobservations",
+          "statement:Q1"
+        ],
+        "note": "Codex代理；实际读取项目内四技能与三画像，未读取其他安装技能；无外部事实核验。 来源权限元数据改为unknown，仅澄清未推断公开许可；数据与实际工作未变，重新绑定当前记录版本。 经显式授权补充可移植原始运行凭据并修正引用，仅复核当前记录与文件绑定；未重新执行数值分析，原输出与原始输入保持原SHA。",
+        "outputs": [
+          "artifact:Aissue",
+          "statement:Sdesign",
+          "method-binding:Mfield",
+          "method-binding:Mquant"
+        ],
+        "status": "done",
+        "title": "实际读取冻结方案并确定目标、分配与重复结构"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACTdesign"
+        ],
+        "id": "ACTanalysis",
+        "inputs": [
+          "source:SRCplots",
+          "source:SRCobservations",
+          "source:SRCprotocol",
+          "artifact:Acode"
+        ],
+        "note": "Codex代理编写并执行；两次<0.04秒/次、退出0、数值哈希相同；没有失败运行。 来源权限元数据改为unknown，仅澄清未推断公开许可；数据与实际工作未变，重新绑定当前记录版本。 经显式授权补充可移植原始运行凭据并修正引用，仅复核当前记录与文件绑定；未重新执行数值分析，原输出与原始输入保持原SHA。",
+        "outputs": [
+          "artifact:Aresults",
+          "artifact:Aplotseason",
+          "artifact:Aplotprimary",
+          "artifact:Ablocks",
+          "artifact:Avisits",
+          "artifact:Arerun",
+          "statement:Sprimary",
+          "statement:Sseason"
+        ],
+        "status": "done",
+        "title": "两次实际标准库配对汇总与16分配枚举"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACTanalysis"
+        ],
+        "id": "ACTwriting",
+        "inputs": [
+          "artifact:Aresults",
+          "artifact:Aissue",
+          "source:SRCprotocol"
+        ],
+        "note": "Codex代理写作和自审，未冒充人类或独立农业专家。CLI结构检查不作学术认证。 来源权限元数据改为unknown，仅澄清未推断公开许可；数据与实际工作未变，重新绑定当前记录版本。 经显式授权补充可移植原始运行凭据并修正引用，仅复核当前记录与文件绑定；未重新执行数值分析，原输出与原始输入保持原SHA。",
+        "outputs": [
+          "artifact:Amanuscript",
+          "artifact:Areview",
+          "statement:Sclimate"
+        ],
+        "status": "done",
+        "title": "完成中文短稿与同代理自审"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACTwriting"
+        ],
+        "id": "ACTtrace",
+        "inputs": [
+          "artifact:Acode",
+          "artifact:Arerun"
+        ],
+        "note": "Codex代理实际追踪打包修订；原始日志与完整v1冻结项目保留在工作目录revisions/v1；本次未重新分析、未变原始数据或科学数值，也不声称独立科学审阅。",
+        "outputs": [
+          "artifact:Aexecution",
+          "evidence:Eexecution",
+          "artifact:Areadme",
+          "artifact:Aissue"
+        ],
+        "status": "done",
+        "title": "将原两次科学运行凭据纳入项目并更新可移植引用"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 4,
+    "artifacts": 14,
+    "decisions": 0,
+    "evidence": 7,
+    "method_bindings": 2,
+    "relations": 9,
+    "sources": 4,
+    "statements": 6
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "保持主要终点冻结，由另一位审阅者从artifacts/plot_season.csv独立复核4区组主要/分季/季差及16种原分配枚举，重点区分尖锐零假设与平均效应；后续新增站点/季节前预设年龄、累计处理与气候识别设计及定量气象/灌溉记录。"
+  }
+}

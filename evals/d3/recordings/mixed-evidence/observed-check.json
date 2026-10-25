@@ -1,0 +1,65 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pa22391d864424d8b942bde671971e206",
+  "revision": 66,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 5,
+    "artifacts": 11,
+    "decisions": 1,
+    "evidence": 9,
+    "method_bindings": 5,
+    "relations": 21,
+    "sources": 4,
+    "statements": 9
+  },
+  "activities": [
+    {
+      "id": "ACompute",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "AMaterials",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "AReviewActivity",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "AScope",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "AWrite",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "AReviewActivity",
+    "next_action": "核对notes/connection-check.md中A分类器/输出与B工具/提醒的身份、动作和同一完成结局映射；每格给出可定位方案或日志依据，未知保留未知。先判是否存在共同构念，再决定维持分层问题还是设计可分离提醒与参与选择的比较。此检查尚未执行。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

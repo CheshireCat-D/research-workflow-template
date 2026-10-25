@@ -1,0 +1,65 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P63c7f38b3af242e98dc6159a09820cd0",
+  "revision": 42,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 5,
+    "artifacts": 6,
+    "decisions": 1,
+    "evidence": 6,
+    "method_bindings": 1,
+    "relations": 11,
+    "sources": 4,
+    "statements": 7
+  },
+  "activities": [
+    {
+      "id": "A-question",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A-record-check",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A-research",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A-review",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A-writing",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "A-review",
+    "next_action": "讨论 manuscript/report.md 中 L1 的语义选择；若保留处处结论，在命题假设中明确加入已选代表元在 [0,1] 连续，并保留 notes/work.md B 的单点反例。没有 F 公式或新增正则性/误差资料时，不由网格推断其积分或逐点性质。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

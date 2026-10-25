@@ -1,0 +1,231 @@
+{
+  "schema_version": "1",
+  "case": "engineering-simulation",
+  "status": "complete-in-synthetic-task-scope-with-cost-safety-followthrough",
+  "project": "PROJECT",
+  "project_absolute": "PROJECT",
+  "frozen": true,
+  "completion_marker": "run-summary.json",
+  "no_writes_after_marker": true,
+  "completed_at_utc": "2026-10-25T10:22:45.125649+00:00",
+  "freeze_manifest": {
+    "path": "frozen-project-manifest.json",
+    "sha256": "dfe4ce85208dea076103b3c52d51899c2ce754795f07a133485dca23f6f4d873",
+    "project_files": 155
+  },
+  "actual_skills_read": [
+    {
+      "path": ".agents/skills/rw-workflow/SKILL.md",
+      "sha256": "7ad0a0a6da2c05a169f484d5317337b857696aa4df99477541d8b1c1e2e495b1",
+      "access": "full"
+    },
+    {
+      "path": ".agents/skills/rw-validation/SKILL.md",
+      "sha256": "e75e91b8e19dfe32d51841b000360a16fbf3091273465a4852abc3bb637d7b0e",
+      "access": "full"
+    },
+    {
+      "path": ".agents/skills/rw-writing/SKILL.md",
+      "sha256": "d46b0228f02b5be0c44cbb047fad7effd036531359f238d622801037f336d0e7",
+      "access": "full"
+    },
+    {
+      "path": ".agents/skills/rw-review/SKILL.md",
+      "sha256": "40f20bb095130a3aaefbf55b5f6cafe6232433c58f293767970b5060a2401acd",
+      "access": "full"
+    }
+  ],
+  "actual_profiles_read": [
+    {
+      "id": "engineering",
+      "kind": "discipline",
+      "version": "0.1",
+      "path": ".agents/skills/_rw-runtime/profiles/disciplines/engineering.md"
+    },
+    {
+      "id": "engineering-design",
+      "kind": "method",
+      "version": "0.1",
+      "variant": "system",
+      "path": ".agents/skills/_rw-runtime/profiles/methods/engineering-design.md"
+    },
+    {
+      "id": "computational",
+      "kind": "method",
+      "version": "0.1",
+      "variant": "numerical-simulation",
+      "path": ".agents/skills/_rw-runtime/profiles/methods/computational.md"
+    }
+  ],
+  "protocol_catalog_schema_reads": [
+    "PROJECT/logs/read-resources.json",
+    "PROJECT/logs/schema-read.json"
+  ],
+  "principal_paths": {
+    "issue": "PROJECT/notes/issue.md",
+    "run": "PROJECT/artifacts/run.py",
+    "supplemental_simulator": "PROJECT/artifacts/simulator.py",
+    "raw_simulator": "PROJECT/inputs/simulator.py",
+    "results": "PROJECT/artifacts/results.json",
+    "first_results": "PROJECT/artifacts/results.first-run.json",
+    "traceability": "PROJECT/notes/traceability.md",
+    "analytic_limits": "PROJECT/notes/analytic.md",
+    "manuscript": "PROJECT/manuscript/report.md",
+    "review": "PROJECT/review.md",
+    "replay": "PROJECT/README-replay.md",
+    "registry": "PROJECT/records/registry.json",
+    "check": "PROJECT/checks/check.json",
+    "resume": "PROJECT/checks/resume.json",
+    "cost_safety": "PROJECT/notes/cost-safety.md"
+  },
+  "logs": [
+    "PROJECT/logs/setup.json",
+    "PROJECT/logs/baseline.json",
+    "PROJECT/logs/formal-run.json",
+    "PROJECT/logs/replay-run.json",
+    "PROJECT/logs/readback.json",
+    "PROJECT/logs/registration.json",
+    "PROJECT/logs/metadata-correction.json",
+    "PROJECT/logs/checkpoint.json",
+    "PROJECT/logs/check.json",
+    "PROJECT/logs/resume.json",
+    "PROJECT/logs/read-path-correction.json",
+    "cost-followthrough/logs/01-resume-before.json",
+    "cost-followthrough/logs/02-register-S_cost_safety.json",
+    "cost-followthrough/logs/03-register-A_cost_safety.json",
+    "cost-followthrough/logs/04-register-E_cost_safety.json",
+    "cost-followthrough/logs/05-register-L_cost_safety.json",
+    "cost-followthrough/logs/06-register-M_engineering.json",
+    "cost-followthrough/logs/07-register-X_cost_safety.json",
+    "cost-followthrough/logs/08-checkpoint.json",
+    "cost-followthrough/logs/09-check-final.json",
+    "cost-followthrough/logs/10-resume-final.json"
+  ],
+  "scientific_numerical_scope": {
+    "raw_inputs": "4 copied task-owned synthetic files, identity checked against source",
+    "baseline": "Original nominal simulator run unmodified; ignores delay and saturation",
+    "supplemental": "4 fixed mandatory scenarios x5 Euler steps[0.2,0.1,0.05,0.025,0.0125]s, horizon240s, all0–80W actual power clipped and delayed sensor history",
+    "runtime_s_first_formal": 0.20317991599949892,
+    "runtime_s_replay": 0.20181145799870137,
+    "seed": "not applicable; deterministic",
+    "std_library_only": true,
+    "numerical_outcomes": "nominal/delayed pass late band; cold/hot fail; hot exceeds28C; actual power respects ratings; labels stable under5-step refinement",
+    "max_finest_pair_difference_C": 0.0007806702404060673,
+    "analytic_scope": "Manual finite-time ODE comparison proves R2 infeasible for any allowed power in extreme scenes; nominal/cold/hot closed-form special cases checked on grids; no proof assistant",
+    "hardware_scope": "No measurements, device manufacturing/control, fault injection, firmware deployment or safety certification; hardware evidence insufficient"
+  },
+  "requirements": [
+    {
+      "id": "R1",
+      "status": "pass-in-model",
+      "criterion": "Nominal120–240 s inclusive within[24.5,25.5] C",
+      "evidence": "runs:nominal; convergence; analytic_checks"
+    },
+    {
+      "id": "R2",
+      "status": "fail",
+      "criterion": "All four mandatory scenes meet same late band",
+      "failing_scenarios": [
+        "cold",
+        "hot"
+      ],
+      "evidence": "runs; actuator_feasibility; notes/analytic.md"
+    },
+    {
+      "id": "R3",
+      "status": "pass-in-implementation",
+      "criterion": "actual_W in[0,80] at all evaluated times",
+      "evidence": "runs; artifacts/simulator.py; default traces"
+    },
+    {
+      "id": "R4",
+      "status": "fail-in-model; hardware-insufficient",
+      "criterion": "all times T<=28 C",
+      "failing_scenarios": [
+        "hot"
+      ],
+      "evidence": "runs; analytic_checks:hot",
+      "limitation": "No hardware protection/fault evidence exists"
+    },
+    {
+      "id": "R5",
+      "status": "pass-in-tested-resolution-scope",
+      "criterion": "Five steps, finest pair difference<=0.05 C and stable acceptance labels",
+      "evidence": "convergence; analytic_checks",
+      "limitation": "No arbitrary-step stability or continuum error certificate"
+    }
+  ],
+  "failures_and_limits": {
+    "scientific_failures": [
+      "R2 cold/hot fail; rating infeasible regardless of controller",
+      "R4 hot exceeds28C even with zero heat"
+    ],
+    "runtime_exceptions": [],
+    "tool_failures": [
+      "Six initial read paths used wrong runtime prefix; missing prompts preserved and corrected to.agents/skills/_rw-runtime; no failed numerical or CLI command"
+    ],
+    "metadata_correction": "Rights initially public was unsupported; replaced with unknown via expected-version1 CLI and refreshed activity snapshots.",
+    "numerical_limits": [
+      "fixed synthetic4-scene set, not continuous domain coverage",
+      "all delays grid-aligned; non-grid interpolation branch not independently exercised",
+      "step refinement is empirical resolution evidence, no continuous DDE error bound or arbitrary-step guarantee",
+      "lumped fixed-parameter assumptions omit gradients, radiation, drift and real tolerances"
+    ],
+    "self_review": "same Codex agent; no independent human/expert verification",
+    "external_sources": "none, offline task as requested"
+  },
+  "structural_checks": {
+    "check_exit": 0,
+    "resume_exit": 0,
+    "passed": true,
+    "warnings": [],
+    "checkpoint_status": "current",
+    "scientific_validity": "not-assessed",
+    "counts": {
+      "activities": 5,
+      "artifacts": 16,
+      "decisions": 0,
+      "evidence": 7,
+      "method_bindings": 2,
+      "relations": 12,
+      "sources": 4,
+      "statements": 7
+    },
+    "installed_skills_integrity": "passed; installed-only, source_version_matches=null",
+    "revision": 64
+  },
+  "next_action": "先由需求所有者确认能否缩窄5–35°C用途及共同成本口径；若必须全域，取得含热端主动冷却与故障安全处置的改型资料/报价。硬件、采购与测试责任人分别补功率/效率/维护/验证数据，再比较可行方案并重跑原失败工况；没有成本最优、部署或安全批准结论。",
+  "cost_safety_revision": {
+    "version": "v2",
+    "authorized_scope": "Close T04 cost/safety tradeoff evidence gap with a new bounded design note; original inputs, scientific code/results and manuscript are not changed.",
+    "prior_snapshot": "revisions/v1",
+    "prior_summary_sha256": "7ce0e308b2512537f1e1ec2f5e7486fd8bf785f81d84d7571ecb2cd085857564",
+    "prior_freeze_sha256": "ac5505c4ccc969ee783ade9334c99c3a40817cf163a07f2679037b258d879559",
+    "note": "PROJECT/notes/cost-safety.md",
+    "note_sha256": "46287026a9a02ccb48c369b024c27c6f4dd6d5053d6c67d41bfddc27c14f621e",
+    "actual_execution_receipt": "cost-followthrough/result.json",
+    "actual_cli_sha256": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b",
+    "new_records": [
+      "statement:S_cost_safety",
+      "artifact:A_cost_safety",
+      "evidence:E_cost_safety",
+      "relation:L_cost_safety",
+      "activity:X_cost_safety"
+    ],
+    "explicit_expected_version_replacement": "method-binding:M_engineering version1->2",
+    "existing_activity_data_unchanged": true,
+    "economic_scope": "Three alternatives compared with explicit unknown prices/budget/electricity/efficiency/maintenance; no manufactured monetary values or cost ranking.",
+    "physical_scope": "100W cold steady load is necessary target-equilibrium burden, not sufficient dynamic/safety rating; 50W hot heat removal is not electric input; cutoff alone cannot exclude ambient heat ingress at35C.",
+    "role_scope": "Agent analysis only; requirement owner, hardware, procurement and test responsibilities are proposed roles, not fabricated decisions or approvals.",
+    "changed_preexisting_project_files": [
+      "PROJECT/records/registry.json",
+      "PROJECT/checks/check.json",
+      "PROJECT/checks/resume.json"
+    ],
+    "new_project_files": [
+      "PROJECT/notes/cost-safety.md"
+    ],
+    "original_project_files_unchanged_except_metadata_and_check_outputs": true,
+    "independent_review": "Not performed by this executor; pending separately assigned reviewer."
+  }
+}

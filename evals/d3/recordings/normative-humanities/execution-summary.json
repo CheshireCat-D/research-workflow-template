@@ -1,0 +1,136 @@
+{
+  "case": "normative-humanities",
+  "project_absolute_path": "PROJECT",
+  "project": "PROJECT",
+  "status": "complete-in-scope",
+  "skills_actually_read": [
+    "PROJECT/.agents/skills/rw-workflow/SKILL.md",
+    "PROJECT/.agents/skills/rw-question/SKILL.md",
+    "PROJECT/.agents/skills/rw-literature/SKILL.md",
+    "PROJECT/.agents/skills/rw-candidates/SKILL.md",
+    "PROJECT/.agents/skills/rw-validation/SKILL.md",
+    "PROJECT/.agents/skills/rw-writing/SKILL.md",
+    "PROJECT/.agents/skills/rw-review/SKILL.md"
+  ],
+  "workflow_first_read": "toolkit skills/rw-workflow/SKILL.md, then copied project-local workflow and applicable subskills",
+  "profiles_actually_read": [
+    {
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/disciplines/humanities.md",
+      "id": "humanities",
+      "version": "0.1"
+    },
+    {
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/methods/conceptual-normative.md",
+      "id": "conceptual-normative",
+      "version": "0.1",
+      "variants_actually_applied": [
+        "conceptual-analysis",
+        "normative-argument"
+      ]
+    },
+    {
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/governance.md",
+      "version": "0.1"
+    }
+  ],
+  "other_resources_actually_read": [
+    "PROJECT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+    "PROJECT/.agents/skills/_rw-runtime/core/protocol.md",
+    "PROJECT/.agents/skills/_rw-runtime/design/catalog.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/source.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+    "PROJECT/.agents/skills/_rw-runtime/core/schemas/method-binding.schema.json"
+  ],
+  "principal_paths": {
+    "issue": "PROJECT/notes/issue.md",
+    "propositions_and_source_locations": "PROJECT/notes/propositions.md",
+    "argument_counterexample_rival_and_rebuttal": "PROJECT/notes/argument.md",
+    "short_manuscript": "PROJECT/manuscript/report.md",
+    "self_review": "PROJECT/review.md",
+    "arithmetic_code": "PROJECT/artifacts/run.py",
+    "arithmetic_results": "PROJECT/artifacts/results.json",
+    "registry": "PROJECT/records/registry.json",
+    "check": "PROJECT/checks/check.json",
+    "resume": "PROJECT/checks/resume.json",
+    "freeze_manifest": "freeze-manifest.json"
+  },
+  "command_logs": {
+    "init": "logs/01-init.json",
+    "input_copy": "logs/02-input-copy.json",
+    "connect": "logs/06-connect-install.json",
+    "local_skills": "logs/07-local-skills-schemas-read.json",
+    "local_profiles_schemas": "logs/09-local-profiles-protocol-schemas-read.json",
+    "inputs_read": "logs/11-raw-input-read.json",
+    "formal_run": "logs/13-formal-arithmetic-run.json",
+    "qa": "logs/14-delivery-qa.json",
+    "registration": "logs/15-registration.json",
+    "installed_integrity": "logs/17-installed-integrity.json",
+    "record_clarification": "logs/18-claim-target-clarification.json",
+    "checkpoint": "logs/20-checkpoint.json",
+    "check": "logs/21-check.json",
+    "resume": "logs/22-resume.json",
+    "freeze_validation": "logs/23-freeze-validation.json"
+  },
+  "failures_preserved": [
+    {
+      "stage": "initial schema discovery",
+      "exit_code": 2,
+      "log": "logs/bootstrap-history.json",
+      "reason": "looked for schemas/ rather than core/schemas/; corrected"
+    },
+    {
+      "stage": "first copied-runtime read",
+      "exit_code": 1,
+      "log": "logs/07-local-skills-schemas-read.json",
+      "reason": "runtime was installed under .agents/skills/; corrected, subskills had been read successfully"
+    },
+    {
+      "stage": "input line-number command",
+      "exit_code": 1,
+      "log": "logs/10-raw-input-read.json",
+      "reason": "macOS nl rejected multiple filenames; replaced by Python per-file numbering"
+    }
+  ],
+  "actual_arithmetic_run": {
+    "command": [
+      "python3",
+      "artifacts/run.py"
+    ],
+    "cwd": "PROJECT",
+    "exit_code": 0,
+    "elapsed_seconds": 0.02264933399783331,
+    "timeout_seconds": 10,
+    "seed": "not applicable; deterministic standard-library arithmetic, no experiment"
+  },
+  "result_scope": {
+    "stable_conclusion": "Given the supplied finite packet and explicitly defended values, current reasons do not justify universal phone/identity exclusion. Anonymous default remains conditional on capacity and necessary emergency measures.",
+    "conditional_conclusion": "1600 paid extension plus 400 held is only a recommendation after verifying unmet time coverage and paid staffing. Assisted booking at 1100 is a serious rival if queue harms predominate. No optimal allocation established.",
+    "manuscript_han_characters_including_title": 659,
+    "cli_scientific_validity": "not-assessed",
+    "check_errors": [],
+    "check_warnings": [],
+    "checkpoint_status": "current",
+    "record_counts": {
+      "activities": 5,
+      "artifacts": 7,
+      "decisions": 0,
+      "evidence": 12,
+      "method_bindings": 2,
+      "relations": 40,
+      "sources": 7,
+      "statements": 22
+    }
+  },
+  "limitations": [
+    "Only original synthetic excerpts and estimates; no external sources, real legal review, causal evidence or representative consultation.",
+    "The same agent wrote and self-reviewed the argument; no independent expert review.",
+    "No effects or costs for new triage or voluntary contact procedures; no independent capacity safety assessment.",
+    "No network, package installation, external messages, participant activity or real policy deployment. Installed-only integrity does not compare source versions."
+  ],
+  "saved_next_action": "在真实执行前核实各时段等待/拒入原因、未注册者障碍、1600可支付的排班及匿名分流新增成本；新材料保存为新版本输入并更新R-C1/R-C2。若主要缺口为时段则评估1600有偿延时；若为等待且辅助预约可及则重比1100系统加电话；只有具体严重伤害与替代不足证据成立才逐项重审最小身份资料。当前不启动调查或部署。",
+  "freeze_policy": "Registered artifacts and PROJECT records will not be changed after COMPLETED.json is written; freeze-manifest.json records the final project bytes."
+}

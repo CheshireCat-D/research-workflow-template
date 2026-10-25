@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "issue": "v1 notes/analysis.md line25 day7 pooled program mean and contrast transcription inconsistent with already-correct original results.json",
+  "day7_pooled_decimal": {
+    "sums": {
+      "program": "120.0",
+      "control": "200.0"
+    },
+    "n": {
+      "program": 32,
+      "control": 32
+    },
+    "means": {
+      "program": "3.75",
+      "control": "6.25"
+    },
+    "difference": "-2.50"
+  },
+  "original_results_json_already_correct": true,
+  "isolated_full_script_rerun": {
+    "command": [
+      "PYTHON",
+      "revision-work/v2-recompute/artifacts/run.py"
+    ],
+    "cwd": ".",
+    "exit_code": 0,
+    "stdout": "{\"day30_effect\": 0.5, \"day30_exact_two_sided_p\": 0.75, \"pooled_day30_difference\": -1.75, \"day7_exploratory_effect\": -2.0, \"day7_exploratory_two_sided_p\": 0.125, \"elapsed_seconds\": 0.0008783330013102386, \"failure_count\": 0}\n",
+    "stderr": "",
+    "elapsed_seconds": 0.0008783330013102386,
+    "all_results_equal_excluding_elapsed": true
+  },
+  "active_prose_old_values_absent": [
+    "notes/analysis.md",
+    "manuscript/report.md",
+    "review.md"
+  ],
+  "unchanged_paths_verified_against_v1_marker": [
+    "artifacts/run.py",
+    "artifacts/results.json",
+    "artifacts/sites.csv",
+    "artifacts/pairs.csv",
+    "artifacts/verify.py",
+    "checks/analysis-verification.json",
+    "manuscript/report.md",
+    "notes/issue.md",
+    "inputs/participants.csv",
+    "inputs/draft.md",
+    "inputs/allocation.csv",
+    "inputs/task.md",
+    "inputs/protocol.md"
+  ],
+  "elapsed_seconds": 0.025345665999338962,
+  "scope": "transcription correction plus independent raw-record Decimal verification and complete original computation rerun in isolated copy; primary analysis files remain byte-identical"
+}

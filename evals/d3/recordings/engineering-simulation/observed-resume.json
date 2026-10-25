@@ -1,0 +1,68 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P44691c32ce9243369af197afaa190f6b",
+  "revision": 64,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 5,
+    "artifacts": 16,
+    "decisions": 0,
+    "evidence": 7,
+    "method_bindings": 2,
+    "relations": 12,
+    "sources": 4,
+    "statements": 7
+  },
+  "activities": [
+    {
+      "id": "X_cost_safety",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "X_plan",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "X_review",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "X_simulate",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "X_write",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "X_cost_safety",
+    "next_action": "先由需求所有者确认能否缩窄5–35°C用途及共同成本口径；若必须全域，取得含热端主动冷却与故障安全处置的改型资料/报价。硬件、采购与测试责任人分别补功率/效率/维护/验证数据，再比较可行方案并重跑原失败工况；没有成本最优、部署或安全批准结论。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "next_action": "先由需求所有者确认能否缩窄5–35°C用途及共同成本口径；若必须全域，取得含热端主动冷却与故障安全处置的改型资料/报价。硬件、采购与测试责任人分别补功率/效率/维护/验证数据，再比较可行方案并重跑原失败工况；没有成本最优、部署或安全批准结论。",
+  "needs_review": false,
+  "recovery_instruction": "Continue the recorded next action within its existing scope."
+}

@@ -1,0 +1,46 @@
+{
+  "provenance": "Self-authored synthetic target definitions; no external dataset or real publication.",
+  "domain": [
+    0.0,
+    1.0
+  ],
+  "function_evaluation_budgets": [
+    9,
+    33,
+    129
+  ],
+  "error_metric": "absolute_error against the stated mathematical integral",
+  "targets": [
+    {
+      "id": "quadratic",
+      "formula": "x**2",
+      "integral": "1/3"
+    },
+    {
+      "id": "exponential",
+      "formula": "exp(x)",
+      "integral": "exp(1)-1"
+    },
+    {
+      "id": "root",
+      "formula": "sqrt(x)",
+      "integral": "2/3"
+    },
+    {
+      "id": "oscillation",
+      "formula": "cos(18*pi*x)",
+      "integral": "0"
+    },
+    {
+      "id": "kink",
+      "formula": "abs(x-0.37)",
+      "integral": "(0.37**2+0.63**2)/2"
+    },
+    {
+      "id": "rational",
+      "formula": "1/(1+25*x**2)",
+      "integral": "atan(5)/5"
+    }
+  ],
+  "reference_note": "These exact integral expressions are part of the supplied mathematical specification. Implement them with Python math; do not infer reference values from either tested algorithm."
+}

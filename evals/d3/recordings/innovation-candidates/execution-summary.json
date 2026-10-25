@@ -1,0 +1,187 @@
+{
+  "status": "completed",
+  "project": "PROJECT",
+  "skills_actually_read": [
+    {
+      "id": "rw-workflow",
+      "path": "PROJECT/.agents/skills/rw-workflow/SKILL.md"
+    },
+    {
+      "id": "rw-question",
+      "path": "PROJECT/.agents/skills/rw-question/SKILL.md"
+    },
+    {
+      "id": "rw-innovation",
+      "path": "PROJECT/.agents/skills/rw-innovation/SKILL.md"
+    },
+    {
+      "id": "rw-candidates",
+      "path": "PROJECT/.agents/skills/rw-candidates/SKILL.md"
+    },
+    {
+      "id": "rw-validation",
+      "path": "PROJECT/.agents/skills/rw-validation/SKILL.md"
+    },
+    {
+      "id": "rw-writing",
+      "path": "PROJECT/.agents/skills/rw-writing/SKILL.md"
+    },
+    {
+      "id": "rw-review",
+      "path": "PROJECT/.agents/skills/rw-review/SKILL.md"
+    }
+  ],
+  "other_skill_read": {
+    "path": "toolkit/skills/rw-workflow/SKILL.md",
+    "scope": "initial required workflow entry before project connection"
+  },
+  "profiles_actually_read": [
+    {
+      "id": "formal-theory",
+      "version": "0.1",
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/methods/formal-theory.md"
+    },
+    {
+      "id": "computational",
+      "version": "0.1",
+      "path": "PROJECT/.agents/skills/_rw-runtime/profiles/methods/computational.md"
+    }
+  ],
+  "principal_files": [
+    {
+      "path": "PROJECT/notes/issue.md",
+      "sha256": "7d8fdf7d1b5dde2675cd6436f97365fd242fb645549dfd14bb09a0e280c77b49"
+    },
+    {
+      "path": "PROJECT/notes/mechanism.md",
+      "sha256": "39eb839a18da4576cc6cb8b8795465148f56f78ff25b492755c4d71ad2bd74f6"
+    },
+    {
+      "path": "PROJECT/notes/candidates.md",
+      "sha256": "ceaa1f387ff2b5cc607e611f78f6d49edefb9511c877c6fd0205a45de8978dbd"
+    },
+    {
+      "path": "PROJECT/notes/results.md",
+      "sha256": "3e98b984cdf6ad766dd09411cf7db8408a2d4ad0950fd0c4cbfd84b78f55efdf"
+    },
+    {
+      "path": "PROJECT/manuscript/report.md",
+      "sha256": "387f83f2f1d19eb5bd8c7e8bae336a36b0b745b3c3a41d8e6cbcaee3b6273c5d"
+    },
+    {
+      "path": "PROJECT/review.md",
+      "sha256": "1dd4345e37ea34174e0787d85ba83c474cd494f56eab58ccec67d92d43713ef6"
+    },
+    {
+      "path": "PROJECT/artifacts/run.py",
+      "sha256": "486a0c2f66b2efb8abebe259659f6e7d2fdecc711cb06b93b5835213c53908b0"
+    },
+    {
+      "path": "PROJECT/artifacts/config.json",
+      "sha256": "3e49aa45bb90405add2f048f16d0eb6ffb80fa228fd768240e8a94c8f7d6fa7e"
+    },
+    {
+      "path": "PROJECT/artifacts/results.json",
+      "sha256": "44e5dc30a0b637bb7efbce50b10964dfb5137f412e1d7151d94333ca73c34cdd"
+    },
+    {
+      "path": "PROJECT/artifacts/minimum_check.py",
+      "sha256": "046cf61ea3f0bf2ec48e15b72a0c58e409195b9001a3a5c64016369fa7c3b02c"
+    },
+    {
+      "path": "PROJECT/artifacts/minimum-check.json",
+      "sha256": "73a13d1196f626d678ebfc2046680ea2b22453e0d0ce8e482507f7aa7c6d0c9e"
+    },
+    {
+      "path": "PROJECT/artifacts/verify_relocation.py",
+      "sha256": "6d9074e7c38eab39c55e4d97472b6ce8d432cafd812a39588005d2d74fb5491e"
+    },
+    {
+      "path": "PROJECT/checks/relocation.json",
+      "sha256": "52bd14f5bc09194c4bfc2fbcea27945297800aa0e59a6ae17433b65b1f7c29c5"
+    },
+    {
+      "path": "PROJECT/checks/check.json",
+      "sha256": "1f2fa9a0b4f5fb0538fa07328575bdfdbfc59987d58fba5f84588192e68327c7"
+    },
+    {
+      "path": "PROJECT/checks/resume.json",
+      "sha256": "fdf9447ce66d93bdfa439c0ca03972fcc6e5fdb32b6421f5a260a6092c893fab"
+    },
+    {
+      "path": "PROJECT/records/registry.json",
+      "sha256": "63ae63f3e0a13a8380bfe69d0189b8e1bc3dd5e03e1d87c4f779bf1f3f48ae79"
+    },
+    {
+      "path": "PROJECT/README.md",
+      "sha256": "ba89ef03cf38bc999e483d56ccd11e6949dcc869160e9847dc7a0e73eed7ab3a"
+    }
+  ],
+  "command_log_index": "logs/command-index.json",
+  "read_log_index": "logs/read-index.json",
+  "registration_log_index": "logs/registration-index.json",
+  "early_discovery_log": "logs/early-discovery.json",
+  "actual_commands_count": 72,
+  "process_failures": [],
+  "failures_and_recoveries": [
+    {
+      "type": "scientific-hypothesis-rejection",
+      "failed_claim": "C_mix uniformly improves A",
+      "evidence": "PROJECT/artifacts/minimum-check.json",
+      "revision": "PROJECT/notes/mechanism.md: C_strata removes repeats but still fails on shifted/new hotspots"
+    },
+    {
+      "type": "resource-infeasibility",
+      "candidate": "B",
+      "action": "skipped training; no invented performance",
+      "record": "PROJECT/notes/candidates.md"
+    },
+    {
+      "type": "process",
+      "failures": 0,
+      "recovery": "not needed"
+    }
+  ],
+  "numerical_scope": {
+    "workloads": 6,
+    "N": 12,
+    "budgets": [
+      4,
+      6
+    ],
+    "methods": [
+      "A",
+      "U_wr",
+      "C_mix",
+      "C_strata"
+    ],
+    "rows": 48,
+    "analytic_evaluation": "exact rational randomization MSE",
+    "joint_sample_sets_enumerated": 10866,
+    "single_draw_outcomes_enumerated": 288,
+    "implementation_trials": 48000,
+    "seed": 8123,
+    "formal_run_elapsed_seconds": 0.7056843749996915,
+    "relocation_rows_identical": true,
+    "current_value_access_rule": "all estimator calls use counted callable; repeats charged; complete current values used only by driver for truth and error/moment calculation"
+  },
+  "structural_checks": {
+    "check_passed": true,
+    "resume_passed": true,
+    "checkpoint_status": "current",
+    "errors": [],
+    "warnings": [],
+    "scientific_validity": "not-assessed"
+  },
+  "limitations": [
+    "Only supplied finite synthetic materials, N12 and budgets4/6.",
+    "No external literature, actual sensor data, GPU training, formal proof assistant or global novelty claim.",
+    "Stratified revision has conditional gains and explicit losses; no guarantee of dominance.",
+    "Initial read-only discovery preceded the persistent logging wrapper; retained source text and explicit discovery command index document that scope."
+  ],
+  "next_action": {
+    "path": "PROJECT/notes/mechanism.md",
+    "text": "在 notes/mechanism.md 的H/L框架中定义层内变化方差上界与历史失配集合，推导固定预算分配的最坏MSE并与A比较；不读取当前真值来选择分配。若得不到有条件界，删除保证改善路线；全球新颖性仍待另行检索。"
+  },
+  "registered_artifacts_frozen_after_this_summary": true
+}

@@ -1,0 +1,71 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P0b964c22e753490389d7a896ab6941ff",
+  "revision": 71,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 6,
+    "artifacts": 4,
+    "decisions": 0,
+    "evidence": 9,
+    "method_bindings": 1,
+    "relations": 30,
+    "sources": 9,
+    "statements": 11
+  },
+  "activities": [
+    {
+      "id": "A1",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A2",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A3",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A4",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A5",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A6",
+      "declared_status": "pending",
+      "effective_status": "pending",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "A6",
+    "next_action": "若获得新增材料，先核9月11日会议全文及9月16日—10月底执行、复议、借舍与点名记录，逐日对照夜渡停复以判断复航后是否复课，再核8—10月完整账簿及津贴凭据；当前A6待做，不补造材料。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

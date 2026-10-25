@@ -1,0 +1,434 @@
+{
+  "status": "success",
+  "started_utc": "2026-10-24T20:30:03.065246+00:00",
+  "environment": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "executable": "python3.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "command": "python3 artifacts/run.py",
+  "failures": [],
+  "config": {
+    "version": "1",
+    "model": "L",
+    "model_definition": "memorize each distinct training subject event90; unseen subject probability = training distinct-subject event rate",
+    "threshold": 0.5,
+    "prediction_rule": "p >= threshold",
+    "aggregation": "arithmetic mean per test subject; one consistent subject outcome",
+    "splits": {
+      "R": {
+        "train": "visit == 1",
+        "test": "visit == 2"
+      },
+      "S": {
+        "train_subjects": [
+          "P01",
+          "P02",
+          "P03",
+          "P04",
+          "P05",
+          "P06",
+          "P07",
+          "P08"
+        ],
+        "test_subjects": [
+          "P09",
+          "P10",
+          "P11",
+          "P12"
+        ]
+      }
+    },
+    "bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.25,
+        "right_closed": false
+      },
+      {
+        "lower": 0.25,
+        "upper": 0.5,
+        "right_closed": false
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.75,
+        "right_closed": false
+      },
+      {
+        "lower": 0.75,
+        "upper": 1.0,
+        "right_closed": true
+      }
+    ],
+    "formal_run_timeout_seconds": 10,
+    "randomness": {
+      "used": false,
+      "seed": null,
+      "reason": "all rows, splits, model, aggregation, threshold and bins fixed by model-card v1"
+    },
+    "selection": "No tuning, model or threshold selection; split S prescribed in the supplied card before formal execution; no independent validation cohort. Initial raw input was viewed before execution, so this is not claimed as a prospective preregistration.",
+    "data": "inputs/visits.csv",
+    "input_paths": [
+      "inputs/task.md",
+      "inputs/model-card.md",
+      "inputs/draft.md",
+      "inputs/visits.csv"
+    ]
+  },
+  "input_fingerprints": [
+    {
+      "path": "inputs/task.md",
+      "bytes": 1755,
+      "sha256": "f272a2fffb5dbc5dd9b6ebfc56e2b79ecf720c89a35bdf8989e9cc16628b873f"
+    },
+    {
+      "path": "inputs/model-card.md",
+      "bytes": 1575,
+      "sha256": "c1727d89e86e1a9deb78941168c65261d386f17170c7b4531354c8b4bde945e7"
+    },
+    {
+      "path": "inputs/draft.md",
+      "bytes": 496,
+      "sha256": "390100d72521547eeb93ecabe0b06c778fec3ef03e78c86abe6f15f940a67a8c"
+    },
+    {
+      "path": "inputs/visits.csv",
+      "bytes": 802,
+      "sha256": "5073b7f979716a2bd62ed05f856d363210d266c6a95aef570f3f3d9eedb3d56f"
+    }
+  ],
+  "execution_fingerprints": [
+    {
+      "path": "artifacts/config.json",
+      "bytes": 1626,
+      "sha256": "6f0e47b0afb4d85409b62d98399985619acf27b6a52270222c09a7783eedabf2"
+    },
+    {
+      "path": "artifacts/run.py",
+      "bytes": 7276,
+      "sha256": "18cea2933f68483fd3f2dd79f5e65c19b52fd992ddec1916483f54da36125a2b"
+    }
+  ],
+  "input_audit": {
+    "n_records": 24,
+    "n_subjects": 12,
+    "n_outcome_events": 6,
+    "sites": [
+      "Synth-A"
+    ],
+    "periods": [
+      "2024"
+    ],
+    "missing_fields": 0,
+    "duplicate_record_ids": 0,
+    "inconsistent_subject_outcomes": 0,
+    "excluded_records": 0,
+    "raw_line_ending": "CRLF"
+  },
+  "splits": {
+    "R": {
+      "n_train_records": 12,
+      "n_train_subjects": 12,
+      "n_test_records": 12,
+      "n_test_subjects": 12,
+      "train_subject_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12"
+      ],
+      "test_subject_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12"
+      ],
+      "n_overlap_subjects": 12,
+      "overlap_subject_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12"
+      ],
+      "training_subject_event_rate": 0.5,
+      "accuracy": 1.0,
+      "brier_score": 0.0,
+      "mean_predicted_probability": 0.5,
+      "observed_event_rate": 0.5,
+      "calibration_bins": [
+        {
+          "interval": "[0.0,0.25)",
+          "n_subjects": 6,
+          "mean_predicted_probability": 0.0,
+          "event_rate": 0.0
+        },
+        {
+          "interval": "[0.25,0.5)",
+          "n_subjects": 0,
+          "mean_predicted_probability": null,
+          "event_rate": null
+        },
+        {
+          "interval": "[0.5,0.75)",
+          "n_subjects": 0,
+          "mean_predicted_probability": null,
+          "event_rate": null
+        },
+        {
+          "interval": "[0.75,1.0]",
+          "n_subjects": 6,
+          "mean_predicted_probability": 1.0,
+          "event_rate": 1.0
+        }
+      ],
+      "subject_predictions": [
+        {
+          "split": "R",
+          "subject_id": "P01",
+          "test_records": 1,
+          "p": 0.0,
+          "y": 0,
+          "predicted": 0,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P02",
+          "test_records": 1,
+          "p": 1.0,
+          "y": 1,
+          "predicted": 1,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P03",
+          "test_records": 1,
+          "p": 0.0,
+          "y": 0,
+          "predicted": 0,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P04",
+          "test_records": 1,
+          "p": 1.0,
+          "y": 1,
+          "predicted": 1,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P05",
+          "test_records": 1,
+          "p": 0.0,
+          "y": 0,
+          "predicted": 0,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P06",
+          "test_records": 1,
+          "p": 1.0,
+          "y": 1,
+          "predicted": 1,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P07",
+          "test_records": 1,
+          "p": 0.0,
+          "y": 0,
+          "predicted": 0,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P08",
+          "test_records": 1,
+          "p": 1.0,
+          "y": 1,
+          "predicted": 1,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P09",
+          "test_records": 1,
+          "p": 0.0,
+          "y": 0,
+          "predicted": 0,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P10",
+          "test_records": 1,
+          "p": 1.0,
+          "y": 1,
+          "predicted": 1,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P11",
+          "test_records": 1,
+          "p": 0.0,
+          "y": 0,
+          "predicted": 0,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        },
+        {
+          "split": "R",
+          "subject_id": "P12",
+          "test_records": 1,
+          "p": 1.0,
+          "y": 1,
+          "predicted": 1,
+          "seen_in_training": true,
+          "squared_error": 0.0
+        }
+      ],
+      "evaluation_unit": "subject, equal weight"
+    },
+    "S": {
+      "n_train_records": 16,
+      "n_train_subjects": 8,
+      "n_test_records": 8,
+      "n_test_subjects": 4,
+      "train_subject_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "test_subject_ids": [
+        "P09",
+        "P10",
+        "P11",
+        "P12"
+      ],
+      "n_overlap_subjects": 0,
+      "overlap_subject_ids": [],
+      "training_subject_event_rate": 0.5,
+      "accuracy": 0.5,
+      "brier_score": 0.25,
+      "mean_predicted_probability": 0.5,
+      "observed_event_rate": 0.5,
+      "calibration_bins": [
+        {
+          "interval": "[0.0,0.25)",
+          "n_subjects": 0,
+          "mean_predicted_probability": null,
+          "event_rate": null
+        },
+        {
+          "interval": "[0.25,0.5)",
+          "n_subjects": 0,
+          "mean_predicted_probability": null,
+          "event_rate": null
+        },
+        {
+          "interval": "[0.5,0.75)",
+          "n_subjects": 4,
+          "mean_predicted_probability": 0.5,
+          "event_rate": 0.5
+        },
+        {
+          "interval": "[0.75,1.0]",
+          "n_subjects": 0,
+          "mean_predicted_probability": null,
+          "event_rate": null
+        }
+      ],
+      "subject_predictions": [
+        {
+          "split": "S",
+          "subject_id": "P09",
+          "test_records": 2,
+          "p": 0.5,
+          "y": 0,
+          "predicted": 1,
+          "seen_in_training": false,
+          "squared_error": 0.25
+        },
+        {
+          "split": "S",
+          "subject_id": "P10",
+          "test_records": 2,
+          "p": 0.5,
+          "y": 1,
+          "predicted": 1,
+          "seen_in_training": false,
+          "squared_error": 0.25
+        },
+        {
+          "split": "S",
+          "subject_id": "P11",
+          "test_records": 2,
+          "p": 0.5,
+          "y": 0,
+          "predicted": 1,
+          "seen_in_training": false,
+          "squared_error": 0.25
+        },
+        {
+          "split": "S",
+          "subject_id": "P12",
+          "test_records": 2,
+          "p": 0.5,
+          "y": 1,
+          "predicted": 1,
+          "seen_in_training": false,
+          "squared_error": 0.25
+        }
+      ],
+      "evaluation_unit": "subject, equal weight"
+    }
+  },
+  "elapsed_seconds": 0.010133042000234127
+}

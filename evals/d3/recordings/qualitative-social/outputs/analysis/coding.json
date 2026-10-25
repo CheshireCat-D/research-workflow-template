@@ -1,0 +1,192 @@
+{
+  "status": "AI-agent-performed interpretive coding of synthetic excerpts; not human coding or independent human validation; no numerical experiment",
+  "unit": "supplied excerpt ID",
+  "entries": [
+    {
+      "locator": "P1-Q1",
+      "line": 6,
+      "quote": "“买菜接龙比逐户敲门快，我一周能用四五次。”",
+      "codes": [
+        "C1"
+      ],
+      "theme": "T1",
+      "scope": "一次操作提速体验；不证明净节时或适用于所有人"
+    },
+    {
+      "locator": "P1-Q2",
+      "line": 7,
+      "quote": "“送药时我只写楼栋，不愿上传家门照片。管理员说是为了确认，我还是没有传。”",
+      "codes": [
+        "C2"
+      ],
+      "theme": "T1",
+      "scope": "隐私边界造成实际不上传，不能用日常高频使用抹掉"
+    },
+    {
+      "locator": "P1-Q3",
+      "line": 8,
+      "quote": "“没注册的人会打我电话，我替他们填。有些帮助根本不经过平台。”",
+      "codes": [
+        "C3"
+      ],
+      "theme": "T2",
+      "scope": "代填把非注册者纳入，平台活动不等于互助总量"
+    },
+    {
+      "locator": "P2-Q1",
+      "line": 11,
+      "quote": "“我每天用手机，也教过隔壁年轻人扫码。年龄不是我这里的问题。”",
+      "codes": [
+        "C4"
+      ],
+      "theme": "T3",
+      "scope": "68岁熟练使用的自述反驳年龄即能力不足的唯一解释"
+    },
+    {
+      "locator": "P2-Q2",
+      "line": 12,
+      "quote": "“一次找修灯师傅等了两天。后来熟人直接打电话，半小时就来了。”",
+      "codes": [
+        "C3",
+        "C6"
+      ],
+      "theme": "T2",
+      "scope": "自述熟人电话更快；时间未经核实，不能估计效率差"
+    },
+    {
+      "locator": "P2-Q3",
+      "line": 13,
+      "quote": "“有人回我，我才信这件事；按钮好看没有用。”",
+      "codes": [
+        "C6"
+      ],
+      "theme": "T2",
+      "scope": "信任取决于得到回应，而非界面；不说明社区总体信任"
+    },
+    {
+      "locator": "P3-Q1",
+      "line": 16,
+      "quote": "“不是不会用。我白天睡觉，核验只在工作日下午开，我总赶不上。”",
+      "codes": [
+        "C4",
+        "C5"
+      ],
+      "theme": "T1/T3",
+      "scope": "未注册者明确归因核验时段，不等于能力不足"
+    },
+    {
+      "locator": "P3-Q2",
+      "line": 17,
+      "quote": "“邻居上门时我会帮忙。我没装这个软件，不等于我不参加互助。”",
+      "codes": [
+        "C3"
+      ],
+      "theme": "T2",
+      "scope": "未装软件仍参加邻里互助，参与不能用注册代替"
+    },
+    {
+      "locator": "P3-Q3",
+      "line": 18,
+      "quote": "“如果能晚上核验，我也许试一次，但现在没时间。”",
+      "codes": [
+        "C5"
+      ],
+      "theme": "T1",
+      "scope": "“也许试一次”是条件意向，非政策效果或使用承诺"
+    },
+    {
+      "locator": "P4-Q1",
+      "line": 21,
+      "quote": "“通知一发就有回应，这一点确实方便。”",
+      "codes": [
+        "C1"
+      ],
+      "theme": "T1",
+      "scope": "志愿管理员同样承认回应便利，不能归为全面反对者"
+    },
+    {
+      "locator": "P4-Q2",
+      "line": 22,
+      "quote": "“我下班后还要核实照片、删重复单。平台账上说节省时间，节省的是谁的时间？”",
+      "codes": [
+        "C7"
+      ],
+      "theme": "T2",
+      "scope": "班后核验及删单提示劳动分配；没有总工时可比较"
+    },
+    {
+      "locator": "P4-Q3",
+      "line": 23,
+      "quote": "“遇到急事我们还是在旧电话群处理，然后补录。月报只看到补录的那条。”",
+      "codes": [
+        "C3",
+        "C7"
+      ],
+      "theme": "T2",
+      "scope": "补录使电话互助呈现为平台条目；月报与后台未独立核验"
+    },
+    {
+      "locator": "P5-Q1",
+      "line": 26,
+      "quote": "“我平时反对把家庭情况放上去，怕不熟的人看到。”",
+      "codes": [
+        "C2"
+      ],
+      "theme": "T1",
+      "scope": "家庭信息的可见范围是顾虑；非永不使用的承诺"
+    },
+    {
+      "locator": "P5-Q2",
+      "line": 27,
+      "quote": "“家里停电那晚，我在平台求助，十分钟就有人来。我很感谢他们。”",
+      "codes": [
+        "C1"
+      ],
+      "theme": "T1",
+      "scope": "紧急获助与感谢是正面经验；时间及结果未独立核实"
+    },
+    {
+      "locator": "P5-Q3",
+      "line": 28,
+      "quote": "“急的时候用了，不代表我同意以后每次都交照片。电话和平台都应该留着。”",
+      "codes": [
+        "C2",
+        "C3"
+      ],
+      "theme": "T1/T2",
+      "scope": "紧急使用不等于持续照片同意，并要求保留双渠道"
+    },
+    {
+      "locator": "P6-Q1",
+      "line": 31,
+      "quote": "“我完全支持统一在线办理，每个人多学一会儿就行。”",
+      "codes": [
+        "C8"
+      ],
+      "theme": "T1",
+      "scope": "保留全面线上支持的异向材料；不能代表所有居民"
+    },
+    {
+      "locator": "P6-Q2",
+      "line": 32,
+      "quote": "“现在联系的人大半是我以前志愿队里认识的，陌生居民我接触得少。”",
+      "codes": [
+        "C6"
+      ],
+      "theme": "T2",
+      "scope": "既有志愿队关系可解释熟人连接；陌生居民经验稀缺"
+    },
+    {
+      "locator": "P6-Q3",
+      "line": 33,
+      "quote": "“采访前工作人员告诉我今天主要聊成功经验。我确实先想到了成功的几次。”",
+      "codes": [
+        "C9"
+      ],
+      "theme": "T3",
+      "scope": "成功提示与自述回忆顺序关联，不能据此宣布正面经验虚假"
+    }
+  ],
+  "executor": "Codex AI agent; interpretive coding and thematic judgments",
+  "document_reconstruction": "Python standard-library script only checks literal quotations, excerpt coverage and report length; it does not infer themes"
+}

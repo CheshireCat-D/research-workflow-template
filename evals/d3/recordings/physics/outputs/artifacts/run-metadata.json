@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python3",
+    "artifacts/run.py"
+  ],
+  "python": "3.14.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "elapsed_s": 0.0005261660007818136,
+  "exit_code": 0,
+  "error": null,
+  "input_sha256": {
+    "inputs/calibration.json": "ef70a4abb7325b73b8b4f8a85b6bc9559a838ff9e4b9f2063f317b38a2e363d2",
+    "inputs/model.md": "ad50aa7711a1d3535a4a6ba5ddf65afc08680cc0fc547c1b7a32d2398dd2b2d3",
+    "inputs/observations.csv": "1bf2f66e7b6c4ce62fb7b4e618f96575a5daac7a443f2ddc114222863de42618",
+    "inputs/pilot.csv": "ef93675ee9087975c0ac75c7bf6987562bab5b4142aec0ca0acf027ad228925f",
+    "inputs/task.md": "06ae6919b65b555cc4307ec3ee1555d68d3092e282f4de17ea2fb492bc55dab6"
+  },
+  "output": "artifacts/results.json"
+}

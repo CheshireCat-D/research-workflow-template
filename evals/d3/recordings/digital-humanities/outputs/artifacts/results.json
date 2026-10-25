@@ -1,0 +1,564 @@
+{
+  "case": "self-authored-fictional-digital-humanities",
+  "started_utc": "2026-10-24T20:40:42.500459+00:00",
+  "parameters": {
+    "token_pattern": "[a-z]+",
+    "case_transform": "str.lower",
+    "target_exact_token": "liberty",
+    "frequency_multiplier": 100,
+    "layers": [
+      "ocr",
+      "corrected"
+    ],
+    "periods": [
+      1900,
+      1910
+    ],
+    "common_edition_family": "E1",
+    "missing_text_policy": "exclude-from-denominator-and-retain-null",
+    "aggregation": "sum-target-count / sum-token-count; not mean document frequency",
+    "stemming": false,
+    "synonym_merging": false,
+    "automatic_correction": false,
+    "randomness": "none; deterministic analysis",
+    "time_limit_seconds": 10
+  },
+  "environment": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "implementation": "CPython",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "dependencies": "Python standard library only"
+  },
+  "failures": [],
+  "scientific_scope": "descriptive counts in supplied synthetic excerpts only",
+  "input_fingerprints": [
+    {
+      "path": "inputs/corpus.json",
+      "bytes": 1915,
+      "sha256": "585bf0eeb94f133b6416567bbde04b2a19545759b4b20c0c37adc1ef4949eda3"
+    },
+    {
+      "path": "inputs/draft.md",
+      "bytes": 488,
+      "sha256": "007329c9251dfd6aaf6c0cb4f223b66c7fae377b50f572e8ba0b02cfb3934333"
+    },
+    {
+      "path": "inputs/editorial-note.md",
+      "bytes": 1204,
+      "sha256": "76f6d0f12d70b4642ef8e9a0302879e446bec1b592d15ca21151b5710ddafaa2"
+    },
+    {
+      "path": "inputs/task.md",
+      "bytes": 1486,
+      "sha256": "1216d4a2a61caefc798325490b1ba35448e6acffb003b63230b2a2a29bc75d76"
+    }
+  ],
+  "code_fingerprint": {
+    "path": "artifacts/run.py",
+    "bytes": 7378,
+    "sha256": "1604aecdbdd9d798f336b4a2a7d27b015208461185d624df1145304b115b779b"
+  },
+  "corpus_version": "1",
+  "documents": [
+    {
+      "id": "D01",
+      "period": 1900,
+      "edition_id": "E1",
+      "edition_year": 1915,
+      "title": "议事摘要一",
+      "genre": "meeting-note",
+      "text_access": "supplied-excerpt",
+      "ocr": {
+        "available": true,
+        "tokens": [
+          "liberty",
+          "tax",
+          "work",
+          "liberty",
+          "tax"
+        ],
+        "total_tokens": 5,
+        "liberty_count": 2,
+        "per_100_tokens": 40.0
+      },
+      "corrected": {
+        "available": true,
+        "tokens": [
+          "liberty",
+          "tax",
+          "work",
+          "liberty",
+          "tax"
+        ],
+        "total_tokens": 5,
+        "liberty_count": 2,
+        "per_100_tokens": 40.0
+      },
+      "provided_layer_token_edits": []
+    },
+    {
+      "id": "D02",
+      "period": 1900,
+      "edition_id": "E1",
+      "edition_year": 1915,
+      "title": "通信节录",
+      "genre": "letter",
+      "text_access": "supplied-excerpt",
+      "ocr": {
+        "available": true,
+        "tokens": [
+          "liberiy",
+          "tax",
+          "work",
+          "libcrty"
+        ],
+        "total_tokens": 4,
+        "liberty_count": 0,
+        "per_100_tokens": 0.0
+      },
+      "corrected": {
+        "available": true,
+        "tokens": [
+          "liberty",
+          "tax",
+          "work",
+          "liberty"
+        ],
+        "total_tokens": 4,
+        "liberty_count": 2,
+        "per_100_tokens": 50.0
+      },
+      "provided_layer_token_edits": [
+        {
+          "operation": "replace",
+          "ocr_positions_1based": [
+            1
+          ],
+          "ocr_tokens": [
+            "liberiy"
+          ],
+          "corrected_positions_1based": [
+            1
+          ],
+          "corrected_tokens": [
+            "liberty"
+          ]
+        },
+        {
+          "operation": "replace",
+          "ocr_positions_1based": [
+            4
+          ],
+          "ocr_tokens": [
+            "libcrty"
+          ],
+          "corrected_positions_1based": [
+            4
+          ],
+          "corrected_tokens": [
+            "liberty"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "period": 1900,
+      "edition_id": "E2",
+      "edition_year": 1935,
+      "title": "增订件目录项",
+      "genre": "catalogue-only",
+      "text_access": "metadata-only",
+      "ocr": {
+        "available": false,
+        "tokens": null,
+        "total_tokens": null,
+        "liberty_count": null,
+        "per_100_tokens": null
+      },
+      "corrected": {
+        "available": false,
+        "tokens": null,
+        "total_tokens": null,
+        "liberty_count": null,
+        "per_100_tokens": null
+      },
+      "provided_layer_token_edits": []
+    },
+    {
+      "id": "D04",
+      "period": 1910,
+      "edition_id": "E1",
+      "edition_year": 1915,
+      "title": "短讲节录",
+      "genre": "speech",
+      "text_access": "supplied-excerpt",
+      "ocr": {
+        "available": true,
+        "tokens": [
+          "liberty",
+          "liberty",
+          "liberty",
+          "tax",
+          "work"
+        ],
+        "total_tokens": 5,
+        "liberty_count": 3,
+        "per_100_tokens": 60.0
+      },
+      "corrected": {
+        "available": true,
+        "tokens": [
+          "liberty",
+          "liberty",
+          "liberty",
+          "tax",
+          "work"
+        ],
+        "total_tokens": 5,
+        "liberty_count": 3,
+        "per_100_tokens": 60.0
+      },
+      "provided_layer_token_edits": []
+    },
+    {
+      "id": "D05",
+      "period": 1910,
+      "edition_id": "E2",
+      "edition_year": 1935,
+      "title": "社论节录",
+      "genre": "editorial",
+      "text_access": "supplied-excerpt",
+      "ocr": {
+        "available": true,
+        "tokens": [
+          "liberty",
+          "liberty",
+          "tax",
+          "liberty",
+          "liberty"
+        ],
+        "total_tokens": 5,
+        "liberty_count": 4,
+        "per_100_tokens": 80.0
+      },
+      "corrected": {
+        "available": true,
+        "tokens": [
+          "liberty",
+          "liberty",
+          "tax",
+          "liberty",
+          "liberty"
+        ],
+        "total_tokens": 5,
+        "liberty_count": 4,
+        "per_100_tokens": 80.0
+      },
+      "provided_layer_token_edits": []
+    },
+    {
+      "id": "D06",
+      "period": 1910,
+      "edition_id": "E2",
+      "edition_year": 1935,
+      "title": "来信节录",
+      "genre": "letter",
+      "text_access": "supplied-excerpt",
+      "ocr": {
+        "available": true,
+        "tokens": [
+          "liberty",
+          "liberal",
+          "tax"
+        ],
+        "total_tokens": 3,
+        "liberty_count": 1,
+        "per_100_tokens": 33.333333333333336
+      },
+      "corrected": {
+        "available": true,
+        "tokens": [
+          "liberty",
+          "liberal",
+          "tax"
+        ],
+        "total_tokens": 3,
+        "liberty_count": 1,
+        "per_100_tokens": 33.333333333333336
+      },
+      "provided_layer_token_edits": []
+    }
+  ],
+  "all_period_totals": [
+    {
+      "period": 1900,
+      "edition_id": "all-available",
+      "layer": "ocr",
+      "catalogued_count": 3,
+      "available_count": 2,
+      "available_ids": [
+        "D01",
+        "D02"
+      ],
+      "missing_ids": [
+        "D03"
+      ],
+      "total_tokens": 9,
+      "liberty_count": 2,
+      "per_100_tokens": 22.22222222222222
+    },
+    {
+      "period": 1900,
+      "edition_id": "all-available",
+      "layer": "corrected",
+      "catalogued_count": 3,
+      "available_count": 2,
+      "available_ids": [
+        "D01",
+        "D02"
+      ],
+      "missing_ids": [
+        "D03"
+      ],
+      "total_tokens": 9,
+      "liberty_count": 4,
+      "per_100_tokens": 44.44444444444444
+    },
+    {
+      "period": 1910,
+      "edition_id": "all-available",
+      "layer": "ocr",
+      "catalogued_count": 3,
+      "available_count": 3,
+      "available_ids": [
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "missing_ids": [],
+      "total_tokens": 13,
+      "liberty_count": 8,
+      "per_100_tokens": 61.53846153846154
+    },
+    {
+      "period": 1910,
+      "edition_id": "all-available",
+      "layer": "corrected",
+      "catalogued_count": 3,
+      "available_count": 3,
+      "available_ids": [
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "missing_ids": [],
+      "total_tokens": 13,
+      "liberty_count": 8,
+      "per_100_tokens": 61.53846153846154
+    }
+  ],
+  "common_E1_totals": [
+    {
+      "period": 1900,
+      "edition_id": "E1",
+      "layer": "ocr",
+      "catalogued_count": 2,
+      "available_count": 2,
+      "available_ids": [
+        "D01",
+        "D02"
+      ],
+      "missing_ids": [],
+      "total_tokens": 9,
+      "liberty_count": 2,
+      "per_100_tokens": 22.22222222222222
+    },
+    {
+      "period": 1900,
+      "edition_id": "E1",
+      "layer": "corrected",
+      "catalogued_count": 2,
+      "available_count": 2,
+      "available_ids": [
+        "D01",
+        "D02"
+      ],
+      "missing_ids": [],
+      "total_tokens": 9,
+      "liberty_count": 4,
+      "per_100_tokens": 44.44444444444444
+    },
+    {
+      "period": 1910,
+      "edition_id": "E1",
+      "layer": "ocr",
+      "catalogued_count": 1,
+      "available_count": 1,
+      "available_ids": [
+        "D04"
+      ],
+      "missing_ids": [],
+      "total_tokens": 5,
+      "liberty_count": 3,
+      "per_100_tokens": 60.0
+    },
+    {
+      "period": 1910,
+      "edition_id": "E1",
+      "layer": "corrected",
+      "catalogued_count": 1,
+      "available_count": 1,
+      "available_ids": [
+        "D04"
+      ],
+      "missing_ids": [],
+      "total_tokens": 5,
+      "liberty_count": 3,
+      "per_100_tokens": 60.0
+    }
+  ],
+  "edition_period_totals": [
+    {
+      "period": 1900,
+      "edition_id": "E1",
+      "layer": "ocr",
+      "catalogued_count": 2,
+      "available_count": 2,
+      "available_ids": [
+        "D01",
+        "D02"
+      ],
+      "missing_ids": [],
+      "total_tokens": 9,
+      "liberty_count": 2,
+      "per_100_tokens": 22.22222222222222
+    },
+    {
+      "period": 1900,
+      "edition_id": "E1",
+      "layer": "corrected",
+      "catalogued_count": 2,
+      "available_count": 2,
+      "available_ids": [
+        "D01",
+        "D02"
+      ],
+      "missing_ids": [],
+      "total_tokens": 9,
+      "liberty_count": 4,
+      "per_100_tokens": 44.44444444444444
+    },
+    {
+      "period": 1910,
+      "edition_id": "E1",
+      "layer": "ocr",
+      "catalogued_count": 1,
+      "available_count": 1,
+      "available_ids": [
+        "D04"
+      ],
+      "missing_ids": [],
+      "total_tokens": 5,
+      "liberty_count": 3,
+      "per_100_tokens": 60.0
+    },
+    {
+      "period": 1910,
+      "edition_id": "E1",
+      "layer": "corrected",
+      "catalogued_count": 1,
+      "available_count": 1,
+      "available_ids": [
+        "D04"
+      ],
+      "missing_ids": [],
+      "total_tokens": 5,
+      "liberty_count": 3,
+      "per_100_tokens": 60.0
+    },
+    {
+      "period": 1900,
+      "edition_id": "E2",
+      "layer": "ocr",
+      "catalogued_count": 1,
+      "available_count": 0,
+      "available_ids": [],
+      "missing_ids": [
+        "D03"
+      ],
+      "total_tokens": 0,
+      "liberty_count": 0,
+      "per_100_tokens": null
+    },
+    {
+      "period": 1900,
+      "edition_id": "E2",
+      "layer": "corrected",
+      "catalogued_count": 1,
+      "available_count": 0,
+      "available_ids": [],
+      "missing_ids": [
+        "D03"
+      ],
+      "total_tokens": 0,
+      "liberty_count": 0,
+      "per_100_tokens": null
+    },
+    {
+      "period": 1910,
+      "edition_id": "E2",
+      "layer": "ocr",
+      "catalogued_count": 2,
+      "available_count": 2,
+      "available_ids": [
+        "D05",
+        "D06"
+      ],
+      "missing_ids": [],
+      "total_tokens": 8,
+      "liberty_count": 5,
+      "per_100_tokens": 62.5
+    },
+    {
+      "period": 1910,
+      "edition_id": "E2",
+      "layer": "corrected",
+      "catalogued_count": 2,
+      "available_count": 2,
+      "available_ids": [
+        "D05",
+        "D06"
+      ],
+      "missing_ids": [],
+      "total_tokens": 8,
+      "liberty_count": 5,
+      "per_100_tokens": 62.5
+    }
+  ],
+  "period_differences_per_100_tokens": {
+    "all_available": {
+      "ocr": 39.31623931623932,
+      "corrected": 17.094017094017097
+    },
+    "common_E1": {
+      "ocr": 37.77777777777778,
+      "corrected": 15.555555555555557
+    }
+  },
+  "coverage": {
+    "catalogued_documents": 6,
+    "available_excerpt_pairs": 5,
+    "metadata_only_ids": [
+      "D03"
+    ],
+    "original_scan_images": 0,
+    "layer_token_totals": {
+      "ocr": 22,
+      "corrected": 22
+    }
+  },
+  "elapsed_seconds": 0.011716790999344084,
+  "exit_code": 0
+}

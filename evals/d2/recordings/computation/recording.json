@@ -1,0 +1,790 @@
+{
+  "format_version": 1,
+  "case_id": "computation",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create a fresh project identity, version-one records and a new checkpoint; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "22a5c72c80233b743dfb31f7fa2e4be566c1f1d0a4443212364ef4f32948c2be",
+  "project_init": {
+    "title": "固定函数求值预算下中点法与梯形法的有界比较",
+    "interest": "合成目标上的积分绝对误差比较",
+    "disciplines": [],
+    "methods": [],
+    "workflow_mode": "reproducible",
+    "language": "zh-CN",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/draft.md": "draft.md",
+    "inputs/methods.py": "methods.py",
+    "inputs/pilot.csv": "pilot.csv",
+    "inputs/targets.json": "targets.json",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "methods.py": "0d7dd82ab9a0cd60c120eef9800390fec84d9b30135d5ee9ce18a3f92e628695",
+    "draft.md": "8542092fba7756d65aff9bb6398105c87f10744284b75a84e51a111d8f56fbdf",
+    "targets.json": "097da57112f7619b22c29228f912b6f8786909263fa310ca65dd998c657db731",
+    "pilot.csv": "2a5ca4d772033969fc2812fe80192d3afb1a9e86690b598ce4b30fe2c6a3e00a",
+    "task.md": "590d3dfdef8b213e33fb18f44f1aa1a62ddc19b9800b6b954e9f882c50f6752b"
+  },
+  "output_files": [
+    "README.md",
+    "artifacts/content-check.json",
+    "artifacts/execution-envelope.json",
+    "artifacts/input-manifest.json",
+    "artifacts/pilot-audit.json",
+    "artifacts/reproducibility.json",
+    "artifacts/results.json",
+    "artifacts/run.log",
+    "artifacts/run.py",
+    "artifacts/setup-incidents.json",
+    "artifacts/summary.csv",
+    "artifacts/summary.md",
+    "manuscript/report.md",
+    "notes/issue.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "README.md": "5546768e6aee19e0f178e202d4b1c4f5a27812ba4cf039e34fbe586de0b5fe99",
+    "artifacts/content-check.json": "4939d96398a704ac6b187519098b7892195d6fe159f4661db028205394785bf0",
+    "artifacts/execution-envelope.json": "576c515eef58e55131cd12afbe40c7f72af1c882f3031ebfa85e7217152611a4",
+    "artifacts/input-manifest.json": "9d54bbcb63741b4f9ae0cff06e9acec052fa888642ecaf6c68555b8fc8da5dd1",
+    "artifacts/pilot-audit.json": "2f74d97e9dccd3a241e36f397685eb606c99d36e5507fb423c2977336610134f",
+    "artifacts/reproducibility.json": "c1daface85bbcccdeaf7b75240fe0e703c4a689ee2038e9a4094e04a9d5e0482",
+    "artifacts/results.json": "b89bfebe8e5c10a1d11919763c383bb5d4cabb6073010ecf46cbad2acd7cf6ea",
+    "artifacts/run.log": "6fbdc781057717305a8355f139a3617ac6aee42da6e9cbc2246494191b8766db",
+    "artifacts/run.py": "46d41eb38e7f7d7f01473795440a5468a2745d420bd6a28792549e58d17107c1",
+    "artifacts/setup-incidents.json": "cc68f35bc6f68f3a27be061cc8c6bb6b63eb5c732a25ca87f5667f0a56f6c375",
+    "artifacts/summary.csv": "d8e4b9f3b392fd009f08c46fec7b66768b80edda5a3ef0665ca545537facc34c",
+    "artifacts/summary.md": "1501991493d8dd537160def3efe4b8d203a6fd16f484c78dc163a021cc18a75b",
+    "manuscript/report.md": "043388cfb00724dc992550217fe4a76d21871264982f344b8f1edd5967527fff",
+    "notes/issue.md": "028e70586f584a5d927bc16f9744eb3962d089aea084ba45d623f274b1c8fd9c",
+    "review.md": "1c769ee3f493e3fac5aa43c2b4b3005bba6188537b805a8a8392e433bd929a6e"
+  },
+  "output_normalizations": [
+    {
+      "path": "artifacts/setup-incidents.json",
+      "original_sha256": "7f7d830c4a7713ed1c008af62cc3db3237708592faa5c7e8b6d4ee1ac580d1a9",
+      "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+    }
+  ],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_DRAFT",
+        "limitations": "用户提供的新写合成练习；无真实发表或新颖性结论。未联网核查。",
+        "locator": "inputs/draft.md",
+        "title": "合作者草稿v0.1",
+        "version": "sha256:8542092fba7756d65aff9bb6398105c87f10744284b75a84e51a111d8f56fbdf"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_METHODS",
+        "limitations": "用户提供的新写合成练习；无真实发表或新颖性结论。未联网核查。",
+        "locator": "inputs/methods.py",
+        "title": "固定复合中点法和梯形法源码",
+        "version": "sha256:0d7dd82ab9a0cd60c120eef9800390fec84d9b30135d5ee9ce18a3f92e628695"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_PILOT",
+        "limitations": "用户提供的新写合成练习；无真实发表或新颖性结论。未联网核查。",
+        "locator": "inputs/pilot.csv",
+        "title": "构造的四行试跑记录",
+        "version": "sha256:2a5ca4d772033969fc2812fe80192d3afb1a9e86690b598ce4b30fe2c6a3e00a"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_TARGETS",
+        "limitations": "用户提供的新写合成练习；无真实发表或新颖性结论。未联网核查。",
+        "locator": "inputs/targets.json",
+        "title": "六目标、预算及数学参考值规范",
+        "version": "sha256:097da57112f7619b22c29228f912b6f8786909263fa310ca65dd998c657db731"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_TASK",
+        "limitations": "用户提供的新写合成练习；无真实发表或新颖性结论。未联网核查。",
+        "locator": "inputs/task.md",
+        "title": "合成练习委托及约束",
+        "version": "sha256:590d3dfdef8b213e33fb18f44f1aa1a62ddc19b9800b6b954e9f882c50f6752b"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "源码和逐行复核显示每项中点128次而梯形9次求值。",
+          "reviewer": "Codex执行者自审，非独立专家或形式化认证",
+          "scope": "仅原试跑四行的资源口径",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "本轮为数值实验及手工原函数核对",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "C_BUDGET",
+        "scope": "仅原试跑四行的资源口径",
+        "text": "原试跑两法均运行一次，因此实验资源相同。",
+        "type": "empirical",
+        "use": "background",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "同预算9的振荡与折点目标均为梯形误差较小，构成所测范围内的反例。",
+          "reviewer": "Codex执行者自审，非独立专家或形式化认证",
+          "scope": "原稿的全称主张；本轮仅提供明确反向算例，不证明一般分类",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "本轮为数值实验及手工原函数核对",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "C_GLOBAL",
+        "scope": "原稿的全称主张；本轮仅提供明确反向算例，不证明一般分类",
+        "text": "中点法在所有被积函数和所有预算下均比梯形法准确。",
+        "type": "empirical",
+        "use": "background",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "全部36项完成；差值≤1e−12预设为并列；保留全部逐项结果及均值、中位数、最大值。",
+          "reviewer": "Codex执行者自审，非独立专家或形式化认证",
+          "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "本轮为数值实验及手工原函数核对",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "C_LOCAL",
+        "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+        "text": "预算9时中点/梯形较准目标数为4/2；33和129时各为5/0并有1个浮点尺度内并列；没有统一赢家。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "试跑没有计时，本轮短时计时只检验10秒约束，未设计相对性能测量。",
+          "reviewer": "Codex执行者自审，非独立专家或形式化认证",
+          "scope": "原稿速度比较；本轮不作速度排名",
+          "status": "insufficient"
+        },
+        "formal_verification": {
+          "scope": "本轮为数值实验及手工原函数核对",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "C_SPEED",
+        "scope": "原稿速度比较；本轮不作速度排名",
+        "text": "中点法运行速度更快。",
+        "type": "empirical",
+        "use": "background",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "研究问题已界定，正式运行全部36项并保留结果。",
+          "reviewer": "Codex执行者自审，非独立专家或形式化认证",
+          "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+          "status": "not-applicable"
+        },
+        "formal_verification": {
+          "scope": "本轮为数值实验及手工原函数核对",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "Q1",
+        "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+        "text": "固定求值预算下两种算法在全部附件目标的绝对误差如何比较，是否存在反向结果？",
+        "type": "question",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "目标覆盖、预算、误差、源码身份和稿长核对",
+        "id": "E_CONTENT",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/content-check.json"
+        },
+        "provenance": "本轮实际生成；命令与原始stdout/stderr保存在项目旁logs/",
+        "source_ids": [],
+        "type": "executed-local-record"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "完整正式子进程命令、真实退出状态、墙钟及原始输出",
+        "id": "E_EXEC",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/execution-envelope.json"
+        },
+        "provenance": "本轮实际生成；命令与原始stdout/stderr保存在项目旁logs/",
+        "source_ids": [],
+        "type": "executed-local-record"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "试跑四行的实际重算与逐项差值",
+        "id": "E_PILOT_AUDIT",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/pilot-audit.json"
+        },
+        "provenance": "本轮实际生成；命令与原始stdout/stderr保存在项目旁logs/",
+        "source_ids": [],
+        "type": "executed-local-record"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "正式运行前的问题卡、材料审计、预算计划与原函数核对",
+        "id": "E_PLAN",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "notes/issue.md"
+        },
+        "provenance": "本轮实际生成；命令与原始stdout/stderr保存在项目旁logs/",
+        "source_ids": [],
+        "type": "executed-local-record"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "迁移复跑七项一致性检查",
+        "id": "E_REPRO",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/reproducibility.json"
+        },
+        "provenance": "本轮实际生成；命令与原始stdout/stderr保存在项目旁logs/",
+        "source_ids": [],
+        "type": "executed-local-record"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "36项原始结果、18独立基准、实际计数、参数和环境",
+        "id": "E_RUN",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "本轮实际生成；命令与原始stdout/stderr保存在项目旁logs/",
+        "source_ids": [],
+        "type": "executed-local-record"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "保留的初始化参数拒绝和路径检索错误及恢复记录",
+        "id": "E_SETUP",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/setup-incidents.json"
+        },
+        "provenance": "本轮实际生成；命令与原始stdout/stderr保存在项目旁logs/",
+        "source_ids": [],
+        "type": "executed-local-record"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "被修订的原始论断",
+        "id": "E_DRAFT",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "用户授权的离线合成练习；附件按字节复制",
+        "source_ids": [
+          "SRC_DRAFT"
+        ],
+        "type": "supplied-synthetic-material"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "固定算法和函数求值口径",
+        "id": "E_METHODS",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/methods.py"
+        },
+        "provenance": "用户授权的离线合成练习；附件按字节复制",
+        "source_ids": [
+          "SRC_METHODS"
+        ],
+        "type": "supplied-synthetic-material"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "未经公平预算对齐的四行试跑",
+        "id": "E_PILOT",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/pilot.csv"
+        },
+        "provenance": "用户授权的离线合成练习；附件按字节复制",
+        "source_ids": [
+          "SRC_PILOT"
+        ],
+        "type": "supplied-synthetic-material"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "目标与独立参考数学表达式",
+        "id": "E_TARGETS",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/targets.json"
+        },
+        "provenance": "用户授权的离线合成练习；附件按字节复制",
+        "source_ids": [
+          "SRC_TARGETS"
+        ],
+        "type": "supplied-synthetic-material"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "委托、范围和资源约束",
+        "id": "E_TASK",
+        "limitations": "本地材料身份可核验；数值、科学解释和范围仍需内容审阅，登记不构成认证。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/task.md"
+        },
+        "provenance": "用户授权的离线合成练习；附件按字节复制",
+        "source_ids": [
+          "SRC_TASK"
+        ],
+        "type": "supplied-synthetic-material"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RUN",
+        "id": "R_GLOBAL",
+        "limitations": "没有外部文献、新颖性或普遍优越性认证。",
+        "rationale": "预算9的振荡和折点均为梯形更准。",
+        "relation": "challenges",
+        "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+        "statement_id": "C_GLOBAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RUN",
+        "id": "R_LOCAL",
+        "limitations": "没有外部文献、新颖性或普遍优越性认证。",
+        "rationale": "36项原始值给出局部胜负和聚合量，未删不利目标。",
+        "relation": "supports",
+        "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+        "statement_id": "C_LOCAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_PILOT_AUDIT",
+        "id": "R_PILOT",
+        "limitations": "没有外部文献、新颖性或普遍优越性认证。",
+        "rationale": "重算计数确认试跑预算不等；数字本身全部复现。",
+        "relation": "challenges",
+        "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+        "statement_id": "C_BUDGET"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_REPRO",
+        "id": "R_REPRO",
+        "limitations": "没有外部文献、新颖性或普遍优越性认证。",
+        "rationale": "迁移复跑数值一致；仅为相同环境下的可复查性，非总体外推。",
+        "relation": "qualifies",
+        "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+        "statement_id": "C_LOCAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_EXEC",
+        "id": "R_SPEED",
+        "limitations": "没有外部文献、新颖性或普遍优越性认证。",
+        "rationale": "正式进程0.0648秒仅核查资源限制，不能支持两法速度结论。",
+        "relation": "qualifies",
+        "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+        "statement_id": "C_SPEED"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "A_SETUP_FAILED",
+        "inputs": [
+          "source:SRC_TASK"
+        ],
+        "note": "命令011真实退出2，Unknown or repeated project disciplines/methods；未创建项目。随后命令015初始化、016项目内接入均成功。路径检索命令012的退出2亦保留，随后已定位正确模式目录；这不是数值实验失败。",
+        "outputs": [
+          "evidence:E_SETUP"
+        ],
+        "status": "failed",
+        "title": "首次初始化自由文本参数被拒绝"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RUN"
+        ],
+        "description": "保留全部36行的逐目标表",
+        "id": "ART_CSV",
+        "path": "artifacts/summary.csv",
+        "type": "data-table"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RUN"
+        ],
+        "description": "实际运行事件与结果数",
+        "id": "ART_LOG",
+        "path": "artifacts/run.log",
+        "type": "run-log"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_TASK",
+          "source:SRC_METHODS",
+          "source:SRC_TARGETS",
+          "source:SRC_PILOT",
+          "source:SRC_DRAFT"
+        ],
+        "description": "原始五输入的复制身份与哈希",
+        "id": "ART_MANIFEST",
+        "path": "artifacts/input-manifest.json",
+        "type": "input-manifest"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:C_LOCAL",
+          "evidence:E_RUN",
+          "evidence:E_PILOT_AUDIT"
+        ],
+        "description": "基于实际结果修订的短稿",
+        "id": "ART_REPORT",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RUN"
+        ],
+        "description": "全部目标和三预算的描述汇总",
+        "id": "ART_SUMMARY",
+        "path": "artifacts/summary.md",
+        "type": "summary"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_METHODS",
+        "id": "R_BUDGET",
+        "limitations": "没有外部文献、新颖性或普遍优越性认证。",
+        "rationale": "n代表子区间，求值数为n与n+1；试跑为128与9。",
+        "relation": "challenges",
+        "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+        "statement_id": "C_BUDGET"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_TARGETS",
+        "id": "R_REFERENCE",
+        "limitations": "没有外部文献、新颖性或普遍优越性认证。",
+        "rationale": "参考式由附件规范提供，math近似无认证舍入界。",
+        "relation": "qualifies",
+        "scope": "附件六个目标、[0,1]、B=9/33/129、原固定算法、CPython双精度，预算为实际f调用数",
+        "statement_id": "C_LOCAL"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_METHODS",
+          "evidence:E_TARGETS",
+          "evidence:E_PLAN"
+        ],
+        "description": "标准库计数、基准、试跑审计和正式比较脚本",
+        "id": "ART_CODE",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:Q1",
+          "evidence:E_METHODS",
+          "evidence:E_PILOT"
+        ],
+        "description": "问题卡与预先计划",
+        "id": "ART_PLAN",
+        "path": "notes/issue.md",
+        "type": "research-note"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART_REPORT",
+          "evidence:E_RUN",
+          "evidence:E_CONTENT",
+          "evidence:E_REPRO"
+        ],
+        "description": "问题、已修订论断、实际核对与限制",
+        "id": "ART_REVIEW",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "A_AUDIT",
+        "inputs": [
+          "evidence:E_TASK",
+          "evidence:E_METHODS",
+          "evidence:E_TARGETS",
+          "evidence:E_PILOT",
+          "evidence:E_DRAFT"
+        ],
+        "note": "问题卡写在正式运行之前；手工核对六个原函数；未联网或查新。",
+        "outputs": [
+          "statement:Q1",
+          "artifact:ART_PLAN",
+          "artifact:ART_MANIFEST"
+        ],
+        "status": "done",
+        "title": "阅读附件、界定比较问题并预设预算及参考核对"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART_CODE",
+          "evidence:E_REPRO"
+        ],
+        "description": "迁移复跑与恢复的相对路径命令",
+        "id": "ART_README",
+        "path": "README.md",
+        "type": "reproduction-instructions"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART_CODE",
+          "evidence:E_METHODS",
+          "evidence:E_TARGETS"
+        ],
+        "description": "原始逐项目输出与执行配置",
+        "id": "ART_RESULTS",
+        "path": "artifacts/results.json",
+        "type": "raw-results"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Q1",
+          "statement:C_LOCAL",
+          "artifact:ART_CODE"
+        ],
+        "id": "M_COMPUTE",
+        "method_id": "computational",
+        "notes": "方法选择和登记不替代实际运行；实际运行由A_RUN记录。",
+        "profile_version": "0.1",
+        "reason": "已实际读取项目内计算画像；明确预算、独立基准、完整原始结果、运行条件、失败与有界解释。"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_AUDIT"
+        ],
+        "id": "A_RUN",
+        "inputs": [
+          "statement:Q1",
+          "evidence:E_METHODS",
+          "evidence:E_TARGETS",
+          "evidence:E_PILOT",
+          "artifact:ART_CODE",
+          "method-binding:M_COMPUTE"
+        ],
+        "note": "命令023及026退出0；18基准全通过，36正式行全成功，2052正式调用，实际完整进程0.064796459秒；迁移复跑七项相同，未比较速度。",
+        "outputs": [
+          "evidence:E_RUN",
+          "evidence:E_PILOT_AUDIT",
+          "evidence:E_REPRO",
+          "evidence:E_EXEC",
+          "artifact:ART_RESULTS",
+          "artifact:ART_CSV",
+          "artifact:ART_SUMMARY",
+          "artifact:ART_LOG"
+        ],
+        "status": "done",
+        "title": "独立基准、试跑重算、完整比较与迁移复跑"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_RUN"
+        ],
+        "id": "A_WRITE",
+        "inputs": [
+          "evidence:E_DRAFT",
+          "statement:C_LOCAL",
+          "statement:C_GLOBAL",
+          "statement:C_SPEED",
+          "evidence:E_RUN",
+          "evidence:E_PILOT_AUDIT"
+        ],
+        "note": "删除同资源、普遍优越和速度外推；保留混叠及折点反向结果、全部预算和适用范围。",
+        "outputs": [
+          "artifact:ART_REPORT"
+        ],
+        "status": "done",
+        "title": "依据正式结果修订短稿"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A_WRITE"
+        ],
+        "id": "A_REVIEW",
+        "inputs": [
+          "artifact:ART_REPORT",
+          "evidence:E_RUN",
+          "evidence:E_CONTENT",
+          "evidence:E_REPRO",
+          "evidence:E_EXEC",
+          "evidence:E_PLAN"
+        ],
+        "note": "命令028的覆盖、预算、误差、身份及稿长检查全通过；手工审阅无速度或普适性结论。登记检查另行保存，不作为科学有效性证明。",
+        "outputs": [
+          "artifact:ART_REVIEW",
+          "artifact:ART_README"
+        ],
+        "status": "done",
+        "title": "核对材料、结果、短稿与限制并保存下一步"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 5,
+    "artifacts": 10,
+    "decisions": 0,
+    "evidence": 12,
+    "method_bindings": 1,
+    "relations": 7,
+    "sources": 5,
+    "statements": 5
+  },
+  "cursor": {
+    "activity_id": "A_REVIEW",
+    "next_action": "手工推导cos(2πkx)的两种复合求积离散和及混叠条件，再预先设计独立的扩展预算；另存后续结果，不覆盖本轮36行。"
+  }
+}

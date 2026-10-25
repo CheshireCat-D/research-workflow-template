@@ -1,0 +1,74 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pa803189f84da4303bdaa6370c90b3573",
+  "revision": 56,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 6,
+    "artifacts": 14,
+    "decisions": 0,
+    "evidence": 6,
+    "method_bindings": 2,
+    "relations": 8,
+    "sources": 5,
+    "statements": 4
+  },
+  "activities": [
+    {
+      "id": "ACT_ACCEPT",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_BASELINE",
+      "declared_status": "failed",
+      "effective_status": "failed",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_PLAN",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_REPAIR",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_REVIEW",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_WRITE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "ACT_REVIEW",
+    "next_action": "在新副本补充负零、最小正浮点窗口、最大有限浮点和多客户非同步时间轨迹；对照定义参考逐项记录，若发现反例则保留失败并重新审阅。本次冻结组件继续限于单线程内存演示。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "next_action": "在新副本补充负零、最小正浮点窗口、最大有限浮点和多客户非同步时间轨迹；对照定义参考逐项记录，若发现反例则保留失败并重新审阅。本次冻结组件继续限于单线程内存演示。",
+  "needs_review": false,
+  "recovery_instruction": "Continue the recorded next action within its existing scope."
+}

@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "checks": {
+    "relocated_scientific_results_identical": true,
+    "all_arithmetic_anchors_true": true,
+    "primary_run_under_10_seconds": true,
+    "relocated_run_under_10_seconds": true,
+    "all_relocated_commands_exit_zero": true,
+    "manuscript_under_1000_hanzi": true,
+    "medical_crude_and_standardized_sign_reversal": true,
+    "policy_fixed_2023_baseline": true,
+    "results_contain_no_absolute_local_paths": true,
+    "code_has_no_network_or_nonstdlib_imports": true
+  },
+  "manuscript_hanzi_count": 477,
+  "relocated_output": "relocated-PROJECT/artifacts/relocated-results.json",
+  "compared_scientific_fields": [
+    "medical",
+    "policy",
+    "arithmetic_anchors",
+    "parameters",
+    "input_fingerprints",
+    "status",
+    "failures"
+  ],
+  "excluded_variable_fields": [
+    "environment",
+    "elapsed_seconds"
+  ],
+  "run_commands": [
+    {
+      "argv": [
+        "PYTHON",
+        "artifacts/run.py",
+        "--output",
+        "artifacts/relocated-results.json"
+      ],
+      "cwd": "relocated-PROJECT",
+      "exit_code": 0,
+      "elapsed_seconds": 0.0460880829996313
+    },
+    {
+      "argv": [
+        "PYTHON",
+        ".agents/skills/_rw-runtime/tools/research.py",
+        "check",
+        "--root",
+        "."
+      ],
+      "cwd": "relocated-PROJECT",
+      "exit_code": 0,
+      "elapsed_seconds": 0.04136474999904749
+    }
+  ],
+  "scope": "Finite synthetic arithmetic, delivery text/relative paths, and project-local runtime after directory copy. Does not establish causal identification, external validity, independent human review or full stdlib security audit."
+}

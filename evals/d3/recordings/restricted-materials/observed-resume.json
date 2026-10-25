@@ -1,0 +1,79 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pf5bcf64822424d668f63dcd5d1765120",
+  "revision": 47,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [
+    {
+      "code": "evidence_not_inspected",
+      "record": "evidence:EV-INT",
+      "location_kind": "controlled"
+    },
+    {
+      "code": "evidence_not_inspected",
+      "record": "evidence:EV-PAT",
+      "location_kind": "controlled"
+    }
+  ],
+  "findings": [],
+  "counts": {
+    "activities": 5,
+    "artifacts": 11,
+    "decisions": 2,
+    "evidence": 7,
+    "method_bindings": 2,
+    "relations": 8,
+    "sources": 7,
+    "statements": 4
+  },
+  "activities": [
+    {
+      "id": "ACT-CLARIFY",
+      "declared_status": "pending",
+      "effective_status": "pending",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-DECIDE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-DESIGN",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-REVIEW",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-WRITE",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "ACT-CLARIFY",
+    "next_action": "根据 notes/permission-decision.md 的6项问题，由医院数据办公室／PI及访谈资料控制者提供新的虚构书面依据；收到后先按原件本地分析、第三方处理、原话引用、跨机构共享逐项核对主体、版本、目的与范围，再更新判断；本演练不执行现实上传或外部消息。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "next_action": "根据 notes/permission-decision.md 的6项问题，由医院数据办公室／PI及访谈资料控制者提供新的虚构书面依据；收到后先按原件本地分析、第三方处理、原话引用、跨机构共享逐项核对主体、版本、目的与范围，再更新判断；本演练不执行现实上传或外部消息。",
+  "needs_review": false,
+  "recovery_instruction": "Continue the recorded next action within its existing scope."
+}

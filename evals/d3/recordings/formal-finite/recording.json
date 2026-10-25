@@ -1,0 +1,777 @@
+{
+  "format_version": 1,
+  "case_id": "formal-finite",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task output and final record data. Replays create fresh IDs/versions/checkpoints; original process logs and installed runtime copies are not duplicated here.",
+  "executed_bundle_sha256": "71655fc5525049725f62da473cd0a795e569df7d2a4065fb24d0f39331520d65",
+  "project_init": {
+    "title": "有限素数观察、反例与修正版",
+    "interest": "核对 q(n)=n²−n+17 的有限观察和全称命题",
+    "disciplines": [
+      "natural-sciences"
+    ],
+    "methods": [
+      "formal-theory",
+      "computational"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/definition.md": "definition.md",
+    "inputs/draft.md": "draft.md",
+    "inputs/observations.csv": "observations.csv",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "definition.md": "d30a80a34091173d00b71ccad66d1a67e37aed2054b1cc4de0756cfb4a7c9305",
+    "draft.md": "43c011bbae5f17c483f6f5ee96742f1d7fbeb10fcd923176d976d7ef63373aa0",
+    "task.md": "9d2c61332bf4330d9972651f659e909ccfffd7ec50a3f6f5ce49a7a077b6bb55",
+    "observations.csv": "0cd2665dfb5591d835974e19dd3ad89a796d597f841286de156f23c669b8bbe9"
+  },
+  "output_files": [
+    "artifacts/config.json",
+    "artifacts/environment.json",
+    "artifacts/input-fingerprints.json",
+    "artifacts/results.json",
+    "artifacts/review-checks.json",
+    "artifacts/run.py",
+    "manuscript/report.md",
+    "notes/derivation.md",
+    "notes/guidance-read.json",
+    "notes/issue.md",
+    "notes/run-notes.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/config.json": "07a3f3dd4cc475d3e649b50720d098c953c53ec88d1bbb4dc969906471dde4b3",
+    "artifacts/environment.json": "1e36972d07b717dc297ec0c36a54e2f2dce81976eb67f870132648f7e475a796",
+    "artifacts/input-fingerprints.json": "0f5d88fe6f91a0dc539c8e27b75d34a437ee76981d2a6c9e157540394c7d6e48",
+    "artifacts/results.json": "336a50569091df6c2c4d50ef445bcd173572166d5dd482b818bcf487c6980844",
+    "artifacts/review-checks.json": "720d4b04430f6b885dbedae12f29b689d2f8defe19b3d3919501a3878c4f5afc",
+    "artifacts/run.py": "7009d3013394bc8705daf2ccec1bec51bb3cc6a417f29cdcc7679b586eba62d0",
+    "manuscript/report.md": "b6ea14c0a1e9f381177cdcc5161f6afb3a09aa9cd513ba6678dbf1b3333358a1",
+    "notes/derivation.md": "beedff401d4eea571d8113abaa659068c71c0cb62534d61ebf1a94489b2eef69",
+    "notes/guidance-read.json": "2fc9f5c83ae0c92a764cd606ae29431b9c5706db4add2b750ea635e8c56b0da5",
+    "notes/issue.md": "939eec15bbb18314b277a1bfc82375cd582a1056898bc0ad1cc9feb6e1115fcf",
+    "notes/run-notes.md": "62afedefd688a033ad9033d3b664dec9f893a6f408d129a38cd5ecb82eced144",
+    "review.md": "808acefa0637981bdb0d96bd9d52c928ae022fbdea7709292627a3c9066b48c7"
+  },
+  "output_normalizations": [
+    {
+      "path": "artifacts/environment.json",
+      "original_sha256": "84e63d4103549493c3eaeff45ba84bfe443b6b6ec9724a3f17e92a65562d5244",
+      "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+    },
+    {
+      "path": "artifacts/results.json",
+      "original_sha256": "71e652e906441d6e8b1b495391aed8cc04cc289eabe41be1ab308d98ad5c9ecc",
+      "transformation": "Only local execution-path prefixes replaced by PROJECT/RUN/TOOLKIT/PYTHON placeholders; original remains in isolated run."
+    }
+  ],
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-CSV",
+        "limitations": "用户提供的合成练习；仅限离线本轮复核，不推断真实发表或原作者程序执行。",
+        "locator": "inputs/observations.csv",
+        "rights": "unknown",
+        "title": "原作者17项观察",
+        "version": "provided synthetic v1; SHA-256 in artifacts/input-fingerprints.json"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-DEF",
+        "limitations": "用户提供的合成练习；仅限离线本轮复核，不推断真实发表或原作者程序执行。",
+        "locator": "inputs/definition.md",
+        "rights": "unknown",
+        "title": "整数对象与检查定义v1",
+        "version": "provided synthetic v1; SHA-256 in artifacts/input-fingerprints.json"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-DRAFT",
+        "limitations": "用户提供的合成练习；仅限离线本轮复核，不推断真实发表或原作者程序执行。",
+        "locator": "inputs/draft.md",
+        "rights": "unknown",
+        "title": "原始错误草稿",
+        "version": "provided synthetic v1; SHA-256 in artifacts/input-fingerprints.json"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-TASK",
+        "limitations": "用户提供的合成练习；仅限离线本轮复核，不推断真实发表或原作者程序执行。",
+        "locator": "inputs/task.md",
+        "rights": "unknown",
+        "title": "本轮委托",
+        "version": "provided synthetic v1; SHA-256 in artifacts/input-fingerprints.json"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "n=21在余数4类，而q=437=19×23。",
+          "reviewer": "Codex agent d3_forward_finite; self-review, no human independent verification",
+          "scope": "模17条件的必要/充分边界",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No machine formalization; handwritten derivation and finite Python checks separately reported",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-BOUNDARY",
+        "role": "revised result",
+        "scope": "模17条件的必要/充分边界",
+        "text": "n不≡0,1 (mod17)不足以保证q(n)为素数。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "显式因式分解q(17k)、q(17k+1)，k≥1两因子均非平凡。",
+          "reviewer": "Codex agent d3_forward_finite; self-review, no human independent verification",
+          "scope": "指定的两个非负整数余数类，排除n=0、1",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No machine formalization; handwritten derivation and finite Python checks separately reported",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-C",
+        "role": "revised result",
+        "scope": "指定的两个非负整数余数类，排除n=0、1",
+        "text": "所有n≥17且n≡0或1 (mod17)使q(n)合成；两类给出无穷多个反例。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "手工排除小于17的所有素因子，利用q≤257<17²；n17直接反例。",
+          "reviewer": "Codex agent d3_forward_finite; self-review, no human independent verification",
+          "scope": "0..16，且n=17中断",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No machine formalization; handwritten derivation and finite Python checks separately reported",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-F",
+        "role": "revised result",
+        "scope": "0..16，且n=17中断",
+        "text": "对整数0≤n≤16，q(n)均为素数；这是从0起的最长连续素数段。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "实际整数试除保存全部记录，筛法独立核对无分歧，所有合数有有效因子见证。",
+          "reviewer": "Codex agent d3_forward_finite; self-review, no human independent verification",
+          "scope": "固定闭区间0..200及原CSV0..16",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No machine formalization; handwritten derivation and finite Python checks separately reported",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-FINITE",
+        "role": "revised result",
+        "scope": "固定闭区间0..200及原CSV0..16",
+        "text": "本次精确检查0..200全部201项，106个素数值、95个合数值，首个合数n=17；CSV17项数值与素性报告均一致。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "n=17时289=17×17，符合定义域并违反素性；原归纳步错误。",
+          "reviewer": "Codex agent d3_forward_finite; self-review, no human independent verification",
+          "scope": "全部非负整数",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "No machine formalization; handwritten derivation and finite Python checks separately reported",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-P",
+        "role": "original candidate",
+        "scope": "全部非负整数",
+        "text": "∀n∈Z≥0，n²−n+17为素数。",
+        "type": "formal",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "奇偶性及4q=(2n−1)²+67；模3,5,7,11,13的−67均为非平方剩余。",
+          "reviewer": "Codex agent d3_forward_finite; self-review, no human independent verification",
+          "scope": "全部整数；不据此推出全域素性",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "No machine formalization; handwritten derivation and finite Python checks separately reported",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-SMALL",
+        "role": "revised result",
+        "scope": "全部整数；不据此推出全域素性",
+        "text": "任意整数n，q(n)均没有小于17的素因子。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "decision",
+      "record": {
+        "choice": "排除原P，以F、C及有限计算记录构成合成札记",
+        "decided_at": "2026-10-24T20:46:58.742858+00:00",
+        "id": "D-REVISION",
+        "rationale": "直接反例、严格初等证明和实际完整有限检查；不扩展为无穷素数值或新颖性结论",
+        "responsible": "Codex agent d3_forward_finite"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [],
+        "description": "实际读取的项目内技能与画像",
+        "id": "ART-GUIDANCE",
+        "path": "notes/guidance-read.json",
+        "type": "guidance-ledger"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "保留原CSV17项与原作者reported_prime",
+        "id": "E-CSV",
+        "limitations": "该报告状态在本次程序前不视为已核查。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/observations.csv"
+        },
+        "provenance": "inputs are user-provided synthetic; analysis executed by Codex agent in this project",
+        "source_ids": [
+          "SRC-CSV"
+        ],
+        "type": "provided-observations"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "给定q、定义域、素数定义和固定有限搜索范围",
+        "id": "E-DEF",
+        "limitations": "原始定义不是结论的证明。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/definition.md"
+        },
+        "provenance": "inputs are user-provided synthetic; analysis executed by Codex agent in this project",
+        "source_ids": [
+          "SRC-DEF"
+        ],
+        "type": "provided-definition"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "保留原错误全称命题与归纳尝试",
+        "id": "E-DRAFT",
+        "limitations": "被审阅对象，不能作为正确证明。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "inputs are user-provided synthetic; analysis executed by Codex agent in this project",
+        "source_ids": [
+          "SRC-DRAFT"
+        ],
+        "type": "original-argument"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "逐步审稿、有限素数段证明、无穷反例族与边界",
+        "id": "E-PROOF",
+        "limitations": "Codex手工推导、自审；无证明器与人类独立验证。",
+        "location": {
+          "kind": "local",
+          "path": "notes/derivation.md"
+        },
+        "provenance": "inputs are user-provided synthetic; analysis executed by Codex agent in this project",
+        "source_ids": [
+          "SRC-DEF",
+          "SRC-DRAFT"
+        ],
+        "type": "handwritten-proof-and-counterexample"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "主张、数值、量词、限制与修订的本轮自审",
+        "id": "E-REVIEW",
+        "limitations": "同一代理自审，无外部同行或人类审阅。",
+        "location": {
+          "kind": "local",
+          "path": "review.md"
+        },
+        "provenance": "inputs are user-provided synthetic; analysis executed by Codex agent in this project",
+        "source_ids": [
+          "SRC-DRAFT",
+          "SRC-DEF",
+          "SRC-CSV"
+        ],
+        "type": "scoped-self-review"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "完整201项、17行CSV独立核对、因子见证和筛法交叉检查",
+        "id": "E-RUN",
+        "limitations": "只对0..200实际计算；不证明无限量词。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "inputs are user-provided synthetic; analysis executed by Codex agent in this project",
+        "source_ids": [
+          "SRC-DEF",
+          "SRC-CSV"
+        ],
+        "type": "exact-finite-computation"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-DEF",
+          "source:SRC-CSV"
+        ],
+        "description": "标准库相对路径可重跑有限核查脚本",
+        "id": "ART-CODE",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-DEF"
+        ],
+        "description": "实际固定有限范围与判定方法",
+        "id": "ART-CONFIG",
+        "path": "artifacts/config.json",
+        "type": "configuration"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-TASK",
+          "source:SRC-DEF",
+          "source:SRC-DRAFT",
+          "source:SRC-CSV"
+        ],
+        "description": "全部四项输入身份与SHA256",
+        "id": "ART-FINGERPRINTS",
+        "path": "artifacts/input-fingerprints.json",
+        "type": "input-manifest"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-TASK",
+          "source:SRC-DEF"
+        ],
+        "description": "问题、预先范围与成功标准",
+        "id": "ART-ISSUE",
+        "path": "notes/issue.md",
+        "type": "question-note"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-PROOF",
+        "id": "R-BOUNDARY",
+        "rationale": "21≡4(mod17)，437=19×23",
+        "relation": "supports",
+        "scope": "不充分性的一个有效反例",
+        "statement_id": "S-BOUNDARY"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-PROOF",
+        "id": "R-C-PROOF",
+        "rationale": "显式因式分解与非平凡因子下界",
+        "relation": "supports",
+        "scope": "k≥1两个无穷族",
+        "statement_id": "S-C"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-PROOF",
+        "id": "R-F-PROOF",
+        "rationale": "完整小素因子排除及17反例确定最长初始段",
+        "relation": "supports",
+        "scope": "0..16及n17边界",
+        "statement_id": "S-F"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-RUN",
+        "id": "R-F-RUN",
+        "rationale": "逐项独立试除与筛法匹配",
+        "relation": "supports",
+        "scope": "有限0..16，仅计算支持",
+        "statement_id": "S-F"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-RUN",
+        "id": "R-FINITE",
+        "rationale": "真实运行完整范围和CSV核对，失败为空",
+        "relation": "supports",
+        "scope": "0..200及原17行",
+        "statement_id": "S-FINITE"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-PROOF",
+        "id": "R-P-CHALLENGE",
+        "rationale": "n=17给出非平凡因子，原命题为假",
+        "relation": "challenges",
+        "scope": "全称命题的反例",
+        "statement_id": "S-P"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-RUN",
+        "id": "R-P-FINITE",
+        "rationale": "201项不能全称证明，且含95个实际合数值",
+        "relation": "qualifies",
+        "scope": "固定有限范围",
+        "statement_id": "S-P"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-PROOF",
+        "id": "R-SMALL",
+        "rationale": "平方剩余表排除奇素数3..13，奇偶性排除2",
+        "relation": "supports",
+        "scope": "全部整数",
+        "statement_id": "S-SMALL"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [],
+        "extensions": {
+          "executor": "Codex agent d3_forward_finite"
+        },
+        "id": "ACT-INPUT",
+        "inputs": [
+          "source:SRC-TASK",
+          "source:SRC-DEF",
+          "source:SRC-CSV",
+          "source:SRC-DRAFT"
+        ],
+        "note": "Codex实际完整读取四项原始材料，未访问其他案例或外部来源。",
+        "outputs": [
+          "artifact:ART-ISSUE",
+          "artifact:ART-FINGERPRINTS",
+          "evidence:E-DEF",
+          "evidence:E-CSV",
+          "evidence:E-DRAFT"
+        ],
+        "status": "done",
+        "title": "读取材料、明确量词与预先范围"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART-CODE"
+        ],
+        "description": "实际Python和机器环境",
+        "id": "ART-ENV",
+        "path": "artifacts/environment.json",
+        "type": "environment"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E-DEF",
+          "evidence:E-DRAFT"
+        ],
+        "description": "可逐行审阅的手工证明、反例与原稿核查",
+        "id": "ART-PROOF",
+        "path": "notes/derivation.md",
+        "type": "proof-note"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "statement:S-F",
+          "statement:S-C",
+          "statement:S-FINITE",
+          "evidence:E-PROOF",
+          "evidence:E-RUN"
+        ],
+        "description": "约371汉字的修订整数札记",
+        "id": "ART-REPORT",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART-CODE",
+          "artifact:ART-CONFIG",
+          "evidence:E-CSV"
+        ],
+        "description": "完整有限运行记录",
+        "id": "ART-RESULTS",
+        "path": "artifacts/results.json",
+        "type": "computation-result"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-INPUT"
+        ],
+        "extensions": {
+          "executor": "Codex agent d3_forward_finite"
+        },
+        "id": "ACT-PROOF",
+        "inputs": [
+          "evidence:E-DEF",
+          "evidence:E-DRAFT",
+          "statement:S-P"
+        ],
+        "note": "手工初等证明、自审，无机器形式化或人类独立复核。原P被反例终止。",
+        "outputs": [
+          "evidence:E-PROOF",
+          "artifact:ART-PROOF",
+          "statement:S-F",
+          "statement:S-C",
+          "statement:S-SMALL",
+          "statement:S-BOUNDARY"
+        ],
+        "status": "done",
+        "title": "逐步核查草稿并完成修正版证明"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART-RESULTS",
+          "artifact:ART-REPORT"
+        ],
+        "description": "有限数据与稿件一致性检查",
+        "id": "ART-REVIEWCHECKS",
+        "path": "artifacts/review-checks.json",
+        "type": "artifact-check"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART-CODE",
+          "artifact:ART-RESULTS"
+        ],
+        "description": "算法、运行、耗时和有限检查边界",
+        "id": "ART-RUNNOTES",
+        "path": "notes/run-notes.md",
+        "type": "execution-note"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-INPUT"
+        ],
+        "extensions": {
+          "executor": "Codex agent d3_forward_finite"
+        },
+        "id": "ACT-COMPUTE",
+        "inputs": [
+          "evidence:E-CSV",
+          "evidence:E-DEF",
+          "artifact:ART-CODE",
+          "artifact:ART-CONFIG"
+        ],
+        "note": "两次实际进程运行均退出0、少于10秒，完整范围，无跳项与筛法分歧。",
+        "outputs": [
+          "evidence:E-RUN",
+          "artifact:ART-RESULTS",
+          "artifact:ART-ENV",
+          "artifact:ART-RUNNOTES",
+          "statement:S-FINITE"
+        ],
+        "status": "done",
+        "title": "实际精确核对CSV与闭区间0..200"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E-DRAFT",
+          "artifact:ART-REPORT",
+          "artifact:ART-REVIEWCHECKS"
+        ],
+        "description": "已确认问题、修订与限制",
+        "id": "ART-REVIEW",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:S-P",
+          "statement:S-F",
+          "statement:S-C",
+          "activity:ACT-PROOF"
+        ],
+        "id": "M-FORMAL",
+        "method_id": "formal-theory",
+        "profile_version": "0.1",
+        "reason": "对象、量词、初等证明、反例和修正版",
+        "variant": "proof"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-PROOF",
+          "ACT-COMPUTE"
+        ],
+        "extensions": {
+          "executor": "Codex agent d3_forward_finite"
+        },
+        "id": "ACT-WRITE-REVIEW",
+        "inputs": [
+          "evidence:E-PROOF",
+          "evidence:E-RUN",
+          "statement:S-F",
+          "statement:S-C",
+          "statement:S-FINITE"
+        ],
+        "note": "修订错误结论与归纳；保留结果范围、反例、未覆盖延伸；不称科学认证。",
+        "outputs": [
+          "artifact:ART-REPORT",
+          "artifact:ART-REVIEW",
+          "artifact:ART-REVIEWCHECKS",
+          "evidence:E-REVIEW"
+        ],
+        "status": "done",
+        "title": "起草修订札记并自审"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:S-FINITE",
+          "activity:ACT-COMPUTE"
+        ],
+        "id": "M-COMPUTE",
+        "method_id": "computational",
+        "profile_version": "0.1",
+        "reason": "整数精确有限判定与可复跑运行依据"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 4,
+    "artifacts": 12,
+    "decisions": 1,
+    "evidence": 6,
+    "method_bindings": 2,
+    "relations": 8,
+    "sources": 4,
+    "statements": 6
+  },
+  "cursor": {
+    "activity_id": "ACT-WRITE-REVIEW",
+    "next_action": "在可写副本逐行独立复核 notes/derivation.md 第3–5节的最小素因子引理、平方剩余表与模17反例族；若只做审阅则记录意见，若修改受登记文件则先重跑 artifacts/run.py 并按版本重新登记受影响证据和活动。不要继续证明已被n=17反驳的P。"
+  }
+}

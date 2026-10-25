@@ -1,0 +1,1067 @@
+{
+  "schema_version": "1",
+  "executor": "Codex agent",
+  "scope": "Offline synthetic lumped thermal model, fixed four scenarios, Euler with delayed interpolated history and clipped actual power; no hardware data.",
+  "command": [
+    "python3",
+    "artifacts/run.py"
+  ],
+  "cwd": ".",
+  "seed": "not applicable; deterministic",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "input_sha256": {
+    "inputs/requirements.md": "8ecaf2beb69608ad4c00888602d27dc26b47101f87b5bf7abbaf5a253bd9a582",
+    "inputs/scenarios.json": "153a677d3568e61793c882413f416536dfce7fc34a4744763b8a59ec963815e4",
+    "inputs/simulator.py": "deaccc68d9a6d7f348f4b71fb0996f7201a08825e43d41baee748bd152835225",
+    "inputs/task.md": "1ab1fd5c891c4f7470422f7d854a77bf3231888b688057a4a0593588e4ba93a6"
+  },
+  "source_sha256": {
+    "artifacts/run.py": "9d554e2ecd028e11c4684aa9da0cd87f9fa3e8061511166755deed6ddfa410bd",
+    "artifacts/simulator.py": "4c6c2244fa04c6cb75510f6925bf4013e1e9f6fc3048aa566acb8f7ac1ed2082"
+  },
+  "baseline": {
+    "source": "inputs/simulator.py",
+    "scenario": {
+      "id": "nominal",
+      "ambient_C": 20.0,
+      "initial_C": 24.0,
+      "sensor_delay_s": 0.0
+    },
+    "config": {
+      "capacity_J_per_K": 500.0,
+      "loss_W_per_K": 5.0,
+      "gain_W_per_K": 40.0,
+      "target_C": 25.0,
+      "actuator_min_W": 0.0,
+      "actuator_max_W": 80.0,
+      "horizon_s": 240.0,
+      "dt_s": 0.1
+    },
+    "limitations": "Original algorithm ignores sensor delay and sends unbounded requested_W directly to model; only nominal executed as original main.",
+    "rows": 2401,
+    "final_temperature_C": 24.99999999962262,
+    "max_temperature_C": 24.99999999962262
+  },
+  "method": {
+    "integrator": "forward Euler",
+    "history": "linear interpolation for non-grid delayed past; T(t<0)=initial; all tested delays align with grid",
+    "sampling": "endpoint metrics on full grid; explicit-Euler interpolated trajectory linear between states",
+    "dts_s": [
+      0.2,
+      0.1,
+      0.05,
+      0.025,
+      0.0125
+    ],
+    "resolution_tolerance_C": 0.05
+  },
+  "runs": [
+    {
+      "scenario": "nominal",
+      "dt_s": 0.2,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.2
+      },
+      "scenario_config": {
+        "id": "nominal",
+        "ambient_C": 20.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 0.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 24.99998151188337,
+        "temperature_final_C": 24.999999999658193,
+        "temperature_min_late_C": 24.99998151188337,
+        "temperature_max_late_C": 24.999999999658193,
+        "temperature_max_all_C": 24.999999999658193,
+        "late_band_pass": true,
+        "over_28_pass": true,
+        "power_min_W": 25.000000013672263,
+        "power_max_W": 65.0,
+        "requested_min_W": 25.000000013672263,
+        "requested_max_W": 65.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 0.0,
+        "rows": 1201
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "nominal",
+      "dt_s": 0.1,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.1
+      },
+      "scenario_config": {
+        "id": "nominal",
+        "ambient_C": 20.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 0.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 24.999980573910626,
+        "temperature_final_C": 24.99999999962262,
+        "temperature_min_late_C": 24.999980573910626,
+        "temperature_max_late_C": 24.99999999962262,
+        "temperature_max_all_C": 24.99999999962262,
+        "late_band_pass": true,
+        "over_28_pass": true,
+        "power_min_W": 25.000000015095196,
+        "power_max_W": 65.0,
+        "requested_min_W": 25.000000015095196,
+        "requested_max_W": 65.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 0.0,
+        "rows": 2401
+      },
+      "execution_status": "complete",
+      "trajectory_path": "artifacts/traces/nominal.csv"
+    },
+    {
+      "scenario": "nominal",
+      "dt_s": 0.05,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.05
+      },
+      "scenario_config": {
+        "id": "nominal",
+        "ambient_C": 20.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 0.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 24.999980091686442,
+        "temperature_final_C": 24.99999999960364,
+        "temperature_min_late_C": 24.999980091686442,
+        "temperature_max_late_C": 24.99999999960364,
+        "temperature_max_all_C": 24.99999999960364,
+        "late_band_pass": true,
+        "over_28_pass": true,
+        "power_min_W": 25.00000001585434,
+        "power_max_W": 65.0,
+        "requested_min_W": 25.00000001585434,
+        "requested_max_W": 65.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 0.0,
+        "rows": 4801
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "nominal",
+      "dt_s": 0.025,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.025
+      },
+      "scenario_config": {
+        "id": "nominal",
+        "ambient_C": 20.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 0.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 24.999979847218814,
+        "temperature_final_C": 24.99999999959388,
+        "temperature_min_late_C": 24.999979847218814,
+        "temperature_max_late_C": 24.99999999959388,
+        "temperature_max_all_C": 24.99999999959388,
+        "late_band_pass": true,
+        "over_28_pass": true,
+        "power_min_W": 25.000000016244854,
+        "power_max_W": 65.0,
+        "requested_min_W": 25.000000016244854,
+        "requested_max_W": 65.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 0.0,
+        "rows": 9601
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "nominal",
+      "dt_s": 0.0125,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.0125
+      },
+      "scenario_config": {
+        "id": "nominal",
+        "ambient_C": 20.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 0.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 24.99997972414034,
+        "temperature_final_C": 24.999999999588898,
+        "temperature_min_late_C": 24.99997972414034,
+        "temperature_max_late_C": 24.999999999588898,
+        "temperature_max_all_C": 24.999999999588898,
+        "late_band_pass": true,
+        "over_28_pass": true,
+        "power_min_W": 25.00000001644409,
+        "power_max_W": 65.0,
+        "requested_min_W": 25.00000001644409,
+        "requested_max_W": 65.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 0.0,
+        "rows": 19201
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "delayed",
+      "dt_s": 0.2,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.2
+      },
+      "scenario_config": {
+        "id": "delayed",
+        "ambient_C": 20.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 24.843834323456942,
+        "temperature_final_C": 24.97922065610745,
+        "temperature_min_late_C": 24.843834323456942,
+        "temperature_max_late_C": 25.097193229590008,
+        "temperature_max_all_C": 25.663820845533543,
+        "late_band_pass": true,
+        "over_28_pass": true,
+        "power_min_W": 0.0,
+        "power_max_W": 65.0,
+        "requested_min_W": -1.5528338213417214,
+        "requested_max_W": 65.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 0.028333333333333332,
+        "rows": 1201
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "delayed",
+      "dt_s": 0.1,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.1
+      },
+      "scenario_config": {
+        "id": "delayed",
+        "ambient_C": 20.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 24.847146679637966,
+        "temperature_final_C": 24.979616902935426,
+        "temperature_min_late_C": 24.847146679637966,
+        "temperature_max_late_C": 25.094680818292755,
+        "temperature_max_all_C": 25.659796760203093,
+        "late_band_pass": true,
+        "over_28_pass": true,
+        "power_min_W": 0.0,
+        "power_max_W": 65.0,
+        "requested_min_W": -1.3918704081237365,
+        "requested_max_W": 65.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 0.0275,
+        "rows": 2401
+      },
+      "execution_status": "complete",
+      "trajectory_path": "artifacts/traces/delayed.csv"
+    },
+    {
+      "scenario": "delayed",
+      "dt_s": 0.05,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.05
+      },
+      "scenario_config": {
+        "id": "delayed",
+        "ambient_C": 20.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 24.84882585471856,
+        "temperature_final_C": 24.97983875900611,
+        "temperature_min_late_C": 24.84882585471856,
+        "temperature_max_late_C": 25.093438261830403,
+        "temperature_max_all_C": 25.657788232771697,
+        "late_band_pass": true,
+        "over_28_pass": true,
+        "power_min_W": 0.0,
+        "power_max_W": 65.0,
+        "requested_min_W": -1.3115293108678827,
+        "requested_max_W": 65.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 0.026458333333333334,
+        "rows": 4801
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "delayed",
+      "dt_s": 0.025,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.025
+      },
+      "scenario_config": {
+        "id": "delayed",
+        "ambient_C": 20.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 24.849670966195184,
+        "temperature_final_C": 24.979955254999002,
+        "temperature_min_late_C": 24.849670966195184,
+        "temperature_max_late_C": 25.092820788476548,
+        "temperature_max_all_C": 25.656787924361332,
+        "late_band_pass": true,
+        "over_28_pass": true,
+        "power_min_W": 0.0,
+        "power_max_W": 65.0,
+        "requested_min_W": -1.2715169744532773,
+        "requested_max_W": 65.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 0.026145833333333333,
+        "rows": 9601
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "delayed",
+      "dt_s": 0.0125,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.0125
+      },
+      "scenario_config": {
+        "id": "delayed",
+        "ambient_C": 20.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 24.850094807816262,
+        "temperature_final_C": 24.98001483732402,
+        "temperature_min_late_C": 24.850094807816262,
+        "temperature_max_late_C": 25.092513043309115,
+        "temperature_max_all_C": 25.656287637940213,
+        "late_band_pass": true,
+        "over_28_pass": true,
+        "power_min_W": 0.0,
+        "power_max_W": 65.0,
+        "requested_min_W": -1.2515055176085355,
+        "requested_max_W": 65.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 0.0259375,
+        "rows": 19201
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "cold",
+      "dt_s": 0.2,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.2
+      },
+      "scenario_config": {
+        "id": "cold",
+        "ambient_C": 5.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 21.902497540726372,
+        "temperature_final_C": 21.27150060367238,
+        "temperature_min_late_C": 21.27150060367238,
+        "temperature_max_late_C": 21.902497540726372,
+        "temperature_max_all_C": 24.0,
+        "late_band_pass": false,
+        "over_28_pass": true,
+        "power_min_W": 80.0,
+        "power_max_W": 80.0,
+        "requested_min_W": 140.0,
+        "requested_max_W": 247.3805567674563,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 1.0,
+        "rows": 1201
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "cold",
+      "dt_s": 0.1,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.1
+      },
+      "scenario_config": {
+        "id": "cold",
+        "ambient_C": 5.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 21.903040287280163,
+        "temperature_final_C": 21.271827253483675,
+        "temperature_min_late_C": 21.271827253483675,
+        "temperature_max_late_C": 21.903040287280163,
+        "temperature_max_all_C": 24.0,
+        "late_band_pass": false,
+        "over_28_pass": true,
+        "power_min_W": 80.0,
+        "power_max_W": 80.0,
+        "requested_min_W": 140.0,
+        "requested_max_W": 247.36632342951253,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 1.0,
+        "rows": 2401
+      },
+      "execution_status": "complete",
+      "trajectory_path": "artifacts/traces/cold.csv"
+    },
+    {
+      "scenario": "cold",
+      "dt_s": 0.05,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.05
+      },
+      "scenario_config": {
+        "id": "cold",
+        "ambient_C": 5.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 21.90331151123799,
+        "temperature_final_C": 21.271990562111696,
+        "temperature_min_late_C": 21.271990562111696,
+        "temperature_max_late_C": 21.90331151123799,
+        "temperature_max_all_C": 24.0,
+        "late_band_pass": false,
+        "over_28_pass": true,
+        "power_min_W": 80.0,
+        "power_max_W": 80.0,
+        "requested_min_W": 140.0,
+        "requested_max_W": 247.35920787070938,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 1.0,
+        "rows": 4801
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "cold",
+      "dt_s": 0.025,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.025
+      },
+      "scenario_config": {
+        "id": "cold",
+        "ambient_C": 5.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 21.903447085915577,
+        "temperature_final_C": 21.272072212349794,
+        "temperature_min_late_C": 21.272072212349794,
+        "temperature_max_late_C": 21.903447085915577,
+        "temperature_max_all_C": 24.0,
+        "late_band_pass": false,
+        "over_28_pass": true,
+        "power_min_W": 80.0,
+        "power_max_W": 80.0,
+        "requested_min_W": 140.0,
+        "requested_max_W": 247.35565036903353,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 1.0,
+        "rows": 9601
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "cold",
+      "dt_s": 0.0125,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.0125
+      },
+      "scenario_config": {
+        "id": "cold",
+        "ambient_C": 5.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 21.9035148639327,
+        "temperature_final_C": 21.27211303644927,
+        "temperature_min_late_C": 21.27211303644927,
+        "temperature_max_late_C": 21.9035148639327,
+        "temperature_max_all_C": 24.0,
+        "late_band_pass": false,
+        "over_28_pass": true,
+        "power_min_W": 80.0,
+        "power_max_W": 80.0,
+        "requested_min_W": 140.0,
+        "requested_max_W": 247.35387168764333,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 1.0,
+        "rows": 19201
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "hot",
+      "dt_s": 0.2,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.2
+      },
+      "scenario_config": {
+        "id": "hot",
+        "ambient_C": 35.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 31.690842350669957,
+        "temperature_final_C": 34.004497786534614,
+        "temperature_min_late_C": 31.690842350669957,
+        "temperature_max_late_C": 34.004497786534614,
+        "temperature_max_all_C": 34.004497786534614,
+        "late_band_pass": false,
+        "over_28_pass": false,
+        "power_min_W": 0.0,
+        "power_max_W": 0.0,
+        "requested_min_W": -403.7287081473414,
+        "requested_max_W": -10.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 1.0,
+        "rows": 1201
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "hot",
+      "dt_s": 0.1,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.1
+      },
+      "scenario_config": {
+        "id": "hot",
+        "ambient_C": 35.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 31.688852279972593,
+        "temperature_final_C": 34.00330007055981,
+        "temperature_min_late_C": 31.688852279972593,
+        "temperature_max_late_C": 34.00330007055981,
+        "temperature_max_all_C": 34.00330007055981,
+        "late_band_pass": false,
+        "over_28_pass": false,
+        "power_min_W": 0.0,
+        "power_max_W": 0.0,
+        "requested_min_W": -403.67651924154757,
+        "requested_max_W": -10.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 1.0,
+        "rows": 2401
+      },
+      "execution_status": "complete",
+      "trajectory_path": "artifacts/traces/hot.csv"
+    },
+    {
+      "scenario": "hot",
+      "dt_s": 0.05,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.05
+      },
+      "scenario_config": {
+        "id": "hot",
+        "ambient_C": 35.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 31.687857792127367,
+        "temperature_final_C": 34.002701272257205,
+        "temperature_min_late_C": 31.687857792127367,
+        "temperature_max_late_C": 34.002701272257205,
+        "temperature_max_all_C": 34.002701272257205,
+        "late_band_pass": false,
+        "over_28_pass": false,
+        "power_min_W": 0.0,
+        "power_max_W": 0.0,
+        "requested_min_W": -403.65042885926897,
+        "requested_max_W": -10.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 1.0,
+        "rows": 4801
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "hot",
+      "dt_s": 0.025,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.025
+      },
+      "scenario_config": {
+        "id": "hot",
+        "ambient_C": 35.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 31.68736068497604,
+        "temperature_final_C": 34.002401888050684,
+        "temperature_min_late_C": 31.68736068497604,
+        "temperature_max_late_C": 34.002401888050684,
+        "temperature_max_all_C": 34.002401888050684,
+        "late_band_pass": false,
+        "over_28_pass": false,
+        "power_min_W": 0.0,
+        "power_max_W": 0.0,
+        "requested_min_W": -403.6373846864515,
+        "requested_max_W": -10.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 1.0,
+        "rows": 9601
+      },
+      "execution_status": "complete"
+    },
+    {
+      "scenario": "hot",
+      "dt_s": 0.0125,
+      "config": {
+        "capacity_J_per_K": 500.0,
+        "loss_W_per_K": 5.0,
+        "gain_W_per_K": 40.0,
+        "target_C": 25.0,
+        "actuator_min_W": 0.0,
+        "actuator_max_W": 80.0,
+        "horizon_s": 240.0,
+        "dt_s": 0.0125
+      },
+      "scenario_config": {
+        "id": "hot",
+        "ambient_C": 35.0,
+        "initial_C": 24.0,
+        "sensor_delay_s": 15.0
+      },
+      "metrics": {
+        "temperature_at_120_C": 31.687112165580057,
+        "temperature_final_C": 34.00225219968651,
+        "temperature_min_late_C": 31.687112165580057,
+        "temperature_max_late_C": 34.00225219968651,
+        "temperature_max_all_C": 34.00225219968651,
+        "late_band_pass": false,
+        "over_28_pass": false,
+        "power_min_W": 0.0,
+        "power_max_W": 0.0,
+        "requested_min_W": -403.6308628547087,
+        "requested_max_W": -10.0,
+        "power_limits_pass": true,
+        "saturated_update_fraction": 1.0,
+        "rows": 19201
+      },
+      "execution_status": "complete"
+    }
+  ],
+  "convergence": [
+    {
+      "scenario": "nominal",
+      "comparisons": [
+        {
+          "dt_s": 0.2,
+          "max_difference_from_finest_C": 0.0031289369988627413,
+          "max_difference_from_next_C": 0.001674308928187429
+        },
+        {
+          "dt_s": 0.1,
+          "max_difference_from_finest_C": 0.001454667261455711,
+          "max_difference_from_next_C": 0.0008324117004967491
+        },
+        {
+          "dt_s": 0.05,
+          "max_difference_from_finest_C": 0.000622255560958962,
+          "max_difference_from_next_C": 0.0004150319230902255
+        },
+        {
+          "dt_s": 0.025,
+          "max_difference_from_finest_C": 0.00020722363786873643,
+          "max_difference_from_next_C": 0.00020722363786873643
+        }
+      ],
+      "acceptance_labels_stable": true,
+      "finest_pair_difference_le_0_05_C": true,
+      "resolution_criterion_pass": true
+    },
+    {
+      "scenario": "delayed",
+      "comparisons": [
+        {
+          "dt_s": 0.2,
+          "max_difference_from_finest_C": 0.01177354078368964,
+          "max_difference_from_next_C": 0.006296285975796678
+        },
+        {
+          "dt_s": 0.1,
+          "max_difference_from_finest_C": 0.005477999904702102,
+          "max_difference_from_next_C": 0.003134096491358207
+        },
+        {
+          "dt_s": 0.05,
+          "max_difference_from_finest_C": 0.002343961317436083,
+          "max_difference_from_next_C": 0.0015633027970309854
+        },
+        {
+          "dt_s": 0.025,
+          "max_difference_from_finest_C": 0.0007806702404060673,
+          "max_difference_from_next_C": 0.0007806702404060673
+        }
+      ],
+      "acceptance_labels_stable": true,
+      "finest_pair_difference_le_0_05_C": true,
+      "resolution_criterion_pass": true
+    },
+    {
+      "scenario": "cold",
+      "comparisons": [
+        {
+          "dt_s": 0.2,
+          "max_difference_from_finest_C": 0.0010355779548625321,
+          "max_difference_from_next_C": 0.0005525097414142977
+        },
+        {
+          "dt_s": 0.1,
+          "max_difference_from_finest_C": 0.0004830682134482345,
+          "max_difference_from_next_C": 0.00027608212500496165
+        },
+        {
+          "dt_s": 0.05,
+          "max_difference_from_finest_C": 0.00020698608844327282,
+          "max_difference_from_next_C": 0.0001379979138640408
+        },
+        {
+          "dt_s": 0.025,
+          "max_difference_from_finest_C": 6.898817457923201e-05,
+          "max_difference_from_next_C": 6.898817457923201e-05
+        }
+      ],
+      "acceptance_labels_stable": true,
+      "finest_pair_difference_le_0_05_C": true,
+      "resolution_criterion_pass": true
+    },
+    {
+      "scenario": "hot",
+      "comparisons": [
+        {
+          "dt_s": 0.2,
+          "max_difference_from_finest_C": 0.0037971191677357297,
+          "max_difference_from_next_C": 0.002025869051873741
+        },
+        {
+          "dt_s": 0.1,
+          "max_difference_from_finest_C": 0.0017712501158619887,
+          "max_difference_from_next_C": 0.0010123011250406933
+        },
+        {
+          "dt_s": 0.05,
+          "max_difference_from_finest_C": 0.0007589489908212954,
+          "max_difference_from_next_C": 0.0005059923509200814
+        },
+        {
+          "dt_s": 0.025,
+          "max_difference_from_finest_C": 0.000252956639901214,
+          "max_difference_from_next_C": 0.000252956639901214
+        }
+      ],
+      "acceptance_labels_stable": true,
+      "finest_pair_difference_le_0_05_C": true,
+      "resolution_criterion_pass": true
+    }
+  ],
+  "analytic_checks": [
+    {
+      "scenario": "nominal",
+      "formula": "25-exp(-0.09t); unclipped no-delay control, requests initially65 W and fall to25 W",
+      "dt_errors": [
+        {
+          "dt_s": 0.2,
+          "max_grid_error_C": 0.0033359564004662445
+        },
+        {
+          "dt_s": 0.1,
+          "max_grid_error_C": 0.0016616964558444636
+        },
+        {
+          "dt_s": 0.05,
+          "max_grid_error_C": 0.0008292847553477145
+        },
+        {
+          "dt_s": 0.025,
+          "max_grid_error_C": 0.000414252832257489
+        },
+        {
+          "dt_s": 0.0125,
+          "max_grid_error_C": 0.00020702923080762048
+        }
+      ],
+      "exact_120_C": 24.999979600496587,
+      "exact_240_C": 24.99999999958386
+    },
+    {
+      "scenario": "cold",
+      "formula": "21+3exp(-0.01t); all actual powers80 W",
+      "dt_errors": [
+        {
+          "dt_s": 0.2,
+          "max_grid_error_C": 0.001104558942859768
+        },
+        {
+          "dt_s": 0.1,
+          "max_grid_error_C": 0.0005520492014454703
+        },
+        {
+          "dt_s": 0.05,
+          "max_grid_error_C": 0.00027596707644050866
+        },
+        {
+          "dt_s": 0.025,
+          "max_grid_error_C": 0.00013796916257646785
+        },
+        {
+          "dt_s": 0.0125,
+          "max_grid_error_C": 6.898098799723584e-05
+        }
+      ],
+      "exact_120_C": 21.903582635736605,
+      "exact_240_C": 21.272153859868236
+    },
+    {
+      "scenario": "hot",
+      "formula": "35-11exp(-0.01t); all actual powers0 W",
+      "dt_errors": [
+        {
+          "dt_s": 0.2,
+          "max_grid_error_C": 0.004050049457131166
+        },
+        {
+          "dt_s": 0.1,
+          "max_grid_error_C": 0.0020241804052574253
+        },
+        {
+          "dt_s": 0.05,
+          "max_grid_error_C": 0.001011879280216732
+        },
+        {
+          "dt_s": 0.025,
+          "max_grid_error_C": 0.0005058869292966506
+        },
+        {
+          "dt_s": 0.0125,
+          "max_grid_error_C": 0.0002529302893954366
+        }
+      ],
+      "exact_120_C": 31.686863668965778,
+      "exact_240_C": 34.00210251381646
+    }
+  ],
+  "actuator_feasibility": {
+    "required_power_target_5C_W": 100,
+    "required_power_target_35C_W": -50,
+    "cold_max_equilibrium_C": 21,
+    "hot_min_equilibrium_C": 35,
+    "cold_best_120_C": 21.903582635736605,
+    "hot_best_120_C": 31.686863668965778,
+    "hot_best_240_C": 34.00210251381646,
+    "hot_28_crossing_s": 45.19851237430573,
+    "necessary_ambient_band_for_invariance_C": [
+      8.5,
+      25.5
+    ],
+    "ambient_range_exact_target_equilibrium_C": [
+      9,
+      25
+    ],
+    "status": "Manual scalar ODE comparison/energy-balance derivation; independently numerically evaluated, no formal proof tool."
+  },
+  "requirements": [
+    {
+      "id": "R1",
+      "status": "pass-in-model",
+      "criterion": "Nominal120–240 s inclusive within[24.5,25.5] C",
+      "evidence": "runs:nominal; convergence; analytic_checks"
+    },
+    {
+      "id": "R2",
+      "status": "fail",
+      "criterion": "All four mandatory scenes meet same late band",
+      "failing_scenarios": [
+        "cold",
+        "hot"
+      ],
+      "evidence": "runs; actuator_feasibility; notes/analytic.md"
+    },
+    {
+      "id": "R3",
+      "status": "pass-in-implementation",
+      "criterion": "actual_W in[0,80] at all evaluated times",
+      "evidence": "runs; artifacts/simulator.py; default traces"
+    },
+    {
+      "id": "R4",
+      "status": "fail-in-model; hardware-insufficient",
+      "criterion": "all times T<=28 C",
+      "failing_scenarios": [
+        "hot"
+      ],
+      "evidence": "runs; analytic_checks:hot",
+      "limitation": "No hardware protection/fault evidence exists"
+    },
+    {
+      "id": "R5",
+      "status": "pass-in-tested-resolution-scope",
+      "criterion": "Five steps, finest pair difference<=0.05 C and stable acceptance labels",
+      "evidence": "convergence; analytic_checks",
+      "limitation": "No arbitrary-step stability or continuum error certificate"
+    }
+  ],
+  "execution_failures": [],
+  "elapsed_s": 0.20317991599949892
+}

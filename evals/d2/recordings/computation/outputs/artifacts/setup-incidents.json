@@ -1,0 +1,49 @@
+[
+  {
+    "log_base": "output root",
+    "command_log": "logs/011.command.txt",
+    "raw_stdout": "logs/011.stdout.txt",
+    "raw_stderr": "logs/011.stderr.txt",
+    "result": {
+      "argv": [
+        "python3",
+        "-B",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "固定函数求值预算下中点法与梯形法的有界比较",
+        "--interest",
+        "合成目标上的积分绝对误差比较",
+        "--discipline",
+        "numerical analysis",
+        "--method",
+        "controlled computational comparison",
+        "--mode",
+        "reproducible",
+        "--language",
+        "zh-CN"
+      ],
+      "exit_status": 2
+    },
+    "recovery": "Invalid free-form discipline/method rejected without creating PROJECT; successful init omitted those optional fields and computational method was later bound explicitly."
+  },
+  {
+    "log_base": "output root",
+    "command_log": "logs/012.command.txt",
+    "raw_stdout": "logs/012.stdout.txt",
+    "raw_stderr": "logs/012.stderr.txt",
+    "result": {
+      "argv": [
+        "rg",
+        "-n",
+        "disciplines|methods|computation|computational|reproducible|research.py init",
+        "TOOLKIT/README.md",
+        "TOOLKIT/schemas"
+      ],
+      "exit_status": 2
+    },
+    "recovery": "README search succeeded but schemas path did not exist; schema files were read from installed _rw-runtime/core/schemas instead."
+  }
+]
