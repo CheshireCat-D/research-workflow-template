@@ -211,7 +211,8 @@ def build_payload(root=None):
         'design/catalog.json', 'tools/research.py', 'tools/connect_skills.py',
     ))
     cat = parse_json(_source_bytes(root, 'design/catalog.json'))
-    required = ['core/skill-bridge.md'] + [
+    required = ['core/skill-bridge.md', 'profiles/selection.md',
+                'profiles/governance.md', 'profiles/templates/legal-research.md'] + [
         item['implementation']['profile'] for item in cat['methods']
         if item.get('implementation', {}).get('status') == 'guidance-slice'
     ] + [item['profile'] for item in cat['disciplines'] if 'profile' in item]

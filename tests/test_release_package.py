@@ -70,7 +70,7 @@ class ReleasePackages(unittest.TestCase):
         self.assertEqual(verified['prefix'],result['prefix'])
         self.assertEqual(verified['version'],result['version'])
 
-    def test_chinese_root_guide_is_inventoried_and_delivered_when_present(self):
+    def test_chinese_root_guide_is_inventoried_and_delivered_with_original_bytes(self):
         guide=self.source/'中文介绍与使用说明.md'
         guide.write_text('# 中文介绍与使用说明\n\n只保留当前发行副本。\n',encoding='utf-8')
         release.index(self.source)
@@ -79,6 +79,48 @@ class ReleasePackages(unittest.TestCase):
         with zipfile.ZipFile(archive) as package:
             self.assertEqual(package.read(result['prefix']+'/'+guide.name),guide.read_bytes())
         self.assertTrue(release.verify(archive)['passed'])
+
+    def test_missing_bilingual_guides_block_source_check_and_build_even_after_reindexing(self):
+        for name in ('中文介绍与使用说明.md','USER_GUIDE.en.md','README.en.md'):
+            with self.subTest(name=name):
+                guide=self.source/name
+                original=guide.read_bytes()
+                guide.unlink()
+                release.index(self.source)
+                before=snapshot(self.source)
+                report=release.check(self.source)
+                self.assertFalse(report['passed'])
+                self.assertEqual(report['errors'],[{'code':'required_file_missing','path':name}])
+                archive=self.base/'missing-guide.zip'
+                with self.assertRaises(release.ReleaseError):release.build(archive,self.source)
+                self.assertFalse(archive.exists())
+                self.assertEqual(before,snapshot(self.source))
+                guide.write_bytes(original)
+                release.index(self.source)
+
+    def test_missing_bilingual_guides_block_self_consistent_archive_verification(self):
+        original=self.base/'complete.zip'
+        release.build(original,self.source)
+        with zipfile.ZipFile(original) as package:
+            prefix=release.ARCHIVE_ROOT+'/'
+            captured={name[len(prefix):]:package.read(name) for name in package.namelist()}
+        for name in ('中文介绍与使用说明.md','USER_GUIDE.en.md','README.en.md'):
+            with self.subTest(name=name):
+                entries=dict(captured)
+                del entries[name]
+                index=json.loads(entries[release.INDEX])
+                del index['files'][name]
+                entries[release.INDEX]=release.encoded(index)
+                manifest=json.loads(entries[release.ARCHIVE_MANIFEST])
+                del manifest['files'][name]
+                manifest['files'][release.INDEX]=release.digest(entries[release.INDEX])
+                entries[release.ARCHIVE_MANIFEST]=release.encoded(manifest)
+                archive=self.base/'missing-guide.zip'
+                with zipfile.ZipFile(archive,'w') as package:
+                    for relative,data in entries.items():package.writestr(prefix+relative,data)
+                before=snapshot(self.base)
+                with self.assertRaises(release.ReleaseError):release.verify(archive)
+                self.assertEqual(before,snapshot(self.base))
 
     def test_legacy_versioned_root_verifies_but_mismatched_root_is_rejected(self):
         original=self.base/'current.zip'

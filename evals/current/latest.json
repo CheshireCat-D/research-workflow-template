@@ -2,8 +2,8 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-25T21:46:11.740607+00:00",
-  "scope": "Current cross-discipline navigation, discovery/checker contracts, read-only record summaries and frozen task replays. No new discipline-specific content validation is inferred from navigation or software checks.",
+  "checked_at_utc": "2026-10-25T22:19:57.339019+00:00",
+  "scope": "Current release-required bilingual guides, portable shared-guidance completeness and existing software/synthetic-task regressions. No new disciplinary content review.",
   "scientific_validity": "not-assessed",
   "publication_style": {
     "archive_name": "research-workflow-template.zip",
@@ -24,11 +24,11 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 142,
+      "test_methods": 145,
       "check_groups": 7,
       "receipt": {
         "identifier": "private-evidence:full-check.json",
-        "sha256": "9317aaf80415c9db838ae0c9ca0e3b961206f4ad42cf2e74e6fab973162b4673"
+        "sha256": "d16e4f81889aced9301f433121ab033dae4256c15cb6a6c98d0d17e36ea7ca58"
       }
     },
     "post_execution_bookkeeping_changes": [
@@ -57,9 +57,9 @@
     "scope": "Existing frozen synthetic task executions/reviews, replayed with current software; no new legal-content review or changed outcome."
   },
   "skill_creator_validation": {
-    "modified_skills": 1,
+    "modified_skills": 0,
     "passed": true,
-    "scope": "rw-question scaffold/frontmatter check; all eight discovery entrypoints also checked by the dependency-free full suite."
+    "scope": "No skill instruction files changed; all eight discovery entrypoints remain covered by the full software suite."
   },
   "preservation": {
     "frozen_d2_d3_legal_files_byte_identical": 423,
@@ -79,30 +79,22 @@
     "The discovery checker validates a documented safe YAML subset, not every optional host YAML structure.",
     "Directory upgrade retains its documented short reader gap and caught-failure rollback; no power-loss transaction guarantee."
   ],
-  "general_audit": {
-    "specialty_navigation": [
-      "education",
-      "economics-management",
-      "psychology",
-      "philosophy",
-      "arts"
+  "maintenance_hardening": {
+    "required_release_guides": [
+      "中文介绍与使用说明.md",
+      "USER_GUIDE.en.md",
+      "README.en.md"
     ],
-    "top_level_skills_added": 0,
-    "new_specialty_task_validation_claimed": false,
-    "reader_review_scenarios": 2,
-    "reader_review_scope": "Independent routing/readability review of observational education and creative-practice requests; not completed research studies.",
-    "variant_summary": "Declares guidance separately from explicit recorded bindings, method-only records and unavailable evaluation material. No inferred binding from task names or new content certification.",
-    "checker_fixes": [
-      "Ambiguous YAML discovery scalars no longer pass as strings.",
-      "Duplicate catalog/scenario IDs and invalid method/variant suggestions are reported.",
-      "Generated/cache/private-state directories do not cause false source-link/syntax failures."
+    "required_portable_guidance": [
+      "profiles/selection.md",
+      "profiles/governance.md",
+      "profiles/templates/legal-research.md"
     ],
-    "cleanup": {
-      "redundant_maintained_files_deleted": 0,
-      "conflicting_unused_env_example_exception_removed": true,
-      "frozen_evidence_retained": true
+    "negative_behavior_tests": {
+      "new_test_methods": 3,
+      "per_resource_cases": 9,
+      "scope": "Missing guides reject source checks/builds and self-consistent incomplete ZIPs; missing shared guidance rejects installation without source/project writes."
     },
-    "new_regression_methods": 11,
-    "independent_read_only_review": "pass-in-scope"
+    "scientific_or_legal_content_review": "not-newly-assessed"
   }
 }

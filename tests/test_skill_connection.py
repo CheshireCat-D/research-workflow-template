@@ -54,6 +54,26 @@ class ProjectSkillConnection(unittest.TestCase):
                             ignore=shutil.ignore_patterns('__pycache__'))
         return source
 
+    def test_missing_shared_guidance_blocks_install_without_mutating_the_project(self):
+        from core import bundle
+        from core.storage import CoreError
+
+        for name in ('profiles/selection.md', 'profiles/governance.md',
+                     'profiles/templates/legal-research.md'):
+            with self.subTest(resource=name):
+                source = self.copy_source('missing-' + Path(name).stem)
+                (source / name).unlink()
+                source_before = snapshot(source)
+                project_before = snapshot(self.project)
+                with mock.patch.object(bundle, 'source_root', return_value=source):
+                    with self.assertRaises(CoreError) as raised:
+                        bundle.install(self.project)
+                self.assertEqual(raised.exception.code, 'bundle_source_missing')
+                self.assertIn(name, str(raised.exception))
+                self.assertEqual(snapshot(source), source_before)
+                self.assertEqual(snapshot(self.project), project_before)
+                self.assertFalse((self.project / '.agents').exists())
+
     def test_install_connects_all_skills_without_touching_existing_project_files(self):
         (self.project / 'AGENTS.md').write_text('Author instructions stay here.\n')
         before = snapshot(self.project)

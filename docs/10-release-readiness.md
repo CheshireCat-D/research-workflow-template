@@ -28,6 +28,8 @@ python3 -B tools/release_package.py verify --archive dist/research-workflow-temp
 
 源内容变动后先审阅差异，再运行 `tools/release_package.py index` 更新来源清单，并重新验收。不能为让校验通过而自动接受未知变化。
 
+发布检查、构建和归档验证均要求保留 `中文介绍与使用说明.md`、`USER_GUIDE.en.md` 和 `README.en.md`。项目内技能副本在生成前显式检查跨专业导航、治理指导和法学研究模板；这些公共资源缺失时会报错，不生成不完整副本。
+
 干净验收将当前ZIP解压到独立目录，用空HOME运行完整检查和初始化、技能接入、登记与恢复示例；搬迁项目后用复制接口继续，确认不依赖原源码或个人包。[Linux复查](11-linux-validation.md)和托管CI各按实际执行单独记账。Windows写锁不受支持。
 
 检查通过只说明所声明范围内的工程与登记一致性，不认证研究结论、伦理批准、场所政策或投稿接收，也不表示已经创建、推送或发布GitHub仓库。
