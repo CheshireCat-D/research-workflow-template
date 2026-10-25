@@ -2,8 +2,8 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-25T22:19:57.339019+00:00",
-  "scope": "Current release-required bilingual guides, portable shared-guidance completeness and existing software/synthetic-task regressions. No new disciplinary content review.",
+  "checked_at_utc": "2026-10-25T23:19:27.362956+00:00",
+  "scope": "Current nine-skill integration, editable SVG structure and rendered examples, source-index/terminology/search guidance, software regression and frozen synthetic task replay. No new disciplinary certification.",
   "scientific_validity": "not-assessed",
   "publication_style": {
     "archive_name": "research-workflow-template.zip",
@@ -12,7 +12,7 @@
     "schema_record_dependency_versions": "Preserved technical compatibility information."
   },
   "catalog": {
-    "implemented_skills": 8,
+    "implemented_skills": 9,
     "discipline_portraits": 7,
     "method_guidance_profiles": 10,
     "architecture_scenarios": 18
@@ -24,15 +24,16 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 145,
+      "test_methods": 157,
       "check_groups": 7,
       "receipt": {
-        "identifier": "private-evidence:full-check.json",
-        "sha256": "d16e4f81889aced9301f433121ab033dae4256c15cb6a6c98d0d17e36ea7ca58"
+        "identifier": "private-evidence:general-full-final.json",
+        "sha256": "a74bf27e4101433bfcf59b8cad5aca8be9ee12dce5ac2305200a0f2b64f8b1ae"
       }
     },
     "post_execution_bookkeeping_changes": [
       "evals/current/latest.json",
+      "evals/current/skill-task-checks.json",
       "provenance/file-origins.json"
     ]
   },
@@ -54,17 +55,32 @@
       "Two cases cover the stated variants only in these supplied settings; they do not establish all-jurisdiction or all-subfield coverage.",
       "Checks of byte identity do not alone establish execution chronology or legal correctness."
     ],
-    "scope": "Existing frozen synthetic task executions/reviews, replayed with current software; no new legal-content review or changed outcome."
+    "scope": "Old reviewed synthetic legal outputs remain bound to exact recovered guidance. Current software replay does not renew content review of changed shared guidance; legal-specific resources still match the recorded identities.",
+    "current_shared_guidance_changed": [
+      "rw-workflow",
+      "rw-literature",
+      "rw-writing"
+    ],
+    "reviewed_guidance_evidence": "evals/legal/reviewed-guidance.json"
   },
   "skill_creator_validation": {
-    "modified_skills": 0,
+    "entrypoints_checked": [
+      "rw-candidates",
+      "rw-figures",
+      "rw-innovation",
+      "rw-literature",
+      "rw-question",
+      "rw-review",
+      "rw-validation",
+      "rw-workflow",
+      "rw-writing"
+    ],
     "passed": true,
-    "scope": "No skill instruction files changed; all eight discovery entrypoints remain covered by the full software suite."
+    "scope": "Discovery/frontmatter only; actual forward tasks are recorded separately."
   },
   "preservation": {
     "frozen_d2_d3_legal_files_byte_identical": 423,
-    "separate_personal_nonruntime_files_verified_unchanged": 452,
-    "scope": "Recorded nonruntime personal files only; no claim of a full runtime audit."
+    "scope": "Original 423 frozen d2/d3/legal files preserved; one recovered historical-guidance evidence resource is new. The personal package is independently maintained and excluded."
   },
   "hosted_ci": {
     "source_of_truth": "https://github.com/CheshireCat-D/research-workflow-template/actions",
@@ -79,22 +95,15 @@
     "The discovery checker validates a documented safe YAML subset, not every optional host YAML structure.",
     "Directory upgrade retains its documented short reader gap and caught-failure rollback; no power-loss transaction guarantee."
   ],
-  "maintenance_hardening": {
-    "required_release_guides": [
-      "中文介绍与使用说明.md",
-      "USER_GUIDE.en.md",
-      "README.en.md"
+  "current_skill_integration": {
+    "selection": "docs/12-skills-selection.md",
+    "new_entrypoints": [
+      "rw-figures"
     ],
-    "required_portable_guidance": [
-      "profiles/selection.md",
-      "profiles/governance.md",
-      "profiles/templates/legal-research.md"
-    ],
-    "negative_behavior_tests": {
-      "new_test_methods": 3,
-      "per_resource_cases": 9,
-      "scope": "Missing guides reject source checks/builds and self-consistent incomplete ZIPs; missing shared guidance rejects installation without source/project writes."
-    },
-    "scientific_or_legal_content_review": "not-newly-assessed"
+    "forward_tasks": "evals/current/skill-task-checks.json",
+    "forward_requests": 5,
+    "visual_examples_actually_rendered_and_inspected": true,
+    "upstream_scripts_or_figure_assets_copied": false,
+    "personal_package_contents_included": false
   }
 }

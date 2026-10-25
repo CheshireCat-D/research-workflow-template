@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT))
 CLI = ROOT / 'tools/research.py'
 CONNECT = ROOT / 'tools/connect_skills.py'
 SKILLS = {'rw-workflow', 'rw-question', 'rw-literature', 'rw-innovation', 'rw-candidates',
-          'rw-validation', 'rw-writing', 'rw-review'}
+          'rw-validation', 'rw-writing', 'rw-review', 'rw-figures'}
 
 
 def snapshot(root):
@@ -363,7 +363,7 @@ class ProjectSkillConnection(unittest.TestCase):
         folder = self.project / '.agents/skills'
         path = folder / '_rw-runtime/bundle-manifest.json'
         manifest = json.loads(path.read_text())
-        removed = {'rw-innovation', 'rw-candidates'}
+        removed = {'rw-innovation', 'rw-candidates', 'rw-figures'}
         for name in removed:
             shutil.rmtree(folder / name)
         manifest['skills'] = [skill for skill in manifest['skills'] if skill not in removed]
@@ -606,7 +606,7 @@ class ProjectSkillConnection(unittest.TestCase):
         folder = self.project / '.agents/skills'
         path = folder / '_rw-runtime/bundle-manifest.json'
         manifest = json.loads(path.read_text())
-        removed = {'rw-innovation', 'rw-candidates'}
+        removed = {'rw-innovation', 'rw-candidates', 'rw-figures'}
         for name in removed:
             shutil.rmtree(folder / name)
         manifest['skills'] = [s for s in manifest['skills'] if s not in removed]

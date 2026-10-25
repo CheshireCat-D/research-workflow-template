@@ -1,0 +1,24 @@
+{
+  "format": "rw-figures/example-spec@1",
+  "synthetic": true,
+  "purpose": "Demonstrate editable nodes, source links, and separately marked inference; not research evidence.",
+  "sources": [
+    {
+      "id": "source:demo-note",
+      "kind": "synthetic-author-note",
+      "content": "Input records undergo a check. The check produces a summary. This note does not describe a feedback step."
+    }
+  ],
+  "nodes": [
+    {"id": "node:input", "label": "Input records", "basis": "direct", "source_id": "source:demo-note", "quote": "Input records undergo a check."},
+    {"id": "node:check", "label": "Check", "basis": "direct", "source_id": "source:demo-note", "quote": "Input records undergo a check."},
+    {"id": "node:summary", "label": "Summary", "basis": "direct", "source_id": "source:demo-note", "quote": "The check produces a summary."}
+  ],
+  "edges": [
+    {"id": "edge:input-check", "from": "node:input", "to": "node:check", "meaning": "records are checked", "basis": "direct", "source_id": "source:demo-note", "quote": "Input records undergo a check."},
+    {"id": "edge:check-summary", "from": "node:check", "to": "node:summary", "meaning": "check produces summary", "basis": "direct", "source_id": "source:demo-note", "quote": "The check produces a summary."},
+    {"id": "edge:possible-revision", "from": "node:summary", "to": "node:check", "meaning": "possible revision", "basis": "inference", "source_id": "source:demo-note", "rationale": "Illustrative proposal only; the note does not establish this edge.", "visible_label": "Possible revision (inference)", "style": "dashed"}
+  ],
+  "design_choices": ["Left-to-right order aids reading; spacing is not quantitative.", "Blue boxes are a presentation choice, not an experimental grouping."],
+  "output": "synthetic-workflow.svg"
+}

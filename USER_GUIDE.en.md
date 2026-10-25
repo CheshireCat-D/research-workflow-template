@@ -44,7 +44,7 @@ Tell the assistant whether you need topic selection, literature positioning, pro
 
 For a manuscript that has not been registered, you can begin with a local task. When you need persistent project management, create a separate project and have the assistant register the actual materials without overwriting the original manuscript directory.
 
-## What the eight skills do
+## What the nine skills do
 
 | Skill | Suitable tasks |
 |---|---|
@@ -56,6 +56,7 @@ For a manuscript that has not been registered, you can begin with a local task. 
 | `rw-validation` | Select minimum validation, proof checks, or experimental checks for the method |
 | `rw-writing` | Organize manuscript prose from available statements and materials |
 | `rw-review` | Review claim support, limitations, structure, and delivery completeness |
+| `rw-figures` | Create or inspect data figures and editable schematics, preserving sources and scientific meaning |
 
 Combine specialist methods as needed. Finite numerical checks cannot replace a mathematical proof. Clinical, field, interview, and historical materials each have their own evidence, permission, and ethics requirements. See [disciplinary and method adaptation](docs/02-disciplinary-adaptation.md) for details.
 

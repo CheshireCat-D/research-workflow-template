@@ -4,7 +4,7 @@
 
 | 要求 | 当前证据与验收方式 |
 |---|---|
-| 八个核心技能 | [技能接入](08-skills-and-methods.md)、项目内复制和布局检查 |
+| 九个核心技能 | [技能接入](08-skills-and-methods.md)、项目内复制和布局检查 |
 | 七学科与十类方法 | [方法和学科画像](02-disciplinary-adaptation.md)、[稳定目录](../design/catalog.json)，按实际任务绑定范围 |
 | 研究行为回归 | [基础素材](../evals/d2/README.md)、[跨学科素材](../evals/d3/README.md)与独立审阅指纹；不同材料组不是软件旧版 |
 | 法学新增任务 | [两项合成案例及范围](../evals/legal/README.md)、[覆盖](../evals/legal/coverage.json)与独立审阅；旧冻结任务不改写为新增方法的验证 |

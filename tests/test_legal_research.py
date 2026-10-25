@@ -18,7 +18,7 @@ from replay_support import ReplayHarness
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from core.bundle import build_payload
+from core.bundle import build_payload, _rewrite_skill_links
 
 CLI = ROOT / 'tools/research.py'
 CONNECT = ROOT / 'tools/connect_skills.py'
@@ -172,6 +172,12 @@ class LegalResearchIntegration(unittest.TestCase):
         reviews = read_json(EVAL/'independent-review.json')
         self.assertEqual(set(reviews['cases']), set(CASE_IDS))
         payload = build_payload(ROOT)
+        snapshot = read_json(EVAL/'reviewed-guidance.json')
+        self.assertEqual(snapshot['format_version'], 1)
+        self.assertEqual(set(snapshot['sources']), {
+            'skills/rw-workflow/SKILL.md', 'skills/rw-literature/SKILL.md',
+            'skills/rw-writing/SKILL.md',
+        })
         for case in CASE_IDS:
             with self.subTest(case=case):
                 recording = EVAL/'recordings'/case
@@ -212,11 +218,21 @@ class LegalResearchIntegration(unittest.TestCase):
                     source_hash = resource.get('source_sha256', resource.get('sha256'))
                     if 'sha256' in resource:
                         self.assertEqual(resource['sha256'], source_hash)
-                    self.assertEqual(sha(ROOT/source_path), source_hash)
+                    # A historical content review binds the guidance actually
+                    # read then, not an evolving shared workflow. Preserve that
+                    # byte identity; current software/forward tasks run apart.
+                    # Legal-specific resources remain tied to current sources.
+                    frozen = snapshot['sources'].get(source_path.as_posix())
+                    source_bytes = (frozen['source_text'].encode('utf-8') if frozen
+                                    else (ROOT/source_path).read_bytes())
+                    self.assertEqual(hashlib.sha256(source_bytes).hexdigest(), source_hash)
                     self.assertEqual(source_hash, reviewed_sources[destination])
                     payload_path = destination.removeprefix('.agents/skills/')
                     self.assertIn(payload_path, payload)
-                    executed_hash = hashlib.sha256(payload[payload_path]).hexdigest()
+                    executed_bytes = (_rewrite_skill_links(frozen['source_text'],
+                                      source_path.as_posix()).encode('utf-8') if frozen
+                                      else payload[payload_path])
+                    executed_hash = hashlib.sha256(executed_bytes).hexdigest()
                     self.assertEqual(executed_hash, resource['executed_sha256'])
                     self.assertEqual(executed_hash, reviewed_executed[destination])
 

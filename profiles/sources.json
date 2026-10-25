@@ -261,6 +261,110 @@
       ],
       "limits": "Optional venue-specific style; not a universal citation mandate or a check of substantive legal authority.",
       "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "karpathy-coding-guidelines",
+      "title": "Karpathy Guidelines: scoped LLM coding behavior",
+      "version": "SKILL.md at commit 64723a49ea6117894304eb491f0d32a60570bf45",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills/blob/64723a49ea6117894304eb491f0d32a60570bf45/skills/karpathy-guidelines/SKILL.md",
+      "access": "Full upstream SKILL.md and discovery metadata; no upstream scripts or standalone installation",
+      "checked_scope": "Code-change decisions on existing callers/interfaces/style, unnecessary abstractions/configuration, unrelated changes and patch-created orphans. Only the missing conditional guidance was independently expressed in rw-workflow.",
+      "applicability": [
+        "research-code-and-tool-maintenance"
+      ],
+      "limits": "Upstream frontmatter declares MIT. No upstream text or code is bundled; this is a behavioral design influence, not Karpathy endorsement, a new research method or measured effectiveness evidence. Existing question, validation and stop contracts govern.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "scipilot-figure",
+      "title": "SciPilot Figure",
+      "version": "Upstream file reviewed on 2026-10-25; moving branch URL, no release certification",
+      "url": "https://github.com/Haojae/scipilot-figure-skill/blob/main/SKILL.md",
+      "access": "Author-maintained skill/reference inspected for the bounded decisions described here",
+      "checked_scope": "Data-before-chart selection and separate programmatic/visual review; existing mature data-figure checks retained.",
+      "applicability": [
+        "research-workflow-support"
+      ],
+      "limits": "Design influence independently expressed in this template. No upstream file, private implementation, third-party figure asset, large library or background service is bundled; no new scientific effectiveness claim.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "nature-svg-guidance",
+      "title": "Nature Figure native SVG workflow",
+      "version": "Upstream file reviewed on 2026-10-25; moving branch URL, no release certification",
+      "url": "https://github.com/Yuan1z0825/nature-skills/blob/main/skills/nature-figure/references/vector-schematic-workflow.md",
+      "access": "Author-maintained skill/reference inspected for the bounded decisions described here",
+      "checked_scope": "Native editable schematic routing, stable semantic elements, and separate structural/visual/scientific acceptance. Upstream scripts were not copied.",
+      "applicability": [
+        "research-workflow-support"
+      ],
+      "limits": "Design influence independently expressed in this template. No upstream file, private implementation, third-party figure asset, large library or background service is bundled; no new scientific effectiveness claim.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "diagram-design",
+      "title": "Diagram Design",
+      "version": "Upstream file reviewed on 2026-10-25; moving branch URL, no release certification",
+      "url": "https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/SKILL.md",
+      "access": "Author-maintained skill/reference inspected for the bounded decisions described here",
+      "checked_scope": "Semantic relationships and editable SVG before layout; source fidelity and final-size review, without brand defaults.",
+      "applicability": [
+        "research-workflow-support"
+      ],
+      "limits": "Design influence independently expressed in this template. No upstream file, private implementation, third-party figure asset, large library or background service is bundled; no new scientific effectiveness claim.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "book-to-skill",
+      "title": "Book to Skill",
+      "version": "Upstream file reviewed on 2026-10-25; moving branch URL, no release certification",
+      "url": "https://github.com/virgiliojr94/book-to-skill/blob/master/SKILL.md",
+      "access": "Author-maintained skill/reference inspected for the bounded decisions described here",
+      "checked_scope": "Project-local source/version indexes and selective reading; no global corpus installation or claim of hallucination elimination.",
+      "applicability": [
+        "research-workflow-support"
+      ],
+      "limits": "Design influence independently expressed in this template. No upstream file, private implementation, third-party figure asset, large library or background service is bundled; no new scientific effectiveness claim.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "document-domain-modeling",
+      "title": "Domain modeling and document-grounded questions",
+      "version": "Upstream file reviewed on 2026-10-25; moving branch URL, no release certification",
+      "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md",
+      "access": "Author-maintained skill/reference inspected for the bounded decisions described here",
+      "checked_scope": "Conditional cross-discipline terminology and recovery-relevant decisions; existing limited-question contract retained.",
+      "applicability": [
+        "research-workflow-support"
+      ],
+      "limits": "Design influence independently expressed in this template. No upstream file, private implementation, third-party figure asset, large library or background service is bundled; no new scientific effectiveness claim.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "reproducible-literature-search",
+      "title": "Literature review",
+      "version": "Upstream file reviewed on 2026-10-25; moving branch URL, no release certification",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/literature-review/SKILL.md",
+      "access": "Author-maintained skill/reference inspected for the bounded decisions described here",
+      "checked_scope": "Actual database queries/filters/coverage/export records and record/version/study distinction; no fixed corpus size or universal review framework.",
+      "applicability": [
+        "research-workflow-support"
+      ],
+      "limits": "Design influence independently expressed in this template. No upstream file, private implementation, third-party figure asset, large library or background service is bundled; no new scientific effectiveness claim.",
+      "accessed_on": "2026-10-25"
+    },
+    {
+      "id": "research-evidence-artifacts",
+      "title": "Agent-native research artifact compiler",
+      "version": "Upstream file reviewed on 2026-10-25; moving branch URL, no release certification",
+      "url": "https://github.com/Orchestra-Research/AI-Research-SKILLs/blob/main/22-agent-native-research-artifact/compiler/SKILL.md",
+      "access": "Author-maintained skill/reference inspected for the bounded decisions described here",
+      "checked_scope": "Distinguish original evidence from derived representations and direct source statements from synthesis; existing claim/evidence registers retained.",
+      "applicability": [
+        "research-workflow-support"
+      ],
+      "limits": "Design influence independently expressed in this template. No upstream file, private implementation, third-party figure asset, large library or background service is bundled; no new scientific effectiveness claim.",
+      "accessed_on": "2026-10-25"
     }
   ],
   "original_guidance": [

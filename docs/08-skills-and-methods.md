@@ -1,6 +1,6 @@
 # 技能与方法接入
 
-当前实现八个 `rw-*` 技能、十类方法指导和七类学科画像，维护源分别在仓库 `skills/` 与 `profiles/`。它们由宿主代理根据任务读取并执行。共享登记规则位于[接入协议](../core/skill-bridge.md)，统一处理记录版本、检查点和只读命令。软件只维护当前一份；研究记录版本仍按兼容契约保留。
+当前实现九个 `rw-*` 技能、十类方法指导和七类学科画像，维护源分别在仓库 `skills/` 与 `profiles/`。它们由宿主代理根据任务读取并执行。共享登记规则位于[接入协议](../core/skill-bridge.md)，统一处理记录版本、检查点和只读命令。软件只维护当前一份；研究记录版本仍按兼容契约保留。
 
 ## 在新研究项目中使用
 
@@ -12,7 +12,7 @@ python3 tools/connect_skills.py install --root ../my-research
 python3 tools/connect_skills.py check --root ../my-research
 ```
 
-接入会在该项目内生成 `.agents/skills/`：八个技能目录及一个不作为技能发现的 `_rw-runtime/` 共用资源目录。代码、登记模式和方法／学科画像随项目复制，不依赖开发者的个人包、Python 虚拟环境或原仓库路径。已有 `AGENTS.md` 保持原样；已有 `.agents/skills` 时拒绝覆盖，包括空目录。
+接入会在该项目内生成 `.agents/skills/`：九个技能目录及一个不作为技能发现的 `_rw-runtime/` 共用资源目录。代码、登记模式和方法／学科画像随项目复制，不依赖开发者的个人包、Python 虚拟环境或原仓库路径。已有 `AGENTS.md` 保持原样；已有 `.agents/skills` 时拒绝覆盖，包括空目录。
 
 然后在 Codex 中打开研究项目，以自然语言说明任务，例如：
 
@@ -34,6 +34,7 @@ python3 tools/connect_skills.py check --root ../my-research
 | 证明、计算、实证、解释或设计检查 | `rw-validation` | 按所需方法读取画像，交付实际推导、分析或运行依据 |
 | 起草、润色、翻译、压缩 | `rw-writing` | 按请求选择模式，保留论证身份与作者声音 |
 | 自审、返修、审稿回复、交付核对 | `rw-review` | 可定位发现、实际检查、已完成修改与仍存缺口 |
+| 科研数据图、可编辑示意图与图件审查 | `rw-figures` | 原始依据、绘图源、最终尺寸预览及实际完成的结构／目视检查 |
 
 不要为了走流程逐一调用所有技能，也不对单条已定方向强制做候选比赛。图表格式扩展仍在后续计划中；当前路由只调用实际存在的入口。
 
@@ -54,6 +55,8 @@ python3 tools/connect_skills.py check --root ../my-research
 
 ## 修改与核验
 
+研究代码与工具的实现或维护按 `rw-workflow` 的[对应分支](../skills/rw-workflow/SKILL.md#研究代码与工具维护)执行；仅补充代码改动范围、结构复用和风险相称验证，其他任务继续沿用各自技能。
+
 修改仓库里的维护源，再运行 `python3 tools/check_core.py`。项目内副本是生成产物；不要同时维护两套指令。源码中的 `connect_skills.py check` 只读区分“已安装文件改变／丢失”和“源版本不同”。复制的连接检查器默认只核对已安装资源，也可显式加 `--installed-only`；`source_version_matches=null` 表示未比较来源。旧六技能格式1副本仍可读取，升级仍需显式执行。
 
 ## 升级已有项目的技能副本
@@ -73,3 +76,5 @@ python3 tools/connect_skills.py check --root ../my-research
 POSIX通用接口不能用一次 `rename` 交换两个非空目录。这里每次目录改名都是原子的，整次升级采用两次改名；两者之间路径可能短暂不存在，同时读取的代理应重试。执行前暂停正在读取该项目技能的宿主。捕获到发布失败时会尝试恢复旧目录；若返回 `upgrade_recovery_required`，先按错误中保留的 `.agents/.rw-skills-backup-*` 位置审阅并恢复，再重试。若返回 `upgrade_cleanup_required`，新副本已发布，仅旧备份清理失败。进程强制终止、断电和绕过写锁的外部目录替换没有完整事务保证。
 
 三项基础回归任务保存在[基础素材](../evals/d2/README.md)，跨学科任务及场景映射在[覆盖记录](../evals/d3/coverage.json)，法学新增场景在[法学覆盖](../evals/legal/coverage.json)。这些是当前测试依赖的不同材料组，不是旧软件副本。执行者只获得任务、原始材料和技能；内容复核与自动回归分开。旧任务的冻结材料与审阅指纹保持原样，新增方法用新任务核验，不继承旧任务的执行结论。自动测试重跑代码和登记流程，不能重新产生一次独立模型评估。
+
+本轮外部技能检索、未采用条目与整合边界见[技能检索与取舍](12-skills-selection.md)。

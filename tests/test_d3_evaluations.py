@@ -53,7 +53,7 @@ class D3Evaluations(unittest.TestCase):
                 self.assertEqual(recovered['next_action'],manifest['cursor']['next_action'])
                 self.assertFalse(recovered['needs_review'])
                 self.assertTrue(installed['installed_integrity'])
-                self.assertEqual(len(installed['skills']),8)
+                self.assertEqual(len(installed['skills']),9)
                 for kind in ('sources','statements','evidence','relations','activities','artifacts','method_bindings'):
                     self.assertGreater(checked['counts'][kind],0)
 

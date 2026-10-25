@@ -1,0 +1,70 @@
+{
+  "format_version": 1,
+  "scope": "Current general-template forward tasks executed by separate AI agents in isolated synthetic fixtures. Not an effectiveness benchmark, independent human review, or scientific/legal certification.",
+  "recorded_at_utc": "2026-10-25T23:19:27.154550+00:00",
+  "normalization": "Machine-local prefixes removed from case-local note links; original source fingerprints and observations retained.",
+  "cases": [
+    {
+      "id": "csv-sign",
+      "request": "Repair negative totals while preserving the CLI.",
+      "input_csv": "amount\n-2.25\n0.50\n",
+      "original_source": "\"\"\"CSV amount summary for a small research bookkeeping export.\"\"\"\nimport argparse\nimport csv\nfrom decimal import Decimal, InvalidOperation\nimport json\n\n\ndef percent_label(value):\n    return f\"{value:.1%}\"\n\n\ndef summarize(path):\n    with open(path, newline=\"\", encoding=\"utf-8\") as stream:\n        reader = csv.DictReader(stream)\n        if reader.fieldnames != [\"amount\"]:\n            raise ValueError(\"Expected one amount column\")\n        rows = list(reader)\n    if not rows:\n        raise ValueError(\"No observations\")\n    total = Decimal(\"0\")\n    for line, row in enumerate(rows, 2):\n        try:\n            total += Decimal(row[\"amount\"])\n        except (InvalidOperation, TypeError):\n            raise ValueError(f\"Invalid amount on row {line}\") from None\n    return {\"total\": f\"{abs(total):.2f}\", \"rows\": len(rows)}\n\n\nif __name__ == \"__main__\":\n    parser = argparse.ArgumentParser()\n    parser.add_argument(\"csv_path\")\n    args = parser.parse_args()\n    print(json.dumps(summarize(args.csv_path)))\n",
+      "result_source": "\"\"\"CSV amount summary for a small research bookkeeping export.\"\"\"\nimport argparse\nimport csv\nfrom decimal import Decimal, InvalidOperation\nimport json\n\n\ndef percent_label(value):\n    return f\"{value:.1%}\"\n\n\ndef summarize(path):\n    with open(path, newline=\"\", encoding=\"utf-8\") as stream:\n        reader = csv.DictReader(stream)\n        if reader.fieldnames != [\"amount\"]:\n            raise ValueError(\"Expected one amount column\")\n        rows = list(reader)\n    if not rows:\n        raise ValueError(\"No observations\")\n    total = Decimal(\"0\")\n    for line, row in enumerate(rows, 2):\n        try:\n            total += Decimal(row[\"amount\"])\n        except (InvalidOperation, TypeError):\n            raise ValueError(f\"Invalid amount on row {line}\") from None\n    return {\"total\": f\"{total:.2f}\", \"rows\": len(rows)}\n\n\nif __name__ == \"__main__\":\n    parser = argparse.ArgumentParser()\n    parser.add_argument(\"csv_path\")\n    args = parser.parse_args()\n    print(json.dumps(summarize(args.csv_path)))\n",
+      "observed_before": "{\"total\": \"1.75\", \"rows\": 2}\n",
+      "observed_after": "{\"total\": \"-1.75\", \"rows\": 2}\n",
+      "executed_checks": 10,
+      "result": "pass-in-scope; signed formatting expression alone changed"
+    },
+    {
+      "id": "missing-data",
+      "request": "Fill missing values and compare means; no imputation convention supplied.",
+      "input_csv": "group,value\nA,2\nA,\nA,8\nB,4\nB,5\nB,\n",
+      "observed_summary": {
+        "scope": "Observed values only; no imputation",
+        "groups": {
+          "A": {
+            "rows": 3,
+            "observed": 2,
+            "missing": 1,
+            "observed_mean": "5"
+          },
+          "B": {
+            "rows": 3,
+            "observed": 2,
+            "missing": 1,
+            "observed_mean": "4.5"
+          }
+        },
+        "observed_A_minus_B": "0.5"
+      },
+      "result": "Observed values summarized; no imputation or inference. The material missingness/imputation choice remains a user question."
+    },
+    {
+      "id": "quantifier-edit",
+      "request": "Polish only the sentence without changing mathematical meaning.",
+      "input": "For every x in X, there exists a finite C_x such that |f_n(x)| <= C_x for all n.",
+      "output": "For every x in X, there is a finite constant C_x such that |f_n(x)| <= C_x for all n.",
+      "result": "Pointwise dependence and quantifier order retained; no proof claim."
+    },
+    {
+      "id": "editable-svg",
+      "request": "Rearrange the three boxes vertically; preserve words and relationships.",
+      "input_svg": "skills/rw-figures/assets/synthetic-workflow.svg",
+      "result_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"160mm\" height=\"150mm\" viewBox=\"0 0 640 600\" role=\"img\" aria-labelledby=\"figure:title figure:desc\">\n  <title id=\"figure:title\">Synthetic editable workflow demonstration</title>\n  <desc id=\"figure:desc\">Synthetic example, not research evidence. Input records pass through a check to a summary. A dashed possible revision edge is an illustrative inference unsupported by the fictional note. Text, boxes and arrows are separate editable SVG elements.</desc>\n  <defs>\n    <marker id=\"marker:arrow\" markerWidth=\"8\" markerHeight=\"8\" refX=\"7\" refY=\"4\" orient=\"auto\" markerUnits=\"strokeWidth\"><path d=\"M 0 0 L 8 4 L 0 8 Z\" fill=\"#24364b\"/></marker>\n  </defs>\n  <rect id=\"canvas:background\" width=\"640\" height=\"600\" fill=\"#ffffff\"/>\n  <g id=\"notice:synthetic\" font-family=\"sans-serif\" fill=\"#24364b\">\n    <text x=\"32\" y=\"32\" font-size=\"14\" font-weight=\"bold\">SYNTHETIC DEMONSTRATION</text>\n    <text x=\"32\" y=\"53\" font-size=\"12\">Editable source example; not research evidence</text>\n  </g>\n  <g id=\"edges:direct\" fill=\"none\" stroke=\"#24364b\" stroke-width=\"2\" marker-end=\"url(#marker:arrow)\">\n    <path id=\"edge:input-check\" d=\"M 320 164 V 246\"/>\n    <path id=\"edge:check-summary\" d=\"M 320 312 V 394\"/>\n  </g>\n  <path id=\"edge:possible-revision\" d=\"M 396 428 H 608 V 280 H 398\" fill=\"none\" stroke=\"#24364b\" stroke-width=\"2\" stroke-dasharray=\"6 5\" marker-end=\"url(#marker:arrow)\"/>\n  <g font-family=\"sans-serif\" font-size=\"16\" text-anchor=\"middle\" fill=\"#24364b\">\n    <g id=\"node:input\"><rect x=\"244\" y=\"100\" width=\"152\" height=\"64\" rx=\"6\" fill=\"#e8f0f8\" stroke=\"#426c94\"/><text x=\"320\" y=\"138\">Input records</text></g>\n    <g id=\"node:check\"><rect x=\"244\" y=\"248\" width=\"152\" height=\"64\" rx=\"6\" fill=\"#e8f0f8\" stroke=\"#426c94\"/><text x=\"320\" y=\"286\">Check</text></g>\n    <g id=\"node:summary\"><rect x=\"244\" y=\"396\" width=\"152\" height=\"64\" rx=\"6\" fill=\"#e8f0f8\" stroke=\"#426c94\"/><text x=\"320\" y=\"434\">Summary</text></g>\n  </g>\n  <g id=\"legend:relationships\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#24364b\">\n    <text x=\"410\" y=\"354\">Possible revision (inference)</text>\n    <text x=\"32\" y=\"552\">Solid: direct synthetic note · Dashed: illustrative inference</text>\n  </g>\n</svg>\n",
+      "structure_result": "pass",
+      "visible_texts_retained": 7,
+      "stable_ids_retained": 13,
+      "relations_retained": 3,
+      "actual_preview_inspected": true,
+      "result": "pass-in-scope; structure and rendered PNG inspected, synthetic scientific scenario not certified"
+    },
+    {
+      "id": "source-index",
+      "request": "Index the supplied source and assess applicability to X=N, preserving it.",
+      "input_excerpt": "SYNTHETIC SOURCE PACKET, not a real publication.\nSource: Toy Monograph A, supplied excerpt, version 1.\nPrinted page 12 / source excerpt block A-12.\nTheorem 1. Let X be a finite nonempty set. If for each x in X there exists a finite C_x such that |f_n(x)| <= C_x for all n, then there is a finite C such that |f_n(x)| <= C for all n and x in X.\nProof: choose the maximum of the finitely many C_x.\nPrinted page 13 is not supplied. Diagrams and exercises are unavailable.\n",
+      "source_sha256": "e04be8e12c827bcf65f4ea9ab1053259f95c43c53c78b489fe3358dbb5d581d9",
+      "result_notes": "# Existing project notes\n\nQuestion: distinguish pointwise and uniform boundedness when the domain changes.\n\n## 项目内小索引：Toy Monograph A（所供节录 v1）\n\n沿用上方已有问题：域改变时，区分逐点有界与一致有界。\n\n材料身份：这是材料明确标注的合成示例，不是真实出版物。题名为 *Toy Monograph A*，所供节录 version 1；作者、正式版次、出版信息和 DOI 未提供。当前可用副本为 [source.txt](source.txt)，共 6 行，已全部读取。它是本任务的原始输入文本；没有 PDF、扫描页或另行提取/OCR 副本可供比对。下列 printed p.12 与 A-12 来自文本自报定位，没有核对版面或 PDF 页码。\n\n原件 SHA-256：`e04be8e12c827bcf65f4ea9ab1053259f95c43c53c78b489fe3358dbb5d581d9`。指纹只标识本地文件字节，不验证书目信息或定理正确性；后续原件变化时，需重读受影响位置，不能只换指纹。\n\n| 按需查阅主题 | 可核对位置 | 原文实际支持／读取范围 |\n|---|---|---|\n| 逐点有界何时推出一致有界；量词与域条件 | printed p.12，A-12，Theorem 1；[source.txt 第 4 行](source.txt:4) | 在有限非空 $X$ 上，每个 $x$ 有对全部 $n$ 有效的有限 $C_x$，可推出对全部 $n,x$ 有效的有限 $C$。已读该定理全文。 |\n| 有限性在论证中的作用 | printed p.12，A-12，proof；[source.txt 第 5 行](source.txt:5) | 原文取有限多个 $C_x$ 的最大值。已读这一行证明；未作全面证明审计。 |\n| 不可用材料 | [source.txt 第 6 行](source.txt:6) | printed p.13 未提供；图与习题不可用。未读，不据此补出章节、编号或后续结论。 |\n\n### 当前问题：能否用于 $X=\\mathbb N$？\n\n**从原文可得：**不能直接套用。Theorem 1 的明确前提是有限非空集，而 $\\mathbb N$ 是无限集（定位：A-12，Theorem 1，原件第 4 行）。原文节录未明确说明无限域版本。\n\n**本次补充推断／示例，非原文陈述：**仅有原句的逐点有界条件，在 $X=\\mathbb N$ 上一般不足以推出一致有界。令 $f_n(k)=k$（对所有 $n,k\\in\\mathbb N$）。每个固定 $k$ 可取有限常数 $C_k=k$，但不存在一个有限 $C$ 同时界住所有 $k$，因为可以取 $k>C$。这说明该推广一般不成立；它不否定另加条件后得到无限域版本的可能性。\n\n**缺口与提问：**没有实际出版物或完整第 12 页版面，且第 13 页、图、习题缺失；这些缺口不影响当前前提核对与上述补充示例。因此本轮无需额外提问，也未请求补材料。\n",
+      "result": "Source identity, actual read extent and missing page recorded; finite-domain condition checked; executor counterexample separated from source."
+    }
+  ]
+}

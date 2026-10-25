@@ -21,7 +21,7 @@ from .storage import CoreError, ProjectFiles, json_bytes, object_sha, parse_json
 
 SKILLS = tuple('rw-' + name for name in (
     'workflow', 'question', 'literature', 'innovation', 'candidates',
-    'validation', 'writing', 'review',
+    'validation', 'writing', 'review', 'figures',
 ))
 MANIFEST = '_rw-runtime/bundle-manifest.json'
 BUNDLE_PATH = '.agents/skills'
