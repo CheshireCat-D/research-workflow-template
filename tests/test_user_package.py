@@ -81,6 +81,8 @@ class UserPackage(unittest.TestCase):
         self.assertEqual(entries['skills/rw-review/SKILL.md'],
                          (self.source / 'skills/rw-review/SKILL.md').read_bytes())
         self.assertIn('skills/rw-review/references/cross-material-consistency.md', entries)
+        for name in ('review-modes.md', 'review-response.md', 'submission-delivery.md'):
+            self.assertIn('skills/rw-review/references/' + name, entries)
         self.assertFalse(package.payload_link_errors(entries))
         catalog = json.loads(entries['design/catalog.json'])
         for method in catalog['methods']:
@@ -202,6 +204,9 @@ class UserPackage(unittest.TestCase):
             {'USER_GUIDE.en.md': None},
             {'profiles/methods/legal-analysis.md': None},
             {'skills/rw-review/references/cross-material-consistency.md': None},
+            {'skills/rw-review/references/review-modes.md': None},
+            {'skills/rw-review/references/review-response.md': None},
+            {'skills/rw-review/references/submission-delivery.md': None},
             {'evals/current/history.json': b'{}\n'},
             {'skills/rw-review/tests/test_old_revision.py': b'# Development only.\n'},
             {'profiles/methods/revisions/old.md': b'# Earlier guidance.\n'},

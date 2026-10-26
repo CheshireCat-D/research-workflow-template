@@ -12,6 +12,8 @@
 | 长期资料反复查阅 | 项目本地索引与来源变化重核 | 按相关章节或片段读取；索引不是全文已读证据，不复制整书成全局技能 |
 | 跨学科同名术语 | `rw-question` 的按需术语核对 | 只澄清影响当前选择的歧义，在已有笔记保存必要取舍 |
 | 多份材料中的共享事实难以集中核对 | `rw-review` 的按需跨材料参考与报告附表 | 先确认事实身份，保留合理例外；复用原审阅产物与登记，不自动改源数据或提升主张状态 |
+| 模拟审稿缺少结构化依据与真正隔离 | `rw-review` 的[评审模式](../skills/rw-review/references/review-modes.md) | 普通自审不自动多评审；原始材料共享、分析独立、报告冻结后再汇总，Nature 风格只按目标适用 |
+| 返修回复与真实修改、提交材料难以对应 | [回复与修改](../skills/rw-review/references/review-response.md)、[投稿与交付](../skills/rw-review/references/submission-delivery.md) | 对应实际修改和当前版本；组包核对真实字节与缺口，准备不等于提交 |
 
 现有选题、创新、证据核对、写作、审阅和交接边界继续适用。没有新增同义写作或提问入口，也没有自动下载全文、注册定时任务、推送消息或后台无限循环。
 
@@ -60,3 +62,5 @@
 | [Anthropic skills](https://github.com/anthropics/skills)、[knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | 分别核对技能内容与许可；不将所有公开文件视为同一自由许可 |
 
 来源记录见 [profiles/sources.json](../profiles/sources.json)，发行文件身份见 [来源清单](../provenance/file-origins.json)。上游后续变化不自动进入本模板，后续仍按缺口、适用性、许可和实际任务检查决定。
+
+本轮另核对固定版本的 [Nature reviewer](https://github.com/Yuan1z0825/nature-skills/blob/07009f91f99c7108519e7657885f1a89d91099d5/skills/nature-reviewer/SKILL.md) 与 [K-Dense peer-review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/5f2bc0341354fd5590aef76a533ada1e1e5b4e62/skills/peer-review/SKILL.md)，分别确认上游 Apache-2.0 和 MIT 许可身份，并以[官方 referee 规则](https://www.nature.com/nature/for-referees/policies-and-processes)核对目标刊物与角色边界。通用包没有复制这两个第三方技能或个人包文件；结构化审阅、隔离评审与交付指导以本包中文规则独立表达，继续保留九个入口。

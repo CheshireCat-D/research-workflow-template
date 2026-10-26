@@ -38,9 +38,7 @@ On Windows, choose an ordinary local project directory such as `C:\Research\my-p
 
 Replace `../my-research` with a new directory that does not yet exist. Initialization refuses to overwrite an existing directory. Keep your manuscript, data, and results in the new project; the toolkit folder holds the tools and skills.
 
-Then open the new research project in Codex and send a prompt such as:
-
-> My research interests are: … . My current knowledge, materials, and constraints are: … . My intended deliverable is: … . First read or resume this project, clarify the most important open questions, and help me choose one feasible next step. Keep missing sources, unverified conclusions, and unresolved decisions explicit. Complete the work needed at the current stage; we do not need to run through the whole workflow at once.
+Then open the new research project in Codex. Use the startup example below or describe the current task; complete the work needed at that stage rather than running the entire workflow at once.
 
 You do not need to fill every field before starting or list the skill names in every request. Once the project skills are connected, the host assistant selects skills for the current task. Successful installation and file-integrity checks do not establish that the host interface has actually invoked a skill.
 
@@ -48,7 +46,9 @@ You do not need to fill every field before starting or list the skill names in e
 
 Open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
 
-> Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline or area is […], my current interests or ideas are […], my available knowledge, materials and time are […], and my intended deliverable is […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step.
+> Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step.
+
+If the journal is undecided, write “undecided” and continue the research already possible. The target journal guides audience, scope and submission requirements; it is not an acceptance prediction.
 
 A chat interface may use the guide for discussion or editing according to its actual attachment capabilities. Uploading a file does not establish skill installation or local execution. Initialization, registration and recovery require real directory and command access. A brand or model name alone does not establish one-click compatibility.
 
@@ -75,7 +75,7 @@ For a manuscript that has not been registered, you can begin with a local task. 
 | `rw-candidates` | Compare existing candidate directions and assess them adversarially |
 | `rw-validation` | Select minimum validation, proof checks, or experimental checks for the method |
 | `rw-writing` | Draft, polish, translate and compress; preserve author voice and necessary qualifications while removing boilerplate and defensive framing |
-| `rw-review` | Review claim support, limitations, structure, consistency across materials, and delivery completeness |
+| `rw-review` | Self-review, structured or multiple simulated reviews, referee responses, cross-material consistency and submission preparation |
 | `rw-figures` | Create or inspect data figures and editable schematics, preserving sources and scientific meaning |
 
 Combine specialist methods as needed. Finite numerical checks cannot replace a mathematical proof. Clinical, field, interview, and historical materials each have their own evidence, permission, and ethics requirements. See [disciplinary and method adaptation](docs/02-disciplinary-adaptation.md) for details.
@@ -83,6 +83,19 @@ Combine specialist methods as needed. Finite numerical checks cannot replace a m
 When a delivery includes several materials, such as a manuscript, figures, supplements, slides, or code, or an updated fact affects other materials, you can ask the assistant to check consistency. It first identifies the fact and its established authoritative basis, then checks the relevant expressions and records conflicts or justified exceptions in the existing review report. A read-only request adds no project records. For example: “Check the definitions, conditions, and values for the same result across these materials, and state what you actually checked.” See the [cross-material review reference](skills/rw-review/references/cross-material-consistency.md) for the procedure.
 
 For legal research, initialize with `--discipline law --method legal-analysis` and use the [legal project template](profiles/templates/legal-research.md). Record jurisdiction, relevant dates, the basis for authority and precedential status, and precise citations. Keep doctrinal interpretation, comparative description, normative proposals, and empirical effects distinct. Legal metadata can use `source.extensions.legal`; successful registration does not certify legal meaning or validity. The added [legal tasks](evals/legal/README.md) use fictional jurisdictions and have a limited testing scope.
+
+## Review, revision responses and submission materials
+
+These capabilities use the existing `rw-review` entry and expand only for the requested task:
+
+- **Structured review:** “Prepare a structured peer-review draft with locations, evidence, impact and testable actions.” Apply the proof, experimental, data or interpretation obligations relevant to the manuscript rather than one article template.
+- **Multiple simulated reviewers:** “Produce two reviewer reports without showing either reviewer the other report, then synthesize disagreements and important findings.” Isolated reports are used when multiple reviewers are requested; complete and freeze them before synthesis. Nature-style or broad-readership criteria apply only when the target calls for them. Simulations do not impersonate actual journal referees or editorial decisions.
+- **Point-by-point response:** “Compare the referee comments with the current revision and map each comment to the actual change, current location and verification status.” Distinguish completed changes from planned work and retain evidence-based disagreement.
+- **Submission preparation:** “Use the supplied journal requirements to organize the current manuscript, figures, supplements and required declarations, with a file list and explicit gaps.” Check the actual target, prepare delivery copies and verify file identity. Record preparation separately from submission; do not upload or contact a journal automatically.
+
+Reuse the existing review report and, when persistence is needed, `artifact` and `activity` records. A read-only review still returns a report without creating a second review ledger.
+
+Mode details: [structured and multiple reviews](skills/rw-review/references/review-modes.md), [referee responses](skills/rw-review/references/review-response.md), and [submission delivery](skills/rw-review/references/submission-delivery.md).
 
 ## Common daily operations
 

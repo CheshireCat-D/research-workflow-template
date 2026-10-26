@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-26T15:43:30.547957+00:00",
+  "checked_at_utc": "2026-10-26T17:06:28.147539+00:00",
   "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -24,11 +24,11 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 195,
+      "test_methods": 197,
       "check_groups": 7,
       "receipt": {
-        "identifier": "local-evidence:windows-optimized-local-full.json",
-        "sha256": "07d8def0b9c0026324d98f2d41fe05f9faecdbaa6766458fff8e811fcd65e703"
+        "identifier": "local-evidence:rwt-review-full.json",
+        "sha256": "5c8d6f09c921f0dbdb1064bb5ec53b0ee9efe8d1fa761fa1bc81e718bc308a5b"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,8 +36,8 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative Python file names and raw SHA-256 bytes in core/, tools/ and tests/, excluding __pycache__",
-        "sha256": "1fa8c30908ba148d9b8a80e3d782d28a46b166a70821729e2298abd588b067c1",
-        "files": 30
+        "sha256": "3fba73be45d8fcadcd2db0b4b49fb89bc883a8134ad44654059669f6105482a5",
+        "files": 31
       }
     },
     "post_execution_bookkeeping_changes": [
@@ -45,18 +45,14 @@
       "provenance/file-origins.json"
     ],
     "followup_validation": {
-      "scope": "Real ordered batch CLI reconstructs the same per-record versions, history and bindings as sequential registration; checkpoint/check/resume still use independent processes. The current commit hosted CI reruns full checks and isolated archives.",
-      "equivalence_test": "tests/test_replay_harness.py",
-      "local_full_suite_result": "195 tests completed successfully",
+      "scope": "Explicit resource closure for the three review-mode references; source install and rehashed archive removal checks preserve the project. Actual review/report/delivery forward tasks are recorded separately.",
+      "local_full_suite_result": "197 tests completed successfully",
+      "source_record": "evals/current/review-mode-checks.json",
       "scientific_script_budgets_changed": false,
-      "engineering_command_timeout_seconds": {
-        "windows": 60,
-        "posix": 30
-      },
-      "post_local_full_source_changes": [
-        ".github/workflows/check.yml macOS Intel runner label",
-        "docs/11-linux-validation.md platform explanation",
-        ".gitattributes automatic binary-safe text detection"
+      "post_execution_bookkeeping_changes": [
+        "evals/current/latest.json",
+        "provenance/file-origins.json",
+        "evals/current/README.md"
       ]
     }
   },
@@ -137,6 +133,22 @@
       "forward_requests": 3,
       "record": "evals/current/skill-task-checks.json#cross_material_review",
       "scope": "Independently executed synthetic text tasks and file-change verification; not semantic automation or full scientific review."
+    },
+    "review_modes": {
+      "owner": "rw-review",
+      "new_standalone_skills": 0,
+      "entrypoints": 9,
+      "new_references": [
+        "review-modes.md",
+        "review-response.md",
+        "submission-delivery.md"
+      ],
+      "forward_record": "evals/current/review-mode-checks.json",
+      "independent_simulated_reports": 2,
+      "response_and_delivery_tasks": 1,
+      "new_schema_or_runtime_dependency": false,
+      "personal_package_files_copied": false,
+      "scope": "Two fresh same-model review contexts plus one actual response/delivery exercise; wholly synthetic author-owned inputs only. Not real journal peer review, efficacy measurement or acceptance prediction."
     }
   },
   "current_rule_audit": {
@@ -171,11 +183,11 @@
   "user_distribution": {
     "profile": "user-runtime",
     "archive_name": "research-workflow-template.zip",
-    "maintained_runtime_and_guide_files": 68,
+    "maintained_runtime_and_guide_files": 71,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "f59e5e67affc36fee6d7b0822beb3621771613e174176f4f26d16a7d8f6bf27f",
+    "sha256": "069b61001aba9c1b15b11539b1e4dff1f1fa86722f05a83dccce5811647ff543",
     "deterministic_builds_byte_identical": true,
-    "explicit_reviewed_runtime_resources": 61,
+    "explicit_reviewed_runtime_resources": 64,
     "development_history_or_previous_editions_included": false,
     "nested_unreviewed_resources_rejected": true,
     "portable_evidence_availability": "not-included-in-project-runtime",

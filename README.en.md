@@ -38,6 +38,14 @@ Choose a new output directory. Open that project in a compatible skill host and 
 
 Use `show` for complete envelopes and record versions, `register --file -` or `register-batch` for bounded stdin imports, and `configure` for supported settings. [CLI usage](docs/07-core-usage.md) and [skill connection](docs/08-skills-and-methods.md) document the contracts and directory-switch recovery limits.
 
+An agent with local file and command access can read the user guide, then start from:
+
+> My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […].
+
+If the journal is undecided, write “undecided” and continue the research already possible. The target journal guides audience, scope and submission requirements; it is not an acceptance prediction.
+
+`rw-review` supports structured review, optional isolated simulated reviewers, point-by-point responses and submission preparation. State the task directly; see the [full guide](USER_GUIDE.en.md#review-revision-responses-and-submission-materials) for examples.
+
 ## Checks and evidence
 
 ```sh

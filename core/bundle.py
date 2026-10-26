@@ -212,7 +212,10 @@ def build_payload(root=None):
     ))
     cat = parse_json(_source_bytes(root, 'design/catalog.json'))
     required = ['core/skill-bridge.md', 'core/windows_storage.py', 'profiles/selection.md',
-                'profiles/governance.md', 'profiles/templates/legal-research.md'] + [
+                'profiles/governance.md', 'profiles/templates/legal-research.md',
+                'skills/rw-review/references/review-modes.md',
+                'skills/rw-review/references/review-response.md',
+                'skills/rw-review/references/submission-delivery.md'] + [
         item['implementation']['profile'] for item in cat['methods']
         if item.get('implementation', {}).get('status') == 'guidance-slice'
     ] + [item['profile'] for item in cat['disciplines'] if 'profile' in item]

@@ -74,7 +74,10 @@ class ProjectSkillConnection(unittest.TestCase):
         from core.storage import CoreError
 
         for name in ('profiles/selection.md', 'profiles/governance.md',
-                     'profiles/templates/legal-research.md'):
+                     'profiles/templates/legal-research.md',
+                     'skills/rw-review/references/review-modes.md',
+                     'skills/rw-review/references/review-response.md',
+                     'skills/rw-review/references/submission-delivery.md'):
             with self.subTest(resource=name):
                 source = self.copy_source('missing-' + Path(name).stem)
                 (source / name).unlink()

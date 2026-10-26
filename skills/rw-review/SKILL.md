@@ -1,11 +1,24 @@
 ---
 name: rw-review
-description: Review research manuscripts, claim support, revisions, cross-material consistency and delivery scope with actionable findings. Use for 论文自审、审稿、返修、跨材料一致性、交付核对 and referee responses; ordinary polishing uses rw-writing.
+description: Review manuscripts and evidence, simulate requested peer review, prepare referee responses and check submission materials. Use for 论文自审、结构化同行评审、隔离多审稿人、Nature风格模拟审稿、返修回复、跨材料一致性 and 投稿准备; ordinary polishing uses rw-writing.
 ---
 
 # 研究审阅与返修
 
-先读 [接入协议](../../core/skill-bridge.md)。记录身份、版本与只读边界遵守 [核心协议](../../core/protocol.md)。先确认审阅对象的当前版本、用户需要的深度与交付目的。
+先读 [接入协议](../../core/skill-bridge.md)。记录身份、版本与只读边界遵守 [核心协议](../../core/protocol.md)。从当前材料和请求确定对象版本、审阅深度与交付目的；仅追问会改变当前工作的缺口。
+
+## 选择本次工作
+
+普通自审直接依据下文完成，不自动升级为多轮或多审稿人评审。需要相应交付时才读参考：
+
+| 当前请求 | 按需参考 |
+|---|---|
+| 结构化同行评审、明确要求隔离多评审或指定期刊风格 | [评审模式](references/review-modes.md)：证据定位、严重度、上下文隔离与冻结后汇总 |
+| 逐条审稿回复、返修或 rebuttal | [回复与修改](references/review-response.md)：对应意见、依据、实际改动和当前状态 |
+| 投稿前资料核对、整理交付目录或源文件包 | [投稿与交付](references/submission-delivery.md)：实际要求、选定文件、清单及未完成项 |
+| 相关稿件、图表、补充或幻灯片共享同一事实 | [跨材料核对](references/cross-material-consistency.md)：先辨认事实身份再判断差异 |
+
+这些是同一入口的工作模式，不要求依次全部执行。普通句子润色仍交给 `rw-writing`；研究问题的证明、实验或解释义务按需用 `rw-validation`。
 
 ## 依据实际材料审阅
 
@@ -27,6 +40,6 @@ description: Review research manuscripts, claim support, revisions, cross-materi
 
 获得修改任务时，修复有依据的问题，并让结论、材料、稿件与登记一致；保留无法解决的缺口。单次审阅可以只交付报告，不必改文件或更新研究状态。
 
-审稿回复逐项对应意见、实际修改及定位。不同意时依据材料说明理由；计划中的补充实验不能写成已经完成。回复中引用的章节、图表或行号必须核对当前稿件。
+审稿回复和投稿组包按所选参考落实到实际文件与状态。用户只要回复草稿时交付草稿；准备材料时交付已核验文件和缺口，不把这些工作写成已完成投稿。
 
 交付简明发现与建议，说明哪些检查实际执行及其限制。若需要持续记录，将报告登记为产物并关联被审主张和材料；审阅活动完成不自动将所有主张改成已证实。没有执行投稿时，交付状态仍是可审阅材料。

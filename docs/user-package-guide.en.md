@@ -33,7 +33,9 @@ If the discipline or method is known, add options such as `--discipline law --me
 
 Open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
 
-> Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline or area is […], my current interests or ideas are […], my available knowledge, materials and time are […], and my intended deliverable is […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step.
+> Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step.
+
+If the journal is undecided, write “undecided” and continue the research already possible. The target journal guides audience, scope and submission requirements; it is not an acceptance prediction.
 
 A chat interface may use the guide for discussion or editing according to its actual attachment capabilities. Uploading a file does not establish skill installation or local execution. Initialization, registration and recovery require real directory and command access. A brand or model name alone does not establish one-click compatibility.
 
@@ -49,11 +51,22 @@ A chat interface may use the guide for discussion or editing according to its ac
 | `rw-validation` | Apply the proof, computation, experiment or interpretation obligations |
 | `rw-writing` | Draft, naturally revise, translate and compress; preserve the argument, author voice and necessary qualifications while removing boilerplate and defensive framing |
 | `rw-figures` | Produce and inspect research figures, separating data, structure and visual appearance |
-| `rw-review` | Review, revise and compare shared facts across materials when relevant |
+| `rw-review` | Review, optional multiple simulated reports, point-by-point responses and submission preparation; check relevant shared facts |
 
 Describe the task directly, for example: “Read these materials and help me define a small testable question.” For several materials, ask: “Check the definitions, conditions and values for the same result in the manuscript and figures, and state what you actually checked.” A read-only request does not add project records.
 
 Discipline and method guidance is in `profiles/`; shared protocols are in `core/`. They do not certify an entire specialty. Mathematical proofs, numerical observations, legal interpretations, ethics permissions and venue requirements each need their own evidence.
+
+## Review, revision responses and submission materials
+
+These capabilities use the existing `rw-review` entry and expand only for the requested task:
+
+- **Structured review:** “Prepare a structured peer-review draft with locations, evidence, impact and testable actions.” Apply the proof, experimental, data or interpretation obligations relevant to the manuscript rather than one article template.
+- **Multiple simulated reviewers:** “Produce two reviewer reports without showing either reviewer the other report, then synthesize disagreements and important findings.” Isolated reports are used when multiple reviewers are requested; complete and freeze them before synthesis. Nature-style or broad-readership criteria apply only when the target calls for them. Simulations do not impersonate actual journal referees or editorial decisions.
+- **Point-by-point response:** “Compare the referee comments with the current revision and map each comment to the actual change, current location and verification status.” Distinguish completed changes from planned work and retain evidence-based disagreement.
+- **Submission preparation:** “Use the supplied journal requirements to organize the current manuscript, figures, supplements and required declarations, with a file list and explicit gaps.” Check the actual target, prepare delivery copies and verify file identity. Record preparation separately from submission; do not upload or contact a journal automatically.
+
+Reuse the existing review report and, when persistence is needed, `artifact` and `activity` records. A read-only review still returns a report without creating a second review ledger.
 
 ## Daily recovery and registration
 

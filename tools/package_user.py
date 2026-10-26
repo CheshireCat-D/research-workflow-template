@@ -61,6 +61,9 @@ SKILL_RESOURCES = (
     'rw-figures/scripts/audit_svg_schematic.py',
     'rw-literature/references/search-and-library.md',
     'rw-review/references/cross-material-consistency.md',
+    'rw-review/references/review-modes.md',
+    'rw-review/references/review-response.md',
+    'rw-review/references/submission-delivery.md',
 )
 RUNTIME_FILES = frozenset((
     'design/catalog.json',
