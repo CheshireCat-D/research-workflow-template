@@ -5,13 +5,13 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "98a5dded78eaa323cdc8dffbfb91560d8e80f89351e3fe59dbf8ada3683d8cfa"
+      "sha256": "a21b6ddbeb8160b111ea9eece9daf213bac18dfef4d29d63af5130abc7aca407"
     },
     ".github/workflows/check.yml": {
       "classification": "original-workflow-referencing-pinned-external-actions",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "ee5ada8273641fd8a16851a000d194d65ea66e8a8dba21e3f6f4dc6e5de3e576"
+      "sha256": "a12c4bb8149020d6e291fa2cd49ee75a0600d9b85419d28fd252b8b4909b2e46"
     },
     ".gitignore": {
       "classification": "original-project-content",
@@ -251,7 +251,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "396663a08348b1936760b9fba18e3749c73cfa1f8c1db5ca025b83aa6510cc02"
+      "sha256": "12780cede33fa483a6561634bd54c172dd5890f407aca7b828a444a542e80e62"
     },
     "docs/12-skills-selection.md": {
       "classification": "original-project-content",
@@ -281,7 +281,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "01f4f179bbf06cf6a7ab65d0eed4d8aa4c2f0ef4c22c3145e75b2cf079ad573c"
+      "sha256": "c43a956d96170b3823a32ca8b89f3676452cebdc3608a72be4bb3b53dcf7c276"
     },
     "evals/current/skill-task-checks.json": {
       "classification": "original-project-content",
@@ -3131,7 +3131,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "4e751b7c29899ce79a9b3bf1c374c7242b7dcaa25da5e56cf5e01a0e65dc77a6"
+      "sha256": "62b1a533397c5c91df61e1d677205767e2006e2a4e1f71c430e306f2c14a769a"
     },
     "tests/test_check_runner.py": {
       "classification": "original-project-content",
@@ -3181,11 +3181,17 @@
       "origin": "authored-for-this-independent-template",
       "sha256": "d6fe8419c3739a2476bb17a6d4789c695eb3f5da426674dc228c2e1545da22fe"
     },
+    "tests/test_replay_harness.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "953b8c8086c94ae03c2d83ac333a72a18b0b708f5ebc958a030a894fd7c93880"
+    },
     "tests/test_skill_connection.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "5cbe10d3c1b78e87a87f95c28db18e6a16677076db6db45e5b1d4a46ed71bd03"
+      "sha256": "57d25a5541d29426a0d98d05df10c5298794120bc436893f92c765f4dbcb3aad"
     },
     "tests/test_task_replays.py": {
       "classification": "original-project-content",

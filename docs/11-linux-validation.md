@@ -34,6 +34,8 @@ py -3 -X utf8 -B tools/release_package.py check
 
 本地 Linux ARM64、不同 C 库、GitHub 托管 Ubuntu、macOS 和 Windows 分别记录。CI 配置覆盖三种系统及 Python 3.11／3.14，共六组环境；配置存在不表示本次提交已通过。没有取得相应成功结果之前，当前核验仍须明确记为未执行或待确认。
 
+托管 macOS 固定使用 `macos-15-intel`，与本机 Apple Silicon 的实际检查分别记录。此前 `macos-latest` 的 arm64 任务因运行器容量不足而排队后取消；切换到官方提供的 Intel 标签后仍运行完整套件及归档检查，不将取消记录记为通过。标签和架构以 [GitHub 运行器说明](https://docs.github.com/en/actions/reference/runners/github-hosted-runners)与实际任务日志为准。
+
 一次本地测试不代表托管 CI 已执行，也不覆盖网络文件系统、所有发行版、断电恢复或宿主界面技能触发。两套 Python 若使用同一内核或用户态，也应明确说明。
 
 CI 从实际构建并校验的源码 ZIP 解压到临时目录，以独立 HOME／USERPROFILE 和临时目录重新运行完整检查和来源清单检查，另对用户 ZIP 做初始化、技能接入、登记、搬迁与恢复的真实运行；无需个人技能包、账户或额外 Python 依赖。UTF-8 与 Git 提交中的换行字节显式保留，避免把编码或 CRLF 变化误当作内容升级。

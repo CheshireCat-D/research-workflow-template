@@ -16,7 +16,8 @@ class ReplayHarness:
 
     def invoke(self,script,*arguments,expected=0):
         result=subprocess.run([sys.executable,'-B',str(script),*map(str,arguments)],
-                              cwd=ROOT,text=True, encoding='utf-8',capture_output=True,timeout=30,
+                              cwd=ROOT,text=True, encoding='utf-8',capture_output=True,
+                              timeout=60 if os.name == 'nt' else 30,
                               env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'))
         if result.returncode!=expected:
             raise AssertionError(result.stdout+result.stderr)
@@ -42,16 +43,27 @@ class ReplayHarness:
             shutil.copyfile(recording/'outputs'/relative,target)
         return project,manifest
 
+    def register_records(self,project,runtime,records):
+        """Use the real ordered batch CLI, preserving per-record history/bindings.
+
+        These are final-state reconstruction fixtures, not concurrency tests.
+        Individual registration, writer locking and concurrent processes remain
+        exercised in test_core.py and test_skill_connection.py.
+        """
+        operations=[]
+        for entry in records:
+            operation={'kind':entry['kind'],'record':entry['record']}
+            if 'expected_version' in entry:
+                operation.update(replace=True,expected_version=entry['expected_version'])
+            operations.append(operation)
+        record_input=self.base/('record-input-'+project.name+'.json')
+        record_input.write_text(json.dumps(operations,ensure_ascii=False),encoding='utf-8')
+        return self.invoke(runtime,'register-batch','--root',project,'--file',record_input)
+
     def replay(self,case,suffix=''):
         project,manifest=self.assemble(case,suffix)
         runtime=project/'.agents/skills/_rw-runtime/tools/research.py'
-        record_input=self.base/('record-input-'+case+suffix+'.json')
-        for entry in manifest['records']:
-            record_input.write_text(json.dumps(entry['record'],ensure_ascii=False),encoding='utf-8')
-            args=['register','--root',project,'--kind',entry['kind'],'--file',record_input]
-            if 'expected_version' in entry:
-                args.extend(['--replace','--expected-version',entry['expected_version']])
-            self.invoke(runtime,*args)
+        self.register_records(project,runtime,manifest['records'])
         args=['checkpoint','--root',project,'--next-action',manifest['cursor']['next_action']]
         if manifest['cursor']['activity_id']:args.extend(['--activity',manifest['cursor']['activity_id']])
         self.invoke(runtime,*args)

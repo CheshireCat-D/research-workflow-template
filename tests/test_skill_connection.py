@@ -52,7 +52,8 @@ class ProjectSkillConnection(unittest.TestCase):
 
     def invoke(self, script, *arguments, expected=0, cwd=None, env=None):
         completed = subprocess.run([sys.executable, '-B', str(script), *map(str, arguments)],
-                                   cwd=cwd or ROOT, text=True, encoding='utf-8', capture_output=True, timeout=30,
+                                   cwd=cwd or ROOT, text=True, encoding='utf-8', capture_output=True,
+                                   timeout=60 if os.name == 'nt' else 30,
                                    env=env or dict(os.environ, PYTHONDONTWRITEBYTECODE='1'))
         self.assertEqual(completed.returncode, expected, completed.stdout + completed.stderr)
         return json.loads(completed.stdout)

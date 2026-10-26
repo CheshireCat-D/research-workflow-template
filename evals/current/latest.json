@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-26T15:23:48.365986+00:00",
+  "checked_at_utc": "2026-10-26T15:43:30.547957+00:00",
   "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -24,16 +24,20 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 194,
+      "test_methods": 195,
       "check_groups": 7,
-      "checked_source_commit": "84cc23cbe65509a8df50c6d59e5cbafbcf17174b",
       "receipt": {
-        "identifier": "local-evidence:windows-second-local-full.json",
-        "sha256": "2f2bbcac76091d7fb0b14764c7828af730342da41b2de1034cfdf0945b420da1"
+        "identifier": "local-evidence:windows-optimized-local-full.json",
+        "sha256": "07d8def0b9c0026324d98f2d41fe05f9faecdbaa6766458fff8e811fcd65e703"
       },
       "platform_skips": {
         "native_windows_tests": 13,
         "reason": "Must execute on real Windows; macOS success does not certify them."
+      },
+      "checked_source_basis": {
+        "scope": "Sorted relative Python file names and raw SHA-256 bytes in core/, tools/ and tests/, excluding __pycache__",
+        "sha256": "1fa8c30908ba148d9b8a80e3d782d28a46b166a70821729e2298abd588b067c1",
+        "files": 30
       }
     },
     "post_execution_bookkeeping_changes": [
@@ -41,12 +45,19 @@
       "provenance/file-origins.json"
     ],
     "followup_validation": {
-      "scope": "Windows locked-file snapshot fixture corrected after the local full suite; current commit CI reruns the entire suite and archive checks.",
-      "changed_test": "tests/test_core.py",
-      "production_runtime_changed_after_local_full_suite": false,
-      "source_of_truth": "Read hosted CI for the exact selected commit, not an earlier failing diagnostic run.",
-      "targeted_core_tests": 54,
-      "targeted_core_result": "passed-on-local-macos"
+      "scope": "Real ordered batch CLI reconstructs the same per-record versions, history and bindings as sequential registration; checkpoint/check/resume still use independent processes. The current commit hosted CI reruns full checks and isolated archives.",
+      "equivalence_test": "tests/test_replay_harness.py",
+      "local_full_suite_result": "195 tests completed successfully",
+      "scientific_script_budgets_changed": false,
+      "engineering_command_timeout_seconds": {
+        "windows": 60,
+        "posix": 30
+      },
+      "post_local_full_source_changes": [
+        ".github/workflows/check.yml macOS Intel runner label",
+        "docs/11-linux-validation.md platform explanation",
+        ".gitattributes automatic binary-safe text detection"
+      ]
     }
   },
   "legal_tasks": {
@@ -143,7 +154,8 @@
       "Delivered user manifest preserves options evidence availability without misreporting missing distribution evidence",
       "Native Windows project storage, safe bundle publication/rollback, UTF-8 commands and portable archive names; POSIX behavior retained",
       "Current user guides include PowerShell commands and a research-interest startup prompt without claiming untested Agent-host equivalence",
-      "Frozen scientific replay adapts only platform instrumentation and declared path fields; source/hash/numerical assertions retained"
+      "Frozen scientific replay adapts only platform instrumentation and declared path fields; source/hash/numerical assertions retained",
+      "Replay batching has a real sequential-equivalence check; engineering command timeouts are distinct from unchanged scientific computation budgets; hosted Intel macOS avoids the observed arm64 pool capacity cancellation"
     ],
     "existing_forward_task_records_retained_not_rerun": true,
     "scientific_or_legal_content_certification": false,
@@ -182,6 +194,7 @@
     "windows_backend": "Native no-follow handles, directory guards, file identity and nonblocking LockFileEx writer locks; ordinary local directories.",
     "runtime_dependencies": "Python 3.11+ standard library; no symlink privileges required for skill installation.",
     "verification": "Actual OS execution is reported by commit-specific hosted jobs and the separate local receipt.",
-    "frozen_replay_boundary": "Windows test-only launcher explicitly reports POSIX CPU/alarm limits unavailable and RSS unmeasured-null; actual outer wall timeout and numerical comparisons remain. Frozen scientific source bytes are not rewritten."
+    "frozen_replay_boundary": "Windows test-only launcher explicitly reports POSIX CPU/alarm limits unavailable and RSS unmeasured-null; actual outer wall timeout and numerical comparisons remain. Frozen scientific source bytes are not rewritten.",
+    "hosted_macos": "macos-15-intel; distinct from local Apple Silicon validation. Previous arm64 pool capacity cancellations are not successful execution."
   }
 }
