@@ -55,10 +55,12 @@ For a manuscript that has not been registered, you can begin with a local task. 
 | `rw-candidates` | Compare existing candidate directions and assess them adversarially |
 | `rw-validation` | Select minimum validation, proof checks, or experimental checks for the method |
 | `rw-writing` | Organize manuscript prose from available statements and materials |
-| `rw-review` | Review claim support, limitations, structure, and delivery completeness |
+| `rw-review` | Review claim support, limitations, structure, consistency across materials, and delivery completeness |
 | `rw-figures` | Create or inspect data figures and editable schematics, preserving sources and scientific meaning |
 
 Combine specialist methods as needed. Finite numerical checks cannot replace a mathematical proof. Clinical, field, interview, and historical materials each have their own evidence, permission, and ethics requirements. See [disciplinary and method adaptation](docs/02-disciplinary-adaptation.md) for details.
+
+When a delivery includes several materials, such as a manuscript, figures, supplements, slides, or code, or an updated fact affects other materials, you can ask the assistant to check consistency. It first identifies the fact and its established authoritative basis, then checks the relevant expressions and records conflicts or justified exceptions in the existing review report. A read-only request adds no project records. For example: “Check the definitions, conditions, and values for the same result across these materials, and state what you actually checked.” See the [cross-material review reference](skills/rw-review/references/cross-material-consistency.md) for the procedure.
 
 For legal research, initialize with `--discipline law --method legal-analysis` and use the [legal project template](profiles/templates/legal-research.md). Record jurisdiction, relevant dates, the basis for authority and precedential status, and precise citations. Keep doctrinal interpretation, comparative description, normative proposals, and empirical effects distinct. Legal metadata can use `source.extensions.legal`; successful registration does not certify legal meaning or validity. The added [legal tasks](evals/legal/README.md) use fictional jurisdictions and have a limited testing scope.
 

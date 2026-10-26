@@ -176,7 +176,7 @@ class LegalResearchIntegration(unittest.TestCase):
         self.assertEqual(snapshot['format_version'], 1)
         self.assertEqual(set(snapshot['sources']), {
             'skills/rw-workflow/SKILL.md', 'skills/rw-literature/SKILL.md',
-            'skills/rw-writing/SKILL.md',
+            'skills/rw-writing/SKILL.md', 'skills/rw-review/SKILL.md',
         })
         for case in CASE_IDS:
             with self.subTest(case=case):
