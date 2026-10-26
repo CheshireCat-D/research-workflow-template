@@ -113,6 +113,8 @@ Pause agents using the project before upgrading. If the installed copy has local
 
 ## Which folders to keep
 
+The following is the full source repository's maintenance layout. The final user ZIP contains runtime resources, concise bilingual guides, licensing and attribution. Tests, evaluation cases, development change records and previous editions are excluded. Its separate [user-package guide](docs/user-package-guide.en.md) focuses on daily work.
+
 - `core/`, `tools/`, `skills/`, `profiles/`: the implementation, skills, and method guidance.
 - `docs/`: technical documentation to consult as needed. These detailed documents are currently in Chinese; this English guide covers the main user workflow.
 - `tests/`, `examples/`, `evals/`: synthetic inputs, execution evidence, and regression fixtures needed by the current tests. Retained stage IDs locate those materials; they do not represent additional old software editions.
@@ -126,6 +128,7 @@ Obsolete release-only records and duplicate candidate packages have been removed
 ```sh
 python3 -B tools/check_core.py --test-timeout 360
 python3 -B tools/release_package.py check
+python3 -B tools/package_user.py check
 ```
 
 The full checks run in temporary projects. After changing source content, review the changes, regenerate the source inventory, and repeat acceptance checks and archive construction. Do not edit hashes merely to hide an unexplained change. See the [recorded checks](evals/current/latest.json) and [distribution acceptance guide](docs/10-release-readiness.md) for their execution scope.

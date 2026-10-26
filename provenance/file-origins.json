@@ -5,7 +5,7 @@
       "classification": "original-workflow-referencing-pinned-external-actions",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "b8307d0a6fa7452ecd7f30cbb7d27c34540dbf72e02a71e94194e2a4262fb519"
+      "sha256": "610f5cdb6ec22d2e7639573f33c759621943e990621354248753b68ee8ad96df"
     },
     ".gitignore": {
       "classification": "original-project-content",
@@ -35,13 +35,13 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "28c7cc13ba53b1a07fcc181e028c3c8728c481c7797b0fc256d4957a678aba28"
+      "sha256": "d27418085352ce0e5ec279ab6a08c1c9edeb7784adae1b428c5445f347311a0e"
     },
     "README.md": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "f3763eaefa8e0be1367c398c476245c6c1044f4175794c3eeefb0c75c80f1f58"
+      "sha256": "1355aff4a4e74d4c337d625f640388f4a1f2abce5e493509a0e7282d78249071"
     },
     "SECURITY.md": {
       "classification": "original-project-content",
@@ -53,7 +53,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "23477918981cc6875865553e1e98b8ec0eb13875709caf5a1ce372f7a7e8cd10"
+      "sha256": "aa2ff9eb48f81540aa280f868e9174597ea8b04f4fc2f0745afd22c026f6e397"
     },
     "core/__init__.py": {
       "classification": "original-project-content",
@@ -71,7 +71,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "0ce83e9a336ffb44b38035875eaee3afb28c9a437dd1d099876427161173a038"
+      "sha256": "427170f1361193e339f957bf33c0a4af5afaef41a50d76000cf6a0caef67a81c"
     },
     "core/model.py": {
       "classification": "original-project-content",
@@ -233,7 +233,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "cba69e4a870e9b6090bbe1f58125e2b67163bfe8e202621432f0fe38d92b76c1"
+      "sha256": "9d9b853537ef8c09ee2dda117d8a46a9a0c3295b1c96490dc276e9c7593d3ece"
     },
     "docs/11-linux-validation.md": {
       "classification": "original-project-content",
@@ -247,6 +247,18 @@
       "origin": "authored-for-this-independent-template",
       "sha256": "934c241d264404e48219d00a574becb9585602a1cdd6e7ce9d68bb3ece3b1b91"
     },
+    "docs/user-package-guide.en.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "b9f4b6afa4f1b84f94af797064a4fb87beb7a0b40e6f467038062dcebc4fcc16"
+    },
+    "docs/user-package-guide.md": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "bd513ffd13f1dcf007f5e6a6a7868044acc510004586dad5c95e989d157cf422"
+    },
     "evals/current/README.md": {
       "classification": "original-project-content",
       "license": "MIT",
@@ -257,7 +269,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "97cfe1906745fda149937ffecb99c1812fed5d80e437c517e4e6b8b13cd56a65"
+      "sha256": "b2280350fc534ce3b0154f19d30b32d726cf5cea71451595f268dc3a52a59dd1"
     },
     "evals/current/skill-task-checks.json": {
       "classification": "original-project-content",
@@ -3151,6 +3163,12 @@
       "origin": "authored-for-this-independent-template",
       "sha256": "8ffbc5ffbf7de9142a1602888f68aa3348ebb4d789a735a24157f294b48ced56"
     },
+    "tests/test_user_package.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "50338383f754b03758630cc56928be5aef2a7aede84ced5b4d08e5580458b3c3"
+    },
     "tests/test_variant_evidence.py": {
       "classification": "original-project-content",
       "license": "MIT",
@@ -3169,6 +3187,12 @@
       "origin": "authored-for-this-independent-template",
       "sha256": "d56b58c2564e965c3e56254b91d36022d1571a02cec4d0e2f1412ecdea36f133"
     },
+    "tools/package_user.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "35da3b7bb86ded343061d0c6037370c9bdbda6004244550f02ddf0b1d01b6263"
+    },
     "tools/release_package.py": {
       "classification": "original-project-content",
       "license": "MIT",
@@ -3185,7 +3209,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "b4406b0c53331bb718e0e7732f10854c623066110c16600afc5aecd17bffd73c"
+      "sha256": "5bec1605c506dbfb107b3a864cf4ea525f366354ca813a5be806ef1a4ee5f7e4"
     }
   },
   "format_version": 1,

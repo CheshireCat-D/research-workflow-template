@@ -95,13 +95,28 @@ def recovery_markdown(result):
     return '\n'.join(lines)
 
 
+def user_runtime_context(toolkit):
+    """A delivered user archive is portable guidance, not the source evidence tree."""
+    marker = toolkit / 'USER-PACKAGE-MANIFEST.json'
+    if not marker.is_file():
+        return False
+    try:
+        value = json.loads(marker.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return False
+    return (isinstance(value, dict) and value.get('format_version') == 1 and
+            value.get('profile') == 'user-runtime' and
+            value.get('prefix') == 'research-workflow-template')
+
+
 def main(argv=None):
     try:
         args = parser().parse_args(argv)
         if args.command == 'options':
             toolkit = Path(__file__).resolve().parents[1]
             choices = catalog_view(catalog(), toolkit,
-                                   project_runtime=(toolkit/'bundle-manifest.json').is_file())
+                                   project_runtime=((toolkit/'bundle-manifest.json').is_file() or
+                                                    user_runtime_context(toolkit)))
             skills = [dict(item) for item in choices['skills']]
             for item in skills:
                 if ('entrypoint' in item and not (toolkit / item['entrypoint']).is_file() and

@@ -2,6 +2,7 @@ name: Check template
 
 on:
   push:
+    branches: ['**']
   pull_request:
   workflow_dispatch:
 
@@ -28,12 +29,14 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -B tools/check_core.py --test-timeout 360
       - run: python -B tools/release_package.py check
-      - name: Build and verify local archive
+      - run: python -B tools/package_user.py check
+      - name: Build, verify and exercise the current user package
         run: |
           mkdir -p dist
-          python -B tools/release_package.py build --output dist/research-workflow-template.zip
-          python -B tools/release_package.py verify --archive dist/research-workflow-template.zip
-      - name: Check extracted archive with an empty home
+          python -B tools/package_user.py build --output dist/research-workflow-template.zip
+          python -B tools/package_user.py verify --archive dist/research-workflow-template.zip
+          python -B tools/package_user.py smoke --archive dist/research-workflow-template.zip
+      - name: Check an internal source archive with an empty home
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -43,9 +46,13 @@ jobs:
           import tempfile
           import zipfile
 
-          archive = Path('dist/research-workflow-template.zip').resolve()
-          with tempfile.TemporaryDirectory(prefix='rw-release-') as temporary:
+          with tempfile.TemporaryDirectory(prefix='rw-source-release-') as temporary:
               base = Path(temporary)
+              archive = base / 'source.zip'
+              subprocess.run([sys.executable, '-B', 'tools/release_package.py', 'build',
+                              '--output', str(archive)], check=True)
+              subprocess.run([sys.executable, '-B', 'tools/release_package.py', 'verify',
+                              '--archive', str(archive)], check=True)
               with zipfile.ZipFile(archive) as package:
                   prefix = package.namelist()[0].split('/')[0]
                   package.extractall(base / 'source')

@@ -4,9 +4,11 @@
 
 一套面向理工医农、人文社科与法学的本地科研工作流：从研究兴趣、文献定位、创新与候选比较，到最小验证、证明或实验、写作、图件与审阅。九个技能由宿主助手执行实际任务，标准库 Python 工具保存主张、材料、引用、进度和恢复状态。
 
-本目录只维护一份当前内容，发行包固定为 `research-workflow-template.zip`。更新由来源清单和 SHA-256 内容指纹标识；项目数据格式、记录与依赖的必要版本字段继续保留。
+本仓库维护当前源码、测试和必要的冻结评估证据。面向用户的发行包固定为 `research-workflow-template.zip`，只含当前运行资源、双语指南、许可与来源归属，不含测试、评估过程、开发修改记录或旧版。源码与用户包分别检查，更新由清单和 SHA-256 内容指纹标识；项目数据格式、记录与依赖的必要版本字段继续保留。
 
 ## 开始使用
+
+直接使用可下载[当前用户运行包](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip)与[SHA-256](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip.sha256)。发行入口只维护一个当前包；GitHub 的源码下载另含开发测试材料。
 
 需要 Python 3.11 或更新版本，以及 macOS 或 Linux。Windows 的写锁尚不支持。在本目录运行：
 
@@ -33,6 +35,7 @@ python3 tools/connect_skills.py check --root ../my-research
 | [证据契约](docs/03-evidence-contract.md) | 主张、材料、支持关系和研究进度的边界 |
 | [当前验收](evals/current/latest.json) | 当前内容的实际检查结果与执行范围 |
 | [发行验收](docs/10-release-readiness.md) | 来源、归档、干净环境与可交付检查 |
+| [用户包指南](docs/user-package-guide.md) | 最终用户 ZIP 随附的简洁使用说明 |
 | [平台核验](docs/11-linux-validation.md) | 实际平台范围、复查方法与未测环境 |
 
 ## 检查与边界
@@ -40,8 +43,9 @@ python3 tools/connect_skills.py check --root ../my-research
 ```sh
 python3 -B tools/check_core.py --test-timeout 360
 python3 -B tools/release_package.py check
+python3 -B tools/package_user.py check
 ```
 
-命令行离线工作，不执行材料中的命令、不上传数据或自动投稿。登记或软件检查通过不认证证明、创新性、伦理批准或期刊合规；相应检查仍由作者与实际执行者负责。完整的学科合成材料和回归测试保留在 `evals/`，纯旧发行阶段记录移出当前包。
+命令行离线工作，不执行材料中的命令、不上传数据或自动投稿。登记或软件检查通过不认证证明、创新性、伦理批准或期刊合规；相应检查仍由作者与实际执行者负责。源码中的 `evals/` 保留当前回归所需的合成材料与证据，用户 ZIP 不包含这些开发材料。构建与干净运行命令见[发行验收](docs/10-release-readiness.md)。
 
 原创实现、指导与合成材料采用[MIT许可证](LICENSE)。外部方法资料保留自身权利，见[来源说明](provenance/ORIGIN.md)与[方法来源](profiles/sources.json)。维护流程见[贡献说明](CONTRIBUTING.md)，数据边界见[安全说明](SECURITY.md)。本目录与个人包独立，远程发布由维护者显式执行。

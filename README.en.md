@@ -10,9 +10,11 @@ The [English user guide](USER_GUIDE.en.md) covers first use, all nine skills, da
 
 Legal research uses the shared skills with a [legal method profile](profiles/methods/legal-analysis.md) and [project template](profiles/templates/legal-research.md), covering jurisdiction, relevant dates, legal authority, judgments and citation pinpoints. The added task evidence uses fictional jurisdictions; it does not certify real legal conclusions.
 
-Only one current edition is maintained. The distribution is named `research-workflow-template.zip`, with content identity recorded by the source inventory and SHA-256. Record, schema and dependency versions remain where required for compatibility and traceability.
+The repository maintains current sources, tests and required frozen evaluation evidence. The user distribution is named `research-workflow-template.zip` and contains only current runtime resources, bilingual guides, licensing and source attribution. Tests, evaluation processes, development change records and previous editions are excluded. Source and user packages are checked separately and identified by their manifests and SHA-256. Record, schema and dependency versions remain where required for compatibility and traceability. The final archive includes a concise [user-package guide](docs/user-package-guide.en.md).
 
 ## Start a project
+
+Download the [current user runtime](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) and its [SHA-256 file](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip.sha256). One current release is maintained; GitHub's separate source download also contains development tests. See the [skill selection and design influences](docs/12-skills-selection.md) for integration choices.
 
 Use Python 3.11+ on macOS or Linux. POSIX writer locks do not support Windows.
 
@@ -31,9 +33,10 @@ Use `show` for complete envelopes and record versions, `register --file -` or `r
 ```sh
 python3 -B tools/check_core.py --test-timeout 360
 python3 -B tools/release_package.py check
+python3 -B tools/package_user.py check
 ```
 
-[Current checks](evals/current/latest.json), [release acceptance](docs/10-release-readiness.md) and [platform validation](docs/11-linux-validation.md) distinguish executed environments from untested targets. Active synthetic inputs, frozen task evidence and regression fixtures remain in `evals/`; obsolete release-stage reports are not shipped.
+[Current checks](evals/current/latest.json), [release acceptance](docs/10-release-readiness.md) and [platform validation](docs/11-linux-validation.md) distinguish executed environments from untested targets. Active synthetic inputs, frozen task evidence and regression fixtures remain in the source repository's `evals/`. The user ZIP omits these development materials; the release guide gives its build and clean-runtime commands.
 
 The core performs local registration and inspection, without executing commands embedded in sources, uploading data or submitting manuscripts. Software success is separate from scientific validity, ethics approval and venue compliance. The tool does not include a model API or a background research service. Hosted CI success must be established by an actual repository run.
 
