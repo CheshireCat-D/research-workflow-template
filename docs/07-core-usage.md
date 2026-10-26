@@ -147,4 +147,4 @@ my-research/
 
 初始化创建元数据与锁目录；上图的材料、稿件和产物目录按需要创建。`light`、`structured`、`reproducible` 三种模式都会建立一个空登记文件，以保持单一权威与一致接口；`light` 不要求为了启动而填满任何表。模式与方法目前是配置，不会自动生成分析环境、运行实验或增强科学验证。
 
-[design/project.example.json](../design/project.example.json) 保留为中性设计示意，**不是可直接覆盖的运行配置**。运行配置由 `init` 生成，遵守 [project.schema.json](../core/schemas/project.schema.json)；当前 CLI 没有 `--config` 导入参数。移动整个研究项目后，相对材料路径保持可用；外部或受控证据仍需按其原有权限另行访问。
+运行配置由 `init` 生成，遵守 [project.schema.json](../core/schemas/project.schema.json)；当前 CLI 没有 `--config` 导入参数，不要用设计示意覆盖项目配置。移动整个研究项目后，相对材料路径保持可用；外部或受控证据仍需按其原有权限另行访问。

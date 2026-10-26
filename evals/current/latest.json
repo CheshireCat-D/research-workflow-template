@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-26T17:06:28.147539+00:00",
+  "checked_at_utc": "2026-10-26T22:33:31.880510+00:00",
   "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -27,8 +27,8 @@
       "test_methods": 197,
       "check_groups": 7,
       "receipt": {
-        "identifier": "local-evidence:rwt-review-full.json",
-        "sha256": "5c8d6f09c921f0dbdb1064bb5ec53b0ee9efe8d1fa761fa1bc81e718bc308a5b"
+        "identifier": "local-evidence:rwt-cleanup-final-full.json",
+        "sha256": "f86dc6de14c8e1392d7a460822d5bc1e94764fee17c849ab1382d449967e72a5"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -39,21 +39,6 @@
         "sha256": "3fba73be45d8fcadcd2db0b4b49fb89bc883a8134ad44654059669f6105482a5",
         "files": 31
       }
-    },
-    "post_execution_bookkeeping_changes": [
-      "evals/current/latest.json",
-      "provenance/file-origins.json"
-    ],
-    "followup_validation": {
-      "scope": "Explicit resource closure for the three review-mode references; source install and rehashed archive removal checks preserve the project. Actual review/report/delivery forward tasks are recorded separately.",
-      "local_full_suite_result": "197 tests completed successfully",
-      "source_record": "evals/current/review-mode-checks.json",
-      "scientific_script_budgets_changed": false,
-      "post_execution_bookkeeping_changes": [
-        "evals/current/latest.json",
-        "provenance/file-origins.json",
-        "evals/current/README.md"
-      ]
     }
   },
   "legal_tasks": {
@@ -149,35 +134,6 @@
       "new_schema_or_runtime_dependency": false,
       "personal_package_files_copied": false,
       "scope": "Two fresh same-model review contexts plus one actual response/delivery exercise; wholly synthetic author-owned inputs only. Not real journal peer review, efficacy measurement or acceptance prediction."
-    }
-  },
-  "current_rule_audit": {
-    "implemented_skill_entrypoints": 9,
-    "unnecessary_duplicate_skills_found": 0,
-    "safe_redundant_file_candidates": 0,
-    "files_deleted": 0,
-    "repairs": [
-      "Implemented figure capability distinguished from planned table/format extensions",
-      "Actual source and installed SKILL_DIR paths explained",
-      "Independent implementation clarified without automatic cross-package sync",
-      "Frozen representative research cases distinguished from maintenance requests",
-      "Cross-material comparisons are conditional, fact-identity aware and recorded in existing review artifacts; read-only and existing authority boundaries retained",
-      "Explicit user-runtime resource allowlist excludes nested development and old process material",
-      "Delivered user manifest preserves options evidence availability without misreporting missing distribution evidence",
-      "Native Windows project storage, safe bundle publication/rollback, UTF-8 commands and portable archive names; POSIX behavior retained",
-      "Current user guides include PowerShell commands and a research-interest startup prompt without claiming untested Agent-host equivalence",
-      "Frozen scientific replay adapts only platform instrumentation and declared path fields; source/hash/numerical assertions retained",
-      "Replay batching has a real sequential-equivalence check; engineering command timeouts are distinct from unchanged scientific computation budgets; hosted Intel macOS avoids the observed arm64 pool capacity cancellation"
-    ],
-    "existing_forward_task_records_retained_not_rerun": true,
-    "scientific_or_legal_content_certification": false,
-    "reviewed_rule_integration": "pass-in-scope",
-    "historical_guidance_identity_repair": {
-      "initial_failure": "Two old legal case subtests bound the earlier rw-review text; current shared-skill changes require the original read-time source.",
-      "repair": "Recovered exact original rw-review source from the recorded public commit into the existing reviewed-guidance evidence; original case inputs, outputs and independent reviews unchanged. Source/executed hash assertions retained.",
-      "targeted_checks": 7,
-      "targeted_result": "passed",
-      "subsequent_full_result": "passed"
     }
   },
   "user_distribution": {
