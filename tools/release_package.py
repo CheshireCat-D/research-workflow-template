@@ -185,7 +185,7 @@ def _check_entries(entries):
                     errors.append({'code':'provenance_record_differs','path':name})
         except (ValueError,KeyError,TypeError):
             errors.append({'code':'provenance_index_invalid'})
-    if 'LICENSE' in entries and not entries['LICENSE'].startswith(b'MIT License\n'):
+    if 'LICENSE' in entries and entries['LICENSE'].splitlines()[:1] != [b'MIT License']:
         errors.append({'code':'unexpected_license'})
     return {'passed':not errors,'version':__version__,'files':len(entries),'errors':errors,
             'scope':'Local source packaging, declared provenance and hygiene only; scientific/task checks run separately.'}

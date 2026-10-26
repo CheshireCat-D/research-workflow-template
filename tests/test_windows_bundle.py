@@ -12,6 +12,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import zipfile
 from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -51,6 +52,25 @@ class PortableArchiveNames(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 release_package.exclusive_output(target)
             self.assertEqual(target.read_bytes(), b'Existing author bytes.\r\n')
+
+    def test_crlf_license_keeps_its_exact_bytes_through_source_packaging(self):
+        # Windows text writers produce CRLF. The license heading still means
+        # MIT, while provenance and archive identity must bind the actual bytes.
+        with tempfile.TemporaryDirectory() as temporary:
+            base = Path(temporary)
+            source = base / 'source'
+            source.mkdir()
+            for name in release_package.REQUIRED:
+                target = source / name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(b'MIT License\r\n' if name == 'LICENSE' else b'Synthetic fixture.\n')
+            release_package.index(source)
+            self.assertTrue(release_package.check(source)['passed'])
+            archive = base / 'source.zip'
+            release_package.build(archive, source)
+            self.assertTrue(release_package.verify(archive)['passed'])
+            with zipfile.ZipFile(archive) as package:
+                self.assertEqual(package.read('research-workflow-template/LICENSE'), b'MIT License\r\n')
 
 
 @unittest.skipUnless(os.name == 'nt', 'Requires native Windows filesystem and handles')

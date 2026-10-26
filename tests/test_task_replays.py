@@ -97,12 +97,26 @@ class RecordedResearchTasks(unittest.TestCase):
     def test_computational_task_reexecutes_all_cases_with_equal_calls_and_reference_errors(self):
         project, _ = self.assemble('computation')
         fresh = self.base / 'fresh-computation'
-        completed = subprocess.run([sys.executable, '-B', str(project / 'artifacts/run.py'),
+        source = project / 'artifacts/run.py'
+        source_bytes = source.read_bytes()
+        prefix = [str(ROOT / 'tests/recorded_platform.py')] if os.name == 'nt' else []
+        completed = subprocess.run([sys.executable, '-X', 'utf8', '-B', *prefix, str(source),
                                     '--output-dir', str(fresh)], cwd=self.base,
                                    text=True, encoding='utf-8', capture_output=True, timeout=10,
                                    env=dict(os.environ, PYTHONDONTWRITEBYTECODE='1'))
         self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
         result = json.loads((fresh / 'results.json').read_text(encoding='utf-8'))
+        self.assertEqual(source.read_bytes(), source_bytes)
+        self.assertEqual(result['configuration']['code_sha256'], hashlib.sha256(source_bytes).hexdigest())
+        if os.name == 'nt':
+            receipt = json.loads(completed.stderr)
+            self.assertEqual(receipt['adapter'], 'windows-frozen-fixture-instrumentation')
+            self.assertFalse(receipt['scientific_source_bytes_changed'])
+            self.assertIsNone(result['execution']['max_rss'])
+            limits = result['configuration']['resource_limits']
+            self.assertEqual(limits['RLIMIT_CPU'], [None, None])
+            self.assertIn('not applied:', limits['cpu_limit_setting'])
+            self.assertIn('unavailable on Windows', limits['cpu_limit_setting'])
         functions = {
             'quadratic': (lambda x: x*x, 1/3),
             'exponential': (math.exp, math.exp(1)-1),

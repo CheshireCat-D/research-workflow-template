@@ -21,10 +21,23 @@ SKILLS = {'rw-workflow', 'rw-question', 'rw-literature', 'rw-innovation', 'rw-ca
           'rw-validation', 'rw-writing', 'rw-review', 'rw-figures'}
 
 
-def snapshot(root):
-    return {p.relative_to(root).as_posix(): (
-        hashlib.sha256(p.read_bytes()).hexdigest(), p.stat().st_size, p.stat().st_mtime_ns)
-        for p in root.rglob('*') if p.is_file() and not p.is_symlink()}
+def snapshot(root, *, held_writer=False):
+    result = {}
+    for path in root.rglob('*'):
+        if not path.is_file() or path.is_symlink():
+            continue
+        relative = path.relative_to(root).as_posix()
+        metadata = path.stat()
+        if held_writer and relative == '.research/write.lock':
+            # LockFileEx denies reads of its locked byte range, including a
+            # read past EOF. Check identity/metadata while locked; the busy
+            # tests also compare a full content snapshot after releasing it.
+            content = ('held-lock-metadata', metadata.st_dev, metadata.st_ino,
+                       metadata.st_mode)
+        else:
+            content = hashlib.sha256(path.read_bytes()).hexdigest()
+        result[relative] = (content, metadata.st_size, metadata.st_mtime_ns)
+    return result
 
 
 class ProjectSkillConnection(unittest.TestCase):
@@ -157,12 +170,14 @@ class ProjectSkillConnection(unittest.TestCase):
 
     def test_busy_writer_is_reported_without_publishing_any_skill_directory(self):
         from core.storage import ProjectFiles
+        before = snapshot(self.project)
         with ProjectFiles(self.project) as files, files.lock():
-            before = snapshot(self.project)
+            held_before = snapshot(self.project, held_writer=True)
             result = self.invoke(CONNECT, 'install', '--root', self.project, expected=2)
             self.assertEqual(result['errors'][0]['code'], 'project_busy')
-            self.assertEqual(before, snapshot(self.project))
+            self.assertEqual(held_before, snapshot(self.project, held_writer=True))
             self.assertFalse((self.project / '.agents').exists())
+        self.assertEqual(before, snapshot(self.project))
         self.install()
 
     def test_mid_copy_failure_cleans_staging_and_never_publishes_partial_bundle(self):
@@ -390,12 +405,14 @@ class ProjectSkillConnection(unittest.TestCase):
         from core.storage import ProjectFiles
         self.install()
         source = self.changed_source()
+        before = snapshot(self.project)
         with ProjectFiles(self.project) as files, files.lock():
-            before = snapshot(self.project)
+            held_before = snapshot(self.project, held_writer=True)
             result = self.invoke(source / 'tools/connect_skills.py', 'upgrade', '--root', self.project, expected=2)
             self.assertEqual(result['errors'][0]['code'], 'project_busy')
-            self.assertEqual(before, snapshot(self.project))
+            self.assertEqual(held_before, snapshot(self.project, held_writer=True))
             self.assertEqual({path.name for path in (self.project / '.agents').iterdir()}, {'skills'})
+        self.assertEqual(before, snapshot(self.project))
 
     def test_upgrade_staging_failure_preserves_the_old_bundle(self):
         from core import bundle
@@ -563,7 +580,7 @@ class ProjectSkillConnection(unittest.TestCase):
                             '[Guide]: ../../../../profiles/methods/formal-theory.md "Title"\n'
                             'Literal ../../../../core/protocol.md stays as text.\n'
                             '`[Literal](../../../../core/protocol.md)`\n'
-                            '```md\n[Example](../../../../core/protocol.md)\n```\n', encoding='utf-8')
+                            '```md\n[Example](../../../../core/protocol.md)\n```\n', encoding='utf-8', newline='\n')
         payload = build_payload(source)
         text = payload['rw-question/references/details/deep.md'].decode()
         self.assertIn('[Core](../../../_rw-runtime/core/protocol.md#scope)', text)

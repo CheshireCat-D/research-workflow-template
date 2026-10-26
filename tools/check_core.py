@@ -58,6 +58,34 @@ def captured_text(value):
     return value.decode('utf-8', errors='replace') if isinstance(value, bytes) else value or ''
 
 
+def bounded_test_output(output, limit=16000):
+    """Keep each unittest failure visible instead of cutting off early stacks."""
+    if len(output) <= limit:
+        return output
+    starts = [match.start() for match in re.finditer(
+        r'(?m)^={10,}\r?\n(?:ERROR|FAIL):[^\r\n]+', output)]
+    if not starts:
+        marker = '[Earlier output omitted; bounded tail follows.]\n'
+        return marker + output[-(limit - len(marker)):]
+    summary = output[-600:]
+    header = f'[{len(starts)} failure blocks; test progress omitted.]\n'
+    separator = '\n[Middle of this failure omitted.]\n'
+    budget = max(1, (limit - len(header) - len(summary) - 2) // len(starts))
+    parts = []
+    for index, start in enumerate(starts):
+        end = starts[index + 1] if index + 1 < len(starts) else len(output)
+        block = output[start:end]
+        if len(block) > budget:
+            if budget <= len(separator) + 2:
+                block = block[:budget]
+            else:
+                keep = budget - len(separator)
+                first = (keep + 1) // 2
+                block = block[:first] + separator + block[-(keep - first):]
+        parts.append(block)
+    return (header + ''.join(parts) + '\n\n' + summary)[:limit]
+
+
 def skill_metadata(content):
     """Validate the two discovery fields without requiring a YAML dependency.
 
@@ -333,7 +361,7 @@ def main(argv=None):
         {'tests_run': int(count[1]) if count else 0, 'exit_code': exit_code,
          'timed_out': timed_out, 'timeout_seconds': args.test_timeout,
          'completion': 'Partial capture; suite did not finish.' if timed_out else 'Suite process completed.',
-         'output': output[-16000:]})
+         'output': bounded_test_output(output)})
     report = {'scope': 'Software, metadata, connection and recorded task regressions. Agent task execution and independent content review are separately recorded; no disciplinary certification or publication readiness.',
               'passed': all(check['passed'] for check in checks), 'checks': checks,
               'runtime': {'python': sys.version.split()[0], 'platform': sys.platform}}

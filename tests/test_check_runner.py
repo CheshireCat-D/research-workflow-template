@@ -18,6 +18,29 @@ spec.loader.exec_module(runner)
 
 
 class CheckRunnerTests(unittest.TestCase):
+    def test_bounded_failure_output_retains_early_and_late_stacks(self):
+        early = ('=' * 70 + '\nERROR: early_native_failure (storage.Test)\n' +
+                 '-' * 70 + '\nTraceback (most recent call last):\n' +
+                 'early frame\n' * 2000 + 'PermissionError: early lock failure\n')
+        late = ('=' * 70 + '\nFAIL: late_native_failure (bundle.Test)\n' +
+                '-' * 70 + '\nTraceback (most recent call last):\n' +
+                'late frame\n' * 2000 + 'AssertionError: late publication failure\n')
+        output = ('test progress\n' * 1000 + early + late +
+                  'Ran 188 tests in 1.000s\n\nFAILED (failures=1, errors=1)\n')
+        captured = runner.bounded_test_output(output, 3000)
+        self.assertLessEqual(len(captured), 3000)
+        for expected in ('ERROR: early_native_failure', 'PermissionError: early lock failure',
+                         'FAIL: late_native_failure', 'AssertionError: late publication failure',
+                         'Ran 188 tests', 'FAILED (failures=1, errors=1)'):
+            self.assertIn(expected, captured)
+
+    def test_bounded_output_preserves_short_reports_and_timeout_tail(self):
+        short = 'Ran 1 test in 0.001s\n\nOK\n'
+        self.assertEqual(runner.bounded_test_output(short), short)
+        captured = runner.bounded_test_output('progress\n' * 1000 + 'last partial output', 1000)
+        self.assertLessEqual(len(captured), 1000)
+        self.assertTrue(captured.endswith('last partial output'))
+
     def test_frontmatter_supports_nonempty_folded_and_literal_descriptions(self):
         for marker in ('>', '>-', '>+', '|', '|-', '|+'):
             with self.subTest(marker=marker):

@@ -28,6 +28,48 @@ def snapshot(root):
             for p in root.rglob('*') if p.is_file()}
 
 
+def portable_path_metadata(field, value):
+    """Normalize separators only in declared path/fingerprint result fields.
+
+    Numerical results, hashes, byte lengths and prose remain exact inputs to the
+    comparison. A key collision is an error rather than a discarded result.
+    """
+    mapping_fields = {'input_sha256', 'source_sha256', 'inputs', 'input_fingerprints'}
+    fingerprint_lists = {'input_fingerprints', 'execution_fingerprints'}
+    fingerprint_objects = {'code_fingerprint', 'config_fingerprint'}
+    if field in mapping_fields and isinstance(value, dict):
+        normalized = {key.replace('\\', '/'): item for key, item in value.items()}
+        if len(normalized) != len(value):
+            raise ValueError('Platform path normalization would merge distinct result entries')
+        return normalized
+    if field in fingerprint_lists and isinstance(value, list):
+        return [portable_path_metadata('code_fingerprint', item) for item in value]
+    if field in fingerprint_objects and isinstance(value, dict) and isinstance(value.get('path'), str):
+        return dict(value, path=value['path'].replace('\\', '/'))
+    return value
+
+
+class PlatformPathComparison(unittest.TestCase):
+    def test_native_path_separators_preserve_fingerprint_values(self):
+        digest = 'a' * 64
+        self.assertEqual(portable_path_metadata('source_sha256', {'artifacts\\run.py': digest}),
+                         {'artifacts/run.py': digest})
+        self.assertEqual(portable_path_metadata('input_fingerprints', [
+            {'path': 'inputs\\data.csv', 'bytes': 17, 'sha256': digest}]),
+            [{'path': 'inputs/data.csv', 'bytes': 17, 'sha256': digest}])
+
+    def test_unrelated_text_and_plain_hashes_are_not_normalized_or_ignored(self):
+        self.assertEqual(portable_path_metadata('interpretation', 'Keep \\ and / distinct.'),
+                         'Keep \\ and / distinct.')
+        self.assertEqual(portable_path_metadata('input_sha256', 'abc\\def'), 'abc\\def')
+        self.assertNotEqual(portable_path_metadata('inputs', {'inputs\\x': 'digest-one'}),
+                            portable_path_metadata('inputs', {'inputs/x': 'digest-two'}))
+
+    def test_distinct_keys_cannot_be_silently_merged(self):
+        with self.assertRaises(ValueError):
+            portable_path_metadata('inputs', {'inputs\\x': 'one', 'inputs/x': 'two'})
+
+
 class D3Evaluations(unittest.TestCase):
     def setUp(self):
         self.temporary=tempfile.TemporaryDirectory(prefix='rw-d3-regression-')
@@ -113,10 +155,21 @@ class D3Evaluations(unittest.TestCase):
                     continue
                 output=self.base/(case+'-rerun')
                 arguments=[str(value).replace('{OUTPUT}',str(output)) for value in plan['arguments']]
-                command=[sys.executable,'-B',str(project/plan['script']),*arguments]
+                command=[sys.executable,'-X','utf8','-B']
+                adapted_alarm = os.name == 'nt' and case == 'formal-finite'
+                if adapted_alarm:
+                    command.append(str(ROOT/'tests/recorded_platform.py'))
+                command.extend([str(project/plan['script']),*arguments])
                 completed=subprocess.run(command,cwd=project,text=True, encoding='utf-8',capture_output=True,timeout=10,
                                          env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'))
                 self.assertEqual(completed.returncode,plan['expected_exit'],completed.stdout+completed.stderr)
+                if adapted_alarm:
+                    receipts = [json.loads(line) for line in completed.stderr.splitlines() if line.startswith('{')]
+                    receipt = next(item for item in receipts
+                                   if item.get('adapter') == 'windows-frozen-fixture-instrumentation')
+                    self.assertFalse(receipt['scientific_source_bytes_changed'])
+                    self.assertEqual(receipt['sigalrm'],
+                                     'unavailable; delegated to outer subprocess wall timeout')
                 result_path=Path(str(plan['result']).replace('{PROJECT}',str(project)).replace('{OUTPUT}',str(output)))
                 actual=json.loads(result_path.read_text(encoding='utf-8'))
                 expected=json.loads((EVAL/'recordings'/case/'outputs'/plan['recorded_result']).read_text(encoding='utf-8'))
@@ -133,7 +186,8 @@ class D3Evaluations(unittest.TestCase):
                         self.assertTrue(math.isclose(a,b,rel_tol=1e-10,abs_tol=1e-12),path+': '+str((a,b)))
                     else:self.assertEqual(a,b,path)
                 for field in plan['scientific_fields']:
-                    compare(actual[field],expected[field],'$.'+field)
+                    compare(portable_path_metadata(field,actual[field]),
+                            portable_path_metadata(field,expected[field]),'$.'+field)
 
 
 if __name__=='__main__':unittest.main()

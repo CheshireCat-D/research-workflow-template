@@ -21,6 +21,10 @@ from .storage import CoreError, PosixProjectFiles, path_parts
 REPARSE_POINT = 0x400
 DIRECTORY = 0x10
 GENERIC_READ, GENERIC_WRITE = 0x80000000, 0x40000000
+# Attribute-only handles are exempt from Windows share-access restrictions.
+# Request FILE_LIST_DIRECTORY as well, so omission of FILE_SHARE_DELETE really
+# blocks renaming a checked directory while its guard is held.
+DIRECTORY_ACCESS = 0x1 | 0x80
 OPEN_EXISTING, OPEN_ALWAYS, CREATE_NEW = 3, 4, 1
 _RESERVED = {'CON', 'PRN', 'AUX', 'NUL', 'CLOCK$', 'CONIN$', 'CONOUT$'}
 _RESERVED.update(prefix + number for prefix in ('COM', 'LPT')
@@ -156,7 +160,7 @@ class WindowsProjectFiles(PosixProjectFiles):
             for component in (None, *self.root.parts[1:]):
                 if component is not None:
                     current = current / component
-                self._root_handles.append(_open_handle(current, directory=True, access=0x80))
+                self._root_handles.append(_open_handle(current, directory=True, access=DIRECTORY_ACCESS))
         except BaseException as exc:
             self.close()
             if isinstance(exc, (CoreError, KeyboardInterrupt, SystemExit)):
@@ -183,7 +187,7 @@ class WindowsProjectFiles(PosixProjectFiles):
                     except FileExistsError:
                         pass
                 try:
-                    handles.append(_open_handle(current, directory=True, access=0x80))
+                    handles.append(_open_handle(current, directory=True, access=DIRECTORY_ACCESS))
                 except FileNotFoundError:
                     raise
                 except OSError as exc:
@@ -219,7 +223,7 @@ class WindowsProjectFiles(PosixProjectFiles):
 
     def directory_identity(self, relative):
         with self.checked_directory(relative) as directory:
-            handle = _open_handle(directory, directory=True, access=0x80)
+            handle = _open_handle(directory, directory=True, access=DIRECTORY_ACCESS)
             try:
                 return _identity(handle)
             finally:

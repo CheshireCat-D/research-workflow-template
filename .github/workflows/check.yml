@@ -17,7 +17,7 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
         python: ['3.11', '3.14']
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 30
+    timeout-minutes: 40
     defaults:
       run:
         shell: bash
@@ -31,7 +31,19 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: ${{ matrix.python }}
-      - run: python -X utf8 -B tools/check_core.py --test-timeout 600
+      - name: Check native Windows storage and writer locking
+        if: runner.os == 'Windows'
+        run: python -X utf8 -B -m unittest discover -s tests -p test_windows_storage.py -v
+      - name: Check native Windows skill publication and rollback
+        if: runner.os == 'Windows'
+        run: python -X utf8 -B -m unittest discover -s tests -p test_windows_bundle.py -v
+      - name: Check Windows CLI UTF-8 behavior
+        if: runner.os == 'Windows'
+        run: python -X utf8 -B -m unittest discover -s tests -p test_cli_encoding.py -v
+      - name: Check bounded diagnostic output
+        if: runner.os == 'Windows'
+        run: python -X utf8 -B -m unittest discover -s tests -p test_check_runner.py -v
+      - run: python -X utf8 -B tools/check_core.py --test-timeout 900
       - run: python -B tools/release_package.py check
       - run: python -B tools/package_user.py check
       - name: Build, verify and exercise the current user package
@@ -69,7 +81,7 @@ jobs:
                                  PYTHONDONTWRITEBYTECODE='1', PYTHONUTF8='1')
               root = base / 'source' / prefix
               subprocess.run([sys.executable, '-X', 'utf8', '-I', '-B', 'tools/check_core.py',
-                              '--test-timeout', '600'], cwd=root, env=environment, check=True)
+                              '--test-timeout', '900'], cwd=root, env=environment, check=True)
               subprocess.run([sys.executable, '-X', 'utf8', '-I', '-B', 'tools/release_package.py', 'check'],
                              cwd=root, env=environment, check=True)
           PY
