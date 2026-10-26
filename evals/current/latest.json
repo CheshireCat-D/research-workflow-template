@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-26T00:55:48.347145+00:00",
+  "checked_at_utc": "2026-10-26T15:23:48.365986+00:00",
   "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -24,17 +24,30 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 168,
+      "test_methods": 194,
       "check_groups": 7,
+      "checked_source_commit": "84cc23cbe65509a8df50c6d59e5cbafbcf17174b",
       "receipt": {
-        "identifier": "private-evidence:source-full.json",
-        "sha256": "a580921b9bbd34153b79d4e0d8fa26f7ee800cc81eef14b37e12350395cbf134"
+        "identifier": "local-evidence:windows-second-local-full.json",
+        "sha256": "2f2bbcac76091d7fb0b14764c7828af730342da41b2de1034cfdf0945b420da1"
+      },
+      "platform_skips": {
+        "native_windows_tests": 13,
+        "reason": "Must execute on real Windows; macOS success does not certify them."
       }
     },
     "post_execution_bookkeeping_changes": [
       "evals/current/latest.json",
       "provenance/file-origins.json"
-    ]
+    ],
+    "followup_validation": {
+      "scope": "Windows locked-file snapshot fixture corrected after the local full suite; current commit CI reruns the entire suite and archive checks.",
+      "changed_test": "tests/test_core.py",
+      "production_runtime_changed_after_local_full_suite": false,
+      "source_of_truth": "Read hosted CI for the exact selected commit, not an earlier failing diagnostic run.",
+      "targeted_core_tests": 54,
+      "targeted_core_result": "passed-on-local-macos"
+    }
   },
   "legal_tasks": {
     "coverage": "evals/legal/coverage.json",
@@ -59,7 +72,8 @@
       "rw-workflow",
       "rw-literature",
       "rw-writing",
-      "rw-review"
+      "rw-review",
+      "core/protocol.md"
     ],
     "reviewed_guidance_evidence": "evals/legal/reviewed-guidance.json"
   },
@@ -80,7 +94,7 @@
   },
   "preservation": {
     "frozen_d2_d3_legal_files_byte_identical": 423,
-    "scope": "Frozen case inputs, outputs and independent reviews unchanged. Existing historical-guidance evidence extended with exact original rw-review source; no runnable old release or renewed legal content review. Personal package excluded."
+    "scope": "Frozen case inputs, numerical algorithms, authored outputs and independent reviews unchanged. Existing historical-guidance evidence also contains the exact original core/protocol.md source bound by the old legal review; no old runnable release or renewed scientific content review. Personal package excluded."
   },
   "hosted_ci": {
     "source_of_truth": "https://github.com/CheshireCat-D/research-workflow-template/actions",
@@ -126,7 +140,10 @@
       "Frozen representative research cases distinguished from maintenance requests",
       "Cross-material comparisons are conditional, fact-identity aware and recorded in existing review artifacts; read-only and existing authority boundaries retained",
       "Explicit user-runtime resource allowlist excludes nested development and old process material",
-      "Delivered user manifest preserves options evidence availability without misreporting missing distribution evidence"
+      "Delivered user manifest preserves options evidence availability without misreporting missing distribution evidence",
+      "Native Windows project storage, safe bundle publication/rollback, UTF-8 commands and portable archive names; POSIX behavior retained",
+      "Current user guides include PowerShell commands and a research-interest startup prompt without claiming untested Agent-host equivalence",
+      "Frozen scientific replay adapts only platform instrumentation and declared path fields; source/hash/numerical assertions retained"
     ],
     "existing_forward_task_records_retained_not_rerun": true,
     "scientific_or_legal_content_certification": false,
@@ -142,11 +159,11 @@
   "user_distribution": {
     "profile": "user-runtime",
     "archive_name": "research-workflow-template.zip",
-    "maintained_runtime_and_guide_files": 67,
+    "maintained_runtime_and_guide_files": 68,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "68a2d7e7906059ce529f4215052822e7602639b6b2510e074248b6d0c246962a",
+    "sha256": "f59e5e67affc36fee6d7b0822beb3621771613e174176f4f26d16a7d8f6bf27f",
     "deterministic_builds_byte_identical": true,
-    "explicit_reviewed_runtime_resources": 60,
+    "explicit_reviewed_runtime_resources": 61,
     "development_history_or_previous_editions_included": false,
     "nested_unreviewed_resources_rejected": true,
     "portable_evidence_availability": "not-included-in-project-runtime",
@@ -155,5 +172,16 @@
     "public_download_entry": "https://github.com/CheshireCat-D/research-workflow-template/releases/latest",
     "source_evaluation_evidence_retained_separately": true,
     "scope": "Software distribution and declared file identity; no renewed disciplinary content review or certification."
+  },
+  "platform_implementation": {
+    "targets": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "windows_backend": "Native no-follow handles, directory guards, file identity and nonblocking LockFileEx writer locks; ordinary local directories.",
+    "runtime_dependencies": "Python 3.11+ standard library; no symlink privileges required for skill installation.",
+    "verification": "Actual OS execution is reported by commit-specific hosted jobs and the separate local receipt.",
+    "frozen_replay_boundary": "Windows test-only launcher explicitly reports POSIX CPU/alarm limits unavailable and RSS unmeasured-null; actual outer wall timeout and numerical comparisons remain. Frozen scientific source bytes are not rewritten."
   }
 }

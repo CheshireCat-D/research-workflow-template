@@ -24,7 +24,7 @@ CLI = REPOSITORY / "tools" / "research.py"
 sys.path.insert(0, str(REPOSITORY))
 
 
-def snapshot(root):
+def snapshot(root, *, held_writer=False):
     """Include files, directories, symlinks, content and modification times."""
     result = {}
     for path in [root, *sorted(root.rglob("*"))]:
@@ -32,6 +32,11 @@ def snapshot(root):
         stat = path.lstat()
         if path.is_symlink():
             content = ("symlink", os.readlink(path))
+        elif held_writer and rel == ".research/write.lock":
+            # Windows LockFileEx denies reads of the locked range, even for
+            # an empty lock file. Check its identity and metadata while held;
+            # the caller also compares full file bytes before and after.
+            content = ("held-lock-metadata", stat.st_dev, stat.st_ino, stat.st_size)
         elif path.is_file():
             content = ("file", hashlib.sha256(path.read_bytes()).hexdigest())
         else:
@@ -743,11 +748,13 @@ class CoreCLITests(unittest.TestCase):
 
     def test_configure_respects_the_existing_writer_lock(self):
         from core.storage import ProjectFiles
+        before = snapshot(self.project)
         with ProjectFiles(self.project) as files, files.lock():
-            before = snapshot(self.project)
+            held_before = snapshot(self.project, held_writer=True)
             report = self.invoke("configure", "--root", self.project, "--mode", "structured", expected=2)
             self.assertEqual(report["errors"][0]["code"], "project_busy")
-            self.assertEqual(snapshot(self.project), before)
+            self.assertEqual(snapshot(self.project, held_writer=True), held_before)
+        self.assertEqual(snapshot(self.project), before)
 
     def test_markdown_recovery_includes_revision_checkpoint_and_active_activity_title(self):
         self.register("activity", self.activity(status="in-progress"))
