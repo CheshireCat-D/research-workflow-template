@@ -1,6 +1,6 @@
 # 中文介绍与使用说明
 
-这份用户包用于本地科研工作。九个技能由 Codex 等兼容宿主中的助手执行；Python 工具保存研究材料、主张、证据关系、进度和恢复状态。需要 Python 3.11 或更新版本，支持 macOS 和 Linux；Windows 写锁尚不支持。
+这份用户包用于本地科研工作。九个技能由 Codex 等兼容宿主中的助手执行；Python 工具保存研究材料、主张、证据关系、进度和恢复状态。需要 Python 3.11 或更新版本，核心提供 Windows、macOS 与 Linux 的本地项目读写、技能接入和恢复；实际平台验收以源码仓库的当前核验记录为准。
 
 ## 第一次使用
 
@@ -13,9 +13,29 @@ python3 tools/connect_skills.py install --root ../my-research
 python3 tools/connect_skills.py check --root ../my-research
 ```
 
+Windows PowerShell 可运行同一组命令：
+
+```powershell
+py -3 -X utf8 tools/research.py init --output "../我的研究" --title "我的研究问题"
+py -3 -X utf8 tools/connect_skills.py install --root "../我的研究"
+py -3 -X utf8 tools/connect_skills.py check --root "../我的研究"
+```
+
+先用 `py -3 --version` 确认 Python 为 3.11 或更新版本；若没有 `py` 启动器，把 `py -3` 换成已安装的 `python`。命令中的项目根路径可使用系统惯用路径，登记材料的项目相对路径统一用 `/`。
+
+Windows 项目请放在普通本地目录，例如 `C:\Research\my-project`。本版本拒绝项目路径中的重解析点（包括 junction、符号链接与云盘占位符）；网络盘和云同步目录不作为本轮已验证目标。
+
 输出目录必须尚不存在；路径含空格时加引号。然后在兼容宿主中打开 `my-research`，说明研究兴趣、已有材料或当前任务。工具包目录与研究项目目录分别保存；安装只写入所选项目的 `.agents/skills/`，不改全局技能。
 
 已知学科或方法时，可在 `init` 加入 `--discipline law --method legal-analysis` 等选项；合法 ID 以 `options` 为准。尚未确定时先省略，之后用 `configure` 更新。
+
+## 不知道从哪里开始，可以先这样说
+
+在能读取本地目录并执行命令的 Agent 中打开解压后的工具包，发送：
+
+> 请先阅读中文使用说明，检查环境，在旁边的新目录初始化独立研究项目并接入所需技能。我的专业／方向是【……】，目前的想法和兴趣是【……】，已有知识、材料与时间限制是【……】，希望完成【……】。选题还没确定时，请先帮我缩小问题；有多个合适方向时比较其依据、主要反驳和可行性，再选择一项最小验证。信息足够就先推进，只追问会影响下一步的关键缺口，保留实际来源、成果和可恢复的下一步。
+
+普通聊天工具可以按实际附件能力参考指南、讨论或润色文本；能上传文件不代表已安装技能或能操作本地项目。完整初始化、登记和恢复需要实际宿主具备文件访问与命令执行能力。品牌或模型名称本身不是接入验证，未实测的平台不列作一键兼容。
 
 ## 九个技能如何配合
 
@@ -25,9 +45,9 @@ python3 tools/connect_skills.py check --root ../my-research
 | `rw-question` | 澄清研究问题、范围和关键术语 |
 | `rw-literature` | 查找和阅读来源，核对身份、引用与实际支持 |
 | `rw-innovation` | 构造候选机制、猜想与最小验证 |
-| `rw-candidates` | 比较多个方向的依据、障碍和可行性 |
+| `rw-candidates` | 对候选问题做支持与反驳比较，判断依据、障碍和可行性 |
 | `rw-validation` | 按方法检查证明、计算、实验或解释的义务 |
-| `rw-writing` | 起草、润色、翻译与压缩，保持论证与作者意思 |
+| `rw-writing` | 起草、自然润色、翻译与压缩，保持论证、作者声音及必要限定，精简套话与防御性包装 |
 | `rw-figures` | 制作和检查科研图件，区分数据、结构与视觉效果 |
 | `rw-review` | 审阅、返修和按需核对多份材料中的共享事实 |
 

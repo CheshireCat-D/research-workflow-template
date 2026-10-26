@@ -10,13 +10,23 @@
 
 直接使用可下载[当前用户运行包](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip)与[SHA-256](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip.sha256)。发行入口只维护一个当前包；GitHub 的源码下载另含开发测试材料。
 
-需要 Python 3.11 或更新版本，以及 macOS 或 Linux。Windows 的写锁尚不支持。在本目录运行：
+需要 Python 3.11 或更新版本。核心提供 Windows、macOS 与 Linux 本地项目支持；各平台的实际执行记录见[平台核验](docs/11-linux-validation.md)。macOS/Linux 在本目录运行：
 
 ```sh
 python3 tools/research.py init --output ../my-research --title '我的研究问题'
 python3 tools/connect_skills.py install --root ../my-research
 python3 tools/connect_skills.py check --root ../my-research
 ```
+
+Windows PowerShell 可运行同一组命令：
+
+```powershell
+py -3 -X utf8 tools/research.py init --output "../我的研究" --title "我的研究问题"
+py -3 -X utf8 tools/connect_skills.py install --root "../我的研究"
+py -3 -X utf8 tools/connect_skills.py check --root "../我的研究"
+```
+
+先用 `py -3 --version` 确认 Python 为 3.11 或更新版本；若没有 `py` 启动器，把 `py -3` 换成已安装的 `python`。命令中的项目根路径可使用系统惯用路径，登记材料的项目相对路径统一用 `/`。
 
 将输出路径换成尚不存在的新目录。然后在 Codex 等兼容宿主中打开新项目，描述研究兴趣或当前任务即可。已有项目先运行 `resume`。首次接入和显式升级分别保护已有目录与本地修改；不改全局技能或个人完整版。
 

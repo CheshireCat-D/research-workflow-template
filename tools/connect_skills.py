@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from core.bundle import SCOPE, install, check, upgrade
 from core.storage import CoreError
+from core.cli import configure_cli_streams
 
 
 class Parser(argparse.ArgumentParser):
@@ -18,6 +19,7 @@ class Parser(argparse.ArgumentParser):
 
 
 def main(argv=None):
+    configure_cli_streams()
     try:
         parser = Parser(description='Connect research skills to one initialized project; no global installation.')
         commands = parser.add_subparsers(dest='command', required=True)

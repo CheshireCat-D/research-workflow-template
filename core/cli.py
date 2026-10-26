@@ -17,6 +17,14 @@ class Parser(argparse.ArgumentParser):
         raise CoreError('arguments', message)
 
 
+def configure_cli_streams():
+    """Keep the JSON/Markdown CLI contract UTF-8, including Windows pipes."""
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, 'reconfigure', None)
+        if callable(reconfigure):
+            reconfigure(encoding='utf-8', newline='\n')
+
+
 def parser():
     p = Parser(description='Research metadata and recovery core. No scientific/ethics certification or network access.')
     p.add_argument('--version', action='version', version=__version__)
@@ -110,6 +118,7 @@ def user_runtime_context(toolkit):
 
 
 def main(argv=None):
+    configure_cli_streams()
     try:
         args = parser().parse_args(argv)
         if args.command == 'options':

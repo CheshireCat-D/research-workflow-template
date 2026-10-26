@@ -16,13 +16,23 @@ The repository maintains current sources, tests and required frozen evaluation e
 
 Download the [current user runtime](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) and its [SHA-256 file](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip.sha256). One current release is maintained; GitHub's separate source download also contains development tests. See the [skill selection and design influences](docs/12-skills-selection.md) for integration choices.
 
-Use Python 3.11+ on macOS or Linux. POSIX writer locks do not support Windows.
+Use Python 3.11+ on Windows, macOS or Linux. See the [platform validation record](docs/11-linux-validation.md) for actual execution evidence. The commands below use macOS/Linux syntax.
 
 ```sh
 python3 tools/research.py init --output ../my-research --title 'My research question'
 python3 tools/connect_skills.py install --root ../my-research
 python3 tools/connect_skills.py check --root ../my-research
 ```
+
+On Windows PowerShell, run the same tools with the Python launcher:
+
+```powershell
+py -3 -X utf8 tools/research.py init --output "../my-research" --title "My research question"
+py -3 -X utf8 tools/connect_skills.py install --root "../my-research"
+py -3 -X utf8 tools/connect_skills.py check --root "../my-research"
+```
+
+Check `py -3 --version` for Python 3.11 or later. If the launcher is unavailable, replace `py -3` with the installed `python`. Project-root arguments may use native paths; material paths stored inside project records use `/` on every platform.
 
 Choose a new output directory. Open that project in a compatible skill host and describe the current task. Existing research can resume at the relevant activity. Initial installation refuses existing targets; explicit upgrades preserve local edits by refusing a modified bundle. Global skills and the separate personal package remain independent.
 

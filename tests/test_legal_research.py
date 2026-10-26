@@ -53,7 +53,7 @@ class LegalResearchIntegration(unittest.TestCase):
 
     def invoke(self, script, *arguments, expected=0):
         result = subprocess.run([sys.executable, '-B', str(script), *map(str, arguments)],
-                                cwd=self.base, text=True, capture_output=True, timeout=30,
+                                cwd=self.base, text=True, encoding='utf-8', capture_output=True, timeout=30,
                                 env=dict(os.environ, PYTHONDONTWRITEBYTECODE='1'))
         self.assertEqual(result.returncode, expected, result.stdout + result.stderr)
         return json.loads(result.stdout)

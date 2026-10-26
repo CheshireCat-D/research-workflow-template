@@ -317,12 +317,12 @@ def main(argv=None):
     add('local-document-links', not missing, missing)
     generated_missing = payload_link_errors(payload)
     add('installed-layout-document-links', not generated_missing, generated_missing)
-    environment = dict(os.environ, PYTHONDONTWRITEBYTECODE='1')
+    environment = dict(os.environ, PYTHONDONTWRITEBYTECODE='1', PYTHONUTF8='1')
     timed_out = False
     try:
-        result = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover',
+        result = subprocess.run([sys.executable, '-X', 'utf8', '-B', '-m', 'unittest', 'discover',
                                  '-s', str(ROOT / 'tests'), '-v'], cwd=ROOT,
-                                env=environment, text=True, capture_output=True,
+                                env=environment, text=True, encoding='utf-8', capture_output=True,
                                 timeout=args.test_timeout)
         output, exit_code = result.stdout + result.stderr, result.returncode
     except subprocess.TimeoutExpired as exc:

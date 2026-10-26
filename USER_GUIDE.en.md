@@ -14,7 +14,7 @@ Only one current edition is maintained. Its distribution is named `research-work
 
 ## First use: create a separate research project
 
-You need macOS or Linux and Python 3.11 or later. Windows writer locks are not supported.
+Use Python 3.11 or later on Windows, macOS or Linux. Platform implementation and actually executed verification are recorded separately in the [platform guide](docs/11-linux-validation.md).
 
 Open the toolkit folder in Codex. In a terminal, change to the same folder and run:
 
@@ -24,6 +24,18 @@ python3 tools/connect_skills.py install --root '../my-research'
 python3 tools/connect_skills.py check --root '../my-research'
 ```
 
+On Windows PowerShell, run the same tools with the Python launcher:
+
+```powershell
+py -3 -X utf8 tools/research.py init --output "../my-research" --title "My research question"
+py -3 -X utf8 tools/connect_skills.py install --root "../my-research"
+py -3 -X utf8 tools/connect_skills.py check --root "../my-research"
+```
+
+Check `py -3 --version` for Python 3.11 or later. If the launcher is unavailable, replace `py -3` with the installed `python`. Project-root arguments may use native paths; material paths stored inside project records use `/` on every platform.
+
+On Windows, choose an ordinary local project directory such as `C:\Research\my-project`. This version rejects reparse points, including junctions, symbolic links and cloud placeholders; network and cloud-synchronized directories are outside the verified target.
+
 Replace `../my-research` with a new directory that does not yet exist. Initialization refuses to overwrite an existing directory. Keep your manuscript, data, and results in the new project; the toolkit folder holds the tools and skills.
 
 Then open the new research project in Codex and send a prompt such as:
@@ -31,6 +43,14 @@ Then open the new research project in Codex and send a prompt such as:
 > My research interests are: … . My current knowledge, materials, and constraints are: … . My intended deliverable is: … . First read or resume this project, clarify the most important open questions, and help me choose one feasible next step. Keep missing sources, unverified conclusions, and unresolved decisions explicit. Complete the work needed at the current stage; we do not need to run through the whole workflow at once.
 
 You do not need to fill every field before starting or list the skill names in every request. Once the project skills are connected, the host assistant selects skills for the current task. Successful installation and file-integrity checks do not establish that the host interface has actually invoked a skill.
+
+## Start with an interest, even without a topic
+
+Open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
+
+> Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline or area is […], my current interests or ideas are […], my available knowledge, materials and time are […], and my intended deliverable is […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step.
+
+A chat interface may use the guide for discussion or editing according to its actual attachment capabilities. Uploading a file does not establish skill installation or local execution. Initialization, registration and recovery require real directory and command access. A brand or model name alone does not establish one-click compatibility.
 
 ## If you already have a manuscript or research materials
 
@@ -54,7 +74,7 @@ For a manuscript that has not been registered, you can begin with a local task. 
 | `rw-innovation` | Develop concrete mechanisms, constructions, or testable ideas |
 | `rw-candidates` | Compare existing candidate directions and assess them adversarially |
 | `rw-validation` | Select minimum validation, proof checks, or experimental checks for the method |
-| `rw-writing` | Organize manuscript prose from available statements and materials |
+| `rw-writing` | Draft, polish, translate and compress; preserve author voice and necessary qualifications while removing boilerplate and defensive framing |
 | `rw-review` | Review claim support, limitations, structure, consistency across materials, and delivery completeness |
 | `rw-figures` | Create or inspect data figures and editable schematics, preserving sources and scientific meaning |
 

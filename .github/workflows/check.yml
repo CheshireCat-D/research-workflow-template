@@ -14,12 +14,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
         python: ['3.11', '3.14']
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 15
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
     env:
       PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONUTF8: '1'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -27,12 +31,12 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: ${{ matrix.python }}
-      - run: python -B tools/check_core.py --test-timeout 360
+      - run: python -X utf8 -B tools/check_core.py --test-timeout 600
       - run: python -B tools/release_package.py check
       - run: python -B tools/package_user.py check
       - name: Build, verify and exercise the current user package
         run: |
-          mkdir -p dist
+          python -c "from pathlib import Path; Path('dist').mkdir(exist_ok=True)"
           python -B tools/package_user.py build --output dist/research-workflow-template.zip
           python -B tools/package_user.py verify --archive dist/research-workflow-template.zip
           python -B tools/package_user.py smoke --archive dist/research-workflow-template.zip
@@ -60,11 +64,12 @@ jobs:
               scratch = base / 'tmp'
               home.mkdir()
               scratch.mkdir()
-              environment = dict(os.environ, HOME=str(home), TMPDIR=str(scratch),
-                                 PYTHONDONTWRITEBYTECODE='1')
+              environment = dict(os.environ, HOME=str(home), USERPROFILE=str(home),
+                                 TMPDIR=str(scratch), TMP=str(scratch), TEMP=str(scratch),
+                                 PYTHONDONTWRITEBYTECODE='1', PYTHONUTF8='1')
               root = base / 'source' / prefix
-              subprocess.run([sys.executable, '-I', '-B', 'tools/check_core.py',
-                              '--test-timeout', '360'], cwd=root, env=environment, check=True)
-              subprocess.run([sys.executable, '-I', '-B', 'tools/release_package.py', 'check'],
+              subprocess.run([sys.executable, '-X', 'utf8', '-I', '-B', 'tools/check_core.py',
+                              '--test-timeout', '600'], cwd=root, env=environment, check=True)
+              subprocess.run([sys.executable, '-X', 'utf8', '-I', '-B', 'tools/release_package.py', 'check'],
                              cwd=root, env=environment, check=True)
           PY

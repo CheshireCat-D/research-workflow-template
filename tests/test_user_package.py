@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from platform_support import symlink_or_skip
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -140,9 +141,9 @@ class UserPackage(unittest.TestCase):
         before = snapshot(runtime)
         for toolkit, expected in ((ROOT, 'available'),
                                   (runtime, 'not-included-in-project-runtime')):
-            result = subprocess.run([sys.executable, '-I', '-B',
+            result = subprocess.run([sys.executable, '-X', 'utf8', '-I', '-B',
                                      str(toolkit / 'tools/research.py'), 'options'],
-                                    capture_output=True, text=True, timeout=30)
+                                    capture_output=True, text=True, encoding='utf-8', timeout=30)
             self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
             options = json.loads(result.stdout)
             methods = [item['implementation'] for item in options['methods']
@@ -174,7 +175,7 @@ class UserPackage(unittest.TestCase):
         with self.assertRaises(FileExistsError):
             package.build(archive, self.source)
         link = self.base / 'link.zip'
-        link.symlink_to(archive)
+        symlink_or_skip(self, link, archive)
         with self.assertRaises(FileExistsError):
             package.build(link, self.source)
         self.assertEqual(archive.read_bytes(), b'Keep existing delivery')
@@ -222,7 +223,7 @@ class UserPackage(unittest.TestCase):
             package.build(self.base / 'private.zip', self.source)
         path.unlink()
         path = self.source / 'skills/rw-review/linked.md'
-        path.symlink_to(self.source / 'LICENSE')
+        symlink_or_skip(self, path, self.source / 'LICENSE')
         with self.assertRaises(package.CoreError):
             package.build(self.base / 'linked.zip', self.source)
 

@@ -33,7 +33,7 @@ class SvgAuditTests(unittest.TestCase):
         self.assertEqual(report["status"], "pass", report)
         self.assertGreaterEqual(report["counts"]["native_text_elements"], 3)
         self.assertGreater(report["counts"]["local_references"], 0)
-        figure_spec = json.loads((SKILL / "assets/synthetic-figure-spec.json").read_text())
+        figure_spec = json.loads((SKILL / "assets/synthetic-figure-spec.json").read_text(encoding='utf-8'))
         self.assertTrue(figure_spec["synthetic"])
         identifiers = {element.get("id") for element in audit.ET.fromstring(
             (SKILL / "assets/synthetic-workflow.svg").read_bytes()).iter()}
@@ -128,7 +128,7 @@ class SvgAuditTests(unittest.TestCase):
                 path.write_bytes(data)
                 before = path.stat()
                 run = subprocess.run([sys.executable, str(SCRIPT), str(path)],
-                                     capture_output=True, text=True, check=False)
+                                     capture_output=True, text=True, encoding='utf-8', check=False)
                 self.assertEqual(run.returncode, expected, run.stderr)
                 self.assertEqual(path.read_bytes(), data)
                 self.assertEqual(path.stat().st_mtime_ns, before.st_mtime_ns)
@@ -136,7 +136,7 @@ class SvgAuditTests(unittest.TestCase):
                 self.assertIn("status", json.loads(run.stdout))
                 self.assertEqual(sorted(p.name for p in Path(directory).iterdir()), ["figure.svg"])
             run = subprocess.run([sys.executable, str(SCRIPT), str(path.with_name("missing.svg"))],
-                                 capture_output=True, text=True, check=False)
+                                 capture_output=True, text=True, encoding='utf-8', check=False)
             self.assertEqual(run.returncode, 2)
             self.assertEqual(json.loads(run.stdout)["status"], "not-auditable")
 

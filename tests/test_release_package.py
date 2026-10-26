@@ -9,6 +9,7 @@ import sys
 import tempfile
 import unittest
 from unittest import mock
+from platform_support import symlink_or_skip
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -30,7 +31,7 @@ class ReleasePackages(unittest.TestCase):
         self.source.mkdir()
         for name in release.REQUIRED:
             p=self.source/name;p.parent.mkdir(parents=True,exist_ok=True)
-            p.write_text('MIT License\n' if name=='LICENSE' else 'Synthetic package fixture.\n')
+            p.write_text('MIT License\n' if name=='LICENSE' else 'Synthetic package fixture.\n', encoding='utf-8')
         release.index(self.source)
 
     def tearDown(self):
@@ -152,7 +153,7 @@ class ReleasePackages(unittest.TestCase):
                 self.assertEqual(before,snapshot(self.base))
 
     def test_index_drift_blocks_build_without_reindexing_or_overwriting(self):
-        (self.source/'README.md').write_text('Reviewed content changed.\n')
+        (self.source/'README.md').write_text('Reviewed content changed.\n', encoding='utf-8')
         before=snapshot(self.source)
         self.assertFalse(release.check(self.source)['passed'])
         with self.assertRaises(release.ReleaseError):release.build(self.base/'blocked.zip',self.source)
@@ -165,7 +166,7 @@ class ReleasePackages(unittest.TestCase):
         def edit_after_capture(root):
             entries=original_inventory(root)
             captured.append(entries)
-            (self.source/'README.md').write_text('Edited after source capture.\n')
+            (self.source/'README.md').write_text('Edited after source capture.\n', encoding='utf-8')
             return entries
         archive=self.base/'captured.zip'
         with mock.patch.object(release,'inventory',side_effect=edit_after_capture) as inventory:
@@ -187,19 +188,19 @@ class ReleasePackages(unittest.TestCase):
         p=self.base/'keep.zip';p.write_bytes(b'Keep')
         with self.assertRaises(FileExistsError):release.build(p,self.source)
         self.assertEqual(p.read_bytes(),b'Keep')
-        link=self.base/'link.zip';link.symlink_to(p)
+        link=self.base/'link.zip';symlink_or_skip(self, link, p)
         with self.assertRaises(FileExistsError):release.build(link,self.source)
         self.assertEqual(p.read_bytes(),b'Keep')
 
     def test_link_and_credential_like_source_rejected_before_inventory_update(self):
         p=self.source/'docs';p.mkdir()
-        outside=self.base/'outside.txt';outside.write_text('Not included')
-        (p/'linked.md').symlink_to(outside)
+        outside=self.base/'outside.txt';outside.write_text('Not included', encoding='utf-8')
+        symlink_or_skip(self, p/'linked.md', outside)
         with self.assertRaises(release.ReleaseError):release.inventory(self.source)
         (p/'linked.md').unlink()
-        (p/'bad.md').write_text('ghp_'+'a'*36)
+        (p/'bad.md').write_text('ghp_'+'a'*36, encoding='utf-8')
         with self.assertRaises(release.ReleaseError):release.index(self.source)
-        self.assertEqual(outside.read_text(),'Not included')
+        self.assertEqual(outside.read_text(encoding='utf-8'),'Not included')
 
     def test_archive_payload_change_and_unlisted_entries_are_rejected(self):
         original=self.base/'original.zip';release.build(original,self.source)
@@ -261,9 +262,9 @@ class ReleasePackages(unittest.TestCase):
                             data=json.dumps(manifest).encode()
                         output.writestr(info,data)
                 before=snapshot(self.base)
-                result=subprocess.run([sys.executable,'-I','-B',str(ROOT/'tools/release_package.py'),
+                result=subprocess.run([sys.executable,'-X','utf8','-I','-B',str(ROOT/'tools/release_package.py'),
                                        'verify','--archive',str(target)],
-                                      capture_output=True,text=True,timeout=20)
+                                      capture_output=True,text=True, encoding='utf-8',timeout=20)
                 self.assertEqual(result.returncode,2,result.stdout+result.stderr)
                 self.assertEqual(result.stderr,'')
                 report=json.loads(result.stdout)

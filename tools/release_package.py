@@ -21,10 +21,11 @@ DIRECTORIES = ('core', 'tools', 'skills', 'profiles', 'design', 'docs',
                'examples', 'evals', 'tests', 'provenance', '.github')
 TOP_FILES = ('README.md', 'README.en.md', 'LICENSE', 'CONTRIBUTING.md',
              'SECURITY.md', 'CITATION.cff', '.gitignore', '中文介绍与使用说明.md',
-             'USER_GUIDE.en.md')
+             'USER_GUIDE.en.md', '.gitattributes')
 REQUIRED = ('README.md', 'README.en.md', '中文介绍与使用说明.md', 'USER_GUIDE.en.md',
-            'LICENSE', 'CONTRIBUTING.md', 'SECURITY.md', 'CITATION.cff',
+            'LICENSE', 'CONTRIBUTING.md', 'SECURITY.md', 'CITATION.cff', '.gitattributes',
             '.github/workflows/check.yml', 'core/cli.py', 'core/bundle.py',
+            'core/windows_storage.py',
             'tools/research.py', 'tools/connect_skills.py', 'tools/check_core.py',
             'provenance/ORIGIN.md')
 INDEX = 'provenance/file-origins.json'
@@ -54,23 +55,47 @@ def safe_name(name):
     if (not isinstance(name, str) or not name or '\\' in name or ':' in name or
             '\x00' in name or name.startswith('/') or any(p in ('', '.', '..') for p in name.split('/'))):
         raise ReleaseError('Unsafe archive or inventory path')
+    # Keep every published name portable to an ordinary Windows filesystem.
+    # Device aliases and trailing dots/spaces are normalized by Win32 and can
+    # otherwise escape the archive's apparent one-name/one-resource contract.
+    reserved = {'CON', 'PRN', 'AUX', 'NUL', 'CLOCK$', 'CONIN$', 'CONOUT$'}
+    reserved.update(prefix + suffix for prefix in ('COM', 'LPT')
+                    for suffix in '123456789¹²³')
+    for part in name.split('/'):
+        if (part.endswith((' ', '.')) or any(ord(char) < 32 or char in '<>"|?*' for char in part)
+                or part.split('.')[0].rstrip(' .').upper() in reserved):
+            raise ReleaseError('Archive path is not portable to Windows')
     return name
+
+
+def is_link(path):
+    info = path.lstat()
+    return (stat.S_ISLNK(info.st_mode) or
+            bool(getattr(info, 'st_file_attributes', 0) & 0x400))
+
+
+def exclusive_output(path):
+    # O_EXCL rejects an existing final entry, including a reparse point.
+    # O_BINARY prevents Windows CRLF translation from changing ZIP bytes.
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+    flags |= getattr(os, 'O_NOFOLLOW', 0) | getattr(os, 'O_BINARY', 0)
+    return os.open(path, flags, 0o600)
 
 
 def inventory(root=ROOT):
     """Only explicitly maintained public roots; never traverse private state."""
     root = Path(root)
     entries = {}
-    paths = [root / name for name in TOP_FILES if (root / name).exists() or (root / name).is_symlink()]
+    paths = [root / name for name in TOP_FILES if os.path.lexists(root / name)]
     for name in DIRECTORIES:
         directory = root/name
-        if directory.is_symlink():
+        if os.path.lexists(directory) and is_link(directory):
             raise ReleaseError('Source directory is a link: '+name)
         if not directory.is_dir():
             continue
         for current, dirs, files in os.walk(directory, followlinks=False):
             for child in dirs:
-                if (Path(current)/child).is_symlink():
+                if is_link(Path(current)/child):
                     raise ReleaseError('Source contains a directory link')
                 if child in PRIVATE_DIRS:
                     raise ReleaseError('Private/generated project state inside public sources')
@@ -79,7 +104,7 @@ def inventory(root=ROOT):
     total = 0
     for path in sorted(paths):
         relative = safe_name(path.relative_to(root).as_posix())
-        if path.is_symlink() or not path.is_file():
+        if is_link(path) or not path.is_file():
             raise ReleaseError('Public source is a link or non-file: '+relative)
         if path.name == '.env' or path.name.startswith('.env.') or path.suffix.lower() in {'.pem', '.key', '.p12'}:
             raise ReleaseError('Credential/config file in public sources: '+relative)
@@ -125,7 +150,7 @@ def index(root=ROOT):
               'excluded_self':INDEX, 'files':records}
     path = root/INDEX
     path.parent.mkdir(parents=True, exist_ok=True)
-    if path.is_symlink():
+    if os.path.lexists(path) and is_link(path):
         raise ReleaseError('Refusing to replace linked provenance index')
     temporary = path.with_name('.file-origins-'+uuid.uuid4().hex+'.tmp')
     try:
@@ -140,6 +165,8 @@ def index(root=ROOT):
 def _check_entries(entries):
     """Validate one captured byte map without reading the source tree again."""
     errors = [{'code':'required_file_missing','path':name} for name in REQUIRED if name not in entries]
+    if len({name.casefold() for name in entries}) != len(entries):
+        errors.append({'code':'portable_path_collision'})
     if INDEX not in entries:
         errors.append({'code':'provenance_index_missing','path':INDEX})
     else:
@@ -180,7 +207,7 @@ def build(output, root=ROOT):
               'files':{name:digest(data) for name,data in entries.items()}}
     if not output.parent.is_dir():
         raise ReleaseError('Archive output parent must already exist')
-    fd=os.open(output,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o600)
+    fd=exclusive_output(output)
     try:
         with os.fdopen(fd,'wb') as stream:
             with zipfile.ZipFile(stream,'w',compression=zipfile.ZIP_STORED) as archive:
@@ -201,7 +228,8 @@ def verify(path):
     with zipfile.ZipFile(path) as archive:
         infos=archive.infolist()
         names=[safe_name(i.filename) for i in infos]
-        if not 1 <= len(names) <= 4096 or len(set(names))!=len(names):
+        if (not 1 <= len(names) <= 4096 or len(set(names))!=len(names) or
+                len({name.casefold() for name in names}) != len(names)):
             raise ReleaseError('Archive has duplicate entries or an unsupported file count')
         if sum(i.file_size for i in infos)>MAX_TOTAL or any(i.file_size>MAX_FILE for i in infos):
             raise ReleaseError('Archive expands beyond size limits')

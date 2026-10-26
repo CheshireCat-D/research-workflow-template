@@ -1,6 +1,6 @@
 # English user guide
 
-This user package supports local research work. An assistant in Codex or another compatible skill host executes the nine skills; the Python tools save materials, statements, evidence relations, progress and recovery state. Use Python 3.11+ on macOS or Linux. Windows writer locks are not supported.
+This user package supports local research work. An assistant in Codex or another compatible skill host executes the nine skills; the Python tools save materials, statements, evidence relations, progress and recovery state. Use Python 3.11+ on Windows, macOS or Linux. The core provides native local project I/O, skill connection and recovery; actual platform verification is recorded separately in the source repository.
 
 ## First use
 
@@ -13,9 +13,29 @@ python3 tools/connect_skills.py install --root ../my-research
 python3 tools/connect_skills.py check --root ../my-research
 ```
 
+On Windows PowerShell, run the same tools with the Python launcher:
+
+```powershell
+py -3 -X utf8 tools/research.py init --output "../my-research" --title "My research question"
+py -3 -X utf8 tools/connect_skills.py install --root "../my-research"
+py -3 -X utf8 tools/connect_skills.py check --root "../my-research"
+```
+
+Check `py -3 --version` for Python 3.11 or later. If the launcher is unavailable, replace `py -3` with the installed `python`. Project-root arguments may use native paths; material paths stored inside project records use `/` on every platform.
+
+On Windows, choose an ordinary local project directory such as `C:\Research\my-project`. This version rejects reparse points, including junctions, symbolic links and cloud placeholders; network and cloud-synchronized directories are outside the verified target.
+
 Choose an output directory that does not exist, and quote paths containing spaces. Open `my-research` in a compatible host and describe your interest, available materials or current task. Keep the toolkit and research project in separate directories. Installation writes only to the selected project's `.agents/skills/`; it does not change global skills.
 
 If the discipline or method is known, add options such as `--discipline law --method legal-analysis` to `init`. Read valid IDs with `options`. Otherwise omit them and update the configuration later with `configure`.
+
+## Start with an interest, even without a topic
+
+Open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
+
+> Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline or area is […], my current interests or ideas are […], my available knowledge, materials and time are […], and my intended deliverable is […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step.
+
+A chat interface may use the guide for discussion or editing according to its actual attachment capabilities. Uploading a file does not establish skill installation or local execution. Initialization, registration and recovery require real directory and command access. A brand or model name alone does not establish one-click compatibility.
 
 ## How the nine skills work together
 
@@ -27,7 +47,7 @@ If the discipline or method is known, add options such as `--discipline law --me
 | `rw-innovation` | Develop candidate mechanisms, conjectures and minimum checks |
 | `rw-candidates` | Compare the evidence, obstacles and feasibility of directions |
 | `rw-validation` | Apply the proof, computation, experiment or interpretation obligations |
-| `rw-writing` | Draft, polish, translate and compress while preserving the argument and author intent |
+| `rw-writing` | Draft, naturally revise, translate and compress; preserve the argument, author voice and necessary qualifications while removing boilerplate and defensive framing |
 | `rw-figures` | Produce and inspect research figures, separating data, structure and visual appearance |
 | `rw-review` | Review, revise and compare shared facts across materials when relevant |
 

@@ -1,4 +1,4 @@
-"""Bounded JSON I/O and POSIX project-local atomic mutations; no network or exec."""
+"""Bounded JSON I/O and platform-specific guarded project mutations."""
 from __future__ import annotations
 
 from contextlib import contextmanager
@@ -78,7 +78,8 @@ def read_input(path):
             # Read bytes so the same UTF-8 and 8 MiB checks apply to files and
             # pipes. Do not close the process-owned stdin stream.
             return parse_json(sys.stdin.buffer.read(JSON_LIMIT + 1))
-        fd = os.open(path, os.O_RDONLY | os.O_NONBLOCK)
+        fd = os.open(path, os.O_RDONLY | getattr(os, 'O_NONBLOCK', 0) |
+                     getattr(os, 'O_BINARY', 0))
         if not stat.S_ISREG(os.fstat(fd).st_mode):
             os.close(fd)
             raise CoreError('input_unreadable', 'The supplied JSON input must be a regular file')
@@ -130,6 +131,7 @@ class ProjectFiles:
             yield fd, parts[-1]
         finally:
             os.close(fd)
+
 
     def _open(self, relative):
         with self.parent(relative) as (parent, name):
@@ -247,3 +249,10 @@ class ProjectFiles:
             yield
         finally:
             os.close(fd)
+
+
+# Keep the directory-fd implementation unchanged on POSIX. The Windows backend
+# imports only after the shared definitions exist, and calls Win32 lazily.
+PosixProjectFiles = ProjectFiles
+if os.name == 'nt':
+    from .windows_storage import WindowsProjectFiles as ProjectFiles

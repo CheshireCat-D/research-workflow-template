@@ -16,7 +16,7 @@ class ReplayHarness:
 
     def invoke(self,script,*arguments,expected=0):
         result=subprocess.run([sys.executable,'-B',str(script),*map(str,arguments)],
-                              cwd=ROOT,text=True,capture_output=True,timeout=30,
+                              cwd=ROOT,text=True, encoding='utf-8',capture_output=True,timeout=30,
                               env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'))
         if result.returncode!=expected:
             raise AssertionError(result.stdout+result.stderr)

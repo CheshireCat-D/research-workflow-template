@@ -61,8 +61,8 @@ class CheckRunnerTests(unittest.TestCase):
                 self.assertEqual(fields['description'], expected)
 
     def test_catalog_rejects_duplicate_stable_ids_without_dictionary_collapse(self):
-        catalog = json.loads((ROOT/'design/catalog.json').read_text())
-        cases = json.loads((ROOT/'design/scenarios.json').read_text())['cases']
+        catalog = json.loads((ROOT/'design/catalog.json').read_text(encoding='utf-8'))
+        cases = json.loads((ROOT/'design/scenarios.json').read_text(encoding='utf-8'))['cases']
         self.assertEqual(runner.catalog_reference_errors(catalog, cases), [])
         for group, label in (('disciplines', 'discipline'), ('methods', 'method'), ('skills', 'skill')):
             with self.subTest(group=group):
@@ -75,8 +75,8 @@ class CheckRunnerTests(unittest.TestCase):
                       runner.catalog_reference_errors(catalog, duplicate_cases))
 
     def test_catalog_rejects_bad_suggestions_and_variant_lists(self):
-        catalog = json.loads((ROOT/'design/catalog.json').read_text())
-        cases = json.loads((ROOT/'design/scenarios.json').read_text())['cases']
+        catalog = json.loads((ROOT/'design/catalog.json').read_text(encoding='utf-8'))
+        cases = json.loads((ROOT/'design/scenarios.json').read_text(encoding='utf-8'))['cases']
         for mutation, expected in (
             ('unknown-suggestion', 'Unknown suggested method: '),
             ('repeated-suggestion', 'Repeated suggested methods: '),
@@ -104,17 +104,17 @@ class CheckRunnerTests(unittest.TestCase):
     def test_ignored_generated_and_private_trees_do_not_break_source_links(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            (root/'guide.md').write_text('# Maintained guide\n')
+            (root/'guide.md').write_text('# Maintained guide\n', encoding='utf-8')
             for name in ('.git', '.venv', 'venv', 'build', 'dist', '__pycache__',
                          '.agents', '.research', 'private-data', 'local-config', 'node_modules'):
                 folder = root/name
                 folder.mkdir()
-                (folder/'generated.md').write_text('[Generated only](missing.md)\n')
-                (folder/'generated.py').write_text('not valid Python!!!\n')
+                (folder/'generated.md').write_text('[Generated only](missing.md)\n', encoding='utf-8')
+                (folder/'generated.py').write_text('not valid Python!!!\n', encoding='utf-8')
             self.assertEqual(runner.source_link_errors(root), [])
             self.assertEqual(list(runner.source_files(root, '.py')), [])
             (root/'docs').mkdir()
-            (root/'docs'/'maintained.md').write_text('[Missing maintained target](missing.md)\n')
+            (root/'docs'/'maintained.md').write_text('[Missing maintained target](missing.md)\n', encoding='utf-8')
             self.assertEqual(runner.source_link_errors(root),
                              [{'document': 'docs/maintained.md', 'link': 'missing.md'}])
 
@@ -129,9 +129,9 @@ class CheckRunnerTests(unittest.TestCase):
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes(data)
             path = root/'design/catalog.json'
-            catalog = json.loads(path.read_text())
+            catalog = json.loads(path.read_text(encoding='utf-8'))
             catalog['disciplines'][0]['suggested_methods'].append('not-a-real-method')
-            path.write_text(json.dumps(catalog))
+            path.write_text(json.dumps(catalog), encoding='utf-8')
             complete = subprocess.CompletedProcess(['unittest'], 0, '', 'Ran 2 tests in 0.001s\n\nOK\n')
             with mock.patch.object(runner, 'ROOT', root):
                 status, report, _ = self.invoke(lambda *args, **kwargs: complete, [])
@@ -217,6 +217,8 @@ class CheckRunnerTests(unittest.TestCase):
         self.assertEqual(check['detail']['tests_run'], 2)
         self.assertEqual(check['detail']['exit_code'], 0)
         self.assertEqual(run.call_args.kwargs['timeout'], 180)
+        self.assertEqual(run.call_args.kwargs['encoding'], 'utf-8')
+        self.assertEqual(run.call_args.args[0][1:3], ['-X', 'utf8'])
 
     def test_completed_failed_suite_remains_failed(self):
         complete = subprocess.CompletedProcess(['unittest'], 1, '', 'Ran 1 test in 0.001s\n\nFAILED\n')

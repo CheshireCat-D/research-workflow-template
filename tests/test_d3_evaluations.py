@@ -63,7 +63,7 @@ class D3Evaluations(unittest.TestCase):
         self.assertEqual(set(reviews['cases']),set(COVERAGE['d3_cases']))
         for case in COVERAGE['d3_cases']:
             with self.subTest(case=case):
-                manifest=json.loads((EVAL/'recordings'/case/'recording.json').read_text())
+                manifest=json.loads((EVAL/'recordings'/case/'recording.json').read_text(encoding='utf-8'))
                 review=reviews['cases'][case]
                 self.assertEqual(review['status'],'pass-in-scope')
                 self.assertEqual(review['input_sha256'],manifest['case_input_sha256'])
@@ -78,7 +78,7 @@ class D3Evaluations(unittest.TestCase):
                     self.assertTrue(name.startswith('.agents/skills/_rw-runtime/'))
                     self.assertEqual(sha(ROOT/resource['source_path']), resource['sha256'])
                     self.assertEqual(resource['sha256'], review['artifact_binding']['reviewed_runtime_resource_sha256'][name])
-        scenarios=json.loads((ROOT/'design/scenarios.json').read_text())['cases']
+        scenarios=json.loads((ROOT/'design/scenarios.json').read_text(encoding='utf-8'))['cases']
         # D3 owns its frozen original scenarios. Later suites must account for
         # additions in their own coverage, without rewriting this old review.
         self.assertLessEqual(set(COVERAGE['original_scenarios']),{item['id'] for item in scenarios})
@@ -86,9 +86,9 @@ class D3Evaluations(unittest.TestCase):
             self.assertEqual(item['status'],'pass-in-scope')
             if item['phase']=='d3':self.assertIn(item['case_id'],reviews['cases'])
             else:
-                older=json.loads((ROOT/'evals/d2/independent-review.json').read_text())
+                older=json.loads((ROOT/'evals/d2/independent-review.json').read_text(encoding='utf-8'))
                 self.assertEqual(older['cases'][item['case_id']]['status'],'pass')
-        catalog=json.loads((ROOT/'design/catalog.json').read_text())
+        catalog=json.loads((ROOT/'design/catalog.json').read_text(encoding='utf-8'))
         methods={item['id']:item for item in catalog['methods']}
         for method_id,cases in COVERAGE['method_cases'].items():
             self.assertIn(method_id,methods)
@@ -97,7 +97,7 @@ class D3Evaluations(unittest.TestCase):
             self.assertTrue(cases)
             for case in cases:
                 phase,identifier=case.split(':',1) if ':' in case else ('d3',case)
-                manifest=json.loads((ROOT/'evals'/phase/'recordings'/identifier/'recording.json').read_text())
+                manifest=json.loads((ROOT/'evals'/phase/'recordings'/identifier/'recording.json').read_text(encoding='utf-8'))
                 bindings={entry['record']['method_id'] for entry in manifest['records']
                           if entry['kind']=='method-binding'}
                 self.assertIn(method['id'],bindings,case+' does not apply this method')
@@ -114,7 +114,7 @@ class D3Evaluations(unittest.TestCase):
                 output=self.base/(case+'-rerun')
                 arguments=[str(value).replace('{OUTPUT}',str(output)) for value in plan['arguments']]
                 command=[sys.executable,'-B',str(project/plan['script']),*arguments]
-                completed=subprocess.run(command,cwd=project,text=True,capture_output=True,timeout=10,
+                completed=subprocess.run(command,cwd=project,text=True, encoding='utf-8',capture_output=True,timeout=10,
                                          env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'))
                 self.assertEqual(completed.returncode,plan['expected_exit'],completed.stdout+completed.stderr)
                 result_path=Path(str(plan['result']).replace('{PROJECT}',str(project)).replace('{OUTPUT}',str(output)))

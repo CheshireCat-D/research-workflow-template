@@ -83,7 +83,7 @@ class VariantEvidence(unittest.TestCase):
 
     def test_source_cli_and_generated_catalog_expose_the_same_guidance_with_distinct_evidence(self):
         result = subprocess.run([sys.executable, '-B', str(ROOT/'tools/research.py'), 'options'],
-                                capture_output=True, text=True, check=True,
+                                capture_output=True, text=True, encoding='utf-8', check=True,
                                 env=dict(os.environ, PYTHONDONTWRITEBYTECODE='1'))
         source = json.loads(result.stdout)
         self.assertTrue(source['read_only'])

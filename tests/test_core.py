@@ -16,6 +16,7 @@ import tempfile
 import unittest
 from contextlib import contextmanager
 from unittest import mock
+from platform_support import symlink_or_skip
 
 
 REPOSITORY = Path(__file__).resolve().parents[1]
@@ -52,7 +53,7 @@ class CoreCLITests(unittest.TestCase):
                     "--discipline", "natural-sciences", "--method", "formal-theory")
 
     def invoke(self, *args, expected=0, cli=CLI, env=None, input_text=None):
-        proc = subprocess.run([sys.executable, "-I", "-B", str(cli), *map(str, args)],
+        proc = subprocess.run([sys.executable, "-X", "utf8", "-I", "-B", str(cli), *map(str, args)],
                               cwd=self.base, capture_output=True, text=True,
                               encoding="utf-8", timeout=20, env=env, input=input_text)
         self.assertEqual(proc.returncode, expected, (proc.args, proc.stdout, proc.stderr))
@@ -117,7 +118,7 @@ class CoreCLITests(unittest.TestCase):
     def test_initialize_unicode_neutral_and_new_project_files(self):
         for path in ("project.json", "PROJECT.md", "records/registry.json", ".research/write.lock", ".gitignore"):
             self.assertTrue((self.project / path).is_file(), path)
-        config = json.loads((self.project / "project.json").read_text())
+        config = json.loads((self.project / "project.json").read_text(encoding='utf-8'))
         self.assertEqual(config["title"], "合成研究问题")
         self.assertIsNone(config["deliverable"]["venue"])
         self.assertEqual(config["deliverable"]["contribution_benchmarks"], [])
@@ -139,7 +140,7 @@ class CoreCLITests(unittest.TestCase):
                 target = self.base / discipline
                 self.invoke("init", "--output", target, "--title", "Synthetic question", "--discipline", discipline,
                             "--method", method, "--mode", mode, "--language", "en")
-                config = json.loads((target / "project.json").read_text())
+                config = json.loads((target / "project.json").read_text(encoding='utf-8'))
                 self.assertEqual(config["disciplines"], [discipline])
                 self.assertEqual(config["methods"], [method])
                 self.assertEqual(config["workflow_mode"], mode)
@@ -160,7 +161,7 @@ class CoreCLITests(unittest.TestCase):
     def test_initialization_refuses_dangling_symlink(self):
         target = self.base / "missing-target"
         link = self.base / "dangling"
-        link.symlink_to(target, target_is_directory=True)
+        symlink_or_skip(self, link, target, target_is_directory=True)
         self.invoke("init", "--output", link, "--title", "No overwrite", expected=2)
         self.assertTrue(link.is_symlink())
         self.assertFalse(target.exists())
@@ -238,16 +239,16 @@ class CoreCLITests(unittest.TestCase):
     def test_unsafe_local_paths_and_symlinks_cannot_escape(self):
         outside = self.base / "outside.txt"
         outside.write_text("protected", encoding="utf-8")
-        (self.project / "linked.txt").symlink_to(outside)
+        symlink_or_skip(self, self.project / "linked.txt", outside)
         for path in (str(outside), "../outside.txt", "linked.txt"):
             with self.subTest(path=path):
                 data = self.local()
                 data["location"]["path"] = path
                 self.no_mutation("evidence", data)
-        (self.project / "linked-directory").symlink_to(self.base, target_is_directory=True)
+        symlink_or_skip(self, self.project / "linked-directory", self.base, target_is_directory=True)
         data["location"]["path"] = "linked-directory/outside.txt"
         self.no_mutation("evidence", data)
-        self.assertEqual(outside.read_text(), "protected")
+        self.assertEqual(outside.read_text(encoding='utf-8'), "protected")
 
     def test_internal_metadata_cannot_be_its_own_evidence_or_artifact(self):
         for path in ("project.json", "records/registry.json", ".research/write.lock"):
@@ -262,7 +263,7 @@ class CoreCLITests(unittest.TestCase):
 
     def test_internal_file_hardlinks_cannot_be_registered_as_research(self):
         (self.project / '.research/nested').mkdir()
-        (self.project / '.research/nested/state.json').write_text('{}\n')
+        (self.project / '.research/nested/state.json').write_text('{}\n', encoding='utf-8')
         for number, protected in enumerate(('project.json', 'records/registry.json',
                                              '.research/write.lock', '.research/nested/state.json')):
             alias = f'notes/internal-alias-{number}.txt'
@@ -284,7 +285,7 @@ class CoreCLITests(unittest.TestCase):
                     'description': 'test', 'path': alias})
             else:
                 target.parent.mkdir(exist_ok=True)
-                target.write_text('A distinct file on a case-sensitive filesystem.\n')
+                target.write_text('A distinct file on a case-sensitive filesystem.\n', encoding='utf-8')
                 self.register('artifact', {'id': 'F' + str(number), 'type': 'test',
                     'description': 'distinct research file', 'path': alias})
         self.assertTrue(self.check()['passed'])
@@ -295,13 +296,14 @@ class CoreCLITests(unittest.TestCase):
         os.link(self.project / 'project.json', self.project / alias)
         registry = self.registry()
         registry['records']['evidence']['E1']['data']['location']['path'] = alias
-        (self.project / 'records/registry.json').write_text(json.dumps(registry))
+        (self.project / 'records/registry.json').write_text(json.dumps(registry), encoding='utf-8')
         before = snapshot(self.project)
         for command in ('check', 'resume'):
             report = self.invoke(command, '--root', self.project, expected=2)
             self.assertFalse(report['passed'])
             self.assertEqual(snapshot(self.project), before)
 
+    @unittest.skipUnless(os.name == 'posix', 'POSIX RLIMIT_NOFILE; native Windows handle traversal is tested separately')
     def test_wide_internal_state_is_read_only_under_a_small_descriptor_limit(self):
         import resource
         hard = resource.getrlimit(resource.RLIMIT_NOFILE)[1]
@@ -314,9 +316,9 @@ class CoreCLITests(unittest.TestCase):
                    'resource.setrlimit(resource.RLIMIT_NOFILE, '
                    '(64, resource.getrlimit(resource.RLIMIT_NOFILE)[1])); '
                    'sys.argv=sys.argv[1:]; runpy.run_path(sys.argv[0],run_name="__main__")')
-        result = subprocess.run([sys.executable, '-I', '-B', '-c', wrapper,
+        result = subprocess.run([sys.executable, '-X', 'utf8', '-I', '-B', '-c', wrapper,
                                  str(CLI), 'check', '--root', str(self.project)],
-                                cwd=self.base, text=True, capture_output=True, timeout=20)
+                                cwd=self.base, text=True, encoding='utf-8', capture_output=True, timeout=20)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertEqual(result.stderr, '')
         report = json.loads(result.stdout)
@@ -329,7 +331,7 @@ class CoreCLITests(unittest.TestCase):
         self.register("evidence", evidence)
         self.register("activity", self.activity(status="done", inputs=["evidence:E1"]))
         self.register("activity", self.activity("A2", status="done", depends_on=["A1"]))
-        (self.project / "notes/data.txt").write_text("synthetic observation 2\n")
+        (self.project / "notes/data.txt").write_text("synthetic observation 2\n", encoding='utf-8')
         report = self.check(expected=1)
         self.assert_stale(report, "A1", "A2")
         self.assertIn("file_changed", {row["code"] for row in report["findings"]})
@@ -396,8 +398,8 @@ class CoreCLITests(unittest.TestCase):
             report = self.invoke(command, "--root", self.project)
             self.assertTrue(report["read_only"])
             self.assertEqual(snapshot(self.project), before)
-        proc = subprocess.run([sys.executable, "-I", "-B", str(CLI), "resume", "--root", str(self.project), "--format", "markdown"],
-                              capture_output=True, text=True, timeout=20)
+        proc = subprocess.run([sys.executable, "-X", "utf8", "-I", "-B", str(CLI), "resume", "--root", str(self.project), "--format", "markdown"],
+                              capture_output=True, text=True, encoding='utf-8', timeout=20)
         self.assertEqual(proc.returncode, 0, proc.stderr)
         self.assertTrue(proc.stdout.startswith("# Research recovery"))
         self.assertEqual(snapshot(self.project), before)
@@ -431,11 +433,11 @@ class CoreCLITests(unittest.TestCase):
         self.register("evidence", self.local())
         self.invoke("checkpoint", "--root", self.project, "--next-action", "检查变化")
         config_path = self.project / "project.json"
-        config = json.loads(config_path.read_text())
+        config = json.loads(config_path.read_text(encoding='utf-8'))
         config["title"] = "修订后的合成问题"
         config_path.write_text(json.dumps(config, ensure_ascii=False), encoding="utf-8")
         self.register("statement", self.statement("S2"))
-        (self.project / "notes/data.txt").write_text("different synthetic data")
+        (self.project / "notes/data.txt").write_text("different synthetic data", encoding='utf-8')
         before = snapshot(self.project)
         report = self.invoke("resume", "--root", self.project, expected=1)
         self.assertTrue(report["needs_review"])
@@ -454,7 +456,7 @@ class CoreCLITests(unittest.TestCase):
                     '{"id":']
         for text in payloads:
             path = self.inputs / "invalid.json"
-            path.write_text(text)
+            path.write_text(text, encoding='utf-8')
             before = snapshot(self.project)
             self.invoke("register", "--root", self.project, "--kind", "statement", "--file", path, expected=2)
             self.assertEqual(snapshot(self.project), before)
@@ -481,7 +483,7 @@ class CoreCLITests(unittest.TestCase):
         self.local(filename="artifacts/output.txt")
         self.register("artifact", {"id": "F1", "type": "note", "description": "合成产物", "path": "artifacts/output.txt"})
         self.register("activity", self.activity(status="done", outputs=["artifact:F1"]))
-        (self.project / "artifacts/output.txt").write_text("changed artifact")
+        (self.project / "artifacts/output.txt").write_text("changed artifact", encoding='utf-8')
         report = self.check(expected=1)
         self.assert_stale(report, "A1")
         self.assertTrue(any(row.get("record") == "artifact:F1" and row["code"] == "file_changed" for row in report["findings"]))
@@ -490,9 +492,9 @@ class CoreCLITests(unittest.TestCase):
         commands = []
         for identifier in ("S1", "S2"):
             path = self.inputs / (identifier + ".json")
-            path.write_text(json.dumps(self.statement(identifier)))
-            commands.append([sys.executable, "-I", "-B", str(CLI), "register", "--root", str(self.project), "--kind", "statement", "--file", str(path)])
-        procs = [subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True) for command in commands]
+            path.write_text(json.dumps(self.statement(identifier)), encoding='utf-8')
+            commands.append([sys.executable, "-X", "utf8", "-I", "-B", str(CLI), "register", "--root", str(self.project), "--kind", "statement", "--file", str(path)])
+        procs = [subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8') for command in commands]
         retry = []
         successful = set()
         for identifier, command, proc in zip(("S1", "S2"), commands, procs):
@@ -509,7 +511,7 @@ class CoreCLITests(unittest.TestCase):
         self.assertTrue(successful)
         self.assertEqual(set(self.registry()["records"]["statements"]), successful)
         for command in retry:
-            result = subprocess.run(command, capture_output=True, text=True, timeout=20)
+            result = subprocess.run(command, capture_output=True, text=True, encoding='utf-8', timeout=20)
             self.assertEqual(result.returncode, 0, (result.stdout, result.stderr))
             self.assertTrue(json.loads(result.stdout)["registered"])
         self.assertEqual(set(self.registry()["records"]["statements"]), {"S1", "S2"})
@@ -527,8 +529,8 @@ class CoreCLITests(unittest.TestCase):
         shutil.move(str(self.project), moved_project)
         empty_home = self.base / "empty-home"
         empty_home.mkdir()
-        env = {key: value for key, value in os.environ.items() if key in ("PATH", "SYSTEMROOT", "LANG", "LC_ALL", "TMPDIR")}
-        env["HOME"] = str(empty_home)
+        env = {key: value for key, value in os.environ.items() if key.upper() in ("PATH", "SYSTEMROOT", "WINDIR", "LANG", "LC_ALL", "TMPDIR", "TMP", "TEMP")}
+        env["HOME"] = env["USERPROFILE"] = str(empty_home)
         before = snapshot(moved_project)
         report = self.invoke("resume", "--root", moved_project, cli=moved_repository / "tools/research.py", env=env)
         self.assertEqual(report["checkpoint"]["status"], "current")
@@ -597,7 +599,7 @@ class CoreCLITests(unittest.TestCase):
     def test_stdin_rejects_duplicate_keys_nonfinite_and_invalid_utf8_without_writes(self):
         before = snapshot(self.project)
         for raw in (b'{"id":"S1","id":"S2"}', b'{"id":NaN}', b'\xff'):
-            result = subprocess.run([sys.executable, "-I", "-B", str(CLI), "register",
+            result = subprocess.run([sys.executable, "-X", "utf8", "-I", "-B", str(CLI), "register",
                                      "--root", str(self.project), "--kind", "statement", "--file", "-"],
                                     input=raw, capture_output=True, timeout=20)
             self.assertEqual(result.returncode, 2, result.stdout)
@@ -628,7 +630,7 @@ class CoreCLITests(unittest.TestCase):
             {"kind": "activity", "record": self.activity(status="done", inputs=["statement:S1", "evidence:E1"])},
         ]
         path = self.inputs / "batch.json"
-        path.write_text(json.dumps(operations, ensure_ascii=False))
+        path.write_text(json.dumps(operations, ensure_ascii=False), encoding='utf-8')
         result = self.invoke("register-batch", "--root", self.project, "--file", path)
         self.assertEqual(result["registered_count"], 5)
         self.assertEqual([entry["revision"] for entry in result["records"]], [1, 2, 3, 4, 5])
@@ -701,14 +703,14 @@ class CoreCLITests(unittest.TestCase):
     def test_configure_updates_supported_fields_and_stales_only_configuration_checkpoint(self):
         self.invoke("checkpoint", "--root", self.project, "--next-action", "人工复核方法选择")
         registry_bytes = (self.project / "records/registry.json").read_bytes()
-        initial = json.loads((self.project / "project.json").read_text())
+        initial = json.loads((self.project / "project.json").read_text(encoding='utf-8'))
         report = self.invoke("configure", "--root", self.project, "--add-discipline", "engineering",
                              "--add-method", "computational", "--mode", "reproducible",
                              "--venue", "Example journal, policy not assessed",
                              "--governance-applicability", "applicable",
                              "--add-governance-requirement", "Verify permission before accessing restricted material")
         self.assertTrue(report["configured"])
-        config = json.loads((self.project / "project.json").read_text())
+        config = json.loads((self.project / "project.json").read_text(encoding='utf-8'))
         self.assertEqual(config["project_id"], initial["project_id"])
         self.assertEqual(config["title"], initial["title"])
         self.assertEqual(config["workflow_mode"], "reproducible")
@@ -751,8 +753,8 @@ class CoreCLITests(unittest.TestCase):
         self.register("activity", self.activity(status="in-progress"))
         def markdown(expected):
             before = snapshot(self.project)
-            result = subprocess.run([sys.executable, "-I", "-B", str(CLI), "resume", "--root", str(self.project),
-                                     "--format", "markdown"], text=True, capture_output=True, timeout=20)
+            result = subprocess.run([sys.executable, "-X", "utf8", "-I", "-B", str(CLI), "resume", "--root", str(self.project),
+                                     "--format", "markdown"], text=True, encoding='utf-8', capture_output=True, timeout=20)
             self.assertEqual(result.returncode, expected, result.stdout + result.stderr)
             self.assertEqual(result.stderr, "")
             self.assertEqual(snapshot(self.project), before)
@@ -777,10 +779,10 @@ class CoreCLITests(unittest.TestCase):
             if missing:
                 material.unlink()
             else:
-                material.write_text("intentionally changed synthetic material")
+                material.write_text("intentionally changed synthetic material", encoding='utf-8')
             before = snapshot(self.project)
-            result = subprocess.run([sys.executable, "-I", "-B", str(CLI), "resume", "--root", str(self.project),
-                                     "--format", "markdown"], text=True, capture_output=True, timeout=20)
+            result = subprocess.run([sys.executable, "-X", "utf8", "-I", "-B", str(CLI), "resume", "--root", str(self.project),
+                                     "--format", "markdown"], text=True, encoding='utf-8', capture_output=True, timeout=20)
             self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
             for expected in (code, "evidence:E1", "notes/data.txt", "activity_stale", "checkpoint_stale", "A1", "比较合成材料", "stale", "Needs review: true"):
                 self.assertIn(expected, result.stdout)

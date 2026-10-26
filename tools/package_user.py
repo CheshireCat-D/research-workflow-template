@@ -21,7 +21,7 @@ from core.storage import CoreError, ProjectFiles
 from tools.check_core import payload_link_errors
 from tools.release_package import (
     MAX_FILE, MAX_TOTAL, PATH_PATTERN, TOKEN_PATTERN,
-    ReleaseError, digest, encoded, safe_name,
+    ReleaseError, digest, encoded, safe_name, exclusive_output,
 )
 
 PROFILE = 'user-runtime'
@@ -34,7 +34,7 @@ GUIDES = {
 }
 CORE_FILES = (
     '__init__.py', 'bundle.py', 'cli.py', 'model.py', 'project.py', 'storage.py',
-    'protocol.md', 'skill-bridge.md',
+    'windows_storage.py', 'protocol.md', 'skill-bridge.md',
 )
 SCHEMAS = (
     'activity', 'artifact', 'decision', 'evidence', 'method-binding',
@@ -86,12 +86,15 @@ def readme(english=False):
                 '[中文](README.md) · [English user guide](USER_GUIDE.en.md) · '
                 '[中文使用说明](中文介绍与使用说明.md)\n\n'
                 'The current local runtime contains nine research skills, method guidance, '
-                'and standard-library Python tools. Use Python 3.11+ on macOS or Linux.\n\n'
+                'and standard-library Python tools. Use Python 3.11+ on macOS, Linux or Windows.\n\n'
                 '```sh\n'
                 "python3 tools/research.py init --output ../my-research --title 'My research question'\n"
                 'python3 tools/connect_skills.py install --root ../my-research\n'
                 'python3 tools/research.py resume --root ../my-research\n'
                 '```\n\n'
+                'In Windows PowerShell, replace `python3` with `py -3` '
+                '(or `python` if that is your Python 3.11+ command). Use a local '
+                'project folder; close other writers before upgrading skills.\n\n'
                 'Choose a new output directory, then open that project in a compatible skill host. '
                 'The guide covers daily use, records and upgrades. The '
                 '[source repository](' + SOURCE_URL + ') provides development checks and '
@@ -103,12 +106,14 @@ def readme(english=False):
             '[English](README.en.md) · [中文介绍与使用说明](中文介绍与使用说明.md) · '
             '[English user guide](USER_GUIDE.en.md)\n\n'
             '当前用户包包含九个科研技能、方法指导与标准库 Python 工具。'
-            '需要 Python 3.11 或更新版本，以及 macOS 或 Linux。\n\n'
+            '需要 Python 3.11 或更新版本，支持 macOS、Linux 与 Windows。\n\n'
             '```sh\n'
             "python3 tools/research.py init --output ../my-research --title '我的研究问题'\n"
             'python3 tools/connect_skills.py install --root ../my-research\n'
             'python3 tools/research.py resume --root ../my-research\n'
             '```\n\n'
+            'Windows PowerShell 中将 `python3` 换成 `py -3`，或已配置为 '
+            'Python 3.11+ 的 `python`。使用本地项目目录，技能升级前先暂停其他写入者。\n\n'
             '将输出路径换成尚不存在的新目录，再在兼容的技能宿主中打开新项目。'
             '指南说明日常使用、登记与升级。开发检查和评估证据另见'
             '[源码仓库](' + SOURCE_URL + ')；用户包不携带评估案例、开发日志或旧版。\n\n'
@@ -227,7 +232,7 @@ def build(output, root=ROOT):
     output = Path(output)
     if not output.parent.is_dir():
         raise ReleaseError('Archive output parent must already exist')
-    fd = os.open(output, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o600)
+    fd = exclusive_output(output)
     try:
         with os.fdopen(fd, 'wb') as stream:
             with zipfile.ZipFile(stream, 'w', compression=zipfile.ZIP_STORED) as archive:
@@ -255,6 +260,7 @@ def _read_archive(path):
         infos = archive.infolist()
         names = [safe_name(info.filename) for info in infos]
         if (not 1 <= len(names) <= 4096 or len(names) != len(set(names)) or
+                len({name.casefold() for name in names}) != len(names) or
                 sum(info.file_size for info in infos) > MAX_TOTAL or
                 any(info.file_size > MAX_FILE or info.flag_bits & 1 or info.is_dir() or
                     stat.S_ISLNK(info.external_attr >> 16) for info in infos)):
@@ -318,16 +324,17 @@ def smoke(path):
         home, scratch = base / 'home', base / 'tmp'
         home.mkdir()
         scratch.mkdir()
-        environment = dict(os.environ, HOME=str(home), TMPDIR=str(scratch),
+        environment = dict(os.environ, HOME=str(home), USERPROFILE=str(home),
+                           TMPDIR=str(scratch), TMP=str(scratch), TEMP=str(scratch),
                            PYTHONDONTWRITEBYTECODE='1')
 
         def invoke(script, *arguments, record=None):
             nonlocal commands
             commands += 1
-            result = subprocess.run([sys.executable, '-I', '-B', str(script),
+            result = subprocess.run([sys.executable, '-X', 'utf8', '-I', '-B', str(script),
                                      *map(str, arguments)], cwd=base, env=environment,
                                     input=json.dumps(record) if record is not None else None,
-                                    capture_output=True, text=True, timeout=30)
+                                    capture_output=True, text=True, encoding='utf-8', timeout=30)
             if result.returncode:
                 raise ReleaseError('User runtime command failed: ' + result.stdout + result.stderr)
             report = json.loads(result.stdout)

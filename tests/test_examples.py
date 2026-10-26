@@ -21,7 +21,7 @@ class OnboardingExamples(unittest.TestCase):
 
     def command(self, *args, expected=0):
         result = subprocess.run([sys.executable, '-B', str(CLI), *map(str, args)],
-                                cwd=self.work, text=True, capture_output=True, timeout=15)
+                                cwd=self.work, text=True, encoding='utf-8', capture_output=True, timeout=15)
         self.assertEqual(expected, result.returncode, result.stdout + result.stderr)
         return json.loads(result.stdout)
 
@@ -43,7 +43,7 @@ class OnboardingExamples(unittest.TestCase):
         self.initialize('natural-sciences', 'formal-theory', 'finite-observations.txt')
         records = {}
         for kind in ('statement', 'evidence', 'relation', 'activity'):
-            records[kind] = json.loads((EXAMPLES / ('math-' + kind + '.json')).read_text())
+            records[kind] = json.loads((EXAMPLES / ('math-' + kind + '.json')).read_text(encoding='utf-8'))
             self.register(kind, records[kind])
         activity = records['activity']['id']
         self.command('checkpoint', '--root', self.project, '--activity', activity,
@@ -52,7 +52,7 @@ class OnboardingExamples(unittest.TestCase):
         self.assertFalse(initial['needs_review'])
         self.assertEqual('not-assessed', initial['scientific_validity'])
         path = self.project / records['evidence']['location']['path']
-        path.write_text(path.read_text() + '\nSynthetic onboarding revision; no new mathematical result.\n')
+        path.write_text(path.read_text(encoding='utf-8') + '\nSynthetic onboarding revision; no new mathematical result.\n', encoding='utf-8')
         drift = self.command('check', '--root', self.project, expected=1)
         self.assertEqual('stale', drift['activities'][0]['effective_status'])
         self.register('evidence', records['evidence'], version=1)
@@ -67,7 +67,7 @@ class OnboardingExamples(unittest.TestCase):
 
     def test_fictional_history_onboarding_preserves_competing_interpretations(self):
         self.initialize('humanities', 'historical-interpretive', 'fictional-excerpts.txt')
-        rows = json.loads((EXAMPLES / 'history-records.json').read_text())
+        rows = json.loads((EXAMPLES / 'history-records.json').read_text(encoding='utf-8'))
         for row in rows:
             self.register(row['kind'], row['record'])
         activities = [row['record'] for row in rows if row['kind'] == 'activity']

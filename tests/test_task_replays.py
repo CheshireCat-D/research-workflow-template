@@ -38,7 +38,7 @@ class RecordedResearchTasks(unittest.TestCase):
 
     def invoke(self, script, *arguments, expected=0):
         result = subprocess.run([sys.executable, '-B', str(script), *map(str, arguments)],
-                                cwd=ROOT, text=True, capture_output=True, timeout=30,
+                                cwd=ROOT, text=True, encoding='utf-8', capture_output=True, timeout=30,
                                 env=dict(os.environ, PYTHONDONTWRITEBYTECODE='1'))
         self.assertEqual(result.returncode, expected, result.stdout + result.stderr)
         return json.loads(result.stdout)
@@ -99,7 +99,7 @@ class RecordedResearchTasks(unittest.TestCase):
         fresh = self.base / 'fresh-computation'
         completed = subprocess.run([sys.executable, '-B', str(project / 'artifacts/run.py'),
                                     '--output-dir', str(fresh)], cwd=self.base,
-                                   text=True, capture_output=True, timeout=10,
+                                   text=True, encoding='utf-8', capture_output=True, timeout=10,
                                    env=dict(os.environ, PYTHONDONTWRITEBYTECODE='1'))
         self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
         result = json.loads((fresh / 'results.json').read_text(encoding='utf-8'))
@@ -146,7 +146,7 @@ class RecordedResearchTasks(unittest.TestCase):
         project, _ = self.assemble('proof')
         expected = json.loads((project / 'notes/input-check.json').read_text(encoding='utf-8'))
         completed = subprocess.run([sys.executable, '-B', str(project / 'code/check_inputs.py')],
-                                   cwd=self.base, text=True, capture_output=True, timeout=10,
+                                   cwd=self.base, text=True, encoding='utf-8', capture_output=True, timeout=10,
                                    env=dict(os.environ, PYTHONDONTWRITEBYTECODE='1'))
         self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
         self.assertEqual(json.loads(completed.stdout), expected)

@@ -1,11 +1,17 @@
 {
   "excluded_self": "provenance/file-origins.json",
   "files": {
+    ".gitattributes": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "98a5dded78eaa323cdc8dffbfb91560d8e80f89351e3fe59dbf8ada3683d8cfa"
+    },
     ".github/workflows/check.yml": {
       "classification": "original-workflow-referencing-pinned-external-actions",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "610f5cdb6ec22d2e7639573f33c759621943e990621354248753b68ee8ad96df"
+      "sha256": "4c3fde1baa3ca69c82d0044debc86d4e64805f898139b6fca46671cf36ad8943"
     },
     ".gitignore": {
       "classification": "original-project-content",
@@ -35,13 +41,13 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "d27418085352ce0e5ec279ab6a08c1c9edeb7784adae1b428c5445f347311a0e"
+      "sha256": "218ea94234310d097438368e0acac04e5eea038c09b8b5db9e62b584b4c6ccde"
     },
     "README.md": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "1355aff4a4e74d4c337d625f640388f4a1f2abce5e493509a0e7282d78249071"
+      "sha256": "289c59724bb3c63e443e619815f8ecd6c7a2f1987946e66e59a034c8482b5df9"
     },
     "SECURITY.md": {
       "classification": "original-project-content",
@@ -53,7 +59,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "aa2ff9eb48f81540aa280f868e9174597ea8b04f4fc2f0745afd22c026f6e397"
+      "sha256": "fb270e3883b5db33dc4677b0caa25049f9a32972ae3789cbf7901a38ca233bf1"
     },
     "core/__init__.py": {
       "classification": "original-project-content",
@@ -65,13 +71,13 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "c2a43827a7dacb0d2368cd1c7fcfe24b2ebf04b835af125e1907f76b61860d58"
+      "sha256": "938b45333513808cc70bb48defa03efd57e5084092b4f7c868101d4b25607aa0"
     },
     "core/cli.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "427170f1361193e339f957bf33c0a4af5afaef41a50d76000cf6a0caef67a81c"
+      "sha256": "c5fb1241524222447655127b3796e45ef80ea50ce1539a58881098651d567548"
     },
     "core/model.py": {
       "classification": "original-project-content",
@@ -89,7 +95,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "791944f0e43f30ce7e644aac7d875507ed2e801e29694a3745844705e4ad276d"
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9"
     },
     "core/schemas/activity.schema.json": {
       "classification": "original-project-content",
@@ -161,7 +167,13 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "344a3c15fa7c4ded67a90fb0cf715d9947a714942f155673e45b6420a10bbb74"
+      "sha256": "dc84e24536f6d3dc93762c414b334ac24765cbad41fc48bda05f5626a577c9d8"
+    },
+    "core/windows_storage.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "bce03e399cfad2802b277d8f095955ba6648ef7a981d9da159e63195c0b30246"
     },
     "design/catalog.json": {
       "classification": "original-project-content",
@@ -221,25 +233,25 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "ff3d6a4547bb953b48df6bf78a255479c20bb3753cc8b354fa7b9b89873f1e80"
+      "sha256": "fcc1591f774ef9f2db2893dd2d23e76022e2916b99aed6366fa50b509184ee91"
     },
     "docs/08-skills-and-methods.md": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "03ecc81577414896b40605144a416fe1c5550a3a91c1fd81d1cb3f12dd0c86e6"
+      "sha256": "299eaeb0030b9c62366536a5b7fce328ea80bb9105dc31ca183b8d3785367d5c"
     },
     "docs/10-release-readiness.md": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "9d9b853537ef8c09ee2dda117d8a46a9a0c3295b1c96490dc276e9c7593d3ece"
+      "sha256": "ea5e9d4131815f35bd9e7452fae89233dcdc553e3c30aaf486ee184f15ce7a83"
     },
     "docs/11-linux-validation.md": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "c741a654894d1b506de55aef1a887d219d7acbe5999a527755ba84590dd206d4"
+      "sha256": "b0fb43bdb801dd31dc83af873ffd44c724d4010884326b3044f7eb87ee722ea4"
     },
     "docs/12-skills-selection.md": {
       "classification": "original-project-content",
@@ -251,13 +263,13 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "b9f4b6afa4f1b84f94af797064a4fb87beb7a0b40e6f467038062dcebc4fcc16"
+      "sha256": "49c8ecb698dceb59fb411701a57a3a331d0985c30bc6f0d91d529e96adc3ce0c"
     },
     "docs/user-package-guide.md": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "bd513ffd13f1dcf007f5e6a6a7868044acc510004586dad5c95e989d157cf422"
+      "sha256": "ff7121e3940f73d0c4638b9b0dd036e1a44bdb027f15fe739ed4369a88f0228d"
     },
     "evals/current/README.md": {
       "classification": "original-project-content",
@@ -2819,7 +2831,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "900d651455ce1e8ba9f8ace65200d512f1a19bf47c40dd488cb4cab0b878b46c"
+      "sha256": "70312b5f148bd7df8569b49a65386c26a1c8f3b9be743a1ffb29b754a1a08e28"
     },
     "examples/synthetic/fictional-excerpts.txt": {
       "classification": "original-synthetic-input",
@@ -3103,101 +3115,125 @@
       "origin": "authored-for-this-independent-template",
       "sha256": "47718f70cced7c2b270b297eaf9520cd3033d36c76c91f88ebf752d638e13223"
     },
+    "tests/platform_support.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "d43188ecd32ad371053b8c05ac5fe8136ac813e05712403785919568251f3325"
+    },
     "tests/replay_support.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "6656a19eff0455089818789c02a0b03607ac434ee2bc9c115fbc854940b49de6"
+      "sha256": "4e751b7c29899ce79a9b3bf1c374c7242b7dcaa25da5e56cf5e01a0e65dc77a6"
     },
     "tests/test_check_runner.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "917e795ec3398f4bca28933e763543043f987532b6c7e8e79d9a7ed0ce717cd9"
+      "sha256": "8b8fba897f4c396c3e70d290c90ab27266564cf95399a67c456eb6142aeee675"
+    },
+    "tests/test_cli_encoding.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "f5cf7f5dd8e74f30da76beb048058bf1a9359ff956fbee0c475770d2d7fbbeb5"
     },
     "tests/test_core.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "f0b85ed8888be60d1b2a6918c4b0f26795cc0919fcec849f3d118227dca1e058"
+      "sha256": "8a8a1f2adda256cc58aaa0901a9e8c6dfe15addc77f0c7aabb7e47474ab8571b"
     },
     "tests/test_d3_evaluations.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "6638760431ad657aa91d574c293759719b7006cb28e0b792ae53bbdd1243b544"
+      "sha256": "f635ae64d3cd6d591d734b143f7b6c0dee69912cfc582b1023d13f959af512ec"
     },
     "tests/test_examples.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "4d5593732cd099a8a3b3826496b319d604c1545870ede1d2849ada870911939a"
+      "sha256": "30f5572c0ac5257260fc67afbd890ad1a63194b4cfa32658bd20efa8b9540fe6"
     },
     "tests/test_figures.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "f6a42a2e9c8aa989457da170af723852b414e4fd764483140bdc366ac464e07b"
+      "sha256": "37a582e68002057bc81314f64137f78a64d99b05c75eea510834d3fbb1658988"
     },
     "tests/test_legal_research.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "899cb12880efef80e0faf5836c5f5e71a14dffae6b120419561cf721c66287c0"
+      "sha256": "339bef7f4c6373e395e40a01adca64d717e96070ae083444931f3743a31be9b6"
     },
     "tests/test_release_package.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "6a746df50d145a372aba5861452b2c9b71a283ca9f375cda9625e2ae0e2986c9"
+      "sha256": "d6fe8419c3739a2476bb17a6d4789c695eb3f5da426674dc228c2e1545da22fe"
     },
     "tests/test_skill_connection.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "bd27b33ce259d7bcca6f4ae20eefadd1a98604e3afb96230175708f591f57c32"
+      "sha256": "e994d961d248df28119438b621cc76aca38be353cd07c8cab195313916ed9b70"
     },
     "tests/test_task_replays.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "8ffbc5ffbf7de9142a1602888f68aa3348ebb4d789a735a24157f294b48ced56"
+      "sha256": "b46d9dc187eb7cd577dd0c811bf4500c437fbe558c60c9268da8110b909126f4"
     },
     "tests/test_user_package.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "50338383f754b03758630cc56928be5aef2a7aede84ced5b4d08e5580458b3c3"
+      "sha256": "79c7ebed7396d2e38426324a1a49c34c61623a47266c36b1a9d5ef904eab3f08"
     },
     "tests/test_variant_evidence.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "c29a157019b297a7bdf5e5e56f4e4813ec93e87678ff6e9cfec233938b86ffe1"
+      "sha256": "009343f4a95d4a4b4e1e2dbaaf7937ab74d6a31ab688e5e6cdef377960456de9"
+    },
+    "tests/test_windows_bundle.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4c336979ec5aac3dc88d74fa551e029163af60866770fdaba80b4f96fe9cb533"
+    },
+    "tests/test_windows_storage.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "56d690af5e0654ccb729c6f0e641a22246e0dc46967e50b744e4ce1bf233bf21"
     },
     "tools/check_core.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "720dd335bfee95387351c7e39fe602e73676db49118ede5295bdf6349f0ebd57"
+      "sha256": "48569bfb5ff1e2c92426ed9f5e38ad56dca5ca0c5223a68660e66ea4e7df9019"
     },
     "tools/connect_skills.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "d56b58c2564e965c3e56254b91d36022d1571a02cec4d0e2f1412ecdea36f133"
+      "sha256": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd"
     },
     "tools/package_user.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "35da3b7bb86ded343061d0c6037370c9bdbda6004244550f02ddf0b1d01b6263"
+      "sha256": "ddeb2b360df4f6d0bebcb6955e31e9769ff2bd639250c527fa8ca6b3552f21fd"
     },
     "tools/release_package.py": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "a10bdd8f11ae3874eed527945e5ee1c08d5988c10f3d7f00443847cd5a8fa655"
+      "sha256": "b2c280d40371e395b62a51eae0d3ff630a4d278ae3d62b895b6256c5ba2e2da3"
     },
     "tools/research.py": {
       "classification": "original-project-content",
@@ -3209,7 +3245,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "5bec1605c506dbfb107b3a864cf4ea525f366354ca813a5be806ef1a4ee5f7e4"
+      "sha256": "ac035c673b7e48d3c64b516f830cd44a6f97e5cf6448c1deb09cf7748b512448"
     }
   },
   "format_version": 1,

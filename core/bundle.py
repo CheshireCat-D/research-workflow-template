@@ -194,8 +194,8 @@ def build_payload(root=None):
         if not (folder / 'SKILL.md').is_file():
             raise CoreError('bundle_source_missing', 'Required skill is missing: ' + skill)
         for path in sorted(folder.rglob('*')):
-            if path.is_symlink():
-                raise CoreError('unsafe_path', 'Skill sources cannot contain symbolic links')
+            if _is_link_path(path):
+                raise CoreError('unsafe_path', 'Skill sources cannot contain links or reparse points')
             if not path.is_file() or '__pycache__' in path.parts:
                 continue
             relative = path.relative_to(root).as_posix()
@@ -211,7 +211,7 @@ def build_payload(root=None):
         'design/catalog.json', 'tools/research.py', 'tools/connect_skills.py',
     ))
     cat = parse_json(_source_bytes(root, 'design/catalog.json'))
-    required = ['core/skill-bridge.md', 'profiles/selection.md',
+    required = ['core/skill-bridge.md', 'core/windows_storage.py', 'profiles/selection.md',
                 'profiles/governance.md', 'profiles/templates/legal-research.md'] + [
         item['implementation']['profile'] for item in cat['methods']
         if item.get('implementation', {}).get('status') == 'guidance-slice'
@@ -235,6 +235,8 @@ def _manifest(payload):
 
 def _exists(parent, name):
     try:
+        if isinstance(parent, Path):
+            return os.stat(parent / name, follow_symlinks=False)
         return os.stat(name, dir_fd=parent, follow_symlinks=False)
     except FileNotFoundError:
         return None
@@ -242,6 +244,13 @@ def _exists(parent, name):
 
 @contextmanager
 def _directory(parent, name):
+    if isinstance(parent, Path):
+        # The owning ProjectFiles context already holds the parent chain.
+        # Keep this child guarded as well while reading/staging its contents.
+        with ProjectFiles(parent) as anchor:
+            with anchor.checked_directory(name) as child:
+                yield child
+        return
     try:
         fd = os.open(name, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=parent)
     except FileNotFoundError:
@@ -254,9 +263,57 @@ def _directory(parent, name):
         os.close(fd)
 
 
+def _is_link(info):
+    return (stat.S_ISLNK(info.st_mode) or
+            bool(getattr(info, 'st_file_attributes', 0) & 0x400))
+
+
+def _is_link_path(path):
+    return _is_link(path.lstat())
+
+
+def _mkdir(parent, name):
+    if isinstance(parent, Path):
+        os.mkdir(parent / name, mode=0o700)
+    else:
+        os.mkdir(name, mode=0o700, dir_fd=parent)
+
+
+def _rename(parent, source, destination):
+    if isinstance(parent, Path):
+        os.rename(parent / source, parent / destination)
+    else:
+        os.rename(source, destination, src_dir_fd=parent, dst_dir_fd=parent)
+
+
+def _sync(parent):
+    # Windows flushes staged files through ProjectFiles.write. It has no
+    # portable directory-fsync equivalent; do not claim power-loss atomicity.
+    if not isinstance(parent, Path):
+        os.fsync(parent)
+
+
+def _remove_tree(parent, name):
+    if isinstance(parent, Path):
+        with _directory(parent, name) as child:
+            if any(kind == 'unsafe' for kind in _walk(child).values()):
+                raise CoreError('unsafe_path', 'Refusing to clean a tree containing reparse points')
+        # Release child handles before deleting it. Python 3.8+ on Windows
+        # removes a junction itself rather than deleting its target contents.
+        shutil.rmtree(parent / name)
+    else:
+        shutil.rmtree(name, dir_fd=parent)
+
+
 def _stage_payload(project, parent, staging, payload, manifest):
     """Fill a directory already created exclusively by the current operation."""
     with _directory(parent, staging) as stage_fd:
+        if isinstance(stage_fd, Path):
+            with ProjectFiles(stage_fd) as staged:
+                for relative, content in payload.items():
+                    staged.write(relative, content)
+                staged.write(MANIFEST, json_bytes(manifest))
+            return
         staged = ProjectFiles.__new__(ProjectFiles)
         staged.fd = os.dup(stage_fd)
         staged.root = project.root / '.agents' / staging
@@ -286,16 +343,16 @@ def install(root):
                 if _exists(parent, name) is not None:
                     raise CoreError('skill_target_exists', 'Refusing to replace existing project .agents/skills')
                 staging = '.rw-skills-' + uuid.uuid4().hex
-                os.mkdir(staging, mode=0o700, dir_fd=parent)
+                _mkdir(parent, staging)
                 try:
                     _stage_payload(project, parent, staging, payload, manifest)
                     if _exists(parent, name) is not None:
                         raise CoreError('skill_target_exists', 'Project .agents/skills appeared during installation')
-                    os.rename(staging, name, src_dir_fd=parent, dst_dir_fd=parent)
-                    os.fsync(parent)
+                    _rename(parent, staging, name)
+                    _sync(parent)
                 finally:
                     if _exists(parent, staging) is not None:
-                        shutil.rmtree(staging, dir_fd=parent)
+                        _remove_tree(parent, staging)
     return {'passed': True, 'installed': True, 'scope': SCOPE,
             'target': BUNDLE_PATH, 'skills': list(SKILLS), 'files': len(payload),
             'payload_sha256': manifest['payload_sha256'], 'global_installation': False,
@@ -334,8 +391,12 @@ def _walk(parent, prefix=''):
     result = {}
     for name in os.listdir(parent):
         relative = prefix + name
-        info = os.stat(name, dir_fd=parent, follow_symlinks=False)
-        if stat.S_ISDIR(info.st_mode):
+        info = _exists(parent, name)
+        if info is None:
+            raise CoreError('concurrent_change', 'A bundle resource disappeared during inventory; retry')
+        if _is_link(info):
+            result[relative] = 'unsafe'
+        elif stat.S_ISDIR(info.st_mode):
             result[relative + '/'] = 'directory'
             with _directory(parent, name) as child:
                 result.update(_walk(child, relative + '/'))
@@ -352,6 +413,11 @@ def _inspect_installed(project):
     """Check one held installed directory, including otherwise-unlisted empty dirs."""
     try:
         with project.parent(BUNDLE_PATH + '/_inventory') as (bundle_fd, _):
+            if isinstance(bundle_fd, Path):
+                identity = bundle_fd.stat(follow_symlinks=False)
+                with ProjectFiles(bundle_fd) as bundle:
+                    manifest = _validate_manifest(parse_json(bundle.read(MANIFEST)))
+                    return _inspect_bundle(bundle, manifest), (identity.st_dev, identity.st_ino)
             identity = os.fstat(bundle_fd)
             bundle = ProjectFiles.__new__(ProjectFiles)
             bundle.fd, bundle.root = os.dup(bundle_fd), project.root / BUNDLE_PATH
@@ -417,7 +483,7 @@ def _require_clean_bundle(project):
 
 def _directory_identity(parent, name):
     info = _exists(parent, name)
-    if info is None or not stat.S_ISDIR(info.st_mode):
+    if info is None or _is_link(info) or not stat.S_ISDIR(info.st_mode):
         raise CoreError('concurrent_change', 'Installed bundle directory changed during upgrade')
     return info.st_dev, info.st_ino
 
@@ -452,7 +518,7 @@ def upgrade(root):
             with project.parent(BUNDLE_PATH) as (parent, name):
                 staging, backup = '.rw-skills-stage-' + uuid.uuid4().hex, '.rw-skills-backup-' + uuid.uuid4().hex
                 published = False
-                os.mkdir(staging, mode=0o700, dir_fd=parent)
+                _mkdir(parent, staging)
                 try:
                     _stage_payload(project, parent, staging, payload, manifest)
                     # Staging may be slow. Recheck edits just before moving the
@@ -464,11 +530,11 @@ def upgrade(root):
                     stage_identity = _directory_identity(parent, staging)
                     if _exists(parent, backup) is not None:
                         raise CoreError('concurrent_change', 'Upgrade backup path already exists; nothing was replaced')
-                    os.rename(name, backup, src_dir_fd=parent, dst_dir_fd=parent)
+                    _rename(parent, name, backup)
                     try:
-                        os.rename(staging, name, src_dir_fd=parent, dst_dir_fd=parent)
+                        _rename(parent, staging, name)
                         published = True
-                        os.fsync(parent)
+                        _sync(parent)
                     except BaseException as exc:
                         restored_old = False
                         try:
@@ -476,14 +542,14 @@ def upgrade(root):
                                 if _directory_identity(parent, name) != stage_identity:
                                     raise CoreError('upgrade_recovery_required',
                                                     'Publication path changed; old bundle retained at .agents/' + backup)
-                                os.rename(name, staging, src_dir_fd=parent, dst_dir_fd=parent)
+                                _rename(parent, name, staging)
                                 published = False
                             if _exists(parent, name) is not None:
                                 raise CoreError('upgrade_recovery_required',
                                                 'Publication path appeared; old bundle retained at .agents/' + backup)
-                            os.rename(backup, name, src_dir_fd=parent, dst_dir_fd=parent)
+                            _rename(parent, backup, name)
                             restored_old = True
-                            os.fsync(parent)
+                            _sync(parent)
                         except CoreError:
                             raise
                         except BaseException as rollback_error:
@@ -494,13 +560,13 @@ def upgrade(root):
                                             'Rollback failed; preserve .agents/' + backup + ' for recovery') from rollback_error
                         raise
                     try:
-                        shutil.rmtree(backup, dir_fd=parent)
+                        _remove_tree(parent, backup)
                     except OSError as exc:
                         raise CoreError('upgrade_cleanup_required',
                                         'New bundle installed; remove the leftover old bundle after review: .agents/' + backup) from exc
                 finally:
                     if _exists(parent, staging) is not None:
-                        shutil.rmtree(staging, dir_fd=parent)
+                        _remove_tree(parent, staging)
                     # If rollback itself fails, keep the backup for explicit
                     # recovery. Never delete the only remaining old copy.
         result['upgraded'] = True

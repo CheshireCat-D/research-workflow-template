@@ -36,6 +36,6 @@ python3 -B tools/package_user.py smoke --archive dist/research-workflow-template
 
 干净用户验收先验证并捕获当前 ZIP 的文件，再写入独立临时目录。空 HOME 下实际运行初始化、技能接入、登记、检查点与恢复；搬迁项目并移走工具包后，用项目副本继续查询与恢复，核对源文件和只读项目的字节及修改时间。缺失资源、坏链接、篡改和混入开发文件由专项测试拒绝。
 
-完整源码归档另由 `tools/release_package.py build/verify` 在临时目录检查，不作为最终用户 ZIP。CI 同时运行完整源码回归、临时源码归档解压检查和用户包构建／验证／干净运行；本地与托管执行按实际 commit 和归档 SHA 分别记录。[Linux复查](11-linux-validation.md)另有说明。Windows写锁不受支持。
+完整源码归档另由 `tools/release_package.py build/verify` 在临时目录检查，不作为最终用户 ZIP。CI 同时运行完整源码回归、临时源码归档解压检查和用户包构建／验证／干净运行；本地与托管执行按实际 commit 和归档 SHA 分别记录。[Linux复查](11-linux-validation.md)另有说明。Windows、macOS 和 Linux 分别在 CI 中运行；工作流配置不等于本次执行已通过，实际结果须绑定到相应提交。
 
 检查通过只说明所声明范围内的工程与登记一致性，不认证研究结论、伦理批准、场所政策或投稿接收，也不表示已经创建、推送或发布GitHub仓库。

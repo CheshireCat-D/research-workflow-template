@@ -10,6 +10,7 @@ import sys
 import tempfile
 import unittest
 from unittest import mock
+from platform_support import symlink_or_skip
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,7 +39,7 @@ class ProjectSkillConnection(unittest.TestCase):
 
     def invoke(self, script, *arguments, expected=0, cwd=None, env=None):
         completed = subprocess.run([sys.executable, '-B', str(script), *map(str, arguments)],
-                                   cwd=cwd or ROOT, text=True, capture_output=True, timeout=30,
+                                   cwd=cwd or ROOT, text=True, encoding='utf-8', capture_output=True, timeout=30,
                                    env=env or dict(os.environ, PYTHONDONTWRITEBYTECODE='1'))
         self.assertEqual(completed.returncode, expected, completed.stdout + completed.stderr)
         return json.loads(completed.stdout)
@@ -75,7 +76,7 @@ class ProjectSkillConnection(unittest.TestCase):
                 self.assertFalse((self.project / '.agents').exists())
 
     def test_install_connects_all_skills_without_touching_existing_project_files(self):
-        (self.project / 'AGENTS.md').write_text('Author instructions stay here.\n')
+        (self.project / 'AGENTS.md').write_text('Author instructions stay here.\n', encoding='utf-8')
         before = snapshot(self.project)
         result = self.install()
         self.assertTrue(result['installed'])
@@ -119,9 +120,9 @@ class ProjectSkillConnection(unittest.TestCase):
     def test_changed_missing_and_added_resources_are_findings_without_repair(self):
         self.install()
         folder = self.project / '.agents/skills'
-        (folder / 'rw-writing/SKILL.md').write_text('A locally edited instruction.\n')
+        (folder / 'rw-writing/SKILL.md').write_text('A locally edited instruction.\n', encoding='utf-8')
         (folder / 'rw-review/SKILL.md').unlink()
-        (folder / 'unmanaged.txt').write_text('Unexpected local material\n')
+        (folder / 'unmanaged.txt').write_text('Unexpected local material\n', encoding='utf-8')
         before = snapshot(self.project)
         result = self.invoke(CONNECT, 'check', '--root', self.project, expected=1)
         self.assertFalse(result['installed_integrity'])
@@ -137,7 +138,7 @@ class ProjectSkillConnection(unittest.TestCase):
         self.assertEqual(result['errors'][0]['code'], 'skill_target_exists')
         self.assertEqual(before, snapshot(self.project))
         self.assertEqual(list(target.iterdir()), [])
-        (target / 'keep.txt').write_text('Keep this skill\n')
+        (target / 'keep.txt').write_text('Keep this skill\n', encoding='utf-8')
         before = snapshot(self.project)
         self.invoke(CONNECT, 'install', '--root', self.project, expected=2)
         self.assertEqual(before, snapshot(self.project))
@@ -155,9 +156,8 @@ class ProjectSkillConnection(unittest.TestCase):
         self.assertEqual(list(target.iterdir()), [])
 
     def test_busy_writer_is_reported_without_publishing_any_skill_directory(self):
-        import fcntl
-        with (self.project / '.research/write.lock').open('r+b') as lock:
-            fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        from core.storage import ProjectFiles
+        with ProjectFiles(self.project) as files, files.lock():
             before = snapshot(self.project)
             result = self.invoke(CONNECT, 'install', '--root', self.project, expected=2)
             self.assertEqual(result['errors'][0]['code'], 'project_busy')
@@ -188,8 +188,8 @@ class ProjectSkillConnection(unittest.TestCase):
         outside = self.base / 'outside'
         outside.mkdir()
         sentinel = outside / 'private.txt'
-        sentinel.write_text('Untouched outside\n')
-        (self.project / '.agents').symlink_to(outside, target_is_directory=True)
+        sentinel.write_text('Untouched outside\n', encoding='utf-8')
+        symlink_or_skip(self, self.project / '.agents', outside, target_is_directory=True)
         before = snapshot(outside)
         result = self.invoke(CONNECT, 'install', '--root', self.project, expected=2)
         self.assertEqual(result['errors'][0]['code'], 'unsafe_path')
@@ -198,7 +198,7 @@ class ProjectSkillConnection(unittest.TestCase):
         self.install()
         resource = self.project / '.agents/skills/rw-writing/SKILL.md'
         resource.unlink()
-        resource.symlink_to(sentinel)
+        symlink_or_skip(self, resource, sentinel)
         before = snapshot(outside)
         result = self.invoke(CONNECT, 'check', '--root', self.project, expected=1)
         self.assertIn('unsafe_bundle_resource', {item['code'] for item in result['findings']})
@@ -207,9 +207,9 @@ class ProjectSkillConnection(unittest.TestCase):
     def test_malformed_manifest_cannot_escape_project(self):
         self.install()
         path = self.project / '.agents/skills/_rw-runtime/bundle-manifest.json'
-        manifest = json.loads(path.read_text())
+        manifest = json.loads(path.read_text(encoding='utf-8'))
         manifest['files']['../../private.txt'] = '0' * 64
-        path.write_text(json.dumps(manifest))
+        path.write_text(json.dumps(manifest), encoding='utf-8')
         before = snapshot(self.project)
         result = self.invoke(CONNECT, 'check', '--root', self.project, expected=2)
         self.assertEqual(result['errors'][0]['code'], 'unsafe_path')
@@ -223,11 +223,12 @@ class ProjectSkillConnection(unittest.TestCase):
         self.project.rename(moved)
         empty_home = self.base / 'empty-home'
         empty_home.mkdir()
-        environment = dict(os.environ, HOME=str(empty_home), PYTHONDONTWRITEBYTECODE='1', PYTHONPATH='')
+        environment = dict(os.environ, HOME=str(empty_home), USERPROFILE=str(empty_home),
+                           PYTHONDONTWRITEBYTECODE='1', PYTHONPATH='')
         runtime = moved / '.agents/skills/_rw-runtime/tools/research.py'
         record = self.base / 'question.json'
         record.write_text(json.dumps({'id': 'Q1', 'type': 'question', 'text': 'What can the materials establish?',
-                                     'scope': 'One portable synthetic project'}))
+                                     'scope': 'One portable synthetic project'}), encoding='utf-8')
         self.invoke(runtime, 'register', '--root', moved, '--kind', 'statement', '--file', record,
                     cwd=self.base, env=environment)
         self.invoke(runtime, 'checkpoint', '--root', moved, '--next-action', 'Read the supplied materials',
@@ -243,7 +244,7 @@ class ProjectSkillConnection(unittest.TestCase):
     def test_source_version_drift_is_separate_from_installed_file_integrity(self):
         self.install()
         source = self.copy_source('source-copy')
-        (source / 'core/protocol.md').write_text('A later source protocol.\n')
+        (source / 'core/protocol.md').write_text('A later source protocol.\n', encoding='utf-8')
         before = snapshot(self.project)
         result = self.invoke(source / 'tools/connect_skills.py', 'check', '--root', self.project, expected=1)
         self.assertTrue(result['installed_integrity'])
@@ -254,7 +255,7 @@ class ProjectSkillConnection(unittest.TestCase):
     def changed_source(self, name='upgrade-source'):
         source = self.copy_source(name)
         protocol = source / 'core/protocol.md'
-        protocol.write_text(protocol.read_text() + '\nA reviewed later protocol.\n')
+        protocol.write_text(protocol.read_text(encoding='utf-8') + '\nA reviewed later protocol.\n', encoding='utf-8')
         return source
 
     def test_upgrade_publishes_complete_new_bundle_and_preserves_research_records(self):
@@ -272,7 +273,7 @@ class ProjectSkillConnection(unittest.TestCase):
                 self.assertEqual(before[path], after[path], path)
         self.assertEqual({path.name for path in (self.project / '.agents').iterdir()}, {'skills'})
         self.assertIn('A reviewed later protocol.',
-                      (self.project / '.agents/skills/_rw-runtime/core/protocol.md').read_text())
+                      (self.project / '.agents/skills/_rw-runtime/core/protocol.md').read_text(encoding='utf-8'))
 
     def test_same_version_upgrade_is_read_only_and_does_not_create_a_missing_lock(self):
         self.install()
@@ -298,7 +299,7 @@ class ProjectSkillConnection(unittest.TestCase):
     def test_upgrade_refuses_local_changes_missing_unknown_and_linked_resources(self):
         source = self.changed_source()
         outside = self.base / 'outside-secret'
-        outside.write_text('Untouched external material\n')
+        outside.write_text('Untouched external material\n', encoding='utf-8')
         for case in ('changed', 'missing', 'unknown-file', 'empty-directory', 'symlink'):
             with self.subTest(case=case):
                 if (self.project / '.agents').exists():
@@ -307,21 +308,21 @@ class ProjectSkillConnection(unittest.TestCase):
                 folder = self.project / '.agents/skills'
                 target = folder / 'rw-writing/SKILL.md'
                 if case == 'changed':
-                    target.write_text('Author local edits\n')
+                    target.write_text('Author local edits\n', encoding='utf-8')
                 elif case == 'missing':
                     target.unlink()
                 elif case == 'unknown-file':
-                    (folder / 'my-notes.txt').write_text('Author notes\n')
+                    (folder / 'my-notes.txt').write_text('Author notes\n', encoding='utf-8')
                 elif case == 'empty-directory':
                     (folder / 'my-empty-folder').mkdir()
                 else:
                     target.unlink()
-                    target.symlink_to(outside)
+                    symlink_or_skip(self, target, outside)
                 before = snapshot(self.project)
                 result = self.invoke(source / 'tools/connect_skills.py', 'upgrade', '--root', self.project, expected=2)
                 self.assertEqual(result['errors'][0]['code'], 'bundle_modified')
                 self.assertEqual(before, snapshot(self.project))
-                self.assertEqual(outside.read_text(), 'Untouched external material\n')
+                self.assertEqual(outside.read_text(encoding='utf-8'), 'Untouched external material\n')
                 if case == 'empty-directory':
                     self.assertTrue((folder / 'my-empty-folder').is_dir())
                 if case == 'symlink':
@@ -330,7 +331,7 @@ class ProjectSkillConnection(unittest.TestCase):
     def test_upgrade_refuses_malformed_manifest_without_replacing_files(self):
         self.install()
         path = self.project / '.agents/skills/_rw-runtime/bundle-manifest.json'
-        path.write_text('[]\n')
+        path.write_text('[]\n', encoding='utf-8')
         before = snapshot(self.project)
         result = self.invoke(CONNECT, 'upgrade', '--root', self.project, expected=2)
         self.assertEqual(result['errors'][0]['code'], 'invalid_bundle_manifest')
@@ -341,7 +342,7 @@ class ProjectSkillConnection(unittest.TestCase):
         agents = self.project / '.agents'
         outside = self.base / 'outside-agents'
         agents.rename(outside)
-        agents.symlink_to(outside, target_is_directory=True)
+        symlink_or_skip(self, agents, outside, target_is_directory=True)
         before = snapshot(outside)
         result = self.invoke(CONNECT, 'upgrade', '--root', self.project, expected=2)
         self.assertEqual(result['errors'][0]['code'], 'unsafe_path')
@@ -351,7 +352,7 @@ class ProjectSkillConnection(unittest.TestCase):
         target = agents / 'skills'
         outside = self.base / 'outside-skills'
         target.rename(outside)
-        target.symlink_to(outside, target_is_directory=True)
+        symlink_or_skip(self, target, outside, target_is_directory=True)
         before = snapshot(outside)
         result = self.invoke(CONNECT, 'upgrade', '--root', self.project, expected=2)
         self.assertEqual(result['errors'][0]['code'], 'unsafe_path')
@@ -362,7 +363,7 @@ class ProjectSkillConnection(unittest.TestCase):
         self.install()
         folder = self.project / '.agents/skills'
         path = folder / '_rw-runtime/bundle-manifest.json'
-        manifest = json.loads(path.read_text())
+        manifest = json.loads(path.read_text(encoding='utf-8'))
         removed = {'rw-innovation', 'rw-candidates', 'rw-figures'}
         for name in removed:
             shutil.rmtree(folder / name)
@@ -370,11 +371,11 @@ class ProjectSkillConnection(unittest.TestCase):
         manifest['files'] = {p:d for p,d in manifest['files'].items() if p.split('/')[0] not in removed}
         manifest['format_version'], manifest['bundle_id'] = '1', 'research-workflow-template-d2'
         manifest['payload_sha256'] = object_sha(manifest['files'])
-        path.write_text(json.dumps(manifest))
+        path.write_text(json.dumps(manifest), encoding='utf-8')
         result = self.invoke(CONNECT, 'upgrade', '--root', self.project)
         self.assertTrue(result['upgraded'])
         self.assertEqual(set(result['skills']), SKILLS)
-        self.assertEqual(json.loads(path.read_text())['format_version'], '2')
+        self.assertEqual(json.loads(path.read_text(encoding='utf-8'))['format_version'], '2')
         self.assertTrue(self.invoke(CONNECT, 'check', '--root', self.project)['passed'])
 
     def test_copied_runtime_upgrade_requires_the_full_distribution(self):
@@ -386,11 +387,10 @@ class ProjectSkillConnection(unittest.TestCase):
         self.assertEqual(before, snapshot(self.project))
 
     def test_busy_writer_blocks_upgrade_before_staging(self):
-        import fcntl
+        from core.storage import ProjectFiles
         self.install()
         source = self.changed_source()
-        with (self.project / '.research/write.lock').open('r+b') as lock:
-            fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        with ProjectFiles(self.project) as files, files.lock():
             before = snapshot(self.project)
             result = self.invoke(source / 'tools/connect_skills.py', 'upgrade', '--root', self.project, expected=2)
             self.assertEqual(result['errors'][0]['code'], 'project_busy')
@@ -424,7 +424,7 @@ class ProjectSkillConnection(unittest.TestCase):
         agents.mkdir()
         install_collision = agents / '.rw-skills-collision'
         install_collision.mkdir()
-        (install_collision / 'keep.txt').write_text('Preserve existing directory\n')
+        (install_collision / 'keep.txt').write_text('Preserve existing directory\n', encoding='utf-8')
         before = snapshot(self.project)
         with mock.patch.object(bundle.uuid, 'uuid4', return_value=mock.Mock(hex='collision')):
             with self.assertRaises(FileExistsError):
@@ -436,13 +436,13 @@ class ProjectSkillConnection(unittest.TestCase):
             with self.subTest(prefix=prefix):
                 collision = agents / (prefix + 'collision')
                 collision.mkdir()
-                (collision / 'keep.txt').write_text('Preserve upgrade collision\n')
+                (collision / 'keep.txt').write_text('Preserve upgrade collision\n', encoding='utf-8')
                 before = snapshot(self.project)
                 with mock.patch.object(bundle, 'source_root', return_value=source), mock.patch.object(bundle.uuid, 'uuid4', return_value=mock.Mock(hex='collision')):
                     with self.assertRaises((FileExistsError, CoreError)):
                         bundle.upgrade(self.project)
                 self.assertEqual(before, snapshot(self.project))
-                self.assertEqual((collision / 'keep.txt').read_text(), 'Preserve upgrade collision\n')
+                self.assertEqual((collision / 'keep.txt').read_text(encoding='utf-8'), 'Preserve upgrade collision\n')
                 shutil.rmtree(collision)
 
     def test_upgrade_publication_failure_restores_the_original_directory(self):
@@ -451,7 +451,7 @@ class ProjectSkillConnection(unittest.TestCase):
         source = self.changed_source()
         original = os.rename
         def fail_publish(src, dst, **kwargs):
-            if str(src).startswith('.rw-skills-stage-') and dst == 'skills':
+            if Path(src).name.startswith('.rw-skills-stage-') and Path(dst).name == 'skills':
                 raise OSError('simulated publish failure')
             return original(src, dst, **kwargs)
         before = snapshot(self.project)
@@ -462,6 +462,7 @@ class ProjectSkillConnection(unittest.TestCase):
         self.assertTrue(bundle.check(self.project, compare_source=False)['installed_integrity'])
         self.assertEqual({path.name for path in (self.project / '.agents').iterdir()}, {'skills'})
 
+    @unittest.skipUnless(os.name == 'posix', 'POSIX directory-fsync fault injection; native Windows publication rollback is tested separately')
     def test_upgrade_sync_failure_rolls_back_a_published_new_directory(self):
         from core import bundle
         self.install()
@@ -471,7 +472,7 @@ class ProjectSkillConnection(unittest.TestCase):
         def track_publish(src, dst, **kwargs):
             nonlocal fail_next_sync
             result = original_rename(src, dst, **kwargs)
-            if str(src).startswith('.rw-skills-stage-') and dst == 'skills':
+            if Path(src).name.startswith('.rw-skills-stage-') and Path(dst).name == 'skills':
                 fail_next_sync = True
             return result
         def fail_sync(fd):
@@ -495,7 +496,7 @@ class ProjectSkillConnection(unittest.TestCase):
         original = os.rename
         old_protocol = (self.project / '.agents/skills/_rw-runtime/core/protocol.md').read_bytes()
         def fail_publish_and_restore(src, dst, **kwargs):
-            if dst == 'skills' and (str(src).startswith('.rw-skills-stage-') or str(src).startswith('.rw-skills-backup-')):
+            if Path(dst).name == 'skills' and (Path(src).name.startswith('.rw-skills-stage-') or Path(src).name.startswith('.rw-skills-backup-')):
                 raise OSError('simulated publication/rollback failure')
             return original(src, dst, **kwargs)
         with mock.patch.object(bundle, 'source_root', return_value=source), mock.patch.object(bundle.os, 'rename', side_effect=fail_publish_and_restore):
@@ -516,7 +517,7 @@ class ProjectSkillConnection(unittest.TestCase):
         source = self.changed_source()
         original = shutil.rmtree
         def fail_old_cleanup(path, *args, **kwargs):
-            if str(path).startswith('.rw-skills-backup-'):
+            if Path(path).name.startswith('.rw-skills-backup-'):
                 raise OSError('simulated backup cleanup failure')
             return original(path, *args, **kwargs)
         with mock.patch.object(bundle, 'source_root', return_value=source), mock.patch.object(bundle.shutil, 'rmtree', side_effect=fail_old_cleanup):
@@ -526,7 +527,7 @@ class ProjectSkillConnection(unittest.TestCase):
         self.assertIn('New bundle installed', raised.exception.message)
         self.assertTrue(bundle.check(self.project, compare_source=False)['installed_integrity'])
         self.assertIn('A reviewed later protocol.',
-                      (self.project / '.agents/skills/_rw-runtime/core/protocol.md').read_text())
+                      (self.project / '.agents/skills/_rw-runtime/core/protocol.md').read_text(encoding='utf-8'))
         self.assertEqual(len(list((self.project / '.agents').glob('.rw-skills-backup-*'))), 1)
 
     def test_upgrade_rechecks_user_edits_that_appear_during_staging(self):
@@ -538,13 +539,13 @@ class ProjectSkillConnection(unittest.TestCase):
         target = self.project / '.agents/skills/rw-writing/SKILL.md'
         def edit_after_stage(*args, **kwargs):
             result = original(*args, **kwargs)
-            target.write_text('A local edit made during staging\n')
+            target.write_text('A local edit made during staging\n', encoding='utf-8')
             return result
         with mock.patch.object(bundle, 'source_root', return_value=source), mock.patch.object(bundle, '_stage_payload', side_effect=edit_after_stage):
             with self.assertRaises(CoreError) as raised:
                 bundle.upgrade(self.project)
         self.assertEqual(raised.exception.code, 'bundle_modified')
-        self.assertEqual(target.read_text(), 'A local edit made during staging\n')
+        self.assertEqual(target.read_text(encoding='utf-8'), 'A local edit made during staging\n')
         self.assertEqual({path.name for path in (self.project / '.agents').iterdir()}, {'skills'})
 
     def test_nested_skill_document_links_are_relocated_by_their_actual_depth(self):
@@ -552,8 +553,8 @@ class ProjectSkillConnection(unittest.TestCase):
         source = self.copy_source('nested-documents')
         folder = source / 'skills/rw-question/references/details'
         folder.mkdir(parents=True)
-        (folder.parent / 'local.md').write_text('Local guide\n')
-        (source / 'core/with space.md').write_text('Spaced resource\n')
+        (folder.parent / 'local.md').write_text('Local guide\n', encoding='utf-8')
+        (source / 'core/with space.md').write_text('Spaced resource\n', encoding='utf-8')
         document = folder / 'deep.md'
         document.write_text('[Core](../../../../core/protocol.md#scope)\n'
                             '[CLI](../../../../tools/research.py?mode=1#help)\n'
@@ -562,7 +563,7 @@ class ProjectSkillConnection(unittest.TestCase):
                             '[Guide]: ../../../../profiles/methods/formal-theory.md "Title"\n'
                             'Literal ../../../../core/protocol.md stays as text.\n'
                             '`[Literal](../../../../core/protocol.md)`\n'
-                            '```md\n[Example](../../../../core/protocol.md)\n```\n')
+                            '```md\n[Example](../../../../core/protocol.md)\n```\n', encoding='utf-8')
         payload = build_payload(source)
         text = payload['rw-question/references/details/deep.md'].decode()
         self.assertIn('[Core](../../../_rw-runtime/core/protocol.md#scope)', text)
@@ -597,7 +598,7 @@ class ProjectSkillConnection(unittest.TestCase):
         self.assertFalse(default['source_comparison_performed'])
         self.assertIsNone(default['source_version_matches'])
         self.assertEqual(before, snapshot(moved))
-        (moved / '.agents/skills/rw-innovation/SKILL.md').write_text('Changed local instruction.\n')
+        (moved / '.agents/skills/rw-innovation/SKILL.md').write_text('Changed local instruction.\n', encoding='utf-8')
         self.invoke(connector, 'check', '--installed-only', '--root', moved, expected=1)
 
     def test_legacy_six_skill_manifest_remains_readable_without_silent_upgrade(self):
@@ -605,7 +606,7 @@ class ProjectSkillConnection(unittest.TestCase):
         self.install()
         folder = self.project / '.agents/skills'
         path = folder / '_rw-runtime/bundle-manifest.json'
-        manifest = json.loads(path.read_text())
+        manifest = json.loads(path.read_text(encoding='utf-8'))
         removed = {'rw-innovation', 'rw-candidates', 'rw-figures'}
         for name in removed:
             shutil.rmtree(folder / name)
@@ -614,7 +615,7 @@ class ProjectSkillConnection(unittest.TestCase):
         manifest['format_version'] = '1'
         manifest['bundle_id'] = 'research-workflow-template-d2'
         manifest['payload_sha256'] = object_sha(manifest['files'])
-        path.write_text(json.dumps(manifest))
+        path.write_text(json.dumps(manifest), encoding='utf-8')
         before = snapshot(self.project)
         result = self.invoke(CONNECT, 'check', '--installed-only', '--root', self.project)
         self.assertTrue(result['installed_integrity'])
@@ -624,9 +625,9 @@ class ProjectSkillConnection(unittest.TestCase):
     def test_malformed_manifest_version_returns_json_error_without_traceback(self):
         self.install()
         path = self.project / '.agents/skills/_rw-runtime/bundle-manifest.json'
-        manifest = json.loads(path.read_text())
+        manifest = json.loads(path.read_text(encoding='utf-8'))
         manifest['format_version'] = {'not': 'a scalar'}
-        path.write_text(json.dumps(manifest))
+        path.write_text(json.dumps(manifest), encoding='utf-8')
         before = snapshot(self.project)
         result = self.invoke(CONNECT, 'check', '--installed-only', '--root', self.project, expected=2)
         self.assertEqual(result['errors'][0]['code'], 'invalid_bundle_manifest')
@@ -670,7 +671,7 @@ class ProjectSkillConnection(unittest.TestCase):
         copied_options = self.invoke(runtime/'tools/research.py', 'options', cwd=self.base)
         self.assertEqual(copied_options['resource_base'], 'toolkit-root')
         self.assertFalse((runtime/'evals').exists())
-        generated_catalog = json.loads((runtime/'design/catalog.json').read_text())
+        generated_catalog = json.loads((runtime/'design/catalog.json').read_text(encoding='utf-8'))
         for collection in (copied_options['methods'], generated_catalog['methods']):
             for item in collection:
                 implementation = item['implementation']
