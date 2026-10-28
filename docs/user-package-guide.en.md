@@ -59,6 +59,8 @@ Describe the task directly, for example: “Read these materials and help me def
 
 Discipline and method guidance is in `profiles/`; shared protocols are in `core/`. They do not certify an entire specialty. Mathematical proofs, numerical observations, legal interpretations, ethics permissions and venue requirements each need their own evidence.
 
+For a citation audit, say: “Check support for each claim, find missing, partial or irrelevant citations, and suggest specific corrections.” The assistant uses existing notes and reports to check compound claims and cross-source synthesis.
+
 ## Review, revision responses and submission materials
 
 These capabilities use the existing `rw-review` entry and expand only for the requested task:

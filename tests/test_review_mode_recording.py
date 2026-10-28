@@ -82,8 +82,20 @@ class WritingTaskRecording(unittest.TestCase):
 class RevisionWorkflowRecording(unittest.TestCase):
     def test_actual_revision_tasks_bind_guidance_inputs_and_output_bytes(self):
         record = json.loads((ROOT / 'evals/current/skill-task-checks.json').read_text(encoding='utf-8'))['revision_workflow']
+        historical = record['historical_guidance']
+        self.assertEqual(historical['recovered_from_commit'],
+                         'd91805195001cdaf1a96824a2d0d9e557b55e85f')
+        sources = historical['sources']
+        self.assertEqual(set(sources), {
+            'skills/rw-review/references/review-response.md',
+            'skills/rw-review/scripts/check_revision_plan.py',
+        })
         for name, expected in record['guidance_sha256'].items():
-            self.assertEqual(digest((ROOT / name).read_bytes()), expected, name)
+            source = (sources[name]['source_text'].encode('utf-8') if name in sources
+                      else (ROOT / name).read_bytes())
+            self.assertEqual(digest(source), expected, name)
+            if name in sources:
+                self.assertEqual(digest(source), sources[name]['sha256'], name)
         self.assertEqual({case['id'] for case in record['cases']}, {'time-bounded-plan', 'executed-revision'})
         self.assertEqual(len(record['cases']), 2)
         for case in record['cases']:
@@ -93,6 +105,25 @@ class RevisionWorkflowRecording(unittest.TestCase):
                 self.assertTrue(files)
                 for name, content in files.items():
                     self.assertEqual(digest(content.encode('utf-8')), hashes[name], name)
+
+
+class CitationTaskRecording(unittest.TestCase):
+    def test_offline_task_binds_actual_guidance_packet_and_read_only_report(self):
+        record = json.loads((ROOT / 'evals/current/skill-task-checks.json').read_text(encoding='utf-8'))['citation_audit']
+        self.assertIn(record['source_entrypoint'], record['guidance_sha256'])
+        self.assertIn('skills/rw-literature/references/search-and-library.md', record['guidance_sha256'])
+        for name, expected in record['guidance_sha256'].items():
+            self.assertEqual(digest((ROOT / name).read_bytes()), expected, name)
+        self.assertEqual(set(record['input_files']), {'draft.md', 'sources.md'})
+        self.assertEqual(set(record['output_files']), {'report.md'})
+        for group in ('input', 'output'):
+            files, hashes = record[group + '_files'], record[group + '_sha256']
+            self.assertEqual(set(files), set(hashes))
+            for name, content in files.items():
+                self.assertEqual(digest(content.encode('utf-8')), hashes[name], name)
+        self.assertTrue(record['read_only'])
+        self.assertTrue(record['input_bytes_and_mtime_unchanged'])
+        # These checks preserve the actual task record, not citation quality.
 
 
 if __name__ == '__main__':

@@ -15,6 +15,7 @@
 | 模拟审稿缺少结构化依据与真正隔离 | `rw-review` 的[评审模式](../skills/rw-review/references/review-modes.md) | 普通自审不自动多评审；原始材料共享、分析独立、报告冻结后再汇总，Nature 风格只按目标适用 |
 | 返修回复与真实修改、提交材料难以对应 | [回复与修改](../skills/rw-review/references/review-response.md)、[投稿与交付](../skills/rw-review/references/submission-delivery.md) | 对应实际修改和当前版本；组包核对真实字节与缺口，准备不等于提交 |
 | 多条返修要求的前置关系、工时与回复覆盖难以核对 | 扩展同一回复参考，配套原创的标准库只读检查脚本 | 简单回复直接处理；结构化产物复用原记录，显式区分接受、部分接受、澄清、不同意与暂缓 |
+| 复合句可能只有部分依据，真实引用也可能放错位置 | `rw-literature` 的按需双向引证核对 | 逐项比较主张与原文，再核对引用的作用；保留合理综合和同源多处引用，复用现有笔记与记录 |
 
 现有选题、创新、证据核对、写作、审阅和交接边界继续适用。没有新增同义写作或提问入口，也没有自动下载全文、注册定时任务、推送消息或后台无限循环。
 
@@ -67,3 +68,5 @@
 返修增强比较了 [strategic-revision](https://github.com/jusi-aalto/strategic-revision) 的原意见拆分与依赖安排，以及 [open-science-skills](https://github.com/scdenney/open-science-skills) 的计划、回复与覆盖核对。前者本次未确认明确的复制分发许可，后者采用 CC BY-NC 4.0。本模板自行设计任务字段、计划与定位检查，编写标准库脚本和合成任务；没有复制上游技能、模板、脚本或引入 NetworkX。夜间调度与执行运行器留待独立工作。
 
 本轮另核对固定版本的 [Nature reviewer](https://github.com/Yuan1z0825/nature-skills/blob/07009f91f99c7108519e7657885f1a89d91099d5/skills/nature-reviewer/SKILL.md) 与 [K-Dense peer-review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/5f2bc0341354fd5590aef76a533ada1e1e5b4e62/skills/peer-review/SKILL.md)，分别确认上游 Apache-2.0 和 MIT 许可身份，并以[官方 referee 规则](https://www.nature.com/nature/for-referees/policies-and-processes)核对目标刊物与角色边界。通用包没有复制这两个第三方技能或个人包文件；结构化审阅、隔离评审与交付指导以本包中文规则独立表达，继续保留九个入口。
+
+本轮文献增强核对了 [OpenScholar 的 Nature 研究](https://www.nature.com/articles/s41586-025-10072-4)及[官方实现](https://github.com/AkariAsai/OpenScholar)，以及 [SourceCheckup 的 Nature Communications 研究](https://www.nature.com/articles/s41467-025-58551-6)及[官方仓库](https://github.com/kevinwu23/SourceCheckup)。只将主张支持与引证相关性分别核对的思路独立表述为指导，不复制模型、代码、数据或提示词，也不把原研究的性能移作本模板的验证。研究执行循环由宿主与后续 Runner 设计另行处理。

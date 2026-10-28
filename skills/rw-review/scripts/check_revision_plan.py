@@ -108,6 +108,8 @@ def validate_plan(plan, root, *, delivery=False):
     if not isinstance(sources, list):
         error("invalid_sources", "sources", "Expected a list of source objects.")
         sources = []
+    elif not sources:
+        error("empty_sources", "sources", "At least one original review comment is required.")
     source_ids = set()
     for index, source in enumerate(sources):
         location = f"sources[{index}]"
@@ -128,8 +130,10 @@ def validate_plan(plan, root, *, delivery=False):
     if not isinstance(items, list):
         error("invalid_items", "items", "Expected a list of item objects.")
         items = []
+    elif not items:
+        error("empty_items", "items", "At least one revision item is required.")
     records, covered = {}, set()
-    graph_valid, effort_valid = True, True
+    graph_valid, effort_valid = bool(sources) and bool(items), True
     known_efforts = []
     for index, item in enumerate(items):
         location = f"items[{index}]"

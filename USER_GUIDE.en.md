@@ -86,6 +86,8 @@ When a delivery includes several materials, such as a manuscript, figures, suppl
 
 For legal research, initialize with `--discipline law --method legal-analysis` and use the [legal project template](profiles/templates/legal-research.md). Record jurisdiction, relevant dates, the basis for authority and precedential status, and precise citations. Keep doctrinal interpretation, comparative description, normative proposals, and empirical effects distinct. Legal metadata can use `source.extensions.legal`; successful registration does not certify legal meaning or validity. The added [legal tasks](evals/legal/README.md) use fictional jurisdictions and have a limited testing scope.
 
+For a citation audit, say: “Check the source support for each claim in this passage, then find missing, partial or irrelevant citations and suggest specific corrections.” The assistant checks separately verifiable parts of compound claims and explains cross-source synthesis in the existing notes or review report.
+
 ## Review, revision responses and submission materials
 
 These capabilities use the existing `rw-review` entry and expand only for the requested task:

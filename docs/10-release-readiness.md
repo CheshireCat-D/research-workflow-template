@@ -13,6 +13,7 @@
 | 来源与许可 | [MIT](../LICENSE)、[来源说明](../provenance/ORIGIN.md)、[逐文件清单](../provenance/file-origins.json) |
 | 正文表达 | [共用写作规则](../skills/rw-writing/SKILL.md)、[三项实际写作任务](../evals/current/skill-task-checks.json)：实验结果直述、观察性关联修订与按请求解释推断区别 |
 | 返修规划与覆盖核对 | [回复与修改](../skills/rw-review/references/review-response.md)、同一[实际任务记录](../evals/current/skill-task-checks.json)中的计划与执行案例，以及只读检查器和用户包独立运行测试 |
+| 主张与引证支持 | [文献核对规则](../skills/rw-literature/references/search-and-library.md)、同一任务记录的 `citation_audit`：离线合成来源、逐项定位及只读产物 |
 | 当前软件与平台检查 | [唯一当前核验记录](../evals/current/latest.json)；只报告真正执行的环境，不沿用旧阶段通过状态 |
 | 当前用户归档 | `dist/research-workflow-template.zip`、相邻SHA文件及 `dist/release-validation.json`；核对用户资源闭包、链接、确定性构建和干净运行 |
 
@@ -40,4 +41,4 @@ python3 -B tools/package_user.py smoke --archive dist/research-workflow-template
 
 完整源码归档另由 `tools/release_package.py build/verify` 在临时目录检查，不作为最终用户 ZIP。CI 同时运行完整源码回归、临时源码归档解压检查和用户包构建／验证／干净运行；本地与托管执行按实际 commit 和归档 SHA 分别记录。[Linux复查](11-linux-validation.md)另有说明。Windows、macOS 和 Linux 分别在 CI 中运行；工作流配置不等于本次执行已通过，实际结果须绑定到相应提交。
 
-检查通过只说明所声明范围内的工程与登记一致性，不认证研究结论、伦理批准、场所政策或投稿接收，也不表示已经创建、推送或发布GitHub仓库。
+工程检查按实际命令和环境记录；研究内容审阅、投稿操作及公开发布分别以对应证据确认。

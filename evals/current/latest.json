@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-28T17:38:33.126664+00:00",
+  "checked_at_utc": "2026-10-28T18:39:53.842745+00:00",
   "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -24,11 +24,11 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 222,
+      "test_methods": 225,
       "check_groups": 7,
       "receipt": {
         "identifier": "local-evidence:check-core.json",
-        "sha256": "b4c4a6804286585f183a6ee0dc8482324551bf96d5411cf93a13353c2f8b1f82"
+        "sha256": "61ed669b7bd684df1850005ac9fbefa54dedc27b7c2b82cc302161bc66530708"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,7 +36,7 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "2d74987fb236557ff5cfc9cbff0509fbd2ad827f9491c9394e8bd4b181f72579",
+        "sha256": "6f9e2a6b6e471b9f5d30df6d57a584163e07394fcd96c53bb612be2e4b5ae65b",
         "files": 32
       }
     }
@@ -85,7 +85,7 @@
     "scope": "Discovery/frontmatter only; actual forward tasks are recorded separately."
   },
   "preservation": {
-    "frozen_d2_d3_legal_files_byte_identical": 423,
+    "frozen_d2_d3_legal_files_byte_identical": 424,
     "scope": "Frozen case inputs, numerical algorithms, authored outputs and independent reviews unchanged. Existing historical-guidance evidence also contains the exact original core/protocol.md source bound by the old legal review; no old runnable release or renewed scientific content review. Personal package excluded."
   },
   "hosted_ci": {
@@ -152,7 +152,15 @@
       "new_skill_entrypoints": 0,
       "checker": "skills/rw-review/scripts/check_revision_plan.py",
       "runtime_dependencies": "Python standard library",
-      "scope": "Actual synthetic planning and revision tasks; declared source coverage, dependency and text-location checks plus observed substantive edits."
+      "scope": "Originally recorded synthetic planning and revision tasks retain the exact guidance read then. Current software regression additionally rejects empty comment/item lists; current guidance explains mapping to existing core activity states."
+    },
+    "citation_audit": {
+      "owner": "rw-literature",
+      "new_skill_entrypoints": 0,
+      "new_ledger_or_runtime_dependency": false,
+      "forward_requests": 1,
+      "record": "evals/current/skill-task-checks.json#citation_audit",
+      "scope": "Fresh offline fictional task and separate AI report review; claim parts, citation roles and synthesis checked against supplied excerpts."
     }
   },
   "user_distribution": {
@@ -160,7 +168,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 72,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "6cb1e1fe93d3d80b18ba2cab9582bfbf64dac82ffa47fa5561ae78a5fbf6f48e",
+    "sha256": "4c25a763b90e18eaadcf24e23868fbe20ec85ca8f0e9fc77540cb4191410373b",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 65,
     "development_history_or_previous_editions_included": false,

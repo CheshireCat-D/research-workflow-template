@@ -162,6 +162,36 @@ class RevisionPlanChecks(unittest.TestCase):
                 self.assert_code(self.check(value), code)
                 self.assert_code(self.check(value, delivery=True), code)
 
+    def test_empty_sources_or_items_cannot_pass_or_claim_dependency_order(self):
+        cases = [(plan(item(reply=self.reply), sources=[]), {"empty_sources"}),
+                 (plan(items=[]), {"empty_items"}),
+                 ({"sources": [], "items": []}, {"empty_sources", "empty_items"})]
+        for delivery in (False, True):
+            for value, expected_codes in cases:
+                with self.subTest(delivery=delivery, expected_codes=expected_codes):
+                    report = self.check(value, delivery=delivery)
+                    self.assertFalse(report["passed"], report)
+                    self.assertTrue(expected_codes <= {error["code"] for error in report["errors"]}, report)
+                    self.assertFalse(report["dependency_order_complete"])
+                    self.assertEqual(report["batches"], [])
+                    self.assertEqual(report, json.loads(json.dumps(report, allow_nan=False)))
+
+    def test_cli_empty_sources_or_items_return_structured_errors_in_both_modes(self):
+        cases = [(plan(item(reply=self.reply), sources=[]), {"empty_sources"}),
+                 (plan(items=[]), {"empty_items"}),
+                 ({"sources": [], "items": []}, {"empty_sources", "empty_items"})]
+        for arguments in ((), ("--delivery",)):
+            for value, expected_codes in cases:
+                with self.subTest(arguments=arguments, expected_codes=expected_codes):
+                    result = self.run_cli(value, *arguments)
+                    self.assertEqual(result.returncode, 1)
+                    self.assertEqual(result.stderr, "")
+                    report = json.loads(result.stdout)
+                    self.assertFalse(report["passed"], report)
+                    self.assertTrue(expected_codes <= {error["code"] for error in report["errors"]}, report)
+                    self.assertFalse(report["dependency_order_complete"])
+                    self.assertEqual(report["batches"], [])
+
     def test_hours_reject_booleans_negative_nonfinite_and_wrong_types(self):
         for hours in (True, False, -1, float("nan"), float("inf"), -float("inf"), "2", None):
             with self.subTest(hours=hours):

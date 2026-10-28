@@ -433,6 +433,30 @@
       "checked_scope": "General separation of planning, reply writing and comment-to-location coverage; original RWT guidance and synthetic tasks.",
       "limits": "Original source remains CC BY-NC 4.0. No upstream skill text, templates or scripts are redistributed or relicensed.",
       "accessed_on": "2026-10-28"
+    },
+    {
+      "id": "openscholar-citation-audit",
+      "title": "OpenScholar: Synthesizing scientific literature with retrieval-augmented language models",
+      "version": "Nature 650, 857–863 (2026); published 2026-02-04; official article Methods: Citation accuracy and Content quality and organization",
+      "url": "https://www.nature.com/articles/s41586-025-10072-4",
+      "repository_url": "https://github.com/AkariAsai/OpenScholar",
+      "license_url": "https://github.com/AkariAsai/OpenScholar/blob/main/LICENSE",
+      "access": "Official article methods and author-maintained repository README and license read.",
+      "checked_scope": "Citation-worthy claim support and per-citation relevance are separate checks; useful for an optional bidirectional audit in existing reading notes.",
+      "upstream_license": "Repository LICENSE: Apache-2.0 as accessed. Publication rights remain with the publication; no publication text, code, model, prompts or data copied.",
+      "limits": "Independently expressed workflow concept only. Benchmark results belong to OpenScholar and are not RWT performance evidence. No retrieval service or inference loop added.",
+      "accessed_on": "2026-10-28"
+    },
+    {
+      "id": "sourcecheckup-claim-support",
+      "title": "SourceCheckup: An automated framework for assessing how well LLMs cite relevant medical references",
+      "version": "Nature Communications 16, 3615 (2025); published 2025-04-16; Methods on statement extraction and source verification",
+      "url": "https://www.nature.com/articles/s41467-025-58551-6",
+      "repository_url": "https://github.com/kevinwu23/SourceCheckup",
+      "access": "Official article methods, source and data availability sections and author-maintained repository documentation read.",
+      "checked_scope": "Separately verifiable claim parts, source identity/access and actual statement support; adapted as a local, optional evidence-reading procedure.",
+      "limits": "General method idea independently expressed; no upstream code, prompts, dataset or article text bundled. Repository redistribution license not confirmed; medical benchmark results are not transferred to RWT or other fields.",
+      "accessed_on": "2026-10-28"
     }
   ],
   "original_guidance": [
