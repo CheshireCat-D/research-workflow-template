@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "check",
+    "--root",
+    "PROJECT"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P73d9c9047b264a71b85d37bc4be5cfa3\",\n  \"revision\": 35,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 6,\n    \"decisions\": 0,\n    \"evidence\": 6,\n    \"method_bindings\": 1,\n    \"relations\": 8,\n    \"sources\": 5,\n    \"statements\": 5\n  },\n  \"activities\": [\n    {\n      \"id\": \"ACT_ANALYZE\",\n      \"title\": \"解释构建、重复键、重复调用和未命中对成本的作用\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_COMPUTE\",\n      \"title\": \"实现相同最后值合同、逐查询核对并统计三个冷启动负载\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_REVIEW\",\n      \"title\": \"自审实现、结果和稿件的一致性及执行边界\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_WRITE\",\n      \"title\": \"根据实测操作数修订原稿两项错误主张\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"Clarify the current question, scope and next evidence check.\"\n  },\n  \"checkpoint\": {\n    \"recorded\": false,\n    \"status\": \"not-recorded\",\n    \"changed\": []\n  }\n}\n",
+  "stderr": "",
+  "machine_seconds": 0.05106995800451841
+}

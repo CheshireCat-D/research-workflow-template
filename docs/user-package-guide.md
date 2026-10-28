@@ -61,6 +61,8 @@ Windows 项目请放在普通本地目录，例如 `C:\Research\my-project`。�
 
 引证核对可说：“逐项检查这段话的来源支持，再找缺引、部分支持和无关引证，给出具体修改建议。”助手沿用现有笔记和报告核对复合主张与综合依据。
 
+可先看公开仓库的[七学科专项案例](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/disciplinary)：合成输入、实际分析与短稿、独立代理复核及回归检查均在源码中，下载包不重复存放这些测试材料。仿照案例时另建自己的项目。
+
 ## 审阅、返修与投稿材料
 
 这些能力沿用 `rw-review`，按当前请求展开，不需要再安装同义审阅入口：

@@ -1,0 +1,1371 @@
+{
+  "project": "PROJECT",
+  "executor": "Codex agent; no independent human review",
+  "network_used": false,
+  "third_party_dependencies_installed": false,
+  "scope": "Offline art interpretation with material-identity audit; core CLI outcomes do not assess scientific validity.",
+  "commands": [
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "《两条路径》原构图与裁剪展陈：版本与竞争解释",
+        "--discipline",
+        "humanities",
+        "--method",
+        "historical-interpretive",
+        "--mode",
+        "structured",
+        "--language",
+        "zh",
+        "--entry",
+        "validation"
+      ],
+      "exit_status": 2,
+      "stdout": "{\n  \"passed\": false,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"errors\": [\n    {\n      \"code\": \"invalid_registration\",\n      \"message\": \"Unknown project entry activity or workflow mode\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "《两条路径》原构图与裁剪展陈：版本与竞争解释",
+        "--discipline",
+        "humanities",
+        "--method",
+        "historical-interpretive",
+        "--mode",
+        "structured",
+        "--language",
+        "zh"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"initialized\": true,\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 0,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "install",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"installed\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 65,\n  \"payload_sha256\": \"321fa8cc01187952b33ec072e96a10d65acdf24c674b99cd92107473bcfa69d5\",\n  \"global_installation\": false,\n  \"project_records_modified\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"installed_integrity\": true,\n  \"source_version_matches\": true,\n  \"source_comparison_performed\": true,\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 65,\n  \"payload_sha256\": \"321fa8cc01187952b33ec072e96a10d65acdf24c674b99cd92107473bcfa69d5\",\n  \"findings\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "RUN/material-audit-output"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"output\": \"results.json\", \"dimensions_consistent\": true}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register-batch",
+        "--root",
+        "PROJECT",
+        "--file",
+        "RUN/registration-batch.json"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"registered_count\": 52,\n  \"records\": [\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC-original\",\n      \"version\": 1,\n      \"revision\": 1,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC-reproduction\",\n      \"version\": 1,\n      \"revision\": 2,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC-packet\",\n      \"version\": 1,\n      \"revision\": 3,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC-A1\",\n      \"version\": 1,\n      \"revision\": 4,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC-C1\",\n      \"version\": 1,\n      \"revision\": 5,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC-E1\",\n      \"version\": 1,\n      \"revision\": 6,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC-draft\",\n      \"version\": 1,\n      \"revision\": 7,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"Q-versions\",\n      \"version\": 1,\n      \"revision\": 8,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S-crop\",\n      \"version\": 1,\n      \"revision\": 9,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S-choice\",\n      \"version\": 1,\n      \"revision\": 10,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S-enclosure\",\n      \"version\": 1,\n      \"revision\": 11,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S-industrial\",\n      \"version\": 1,\n      \"revision\": 12,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S-nofigure\",\n      \"version\": 1,\n      \"revision\": 13,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S-independence\",\n      \"version\": 1,\n      \"revision\": 14,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E-original\",\n      \"version\": 1,\n      \"revision\": 15,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E-reproduction\",\n      \"version\": 1,\n      \"revision\": 16,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E-identity\",\n      \"version\": 1,\n      \"revision\": 17,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E-A1\",\n      \"version\": 1,\n      \"revision\": 18,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E-C1\",\n      \"version\": 1,\n      \"revision\": 19,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E-E1\",\n      \"version\": 1,\n      \"revision\": 20,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E-draft\",\n      \"version\": 1,\n      \"revision\": 21,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E-metadata\",\n      \"version\": 1,\n      \"revision\": 22,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E-init-failure\",\n      \"version\": 1,\n      \"revision\": 23,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-crop-observe\",\n      \"version\": 1,\n      \"revision\": 24,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-crop-rep\",\n      \"version\": 1,\n      \"revision\": 25,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-crop-identity\",\n      \"version\": 1,\n      \"revision\": 26,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-crop-dimensions\",\n      \"version\": 1,\n      \"revision\": 27,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-choice-A1\",\n      \"version\": 1,\n      \"revision\": 28,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-choice-visual\",\n      \"version\": 1,\n      \"revision\": 29,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-choice-limit\",\n      \"version\": 1,\n      \"revision\": 30,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-enclosure-C1\",\n      \"version\": 1,\n      \"revision\": 31,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-enclosure-rep\",\n      \"version\": 1,\n      \"revision\": 32,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-enclosure-A1\",\n      \"version\": 1,\n      \"revision\": 33,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-industrial-E1\",\n      \"version\": 1,\n      \"revision\": 34,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-industrial-counter\",\n      \"version\": 1,\n      \"revision\": 35,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-industrial-A1\",\n      \"version\": 1,\n      \"revision\": 36,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-nofigure\",\n      \"version\": 1,\n      \"revision\": 37,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-nofigure-version\",\n      \"version\": 1,\n      \"revision\": 38,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-dependence-E1\",\n      \"version\": 1,\n      \"revision\": 39,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-dependence-C1\",\n      \"version\": 1,\n      \"revision\": 40,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R-draft-context\",\n      \"version\": 1,\n      \"revision\": 41,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"ART-code\",\n      \"version\": 1,\n      \"revision\": 42,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"ART-results\",\n      \"version\": 1,\n      \"revision\": 43,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"ART-analysis\",\n      \"version\": 1,\n      \"revision\": 44,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"ART-sources\",\n      \"version\": 1,\n      \"revision\": 45,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"ART-report\",\n      \"version\": 1,\n      \"revision\": 46,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"ART-review\",\n      \"version\": 1,\n      \"revision\": 47,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"A-init-failure\",\n      \"version\": 1,\n      \"revision\": 48,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"A-material-audit\",\n      \"version\": 1,\n      \"revision\": 49,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"A-interpret\",\n      \"version\": 1,\n      \"revision\": 50,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"A-next-context\",\n      \"version\": 1,\n      \"revision\": 51,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"method-binding\",\n      \"id\": \"MB-art\",\n      \"version\": 1,\n      \"revision\": 52,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    }\n  ],\n  \"revision\": 52,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 52,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 6,\n    \"decisions\": 0,\n    \"evidence\": 9,\n    \"method_bindings\": 1,\n    \"relations\": 18,\n    \"sources\": 7,\n    \"statements\": 7\n  },\n  \"activities\": [\n    {\n      \"id\": \"A-init-failure\",\n      \"title\": \"首次项目初始化参数被拒绝\",\n      \"declared_status\": \"failed\",\n      \"effective_status\": \"failed\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-interpret\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-material-audit\",\n      \"title\": \"读取输入复制件并核对尺寸及来源定位\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-next-context\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"Clarify the current question, scope and next evidence check.\"\n  },\n  \"checkpoint\": {\n    \"recorded\": false,\n    \"status\": \"not-recorded\",\n    \"changed\": []\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "checkpoint",
+        "--next-action",
+        "先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。",
+        "--activity",
+        "A-next-context",
+        "--note",
+        "图像已实际查看、两种解释已比较、短稿与来源对照已写；下一活动待取得新上下文，不声称已完成。",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"checkpoint_saved\": true,\n  \"revision\": 53,\n  \"cursor\": {\n    \"activity_id\": \"A-next-context\",\n    \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。\"\n  },\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 6,\n    \"decisions\": 0,\n    \"evidence\": 9,\n    \"method_bindings\": 1,\n    \"relations\": 18,\n    \"sources\": 7,\n    \"statements\": 7\n  },\n  \"activities\": [\n    {\n      \"id\": \"A-init-failure\",\n      \"title\": \"首次项目初始化参数被拒绝\",\n      \"declared_status\": \"failed\",\n      \"effective_status\": \"failed\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-interpret\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-material-audit\",\n      \"title\": \"读取输入复制件并核对尺寸及来源定位\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-next-context\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"A-next-context\",\n    \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 6,\n    \"decisions\": 0,\n    \"evidence\": 9,\n    \"method_bindings\": 1,\n    \"relations\": 18,\n    \"sources\": 7,\n    \"statements\": 7\n  },\n  \"activities\": [\n    {\n      \"id\": \"A-init-failure\",\n      \"title\": \"首次项目初始化参数被拒绝\",\n      \"declared_status\": \"failed\",\n      \"effective_status\": \"failed\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-interpret\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-material-audit\",\n      \"title\": \"读取输入复制件并核对尺寸及来源定位\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-next-context\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"A-next-context\",\n    \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  },\n  \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。\",\n  \"needs_review\": false,\n  \"recovery_instruction\": \"Continue the recorded next action within its existing scope.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "install",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"installed\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 65,\n  \"payload_sha256\": \"321fa8cc01187952b33ec072e96a10d65acdf24c674b99cd92107473bcfa69d5\",\n  \"global_installation\": false,\n  \"project_records_modified\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"installed_integrity\": true,\n  \"source_version_matches\": true,\n  \"source_comparison_performed\": true,\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 65,\n  \"payload_sha256\": \"321fa8cc01187952b33ec072e96a10d65acdf24c674b99cd92107473bcfa69d5\",\n  \"findings\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 6,\n    \"decisions\": 0,\n    \"evidence\": 9,\n    \"method_bindings\": 1,\n    \"relations\": 18,\n    \"sources\": 7,\n    \"statements\": 7\n  },\n  \"activities\": [\n    {\n      \"id\": \"A-init-failure\",\n      \"title\": \"首次项目初始化参数被拒绝\",\n      \"declared_status\": \"failed\",\n      \"effective_status\": \"failed\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-interpret\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-material-audit\",\n      \"title\": \"读取输入复制件并核对尺寸及来源定位\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-next-context\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"A-next-context\",\n    \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 6,\n    \"decisions\": 0,\n    \"evidence\": 9,\n    \"method_bindings\": 1,\n    \"relations\": 18,\n    \"sources\": 7,\n    \"statements\": 7\n  },\n  \"activities\": [\n    {\n      \"id\": \"A-init-failure\",\n      \"title\": \"首次项目初始化参数被拒绝\",\n      \"declared_status\": \"failed\",\n      \"effective_status\": \"failed\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-interpret\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-material-audit\",\n      \"title\": \"读取输入复制件并核对尺寸及来源定位\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-next-context\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"A-next-context\",\n    \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  },\n  \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。\",\n  \"needs_review\": false,\n  \"recovery_instruction\": \"Continue the recorded next action within its existing scope.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "statement",
+        "--id",
+        "S-industrial"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"kind\": \"statement\",\n  \"id\": \"S-industrial\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"assessment\": {\n        \"rationale\": \"具体工业劳动对象仅由E1推断，且其原画无人前提被原图挑战。\",\n        \"reviewer\": \"Codex代理，本次图像细读与材料对照；无独立人类专家验证\",\n        \"scope\": \"仅限所给离线原创虚构图像和材料包节录\",\n        \"status\": \"challenged\"\n      },\n      \"id\": \"S-industrial\",\n      \"scope\": \"仅限所给离线原创虚构图像和材料包节录\",\n      \"text\": \"原草稿主张作者唯一意图是谴责工业劳动制度。\",\n      \"type\": \"interpretive\",\n      \"use\": \"excluded\",\n      \"work_status\": \"reviewed\"\n    },\n    \"registered_at\": \"2026-10-28T21:36:25.691675+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "statement",
+        "--id",
+        "S-nofigure"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"kind\": \"statement\",\n  \"id\": \"S-nofigure\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"assessment\": {\n        \"rationale\": \"原图左下实际可见人形，复刻的无人不代表原构图无人。\",\n        \"reviewer\": \"Codex代理，本次图像细读与材料对照；无独立人类专家验证\",\n        \"scope\": \"仅限所给离线原创虚构图像和材料包节录\",\n        \"status\": \"challenged\"\n      },\n      \"id\": \"S-nofigure\",\n      \"scope\": \"仅限所给离线原创虚构图像和材料包节录\",\n      \"text\": \"原草稿主张原画完全没有人物。\",\n      \"type\": \"empirical\",\n      \"use\": \"excluded\",\n      \"work_status\": \"reviewed\"\n    },\n    \"registered_at\": \"2026-10-28T21:36:25.692894+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--id",
+        "R-industrial-E1"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"kind\": \"relation\",\n  \"id\": \"R-industrial-E1\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"evidence_id\": \"E-E1\",\n      \"id\": \"R-industrial-E1\",\n      \"rationale\": \"E1确实提出此读法，只支持该后出说法存在，不确认其作者意图断言。\",\n      \"relation\": \"supports\",\n      \"scope\": \"1970年E1接受表述的存在，非原作者意图\",\n      \"statement_id\": \"S-industrial\"\n    },\n    \"registered_at\": \"2026-10-28T21:36:25.748710+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--id",
+        "R-industrial-counter"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"kind\": \"relation\",\n  \"id\": \"R-industrial-counter\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"evidence_id\": \"E-original\",\n      \"id\": \"R-industrial-counter\",\n      \"rationale\": \"E1所依赖的原画无人物前提与原图可见人形冲突。\",\n      \"relation\": \"challenges\",\n      \"scope\": \"仅限所给离线原创虚构图像和材料包节录\",\n      \"statement_id\": \"S-industrial\"\n    },\n    \"registered_at\": \"2026-10-28T21:36:25.752428+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "evidence",
+        "--id",
+        "E-init-failure"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"kind\": \"evidence\",\n  \"id\": \"E-init-failure\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"checks/initial-init-failure.json\": \"98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"description\": \"首次init因非法entry validation退出2；后续纠正成功。\",\n      \"id\": \"E-init-failure\",\n      \"limitations\": \"接口失败，不是艺术解释检验。\",\n      \"location\": {\n        \"kind\": \"local\",\n        \"path\": \"checks/initial-init-failure.json\"\n      },\n      \"provenance\": \"由Codex代理在本次执行中从项目inputs复制件读取/查看；具体步骤见notes/analysis.md与execution.json。\",\n      \"source_ids\": [],\n      \"type\": \"execution-failure\"\n    },\n    \"registered_at\": \"2026-10-28T21:36:25.713440+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--id",
+        "A-interpret"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"kind\": \"activity\",\n  \"id\": \"A-interpret\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"artifacts/results.json\": \"3eae8dd6771bf9f99c566275fa27297d59372595a9a8301e201e0dbd415de338\",\n        \"artifacts/run.py\": \"fe6f057951a10c44c9e9b642821994f82e43e4ecf37b4d45ae54379e8be4c364\",\n        \"checks/initial-init-failure.json\": \"98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4\",\n        \"inputs/draft.md\": \"b16f8ef1943139d651088e151e433c075febc814282ac3e32a5433f6f3bab5ef\",\n        \"inputs/original.png\": \"7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7\",\n        \"inputs/reproduction.png\": \"2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247\",\n        \"inputs/source-packet.md\": \"fb5d68dcfe709b80f50653a3503184ba49a94dcccabb04ce560c94be8dec614a\",\n        \"manuscript/report.md\": \"4a52f78bc1fd01a34ae59d345df0f72db9716d886c6ab21e41ff6252d28f740b\",\n        \"notes/analysis.md\": \"9187553bf955e03c1347253393eff8d3f59efb31750d4efa3637d3a25ffbbba5\",\n        \"notes/source-comparison.md\": \"ebdf01b13f34af2e934cee84682e6f2041400e5f65865a539b2b2b640d3e8fee\",\n        \"review.md\": \"4cf46022fb0a1bac18ba7d451106788898d1fd6d85dff55dd4188e10ac8e44fb\"\n      },\n      \"records\": {\n        \"activity:A-material-audit\": \"9c389d23794196b8245a1a696e53dd9d51c9f93978bbfe2d5cac1cc6a510bb7e\",\n        \"artifact:ART-analysis\": \"8c18870ea0336ed8a13a1343ba1159971428c745749653483a6bafced2b9875e\",\n        \"artifact:ART-code\": \"565d41b4b5eedf1d478b776c5074ed9570fc8ffed40aab65d3c6fc9abe2e2986\",\n        \"artifact:ART-report\": \"8c4cf5f6d607defeee5d891d00b319896d50eb4d6f860129b67e0cc96ddada26\",\n        \"artifact:ART-results\": \"1632d831d864ce39d9aaa9720b92a85260a3eb2bdd9356ac458d23e916bb8742\",\n        \"artifact:ART-review\": \"2e81d60e2c4961aec5432503c684f4eaa2d5f3ed3885b03cccfbb42b52a5409c\",\n        \"artifact:ART-sources\": \"a7aa8657b86f8eb6d7357c7317bb675756868c686a6f5a3f555d5423f83077a6\",\n        \"evidence:E-A1\": \"2602cc3c078e44e6dfefa26bb94ba8260deab45edae147b9dde69a0160124729\",\n        \"evidence:E-C1\": \"bc426d2cd1a136571605774344a9076b8fe0818b55a65fe0a58a7a330c44a568\",\n        \"evidence:E-E1\": \"408cd3671738f22a172f4b173a87ed8284d1c19b38c5db0096b1c8c8f313e50e\",\n        \"evidence:E-draft\": \"2d0ccdfab303c05b38f02ed62b2ad488ceff07d16e325f93691d86c123058b0d\",\n        \"evidence:E-identity\": \"4c5ed3b4804a2d2ab43fcbb363af21cc19f93c7916a1bc8e362bf9f467e3118e\",\n        \"evidence:E-init-failure\": \"b9ea5062c61d9d02b261285b352363b1710e090f1c64725a3953796a1ebeb8eb\",\n        \"evidence:E-original\": \"85b81cccd0dd3ed552027f06e930d4d3d34debb59f9efc37113cf0a44df0dafc\",\n        \"evidence:E-reproduction\": \"49f8e9841aad54f2562c4ae659fc1b238d01fd84adf15d90f1dceb018b621447\",\n        \"relation:R-choice-A1\": \"7d885a28fe44188811e3f35399c67124ab4aa1430d5a9bc8c7caa2114550e6d3\",\n        \"relation:R-choice-limit\": \"6c9acae592157991f8a25996d3bf0a72ba187994876b5d6e2dd36a3a040feba4\",\n        \"relation:R-choice-visual\": \"06c32dd6faf2f55e89800b157789b8b50a6adc04ea462ef5eb668dfd3dcb5b39\",\n        \"relation:R-enclosure-A1\": \"1b0c71cd640c6f4f34578e8a3364b9f089c28ce78f5ee95071366acf95370275\",\n        \"relation:R-enclosure-C1\": \"27d8dc52b6c79485ab739b125027b3ce0387d96b5c7ac185e006b97f382062c5\",\n        \"relation:R-enclosure-rep\": \"2f612025623e771e3a5ef5ff86fbb1ab525cd96913b83101fe5a0524d4840936\",\n        \"source:SRC-A1\": \"773e0ffa83895fe14da56d5f36ecd348ee08bd66703388515aa4cf214cae8211\",\n        \"source:SRC-C1\": \"ca8bcb5a9ccab7446299d41611964855be5b256c84da9684de563d676d4c5491\",\n        \"source:SRC-E1\": \"331267c891e0eef69e23f046cd3eabb794a6becdc510aab5c4e57470d73f233c\",\n        \"source:SRC-draft\": \"f15f90bee715315b2ebbf7811050fbfa9a5006c4b7fd77b0ce8275ceb94080cc\",\n        \"source:SRC-original\": \"fe07f545dba057b1fba9e861937a914b63891a637084f1a01364c5a411b3640d\",\n        \"source:SRC-packet\": \"3b2f44aac63d53e803650cbcdecf4a0f51cf75bea160abce39d6b117b698474a\",\n        \"source:SRC-reproduction\": \"7d4f27a80323a4cc5a3150324366a1d0b294f1ed74a9cf6c574526749c1fc30c\",\n        \"statement:S-choice\": \"b4738a776a93c6743ccdb5798e3424a84e33fb66669c18d70c10ae53c6ca7fcb\",\n        \"statement:S-enclosure\": \"c16262d5d2c508e92f9498fa9be65230390e3c8e6ab677877de2084359e37e02\"\n      }\n    },\n    \"data\": {\n      \"depends_on\": [\n        \"A-material-audit\"\n      ],\n      \"id\": \"A-interpret\",\n      \"inputs\": [\n        \"evidence:E-original\",\n        \"evidence:E-reproduction\",\n        \"evidence:E-A1\",\n        \"evidence:E-C1\",\n        \"evidence:E-E1\",\n        \"evidence:E-draft\",\n        \"artifact:ART-results\"\n      ],\n      \"note\": \"由Codex代理实际完成；view_image全图查看原输入及复制件；非独立人类审稿。\",\n      \"outputs\": [\n        \"artifact:ART-analysis\",\n        \"artifact:ART-sources\",\n        \"artifact:ART-report\",\n        \"artifact:ART-review\"\n      ],\n      \"status\": \"done\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\"\n    },\n    \"registered_at\": \"2026-10-28T21:36:25.820500+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--id",
+        "A-next-context"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"kind\": \"activity\",\n  \"id\": \"A-next-context\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"depends_on\": [\n        \"A-interpret\"\n      ],\n      \"id\": \"A-next-context\",\n      \"inputs\": [\n        \"artifact:ART-analysis\",\n        \"artifact:ART-review\"\n      ],\n      \"note\": \"计划：索取工作笺全文及目录第5段所在完整页，检查是否存在工业劳动的直接出处；本轮未取得，不记完成。\",\n      \"outputs\": [],\n      \"status\": \"pending\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\"\n    },\n    \"registered_at\": \"2026-10-28T21:36:25.826490+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "statement",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-statement-S-industrial.json",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"statement\",\n  \"id\": \"S-industrial\",\n  \"version\": 2,\n  \"revision\": 54,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "statement",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-statement-S-nofigure.json",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"statement\",\n  \"id\": \"S-nofigure\",\n  \"version\": 2,\n  \"revision\": 55,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-relation-R-industrial-E1.json",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"relation\",\n  \"id\": \"R-industrial-E1\",\n  \"version\": 2,\n  \"revision\": 56,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-relation-R-industrial-counter.json",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"relation\",\n  \"id\": \"R-industrial-counter\",\n  \"version\": 2,\n  \"revision\": 57,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-relation-R-industrial-draft.json"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"relation\",\n  \"id\": \"R-industrial-draft\",\n  \"version\": 1,\n  \"revision\": 58,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-relation-R-nofigure-draft.json"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"relation\",\n  \"id\": \"R-nofigure-draft\",\n  \"version\": 1,\n  \"revision\": 59,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "evidence",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-evidence-E-init-failure.json",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"evidence\",\n  \"id\": \"E-init-failure\",\n  \"version\": 2,\n  \"revision\": 60,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "evidence",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-evidence-E-ledger-semantic-review.json"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"evidence\",\n  \"id\": \"E-ledger-semantic-review\",\n  \"version\": 1,\n  \"revision\": 61,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "artifact",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-artifact-ART-ledger-semantic-review.json"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"ART-ledger-semantic-review\",\n  \"version\": 1,\n  \"revision\": 62,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 1,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 62,\n  \"passed\": false,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [\n    {\n      \"code\": \"activity_stale\",\n      \"record\": \"activity:A-interpret\"\n    },\n    {\n      \"code\": \"checkpoint_stale\",\n      \"changed\": [\n        \"registered-records\",\n        \"local-files\"\n      ]\n    }\n  ],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 7,\n    \"decisions\": 0,\n    \"evidence\": 10,\n    \"method_bindings\": 1,\n    \"relations\": 20,\n    \"sources\": 7,\n    \"statements\": 7\n  },\n  \"activities\": [\n    {\n      \"id\": \"A-init-failure\",\n      \"title\": \"首次项目初始化参数被拒绝\",\n      \"declared_status\": \"failed\",\n      \"effective_status\": \"failed\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-interpret\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"stale\",\n      \"stale_reasons\": [\n        \"Bound records or local files changed\"\n      ]\n    },\n    {\n      \"id\": \"A-material-audit\",\n      \"title\": \"读取输入复制件并核对尺寸及来源定位\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-next-context\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"A-next-context\",\n    \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"stale\",\n    \"changed\": [\n      \"registered-records\",\n      \"local-files\"\n    ]\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-activity-A-interpret.json",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"A-interpret\",\n  \"version\": 2,\n  \"revision\": 63,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-activity-A-ledger-semantic-correction.json"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"A-ledger-semantic-correction\",\n  \"version\": 1,\n  \"revision\": 64,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--file",
+        "PROJECT/checks/semantic-correction/input-activity-A-next-context.json",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"A-next-context\",\n  \"version\": 2,\n  \"revision\": 65,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "checkpoint",
+        "--root",
+        "PROJECT",
+        "--activity",
+        "A-next-context",
+        "--next-action",
+        "先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；E1未说唯一，在取得直接出处前不把其后出工业劳动归因写成已确认作者意图。",
+        "--note",
+        "本次显式修正登记目标/关系和CLI日志provenance，已重绑受影响done活动；保留旧版本与原失败；原科学产物及输入未改。"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"checkpoint_saved\": true,\n  \"revision\": 66,\n  \"cursor\": {\n    \"activity_id\": \"A-next-context\",\n    \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；E1未说唯一，在取得直接出处前不把其后出工业劳动归因写成已确认作者意图。\"\n  },\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 5,\n    \"artifacts\": 7,\n    \"decisions\": 0,\n    \"evidence\": 10,\n    \"method_bindings\": 1,\n    \"relations\": 20,\n    \"sources\": 7,\n    \"statements\": 7\n  },\n  \"activities\": [\n    {\n      \"id\": \"A-init-failure\",\n      \"title\": \"首次项目初始化参数被拒绝\",\n      \"declared_status\": \"failed\",\n      \"effective_status\": \"failed\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-interpret\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-ledger-semantic-correction\",\n      \"title\": \"核对原文并修正被审命题、证据关系和CLI日志来源\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-material-audit\",\n      \"title\": \"读取输入复制件并核对尺寸及来源定位\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-next-context\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"A-next-context\",\n    \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；E1未说唯一，在取得直接出处前不把其后出工业劳动归因写成已确认作者意图。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 5,\n    \"artifacts\": 7,\n    \"decisions\": 0,\n    \"evidence\": 10,\n    \"method_bindings\": 1,\n    \"relations\": 20,\n    \"sources\": 7,\n    \"statements\": 7\n  },\n  \"activities\": [\n    {\n      \"id\": \"A-init-failure\",\n      \"title\": \"首次项目初始化参数被拒绝\",\n      \"declared_status\": \"failed\",\n      \"effective_status\": \"failed\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-interpret\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-ledger-semantic-correction\",\n      \"title\": \"核对原文并修正被审命题、证据关系和CLI日志来源\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-material-audit\",\n      \"title\": \"读取输入复制件并核对尺寸及来源定位\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-next-context\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"A-next-context\",\n    \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；E1未说唯一，在取得直接出处前不把其后出工业劳动归因写成已确认作者意图。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  },\n  \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；E1未说唯一，在取得直接出处前不把其后出工业劳动归因写成已确认作者意图。\",\n  \"needs_review\": false,\n  \"recovery_instruction\": \"Continue the recorded next action within its existing scope.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"installed_integrity\": true,\n  \"source_version_matches\": true,\n  \"source_comparison_performed\": true,\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 65,\n  \"payload_sha256\": \"321fa8cc01187952b33ec072e96a10d65acdf24c674b99cd92107473bcfa69d5\",\n  \"findings\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "statement",
+        "--id",
+        "S-industrial"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"statement\",\n  \"id\": \"S-industrial\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"assessment\": {\n        \"rationale\": \"E1只是1970年基于裁剪复刻的后出归因，没有说唯一，也未确认艺术家自身意图；其无人前提被原图挑战。A1另有保留选择的自述，但这些材料不能反证一切工业批判可能，故唯一意图主张依据不足。\",\n        \"reviewer\": \"Codex代理，本次图像细读与材料对照；无独立人类专家验证\",\n        \"scope\": \"仅限所给离线原创虚构图像和材料包节录\",\n        \"status\": \"insufficient\"\n      },\n      \"id\": \"S-industrial\",\n      \"notes\": \"直接登记被审内容命题；其在原草稿第1行出现的事实由R-industrial-draft/E-draft定位，不再混入statement文本。\",\n      \"scope\": \"仅限所给离线原创虚构图像和材料包节录\",\n      \"text\": \"作者的唯一意图是谴责工业劳动制度。\",\n      \"type\": \"interpretive\",\n      \"use\": \"excluded\",\n      \"work_status\": \"reviewed\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:51.845158+00:00\",\n    \"version\": 2\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "statement",
+        "--id",
+        "S-nofigure"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"statement\",\n  \"id\": \"S-nofigure\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"assessment\": {\n        \"rationale\": \"原图左下实际可见人形，复刻的无人不代表原构图无人。\",\n        \"reviewer\": \"Codex代理，本次图像细读与材料对照；无独立人类专家验证\",\n        \"scope\": \"仅限所给离线原创虚构图像和材料包节录\",\n        \"status\": \"challenged\"\n      },\n      \"id\": \"S-nofigure\",\n      \"notes\": \"直接登记被审内容命题；原草稿位置由R-nofigure-draft/E-draft定位。\",\n      \"scope\": \"仅限所给离线原创虚构图像和材料包节录\",\n      \"text\": \"原画完全没有人物。\",\n      \"type\": \"empirical\",\n      \"use\": \"excluded\",\n      \"work_status\": \"reviewed\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:51.903662+00:00\",\n    \"version\": 2\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--id",
+        "R-industrial-E1"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"relation\",\n  \"id\": \"R-industrial-E1\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"evidence_id\": \"E-E1\",\n      \"id\": \"R-industrial-E1\",\n      \"rationale\": \"E1记载1970年有人把作品归因为艺术家对工业劳动制度的谴责，提供后出接受语境；节录没有唯一性表述，也不确认归因成立。\",\n      \"relation\": \"contextualizes\",\n      \"scope\": \"仅限E1后出归因的存在与语境，不支持原作者唯一意图。\",\n      \"statement_id\": \"S-industrial\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:51.963295+00:00\",\n    \"version\": 2\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--id",
+        "R-industrial-counter"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"relation\",\n  \"id\": \"R-industrial-counter\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"evidence_id\": \"E-original\",\n      \"id\": \"R-industrial-counter\",\n      \"rationale\": \"原图可见人形，直接反驳E1的无人前提，削弱其由此推导工业劳动意图的依据；不能从有人直接反证艺术家具有任何该意图的可能。\",\n      \"relation\": \"qualifies\",\n      \"scope\": \"只限制E1归因推论的前提和支持力度，不直接判定艺术家全部意图。\",\n      \"statement_id\": \"S-industrial\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:52.024315+00:00\",\n    \"version\": 2\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "evidence",
+        "--id",
+        "E-init-failure"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"evidence\",\n  \"id\": \"E-init-failure\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"checks/initial-init-failure.json\": \"98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"description\": \"首次init因非法entry validation退出2；后续纠正成功。\",\n      \"id\": \"E-init-failure\",\n      \"limitations\": \"接口失败，不是艺术解释检验。\",\n      \"location\": {\n        \"kind\": \"local\",\n        \"path\": \"checks/initial-init-failure.json\"\n      },\n      \"notes\": \"执行日志来源已显式更正；checks/initial-init-failure.json原始字节和A-init-failure的failed状态保留。\",\n      \"provenance\": \"Codex代理实际通过subprocess.run执行初始化命令；argv=[\\\"PYTHON\\\", \\\"TOOLKIT/tools/research.py\\\", \\\"init\\\", \\\"--output\\\", \\\"PROJECT\\\", \\\"--title\\\", \\\"《两条路径》原构图与裁剪展陈：版本与竞争解释\\\", \\\"--discipline\\\", \\\"humanities\\\", \\\"--method\\\", \\\"historical-interpretive\\\", \\\"--mode\\\", \\\"structured\\\", \\\"--language\\\", \\\"zh\\\", \\\"--entry\\\", \\\"validation\\\"]。证据文件保存该次调用实际返回的stdout、stderr（本次为空）及exit_status=2；stdout含Unknown project entry activity or workflow mode错误。\",\n      \"source_ids\": [],\n      \"type\": \"execution-failure\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:52.203524+00:00\",\n    \"version\": 2\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--id",
+        "A-interpret"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"activity\",\n  \"id\": \"A-interpret\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"artifacts/results.json\": \"3eae8dd6771bf9f99c566275fa27297d59372595a9a8301e201e0dbd415de338\",\n        \"artifacts/run.py\": \"fe6f057951a10c44c9e9b642821994f82e43e4ecf37b4d45ae54379e8be4c364\",\n        \"checks/initial-init-failure.json\": \"98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4\",\n        \"checks/registration-semantic-review.md\": \"d451395ca0a7a2577f0a6ed27b6e51436bb17c1ebc58198fb56ee2e19ad8a40b\",\n        \"inputs/draft.md\": \"b16f8ef1943139d651088e151e433c075febc814282ac3e32a5433f6f3bab5ef\",\n        \"inputs/original.png\": \"7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7\",\n        \"inputs/reproduction.png\": \"2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247\",\n        \"inputs/source-packet.md\": \"fb5d68dcfe709b80f50653a3503184ba49a94dcccabb04ce560c94be8dec614a\",\n        \"manuscript/report.md\": \"4a52f78bc1fd01a34ae59d345df0f72db9716d886c6ab21e41ff6252d28f740b\",\n        \"notes/analysis.md\": \"9187553bf955e03c1347253393eff8d3f59efb31750d4efa3637d3a25ffbbba5\",\n        \"notes/source-comparison.md\": \"ebdf01b13f34af2e934cee84682e6f2041400e5f65865a539b2b2b640d3e8fee\",\n        \"review.md\": \"4cf46022fb0a1bac18ba7d451106788898d1fd6d85dff55dd4188e10ac8e44fb\"\n      },\n      \"records\": {\n        \"activity:A-material-audit\": \"9c389d23794196b8245a1a696e53dd9d51c9f93978bbfe2d5cac1cc6a510bb7e\",\n        \"artifact:ART-analysis\": \"8c18870ea0336ed8a13a1343ba1159971428c745749653483a6bafced2b9875e\",\n        \"artifact:ART-code\": \"565d41b4b5eedf1d478b776c5074ed9570fc8ffed40aab65d3c6fc9abe2e2986\",\n        \"artifact:ART-ledger-semantic-review\": \"7b9b11911b90b4dad766f4a0738cd00a5ed21c1e95fa758646ef993280760f61\",\n        \"artifact:ART-report\": \"8c4cf5f6d607defeee5d891d00b319896d50eb4d6f860129b67e0cc96ddada26\",\n        \"artifact:ART-results\": \"1632d831d864ce39d9aaa9720b92a85260a3eb2bdd9356ac458d23e916bb8742\",\n        \"artifact:ART-review\": \"2e81d60e2c4961aec5432503c684f4eaa2d5f3ed3885b03cccfbb42b52a5409c\",\n        \"artifact:ART-sources\": \"a7aa8657b86f8eb6d7357c7317bb675756868c686a6f5a3f555d5423f83077a6\",\n        \"evidence:E-A1\": \"2602cc3c078e44e6dfefa26bb94ba8260deab45edae147b9dde69a0160124729\",\n        \"evidence:E-C1\": \"bc426d2cd1a136571605774344a9076b8fe0818b55a65fe0a58a7a330c44a568\",\n        \"evidence:E-E1\": \"408cd3671738f22a172f4b173a87ed8284d1c19b38c5db0096b1c8c8f313e50e\",\n        \"evidence:E-draft\": \"2d0ccdfab303c05b38f02ed62b2ad488ceff07d16e325f93691d86c123058b0d\",\n        \"evidence:E-identity\": \"4c5ed3b4804a2d2ab43fcbb363af21cc19f93c7916a1bc8e362bf9f467e3118e\",\n        \"evidence:E-init-failure\": \"63db468194f3deeb2916d02a938486744615c26f919577e07afd95ff6620bca8\",\n        \"evidence:E-ledger-semantic-review\": \"e1ae6cbbba5e56d266fde612eb72e3f801d5c78c330fc86026878550f165afba\",\n        \"evidence:E-original\": \"85b81cccd0dd3ed552027f06e930d4d3d34debb59f9efc37113cf0a44df0dafc\",\n        \"evidence:E-reproduction\": \"49f8e9841aad54f2562c4ae659fc1b238d01fd84adf15d90f1dceb018b621447\",\n        \"relation:R-choice-A1\": \"7d885a28fe44188811e3f35399c67124ab4aa1430d5a9bc8c7caa2114550e6d3\",\n        \"relation:R-choice-limit\": \"6c9acae592157991f8a25996d3bf0a72ba187994876b5d6e2dd36a3a040feba4\",\n        \"relation:R-choice-visual\": \"06c32dd6faf2f55e89800b157789b8b50a6adc04ea462ef5eb668dfd3dcb5b39\",\n        \"relation:R-enclosure-A1\": \"1b0c71cd640c6f4f34578e8a3364b9f089c28ce78f5ee95071366acf95370275\",\n        \"relation:R-enclosure-C1\": \"27d8dc52b6c79485ab739b125027b3ce0387d96b5c7ac185e006b97f382062c5\",\n        \"relation:R-enclosure-rep\": \"2f612025623e771e3a5ef5ff86fbb1ab525cd96913b83101fe5a0524d4840936\",\n        \"relation:R-industrial-A1\": \"721c9f4f65c592486903c8d126668b9103c88a351d867030eb8064e14886b4d8\",\n        \"relation:R-industrial-E1\": \"dff6a84020eb11b6307e72165c0be7ea8d473dff2561a8f30b9f0f3bcffa67c8\",\n        \"relation:R-industrial-counter\": \"cc604bd8405ac7be172cdce59197968128b0ec9b6a43b09216e24543398e6f7b\",\n        \"relation:R-industrial-draft\": \"189f40bd3755ce40930fd9f5420ab45b77ce1241eeb2a0896c0c1a13ff2bf060\",\n        \"relation:R-nofigure\": \"3dd6d03ceabe505478084d2afc59ba38bfef7fc26f1c99cd8511504ce0c17e2e\",\n        \"relation:R-nofigure-draft\": \"2fd6bfc956790f4a578bd886770ca9c03a3b71c9709d360baf9b4549e0d01ce2\",\n        \"relation:R-nofigure-version\": \"8987bbefb6b5e96b08df4a1e8e947f38e75e448b53592cb932176c4558a7df95\",\n        \"source:SRC-A1\": \"773e0ffa83895fe14da56d5f36ecd348ee08bd66703388515aa4cf214cae8211\",\n        \"source:SRC-C1\": \"ca8bcb5a9ccab7446299d41611964855be5b256c84da9684de563d676d4c5491\",\n        \"source:SRC-E1\": \"331267c891e0eef69e23f046cd3eabb794a6becdc510aab5c4e57470d73f233c\",\n        \"source:SRC-draft\": \"f15f90bee715315b2ebbf7811050fbfa9a5006c4b7fd77b0ce8275ceb94080cc\",\n        \"source:SRC-original\": \"fe07f545dba057b1fba9e861937a914b63891a637084f1a01364c5a411b3640d\",\n        \"source:SRC-packet\": \"3b2f44aac63d53e803650cbcdecf4a0f51cf75bea160abce39d6b117b698474a\",\n        \"source:SRC-reproduction\": \"7d4f27a80323a4cc5a3150324366a1d0b294f1ed74a9cf6c574526749c1fc30c\",\n        \"statement:S-choice\": \"b4738a776a93c6743ccdb5798e3424a84e33fb66669c18d70c10ae53c6ca7fcb\",\n        \"statement:S-enclosure\": \"c16262d5d2c508e92f9498fa9be65230390e3c8e6ab677877de2084359e37e02\",\n        \"statement:S-industrial\": \"b6310613780db12d31620293bb915417dbfde4d49820fce1d5278322293f421b\",\n        \"statement:S-nofigure\": \"d6eee226081b62f321ae0101d499b4778486d4ebb6d2ee373a5ba0a6735354ce\"\n      }\n    },\n    \"data\": {\n      \"depends_on\": [\n        \"A-material-audit\"\n      ],\n      \"id\": \"A-interpret\",\n      \"inputs\": [\n        \"evidence:E-original\",\n        \"evidence:E-reproduction\",\n        \"evidence:E-A1\",\n        \"evidence:E-C1\",\n        \"evidence:E-E1\",\n        \"evidence:E-draft\",\n        \"artifact:ART-results\",\n        \"statement:S-industrial\",\n        \"statement:S-nofigure\",\n        \"relation:R-industrial-E1\",\n        \"relation:R-industrial-counter\",\n        \"relation:R-industrial-A1\",\n        \"relation:R-nofigure\",\n        \"relation:R-nofigure-version\",\n        \"relation:R-industrial-draft\",\n        \"relation:R-nofigure-draft\",\n        \"artifact:ART-ledger-semantic-review\"\n      ],\n      \"note\": \"由Codex代理实际完成；view_image全图查看原输入及复制件；非独立人类审稿。 后续登记语义复核已将被审内容与草稿归属分开，明确E1未说唯一，纠正失败日志来源；重新核对原正文仍表达相同解释范围，科学产物未改，并重新绑定当前记录版本。\",\n      \"outputs\": [\n        \"artifact:ART-analysis\",\n        \"artifact:ART-sources\",\n        \"artifact:ART-report\",\n        \"artifact:ART-review\"\n      ],\n      \"status\": \"done\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:52.440916+00:00\",\n    \"version\": 2\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--id",
+        "A-next-context"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"activity\",\n  \"id\": \"A-next-context\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"depends_on\": [\n        \"A-interpret\",\n        \"A-ledger-semantic-correction\"\n      ],\n      \"id\": \"A-next-context\",\n      \"inputs\": [\n        \"artifact:ART-analysis\",\n        \"artifact:ART-review\",\n        \"artifact:ART-ledger-semantic-review\"\n      ],\n      \"note\": \"计划：索取工作笺全文及目录第5段所在完整页，检查是否存在工业劳动的直接出处；本轮未取得，不记完成。 登记语义和失败日志来源更正已完成；后续仍需新语境材料，本活动保持pending。\",\n      \"outputs\": [],\n      \"status\": \"pending\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:52.568051+00:00\",\n    \"version\": 2\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--id",
+        "R-industrial-draft"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"relation\",\n  \"id\": \"R-industrial-draft\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"evidence_id\": \"E-draft\",\n      \"id\": \"R-industrial-draft\",\n      \"rationale\": \"inputs/draft.md第1行出现“作者唯一意图是谴责工业劳动制度”，定位本次被审内容命题；原稿出现该断言不证明其内容成立。\",\n      \"relation\": \"contextualizes\",\n      \"scope\": \"只定位原草稿断言的出现及被审语境。\",\n      \"statement_id\": \"S-industrial\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:52.083231+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--id",
+        "R-nofigure-draft"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"relation\",\n  \"id\": \"R-nofigure-draft\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"evidence_id\": \"E-draft\",\n      \"id\": \"R-nofigure-draft\",\n      \"rationale\": \"inputs/draft.md第1行出现“原画完全没有人物”，定位本次被审内容命题；原稿出现该断言不证明其内容成立。\",\n      \"relation\": \"contextualizes\",\n      \"scope\": \"只定位原草稿断言的出现及被审语境。\",\n      \"statement_id\": \"S-nofigure\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:52.143555+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--id",
+        "A-ledger-semantic-correction"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"activity\",\n  \"id\": \"A-ledger-semantic-correction\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"artifacts/results.json\": \"3eae8dd6771bf9f99c566275fa27297d59372595a9a8301e201e0dbd415de338\",\n        \"artifacts/run.py\": \"fe6f057951a10c44c9e9b642821994f82e43e4ecf37b4d45ae54379e8be4c364\",\n        \"checks/initial-init-failure.json\": \"98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4\",\n        \"checks/registration-semantic-review.md\": \"d451395ca0a7a2577f0a6ed27b6e51436bb17c1ebc58198fb56ee2e19ad8a40b\",\n        \"inputs/draft.md\": \"b16f8ef1943139d651088e151e433c075febc814282ac3e32a5433f6f3bab5ef\",\n        \"inputs/original.png\": \"7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7\",\n        \"inputs/reproduction.png\": \"2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247\",\n        \"inputs/source-packet.md\": \"fb5d68dcfe709b80f50653a3503184ba49a94dcccabb04ce560c94be8dec614a\",\n        \"manuscript/report.md\": \"4a52f78bc1fd01a34ae59d345df0f72db9716d886c6ab21e41ff6252d28f740b\",\n        \"notes/analysis.md\": \"9187553bf955e03c1347253393eff8d3f59efb31750d4efa3637d3a25ffbbba5\",\n        \"notes/source-comparison.md\": \"ebdf01b13f34af2e934cee84682e6f2041400e5f65865a539b2b2b640d3e8fee\",\n        \"review.md\": \"4cf46022fb0a1bac18ba7d451106788898d1fd6d85dff55dd4188e10ac8e44fb\"\n      },\n      \"records\": {\n        \"activity:A-interpret\": \"295e2861451eda0129fa6860603041179df3364abeefcc76b247ce5d89ac7cda\",\n        \"activity:A-material-audit\": \"9c389d23794196b8245a1a696e53dd9d51c9f93978bbfe2d5cac1cc6a510bb7e\",\n        \"artifact:ART-analysis\": \"8c18870ea0336ed8a13a1343ba1159971428c745749653483a6bafced2b9875e\",\n        \"artifact:ART-code\": \"565d41b4b5eedf1d478b776c5074ed9570fc8ffed40aab65d3c6fc9abe2e2986\",\n        \"artifact:ART-ledger-semantic-review\": \"7b9b11911b90b4dad766f4a0738cd00a5ed21c1e95fa758646ef993280760f61\",\n        \"artifact:ART-report\": \"8c4cf5f6d607defeee5d891d00b319896d50eb4d6f860129b67e0cc96ddada26\",\n        \"artifact:ART-results\": \"1632d831d864ce39d9aaa9720b92a85260a3eb2bdd9356ac458d23e916bb8742\",\n        \"artifact:ART-review\": \"2e81d60e2c4961aec5432503c684f4eaa2d5f3ed3885b03cccfbb42b52a5409c\",\n        \"artifact:ART-sources\": \"a7aa8657b86f8eb6d7357c7317bb675756868c686a6f5a3f555d5423f83077a6\",\n        \"evidence:E-A1\": \"2602cc3c078e44e6dfefa26bb94ba8260deab45edae147b9dde69a0160124729\",\n        \"evidence:E-C1\": \"bc426d2cd1a136571605774344a9076b8fe0818b55a65fe0a58a7a330c44a568\",\n        \"evidence:E-E1\": \"408cd3671738f22a172f4b173a87ed8284d1c19b38c5db0096b1c8c8f313e50e\",\n        \"evidence:E-draft\": \"2d0ccdfab303c05b38f02ed62b2ad488ceff07d16e325f93691d86c123058b0d\",\n        \"evidence:E-identity\": \"4c5ed3b4804a2d2ab43fcbb363af21cc19f93c7916a1bc8e362bf9f467e3118e\",\n        \"evidence:E-init-failure\": \"63db468194f3deeb2916d02a938486744615c26f919577e07afd95ff6620bca8\",\n        \"evidence:E-ledger-semantic-review\": \"e1ae6cbbba5e56d266fde612eb72e3f801d5c78c330fc86026878550f165afba\",\n        \"evidence:E-original\": \"85b81cccd0dd3ed552027f06e930d4d3d34debb59f9efc37113cf0a44df0dafc\",\n        \"evidence:E-reproduction\": \"49f8e9841aad54f2562c4ae659fc1b238d01fd84adf15d90f1dceb018b621447\",\n        \"relation:R-choice-A1\": \"7d885a28fe44188811e3f35399c67124ab4aa1430d5a9bc8c7caa2114550e6d3\",\n        \"relation:R-choice-limit\": \"6c9acae592157991f8a25996d3bf0a72ba187994876b5d6e2dd36a3a040feba4\",\n        \"relation:R-choice-visual\": \"06c32dd6faf2f55e89800b157789b8b50a6adc04ea462ef5eb668dfd3dcb5b39\",\n        \"relation:R-enclosure-A1\": \"1b0c71cd640c6f4f34578e8a3364b9f089c28ce78f5ee95071366acf95370275\",\n        \"relation:R-enclosure-C1\": \"27d8dc52b6c79485ab739b125027b3ce0387d96b5c7ac185e006b97f382062c5\",\n        \"relation:R-enclosure-rep\": \"2f612025623e771e3a5ef5ff86fbb1ab525cd96913b83101fe5a0524d4840936\",\n        \"relation:R-industrial-A1\": \"721c9f4f65c592486903c8d126668b9103c88a351d867030eb8064e14886b4d8\",\n        \"relation:R-industrial-E1\": \"dff6a84020eb11b6307e72165c0be7ea8d473dff2561a8f30b9f0f3bcffa67c8\",\n        \"relation:R-industrial-counter\": \"cc604bd8405ac7be172cdce59197968128b0ec9b6a43b09216e24543398e6f7b\",\n        \"relation:R-industrial-draft\": \"189f40bd3755ce40930fd9f5420ab45b77ce1241eeb2a0896c0c1a13ff2bf060\",\n        \"relation:R-nofigure\": \"3dd6d03ceabe505478084d2afc59ba38bfef7fc26f1c99cd8511504ce0c17e2e\",\n        \"relation:R-nofigure-draft\": \"2fd6bfc956790f4a578bd886770ca9c03a3b71c9709d360baf9b4549e0d01ce2\",\n        \"relation:R-nofigure-version\": \"8987bbefb6b5e96b08df4a1e8e947f38e75e448b53592cb932176c4558a7df95\",\n        \"source:SRC-A1\": \"773e0ffa83895fe14da56d5f36ecd348ee08bd66703388515aa4cf214cae8211\",\n        \"source:SRC-C1\": \"ca8bcb5a9ccab7446299d41611964855be5b256c84da9684de563d676d4c5491\",\n        \"source:SRC-E1\": \"331267c891e0eef69e23f046cd3eabb794a6becdc510aab5c4e57470d73f233c\",\n        \"source:SRC-draft\": \"f15f90bee715315b2ebbf7811050fbfa9a5006c4b7fd77b0ce8275ceb94080cc\",\n        \"source:SRC-original\": \"fe07f545dba057b1fba9e861937a914b63891a637084f1a01364c5a411b3640d\",\n        \"source:SRC-packet\": \"3b2f44aac63d53e803650cbcdecf4a0f51cf75bea160abce39d6b117b698474a\",\n        \"source:SRC-reproduction\": \"7d4f27a80323a4cc5a3150324366a1d0b294f1ed74a9cf6c574526749c1fc30c\",\n        \"statement:S-choice\": \"b4738a776a93c6743ccdb5798e3424a84e33fb66669c18d70c10ae53c6ca7fcb\",\n        \"statement:S-enclosure\": \"c16262d5d2c508e92f9498fa9be65230390e3c8e6ab677877de2084359e37e02\",\n        \"statement:S-industrial\": \"b6310613780db12d31620293bb915417dbfde4d49820fce1d5278322293f421b\",\n        \"statement:S-nofigure\": \"d6eee226081b62f321ae0101d499b4778486d4ebb6d2ee373a5ba0a6735354ce\"\n      }\n    },\n    \"data\": {\n      \"depends_on\": [\n        \"A-interpret\"\n      ],\n      \"id\": \"A-ledger-semantic-correction\",\n      \"inputs\": [\n        \"evidence:E-draft\",\n        \"evidence:E-E1\",\n        \"evidence:E-init-failure\",\n        \"statement:S-industrial\",\n        \"statement:S-nofigure\",\n        \"relation:R-industrial-E1\",\n        \"relation:R-industrial-counter\",\n        \"relation:R-industrial-draft\",\n        \"relation:R-nofigure-draft\"\n      ],\n      \"note\": \"Codex代理实际重读本包原文、通过CLI show取得版本并显式replace；旧版本及中间stale检查保留；输入和原科学正文无改动。\",\n      \"outputs\": [\n        \"artifact:ART-ledger-semantic-review\"\n      ],\n      \"status\": \"done\",\n      \"title\": \"核对原文并修正被审命题、证据关系和CLI日志来源\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:52.503699+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "input_identity": {
+    "draft.md": {
+      "original_path": "TOOLKIT/evals/disciplinary/cases/artwork-versions/draft.md",
+      "copy_path": "PROJECT/inputs/draft.md",
+      "sha256": "b16f8ef1943139d651088e151e433c075febc814282ac3e32a5433f6f3bab5ef",
+      "original_sha256": "b16f8ef1943139d651088e151e433c075febc814282ac3e32a5433f6f3bab5ef",
+      "copy_identical": true
+    },
+    "original.png": {
+      "original_path": "TOOLKIT/evals/disciplinary/cases/artwork-versions/original.png",
+      "copy_path": "PROJECT/inputs/original.png",
+      "sha256": "7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7",
+      "original_sha256": "7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7",
+      "copy_identical": true
+    },
+    "reproduction.png": {
+      "original_path": "TOOLKIT/evals/disciplinary/cases/artwork-versions/reproduction.png",
+      "copy_path": "PROJECT/inputs/reproduction.png",
+      "sha256": "2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247",
+      "original_sha256": "2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247",
+      "copy_identical": true
+    },
+    "source-packet.md": {
+      "original_path": "TOOLKIT/evals/disciplinary/cases/artwork-versions/source-packet.md",
+      "copy_path": "PROJECT/inputs/source-packet.md",
+      "sha256": "fb5d68dcfe709b80f50653a3503184ba49a94dcccabb04ce560c94be8dec614a",
+      "original_sha256": "fb5d68dcfe709b80f50653a3503184ba49a94dcccabb04ce560c94be8dec614a",
+      "copy_identical": true
+    },
+    "task.md": {
+      "original_path": "TOOLKIT/evals/disciplinary/cases/artwork-versions/task.md",
+      "copy_path": "PROJECT/inputs/task.md",
+      "sha256": "de1c54030330fb4a578f7fe1eb1a0d70b1923008b1e12a04ec9d2ca69e3d7643",
+      "original_sha256": "de1c54030330fb4a578f7fe1eb1a0d70b1923008b1e12a04ec9d2ca69e3d7643",
+      "copy_identical": true
+    }
+  },
+  "output_sha256": {
+    ".agents/skills/_rw-runtime/bundle-manifest.json": "40ef72cdce48c1534789e4dce91722a1de7c7299eb323f6ceaeaf91bd7d49c97",
+    ".agents/skills/_rw-runtime/core/__init__.py": "747401e8a3ec02843d8ab825c1322b786a8c0e39a13d6d28affc57bbd4d3fd04",
+    ".agents/skills/_rw-runtime/core/bundle.py": "6aea78775b3bd645602986da5030514c9b29a1f51fbf0d1e2b828c75ce5e7ea7",
+    ".agents/skills/_rw-runtime/core/cli.py": "c5fb1241524222447655127b3796e45ef80ea50ce1539a58881098651d567548",
+    ".agents/skills/_rw-runtime/core/model.py": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31",
+    ".agents/skills/_rw-runtime/core/project.py": "ef7d0c6e5ada59a5a1b08ba3d4f83b1efa454a959c58a55f4851aaf0e6b2be99",
+    ".agents/skills/_rw-runtime/core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    ".agents/skills/_rw-runtime/core/schemas/activity.schema.json": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    ".agents/skills/_rw-runtime/core/schemas/artifact.schema.json": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    ".agents/skills/_rw-runtime/core/schemas/decision.schema.json": "c3f913c83476a4d63ff6e34f9dc4a835a3547dbbb9feb8896773fc72ce0d6f49",
+    ".agents/skills/_rw-runtime/core/schemas/evidence.schema.json": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    ".agents/skills/_rw-runtime/core/schemas/method-binding.schema.json": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    ".agents/skills/_rw-runtime/core/schemas/project.schema.json": "d3aea9cc6055a5e97776be07cf101ad35d8b764405042372439c3445aa80a558",
+    ".agents/skills/_rw-runtime/core/schemas/registry.schema.json": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
+    ".agents/skills/_rw-runtime/core/schemas/relation.schema.json": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    ".agents/skills/_rw-runtime/core/schemas/source.schema.json": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    ".agents/skills/_rw-runtime/core/schemas/statement.schema.json": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    ".agents/skills/_rw-runtime/core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+    ".agents/skills/_rw-runtime/core/storage.py": "dc84e24536f6d3dc93762c414b334ac24765cbad41fc48bda05f5626a577c9d8",
+    ".agents/skills/_rw-runtime/core/windows_storage.py": "2770971dc068eb3d670a17c9110aaeb53aa25c99950468a9b5c0985837735615",
+    ".agents/skills/_rw-runtime/design/catalog.json": "c164def668d75f14a2d12d414fee6dcf287f96d33e293fbdaf8536c9cbe798c9",
+    ".agents/skills/_rw-runtime/profiles/disciplines/agriculture-life.md": "66d86ef5e1f6deaa2af354e36e188469f9e1cf3423c14d31b4b48c854d46d583",
+    ".agents/skills/_rw-runtime/profiles/disciplines/engineering.md": "0c776e883840960b7eeb6c4dcb6a3be4974c1834d8bb142d0b3cde2acf502e30",
+    ".agents/skills/_rw-runtime/profiles/disciplines/humanities.md": "4ca1a988537c0f006d0fc5ce33dc1f8dfbcd09733c396a24bd4d2390dd406114",
+    ".agents/skills/_rw-runtime/profiles/disciplines/law.md": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+    ".agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
+    ".agents/skills/_rw-runtime/profiles/disciplines/natural-sciences.md": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a",
+    ".agents/skills/_rw-runtime/profiles/disciplines/social-sciences.md": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8",
+    ".agents/skills/_rw-runtime/profiles/governance.md": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+    ".agents/skills/_rw-runtime/profiles/methods/computational.md": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+    ".agents/skills/_rw-runtime/profiles/methods/conceptual-normative.md": "609f444f364e638a0e61c49f160a4912ecd56ab9310a6937cef9b7abadae8b72",
+    ".agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+    ".agents/skills/_rw-runtime/profiles/methods/engineering-design.md": "693c7a1a42001bdf87ce3684c866863c81b089af9bd6e521b813667de24423c8",
+    ".agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md": "0a9fccdfea15ffd8b30c30a56bcb8e5511d40d30bf8ea094ee47cf8ce8e4fbdc",
+    ".agents/skills/_rw-runtime/profiles/methods/formal-theory.md": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+    ".agents/skills/_rw-runtime/profiles/methods/historical-interpretive.md": "0894387de28c40bbf2e5913dbf260b1df15f6eaed45abdd8df2a9c1360c8f4d9",
+    ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+    ".agents/skills/_rw-runtime/profiles/methods/measurement-experiment.md": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd",
+    ".agents/skills/_rw-runtime/profiles/methods/qualitative.md": "069f3880300a754dc2e8dd26eb64290278045ce2cabadd394160c68d02efb2c6",
+    ".agents/skills/_rw-runtime/profiles/selection.md": "d9f5b1c903bb6cd24f5c1a76d345ac847ae24cc112ef155aca5c8d667276594b",
+    ".agents/skills/_rw-runtime/profiles/sources.json": "b8a05f32aea861bff470abfeeef0dcd1943fcae7dda30a14619ffcd853bd12c7",
+    ".agents/skills/_rw-runtime/profiles/templates/legal-research.md": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+    ".agents/skills/_rw-runtime/profiles/templates/legal-source.json": "e127852f1bb0a051e3aad083d29e54719866296d6830f3df5d8b0513afcbece4",
+    ".agents/skills/_rw-runtime/tools/connect_skills.py": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+    ".agents/skills/_rw-runtime/tools/research.py": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b",
+    ".agents/skills/rw-candidates/SKILL.md": "1e63dd370770263d981ee03678c54a3cbba6c8add0ca85d8552ef2e98ba63005",
+    ".agents/skills/rw-figures/SKILL.md": "cc9c901bc9b516512d4d0ca5ee5efd68efd85dc243e60800ec2291287fd748fa",
+    ".agents/skills/rw-figures/agents/openai.yaml": "0a8e433abbb264ae4610be7692503db534b6dcffbe6a6188841de88b57556d98",
+    ".agents/skills/rw-figures/assets/synthetic-figure-spec.json": "a6aa429fe76a185f726b2c3bcafb65ba131c89c130e9b1156bbbcb3ef6cea591",
+    ".agents/skills/rw-figures/assets/synthetic-workflow.svg": "ba843559b5be505b2b4e21540de2c3fb48c46b7dca4d2e22c42f5f32d7a77717",
+    ".agents/skills/rw-figures/examples/plot_demo.py": "63c482011529440d36dcbd1df9506ecad47b0d3e17508ad40282d35342ae17ed",
+    ".agents/skills/rw-figures/references/editable-schematics.md": "f76450491c138c6d6518a7dccabe3890f9768ddd21b656b18bcfa0aa40368acd",
+    ".agents/skills/rw-figures/scripts/audit_svg_schematic.py": "8c87f1819e8c7887a7b7b5432f2e6f7e983157e6980d17346c47908f2b069d87",
+    ".agents/skills/rw-innovation/SKILL.md": "3817216a0d99514e78f6c9520d51ea0b2b279d7d83c6f55d82ee8aaeed418a09",
+    ".agents/skills/rw-literature/SKILL.md": "af8bdc59e579e147e015180cc707f4116d44daca99b90ed18c486dd7b26f51c1",
+    ".agents/skills/rw-literature/references/search-and-library.md": "833e05ed6fe7cba0b27aeebe453ea6a537450e4d56a5f78e5b15e04794018e44",
+    ".agents/skills/rw-question/SKILL.md": "cbfe1f537202d9cad995949458a5bbe496624f6cc926956ed80ad2be97e0239a",
+    ".agents/skills/rw-review/SKILL.md": "9952df82a18698f8e7f244a597ed26ae3787640becd891ecd0993eeafc859033",
+    ".agents/skills/rw-review/references/cross-material-consistency.md": "ddc1d7de400cb83c8b8c4fc160f0afa070793525ad5fb5963fbe5313a651f0cc",
+    ".agents/skills/rw-review/references/review-modes.md": "0d6253160bc164a6d07f704fb1c8eb2338f01738ba99cef8d1af70d87968e3e3",
+    ".agents/skills/rw-review/references/review-response.md": "f08a84ba4bef293858d6931658e206e4b1484c715afe45b2d064fbab78dfa019",
+    ".agents/skills/rw-review/references/submission-delivery.md": "91f9c1a32f945cfaae2a0fda290903456e74795c17340138779cf41f334fb669",
+    ".agents/skills/rw-review/scripts/check_revision_plan.py": "54cd825ea0bc3d8d0c798cf535afef66c89a82d17f0d476ddca88dfd77c36bc9",
+    ".agents/skills/rw-validation/SKILL.md": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2",
+    ".agents/skills/rw-workflow/SKILL.md": "0fdbe0845d7fb4f67211edc8f72d81bb537d846ce8a1560eead5cf65bab1aebc",
+    ".agents/skills/rw-writing/SKILL.md": "299efd19a165a38ca761306021befcc3c4f6ede959ed3da427aae199aa22a3b7",
+    ".gitignore": "281aec9c2b5c9d3d07eadb93cef95f417535828b8f1be777c626722d27eb35dc",
+    ".research/write.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "PROJECT.md": "2f65194be26242df751fc2a2a60b3282d728835a0b2fffdfbfd04bf7250d68cc",
+    "artifacts/results.json": "3eae8dd6771bf9f99c566275fa27297d59372595a9a8301e201e0dbd415de338",
+    "artifacts/run.py": "fe6f057951a10c44c9e9b642821994f82e43e4ecf37b4d45ae54379e8be4c364",
+    "checks/check-final.json": "a4ed909208fe03772f1fa2252e24ea8df3b76498c75f9473fd024c41cd2f88b5",
+    "checks/check.json": "b192e054e7c4c72c5fb829e348a451d164bd804e1490947526f87c18e042559d",
+    "checks/checkpoint.json": "a8b29423babeefdb0b99963da3cb1a98f731adbdbebd6a7ee8330e0f3d199ad7",
+    "checks/compact-delivery.json": "25e734aa11aa8ad62762143c2428b88f27b48c7929b2bd5938ff372e7e3c75cc",
+    "checks/connect-check.json": "f1ad492f3a43fbf7ec51b8a02a491e4b0dcfb2a0a4ff4429621d7b69a6331984",
+    "checks/connect-install.json": "b7a734bda561036628c2f297bc1d59cd0ee5d92e85f58178272f086b7099bd58",
+    "checks/connected-bundle-manifest.json": "40ef72cdce48c1534789e4dce91722a1de7c7299eb323f6ceaeaf91bd7d49c97",
+    "checks/init.json": "b8dea3d979e39d998bbfe3fb75342145339a3d3369842c6455e12a45938a75ce",
+    "checks/initial-init-failure.json": "98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4",
+    "checks/material-audit-command.json": "f11712a44f379f5b5021e32843e1fff0063b097b392cb2a93ef5b672c8845563",
+    "checks/project-after-skills-restore-check.json": "c514fbf556071c0cac2d6b041216e974ca49bfb24cdca95e1cc7fe6f12ab1cee",
+    "checks/project-after-skills-restore-resume.json": "d92cef6bda18f09e5f71724d34b2744ed8f57ea7b4c961cffeb0f430f42bf718",
+    "checks/register-batch.json": "afb48877f258431c47391bdf0874fe04524957044c18c9804c403586e33b01da",
+    "checks/registration-semantic-review.md": "d451395ca0a7a2577f0a6ed27b6e51436bb17c1ebc58198fb56ee2e19ad8a40b",
+    "checks/resume.json": "c7d0028306096444ed721bdd30b38804ea69831bcd32cd27389098306b01ae23",
+    "checks/semantic-correction/after-activity-A-interpret.json": "e83467f05bde4b25b5263c8683171a939761ddfb26f89d4b3978904d960c09ef",
+    "checks/semantic-correction/after-activity-A-ledger-semantic-correction.json": "af024798d759748fa5da27587244ab2a659f9bc30e203cec49c64af0b0af467c",
+    "checks/semantic-correction/after-activity-A-next-context.json": "bcc55051e6e89e5c74ea52f7627876baa0b6f5dc9a5c87e6705255a074e4c428",
+    "checks/semantic-correction/after-envelopes.json": "672b47aa1dbfb2857222dc6cb4cd16625dcd95ae8e2a392c0377579e6bf9a8c0",
+    "checks/semantic-correction/after-evidence-E-init-failure.json": "6fac3fbf17d4a9ad4e300d882edcdfe139c29961f1c13bb2ea9dce450ee8c3ef",
+    "checks/semantic-correction/after-relation-R-industrial-E1.json": "d1cf4dc46eab519d3903edd1c6e9a11f1e947921b14c5770be177640d11e2e39",
+    "checks/semantic-correction/after-relation-R-industrial-counter.json": "53d0e6197ed39272720913bd6bf047707914bb65dfe2f1d12742760bd1f293a9",
+    "checks/semantic-correction/after-relation-R-industrial-draft.json": "7a292e5fbd1c00ef2860a3adf8f5cdd42a904e4d7c5245b14d6ef0e3b417ba00",
+    "checks/semantic-correction/after-relation-R-nofigure-draft.json": "a089e2317ba3aa6d8023eb55c7eb55a45cc6dd350a6d840e136a5546a7c52587",
+    "checks/semantic-correction/after-statement-S-industrial.json": "ac0b35090fcb09bc692ab63ad84457b08f8d9fce781036c480813aca557fa4f0",
+    "checks/semantic-correction/after-statement-S-nofigure.json": "4d1333f047011e2b27e0553a3a4d96cc3879cfb975c0efdb87a5c62266ef0c39",
+    "checks/semantic-correction/before-activity-A-interpret.json": "5e8a3529629c600d0121f6308c345e0b09a6276b0b2cdcb156b08380f8d59b23",
+    "checks/semantic-correction/before-activity-A-next-context.json": "6fc64f7bea355f015dd2b27ac318e9f618a93dd888de4edc17f91ce394c7638d",
+    "checks/semantic-correction/before-envelopes.json": "3047bb15093dac27182ade3bcb3c36bc3e434ab796e6194db0ab223f63247be5",
+    "checks/semantic-correction/before-evidence-E-init-failure.json": "c1f7952d2f4045d4d0f6e781d66f8d9cf70b8d3fc80012e9d3e9e14196f5121d",
+    "checks/semantic-correction/before-relation-R-industrial-E1.json": "4d3744584124d3e975f4d977bc91be68acd848cdf2affacd79daba04d30c7370",
+    "checks/semantic-correction/before-relation-R-industrial-counter.json": "d611accb356dc88f67748acd17c6e7182fb5acd9ad9828b7ff40e38ca56365ce",
+    "checks/semantic-correction/before-statement-S-industrial.json": "a0e2570db6d08f4022dd0eeef0d56def292b5742f565dbc9dbf7d5a35ca955c2",
+    "checks/semantic-correction/before-statement-S-nofigure.json": "c7c536420ae09320541ae0e0f8f06e066c5d68f90d112eba27fb8b964963d82d",
+    "checks/semantic-correction/check-before-rebinding.json": "ba8bf77c0dd1f66a7a3a6d6ed51377c601815f6874bc4e7920b91a4199ac71a3",
+    "checks/semantic-correction/check-final.json": "ec2698f465901892344c73e2327544166e16503c0e3338d95b4db18f8f1ac6df",
+    "checks/semantic-correction/checkpoint.json": "5b97b3b79e02fc1c870e6461e78d36b3ab52e7cccc320369a267ad9489a37be6",
+    "checks/semantic-correction/input-activity-A-interpret.json": "bc0182aea82325e0424c7687d199fca5f019d123465257b21e8f19e72cc9822e",
+    "checks/semantic-correction/input-activity-A-ledger-semantic-correction.json": "e535e7ab3dc522a3caa0e4adadf31e78380be616b707ba4c62dd82c25f8295c5",
+    "checks/semantic-correction/input-activity-A-next-context.json": "d3b5ba3ac27bff5cb831a9b83f5fbe816b0dc43504c5d36c15d78a87c91ed05d",
+    "checks/semantic-correction/input-artifact-ART-ledger-semantic-review.json": "d03d23c87d0ff3c766e570c2f2d1f9471aa47dccdd2ab21ca3111bb508e63503",
+    "checks/semantic-correction/input-evidence-E-init-failure.json": "67d894d338bf39289b6c9fa028c0a9bc634f07175070f585f9edfee306f43433",
+    "checks/semantic-correction/input-evidence-E-ledger-semantic-review.json": "23238b4d193560a0d2c1b57b7ade9eba0c407cd08609ff9482828c805c85ac20",
+    "checks/semantic-correction/input-relation-R-industrial-E1.json": "4fdcbd399fd94945d4a156b589aaee448a23e291ef01bbf339ed30e8eda4c754",
+    "checks/semantic-correction/input-relation-R-industrial-counter.json": "8311c6ac686f483861f897a1db075448bd922cc4344025789b6dd14bfa48585d",
+    "checks/semantic-correction/input-relation-R-industrial-draft.json": "1ed312aef259b061766d6949ba5c0a979df3aaf6407a4c5239cc91f7873a7ef2",
+    "checks/semantic-correction/input-relation-R-nofigure-draft.json": "014e852db8ed905bc28b1b556bf59d98adfdac00208556930e75427cc52add4a",
+    "checks/semantic-correction/input-statement-S-industrial.json": "5be99ddc412d2e0e143555b6669b6032c95bd33f244a9087c6e8d39500fbb270",
+    "checks/semantic-correction/input-statement-S-nofigure.json": "99610a479dc1d3f0f6f77d03a90576bdc14b134e9ac9159fd39f12f7b709d332",
+    "checks/semantic-correction/register-activity-A-interpret.json": "9f6a170e2840d67cec8f3f6fdc44f6ef44ce72d4552aaf2c4bdfe5efa81c264c",
+    "checks/semantic-correction/register-activity-A-ledger-semantic-correction.json": "249e7d012b1b8752a1046f5e94fe7abf12fda740ecb9f921518479dfb720bcee",
+    "checks/semantic-correction/register-activity-A-next-context.json": "a64b0fd8626e146d8fc46e62623b819d572f87afc3327ee33a1b2906d25ff05e",
+    "checks/semantic-correction/register-artifact-ART-ledger-semantic-review.json": "0f0e5735f620ddfd72a0aa5578451c4af9703aa522a988d6d09b81961b09b599",
+    "checks/semantic-correction/register-evidence-E-init-failure.json": "9fb9f2fa25447ab2572ad76de96756ed68e87b7152a43e09c71bcd628ddd961a",
+    "checks/semantic-correction/register-evidence-E-ledger-semantic-review.json": "9525dec010828b182820d234479659decca605500ed72b1d8cede1a0d4c2337a",
+    "checks/semantic-correction/register-relation-R-industrial-E1.json": "0b14f46b3635af6078ef1a6671d302c73fbfdea5a9b4343f572e8e334fb8a72e",
+    "checks/semantic-correction/register-relation-R-industrial-counter.json": "2faf2270e6a07b155377feaaab7bb62c79c08d19fd7a1e221a633d7f55f5f3e1",
+    "checks/semantic-correction/register-relation-R-industrial-draft.json": "e947073303e69f9df80db88b4e970e3784a08e6fa1b9e9024fc4be499399ae34",
+    "checks/semantic-correction/register-relation-R-nofigure-draft.json": "55b99c2d521c2870f43c2ba8a83faf0df1a1bc5ec129fd567b8cb5319c698cc5",
+    "checks/semantic-correction/register-statement-S-industrial.json": "56b95d7c245f32a43a7946b74440a582ffa69a6f0095f8d382027b2808381352",
+    "checks/semantic-correction/register-statement-S-nofigure.json": "63cf8c4e6d83b8a26935abda19ff41d9c4a843d51a3b13b554f089afbecc03e2",
+    "checks/semantic-correction/resume-final.json": "5ee83b2882df1ce000f88c765e12b939952c34538d5c8613d9f3b3e769fb86af",
+    "checks/semantic-correction/skills-check-final.json": "7564a7a1f9e3cff4a4e3e1acdc9725b4689322c3dbd7b2c59dba6d2042b2027e",
+    "checks/skills-restore-check.json": "2942409ab35f6f8823da68bd4e1f1051956d9f9e98af4dfddb2f7cda03045332",
+    "checks/skills-restore-install.json": "7d3da02b7e10f1f55112cc0f838629b6756d9ee4d3cbd16dcc8026847fd4dc18",
+    "manuscript/report.md": "4a52f78bc1fd01a34ae59d345df0f72db9716d886c6ab21e41ff6252d28f740b",
+    "notes/analysis.md": "9187553bf955e03c1347253393eff8d3f59efb31750d4efa3637d3a25ffbbba5",
+    "notes/source-comparison.md": "ebdf01b13f34af2e934cee84682e6f2041400e5f65865a539b2b2b640d3e8fee",
+    "project.json": "e64db52e76a76d8c6c9ea4d7f0b185f7edda1263fc8e9a01cd14ee81d79d0ce2",
+    "records/registry.json": "1e8924e057aae50b30581076cf61a9ff9a8ade18dfa04f3ad59a4c3716145c50",
+    "review.md": "4cf46022fb0a1bac18ba7d451106788898d1fd6d85dff55dd4188e10ac8e44fb"
+  },
+  "guidance_read": [
+    {
+      "path": "TOOLKIT/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/skill-bridge.md",
+      "sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-literature/SKILL.md",
+      "sha256": "e5dd402251a95c5b1b1673b1b50c9a0369ba2769f7e9eeb55f3b6e5cf7c61088",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-writing/SKILL.md",
+      "sha256": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-review/SKILL.md",
+      "sha256": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-figures/SKILL.md",
+      "sha256": "6b25063c1ec423267546af8061dfa543abe770c33cd91514bdb5a2c01c292b43",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/profiles/disciplines/humanities.md",
+      "sha256": "4ca1a988537c0f006d0fc5ce33dc1f8dfbcd09733c396a24bd4d2390dd406114",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/profiles/methods/historical-interpretive.md",
+      "sha256": "0894387de28c40bbf2e5913dbf260b1df15f6eaed45abdd8df2a9c1360c8f4d9",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/source.schema.json",
+      "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/statement.schema.json",
+      "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/evidence.schema.json",
+      "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/relation.schema.json",
+      "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/artifact.schema.json",
+      "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/activity.schema.json",
+      "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/method-binding.schema.json",
+      "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/registry.schema.json",
+      "sha256": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/cli.py",
+      "sha256": "c5fb1241524222447655127b3796e45ef80ea50ce1539a58881098651d567548",
+      "access": "targeted sections only"
+    },
+    {
+      "path": "TOOLKIT/core/project.py",
+      "sha256": "ef7d0c6e5ada59a5a1b08ba3d4f83b1efa454a959c58a55f4851aaf0e6b2be99",
+      "access": "targeted sections only"
+    },
+    {
+      "path": "TOOLKIT/tools/connect_skills.py",
+      "sha256": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+      "access": "full"
+    }
+  ],
+  "ui_image_views": [
+    {
+      "tool": "functions.exec -> tools.view_image",
+      "file": "TOOLKIT/evals/disciplinary/cases/artwork-versions/original.png",
+      "scope": "full image actually displayed to Codex"
+    },
+    {
+      "tool": "functions.exec -> tools.view_image",
+      "file": "TOOLKIT/evals/disciplinary/cases/artwork-versions/reproduction.png",
+      "scope": "full image actually displayed to Codex"
+    },
+    {
+      "tool": "functions.exec -> tools.view_image",
+      "file": "PROJECT/inputs/original.png",
+      "scope": "full image actually displayed to Codex"
+    },
+    {
+      "tool": "functions.exec -> tools.view_image",
+      "file": "PROJECT/inputs/reproduction.png",
+      "scope": "full image actually displayed to Codex"
+    }
+  ],
+  "preserved_failures": [
+    {
+      "command_index": 0,
+      "exit_status": 2,
+      "reason": "Unknown project entry activity or workflow mode: --entry validation",
+      "evidence": "checks/initial-init-failure.json",
+      "subsequent_resolution": "Removed invalid entry option; following init succeeded."
+    }
+  ],
+  "machine_runtime": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "command_durations": [
+      {
+        "command_index": 0,
+        "elapsed_seconds": 0.046622833993751556
+      },
+      {
+        "command_index": 1,
+        "elapsed_seconds": 0.047342707999632694
+      },
+      {
+        "command_index": 2,
+        "elapsed_seconds": 0.06614075000106823
+      },
+      {
+        "command_index": 3,
+        "elapsed_seconds": 0.059517665999010205
+      },
+      {
+        "command_index": 4,
+        "elapsed_seconds": 0.03588054099236615
+      },
+      {
+        "command_index": 5,
+        "elapsed_seconds": 0.20543270900088828
+      },
+      {
+        "command_index": 6,
+        "elapsed_seconds": 0.053735665991553105
+      },
+      {
+        "command_index": 7,
+        "elapsed_seconds": 0.05642854199686553
+      },
+      {
+        "command_index": 8,
+        "elapsed_seconds": 0.052005165998707525
+      },
+      {
+        "command_index": 9,
+        "elapsed_seconds": 0.051672125002369285
+      },
+      {
+        "command_index": 10,
+        "elapsed_seconds": 0.07920787500916049
+      },
+      {
+        "command_index": 11,
+        "elapsed_seconds": 0.07391695799014997
+      },
+      {
+        "command_index": 12,
+        "elapsed_seconds": 0.0633441660029348
+      },
+      {
+        "command_index": 13,
+        "elapsed_seconds": 0.05743033401085995
+      },
+      {
+        "command_index": 14,
+        "elapsed_seconds": 0.052252125009545125
+      },
+      {
+        "command_index": 15,
+        "elapsed_seconds": 0.05163066698878538
+      },
+      {
+        "command_index": 16,
+        "elapsed_seconds": 0.05052254200563766
+      },
+      {
+        "command_index": 17,
+        "elapsed_seconds": 0.05055575000005774
+      },
+      {
+        "command_index": 18,
+        "elapsed_seconds": 0.050837083006626926
+      },
+      {
+        "command_index": 19,
+        "elapsed_seconds": 0.050547582999570295
+      },
+      {
+        "command_index": 20,
+        "elapsed_seconds": 0.050726624991511926
+      },
+      {
+        "command_index": 21,
+        "elapsed_seconds": 0.05707829199673142
+      },
+      {
+        "command_index": 22,
+        "elapsed_seconds": 0.058486834008363076
+      },
+      {
+        "command_index": 23,
+        "elapsed_seconds": 0.058750374999362975
+      },
+      {
+        "command_index": 24,
+        "elapsed_seconds": 0.059228875004919246
+      },
+      {
+        "command_index": 25,
+        "elapsed_seconds": 0.0586026669916464
+      },
+      {
+        "command_index": 26,
+        "elapsed_seconds": 0.05940670800919179
+      },
+      {
+        "command_index": 27,
+        "elapsed_seconds": 0.05839912500232458
+      },
+      {
+        "command_index": 28,
+        "elapsed_seconds": 0.06125095899915323
+      },
+      {
+        "command_index": 29,
+        "elapsed_seconds": 0.05976370799180586
+      },
+      {
+        "command_index": 30,
+        "elapsed_seconds": 0.052348375000292435
+      },
+      {
+        "command_index": 31,
+        "elapsed_seconds": 0.060553082992555574
+      },
+      {
+        "command_index": 32,
+        "elapsed_seconds": 0.06356791699363384
+      },
+      {
+        "command_index": 33,
+        "elapsed_seconds": 0.062521249987185
+      },
+      {
+        "command_index": 34,
+        "elapsed_seconds": 0.05852045799838379
+      },
+      {
+        "command_index": 35,
+        "elapsed_seconds": 0.05296820800867863
+      },
+      {
+        "command_index": 36,
+        "elapsed_seconds": 0.053870874995482154
+      },
+      {
+        "command_index": 37,
+        "elapsed_seconds": 0.05987425000057556
+      },
+      {
+        "command_index": 38,
+        "elapsed_seconds": 0.05244645899801981
+      },
+      {
+        "command_index": 39,
+        "elapsed_seconds": 0.051844582994817756
+      },
+      {
+        "command_index": 40,
+        "elapsed_seconds": 0.05213220900623128
+      },
+      {
+        "command_index": 41,
+        "elapsed_seconds": 0.05389391699281987
+      },
+      {
+        "command_index": 42,
+        "elapsed_seconds": 0.05188054099562578
+      },
+      {
+        "command_index": 43,
+        "elapsed_seconds": 0.05203699998673983
+      },
+      {
+        "command_index": 44,
+        "elapsed_seconds": 0.05122979100269731
+      },
+      {
+        "command_index": 45,
+        "elapsed_seconds": 0.05383845900360029
+      },
+      {
+        "command_index": 46,
+        "elapsed_seconds": 0.052240916003938764
+      },
+      {
+        "command_index": 47,
+        "elapsed_seconds": 0.05168287501146551
+      }
+    ]
+  },
+  "hash_exclusion": "execution.json excludes its own recursive hash. All other delivered regular files are hashed; the authoritative registry is records/registry.json.",
+  "guidance_boundary": "No personal skill package, other case contents, tests, grading notes or expected answers used. CLI options included catalog metadata; referenced evaluation files were not opened.",
+  "project_lifecycle_actions": [
+    {
+      "action": "generated_skill_runtime_removed_for_compact_delivery",
+      "state": "historical action retained",
+      "evidence": "checks/compact-delivery.json",
+      "note": "The prior omission was real. It is not the current original-project state."
+    },
+    {
+      "action": "restore_project_local_skills_and_runtime",
+      "command_indices": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "result": "install/check/project-check/resume all exited 0",
+      "current_project_state": "Project-local .agents/skills and _rw-runtime are present and usable. Only future exported handoff/case copies should exclude generated runtime.",
+      "registry_unchanged": true,
+      "scientific_outputs_and_inputs_unchanged": true,
+      "previous_removal_evidence_preserved": "checks/compact-delivery.json"
+    }
+  ],
+  "current_skill_connection_state": {
+    "present": true,
+    "runtime_path": "PROJECT/.agents/skills/_rw-runtime",
+    "integrity_check": "checks/skills-restore-check.json",
+    "export_policy": "Exclude generated runtime only from an exported handoff/case; keep it in this original resumable PROJECT."
+  },
+  "registration_corrections": [
+    {
+      "reason": "Independent review identified report/content proposition mismatch, E1 attribution/unique-intent scope mismatch and incorrect failure-log provenance.",
+      "corrected_existing_ids": [
+        "S-industrial",
+        "S-nofigure",
+        "R-industrial-E1",
+        "R-industrial-counter",
+        "E-init-failure",
+        "A-interpret",
+        "A-next-context"
+      ],
+      "new_ids": [
+        "R-industrial-draft",
+        "R-nofigure-draft",
+        "E-ledger-semantic-review",
+        "ART-ledger-semantic-review",
+        "A-ledger-semantic-correction"
+      ],
+      "command_indices": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "before_records": "checks/semantic-correction/before-envelopes.json",
+      "after_records": "checks/semantic-correction/after-envelopes.json",
+      "substantive_basis": "checks/registration-semantic-review.md",
+      "preserved_intermediate_stale_check": "checks/semantic-correction/check-before-rebinding.json",
+      "scientific_outputs_and_inputs_unchanged": true,
+      "failed_initialization_log_unchanged": true,
+      "assessment_precision": "S-industrial now directly states the embedded content and is insufficient; E1 does not state uniqueness. S-nofigure now directly states absence of figures and remains challenged.",
+      "final_checks": "check/resume/skillscheck all exit 0; checkpoint current"
+    }
+  ]
+}

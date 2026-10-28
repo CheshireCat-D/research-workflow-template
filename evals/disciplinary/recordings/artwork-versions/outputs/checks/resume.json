@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "resume",
+    "--root",
+    "PROJECT"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 6,\n    \"decisions\": 0,\n    \"evidence\": 9,\n    \"method_bindings\": 1,\n    \"relations\": 18,\n    \"sources\": 7,\n    \"statements\": 7\n  },\n  \"activities\": [\n    {\n      \"id\": \"A-init-failure\",\n      \"title\": \"首次项目初始化参数被拒绝\",\n      \"declared_status\": \"failed\",\n      \"effective_status\": \"failed\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-interpret\",\n      \"title\": \"实际看图、比较两种解释、审查原稿并写出短稿\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-material-audit\",\n      \"title\": \"读取输入复制件并核对尺寸及来源定位\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"A-next-context\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"A-next-context\",\n    \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  },\n  \"next_action\": \"先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；在取得直接出处前不把E1工业劳动读法写成艺术家意图。\",\n  \"needs_review\": false,\n  \"recovery_instruction\": \"Continue the recorded next action within its existing scope.\"\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.051672125002369285
+}

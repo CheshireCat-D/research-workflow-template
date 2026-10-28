@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT",
+    "--kind",
+    "relation",
+    "--id",
+    "R-industrial-E1"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 66,\n  \"kind\": \"relation\",\n  \"id\": \"R-industrial-E1\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"evidence_id\": \"E-E1\",\n      \"id\": \"R-industrial-E1\",\n      \"rationale\": \"E1记载1970年有人把作品归因为艺术家对工业劳动制度的谴责，提供后出接受语境；节录没有唯一性表述，也不确认归因成立。\",\n      \"relation\": \"contextualizes\",\n      \"scope\": \"仅限E1后出归因的存在与语境，不支持原作者唯一意图。\",\n      \"statement_id\": \"S-industrial\"\n    },\n    \"registered_at\": \"2026-10-28T21:42:51.963295+00:00\",\n    \"version\": 2\n  }\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.05213220900623128
+}

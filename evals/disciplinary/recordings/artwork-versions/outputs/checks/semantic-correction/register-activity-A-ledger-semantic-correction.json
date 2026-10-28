@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT",
+    "--kind",
+    "activity",
+    "--file",
+    "PROJECT/checks/semantic-correction/input-activity-A-ledger-semantic-correction.json"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"A-ledger-semantic-correction\",\n  \"version\": 1,\n  \"revision\": 64,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.06356791699363384
+}

@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "init",
+    "--output",
+    "PROJECT",
+    "--title",
+    "《两条路径》原构图与裁剪展陈：版本与竞争解释",
+    "--discipline",
+    "humanities",
+    "--method",
+    "historical-interpretive",
+    "--mode",
+    "structured",
+    "--language",
+    "zh",
+    "--entry",
+    "validation"
+  ],
+  "exit_status": 2,
+  "stdout": "{\n  \"passed\": false,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"errors\": [\n    {\n      \"code\": \"invalid_registration\",\n      \"message\": \"Unknown project entry activity or workflow mode\"\n    }\n  ]\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.046622833993751556
+}

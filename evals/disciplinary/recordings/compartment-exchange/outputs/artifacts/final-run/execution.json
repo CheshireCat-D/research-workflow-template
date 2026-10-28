@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "PYTHON",
+    "PROJECT/artifacts/run.py",
+    "--input-dir",
+    "PROJECT/inputs",
+    "--output-dir",
+    "PROJECT/artifacts/final-run"
+  ],
+  "exit_status": 0,
+  "input_sha256": {
+    "model.md": "d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111",
+    "parameters.json": "ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f",
+    "draft.md": "014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991",
+    "task.md": "76a903d4d79f2f139c5b528579fc6d7321c497cb9cd03860a2dea80eb207e970"
+  },
+  "code_sha256": {
+    "run.py": "6c5c5c0bf2eacacd86c589f0d1a5afcba992c93aeffa4f526b2540ea66bc13c5"
+  },
+  "output_sha256": {
+    "results.json": "8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257"
+  },
+  "guidance": "The host's actually read guidance paths are recorded in PROJECT/execution.json; no runtime guidance is required by this portable script.",
+  "machine_specific": {
+    "elapsed_seconds": 0.0011889589950442314,
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  }
+}

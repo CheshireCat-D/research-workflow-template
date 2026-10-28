@@ -1,0 +1,52 @@
+{
+  "old_defect_reproduced": true,
+  "rejection_checks": [
+    {
+      "variant": "bilingual-extra-condition",
+      "exit_status": 2,
+      "output_directory_absent": true,
+      "stderr_has_explicit_scope_message": true,
+      "input_sha256": "3b82236ed64c85e17f6b123e8f6a91e97f64d66adc466f0ade7b4c3293ba2e73"
+    },
+    {
+      "variant": "extra-new-section",
+      "exit_status": 2,
+      "output_directory_absent": true,
+      "stderr_has_explicit_scope_message": true,
+      "input_sha256": "8160f41d2b5b9e4be2c6a84c155a4935bb7cda5797f7e8c78e368c43e7e6bd88"
+    },
+    {
+      "variant": "connector-changed",
+      "exit_status": 2,
+      "output_directory_absent": true,
+      "stderr_has_explicit_scope_message": true,
+      "input_sha256": "1192fec2afcd8133910914943bef088866789322d9303f755d687669c84df6b5"
+    },
+    {
+      "variant": "english-extra-condition",
+      "exit_status": 2,
+      "output_directory_absent": true,
+      "stderr_has_explicit_scope_message": true,
+      "input_sha256": "2bae8c42ac01652c24519392b87031ea2cb4ab8d0bd92cc1960bc94fbcae4a5c"
+    }
+  ],
+  "normal_applicant_outcomes": {
+    "甲": true,
+    "乙": false,
+    "丙": false
+  },
+  "changed_fact_applicant_outcomes": {
+    "甲": false,
+    "乙": true,
+    "丙": true
+  },
+  "changed_fact_input_sha256": "d8394b2656290af3a5cc312be5fd256bc7c50c0e7c48c278229ff500a0b28f10",
+  "current_replay": {
+    "normal_result_sha256": "b65e821e8711405f78ce08b50b00f6bce5bcc87f9729e8903f74891dc58f9807",
+    "replay_result_sha256": "b65e821e8711405f78ce08b50b00f6bce5bcc87f9729e8903f74891dc58f9807",
+    "byte_identical": true
+  },
+  "frozen_inputs_unchanged": true,
+  "correct_legal_prose_unchanged": true,
+  "scope": "Four designed rejection variants plus one fact-change input; no claim to parse arbitrary legislation."
+}

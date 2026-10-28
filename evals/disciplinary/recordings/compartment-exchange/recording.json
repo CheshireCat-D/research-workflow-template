@@ -1,0 +1,881 @@
+{
+  "format_version": 1,
+  "case_id": "compartment-exchange",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task outputs and final record data. Replay creates new project IDs, version-1 records and a checkpoint; it does not recreate all original history or repeat model reasoning.",
+  "project_init": {
+    "title": "两室交换模型：解析、量纲与Euler离散核对",
+    "interest": "两室交换模型：解析、量纲与Euler离散核对",
+    "disciplines": [
+      "natural-sciences"
+    ],
+    "methods": [
+      "formal-theory",
+      "computational"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh-CN",
+    "entry_activity": "research"
+  },
+  "case_files": {
+    "inputs/draft.md": "draft.md",
+    "inputs/model.md": "model.md",
+    "inputs/parameters.json": "parameters.json",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "draft.md": "014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991",
+    "model.md": "d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111",
+    "parameters.json": "ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f",
+    "task.md": "76a903d4d79f2f139c5b528579fc6d7321c497cb9cd03860a2dea80eb207e970"
+  },
+  "output_files": [
+    "artifacts/final-run/execution.json",
+    "artifacts/initial-run/execution.json",
+    "artifacts/initial-run/results.json",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "checks/calculation-final-and-relocated.json",
+    "checks/calculation-initial.json",
+    "checks/check-before-checkpoint.json",
+    "checks/check-before-wording-refresh.json",
+    "checks/check.json",
+    "checks/checkpoint.json",
+    "checks/cli-initialization.json",
+    "checks/configure.json",
+    "checks/final-check.json",
+    "checks/final-checkpoint.json",
+    "checks/final-resume.json",
+    "checks/pre-revision-show.json",
+    "checks/register-batch-execution.json",
+    "checks/registration-batch.json",
+    "checks/relocated-execution.json",
+    "checks/resume.json",
+    "checks/skills-integrity.json",
+    "checks/wording-refresh-registrations.json",
+    "execution.json",
+    "manuscript/report.md",
+    "notes/analysis.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/final-run/execution.json": "3ed0e3e10deab0b048668305264cc1768ac69869b3bfaf6007463fd13d0e4913",
+    "artifacts/initial-run/execution.json": "3d750bab6684d2b522c7e950a511363578f6322154da36dffd73fa4d138022d0",
+    "artifacts/initial-run/results.json": "9379d33d670971208a0c2b2002f14bb34d66cfe9985c7405d377527396315744",
+    "artifacts/results.json": "8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257",
+    "artifacts/run.py": "6c5c5c0bf2eacacd86c589f0d1a5afcba992c93aeffa4f526b2540ea66bc13c5",
+    "checks/calculation-final-and-relocated.json": "380e47b5521afc930b7b899c4325e50b0106842e7c9ccc748603d445bd951933",
+    "checks/calculation-initial.json": "0fb527082d208ee90e8e3736deca3e387eb0196b8430abcab0a445bd251be96f",
+    "checks/check-before-checkpoint.json": "96aa991428972b700f6cca12536ee775d071b1752d5653b51c3985b561598cc6",
+    "checks/check-before-wording-refresh.json": "fbec3a3b7c637405989f145a0ada86e1a90a6363d7afc497040179ab4c261434",
+    "checks/check.json": "f57bc307eb3a0cc66a46dffd95b3540dd93df51226599d701f9f007f22451d19",
+    "checks/checkpoint.json": "9d0c5d9eeb97b650940fd34d779ead4a9f0809811ce8f5aeb1e027ea0839fa54",
+    "checks/cli-initialization.json": "d560dcebbd9dc7a730fbb8bbe8343ef17328c5ec171f35eefff3e33bd4fe4218",
+    "checks/configure.json": "f3012c9dc48c7e1fdc9224902ffa3f1e149a492ef1941bcdf4e229e4df618d33",
+    "checks/final-check.json": "f51ea6305e653f6b168c5e05568a1ff355a3cbb3db4cea11dc6bd4fb4e8907a7",
+    "checks/final-checkpoint.json": "4b7a82984b94ee424c66b20b4df89f86d277ad2b8a736c2c309c99679de38490",
+    "checks/final-resume.json": "b755e36b3a08cad14dee6c35b660d0b1a6da8b077f78a23d1ad894c60b45470d",
+    "checks/pre-revision-show.json": "9b71c75b0a4c0330464928bcedac1f277119ddc0b2162700c7ceff2061c75411",
+    "checks/register-batch-execution.json": "0413698fce8e290a7cb585b4317211b04e2f81baabfbf83957890d73746e06a1",
+    "checks/registration-batch.json": "f3823bc8d1c300b37a050c2b407c05f6e6dcedf4e26cf1c945a1c771b78ffb43",
+    "checks/relocated-execution.json": "7db2d3712cfbb9a802a797df4af06d2037f5a3e69428dbf8547804e1a8d994e8",
+    "checks/resume.json": "bd2e051124a9084d85553f790cac21fcb858cc637e0b0fe27286699be8052d1c",
+    "checks/skills-integrity.json": "4ff54d66a80530d0c3b03651192f8644d1e0043b466ebccf24dacde047d5659d",
+    "checks/wording-refresh-registrations.json": "3c82c6a8e72ed41ee3510629be5ef278aded997a516239a60fc4097e799b27a6",
+    "execution.json": "69e0b07da6159429ddf15bb7ee0939d1dd29a66643d87bca747995f0b7786852",
+    "manuscript/report.md": "84f179be9ca36b7a1e4e13c68e7fc0849bc213868638258eb9c5b229d0f80ba4",
+    "notes/analysis.md": "f6dcca876c83ff63ba73c4c3b968170634f65d8a5f0becaa4704d02f5b2c6767",
+    "review.md": "ab1f98894aab435b83a5bb9f33898c0cd4a0857c3d8297ee0553ad19a3f1f2f3"
+  },
+  "executed_output_sha256": {
+    "artifacts/final-run/execution.json": "16c565769d37a7b6873a8c1a08583eea88a88c39ed0752b3c7760644efc41276",
+    "artifacts/initial-run/execution.json": "14ceedc89ce72c0c3e1096969bdd5bf24d8c33259a8a308431151bdaa646aedf",
+    "artifacts/initial-run/results.json": "9379d33d670971208a0c2b2002f14bb34d66cfe9985c7405d377527396315744",
+    "artifacts/results.json": "8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257",
+    "artifacts/run.py": "6c5c5c0bf2eacacd86c589f0d1a5afcba992c93aeffa4f526b2540ea66bc13c5",
+    "checks/calculation-final-and-relocated.json": "6bcea958f49bda99748aadd39cd36f32d3a982fc55bdfdbc389a90a3606f062a",
+    "checks/calculation-initial.json": "4790010312ecd0d7b28ffce126872f5f52ca4d4212ff92d050a199914e3ef8cb",
+    "checks/check-before-checkpoint.json": "79f419a26399430762859d644270d9cf8f823394257f8605a197a934503aff14",
+    "checks/check-before-wording-refresh.json": "b6eb50881f8ef3df551fc3121efa15ed39da66cda26612b31d28b368b6718301",
+    "checks/check.json": "c96e1d8bb393c405dbde47617e4d55779da8cd558ca57fef72c17ddc39557ad5",
+    "checks/checkpoint.json": "f8f3f7f7f3487c1c31bd6f1c3d3f8899b9553b2f19b85f777ce012ddbaf61e9c",
+    "checks/cli-initialization.json": "09785c3688ae31038a5d45f0aaa93fe5e522d8daf90b96e38d522dfbb710a516",
+    "checks/configure.json": "0c33c3407b89def9936ae7ed72c850db38cd84d585feff5e2ebf115ace373cf5",
+    "checks/final-check.json": "3b052da6f829310577117298c5167fe11bbeb2d6330ae176c56b81cfa91b3967",
+    "checks/final-checkpoint.json": "a66789111f151d0722840c494c65bedbfbb0b956c7381002ace82e3966d92fa6",
+    "checks/final-resume.json": "d60af82f646bfc7324d09693844a139bf0660f617f1ba6f5b2563b46a5faac2b",
+    "checks/pre-revision-show.json": "a96fee51ba8e13fbf30ced712d2ea2ba3cc94d21cfbc909378ac2874fb6c6642",
+    "checks/register-batch-execution.json": "a7bb9f75d6b0e036f6aeff39c2d2f42942c34851a6f4a006963194e4ad1e38a8",
+    "checks/registration-batch.json": "f3823bc8d1c300b37a050c2b407c05f6e6dcedf4e26cf1c945a1c771b78ffb43",
+    "checks/relocated-execution.json": "9f32f951c26028623baba98e203a96000edbbfc39b8584225c287ceb00bf7322",
+    "checks/resume.json": "65aae2e83fb125a918743d198c78a9a76494679d5ff0f159f35dd28e08ef91b4",
+    "checks/skills-integrity.json": "703af1ff7a310fb6b8ac2e9b10105717be0dead9bb12607c5041e97d25fdf2c3",
+    "checks/wording-refresh-registrations.json": "c9c7f1d71446fb611243ca39017e9ea9d5f5e0cfa3e977c9349e3cdbd62e6e23",
+    "execution.json": "224b442a6d0c299346a194eb5954f539b2663fbbafbd5b718ccb10e45a1f4556",
+    "manuscript/report.md": "84f179be9ca36b7a1e4e13c68e7fc0849bc213868638258eb9c5b229d0f80ba4",
+    "notes/analysis.md": "f6dcca876c83ff63ba73c4c3b968170634f65d8a5f0becaa4704d02f5b2c6767",
+    "review.md": "ab1f98894aab435b83a5bb9f33898c0cd4a0857c3d8297ee0553ad19a3f1f2f3"
+  },
+  "output_normalizations": [
+    {
+      "path": "artifacts/final-run/execution.json",
+      "original_sha256": "16c565769d37a7b6873a8c1a08583eea88a88c39ed0752b3c7760644efc41276",
+      "published_sha256": "3ed0e3e10deab0b048668305264cc1768ac69869b3bfaf6007463fd13d0e4913",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "artifacts/initial-run/execution.json",
+      "original_sha256": "14ceedc89ce72c0c3e1096969bdd5bf24d8c33259a8a308431151bdaa646aedf",
+      "published_sha256": "3d750bab6684d2b522c7e950a511363578f6322154da36dffd73fa4d138022d0",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/calculation-final-and-relocated.json",
+      "original_sha256": "6bcea958f49bda99748aadd39cd36f32d3a982fc55bdfdbc389a90a3606f062a",
+      "published_sha256": "380e47b5521afc930b7b899c4325e50b0106842e7c9ccc748603d445bd951933",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/calculation-initial.json",
+      "original_sha256": "4790010312ecd0d7b28ffce126872f5f52ca4d4212ff92d050a199914e3ef8cb",
+      "published_sha256": "0fb527082d208ee90e8e3736deca3e387eb0196b8430abcab0a445bd251be96f",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/check-before-checkpoint.json",
+      "original_sha256": "79f419a26399430762859d644270d9cf8f823394257f8605a197a934503aff14",
+      "published_sha256": "96aa991428972b700f6cca12536ee775d071b1752d5653b51c3985b561598cc6",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/check-before-wording-refresh.json",
+      "original_sha256": "b6eb50881f8ef3df551fc3121efa15ed39da66cda26612b31d28b368b6718301",
+      "published_sha256": "fbec3a3b7c637405989f145a0ada86e1a90a6363d7afc497040179ab4c261434",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/check.json",
+      "original_sha256": "c96e1d8bb393c405dbde47617e4d55779da8cd558ca57fef72c17ddc39557ad5",
+      "published_sha256": "f57bc307eb3a0cc66a46dffd95b3540dd93df51226599d701f9f007f22451d19",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/checkpoint.json",
+      "original_sha256": "f8f3f7f7f3487c1c31bd6f1c3d3f8899b9553b2f19b85f777ce012ddbaf61e9c",
+      "published_sha256": "9d0c5d9eeb97b650940fd34d779ead4a9f0809811ce8f5aeb1e027ea0839fa54",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/cli-initialization.json",
+      "original_sha256": "09785c3688ae31038a5d45f0aaa93fe5e522d8daf90b96e38d522dfbb710a516",
+      "published_sha256": "d560dcebbd9dc7a730fbb8bbe8343ef17328c5ec171f35eefff3e33bd4fe4218",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/configure.json",
+      "original_sha256": "0c33c3407b89def9936ae7ed72c850db38cd84d585feff5e2ebf115ace373cf5",
+      "published_sha256": "f3012c9dc48c7e1fdc9224902ffa3f1e149a492ef1941bcdf4e229e4df618d33",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/final-check.json",
+      "original_sha256": "3b052da6f829310577117298c5167fe11bbeb2d6330ae176c56b81cfa91b3967",
+      "published_sha256": "f51ea6305e653f6b168c5e05568a1ff355a3cbb3db4cea11dc6bd4fb4e8907a7",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/final-checkpoint.json",
+      "original_sha256": "a66789111f151d0722840c494c65bedbfbb0b956c7381002ace82e3966d92fa6",
+      "published_sha256": "4b7a82984b94ee424c66b20b4df89f86d277ad2b8a736c2c309c99679de38490",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/final-resume.json",
+      "original_sha256": "d60af82f646bfc7324d09693844a139bf0660f617f1ba6f5b2563b46a5faac2b",
+      "published_sha256": "b755e36b3a08cad14dee6c35b660d0b1a6da8b077f78a23d1ad894c60b45470d",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/pre-revision-show.json",
+      "original_sha256": "a96fee51ba8e13fbf30ced712d2ea2ba3cc94d21cfbc909378ac2874fb6c6642",
+      "published_sha256": "9b71c75b0a4c0330464928bcedac1f277119ddc0b2162700c7ceff2061c75411",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/register-batch-execution.json",
+      "original_sha256": "a7bb9f75d6b0e036f6aeff39c2d2f42942c34851a6f4a006963194e4ad1e38a8",
+      "published_sha256": "0413698fce8e290a7cb585b4317211b04e2f81baabfbf83957890d73746e06a1",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/relocated-execution.json",
+      "original_sha256": "9f32f951c26028623baba98e203a96000edbbfc39b8584225c287ceb00bf7322",
+      "published_sha256": "7db2d3712cfbb9a802a797df4af06d2037f5a3e69428dbf8547804e1a8d994e8",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/resume.json",
+      "original_sha256": "65aae2e83fb125a918743d198c78a9a76494679d5ff0f159f35dd28e08ef91b4",
+      "published_sha256": "bd2e051124a9084d85553f790cac21fcb858cc637e0b0fe27286699be8052d1c",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/skills-integrity.json",
+      "original_sha256": "703af1ff7a310fb6b8ac2e9b10105717be0dead9bb12607c5041e97d25fdf2c3",
+      "published_sha256": "4ff54d66a80530d0c3b03651192f8644d1e0043b466ebccf24dacde047d5659d",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/wording-refresh-registrations.json",
+      "original_sha256": "c9c7f1d71446fb611243ca39017e9ea9d5f5e0cfa3e977c9349e3cdbd62e6e23",
+      "published_sha256": "3c82c6a8e72ed41ee3510629be5ef278aded997a516239a60fc4097e799b27a6",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "execution.json",
+      "original_sha256": "224b442a6d0c299346a194eb5954f539b2663fbbafbd5b718ccb10e45a1f4556",
+      "published_sha256": "69e0b07da6159429ddf15bb7ee0939d1dd29a66643d87bca747995f0b7786852",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    }
+  ],
+  "omitted_identical_outputs": [
+    {
+      "path": "artifacts/final-run/results.json",
+      "canonical": "artifacts/results.json",
+      "sha256": "8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257",
+      "reason": "Unregistered byte-identical rerun result; execution commands and identity receipts retained."
+    }
+  ],
+  "guidance_sha256": {
+    "core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "core/schemas/activity.schema.json": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    "core/schemas/artifact.schema.json": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    "core/schemas/evidence.schema.json": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    "core/schemas/method-binding.schema.json": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    "core/schemas/project.schema.json": "d3aea9cc6055a5e97776be07cf101ad35d8b764405042372439c3445aa80a558",
+    "core/schemas/registry.schema.json": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
+    "core/schemas/relation.schema.json": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    "core/schemas/source.schema.json": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    "core/schemas/statement.schema.json": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    "core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+    "design/catalog.json": "4cc800b1d1ee5e6dabbde06aa60bded298c8e5b84bc035747e93d7c9cf6ccb12",
+    "profiles/disciplines/natural-sciences.md": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a",
+    "profiles/methods/computational.md": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+    "profiles/methods/formal-theory.md": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+    "skills/rw-review/SKILL.md": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+    "skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+    "skills/rw-workflow/SKILL.md": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+    "skills/rw-writing/SKILL.md": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+    "tools/connect_skills.py": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+    "tools/research.py": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b"
+  },
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-draft",
+        "limitations": "原创MIT离线合成材料，不是实测数据。",
+        "locator": "inputs/draft.md",
+        "rights": "public",
+        "title": "待修订原稿",
+        "version": "sha256:014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-model",
+        "limitations": "原创MIT离线合成材料，不是实测数据。",
+        "locator": "inputs/model.md",
+        "rights": "public",
+        "title": "合成两室交换设定",
+        "version": "sha256:d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-parameters",
+        "limitations": "原创MIT离线合成材料，不是实测数据。",
+        "locator": "inputs/parameters.json",
+        "rights": "public",
+        "title": "两室模型参数与对照时点",
+        "version": "sha256:ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-task",
+        "limitations": "原创MIT离线合成材料，不是实测数据。",
+        "locator": "inputs/task.md",
+        "rights": "public",
+        "title": "本次委托与交付条件",
+        "version": "sha256:76a903d4d79f2f139c5b528579fc6d7321c497cb9cd03860a2dea80eb207e970"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "最终标准库实际输出可复跑。",
+          "reviewer": "Codex执行代理自审",
+          "scope": "所给参数、四步计算和列出的五种细化步长。",
+          "status": "supported-in-scope"
+        },
+        "id": "S-computation",
+        "scope": "所给参数、四步计算和列出的五种细化步长。",
+        "text": "给定步长2.5h第2步为(15,-3)，1.5h交替收敛；固定4h细化误差比由1.895趋近1.989。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "各项量纲一致，链式法则给出无量纲方程。",
+          "reviewer": "Codex执行代理自审",
+          "scope": "U为未指定溶质量单位；平均浓度正，k>0，浓度单位U/L。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-dimension",
+        "scope": "U为未指定溶质量单位；平均浓度正，k>0，浓度单位U/L。",
+        "text": "k(a-b)为浓度变化率，Vk(a-b)为总量转移率；τ=2kt,u=a/6,v=b/6无量纲。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "矩阵凸组合、必要性反例和差值递推给出条件。",
+          "reviewer": "Codex执行代理自审",
+          "scope": "固定总量子空间、k>0、任意非负初值；平衡初值的特殊情况单列。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-euler",
+        "scope": "固定总量子空间、k>0、任意非负初值；平衡初值的特殊情况单列。",
+        "text": "Euler差值系数Q=1-2kh；0<h<1/k差值渐近稳定；0<kh<=1对所有非负初值保非负；h<=1/(2k)不交替。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "h=2.5h第2步B=-3，且凸组合证明给出kh<=1条件。",
+          "reviewer": "Codex执行代理自审",
+          "scope": "原稿对本案例任意正步长的主张。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-old-positive",
+        "scope": "原稿对本案例任意正步长的主张。",
+        "text": "所有正步长Euler都保持浓度非负。",
+        "type": "formal",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "Q随h变化，h=2.5h发散、h=2h不衰减，稳定步长速率也不同。",
+          "reviewer": "Codex执行代理自审",
+          "scope": "原稿对本案例任意正步长的主张。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-old-speed",
+        "scope": "原稿对本案例任意正步长的主张。",
+        "text": "所有正步长Euler以同一速度收敛。",
+        "type": "formal",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "解析解A趋6、B趋6，且导数随时间指数变化。",
+          "reviewer": "Codex执行代理自审",
+          "scope": "原稿关于本案例模型的结果主张。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-old-trend",
+        "scope": "原稿关于本案例模型的结果主张。",
+        "text": "封闭交换中A室浓度线性下降到零，B室持续增大。",
+        "type": "formal",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "闭式误差及log展开给出一阶项；有限细化作核对。",
+          "reviewer": "Codex执行代理自审",
+          "scope": "线性闭交换模型k>0，固定T>0；Taylor展开需足够小h使2kh<1。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-order",
+        "scope": "线性闭交换模型k>0，固定T>0；Taylor展开需足够小h使2kh<1。",
+        "text": "固定终点T、h=T/n趋于0，Euler浓度全局误差O(h)。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "由s、d方程完整推导并代回初值。",
+          "reviewer": "Codex执行代理自审",
+          "scope": "等恒定体积1L、k=0.5h^-1、初值(10,2)、无源损失、t>=0。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+          "status": "not-started",
+          "tool": "none"
+        },
+        "id": "S-solution",
+        "scope": "等恒定体积1L、k=0.5h^-1、初值(10,2)、无源损失、t>=0。",
+        "text": "a=6+4exp[-(1 h^-1)t]、b=6-4exp[-(1 h^-1)t]，总量12 U，两室指数趋于6 U/L。",
+        "type": "formal",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC-model",
+          "source:SRC-parameters"
+        ],
+        "description": "仅标准库、重读输入、拒绝已有输出目录的跨平台脚本",
+        "id": "AR-code",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "模型方程、变量和差、守恒、显式解、量纲/无量纲、离散条件及误差推导",
+        "id": "EV-analysis",
+        "limitations": "手工推导；不声称独立人类或形式化验证。",
+        "location": {
+          "kind": "local",
+          "path": "notes/analysis.md"
+        },
+        "provenance": "Codex代理基于本地模型和参数逐步推导，无证明器。",
+        "source_ids": [
+          "SRC-model",
+          "SRC-parameters"
+        ],
+        "type": "manual-analytic-derivation"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "含三个待核对结果主张的旧稿",
+        "id": "EV-draft",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "从本案例原件复制，逐字只读；来源SHA-256已记录。",
+        "source_ids": [
+          "SRC-draft"
+        ],
+        "type": "original-local-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "封闭、等体积、瞬时混匀的本地模型设定",
+        "id": "EV-model",
+        "location": {
+          "kind": "local",
+          "path": "inputs/model.md"
+        },
+        "provenance": "从本案例原件复制，逐字只读；来源SHA-256已记录。",
+        "source_ids": [
+          "SRC-model"
+        ],
+        "type": "original-local-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "实际读取的初值、速率、时点及Euler步长",
+        "id": "EV-parameters",
+        "location": {
+          "kind": "local",
+          "path": "inputs/parameters.json"
+        },
+        "provenance": "从本案例原件复制，逐字只读；来源SHA-256已记录。",
+        "source_ids": [
+          "SRC-parameters"
+        ],
+        "type": "original-local-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "指定时点解析值、四种Euler前四步、2h边界、固定终点细化和数值残差",
+        "id": "EV-results",
+        "limitations": "有限双精度计算，仅当前环境实际运行。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "实际执行artifacts/run.py；final-run与迁移输入复跑结果SHA-256一致。",
+        "source_ids": [
+          "SRC-model",
+          "SRC-parameters"
+        ],
+        "type": "executed-numerical-calculation"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:EV-model",
+          "evidence:EV-parameters"
+        ],
+        "description": "逐步理论推导与实际数值对照",
+        "id": "AR-analysis",
+        "path": "notes/analysis.md",
+        "type": "analysis"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AR-code",
+          "evidence:EV-parameters"
+        ],
+        "description": "最终实际计算的机器可读结果",
+        "id": "AR-results",
+        "path": "artifacts/results.json",
+        "type": "calculation-results"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-analysis",
+        "id": "R1",
+        "rationale": "变量和差的推导建立解、唯一性、守恒与长期状态。",
+        "relation": "supports",
+        "scope": "本次离线合成两室模型；详见对应主张条件。",
+        "statement_id": "S-solution"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-analysis",
+        "id": "R10",
+        "rationale": "Q因步长而异，含发散与边界不衰减条件。",
+        "relation": "challenges",
+        "scope": "本次离线合成两室模型；详见对应主张条件。",
+        "statement_id": "S-old-speed"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-results",
+        "id": "R2",
+        "rationale": "有限时点数值代入仅作核对，普遍结论来自解析推导。",
+        "relation": "qualifies",
+        "scope": "本次离线合成两室模型；详见对应主张条件。",
+        "statement_id": "S-solution"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-analysis",
+        "id": "R3",
+        "rationale": "明确浓度变化率与总量转移率，链式法则建立无量纲方程。",
+        "relation": "supports",
+        "scope": "本次离线合成两室模型；详见对应主张条件。",
+        "statement_id": "S-dimension"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-analysis",
+        "id": "R4",
+        "rationale": "差值递推建立稳定区间；凸组合及非负初值反例证明正性条件。",
+        "relation": "supports",
+        "scope": "本次离线合成两室模型；详见对应主张条件。",
+        "statement_id": "S-euler"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-analysis",
+        "id": "R5",
+        "rationale": "固定终点闭式误差的log展开给出一阶项。",
+        "relation": "supports",
+        "scope": "本次离线合成两室模型；详见对应主张条件。",
+        "statement_id": "S-order"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-results",
+        "id": "R6",
+        "rationale": "细化误差比只支持列出的步长，不能代替渐近推导。",
+        "relation": "qualifies",
+        "scope": "本次离线合成两室模型；详见对应主张条件。",
+        "statement_id": "S-order"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-results",
+        "id": "R7",
+        "rationale": "真实程序输出给定状态、误差、负值及细化结果。",
+        "relation": "supports",
+        "scope": "本次离线合成两室模型；详见对应主张条件。",
+        "statement_id": "S-computation"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-analysis",
+        "id": "R8",
+        "rationale": "A的精确解指数趋于6，否定线性至0；B持续增加在本例为真，补充其极限6，不将原稿改读为声称无界。",
+        "relation": "challenges",
+        "scope": "本次离线合成两室模型；详见对应主张条件。",
+        "statement_id": "S-old-trend"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "EV-results",
+        "id": "R9",
+        "rationale": "h=2.5的第2步B=-3是原主张的同参数反例。",
+        "relation": "challenges",
+        "scope": "本次离线合成两室模型；详见对应主张条件。",
+        "statement_id": "S-old-positive"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT-derive",
+        "inputs": [
+          "evidence:EV-model",
+          "evidence:EV-parameters"
+        ],
+        "note": "实际手工推导；无证明器或人类独立复核。 最终复核纠正对原稿B单调性措辞的解释；公式和数值未变，依赖已按当前版本刷新。",
+        "outputs": [
+          "artifact:AR-analysis",
+          "statement:S-solution",
+          "statement:S-dimension",
+          "statement:S-euler",
+          "statement:S-order"
+        ],
+        "status": "done",
+        "title": "Codex从本地设定建立并逐步推导连续与离散关系"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AR-analysis",
+          "artifact:AR-results",
+          "source:SRC-draft"
+        ],
+        "description": "约600字以内的修订中文短稿",
+        "id": "AR-report",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-derive"
+        ],
+        "id": "ACT-compute",
+        "inputs": [
+          "evidence:EV-model",
+          "evidence:EV-parameters",
+          "artifact:AR-code"
+        ],
+        "note": "所有实际计算在10秒内；负状态保留；对应argv和hash见execution.json。 最终复核纠正对原稿B单调性措辞的解释；公式和数值未变，依赖已按当前版本刷新。",
+        "outputs": [
+          "artifact:AR-results",
+          "evidence:EV-results",
+          "statement:S-computation"
+        ],
+        "status": "done",
+        "title": "Codex实际运行Euler与解析对照并用迁移输入复跑"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:AR-analysis",
+          "artifact:AR-code",
+          "artifact:AR-results",
+          "artifact:AR-report"
+        ],
+        "description": "实际自审、失败保留和具体后续任务",
+        "id": "AR-review",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "activity:ACT-derive",
+          "statement:S-solution",
+          "statement:S-dimension",
+          "statement:S-euler",
+          "statement:S-order"
+        ],
+        "id": "MB-analytic",
+        "method_id": "formal-theory",
+        "notes": "所读画像明确是证明指导切片，解析物理与数值义务按任务补充，不称完整覆盖。",
+        "profile_version": "0.1",
+        "reason": "以变量和差求解并证明连续/离散条件和误差范围。",
+        "variant": "analytic-derivation"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT-derive",
+          "ACT-compute"
+        ],
+        "id": "ACT-write",
+        "inputs": [
+          "evidence:EV-draft",
+          "artifact:AR-analysis",
+          "artifact:AR-results"
+        ],
+        "note": "原稿不改；约556非空白字符；同一执行代理自审。 最终复核纠正对原稿B单调性措辞的解释；公式和数值未变，依赖已按当前版本刷新。",
+        "outputs": [
+          "artifact:AR-report",
+          "artifact:AR-review"
+        ],
+        "status": "done",
+        "title": "Codex修订结果主张并自审"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "activity:ACT-compute",
+          "statement:S-computation",
+          "artifact:AR-code",
+          "artifact:AR-results"
+        ],
+        "id": "MB-numeric",
+        "method_id": "computational",
+        "profile_version": "0.1",
+        "reason": "给定参数的显式Euler、解析基线、边界与固定终点细化实际计算。",
+        "variant": "numerical-simulation"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 3,
+    "artifacts": 5,
+    "decisions": 0,
+    "evidence": 5,
+    "method_bindings": 2,
+    "relations": 10,
+    "sources": 4,
+    "statements": 8
+  },
+  "cursor": {
+    "activity_id": "ACT-write",
+    "next_action": "对固定终点T和目标误差ε，由闭式Euler误差推导先验步长上界，再与T=4h、h=0.03125h时0.004530461 U/L的已算误差对照；该延伸尚未执行。"
+  },
+  "executed_registry_sha256": "60350ab099f66515a7ca29495a737491f0932a9b36b84a1610206bf77725e657",
+  "original_registry_revision": 46,
+  "observed_check_sha256": "77ccc4ba9e388063718aaef4c4234d3ba970e30a1671f6d088529e6083c42aa0",
+  "observed_resume_sha256": "32d103f3d2896f8dae6b8d34ba5c48f8836962cb64438689e2aa7c54b0d005ee",
+  "reproduction": {
+    "script": "artifacts/run.py",
+    "arguments": [
+      "--input-dir",
+      "INPUTS",
+      "--output-dir",
+      "NEW"
+    ],
+    "result": "results.json"
+  }
+}

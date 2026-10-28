@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT",
+    "--kind",
+    "activity",
+    "--id",
+    "A-next-context"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 53,\n  \"kind\": \"activity\",\n  \"id\": \"A-next-context\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"depends_on\": [\n        \"A-interpret\"\n      ],\n      \"id\": \"A-next-context\",\n      \"inputs\": [\n        \"artifact:ART-analysis\",\n        \"artifact:ART-review\"\n      ],\n      \"note\": \"计划：索取工作笺全文及目录第5段所在完整页，检查是否存在工业劳动的直接出处；本轮未取得，不记完成。\",\n      \"outputs\": [],\n      \"status\": \"pending\",\n      \"title\": \"取得完整A1与C1并核对制度对象及道路语境\"\n    },\n    \"registered_at\": \"2026-10-28T21:36:25.826490+00:00\",\n    \"version\": 1\n  }\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.050726624991511926
+}

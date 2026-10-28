@@ -1,0 +1,643 @@
+{
+  "format_version": 1,
+  "case_id": "missing-outcomes",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task outputs and final record data. Replay creates new project IDs, version-1 records and a checkpoint; it does not recreate all original history or repeat model reasoning.",
+  "project_init": {
+    "title": "随机试验失访结局的分母与敏感性",
+    "interest": "随机试验失访结局的分母与敏感性",
+    "disciplines": [
+      "medicine-health"
+    ],
+    "methods": [
+      "empirical-quantitative"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "research"
+  },
+  "case_files": {
+    "inputs/draft.md": "draft.md",
+    "inputs/outcomes.csv": "outcomes.csv",
+    "inputs/protocol.md": "protocol.md",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "draft.md": "a343ffe4ada19dc3b23a3c1fdf1b6681679e6739bf1482701f19055b0e016717",
+    "outcomes.csv": "23ce9fe1d275c65afed1ee56793b1ca6abbcd01109abd6ea75bb29662b53d72e",
+    "protocol.md": "c4067a361620bd991b79048760265037b85466daeffe8956a9f0bb0233dbaf01",
+    "task.md": "fd746546cd1a19564b073b02d08ed7f7b341a711f5e597c7ba4c5fb1d4b676e4"
+  },
+  "output_files": [
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "checks/check-final.json",
+    "checks/check-final.stderr.txt",
+    "checks/check.json",
+    "checks/check.stderr.txt",
+    "checks/checkpoint.json",
+    "checks/checkpoint.stderr.txt",
+    "checks/commands.json",
+    "checks/configure.json",
+    "checks/configure.stderr.txt",
+    "checks/guidance.json",
+    "checks/input-copy-integrity.json",
+    "checks/interface-discovery.json",
+    "checks/machine.json",
+    "checks/register-batch.json",
+    "checks/register-batch.stderr.txt",
+    "checks/resume.json",
+    "checks/resume.stderr.txt",
+    "checks/skill-check.json",
+    "checks/skill-check.stderr.txt",
+    "checks/timings.json",
+    "execution.json",
+    "manuscript/report.md",
+    "notes/analysis.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/results.json": "c7ee4ec4edac1a84796df13710f9b24b8f2b24f6433082a0a1987d0ea89597f7",
+    "artifacts/run.py": "26519e2fa9c8e1e998087d800100e687cccef1f15cb44a47c8d84c46ebfc8465",
+    "checks/check-final.json": "2931922854af526a3d6683fc7c9942e1631add845f7adceecbea985678f32a55",
+    "checks/check-final.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/check.json": "361a0b35406ad54fdf28cb2b72d9e24196c588ed2b169c4d881fba0582dec31d",
+    "checks/check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/checkpoint.json": "9bcad3eb456a38b68344c6571b38986cb59a395951e67ccbc1f4f6274a918e8c",
+    "checks/checkpoint.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/commands.json": "70a7b540a59ff6988c7f385926f6109be171d63c4d39b1827a29d937865bf08f",
+    "checks/configure.json": "59d37dbbd0bf5940812a8bb7b6be2477835e190884e198f2d37b1e882b514a8f",
+    "checks/configure.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/guidance.json": "9bb4bd99d25bcd0c9374ef1d0fc99f0049399f62343880194b06949148e643e8",
+    "checks/input-copy-integrity.json": "36531209f44f0afb79138da9a3221427cd76eb8ee9b3461a4c5ff87bee41cb84",
+    "checks/interface-discovery.json": "36b3c9d53699544af9ae13f30f5ee8db69d2893be3a98deb8da7a76683b40cdc",
+    "checks/machine.json": "e0ceb74906f85c2469d7321688fe61331eb90f53060db6cea6e040bb3eb2de1d",
+    "checks/register-batch.json": "f5a79c689b235a5981e93b56cc3901095d72e58ead8a26dc80be7a40f5bf597a",
+    "checks/register-batch.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/resume.json": "54bd113c3606d9f91ac05c02cb9c6bfa18c8e71ac37e408d8cacd33210b2d454",
+    "checks/resume.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/skill-check.json": "f61519eaf9afc1195a09e0ec7857fa73be2481fc13afaa3dffd8d0105d37a562",
+    "checks/skill-check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/timings.json": "bb6f8d896568d590099418cf9749f362d4d48ae8e288226205e17fa506dbe9f7",
+    "execution.json": "2536c49724106c7de55ec6e088534ac9c4383c7752811bc8eb914a5c1a9607c0",
+    "manuscript/report.md": "958fc04e3bba9aa9852420386dca6d46cb25e963ffb460c82d60f7c3272f86d3",
+    "notes/analysis.md": "bd0e90db5506912e08ee10652ae4b6acc68825d3bc033e59e6679dd6c0d22889",
+    "review.md": "814d23cc93c29432afb6c9114559c7ed4d1417fd6c2738b20328a627dda8e43d"
+  },
+  "executed_output_sha256": {
+    "artifacts/results.json": "c7ee4ec4edac1a84796df13710f9b24b8f2b24f6433082a0a1987d0ea89597f7",
+    "artifacts/run.py": "26519e2fa9c8e1e998087d800100e687cccef1f15cb44a47c8d84c46ebfc8465",
+    "checks/check-final.json": "2931922854af526a3d6683fc7c9942e1631add845f7adceecbea985678f32a55",
+    "checks/check-final.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/check.json": "361a0b35406ad54fdf28cb2b72d9e24196c588ed2b169c4d881fba0582dec31d",
+    "checks/check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/checkpoint.json": "9bcad3eb456a38b68344c6571b38986cb59a395951e67ccbc1f4f6274a918e8c",
+    "checks/checkpoint.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/commands.json": "bb8ff445cb2086783643ebf1744dfaf8659dd3493ba505bef7b88f7d39dffc4c",
+    "checks/configure.json": "59d37dbbd0bf5940812a8bb7b6be2477835e190884e198f2d37b1e882b514a8f",
+    "checks/configure.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/guidance.json": "751deb6bac34f8f50d69934e0623bbeb43e8fd17c489dd31aeb1b216cf8b8c25",
+    "checks/input-copy-integrity.json": "36531209f44f0afb79138da9a3221427cd76eb8ee9b3461a4c5ff87bee41cb84",
+    "checks/interface-discovery.json": "a51df73be7e10e94ca284a89c715429c90ead0666a6de2f0a8a561e37dff5688",
+    "checks/machine.json": "e1ed562825b22a88399242ed42e54472ec63ac6fb8547de8e07d8d327b7b4377",
+    "checks/register-batch.json": "f5a79c689b235a5981e93b56cc3901095d72e58ead8a26dc80be7a40f5bf597a",
+    "checks/register-batch.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/resume.json": "54bd113c3606d9f91ac05c02cb9c6bfa18c8e71ac37e408d8cacd33210b2d454",
+    "checks/resume.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/skill-check.json": "f61519eaf9afc1195a09e0ec7857fa73be2481fc13afaa3dffd8d0105d37a562",
+    "checks/skill-check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/timings.json": "bb6f8d896568d590099418cf9749f362d4d48ae8e288226205e17fa506dbe9f7",
+    "execution.json": "a532b6aa44780343c7712d18bff5ca4136dd7e36512c9f88d3a2e9c076ae3e00",
+    "manuscript/report.md": "958fc04e3bba9aa9852420386dca6d46cb25e963ffb460c82d60f7c3272f86d3",
+    "notes/analysis.md": "bd0e90db5506912e08ee10652ae4b6acc68825d3bc033e59e6679dd6c0d22889",
+    "review.md": "814d23cc93c29432afb6c9114559c7ed4d1417fd6c2738b20328a627dda8e43d"
+  },
+  "output_normalizations": [
+    {
+      "path": "checks/commands.json",
+      "original_sha256": "bb8ff445cb2086783643ebf1744dfaf8659dd3493ba505bef7b88f7d39dffc4c",
+      "published_sha256": "70a7b540a59ff6988c7f385926f6109be171d63c4d39b1827a29d937865bf08f",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/WORKSPACE/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/guidance.json",
+      "original_sha256": "751deb6bac34f8f50d69934e0623bbeb43e8fd17c489dd31aeb1b216cf8b8c25",
+      "published_sha256": "9bb4bd99d25bcd0c9374ef1d0fc99f0049399f62343880194b06949148e643e8",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/WORKSPACE/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/interface-discovery.json",
+      "original_sha256": "a51df73be7e10e94ca284a89c715429c90ead0666a6de2f0a8a561e37dff5688",
+      "published_sha256": "36b3c9d53699544af9ae13f30f5ee8db69d2893be3a98deb8da7a76683b40cdc",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/WORKSPACE/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/machine.json",
+      "original_sha256": "e1ed562825b22a88399242ed42e54472ec63ac6fb8547de8e07d8d327b7b4377",
+      "published_sha256": "e0ceb74906f85c2469d7321688fe61331eb90f53060db6cea6e040bb3eb2de1d",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/WORKSPACE/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "execution.json",
+      "original_sha256": "a532b6aa44780343c7712d18bff5ca4136dd7e36512c9f88d3a2e9c076ae3e00",
+      "published_sha256": "2536c49724106c7de55ec6e088534ac9c4383c7752811bc8eb914a5c1a9607c0",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/WORKSPACE/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    }
+  ],
+  "omitted_identical_outputs": [],
+  "guidance_sha256": {
+    "core/cli.py": "c5fb1241524222447655127b3796e45ef80ea50ce1539a58881098651d567548",
+    "core/project.py": "ef7d0c6e5ada59a5a1b08ba3d4f83b1efa454a959c58a55f4851aaf0e6b2be99",
+    "core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "core/schemas/activity.schema.json": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    "core/schemas/artifact.schema.json": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    "core/schemas/evidence.schema.json": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    "core/schemas/method-binding.schema.json": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    "core/schemas/relation.schema.json": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    "core/schemas/source.schema.json": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    "core/schemas/statement.schema.json": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    "core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+    "design/catalog.json": "4cc800b1d1ee5e6dabbde06aa60bded298c8e5b84bc035747e93d7c9cf6ccb12",
+    "profiles/disciplines/medicine-health.md": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
+    "profiles/governance.md": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+    "profiles/methods/empirical-quantitative.md": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+    "skills/rw-review/SKILL.md": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+    "skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+    "skills/rw-workflow/SKILL.md": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+    "skills/rw-writing/SKILL.md": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+    "tools/connect_skills.py": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+    "tools/research.py": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b"
+  },
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_DATA",
+        "limitations": "任务提供的原创离线合成材料；未外推真实患者。",
+        "locator": "inputs/outcomes.csv",
+        "notes": "MIT可再分发授权来自inputs/task.md。",
+        "rights": "public",
+        "title": "随机分配与第30天二元结局原始合成数据",
+        "version": "sha256:23ce9fe1d275c65afed1ee56793b1ca6abbcd01109abd6ea75bb29662b53d72e"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_DRAFT",
+        "limitations": "任务提供的原创离线合成材料；未外推真实患者。",
+        "locator": "inputs/draft.md",
+        "notes": "MIT可再分发授权来自inputs/task.md。",
+        "rights": "public",
+        "title": "原始结果段（含待更正主张）",
+        "version": "sha256:a343ffe4ada19dc3b23a3c1fdf1b6681679e6739bf1482701f19055b0e016717"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_PROTOCOL",
+        "limitations": "任务提供的原创离线合成材料；未外推真实患者。",
+        "locator": "inputs/protocol.md",
+        "notes": "MIT可再分发授权来自inputs/task.md。",
+        "rights": "public",
+        "title": "合成预设方案",
+        "version": "sha256:c4067a361620bd991b79048760265037b85466daeffe8956a9f0bb0233dbaf01"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_TASK",
+        "limitations": "任务提供的原创离线合成材料；未外推真实患者。",
+        "locator": "inputs/task.md",
+        "notes": "MIT可再分发授权来自inputs/task.md。",
+        "rights": "public",
+        "title": "任务、离线范围和MIT再分发授权",
+        "version": "sha256:fd746546cd1a19564b073b02d08ed7f7b341a711f5e597c7ba4c5fb1d4b676e4"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "6个人数情形与8个个体补全一致，两个端点均有实现情形；不是置信区间。",
+          "reviewer": "Codex代理（本次实际分析与自审执行者）",
+          "scope": "给定已观察事件，枚举A缺失事件0至2及B缺失事件0至1；不假设缺失机制。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "二元合成数据计算与枚举；未开展定理形式化。",
+          "status": "not-applicable",
+          "tool": "Python 3.14标准库Fraction及枚举，非形式证明器"
+        },
+        "id": "S_BOUNDS",
+        "scope": "给定已观察事件，枚举A缺失事件0至2及B缺失事件0至1；不假设缺失机制。",
+        "text": "每组全部随机分配10人的组别风险差锐界为[-1/5,1/10]；可行值为{-1/5,-1/10,0,1/10}。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "(a,b)=(2,0)给+10个百分点；(1,0)及(2,1)给0。",
+          "reviewer": "Codex代理（本次实际分析与自审执行者）",
+          "scope": "仅限此20人的合成随机分配样本与第30天二元终点；不作临床推荐。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "二元合成数据计算与枚举；未开展定理形式化。",
+          "status": "not-applicable",
+          "tool": "Python 3.14标准库Fraction及枚举，非形式证明器"
+        },
+        "id": "S_DIRECTION",
+        "scope": "仅限此20人的合成随机分配样本与第30天二元终点；不作临床推荐。",
+        "text": "完整病例的负风险差方向并不对未知结局稳健，可能相等或严格变正。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "逐行统计已知二元事件；分母分别8与9，未将缺失填0。",
+          "reviewer": "Codex代理（本次实际分析与自审执行者）",
+          "scope": "第30天结局已观察的17人；仅描述两个完整病例子集。",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "二元合成数据计算与枚举；未开展定理形式化。",
+          "status": "not-applicable",
+          "tool": "Python 3.14标准库Fraction及枚举，非形式证明器"
+        },
+        "id": "S_OBSERVED",
+        "scope": "第30天结局已观察的17人；仅描述两个完整病例子集。",
+        "text": "完整病例A=2/8=25%，B=3/9=33.333…%，A减B=−1/12（−8.333…个百分点）。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "CSV有三项空结局；(a,b)=(2,0)时风险差变为+10个百分点。",
+          "reviewer": "Codex代理（本次实际分析与自审执行者）",
+          "scope": "原稿逐句审计；在复制原始draft.md中保留。",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "二元合成数据计算与枚举；未开展定理形式化。",
+          "status": "not-applicable",
+          "tool": "Python 3.14标准库Fraction及枚举，非形式证明器"
+        },
+        "id": "S_ORIGINAL",
+        "scope": "原稿逐句审计；在复制原始draft.md中保留。",
+        "text": "原稿称20人均观察，A风险20%、B风险30%，且A稳定降低10个百分点。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_PROTOCOL",
+          "source:SRC_DATA"
+        ],
+        "description": "标准库可迁移计算器；输入和输出目录均为参数；拒绝已存在输出目录。",
+        "id": "A_CODE",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "20个ID及A/B组别、0/1/空的结局记录。",
+        "id": "E_DATA",
+        "limitations": "3项缺失；仅虚构数据。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/outcomes.csv"
+        },
+        "provenance": "任务提供的本地原始CSV完整复制。",
+        "source_ids": [
+          "SRC_DATA"
+        ],
+        "type": "synthetic-data"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "待修订原始结果段。",
+        "id": "E_DRAFT",
+        "limitations": "其内容是被审主张，不能当已验证结果。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "任务原始稿完整复制，错误不覆盖原件。",
+        "source_ids": [
+          "SRC_DRAFT"
+        ],
+        "type": "text"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "每组10人、预设第30天终点、缺失不填0、无缺失机制证据。",
+        "id": "E_PROTOCOL",
+        "limitations": "无额外机制和实施资料。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/protocol.md"
+        },
+        "provenance": "任务提供的本地原始方案完整复制。",
+        "source_ids": [
+          "SRC_PROTOCOL"
+        ],
+        "type": "protocol"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "按实际CSV重算完整病例、6种人数情形和8种个体补全、锐界及反转。",
+        "id": "E_RESULTS",
+        "limitations": "枚举仅识别缺失结局造成的样本组别风险差范围，无机制假设和外部推广。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Codex代理编写artifacts/run.py并通过实际Python命令运行；portable重放结果字节一致。",
+        "source_ids": [
+          "SRC_DATA",
+          "SRC_PROTOCOL"
+        ],
+        "type": "exact-enumeration"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS",
+          "statement:S_BOUNDS",
+          "statement:S_OBSERVED"
+        ],
+        "description": "设计卡、分母流转、具体推导、全部情形及识别范围。",
+        "id": "A_ANALYSIS",
+        "path": "notes/analysis.md",
+        "type": "analysis"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_CODE",
+          "evidence:E_DATA",
+          "evidence:E_PROTOCOL"
+        ],
+        "description": "实际执行生成的精确风险、全部枚举与输入指纹。",
+        "id": "A_RESULTS",
+        "path": "artifacts/results.json",
+        "type": "calculation"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULTS",
+        "id": "R_BOUND_SUPPORT",
+        "rationale": "列出全部6种事件数和8种个体补全，端点可达。",
+        "relation": "supports",
+        "scope": "有限随机分配样本的极端范围。",
+        "statement_id": "S_BOUNDS"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_PROTOCOL",
+        "id": "R_CC_LIMIT",
+        "rationale": "没有失访机制证据，不能把完整病例视为全部随机分配者的点识别结论。",
+        "relation": "qualifies",
+        "scope": "分析人群与识别范围。",
+        "statement_id": "S_OBSERVED"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULTS",
+        "id": "R_CC_SUPPORT",
+        "rationale": "精确分数为1/4−1/3=−1/12。",
+        "relation": "supports",
+        "scope": "完整病例描述。",
+        "statement_id": "S_OBSERVED"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_DATA",
+        "id": "R_DATA_CHALLENGE",
+        "rationale": "A09、A10、B10为空，直接否定全观察；已观察分母是8及9。",
+        "relation": "challenges",
+        "scope": "分母与观察状态。",
+        "statement_id": "S_ORIGINAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULTS",
+        "id": "R_DIRECTION_SUPPORT",
+        "rationale": "(2,0)为正，(1,0)与(2,1)为零。",
+        "relation": "supports",
+        "scope": "负方向不稳健。",
+        "statement_id": "S_DIRECTION"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULTS",
+        "id": "R_ORIGINAL_CHALLENGE",
+        "rationale": "风险差可为+10个百分点，是原无失访影响主张的反例。",
+        "relation": "challenges",
+        "scope": "原稿风险降低的确定性措辞。",
+        "statement_id": "S_ORIGINAL"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_DRAFT",
+          "artifact:A_ANALYSIS",
+          "evidence:E_RESULTS"
+        ],
+        "description": "600字以内中文修订短稿，替换原分母与稳定获益说法。",
+        "id": "A_REPORT",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_CODE",
+          "artifact:A_RESULTS",
+          "artifact:A_REPORT"
+        ],
+        "description": "实际自审、执行与未覆盖范围、下一步；保留现有输出目录拒绝日志。",
+        "id": "A_REVIEW",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:S_OBSERVED",
+          "statement:S_BOUNDS",
+          "statement:S_DIRECTION",
+          "artifact:A_CODE",
+          "artifact:A_ANALYSIS",
+          "artifact:A_REPORT"
+        ],
+        "id": "M_RANDOMIZED",
+        "method_id": "empirical-quantitative",
+        "profile_version": "0.1",
+        "reason": "按个人随机分配、预设第30天二元主要终点核对完整病例与随机分配分析集，枚举失访事件数并检验结论方向；不作机制或因果点识别假定。",
+        "variant": "randomized-intervention"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT_ANALYSIS",
+        "inputs": [
+          "evidence:E_DATA",
+          "evidence:E_PROTOCOL",
+          "method-binding:M_RANDOMIZED"
+        ],
+        "note": "执行者Codex代理；Python 3.14标准库真实运行；新目录复制重放结果字节相同；现有输出目录拒绝退出2保留。",
+        "outputs": [
+          "artifact:A_CODE",
+          "artifact:A_RESULTS",
+          "artifact:A_ANALYSIS",
+          "statement:S_OBSERVED",
+          "statement:S_BOUNDS",
+          "statement:S_DIRECTION"
+        ],
+        "status": "done",
+        "title": "实际核对分母并运行失访极端界限与全部组合枚举"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_ANALYSIS"
+        ],
+        "id": "ACT_FOLLOWUP",
+        "inputs": [
+          "evidence:E_DATA",
+          "statement:S_DIRECTION"
+        ],
+        "note": "需要当前材料未提供的新增合成资料；未执行、不记为完成。无新增资料时保留全范围。",
+        "status": "pending",
+        "title": "新增材料后核对A09、A10、B10失访原因与第30天结局"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_ANALYSIS"
+        ],
+        "id": "ACT_WRITING",
+        "inputs": [
+          "evidence:E_DRAFT",
+          "evidence:E_RESULTS",
+          "artifact:A_ANALYSIS"
+        ],
+        "note": "执行者Codex代理；保留inputs/draft.md原始错误表述并另存修订稿。",
+        "outputs": [
+          "artifact:A_REPORT"
+        ],
+        "status": "done",
+        "title": "按实算结果修订中文结果段"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_ANALYSIS",
+          "ACT_WRITING"
+        ],
+        "id": "ACT_REVIEW",
+        "inputs": [
+          "artifact:A_RESULTS",
+          "artifact:A_CODE",
+          "artifact:A_ANALYSIS",
+          "artifact:A_REPORT"
+        ],
+        "note": "执行者为同一Codex代理，没有冒称独立人类或独立代理审阅。",
+        "outputs": [
+          "artifact:A_REVIEW"
+        ],
+        "status": "done",
+        "title": "对分母、六种情形、方向反例和可复现接口作实际自审"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 4,
+    "artifacts": 5,
+    "decisions": 0,
+    "evidence": 4,
+    "method_bindings": 1,
+    "relations": 6,
+    "sources": 4,
+    "statements": 4
+  },
+  "cursor": {
+    "activity_id": "ACT_FOLLOWUP",
+    "next_action": "若收到新增合成资料，逐一核对A09、A10、B10的失访原因和第30天结局可追踪性，按原主要终点更新分母与敏感性枚举；无新增证据时保留[-20,+10]个百分点界限及方向不稳定结论。"
+  },
+  "executed_registry_sha256": "ccc4b913e89db560b706fdd9d3e749eb3135391a3fd44c26ca7aac6c3dc58318",
+  "original_registry_revision": 29,
+  "observed_check_sha256": "2931922854af526a3d6683fc7c9942e1631add845f7adceecbea985678f32a55",
+  "observed_resume_sha256": "54bd113c3606d9f91ac05c02cb9c6bfa18c8e71ac37e408d8cacd33210b2d454",
+  "reproduction": {
+    "script": "artifacts/run.py",
+    "arguments": [
+      "--input-dir",
+      "INPUTS",
+      "--output-dir",
+      "NEW"
+    ],
+    "result": "results.json"
+  }
+}

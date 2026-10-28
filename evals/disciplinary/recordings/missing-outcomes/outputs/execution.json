@@ -1,0 +1,417 @@
+{
+  "schema": "task-execution-summary-1",
+  "project": "PROJECT",
+  "executor": "Codex agent /root/execute_missing_outcomes",
+  "scope": "Actual offline synthetic-data analysis and same-agent self-review, not independent clinical review or clinical advice.",
+  "input_sha256": {
+    "inputs/draft.md": "a343ffe4ada19dc3b23a3c1fdf1b6681679e6739bf1482701f19055b0e016717",
+    "inputs/outcomes.csv": "23ce9fe1d275c65afed1ee56793b1ca6abbcd01109abd6ea75bb29662b53d72e",
+    "inputs/protocol.md": "c4067a361620bd991b79048760265037b85466daeffe8956a9f0bb0233dbaf01",
+    "inputs/task.md": "fd746546cd1a19564b073b02d08ed7f7b341a711f5e597c7ba4c5fb1d4b676e4"
+  },
+  "output_sha256": {
+    "artifacts/results.json": "c7ee4ec4edac1a84796df13710f9b24b8f2b24f6433082a0a1987d0ea89597f7",
+    "artifacts/run.py": "26519e2fa9c8e1e998087d800100e687cccef1f15cb44a47c8d84c46ebfc8465",
+    "checks/check-final.json": "2931922854af526a3d6683fc7c9942e1631add845f7adceecbea985678f32a55",
+    "checks/check-final.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/check.json": "361a0b35406ad54fdf28cb2b72d9e24196c588ed2b169c4d881fba0582dec31d",
+    "checks/check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/checkpoint.json": "9bcad3eb456a38b68344c6571b38986cb59a395951e67ccbc1f4f6274a918e8c",
+    "checks/checkpoint.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/commands.json": "bb8ff445cb2086783643ebf1744dfaf8659dd3493ba505bef7b88f7d39dffc4c",
+    "checks/configure.json": "59d37dbbd0bf5940812a8bb7b6be2477835e190884e198f2d37b1e882b514a8f",
+    "checks/configure.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/guidance.json": "751deb6bac34f8f50d69934e0623bbeb43e8fd17c489dd31aeb1b216cf8b8c25",
+    "checks/input-copy-integrity.json": "36531209f44f0afb79138da9a3221427cd76eb8ee9b3461a4c5ff87bee41cb84",
+    "checks/interface-discovery.json": "a51df73be7e10e94ca284a89c715429c90ead0666a6de2f0a8a561e37dff5688",
+    "checks/machine.json": "e1ed562825b22a88399242ed42e54472ec63ac6fb8547de8e07d8d327b7b4377",
+    "checks/register-batch.json": "f5a79c689b235a5981e93b56cc3901095d72e58ead8a26dc80be7a40f5bf597a",
+    "checks/register-batch.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/resume.json": "54bd113c3606d9f91ac05c02cb9c6bfa18c8e71ac37e408d8cacd33210b2d454",
+    "checks/resume.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/skill-check.json": "f61519eaf9afc1195a09e0ec7857fa73be2481fc13afaa3dffd8d0105d37a562",
+    "checks/skill-check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "checks/timings.json": "bb6f8d896568d590099418cf9749f362d4d48ae8e288226205e17fa506dbe9f7",
+    "manuscript/report.md": "958fc04e3bba9aa9852420386dca6d46cb25e963ffb460c82d60f7c3272f86d3",
+    "notes/analysis.md": "bd0e90db5506912e08ee10652ae4b6acc68825d3bc033e59e6679dd6c0d22889",
+    "project.json": "3f09049f7ae723b054e432af21dd3ebe9eaf04a6305aaa24a0eeeadd398943d6",
+    "records/registry.json": "ccc4b913e89db560b706fdd9d3e749eb3135391a3fd44c26ca7aac6c3dc58318",
+    "review.md": "814d23cc93c29432afb6c9114559c7ed4d1417fd6c2738b20328a627dda8e43d",
+    "delivery-files.json": "cdbbe08502087d61de78809805e2b8f8ababdeecbb06aa8942c21ebf11870f31"
+  },
+  "manifest_self_hash_excluded": true,
+  "guidance_read": [
+    {
+      "path": "TOOLKIT/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/skill-bridge.md",
+      "sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-writing/SKILL.md",
+      "sha256": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-review/SKILL.md",
+      "sha256": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/profiles/disciplines/medicine-health.md",
+      "sha256": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/profiles/methods/empirical-quantitative.md",
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/profiles/governance.md",
+      "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/design/catalog.json",
+      "sha256": "4cc800b1d1ee5e6dabbde06aa60bded298c8e5b84bc035747e93d7c9cf6ccb12",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/source.schema.json",
+      "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/statement.schema.json",
+      "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/evidence.schema.json",
+      "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/relation.schema.json",
+      "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/artifact.schema.json",
+      "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/activity.schema.json",
+      "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/method-binding.schema.json",
+      "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/cli.py",
+      "sha256": "c5fb1241524222447655127b3796e45ef80ea50ce1539a58881098651d567548",
+      "access": "partial-interface-inspection"
+    },
+    {
+      "path": "TOOLKIT/core/project.py",
+      "sha256": "ef7d0c6e5ada59a5a1b08ba3d4f83b1efa454a959c58a55f4851aaf0e6b2be99",
+      "access": "partial-interface-inspection"
+    }
+  ],
+  "tool_paths": [
+    "TOOLKIT/tools/research.py",
+    "TOOLKIT/tools/connect_skills.py"
+  ],
+  "commands": [
+    {
+      "label": "init",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "随机试验失访结局的分母与敏感性",
+        "--discipline",
+        "medicine-health",
+        "--method",
+        "empirical-quantitative",
+        "--mode",
+        "reproducible",
+        "--entry",
+        "research",
+        "--language",
+        "zh"
+      ],
+      "exit_status": 0,
+      "capture": "Executed directly via exec_command; returned initialized=true, revision=0, project_id=Pdde894184a434d36804de629b50a8339."
+    },
+    {
+      "label": "connect-skills",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "install",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "capture": "Executed directly via exec_command; returned passed=true, installed=true, files=65, global_installation=false."
+    },
+    {
+      "label": "analysis",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "RUN/calculation"
+      ],
+      "cwd": "WORKSPACE",
+      "exit_status": 0,
+      "stdout": "{\"status\": \"completed\", \"count_combinations\": 6, \"individual_completions\": 8, \"bounds\": [\"-1/5\", \"1/10\"]}\n",
+      "stderr": "",
+      "capture_note": "Initial subprocess inherited the exec_command working directory; corrected metadata to match the actual cwd."
+    },
+    {
+      "label": "portable-replay",
+      "argv": [
+        "PYTHON",
+        "RUN/portable/run.py",
+        "--input-dir",
+        "RUN/portable/inputs",
+        "--output-dir",
+        "RUN/portable/new-output"
+      ],
+      "cwd": "RUN/portable",
+      "exit_status": 0,
+      "stdout": "{\"status\": \"completed\", \"count_combinations\": 6, \"individual_completions\": 8, \"bounds\": [\"-1/5\", \"1/10\"]}\n",
+      "stderr": ""
+    },
+    {
+      "label": "existing-output-refusal",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "RUN/calculation"
+      ],
+      "cwd": "WORKSPACE",
+      "exit_status": 2,
+      "stdout": "",
+      "stderr": "usage: run.py [-h] --input-dir INPUT_DIR --output-dir OUTPUT_DIR\nrun.py: error: --output-dir must not already exist\n",
+      "capture_note": "Initial subprocess inherited the exec_command working directory; corrected metadata to match the actual cwd."
+    },
+    {
+      "label": "configure",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "configure",
+        "--root",
+        "PROJECT",
+        "--governance-applicability",
+        "not-applicable"
+      ],
+      "cwd": "RUN",
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"configured\": true,\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": null\n    },\n    \"disciplines\": [\n      \"medicine-health\"\n    ],\n    \"entry_activity\": \"research\",\n    \"governance\": {\n      \"applicability\": \"not-applicable\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"随机试验失访结局的分母与敏感性\",\n    \"methods\": [\n      \"empirical-quantitative\"\n    ],\n    \"project_id\": \"Pdde894184a434d36804de629b50a8339\",\n    \"resources\": {\n      \"available_capabilities\": [],\n      \"budget\": null,\n      \"deadline\": null\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"随机试验失访结局的分母与敏感性\",\n    \"workflow_mode\": \"reproducible\"\n  },\n  \"config_sha256\": \"3f09049f7ae723b054e432af21dd3ebe9eaf04a6305aaa24a0eeeadd398943d6\",\n  \"registry_revision\": 0,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "register-batch",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register-batch",
+        "--root",
+        "PROJECT",
+        "--file",
+        "RUN/registration-batch.json"
+      ],
+      "cwd": "RUN",
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"registered_count\": 28,\n  \"records\": [\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC_PROTOCOL\",\n      \"version\": 1,\n      \"revision\": 1,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC_DATA\",\n      \"version\": 1,\n      \"revision\": 2,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC_DRAFT\",\n      \"version\": 1,\n      \"revision\": 3,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC_TASK\",\n      \"version\": 1,\n      \"revision\": 4,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S_ORIGINAL\",\n      \"version\": 1,\n      \"revision\": 5,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S_OBSERVED\",\n      \"version\": 1,\n      \"revision\": 6,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S_BOUNDS\",\n      \"version\": 1,\n      \"revision\": 7,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S_DIRECTION\",\n      \"version\": 1,\n      \"revision\": 8,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E_PROTOCOL\",\n      \"version\": 1,\n      \"revision\": 9,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E_DATA\",\n      \"version\": 1,\n      \"revision\": 10,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E_DRAFT\",\n      \"version\": 1,\n      \"revision\": 11,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E_RESULTS\",\n      \"version\": 1,\n      \"revision\": 12,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_DATA_CHALLENGE\",\n      \"version\": 1,\n      \"revision\": 13,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_CC_SUPPORT\",\n      \"version\": 1,\n      \"revision\": 14,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_CC_LIMIT\",\n      \"version\": 1,\n      \"revision\": 15,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_BOUND_SUPPORT\",\n      \"version\": 1,\n      \"revision\": 16,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_DIRECTION_SUPPORT\",\n      \"version\": 1,\n      \"revision\": 17,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_ORIGINAL_CHALLENGE\",\n      \"version\": 1,\n      \"revision\": 18,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_CODE\",\n      \"version\": 1,\n      \"revision\": 19,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_RESULTS\",\n      \"version\": 1,\n      \"revision\": 20,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_ANALYSIS\",\n      \"version\": 1,\n      \"revision\": 21,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_REPORT\",\n      \"version\": 1,\n      \"revision\": 22,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_REVIEW\",\n      \"version\": 1,\n      \"revision\": 23,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"method-binding\",\n      \"id\": \"M_RANDOMIZED\",\n      \"version\": 1,\n      \"revision\": 24,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"ACT_ANALYSIS\",\n      \"version\": 1,\n      \"revision\": 25,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"ACT_WRITING\",\n      \"version\": 1,\n      \"revision\": 26,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"ACT_REVIEW\",\n      \"version\": 1,\n      \"revision\": 27,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"ACT_FOLLOWUP\",\n      \"version\": 1,\n      \"revision\": 28,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    }\n  ],\n  \"revision\": 28,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "skill-check",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "cwd": "RUN",
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"installed_integrity\": true,\n  \"source_version_matches\": true,\n  \"source_comparison_performed\": true,\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 65,\n  \"payload_sha256\": \"321fa8cc01187952b33ec072e96a10d65acdf24c674b99cd92107473bcfa69d5\",\n  \"findings\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "check",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "cwd": "RUN",
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pdde894184a434d36804de629b50a8339\",\n  \"revision\": 28,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 5,\n    \"decisions\": 0,\n    \"evidence\": 4,\n    \"method_bindings\": 1,\n    \"relations\": 6,\n    \"sources\": 4,\n    \"statements\": 4\n  },\n  \"activities\": [\n    {\n      \"id\": \"ACT_ANALYSIS\",\n      \"title\": \"实际核对分母并运行失访极端界限与全部组合枚举\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_FOLLOWUP\",\n      \"title\": \"新增材料后核对A09、A10、B10失访原因与第30天结局\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_REVIEW\",\n      \"title\": \"对分母、六种情形、方向反例和可复现接口作实际自审\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_WRITING\",\n      \"title\": \"按实算结果修订中文结果段\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"Clarify the current question, scope and next evidence check.\"\n  },\n  \"checkpoint\": {\n    \"recorded\": false,\n    \"status\": \"not-recorded\",\n    \"changed\": []\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "checkpoint",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "checkpoint",
+        "--root",
+        "PROJECT",
+        "--next-action",
+        "若收到新增合成资料，逐一核对A09、A10、B10的失访原因和第30天结局可追踪性，按原主要终点更新分母与敏感性枚举；无新增证据时保留[-20,+10]个百分点界限及方向不稳定结论。",
+        "--activity",
+        "ACT_FOLLOWUP",
+        "--note",
+        "本次计算、短稿及自审已完成；失访机制仍未知，新增资料核查尚未执行。"
+      ],
+      "cwd": "RUN",
+      "exit_status": 0,
+      "stdout": "{\n  \"checkpoint_saved\": true,\n  \"revision\": 29,\n  \"cursor\": {\n    \"activity_id\": \"ACT_FOLLOWUP\",\n    \"next_action\": \"若收到新增合成资料，逐一核对A09、A10、B10的失访原因和第30天结局可追踪性，按原主要终点更新分母与敏感性枚举；无新增证据时保留[-20,+10]个百分点界限及方向不稳定结论。\"\n  },\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "resume",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT"
+      ],
+      "cwd": "RUN",
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pdde894184a434d36804de629b50a8339\",\n  \"revision\": 29,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 5,\n    \"decisions\": 0,\n    \"evidence\": 4,\n    \"method_bindings\": 1,\n    \"relations\": 6,\n    \"sources\": 4,\n    \"statements\": 4\n  },\n  \"activities\": [\n    {\n      \"id\": \"ACT_ANALYSIS\",\n      \"title\": \"实际核对分母并运行失访极端界限与全部组合枚举\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_FOLLOWUP\",\n      \"title\": \"新增材料后核对A09、A10、B10失访原因与第30天结局\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_REVIEW\",\n      \"title\": \"对分母、六种情形、方向反例和可复现接口作实际自审\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_WRITING\",\n      \"title\": \"按实算结果修订中文结果段\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"ACT_FOLLOWUP\",\n    \"next_action\": \"若收到新增合成资料，逐一核对A09、A10、B10的失访原因和第30天结局可追踪性，按原主要终点更新分母与敏感性枚举；无新增证据时保留[-20,+10]个百分点界限及方向不稳定结论。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  },\n  \"next_action\": \"若收到新增合成资料，逐一核对A09、A10、B10的失访原因和第30天结局可追踪性，按原主要终点更新分母与敏感性枚举；无新增证据时保留[-20,+10]个百分点界限及方向不稳定结论。\",\n  \"needs_review\": false,\n  \"recovery_instruction\": \"Continue the recorded next action within its existing scope.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "check-final",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "cwd": "RUN",
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pdde894184a434d36804de629b50a8339\",\n  \"revision\": 29,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 5,\n    \"decisions\": 0,\n    \"evidence\": 4,\n    \"method_bindings\": 1,\n    \"relations\": 6,\n    \"sources\": 4,\n    \"statements\": 4\n  },\n  \"activities\": [\n    {\n      \"id\": \"ACT_ANALYSIS\",\n      \"title\": \"实际核对分母并运行失访极端界限与全部组合枚举\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_FOLLOWUP\",\n      \"title\": \"新增材料后核对A09、A10、B10失访原因与第30天结局\",\n      \"declared_status\": \"pending\",\n      \"effective_status\": \"pending\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_REVIEW\",\n      \"title\": \"对分母、六种情形、方向反例和可复现接口作实际自审\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_WRITING\",\n      \"title\": \"按实算结果修订中文结果段\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"ACT_FOLLOWUP\",\n    \"next_action\": \"若收到新增合成资料，逐一核对A09、A10、B10的失访原因和第30天结局可追踪性，按原主要终点更新分母与敏感性枚举；无新增证据时保留[-20,+10]个百分点界限及方向不稳定结论。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "interface_discovery_file": "checks/interface-discovery.json",
+  "machine_details": "checks/machine.json",
+  "runtime_details": "checks/timings.json",
+  "checks": {
+    "all_input_copies_identical": true,
+    "portable_replay_byte_identical": true,
+    "existing_output_refusal_exit_status": 2,
+    "register_batch_exit_status": 0,
+    "check_exit_status": 0,
+    "resume_exit_status": 0,
+    "checkpoint_status": "current"
+  },
+  "retained_nonzero_runs": [
+    {
+      "label": "existing-output-refusal",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "RUN/calculation"
+      ],
+      "cwd": "WORKSPACE",
+      "exit_status": 2,
+      "stdout": "",
+      "stderr": "usage: run.py [-h] --input-dir INPUT_DIR --output-dir OUTPUT_DIR\nrun.py: error: --output-dir must not already exist\n",
+      "capture_note": "Initial subprocess inherited the exec_command working directory; corrected metadata to match the actual cwd."
+    }
+  ],
+  "unexpected_execution_failures": [],
+  "handoff": {
+    "files": [
+      "artifacts/results.json",
+      "artifacts/run.py",
+      "checks/check-final.json",
+      "checks/check-final.stderr.txt",
+      "checks/check.json",
+      "checks/check.stderr.txt",
+      "checks/checkpoint.json",
+      "checks/checkpoint.stderr.txt",
+      "checks/commands.json",
+      "checks/configure.json",
+      "checks/configure.stderr.txt",
+      "checks/guidance.json",
+      "checks/input-copy-integrity.json",
+      "checks/interface-discovery.json",
+      "checks/machine.json",
+      "checks/register-batch.json",
+      "checks/register-batch.stderr.txt",
+      "checks/resume.json",
+      "checks/resume.stderr.txt",
+      "checks/skill-check.json",
+      "checks/skill-check.stderr.txt",
+      "checks/timings.json",
+      "inputs/draft.md",
+      "inputs/outcomes.csv",
+      "inputs/protocol.md",
+      "inputs/task.md",
+      "manuscript/report.md",
+      "notes/analysis.md",
+      "project.json",
+      "records/registry.json",
+      "review.md",
+      "delivery-files.json",
+      "execution.json"
+    ],
+    "runtime_excluded": true
+  },
+  "scientific_conclusions": {
+    "complete_case_risk_difference": "-1/12",
+    "randomized_cohort_risk_difference_extreme_bounds": [
+      "-1/5",
+      "1/10"
+    ],
+    "count_combinations": 6,
+    "individual_completions": 8,
+    "direction_not_robust": true,
+    "missing_mechanism": "unknown"
+  }
+}

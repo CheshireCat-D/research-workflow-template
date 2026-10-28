@@ -1,0 +1,73 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pd1d92537032a444698aaaea11d960cd9",
+  "revision": 66,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 5,
+    "artifacts": 7,
+    "decisions": 0,
+    "evidence": 10,
+    "method_bindings": 1,
+    "relations": 20,
+    "sources": 7,
+    "statements": 7
+  },
+  "activities": [
+    {
+      "id": "A-init-failure",
+      "title": "首次项目初始化参数被拒绝",
+      "declared_status": "failed",
+      "effective_status": "failed",
+      "stale_reasons": []
+    },
+    {
+      "id": "A-interpret",
+      "title": "实际看图、比较两种解释、审查原稿并写出短稿",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A-ledger-semantic-correction",
+      "title": "核对原文并修正被审命题、证据关系和CLI日志来源",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A-material-audit",
+      "title": "读取输入复制件并核对尺寸及来源定位",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "A-next-context",
+      "title": "取得完整A1与C1并核对制度对象及道路语境",
+      "declared_status": "pending",
+      "effective_status": "pending",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "A-next-context",
+    "next_action": "先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；E1未说唯一，在取得直接出处前不把其后出工业劳动归因写成已确认作者意图。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "next_action": "先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；E1未说唯一，在取得直接出处前不把其后出工业劳动归因写成已确认作者意图。",
+  "needs_review": false,
+  "recovery_instruction": "Continue the recorded next action within its existing scope."
+}

@@ -1,0 +1,1134 @@
+{
+  "input_sha256": {
+    "source-packet.md": "65c4d94005bedb72a3e99bc85a708e5bbe79b1770de33443b3670778c3f34f21",
+    "draft.md": "b316c02633a1c27a794a32355c72cab636b42d0e2ee41260df285210d90c1b7b",
+    "task.md": "046a7f78b0b0c695058bd1c714668e37c373ad4b4df2d852dfa33380d0ccc536"
+  },
+  "interpretive_model": "A and R and (T or S) and not P",
+  "model_origin": "Agent clause analysis of supplied sections 2, 5, 7; enumeration is not legal authority.",
+  "parsed_age_threshold": 18,
+  "parsed_review_days_after_service": 15,
+  "authority": {
+    "coequal_languages": true,
+    "priority_language_defined": false
+  },
+  "recognized_clauses": {
+    "D0_1": "本规则中英文本同等权威。",
+    "zh_2": "合格申请人指年满18岁的本地居民；本地居住条件用R表示，年龄条件用A表示。",
+    "en_2": "An eligible applicant is a local resident aged eighteen years or older.",
+    "zh_5": "合格申请人完成培训或者处于获准监督之下，得申请许可；但第7条禁止者除外。",
+    "en_5": "An eligible applicant who has completed training or is under approved supervision may apply for a permit, except a person prohibited under section 7.",
+    "zh_7": "正在执行禁止令的申请人不得适用第5条。",
+    "en_7": "An applicant subject to an active prohibition order is excluded from section 5.",
+    "zh_9": "对拒绝申请的决定可在送达后15日内请求复核。复核权不改变第5条实体条件。"
+  },
+  "input_policy": {
+    "normative_text": "Exact ordered reviewed nonblank lines; added, removed, changed or reordered content is rejected.",
+    "normalization": "Blank lines and outer line whitespace only.",
+    "applicant_facts": "Parsed afresh from the provided input with the documented closed grammar."
+  },
+  "applicants": [
+    {
+      "name": "甲",
+      "age": 19,
+      "source_line": "申请人甲：年龄19，本地居民，未完成培训，处于获准监督下，无禁止令。",
+      "facts": {
+        "A": true,
+        "R": true,
+        "T": false,
+        "S": true,
+        "P": false
+      },
+      "may_apply_under_section_5": true,
+      "review_rule": {
+        "if_refusal_decision_served": true,
+        "request_within_days_after_service": 15,
+        "changes_substantive_conditions": false,
+        "service_or_refusal_facts_given": false,
+        "automatic_grant_established": false
+      }
+    },
+    {
+      "name": "乙",
+      "age": 17,
+      "source_line": "申请人乙：年龄17，本地居民，完成培训，无监督，无禁止令。",
+      "facts": {
+        "A": false,
+        "R": true,
+        "T": true,
+        "S": false,
+        "P": false
+      },
+      "may_apply_under_section_5": false,
+      "review_rule": {
+        "if_refusal_decision_served": true,
+        "request_within_days_after_service": 15,
+        "changes_substantive_conditions": false,
+        "service_or_refusal_facts_given": false,
+        "automatic_grant_established": false
+      }
+    },
+    {
+      "name": "丙",
+      "age": 25,
+      "source_line": "申请人丙：年龄25，本地居民，完成培训，无监督，有正在执行的禁止令。",
+      "facts": {
+        "A": true,
+        "R": true,
+        "T": true,
+        "S": false,
+        "P": true
+      },
+      "may_apply_under_section_5": false,
+      "review_rule": {
+        "if_refusal_decision_served": true,
+        "request_within_days_after_service": 15,
+        "changes_substantive_conditions": false,
+        "service_or_refusal_facts_given": false,
+        "automatic_grant_established": false
+      }
+    }
+  ],
+  "enumeration": {
+    "variables": [
+      "A",
+      "R",
+      "T",
+      "S",
+      "P"
+    ],
+    "rows": [
+      {
+        "facts": {
+          "A": false,
+          "R": false,
+          "T": false,
+          "S": false,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": false,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": false,
+          "T": false,
+          "S": false,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": false,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": false,
+          "T": false,
+          "S": true,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": false,
+          "T": false,
+          "S": true,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": false,
+          "T": true,
+          "S": false,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": false,
+          "T": true,
+          "S": false,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": false,
+          "T": true,
+          "S": true,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": false,
+          "T": true,
+          "S": true,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": true,
+          "T": false,
+          "S": false,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": true,
+          "T": false,
+          "S": false,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": true,
+          "T": false,
+          "S": true,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": true,
+          "T": false,
+          "S": true,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": true,
+          "T": true,
+          "S": false,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": true,
+          "T": true,
+          "S": false,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": true,
+          "T": true,
+          "S": true,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": false,
+          "R": true,
+          "T": true,
+          "S": true,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": false,
+          "T": false,
+          "S": false,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": false,
+          "T": false,
+          "S": false,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": false,
+          "T": false,
+          "S": true,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": false,
+          "T": false,
+          "S": true,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": false,
+          "T": true,
+          "S": false,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": false,
+          "T": true,
+          "S": false,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": false,
+          "T": true,
+          "S": true,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": false,
+          "T": true,
+          "S": true,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": true,
+          "T": false,
+          "S": false,
+          "P": false
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": true,
+          "T": false,
+          "S": false,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": false
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": true,
+          "T": false,
+          "S": true,
+          "P": false
+        },
+        "factored": true,
+        "distributed": true,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": true
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": true,
+          "T": false,
+          "S": true,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": true
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": true,
+          "T": true,
+          "S": false,
+          "P": false
+        },
+        "factored": true,
+        "distributed": true,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": true,
+          "prohibition_omitted": true
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": true,
+          "T": true,
+          "S": false,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": true
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": true,
+          "T": true,
+          "S": true,
+          "P": false
+        },
+        "factored": true,
+        "distributed": true,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": true,
+          "prohibition_omitted": true
+        }
+      },
+      {
+        "facts": {
+          "A": true,
+          "R": true,
+          "T": true,
+          "S": true,
+          "P": true
+        },
+        "factored": false,
+        "distributed": false,
+        "wrong_models": {
+          "draft_any_single_condition_ignoring_prohibition": true,
+          "training_required": false,
+          "prohibition_omitted": true
+        }
+      }
+    ],
+    "row_count": 32,
+    "eligible_row_count": 3,
+    "distribution_difference_count": 0,
+    "distribution_differences": [],
+    "wrong_model_difference_counts": {
+      "draft_any_single_condition_ignoring_prohibition": 27,
+      "training_required": 1,
+      "prohibition_omitted": 3
+    },
+    "wrong_model_differences": {
+      "draft_any_single_condition_ignoring_prohibition": [
+        {
+          "facts": {
+            "A": false,
+            "R": false,
+            "T": false,
+            "S": true,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": false,
+            "T": false,
+            "S": true,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": false,
+            "T": true,
+            "S": false,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": false,
+            "T": true,
+            "S": false,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": false,
+            "T": true,
+            "S": true,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": false,
+            "T": true,
+            "S": true,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": true,
+            "T": false,
+            "S": false,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": true,
+            "T": false,
+            "S": false,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": true,
+            "T": false,
+            "S": true,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": true,
+            "T": false,
+            "S": true,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": true,
+            "T": true,
+            "S": false,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": true,
+            "T": true,
+            "S": false,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": true,
+            "T": true,
+            "S": true,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": false,
+            "R": true,
+            "T": true,
+            "S": true,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": false,
+            "T": false,
+            "S": false,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": false,
+            "T": false,
+            "S": false,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": false,
+            "T": false,
+            "S": true,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": false,
+            "T": false,
+            "S": true,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": false,
+            "T": true,
+            "S": false,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": false,
+            "T": true,
+            "S": false,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": false,
+            "T": true,
+            "S": true,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": false,
+            "T": true,
+            "S": true,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": true,
+            "T": false,
+            "S": false,
+            "P": false
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": true,
+            "T": false,
+            "S": false,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": false
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": true,
+            "T": false,
+            "S": true,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": true
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": true,
+            "T": true,
+            "S": false,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": true
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": true,
+            "T": true,
+            "S": true,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": true
+          }
+        }
+      ],
+      "training_required": [
+        {
+          "facts": {
+            "A": true,
+            "R": true,
+            "T": false,
+            "S": true,
+            "P": false
+          },
+          "factored": true,
+          "distributed": true,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": true
+          }
+        }
+      ],
+      "prohibition_omitted": [
+        {
+          "facts": {
+            "A": true,
+            "R": true,
+            "T": false,
+            "S": true,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": true
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": true,
+            "T": true,
+            "S": false,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": true
+          }
+        },
+        {
+          "facts": {
+            "A": true,
+            "R": true,
+            "T": true,
+            "S": true,
+            "P": true
+          },
+          "factored": false,
+          "distributed": false,
+          "wrong_models": {
+            "draft_any_single_condition_ignoring_prohibition": true,
+            "training_required": false,
+            "prohibition_omitted": true
+          }
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Closed fictional material only; no real jurisdiction or precedent.",
+    "Boolean model is assigned by the recorded clause analysis, not discovered by enumeration.",
+    "Only this exact reviewed normative block is supported; any other normative text is rejected pending legal review.",
+    "May apply is not a determination of final permit grant."
+  ]
+}

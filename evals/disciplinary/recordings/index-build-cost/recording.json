@@ -1,0 +1,733 @@
+{
+  "format_version": 1,
+  "case_id": "index-build-cost",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task outputs and final record data. Replay creates new project IDs, version-1 records and a checkpoint; it does not recreate all original history or repeat model reasoning.",
+  "project_init": {
+    "title": "重复键查询的端到端成本比较",
+    "interest": "重复键查询的端到端成本比较",
+    "disciplines": [
+      "engineering"
+    ],
+    "methods": [
+      "computational"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "minimum-check"
+  },
+  "case_files": {
+    "inputs/contract.md": "contract.md",
+    "inputs/draft.md": "draft.md",
+    "inputs/queries.json": "queries.json",
+    "inputs/records.csv": "records.csv",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "contract.md": "9aef9104f13db5c019676831837ea311c07c63c8f445870f4fa60c6a7bafd646",
+    "draft.md": "deb88557339672857a96f423ff1b6e740a3362d81739c268c70d885a191cb49e",
+    "queries.json": "72d76d55986f6d6029e8659b23660fbe6fa16e03d165cd12141b92f547755591",
+    "records.csv": "c00c73ce2d3c56bfea4f649a2bbd88ecd34337de8e2f439640e51fc2e9826642",
+    "task.md": "09fb97fb1dee4d7802536ce62bef51ba67af8d9a176ba5da458a18a5351b355a"
+  },
+  "output_files": [
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "checks/check-before-checkpoint.json",
+    "checks/check.json",
+    "checks/checkpoint.json",
+    "checks/computation.json",
+    "checks/guidance-read.json",
+    "checks/register.json",
+    "checks/registration-batch.json",
+    "checks/resume.json",
+    "checks/skill-connection.json",
+    "execution.json",
+    "manuscript/report.md",
+    "notes/analysis.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/results.json": "62d5365bdeffab2935c110eb0f61db1602be9a86b4a82254c7269592ba10ce74",
+    "artifacts/run.py": "cc9d429a8b776cd88c089a73ebdfb355f48cb747b9b80a78ec2cadacf9784b8c",
+    "checks/check-before-checkpoint.json": "494b68648e416da994abd8c59f01fd233391903eab344259214905ce40259972",
+    "checks/check.json": "140d31b695761b93318bc1f46e5ba622327297fb74360ce8575b34b4ad4903e5",
+    "checks/checkpoint.json": "f4fa2aa911744bc4efe749c5a133c2998df72b701284742de824ef5b3e51e0ef",
+    "checks/computation.json": "e806865e1487c764005993a37cd97614b8fc4880d2e725ae2a0026d1284f3fa3",
+    "checks/guidance-read.json": "762a5d7d356f8b5b7fd48c5b449827f4b7332c53f78339385165c9d71ca43d06",
+    "checks/register.json": "378e2aca376dd17e75e4536b8bff58a09d75dcb8c3eef2100357d90c310a2040",
+    "checks/registration-batch.json": "ceb1730e1114fafbb0775fc11532bb9434d53178605e1897e935fbcb290ac2f5",
+    "checks/resume.json": "3257513ad15bbb125bc1841184803b94e3ca4a017154019724f59a860a6fc1d8",
+    "checks/skill-connection.json": "f11a4ba08470f5ecef07a818c6315a016a0cc07ef3e1fc2e1b400d4b417d9889",
+    "execution.json": "86f01402271ec7bfc0679cf32446e1eaea5792f2c6495e260e66e5a9c3d0c392",
+    "manuscript/report.md": "6454c09a0582fddf4c36084ee470efe5878b17fd5c23740dcc0a623f104124a6",
+    "notes/analysis.md": "b7e30b67bd47e51949dd402d56182275dc1eaa9626ab13e398ca016ac854757f",
+    "review.md": "af3b893bf58bb4169b323430d0d89521ea16b1d650929e72cf7e0629a957f3dc"
+  },
+  "executed_output_sha256": {
+    "artifacts/results.json": "62d5365bdeffab2935c110eb0f61db1602be9a86b4a82254c7269592ba10ce74",
+    "artifacts/run.py": "cc9d429a8b776cd88c089a73ebdfb355f48cb747b9b80a78ec2cadacf9784b8c",
+    "checks/check-before-checkpoint.json": "b6076ee803d550ccbd11d81343e3d06724caf9d3cc3e47216c93d974f263daea",
+    "checks/check.json": "6a832a4d9a0242adaa081c6da0ccd2aaa93ac675584abd353eb121f757f341f5",
+    "checks/checkpoint.json": "42f40b043cae5d61e5cdef4fa52c3628b2dee41f59a2080c33e53930a4ef8cc1",
+    "checks/computation.json": "09bcbfb24f6fb46f28b5423b9200848e4c9ec2cea4eeabaf442ebe24f1a302b1",
+    "checks/guidance-read.json": "c36e29a0bf9ff9771e8dfc6410649dd8639cfc7833582fea8f5502df5c8811d6",
+    "checks/register.json": "c7f45bb39165b418891d41b79f93f92ea061342f6e2a783926a4b488d0353433",
+    "checks/registration-batch.json": "ceb1730e1114fafbb0775fc11532bb9434d53178605e1897e935fbcb290ac2f5",
+    "checks/resume.json": "4815dea7f8d96f5166b51e71985ce9922bef23535be32a029c1a81848ebf007b",
+    "checks/skill-connection.json": "b8da6d2901ed04c3d696d43b05284f19403db61bf3bdb6478fe1f9a409039032",
+    "execution.json": "115cb1cb3adb7cbda5d5f2fc9e7b18285d6d3031bb3f593fe3178d11a99cfcf2",
+    "manuscript/report.md": "6454c09a0582fddf4c36084ee470efe5878b17fd5c23740dcc0a623f104124a6",
+    "notes/analysis.md": "b7e30b67bd47e51949dd402d56182275dc1eaa9626ab13e398ca016ac854757f",
+    "review.md": "af3b893bf58bb4169b323430d0d89521ea16b1d650929e72cf7e0629a957f3dc"
+  },
+  "output_normalizations": [
+    {
+      "path": "checks/check-before-checkpoint.json",
+      "original_sha256": "b6076ee803d550ccbd11d81343e3d06724caf9d3cc3e47216c93d974f263daea",
+      "published_sha256": "494b68648e416da994abd8c59f01fd233391903eab344259214905ce40259972",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/check.json",
+      "original_sha256": "6a832a4d9a0242adaa081c6da0ccd2aaa93ac675584abd353eb121f757f341f5",
+      "published_sha256": "140d31b695761b93318bc1f46e5ba622327297fb74360ce8575b34b4ad4903e5",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/checkpoint.json",
+      "original_sha256": "42f40b043cae5d61e5cdef4fa52c3628b2dee41f59a2080c33e53930a4ef8cc1",
+      "published_sha256": "f4fa2aa911744bc4efe749c5a133c2998df72b701284742de824ef5b3e51e0ef",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/computation.json",
+      "original_sha256": "09bcbfb24f6fb46f28b5423b9200848e4c9ec2cea4eeabaf442ebe24f1a302b1",
+      "published_sha256": "e806865e1487c764005993a37cd97614b8fc4880d2e725ae2a0026d1284f3fa3",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/guidance-read.json",
+      "original_sha256": "c36e29a0bf9ff9771e8dfc6410649dd8639cfc7833582fea8f5502df5c8811d6",
+      "published_sha256": "762a5d7d356f8b5b7fd48c5b449827f4b7332c53f78339385165c9d71ca43d06",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/register.json",
+      "original_sha256": "c7f45bb39165b418891d41b79f93f92ea061342f6e2a783926a4b488d0353433",
+      "published_sha256": "378e2aca376dd17e75e4536b8bff58a09d75dcb8c3eef2100357d90c310a2040",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/resume.json",
+      "original_sha256": "4815dea7f8d96f5166b51e71985ce9922bef23535be32a029c1a81848ebf007b",
+      "published_sha256": "3257513ad15bbb125bc1841184803b94e3ca4a017154019724f59a860a6fc1d8",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/skill-connection.json",
+      "original_sha256": "b8da6d2901ed04c3d696d43b05284f19403db61bf3bdb6478fe1f9a409039032",
+      "published_sha256": "f11a4ba08470f5ecef07a818c6315a016a0cc07ef3e1fc2e1b400d4b417d9889",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "execution.json",
+      "original_sha256": "115cb1cb3adb7cbda5d5f2fc9e7b18285d6d3031bb3f593fe3178d11a99cfcf2",
+      "published_sha256": "86f01402271ec7bfc0679cf32446e1eaea5792f2c6495e260e66e5a9c3d0c392",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    }
+  ],
+  "omitted_identical_outputs": [],
+  "guidance_sha256": {
+    "core/cli.py": "c5fb1241524222447655127b3796e45ef80ea50ce1539a58881098651d567548",
+    "core/project.py": "ef7d0c6e5ada59a5a1b08ba3d4f83b1efa454a959c58a55f4851aaf0e6b2be99",
+    "core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "core/schemas/activity.schema.json": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    "core/schemas/artifact.schema.json": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    "core/schemas/evidence.schema.json": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    "core/schemas/method-binding.schema.json": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    "core/schemas/relation.schema.json": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    "core/schemas/source.schema.json": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    "core/schemas/statement.schema.json": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    "core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+    "evals/disciplinary/cases/index-build-cost/contract.md": "9aef9104f13db5c019676831837ea311c07c63c8f445870f4fa60c6a7bafd646",
+    "evals/disciplinary/cases/index-build-cost/draft.md": "deb88557339672857a96f423ff1b6e740a3362d81739c268c70d885a191cb49e",
+    "evals/disciplinary/cases/index-build-cost/queries.json": "72d76d55986f6d6029e8659b23660fbe6fa16e03d165cd12141b92f547755591",
+    "evals/disciplinary/cases/index-build-cost/records.csv": "c00c73ce2d3c56bfea4f649a2bbd88ecd34337de8e2f439640e51fc2e9826642",
+    "evals/disciplinary/cases/index-build-cost/task.md": "09fb97fb1dee4d7802536ce62bef51ba67af8d9a176ba5da458a18a5351b355a",
+    "profiles/disciplines/engineering.md": "0c776e883840960b7eeb6c4dcb6a3be4974c1834d8bb142d0b3cde2acf502e30",
+    "profiles/methods/computational.md": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+    "skills/rw-review/SKILL.md": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+    "skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+    "skills/rw-workflow/SKILL.md": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+    "skills/rw-writing/SKILL.md": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+    "tools/connect_skills.py": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+    "tools/research.py": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b"
+  },
+  "records": [
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "主运行、搬移复算及已有目录预期拒绝的真实argv和退出码",
+        "id": "E_EXECUTION",
+        "limitations": "macOS/Python3.14实际执行；非其他平台通过。",
+        "location": {
+          "kind": "local",
+          "path": "checks/computation.json"
+        },
+        "provenance": "Python subprocess实际捕获；机器时长单独记录",
+        "type": "execution-log"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_CONTRACT",
+        "limitations": "原创离线合成材料；MIT许可；不代表真实部署数据。",
+        "locator": "inputs/contract.md",
+        "rights": "public",
+        "title": "最后值查询合同",
+        "version": "case-input-9aef9104f13d"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_DATA",
+        "limitations": "原创离线合成材料；MIT许可；不代表真实部署数据。",
+        "locator": "inputs/records.csv",
+        "rights": "public",
+        "title": "8条有序键值记录",
+        "version": "case-input-c00c73ce2d3c"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_DRAFT",
+        "limitations": "原创离线合成材料；MIT许可；不代表真实部署数据。",
+        "locator": "inputs/draft.md",
+        "rights": "public",
+        "title": "待修订的原始性能主张",
+        "version": "case-input-deb885573396"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_QUERIES",
+        "limitations": "原创离线合成材料；MIT许可；不代表真实部署数据。",
+        "locator": "inputs/queries.json",
+        "rights": "public",
+        "title": "查询顺序及前缀负载",
+        "version": "case-input-72d76d55986f"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_TASK",
+        "limitations": "原创离线合成材料；MIT许可；不代表真实部署数据。",
+        "locator": "inputs/task.md",
+        "rights": "public",
+        "title": "委托和交付要求",
+        "version": "case-input-09fb97fb1dee"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "实际循环计数与n*m及n+m一致。",
+          "reviewer": "Codex agent self-review",
+          "scope": "合同规定的比较、写入、查找单位；每负载独立构建一次",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "执行计数和功能核对；未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_COST",
+        "scope": "合同规定的比较、写入、查找单位；每负载独立构建一次",
+        "text": "独立冷启动前缀1、2、10的L总成本为8、16、80，I总成本为9、10、18。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "逐调用轨迹全部相等，未外推所有可能输入。",
+          "reviewer": "Codex agent self-review",
+          "scope": "给定8条记录和10查询；实际程序与反向参考核对",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "执行计数和功能核对；未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_EQUAL",
+        "scope": "给定8条记录和10查询；实际程序与反向参考核对",
+        "text": "在给定全部10查询和指定三个前缀中，两条实现均返回同一合同要求的最后值或null。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "执行耗时另列；未对两路线做独立计时实验。",
+          "reviewer": "Codex agent self-review",
+          "scope": "本次确定性离线计算及执行日志",
+          "status": "supported-in-scope"
+        },
+        "formal_verification": {
+          "scope": "执行计数和功能核对；未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_LIMIT",
+        "scope": "本次确定性离线计算及执行日志",
+        "text": "本次比较只报告声明成本模型内的操作数，不估计真实墙钟加速。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "合同要求最后值；a=10或30不能替代70。",
+          "reviewer": "Codex agent self-review",
+          "scope": "原始draft.md的查询功能主张",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "执行计数和功能核对；未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_OLD_DUPLICATE",
+        "scope": "原始draft.md的查询功能主张",
+        "text": "重复键可任意选择一条返回。",
+        "type": "formal",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "单查询成本9高于8，三个总成本比均小于8，且未测墙钟速度。",
+          "reviewer": "Codex agent self-review",
+          "scope": "原始draft.md未限定的速度主张",
+          "status": "challenged"
+        },
+        "formal_verification": {
+          "scope": "执行计数和功能核对；未运行形式化证明工具",
+          "status": "not-applicable",
+          "tool": "none"
+        },
+        "id": "S_OLD_SPEED",
+        "scope": "原始draft.md未限定的速度主张",
+        "text": "索引路线在所有工作负载上至少快八倍。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_EXECUTION"
+        ],
+        "description": "复算与预期失败记录",
+        "id": "A_COMPUTE_LOG",
+        "path": "checks/computation.json",
+        "type": "execution-log"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "最后值、null与两路线操作计数边界",
+        "id": "E_CONTRACT",
+        "location": {
+          "kind": "local",
+          "path": "inputs/contract.md"
+        },
+        "provenance": "从本案例原件逐字复制；SHA-256与原件一致",
+        "source_ids": [
+          "SRC_CONTRACT"
+        ],
+        "type": "local-synthetic-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "包含a、b重复键的原始有序记录",
+        "id": "E_DATA",
+        "location": {
+          "kind": "local",
+          "path": "inputs/records.csv"
+        },
+        "provenance": "从本案例原件逐字复制；SHA-256与原件一致",
+        "source_ids": [
+          "SRC_DATA"
+        ],
+        "type": "local-synthetic-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "原稿中的至少八倍及任取重复值主张",
+        "id": "E_DRAFT",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "从本案例原件逐字复制；SHA-256与原件一致",
+        "source_ids": [
+          "SRC_DRAFT"
+        ],
+        "type": "local-synthetic-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "10查询及1、2、10前缀负载",
+        "id": "E_QUERIES",
+        "location": {
+          "kind": "local",
+          "path": "inputs/queries.json"
+        },
+        "provenance": "从本案例原件逐字复制；SHA-256与原件一致",
+        "source_ids": [
+          "SRC_QUERIES"
+        ],
+        "type": "local-synthetic-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "逐查询值、覆盖轨迹及独立负载操作计数",
+        "id": "E_RESULTS",
+        "limitations": "抽象操作数；未测路线墙钟时间。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Codex编写标准库run.py并在本机实际执行；反向扫描核对",
+        "source_ids": [
+          "SRC_CONTRACT",
+          "SRC_DATA",
+          "SRC_QUERIES"
+        ],
+        "type": "deterministic-computation"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_EXECUTION",
+        "id": "R_LIMIT",
+        "rationale": "日志仅进程时长，未分别测量路线速度。",
+        "relation": "supports",
+        "scope": "本案例合同、给定输入及实际执行",
+        "statement_id": "S_LIMIT"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_CONTRACT",
+          "evidence:E_RESULTS"
+        ],
+        "description": "功能、成本、边界和重复/未命中解释",
+        "id": "A_ANALYSIS",
+        "path": "notes/analysis.md",
+        "type": "analysis"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_RESULTS"
+        ],
+        "description": "确定性查询及成本结果",
+        "id": "A_RESULTS",
+        "path": "artifacts/results.json",
+        "type": "results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_CONTRACT",
+          "evidence:E_DATA",
+          "evidence:E_QUERIES"
+        ],
+        "description": "参数化标准库重跑代码",
+        "id": "A_RUN",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULTS",
+        "id": "R_COST",
+        "rationale": "三个负载循环计数直接给出8/9、16/10、80/18。",
+        "relation": "supports",
+        "scope": "本案例合同、给定输入及实际执行",
+        "statement_id": "S_COST"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_CONTRACT",
+        "id": "R_COST_SCOPE",
+        "rationale": "定义操作单位并要求独立负载包含构建。",
+        "relation": "qualifies",
+        "scope": "本案例合同、给定输入及实际执行",
+        "statement_id": "S_COST"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_CONTRACT",
+        "id": "R_COST_TIME",
+        "rationale": "操作成本定义不提供硬件时间转换。",
+        "relation": "qualifies",
+        "scope": "本案例合同、给定输入及实际执行",
+        "statement_id": "S_OLD_SPEED"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_CONTRACT",
+        "id": "R_DUPLICATE",
+        "rationale": "明确要求重复键最后记录值。",
+        "relation": "challenges",
+        "scope": "本案例合同、给定输入及实际执行",
+        "statement_id": "S_OLD_DUPLICATE"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_DATA",
+        "id": "R_DUPLICATE_VALUE",
+        "rationale": "a存在10、30、70，任取旧值可违约。",
+        "relation": "challenges",
+        "scope": "本案例合同、给定输入及实际执行",
+        "statement_id": "S_OLD_DUPLICATE"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULTS",
+        "id": "R_EQUAL",
+        "rationale": "全部逐查询轨迹及独立参考相等。",
+        "relation": "supports",
+        "scope": "本案例合同、给定输入及实际执行",
+        "statement_id": "S_EQUAL"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_RESULTS",
+        "id": "R_SPEED",
+        "rationale": "m=1的9>8已反驳所有负载至少八倍。",
+        "relation": "challenges",
+        "scope": "本案例合同、给定输入及实际执行",
+        "statement_id": "S_OLD_SPEED"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT_COMPUTE",
+        "inputs": [
+          "evidence:E_CONTRACT",
+          "evidence:E_DATA",
+          "evidence:E_QUERIES",
+          "artifact:A_RUN"
+        ],
+        "note": "Codex代理实际执行；两次成功运行和一次已有目录预期拒绝均保留。",
+        "outputs": [
+          "evidence:E_RESULTS",
+          "artifact:A_RESULTS",
+          "artifact:A_COMPUTE_LOG"
+        ],
+        "status": "done",
+        "title": "实现相同最后值合同、逐查询核对并统计三个冷启动负载"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "source:SRC_DRAFT",
+          "artifact:A_ANALYSIS",
+          "evidence:E_RESULTS"
+        ],
+        "description": "原始draft的中文修订短稿",
+        "id": "A_REPORT",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_COMPUTE"
+        ],
+        "id": "ACT_ANALYZE",
+        "inputs": [
+          "evidence:E_CONTRACT",
+          "evidence:E_DATA",
+          "evidence:E_QUERIES",
+          "evidence:E_RESULTS"
+        ],
+        "note": "Codex代理分析；操作数模型与真实计时区分。",
+        "outputs": [
+          "artifact:A_ANALYSIS"
+        ],
+        "status": "done",
+        "title": "解释构建、重复键、重复调用和未命中对成本的作用"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_RUN",
+          "artifact:A_REPORT",
+          "artifact:A_RESULTS"
+        ],
+        "description": "已执行自审及具体下一步",
+        "id": "A_REVIEW",
+        "path": "review.md",
+        "type": "self-review"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_ANALYZE"
+        ],
+        "id": "ACT_WRITE",
+        "inputs": [
+          "evidence:E_DRAFT",
+          "artifact:A_ANALYSIS",
+          "artifact:A_RESULTS"
+        ],
+        "note": "保留原始输入，修订稿另存。",
+        "outputs": [
+          "artifact:A_REPORT"
+        ],
+        "status": "done",
+        "title": "根据实测操作数修订原稿两项错误主张"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:S_EQUAL",
+          "statement:S_COST",
+          "activity:ACT_COMPUTE",
+          "activity:ACT_ANALYZE",
+          "artifact:A_RUN",
+          "artifact:A_RESULTS"
+        ],
+        "id": "MB_ALGORITHM",
+        "method_id": "computational",
+        "notes": "读取engineering 0.1与computational 0.1；不以操作数判断真实墙钟速度。",
+        "profile_version": "0.1",
+        "reason": "比较语义等价的算法路线；直接记录合同单位操作计数，逐查询核对并保留冷启动构建及失败。",
+        "variant": "empirical-algorithm"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_WRITE"
+        ],
+        "id": "ACT_REVIEW",
+        "inputs": [
+          "artifact:A_RUN",
+          "artifact:A_REPORT",
+          "artifact:A_RESULTS",
+          "artifact:A_ANALYSIS",
+          "evidence:E_EXECUTION"
+        ],
+        "note": "Codex代理自审；不称为独立专家验证或科学认证。",
+        "outputs": [
+          "artifact:A_REVIEW"
+        ],
+        "status": "done",
+        "title": "自审实现、结果和稿件的一致性及执行边界"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 4,
+    "artifacts": 6,
+    "decisions": 0,
+    "evidence": 6,
+    "method_bindings": 1,
+    "relations": 8,
+    "sources": 5,
+    "statements": 5
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "若扩展为真实延迟研究，先修订contract.md明确冷/热启动、索引复用、缓存与内存预算，再预设计时环境、重复次数和报告规则；当前合同操作数交付已完成。"
+  },
+  "executed_registry_sha256": "97560bdae29c8ea1edd40552692eaac44e142397417d851218391abccefc46ff",
+  "original_registry_revision": 36,
+  "observed_check_sha256": "4f79b315fe2ab45ea2d11795bd393048d4d922aa0907d8514d59e331c9951c0b",
+  "observed_resume_sha256": "4c0ea04918520f8de18516cbd2da361056e28cede0764ae4b18055978ca2e947",
+  "reproduction": {
+    "script": "artifacts/run.py",
+    "arguments": [
+      "--input-dir",
+      "INPUTS",
+      "--output-dir",
+      "NEW"
+    ],
+    "result": "results.json"
+  }
+}

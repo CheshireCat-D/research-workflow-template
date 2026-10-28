@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "init",
+    "--output",
+    "PROJECT",
+    "--title",
+    "《两条路径》原构图与裁剪展陈：版本与竞争解释",
+    "--discipline",
+    "humanities",
+    "--method",
+    "historical-interpretive",
+    "--mode",
+    "structured",
+    "--language",
+    "zh"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"initialized\": true,\n  \"project_id\": \"Pd1d92537032a444698aaaea11d960cd9\",\n  \"revision\": 0,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.047342707999632694
+}

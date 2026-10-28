@@ -61,6 +61,8 @@ Discipline and method guidance is in `profiles/`; shared protocols are in `core/
 
 For a citation audit, say: “Check support for each claim, find missing, partial or irrelevant citations, and suggest specific corrections.” The assistant uses existing notes and reports to check compound claims and cross-source synthesis.
 
+The source repository provides [seven disciplinary worked examples](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/disciplinary), with synthetic inputs, actual analyses and manuscripts, separate agent reviews, and regression checks. Test materials stay in the source repository. Create a separate project for your own work.
+
 ## Review, revision responses and submission materials
 
 These capabilities use the existing `rw-review` entry and expand only for the requested task:

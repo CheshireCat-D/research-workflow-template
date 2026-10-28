@@ -1,0 +1,6 @@
+{
+  "old_exit_status": 0,
+  "defect_reproduced": true,
+  "defect": "Both authoritative texts add training for supervised applicants, but the old substring validator accepted the changed rule and retained甲=true.",
+  "expected_behavior": "Reject unreviewed normative text before producing a result."
+}

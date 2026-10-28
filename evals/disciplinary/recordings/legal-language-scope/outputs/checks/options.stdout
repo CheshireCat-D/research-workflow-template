@@ -1,0 +1,775 @@
+{
+  "passed": true,
+  "read_only": true,
+  "version": "current",
+  "scope": "Stable choices, declared guidance and explicit recorded binding availability only; not task validity.",
+  "resource_base": "toolkit-root",
+  "scientific_validity": "not-assessed",
+  "disciplines": [
+    {
+      "id": "natural-sciences",
+      "label": "理学",
+      "suggested_methods": [
+        "formal-theory",
+        "computational",
+        "measurement-experiment"
+      ],
+      "profile": "profiles/disciplines/natural-sciences.md"
+    },
+    {
+      "id": "engineering",
+      "label": "工学",
+      "suggested_methods": [
+        "engineering-design",
+        "computational",
+        "measurement-experiment",
+        "formal-theory"
+      ],
+      "profile": "profiles/disciplines/engineering.md"
+    },
+    {
+      "id": "medicine-health",
+      "label": "医学与健康",
+      "suggested_methods": [
+        "empirical-quantitative",
+        "measurement-experiment",
+        "qualitative",
+        "evidence-synthesis"
+      ],
+      "profile": "profiles/disciplines/medicine-health.md"
+    },
+    {
+      "id": "agriculture-life",
+      "label": "农学与生命",
+      "suggested_methods": [
+        "measurement-experiment",
+        "empirical-quantitative",
+        "computational"
+      ],
+      "profile": "profiles/disciplines/agriculture-life.md"
+    },
+    {
+      "id": "humanities",
+      "label": "人文",
+      "suggested_methods": [
+        "historical-interpretive",
+        "conceptual-normative",
+        "qualitative",
+        "computational"
+      ],
+      "profile": "profiles/disciplines/humanities.md"
+    },
+    {
+      "id": "social-sciences",
+      "label": "社会科学",
+      "suggested_methods": [
+        "empirical-quantitative",
+        "qualitative",
+        "historical-interpretive",
+        "conceptual-normative",
+        "evidence-synthesis"
+      ],
+      "profile": "profiles/disciplines/social-sciences.md"
+    },
+    {
+      "id": "law",
+      "label": "法学",
+      "suggested_methods": [
+        "legal-analysis",
+        "conceptual-normative",
+        "historical-interpretive",
+        "empirical-quantitative",
+        "qualitative"
+      ],
+      "profile": "profiles/disciplines/law.md"
+    }
+  ],
+  "methods": [
+    {
+      "id": "formal-theory",
+      "label": "形式与理论",
+      "variants": [
+        "proof",
+        "analytic-derivation"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/formal-theory.md",
+        "supported_variants": [
+          "proof"
+        ],
+        "validation_scope": "Representative offline synthetic tasks executed and independently audited by agents; evidence is task-scoped, not complete variant coverage or human expert certification. Final acceptance is recorded in evals/d3/independent-review.json. Evaluation references use the full distribution at task_evidence.resource_base; check its availability before opening them as local resources.",
+        "task_evidence": {
+          "coverage": "evals/d3/coverage.json",
+          "cases": [
+            "formal-finite",
+            "physics"
+          ],
+          "resource_base": "full-distribution-root",
+          "review": "evals/d3/independent-review.json",
+          "availability": "available"
+        },
+        "variant_evidence": {
+          "availability": "available",
+          "scope": "Recorded method-binding declarations only; not a new execution, review or scientific validation.",
+          "variants": [
+            {
+              "id": "proof",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "formal-finite"
+              ]
+            },
+            {
+              "id": "analytic-derivation",
+              "guidance_declared": false,
+              "explicit_case_bindings": [
+                "physics"
+              ]
+            }
+          ],
+          "method_only_cases": [],
+          "unavailable_cases": [],
+          "unrecognized_variant_records": []
+        }
+      }
+    },
+    {
+      "id": "computational",
+      "label": "计算研究",
+      "variants": [
+        "numerical-simulation",
+        "empirical-algorithm",
+        "corpus-computation"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/computational.md",
+        "supported_variants": [
+          "numerical-simulation",
+          "empirical-algorithm",
+          "corpus-computation"
+        ],
+        "validation_scope": "Representative offline synthetic tasks executed and independently audited by agents; evidence is task-scoped, not complete variant coverage or human expert certification. Final acceptance is recorded in evals/d3/independent-review.json. Evaluation references use the full distribution at task_evidence.resource_base; check its availability before opening them as local resources.",
+        "task_evidence": {
+          "coverage": "evals/d3/coverage.json",
+          "cases": [
+            "innovation-candidates",
+            "prediction-leakage",
+            "digital-humanities"
+          ],
+          "resource_base": "full-distribution-root",
+          "review": "evals/d3/independent-review.json",
+          "availability": "available"
+        },
+        "variant_evidence": {
+          "availability": "available",
+          "scope": "Recorded method-binding declarations only; not a new execution, review or scientific validation.",
+          "variants": [
+            {
+              "id": "numerical-simulation",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            },
+            {
+              "id": "empirical-algorithm",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "innovation-candidates"
+              ]
+            },
+            {
+              "id": "corpus-computation",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            }
+          ],
+          "method_only_cases": [
+            "prediction-leakage",
+            "digital-humanities"
+          ],
+          "unavailable_cases": [],
+          "unrecognized_variant_records": []
+        }
+      }
+    },
+    {
+      "id": "measurement-experiment",
+      "label": "测量与实验",
+      "variants": [
+        "laboratory",
+        "field-trial",
+        "animal-study"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/measurement-experiment.md",
+        "supported_variants": [
+          "laboratory",
+          "field-trial",
+          "animal-study"
+        ],
+        "validation_scope": "Representative offline synthetic tasks executed and independently audited by agents; evidence is task-scoped, not complete variant coverage or human expert certification. Final acceptance is recorded in evals/d3/independent-review.json. Evaluation references use the full distribution at task_evidence.resource_base; check its availability before opening them as local resources.",
+        "task_evidence": {
+          "coverage": "evals/d3/coverage.json",
+          "cases": [
+            "agriculture",
+            "physics",
+            "agriculture-repeated"
+          ],
+          "resource_base": "full-distribution-root",
+          "review": "evals/d3/independent-review.json",
+          "availability": "available"
+        },
+        "variant_evidence": {
+          "availability": "available",
+          "scope": "Recorded method-binding declarations only; not a new execution, review or scientific validation.",
+          "variants": [
+            {
+              "id": "laboratory",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "physics"
+              ]
+            },
+            {
+              "id": "field-trial",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "agriculture",
+                "agriculture-repeated"
+              ]
+            },
+            {
+              "id": "animal-study",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            }
+          ],
+          "method_only_cases": [],
+          "unavailable_cases": [],
+          "unrecognized_variant_records": []
+        }
+      }
+    },
+    {
+      "id": "engineering-design",
+      "label": "工程设计",
+      "variants": [
+        "system",
+        "device",
+        "software-prototype"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/engineering-design.md",
+        "supported_variants": [
+          "system",
+          "device",
+          "software-prototype"
+        ],
+        "validation_scope": "Representative offline synthetic tasks executed and independently audited by agents; evidence is task-scoped, not complete variant coverage or human expert certification. Final acceptance is recorded in evals/d3/independent-review.json. Evaluation references use the full distribution at task_evidence.resource_base; check its availability before opening them as local resources.",
+        "task_evidence": {
+          "coverage": "evals/d3/coverage.json",
+          "cases": [
+            "engineering",
+            "engineering-simulation"
+          ],
+          "resource_base": "full-distribution-root",
+          "review": "evals/d3/independent-review.json",
+          "availability": "available"
+        },
+        "variant_evidence": {
+          "availability": "available",
+          "scope": "Recorded method-binding declarations only; not a new execution, review or scientific validation.",
+          "variants": [
+            {
+              "id": "system",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "engineering-simulation"
+              ]
+            },
+            {
+              "id": "device",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            },
+            {
+              "id": "software-prototype",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "engineering"
+              ]
+            }
+          ],
+          "method_only_cases": [],
+          "unavailable_cases": [],
+          "unrecognized_variant_records": []
+        }
+      }
+    },
+    {
+      "id": "empirical-quantitative",
+      "label": "量化实证",
+      "variants": [
+        "descriptive",
+        "observational",
+        "prediction",
+        "randomized-intervention",
+        "causal-inference",
+        "survey"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/empirical-quantitative.md",
+        "supported_variants": [
+          "descriptive",
+          "observational",
+          "prediction",
+          "randomized-intervention",
+          "causal-inference",
+          "survey"
+        ],
+        "validation_scope": "Representative offline synthetic tasks executed and independently audited by agents; evidence is task-scoped, not complete variant coverage or human expert certification. Final acceptance is recorded in evals/d3/independent-review.json. Evaluation references use the full distribution at task_evidence.resource_base; check its availability before opening them as local resources.",
+        "task_evidence": {
+          "coverage": "evals/d3/coverage.json",
+          "cases": [
+            "medicine",
+            "observational-policy",
+            "prediction-leakage",
+            "agriculture-repeated"
+          ],
+          "resource_base": "full-distribution-root",
+          "review": "evals/d3/independent-review.json",
+          "availability": "available"
+        },
+        "variant_evidence": {
+          "availability": "available",
+          "scope": "Recorded method-binding declarations only; not a new execution, review or scientific validation.",
+          "variants": [
+            {
+              "id": "descriptive",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            },
+            {
+              "id": "observational",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "observational-policy"
+              ]
+            },
+            {
+              "id": "prediction",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "prediction-leakage"
+              ]
+            },
+            {
+              "id": "randomized-intervention",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "medicine",
+                "agriculture-repeated"
+              ]
+            },
+            {
+              "id": "causal-inference",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "observational-policy"
+              ]
+            },
+            {
+              "id": "survey",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            }
+          ],
+          "method_only_cases": [],
+          "unavailable_cases": [],
+          "unrecognized_variant_records": []
+        }
+      }
+    },
+    {
+      "id": "qualitative",
+      "label": "定性研究",
+      "variants": [
+        "interview",
+        "ethnography",
+        "case-study",
+        "participatory"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/qualitative.md",
+        "supported_variants": [
+          "interview",
+          "ethnography",
+          "case-study",
+          "participatory"
+        ],
+        "validation_scope": "Representative offline synthetic tasks executed and independently audited by agents; evidence is task-scoped, not complete variant coverage or human expert certification. Final acceptance is recorded in evals/d3/independent-review.json. Evaluation references use the full distribution at task_evidence.resource_base; check its availability before opening them as local resources.",
+        "task_evidence": {
+          "coverage": "evals/d3/coverage.json",
+          "cases": [
+            "qualitative-social",
+            "mixed-evidence"
+          ],
+          "resource_base": "full-distribution-root",
+          "review": "evals/d3/independent-review.json",
+          "availability": "available"
+        },
+        "variant_evidence": {
+          "availability": "available",
+          "scope": "Recorded method-binding declarations only; not a new execution, review or scientific validation.",
+          "variants": [
+            {
+              "id": "interview",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "qualitative-social",
+                "mixed-evidence"
+              ]
+            },
+            {
+              "id": "ethnography",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            },
+            {
+              "id": "case-study",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            },
+            {
+              "id": "participatory",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            }
+          ],
+          "method_only_cases": [],
+          "unavailable_cases": [],
+          "unrecognized_variant_records": []
+        }
+      }
+    },
+    {
+      "id": "historical-interpretive",
+      "label": "历史与阐释",
+      "variants": [
+        "archival",
+        "textual",
+        "art-interpretation",
+        "historical-comparison"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/historical-interpretive.md",
+        "supported_variants": [
+          "archival",
+          "textual"
+        ],
+        "validation_scope": "Representative offline synthetic tasks executed and independently audited by agents; evidence is task-scoped, not complete variant coverage or human expert certification. Final acceptance is recorded in evals/d3/independent-review.json. Evaluation references use the full distribution at task_evidence.resource_base; check its availability before opening them as local resources.",
+        "task_evidence": {
+          "coverage": "evals/d3/coverage.json",
+          "cases": [
+            "d2:history",
+            "digital-humanities"
+          ],
+          "resource_base": "full-distribution-root",
+          "review": "evals/d3/independent-review.json",
+          "availability": "available"
+        },
+        "variant_evidence": {
+          "availability": "available",
+          "scope": "Recorded method-binding declarations only; not a new execution, review or scientific validation.",
+          "variants": [
+            {
+              "id": "archival",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "d2:history"
+              ]
+            },
+            {
+              "id": "textual",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            },
+            {
+              "id": "art-interpretation",
+              "guidance_declared": false,
+              "explicit_case_bindings": []
+            },
+            {
+              "id": "historical-comparison",
+              "guidance_declared": false,
+              "explicit_case_bindings": []
+            }
+          ],
+          "method_only_cases": [
+            "digital-humanities"
+          ],
+          "unavailable_cases": [],
+          "unrecognized_variant_records": []
+        }
+      }
+    },
+    {
+      "id": "conceptual-normative",
+      "label": "概念与规范论证",
+      "variants": [
+        "conceptual-analysis",
+        "normative-argument"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/conceptual-normative.md",
+        "supported_variants": [
+          "conceptual-analysis",
+          "normative-argument"
+        ],
+        "validation_scope": "Representative offline synthetic tasks executed and independently audited by agents; evidence is task-scoped, not complete variant coverage or human expert certification. Final acceptance is recorded in evals/d3/independent-review.json. Evaluation references use the full distribution at task_evidence.resource_base; check its availability before opening them as local resources.",
+        "task_evidence": {
+          "coverage": "evals/d3/coverage.json",
+          "cases": [
+            "normative-humanities"
+          ],
+          "resource_base": "full-distribution-root",
+          "review": "evals/d3/independent-review.json",
+          "availability": "available"
+        },
+        "variant_evidence": {
+          "availability": "available",
+          "scope": "Recorded method-binding declarations only; not a new execution, review or scientific validation.",
+          "variants": [
+            {
+              "id": "conceptual-analysis",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "normative-humanities"
+              ]
+            },
+            {
+              "id": "normative-argument",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "normative-humanities"
+              ]
+            }
+          ],
+          "method_only_cases": [],
+          "unavailable_cases": [],
+          "unrecognized_variant_records": []
+        }
+      }
+    },
+    {
+      "id": "evidence-synthesis",
+      "label": "证据与文献综合",
+      "variants": [
+        "systematic-review",
+        "scoping-review",
+        "narrative-review",
+        "interpretive-synthesis"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/evidence-synthesis.md",
+        "supported_variants": [
+          "systematic-review",
+          "scoping-review",
+          "narrative-review",
+          "interpretive-synthesis"
+        ],
+        "validation_scope": "Representative offline synthetic tasks executed and independently audited by agents; evidence is task-scoped, not complete variant coverage or human expert certification. Final acceptance is recorded in evals/d3/independent-review.json. Evaluation references use the full distribution at task_evidence.resource_base; check its availability before opening them as local resources.",
+        "task_evidence": {
+          "coverage": "evals/d3/coverage.json",
+          "cases": [
+            "evidence-synthesis"
+          ],
+          "resource_base": "full-distribution-root",
+          "review": "evals/d3/independent-review.json",
+          "availability": "available"
+        },
+        "variant_evidence": {
+          "availability": "available",
+          "scope": "Recorded method-binding declarations only; not a new execution, review or scientific validation.",
+          "variants": [
+            {
+              "id": "systematic-review",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            },
+            {
+              "id": "scoping-review",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            },
+            {
+              "id": "narrative-review",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "evidence-synthesis"
+              ]
+            },
+            {
+              "id": "interpretive-synthesis",
+              "guidance_declared": true,
+              "explicit_case_bindings": []
+            }
+          ],
+          "method_only_cases": [],
+          "unavailable_cases": [],
+          "unrecognized_variant_records": []
+        }
+      }
+    },
+    {
+      "id": "legal-analysis",
+      "label": "法律解释与法源分析",
+      "variants": [
+        "doctrinal",
+        "case-analysis",
+        "comparative-law"
+      ],
+      "implementation": {
+        "status": "guidance-slice",
+        "profile": "profiles/methods/legal-analysis.md",
+        "supported_variants": [
+          "doctrinal",
+          "case-analysis",
+          "comparative-law"
+        ],
+        "validation_scope": "Task-scoped execution and independent agent review are recorded in evals/legal/independent-review.json. Read their actual status and limits; synthetic jurisdictions do not validate real legal conclusions or complete legal-system coverage. Evaluation references use the full distribution at task_evidence.resource_base; check its availability before opening them as local resources.",
+        "task_evidence": {
+          "coverage": "evals/legal/coverage.json",
+          "review": "evals/legal/independent-review.json",
+          "cases": [
+            "legal:authority-time",
+            "legal:comparative-precedent"
+          ],
+          "resource_base": "full-distribution-root",
+          "availability": "available"
+        },
+        "variant_evidence": {
+          "availability": "available",
+          "scope": "Recorded method-binding declarations only; not a new execution, review or scientific validation.",
+          "variants": [
+            {
+              "id": "doctrinal",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "legal:authority-time"
+              ]
+            },
+            {
+              "id": "case-analysis",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "legal:comparative-precedent"
+              ]
+            },
+            {
+              "id": "comparative-law",
+              "guidance_declared": true,
+              "explicit_case_bindings": [
+                "legal:comparative-precedent"
+              ]
+            }
+          ],
+          "method_only_cases": [],
+          "unavailable_cases": [],
+          "unrecognized_variant_records": []
+        }
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "rw-workflow",
+      "scope": "shared",
+      "status": "implemented",
+      "entrypoint": "skills/rw-workflow/SKILL.md"
+    },
+    {
+      "id": "rw-question",
+      "scope": "shared",
+      "status": "implemented",
+      "entrypoint": "skills/rw-question/SKILL.md"
+    },
+    {
+      "id": "rw-literature",
+      "scope": "shared",
+      "status": "implemented",
+      "entrypoint": "skills/rw-literature/SKILL.md"
+    },
+    {
+      "id": "rw-innovation",
+      "scope": "shared",
+      "status": "implemented",
+      "entrypoint": "skills/rw-innovation/SKILL.md"
+    },
+    {
+      "id": "rw-candidates",
+      "scope": "shared",
+      "status": "implemented",
+      "entrypoint": "skills/rw-candidates/SKILL.md"
+    },
+    {
+      "id": "rw-validation",
+      "scope": "shared",
+      "status": "implemented",
+      "entrypoint": "skills/rw-validation/SKILL.md"
+    },
+    {
+      "id": "rw-writing",
+      "scope": "shared",
+      "status": "implemented",
+      "entrypoint": "skills/rw-writing/SKILL.md"
+    },
+    {
+      "id": "rw-review",
+      "scope": "shared",
+      "status": "implemented",
+      "entrypoint": "skills/rw-review/SKILL.md"
+    },
+    {
+      "id": "rw-figures",
+      "scope": "optional",
+      "status": "implemented",
+      "entrypoint": "skills/rw-figures/SKILL.md"
+    },
+    {
+      "id": "rw-tables",
+      "scope": "optional",
+      "status": "planned"
+    },
+    {
+      "id": "rw-format",
+      "scope": "optional",
+      "status": "planned"
+    }
+  ],
+  "entry_activities": [
+    "question",
+    "literature",
+    "candidate-comparison",
+    "method-plan",
+    "minimum-check",
+    "research",
+    "writing",
+    "review",
+    "delivery",
+    "revision"
+  ],
+  "workflow_modes": [
+    "light",
+    "structured",
+    "reproducible"
+  ]
+}

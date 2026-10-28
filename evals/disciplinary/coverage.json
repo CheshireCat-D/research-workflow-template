@@ -1,0 +1,167 @@
+{
+  "format_version": 1,
+  "status": "executed-and-reviewed",
+  "scope": "Seven supplementary synthetic disciplinary tasks. Actual analysis, writing, registration and separate agent review; no field-wide validation.",
+  "cases": [
+    "compartment-exchange",
+    "index-build-cost",
+    "missing-outcomes",
+    "factorial-animal",
+    "weighted-survey",
+    "artwork-versions",
+    "legal-language-scope"
+  ],
+  "discipline_cases": {
+    "natural-sciences": [
+      "compartment-exchange"
+    ],
+    "engineering": [
+      "index-build-cost"
+    ],
+    "medicine-health": [
+      "missing-outcomes"
+    ],
+    "agriculture-life": [
+      "factorial-animal"
+    ],
+    "social-sciences": [
+      "weighted-survey"
+    ],
+    "humanities": [
+      "artwork-versions"
+    ],
+    "law": [
+      "legal-language-scope"
+    ]
+  },
+  "method_cases": {
+    "formal-theory": [
+      "compartment-exchange"
+    ],
+    "computational": [
+      "compartment-exchange",
+      "index-build-cost"
+    ],
+    "empirical-quantitative": [
+      "missing-outcomes",
+      "weighted-survey"
+    ],
+    "measurement-experiment": [
+      "factorial-animal"
+    ],
+    "historical-interpretive": [
+      "artwork-versions"
+    ],
+    "legal-analysis": [
+      "legal-language-scope"
+    ]
+  },
+  "variant_cases": {
+    "formal-theory:analytic-derivation": [
+      "compartment-exchange"
+    ],
+    "computational:numerical-simulation": [
+      "compartment-exchange"
+    ],
+    "computational:empirical-algorithm": [
+      "index-build-cost"
+    ],
+    "empirical-quantitative:randomized-intervention": [
+      "missing-outcomes"
+    ],
+    "measurement-experiment:animal-study": [
+      "factorial-animal"
+    ],
+    "empirical-quantitative:survey": [
+      "weighted-survey"
+    ],
+    "historical-interpretive:art-interpretation": [
+      "artwork-versions"
+    ],
+    "legal-analysis:doctrinal": [
+      "legal-language-scope"
+    ]
+  },
+  "records": "recordings/",
+  "review": "independent-review.json",
+  "prior_task_groups_unchanged": [
+    "evals/d2",
+    "evals/d3",
+    "evals/legal",
+    "evals/current/skill-task-checks.json"
+  ],
+  "replay_tests": "tests/test_disciplinary_evaluations.py",
+  "case_details": {
+    "compartment-exchange": {
+      "title": "两室交换模型的解析与离散检查",
+      "task": "cases/compartment-exchange/task.md",
+      "manuscript": "recordings/compartment-exchange/outputs/manuscript/report.md",
+      "recording": "recordings/compartment-exchange/recording.json",
+      "original_input_files": 4,
+      "actual_record_count": 37,
+      "code_rerun": true,
+      "scope": "Supplied original synthetic packet only; execution and review limits are in the recording and independent review."
+    },
+    "index-build-cost": {
+      "title": "重复键查询的端到端成本比较",
+      "task": "cases/index-build-cost/task.md",
+      "manuscript": "recordings/index-build-cost/outputs/manuscript/report.md",
+      "recording": "recordings/index-build-cost/recording.json",
+      "original_input_files": 5,
+      "actual_record_count": 35,
+      "code_rerun": true,
+      "scope": "Supplied original synthetic packet only; execution and review limits are in the recording and independent review."
+    },
+    "missing-outcomes": {
+      "title": "随机试验失访结局的分母与敏感性",
+      "task": "cases/missing-outcomes/task.md",
+      "manuscript": "recordings/missing-outcomes/outputs/manuscript/report.md",
+      "recording": "recordings/missing-outcomes/recording.json",
+      "original_input_files": 4,
+      "actual_record_count": 28,
+      "code_rerun": true,
+      "scope": "Supplied original synthetic packet only; execution and review limits are in the recording and independent review."
+    },
+    "factorial-animal": {
+      "title": "笼位随机化的二乘二析因对比",
+      "task": "cases/factorial-animal/task.md",
+      "manuscript": "recordings/factorial-animal/outputs/manuscript/report.md",
+      "recording": "recordings/factorial-animal/recording.json",
+      "original_input_files": 4,
+      "actual_record_count": 35,
+      "code_rerun": true,
+      "scope": "Supplied original synthetic packet only; execution and review limits are in the recording and independent review."
+    },
+    "weighted-survey": {
+      "title": "分层调查的权重与无应答敏感性",
+      "task": "cases/weighted-survey/task.md",
+      "manuscript": "recordings/weighted-survey/outputs/manuscript/report.md",
+      "recording": "recordings/weighted-survey/recording.json",
+      "original_input_files": 4,
+      "actual_record_count": 27,
+      "code_rerun": true,
+      "scope": "Supplied original synthetic packet only; execution and review limits are in the recording and independent review."
+    },
+    "artwork-versions": {
+      "title": "原图与裁剪展陈的艺术阐释",
+      "task": "cases/artwork-versions/task.md",
+      "manuscript": "recordings/artwork-versions/outputs/manuscript/report.md",
+      "recording": "recordings/artwork-versions/recording.json",
+      "original_input_files": 5,
+      "actual_record_count": 57,
+      "code_rerun": true,
+      "scope": "Supplied original synthetic packet only; execution and review limits are in the recording and independent review."
+    },
+    "legal-language-scope": {
+      "title": "共同权威法条的连接词与引证保真",
+      "task": "cases/legal-language-scope/task.md",
+      "manuscript": "recordings/legal-language-scope/outputs/manuscript/report.md",
+      "recording": "recordings/legal-language-scope/recording.json",
+      "original_input_files": 3,
+      "actual_record_count": 42,
+      "code_rerun": true,
+      "scope": "Supplied original synthetic packet only; execution and review limits are in the recording and independent review."
+    }
+  },
+  "reviewed_on": "2026-10-28T21:50:34.131308+00:00"
+}

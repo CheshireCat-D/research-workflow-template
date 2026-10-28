@@ -59,3 +59,7 @@ CLI 保存的 `profile_version` 字符串不会自动使活动变为 `stale`；�
 法学的五项检查及逐条台账见 [法律解释与法源分析](../profiles/methods/legal-analysis.md) 和 [法学项目模板](../profiles/templates/legal-research.md)。当前专门测试使用两组虚构法域材料，记录实际分析、独立代理审阅与恢复行为，见 [法学任务](../evals/legal/README.md)；不表示所有法系、部门法或真实案件均已验证。
 
 医学与健康的报告规范入口参考 [EQUATOR Library](https://www.equator-network.org/library/)；史料、引证和解释责任参考 [AHA 标准](https://www.historians.org/resource/statement-on-standards-of-professional-conduct/)。这些来源用于相应范围的适配，不授权把一种学科规范推广为所有研究的统一门槛。具体来源与核验范围见 [规范来源地图](06-source-map.md)。
+
+## 专项任务示例
+
+七类学科各补充一项[已实际执行的专项任务](../evals/disciplinary/README.md)，包含原始合成材料、分析/代码、修订短稿与独立代理复核。解析推导、艺术阐释等示例按其实际输入和工作报告范围；它们补充既有证据，不自动扩大方法画像的全部变体声明。可用这些案例了解输入如何转化为可核对产物，再为自己的问题选择方法。

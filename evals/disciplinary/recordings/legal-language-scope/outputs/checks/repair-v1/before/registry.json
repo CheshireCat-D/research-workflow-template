@@ -1,0 +1,1058 @@
+{
+  "checkpoint": {
+    "config_sha256": "08ac976abbd6dee2438b57731c2dede966a3a9d153d6e528c64e2b9836738135",
+    "created_at": "2026-10-28T21:37:28.080873+00:00",
+    "files": {
+      "artifacts/results.json": "06699d4d1d7d190e9fe16da52a0efa87a11b07d2fe34d4988c5f492b42096a8a",
+      "artifacts/run.py": "793728c76b15566383e056275e629a55c7622f1e828abe15381ac9ce126e27b6",
+      "inputs/draft.md": "b316c02633a1c27a794a32355c72cab636b42d0e2ee41260df285210d90c1b7b",
+      "inputs/source-packet.md": "65c4d94005bedb72a3e99bc85a708e5bbe79b1770de33443b3670778c3f34f21",
+      "manuscript/draft.md": "7c4ae94d3bc81a5c3f00b48f5b84b6795cce38e8c4f03e43283fdb2cd13128d7",
+      "manuscript/report.md": "8f02f83cb0eed74081fabe30c3c8ba6d06df87e3ea5add98919839932aa06c5e",
+      "notes/analysis.md": "e16fefab6a2331a124839e3da3730d954dc7801b8fe42f490ae9b3fe51270288",
+      "review.md": "da0bdef76aa7bc95edbff891331a7dba747e9235159500c08e592db32c39a5a2"
+    },
+    "note": "Recovery checkpoint; not scientific certification.",
+    "records_sha256": "6a9460ceae162b600ecb7e6f288f12ec3471bd7da4520deecf5bab27975af7bd"
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "由维护者逐条对照SP第5、7、9条，复核概述的括号作用域和丙的条件式复核表述；若替换条文或加入送达日期，先复跑artifacts/run.py，再显式更新受影响解释与完成活动。"
+  },
+  "history": [
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.856014+00:00",
+      "id": "SRC-SP",
+      "kind": "source",
+      "previous": null,
+      "revision": 1
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.856393+00:00",
+      "id": "SRC-DRAFT",
+      "kind": "source",
+      "previous": null,
+      "revision": 2
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.856872+00:00",
+      "id": "S-AUTH",
+      "kind": "statement",
+      "previous": null,
+      "revision": 3
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.857449+00:00",
+      "id": "S-RULE",
+      "kind": "statement",
+      "previous": null,
+      "revision": 4
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.858131+00:00",
+      "id": "S-JIA",
+      "kind": "statement",
+      "previous": null,
+      "revision": 5
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.858916+00:00",
+      "id": "S-YI",
+      "kind": "statement",
+      "previous": null,
+      "revision": 6
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.859814+00:00",
+      "id": "S-BING",
+      "kind": "statement",
+      "previous": null,
+      "revision": 7
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.860817+00:00",
+      "id": "S-REVIEW",
+      "kind": "statement",
+      "previous": null,
+      "revision": 8
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.861932+00:00",
+      "id": "S-OLD",
+      "kind": "statement",
+      "previous": null,
+      "revision": 9
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.863139+00:00",
+      "id": "S-ALG",
+      "kind": "statement",
+      "previous": null,
+      "revision": 10
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.864557+00:00",
+      "id": "E-SP",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 11
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.866113+00:00",
+      "id": "E-DRAFT",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 12
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.867987+00:00",
+      "id": "E-RESULTS",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 13
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.870291+00:00",
+      "id": "R-AUTH",
+      "kind": "relation",
+      "previous": null,
+      "revision": 14
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.872266+00:00",
+      "id": "R-RULE",
+      "kind": "relation",
+      "previous": null,
+      "revision": 15
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.874119+00:00",
+      "id": "R-JIA",
+      "kind": "relation",
+      "previous": null,
+      "revision": 16
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.876047+00:00",
+      "id": "R-YI",
+      "kind": "relation",
+      "previous": null,
+      "revision": 17
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.878156+00:00",
+      "id": "R-BING",
+      "kind": "relation",
+      "previous": null,
+      "revision": 18
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.880250+00:00",
+      "id": "R-REVIEW",
+      "kind": "relation",
+      "previous": null,
+      "revision": 19
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.883117+00:00",
+      "id": "R-LIMIT",
+      "kind": "relation",
+      "previous": null,
+      "revision": 20
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.886382+00:00",
+      "id": "R-OLD",
+      "kind": "relation",
+      "previous": null,
+      "revision": 21
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.889324+00:00",
+      "id": "R-ALG",
+      "kind": "relation",
+      "previous": null,
+      "revision": 22
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.892948+00:00",
+      "id": "A-ANALYSIS",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 23
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.896060+00:00",
+      "id": "A-DRAFT",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 24
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.899312+00:00",
+      "id": "A-REPORT",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 25
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.902512+00:00",
+      "id": "A-CODE",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 26
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.906341+00:00",
+      "id": "A-RESULTS",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 27
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.909313+00:00",
+      "id": "A-REVIEW",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 28
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.912671+00:00",
+      "id": "ACT-LAW",
+      "kind": "activity",
+      "previous": null,
+      "revision": 29
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.916420+00:00",
+      "id": "ACT-ENUM",
+      "kind": "activity",
+      "previous": null,
+      "revision": 30
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.920625+00:00",
+      "id": "ACT-REVIEW",
+      "kind": "activity",
+      "previous": null,
+      "revision": 31
+    },
+    {
+      "action": "register",
+      "at": "2026-10-28T21:37:27.924563+00:00",
+      "id": "MB-DOCTRINAL",
+      "kind": "method-binding",
+      "previous": null,
+      "revision": 32
+    },
+    {
+      "action": "checkpoint",
+      "at": "2026-10-28T21:37:28.081047+00:00",
+      "id": null,
+      "kind": null,
+      "previous": null,
+      "revision": 33
+    }
+  ],
+  "project_id": "Pbd889e9a938f4c36b3f2b0a5ef2ee9ba",
+  "records": {
+    "activities": {
+      "ACT-ENUM": {
+        "bindings": {
+          "files": {
+            "artifacts/results.json": "06699d4d1d7d190e9fe16da52a0efa87a11b07d2fe34d4988c5f492b42096a8a",
+            "artifacts/run.py": "793728c76b15566383e056275e629a55c7622f1e828abe15381ac9ce126e27b6",
+            "inputs/draft.md": "b316c02633a1c27a794a32355c72cab636b42d0e2ee41260df285210d90c1b7b",
+            "inputs/source-packet.md": "65c4d94005bedb72a3e99bc85a708e5bbe79b1770de33443b3670778c3f34f21"
+          },
+          "records": {
+            "artifact:A-CODE": "382955fdbb55e6b8c3ec6ddf5a266bf9ccddcb9100a8f688880f43f4b3d37d60",
+            "artifact:A-RESULTS": "bf00ee1f784139c10f4972d524a83c9e32b04ee0480858009e344a8314638b34",
+            "evidence:E-DRAFT": "04d95a003e44c01e37fd7f2aa6f0aaf175dcc6fb38240dfd5dcda74d841a99b6",
+            "evidence:E-RESULTS": "29ed16805a233d5659e945a7c8ff01608928dfc0c5f3c47a7173230aa328ca24",
+            "evidence:E-SP": "afdadf1dd8455e0a625feda07a4692e48bb2230f06f77f6c7b4f85c04b5a7479",
+            "relation:R-ALG": "de145be3074c81c99ab8166a0a5216e49b651ef6f599d033dae2195aef761d51",
+            "source:SRC-DRAFT": "589b6893a0175e6cc441fdb92dac30d42183e0be941b897b292ec231e9fd410d",
+            "source:SRC-SP": "3606cdc7a3a51c805a4011a08e0be0edfa0b86d0cb9cecd121a7c0eb6b39538d",
+            "statement:S-ALG": "0dc00321856cc3c3974d741543b67132484a505d7b5d13c2536cefd315150deb"
+          }
+        },
+        "data": {
+          "id": "ACT-ENUM",
+          "inputs": [
+            "evidence:E-SP",
+            "artifact:A-CODE"
+          ],
+          "note": "Python3.14标准库真实运行，两次输出字节一致；枚举不替代条文解释。",
+          "outputs": [
+            "artifact:A-RESULTS",
+            "evidence:E-RESULTS",
+            "statement:S-ALG"
+          ],
+          "status": "done",
+          "title": "从指定输入真实解析事实并枚举32种布尔组合及复跑"
+        },
+        "registered_at": "2026-10-28T21:37:27.914368+00:00",
+        "version": 1
+      },
+      "ACT-LAW": {
+        "bindings": {
+          "files": {
+            "inputs/draft.md": "b316c02633a1c27a794a32355c72cab636b42d0e2ee41260df285210d90c1b7b",
+            "inputs/source-packet.md": "65c4d94005bedb72a3e99bc85a708e5bbe79b1770de33443b3670778c3f34f21",
+            "manuscript/draft.md": "7c4ae94d3bc81a5c3f00b48f5b84b6795cce38e8c4f03e43283fdb2cd13128d7",
+            "manuscript/report.md": "8f02f83cb0eed74081fabe30c3c8ba6d06df87e3ea5add98919839932aa06c5e",
+            "notes/analysis.md": "e16fefab6a2331a124839e3da3730d954dc7801b8fe42f490ae9b3fe51270288"
+          },
+          "records": {
+            "artifact:A-ANALYSIS": "d3f3b30ec9059990e73a3f0055d0d074ec82bc8d85e842bb866921482adf0cfc",
+            "artifact:A-DRAFT": "6302f2489055b7f89226fcf2818ff39e37adb8a4ee469e5b7b79d2ec79f758ce",
+            "artifact:A-REPORT": "1e59d230d41e5db51673e49b1f3bdc422489985bab5d579ed24560d33650c4f2",
+            "evidence:E-DRAFT": "04d95a003e44c01e37fd7f2aa6f0aaf175dcc6fb38240dfd5dcda74d841a99b6",
+            "evidence:E-SP": "afdadf1dd8455e0a625feda07a4692e48bb2230f06f77f6c7b4f85c04b5a7479",
+            "relation:R-AUTH": "08059823de6d81af514a9aa78f57288d8796ba3ae3a18c0e4633356751f22c60",
+            "relation:R-BING": "a9dceaff6dd25e800fca93616d18057e0954690ea25e4634f9d7794a76658ddc",
+            "relation:R-JIA": "940fadfd65b26b16a063ee8bf5c0cbf91dceaed62ed0f47194c32b2316681b4b",
+            "relation:R-LIMIT": "64a510a45a09736f24e078c50446eb6a5c8848217815cbf0f123e118328cd81a",
+            "relation:R-REVIEW": "bdd7fddefc7288ac0a13ae366a63f8a9c937e66f1820be94ba2a553e78f12f40",
+            "relation:R-RULE": "91a3c585b70bdbf58292c618716ad6d945f3969a3096fd25c8173ed2c08b7911",
+            "relation:R-YI": "603d005f6f7066de827209e6493c56776e15456011a17fba0ae521b37646a368",
+            "source:SRC-DRAFT": "589b6893a0175e6cc441fdb92dac30d42183e0be941b897b292ec231e9fd410d",
+            "source:SRC-SP": "3606cdc7a3a51c805a4011a08e0be0edfa0b86d0cb9cecd121a7c0eb6b39538d",
+            "statement:S-AUTH": "d086fbb20955c3754a4f20e1f0da7fdae51b61379c5001e530e44de7d77182e5",
+            "statement:S-BING": "fe5e6bcf978b96d478316acc929488ce3dfdc935644890bbb9b4d08640974cec",
+            "statement:S-JIA": "d53da66867d44c3c682f0f3270826f47a96797131e332883d199c25a770ee66f",
+            "statement:S-REVIEW": "e5e2d61584570eb55795ef7ce556e5b0d205df56ad769b898cfafb41c2bcf0a9",
+            "statement:S-RULE": "5e6abc8c54f7a572812383fabfe95fb6ad655fb7e52dea8b372fe507d5f06b28",
+            "statement:S-YI": "c5d169267198e9239c2c0911782343947e8600079fb01fcbd1ef77bef0e1286b"
+          }
+        },
+        "data": {
+          "id": "ACT-LAW",
+          "inputs": [
+            "evidence:E-SP",
+            "evidence:E-DRAFT"
+          ],
+          "note": "实际执行者为Codex代理；逐条引证；无独立人类法律审查。",
+          "outputs": [
+            "artifact:A-ANALYSIS",
+            "artifact:A-DRAFT",
+            "artifact:A-REPORT",
+            "statement:S-AUTH",
+            "statement:S-RULE",
+            "statement:S-JIA",
+            "statement:S-YI",
+            "statement:S-BING",
+            "statement:S-REVIEW"
+          ],
+          "status": "done",
+          "title": "对照共同权威条文、定义、交叉引用与例外并修订正文"
+        },
+        "registered_at": "2026-10-28T21:37:27.910659+00:00",
+        "version": 1
+      },
+      "ACT-REVIEW": {
+        "bindings": {
+          "files": {
+            "artifacts/results.json": "06699d4d1d7d190e9fe16da52a0efa87a11b07d2fe34d4988c5f492b42096a8a",
+            "artifacts/run.py": "793728c76b15566383e056275e629a55c7622f1e828abe15381ac9ce126e27b6",
+            "inputs/draft.md": "b316c02633a1c27a794a32355c72cab636b42d0e2ee41260df285210d90c1b7b",
+            "inputs/source-packet.md": "65c4d94005bedb72a3e99bc85a708e5bbe79b1770de33443b3670778c3f34f21",
+            "manuscript/draft.md": "7c4ae94d3bc81a5c3f00b48f5b84b6795cce38e8c4f03e43283fdb2cd13128d7",
+            "manuscript/report.md": "8f02f83cb0eed74081fabe30c3c8ba6d06df87e3ea5add98919839932aa06c5e",
+            "notes/analysis.md": "e16fefab6a2331a124839e3da3730d954dc7801b8fe42f490ae9b3fe51270288",
+            "review.md": "da0bdef76aa7bc95edbff891331a7dba747e9235159500c08e592db32c39a5a2"
+          },
+          "records": {
+            "activity:ACT-ENUM": "78ad08ce2a0fea4161fe7a788fe6b945294ae26516e706044560af2dc3360368",
+            "activity:ACT-LAW": "cf5ab9baae4610fd6cba1341d2748e0e26b365bcb67eb191ee187ec78bc2aee0",
+            "artifact:A-ANALYSIS": "d3f3b30ec9059990e73a3f0055d0d074ec82bc8d85e842bb866921482adf0cfc",
+            "artifact:A-CODE": "382955fdbb55e6b8c3ec6ddf5a266bf9ccddcb9100a8f688880f43f4b3d37d60",
+            "artifact:A-DRAFT": "6302f2489055b7f89226fcf2818ff39e37adb8a4ee469e5b7b79d2ec79f758ce",
+            "artifact:A-REPORT": "1e59d230d41e5db51673e49b1f3bdc422489985bab5d579ed24560d33650c4f2",
+            "artifact:A-RESULTS": "bf00ee1f784139c10f4972d524a83c9e32b04ee0480858009e344a8314638b34",
+            "artifact:A-REVIEW": "d2a6d9be1cf61c1038f8d03a61222ee3305caaa2b72b2ae9721260d96a0742ea",
+            "evidence:E-DRAFT": "04d95a003e44c01e37fd7f2aa6f0aaf175dcc6fb38240dfd5dcda74d841a99b6",
+            "evidence:E-RESULTS": "29ed16805a233d5659e945a7c8ff01608928dfc0c5f3c47a7173230aa328ca24",
+            "evidence:E-SP": "afdadf1dd8455e0a625feda07a4692e48bb2230f06f77f6c7b4f85c04b5a7479",
+            "relation:R-ALG": "de145be3074c81c99ab8166a0a5216e49b651ef6f599d033dae2195aef761d51",
+            "relation:R-AUTH": "08059823de6d81af514a9aa78f57288d8796ba3ae3a18c0e4633356751f22c60",
+            "relation:R-BING": "a9dceaff6dd25e800fca93616d18057e0954690ea25e4634f9d7794a76658ddc",
+            "relation:R-JIA": "940fadfd65b26b16a063ee8bf5c0cbf91dceaed62ed0f47194c32b2316681b4b",
+            "relation:R-LIMIT": "64a510a45a09736f24e078c50446eb6a5c8848217815cbf0f123e118328cd81a",
+            "relation:R-REVIEW": "bdd7fddefc7288ac0a13ae366a63f8a9c937e66f1820be94ba2a553e78f12f40",
+            "relation:R-RULE": "91a3c585b70bdbf58292c618716ad6d945f3969a3096fd25c8173ed2c08b7911",
+            "relation:R-YI": "603d005f6f7066de827209e6493c56776e15456011a17fba0ae521b37646a368",
+            "source:SRC-DRAFT": "589b6893a0175e6cc441fdb92dac30d42183e0be941b897b292ec231e9fd410d",
+            "source:SRC-SP": "3606cdc7a3a51c805a4011a08e0be0edfa0b86d0cb9cecd121a7c0eb6b39538d",
+            "statement:S-ALG": "0dc00321856cc3c3974d741543b67132484a505d7b5d13c2536cefd315150deb",
+            "statement:S-AUTH": "d086fbb20955c3754a4f20e1f0da7fdae51b61379c5001e530e44de7d77182e5",
+            "statement:S-BING": "fe5e6bcf978b96d478316acc929488ce3dfdc935644890bbb9b4d08640974cec",
+            "statement:S-JIA": "d53da66867d44c3c682f0f3270826f47a96797131e332883d199c25a770ee66f",
+            "statement:S-REVIEW": "e5e2d61584570eb55795ef7ce556e5b0d205df56ad769b898cfafb41c2bcf0a9",
+            "statement:S-RULE": "5e6abc8c54f7a572812383fabfe95fb6ad655fb7e52dea8b372fe507d5f06b28",
+            "statement:S-YI": "c5d169267198e9239c2c0911782343947e8600079fb01fcbd1ef77bef0e1286b"
+          }
+        },
+        "data": {
+          "depends_on": [
+            "ACT-LAW",
+            "ACT-ENUM"
+          ],
+          "id": "ACT-REVIEW",
+          "inputs": [
+            "evidence:E-SP",
+            "evidence:E-DRAFT",
+            "artifact:A-ANALYSIS",
+            "artifact:A-DRAFT",
+            "artifact:A-REPORT",
+            "artifact:A-RESULTS"
+          ],
+          "note": "Codex代理完成；47字符概述、短稿539非空白字符，证据见checks/content-check.json。",
+          "outputs": [
+            "artifact:A-REVIEW"
+          ],
+          "status": "done",
+          "title": "自审申请条件、引证和压缩稿字符边界"
+        },
+        "registered_at": "2026-10-28T21:37:27.918357+00:00",
+        "version": 1
+      }
+    },
+    "artifacts": {
+      "A-ANALYSIS": {
+        "bindings": {
+          "files": {
+            "notes/analysis.md": "e16fefab6a2331a124839e3da3730d954dc7801b8fe42f490ae9b3fe51270288"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:E-SP",
+            "evidence:E-DRAFT"
+          ],
+          "description": "逐条法源分析、草稿更正与三名申请人研究备忘录",
+          "id": "A-ANALYSIS",
+          "path": "notes/analysis.md",
+          "type": "research-memo"
+        },
+        "registered_at": "2026-10-28T21:37:27.890992+00:00",
+        "version": 1
+      },
+      "A-CODE": {
+        "bindings": {
+          "files": {
+            "artifacts/run.py": "793728c76b15566383e056275e629a55c7622f1e828abe15381ac9ce126e27b6"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:E-SP",
+            "evidence:E-DRAFT"
+          ],
+          "description": "标准库跨系统可重跑的解析、布尔枚举程序",
+          "id": "A-CODE",
+          "path": "artifacts/run.py",
+          "type": "code"
+        },
+        "registered_at": "2026-10-28T21:37:27.900727+00:00",
+        "version": 1
+      },
+      "A-DRAFT": {
+        "bindings": {
+          "files": {
+            "manuscript/draft.md": "7c4ae94d3bc81a5c3f00b48f5b84b6795cce38e8c4f03e43283fdb2cd13128d7"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:E-SP",
+            "evidence:E-DRAFT"
+          ],
+          "description": "原draft.md的有引证修订稿",
+          "id": "A-DRAFT",
+          "path": "manuscript/draft.md",
+          "type": "revised-draft"
+        },
+        "registered_at": "2026-10-28T21:37:27.894304+00:00",
+        "version": 1
+      },
+      "A-REPORT": {
+        "bindings": {
+          "files": {
+            "manuscript/report.md": "8f02f83cb0eed74081fabe30c3c8ba6d06df87e3ea5add98919839932aa06c5e"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:E-SP",
+            "evidence:E-DRAFT"
+          ],
+          "description": "不超过约600字的中文短稿，含47字符第5条概述",
+          "id": "A-REPORT",
+          "path": "manuscript/report.md",
+          "type": "short-manuscript"
+        },
+        "registered_at": "2026-10-28T21:37:27.897458+00:00",
+        "version": 1
+      },
+      "A-RESULTS": {
+        "bindings": {
+          "files": {
+            "artifacts/results.json": "06699d4d1d7d190e9fe16da52a0efa87a11b07d2fe34d4988c5f492b42096a8a"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:E-SP",
+            "artifact:A-CODE"
+          ],
+          "description": "真实枚举输出，原始运行结果同字节复制交付",
+          "id": "A-RESULTS",
+          "path": "artifacts/results.json",
+          "type": "computed-result"
+        },
+        "registered_at": "2026-10-28T21:37:27.904520+00:00",
+        "version": 1
+      },
+      "A-REVIEW": {
+        "bindings": {
+          "files": {
+            "review.md": "da0bdef76aa7bc95edbff891331a7dba747e9235159500c08e592db32c39a5a2"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:E-SP",
+            "evidence:E-DRAFT"
+          ],
+          "description": "实际自审、已修正缺陷及具体下一步",
+          "id": "A-REVIEW",
+          "path": "review.md",
+          "type": "review"
+        },
+        "registered_at": "2026-10-28T21:37:27.907623+00:00",
+        "version": 1
+      }
+    },
+    "decisions": {},
+    "evidence": {
+      "E-DRAFT": {
+        "bindings": {
+          "files": {
+            "inputs/draft.md": "b316c02633a1c27a794a32355c72cab636b42d0e2ee41260df285210d90c1b7b"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "待纠正的原始表述，保留原文",
+          "id": "E-DRAFT",
+          "limitations": "仅封闭虚构材料；枚举不替代法律解释。",
+          "location": {
+            "kind": "local",
+            "path": "inputs/draft.md"
+          },
+          "provenance": "本次Codex代理离线读取或真实运行；详execution.json",
+          "source_ids": [
+            "SRC-DRAFT"
+          ],
+          "type": "draft-text"
+        },
+        "registered_at": "2026-10-28T21:37:27.865227+00:00",
+        "version": 1
+      },
+      "E-RESULTS": {
+        "bindings": {
+          "files": {
+            "artifacts/results.json": "06699d4d1d7d190e9fe16da52a0efa87a11b07d2fe34d4988c5f492b42096a8a"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "从指定输入真实解析与32行枚举、三名申请人代入结果",
+          "id": "E-RESULTS",
+          "limitations": "仅封闭虚构材料；枚举不替代法律解释。",
+          "location": {
+            "kind": "local",
+            "path": "artifacts/results.json"
+          },
+          "provenance": "本次Codex代理离线读取或真实运行；详execution.json",
+          "source_ids": [],
+          "type": "boolean-enumeration"
+        },
+        "registered_at": "2026-10-28T21:37:27.866801+00:00",
+        "version": 1
+      },
+      "E-SP": {
+        "bindings": {
+          "files": {
+            "inputs/source-packet.md": "65c4d94005bedb72a3e99bc85a708e5bbe79b1770de33443b3670778c3f34f21"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "已全文读取的规范及申请人事实，一手本地合成输入",
+          "id": "E-SP",
+          "limitations": "仅封闭虚构材料；枚举不替代法律解释。",
+          "location": {
+            "kind": "local",
+            "path": "inputs/source-packet.md"
+          },
+          "provenance": "本次Codex代理离线读取或真实运行；详execution.json",
+          "source_ids": [
+            "SRC-SP"
+          ],
+          "type": "synthetic-legal-text"
+        },
+        "registered_at": "2026-10-28T21:37:27.863719+00:00",
+        "version": 1
+      }
+    },
+    "method_bindings": {
+      "MB-DOCTRINAL": {
+        "bindings": null,
+        "data": {
+          "applies_to": [
+            "statement:S-AUTH",
+            "statement:S-RULE",
+            "statement:S-JIA",
+            "statement:S-YI",
+            "statement:S-BING",
+            "statement:S-REVIEW",
+            "activity:ACT-LAW",
+            "activity:ACT-REVIEW",
+            "artifact:A-ANALYSIS"
+          ],
+          "id": "MB-DOCTRINAL",
+          "method_id": "legal-analysis",
+          "notes": "实际读取profiles/methods/legal-analysis.md，辅助枚举仅验证选定布尔模型。",
+          "profile_version": "0.1",
+          "reason": "在共同权威的同一虚构法域规则内核对定义、连接词、例外与复核范围；不是跨法域比较或裁判分析。",
+          "variant": "doctrinal"
+        },
+        "registered_at": "2026-10-28T21:37:27.922361+00:00",
+        "version": 1
+      }
+    },
+    "relations": {
+      "R-ALG": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "E-RESULTS",
+          "id": "R-ALG",
+          "rationale": "实际生成32行真值表与错误模型分歧并代入三名申请人；两次结果逐字节相同。",
+          "relation": "supports",
+          "scope": "有限布尔检验，不是语言解释或真实法律结论的证明",
+          "statement_id": "S-ALG"
+        },
+        "registered_at": "2026-10-28T21:37:27.887616+00:00",
+        "version": 1
+      },
+      "R-AUTH": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "E-SP",
+          "id": "R-AUTH",
+          "rationale": "D0第1条及首段明确同等权威、未规定优先语言。",
+          "relation": "supports",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "statement_id": "S-AUTH"
+        },
+        "registered_at": "2026-10-28T21:37:27.868771+00:00",
+        "version": 1
+      },
+      "R-BING": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "E-SP",
+          "id": "R-BING",
+          "rationale": "丙执行中的禁止令触发第7条；第9条复核不改变实体条件。",
+          "relation": "supports",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "statement_id": "S-BING"
+        },
+        "registered_at": "2026-10-28T21:37:27.876932+00:00",
+        "version": 1
+      },
+      "R-JIA": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "E-SP",
+          "id": "R-JIA",
+          "rationale": "申请人甲事实结合第2、5、7条，监督路径满足。",
+          "relation": "supports",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "statement_id": "S-JIA"
+        },
+        "registered_at": "2026-10-28T21:37:27.873071+00:00",
+        "version": 1
+      },
+      "R-LIMIT": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "E-SP",
+          "id": "R-LIMIT",
+          "rationale": "第5条may apply/得申请限定结论对象；第9条并不增加最终获证保证。",
+          "relation": "qualifies",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "statement_id": "S-RULE"
+        },
+        "registered_at": "2026-10-28T21:37:27.881215+00:00",
+        "version": 1
+      },
+      "R-OLD": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "E-SP",
+          "id": "R-OLD",
+          "rationale": "D0第1条否定英文优先；第9条否定复核改变实体条件，第5条只许申请。",
+          "relation": "challenges",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "statement_id": "S-OLD"
+        },
+        "registered_at": "2026-10-28T21:37:27.884857+00:00",
+        "version": 1
+      },
+      "R-REVIEW": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "E-SP",
+          "id": "R-REVIEW",
+          "rationale": "第9条明示拒绝决定送达后15日且实体条件不变；三个事实句未含送达。",
+          "relation": "supports",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "statement_id": "S-REVIEW"
+        },
+        "registered_at": "2026-10-28T21:37:27.879085+00:00",
+        "version": 1
+      },
+      "R-RULE": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "E-SP",
+          "id": "R-RULE",
+          "rationale": "第2条共同定义，第5条T或S，第7条例外跨两路径。",
+          "relation": "supports",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "statement_id": "S-RULE"
+        },
+        "registered_at": "2026-10-28T21:37:27.871131+00:00",
+        "version": 1
+      },
+      "R-YI": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "E-SP",
+          "id": "R-YI",
+          "rationale": "申请人乙17岁与第2条18岁阈值直接对照。",
+          "relation": "supports",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "statement_id": "S-YI"
+        },
+        "registered_at": "2026-10-28T21:37:27.874969+00:00",
+        "version": 1
+      }
+    },
+    "sources": {
+      "SRC-DRAFT": {
+        "bindings": null,
+        "data": {
+          "content_access": "full",
+          "id": "SRC-DRAFT",
+          "limitations": "待纠正表述，不是法源；不据此建立法律规则。",
+          "locator": "inputs/draft.md",
+          "rights": "public",
+          "title": "待修订原稿",
+          "version": "本案例原始单段稿"
+        },
+        "registered_at": "2026-10-28T21:37:27.856132+00:00",
+        "version": 1
+      },
+      "SRC-SP": {
+        "bindings": null,
+        "data": {
+          "content_access": "full",
+          "extensions": {
+            "legal": {
+              "analysis_as_of": "2030-06-01（虚构材料时点）",
+              "authority_basis": [
+                "材料首段",
+                "D0第1条"
+              ],
+              "authority_status": "本案材料内中英同等权威",
+              "authority_type": "给定合成规范文本及事实",
+              "effective_from": null,
+              "effective_to": null,
+              "fictional": true,
+              "identifier": "D0第1条；其他条款正式文书标识未提供",
+              "issuer_or_court": null,
+              "jurisdiction": "澄湾（虚构）",
+              "language_and_translation": "共同权威中英文；本次公式、压缩及释义为Codex代理研究译述；第9条仅给中文",
+              "pinpoints": [
+                "D0第1条",
+                "第2条/Section 2",
+                "第5条/Section 5",
+                "第7条/Section 7",
+                "第9条",
+                "申请人甲、乙、丙各句"
+              ],
+              "publication_date": null,
+              "relevant_facts_dates": [],
+              "research_cutoff": "2026-10-28，本次仅查完整给定离线合成材料",
+              "subsequent_treatment": {
+                "checked_through": "材料明示虚构2030-06-01",
+                "coverage": "封闭给定材料；无外部检索",
+                "items": [],
+                "searched_sources": [
+                  "inputs/source-packet.md"
+                ]
+              },
+              "territorial_scope": "本案例虚构法域内"
+            }
+          },
+          "id": "SRC-SP",
+          "limitations": "原创离线合成材料；任务说明MIT可分发；不对应真实法律；无正式规则全名、机关名称或公布施行日。",
+          "locator": "inputs/source-packet.md",
+          "rights": "public",
+          "title": "原创虚构法域澄湾：共同权威条文与三名申请人事实",
+          "version": "材料明示截至虚构2030-06-01完整相关条款，未修法"
+        },
+        "registered_at": "2026-10-28T21:37:27.855710+00:00",
+        "version": 1
+      }
+    },
+    "statements": {
+      "S-ALG": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "真实运行并以相同输入重新执行，输出哈希一致。",
+            "reviewer": "Codex代理及Python标准库程序",
+            "scope": "artifacts/results.json实际32行枚举",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "未用形式证明助手；有限枚举仅是穷尽有限真值表检查",
+            "status": "not-started",
+            "tool": "Python3.14标准库"
+          },
+          "id": "S-ALG",
+          "scope": "仅经条文分析选定的布尔模型及本次有限枚举，不推断法源权威",
+          "text": "在32种五变量布尔赋值上，共同条件因式式与两分支展开无分歧；错误广义或、培训必需及省略禁止分别有27、1、3行分歧。",
+          "type": "formal",
+          "use": "background",
+          "work_status": "reviewed"
+        },
+        "registered_at": "2026-10-28T21:37:27.862463+00:00",
+        "version": 1
+      },
+      "S-AUTH": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "见notes/analysis.md逐条引证与review.md实际自审；枚举仅核对布尔模型。",
+            "reviewer": "Codex代理",
+            "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "法律条文解释；无机器法律证明",
+            "status": "not-applicable",
+            "tool": "本次代理人工式条文分析与辅助标准库枚举"
+          },
+          "id": "S-AUTH",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "text": "中英文本同等权威，未规定优先语言。",
+          "type": "interpretive",
+          "use": "included",
+          "work_status": "reviewed"
+        },
+        "registered_at": "2026-10-28T21:37:27.856562+00:00",
+        "version": 1
+      },
+      "S-BING": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "见notes/analysis.md逐条引证与review.md实际自审；枚举仅核对布尔模型。",
+            "reviewer": "Codex代理",
+            "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "法律条文解释；无机器法律证明",
+            "status": "not-applicable",
+            "tool": "本次代理人工式条文分析与辅助标准库枚举"
+          },
+          "id": "S-BING",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "text": "丙受正在执行的禁止令排除；若有拒绝决定送达，可15日内请求复核，不能据此豁免或自动获证。",
+          "type": "interpretive",
+          "use": "included",
+          "work_status": "reviewed"
+        },
+        "registered_at": "2026-10-28T21:37:27.859294+00:00",
+        "version": 1
+      },
+      "S-JIA": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "见notes/analysis.md逐条引证与review.md实际自审；枚举仅核对布尔模型。",
+            "reviewer": "Codex代理",
+            "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "法律条文解释；无机器法律证明",
+            "status": "not-applicable",
+            "tool": "本次代理人工式条文分析与辅助标准库枚举"
+          },
+          "id": "S-JIA",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "text": "甲年满18岁、本地居民，未培训但获准监督且无禁止令，得依第5条申请。",
+          "type": "interpretive",
+          "use": "included",
+          "work_status": "reviewed"
+        },
+        "registered_at": "2026-10-28T21:37:27.857721+00:00",
+        "version": 1
+      },
+      "S-OLD": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "见notes/analysis.md逐条引证与review.md实际自审；枚举仅核对布尔模型。",
+            "reviewer": "Codex代理",
+            "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+            "status": "challenged"
+          },
+          "formal_verification": {
+            "scope": "法律条文解释；无机器法律证明",
+            "status": "not-applicable",
+            "tool": "本次代理人工式条文分析与辅助标准库枚举"
+          },
+          "id": "S-OLD",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "text": "待审原稿称英文优先，并把复核当成禁止令豁免及自动取得许可。",
+          "type": "interpretive",
+          "use": "excluded",
+          "work_status": "reviewed"
+        },
+        "registered_at": "2026-10-28T21:37:27.861304+00:00",
+        "version": 1
+      },
+      "S-REVIEW": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "见notes/analysis.md逐条引证与review.md实际自审；枚举仅核对布尔模型。",
+            "reviewer": "Codex代理",
+            "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "法律条文解释；无机器法律证明",
+            "status": "not-applicable",
+            "tool": "本次代理人工式条文分析与辅助标准库枚举"
+          },
+          "id": "S-REVIEW",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "text": "第9条的15日期限从拒绝决定送达起算，复核不改变第5条实体条件；本题未给拒绝或送达事实。",
+          "type": "interpretive",
+          "use": "included",
+          "work_status": "reviewed"
+        },
+        "registered_at": "2026-10-28T21:37:27.860237+00:00",
+        "version": 1
+      },
+      "S-RULE": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "见notes/analysis.md逐条引证与review.md实际自审；枚举仅核对布尔模型。",
+            "reviewer": "Codex代理",
+            "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "法律条文解释；无机器法律证明",
+            "status": "not-applicable",
+            "tool": "本次代理人工式条文分析与辅助标准库枚举"
+          },
+          "id": "S-RULE",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "text": "第2、5、7条合并为A∧R∧(T∨S)∧¬P；Q只表示得申请许可，不表示最终获证。",
+          "type": "interpretive",
+          "use": "included",
+          "work_status": "reviewed"
+        },
+        "registered_at": "2026-10-28T21:37:27.857089+00:00",
+        "version": 1
+      },
+      "S-YI": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "见notes/analysis.md逐条引证与review.md实际自审；枚举仅核对布尔模型。",
+            "reviewer": "Codex代理",
+            "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "法律条文解释；无机器法律证明",
+            "status": "not-applicable",
+            "tool": "本次代理人工式条文分析与辅助标准库枚举"
+          },
+          "id": "S-YI",
+          "scope": "仅给定澄湾虚构2030-06-01版本，不作真实法域法律建议",
+          "text": "乙17岁欠年龄定义，已培训仍不符合第5条申请资格。",
+          "type": "interpretive",
+          "use": "included",
+          "work_status": "reviewed"
+        },
+        "registered_at": "2026-10-28T21:37:27.858450+00:00",
+        "version": 1
+      }
+    }
+  },
+  "revision": 33,
+  "schema_version": "0.1"
+}

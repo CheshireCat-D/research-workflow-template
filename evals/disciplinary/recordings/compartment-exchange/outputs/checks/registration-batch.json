@@ -1,0 +1,581 @@
+[
+  {
+    "kind": "source",
+    "record": {
+      "id": "SRC-model",
+      "title": "合成两室交换设定",
+      "locator": "inputs/model.md",
+      "version": "sha256:d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111",
+      "content_access": "full",
+      "rights": "public",
+      "limitations": "原创MIT离线合成材料，不是实测数据。"
+    }
+  },
+  {
+    "kind": "source",
+    "record": {
+      "id": "SRC-parameters",
+      "title": "两室模型参数与对照时点",
+      "locator": "inputs/parameters.json",
+      "version": "sha256:ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f",
+      "content_access": "full",
+      "rights": "public",
+      "limitations": "原创MIT离线合成材料，不是实测数据。"
+    }
+  },
+  {
+    "kind": "source",
+    "record": {
+      "id": "SRC-draft",
+      "title": "待修订原稿",
+      "locator": "inputs/draft.md",
+      "version": "sha256:014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991",
+      "content_access": "full",
+      "rights": "public",
+      "limitations": "原创MIT离线合成材料，不是实测数据。"
+    }
+  },
+  {
+    "kind": "source",
+    "record": {
+      "id": "SRC-task",
+      "title": "本次委托与交付条件",
+      "locator": "inputs/task.md",
+      "version": "sha256:76a903d4d79f2f139c5b528579fc6d7321c497cb9cd03860a2dea80eb207e970",
+      "content_access": "full",
+      "rights": "public",
+      "limitations": "原创MIT离线合成材料，不是实测数据。"
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "EV-model",
+      "type": "original-local-input",
+      "description": "封闭、等体积、瞬时混匀的本地模型设定",
+      "provenance": "从本案例原件复制，逐字只读；来源SHA-256已记录。",
+      "location": {
+        "kind": "local",
+        "path": "inputs/model.md"
+      },
+      "source_ids": [
+        "SRC-model"
+      ]
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "EV-parameters",
+      "type": "original-local-input",
+      "description": "实际读取的初值、速率、时点及Euler步长",
+      "provenance": "从本案例原件复制，逐字只读；来源SHA-256已记录。",
+      "location": {
+        "kind": "local",
+        "path": "inputs/parameters.json"
+      },
+      "source_ids": [
+        "SRC-parameters"
+      ]
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "EV-draft",
+      "type": "original-local-input",
+      "description": "含三个待核对结果主张的旧稿",
+      "provenance": "从本案例原件复制，逐字只读；来源SHA-256已记录。",
+      "location": {
+        "kind": "local",
+        "path": "inputs/draft.md"
+      },
+      "source_ids": [
+        "SRC-draft"
+      ]
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "EV-analysis",
+      "type": "manual-analytic-derivation",
+      "description": "模型方程、变量和差、守恒、显式解、量纲/无量纲、离散条件及误差推导",
+      "provenance": "Codex代理基于本地模型和参数逐步推导，无证明器。",
+      "location": {
+        "kind": "local",
+        "path": "notes/analysis.md"
+      },
+      "source_ids": [
+        "SRC-model",
+        "SRC-parameters"
+      ],
+      "limitations": "手工推导；不声称独立人类或形式化验证。"
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "EV-results",
+      "type": "executed-numerical-calculation",
+      "description": "指定时点解析值、四种Euler前四步、2h边界、固定终点细化和数值残差",
+      "provenance": "实际执行artifacts/run.py；final-run与迁移输入复跑结果SHA-256一致。",
+      "location": {
+        "kind": "local",
+        "path": "artifacts/results.json"
+      },
+      "source_ids": [
+        "SRC-model",
+        "SRC-parameters"
+      ],
+      "limitations": "有限双精度计算，仅当前环境实际运行。"
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "S-solution",
+      "text": "a=6+4exp[-(1 h^-1)t]、b=6-4exp[-(1 h^-1)t]，总量12 U，两室指数趋于6 U/L。",
+      "type": "formal",
+      "scope": "等恒定体积1L、k=0.5h^-1、初值(10,2)、无源损失、t>=0。",
+      "work_status": "reviewed",
+      "use": "included",
+      "assessment": {
+        "status": "supported-in-scope",
+        "scope": "等恒定体积1L、k=0.5h^-1、初值(10,2)、无源损失、t>=0。",
+        "rationale": "由s、d方程完整推导并代回初值。",
+        "reviewer": "Codex执行代理自审"
+      },
+      "formal_verification": {
+        "status": "not-started",
+        "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+        "tool": "none"
+      }
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "S-dimension",
+      "text": "k(a-b)为浓度变化率，Vk(a-b)为总量转移率；τ=2kt,u=a/6,v=b/6无量纲。",
+      "type": "formal",
+      "scope": "U为未指定溶质量单位；平均浓度正，k>0，浓度单位U/L。",
+      "work_status": "reviewed",
+      "use": "included",
+      "assessment": {
+        "status": "supported-in-scope",
+        "scope": "U为未指定溶质量单位；平均浓度正，k>0，浓度单位U/L。",
+        "rationale": "各项量纲一致，链式法则给出无量纲方程。",
+        "reviewer": "Codex执行代理自审"
+      },
+      "formal_verification": {
+        "status": "not-started",
+        "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+        "tool": "none"
+      }
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "S-euler",
+      "text": "Euler差值系数Q=1-2kh；0<h<1/k差值渐近稳定；0<kh<=1对所有非负初值保非负；h<=1/(2k)不交替。",
+      "type": "formal",
+      "scope": "固定总量子空间、k>0、任意非负初值；平衡初值的特殊情况单列。",
+      "work_status": "reviewed",
+      "use": "included",
+      "assessment": {
+        "status": "supported-in-scope",
+        "scope": "固定总量子空间、k>0、任意非负初值；平衡初值的特殊情况单列。",
+        "rationale": "矩阵凸组合、必要性反例和差值递推给出条件。",
+        "reviewer": "Codex执行代理自审"
+      },
+      "formal_verification": {
+        "status": "not-started",
+        "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+        "tool": "none"
+      }
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "S-order",
+      "text": "固定终点T、h=T/n趋于0，Euler浓度全局误差O(h)。",
+      "type": "formal",
+      "scope": "线性闭交换模型k>0，固定T>0；Taylor展开需足够小h使2kh<1。",
+      "work_status": "reviewed",
+      "use": "included",
+      "assessment": {
+        "status": "supported-in-scope",
+        "scope": "线性闭交换模型k>0，固定T>0；Taylor展开需足够小h使2kh<1。",
+        "rationale": "闭式误差及log展开给出一阶项；有限细化作核对。",
+        "reviewer": "Codex执行代理自审"
+      },
+      "formal_verification": {
+        "status": "not-started",
+        "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+        "tool": "none"
+      }
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "S-computation",
+      "text": "给定步长2.5h第2步为(15,-3)，1.5h交替收敛；固定4h细化误差比由1.895趋近1.989。",
+      "type": "empirical",
+      "scope": "所给参数、四步计算和列出的五种细化步长。",
+      "work_status": "reviewed",
+      "use": "included",
+      "assessment": {
+        "status": "supported-in-scope",
+        "scope": "所给参数、四步计算和列出的五种细化步长。",
+        "rationale": "最终标准库实际输出可复跑。",
+        "reviewer": "Codex执行代理自审"
+      }
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "S-old-trend",
+      "text": "封闭交换中A室浓度线性下降到零，B室持续增大。",
+      "type": "formal",
+      "scope": "原稿关于本案例模型的结果主张。",
+      "work_status": "reviewed",
+      "use": "excluded",
+      "assessment": {
+        "status": "challenged",
+        "scope": "原稿关于本案例模型的结果主张。",
+        "rationale": "解析解A趋6、B趋6，且导数随时间指数变化。",
+        "reviewer": "Codex执行代理自审"
+      },
+      "formal_verification": {
+        "status": "not-started",
+        "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+        "tool": "none"
+      }
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "S-old-positive",
+      "text": "所有正步长Euler都保持浓度非负。",
+      "type": "formal",
+      "scope": "原稿对本案例任意正步长的主张。",
+      "work_status": "reviewed",
+      "use": "excluded",
+      "assessment": {
+        "status": "challenged",
+        "scope": "原稿对本案例任意正步长的主张。",
+        "rationale": "h=2.5h第2步B=-3，且凸组合证明给出kh<=1条件。",
+        "reviewer": "Codex执行代理自审"
+      },
+      "formal_verification": {
+        "status": "not-started",
+        "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+        "tool": "none"
+      }
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "S-old-speed",
+      "text": "所有正步长Euler以同一速度收敛。",
+      "type": "formal",
+      "scope": "原稿对本案例任意正步长的主张。",
+      "work_status": "reviewed",
+      "use": "excluded",
+      "assessment": {
+        "status": "challenged",
+        "scope": "原稿对本案例任意正步长的主张。",
+        "rationale": "Q随h变化，h=2.5h发散、h=2h不衰减，稳定步长速率也不同。",
+        "reviewer": "Codex执行代理自审"
+      },
+      "formal_verification": {
+        "status": "not-started",
+        "scope": "未运行形式化证明器；手工推导或反例另有明确依据。",
+        "tool": "none"
+      }
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "R1",
+      "statement_id": "S-solution",
+      "evidence_id": "EV-analysis",
+      "relation": "supports",
+      "rationale": "变量和差的推导建立解、唯一性、守恒与长期状态。",
+      "scope": "本次离线合成两室模型；详见对应主张条件。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "R2",
+      "statement_id": "S-solution",
+      "evidence_id": "EV-results",
+      "relation": "qualifies",
+      "rationale": "有限时点数值代入仅作核对，普遍结论来自解析推导。",
+      "scope": "本次离线合成两室模型；详见对应主张条件。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "R3",
+      "statement_id": "S-dimension",
+      "evidence_id": "EV-analysis",
+      "relation": "supports",
+      "rationale": "明确浓度变化率与总量转移率，链式法则建立无量纲方程。",
+      "scope": "本次离线合成两室模型；详见对应主张条件。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "R4",
+      "statement_id": "S-euler",
+      "evidence_id": "EV-analysis",
+      "relation": "supports",
+      "rationale": "差值递推建立稳定区间；凸组合及非负初值反例证明正性条件。",
+      "scope": "本次离线合成两室模型；详见对应主张条件。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "R5",
+      "statement_id": "S-order",
+      "evidence_id": "EV-analysis",
+      "relation": "supports",
+      "rationale": "固定终点闭式误差的log展开给出一阶项。",
+      "scope": "本次离线合成两室模型；详见对应主张条件。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "R6",
+      "statement_id": "S-order",
+      "evidence_id": "EV-results",
+      "relation": "qualifies",
+      "rationale": "细化误差比只支持列出的步长，不能代替渐近推导。",
+      "scope": "本次离线合成两室模型；详见对应主张条件。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "R7",
+      "statement_id": "S-computation",
+      "evidence_id": "EV-results",
+      "relation": "supports",
+      "rationale": "真实程序输出给定状态、误差、负值及细化结果。",
+      "scope": "本次离线合成两室模型；详见对应主张条件。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "R8",
+      "statement_id": "S-old-trend",
+      "evidence_id": "EV-analysis",
+      "relation": "challenges",
+      "rationale": "精确解指数趋于6，否定线性至0且B无界增加的表达。",
+      "scope": "本次离线合成两室模型；详见对应主张条件。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "R9",
+      "statement_id": "S-old-positive",
+      "evidence_id": "EV-results",
+      "relation": "challenges",
+      "rationale": "h=2.5的第2步B=-3是原主张的同参数反例。",
+      "scope": "本次离线合成两室模型；详见对应主张条件。"
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "R10",
+      "statement_id": "S-old-speed",
+      "evidence_id": "EV-analysis",
+      "relation": "challenges",
+      "rationale": "Q因步长而异，含发散与边界不衰减条件。",
+      "scope": "本次离线合成两室模型；详见对应主张条件。"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "AR-analysis",
+      "type": "analysis",
+      "description": "逐步理论推导与实际数值对照",
+      "path": "notes/analysis.md",
+      "derived_from": [
+        "evidence:EV-model",
+        "evidence:EV-parameters"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "AR-code",
+      "type": "code",
+      "description": "仅标准库、重读输入、拒绝已有输出目录的跨平台脚本",
+      "path": "artifacts/run.py",
+      "derived_from": [
+        "source:SRC-model",
+        "source:SRC-parameters"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "AR-results",
+      "type": "calculation-results",
+      "description": "最终实际计算的机器可读结果",
+      "path": "artifacts/results.json",
+      "derived_from": [
+        "artifact:AR-code",
+        "evidence:EV-parameters"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "AR-report",
+      "type": "manuscript",
+      "description": "约600字以内的修订中文短稿",
+      "path": "manuscript/report.md",
+      "derived_from": [
+        "artifact:AR-analysis",
+        "artifact:AR-results",
+        "source:SRC-draft"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "AR-review",
+      "type": "review",
+      "description": "实际自审、失败保留和具体后续任务",
+      "path": "review.md",
+      "derived_from": [
+        "artifact:AR-analysis",
+        "artifact:AR-code",
+        "artifact:AR-results",
+        "artifact:AR-report"
+      ]
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "ACT-derive",
+      "title": "Codex从本地设定建立并逐步推导连续与离散关系",
+      "status": "done",
+      "inputs": [
+        "evidence:EV-model",
+        "evidence:EV-parameters"
+      ],
+      "outputs": [
+        "artifact:AR-analysis",
+        "statement:S-solution",
+        "statement:S-dimension",
+        "statement:S-euler",
+        "statement:S-order"
+      ],
+      "note": "实际手工推导；无证明器或人类独立复核。"
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "ACT-compute",
+      "title": "Codex实际运行Euler与解析对照并用迁移输入复跑",
+      "status": "done",
+      "depends_on": [
+        "ACT-derive"
+      ],
+      "inputs": [
+        "evidence:EV-model",
+        "evidence:EV-parameters",
+        "artifact:AR-code"
+      ],
+      "outputs": [
+        "artifact:AR-results",
+        "evidence:EV-results",
+        "statement:S-computation"
+      ],
+      "note": "所有实际计算在10秒内；负状态保留；对应argv和hash见execution.json。"
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "ACT-write",
+      "title": "Codex修订结果主张并自审",
+      "status": "done",
+      "depends_on": [
+        "ACT-derive",
+        "ACT-compute"
+      ],
+      "inputs": [
+        "evidence:EV-draft",
+        "artifact:AR-analysis",
+        "artifact:AR-results"
+      ],
+      "outputs": [
+        "artifact:AR-report",
+        "artifact:AR-review"
+      ],
+      "note": "原稿不改；约556非空白字符；同一执行代理自审。"
+    }
+  },
+  {
+    "kind": "method-binding",
+    "record": {
+      "id": "MB-analytic",
+      "method_id": "formal-theory",
+      "variant": "analytic-derivation",
+      "profile_version": "0.1",
+      "reason": "以变量和差求解并证明连续/离散条件和误差范围。",
+      "applies_to": [
+        "activity:ACT-derive",
+        "statement:S-solution",
+        "statement:S-dimension",
+        "statement:S-euler",
+        "statement:S-order"
+      ],
+      "notes": "所读画像明确是证明指导切片，解析物理与数值义务按任务补充，不称完整覆盖。"
+    }
+  },
+  {
+    "kind": "method-binding",
+    "record": {
+      "id": "MB-numeric",
+      "method_id": "computational",
+      "variant": "numerical-simulation",
+      "profile_version": "0.1",
+      "reason": "给定参数的显式Euler、解析基线、边界与固定终点细化实际计算。",
+      "applies_to": [
+        "activity:ACT-compute",
+        "statement:S-computation",
+        "artifact:AR-code",
+        "artifact:AR-results"
+      ]
+    }
+  }
+]

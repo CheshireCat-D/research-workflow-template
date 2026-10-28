@@ -1,0 +1,34 @@
+{
+  "depends_on": [
+    "A-material-audit"
+  ],
+  "id": "A-interpret",
+  "inputs": [
+    "evidence:E-original",
+    "evidence:E-reproduction",
+    "evidence:E-A1",
+    "evidence:E-C1",
+    "evidence:E-E1",
+    "evidence:E-draft",
+    "artifact:ART-results",
+    "statement:S-industrial",
+    "statement:S-nofigure",
+    "relation:R-industrial-E1",
+    "relation:R-industrial-counter",
+    "relation:R-industrial-A1",
+    "relation:R-nofigure",
+    "relation:R-nofigure-version",
+    "relation:R-industrial-draft",
+    "relation:R-nofigure-draft",
+    "artifact:ART-ledger-semantic-review"
+  ],
+  "note": "由Codex代理实际完成；view_image全图查看原输入及复制件；非独立人类审稿。 后续登记语义复核已将被审内容与草稿归属分开，明确E1未说唯一，纠正失败日志来源；重新核对原正文仍表达相同解释范围，科学产物未改，并重新绑定当前记录版本。",
+  "outputs": [
+    "artifact:ART-analysis",
+    "artifact:ART-sources",
+    "artifact:ART-report",
+    "artifact:ART-review"
+  ],
+  "status": "done",
+  "title": "实际看图、比较两种解释、审查原稿并写出短稿"
+}

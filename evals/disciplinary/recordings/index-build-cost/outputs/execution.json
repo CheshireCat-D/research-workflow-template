@@ -1,0 +1,321 @@
+{
+  "executor": "Codex agent",
+  "project": "PROJECT",
+  "commands": [
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "重复键查询的端到端成本比较",
+        "--discipline",
+        "engineering",
+        "--method",
+        "computational",
+        "--mode",
+        "reproducible",
+        "--language",
+        "zh",
+        "--entry",
+        "minimum-check"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"initialized\": true,\n  \"project_id\": \"P73d9c9047b264a71b85d37bc4be5cfa3\",\n  \"revision\": 0,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "install",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"installed\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 65,\n  \"payload_sha256\": \"321fa8cc01187952b33ec072e96a10d65acdf24c674b99cd92107473bcfa69d5\",\n  \"global_installation\": false,\n  \"project_records_modified\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "RUN/computed-primary"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"all_returns_equal\": true, \"inputs_unchanged\": true, \"workloads\": [{\"m\": 1, \"L\": 8, \"I\": 9}, {\"m\": 2, \"L\": 16, \"I\": 10}, {\"m\": 10, \"L\": 80, \"I\": 18}]}\n",
+      "stderr": "",
+      "expected_exit_status": 0
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "RUN/relocated-run.py",
+        "--input-dir",
+        "RUN/relocated-inputs",
+        "--output-dir",
+        "RUN/computed-relocated"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"all_returns_equal\": true, \"inputs_unchanged\": true, \"workloads\": [{\"m\": 1, \"L\": 8, \"I\": 9}, {\"m\": 2, \"L\": 16, \"I\": 10}, {\"m\": 10, \"L\": 80, \"I\": 18}]}\n",
+      "stderr": "",
+      "expected_exit_status": 0
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "RUN/computed-primary"
+      ],
+      "exit_status": 2,
+      "stdout": "",
+      "stderr": "usage: run.py [-h] --input-dir INPUT_DIR --output-dir OUTPUT_DIR\nrun.py: error: output directory must not already exist\n",
+      "expected_exit_status": 2
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register-batch",
+        "--root",
+        "PROJECT",
+        "--file",
+        "PROJECT/checks/registration-batch.json"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"registered_count\": 35,\n  \"records\": [\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC_TASK\",\n      \"version\": 1,\n      \"revision\": 1,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC_CONTRACT\",\n      \"version\": 1,\n      \"revision\": 2,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC_DATA\",\n      \"version\": 1,\n      \"revision\": 3,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC_QUERIES\",\n      \"version\": 1,\n      \"revision\": 4,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"SRC_DRAFT\",\n      \"version\": 1,\n      \"revision\": 5,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E_CONTRACT\",\n      \"version\": 1,\n      \"revision\": 6,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E_DATA\",\n      \"version\": 1,\n      \"revision\": 7,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E_QUERIES\",\n      \"version\": 1,\n      \"revision\": 8,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E_DRAFT\",\n      \"version\": 1,\n      \"revision\": 9,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S_EQUAL\",\n      \"version\": 1,\n      \"revision\": 10,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S_COST\",\n      \"version\": 1,\n      \"revision\": 11,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S_OLD_SPEED\",\n      \"version\": 1,\n      \"revision\": 12,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S_OLD_DUPLICATE\",\n      \"version\": 1,\n      \"revision\": 13,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"S_LIMIT\",\n      \"version\": 1,\n      \"revision\": 14,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E_RESULTS\",\n      \"version\": 1,\n      \"revision\": 15,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"E_EXECUTION\",\n      \"version\": 1,\n      \"revision\": 16,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_EQUAL\",\n      \"version\": 1,\n      \"revision\": 17,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_COST\",\n      \"version\": 1,\n      \"revision\": 18,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_COST_SCOPE\",\n      \"version\": 1,\n      \"revision\": 19,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_SPEED\",\n      \"version\": 1,\n      \"revision\": 20,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_DUPLICATE\",\n      \"version\": 1,\n      \"revision\": 21,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_DUPLICATE_VALUE\",\n      \"version\": 1,\n      \"revision\": 22,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_LIMIT\",\n      \"version\": 1,\n      \"revision\": 23,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"R_COST_TIME\",\n      \"version\": 1,\n      \"revision\": 24,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_RUN\",\n      \"version\": 1,\n      \"revision\": 25,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_RESULTS\",\n      \"version\": 1,\n      \"revision\": 26,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_ANALYSIS\",\n      \"version\": 1,\n      \"revision\": 27,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_REPORT\",\n      \"version\": 1,\n      \"revision\": 28,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_REVIEW\",\n      \"version\": 1,\n      \"revision\": 29,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"A_COMPUTE_LOG\",\n      \"version\": 1,\n      \"revision\": 30,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"ACT_COMPUTE\",\n      \"version\": 1,\n      \"revision\": 31,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"ACT_ANALYZE\",\n      \"version\": 1,\n      \"revision\": 32,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"ACT_WRITE\",\n      \"version\": 1,\n      \"revision\": 33,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"ACT_REVIEW\",\n      \"version\": 1,\n      \"revision\": 34,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"method-binding\",\n      \"id\": \"MB_ALGORITHM\",\n      \"version\": 1,\n      \"revision\": 35,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    }\n  ],\n  \"revision\": 35,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P73d9c9047b264a71b85d37bc4be5cfa3\",\n  \"revision\": 35,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 6,\n    \"decisions\": 0,\n    \"evidence\": 6,\n    \"method_bindings\": 1,\n    \"relations\": 8,\n    \"sources\": 5,\n    \"statements\": 5\n  },\n  \"activities\": [\n    {\n      \"id\": \"ACT_ANALYZE\",\n      \"title\": \"解释构建、重复键、重复调用和未命中对成本的作用\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_COMPUTE\",\n      \"title\": \"实现相同最后值合同、逐查询核对并统计三个冷启动负载\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_REVIEW\",\n      \"title\": \"自审实现、结果和稿件的一致性及执行边界\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_WRITE\",\n      \"title\": \"根据实测操作数修订原稿两项错误主张\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"Clarify the current question, scope and next evidence check.\"\n  },\n  \"checkpoint\": {\n    \"recorded\": false,\n    \"status\": \"not-recorded\",\n    \"changed\": []\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "checkpoint",
+        "--root",
+        "PROJECT",
+        "--next-action",
+        "若扩展为真实延迟研究，先修订contract.md明确冷/热启动、索引复用、缓存与内存预算，再预设计时环境、重复次数和报告规则；当前合同操作数交付已完成。",
+        "--note",
+        "给定三个前缀全部完成，保留墙钟速度未测的边界与已有输出目录预期拒绝。"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"checkpoint_saved\": true,\n  \"revision\": 36,\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"若扩展为真实延迟研究，先修订contract.md明确冷/热启动、索引复用、缓存与内存预算，再预设计时环境、重复次数和报告规则；当前合同操作数交付已完成。\"\n  },\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P73d9c9047b264a71b85d37bc4be5cfa3\",\n  \"revision\": 36,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 6,\n    \"decisions\": 0,\n    \"evidence\": 6,\n    \"method_bindings\": 1,\n    \"relations\": 8,\n    \"sources\": 5,\n    \"statements\": 5\n  },\n  \"activities\": [\n    {\n      \"id\": \"ACT_ANALYZE\",\n      \"title\": \"解释构建、重复键、重复调用和未命中对成本的作用\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_COMPUTE\",\n      \"title\": \"实现相同最后值合同、逐查询核对并统计三个冷启动负载\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_REVIEW\",\n      \"title\": \"自审实现、结果和稿件的一致性及执行边界\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_WRITE\",\n      \"title\": \"根据实测操作数修订原稿两项错误主张\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"若扩展为真实延迟研究，先修订contract.md明确冷/热启动、索引复用、缓存与内存预算，再预设计时环境、重复次数和报告规则；当前合同操作数交付已完成。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P73d9c9047b264a71b85d37bc4be5cfa3\",\n  \"revision\": 36,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 6,\n    \"decisions\": 0,\n    \"evidence\": 6,\n    \"method_bindings\": 1,\n    \"relations\": 8,\n    \"sources\": 5,\n    \"statements\": 5\n  },\n  \"activities\": [\n    {\n      \"id\": \"ACT_ANALYZE\",\n      \"title\": \"解释构建、重复键、重复调用和未命中对成本的作用\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_COMPUTE\",\n      \"title\": \"实现相同最后值合同、逐查询核对并统计三个冷启动负载\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_REVIEW\",\n      \"title\": \"自审实现、结果和稿件的一致性及执行边界\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_WRITE\",\n      \"title\": \"根据实测操作数修订原稿两项错误主张\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"若扩展为真实延迟研究，先修订contract.md明确冷/热启动、索引复用、缓存与内存预算，再预设计时环境、重复次数和报告规则；当前合同操作数交付已完成。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  },\n  \"next_action\": \"若扩展为真实延迟研究，先修订contract.md明确冷/热启动、索引复用、缓存与内存预算，再预设计时环境、重复次数和报告规则；当前合同操作数交付已完成。\",\n  \"needs_review\": false,\n  \"recovery_instruction\": \"Continue the recorded next action within its existing scope.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"installed_integrity\": true,\n  \"source_version_matches\": true,\n  \"source_comparison_performed\": true,\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 65,\n  \"payload_sha256\": \"321fa8cc01187952b33ec072e96a10d65acdf24c674b99cd92107473bcfa69d5\",\n  \"findings\": []\n}\n",
+      "stderr": ""
+    }
+  ],
+  "input_sha256": {
+    "contract.md": {
+      "original_path": "TOOLKIT/evals/disciplinary/cases/index-build-cost/contract.md",
+      "project_path": "inputs/contract.md",
+      "original_sha256": "9aef9104f13db5c019676831837ea311c07c63c8f445870f4fa60c6a7bafd646",
+      "copied_sha256": "9aef9104f13db5c019676831837ea311c07c63c8f445870f4fa60c6a7bafd646",
+      "equal": true
+    },
+    "draft.md": {
+      "original_path": "TOOLKIT/evals/disciplinary/cases/index-build-cost/draft.md",
+      "project_path": "inputs/draft.md",
+      "original_sha256": "deb88557339672857a96f423ff1b6e740a3362d81739c268c70d885a191cb49e",
+      "copied_sha256": "deb88557339672857a96f423ff1b6e740a3362d81739c268c70d885a191cb49e",
+      "equal": true
+    },
+    "queries.json": {
+      "original_path": "TOOLKIT/evals/disciplinary/cases/index-build-cost/queries.json",
+      "project_path": "inputs/queries.json",
+      "original_sha256": "72d76d55986f6d6029e8659b23660fbe6fa16e03d165cd12141b92f547755591",
+      "copied_sha256": "72d76d55986f6d6029e8659b23660fbe6fa16e03d165cd12141b92f547755591",
+      "equal": true
+    },
+    "records.csv": {
+      "original_path": "TOOLKIT/evals/disciplinary/cases/index-build-cost/records.csv",
+      "project_path": "inputs/records.csv",
+      "original_sha256": "c00c73ce2d3c56bfea4f649a2bbd88ecd34337de8e2f439640e51fc2e9826642",
+      "copied_sha256": "c00c73ce2d3c56bfea4f649a2bbd88ecd34337de8e2f439640e51fc2e9826642",
+      "equal": true
+    },
+    "task.md": {
+      "original_path": "TOOLKIT/evals/disciplinary/cases/index-build-cost/task.md",
+      "project_path": "inputs/task.md",
+      "original_sha256": "09fb97fb1dee4d7802536ce62bef51ba67af8d9a176ba5da458a18a5351b355a",
+      "copied_sha256": "09fb97fb1dee4d7802536ce62bef51ba67af8d9a176ba5da458a18a5351b355a",
+      "equal": true
+    }
+  },
+  "output_sha256": {
+    "artifacts/results.json": "62d5365bdeffab2935c110eb0f61db1602be9a86b4a82254c7269592ba10ce74",
+    "artifacts/run.py": "cc9d429a8b776cd88c089a73ebdfb355f48cb747b9b80a78ec2cadacf9784b8c",
+    "checks/check-before-checkpoint.json": "b6076ee803d550ccbd11d81343e3d06724caf9d3cc3e47216c93d974f263daea",
+    "checks/check.json": "6a832a4d9a0242adaa081c6da0ccd2aaa93ac675584abd353eb121f757f341f5",
+    "checks/checkpoint.json": "42f40b043cae5d61e5cdef4fa52c3628b2dee41f59a2080c33e53930a4ef8cc1",
+    "checks/computation.json": "09bcbfb24f6fb46f28b5423b9200848e4c9ec2cea4eeabaf442ebe24f1a302b1",
+    "checks/guidance-read.json": "c36e29a0bf9ff9771e8dfc6410649dd8639cfc7833582fea8f5502df5c8811d6",
+    "checks/register.json": "c7f45bb39165b418891d41b79f93f92ea061342f6e2a783926a4b488d0353433",
+    "checks/registration-batch.json": "ceb1730e1114fafbb0775fc11532bb9434d53178605e1897e935fbcb290ac2f5",
+    "checks/resume.json": "4815dea7f8d96f5166b51e71985ce9922bef23535be32a029c1a81848ebf007b",
+    "checks/skill-connection.json": "b8da6d2901ed04c3d696d43b05284f19403db61bf3bdb6478fe1f9a409039032",
+    "delivery-manifest.json": "a466b341a84c845873e1ff926fada4206e5ec0377b6ad458090ee24874650039",
+    "inputs/contract.md": "9aef9104f13db5c019676831837ea311c07c63c8f445870f4fa60c6a7bafd646",
+    "inputs/draft.md": "deb88557339672857a96f423ff1b6e740a3362d81739c268c70d885a191cb49e",
+    "inputs/queries.json": "72d76d55986f6d6029e8659b23660fbe6fa16e03d165cd12141b92f547755591",
+    "inputs/records.csv": "c00c73ce2d3c56bfea4f649a2bbd88ecd34337de8e2f439640e51fc2e9826642",
+    "inputs/task.md": "09fb97fb1dee4d7802536ce62bef51ba67af8d9a176ba5da458a18a5351b355a",
+    "manuscript/report.md": "6454c09a0582fddf4c36084ee470efe5878b17fd5c23740dcc0a623f104124a6",
+    "notes/analysis.md": "b7e30b67bd47e51949dd402d56182275dc1eaa9626ab13e398ca016ac854757f",
+    "project.json": "0c373b51a9f5324f93c31322f7b08a78fd969b7f88b07939010737b9eabf8468",
+    "records/registry.json": "97560bdae29c8ea1edd40552692eaac44e142397417d851218391abccefc46ff",
+    "review.md": "af3b893bf58bb4169b323430d0d89521ea16b1d650929e72cf7e0629a957f3dc"
+  },
+  "code_sha256": {
+    "artifacts/run.py": "cc9d429a8b776cd88c089a73ebdfb355f48cb747b9b80a78ec2cadacf9784b8c"
+  },
+  "read_guidance_paths": [
+    "TOOLKIT/skills/rw-workflow/SKILL.md",
+    "TOOLKIT/core/skill-bridge.md",
+    "TOOLKIT/core/protocol.md",
+    "TOOLKIT/skills/rw-validation/SKILL.md",
+    "TOOLKIT/skills/rw-writing/SKILL.md",
+    "TOOLKIT/skills/rw-review/SKILL.md",
+    "TOOLKIT/profiles/disciplines/engineering.md",
+    "TOOLKIT/profiles/methods/computational.md"
+  ],
+  "read_schema_paths": [
+    "TOOLKIT/core/schemas/source.schema.json",
+    "TOOLKIT/core/schemas/statement.schema.json",
+    "TOOLKIT/core/schemas/evidence.schema.json",
+    "TOOLKIT/core/schemas/relation.schema.json",
+    "TOOLKIT/core/schemas/artifact.schema.json",
+    "TOOLKIT/core/schemas/activity.schema.json",
+    "TOOLKIT/core/schemas/method-binding.schema.json"
+  ],
+  "read_interface_paths": [
+    "TOOLKIT/core/cli.py",
+    "TOOLKIT/core/project.py"
+  ],
+  "catalog_access": "tools/research.py options; no tests, expected answers, or evaluation evidence contents used",
+  "machine_metadata": {
+    "interpreter": "PYTHON",
+    "python_version": "3.14.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "process_durations": [
+      {
+        "command_index": 0,
+        "process_elapsed_seconds": 0.05109358299523592
+      },
+      {
+        "command_index": 1,
+        "process_elapsed_seconds": 0.06697587500093505
+      },
+      {
+        "command_index": 2,
+        "process_elapsed_seconds": 0.036351832997752354
+      },
+      {
+        "command_index": 3,
+        "process_elapsed_seconds": 0.03332191699882969
+      },
+      {
+        "command_index": 4,
+        "process_elapsed_seconds": 0.03404233400942758
+      },
+      {
+        "command_index": 5,
+        "process_elapsed_seconds": 0.12867779200314544
+      },
+      {
+        "command_index": 6,
+        "process_elapsed_seconds": 0.05106995800451841
+      },
+      {
+        "command_index": 7,
+        "process_elapsed_seconds": 0.053559583000605926
+      },
+      {
+        "command_index": 8,
+        "process_elapsed_seconds": 0.05135658300423529
+      },
+      {
+        "command_index": 9,
+        "process_elapsed_seconds": 0.051642083999468014
+      },
+      {
+        "command_index": 10,
+        "process_elapsed_seconds": 0.05836412499775179
+      }
+    ],
+    "performance_measurement": false
+  },
+  "self_hash": "execution.json intentionally excludes its own hash to avoid a circular definition",
+  "outcome": {
+    "primary_exit_status": 0,
+    "relocated_exit_status": 0,
+    "relocated_json_bytes_equal": true,
+    "existing_output_directory_expected_rejection": 2,
+    "unresolved_failures": [],
+    "check_exit_status": 0,
+    "resume_exit_status": 0,
+    "check_errors": [],
+    "check_warnings": [],
+    "checkpoint_status": "current",
+    "scientific_validity": "not-assessed"
+  },
+  "limitations": [
+    "No wall-clock comparison of the two routes",
+    "Executed only on this macOS/Python environment",
+    "Contract semantics were implemented and reviewed by agent; contract changes require content review"
+  ]
+}

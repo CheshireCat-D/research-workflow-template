@@ -1,0 +1,1460 @@
+{
+  "format_version": 1,
+  "case_id": "artwork-versions",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task outputs and final record data. Replay creates new project IDs, version-1 records and a checkpoint; it does not recreate all original history or repeat model reasoning.",
+  "project_init": {
+    "title": "《两条路径》原构图与裁剪展陈：版本与竞争解释",
+    "interest": "《两条路径》原构图与裁剪展陈：版本与竞争解释",
+    "disciplines": [
+      "humanities"
+    ],
+    "methods": [
+      "historical-interpretive"
+    ],
+    "workflow_mode": "structured",
+    "language": "zh",
+    "entry_activity": "question"
+  },
+  "case_files": {
+    "inputs/draft.md": "draft.md",
+    "inputs/original.png": "original.png",
+    "inputs/reproduction.png": "reproduction.png",
+    "inputs/source-packet.md": "source-packet.md",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "draft.md": "b16f8ef1943139d651088e151e433c075febc814282ac3e32a5433f6f3bab5ef",
+    "original.png": "7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7",
+    "reproduction.png": "2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247",
+    "source-packet.md": "fb5d68dcfe709b80f50653a3503184ba49a94dcccabb04ce560c94be8dec614a",
+    "task.md": "de1c54030330fb4a578f7fe1eb1a0d70b1923008b1e12a04ec9d2ca69e3d7643"
+  },
+  "output_files": [
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "checks/check-final.json",
+    "checks/check.json",
+    "checks/checkpoint.json",
+    "checks/compact-delivery.json",
+    "checks/connect-check.json",
+    "checks/connect-install.json",
+    "checks/connected-bundle-manifest.json",
+    "checks/init.json",
+    "checks/initial-init-failure.json",
+    "checks/material-audit-command.json",
+    "checks/project-after-skills-restore-check.json",
+    "checks/project-after-skills-restore-resume.json",
+    "checks/register-batch.json",
+    "checks/registration-semantic-review.md",
+    "checks/resume.json",
+    "checks/semantic-correction/after-activity-A-interpret.json",
+    "checks/semantic-correction/after-activity-A-ledger-semantic-correction.json",
+    "checks/semantic-correction/after-activity-A-next-context.json",
+    "checks/semantic-correction/after-envelopes.json",
+    "checks/semantic-correction/after-evidence-E-init-failure.json",
+    "checks/semantic-correction/after-relation-R-industrial-E1.json",
+    "checks/semantic-correction/after-relation-R-industrial-counter.json",
+    "checks/semantic-correction/after-relation-R-industrial-draft.json",
+    "checks/semantic-correction/after-relation-R-nofigure-draft.json",
+    "checks/semantic-correction/after-statement-S-industrial.json",
+    "checks/semantic-correction/after-statement-S-nofigure.json",
+    "checks/semantic-correction/before-activity-A-interpret.json",
+    "checks/semantic-correction/before-activity-A-next-context.json",
+    "checks/semantic-correction/before-envelopes.json",
+    "checks/semantic-correction/before-evidence-E-init-failure.json",
+    "checks/semantic-correction/before-relation-R-industrial-E1.json",
+    "checks/semantic-correction/before-relation-R-industrial-counter.json",
+    "checks/semantic-correction/before-statement-S-industrial.json",
+    "checks/semantic-correction/before-statement-S-nofigure.json",
+    "checks/semantic-correction/check-before-rebinding.json",
+    "checks/semantic-correction/check-final.json",
+    "checks/semantic-correction/checkpoint.json",
+    "checks/semantic-correction/input-activity-A-interpret.json",
+    "checks/semantic-correction/input-activity-A-ledger-semantic-correction.json",
+    "checks/semantic-correction/input-activity-A-next-context.json",
+    "checks/semantic-correction/input-artifact-ART-ledger-semantic-review.json",
+    "checks/semantic-correction/input-evidence-E-init-failure.json",
+    "checks/semantic-correction/input-evidence-E-ledger-semantic-review.json",
+    "checks/semantic-correction/input-relation-R-industrial-E1.json",
+    "checks/semantic-correction/input-relation-R-industrial-counter.json",
+    "checks/semantic-correction/input-relation-R-industrial-draft.json",
+    "checks/semantic-correction/input-relation-R-nofigure-draft.json",
+    "checks/semantic-correction/input-statement-S-industrial.json",
+    "checks/semantic-correction/input-statement-S-nofigure.json",
+    "checks/semantic-correction/register-activity-A-interpret.json",
+    "checks/semantic-correction/register-activity-A-ledger-semantic-correction.json",
+    "checks/semantic-correction/register-activity-A-next-context.json",
+    "checks/semantic-correction/register-artifact-ART-ledger-semantic-review.json",
+    "checks/semantic-correction/register-evidence-E-init-failure.json",
+    "checks/semantic-correction/register-evidence-E-ledger-semantic-review.json",
+    "checks/semantic-correction/register-relation-R-industrial-E1.json",
+    "checks/semantic-correction/register-relation-R-industrial-counter.json",
+    "checks/semantic-correction/register-relation-R-industrial-draft.json",
+    "checks/semantic-correction/register-relation-R-nofigure-draft.json",
+    "checks/semantic-correction/register-statement-S-industrial.json",
+    "checks/semantic-correction/register-statement-S-nofigure.json",
+    "checks/semantic-correction/resume-final.json",
+    "checks/semantic-correction/skills-check-final.json",
+    "checks/skills-restore-check.json",
+    "checks/skills-restore-install.json",
+    "execution.json",
+    "manuscript/report.md",
+    "notes/analysis.md",
+    "notes/source-comparison.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/results.json": "3eae8dd6771bf9f99c566275fa27297d59372595a9a8301e201e0dbd415de338",
+    "artifacts/run.py": "fe6f057951a10c44c9e9b642821994f82e43e4ecf37b4d45ae54379e8be4c364",
+    "checks/check-final.json": "34c9f68d4f9e75a444170ebb9dbc157b05d18c0054dfb623684d0fbb1dd17469",
+    "checks/check.json": "00dd0dd987b19660a48d8b0d4d668b21010a7df3948a1aa42cd6ef574ccf8800",
+    "checks/checkpoint.json": "842780a70a810fad8a530ce662555cffa8e8f770b6dfdff244d1a16af28ef7e6",
+    "checks/compact-delivery.json": "25e734aa11aa8ad62762143c2428b88f27b48c7929b2bd5938ff372e7e3c75cc",
+    "checks/connect-check.json": "915589f29ca0b73e672efbdb361a5160e4dc798a507fb253572fd31b477b7e9c",
+    "checks/connect-install.json": "5979f737d12014363c976e51b3a99fca21bf0441c1285296f99d412c8ac9a205",
+    "checks/connected-bundle-manifest.json": "40ef72cdce48c1534789e4dce91722a1de7c7299eb323f6ceaeaf91bd7d49c97",
+    "checks/init.json": "54a532b852bafd28d1324a4cb583d0b3b3d921406984136ceff4c96ea5e2cfbb",
+    "checks/initial-init-failure.json": "4d1cef4c03636844e7ee7b3fefbb7ab6fecd047294fead6c158d521b850b5faa",
+    "checks/material-audit-command.json": "a71c83145704bcd294bcfeaf87375fe5911e4ab9ddb79bffcab5c1677f1e80a6",
+    "checks/project-after-skills-restore-check.json": "ad6d4516deddf9db46157b130d3640ab472eed8e0be291e492e6a19f8664cbd2",
+    "checks/project-after-skills-restore-resume.json": "c5f9dd042a7bdd2ff3fbf185de447c11b5bcb0dba85ed26901eb78c3e11c4e69",
+    "checks/register-batch.json": "07c405737697f00aab3486da4194142937ff26eef2656a28768020d8a9308e4b",
+    "checks/registration-semantic-review.md": "d451395ca0a7a2577f0a6ed27b6e51436bb17c1ebc58198fb56ee2e19ad8a40b",
+    "checks/resume.json": "9b7389a6192e671278b5dc11d711b9e2f596ed5c8b52054e9c2234f50a237a2e",
+    "checks/semantic-correction/after-activity-A-interpret.json": "e2a6ef58c67ee474aaafb915fe557a4df947ff47fc6fa32f5333f343f84b4155",
+    "checks/semantic-correction/after-activity-A-ledger-semantic-correction.json": "d2aced6a02a0627b5d4285f8801120c5c5f85e39c0d2b07903f4409cf5e814dc",
+    "checks/semantic-correction/after-activity-A-next-context.json": "d27e2f3f9726438b0ba6f58f37170aad8cb670a9f8b3fea0989a2bf3a95ccaf7",
+    "checks/semantic-correction/after-envelopes.json": "f7f4fe2107590d912ccd5e94a3830b8e60993647df6c43fd2273f8d1920a61a0",
+    "checks/semantic-correction/after-evidence-E-init-failure.json": "3bfb1aaf4dc6f25dd4994d33e6317d0318bf96097ef859c615167b74312873ed",
+    "checks/semantic-correction/after-relation-R-industrial-E1.json": "d8aa3cf3e72f45cd77b5b37d9c689d56a97e05a52d8adebedd0cf3964f6f2194",
+    "checks/semantic-correction/after-relation-R-industrial-counter.json": "a3b420c59b1933abb77f882a68003e58be18f07181ff6c54e31f76c4818a87f0",
+    "checks/semantic-correction/after-relation-R-industrial-draft.json": "72f9f3ed1fd5bff66f0ff9fad4ddb2a0093ec7f833e1d59bb3ae85015e4e7278",
+    "checks/semantic-correction/after-relation-R-nofigure-draft.json": "70f1c5dc4024485cdb4e62206a848f8a07cc4235e2a41ed2e9f41b4edb9fbc9c",
+    "checks/semantic-correction/after-statement-S-industrial.json": "a68d4d9734b1d27850fe6e2dfbb8de3e67d9272ea80c6836582688fa4f6f687d",
+    "checks/semantic-correction/after-statement-S-nofigure.json": "986f5a071655337e9baa6f3e5ad28481a39d9b59d522dc028ed71417a7f086d6",
+    "checks/semantic-correction/before-activity-A-interpret.json": "8427c71594933acc6b703fe10518d4ef1f0376249b1dacd3fef739e6801bf496",
+    "checks/semantic-correction/before-activity-A-next-context.json": "a2c32e89e7334b6f7c55f69bac68dd94dab4124ddaed2de618d99f861eba8cc3",
+    "checks/semantic-correction/before-envelopes.json": "3047bb15093dac27182ade3bcb3c36bc3e434ab796e6194db0ab223f63247be5",
+    "checks/semantic-correction/before-evidence-E-init-failure.json": "039da847c1fad2d41a59727782be0cdac2db2fb109c7b7123d1d55b6608cc08c",
+    "checks/semantic-correction/before-relation-R-industrial-E1.json": "8284ad36e2d5f9c05d12ac0a4f1ab7f0c58e76303e546d253695b1a1e56b098e",
+    "checks/semantic-correction/before-relation-R-industrial-counter.json": "dc8395975952ad2a3ea4a4756d11fafe3aa0b34a55f7f293fad267dbceffcbab",
+    "checks/semantic-correction/before-statement-S-industrial.json": "65afa3224b38d2334e5f778af2b4457f38269c8fa5dcee37f5e9dba317bf222f",
+    "checks/semantic-correction/before-statement-S-nofigure.json": "3b051f0b72030101be297e0fcd76d9de5b1fb714264160c87b026121020d027d",
+    "checks/semantic-correction/check-before-rebinding.json": "9b73deeaed67455b2881dab587dd082c2cfea63fd656217e371f47ffa0506ee7",
+    "checks/semantic-correction/check-final.json": "8878549611c6d6019162d392be844d1af7c9146bc658f9f996a6af2651b5dad8",
+    "checks/semantic-correction/checkpoint.json": "7f3ee50fa12d8d14035c0efa544c53a7efe731738aed64ee34c277e590034759",
+    "checks/semantic-correction/input-activity-A-interpret.json": "bc0182aea82325e0424c7687d199fca5f019d123465257b21e8f19e72cc9822e",
+    "checks/semantic-correction/input-activity-A-ledger-semantic-correction.json": "e535e7ab3dc522a3caa0e4adadf31e78380be616b707ba4c62dd82c25f8295c5",
+    "checks/semantic-correction/input-activity-A-next-context.json": "d3b5ba3ac27bff5cb831a9b83f5fbe816b0dc43504c5d36c15d78a87c91ed05d",
+    "checks/semantic-correction/input-artifact-ART-ledger-semantic-review.json": "d03d23c87d0ff3c766e570c2f2d1f9471aa47dccdd2ab21ca3111bb508e63503",
+    "checks/semantic-correction/input-evidence-E-init-failure.json": "17f00f56661b26a4b08120dab5ab7fa466644d4f542aae4d6c4f75cc47ca1af0",
+    "checks/semantic-correction/input-evidence-E-ledger-semantic-review.json": "23238b4d193560a0d2c1b57b7ade9eba0c407cd08609ff9482828c805c85ac20",
+    "checks/semantic-correction/input-relation-R-industrial-E1.json": "4fdcbd399fd94945d4a156b589aaee448a23e291ef01bbf339ed30e8eda4c754",
+    "checks/semantic-correction/input-relation-R-industrial-counter.json": "8311c6ac686f483861f897a1db075448bd922cc4344025789b6dd14bfa48585d",
+    "checks/semantic-correction/input-relation-R-industrial-draft.json": "1ed312aef259b061766d6949ba5c0a979df3aaf6407a4c5239cc91f7873a7ef2",
+    "checks/semantic-correction/input-relation-R-nofigure-draft.json": "014e852db8ed905bc28b1b556bf59d98adfdac00208556930e75427cc52add4a",
+    "checks/semantic-correction/input-statement-S-industrial.json": "5be99ddc412d2e0e143555b6669b6032c95bd33f244a9087c6e8d39500fbb270",
+    "checks/semantic-correction/input-statement-S-nofigure.json": "99610a479dc1d3f0f6f77d03a90576bdc14b134e9ac9159fd39f12f7b709d332",
+    "checks/semantic-correction/register-activity-A-interpret.json": "0e48bfe1b14c6602fe4f57b926eba8455f458dd29121aae0fa833126ddb957c2",
+    "checks/semantic-correction/register-activity-A-ledger-semantic-correction.json": "da2ecb92e5b463e14e209f03b8e78e4501319013531cade382083827c4dbd076",
+    "checks/semantic-correction/register-activity-A-next-context.json": "4bb4398927f5313143d72649a9ea358414555c130733769e8a1d73b0bbb3135f",
+    "checks/semantic-correction/register-artifact-ART-ledger-semantic-review.json": "c3f9b518d64f0cf6462e90e0690720e432c5889241cdb567bab8abb36a74d105",
+    "checks/semantic-correction/register-evidence-E-init-failure.json": "f1776f6442ff91f6da89fbe0f52c25e5f5bef6d483308074ab8e5a1d86b099eb",
+    "checks/semantic-correction/register-evidence-E-ledger-semantic-review.json": "bec181dcd63dd865f0237987d88c5a1b074327a9455cca4c9f69665ef917c81b",
+    "checks/semantic-correction/register-relation-R-industrial-E1.json": "4a22ab3a7180ac4b8aa570d4932aa15cb1ec5bf72540734b76100dadbdc2f0c4",
+    "checks/semantic-correction/register-relation-R-industrial-counter.json": "2288e4d2565c296feaa0ce011aec353c56bb251d03582b10a66dda210db04249",
+    "checks/semantic-correction/register-relation-R-industrial-draft.json": "1909e01678d2a2121ddcbfcff76559f1b33ee2581a7a47c5739524e60c53682b",
+    "checks/semantic-correction/register-relation-R-nofigure-draft.json": "96ce86abb19462ce952cd06bef07d8144d1051ab23b79f3188afcb8a42852023",
+    "checks/semantic-correction/register-statement-S-industrial.json": "c86f6adb5afd8f19419c60464529d70c929b2737946d4bbd77527eb020931231",
+    "checks/semantic-correction/register-statement-S-nofigure.json": "ebac5897c07e8c4c4c5a0dc872aaf87181ae68f666dfb39c1b3d2ada7ad4adef",
+    "checks/semantic-correction/resume-final.json": "ba625b596a985fe32d19e3077aba14ed1d08eb7d893ca81688176e8a090bec29",
+    "checks/semantic-correction/skills-check-final.json": "98823fb2394348996ddda8a659f5df252dbf50c0140a8a8d7f003e57a21ebea8",
+    "checks/skills-restore-check.json": "bdf63d4b04313326f6747b7449f6e3ffa0f27a41a6fc67747cc04ebf87e6eb59",
+    "checks/skills-restore-install.json": "c789ceb99436a2d9f7bd4923497a4d7943d8bb1ab8005f7ac6743cf1aa0d25a5",
+    "execution.json": "387c2420a4a9e4f6c706bb26335b9ff89240a099dee365a2f3ae67ed13b40ef8",
+    "manuscript/report.md": "4a52f78bc1fd01a34ae59d345df0f72db9716d886c6ab21e41ff6252d28f740b",
+    "notes/analysis.md": "9187553bf955e03c1347253393eff8d3f59efb31750d4efa3637d3a25ffbbba5",
+    "notes/source-comparison.md": "ebdf01b13f34af2e934cee84682e6f2041400e5f65865a539b2b2b640d3e8fee",
+    "review.md": "4cf46022fb0a1bac18ba7d451106788898d1fd6d85dff55dd4188e10ac8e44fb"
+  },
+  "executed_output_sha256": {
+    "artifacts/results.json": "3eae8dd6771bf9f99c566275fa27297d59372595a9a8301e201e0dbd415de338",
+    "artifacts/run.py": "fe6f057951a10c44c9e9b642821994f82e43e4ecf37b4d45ae54379e8be4c364",
+    "checks/check-final.json": "a4ed909208fe03772f1fa2252e24ea8df3b76498c75f9473fd024c41cd2f88b5",
+    "checks/check.json": "b192e054e7c4c72c5fb829e348a451d164bd804e1490947526f87c18e042559d",
+    "checks/checkpoint.json": "a8b29423babeefdb0b99963da3cb1a98f731adbdbebd6a7ee8330e0f3d199ad7",
+    "checks/compact-delivery.json": "25e734aa11aa8ad62762143c2428b88f27b48c7929b2bd5938ff372e7e3c75cc",
+    "checks/connect-check.json": "f1ad492f3a43fbf7ec51b8a02a491e4b0dcfb2a0a4ff4429621d7b69a6331984",
+    "checks/connect-install.json": "b7a734bda561036628c2f297bc1d59cd0ee5d92e85f58178272f086b7099bd58",
+    "checks/connected-bundle-manifest.json": "40ef72cdce48c1534789e4dce91722a1de7c7299eb323f6ceaeaf91bd7d49c97",
+    "checks/init.json": "b8dea3d979e39d998bbfe3fb75342145339a3d3369842c6455e12a45938a75ce",
+    "checks/initial-init-failure.json": "98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4",
+    "checks/material-audit-command.json": "f11712a44f379f5b5021e32843e1fff0063b097b392cb2a93ef5b672c8845563",
+    "checks/project-after-skills-restore-check.json": "c514fbf556071c0cac2d6b041216e974ca49bfb24cdca95e1cc7fe6f12ab1cee",
+    "checks/project-after-skills-restore-resume.json": "d92cef6bda18f09e5f71724d34b2744ed8f57ea7b4c961cffeb0f430f42bf718",
+    "checks/register-batch.json": "afb48877f258431c47391bdf0874fe04524957044c18c9804c403586e33b01da",
+    "checks/registration-semantic-review.md": "d451395ca0a7a2577f0a6ed27b6e51436bb17c1ebc58198fb56ee2e19ad8a40b",
+    "checks/resume.json": "c7d0028306096444ed721bdd30b38804ea69831bcd32cd27389098306b01ae23",
+    "checks/semantic-correction/after-activity-A-interpret.json": "e83467f05bde4b25b5263c8683171a939761ddfb26f89d4b3978904d960c09ef",
+    "checks/semantic-correction/after-activity-A-ledger-semantic-correction.json": "af024798d759748fa5da27587244ab2a659f9bc30e203cec49c64af0b0af467c",
+    "checks/semantic-correction/after-activity-A-next-context.json": "bcc55051e6e89e5c74ea52f7627876baa0b6f5dc9a5c87e6705255a074e4c428",
+    "checks/semantic-correction/after-envelopes.json": "672b47aa1dbfb2857222dc6cb4cd16625dcd95ae8e2a392c0377579e6bf9a8c0",
+    "checks/semantic-correction/after-evidence-E-init-failure.json": "6fac3fbf17d4a9ad4e300d882edcdfe139c29961f1c13bb2ea9dce450ee8c3ef",
+    "checks/semantic-correction/after-relation-R-industrial-E1.json": "d1cf4dc46eab519d3903edd1c6e9a11f1e947921b14c5770be177640d11e2e39",
+    "checks/semantic-correction/after-relation-R-industrial-counter.json": "53d0e6197ed39272720913bd6bf047707914bb65dfe2f1d12742760bd1f293a9",
+    "checks/semantic-correction/after-relation-R-industrial-draft.json": "7a292e5fbd1c00ef2860a3adf8f5cdd42a904e4d7c5245b14d6ef0e3b417ba00",
+    "checks/semantic-correction/after-relation-R-nofigure-draft.json": "a089e2317ba3aa6d8023eb55c7eb55a45cc6dd350a6d840e136a5546a7c52587",
+    "checks/semantic-correction/after-statement-S-industrial.json": "ac0b35090fcb09bc692ab63ad84457b08f8d9fce781036c480813aca557fa4f0",
+    "checks/semantic-correction/after-statement-S-nofigure.json": "4d1333f047011e2b27e0553a3a4d96cc3879cfb975c0efdb87a5c62266ef0c39",
+    "checks/semantic-correction/before-activity-A-interpret.json": "5e8a3529629c600d0121f6308c345e0b09a6276b0b2cdcb156b08380f8d59b23",
+    "checks/semantic-correction/before-activity-A-next-context.json": "6fc64f7bea355f015dd2b27ac318e9f618a93dd888de4edc17f91ce394c7638d",
+    "checks/semantic-correction/before-envelopes.json": "3047bb15093dac27182ade3bcb3c36bc3e434ab796e6194db0ab223f63247be5",
+    "checks/semantic-correction/before-evidence-E-init-failure.json": "c1f7952d2f4045d4d0f6e781d66f8d9cf70b8d3fc80012e9d3e9e14196f5121d",
+    "checks/semantic-correction/before-relation-R-industrial-E1.json": "4d3744584124d3e975f4d977bc91be68acd848cdf2affacd79daba04d30c7370",
+    "checks/semantic-correction/before-relation-R-industrial-counter.json": "d611accb356dc88f67748acd17c6e7182fb5acd9ad9828b7ff40e38ca56365ce",
+    "checks/semantic-correction/before-statement-S-industrial.json": "a0e2570db6d08f4022dd0eeef0d56def292b5742f565dbc9dbf7d5a35ca955c2",
+    "checks/semantic-correction/before-statement-S-nofigure.json": "c7c536420ae09320541ae0e0f8f06e066c5d68f90d112eba27fb8b964963d82d",
+    "checks/semantic-correction/check-before-rebinding.json": "ba8bf77c0dd1f66a7a3a6d6ed51377c601815f6874bc4e7920b91a4199ac71a3",
+    "checks/semantic-correction/check-final.json": "ec2698f465901892344c73e2327544166e16503c0e3338d95b4db18f8f1ac6df",
+    "checks/semantic-correction/checkpoint.json": "5b97b3b79e02fc1c870e6461e78d36b3ab52e7cccc320369a267ad9489a37be6",
+    "checks/semantic-correction/input-activity-A-interpret.json": "bc0182aea82325e0424c7687d199fca5f019d123465257b21e8f19e72cc9822e",
+    "checks/semantic-correction/input-activity-A-ledger-semantic-correction.json": "e535e7ab3dc522a3caa0e4adadf31e78380be616b707ba4c62dd82c25f8295c5",
+    "checks/semantic-correction/input-activity-A-next-context.json": "d3b5ba3ac27bff5cb831a9b83f5fbe816b0dc43504c5d36c15d78a87c91ed05d",
+    "checks/semantic-correction/input-artifact-ART-ledger-semantic-review.json": "d03d23c87d0ff3c766e570c2f2d1f9471aa47dccdd2ab21ca3111bb508e63503",
+    "checks/semantic-correction/input-evidence-E-init-failure.json": "67d894d338bf39289b6c9fa028c0a9bc634f07175070f585f9edfee306f43433",
+    "checks/semantic-correction/input-evidence-E-ledger-semantic-review.json": "23238b4d193560a0d2c1b57b7ade9eba0c407cd08609ff9482828c805c85ac20",
+    "checks/semantic-correction/input-relation-R-industrial-E1.json": "4fdcbd399fd94945d4a156b589aaee448a23e291ef01bbf339ed30e8eda4c754",
+    "checks/semantic-correction/input-relation-R-industrial-counter.json": "8311c6ac686f483861f897a1db075448bd922cc4344025789b6dd14bfa48585d",
+    "checks/semantic-correction/input-relation-R-industrial-draft.json": "1ed312aef259b061766d6949ba5c0a979df3aaf6407a4c5239cc91f7873a7ef2",
+    "checks/semantic-correction/input-relation-R-nofigure-draft.json": "014e852db8ed905bc28b1b556bf59d98adfdac00208556930e75427cc52add4a",
+    "checks/semantic-correction/input-statement-S-industrial.json": "5be99ddc412d2e0e143555b6669b6032c95bd33f244a9087c6e8d39500fbb270",
+    "checks/semantic-correction/input-statement-S-nofigure.json": "99610a479dc1d3f0f6f77d03a90576bdc14b134e9ac9159fd39f12f7b709d332",
+    "checks/semantic-correction/register-activity-A-interpret.json": "9f6a170e2840d67cec8f3f6fdc44f6ef44ce72d4552aaf2c4bdfe5efa81c264c",
+    "checks/semantic-correction/register-activity-A-ledger-semantic-correction.json": "249e7d012b1b8752a1046f5e94fe7abf12fda740ecb9f921518479dfb720bcee",
+    "checks/semantic-correction/register-activity-A-next-context.json": "a64b0fd8626e146d8fc46e62623b819d572f87afc3327ee33a1b2906d25ff05e",
+    "checks/semantic-correction/register-artifact-ART-ledger-semantic-review.json": "0f0e5735f620ddfd72a0aa5578451c4af9703aa522a988d6d09b81961b09b599",
+    "checks/semantic-correction/register-evidence-E-init-failure.json": "9fb9f2fa25447ab2572ad76de96756ed68e87b7152a43e09c71bcd628ddd961a",
+    "checks/semantic-correction/register-evidence-E-ledger-semantic-review.json": "9525dec010828b182820d234479659decca605500ed72b1d8cede1a0d4c2337a",
+    "checks/semantic-correction/register-relation-R-industrial-E1.json": "0b14f46b3635af6078ef1a6671d302c73fbfdea5a9b4343f572e8e334fb8a72e",
+    "checks/semantic-correction/register-relation-R-industrial-counter.json": "2faf2270e6a07b155377feaaab7bb62c79c08d19fd7a1e221a633d7f55f5f3e1",
+    "checks/semantic-correction/register-relation-R-industrial-draft.json": "e947073303e69f9df80db88b4e970e3784a08e6fa1b9e9024fc4be499399ae34",
+    "checks/semantic-correction/register-relation-R-nofigure-draft.json": "55b99c2d521c2870f43c2ba8a83faf0df1a1bc5ec129fd567b8cb5319c698cc5",
+    "checks/semantic-correction/register-statement-S-industrial.json": "56b95d7c245f32a43a7946b74440a582ffa69a6f0095f8d382027b2808381352",
+    "checks/semantic-correction/register-statement-S-nofigure.json": "63cf8c4e6d83b8a26935abda19ff41d9c4a843d51a3b13b554f089afbecc03e2",
+    "checks/semantic-correction/resume-final.json": "5ee83b2882df1ce000f88c765e12b939952c34538d5c8613d9f3b3e769fb86af",
+    "checks/semantic-correction/skills-check-final.json": "7564a7a1f9e3cff4a4e3e1acdc9725b4689322c3dbd7b2c59dba6d2042b2027e",
+    "checks/skills-restore-check.json": "2942409ab35f6f8823da68bd4e1f1051956d9f9e98af4dfddb2f7cda03045332",
+    "checks/skills-restore-install.json": "7d3da02b7e10f1f55112cc0f838629b6756d9ee4d3cbd16dcc8026847fd4dc18",
+    "execution.json": "0fd458fa07d513bf991ee9d64ebcc3870aa6015afeb0d57aa8a751bedda5cbca",
+    "manuscript/report.md": "4a52f78bc1fd01a34ae59d345df0f72db9716d886c6ab21e41ff6252d28f740b",
+    "notes/analysis.md": "9187553bf955e03c1347253393eff8d3f59efb31750d4efa3637d3a25ffbbba5",
+    "notes/source-comparison.md": "ebdf01b13f34af2e934cee84682e6f2041400e5f65865a539b2b2b640d3e8fee",
+    "review.md": "4cf46022fb0a1bac18ba7d451106788898d1fd6d85dff55dd4188e10ac8e44fb"
+  },
+  "output_normalizations": [
+    {
+      "path": "checks/check-final.json",
+      "original_sha256": "a4ed909208fe03772f1fa2252e24ea8df3b76498c75f9473fd024c41cd2f88b5",
+      "published_sha256": "34c9f68d4f9e75a444170ebb9dbc157b05d18c0054dfb623684d0fbb1dd17469",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/check.json",
+      "original_sha256": "b192e054e7c4c72c5fb829e348a451d164bd804e1490947526f87c18e042559d",
+      "published_sha256": "00dd0dd987b19660a48d8b0d4d668b21010a7df3948a1aa42cd6ef574ccf8800",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/checkpoint.json",
+      "original_sha256": "a8b29423babeefdb0b99963da3cb1a98f731adbdbebd6a7ee8330e0f3d199ad7",
+      "published_sha256": "842780a70a810fad8a530ce662555cffa8e8f770b6dfdff244d1a16af28ef7e6",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/connect-check.json",
+      "original_sha256": "f1ad492f3a43fbf7ec51b8a02a491e4b0dcfb2a0a4ff4429621d7b69a6331984",
+      "published_sha256": "915589f29ca0b73e672efbdb361a5160e4dc798a507fb253572fd31b477b7e9c",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/connect-install.json",
+      "original_sha256": "b7a734bda561036628c2f297bc1d59cd0ee5d92e85f58178272f086b7099bd58",
+      "published_sha256": "5979f737d12014363c976e51b3a99fca21bf0441c1285296f99d412c8ac9a205",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/init.json",
+      "original_sha256": "b8dea3d979e39d998bbfe3fb75342145339a3d3369842c6455e12a45938a75ce",
+      "published_sha256": "54a532b852bafd28d1324a4cb583d0b3b3d921406984136ceff4c96ea5e2cfbb",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/initial-init-failure.json",
+      "original_sha256": "98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4",
+      "published_sha256": "4d1cef4c03636844e7ee7b3fefbb7ab6fecd047294fead6c158d521b850b5faa",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/material-audit-command.json",
+      "original_sha256": "f11712a44f379f5b5021e32843e1fff0063b097b392cb2a93ef5b672c8845563",
+      "published_sha256": "a71c83145704bcd294bcfeaf87375fe5911e4ab9ddb79bffcab5c1677f1e80a6",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/project-after-skills-restore-check.json",
+      "original_sha256": "c514fbf556071c0cac2d6b041216e974ca49bfb24cdca95e1cc7fe6f12ab1cee",
+      "published_sha256": "ad6d4516deddf9db46157b130d3640ab472eed8e0be291e492e6a19f8664cbd2",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/project-after-skills-restore-resume.json",
+      "original_sha256": "d92cef6bda18f09e5f71724d34b2744ed8f57ea7b4c961cffeb0f430f42bf718",
+      "published_sha256": "c5f9dd042a7bdd2ff3fbf185de447c11b5bcb0dba85ed26901eb78c3e11c4e69",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/register-batch.json",
+      "original_sha256": "afb48877f258431c47391bdf0874fe04524957044c18c9804c403586e33b01da",
+      "published_sha256": "07c405737697f00aab3486da4194142937ff26eef2656a28768020d8a9308e4b",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/resume.json",
+      "original_sha256": "c7d0028306096444ed721bdd30b38804ea69831bcd32cd27389098306b01ae23",
+      "published_sha256": "9b7389a6192e671278b5dc11d711b9e2f596ed5c8b52054e9c2234f50a237a2e",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-activity-A-interpret.json",
+      "original_sha256": "e83467f05bde4b25b5263c8683171a939761ddfb26f89d4b3978904d960c09ef",
+      "published_sha256": "e2a6ef58c67ee474aaafb915fe557a4df947ff47fc6fa32f5333f343f84b4155",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-activity-A-ledger-semantic-correction.json",
+      "original_sha256": "af024798d759748fa5da27587244ab2a659f9bc30e203cec49c64af0b0af467c",
+      "published_sha256": "d2aced6a02a0627b5d4285f8801120c5c5f85e39c0d2b07903f4409cf5e814dc",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-activity-A-next-context.json",
+      "original_sha256": "bcc55051e6e89e5c74ea52f7627876baa0b6f5dc9a5c87e6705255a074e4c428",
+      "published_sha256": "d27e2f3f9726438b0ba6f58f37170aad8cb670a9f8b3fea0989a2bf3a95ccaf7",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-envelopes.json",
+      "original_sha256": "672b47aa1dbfb2857222dc6cb4cd16625dcd95ae8e2a392c0377579e6bf9a8c0",
+      "published_sha256": "f7f4fe2107590d912ccd5e94a3830b8e60993647df6c43fd2273f8d1920a61a0",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-evidence-E-init-failure.json",
+      "original_sha256": "6fac3fbf17d4a9ad4e300d882edcdfe139c29961f1c13bb2ea9dce450ee8c3ef",
+      "published_sha256": "3bfb1aaf4dc6f25dd4994d33e6317d0318bf96097ef859c615167b74312873ed",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-relation-R-industrial-E1.json",
+      "original_sha256": "d1cf4dc46eab519d3903edd1c6e9a11f1e947921b14c5770be177640d11e2e39",
+      "published_sha256": "d8aa3cf3e72f45cd77b5b37d9c689d56a97e05a52d8adebedd0cf3964f6f2194",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-relation-R-industrial-counter.json",
+      "original_sha256": "53d0e6197ed39272720913bd6bf047707914bb65dfe2f1d12742760bd1f293a9",
+      "published_sha256": "a3b420c59b1933abb77f882a68003e58be18f07181ff6c54e31f76c4818a87f0",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-relation-R-industrial-draft.json",
+      "original_sha256": "7a292e5fbd1c00ef2860a3adf8f5cdd42a904e4d7c5245b14d6ef0e3b417ba00",
+      "published_sha256": "72f9f3ed1fd5bff66f0ff9fad4ddb2a0093ec7f833e1d59bb3ae85015e4e7278",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-relation-R-nofigure-draft.json",
+      "original_sha256": "a089e2317ba3aa6d8023eb55c7eb55a45cc6dd350a6d840e136a5546a7c52587",
+      "published_sha256": "70f1c5dc4024485cdb4e62206a848f8a07cc4235e2a41ed2e9f41b4edb9fbc9c",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-statement-S-industrial.json",
+      "original_sha256": "ac0b35090fcb09bc692ab63ad84457b08f8d9fce781036c480813aca557fa4f0",
+      "published_sha256": "a68d4d9734b1d27850fe6e2dfbb8de3e67d9272ea80c6836582688fa4f6f687d",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/after-statement-S-nofigure.json",
+      "original_sha256": "4d1333f047011e2b27e0553a3a4d96cc3879cfb975c0efdb87a5c62266ef0c39",
+      "published_sha256": "986f5a071655337e9baa6f3e5ad28481a39d9b59d522dc028ed71417a7f086d6",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/before-activity-A-interpret.json",
+      "original_sha256": "5e8a3529629c600d0121f6308c345e0b09a6276b0b2cdcb156b08380f8d59b23",
+      "published_sha256": "8427c71594933acc6b703fe10518d4ef1f0376249b1dacd3fef739e6801bf496",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/before-activity-A-next-context.json",
+      "original_sha256": "6fc64f7bea355f015dd2b27ac318e9f618a93dd888de4edc17f91ce394c7638d",
+      "published_sha256": "a2c32e89e7334b6f7c55f69bac68dd94dab4124ddaed2de618d99f861eba8cc3",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/before-evidence-E-init-failure.json",
+      "original_sha256": "c1f7952d2f4045d4d0f6e781d66f8d9cf70b8d3fc80012e9d3e9e14196f5121d",
+      "published_sha256": "039da847c1fad2d41a59727782be0cdac2db2fb109c7b7123d1d55b6608cc08c",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/before-relation-R-industrial-E1.json",
+      "original_sha256": "4d3744584124d3e975f4d977bc91be68acd848cdf2affacd79daba04d30c7370",
+      "published_sha256": "8284ad36e2d5f9c05d12ac0a4f1ab7f0c58e76303e546d253695b1a1e56b098e",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/before-relation-R-industrial-counter.json",
+      "original_sha256": "d611accb356dc88f67748acd17c6e7182fb5acd9ad9828b7ff40e38ca56365ce",
+      "published_sha256": "dc8395975952ad2a3ea4a4756d11fafe3aa0b34a55f7f293fad267dbceffcbab",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/before-statement-S-industrial.json",
+      "original_sha256": "a0e2570db6d08f4022dd0eeef0d56def292b5742f565dbc9dbf7d5a35ca955c2",
+      "published_sha256": "65afa3224b38d2334e5f778af2b4457f38269c8fa5dcee37f5e9dba317bf222f",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/before-statement-S-nofigure.json",
+      "original_sha256": "c7c536420ae09320541ae0e0f8f06e066c5d68f90d112eba27fb8b964963d82d",
+      "published_sha256": "3b051f0b72030101be297e0fcd76d9de5b1fb714264160c87b026121020d027d",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/check-before-rebinding.json",
+      "original_sha256": "ba8bf77c0dd1f66a7a3a6d6ed51377c601815f6874bc4e7920b91a4199ac71a3",
+      "published_sha256": "9b73deeaed67455b2881dab587dd082c2cfea63fd656217e371f47ffa0506ee7",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/check-final.json",
+      "original_sha256": "ec2698f465901892344c73e2327544166e16503c0e3338d95b4db18f8f1ac6df",
+      "published_sha256": "8878549611c6d6019162d392be844d1af7c9146bc658f9f996a6af2651b5dad8",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/checkpoint.json",
+      "original_sha256": "5b97b3b79e02fc1c870e6461e78d36b3ab52e7cccc320369a267ad9489a37be6",
+      "published_sha256": "7f3ee50fa12d8d14035c0efa544c53a7efe731738aed64ee34c277e590034759",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/input-evidence-E-init-failure.json",
+      "original_sha256": "67d894d338bf39289b6c9fa028c0a9bc634f07175070f585f9edfee306f43433",
+      "published_sha256": "17f00f56661b26a4b08120dab5ab7fa466644d4f542aae4d6c4f75cc47ca1af0",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-activity-A-interpret.json",
+      "original_sha256": "9f6a170e2840d67cec8f3f6fdc44f6ef44ce72d4552aaf2c4bdfe5efa81c264c",
+      "published_sha256": "0e48bfe1b14c6602fe4f57b926eba8455f458dd29121aae0fa833126ddb957c2",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-activity-A-ledger-semantic-correction.json",
+      "original_sha256": "249e7d012b1b8752a1046f5e94fe7abf12fda740ecb9f921518479dfb720bcee",
+      "published_sha256": "da2ecb92e5b463e14e209f03b8e78e4501319013531cade382083827c4dbd076",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-activity-A-next-context.json",
+      "original_sha256": "a64b0fd8626e146d8fc46e62623b819d572f87afc3327ee33a1b2906d25ff05e",
+      "published_sha256": "4bb4398927f5313143d72649a9ea358414555c130733769e8a1d73b0bbb3135f",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-artifact-ART-ledger-semantic-review.json",
+      "original_sha256": "0f0e5735f620ddfd72a0aa5578451c4af9703aa522a988d6d09b81961b09b599",
+      "published_sha256": "c3f9b518d64f0cf6462e90e0690720e432c5889241cdb567bab8abb36a74d105",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-evidence-E-init-failure.json",
+      "original_sha256": "9fb9f2fa25447ab2572ad76de96756ed68e87b7152a43e09c71bcd628ddd961a",
+      "published_sha256": "f1776f6442ff91f6da89fbe0f52c25e5f5bef6d483308074ab8e5a1d86b099eb",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-evidence-E-ledger-semantic-review.json",
+      "original_sha256": "9525dec010828b182820d234479659decca605500ed72b1d8cede1a0d4c2337a",
+      "published_sha256": "bec181dcd63dd865f0237987d88c5a1b074327a9455cca4c9f69665ef917c81b",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-relation-R-industrial-E1.json",
+      "original_sha256": "0b14f46b3635af6078ef1a6671d302c73fbfdea5a9b4343f572e8e334fb8a72e",
+      "published_sha256": "4a22ab3a7180ac4b8aa570d4932aa15cb1ec5bf72540734b76100dadbdc2f0c4",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-relation-R-industrial-counter.json",
+      "original_sha256": "2faf2270e6a07b155377feaaab7bb62c79c08d19fd7a1e221a633d7f55f5f3e1",
+      "published_sha256": "2288e4d2565c296feaa0ce011aec353c56bb251d03582b10a66dda210db04249",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-relation-R-industrial-draft.json",
+      "original_sha256": "e947073303e69f9df80db88b4e970e3784a08e6fa1b9e9024fc4be499399ae34",
+      "published_sha256": "1909e01678d2a2121ddcbfcff76559f1b33ee2581a7a47c5739524e60c53682b",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-relation-R-nofigure-draft.json",
+      "original_sha256": "55b99c2d521c2870f43c2ba8a83faf0df1a1bc5ec129fd567b8cb5319c698cc5",
+      "published_sha256": "96ce86abb19462ce952cd06bef07d8144d1051ab23b79f3188afcb8a42852023",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-statement-S-industrial.json",
+      "original_sha256": "56b95d7c245f32a43a7946b74440a582ffa69a6f0095f8d382027b2808381352",
+      "published_sha256": "c86f6adb5afd8f19419c60464529d70c929b2737946d4bbd77527eb020931231",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/register-statement-S-nofigure.json",
+      "original_sha256": "63cf8c4e6d83b8a26935abda19ff41d9c4a843d51a3b13b554f089afbecc03e2",
+      "published_sha256": "ebac5897c07e8c4c4c5a0dc872aaf87181ae68f666dfb39c1b3d2ada7ad4adef",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/resume-final.json",
+      "original_sha256": "5ee83b2882df1ce000f88c765e12b939952c34538d5c8613d9f3b3e769fb86af",
+      "published_sha256": "ba625b596a985fe32d19e3077aba14ed1d08eb7d893ca81688176e8a090bec29",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/semantic-correction/skills-check-final.json",
+      "original_sha256": "7564a7a1f9e3cff4a4e3e1acdc9725b4689322c3dbd7b2c59dba6d2042b2027e",
+      "published_sha256": "98823fb2394348996ddda8a659f5df252dbf50c0140a8a8d7f003e57a21ebea8",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/skills-restore-check.json",
+      "original_sha256": "2942409ab35f6f8823da68bd4e1f1051956d9f9e98af4dfddb2f7cda03045332",
+      "published_sha256": "bdf63d4b04313326f6747b7449f6e3ffa0f27a41a6fc67747cc04ebf87e6eb59",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/skills-restore-install.json",
+      "original_sha256": "7d3da02b7e10f1f55112cc0f838629b6756d9ee4d3cbd16dcc8026847fd4dc18",
+      "published_sha256": "c789ceb99436a2d9f7bd4923497a4d7943d8bb1ab8005f7ac6743cf1aa0d25a5",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "execution.json",
+      "original_sha256": "0fd458fa07d513bf991ee9d64ebcc3870aa6015afeb0d57aa8a751bedda5cbca",
+      "published_sha256": "387c2420a4a9e4f6c706bb26335b9ff89240a099dee365a2f3ae67ed13b40ef8",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    }
+  ],
+  "omitted_identical_outputs": [],
+  "guidance_sha256": {
+    "core/cli.py": "c5fb1241524222447655127b3796e45ef80ea50ce1539a58881098651d567548",
+    "core/project.py": "ef7d0c6e5ada59a5a1b08ba3d4f83b1efa454a959c58a55f4851aaf0e6b2be99",
+    "core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "core/schemas/activity.schema.json": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    "core/schemas/artifact.schema.json": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    "core/schemas/evidence.schema.json": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    "core/schemas/method-binding.schema.json": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    "core/schemas/registry.schema.json": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
+    "core/schemas/relation.schema.json": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    "core/schemas/source.schema.json": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    "core/schemas/statement.schema.json": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    "core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+    "evals/disciplinary/cases/artwork-versions/draft.md": "b16f8ef1943139d651088e151e433c075febc814282ac3e32a5433f6f3bab5ef",
+    "evals/disciplinary/cases/artwork-versions/original.png": "7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7",
+    "evals/disciplinary/cases/artwork-versions/reproduction.png": "2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247",
+    "evals/disciplinary/cases/artwork-versions/source-packet.md": "fb5d68dcfe709b80f50653a3503184ba49a94dcccabb04ce560c94be8dec614a",
+    "evals/disciplinary/cases/artwork-versions/task.md": "de1c54030330fb4a578f7fe1eb1a0d70b1923008b1e12a04ec9d2ca69e3d7643",
+    "profiles/disciplines/humanities.md": "4ca1a988537c0f006d0fc5ce33dc1f8dfbcd09733c396a24bd4d2390dd406114",
+    "profiles/methods/historical-interpretive.md": "0894387de28c40bbf2e5913dbf260b1df15f6eaed45abdd8df2a9c1360c8f4d9",
+    "skills/rw-figures/SKILL.md": "6b25063c1ec423267546af8061dfa543abe770c33cd91514bdb5a2c01c292b43",
+    "skills/rw-literature/SKILL.md": "e5dd402251a95c5b1b1673b1b50c9a0369ba2769f7e9eeb55f3b6e5cf7c61088",
+    "skills/rw-review/SKILL.md": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+    "skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+    "skills/rw-workflow/SKILL.md": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+    "skills/rw-writing/SKILL.md": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+    "tools/connect_skills.py": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+    "tools/research.py": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b"
+  },
+  "records": [
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "首次init因非法entry validation退出2；后续纠正成功。",
+        "id": "E-init-failure",
+        "limitations": "接口失败，不是艺术解释检验。",
+        "location": {
+          "kind": "local",
+          "path": "checks/initial-init-failure.json"
+        },
+        "notes": "执行日志来源已显式更正；checks/initial-init-failure.json原始字节和A-init-failure的failed状态保留。",
+        "provenance": "Codex代理实际通过subprocess.run执行初始化命令；argv=[\"PYTHON\", \"TOOLKIT/tools/research.py\", \"init\", \"--output\", \"PROJECT\", \"--title\", \"《两条路径》原构图与裁剪展陈：版本与竞争解释\", \"--discipline\", \"humanities\", \"--method\", \"historical-interpretive\", \"--mode\", \"structured\", \"--language\", \"zh\", \"--entry\", \"validation\"]。证据文件保存该次调用实际返回的stdout、stderr（本次为空）及exit_status=2；stdout含Unknown project entry activity or workflow mode错误。",
+        "source_ids": [],
+        "type": "execution-failure"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "复核报告性命题与被审内容命题混用、E1唯一性归属和失败日志来源，并形成明确更正依据。",
+        "id": "E-ledger-semantic-review",
+        "limitations": "本次是登记语义与执行来源复核；原科学正文未改，未新增历史材料。",
+        "location": {
+          "kind": "local",
+          "path": "checks/registration-semantic-review.md"
+        },
+        "provenance": "由Codex代理重新读取inputs/draft.md第1行、inputs/source-packet.md第3–5行、CLI show返回的原版本及checks/initial-init-failure.json后编写。",
+        "type": "registration-semantic-review"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "程序重新读取五个输入，核对PNG尺寸和块CRC、提取文本行定位。",
+        "id": "E-metadata",
+        "limitations": "尺寸一致不证明像素变换，程序不判断象征与意图。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "由Codex代理在本次执行中从项目inputs复制件读取/查看；具体步骤见notes/analysis.md与execution.json。",
+        "source_ids": [],
+        "type": "material-audit"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "SRC-A1",
+        "limitations": "仅有包内节录；未取得完整工作笺，未提工厂等为包的叙述。",
+        "locator": "inputs/source-packet.md:3；所载第2行",
+        "notes": "本任务原创虚构合成材料，可MIT分发；不是现实历史档案。",
+        "rights": "public",
+        "title": "A1创作者工作笺节录",
+        "version": "虚构1901-04"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "SRC-C1",
+        "limitations": "后出展陈解释；未取得完整目录。",
+        "locator": "inputs/source-packet.md:4；所载第5段",
+        "notes": "本任务原创虚构合成材料，可MIT分发；不是现实历史档案。",
+        "rights": "public",
+        "title": "C1展览目录节录",
+        "version": "虚构1924年"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "partial",
+        "id": "SRC-E1",
+        "limitations": "仅依1924复刻，未查原构图或A1；未取得全文。",
+        "locator": "inputs/source-packet.md:5；所载第8行",
+        "notes": "本任务原创虚构合成材料，可MIT分发；不是现实历史档案。",
+        "rights": "public",
+        "title": "E1后出编者说明节录",
+        "version": "虚构1970年"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-draft",
+        "limitations": "保留原件，不覆盖。",
+        "locator": "inputs/draft.md:1",
+        "notes": "本任务原创虚构合成材料，可MIT分发；不是现实历史档案。",
+        "rights": "public",
+        "title": "被审查的原输入草稿",
+        "version": "本次收到的单行草稿"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-original",
+        "limitations": "数字图像全图已由Codex用view_image查看；无实物原画鉴定。",
+        "locator": "inputs/original.png；包第2行指定其版本",
+        "notes": "本任务原创虚构合成材料，可MIT分发；不是现实历史档案。",
+        "rights": "public",
+        "title": "《两条路径》原构图数字图像",
+        "version": "虚构1901年原构图；本次收到的PNG"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-packet",
+        "limitations": "版本与日期来自编写者设定；A1/C1/E1非独立取得原件。",
+        "locator": "inputs/source-packet.md:1-6",
+        "notes": "本任务原创虚构合成材料，可MIT分发；不是现实历史档案。",
+        "rights": "public",
+        "title": "原创虚构画作与来源包",
+        "version": "本次任务收到的完整合成文本"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC-reproduction",
+        "limitations": "已全图查看；不代表未裁剪全图。",
+        "locator": "inputs/reproduction.png；包第2行",
+        "notes": "本任务原创虚构合成材料，可MIT分发；不是现实历史档案。",
+        "rights": "public",
+        "title": "《两条路径》1924裁剪目录复刻",
+        "version": "虚构1924年上部裁剪复刻；本次收到的PNG"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "本轮研究问题，不作真假评估。",
+          "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+          "scope": "仅限所给离线原创虚构图像和材料包节录",
+          "status": "not-applicable"
+        },
+        "id": "Q-versions",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "text": "裁剪怎样改变《两条路径》的视觉依据及竞争解释？",
+        "type": "question",
+        "use": "background",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "A1明确表达选择考虑；大墙与暗门仍可能提供阻隔感。",
+          "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+          "scope": "仅限所给离线原创虚构图像和材料包节录",
+          "status": "supported-in-scope"
+        },
+        "id": "S-choice",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "text": "道路相接、原图人物与A1共同支持去向选择读法；它不是作品唯一意义。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "两图实际查看；包第2行提供版本说明；PNG尺寸一致。",
+          "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+          "scope": "仅限所给离线原创虚构图像和材料包节录",
+          "status": "supported-in-scope"
+        },
+        "id": "S-crop",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "text": "原构图有左下人形和展开的道路；复刻裁掉下部，人物及大部分路径消失，不能准确保存全构图。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "视觉锚点、C1第5段及裁剪差异；A1与道路关系提供另一解释。",
+          "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+          "scope": "仅限所给离线原创虚构图像和材料包节录",
+          "status": "supported-in-scope"
+        },
+        "id": "S-enclosure",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "text": "墙面与暗门支持阻隔感，C1确认1924年目录的封闭制度读法；该展陈解释不能改署为艺术家唯一意图。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "同包节录、内容有异、E1仅依复刻，C1及E1均为后出解释。",
+          "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+          "scope": "仅限所给离线原创虚构图像和材料包节录",
+          "status": "supported-in-scope"
+        },
+        "id": "S-independence",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "text": "A1、C1、E1属于不同来源层次，未构成三份独立一致的一手意图证明。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "E1只是1970年基于裁剪复刻的后出归因，没有说唯一，也未确认艺术家自身意图；其无人前提被原图挑战。A1另有保留选择的自述，但这些材料不能反证一切工业批判可能，故唯一意图主张依据不足。",
+          "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+          "scope": "仅限所给离线原创虚构图像和材料包节录",
+          "status": "insufficient"
+        },
+        "id": "S-industrial",
+        "notes": "直接登记被审内容命题；其在原草稿第1行出现的事实由R-industrial-draft/E-draft定位，不再混入statement文本。",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "text": "作者的唯一意图是谴责工业劳动制度。",
+        "type": "interpretive",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "原图左下实际可见人形，复刻的无人不代表原构图无人。",
+          "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+          "scope": "仅限所给离线原创虚构图像和材料包节录",
+          "status": "challenged"
+        },
+        "id": "S-nofigure",
+        "notes": "直接登记被审内容命题；原草稿位置由R-nofigure-draft/E-draft定位。",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "text": "原画完全没有人物。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "A-init-failure",
+        "inputs": [],
+        "note": "Codex代理执行；非法entry validation触发CLI退出2。原尝试保留，后续已去掉该参数成功初始化。",
+        "outputs": [
+          "evidence:E-init-failure"
+        ],
+        "status": "failed",
+        "title": "首次项目初始化参数被拒绝"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "包第3行/所载A1第2行：道路相接并保留观看者的去向选择。",
+        "id": "E-A1",
+        "limitations": "只见节录；自述不穷尽意义。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/source-packet.md"
+        },
+        "provenance": "由Codex代理在本次执行中从项目inputs复制件读取/查看；具体步骤见notes/analysis.md与execution.json。",
+        "source_ids": [
+          "SRC-packet",
+          "SRC-A1"
+        ],
+        "type": "creator-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "包第4行/所载C1第5段：放大上部，强调几何张力，解释为封闭制度。",
+        "id": "E-C1",
+        "limitations": "1924年展陈读法，不是1901年已确认的艺术家意图。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/source-packet.md"
+        },
+        "provenance": "由Codex代理在本次执行中从项目inputs复制件读取/查看；具体步骤见notes/analysis.md与execution.json。",
+        "source_ids": [
+          "SRC-packet",
+          "SRC-C1"
+        ],
+        "type": "catalogue-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "包第5行/所载E1第8行：只依复刻，无人因此必谴责工业劳动制度。",
+        "id": "E-E1",
+        "limitations": "记录一次后出判断；其前提受原图挑战；不能独立佐证原画描述。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/source-packet.md"
+        },
+        "provenance": "由Codex代理在本次执行中从项目inputs复制件读取/查看；具体步骤见notes/analysis.md与execution.json。",
+        "source_ids": [
+          "SRC-packet",
+          "SRC-E1"
+        ],
+        "type": "later-editor-excerpt"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "单行草稿中的五项原主张，保留未改。",
+        "id": "E-draft",
+        "limitations": "",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "由Codex代理在本次执行中从项目inputs复制件读取/查看；具体步骤见notes/analysis.md与execution.json。",
+        "source_ids": [
+          "SRC-draft"
+        ],
+        "type": "draft-text"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "第2行：虚构身份、底部裁180像素再等比放大；第6行是当代图像导航。",
+        "id": "E-identity",
+        "limitations": "版本身份是案例设定，不是外部历史鉴定。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/source-packet.md"
+        },
+        "provenance": "由Codex代理在本次执行中从项目inputs复制件读取/查看；具体步骤见notes/analysis.md与execution.json。",
+        "source_ids": [
+          "SRC-packet"
+        ],
+        "type": "source-packet"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "全图实际查看；人物约x150–196/y457–553，门洞约x360–556/y150–431，路径相接。",
+        "id": "E-original",
+        "limitations": "坐标为看图后近似定位，人物身份和运动方向未知。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/original.png"
+        },
+        "provenance": "由Codex代理在本次执行中从项目inputs复制件读取/查看；具体步骤见notes/analysis.md与execution.json。",
+        "source_ids": [
+          "SRC-original"
+        ],
+        "type": "visual-artwork"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "全图实际查看；墙面与门洞主导画面，底边仅留窄路径色块，未见人形。",
+        "id": "E-reproduction",
+        "limitations": "裁剪图不能代表原画全貌。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/reproduction.png"
+        },
+        "provenance": "由Codex代理在本次执行中从项目inputs复制件读取/查看；具体步骤见notes/analysis.md与execution.json。",
+        "source_ids": [
+          "SRC-reproduction"
+        ],
+        "type": "visual-reproduction"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-metadata",
+        "id": "R-crop-dimensions",
+        "rationale": "尺寸关系一致，但不等于像素配准验证或视觉识别。",
+        "relation": "qualifies",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-crop"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E-identity"
+        ],
+        "description": "标准库材料身份与尺寸核对脚本，支持指定输入及全新输出目录。",
+        "id": "ART-code",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E-ledger-semantic-review",
+          "evidence:E-draft",
+          "evidence:E-E1",
+          "evidence:E-init-failure"
+        ],
+        "description": "登记语义缺陷、原文核对与显式更正依据。",
+        "id": "ART-ledger-semantic-review",
+        "path": "checks/registration-semantic-review.md",
+        "type": "registration-correction"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E-original",
+          "evidence:E-reproduction",
+          "evidence:E-A1",
+          "evidence:E-C1",
+          "evidence:E-E1"
+        ],
+        "description": "原图/复刻/A1/C1/E1的访问与支持范围对照。",
+        "id": "ART-sources",
+        "path": "notes/source-comparison.md",
+        "type": "source-comparison"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-A1",
+        "id": "R-choice-A1",
+        "rationale": "A1表达保留去向选择的创作考虑。",
+        "relation": "supports",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-choice"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-C1",
+        "id": "R-choice-limit",
+        "rationale": "后出封闭读法提示同一构图可有阻隔张力，不撤销A1。",
+        "relation": "qualifies",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-choice"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-original",
+        "id": "R-choice-visual",
+        "rationale": "人物、门洞、道路相接提供视觉锚点；人物行动仍未知。",
+        "relation": "supports",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-choice"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-identity",
+        "id": "R-crop-identity",
+        "rationale": "材料包明确指定裁剪版本及180像素。",
+        "relation": "supports",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-crop"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-original",
+        "id": "R-crop-observe",
+        "rationale": "原图实际可见左下人形及展开路径。",
+        "relation": "supports",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-crop"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-reproduction",
+        "id": "R-crop-rep",
+        "rationale": "复刻仅留上部，前景与人物不可见。",
+        "relation": "supports",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-crop"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-C1",
+        "id": "R-dependence-C1",
+        "rationale": "目录文类与时间晚于创作，并非作者工作笺；内容是封闭制度而非工业劳动。",
+        "relation": "supports",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-independence"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-E1",
+        "id": "R-dependence-E1",
+        "rationale": "E1仅依复刻，且是后出解释而非独立一手意图证据。",
+        "relation": "supports",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-independence"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-draft",
+        "id": "R-draft-context",
+        "rationale": "定位被审查的三份独立一手材料断言。",
+        "relation": "contextualizes",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-independence"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-A1",
+        "id": "R-enclosure-A1",
+        "rationale": "另有选择考虑，封闭不能被写成唯一作者意图。",
+        "relation": "qualifies",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-enclosure"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-C1",
+        "id": "R-enclosure-C1",
+        "rationale": "直接记录1924目录的解释及放大目的。",
+        "relation": "supports",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-enclosure"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-reproduction",
+        "id": "R-enclosure-rep",
+        "rationale": "墙与门洞在裁剪构图中的突出位置与该观看读法相联系。",
+        "relation": "supports",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-enclosure"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-A1",
+        "id": "R-industrial-A1",
+        "rationale": "提供另一明确创作考虑，所给节录未给工业对象；沉默不证明政治意义不存在。",
+        "relation": "qualifies",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-industrial"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-E1",
+        "id": "R-industrial-E1",
+        "rationale": "E1记载1970年有人把作品归因为艺术家对工业劳动制度的谴责，提供后出接受语境；节录没有唯一性表述，也不确认归因成立。",
+        "relation": "contextualizes",
+        "scope": "仅限E1后出归因的存在与语境，不支持原作者唯一意图。",
+        "statement_id": "S-industrial"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-original",
+        "id": "R-industrial-counter",
+        "rationale": "原图可见人形，直接反驳E1的无人前提，削弱其由此推导工业劳动意图的依据；不能从有人直接反证艺术家具有任何该意图的可能。",
+        "relation": "qualifies",
+        "scope": "只限制E1归因推论的前提和支持力度，不直接判定艺术家全部意图。",
+        "statement_id": "S-industrial"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-draft",
+        "id": "R-industrial-draft",
+        "rationale": "inputs/draft.md第1行出现“作者唯一意图是谴责工业劳动制度”，定位本次被审内容命题；原稿出现该断言不证明其内容成立。",
+        "relation": "contextualizes",
+        "scope": "只定位原草稿断言的出现及被审语境。",
+        "statement_id": "S-industrial"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-original",
+        "id": "R-nofigure",
+        "rationale": "原图左下实际可见人形。",
+        "relation": "challenges",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-nofigure"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-draft",
+        "id": "R-nofigure-draft",
+        "rationale": "inputs/draft.md第1行出现“原画完全没有人物”，定位本次被审内容命题；原稿出现该断言不证明其内容成立。",
+        "relation": "contextualizes",
+        "scope": "只定位原草稿断言的出现及被审语境。",
+        "statement_id": "S-nofigure"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E-reproduction",
+        "id": "R-nofigure-version",
+        "rationale": "复刻未见人物仅限于其裁剪范围。",
+        "relation": "qualifies",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "statement_id": "S-nofigure"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART-code",
+          "evidence:E-original",
+          "evidence:E-reproduction",
+          "evidence:E-identity"
+        ],
+        "description": "真实运行得到的PNG尺寸、CRC、来源定位及输入哈希。",
+        "id": "ART-results",
+        "path": "artifacts/results.json",
+        "type": "material-audit-results"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "A-material-audit",
+        "inputs": [
+          "evidence:E-original",
+          "evidence:E-reproduction",
+          "evidence:E-identity",
+          "evidence:E-draft"
+        ],
+        "note": "Codex代理编写并实际运行标准库脚本，退出0；无数值实验。",
+        "outputs": [
+          "artifact:ART-code",
+          "artifact:ART-results"
+        ],
+        "status": "done",
+        "title": "读取输入复制件并核对尺寸及来源定位"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E-original",
+          "evidence:E-reproduction",
+          "evidence:E-A1",
+          "evidence:E-C1",
+          "evidence:E-E1",
+          "artifact:ART-results"
+        ],
+        "description": "有坐标的视觉锚点、两种竞争解释、来源层次及逐项草稿审查。",
+        "id": "ART-analysis",
+        "path": "notes/analysis.md",
+        "type": "analysis"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART-analysis",
+          "artifact:ART-sources",
+          "statement:S-choice",
+          "statement:S-enclosure"
+        ],
+        "description": "475个非空白字符以内的中文解释短稿，保留具体来源定位。",
+        "id": "ART-report",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:ART-analysis",
+          "artifact:ART-report",
+          "evidence:E-draft",
+          "evidence:E-init-failure"
+        ],
+        "description": "代理实际自审、保留接口失败与明确下一步。",
+        "id": "ART-review",
+        "path": "review.md",
+        "type": "self-review"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A-material-audit"
+        ],
+        "id": "A-interpret",
+        "inputs": [
+          "evidence:E-original",
+          "evidence:E-reproduction",
+          "evidence:E-A1",
+          "evidence:E-C1",
+          "evidence:E-E1",
+          "evidence:E-draft",
+          "artifact:ART-results",
+          "statement:S-industrial",
+          "statement:S-nofigure",
+          "relation:R-industrial-E1",
+          "relation:R-industrial-counter",
+          "relation:R-industrial-A1",
+          "relation:R-nofigure",
+          "relation:R-nofigure-version",
+          "relation:R-industrial-draft",
+          "relation:R-nofigure-draft",
+          "artifact:ART-ledger-semantic-review"
+        ],
+        "note": "由Codex代理实际完成；view_image全图查看原输入及复制件；非独立人类审稿。 后续登记语义复核已将被审内容与草稿归属分开，明确E1未说唯一，纠正失败日志来源；重新核对原正文仍表达相同解释范围，科学产物未改，并重新绑定当前记录版本。",
+        "outputs": [
+          "artifact:ART-analysis",
+          "artifact:ART-sources",
+          "artifact:ART-report",
+          "artifact:ART-review"
+        ],
+        "status": "done",
+        "title": "实际看图、比较两种解释、审查原稿并写出短稿"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A-interpret"
+        ],
+        "id": "A-ledger-semantic-correction",
+        "inputs": [
+          "evidence:E-draft",
+          "evidence:E-E1",
+          "evidence:E-init-failure",
+          "statement:S-industrial",
+          "statement:S-nofigure",
+          "relation:R-industrial-E1",
+          "relation:R-industrial-counter",
+          "relation:R-industrial-draft",
+          "relation:R-nofigure-draft"
+        ],
+        "note": "Codex代理实际重读本包原文、通过CLI show取得版本并显式replace；旧版本及中间stale检查保留；输入和原科学正文无改动。",
+        "outputs": [
+          "artifact:ART-ledger-semantic-review"
+        ],
+        "status": "done",
+        "title": "核对原文并修正被审命题、证据关系和CLI日志来源"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:Q-versions",
+          "statement:S-choice",
+          "statement:S-enclosure",
+          "statement:S-industrial",
+          "activity:A-interpret",
+          "artifact:ART-analysis",
+          "artifact:ART-report"
+        ],
+        "id": "MB-art",
+        "method_id": "historical-interpretive",
+        "profile_version": "0.1",
+        "reason": "按版本身份、实际可见形象、作者自述和后出展陈/接受材料比较竞争解释。画像本身提示该变体未完整验证；这里仅登记本次具体执行。",
+        "variant": "art-interpretation"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "A-interpret",
+          "A-ledger-semantic-correction"
+        ],
+        "id": "A-next-context",
+        "inputs": [
+          "artifact:ART-analysis",
+          "artifact:ART-review",
+          "artifact:ART-ledger-semantic-review"
+        ],
+        "note": "计划：索取工作笺全文及目录第5段所在完整页，检查是否存在工业劳动的直接出处；本轮未取得，不记完成。 登记语义和失败日志来源更正已完成；后续仍需新语境材料，本活动保持pending。",
+        "outputs": [],
+        "status": "pending",
+        "title": "取得完整A1与C1并核对制度对象及道路语境"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 5,
+    "artifacts": 7,
+    "decisions": 0,
+    "evidence": 10,
+    "method_bindings": 1,
+    "relations": 20,
+    "sources": 7,
+    "statements": 7
+  },
+  "cursor": {
+    "activity_id": "A-next-context",
+    "next_action": "先索取A1工作笺全文及C1目录第5段所在完整页，核对道路选择的上下文与封闭制度所指；E1未说唯一，在取得直接出处前不把其后出工业劳动归因写成已确认作者意图。"
+  },
+  "executed_registry_sha256": "1e8924e057aae50b30581076cf61a9ff9a8ade18dfa04f3ad59a4c3716145c50",
+  "original_registry_revision": 66,
+  "observed_check_sha256": "4db2452ee07edffe44669ea8443040ea7017a4039ac656c22768f9ce3ca41f2a",
+  "observed_resume_sha256": "462e182703bc7b21d3ca26555231440fbf9a3adc8cae86549a9c79b772eb7aad",
+  "reproduction": {
+    "script": "artifacts/run.py",
+    "arguments": [
+      "--input-dir",
+      "INPUTS",
+      "--output-dir",
+      "NEW"
+    ],
+    "result": "results.json"
+  }
+}

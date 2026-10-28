@@ -1,0 +1,338 @@
+{
+  "case": "weighted-survey",
+  "project_path": "PROJECT",
+  "actual_executor": "Codex代理；并非人类研究者执行或独立人类审查",
+  "status": "completed-with-preserved-corrected-setup-failure",
+  "commands": [
+    {
+      "label": "init",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "分层调查权重与无应答敏感性",
+        "--discipline",
+        "social-sciences",
+        "--method",
+        "empirical-quantitative",
+        "--mode",
+        "reproducible",
+        "--language",
+        "zh",
+        "--entry",
+        "minimum-check"
+      ],
+      "returncode": 0,
+      "log": "checks/setup.json"
+    },
+    {
+      "label": "connect-skills-install",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "install",
+        "--root",
+        "PROJECT"
+      ],
+      "returncode": 0,
+      "log": "checks/setup.json"
+    },
+    {
+      "label": "computation",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "PROJECT/artifacts/computation"
+      ],
+      "returncode": 0,
+      "log": "checks/computation.json"
+    },
+    {
+      "label": "reproduction",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "PROJECT/checks/reproduction"
+      ],
+      "returncode": 0,
+      "log": "checks/reproduction.json"
+    },
+    {
+      "label": "register-batch",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register-batch",
+        "--root",
+        "PROJECT",
+        "--file",
+        "RUN/registration-batch.json"
+      ],
+      "returncode": 0,
+      "log": "checks/register-batch.json"
+    },
+    {
+      "label": "check-before-checkpoint",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "returncode": 0,
+      "log": "checks/check-before-checkpoint.json"
+    },
+    {
+      "label": "checkpoint",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "checkpoint",
+        "--root",
+        "PROJECT",
+        "--next-action",
+        "若取得H1的40名未应答者追访或辅助变量，先核对文件身份，再评估q是否可收窄及层内代表性；无新增材料则保留34%至74%敏感性范围与64%的条件性表述，不把检查器通过当作科学认证。"
+      ],
+      "returncode": 0,
+      "log": "checks/checkpoint.json"
+    },
+    {
+      "label": "resume",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT"
+      ],
+      "returncode": 0,
+      "log": "checks/resume.json"
+    },
+    {
+      "label": "check",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "returncode": 0,
+      "log": "checks/check.json"
+    },
+    {
+      "label": "skills-check",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "returncode": 0,
+      "log": "checks/skills-check.json"
+    }
+  ],
+  "inputs_sha256": {
+    "inputs/draft.md": "38d5dfa5d6b6e80faedc2bd5fc87f70b3414bf68172a097ad5b3bd2b8a730c9c",
+    "inputs/sampling.md": "cb80889a8eb0f2d2bf1acf93a8d9a2f78f6c57ce3fa80db5319a18530fce8e18",
+    "inputs/strata.csv": "269a569e90f74ac20a0fdbf489ac8c7eb8baf5875d4dcd35190f6b954cce823c",
+    "inputs/task.md": "6177a3c1e5d84c232095b51f7c66289dcfcb68420580ffeacc38e4dabe493bfd"
+  },
+  "outputs_sha256": {
+    "notes/analysis.md": "f8c0fbd64c7c140fa3432a73576d4941f8bffae8d39a1649ee770bca359df38d",
+    "manuscript/report.md": "198a815e37887ad5a9a238c2a50d71ce2c94160c00a174a29d96a50c1597f11a",
+    "review.md": "d84c44ba4a16a43db96302f9820af0f65a5e4f0eb7dfec999dc0cf15f8479243",
+    "artifacts/run.py": "062a344d52b2aefa9366b1570ac990b4383d7fd74eefdea35f68f272b04f03c7",
+    "artifacts/results.json": "3916b315fb538915dda16006b6eadd5fcde518450d288887324505a19a4cf981",
+    "project.json": "32e2561e3cf5be6d486731bfa9ab1d6f10c1719490b101c6beba3e4ab1afaea5",
+    "records/registry.json": "7844a5004f389c06e7b728aca7881455b1fe86b249afa16aefe4b32429572bc6",
+    "checks/check-before-checkpoint.json": "5c80a25afd8f640a15bc19d3bd89f8ba17e36b7cedfc1dc8629c32db792517b3",
+    "checks/check.json": "3d86480e40e10b43b95ea0bf25845891a618c6143c5b8171fe8242dcaf9a7a68",
+    "checks/checkpoint.json": "19f02b75edcf5337bb870583163f2a2bcb7fcb366d63b0285211e901267c0210",
+    "checks/computation.json": "b5b350897911d93192fa3c5cc7bf84d673006361c3c9e398f148693504ce736f",
+    "checks/failure-01.json": "aca79dfe748d8e0c4f2bf478a6bb8d7053f5051c6dbd568d5374866564ded048",
+    "checks/input-copy-verification.json": "a061dffccc534f0acc779b99b9d170d275dc97b250f77b04ece4b74d6880f840",
+    "checks/register-batch.json": "b797b356cf20894877e910ce8273782bd71d5cb01b57c2def5a8aeae6635047a",
+    "checks/reproduction/results.json": "3916b315fb538915dda16006b6eadd5fcde518450d288887324505a19a4cf981",
+    "checks/reproduction.json": "09ea269544fcbbc6d11ecd938158d57d687e948a0e856c68dd544163e31d9abf",
+    "checks/resume.json": "bd151ceeaab511ad1a849ceadc277c6c2511f4e1b52348647d42280db10b1ba4",
+    "checks/setup.json": "4a80744b085d076c9e89dcb9f2f78f43b43b442e6b6e2c85ce6a31cd1a3c41ce",
+    "checks/skills-check.json": "088af363041586959a7786b5a4de83fadd2fad7ecaa923c349d89bb2fbd12ff3"
+  },
+  "guidance_read": [
+    {
+      "path": "TOOLKIT/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad"
+    },
+    {
+      "path": "TOOLKIT/core/skill-bridge.md",
+      "sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf"
+    },
+    {
+      "path": "TOOLKIT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-writing/SKILL.md",
+      "sha256": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-review/SKILL.md",
+      "sha256": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5"
+    },
+    {
+      "path": "TOOLKIT/profiles/disciplines/social-sciences.md",
+      "sha256": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8"
+    },
+    {
+      "path": "TOOLKIT/profiles/methods/empirical-quantitative.md",
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/source.schema.json",
+      "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/statement.schema.json",
+      "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/evidence.schema.json",
+      "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/relation.schema.json",
+      "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/artifact.schema.json",
+      "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/activity.schema.json",
+      "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/method-binding.schema.json",
+      "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d"
+    }
+  ],
+  "other_interface_context": "register-batch item shape kind/record supplied by parent orchestrator, then actual successful CLI call verified acceptance; initial CLI options and --help queries were read-only.",
+  "machine_information": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python_version": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "interpreter": "PYTHON",
+    "per_command_elapsed_seconds": [
+      {
+        "label": "init",
+        "elapsed_seconds": 0.05771666599321179
+      },
+      {
+        "label": "connect-skills-install",
+        "elapsed_seconds": 0.07481862499844283
+      },
+      {
+        "label": "computation",
+        "elapsed_seconds": 0.041326624996145256
+      },
+      {
+        "label": "reproduction",
+        "elapsed_seconds": 0.03623833401070442
+      },
+      {
+        "label": "register-batch",
+        "elapsed_seconds": 0.09737950000271667
+      },
+      {
+        "label": "check-before-checkpoint",
+        "elapsed_seconds": 0.06169837500783615
+      },
+      {
+        "label": "checkpoint",
+        "elapsed_seconds": 0.060342209006194025
+      },
+      {
+        "label": "resume",
+        "elapsed_seconds": 0.05456333300389815
+      },
+      {
+        "label": "check",
+        "elapsed_seconds": 0.053445832993020304
+      },
+      {
+        "label": "skills-check",
+        "elapsed_seconds": 0.06450795900309458
+      }
+    ],
+    "cross_platform_execution": "Only current macOS executed; no third-party dependency. run.py uses Python3.11+ standard library and explicit input/output directories."
+  },
+  "preserved_failures": [
+    {
+      "path": "checks/failure-01.json",
+      "description": "Initial setup wrapper exited1 at copying input because inputs/ did not yet exist. Init/install succeeded. Created directory and copied byte-identical inputs, then completed analysis."
+    }
+  ],
+  "checks": {
+    "check_exit": 0,
+    "resume_exit": 0,
+    "checkpoint": "current",
+    "errors": [],
+    "warnings": [],
+    "effective_done_activities": [
+      "ACT_compute",
+      "ACT_write",
+      "ACT_review"
+    ],
+    "method_binding": "empirical-quantitative / survey / profile 0.1",
+    "scientific_validity": "not-assessed by CLI"
+  },
+  "handoff_paths": [
+    "inputs/task.md",
+    "inputs/sampling.md",
+    "inputs/draft.md",
+    "inputs/strata.csv",
+    "notes/analysis.md",
+    "manuscript/report.md",
+    "review.md",
+    "artifacts/run.py",
+    "artifacts/results.json",
+    "project.json",
+    "records/registry.json",
+    "checks/check-before-checkpoint.json",
+    "checks/check.json",
+    "checks/checkpoint.json",
+    "checks/computation.json",
+    "checks/failure-01.json",
+    "checks/input-copy-verification.json",
+    "checks/register-batch.json",
+    "checks/reproduction/results.json",
+    "checks/reproduction.json",
+    "checks/resume.json",
+    "checks/setup.json",
+    "checks/skills-check.json",
+    "execution.json"
+  ],
+  "handoff_exclusions": [
+    ".agents/skills runtime and instruction copies",
+    ".research internal runtime",
+    "boilerplate PROJECT.md",
+    "redundant artifacts/computation/results.json",
+    "temporary registration-batch command input outside project"
+  ],
+  "next_step": "优先取得H1未应答者追访或辅助变量以评估q；没有新增材料时保持34%-74%敏感性范围和64%条件性解释。"
+}

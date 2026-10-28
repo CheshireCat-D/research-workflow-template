@@ -1,0 +1,8 @@
+{
+  "stage": "copy-inputs after successful init and skill installation",
+  "status": "failed then corrected",
+  "exception": "FileNotFoundError: inputs/task.md did not exist because its parent inputs/ directory was absent",
+  "effect": "No input copied; init and skill installation succeeded. No scientific computation attempted.",
+  "correction": "Created inputs/ (and artifact directories) explicitly, then copied all four original materials byte-for-byte.",
+  "exit_status": 1
+}

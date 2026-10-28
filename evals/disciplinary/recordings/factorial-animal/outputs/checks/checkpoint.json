@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "PYTHON",
+    "-B",
+    "TOOLKIT/tools/research.py",
+    "checkpoint",
+    "--root",
+    "PROJECT",
+    "--next-action",
+    "请另一位审阅者从inputs/observations.csv重新按笼聚合，优先复算B2交互(29-23)-(22-20)=4g及三块平均3g，并核对manuscript/report.md每处理3笼的措辞；若拟真实试验，再补目标物种、时长、测量和随机化协议后设计笼数。"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"checkpoint_saved\": true,\n  \"revision\": 36,\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"请另一位审阅者从inputs/observations.csv重新按笼聚合，优先复算B2交互(29-23)-(22-20)=4g及三块平均3g，并核对manuscript/report.md每处理3笼的措辞；若拟真实试验，再补目标物种、时长、测量和随机化协议后设计笼数。\"\n  },\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

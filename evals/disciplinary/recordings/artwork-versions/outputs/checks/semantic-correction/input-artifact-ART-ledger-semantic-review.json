@@ -1,0 +1,12 @@
+{
+  "id": "ART-ledger-semantic-review",
+  "type": "registration-correction",
+  "description": "登记语义缺陷、原文核对与显式更正依据。",
+  "path": "checks/registration-semantic-review.md",
+  "derived_from": [
+    "evidence:E-ledger-semantic-review",
+    "evidence:E-draft",
+    "evidence:E-E1",
+    "evidence:E-init-failure"
+  ]
+}

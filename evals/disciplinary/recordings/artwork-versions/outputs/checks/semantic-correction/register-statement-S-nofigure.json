@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT",
+    "--kind",
+    "statement",
+    "--file",
+    "PROJECT/checks/semantic-correction/input-statement-S-nofigure.json",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"statement\",\n  \"id\": \"S-nofigure\",\n  \"version\": 2,\n  \"revision\": 55,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.058486834008363076
+}

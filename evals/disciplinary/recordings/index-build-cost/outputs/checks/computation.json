@@ -1,0 +1,55 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "RUN/computed-primary"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"all_returns_equal\": true, \"inputs_unchanged\": true, \"workloads\": [{\"m\": 1, \"L\": 8, \"I\": 9}, {\"m\": 2, \"L\": 16, \"I\": 10}, {\"m\": 10, \"L\": 80, \"I\": 18}]}\n",
+      "stderr": "",
+      "expected_exit_status": 0,
+      "machine_seconds": 0.036351832997752354
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "RUN/relocated-run.py",
+        "--input-dir",
+        "RUN/relocated-inputs",
+        "--output-dir",
+        "RUN/computed-relocated"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"all_returns_equal\": true, \"inputs_unchanged\": true, \"workloads\": [{\"m\": 1, \"L\": 8, \"I\": 9}, {\"m\": 2, \"L\": 16, \"I\": 10}, {\"m\": 10, \"L\": 80, \"I\": 18}]}\n",
+      "stderr": "",
+      "expected_exit_status": 0,
+      "machine_seconds": 0.03332191699882969
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "RUN/computed-primary"
+      ],
+      "exit_status": 2,
+      "stdout": "",
+      "stderr": "usage: run.py [-h] --input-dir INPUT_DIR --output-dir OUTPUT_DIR\nrun.py: error: output directory must not already exist\n",
+      "expected_exit_status": 2,
+      "machine_seconds": 0.03404233400942758
+    }
+  ],
+  "relocated_results_identical": true,
+  "expected_no_overwrite_rejection_preserved": true,
+  "environment": {
+    "python": "3.14.6",
+    "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  }
+}

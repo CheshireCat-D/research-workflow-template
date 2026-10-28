@@ -1,0 +1,81 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pbd889e9a938f4c36b3f2b0a5ef2ee9ba",
+  "revision": 50,
+  "passed": false,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [
+    {
+      "code": "checkpoint_stale",
+      "changed": [
+        "registered-records",
+        "local-files"
+      ]
+    }
+  ],
+  "counts": {
+    "activities": 5,
+    "artifacts": 9,
+    "decisions": 0,
+    "evidence": 6,
+    "method_bindings": 1,
+    "relations": 10,
+    "sources": 2,
+    "statements": 9
+  },
+  "activities": [
+    {
+      "id": "ACT-ENUM",
+      "title": "从指定输入真实解析事实并枚举32种布尔组合及复跑",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-LAW",
+      "title": "对照共同权威条文、定义、交叉引用与例外并修订正文",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-OLD-VALIDATOR",
+      "title": "复现旧片段校验器错误接受附加规范条件",
+      "declared_status": "failed",
+      "effective_status": "failed",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-REPAIR",
+      "title": "完整规范文本契约修复及反向输入边界核对",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-REVIEW",
+      "title": "自审申请条件、引证和压缩稿字符边界",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "由维护者逐条对照SP第5、7、9条，复核概述的括号作用域和丙的条件式复核表述；若替换条文或加入送达日期，先复跑artifacts/run.py，再显式更新受影响解释与完成活动。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "stale",
+    "changed": [
+      "registered-records",
+      "local-files"
+    ]
+  }
+}

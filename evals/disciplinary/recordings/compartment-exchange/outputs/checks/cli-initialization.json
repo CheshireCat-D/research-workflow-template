@@ -1,0 +1,71 @@
+[
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "init",
+      "--output",
+      "PROJECT",
+      "--title",
+      "两室交换模型：解析、量纲与Euler离散核对",
+      "--discipline",
+      "natural-sciences",
+      "--method",
+      "formal-theory",
+      "--mode",
+      "reproducible",
+      "--language",
+      "zh-CN",
+      "--entry",
+      "rw-workflow"
+    ],
+    "exit_status": 2,
+    "stdout": "{\n  \"passed\": false,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"errors\": [\n    {\n      \"code\": \"invalid_registration\",\n      \"message\": \"Unknown project entry activity or workflow mode\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.049496959007228725
+    }
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "init",
+      "--output",
+      "PROJECT",
+      "--title",
+      "两室交换模型：解析、量纲与Euler离散核对",
+      "--discipline",
+      "natural-sciences",
+      "--method",
+      "formal-theory",
+      "--mode",
+      "reproducible",
+      "--language",
+      "zh-CN",
+      "--entry",
+      "research"
+    ],
+    "exit_status": 0,
+    "stdout": "{\n  \"initialized\": true,\n  \"project_id\": \"Pf390188560aa428a946624a4b09e3d89\",\n  \"revision\": 0,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.04990049998741597
+    }
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/connect_skills.py",
+      "install",
+      "--root",
+      "PROJECT"
+    ],
+    "exit_status": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"installed\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 65,\n  \"payload_sha256\": \"321fa8cc01187952b33ec072e96a10d65acdf24c674b99cd92107473bcfa69d5\",\n  \"global_installation\": false,\n  \"project_records_modified\": false\n}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.06837274999998044
+    }
+  }
+]

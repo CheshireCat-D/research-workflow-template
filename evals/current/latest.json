@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-28T18:39:53.842745+00:00",
+  "checked_at_utc": "2026-10-28T21:55:18.507369+00:00",
   "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -24,11 +24,11 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 225,
+      "test_methods": 236,
       "check_groups": 7,
       "receipt": {
         "identifier": "local-evidence:check-core.json",
-        "sha256": "61ed669b7bd684df1850005ac9fbefa54dedc27b7c2b82cc302161bc66530708"
+        "sha256": "4cbc1dbe927ebe9a3046f1024d088c60cd24af26e9e4362deb4611f1166a74d2"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,8 +36,8 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "6f9e2a6b6e471b9f5d30df6d57a584163e07394fcd96c53bb612be2e4b5ae65b",
-        "files": 32
+        "sha256": "b1a382848254677f0ab52e5f356e55cde6ff66825df4ec1e7fd4d0c844ac475c",
+        "files": 33
       }
     }
   },
@@ -168,7 +168,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 72,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "4c25a763b90e18eaadcf24e23868fbe20ec85ca8f0e9fc77540cb4191410373b",
+    "sha256": "aef3c559f8fe6d75b5e62831c2b117bcaee27f3fe4c16757d23aea2924445da7",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 65,
     "development_history_or_previous_editions_included": false,
@@ -191,5 +191,22 @@
     "verification": "Actual OS execution is reported by commit-specific hosted jobs and the separate local receipt.",
     "frozen_replay_boundary": "Windows test-only launcher explicitly reports POSIX CPU/alarm limits unavailable and RSS unmeasured-null; actual outer wall timeout and numerical comparisons remain. Frozen scientific source bytes are not rewritten.",
     "hosted_macos": "macos-15-intel; distinct from local Apple Silicon validation. Previous arm64 pool capacity cancellations are not successful execution."
+  },
+  "disciplinary_tasks": {
+    "cases": 7,
+    "discipline_contexts": 7,
+    "original_input_files": 29,
+    "coverage": "evals/disciplinary/coverage.json",
+    "independent_review": "evals/disciplinary/independent-review.json",
+    "replay_tests": "tests/test_disciplinary_evaluations.py",
+    "previous_research_tasks_preserved": 21,
+    "source_only": true,
+    "new_runtime_dependencies": false,
+    "resolved_observed_defects": [
+      "Missing published log locators restored",
+      "Claim versus reported-claim registration roles corrected",
+      "Closed-case legal input guard aligned with its declared boundary"
+    ],
+    "scope": "Original synthetic packets, actual fresh-context execution, separate AI review and deterministic replay with independent arithmetic and changed inputs. No field-wide certification or human expert endorsement."
   }
 }

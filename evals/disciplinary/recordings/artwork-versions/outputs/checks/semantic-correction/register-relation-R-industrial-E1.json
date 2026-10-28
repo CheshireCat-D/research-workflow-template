@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT",
+    "--kind",
+    "relation",
+    "--file",
+    "PROJECT/checks/semantic-correction/input-relation-R-industrial-E1.json",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"relation\",\n  \"id\": \"R-industrial-E1\",\n  \"version\": 2,\n  \"revision\": 56,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.058750374999362975
+}

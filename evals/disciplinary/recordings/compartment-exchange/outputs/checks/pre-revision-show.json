@@ -1,0 +1,114 @@
+[
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "show",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "evidence",
+      "--id",
+      "EV-analysis"
+    ],
+    "exit_status": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pf390188560aa428a946624a4b09e3d89\",\n  \"revision\": 38,\n  \"kind\": \"evidence\",\n  \"id\": \"EV-analysis\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"notes/analysis.md\": \"d34f7c4446001c76d0af2c719f20cd2f04581e849bfbd12beb2ae35ce94dbcbc\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"description\": \"模型方程、变量和差、守恒、显式解、量纲/无量纲、离散条件及误差推导\",\n      \"id\": \"EV-analysis\",\n      \"limitations\": \"手工推导；不声称独立人类或形式化验证。\",\n      \"location\": {\n        \"kind\": \"local\",\n        \"path\": \"notes/analysis.md\"\n      },\n      \"provenance\": \"Codex代理基于本地模型和参数逐步推导，无证明器。\",\n      \"source_ids\": [\n        \"SRC-model\",\n        \"SRC-parameters\"\n      ],\n      \"type\": \"manual-analytic-derivation\"\n    },\n    \"registered_at\": \"2026-10-28T21:30:47.605434+00:00\",\n    \"version\": 1\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "show",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "artifact",
+      "--id",
+      "AR-analysis"
+    ],
+    "exit_status": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pf390188560aa428a946624a4b09e3d89\",\n  \"revision\": 38,\n  \"kind\": \"artifact\",\n  \"id\": \"AR-analysis\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"notes/analysis.md\": \"d34f7c4446001c76d0af2c719f20cd2f04581e849bfbd12beb2ae35ce94dbcbc\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"derived_from\": [\n        \"evidence:EV-model\",\n        \"evidence:EV-parameters\"\n      ],\n      \"description\": \"逐步理论推导与实际数值对照\",\n      \"id\": \"AR-analysis\",\n      \"path\": \"notes/analysis.md\",\n      \"type\": \"analysis\"\n    },\n    \"registered_at\": \"2026-10-28T21:30:47.647771+00:00\",\n    \"version\": 1\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "show",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "artifact",
+      "--id",
+      "AR-review"
+    ],
+    "exit_status": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pf390188560aa428a946624a4b09e3d89\",\n  \"revision\": 38,\n  \"kind\": \"artifact\",\n  \"id\": \"AR-review\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"review.md\": \"3777e9301fb3b0fc186f03da92db32e76890a7056d089eeb929d69b55bb7b5d4\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"derived_from\": [\n        \"artifact:AR-analysis\",\n        \"artifact:AR-code\",\n        \"artifact:AR-results\",\n        \"artifact:AR-report\"\n      ],\n      \"description\": \"实际自审、失败保留和具体后续任务\",\n      \"id\": \"AR-review\",\n      \"path\": \"review.md\",\n      \"type\": \"review\"\n    },\n    \"registered_at\": \"2026-10-28T21:30:47.660897+00:00\",\n    \"version\": 1\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "show",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "relation",
+      "--id",
+      "R8"
+    ],
+    "exit_status": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pf390188560aa428a946624a4b09e3d89\",\n  \"revision\": 38,\n  \"kind\": \"relation\",\n  \"id\": \"R8\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"evidence_id\": \"EV-analysis\",\n      \"id\": \"R8\",\n      \"rationale\": \"精确解指数趋于6，否定线性至0且B无界增加的表达。\",\n      \"relation\": \"challenges\",\n      \"scope\": \"本次离线合成两室模型；详见对应主张条件。\",\n      \"statement_id\": \"S-old-trend\"\n    },\n    \"registered_at\": \"2026-10-28T21:30:47.639699+00:00\",\n    \"version\": 1\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "show",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "activity",
+      "--id",
+      "ACT-derive"
+    ],
+    "exit_status": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pf390188560aa428a946624a4b09e3d89\",\n  \"revision\": 38,\n  \"kind\": \"activity\",\n  \"id\": \"ACT-derive\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"artifacts/results.json\": \"8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257\",\n        \"inputs/model.md\": \"d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111\",\n        \"inputs/parameters.json\": \"ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f\",\n        \"notes/analysis.md\": \"d34f7c4446001c76d0af2c719f20cd2f04581e849bfbd12beb2ae35ce94dbcbc\"\n      },\n      \"records\": {\n        \"artifact:AR-analysis\": \"2625a9e5ffcfb131db163423bf111cefcd2b8383d8504c6df4382830f8d506e9\",\n        \"evidence:EV-analysis\": \"a657cdfa0be10ef17bd83ce04101a59454a3630087d966b7ecfa74ca5bdfea5a\",\n        \"evidence:EV-model\": \"9cde139ad5a1e26876166bb4dee902c97a84252cad2567f2d0a200f989c2c3b9\",\n        \"evidence:EV-parameters\": \"2dc939aa65013e6dcd724bea1742a6116714a512c85ab6f442b3916638f2e220\",\n        \"evidence:EV-results\": \"e3ae7b44d82e9630f576704ce5fa9f3145bcdf07906c640f300ef3900504d737\",\n        \"relation:R1\": \"645ddbaf11bcaa2a37967169e8b24ee1c9453521d1c36fe780eeab4e35e0fdff\",\n        \"relation:R2\": \"a0bfcc79f4500bafaeab4f737ce9f9e848aa425bd5332544999bfe2402cd6b7e\",\n        \"relation:R3\": \"a8f5d42ec5ac1da2fdf050e54682f58c3d4dc41709a655ee80555ec6d1159e54\",\n        \"relation:R4\": \"bbdb93ae802cf4de68952553a56af2ba0ac93a79847162083bde72a9f4af982b\",\n        \"relation:R5\": \"c948c21b2ded1cadcdf3cf57304f71afc9fbf28881b2ed02da15102bd654f62b\",\n        \"relation:R6\": \"d7727f82a820a2c3d9ab30cb288ab867e443dc4fd9b9354d5824071e79e2e78c\",\n        \"source:SRC-model\": \"30d00bc9aa08cb09f9f39259708b43d6075e65418af393c7cee21e12c4d40de0\",\n        \"source:SRC-parameters\": \"9bcf5df8b72f16abba978e946110960d0e6a414cef79181bd620ea60bbb5421d\",\n        \"statement:S-dimension\": \"c68d10b1c0320548f2b83251bb02e6079e94d3d41c2f9fe9031607e57aa22427\",\n        \"statement:S-euler\": \"79164879d212e556336698945bc6bc7d7389cd42cbb1c8fb8492579b2ccc0e87\",\n        \"statement:S-order\": \"df6e93aae7fef6f415b6abcde5014c62166d350733a0a71a9a0781a77fa20196\",\n        \"statement:S-solution\": \"7424539cec47aabea8d4d30125a89921c1f516356db3878e20f63b3ad6b8f20a\"\n      }\n    },\n    \"data\": {\n      \"id\": \"ACT-derive\",\n      \"inputs\": [\n        \"evidence:EV-model\",\n        \"evidence:EV-parameters\"\n      ],\n      \"note\": \"实际手工推导；无证明器或人类独立复核。\",\n      \"outputs\": [\n        \"artifact:AR-analysis\",\n        \"statement:S-solution\",\n        \"statement:S-dimension\",\n        \"statement:S-euler\",\n        \"statement:S-order\"\n      ],\n      \"status\": \"done\",\n      \"title\": \"Codex从本地设定建立并逐步推导连续与离散关系\"\n    },\n    \"registered_at\": \"2026-10-28T21:30:47.664247+00:00\",\n    \"version\": 1\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "show",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "activity",
+      "--id",
+      "ACT-compute"
+    ],
+    "exit_status": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pf390188560aa428a946624a4b09e3d89\",\n  \"revision\": 38,\n  \"kind\": \"activity\",\n  \"id\": \"ACT-compute\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"artifacts/results.json\": \"8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257\",\n        \"artifacts/run.py\": \"6c5c5c0bf2eacacd86c589f0d1a5afcba992c93aeffa4f526b2540ea66bc13c5\",\n        \"inputs/model.md\": \"d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111\",\n        \"inputs/parameters.json\": \"ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f\",\n        \"notes/analysis.md\": \"d34f7c4446001c76d0af2c719f20cd2f04581e849bfbd12beb2ae35ce94dbcbc\"\n      },\n      \"records\": {\n        \"activity:ACT-derive\": \"334e47eea2d3b53622f8bc5624983a24f6c8dbc1ba2f07c7a8f09c9cf32389dd\",\n        \"artifact:AR-analysis\": \"2625a9e5ffcfb131db163423bf111cefcd2b8383d8504c6df4382830f8d506e9\",\n        \"artifact:AR-code\": \"7c95926d702d9e793de6ba31872be11cc54f821839a8206484818cc398512055\",\n        \"artifact:AR-results\": \"0ed975bceb15b72076c45ee1c102b737b2fc71020b94d0ee7778bdb83303b3bf\",\n        \"evidence:EV-analysis\": \"a657cdfa0be10ef17bd83ce04101a59454a3630087d966b7ecfa74ca5bdfea5a\",\n        \"evidence:EV-model\": \"9cde139ad5a1e26876166bb4dee902c97a84252cad2567f2d0a200f989c2c3b9\",\n        \"evidence:EV-parameters\": \"2dc939aa65013e6dcd724bea1742a6116714a512c85ab6f442b3916638f2e220\",\n        \"evidence:EV-results\": \"e3ae7b44d82e9630f576704ce5fa9f3145bcdf07906c640f300ef3900504d737\",\n        \"relation:R1\": \"645ddbaf11bcaa2a37967169e8b24ee1c9453521d1c36fe780eeab4e35e0fdff\",\n        \"relation:R2\": \"a0bfcc79f4500bafaeab4f737ce9f9e848aa425bd5332544999bfe2402cd6b7e\",\n        \"relation:R3\": \"a8f5d42ec5ac1da2fdf050e54682f58c3d4dc41709a655ee80555ec6d1159e54\",\n        \"relation:R4\": \"bbdb93ae802cf4de68952553a56af2ba0ac93a79847162083bde72a9f4af982b\",\n        \"relation:R5\": \"c948c21b2ded1cadcdf3cf57304f71afc9fbf28881b2ed02da15102bd654f62b\",\n        \"relation:R6\": \"d7727f82a820a2c3d9ab30cb288ab867e443dc4fd9b9354d5824071e79e2e78c\",\n        \"relation:R7\": \"0d1fecbf0d75dd98cac2ad1bb0b433feca588e4285cbcad7cfe6ccfbb767e832\",\n        \"source:SRC-model\": \"30d00bc9aa08cb09f9f39259708b43d6075e65418af393c7cee21e12c4d40de0\",\n        \"source:SRC-parameters\": \"9bcf5df8b72f16abba978e946110960d0e6a414cef79181bd620ea60bbb5421d\",\n        \"statement:S-computation\": \"2ba7bdb76c120eb5fc624a7f004645728507a4b19f01d196aefb8ea25a818309\",\n        \"statement:S-dimension\": \"c68d10b1c0320548f2b83251bb02e6079e94d3d41c2f9fe9031607e57aa22427\",\n        \"statement:S-euler\": \"79164879d212e556336698945bc6bc7d7389cd42cbb1c8fb8492579b2ccc0e87\",\n        \"statement:S-order\": \"df6e93aae7fef6f415b6abcde5014c62166d350733a0a71a9a0781a77fa20196\",\n        \"statement:S-solution\": \"7424539cec47aabea8d4d30125a89921c1f516356db3878e20f63b3ad6b8f20a\"\n      }\n    },\n    \"data\": {\n      \"depends_on\": [\n        \"ACT-derive\"\n      ],\n      \"id\": \"ACT-compute\",\n      \"inputs\": [\n        \"evidence:EV-model\",\n        \"evidence:EV-parameters\",\n        \"artifact:AR-code\"\n      ],\n      \"note\": \"所有实际计算在10秒内；负状态保留；对应argv和hash见execution.json。\",\n      \"outputs\": [\n        \"artifact:AR-results\",\n        \"evidence:EV-results\",\n        \"statement:S-computation\"\n      ],\n      \"status\": \"done\",\n      \"title\": \"Codex实际运行Euler与解析对照并用迁移输入复跑\"\n    },\n    \"registered_at\": \"2026-10-28T21:30:47.668339+00:00\",\n    \"version\": 1\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "show",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "activity",
+      "--id",
+      "ACT-write"
+    ],
+    "exit_status": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"Pf390188560aa428a946624a4b09e3d89\",\n  \"revision\": 38,\n  \"kind\": \"activity\",\n  \"id\": \"ACT-write\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"artifacts/results.json\": \"8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257\",\n        \"artifacts/run.py\": \"6c5c5c0bf2eacacd86c589f0d1a5afcba992c93aeffa4f526b2540ea66bc13c5\",\n        \"inputs/draft.md\": \"014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991\",\n        \"inputs/model.md\": \"d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111\",\n        \"inputs/parameters.json\": \"ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f\",\n        \"manuscript/report.md\": \"84f179be9ca36b7a1e4e13c68e7fc0849bc213868638258eb9c5b229d0f80ba4\",\n        \"notes/analysis.md\": \"d34f7c4446001c76d0af2c719f20cd2f04581e849bfbd12beb2ae35ce94dbcbc\",\n        \"review.md\": \"3777e9301fb3b0fc186f03da92db32e76890a7056d089eeb929d69b55bb7b5d4\"\n      },\n      \"records\": {\n        \"activity:ACT-compute\": \"940ff076df60a18a5560af3e1b679a0a7b769ae497d815aeaaa85745efd8f9af\",\n        \"activity:ACT-derive\": \"334e47eea2d3b53622f8bc5624983a24f6c8dbc1ba2f07c7a8f09c9cf32389dd\",\n        \"artifact:AR-analysis\": \"2625a9e5ffcfb131db163423bf111cefcd2b8383d8504c6df4382830f8d506e9\",\n        \"artifact:AR-code\": \"7c95926d702d9e793de6ba31872be11cc54f821839a8206484818cc398512055\",\n        \"artifact:AR-report\": \"0e9410e4614430ad57aa259b857b131319a55b07650db0e8b3f9f88f65586296\",\n        \"artifact:AR-results\": \"0ed975bceb15b72076c45ee1c102b737b2fc71020b94d0ee7778bdb83303b3bf\",\n        \"artifact:AR-review\": \"928bca12aa46bb6560fc0f62ae22da7cf03acde98567127242215c4f3b601fb2\",\n        \"evidence:EV-analysis\": \"a657cdfa0be10ef17bd83ce04101a59454a3630087d966b7ecfa74ca5bdfea5a\",\n        \"evidence:EV-draft\": \"3fc3b6d00c86314b464ddff2706547c75c3d7ddb1131a5f575341c808c1a6403\",\n        \"evidence:EV-model\": \"9cde139ad5a1e26876166bb4dee902c97a84252cad2567f2d0a200f989c2c3b9\",\n        \"evidence:EV-parameters\": \"2dc939aa65013e6dcd724bea1742a6116714a512c85ab6f442b3916638f2e220\",\n        \"evidence:EV-results\": \"e3ae7b44d82e9630f576704ce5fa9f3145bcdf07906c640f300ef3900504d737\",\n        \"relation:R1\": \"645ddbaf11bcaa2a37967169e8b24ee1c9453521d1c36fe780eeab4e35e0fdff\",\n        \"relation:R2\": \"a0bfcc79f4500bafaeab4f737ce9f9e848aa425bd5332544999bfe2402cd6b7e\",\n        \"relation:R3\": \"a8f5d42ec5ac1da2fdf050e54682f58c3d4dc41709a655ee80555ec6d1159e54\",\n        \"relation:R4\": \"bbdb93ae802cf4de68952553a56af2ba0ac93a79847162083bde72a9f4af982b\",\n        \"relation:R5\": \"c948c21b2ded1cadcdf3cf57304f71afc9fbf28881b2ed02da15102bd654f62b\",\n        \"relation:R6\": \"d7727f82a820a2c3d9ab30cb288ab867e443dc4fd9b9354d5824071e79e2e78c\",\n        \"relation:R7\": \"0d1fecbf0d75dd98cac2ad1bb0b433feca588e4285cbcad7cfe6ccfbb767e832\",\n        \"source:SRC-draft\": \"32bf6a59d88b0aa5a0e8f530b6eb21da7bab1194af43a2b43bc6dd374c145b28\",\n        \"source:SRC-model\": \"30d00bc9aa08cb09f9f39259708b43d6075e65418af393c7cee21e12c4d40de0\",\n        \"source:SRC-parameters\": \"9bcf5df8b72f16abba978e946110960d0e6a414cef79181bd620ea60bbb5421d\",\n        \"statement:S-computation\": \"2ba7bdb76c120eb5fc624a7f004645728507a4b19f01d196aefb8ea25a818309\",\n        \"statement:S-dimension\": \"c68d10b1c0320548f2b83251bb02e6079e94d3d41c2f9fe9031607e57aa22427\",\n        \"statement:S-euler\": \"79164879d212e556336698945bc6bc7d7389cd42cbb1c8fb8492579b2ccc0e87\",\n        \"statement:S-order\": \"df6e93aae7fef6f415b6abcde5014c62166d350733a0a71a9a0781a77fa20196\",\n        \"statement:S-solution\": \"7424539cec47aabea8d4d30125a89921c1f516356db3878e20f63b3ad6b8f20a\"\n      }\n    },\n    \"data\": {\n      \"depends_on\": [\n        \"ACT-derive\",\n        \"ACT-compute\"\n      ],\n      \"id\": \"ACT-write\",\n      \"inputs\": [\n        \"evidence:EV-draft\",\n        \"artifact:AR-analysis\",\n        \"artifact:AR-results\"\n      ],\n      \"note\": \"原稿不改；约556非空白字符；同一执行代理自审。\",\n      \"outputs\": [\n        \"artifact:AR-report\",\n        \"artifact:AR-review\"\n      ],\n      \"status\": \"done\",\n      \"title\": \"Codex修订结果主张并自审\"\n    },\n    \"registered_at\": \"2026-10-28T21:30:47.672997+00:00\",\n    \"version\": 1\n  }\n}\n",
+    "stderr": ""
+  }
+]

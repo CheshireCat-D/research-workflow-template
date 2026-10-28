@@ -1,0 +1,732 @@
+{
+  "schema_version": "1.0",
+  "project_root": "PROJECT",
+  "actual_executor": "Codex research execution agent",
+  "input_sha256": {
+    "inputs/draft.md": "014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991",
+    "inputs/model.md": "d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111",
+    "inputs/parameters.json": "ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f",
+    "inputs/task.md": "76a903d4d79f2f139c5b528579fc6d7321c497cb9cd03860a2dea80eb207e970"
+  },
+  "original_copy_verification": {
+    "parameters.json": {
+      "case_original_sha256": "ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f",
+      "copied_input_sha256": "ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f",
+      "identical": true
+    },
+    "model.md": {
+      "case_original_sha256": "d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111",
+      "copied_input_sha256": "d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111",
+      "identical": true
+    },
+    "draft.md": {
+      "case_original_sha256": "014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991",
+      "copied_input_sha256": "014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991",
+      "identical": true
+    },
+    "task.md": {
+      "case_original_sha256": "76a903d4d79f2f139c5b528579fc6d7321c497cb9cd03860a2dea80eb207e970",
+      "copied_input_sha256": "76a903d4d79f2f139c5b528579fc6d7321c497cb9cd03860a2dea80eb207e970",
+      "identical": true
+    }
+  },
+  "output_sha256": {
+    "notes/analysis.md": "f6dcca876c83ff63ba73c4c3b968170634f65d8a5f0becaa4704d02f5b2c6767",
+    "manuscript/report.md": "84f179be9ca36b7a1e4e13c68e7fc0849bc213868638258eb9c5b229d0f80ba4",
+    "artifacts/final-run/execution.json": "16c565769d37a7b6873a8c1a08583eea88a88c39ed0752b3c7760644efc41276",
+    "artifacts/final-run/results.json": "8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257",
+    "artifacts/initial-run/execution.json": "14ceedc89ce72c0c3e1096969bdd5bf24d8c33259a8a308431151bdaa646aedf",
+    "artifacts/initial-run/results.json": "9379d33d670971208a0c2b2002f14bb34d66cfe9985c7405d377527396315744",
+    "artifacts/results.json": "8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257",
+    "artifacts/run.py": "6c5c5c0bf2eacacd86c589f0d1a5afcba992c93aeffa4f526b2540ea66bc13c5",
+    "records/registry.json": "60350ab099f66515a7ca29495a737491f0932a9b36b84a1610206bf77725e657",
+    "checks/calculation-final-and-relocated.json": "6bcea958f49bda99748aadd39cd36f32d3a982fc55bdfdbc389a90a3606f062a",
+    "checks/calculation-initial.json": "4790010312ecd0d7b28ffce126872f5f52ca4d4212ff92d050a199914e3ef8cb",
+    "checks/check-before-checkpoint.json": "79f419a26399430762859d644270d9cf8f823394257f8605a197a934503aff14",
+    "checks/check-before-wording-refresh.json": "b6eb50881f8ef3df551fc3121efa15ed39da66cda26612b31d28b368b6718301",
+    "checks/check.json": "c96e1d8bb393c405dbde47617e4d55779da8cd558ca57fef72c17ddc39557ad5",
+    "checks/checkpoint.json": "f8f3f7f7f3487c1c31bd6f1c3d3f8899b9553b2f19b85f777ce012ddbaf61e9c",
+    "checks/cli-initialization.json": "09785c3688ae31038a5d45f0aaa93fe5e522d8daf90b96e38d522dfbb710a516",
+    "checks/configure.json": "0c33c3407b89def9936ae7ed72c850db38cd84d585feff5e2ebf115ace373cf5",
+    "checks/final-check.json": "3b052da6f829310577117298c5167fe11bbeb2d6330ae176c56b81cfa91b3967",
+    "checks/final-checkpoint.json": "a66789111f151d0722840c494c65bedbfbb0b956c7381002ace82e3966d92fa6",
+    "checks/final-resume.json": "d60af82f646bfc7324d09693844a139bf0660f617f1ba6f5b2563b46a5faac2b",
+    "checks/pre-revision-show.json": "a96fee51ba8e13fbf30ced712d2ea2ba3cc94d21cfbc909378ac2874fb6c6642",
+    "checks/register-batch-execution.json": "a7bb9f75d6b0e036f6aeff39c2d2f42942c34851a6f4a006963194e4ad1e38a8",
+    "checks/registration-batch.json": "f3823bc8d1c300b37a050c2b407c05f6e6dcedf4e26cf1c945a1c771b78ffb43",
+    "checks/relocated-execution.json": "9f32f951c26028623baba98e203a96000edbbfc39b8584225c287ceb00bf7322",
+    "checks/resume.json": "65aae2e83fb125a918743d198c78a9a76494679d5ff0f159f35dd28e08ef91b4",
+    "checks/skills-integrity.json": "703af1ff7a310fb6b8ac2e9b10105717be0dead9bb12607c5041e97d25fdf2c3",
+    "checks/wording-refresh-registrations.json": "c9c7f1d71446fb611243ca39017e9ea9d5f5e0cfa3e977c9349e3cdbd62e6e23",
+    "review.md": "ab1f98894aab435b83a5bb9f33898c0cd4a0857c3d8297ee0553ad19a3f1f2f3",
+    "project.json": "e33d737f474b7dc28d4d15bfa6828c5e8dd5f57b73b971399852f109caeec210"
+  },
+  "guidance_paths_read": [
+    "TOOLKIT/skills/rw-workflow/SKILL.md",
+    "TOOLKIT/core/skill-bridge.md",
+    "TOOLKIT/core/protocol.md",
+    "TOOLKIT/skills/rw-validation/SKILL.md",
+    "TOOLKIT/skills/rw-writing/SKILL.md",
+    "TOOLKIT/skills/rw-review/SKILL.md",
+    "TOOLKIT/profiles/disciplines/natural-sciences.md",
+    "TOOLKIT/profiles/methods/formal-theory.md",
+    "TOOLKIT/profiles/methods/computational.md",
+    "TOOLKIT/design/catalog.json",
+    "TOOLKIT/core/schemas/source.schema.json",
+    "TOOLKIT/core/schemas/statement.schema.json",
+    "TOOLKIT/core/schemas/evidence.schema.json",
+    "TOOLKIT/core/schemas/relation.schema.json",
+    "TOOLKIT/core/schemas/artifact.schema.json",
+    "TOOLKIT/core/schemas/activity.schema.json",
+    "TOOLKIT/core/schemas/method-binding.schema.json",
+    "TOOLKIT/core/schemas/registry.schema.json",
+    "TOOLKIT/core/schemas/project.schema.json"
+  ],
+  "guidance_sha256": {
+    "TOOLKIT/skills/rw-workflow/SKILL.md": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+    "TOOLKIT/core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+    "TOOLKIT/core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "TOOLKIT/skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+    "TOOLKIT/skills/rw-writing/SKILL.md": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+    "TOOLKIT/skills/rw-review/SKILL.md": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+    "TOOLKIT/profiles/disciplines/natural-sciences.md": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a",
+    "TOOLKIT/profiles/methods/formal-theory.md": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+    "TOOLKIT/profiles/methods/computational.md": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+    "TOOLKIT/design/catalog.json": "4cc800b1d1ee5e6dabbde06aa60bded298c8e5b84bc035747e93d7c9cf6ccb12",
+    "TOOLKIT/core/schemas/source.schema.json": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    "TOOLKIT/core/schemas/statement.schema.json": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    "TOOLKIT/core/schemas/evidence.schema.json": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    "TOOLKIT/core/schemas/relation.schema.json": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    "TOOLKIT/core/schemas/artifact.schema.json": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    "TOOLKIT/core/schemas/activity.schema.json": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    "TOOLKIT/core/schemas/method-binding.schema.json": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    "TOOLKIT/core/schemas/registry.schema.json": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
+    "TOOLKIT/core/schemas/project.schema.json": "d3aea9cc6055a5e97776be07cf101ad35d8b764405042372439c3445aa80a558"
+  },
+  "commands": [
+    {
+      "evidence": "checks/calculation-final-and-relocated.json",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "PROJECT/artifacts/final-run"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/calculation-final-and-relocated.json",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "RUN/relocated-inputs",
+        "--output-dir",
+        "RUN/relocated-output"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/calculation-initial.json",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "PROJECT/artifacts/initial-run"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/check-before-checkpoint.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/check-before-wording-refresh.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 1
+    },
+    {
+      "evidence": "checks/check.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/checkpoint.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "checkpoint",
+        "--root",
+        "PROJECT",
+        "--activity",
+        "ACT-write",
+        "--next-action",
+        "对固定终点T和目标误差ε，由闭式Euler误差推导先验步长上界，再与T=4h、h=0.03125h时0.004530461 U/L的已算误差对照；该延伸尚未执行。",
+        "--note",
+        "模型解析、给定Euler步长和固定终点细化已完成；原输入未改，保留初始CLI失败及负值，所有done活动由Codex实际执行。"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/cli-initialization.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "两室交换模型：解析、量纲与Euler离散核对",
+        "--discipline",
+        "natural-sciences",
+        "--method",
+        "formal-theory",
+        "--mode",
+        "reproducible",
+        "--language",
+        "zh-CN",
+        "--entry",
+        "rw-workflow"
+      ],
+      "exit_status": 2
+    },
+    {
+      "evidence": "checks/cli-initialization.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT",
+        "--title",
+        "两室交换模型：解析、量纲与Euler离散核对",
+        "--discipline",
+        "natural-sciences",
+        "--method",
+        "formal-theory",
+        "--mode",
+        "reproducible",
+        "--language",
+        "zh-CN",
+        "--entry",
+        "research"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/cli-initialization.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "install",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/configure.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "configure",
+        "--root",
+        "PROJECT",
+        "--add-method",
+        "computational",
+        "--governance-applicability",
+        "not-applicable"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/final-check.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/final-checkpoint.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "checkpoint",
+        "--root",
+        "PROJECT",
+        "--activity",
+        "ACT-write",
+        "--next-action",
+        "对固定终点T和目标误差ε，由闭式Euler误差推导先验步长上界，再与T=4h、h=0.03125h时0.004530461 U/L的已算误差对照；该延伸尚未执行。",
+        "--note",
+        "最终复核已纠正原稿B单调性解释；证据、产物及done活动均显式刷新，输入和数值未变。"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/final-resume.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/pre-revision-show.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "evidence",
+        "--id",
+        "EV-analysis"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/pre-revision-show.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "artifact",
+        "--id",
+        "AR-analysis"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/pre-revision-show.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "artifact",
+        "--id",
+        "AR-review"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/pre-revision-show.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--id",
+        "R8"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/pre-revision-show.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--id",
+        "ACT-derive"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/pre-revision-show.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--id",
+        "ACT-compute"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/pre-revision-show.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--id",
+        "ACT-write"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/register-batch-execution.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register-batch",
+        "--root",
+        "PROJECT",
+        "--file",
+        "PROJECT/checks/registration-batch.json"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/relocated-execution.json",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "RUN/relocated-inputs",
+        "--output-dir",
+        "RUN/relocated-output"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/resume.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/skills-integrity.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/connect_skills.py",
+        "check",
+        "--root",
+        "PROJECT"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/wording-refresh-registrations.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "evidence",
+        "--file",
+        "-",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/wording-refresh-registrations.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "artifact",
+        "--file",
+        "-",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/wording-refresh-registrations.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "artifact",
+        "--file",
+        "-",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/wording-refresh-registrations.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "relation",
+        "--file",
+        "-",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/wording-refresh-registrations.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--file",
+        "-",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/wording-refresh-registrations.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--file",
+        "-",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "checks/wording-refresh-registrations.json",
+      "argv": [
+        "PYTHON",
+        "TOOLKIT/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT",
+        "--kind",
+        "activity",
+        "--file",
+        "-",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "artifacts/final-run/execution.json",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "PROJECT/artifacts/final-run"
+      ],
+      "exit_status": 0
+    },
+    {
+      "evidence": "artifacts/initial-run/execution.json",
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "PROJECT/artifacts/initial-run"
+      ],
+      "exit_status": 0
+    }
+  ],
+  "calculation_runs": [
+    {
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "PROJECT/artifacts/initial-run"
+      ],
+      "exit_status": 0,
+      "input_sha256": {
+        "model.md": "d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111",
+        "parameters.json": "ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f",
+        "draft.md": "014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991",
+        "task.md": "76a903d4d79f2f139c5b528579fc6d7321c497cb9cd03860a2dea80eb207e970"
+      },
+      "code_sha256": {
+        "run.py": "720e3efc229db3e091458538acc808d6ae1079b23e98c2fd7dd7bb381467e384"
+      },
+      "output_sha256": {
+        "results.json": "9379d33d670971208a0c2b2002f14bb34d66cfe9985c7405d377527396315744"
+      },
+      "guidance": "The host's actually read guidance paths are recorded in PROJECT/execution.json; no runtime guidance is required by this portable script.",
+      "machine_specific": {
+        "elapsed_seconds": 0.0009724170085974038,
+        "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      }
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "PROJECT/artifacts/final-run"
+      ],
+      "exit_status": 0,
+      "input_sha256": {
+        "model.md": "d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111",
+        "parameters.json": "ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f",
+        "draft.md": "014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991",
+        "task.md": "76a903d4d79f2f139c5b528579fc6d7321c497cb9cd03860a2dea80eb207e970"
+      },
+      "code_sha256": {
+        "run.py": "6c5c5c0bf2eacacd86c589f0d1a5afcba992c93aeffa4f526b2540ea66bc13c5"
+      },
+      "output_sha256": {
+        "results.json": "8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257"
+      },
+      "guidance": "The host's actually read guidance paths are recorded in PROJECT/execution.json; no runtime guidance is required by this portable script.",
+      "machine_specific": {
+        "elapsed_seconds": 0.0011889589950442314,
+        "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      }
+    },
+    {
+      "argv": [
+        "PYTHON",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "RUN/relocated-inputs",
+        "--output-dir",
+        "RUN/relocated-output"
+      ],
+      "exit_status": 0,
+      "input_sha256": {
+        "model.md": "d1f8054dc498766b0d74a9cdb24c603360df59b7880e31208d57dcd729779111",
+        "parameters.json": "ccb3febf80290ddae97e0fcecf0b2bb2f09acdc7acadc3691ef864b55244757f",
+        "draft.md": "014dc94f075dcf48b24d2f8f7af0d6d0aa16848782f99e83b198aa5adbdf6991",
+        "task.md": "76a903d4d79f2f139c5b528579fc6d7321c497cb9cd03860a2dea80eb207e970"
+      },
+      "code_sha256": {
+        "run.py": "6c5c5c0bf2eacacd86c589f0d1a5afcba992c93aeffa4f526b2540ea66bc13c5"
+      },
+      "output_sha256": {
+        "results.json": "8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257"
+      },
+      "guidance": "The host's actually read guidance paths are recorded in PROJECT/execution.json; no runtime guidance is required by this portable script.",
+      "machine_specific": {
+        "elapsed_seconds": 0.0009545829962007701,
+        "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+      }
+    }
+  ],
+  "deterministic_rerun": {
+    "label": "deterministic-relocation-comparison",
+    "same_results_sha256": true,
+    "sha256": "8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257"
+  },
+  "retained_nonzero_exits": [
+    {
+      "evidence": "checks/cli-initialization.json",
+      "exit_status": 2,
+      "reason": "Invalid entry activity rw-workflow; corrected to research and initialized successfully."
+    },
+    {
+      "evidence": "checks/check-before-wording-refresh.json",
+      "exit_status": 1,
+      "reason": "Expected freshness findings after tightening prose; explicit versioned replacements followed by clean final check/resume."
+    }
+  ],
+  "final_status": {
+    "register_count": 37,
+    "final_registry_revision": 46,
+    "check_exit": 0,
+    "resume_exit": 0,
+    "checkpoint": "current",
+    "scientific_validity": "not-assessed by metadata CLI; written analysis and scoped numerical checks supplied"
+  },
+  "machine_specific": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "run_timings_location": "Each stored execution has machine_specific.elapsed_seconds."
+  },
+  "scope_limits": [
+    "No network or installations.",
+    "No other case, scoring answers, tests, personal package or Runner was used.",
+    "No physical measurements, proof assistant, independent human audit or cross-OS execution."
+  ],
+  "runtime_delivery": "Project skill/runtime copies are installed locally but excluded from the maintainer delivery archive."
+}

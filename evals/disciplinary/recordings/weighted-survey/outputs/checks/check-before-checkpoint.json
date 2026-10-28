@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "check",
+    "--root",
+    "PROJECT"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P3463448f67a944ff8ccfb85abcedea7d\",\n  \"revision\": 27,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 3,\n    \"artifacts\": 5,\n    \"decisions\": 0,\n    \"evidence\": 4,\n    \"method_bindings\": 1,\n    \"relations\": 6,\n    \"sources\": 4,\n    \"statements\": 4\n  },\n  \"activities\": [\n    {\n      \"id\": \"ACT_compute\",\n      \"title\": \"计算三种调查比例及全抽中者缺失界限并复跑\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_review\",\n      \"title\": \"核对修订稿、计算和范围并保存具体下一步\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_write\",\n      \"title\": \"依据实际计算修订原稿\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"Clarify the current question, scope and next evidence check.\"\n  },\n  \"checkpoint\": {\n    \"recorded\": false,\n    \"status\": \"not-recorded\",\n    \"changed\": []\n  }\n}\n",
+  "stderr": "",
+  "machine_elapsed_seconds": 0.06169837500783615
+}

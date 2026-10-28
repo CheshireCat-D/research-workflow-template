@@ -1,0 +1,56 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pf390188560aa428a946624a4b09e3d89",
+  "revision": 46,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 3,
+    "artifacts": 5,
+    "decisions": 0,
+    "evidence": 5,
+    "method_bindings": 2,
+    "relations": 10,
+    "sources": 4,
+    "statements": 8
+  },
+  "activities": [
+    {
+      "id": "ACT-compute",
+      "title": "Codex实际运行Euler与解析对照并用迁移输入复跑",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-derive",
+      "title": "Codex从本地设定建立并逐步推导连续与离散关系",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-write",
+      "title": "Codex修订结果主张并自审",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "ACT-write",
+    "next_action": "对固定终点T和目标误差ε，由闭式Euler误差推导先验步长上界，再与T=4h、h=0.03125h时0.004530461 U/L的已算误差对照；该延伸尚未执行。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

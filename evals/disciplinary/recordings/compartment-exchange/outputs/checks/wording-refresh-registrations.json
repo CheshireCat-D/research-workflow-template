@@ -1,0 +1,256 @@
+[
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "register",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "evidence",
+      "--file",
+      "-",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "stdin_record": {
+      "description": "模型方程、变量和差、守恒、显式解、量纲/无量纲、离散条件及误差推导",
+      "id": "EV-analysis",
+      "limitations": "手工推导；不声称独立人类或形式化验证。",
+      "location": {
+        "kind": "local",
+        "path": "notes/analysis.md"
+      },
+      "provenance": "Codex代理基于本地模型和参数逐步推导，无证明器。",
+      "source_ids": [
+        "SRC-model",
+        "SRC-parameters"
+      ],
+      "type": "manual-analytic-derivation"
+    },
+    "exit_status": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"evidence\",\n  \"id\": \"EV-analysis\",\n  \"version\": 2,\n  \"revision\": 39,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.05777454200142529
+    }
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "register",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "artifact",
+      "--file",
+      "-",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "stdin_record": {
+      "derived_from": [
+        "evidence:EV-model",
+        "evidence:EV-parameters"
+      ],
+      "description": "逐步理论推导与实际数值对照",
+      "id": "AR-analysis",
+      "path": "notes/analysis.md",
+      "type": "analysis"
+    },
+    "exit_status": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"AR-analysis\",\n  \"version\": 2,\n  \"revision\": 40,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.057945292006479576
+    }
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "register",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "artifact",
+      "--file",
+      "-",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "stdin_record": {
+      "derived_from": [
+        "artifact:AR-analysis",
+        "artifact:AR-code",
+        "artifact:AR-results",
+        "artifact:AR-report"
+      ],
+      "description": "实际自审、失败保留和具体后续任务",
+      "id": "AR-review",
+      "path": "review.md",
+      "type": "review"
+    },
+    "exit_status": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"AR-review\",\n  \"version\": 2,\n  \"revision\": 41,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.056449249997967854
+    }
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "register",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "relation",
+      "--file",
+      "-",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "stdin_record": {
+      "evidence_id": "EV-analysis",
+      "id": "R8",
+      "rationale": "A的精确解指数趋于6，否定线性至0；B持续增加在本例为真，补充其极限6，不将原稿改读为声称无界。",
+      "relation": "challenges",
+      "scope": "本次离线合成两室模型；详见对应主张条件。",
+      "statement_id": "S-old-trend"
+    },
+    "exit_status": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"relation\",\n  \"id\": \"R8\",\n  \"version\": 2,\n  \"revision\": 42,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.057588124996982515
+    }
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "register",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "activity",
+      "--file",
+      "-",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "stdin_record": {
+      "id": "ACT-derive",
+      "inputs": [
+        "evidence:EV-model",
+        "evidence:EV-parameters"
+      ],
+      "note": "实际手工推导；无证明器或人类独立复核。 最终复核纠正对原稿B单调性措辞的解释；公式和数值未变，依赖已按当前版本刷新。",
+      "outputs": [
+        "artifact:AR-analysis",
+        "statement:S-solution",
+        "statement:S-dimension",
+        "statement:S-euler",
+        "statement:S-order"
+      ],
+      "status": "done",
+      "title": "Codex从本地设定建立并逐步推导连续与离散关系"
+    },
+    "exit_status": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"ACT-derive\",\n  \"version\": 2,\n  \"revision\": 43,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.05802308399870526
+    }
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "register",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "activity",
+      "--file",
+      "-",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "stdin_record": {
+      "depends_on": [
+        "ACT-derive"
+      ],
+      "id": "ACT-compute",
+      "inputs": [
+        "evidence:EV-model",
+        "evidence:EV-parameters",
+        "artifact:AR-code"
+      ],
+      "note": "所有实际计算在10秒内；负状态保留；对应argv和hash见execution.json。 最终复核纠正对原稿B单调性措辞的解释；公式和数值未变，依赖已按当前版本刷新。",
+      "outputs": [
+        "artifact:AR-results",
+        "evidence:EV-results",
+        "statement:S-computation"
+      ],
+      "status": "done",
+      "title": "Codex实际运行Euler与解析对照并用迁移输入复跑"
+    },
+    "exit_status": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"ACT-compute\",\n  \"version\": 2,\n  \"revision\": 44,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.058927958001731895
+    }
+  },
+  {
+    "argv": [
+      "PYTHON",
+      "TOOLKIT/tools/research.py",
+      "register",
+      "--root",
+      "PROJECT",
+      "--kind",
+      "activity",
+      "--file",
+      "-",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "stdin_record": {
+      "depends_on": [
+        "ACT-derive",
+        "ACT-compute"
+      ],
+      "id": "ACT-write",
+      "inputs": [
+        "evidence:EV-draft",
+        "artifact:AR-analysis",
+        "artifact:AR-results"
+      ],
+      "note": "原稿不改；约556非空白字符；同一执行代理自审。 最终复核纠正对原稿B单调性措辞的解释；公式和数值未变，依赖已按当前版本刷新。",
+      "outputs": [
+        "artifact:AR-report",
+        "artifact:AR-review"
+      ],
+      "status": "done",
+      "title": "Codex修订结果主张并自审"
+    },
+    "exit_status": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"ACT-write\",\n  \"version\": 2,\n  \"revision\": 45,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.06015133298933506
+    }
+  }
+]

@@ -1,0 +1,703 @@
+{
+  "format_version": 1,
+  "case_id": "factorial-animal",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task outputs and final record data. Replay creates new project IDs, version-1 records and a checkpoint; it does not recreate all original history or repeat model reasoning.",
+  "project_init": {
+    "title": "笼位随机化的二乘二析因对比",
+    "interest": "笼位随机化的二乘二析因对比",
+    "disciplines": [
+      "agriculture-life"
+    ],
+    "methods": [
+      "measurement-experiment"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "minimum-check"
+  },
+  "case_files": {
+    "inputs/design.md": "design.md",
+    "inputs/draft.md": "draft.md",
+    "inputs/observations.csv": "observations.csv",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "design.md": "54ac2891a13289f7ea76292fcfba903f3070d542b5a6eafdb264c1e85bd66b86",
+    "draft.md": "070690af6154a05345f672734daa48f184655ca8cd1ba75a0a4973e493a9e3fe",
+    "observations.csv": "1034cdb578ddea3765dd3dc3156128f8f27a0ffcecab1ffcbc00cf2e7443e465",
+    "task.md": "39bf7abe12919694da8711a097c4236d0bf4a0d550b88a037cdd0a07df34fc16"
+  },
+  "output_files": [
+    "artifacts/primary/manifest.json",
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "checks/check.json",
+    "checks/checkpoint.json",
+    "checks/computation.json",
+    "checks/delivery-manifest.json",
+    "checks/editorial.json",
+    "checks/failures.json",
+    "checks/machine.json",
+    "checks/registration.json",
+    "checks/resume.json",
+    "checks/setup.json",
+    "checks/skills-check.json",
+    "execution.json",
+    "manuscript/report.md",
+    "notes/analysis.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/primary/manifest.json": "5c3fe2dd2d22f68f23f3b9454d33021adf0bbd48c16dd61f421e39b0ac92026c",
+    "artifacts/results.json": "d9c5679012e71f2149f0615647ce009f4971dea4554df42c85c5092f20067fbc",
+    "artifacts/run.py": "38b8f3efd5396762838c3edbe459273fcb520a84ef745d44c5bf92f50aa4dd01",
+    "checks/check.json": "b75053e8dc65cf03582a5f3b6ff8fe357d9c207b2cfae86bedd2179593503c36",
+    "checks/checkpoint.json": "60754cdfe0957be66fc7b38048523809ba8f7a0d403f157a5b54e1f6c2a60bf7",
+    "checks/computation.json": "de61acffaaf1520c9beec15f2fa3adf2cb7191f354950adf2be6e957d542b294",
+    "checks/delivery-manifest.json": "028fd8d690da4e6f87e2ec0756a726ec07641a31fad5e97c8b96ca3ccc202064",
+    "checks/editorial.json": "8170023737cc72dad33434be58b350a6d15f00c781965c110ff1adcb05ee4e72",
+    "checks/failures.json": "c9aa0c84c322853f282eedf360a1a04e7ff67f7072a4194f567d5a305a71b426",
+    "checks/machine.json": "7c9f2d009341b29ce8d952bfa9fc199640e62c83200721c3bdd8c9a410ecfac5",
+    "checks/registration.json": "a4c44c887e5b80bb1133caa04a1cb2aceeea7efa3a5db23f6ec5190565b3802b",
+    "checks/resume.json": "cdf60ac3a199b66c82a29e1fb6c8a494c5a19082afb203dab7765fe152a61e33",
+    "checks/setup.json": "a8f0d0003f0bfa6c9f0b688fa3997ff3510ec97f46ed97095f88897e06c19925",
+    "checks/skills-check.json": "47c1d731ec49e737f4cd306c3243c5efa7dc4892fcf3e77acb83650447d626ff",
+    "execution.json": "32060ad4c9b47e7622f223203cb03c019be81f49bc01bf31de9405ff8e5cd49e",
+    "manuscript/report.md": "d369d03a8dd1e5da74452cf50715690d9808a4202e35a5f637382ad15e39a776",
+    "notes/analysis.md": "fc0436843d740249baf6dce5c8e2d69317a4e35fd1bee874bad541999db30885",
+    "review.md": "5a0ec52212eb11aebe36cb639256134b8b20aa71e54e112a8bc7d4e969f53c35"
+  },
+  "executed_output_sha256": {
+    "artifacts/primary/manifest.json": "5c3fe2dd2d22f68f23f3b9454d33021adf0bbd48c16dd61f421e39b0ac92026c",
+    "artifacts/results.json": "d9c5679012e71f2149f0615647ce009f4971dea4554df42c85c5092f20067fbc",
+    "artifacts/run.py": "38b8f3efd5396762838c3edbe459273fcb520a84ef745d44c5bf92f50aa4dd01",
+    "checks/check.json": "2b467d87b1e670b462b037e0b5d547f26c158f6e41219d7cf2e7650989f6b152",
+    "checks/checkpoint.json": "594a798363fad6ff8829e7cc0ed6d99de14cc7e052ad48a5fc49208bff96a519",
+    "checks/computation.json": "de61acffaaf1520c9beec15f2fa3adf2cb7191f354950adf2be6e957d542b294",
+    "checks/delivery-manifest.json": "5d29d3762c008c875e42c9580c5562d14542f9a481651410ecc4bcd43a512489",
+    "checks/editorial.json": "8170023737cc72dad33434be58b350a6d15f00c781965c110ff1adcb05ee4e72",
+    "checks/failures.json": "1a899a3afc99e353a4488a2a663d87e2b0cd5516e6881e0c1fdffa8c4ea01fb5",
+    "checks/machine.json": "7c9f2d009341b29ce8d952bfa9fc199640e62c83200721c3bdd8c9a410ecfac5",
+    "checks/registration.json": "33372898cfd9bbc7ef799b9423c56247943022b92873b8db512d082aee14a175",
+    "checks/resume.json": "779f46a459628ee87af64c7ab7aa9fa954033c68ed9c072fb4c818f7025f0189",
+    "checks/setup.json": "24a70459f357bdcce7de74a8640573fd9a70ea8ac4f4f0e3a35f6035e006d106",
+    "checks/skills-check.json": "3b953dd8f55eb46ab4b807697df431f4de83533f9270248bd9d3c2bbf1d18d71",
+    "execution.json": "474a51a3a7c49b1c42bc3669acd929939ea6d3baf4f8de821cf499e233863544",
+    "manuscript/report.md": "d369d03a8dd1e5da74452cf50715690d9808a4202e35a5f637382ad15e39a776",
+    "notes/analysis.md": "fc0436843d740249baf6dce5c8e2d69317a4e35fd1bee874bad541999db30885",
+    "review.md": "5a0ec52212eb11aebe36cb639256134b8b20aa71e54e112a8bc7d4e969f53c35"
+  },
+  "output_normalizations": [
+    {
+      "path": "checks/check.json",
+      "original_sha256": "2b467d87b1e670b462b037e0b5d547f26c158f6e41219d7cf2e7650989f6b152",
+      "published_sha256": "b75053e8dc65cf03582a5f3b6ff8fe357d9c207b2cfae86bedd2179593503c36",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/checkpoint.json",
+      "original_sha256": "594a798363fad6ff8829e7cc0ed6d99de14cc7e052ad48a5fc49208bff96a519",
+      "published_sha256": "60754cdfe0957be66fc7b38048523809ba8f7a0d403f157a5b54e1f6c2a60bf7",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/delivery-manifest.json",
+      "original_sha256": "5d29d3762c008c875e42c9580c5562d14542f9a481651410ecc4bcd43a512489",
+      "published_sha256": "028fd8d690da4e6f87e2ec0756a726ec07641a31fad5e97c8b96ca3ccc202064",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/failures.json",
+      "original_sha256": "1a899a3afc99e353a4488a2a663d87e2b0cd5516e6881e0c1fdffa8c4ea01fb5",
+      "published_sha256": "c9aa0c84c322853f282eedf360a1a04e7ff67f7072a4194f567d5a305a71b426",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/registration.json",
+      "original_sha256": "33372898cfd9bbc7ef799b9423c56247943022b92873b8db512d082aee14a175",
+      "published_sha256": "a4c44c887e5b80bb1133caa04a1cb2aceeea7efa3a5db23f6ec5190565b3802b",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/resume.json",
+      "original_sha256": "779f46a459628ee87af64c7ab7aa9fa954033c68ed9c072fb4c818f7025f0189",
+      "published_sha256": "cdf60ac3a199b66c82a29e1fb6c8a494c5a19082afb203dab7765fe152a61e33",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/setup.json",
+      "original_sha256": "24a70459f357bdcce7de74a8640573fd9a70ea8ac4f4f0e3a35f6035e006d106",
+      "published_sha256": "a8f0d0003f0bfa6c9f0b688fa3997ff3510ec97f46ed97095f88897e06c19925",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/skills-check.json",
+      "original_sha256": "3b953dd8f55eb46ab4b807697df431f4de83533f9270248bd9d3c2bbf1d18d71",
+      "published_sha256": "47c1d731ec49e737f4cd306c3243c5efa7dc4892fcf3e77acb83650447d626ff",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "execution.json",
+      "original_sha256": "474a51a3a7c49b1c42bc3669acd929939ea6d3baf4f8de821cf499e233863544",
+      "published_sha256": "32060ad4c9b47e7622f223203cb03c019be81f49bc01bf31de9405ff8e5cd49e",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    }
+  ],
+  "omitted_identical_outputs": [
+    {
+      "path": "artifacts/primary/results.json",
+      "canonical": "artifacts/results.json",
+      "sha256": "d9c5679012e71f2149f0615647ce009f4971dea4554df42c85c5092f20067fbc",
+      "reason": "Unregistered byte-identical rerun result; execution commands and identity receipts retained."
+    }
+  ],
+  "guidance_sha256": {
+    "core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "core/schemas/activity.schema.json": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    "core/schemas/artifact.schema.json": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    "core/schemas/evidence.schema.json": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    "core/schemas/method-binding.schema.json": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    "core/schemas/relation.schema.json": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    "core/schemas/source.schema.json": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    "core/schemas/statement.schema.json": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    "core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+    "profiles/disciplines/agriculture-life.md": "66d86ef5e1f6deaa2af354e36e188469f9e1cf3423c14d31b4b48c854d46d583",
+    "profiles/governance.md": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+    "profiles/methods/measurement-experiment.md": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd",
+    "skills/rw-review/SKILL.md": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+    "skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+    "skills/rw-workflow/SKILL.md": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+    "skills/rw-writing/SKILL.md": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d"
+  },
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_design",
+        "limitations": "本项目原创离线合成材料；用户任务明确允许MIT分发；没有真实动物资料。",
+        "locator": "inputs/design.md",
+        "rights": "public",
+        "title": "合成笼位随机化设计",
+        "version": "sha256:54ac2891a13289f7ea76292fcfba903f3070d542b5a6eafdb264c1e85bd66b86"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_draft",
+        "limitations": "本项目原创离线合成材料；用户任务明确允许MIT分发；没有真实动物资料。",
+        "locator": "inputs/draft.md",
+        "rights": "public",
+        "title": "待修订的原稿主张",
+        "version": "sha256:070690af6154a05345f672734daa48f184655ca8cd1ba75a0a4973e493a9e3fe"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_raw",
+        "limitations": "本项目原创离线合成材料；用户任务明确允许MIT分发；没有真实动物资料。",
+        "locator": "inputs/observations.csv",
+        "rights": "public",
+        "title": "合成动物个体增重记录",
+        "version": "sha256:1034cdb578ddea3765dd3dc3156128f8f27a0ffcecab1ffcbc00cf2e7443e465"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "SRC_task",
+        "limitations": "本项目原创离线合成材料；用户任务明确允许MIT分发；没有真实动物资料。",
+        "locator": "inputs/task.md",
+        "rights": "public",
+        "title": "任务与原创合成MIT许可说明",
+        "version": "sha256:39bf7abe12919694da8711a097c4236d0bf4a0d550b88a037cdd0a07df34fc16"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "区组交互3、4、2g；边际差3.5、4.5g。2、3g仅为基准简单差。",
+          "reviewer": "Codex execution agent; self-review only",
+          "scope": "原draft第二句",
+          "status": "challenged"
+        },
+        "id": "S_additive_original",
+        "scope": "原draft第二句",
+        "text": "两因素效应在所有条件下相加，饲料提高2g，环境提高3g，交互为0。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "标准库实际重算、确定性重跑及输入扰动均可核对。",
+          "reviewer": "Codex execution agent; self-review only",
+          "scope": "给定CSV、差为1减0、区组等权且对另一因素水平等权",
+          "status": "supported-in-scope"
+        },
+        "id": "S_contrasts",
+        "scope": "给定CSV、差为1减0、区组等权且对另一因素水平等权",
+        "text": "按笼均和区组内对比汇总，F与E边际差3.5g、4.5g；交互平均3g，三个区组为3、4、2g。",
+        "type": "empirical",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "任务明确合成材料；测量与实验画像要求尊重单位和外推范围。",
+          "reviewer": "Codex execution agent; self-review only",
+          "scope": "本次离线合成例；不涉及真实干预或招募",
+          "status": "supported-in-scope"
+        },
+        "id": "S_scope",
+        "scope": "本次离线合成例；不涉及真实干预或招募",
+        "text": "合成数据展示正交互与条件依赖，不能据此宣称真实动物普适效果或生成伦理批准记录。",
+        "type": "interpretive",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "设计文本与24条CSV的12笼及完整四格结构相符。",
+          "reviewer": "Codex execution agent; self-review only",
+          "scope": "给定三完整区组的笼位随机化合成设计",
+          "status": "supported-in-scope"
+        },
+        "id": "S_units",
+        "scope": "给定三完整区组的笼位随机化合成设计",
+        "text": "此合成设计共12笼，每种处理3笼；每区组每种处理1笼；24条动物记录为笼内测量。",
+        "type": "design",
+        "use": "included",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "处理按笼分配；实际只有12笼，动物是笼内测量。",
+          "reviewer": "Codex execution agent; self-review only",
+          "scope": "原draft第一句",
+          "status": "challenged"
+        },
+        "id": "S_units_original",
+        "scope": "原draft第一句",
+        "text": "本研究的24只动物是24个独立处理重复。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "按笼、区组先计算后汇总的全部数值、计数及离散程度",
+        "id": "E_computed",
+        "limitations": "描述性结果，3个区组；无真实生物普适推断或显著性结论。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Codex编写标准库artifacts/run.py实际重新读取CSV，实际argv及散列见execution.json。",
+        "source_ids": [
+          "SRC_design",
+          "SRC_raw"
+        ],
+        "type": "executed-computation"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "随机化与笼级处理设计",
+        "id": "E_design",
+        "limitations": "合成例，非真实动物测量或执行审批证据。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/design.md"
+        },
+        "provenance": "用户提供原创合成材料的逐字复制件；复制SHA-256与原件一致。",
+        "source_ids": [
+          "SRC_design"
+        ],
+        "type": "local-original-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "原稿两项过度/错误主张",
+        "id": "E_draft",
+        "limitations": "合成例，非真实动物测量或执行审批证据。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "用户提供原创合成材料的逐字复制件；复制SHA-256与原件一致。",
+        "source_ids": [
+          "SRC_draft"
+        ],
+        "type": "local-original-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "完整24条原始动物测量",
+        "id": "E_raw",
+        "limitations": "合成例，非真实动物测量或执行审批证据。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/observations.csv"
+        },
+        "provenance": "用户提供原创合成材料的逐字复制件；复制SHA-256与原件一致。",
+        "source_ids": [
+          "SRC_raw"
+        ],
+        "type": "local-original-input"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "本合成材料权限和离线任务范围",
+        "id": "E_task",
+        "limitations": "合成例，非真实动物测量或执行审批证据。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/task.md"
+        },
+        "provenance": "用户提供原创合成材料的逐字复制件；复制SHA-256与原件一致。",
+        "source_ids": [
+          "SRC_task"
+        ],
+        "type": "local-original-input"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_raw",
+          "evidence:E_design"
+        ],
+        "description": "标准库可移植CLI：读取指定输入并拒绝已有输出",
+        "id": "A_code",
+        "path": "artifacts/run.py",
+        "type": "code"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_computed",
+        "id": "R_additive_challenge",
+        "rationale": "计算交互非0，边际差并非2g、3g。",
+        "relation": "challenges",
+        "scope": "本次给定合成设计与CSV",
+        "statement_id": "S_additive_original"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_design",
+        "id": "R_contrast_design",
+        "rationale": "只适用于所列分配设计、差方向与等权水平。",
+        "relation": "qualifies",
+        "scope": "本次给定合成设计与CSV",
+        "statement_id": "S_contrasts"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_computed",
+        "id": "R_contrast_values",
+        "rationale": "区组对比及等权均值实际计算记录。",
+        "relation": "supports",
+        "scope": "本次给定合成设计与CSV",
+        "statement_id": "S_contrasts"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_task",
+        "id": "R_scope_task",
+        "rationale": "任务明确为原创离线合成例，未实施真实动物操作。",
+        "relation": "supports",
+        "scope": "本次给定合成设计与CSV",
+        "statement_id": "S_scope"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_computed",
+        "id": "R_scope_values",
+        "rationale": "3个区组的正交互是当前材料观察；没有扩展到真实物种或环境。",
+        "relation": "qualifies",
+        "scope": "本次给定合成设计与CSV",
+        "statement_id": "S_scope"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_design",
+        "id": "R_units_challenge",
+        "rationale": "按笼实施处理，24只动物不是24个分配重复。",
+        "relation": "challenges",
+        "scope": "本次给定合成设计与CSV",
+        "statement_id": "S_units_original"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_design",
+        "id": "R_units_design",
+        "rationale": "3区组×4笼，处理按笼分配，每格每区组1笼。",
+        "relation": "supports",
+        "scope": "本次给定合成设计与CSV",
+        "statement_id": "S_units"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_raw",
+        "id": "R_units_raw",
+        "rationale": "CSV实际核得12笼、每笼2条、每处理3笼。",
+        "relation": "supports",
+        "scope": "本次给定合成设计与CSV",
+        "statement_id": "S_units"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_code"
+        ],
+        "description": "已解决缺目录失败和预期拒绝覆盖的原始错误",
+        "id": "A_failure",
+        "path": "checks/failures.json",
+        "type": "execution-evidence"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_code",
+          "evidence:E_raw"
+        ],
+        "description": "实际运行的完整笼均、区组和总对比",
+        "id": "A_results",
+        "path": "artifacts/results.json",
+        "type": "computation-result"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT_initial_write_failed",
+        "note": "artifacts目录不存在，shell退出1；错误已保留，随后创建目录并成功写入。执行者为Codex代理。",
+        "outputs": [
+          "artifact:A_failure"
+        ],
+        "status": "failed",
+        "title": "首次写入分析脚本"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_results",
+          "evidence:E_design"
+        ],
+        "description": "实质分析、公式、计数与范围",
+        "id": "A_analysis",
+        "path": "notes/analysis.md",
+        "type": "analysis"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_results",
+          "artifact:A_code"
+        ],
+        "description": "确定性重跑、单条输入扰动与复制散列比对",
+        "id": "A_checks",
+        "path": "checks/computation.json",
+        "type": "execution-evidence"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_code",
+          "artifact:A_results"
+        ],
+        "description": "实际命令状态、SHA-256和指导路径",
+        "id": "A_execution",
+        "path": "execution.json",
+        "type": "execution-evidence"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT_analyze",
+        "inputs": [
+          "evidence:E_raw",
+          "evidence:E_design"
+        ],
+        "note": "Codex代理实际运行Python3.14标准库；主运行与新目录重跑退出0，输入扰动按公式改变结果；已有输出目录拒绝覆盖退出2是预期检查。",
+        "outputs": [
+          "artifact:A_code",
+          "artifact:A_results",
+          "artifact:A_analysis",
+          "artifact:A_execution",
+          "artifact:A_checks"
+        ],
+        "status": "done",
+        "title": "按笼聚合、区组内2×2对比并实际运行复现与扰动检查"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_analysis",
+          "evidence:E_draft"
+        ],
+        "description": "467字符中文修订短稿",
+        "id": "A_report",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_analyze"
+        ],
+        "id": "ACT_write",
+        "inputs": [
+          "evidence:E_draft",
+          "artifact:A_results",
+          "artifact:A_analysis"
+        ],
+        "note": "由Codex代理完成，不标为人类写作或人类核验。",
+        "outputs": [
+          "artifact:A_report"
+        ],
+        "status": "done",
+        "title": "依据结果修订原稿独立单位、边际差和交互主张"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_report",
+          "artifact:A_results"
+        ],
+        "description": "本次代理实际自审与明确下一步",
+        "id": "A_review",
+        "path": "review.md",
+        "type": "review"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:S_units",
+          "statement:S_contrasts",
+          "statement:S_scope",
+          "activity:ACT_analyze"
+        ],
+        "id": "MB_animal",
+        "method_id": "measurement-experiment",
+        "notes": "依据本次实际读取的measurement-experiment画像，未实施真实动物操作。",
+        "profile_version": "0.1",
+        "reason": "动物合成数据，按笼分配；核对独立处理单位、完整区组、因素简单差/边际差/交互及合成范围。",
+        "variant": "animal-study"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_write"
+        ],
+        "id": "ACT_review",
+        "inputs": [
+          "evidence:E_raw",
+          "evidence:E_design",
+          "artifact:A_results",
+          "artifact:A_report"
+        ],
+        "note": "同一Codex代理的实际自审；无独立人类评审。",
+        "outputs": [
+          "artifact:A_review"
+        ],
+        "status": "done",
+        "title": "自审原数据对比、报告与实际计算执行证据"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 4,
+    "artifacts": 8,
+    "decisions": 0,
+    "evidence": 5,
+    "method_bindings": 1,
+    "relations": 8,
+    "sources": 4,
+    "statements": 5
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "请另一位审阅者从inputs/observations.csv重新按笼聚合，优先复算B2交互(29-23)-(22-20)=4g及三块平均3g，并核对manuscript/report.md每处理3笼的措辞；若拟真实试验，再补目标物种、时长、测量和随机化协议后设计笼数。"
+  },
+  "executed_registry_sha256": "b493411ec098144966fb025d18bd5338cedf653bd45ce9c23971630f6671846b",
+  "original_registry_revision": 36,
+  "observed_check_sha256": "eaeecab88a5f809ac547fc18a91c9ead6d36e75728516a59ba39506620d5952d",
+  "observed_resume_sha256": "395b47adeda70d699282633f87b9ad623754d60c7c6fee97d95b3d2708b1266a",
+  "reproduction": {
+    "script": "artifacts/run.py",
+    "arguments": [
+      "--input-dir",
+      "INPUTS",
+      "--output-dir",
+      "NEW"
+    ],
+    "result": "results.json"
+  }
+}

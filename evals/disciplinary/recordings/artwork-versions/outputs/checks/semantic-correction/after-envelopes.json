@@ -1,0 +1,180 @@
+{
+  "statement:S-industrial": {
+    "version": 2,
+    "data": {
+      "assessment": {
+        "rationale": "E1只是1970年基于裁剪复刻的后出归因，没有说唯一，也未确认艺术家自身意图；其无人前提被原图挑战。A1另有保留选择的自述，但这些材料不能反证一切工业批判可能，故唯一意图主张依据不足。",
+        "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "status": "insufficient"
+      },
+      "id": "S-industrial",
+      "notes": "直接登记被审内容命题；其在原草稿第1行出现的事实由R-industrial-draft/E-draft定位，不再混入statement文本。",
+      "scope": "仅限所给离线原创虚构图像和材料包节录",
+      "text": "作者的唯一意图是谴责工业劳动制度。",
+      "type": "interpretive",
+      "use": "excluded",
+      "work_status": "reviewed"
+    }
+  },
+  "statement:S-nofigure": {
+    "version": 2,
+    "data": {
+      "assessment": {
+        "rationale": "原图左下实际可见人形，复刻的无人不代表原构图无人。",
+        "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "status": "challenged"
+      },
+      "id": "S-nofigure",
+      "notes": "直接登记被审内容命题；原草稿位置由R-nofigure-draft/E-draft定位。",
+      "scope": "仅限所给离线原创虚构图像和材料包节录",
+      "text": "原画完全没有人物。",
+      "type": "empirical",
+      "use": "excluded",
+      "work_status": "reviewed"
+    }
+  },
+  "relation:R-industrial-E1": {
+    "version": 2,
+    "data": {
+      "evidence_id": "E-E1",
+      "id": "R-industrial-E1",
+      "rationale": "E1记载1970年有人把作品归因为艺术家对工业劳动制度的谴责，提供后出接受语境；节录没有唯一性表述，也不确认归因成立。",
+      "relation": "contextualizes",
+      "scope": "仅限E1后出归因的存在与语境，不支持原作者唯一意图。",
+      "statement_id": "S-industrial"
+    }
+  },
+  "relation:R-industrial-counter": {
+    "version": 2,
+    "data": {
+      "evidence_id": "E-original",
+      "id": "R-industrial-counter",
+      "rationale": "原图可见人形，直接反驳E1的无人前提，削弱其由此推导工业劳动意图的依据；不能从有人直接反证艺术家具有任何该意图的可能。",
+      "relation": "qualifies",
+      "scope": "只限制E1归因推论的前提和支持力度，不直接判定艺术家全部意图。",
+      "statement_id": "S-industrial"
+    }
+  },
+  "evidence:E-init-failure": {
+    "version": 2,
+    "data": {
+      "description": "首次init因非法entry validation退出2；后续纠正成功。",
+      "id": "E-init-failure",
+      "limitations": "接口失败，不是艺术解释检验。",
+      "location": {
+        "kind": "local",
+        "path": "checks/initial-init-failure.json"
+      },
+      "notes": "执行日志来源已显式更正；checks/initial-init-failure.json原始字节和A-init-failure的failed状态保留。",
+      "provenance": "Codex代理实际通过subprocess.run执行初始化命令；argv=[\"PYTHON\", \"TOOLKIT/tools/research.py\", \"init\", \"--output\", \"PROJECT\", \"--title\", \"《两条路径》原构图与裁剪展陈：版本与竞争解释\", \"--discipline\", \"humanities\", \"--method\", \"historical-interpretive\", \"--mode\", \"structured\", \"--language\", \"zh\", \"--entry\", \"validation\"]。证据文件保存该次调用实际返回的stdout、stderr（本次为空）及exit_status=2；stdout含Unknown project entry activity or workflow mode错误。",
+      "source_ids": [],
+      "type": "execution-failure"
+    }
+  },
+  "activity:A-interpret": {
+    "version": 2,
+    "data": {
+      "depends_on": [
+        "A-material-audit"
+      ],
+      "id": "A-interpret",
+      "inputs": [
+        "evidence:E-original",
+        "evidence:E-reproduction",
+        "evidence:E-A1",
+        "evidence:E-C1",
+        "evidence:E-E1",
+        "evidence:E-draft",
+        "artifact:ART-results",
+        "statement:S-industrial",
+        "statement:S-nofigure",
+        "relation:R-industrial-E1",
+        "relation:R-industrial-counter",
+        "relation:R-industrial-A1",
+        "relation:R-nofigure",
+        "relation:R-nofigure-version",
+        "relation:R-industrial-draft",
+        "relation:R-nofigure-draft",
+        "artifact:ART-ledger-semantic-review"
+      ],
+      "note": "由Codex代理实际完成；view_image全图查看原输入及复制件；非独立人类审稿。 后续登记语义复核已将被审内容与草稿归属分开，明确E1未说唯一，纠正失败日志来源；重新核对原正文仍表达相同解释范围，科学产物未改，并重新绑定当前记录版本。",
+      "outputs": [
+        "artifact:ART-analysis",
+        "artifact:ART-sources",
+        "artifact:ART-report",
+        "artifact:ART-review"
+      ],
+      "status": "done",
+      "title": "实际看图、比较两种解释、审查原稿并写出短稿"
+    }
+  },
+  "activity:A-next-context": {
+    "version": 2,
+    "data": {
+      "depends_on": [
+        "A-interpret",
+        "A-ledger-semantic-correction"
+      ],
+      "id": "A-next-context",
+      "inputs": [
+        "artifact:ART-analysis",
+        "artifact:ART-review",
+        "artifact:ART-ledger-semantic-review"
+      ],
+      "note": "计划：索取工作笺全文及目录第5段所在完整页，检查是否存在工业劳动的直接出处；本轮未取得，不记完成。 登记语义和失败日志来源更正已完成；后续仍需新语境材料，本活动保持pending。",
+      "outputs": [],
+      "status": "pending",
+      "title": "取得完整A1与C1并核对制度对象及道路语境"
+    }
+  },
+  "relation:R-industrial-draft": {
+    "version": 1,
+    "data": {
+      "evidence_id": "E-draft",
+      "id": "R-industrial-draft",
+      "rationale": "inputs/draft.md第1行出现“作者唯一意图是谴责工业劳动制度”，定位本次被审内容命题；原稿出现该断言不证明其内容成立。",
+      "relation": "contextualizes",
+      "scope": "只定位原草稿断言的出现及被审语境。",
+      "statement_id": "S-industrial"
+    }
+  },
+  "relation:R-nofigure-draft": {
+    "version": 1,
+    "data": {
+      "evidence_id": "E-draft",
+      "id": "R-nofigure-draft",
+      "rationale": "inputs/draft.md第1行出现“原画完全没有人物”，定位本次被审内容命题；原稿出现该断言不证明其内容成立。",
+      "relation": "contextualizes",
+      "scope": "只定位原草稿断言的出现及被审语境。",
+      "statement_id": "S-nofigure"
+    }
+  },
+  "activity:A-ledger-semantic-correction": {
+    "version": 1,
+    "data": {
+      "depends_on": [
+        "A-interpret"
+      ],
+      "id": "A-ledger-semantic-correction",
+      "inputs": [
+        "evidence:E-draft",
+        "evidence:E-E1",
+        "evidence:E-init-failure",
+        "statement:S-industrial",
+        "statement:S-nofigure",
+        "relation:R-industrial-E1",
+        "relation:R-industrial-counter",
+        "relation:R-industrial-draft",
+        "relation:R-nofigure-draft"
+      ],
+      "note": "Codex代理实际重读本包原文、通过CLI show取得版本并显式replace；旧版本及中间stale检查保留；输入和原科学正文无改动。",
+      "outputs": [
+        "artifact:ART-ledger-semantic-review"
+      ],
+      "status": "done",
+      "title": "核对原文并修正被审命题、证据关系和CLI日志来源"
+    }
+  }
+}

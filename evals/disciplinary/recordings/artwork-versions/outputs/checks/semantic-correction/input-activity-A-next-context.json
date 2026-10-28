@@ -1,0 +1,16 @@
+{
+  "depends_on": [
+    "A-interpret",
+    "A-ledger-semantic-correction"
+  ],
+  "id": "A-next-context",
+  "inputs": [
+    "artifact:ART-analysis",
+    "artifact:ART-review",
+    "artifact:ART-ledger-semantic-review"
+  ],
+  "note": "计划：索取工作笺全文及目录第5段所在完整页，检查是否存在工业劳动的直接出处；本轮未取得，不记完成。 登记语义和失败日志来源更正已完成；后续仍需新语境材料，本活动保持pending。",
+  "outputs": [],
+  "status": "pending",
+  "title": "取得完整A1与C1并核对制度对象及道路语境"
+}

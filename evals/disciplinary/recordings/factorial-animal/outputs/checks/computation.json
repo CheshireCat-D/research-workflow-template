@@ -1,0 +1,17 @@
+{
+  "replay_results_sha256_equal": true,
+  "sensitivity": {
+    "change": "B1 F1E1 first animal gain +2g",
+    "interaction_delta_g": 0.3333333333333335,
+    "expected_from_cage_formula_g": 0.3333333333333333,
+    "passed": true
+  },
+  "existing_output_guard_exit": 2,
+  "original_inputs_unchanged": true,
+  "copied_inputs_match_original": {
+    "draft.md": true,
+    "task.md": true,
+    "design.md": true,
+    "observations.csv": true
+  }
+}

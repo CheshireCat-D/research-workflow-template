@@ -1,0 +1,320 @@
+{
+  "analysis": "Cage means, within-block contrasts, then equally weighted block average",
+  "unit": "g per stated unit time; actual duration unspecified",
+  "contrast_convention": "Level 1 minus level 0; interaction=(F1E1-F0E1)-(F1E0-F0E0)",
+  "counts": {
+    "animal_records": 24,
+    "cages": 12,
+    "blocks": 3,
+    "animals_per_cage": [
+      2
+    ],
+    "cells_per_block": [
+      4
+    ],
+    "missing_values": 0,
+    "excluded_records": 0,
+    "independent_treatment_unit": "cage; assignments are blocked, not 24 independent animal assignments"
+  },
+  "cage_means": [
+    {
+      "block": "B1",
+      "cage": "C01",
+      "F": 0,
+      "E": 0,
+      "n_animals": 2,
+      "mean_gain_g": 10.0,
+      "animal_gains_g": [
+        9.0,
+        11.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B1",
+      "cage": "C02",
+      "F": 1,
+      "E": 0,
+      "n_animals": 2,
+      "mean_gain_g": 12.0,
+      "animal_gains_g": [
+        11.0,
+        13.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B1",
+      "cage": "C03",
+      "F": 0,
+      "E": 1,
+      "n_animals": 2,
+      "mean_gain_g": 13.0,
+      "animal_gains_g": [
+        12.0,
+        14.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B1",
+      "cage": "C04",
+      "F": 1,
+      "E": 1,
+      "n_animals": 2,
+      "mean_gain_g": 18.0,
+      "animal_gains_g": [
+        17.0,
+        19.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B2",
+      "cage": "C05",
+      "F": 0,
+      "E": 0,
+      "n_animals": 2,
+      "mean_gain_g": 20.0,
+      "animal_gains_g": [
+        19.0,
+        21.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B2",
+      "cage": "C06",
+      "F": 1,
+      "E": 0,
+      "n_animals": 2,
+      "mean_gain_g": 22.0,
+      "animal_gains_g": [
+        21.0,
+        23.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B2",
+      "cage": "C07",
+      "F": 0,
+      "E": 1,
+      "n_animals": 2,
+      "mean_gain_g": 23.0,
+      "animal_gains_g": [
+        22.0,
+        24.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B2",
+      "cage": "C08",
+      "F": 1,
+      "E": 1,
+      "n_animals": 2,
+      "mean_gain_g": 29.0,
+      "animal_gains_g": [
+        28.0,
+        30.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B3",
+      "cage": "C09",
+      "F": 0,
+      "E": 0,
+      "n_animals": 2,
+      "mean_gain_g": 30.0,
+      "animal_gains_g": [
+        29.0,
+        31.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B3",
+      "cage": "C10",
+      "F": 1,
+      "E": 0,
+      "n_animals": 2,
+      "mean_gain_g": 32.0,
+      "animal_gains_g": [
+        31.0,
+        33.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B3",
+      "cage": "C11",
+      "F": 0,
+      "E": 1,
+      "n_animals": 2,
+      "mean_gain_g": 33.0,
+      "animal_gains_g": [
+        32.0,
+        34.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    },
+    {
+      "block": "B3",
+      "cage": "C12",
+      "F": 1,
+      "E": 1,
+      "n_animals": 2,
+      "mean_gain_g": 37.0,
+      "animal_gains_g": [
+        36.0,
+        38.0
+      ],
+      "within_cage_sample_sd_g": 1.4142135623730951
+    }
+  ],
+  "by_block": [
+    {
+      "block": "B1",
+      "cell_means_g": {
+        "F0E0": 10.0,
+        "F1E0": 12.0,
+        "F0E1": 13.0,
+        "F1E1": 18.0
+      },
+      "cages_per_cell": {
+        "F0E0": 1,
+        "F0E1": 1,
+        "F1E0": 1,
+        "F1E1": 1
+      },
+      "F_simple_at_E0_g": 2.0,
+      "F_simple_at_E1_g": 5.0,
+      "E_simple_at_F0_g": 3.0,
+      "E_simple_at_F1_g": 6.0,
+      "F_marginal_g": 3.5,
+      "E_marginal_g": 4.5,
+      "interaction_g": 3.0
+    },
+    {
+      "block": "B2",
+      "cell_means_g": {
+        "F0E0": 20.0,
+        "F1E0": 22.0,
+        "F0E1": 23.0,
+        "F1E1": 29.0
+      },
+      "cages_per_cell": {
+        "F0E0": 1,
+        "F0E1": 1,
+        "F1E0": 1,
+        "F1E1": 1
+      },
+      "F_simple_at_E0_g": 2.0,
+      "F_simple_at_E1_g": 6.0,
+      "E_simple_at_F0_g": 3.0,
+      "E_simple_at_F1_g": 7.0,
+      "F_marginal_g": 4.0,
+      "E_marginal_g": 5.0,
+      "interaction_g": 4.0
+    },
+    {
+      "block": "B3",
+      "cell_means_g": {
+        "F0E0": 30.0,
+        "F1E0": 32.0,
+        "F0E1": 33.0,
+        "F1E1": 37.0
+      },
+      "cages_per_cell": {
+        "F0E0": 1,
+        "F0E1": 1,
+        "F1E0": 1,
+        "F1E1": 1
+      },
+      "F_simple_at_E0_g": 2.0,
+      "F_simple_at_E1_g": 4.0,
+      "E_simple_at_F0_g": 3.0,
+      "E_simple_at_F1_g": 5.0,
+      "F_marginal_g": 3.0,
+      "E_marginal_g": 4.0,
+      "interaction_g": 2.0
+    }
+  ],
+  "by_treatment_cell": [
+    {
+      "F": 0,
+      "E": 0,
+      "n_cages": 3,
+      "n_animal_records": 6,
+      "equal_cage_mean_gain_g": 20.0
+    },
+    {
+      "F": 0,
+      "E": 1,
+      "n_cages": 3,
+      "n_animal_records": 6,
+      "equal_cage_mean_gain_g": 23.0
+    },
+    {
+      "F": 1,
+      "E": 0,
+      "n_cages": 3,
+      "n_animal_records": 6,
+      "equal_cage_mean_gain_g": 22.0
+    },
+    {
+      "F": 1,
+      "E": 1,
+      "n_cages": 3,
+      "n_animal_records": 6,
+      "equal_cage_mean_gain_g": 28.0
+    }
+  ],
+  "overall_equal_block_contrasts": {
+    "F_simple_at_E0_g": 2.0,
+    "F_simple_at_E1_g": 5.0,
+    "E_simple_at_F0_g": 3.0,
+    "E_simple_at_F1_g": 6.0,
+    "F_marginal_g": 3.5,
+    "E_marginal_g": 4.5,
+    "interaction_g": 3.0
+  },
+  "descriptive_block_dispersion": {
+    "F_marginal_g": {
+      "values": [
+        3.5,
+        4.0,
+        3.0
+      ],
+      "min": 3.0,
+      "max": 4.0,
+      "sample_sd_across_blocks_g": 0.5,
+      "description": "Descriptive block dispersion; no population interval or significance claim."
+    },
+    "E_marginal_g": {
+      "values": [
+        4.5,
+        5.0,
+        4.0
+      ],
+      "min": 4.0,
+      "max": 5.0,
+      "sample_sd_across_blocks_g": 0.5,
+      "description": "Descriptive block dispersion; no population interval or significance claim."
+    },
+    "interaction_g": {
+      "values": [
+        3.0,
+        4.0,
+        2.0
+      ],
+      "min": 2.0,
+      "max": 4.0,
+      "sample_sd_across_blocks_g": 1.0,
+      "description": "Descriptive block dispersion; no population interval or significance claim."
+    }
+  },
+  "inference_limit": "Original offline synthetic example; 3 blocked cage replicates per treatment. No real-animal efficacy or universal additivity is established."
+}

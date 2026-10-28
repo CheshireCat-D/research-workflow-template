@@ -1,0 +1,13 @@
+{
+  "description": "首次init因非法entry validation退出2；后续纠正成功。",
+  "id": "E-init-failure",
+  "limitations": "接口失败，不是艺术解释检验。",
+  "location": {
+    "kind": "local",
+    "path": "checks/initial-init-failure.json"
+  },
+  "provenance": "Codex代理实际通过subprocess.run执行初始化命令；argv=[\"PYTHON\", \"TOOLKIT/tools/research.py\", \"init\", \"--output\", \"PROJECT\", \"--title\", \"《两条路径》原构图与裁剪展陈：版本与竞争解释\", \"--discipline\", \"humanities\", \"--method\", \"historical-interpretive\", \"--mode\", \"structured\", \"--language\", \"zh\", \"--entry\", \"validation\"]。证据文件保存该次调用实际返回的stdout、stderr（本次为空）及exit_status=2；stdout含Unknown project entry activity or workflow mode错误。",
+  "source_ids": [],
+  "type": "execution-failure",
+  "notes": "执行日志来源已显式更正；checks/initial-init-failure.json原始字节和A-init-failure的failed状态保留。"
+}

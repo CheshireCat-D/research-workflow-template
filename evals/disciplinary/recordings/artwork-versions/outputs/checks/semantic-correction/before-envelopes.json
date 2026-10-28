@@ -1,0 +1,182 @@
+{
+  "statement:S-industrial": {
+    "bindings": null,
+    "data": {
+      "assessment": {
+        "rationale": "具体工业劳动对象仅由E1推断，且其原画无人前提被原图挑战。",
+        "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "status": "challenged"
+      },
+      "id": "S-industrial",
+      "scope": "仅限所给离线原创虚构图像和材料包节录",
+      "text": "原草稿主张作者唯一意图是谴责工业劳动制度。",
+      "type": "interpretive",
+      "use": "excluded",
+      "work_status": "reviewed"
+    },
+    "registered_at": "2026-10-28T21:36:25.691675+00:00",
+    "version": 1
+  },
+  "statement:S-nofigure": {
+    "bindings": null,
+    "data": {
+      "assessment": {
+        "rationale": "原图左下实际可见人形，复刻的无人不代表原构图无人。",
+        "reviewer": "Codex代理，本次图像细读与材料对照；无独立人类专家验证",
+        "scope": "仅限所给离线原创虚构图像和材料包节录",
+        "status": "challenged"
+      },
+      "id": "S-nofigure",
+      "scope": "仅限所给离线原创虚构图像和材料包节录",
+      "text": "原草稿主张原画完全没有人物。",
+      "type": "empirical",
+      "use": "excluded",
+      "work_status": "reviewed"
+    },
+    "registered_at": "2026-10-28T21:36:25.692894+00:00",
+    "version": 1
+  },
+  "relation:R-industrial-E1": {
+    "bindings": null,
+    "data": {
+      "evidence_id": "E-E1",
+      "id": "R-industrial-E1",
+      "rationale": "E1确实提出此读法，只支持该后出说法存在，不确认其作者意图断言。",
+      "relation": "supports",
+      "scope": "1970年E1接受表述的存在，非原作者意图",
+      "statement_id": "S-industrial"
+    },
+    "registered_at": "2026-10-28T21:36:25.748710+00:00",
+    "version": 1
+  },
+  "relation:R-industrial-counter": {
+    "bindings": null,
+    "data": {
+      "evidence_id": "E-original",
+      "id": "R-industrial-counter",
+      "rationale": "E1所依赖的原画无人物前提与原图可见人形冲突。",
+      "relation": "challenges",
+      "scope": "仅限所给离线原创虚构图像和材料包节录",
+      "statement_id": "S-industrial"
+    },
+    "registered_at": "2026-10-28T21:36:25.752428+00:00",
+    "version": 1
+  },
+  "evidence:E-init-failure": {
+    "bindings": {
+      "files": {
+        "checks/initial-init-failure.json": "98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4"
+      },
+      "records": {}
+    },
+    "data": {
+      "description": "首次init因非法entry validation退出2；后续纠正成功。",
+      "id": "E-init-failure",
+      "limitations": "接口失败，不是艺术解释检验。",
+      "location": {
+        "kind": "local",
+        "path": "checks/initial-init-failure.json"
+      },
+      "provenance": "由Codex代理在本次执行中从项目inputs复制件读取/查看；具体步骤见notes/analysis.md与execution.json。",
+      "source_ids": [],
+      "type": "execution-failure"
+    },
+    "registered_at": "2026-10-28T21:36:25.713440+00:00",
+    "version": 1
+  },
+  "activity:A-interpret": {
+    "bindings": {
+      "files": {
+        "artifacts/results.json": "3eae8dd6771bf9f99c566275fa27297d59372595a9a8301e201e0dbd415de338",
+        "artifacts/run.py": "fe6f057951a10c44c9e9b642821994f82e43e4ecf37b4d45ae54379e8be4c364",
+        "checks/initial-init-failure.json": "98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4",
+        "inputs/draft.md": "b16f8ef1943139d651088e151e433c075febc814282ac3e32a5433f6f3bab5ef",
+        "inputs/original.png": "7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7",
+        "inputs/reproduction.png": "2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247",
+        "inputs/source-packet.md": "fb5d68dcfe709b80f50653a3503184ba49a94dcccabb04ce560c94be8dec614a",
+        "manuscript/report.md": "4a52f78bc1fd01a34ae59d345df0f72db9716d886c6ab21e41ff6252d28f740b",
+        "notes/analysis.md": "9187553bf955e03c1347253393eff8d3f59efb31750d4efa3637d3a25ffbbba5",
+        "notes/source-comparison.md": "ebdf01b13f34af2e934cee84682e6f2041400e5f65865a539b2b2b640d3e8fee",
+        "review.md": "4cf46022fb0a1bac18ba7d451106788898d1fd6d85dff55dd4188e10ac8e44fb"
+      },
+      "records": {
+        "activity:A-material-audit": "9c389d23794196b8245a1a696e53dd9d51c9f93978bbfe2d5cac1cc6a510bb7e",
+        "artifact:ART-analysis": "8c18870ea0336ed8a13a1343ba1159971428c745749653483a6bafced2b9875e",
+        "artifact:ART-code": "565d41b4b5eedf1d478b776c5074ed9570fc8ffed40aab65d3c6fc9abe2e2986",
+        "artifact:ART-report": "8c4cf5f6d607defeee5d891d00b319896d50eb4d6f860129b67e0cc96ddada26",
+        "artifact:ART-results": "1632d831d864ce39d9aaa9720b92a85260a3eb2bdd9356ac458d23e916bb8742",
+        "artifact:ART-review": "2e81d60e2c4961aec5432503c684f4eaa2d5f3ed3885b03cccfbb42b52a5409c",
+        "artifact:ART-sources": "a7aa8657b86f8eb6d7357c7317bb675756868c686a6f5a3f555d5423f83077a6",
+        "evidence:E-A1": "2602cc3c078e44e6dfefa26bb94ba8260deab45edae147b9dde69a0160124729",
+        "evidence:E-C1": "bc426d2cd1a136571605774344a9076b8fe0818b55a65fe0a58a7a330c44a568",
+        "evidence:E-E1": "408cd3671738f22a172f4b173a87ed8284d1c19b38c5db0096b1c8c8f313e50e",
+        "evidence:E-draft": "2d0ccdfab303c05b38f02ed62b2ad488ceff07d16e325f93691d86c123058b0d",
+        "evidence:E-identity": "4c5ed3b4804a2d2ab43fcbb363af21cc19f93c7916a1bc8e362bf9f467e3118e",
+        "evidence:E-init-failure": "b9ea5062c61d9d02b261285b352363b1710e090f1c64725a3953796a1ebeb8eb",
+        "evidence:E-original": "85b81cccd0dd3ed552027f06e930d4d3d34debb59f9efc37113cf0a44df0dafc",
+        "evidence:E-reproduction": "49f8e9841aad54f2562c4ae659fc1b238d01fd84adf15d90f1dceb018b621447",
+        "relation:R-choice-A1": "7d885a28fe44188811e3f35399c67124ab4aa1430d5a9bc8c7caa2114550e6d3",
+        "relation:R-choice-limit": "6c9acae592157991f8a25996d3bf0a72ba187994876b5d6e2dd36a3a040feba4",
+        "relation:R-choice-visual": "06c32dd6faf2f55e89800b157789b8b50a6adc04ea462ef5eb668dfd3dcb5b39",
+        "relation:R-enclosure-A1": "1b0c71cd640c6f4f34578e8a3364b9f089c28ce78f5ee95071366acf95370275",
+        "relation:R-enclosure-C1": "27d8dc52b6c79485ab739b125027b3ce0387d96b5c7ac185e006b97f382062c5",
+        "relation:R-enclosure-rep": "2f612025623e771e3a5ef5ff86fbb1ab525cd96913b83101fe5a0524d4840936",
+        "source:SRC-A1": "773e0ffa83895fe14da56d5f36ecd348ee08bd66703388515aa4cf214cae8211",
+        "source:SRC-C1": "ca8bcb5a9ccab7446299d41611964855be5b256c84da9684de563d676d4c5491",
+        "source:SRC-E1": "331267c891e0eef69e23f046cd3eabb794a6becdc510aab5c4e57470d73f233c",
+        "source:SRC-draft": "f15f90bee715315b2ebbf7811050fbfa9a5006c4b7fd77b0ce8275ceb94080cc",
+        "source:SRC-original": "fe07f545dba057b1fba9e861937a914b63891a637084f1a01364c5a411b3640d",
+        "source:SRC-packet": "3b2f44aac63d53e803650cbcdecf4a0f51cf75bea160abce39d6b117b698474a",
+        "source:SRC-reproduction": "7d4f27a80323a4cc5a3150324366a1d0b294f1ed74a9cf6c574526749c1fc30c",
+        "statement:S-choice": "b4738a776a93c6743ccdb5798e3424a84e33fb66669c18d70c10ae53c6ca7fcb",
+        "statement:S-enclosure": "c16262d5d2c508e92f9498fa9be65230390e3c8e6ab677877de2084359e37e02"
+      }
+    },
+    "data": {
+      "depends_on": [
+        "A-material-audit"
+      ],
+      "id": "A-interpret",
+      "inputs": [
+        "evidence:E-original",
+        "evidence:E-reproduction",
+        "evidence:E-A1",
+        "evidence:E-C1",
+        "evidence:E-E1",
+        "evidence:E-draft",
+        "artifact:ART-results"
+      ],
+      "note": "由Codex代理实际完成；view_image全图查看原输入及复制件；非独立人类审稿。",
+      "outputs": [
+        "artifact:ART-analysis",
+        "artifact:ART-sources",
+        "artifact:ART-report",
+        "artifact:ART-review"
+      ],
+      "status": "done",
+      "title": "实际看图、比较两种解释、审查原稿并写出短稿"
+    },
+    "registered_at": "2026-10-28T21:36:25.820500+00:00",
+    "version": 1
+  },
+  "activity:A-next-context": {
+    "bindings": null,
+    "data": {
+      "depends_on": [
+        "A-interpret"
+      ],
+      "id": "A-next-context",
+      "inputs": [
+        "artifact:ART-analysis",
+        "artifact:ART-review"
+      ],
+      "note": "计划：索取工作笺全文及目录第5段所在完整页，检查是否存在工业劳动的直接出处；本轮未取得，不记完成。",
+      "outputs": [],
+      "status": "pending",
+      "title": "取得完整A1与C1并核对制度对象及道路语境"
+    },
+    "registered_at": "2026-10-28T21:36:25.826490+00:00",
+    "version": 1
+  }
+}

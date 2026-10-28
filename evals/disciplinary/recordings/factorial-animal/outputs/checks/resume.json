@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "PYTHON",
+    "-B",
+    "TOOLKIT/tools/research.py",
+    "resume",
+    "--root",
+    "PROJECT"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P319dde6a0fd146d79dc022bf94b573a6\",\n  \"revision\": 36,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 4,\n    \"artifacts\": 8,\n    \"decisions\": 0,\n    \"evidence\": 5,\n    \"method_bindings\": 1,\n    \"relations\": 8,\n    \"sources\": 4,\n    \"statements\": 5\n  },\n  \"activities\": [\n    {\n      \"id\": \"ACT_analyze\",\n      \"title\": \"按笼聚合、区组内2×2对比并实际运行复现与扰动检查\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_initial_write_failed\",\n      \"title\": \"首次写入分析脚本\",\n      \"declared_status\": \"failed\",\n      \"effective_status\": \"failed\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_review\",\n      \"title\": \"自审原数据对比、报告与实际计算执行证据\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT_write\",\n      \"title\": \"依据结果修订原稿独立单位、边际差和交互主张\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"请另一位审阅者从inputs/observations.csv重新按笼聚合，优先复算B2交互(29-23)-(22-20)=4g及三块平均3g，并核对manuscript/report.md每处理3笼的措辞；若拟真实试验，再补目标物种、时长、测量和随机化协议后设计笼数。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  },\n  \"next_action\": \"请另一位审阅者从inputs/observations.csv重新按笼聚合，优先复算B2交互(29-23)-(22-20)=4g及三块平均3g，并核对manuscript/report.md每处理3笼的措辞；若拟真实试验，再补目标物种、时长、测量和随机化协议后设计笼数。\",\n  \"needs_review\": false,\n  \"recovery_instruction\": \"Continue the recorded next action within its existing scope.\"\n}\n",
+  "stderr": ""
+}

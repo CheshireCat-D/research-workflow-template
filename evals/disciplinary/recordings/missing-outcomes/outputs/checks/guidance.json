@@ -1,0 +1,101 @@
+{
+  "toolkit": "TOOLKIT",
+  "read_paths": [
+    {
+      "path": "TOOLKIT/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/skill-bridge.md",
+      "sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-writing/SKILL.md",
+      "sha256": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-review/SKILL.md",
+      "sha256": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/profiles/disciplines/medicine-health.md",
+      "sha256": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/profiles/methods/empirical-quantitative.md",
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/profiles/governance.md",
+      "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/design/catalog.json",
+      "sha256": "4cc800b1d1ee5e6dabbde06aa60bded298c8e5b84bc035747e93d7c9cf6ccb12",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/source.schema.json",
+      "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/statement.schema.json",
+      "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/evidence.schema.json",
+      "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/relation.schema.json",
+      "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/artifact.schema.json",
+      "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/activity.schema.json",
+      "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/method-binding.schema.json",
+      "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT/core/cli.py",
+      "sha256": "c5fb1241524222447655127b3796e45ef80ea50ce1539a58881098651d567548",
+      "access": "partial-interface-inspection"
+    },
+    {
+      "path": "TOOLKIT/core/project.py",
+      "sha256": "ef7d0c6e5ada59a5a1b08ba3d4f83b1efa454a959c58a55f4851aaf0e6b2be99",
+      "access": "partial-interface-inspection"
+    }
+  ],
+  "scope": "Selected current skills, discipline/method/governance profiles, catalog/schema and CLI interface only; no tests, other evaluation cases, scoring, expected answers, personal package, network or dependency installation."
+}

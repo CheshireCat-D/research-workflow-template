@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT",
+    "--kind",
+    "evidence",
+    "--file",
+    "PROJECT/checks/semantic-correction/input-evidence-E-ledger-semantic-review.json"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"evidence\",\n  \"id\": \"E-ledger-semantic-review\",\n  \"version\": 1,\n  \"revision\": 61,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 0.06125095899915323
+}

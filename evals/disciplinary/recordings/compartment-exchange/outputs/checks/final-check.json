@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "check",
+    "--root",
+    "PROJECT"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"Pf390188560aa428a946624a4b09e3d89\",\n  \"revision\": 46,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 3,\n    \"artifacts\": 5,\n    \"decisions\": 0,\n    \"evidence\": 5,\n    \"method_bindings\": 2,\n    \"relations\": 10,\n    \"sources\": 4,\n    \"statements\": 8\n  },\n  \"activities\": [\n    {\n      \"id\": \"ACT-compute\",\n      \"title\": \"Codex实际运行Euler与解析对照并用迁移输入复跑\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT-derive\",\n      \"title\": \"Codex从本地设定建立并逐步推导连续与离散关系\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"ACT-write\",\n      \"title\": \"Codex修订结果主张并自审\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"ACT-write\",\n    \"next_action\": \"对固定终点T和目标误差ε，由闭式Euler误差推导先验步长上界，再与T=4h、h=0.03125h时0.004530461 U/L的已算误差对照；该延伸尚未执行。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  }\n}\n",
+  "stderr": "",
+  "machine_specific": {
+    "elapsed_seconds": 0.05440895800711587
+  }
+}

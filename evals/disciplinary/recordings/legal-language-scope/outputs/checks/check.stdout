@@ -1,0 +1,56 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "Pbd889e9a938f4c36b3f2b0a5ef2ee9ba",
+  "revision": 32,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 3,
+    "artifacts": 6,
+    "decisions": 0,
+    "evidence": 3,
+    "method_bindings": 1,
+    "relations": 9,
+    "sources": 2,
+    "statements": 8
+  },
+  "activities": [
+    {
+      "id": "ACT-ENUM",
+      "title": "从指定输入真实解析事实并枚举32种布尔组合及复跑",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-LAW",
+      "title": "对照共同权威条文、定义、交叉引用与例外并修订正文",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT-REVIEW",
+      "title": "自审申请条件、引证和压缩稿字符边界",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "Clarify the current question, scope and next evidence check."
+  },
+  "checkpoint": {
+    "recorded": false,
+    "status": "not-recorded",
+    "changed": []
+  }
+}

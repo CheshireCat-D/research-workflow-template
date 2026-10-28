@@ -1,0 +1,68 @@
+{
+  "scope": "Material identity, PNG dimensions and packet locators; does not prove pixel transformation, symbolism or artist intent.",
+  "input_sha256": {
+    "task.md": "de1c54030330fb4a578f7fe1eb1a0d70b1923008b1e12a04ec9d2ca69e3d7643",
+    "source-packet.md": "fb5d68dcfe709b80f50653a3503184ba49a94dcccabb04ce560c94be8dec614a",
+    "draft.md": "b16f8ef1943139d651088e151e433c075febc814282ac3e32a5433f6f3bab5ef",
+    "original.png": "7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7",
+    "reproduction.png": "2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247"
+  },
+  "images": {
+    "original.png": {
+      "width": 900,
+      "height": 600,
+      "bit_depth": 8,
+      "color_type": 2,
+      "interlace": 0,
+      "chunk_types": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "all_chunk_crcs_valid": true
+    },
+    "reproduction.png": {
+      "width": 1350,
+      "height": 630,
+      "bit_depth": 8,
+      "color_type": 2,
+      "interlace": 0,
+      "chunk_types": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "all_chunk_crcs_valid": true
+    }
+  },
+  "crop_dimension_check": {
+    "packet_bottom_crop_pixels": 180,
+    "inferred_width_scale_ratio": "3/2",
+    "retained_original_height": 420,
+    "predicted_reproduction_height": "630",
+    "observed_reproduction_height": 630,
+    "dimensions_consistent": true
+  },
+  "packet_locators": [
+    {
+      "line": 3,
+      "source_id": "A1",
+      "text": "A1 创作者工作笺（1901-04，第2行）：我让门内和门外两条路在画面中相接，想保留观看者对去向的选择。该笺未提政治组织、工厂或集体抗议。"
+    },
+    {
+      "line": 4,
+      "source_id": "C1",
+      "text": "C1 展览目录（1924，第5段）：我们将画面上部放大，以强调墙面与门洞的几何张力。目录将作品读作封闭制度的象征。"
+    },
+    {
+      "line": 5,
+      "source_id": "E1",
+      "text": "E1 后出编者说明（1970，第8行）：该画没有人物，因此作者必在谴责工业劳动制度。这段判断只依据1924年复刻，未查原构图或工作笺。"
+    }
+  ],
+  "text_line_counts": {
+    "task.md": 15,
+    "source-packet.md": 6,
+    "draft.md": 1
+  }
+}

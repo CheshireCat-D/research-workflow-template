@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "PYTHON",
+    "PROJECT/artifacts/run.py",
+    "--input-dir",
+    "PROJECT/inputs",
+    "--output-dir",
+    "PROJECT/artifacts/computation"
+  ],
+  "returncode": 0,
+  "stdout": "{\"written\": \"results.json\", \"strata\": 2, \"status\": \"completed\"}\n",
+  "stderr": "",
+  "machine": {
+    "elapsed_seconds": 0.041326624996145256
+  }
+}

@@ -88,6 +88,8 @@ For legal research, initialize with `--discipline law --method legal-analysis` a
 
 For a citation audit, say: “Check the source support for each claim in this passage, then find missing, partial or irrelevant citations and suggest specific corrections.” The assistant checks separately verifiable parts of compound claims and explains cross-source synthesis in the existing notes or review report.
 
+See the [seven disciplinary examples](evals/disciplinary/README.md) for original synthetic inputs, actual analyses and short manuscripts, separate agent reviews, and reproducible checks. Use them as worked examples, then create a separate project for your own materials.
+
 ## Review, revision responses and submission materials
 
 These capabilities use the existing `rw-review` entry and expand only for the requested task:

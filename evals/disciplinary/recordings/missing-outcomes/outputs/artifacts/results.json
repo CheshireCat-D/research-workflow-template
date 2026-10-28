@@ -1,0 +1,482 @@
+{
+  "input_sha256": {
+    "task.md": "fd746546cd1a19564b073b02d08ed7f7b341a711f5e597c7ba4c5fb1d4b676e4",
+    "protocol.md": "c4067a361620bd991b79048760265037b85466daeffe8956a9f0bb0233dbaf01",
+    "outcomes.csv": "23ce9fe1d275c65afed1ee56793b1ca6abbcd01109abd6ea75bb29662b53d72e",
+    "draft.md": "a343ffe4ada19dc3b23a3c1fdf1b6681679e6739bf1482701f19055b0e016717"
+  },
+  "design": {
+    "independent_unit": "person",
+    "randomization_level": "person, as specified by synthetic protocol",
+    "endpoint_day": 30,
+    "endpoint": "binary adverse event",
+    "contrast": "A minus B",
+    "missing_policy": "blank remains missing; no imputation"
+  },
+  "groups": {
+    "A": {
+      "events": 2,
+      "observed": 8,
+      "randomized": 10,
+      "missing_ids": [
+        "A09",
+        "A10"
+      ],
+      "missing": 2,
+      "observed_nonevents": 6,
+      "complete_case_risk": {
+        "fraction": "1/4",
+        "decimal": 0.25,
+        "percentage_points": 25.0
+      },
+      "risk_bounds": [
+        {
+          "fraction": "1/5",
+          "decimal": 0.2,
+          "percentage_points": 20.0
+        },
+        {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        }
+      ]
+    },
+    "B": {
+      "events": 3,
+      "observed": 9,
+      "randomized": 10,
+      "missing_ids": [
+        "B10"
+      ],
+      "missing": 1,
+      "observed_nonevents": 6,
+      "complete_case_risk": {
+        "fraction": "1/3",
+        "decimal": 0.3333333333333333,
+        "percentage_points": 33.333333333333336
+      },
+      "risk_bounds": [
+        {
+          "fraction": "3/10",
+          "decimal": 0.3,
+          "percentage_points": 30.0
+        },
+        {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        }
+      ]
+    }
+  },
+  "complete_case_risk_difference": {
+    "fraction": "-1/12",
+    "decimal": -0.08333333333333333,
+    "percentage_points": -8.333333333333334
+  },
+  "assigned_cohort_risk_difference_bounds": {
+    "lower": {
+      "fraction": "-1/5",
+      "decimal": -0.2,
+      "percentage_points": -20.0
+    },
+    "upper": {
+      "fraction": "1/10",
+      "decimal": 0.1,
+      "percentage_points": 10.0
+    },
+    "meaning": "sharp extreme bounds from all missing outcomes; not a confidence interval"
+  },
+  "count_combinations": [
+    {
+      "missing_events": {
+        "A": 0,
+        "B": 0
+      },
+      "risks": {
+        "A": {
+          "fraction": "1/5",
+          "decimal": 0.2,
+          "percentage_points": 20.0
+        },
+        "B": {
+          "fraction": "3/10",
+          "decimal": 0.3,
+          "percentage_points": 30.0
+        }
+      },
+      "risk_difference": {
+        "fraction": "-1/10",
+        "decimal": -0.1,
+        "percentage_points": -10.0
+      },
+      "sign": "negative",
+      "individual_completion_count": 1,
+      "reverses_complete_case_direction": false
+    },
+    {
+      "missing_events": {
+        "A": 0,
+        "B": 1
+      },
+      "risks": {
+        "A": {
+          "fraction": "1/5",
+          "decimal": 0.2,
+          "percentage_points": 20.0
+        },
+        "B": {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        }
+      },
+      "risk_difference": {
+        "fraction": "-1/5",
+        "decimal": -0.2,
+        "percentage_points": -20.0
+      },
+      "sign": "negative",
+      "individual_completion_count": 1,
+      "reverses_complete_case_direction": false
+    },
+    {
+      "missing_events": {
+        "A": 1,
+        "B": 0
+      },
+      "risks": {
+        "A": {
+          "fraction": "3/10",
+          "decimal": 0.3,
+          "percentage_points": 30.0
+        },
+        "B": {
+          "fraction": "3/10",
+          "decimal": 0.3,
+          "percentage_points": 30.0
+        }
+      },
+      "risk_difference": {
+        "fraction": "0",
+        "decimal": 0.0,
+        "percentage_points": 0.0
+      },
+      "sign": "zero",
+      "individual_completion_count": 2,
+      "reverses_complete_case_direction": false
+    },
+    {
+      "missing_events": {
+        "A": 1,
+        "B": 1
+      },
+      "risks": {
+        "A": {
+          "fraction": "3/10",
+          "decimal": 0.3,
+          "percentage_points": 30.0
+        },
+        "B": {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        }
+      },
+      "risk_difference": {
+        "fraction": "-1/10",
+        "decimal": -0.1,
+        "percentage_points": -10.0
+      },
+      "sign": "negative",
+      "individual_completion_count": 2,
+      "reverses_complete_case_direction": false
+    },
+    {
+      "missing_events": {
+        "A": 2,
+        "B": 0
+      },
+      "risks": {
+        "A": {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        },
+        "B": {
+          "fraction": "3/10",
+          "decimal": 0.3,
+          "percentage_points": 30.0
+        }
+      },
+      "risk_difference": {
+        "fraction": "1/10",
+        "decimal": 0.1,
+        "percentage_points": 10.0
+      },
+      "sign": "positive",
+      "individual_completion_count": 1,
+      "reverses_complete_case_direction": true
+    },
+    {
+      "missing_events": {
+        "A": 2,
+        "B": 1
+      },
+      "risks": {
+        "A": {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        },
+        "B": {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        }
+      },
+      "risk_difference": {
+        "fraction": "0",
+        "decimal": 0.0,
+        "percentage_points": 0.0
+      },
+      "sign": "zero",
+      "individual_completion_count": 1,
+      "reverses_complete_case_direction": false
+    }
+  ],
+  "extreme_scenarios": {
+    "A_lower_B_upper": {
+      "missing_events": {
+        "A": 0,
+        "B": 1
+      },
+      "risks": {
+        "A": {
+          "fraction": "1/5",
+          "decimal": 0.2,
+          "percentage_points": 20.0
+        },
+        "B": {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        }
+      },
+      "risk_difference": {
+        "fraction": "-1/5",
+        "decimal": -0.2,
+        "percentage_points": -20.0
+      },
+      "sign": "negative",
+      "individual_completion_count": 1,
+      "reverses_complete_case_direction": false
+    },
+    "A_upper_B_lower": {
+      "missing_events": {
+        "A": 2,
+        "B": 0
+      },
+      "risks": {
+        "A": {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        },
+        "B": {
+          "fraction": "3/10",
+          "decimal": 0.3,
+          "percentage_points": 30.0
+        }
+      },
+      "risk_difference": {
+        "fraction": "1/10",
+        "decimal": 0.1,
+        "percentage_points": 10.0
+      },
+      "sign": "positive",
+      "individual_completion_count": 1,
+      "reverses_complete_case_direction": true
+    },
+    "all_missing_nonevents": {
+      "missing_events": {
+        "A": 0,
+        "B": 0
+      },
+      "risks": {
+        "A": {
+          "fraction": "1/5",
+          "decimal": 0.2,
+          "percentage_points": 20.0
+        },
+        "B": {
+          "fraction": "3/10",
+          "decimal": 0.3,
+          "percentage_points": 30.0
+        }
+      },
+      "risk_difference": {
+        "fraction": "-1/10",
+        "decimal": -0.1,
+        "percentage_points": -10.0
+      },
+      "sign": "negative",
+      "individual_completion_count": 1,
+      "reverses_complete_case_direction": false
+    },
+    "all_missing_events": {
+      "missing_events": {
+        "A": 2,
+        "B": 1
+      },
+      "risks": {
+        "A": {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        },
+        "B": {
+          "fraction": "2/5",
+          "decimal": 0.4,
+          "percentage_points": 40.0
+        }
+      },
+      "risk_difference": {
+        "fraction": "0",
+        "decimal": 0.0,
+        "percentage_points": 0.0
+      },
+      "sign": "zero",
+      "individual_completion_count": 1,
+      "reverses_complete_case_direction": false
+    }
+  },
+  "individual_completions": [
+    {
+      "assigned_missing_outcomes": {
+        "A09": 0,
+        "A10": 0,
+        "B10": 0
+      },
+      "risk_difference": {
+        "fraction": "-1/10",
+        "decimal": -0.1,
+        "percentage_points": -10.0
+      }
+    },
+    {
+      "assigned_missing_outcomes": {
+        "A09": 0,
+        "A10": 0,
+        "B10": 1
+      },
+      "risk_difference": {
+        "fraction": "-1/5",
+        "decimal": -0.2,
+        "percentage_points": -20.0
+      }
+    },
+    {
+      "assigned_missing_outcomes": {
+        "A09": 0,
+        "A10": 1,
+        "B10": 0
+      },
+      "risk_difference": {
+        "fraction": "0",
+        "decimal": 0.0,
+        "percentage_points": 0.0
+      }
+    },
+    {
+      "assigned_missing_outcomes": {
+        "A09": 0,
+        "A10": 1,
+        "B10": 1
+      },
+      "risk_difference": {
+        "fraction": "-1/10",
+        "decimal": -0.1,
+        "percentage_points": -10.0
+      }
+    },
+    {
+      "assigned_missing_outcomes": {
+        "A09": 1,
+        "A10": 0,
+        "B10": 0
+      },
+      "risk_difference": {
+        "fraction": "0",
+        "decimal": 0.0,
+        "percentage_points": 0.0
+      }
+    },
+    {
+      "assigned_missing_outcomes": {
+        "A09": 1,
+        "A10": 0,
+        "B10": 1
+      },
+      "risk_difference": {
+        "fraction": "-1/10",
+        "decimal": -0.1,
+        "percentage_points": -10.0
+      }
+    },
+    {
+      "assigned_missing_outcomes": {
+        "A09": 1,
+        "A10": 1,
+        "B10": 0
+      },
+      "risk_difference": {
+        "fraction": "1/10",
+        "decimal": 0.1,
+        "percentage_points": 10.0
+      }
+    },
+    {
+      "assigned_missing_outcomes": {
+        "A09": 1,
+        "A10": 1,
+        "B10": 1
+      },
+      "risk_difference": {
+        "fraction": "0",
+        "decimal": 0.0,
+        "percentage_points": 0.0
+      }
+    }
+  ],
+  "conclusions": {
+    "complete_case_direction_robust": false,
+    "strict_reversal_combinations": [
+      {
+        "A": 2,
+        "B": 0
+      }
+    ],
+    "equality_combinations": [
+      {
+        "A": 1,
+        "B": 0
+      },
+      {
+        "A": 2,
+        "B": 1
+      }
+    ],
+    "missingness_mechanism": "not supplied; MCAR, MAR and MNAR not established",
+    "interpretation": "Observed-case descriptive comparison; full assigned-cohort contrast not point identified. No clinical recommendation."
+  },
+  "validation": {
+    "protocol_csv_counts_agree": true,
+    "ids_unique": true,
+    "count_combinations": 6,
+    "individual_completions": 8,
+    "fraction_arithmetic": true,
+    "microstate_and_count_grid_agree": true
+  }
+}

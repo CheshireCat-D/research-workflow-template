@@ -1,0 +1,603 @@
+{
+  "format_version": 1,
+  "case_id": "weighted-survey",
+  "kind": "normalized-final-project-replay",
+  "scope": "Actual task outputs and final record data. Replay creates new project IDs, version-1 records and a checkpoint; it does not recreate all original history or repeat model reasoning.",
+  "project_init": {
+    "title": "分层调查权重与无应答敏感性",
+    "interest": "分层调查权重与无应答敏感性",
+    "disciplines": [
+      "social-sciences"
+    ],
+    "methods": [
+      "empirical-quantitative"
+    ],
+    "workflow_mode": "reproducible",
+    "language": "zh",
+    "entry_activity": "minimum-check"
+  },
+  "case_files": {
+    "inputs/draft.md": "draft.md",
+    "inputs/sampling.md": "sampling.md",
+    "inputs/strata.csv": "strata.csv",
+    "inputs/task.md": "task.md"
+  },
+  "case_input_sha256": {
+    "draft.md": "38d5dfa5d6b6e80faedc2bd5fc87f70b3414bf68172a097ad5b3bd2b8a730c9c",
+    "sampling.md": "cb80889a8eb0f2d2bf1acf93a8d9a2f78f6c57ce3fa80db5319a18530fce8e18",
+    "strata.csv": "269a569e90f74ac20a0fdbf489ac8c7eb8baf5875d4dcd35190f6b954cce823c",
+    "task.md": "6177a3c1e5d84c232095b51f7c66289dcfcb68420580ffeacc38e4dabe493bfd"
+  },
+  "output_files": [
+    "artifacts/results.json",
+    "artifacts/run.py",
+    "checks/check-before-checkpoint.json",
+    "checks/check.json",
+    "checks/checkpoint.json",
+    "checks/computation.json",
+    "checks/failure-01.json",
+    "checks/input-copy-verification.json",
+    "checks/register-batch.json",
+    "checks/reproduction.json",
+    "checks/resume.json",
+    "checks/setup.json",
+    "checks/skills-check.json",
+    "execution.json",
+    "manuscript/report.md",
+    "notes/analysis.md",
+    "review.md"
+  ],
+  "output_sha256": {
+    "artifacts/results.json": "3916b315fb538915dda16006b6eadd5fcde518450d288887324505a19a4cf981",
+    "artifacts/run.py": "062a344d52b2aefa9366b1570ac990b4383d7fd74eefdea35f68f272b04f03c7",
+    "checks/check-before-checkpoint.json": "58b6b8e292fc590e79de3aa6d9de5b3e50b376d6d8ed18c0d4546f725c720fe0",
+    "checks/check.json": "0caa227ee8aa7a9d563bf80742fb01254078808b1eb04ad2a9c6e55748d308cf",
+    "checks/checkpoint.json": "ee9c3c269b8561426a9c7bdca0ea547491ae1f29c5dbf95f54d45e4807d1fca0",
+    "checks/computation.json": "1e9972789e7e176a45a658a8d07d16d35225041a1a163acbb8471ba515fec6be",
+    "checks/failure-01.json": "aca79dfe748d8e0c4f2bf478a6bb8d7053f5051c6dbd568d5374866564ded048",
+    "checks/input-copy-verification.json": "a061dffccc534f0acc779b99b9d170d275dc97b250f77b04ece4b74d6880f840",
+    "checks/register-batch.json": "6218c3492ded069302ceb8d05039dae3b55262c527bacdbc730b87e4cf86ea54",
+    "checks/reproduction.json": "200e9cc9b1604a311f82e88023a7a11f2433e92581573728b95f1c839b86c9b3",
+    "checks/resume.json": "c95367aa168cb6edd39da543c485bc98862ec8b1ef572f30c4fec8e14d84c494",
+    "checks/setup.json": "0c5efa88fc132813a00a8c512b9e81276fabb9a11901154beca719b17ca468a3",
+    "checks/skills-check.json": "19be92c2351ad9621b4a0ce2c7d23515ef00caab614960a86b0a5eff8948e834",
+    "execution.json": "77904c1aec2c17d66410922aa9f4c0fe61705610cf1d10caa26b6152bd2e4a72",
+    "manuscript/report.md": "198a815e37887ad5a9a238c2a50d71ce2c94160c00a174a29d96a50c1597f11a",
+    "notes/analysis.md": "f8c0fbd64c7c140fa3432a73576d4941f8bffae8d39a1649ee770bca359df38d",
+    "review.md": "d84c44ba4a16a43db96302f9820af0f65a5e4f0eb7dfec999dc0cf15f8479243"
+  },
+  "executed_output_sha256": {
+    "artifacts/results.json": "3916b315fb538915dda16006b6eadd5fcde518450d288887324505a19a4cf981",
+    "artifacts/run.py": "062a344d52b2aefa9366b1570ac990b4383d7fd74eefdea35f68f272b04f03c7",
+    "checks/check-before-checkpoint.json": "5c80a25afd8f640a15bc19d3bd89f8ba17e36b7cedfc1dc8629c32db792517b3",
+    "checks/check.json": "3d86480e40e10b43b95ea0bf25845891a618c6143c5b8171fe8242dcaf9a7a68",
+    "checks/checkpoint.json": "19f02b75edcf5337bb870583163f2a2bcb7fcb366d63b0285211e901267c0210",
+    "checks/computation.json": "b5b350897911d93192fa3c5cc7bf84d673006361c3c9e398f148693504ce736f",
+    "checks/failure-01.json": "aca79dfe748d8e0c4f2bf478a6bb8d7053f5051c6dbd568d5374866564ded048",
+    "checks/input-copy-verification.json": "a061dffccc534f0acc779b99b9d170d275dc97b250f77b04ece4b74d6880f840",
+    "checks/register-batch.json": "b797b356cf20894877e910ce8273782bd71d5cb01b57c2def5a8aeae6635047a",
+    "checks/reproduction.json": "09ea269544fcbbc6d11ecd938158d57d687e948a0e856c68dd544163e31d9abf",
+    "checks/resume.json": "bd151ceeaab511ad1a849ceadc277c6c2511f4e1b52348647d42280db10b1ba4",
+    "checks/setup.json": "4a80744b085d076c9e89dcb9f2f78f43b43b442e6b6e2c85ce6a31cd1a3c41ce",
+    "checks/skills-check.json": "088af363041586959a7786b5a4de83fadd2fad7ecaa923c349d89bb2fbd12ff3",
+    "execution.json": "9e5718126a0f00938addf32adb874ca4494a7fc382881d1adf3f47bd403a2578",
+    "manuscript/report.md": "198a815e37887ad5a9a238c2a50d71ce2c94160c00a174a29d96a50c1597f11a",
+    "notes/analysis.md": "f8c0fbd64c7c140fa3432a73576d4941f8bffae8d39a1649ee770bca359df38d",
+    "review.md": "d84c44ba4a16a43db96302f9820af0f65a5e4f0eb7dfec999dc0cf15f8479243"
+  },
+  "output_normalizations": [
+    {
+      "path": "checks/check-before-checkpoint.json",
+      "original_sha256": "5c80a25afd8f640a15bc19d3bd89f8ba17e36b7cedfc1dc8629c32db792517b3",
+      "published_sha256": "58b6b8e292fc590e79de3aa6d9de5b3e50b376d6d8ed18c0d4546f725c720fe0",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/check.json",
+      "original_sha256": "3d86480e40e10b43b95ea0bf25845891a618c6143c5b8171fe8242dcaf9a7a68",
+      "published_sha256": "0caa227ee8aa7a9d563bf80742fb01254078808b1eb04ad2a9c6e55748d308cf",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/checkpoint.json",
+      "original_sha256": "19f02b75edcf5337bb870583163f2a2bcb7fcb366d63b0285211e901267c0210",
+      "published_sha256": "ee9c3c269b8561426a9c7bdca0ea547491ae1f29c5dbf95f54d45e4807d1fca0",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/computation.json",
+      "original_sha256": "b5b350897911d93192fa3c5cc7bf84d673006361c3c9e398f148693504ce736f",
+      "published_sha256": "1e9972789e7e176a45a658a8d07d16d35225041a1a163acbb8471ba515fec6be",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/register-batch.json",
+      "original_sha256": "b797b356cf20894877e910ce8273782bd71d5cb01b57c2def5a8aeae6635047a",
+      "published_sha256": "6218c3492ded069302ceb8d05039dae3b55262c527bacdbc730b87e4cf86ea54",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/reproduction.json",
+      "original_sha256": "09ea269544fcbbc6d11ecd938158d57d687e948a0e856c68dd544163e31d9abf",
+      "published_sha256": "200e9cc9b1604a311f82e88023a7a11f2433e92581573728b95f1c839b86c9b3",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/resume.json",
+      "original_sha256": "bd151ceeaab511ad1a849ceadc277c6c2511f4e1b52348647d42280db10b1ba4",
+      "published_sha256": "c95367aa168cb6edd39da543c485bc98862ec8b1ef572f30c4fec8e14d84c494",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/setup.json",
+      "original_sha256": "4a80744b085d076c9e89dcb9f2f78f43b43b442e6b6e2c85ce6a31cd1a3c41ce",
+      "published_sha256": "0c5efa88fc132813a00a8c512b9e81276fabb9a11901154beca719b17ca468a3",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "checks/skills-check.json",
+      "original_sha256": "088af363041586959a7786b5a4de83fadd2fad7ecaa923c349d89bb2fbd12ff3",
+      "published_sha256": "19be92c2351ad9621b4a0ce2c7d23515ef00caab614960a86b0a5eff8948e834",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    },
+    {
+      "path": "execution.json",
+      "original_sha256": "9e5718126a0f00938addf32adb874ca4494a7fc382881d1adf3f47bd403a2578",
+      "published_sha256": "77904c1aec2c17d66410922aa9f4c0fe61705610cf1d10caa26b6152bd2e4a72",
+      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
+    }
+  ],
+  "omitted_identical_outputs": [
+    {
+      "path": "artifacts/computation/results.json",
+      "canonical": "artifacts/results.json",
+      "sha256": "3916b315fb538915dda16006b6eadd5fcde518450d288887324505a19a4cf981",
+      "reason": "Unregistered byte-identical rerun result; execution commands and identity receipts retained."
+    },
+    {
+      "path": "checks/reproduction/results.json",
+      "canonical": "artifacts/results.json",
+      "sha256": "3916b315fb538915dda16006b6eadd5fcde518450d288887324505a19a4cf981",
+      "reason": "Unregistered byte-identical rerun result; execution commands and identity receipts retained."
+    }
+  ],
+  "guidance_sha256": {
+    "core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "core/schemas/activity.schema.json": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    "core/schemas/artifact.schema.json": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    "core/schemas/evidence.schema.json": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    "core/schemas/method-binding.schema.json": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    "core/schemas/relation.schema.json": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    "core/schemas/source.schema.json": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    "core/schemas/statement.schema.json": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    "core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+    "profiles/disciplines/social-sciences.md": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8",
+    "profiles/methods/empirical-quantitative.md": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+    "skills/rw-review/SKILL.md": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+    "skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+    "skills/rw-workflow/SKILL.md": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+    "skills/rw-writing/SKILL.md": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+    "tools/connect_skills.py": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+    "tools/research.py": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b"
+  },
+  "records": [
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "S_counts",
+        "limitations": "本任务原创离线合成材料，可按MIT分发；不代表真实调查。",
+        "locator": "inputs/strata.csv",
+        "rights": "public",
+        "title": "两层计数数据",
+        "version": "sha256:269a569e90f74ac20a0fdbf489ac8c7eb8baf5875d4dcd35190f6b954cce823c"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "S_draft",
+        "limitations": "本任务原创离线合成材料，可按MIT分发；不代表真实调查。",
+        "locator": "inputs/draft.md",
+        "rights": "public",
+        "title": "待修订原稿",
+        "version": "sha256:38d5dfa5d6b6e80faedc2bd5fc87f70b3414bf68172a097ad5b3bd2b8a730c9c"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "S_sampling",
+        "limitations": "本任务原创离线合成材料，可按MIT分发；不代表真实调查。",
+        "locator": "inputs/sampling.md",
+        "rights": "public",
+        "title": "原创合成调查抽样及估计口径",
+        "version": "sha256:cb80889a8eb0f2d2bf1acf93a8d9a2f78f6c57ce3fa80db5319a18530fce8e18"
+      }
+    },
+    {
+      "kind": "source",
+      "record": {
+        "content_access": "full",
+        "id": "S_task",
+        "limitations": "本任务原创离线合成材料，可按MIT分发；不代表真实调查。",
+        "locator": "inputs/task.md",
+        "rights": "public",
+        "title": "本次分层调查任务",
+        "version": "sha256:6177a3c1e5d84c232095b51f7c66289dcfcb68420580ffeacc38e4dabe493bfd"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "H1的未知支持比例q导致加权量0.34+0.40q，q无额外依据约束；q=0.75才对应64%。",
+          "reviewer": "Codex代理",
+          "scope": "输入明示条件及缺失敏感性分析",
+          "status": "supported-in-scope"
+        },
+        "id": "C_assumption",
+        "scope": "本例无应答调整的适用条件与推断限制",
+        "text": "64%依赖层内应答者代表未应答者；材料未验证该条件，因此不能声称调整消除了所有偏差或支持必然过半。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "使用全部抽中者分母180，或设计权重分母1000；逐项运算与程序相符。",
+          "reviewer": "Codex代理",
+          "scope": "正权重下极端填补的可达端点",
+          "status": "supported-in-scope"
+        },
+        "id": "C_bounds",
+        "scope": "只改变40名抽中未应答者的二元结局，不是置信区间或真实总体的确定界限",
+        "text": "抽中者缺失全否/全是时原始比例范围为27.7778%至50%；设计加权估计量范围为34%至74%。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "入样概率为0.10与0.50；三种比例不同且无应答代表性未验证。",
+          "reviewer": "Codex代理（本轮自审）",
+          "scope": "本例两层计数与给定抽样设计",
+          "status": "challenged"
+        },
+        "id": "C_original",
+        "scope": "被审查的inputs/draft.md原始文字",
+        "text": "原稿称140名应答者来自同一入样概率，35.7%确定为全体居民支持率且加权不改变结论。",
+        "type": "empirical",
+        "use": "excluded",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "statement",
+      "record": {
+        "assessment": {
+          "rationale": "标准库脚本从CSV实际计算，新输出目录复跑字节一致，并核对分母。",
+          "reviewer": "Codex代理",
+          "scope": "给定输入的精确有理数运算",
+          "status": "supported-in-scope"
+        },
+        "id": "C_ratios",
+        "scope": "本例sampling.md规定的三种计数比率；不是总体真值认证",
+        "text": "应答原始比例50/140=35.7143%；设计权重应答比率340/600=56.6667%；层内n/r调整后640/1000=64%。",
+        "type": "empirical",
+        "work_status": "reviewed"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "两层总体/入样/应答/支持计数",
+        "id": "E_counts",
+        "limitations": "原创合成汇总数据；未给抽样框和调查时点。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/strata.csv"
+        },
+        "provenance": "本例原始文件逐字节复制到inputs/；Codex代理完整读取。",
+        "source_ids": [
+          "S_counts"
+        ],
+        "type": "aggregate-counts"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "分层简单随机抽样、三项估计及层内应答代表性条件",
+        "id": "E_design",
+        "limitations": "没有个体数据或代表性验证。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/sampling.md"
+        },
+        "provenance": "本例原始文件逐字节复制到inputs/；Codex代理完整读取。",
+        "source_ids": [
+          "S_sampling"
+        ],
+        "type": "design-description"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "待修订原稿的过度外推与同概率说法",
+        "id": "E_draft",
+        "limitations": "原稿主张不作为已证实事实。",
+        "location": {
+          "kind": "local",
+          "path": "inputs/draft.md"
+        },
+        "provenance": "本例原始文件逐字节复制到inputs/；Codex代理完整读取。",
+        "source_ids": [
+          "S_draft"
+        ],
+        "type": "draft-text"
+      }
+    },
+    {
+      "kind": "evidence",
+      "record": {
+        "description": "从本地复制输入生成的精确分数、权重与缺失端点",
+        "id": "E_results",
+        "limitations": "只是本例计算与敏感性界限；无应答机制未经验证。",
+        "location": {
+          "kind": "local",
+          "path": "artifacts/results.json"
+        },
+        "provenance": "Codex代理本轮完整读取本地原创材料；计算结果由artifacts/run.py实际运行生成。",
+        "source_ids": [
+          "S_counts",
+          "S_sampling"
+        ],
+        "type": "executed-calculation"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "evidence:E_counts",
+          "evidence:E_design"
+        ],
+        "description": "可携带标准库计算脚本，必须使用新输出目录",
+        "id": "A_code",
+        "path": "artifacts/run.py",
+        "type": "analysis-code"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_design",
+        "id": "R_assumption",
+        "rationale": "sampling.md明示第三项调整依赖层内代表性且未验证。",
+        "relation": "supports",
+        "scope": "无应答模型条件",
+        "statement_id": "C_assumption"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_results",
+        "id": "R_bounds",
+        "rationale": "输出全否与全是端点，程序依据正权重计算。",
+        "relation": "supports",
+        "scope": "抽中者缺失极端填补",
+        "statement_id": "C_bounds"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_counts",
+        "id": "R_challenge_design",
+        "rationale": "80/800与100/200不同；140仅为应答数。",
+        "relation": "challenges",
+        "scope": "原稿同入样概率主张",
+        "statement_id": "C_original"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_results",
+        "id": "R_challenge_ratios",
+        "rationale": "原始35.7143%、设计56.6667%、调整64%不同，且缺失敏感性较宽。",
+        "relation": "challenges",
+        "scope": "原稿总体确定性与加权无变化主张",
+        "statement_id": "C_original"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_design",
+        "id": "R_qualify",
+        "rationale": "64%作为总体估计依赖层内代表性；设计权重本身不解决层内无应答。",
+        "relation": "qualifies",
+        "scope": "从算术比例到总体估计的外推",
+        "statement_id": "C_ratios"
+      }
+    },
+    {
+      "kind": "relation",
+      "record": {
+        "evidence_id": "E_results",
+        "id": "R_ratios",
+        "rationale": "输出记录三种公式、分子、分母和精确分数。",
+        "relation": "supports",
+        "scope": "给定计数计算",
+        "statement_id": "C_ratios"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_code",
+          "evidence:E_counts"
+        ],
+        "description": "真实运行产生的精确结果与输入SHA-256",
+        "id": "A_results",
+        "path": "artifacts/results.json",
+        "type": "computed-results"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_results",
+          "evidence:E_design"
+        ],
+        "description": "对象、公式、假设、边界与敏感性实质分析",
+        "id": "A_analysis",
+        "path": "notes/analysis.md",
+        "type": "analysis-note"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "id": "ACT_compute",
+        "inputs": [
+          "evidence:E_counts",
+          "evidence:E_design"
+        ],
+        "note": "Codex代理实际编写并执行Python标准库脚本；两次运行退出0且结果SHA-256一致，检查了有理数公式与端点。初始化后输入目录未建的复制失败另存checks/failure-01.json，不作为本活动完成证据。",
+        "outputs": [
+          "artifact:A_code",
+          "artifact:A_results",
+          "artifact:A_analysis"
+        ],
+        "status": "done",
+        "title": "计算三种调查比例及全抽中者缺失界限并复跑"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_analysis",
+          "evidence:E_draft"
+        ],
+        "description": "约515字符中文修订短稿",
+        "id": "A_report",
+        "path": "manuscript/report.md",
+        "type": "manuscript"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_compute"
+        ],
+        "id": "ACT_write",
+        "inputs": [
+          "evidence:E_draft",
+          "artifact:A_analysis"
+        ],
+        "note": "Codex代理修订，保留原稿在inputs/；交代分母、权重和适用条件。",
+        "outputs": [
+          "artifact:A_report"
+        ],
+        "status": "done",
+        "title": "依据实际计算修订原稿"
+      }
+    },
+    {
+      "kind": "artifact",
+      "record": {
+        "derived_from": [
+          "artifact:A_report",
+          "artifact:A_results"
+        ],
+        "description": "实际自审、保留失败、未验证条件与具体下一步",
+        "id": "A_review",
+        "path": "review.md",
+        "type": "self-review"
+      }
+    },
+    {
+      "kind": "method-binding",
+      "record": {
+        "applies_to": [
+          "statement:C_ratios",
+          "statement:C_bounds",
+          "statement:C_assumption",
+          "evidence:E_counts",
+          "artifact:A_analysis",
+          "activity:ACT_compute"
+        ],
+        "id": "M_survey",
+        "method_id": "empirical-quantitative",
+        "notes": "只使用画像survey分支；没有作因果推断或预测。",
+        "profile_version": "0.1",
+        "reason": "分层调查描述性估计、非等概率设计权重、层内无应答调整及缺失敏感性是本轮实际分析对象。",
+        "variant": "survey"
+      }
+    },
+    {
+      "kind": "activity",
+      "record": {
+        "depends_on": [
+          "ACT_compute",
+          "ACT_write"
+        ],
+        "id": "ACT_review",
+        "inputs": [
+          "artifact:A_results",
+          "artifact:A_report",
+          "evidence:E_design"
+        ],
+        "note": "本代理自审；未宣称独立人类审查或验证层内应答代表性。",
+        "outputs": [
+          "artifact:A_review"
+        ],
+        "status": "done",
+        "title": "核对修订稿、计算和范围并保存具体下一步"
+      }
+    }
+  ],
+  "record_counts": {
+    "activities": 3,
+    "artifacts": 5,
+    "decisions": 0,
+    "evidence": 4,
+    "method_bindings": 1,
+    "relations": 6,
+    "sources": 4,
+    "statements": 4
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "若取得H1的40名未应答者追访或辅助变量，先核对文件身份，再评估q是否可收窄及层内代表性；无新增材料则保留34%至74%敏感性范围与64%的条件性表述，不把检查器通过当作科学认证。"
+  },
+  "executed_registry_sha256": "7844a5004f389c06e7b728aca7881455b1fe86b249afa16aefe4b32429572bc6",
+  "original_registry_revision": 28,
+  "observed_check_sha256": "3c95969fe47dad783f3100d945657cfede53ad3e92ec4708fe5af1a4280b5244",
+  "observed_resume_sha256": "f38c75ddfe158fa50cfa6c879d9056e59287baccab4d996edfc81212faa42192",
+  "reproduction": {
+    "script": "artifacts/run.py",
+    "arguments": [
+      "--input-dir",
+      "INPUTS",
+      "--output-dir",
+      "NEW"
+    ],
+    "result": "results.json"
+  }
+}

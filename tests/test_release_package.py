@@ -81,6 +81,54 @@ class ReleasePackages(unittest.TestCase):
             self.assertEqual(package.read(result['prefix']+'/'+guide.name),guide.read_bytes())
         self.assertTrue(release.verify(archive)['passed'])
 
+    def test_only_reviewed_original_case_images_are_accepted_and_delivered(self):
+        for name, expected in release.BINARY_SOURCE_ASSETS.items():
+            path = self.source / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            data = (ROOT / name).read_bytes()
+            self.assertEqual(release.digest(data), expected)
+            path.write_bytes(data)
+        release.index(self.source)
+        archive = self.base / 'with-reviewed-images.zip'
+        release.build(archive, self.source)
+        with zipfile.ZipFile(archive) as package:
+            for name in release.BINARY_SOURCE_ASSETS:
+                self.assertEqual(package.read(release.ARCHIVE_ROOT + '/' + name), (ROOT / name).read_bytes())
+        self.assertTrue(release.verify(archive)['passed'])
+        unknown = self.source / 'evals/other-image.png'
+        unknown.write_bytes(next((ROOT / name).read_bytes() for name in release.BINARY_SOURCE_ASSETS))
+        with self.assertRaisesRegex(release.ReleaseError, 'Unexpected binary source'):
+            release.index(self.source)
+
+    def test_changed_image_is_rejected_even_with_consistent_archive_hashes(self):
+        name = next(iter(release.BINARY_SOURCE_ASSETS))
+        path = self.source / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes((ROOT / name).read_bytes())
+        release.index(self.source)
+        archive = self.base / 'image-original.zip'
+        release.build(archive, self.source)
+        path.write_bytes(path.read_bytes() + b'changed')
+        with self.assertRaisesRegex(release.ReleaseError, 'Unreviewed binary source bytes'):
+            release.index(self.source)
+        with zipfile.ZipFile(archive) as package:
+            prefix = release.ARCHIVE_ROOT + '/'
+            captured = {n[len(prefix):]: package.read(n) for n in package.namelist()}
+        captured[name] += b'changed'
+        inventory = json.loads(captured[release.INDEX])
+        inventory['files'][name]['sha256'] = release.digest(captured[name])
+        captured[release.INDEX] = release.encoded(inventory)
+        manifest = json.loads(captured[release.ARCHIVE_MANIFEST])
+        for changed in (name, release.INDEX):
+            manifest['files'][changed] = release.digest(captured[changed])
+        captured[release.ARCHIVE_MANIFEST] = release.encoded(manifest)
+        changed_archive = self.base / 'image-rehashed.zip'
+        with zipfile.ZipFile(changed_archive, 'w') as package:
+            for relative, data in captured.items():
+                package.writestr(prefix + relative, data)
+        with self.assertRaisesRegex(release.ReleaseError, 'unreviewed_binary_source'):
+            release.verify(changed_archive)
+
     def test_missing_bilingual_guides_block_source_check_and_build_even_after_reindexing(self):
         for name in ('中文介绍与使用说明.md','USER_GUIDE.en.md','README.en.md'):
             with self.subTest(name=name):

@@ -1,0 +1,56 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P3463448f67a944ff8ccfb85abcedea7d",
+  "revision": 28,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 3,
+    "artifacts": 5,
+    "decisions": 0,
+    "evidence": 4,
+    "method_bindings": 1,
+    "relations": 6,
+    "sources": 4,
+    "statements": 4
+  },
+  "activities": [
+    {
+      "id": "ACT_compute",
+      "title": "计算三种调查比例及全抽中者缺失界限并复跑",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_review",
+      "title": "核对修订稿、计算和范围并保存具体下一步",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_write",
+      "title": "依据实际计算修订原稿",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "若取得H1的40名未应答者追访或辅助变量，先核对文件身份，再评估q是否可收窄及层内代表性；无新增材料则保留34%至74%敏感性范围与64%的条件性表述，不把检查器通过当作科学认证。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

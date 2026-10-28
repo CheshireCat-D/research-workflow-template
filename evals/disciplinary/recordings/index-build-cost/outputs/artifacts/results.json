@@ -1,0 +1,421 @@
+{
+  "schema_version": "1.0",
+  "deterministic": true,
+  "semantics": "last record value for duplicate key; null on miss; immutable input",
+  "cost_model": {
+    "L": "one comparison per record per query, full forward scan",
+    "I": "one write per record, then one lookup per query",
+    "workload_boundary": "independent cold build for each prefix; no index shared across prefixes",
+    "not_counted": "parsing, validation/oracle, instrumentation, allocation, hashing internals, I/O; no wall-clock speed claim"
+  },
+  "input_sha256": {
+    "task.md": "09fb97fb1dee4d7802536ce62bef51ba67af8d9a176ba5da458a18a5351b355a",
+    "contract.md": "9aef9104f13db5c019676831837ea311c07c63c8f445870f4fa60c6a7bafd646",
+    "records.csv": "c00c73ce2d3c56bfea4f649a2bbd88ecd34337de8e2f439640e51fc2e9826642",
+    "queries.json": "72d76d55986f6d6029e8659b23660fbe6fa16e03d165cd12141b92f547755591",
+    "draft.md": "deb88557339672857a96f423ff1b6e740a3362d81739c268c70d885a191cb49e"
+  },
+  "inputs_unchanged": true,
+  "record_count": 8,
+  "distinct_keys": 5,
+  "duplicate_record_count": 3,
+  "key_frequencies": {
+    "a": 3,
+    "b": 2,
+    "c": 1,
+    "d": 1,
+    "e": 1
+  },
+  "query_count": 10,
+  "query_frequencies": {
+    "a": 3,
+    "missing": 2,
+    "b": 2,
+    "c": 1,
+    "e": 1,
+    "d": 1
+  },
+  "repeated_query_occurrences": 4,
+  "all_query_return_values": [
+    70,
+    null,
+    50,
+    40,
+    70,
+    80,
+    60,
+    null,
+    50,
+    70
+  ],
+  "all_query_miss_count": 2,
+  "workloads": [
+    {
+      "query_count": 1,
+      "L_build_cost": 0,
+      "L_query_cost": 8,
+      "L_total_cost": 8,
+      "I_build_cost": 8,
+      "I_query_cost": 1,
+      "I_total_cost": 9,
+      "L_total_over_I_total": 0.8888888888888888,
+      "I_total_lower": false,
+      "all_returns_equal": true,
+      "query_trace": [
+        {
+          "query_position": 1,
+          "key": "a",
+          "L_value": 70,
+          "I_value": 70,
+          "oracle_value": 70,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": false
+        }
+      ],
+      "I_build_trace": [
+        {
+          "record_position": 1,
+          "key": "a",
+          "value": 10,
+          "previous_value": null
+        },
+        {
+          "record_position": 2,
+          "key": "b",
+          "value": 20,
+          "previous_value": null
+        },
+        {
+          "record_position": 3,
+          "key": "a",
+          "value": 30,
+          "previous_value": 10
+        },
+        {
+          "record_position": 4,
+          "key": "c",
+          "value": 40,
+          "previous_value": null
+        },
+        {
+          "record_position": 5,
+          "key": "b",
+          "value": 50,
+          "previous_value": 20
+        },
+        {
+          "record_position": 6,
+          "key": "d",
+          "value": 60,
+          "previous_value": null
+        },
+        {
+          "record_position": 7,
+          "key": "a",
+          "value": 70,
+          "previous_value": 30
+        },
+        {
+          "record_position": 8,
+          "key": "e",
+          "value": 80,
+          "previous_value": null
+        }
+      ],
+      "final_index": {
+        "a": 70,
+        "b": 50,
+        "c": 40,
+        "d": 60,
+        "e": 80
+      }
+    },
+    {
+      "query_count": 2,
+      "L_build_cost": 0,
+      "L_query_cost": 16,
+      "L_total_cost": 16,
+      "I_build_cost": 8,
+      "I_query_cost": 2,
+      "I_total_cost": 10,
+      "L_total_over_I_total": 1.6,
+      "I_total_lower": true,
+      "all_returns_equal": true,
+      "query_trace": [
+        {
+          "query_position": 1,
+          "key": "a",
+          "L_value": 70,
+          "I_value": 70,
+          "oracle_value": 70,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": false
+        },
+        {
+          "query_position": 2,
+          "key": "missing",
+          "L_value": null,
+          "I_value": null,
+          "oracle_value": null,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": true
+        }
+      ],
+      "I_build_trace": [
+        {
+          "record_position": 1,
+          "key": "a",
+          "value": 10,
+          "previous_value": null
+        },
+        {
+          "record_position": 2,
+          "key": "b",
+          "value": 20,
+          "previous_value": null
+        },
+        {
+          "record_position": 3,
+          "key": "a",
+          "value": 30,
+          "previous_value": 10
+        },
+        {
+          "record_position": 4,
+          "key": "c",
+          "value": 40,
+          "previous_value": null
+        },
+        {
+          "record_position": 5,
+          "key": "b",
+          "value": 50,
+          "previous_value": 20
+        },
+        {
+          "record_position": 6,
+          "key": "d",
+          "value": 60,
+          "previous_value": null
+        },
+        {
+          "record_position": 7,
+          "key": "a",
+          "value": 70,
+          "previous_value": 30
+        },
+        {
+          "record_position": 8,
+          "key": "e",
+          "value": 80,
+          "previous_value": null
+        }
+      ],
+      "final_index": {
+        "a": 70,
+        "b": 50,
+        "c": 40,
+        "d": 60,
+        "e": 80
+      }
+    },
+    {
+      "query_count": 10,
+      "L_build_cost": 0,
+      "L_query_cost": 80,
+      "L_total_cost": 80,
+      "I_build_cost": 8,
+      "I_query_cost": 10,
+      "I_total_cost": 18,
+      "L_total_over_I_total": 4.444444444444445,
+      "I_total_lower": true,
+      "all_returns_equal": true,
+      "query_trace": [
+        {
+          "query_position": 1,
+          "key": "a",
+          "L_value": 70,
+          "I_value": 70,
+          "oracle_value": 70,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": false
+        },
+        {
+          "query_position": 2,
+          "key": "missing",
+          "L_value": null,
+          "I_value": null,
+          "oracle_value": null,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": true
+        },
+        {
+          "query_position": 3,
+          "key": "b",
+          "L_value": 50,
+          "I_value": 50,
+          "oracle_value": 50,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": false
+        },
+        {
+          "query_position": 4,
+          "key": "c",
+          "L_value": 40,
+          "I_value": 40,
+          "oracle_value": 40,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": false
+        },
+        {
+          "query_position": 5,
+          "key": "a",
+          "L_value": 70,
+          "I_value": 70,
+          "oracle_value": 70,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": false
+        },
+        {
+          "query_position": 6,
+          "key": "e",
+          "L_value": 80,
+          "I_value": 80,
+          "oracle_value": 80,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": false
+        },
+        {
+          "query_position": 7,
+          "key": "d",
+          "L_value": 60,
+          "I_value": 60,
+          "oracle_value": 60,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": false
+        },
+        {
+          "query_position": 8,
+          "key": "missing",
+          "L_value": null,
+          "I_value": null,
+          "oracle_value": null,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": true
+        },
+        {
+          "query_position": 9,
+          "key": "b",
+          "L_value": 50,
+          "I_value": 50,
+          "oracle_value": 50,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": false
+        },
+        {
+          "query_position": 10,
+          "key": "a",
+          "L_value": 70,
+          "I_value": 70,
+          "oracle_value": 70,
+          "equal": true,
+          "L_comparisons": 8,
+          "I_lookups": 1,
+          "miss": false
+        }
+      ],
+      "I_build_trace": [
+        {
+          "record_position": 1,
+          "key": "a",
+          "value": 10,
+          "previous_value": null
+        },
+        {
+          "record_position": 2,
+          "key": "b",
+          "value": 20,
+          "previous_value": null
+        },
+        {
+          "record_position": 3,
+          "key": "a",
+          "value": 30,
+          "previous_value": 10
+        },
+        {
+          "record_position": 4,
+          "key": "c",
+          "value": 40,
+          "previous_value": null
+        },
+        {
+          "record_position": 5,
+          "key": "b",
+          "value": 50,
+          "previous_value": 20
+        },
+        {
+          "record_position": 6,
+          "key": "d",
+          "value": 60,
+          "previous_value": null
+        },
+        {
+          "record_position": 7,
+          "key": "a",
+          "value": 70,
+          "previous_value": 30
+        },
+        {
+          "record_position": 8,
+          "key": "e",
+          "value": 80,
+          "previous_value": null
+        }
+      ],
+      "final_index": {
+        "a": 70,
+        "b": 50,
+        "c": 40,
+        "d": 60,
+        "e": 80
+      }
+    }
+  ],
+  "algebra": {
+    "L_total": "n*m",
+    "I_total": "n+m",
+    "I_strictly_lower_condition": "(n-1)*m > n",
+    "first_integer_m_for_I_strictly_lower": 2,
+    "ratio_upper_limit_for_fixed_n": "n, approached from below as m grows for n>0"
+  },
+  "timing": {
+    "measured_performance": false,
+    "note": "execution.json separately records process duration as execution metadata, not route timings"
+  }
+}

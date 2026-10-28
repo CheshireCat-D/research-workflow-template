@@ -1,0 +1,152 @@
+{
+  "executor": "Codex agent; no independent human validation claimed",
+  "runs": [
+    {
+      "label": "primary",
+      "argv": [
+        "PYTHON",
+        "-B",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "PROJECT/artifacts/primary"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"output\": \"PROJECT/artifacts/primary/results.json\", \"counts\": {\"animal_records\": 24, \"cages\": 12, \"blocks\": 3, \"animals_per_cage\": [2], \"cells_per_block\": [4], \"missing_values\": 0, \"excluded_records\": 0, \"independent_treatment_unit\": \"cage; assignments are blocked, not 24 independent animal assignments\"}, \"contrasts\": {\"F_simple_at_E0_g\": 2.0, \"F_simple_at_E1_g\": 5.0, \"E_simple_at_F0_g\": 3.0, \"E_simple_at_F1_g\": 6.0, \"F_marginal_g\": 3.5, \"E_marginal_g\": 4.5, \"interaction_g\": 3.0}}\n",
+      "stderr": ""
+    },
+    {
+      "label": "replay",
+      "argv": [
+        "PYTHON",
+        "-B",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "RUN/replay"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"output\": \"RUN/replay/results.json\", \"counts\": {\"animal_records\": 24, \"cages\": 12, \"blocks\": 3, \"animals_per_cage\": [2], \"cells_per_block\": [4], \"missing_values\": 0, \"excluded_records\": 0, \"independent_treatment_unit\": \"cage; assignments are blocked, not 24 independent animal assignments\"}, \"contrasts\": {\"F_simple_at_E0_g\": 2.0, \"F_simple_at_E1_g\": 5.0, \"E_simple_at_F0_g\": 3.0, \"E_simple_at_F1_g\": 6.0, \"F_marginal_g\": 3.5, \"E_marginal_g\": 4.5, \"interaction_g\": 3.0}}\n",
+      "stderr": ""
+    },
+    {
+      "label": "sensitivity",
+      "argv": [
+        "PYTHON",
+        "-B",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "RUN/sensitivity-input",
+        "--output-dir",
+        "RUN/sensitivity-output"
+      ],
+      "exit_status": 0,
+      "stdout": "{\"output\": \"RUN/sensitivity-output/results.json\", \"counts\": {\"animal_records\": 24, \"cages\": 12, \"blocks\": 3, \"animals_per_cage\": [2], \"cells_per_block\": [4], \"missing_values\": 0, \"excluded_records\": 0, \"independent_treatment_unit\": \"cage; assignments are blocked, not 24 independent animal assignments\"}, \"contrasts\": {\"F_simple_at_E0_g\": 2.0, \"F_simple_at_E1_g\": 5.333333333333333, \"E_simple_at_F0_g\": 3.0, \"E_simple_at_F1_g\": 6.333333333333333, \"F_marginal_g\": 3.6666666666666665, \"E_marginal_g\": 4.666666666666667, \"interaction_g\": 3.3333333333333335}}\n",
+      "stderr": ""
+    },
+    {
+      "label": "existing-output-guard",
+      "argv": [
+        "PYTHON",
+        "-B",
+        "PROJECT/artifacts/run.py",
+        "--input-dir",
+        "PROJECT/inputs",
+        "--output-dir",
+        "RUN/replay"
+      ],
+      "exit_status": 2,
+      "stdout": "",
+      "stderr": "usage: run.py [-h] --input-dir INPUT_DIR --output-dir OUTPUT_DIR\nrun.py: error: output directory must not already exist\n"
+    }
+  ],
+  "inputs_sha256": {
+    "inputs/design.md": "54ac2891a13289f7ea76292fcfba903f3070d542b5a6eafdb264c1e85bd66b86",
+    "inputs/draft.md": "070690af6154a05345f672734daa48f184655ca8cd1ba75a0a4973e493a9e3fe",
+    "inputs/observations.csv": "1034cdb578ddea3765dd3dc3156128f8f27a0ffcecab1ffcbc00cf2e7443e465",
+    "inputs/task.md": "39bf7abe12919694da8711a097c4236d0bf4a0d550b88a037cdd0a07df34fc16"
+  },
+  "outputs_sha256": {
+    "artifacts/run.py": "38b8f3efd5396762838c3edbe459273fcb520a84ef745d44c5bf92f50aa4dd01",
+    "artifacts/results.json": "d9c5679012e71f2149f0615647ce009f4971dea4554df42c85c5092f20067fbc",
+    "artifacts/primary/manifest.json": "5c3fe2dd2d22f68f23f3b9454d33021adf0bbd48c16dd61f421e39b0ac92026c",
+    "checks/computation.json": "de61acffaaf1520c9beec15f2fa3adf2cb7191f354950adf2be6e957d542b294",
+    "checks/failures.json": "1a899a3afc99e353a4488a2a663d87e2b0cd5516e6881e0c1fdffa8c4ea01fb5",
+    "checks/editorial.json": "8170023737cc72dad33434be58b350a6d15f00c781965c110ff1adcb05ee4e72",
+    "notes/analysis.md": "fc0436843d740249baf6dce5c8e2d69317a4e35fd1bee874bad541999db30885",
+    "manuscript/report.md": "d369d03a8dd1e5da74452cf50715690d9808a4202e35a5f637382ad15e39a776",
+    "review.md": "5a0ec52212eb11aebe36cb639256134b8b20aa71e54e112a8bc7d4e969f53c35"
+  },
+  "guidance_read": [
+    {
+      "path": "TOOLKIT/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad"
+    },
+    {
+      "path": "TOOLKIT/core/skill-bridge.md",
+      "sha256": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf"
+    },
+    {
+      "path": "TOOLKIT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-writing/SKILL.md",
+      "sha256": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d"
+    },
+    {
+      "path": "TOOLKIT/skills/rw-review/SKILL.md",
+      "sha256": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5"
+    },
+    {
+      "path": "TOOLKIT/profiles/disciplines/agriculture-life.md",
+      "sha256": "66d86ef5e1f6deaa2af354e36e188469f9e1cf3423c14d31b4b48c854d46d583"
+    },
+    {
+      "path": "TOOLKIT/profiles/methods/measurement-experiment.md",
+      "sha256": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd"
+    },
+    {
+      "path": "TOOLKIT/profiles/governance.md",
+      "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/source.schema.json",
+      "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/statement.schema.json",
+      "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/evidence.schema.json",
+      "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/relation.schema.json",
+      "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/artifact.schema.json",
+      "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/activity.schema.json",
+      "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a"
+    },
+    {
+      "path": "TOOLKIT/core/schemas/method-binding.schema.json",
+      "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d"
+    }
+  ],
+  "catalog_consulted": "tools/research.py options (stable IDs and declared guidance; no external case files opened)",
+  "machine_specific_evidence": "checks/machine.json",
+  "failures_retained": "checks/failures.json",
+  "network_or_third_party_dependencies": false
+}

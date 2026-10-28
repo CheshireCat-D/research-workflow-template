@@ -1,0 +1,173 @@
+{
+  "assumptions": [
+    "Mutually exclusive exhaustive strata with given N_h; SRS without replacement within each stratum, hence inclusion probability n_h/N_h.",
+    "Binary responses and counts are correctly recorded; no further measurement or frame correction is supplied.",
+    "n_h/r_h adjustment requires respondents to represent nonrespondents within strata for the outcome; supplied materials do not verify it.",
+    "Bounds vary sampled missing binary outcomes only; sampling error and unsampled resident outcomes remain unresolved."
+  ],
+  "estimators": {
+    "design_weighted_respondents": {
+      "denominator": "600",
+      "formula": "sum((N_h/n_h)*y_h)/sum((N_h/n_h)*r_h)",
+      "numerator": "340",
+      "value": {
+        "decimal": 0.5666666666666667,
+        "fraction": "17/30",
+        "percent": 56.666666666666664
+      }
+    },
+    "nonresponse_adjusted": {
+      "denominator": "1000",
+      "formula": "sum((N_h/n_h)*(n_h/r_h)*y_h)/sum((N_h/n_h)*(n_h/r_h)*r_h)",
+      "numerator": "640",
+      "value": {
+        "decimal": 0.64,
+        "fraction": "16/25",
+        "percent": 64.0
+      }
+    },
+    "unweighted_respondents": {
+      "denominator": "140",
+      "formula": "sum(y_h)/sum(r_h)",
+      "numerator": "50",
+      "value": {
+        "decimal": 0.35714285714285715,
+        "fraction": "5/14",
+        "percent": 35.714285714285715
+      }
+    }
+  },
+  "inputs_sha256": {
+    "draft.md": "38d5dfa5d6b6e80faedc2bd5fc87f70b3414bf68172a097ad5b3bd2b8a730c9c",
+    "sampling.md": "cb80889a8eb0f2d2bf1acf93a8d9a2f78f6c57ce3fa80db5319a18530fce8e18",
+    "strata.csv": "269a569e90f74ac20a0fdbf489ac8c7eb8baf5875d4dcd35190f6b954cce823c",
+    "task.md": "6177a3c1e5d84c232095b51f7c66289dcfcb68420580ffeacc38e4dabe493bfd"
+  },
+  "missing_outcome_bounds": {
+    "design_weighted": {
+      "formula": "[sum(w_h*y_h)/sum(w_h*n_h), sum(w_h*(y_h+n_h-r_h))/sum(w_h*n_h)]",
+      "lower": {
+        "decimal": 0.34,
+        "fraction": "17/50",
+        "percent": 34.0
+      },
+      "scope": "Extreme-fill range of design-weighted complete-sample population proportion estimator; not deterministic true-population bounds",
+      "upper": {
+        "decimal": 0.74,
+        "fraction": "37/50",
+        "percent": 74.0
+      }
+    },
+    "sampled_raw": {
+      "formula": "[sum(y_h)/sum(n_h), sum(y_h+n_h-r_h)/sum(n_h)]",
+      "lower": {
+        "decimal": 0.2777777777777778,
+        "fraction": "5/18",
+        "percent": 27.77777777777778
+      },
+      "scope": "Deterministic complete-outcome proportion bounds for all sampled people",
+      "upper": {
+        "decimal": 0.5,
+        "fraction": "1/2",
+        "percent": 50.0
+      }
+    }
+  },
+  "scope": "Offline synthetic stratified binary survey; missingness ranges, not confidence intervals",
+  "sensitivity": {
+    "formula": "P_w(q)=sum_h w_h*(y_h+(n_h-r_h)*q_h)/sum_h N_h; each q_h in [0,1]",
+    "intercept": {
+      "decimal": 0.34,
+      "fraction": "17/50",
+      "percent": 34.0
+    },
+    "nonresponse_assumption_q_h": {
+      "H1": {
+        "decimal": 0.75,
+        "fraction": "3/4",
+        "percent": 75.0
+      }
+    },
+    "stratum_missing_coefficients": {
+      "H1": {
+        "decimal": 0.4,
+        "fraction": "2/5",
+        "percent": 40.0
+      },
+      "H2": {
+        "decimal": 0.0,
+        "fraction": "0",
+        "percent": 0.0
+      }
+    }
+  },
+  "strata": [
+    {
+      "adjusted_weight": "20",
+      "design_weight": "10",
+      "missing": 40,
+      "no_observed": 10,
+      "nonresponse_factor": "2",
+      "population": 800,
+      "respondent_yes_rate": {
+        "decimal": 0.75,
+        "fraction": "3/4",
+        "percent": 75.0
+      },
+      "respondents": 40,
+      "response_rate": {
+        "decimal": 0.5,
+        "fraction": "1/2",
+        "percent": 50.0
+      },
+      "sampled": 80,
+      "sampling_probability": {
+        "decimal": 0.1,
+        "fraction": "1/10",
+        "percent": 10.0
+      },
+      "stratum": "H1",
+      "yes": 30
+    },
+    {
+      "adjusted_weight": "2",
+      "design_weight": "2",
+      "missing": 0,
+      "no_observed": 80,
+      "nonresponse_factor": "1",
+      "population": 200,
+      "respondent_yes_rate": {
+        "decimal": 0.2,
+        "fraction": "1/5",
+        "percent": 20.0
+      },
+      "respondents": 100,
+      "response_rate": {
+        "decimal": 1.0,
+        "fraction": "1",
+        "percent": 100.0
+      },
+      "sampled": 100,
+      "sampling_probability": {
+        "decimal": 0.5,
+        "fraction": "1/2",
+        "percent": 50.0
+      },
+      "stratum": "H2",
+      "yes": 20
+    }
+  ],
+  "totals": {
+    "missing_sampled": 40,
+    "no_observed": 90,
+    "population": 1000,
+    "respondents": 140,
+    "response_rate": {
+      "decimal": 0.7777777777777778,
+      "fraction": "7/9",
+      "percent": 77.77777777777777
+    },
+    "sampled": 180,
+    "yes_observed": 50
+  }
+}

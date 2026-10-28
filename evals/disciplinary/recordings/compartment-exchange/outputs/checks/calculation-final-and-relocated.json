@@ -1,0 +1,41 @@
+[
+  {
+    "label": "final",
+    "argv": [
+      "PYTHON",
+      "PROJECT/artifacts/run.py",
+      "--input-dir",
+      "PROJECT/inputs",
+      "--output-dir",
+      "PROJECT/artifacts/final-run"
+    ],
+    "exit_status": 0,
+    "stdout": "{\"output_dir\": \"PROJECT/artifacts/final-run\", \"checks_passed\": true}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.04448216700984631
+    }
+  },
+  {
+    "label": "relocated",
+    "argv": [
+      "PYTHON",
+      "PROJECT/artifacts/run.py",
+      "--input-dir",
+      "RUN/relocated-inputs",
+      "--output-dir",
+      "RUN/relocated-output"
+    ],
+    "exit_status": 0,
+    "stdout": "{\"output_dir\": \"RUN/relocated-output\", \"checks_passed\": true}\n",
+    "stderr": "",
+    "machine_specific": {
+      "elapsed_seconds": 0.04611770799965598
+    }
+  },
+  {
+    "label": "deterministic-relocation-comparison",
+    "same_results_sha256": true,
+    "sha256": "8f8622b155b46b5fb0f63ad919f070bd8053bd29a2bb28eb0654f6229c04d257"
+  }
+]

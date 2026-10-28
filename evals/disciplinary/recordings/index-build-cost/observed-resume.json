@@ -1,0 +1,66 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P73d9c9047b264a71b85d37bc4be5cfa3",
+  "revision": 36,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 4,
+    "artifacts": 6,
+    "decisions": 0,
+    "evidence": 6,
+    "method_bindings": 1,
+    "relations": 8,
+    "sources": 5,
+    "statements": 5
+  },
+  "activities": [
+    {
+      "id": "ACT_ANALYZE",
+      "title": "解释构建、重复键、重复调用和未命中对成本的作用",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_COMPUTE",
+      "title": "实现相同最后值合同、逐查询核对并统计三个冷启动负载",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_REVIEW",
+      "title": "自审实现、结果和稿件的一致性及执行边界",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "ACT_WRITE",
+      "title": "根据实测操作数修订原稿两项错误主张",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": null,
+    "next_action": "若扩展为真实延迟研究，先修订contract.md明确冷/热启动、索引复用、缓存与内存预算，再预设计时环境、重复次数和报告规则；当前合同操作数交付已完成。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "next_action": "若扩展为真实延迟研究，先修订contract.md明确冷/热启动、索引复用、缓存与内存预算，再预设计时环境、重复次数和报告规则；当前合同操作数交付已完成。",
+  "needs_review": false,
+  "recovery_instruction": "Continue the recorded next action within its existing scope."
+}

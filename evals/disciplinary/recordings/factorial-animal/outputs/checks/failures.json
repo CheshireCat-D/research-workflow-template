@@ -1,0 +1,17 @@
+[
+  {
+    "kind": "resolved setup failure",
+    "stage": "first attempt to write run.py",
+    "exit_status": 1,
+    "stderr": "zsh:1: no such file or directory: PROJECT/artifacts/run.py",
+    "cause": "artifacts directory absent after initialization",
+    "resolution": "Created artifacts, notes and manuscript directories, then wrote script successfully."
+  },
+  {
+    "kind": "expected negative check",
+    "run": "existing-output-guard",
+    "exit_status": 2,
+    "stderr": "usage: run.py [-h] --input-dir INPUT_DIR --output-dir OUTPUT_DIR\nrun.py: error: output directory must not already exist\n",
+    "resolution": "No overwrite; expected guard confirmed."
+  }
+]

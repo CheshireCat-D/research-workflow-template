@@ -14,6 +14,7 @@
 | 正文表达 | [共用写作规则](../skills/rw-writing/SKILL.md)、[三项实际写作任务](../evals/current/skill-task-checks.json)：实验结果直述、观察性关联修订与按请求解释推断区别 |
 | 返修规划与覆盖核对 | [回复与修改](../skills/rw-review/references/review-response.md)、同一[实际任务记录](../evals/current/skill-task-checks.json)中的计划与执行案例，以及只读检查器和用户包独立运行测试 |
 | 主张与引证支持 | [文献核对规则](../skills/rw-literature/references/search-and-library.md)、同一任务记录的 `citation_audit`：离线合成来源、逐项定位及只读产物 |
+| 七学科专项回归 | [专项案例与复核](../evals/disciplinary/README.md)、独立公式/计数及输入扰动、七例项目恢复；素材只进入源码 |
 | 当前软件与平台检查 | [唯一当前核验记录](../evals/current/latest.json)；只报告真正执行的环境，不沿用旧阶段通过状态 |
 | 当前用户归档 | `dist/research-workflow-template.zip`、相邻SHA文件及 `dist/release-validation.json`；核对用户资源闭包、链接、确定性构建和干净运行 |
 

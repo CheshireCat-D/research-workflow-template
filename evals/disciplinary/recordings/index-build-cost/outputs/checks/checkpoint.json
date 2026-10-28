@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "PYTHON",
+    "TOOLKIT/tools/research.py",
+    "checkpoint",
+    "--root",
+    "PROJECT",
+    "--next-action",
+    "若扩展为真实延迟研究，先修订contract.md明确冷/热启动、索引复用、缓存与内存预算，再预设计时环境、重复次数和报告规则；当前合同操作数交付已完成。",
+    "--note",
+    "给定三个前缀全部完成，保留墙钟速度未测的边界与已有输出目录预期拒绝。"
+  ],
+  "exit_status": 0,
+  "stdout": "{\n  \"checkpoint_saved\": true,\n  \"revision\": 36,\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"若扩展为真实延迟研究，先修订contract.md明确冷/热启动、索引复用、缓存与内存预算，再预设计时环境、重复次数和报告规则；当前合同操作数交付已完成。\"\n  },\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": "",
+  "machine_seconds": 0.053559583000605926
+}

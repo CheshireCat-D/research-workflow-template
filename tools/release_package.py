@@ -35,6 +35,14 @@ SKIP_DIRS = {'__pycache__', '.pytest_cache', '.mypy_cache', '.ruff_cache', '.git
 PRIVATE_DIRS = {'.agents', '.research', 'private-data', 'local-config', '.venv', 'venv'}
 MAX_FILE = 16 * 1024 * 1024
 MAX_TOTAL = 64 * 1024 * 1024
+# Only these reviewed original task images may bypass the UTF-8 source rule.
+# New images or changed bytes require an explicit source review, not a glob.
+BINARY_SOURCE_ASSETS = {
+    'evals/disciplinary/cases/artwork-versions/original.png':
+        '7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7',
+    'evals/disciplinary/cases/artwork-versions/reproduction.png':
+        '2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247',
+}
 PATH_PATTERN = re.compile(r'/(?:Users|home|private/tmp|private/var|var/folders|opt/homebrew|Library/Frameworks)/[^\s\"\x27<>]+')
 TOKEN_PATTERN = re.compile(r'gh[pousr]_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
 
@@ -114,6 +122,11 @@ def inventory(root=ROOT):
         total += len(data)
         if total > MAX_TOTAL:
             raise ReleaseError('Public source inventory exceeds total limit')
+        if relative in BINARY_SOURCE_ASSETS:
+            if digest(data) != BINARY_SOURCE_ASSETS[relative]:
+                raise ReleaseError('Unreviewed binary source bytes: '+relative)
+            entries[relative] = data
+            continue
         try:
             text = data.decode('utf-8')
         except UnicodeError as exc:
@@ -165,6 +178,9 @@ def index(root=ROOT):
 def _check_entries(entries):
     """Validate one captured byte map without reading the source tree again."""
     errors = [{'code':'required_file_missing','path':name} for name in REQUIRED if name not in entries]
+    errors += [{'code':'unreviewed_binary_source','path':name}
+               for name, checksum in BINARY_SOURCE_ASSETS.items()
+               if name in entries and digest(entries[name]) != checksum]
     if len({name.casefold() for name in entries}) != len(entries):
         errors.append({'code':'portable_path_collision'})
     if INDEX not in entries:
