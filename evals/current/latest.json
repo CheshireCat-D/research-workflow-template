@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-28T22:52:48.469394+00:00",
+  "checked_at_utc": "2026-10-28T23:07:01.119269+00:00",
   "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -28,7 +28,7 @@
       "check_groups": 7,
       "receipt": {
         "identifier": "local-evidence:check-core.json",
-        "sha256": "6ef8a81687975ebab939c44d8061a4c97f91ed9640842984f0fe22e42065c6db"
+        "sha256": "58a49dd1fc02b8effb36af48362db1bd46f957bf2db0f90204cee3d538efd2b1"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,7 +36,7 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "d89f5b5b2241d0d0da6a2d3963ff7052a7b8eed58fe3f0accb97d99f9ec75fee",
+        "sha256": "5b6bd263d3c8c4d282680e2bde5aeae1b367cc54dd62aa99a81539991d167813",
         "files": 33
       }
     }
@@ -190,7 +190,8 @@
     "runtime_dependencies": "Python 3.11+ standard library; no symlink privileges required for skill installation.",
     "verification": "Actual OS execution is reported by commit-specific hosted jobs and the separate local receipt.",
     "frozen_replay_boundary": "Windows test-only launcher explicitly reports POSIX CPU/alarm limits unavailable and RSS unmeasured-null; actual outer wall timeout and numerical comparisons remain. Frozen scientific source bytes are not rewritten.",
-    "hosted_macos": "macos-15-intel; distinct from local Apple Silicon validation. Previous arm64 pool capacity cancellations are not successful execution."
+    "hosted_macos": "macos-15-intel; distinct from local Apple Silicon validation. Previous arm64 pool capacity cancellations are not successful execution.",
+    "scientific_replay_timing": "The innovation-candidates scientific-field replay has a 60-second parent wall timeout on current hosts. Original task timing and review bytes are unchanged; the original 10-second performance acceptance is not renewed. All computations and result comparisons remain."
   },
   "disciplinary_tasks": {
     "cases": 7,

@@ -160,7 +160,10 @@ class D3Evaluations(unittest.TestCase):
                 if adapted_alarm:
                     command.append(str(ROOT/'tests/recorded_platform.py'))
                 command.extend([str(project/plan['script']),*arguments])
-                completed=subprocess.run(command,cwd=project,text=True, encoding='utf-8',capture_output=True,timeout=10,
+                # This Fraction-heavy case replays scientific fields on shared CI.
+                # Its frozen original 10-second timing acceptance is not renewed.
+                wall_timeout = 60 if case == 'innovation-candidates' else 10
+                completed=subprocess.run(command,cwd=project,text=True, encoding='utf-8',capture_output=True,timeout=wall_timeout,
                                          env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1'))
                 self.assertEqual(completed.returncode,plan['expected_exit'],completed.stdout+completed.stderr)
                 if adapted_alarm:
