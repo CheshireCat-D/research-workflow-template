@@ -1,6 +1,6 @@
 ---
 name: rw-review
-description: Review manuscripts and evidence, simulate requested peer review, prepare referee responses and check submission materials. Use for 论文自审、结构化同行评审、隔离多审稿人、Nature风格模拟审稿、返修回复、跨材料一致性 and 投稿准备; ordinary polishing uses rw-writing.
+description: Review manuscripts and evidence, simulate requested peer review, plan revisions, prepare referee responses and check submission materials. Use for 论文自审、结构化同行评审、隔离多审稿人、Nature风格模拟审稿、返修计划与回复、意见覆盖核对、跨材料一致性 and 投稿准备; ordinary polishing uses rw-writing.
 ---
 
 # 研究审阅与返修
@@ -14,7 +14,7 @@ description: Review manuscripts and evidence, simulate requested peer review, pr
 | 当前请求 | 按需参考 |
 |---|---|
 | 结构化同行评审、明确要求隔离多评审或指定期刊风格 | [评审模式](references/review-modes.md)：证据定位、严重度、上下文隔离与冻结后汇总 |
-| 逐条审稿回复、返修或 rebuttal | [回复与修改](references/review-response.md)：对应意见、依据、实际改动和当前状态 |
+| 返修规划、逐条回复、rebuttal 或意见覆盖核对 | [回复与修改](references/review-response.md)：拆分意见、安排依赖与工作量，对应回复、实际改动和当前状态 |
 | 投稿前资料核对、整理交付目录或源文件包 | [投稿与交付](references/submission-delivery.md)：实际要求、选定文件、清单及未完成项 |
 | 相关稿件、图表、补充或幻灯片共享同一事实 | [跨材料核对](references/cross-material-consistency.md)：先辨认事实身份再判断差异 |
 

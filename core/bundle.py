@@ -215,7 +215,8 @@ def build_payload(root=None):
                 'profiles/governance.md', 'profiles/templates/legal-research.md',
                 'skills/rw-review/references/review-modes.md',
                 'skills/rw-review/references/review-response.md',
-                'skills/rw-review/references/submission-delivery.md'] + [
+                'skills/rw-review/references/submission-delivery.md',
+                'skills/rw-review/scripts/check_revision_plan.py'] + [
         item['implementation']['profile'] for item in cat['methods']
         if item.get('implementation', {}).get('status') == 'guidance-slice'
     ] + [item['profile'] for item in cat['disciplines'] if 'profile' in item]

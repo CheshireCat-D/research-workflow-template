@@ -412,6 +412,27 @@
       "checked_scope": "Technical support, contribution and audience criteria; editorial assessment is not vote counting; confidentiality and assigned-review processing context.",
       "limits": "Current at access only and limited to that venue/role. No publisher policy text copied into RWT. Recheck applicable current venue instructions for an actual assignment; these are not universal requirements for author-owned mock review or other disciplines.",
       "accessed_on": "2026-10-26"
+    },
+    {
+      "id": "revision-dependency-design",
+      "title": "strategic-revision: referee-request decomposition and dependency planning",
+      "version": "Repository commit f0b7f196d69bbc6749a2561257603c32960e2187",
+      "url": "https://github.com/jusi-aalto/strategic-revision/blob/f0b7f196d69bbc6749a2561257603c32960e2187/README.md",
+      "access": "Author README and actual skill archive inspected during comparison.",
+      "checked_scope": "General task decomposition, dependency ordering and plan validation; independently implemented RWT fields and standard-library checker.",
+      "limits": "No redistribution license confirmed; no upstream text, templates, code or NetworkX implementation included.",
+      "accessed_on": "2026-10-28"
+    },
+    {
+      "id": "referee-response-coverage-design",
+      "title": "open-science-skills: referee response planning and coverage",
+      "version": "Repository commit 910eafe23729628c6e657855b7be8ca273f7fb30",
+      "url": "https://github.com/scdenney/open-science-skills/blob/910eafe23729628c6e657855b7be8ca273f7fb30/codex/referee-response/SKILL.md",
+      "license_url": "https://github.com/scdenney/open-science-skills/blob/910eafe23729628c6e657855b7be8ca273f7fb30/LICENSE",
+      "access": "Author skill, repository documentation and CC BY-NC 4.0 license inspected.",
+      "checked_scope": "General separation of planning, reply writing and comment-to-location coverage; original RWT guidance and synthetic tasks.",
+      "limits": "Original source remains CC BY-NC 4.0. No upstream skill text, templates or scripts are redistributed or relicensed.",
+      "accessed_on": "2026-10-28"
     }
   ],
   "original_guidance": [

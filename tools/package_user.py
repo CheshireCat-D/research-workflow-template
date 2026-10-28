@@ -64,6 +64,7 @@ SKILL_RESOURCES = (
     'rw-review/references/review-modes.md',
     'rw-review/references/review-response.md',
     'rw-review/references/submission-delivery.md',
+    'rw-review/scripts/check_revision_plan.py',
 )
 RUNTIME_FILES = frozenset((
     'design/catalog.json',

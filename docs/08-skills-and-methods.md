@@ -54,9 +54,12 @@ python3 tools/connect_skills.py check --root ../my-research
 | “请给两份相互不见对方报告的模拟审稿，再汇总” | 同一参考的隔离分支：按本次约定数量分别完成并固定报告，之后汇总；不预先共享协调者分析 |
 | “请按 Nature 风格模拟审稿” | 在目标适用时采用相应读者与重要性标准；保留具体方法义务，不向法学、哲学等稿件强加实验要求 |
 | “请逐项回复这些审稿意见” | [审稿回复](../skills/rw-review/references/review-response.md)：意见、依据、实际修改、当前定位和完成状态对应 |
+| “请按截止期安排返修，并检查有无遗漏意见” | 同一[回复与修改参考](../skills/rw-review/references/review-response.md)：拆分原意见、安排前置依赖和工时，按需用只读脚本核对覆盖与真实文本位置 |
 | “请按目标期刊要求准备投稿材料” | [投稿交付](../skills/rw-review/references/submission-delivery.md)：核对适用要求、整理选定文件、标明缺失项和实际核验范围；准备完成不等于已经投稿 |
 
 模拟审阅不会成为真实期刊身份或编辑决定。沿用既有审阅产物，以及按需登记的 `artifact`、`activity` 和版本关系；不增加 Schema、CLI 或另一套台账。研究内容判断、返修状态、交付完整性与实际投稿状态分别保留。
+
+返修计划、回复草稿和交付核对按请求选择。多项返修可将现有表导出为 `revision-plan.json`，用 `python3 skills/rw-review/scripts/check_revision_plan.py revision-plan.json --root PROJECT` 检查所列原意见的覆盖、依赖与工时；加 `--delivery` 核对回复与修改摘录。一个改动可对应多条意见，合理的澄清或不同意保留理由。计划本身不启动持续任务；已登记工作继续使用原有 `activity.depends_on` 与检查点。
 
 ## 方法与学科适配
 

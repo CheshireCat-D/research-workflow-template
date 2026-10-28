@@ -12,6 +12,7 @@
 | 本地副本升级 | 完整性预检、拒绝本地修改、暂存与捕获失败回滚；切换间隙和恢复边界单独说明 |
 | 来源与许可 | [MIT](../LICENSE)、[来源说明](../provenance/ORIGIN.md)、[逐文件清单](../provenance/file-origins.json) |
 | 正文表达 | [共用写作规则](../skills/rw-writing/SKILL.md)、[三项实际写作任务](../evals/current/skill-task-checks.json)：实验结果直述、观察性关联修订与按请求解释推断区别 |
+| 返修规划与覆盖核对 | [回复与修改](../skills/rw-review/references/review-response.md)、同一[实际任务记录](../evals/current/skill-task-checks.json)中的计划与执行案例，以及只读检查器和用户包独立运行测试 |
 | 当前软件与平台检查 | [唯一当前核验记录](../evals/current/latest.json)；只报告真正执行的环境，不沿用旧阶段通过状态 |
 | 当前用户归档 | `dist/research-workflow-template.zip`、相邻SHA文件及 `dist/release-validation.json`；核对用户资源闭包、链接、确定性构建和干净运行 |
 

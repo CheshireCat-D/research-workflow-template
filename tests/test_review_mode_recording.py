@@ -21,7 +21,10 @@ class ReviewModeRecording(unittest.TestCase):
         self.assertEqual(historical['recovered_from_commit'],
                          '6843fbef19fceb06c0774f0f3d12cd992f46157a')
         sources = historical['sources']
-        self.assertEqual(set(sources), {'skills/rw-review/SKILL.md'})
+        self.assertEqual(set(sources), {
+            'skills/rw-review/SKILL.md',
+            'skills/rw-review/references/review-response.md',
+        })
         for name, expected in record['guidance_sha256'].items():
             # Bind the old task to the guidance actually read then. The
             # snapshot keeps this check self-contained in a source archive.
@@ -74,6 +77,22 @@ class WritingTaskRecording(unittest.TestCase):
             self.assertTrue(case['request'].strip())
             self.assertTrue(case['output'].strip())
         # These are traceable observations; wording checks do not measure style.
+
+
+class RevisionWorkflowRecording(unittest.TestCase):
+    def test_actual_revision_tasks_bind_guidance_inputs_and_output_bytes(self):
+        record = json.loads((ROOT / 'evals/current/skill-task-checks.json').read_text(encoding='utf-8'))['revision_workflow']
+        for name, expected in record['guidance_sha256'].items():
+            self.assertEqual(digest((ROOT / name).read_bytes()), expected, name)
+        self.assertEqual({case['id'] for case in record['cases']}, {'time-bounded-plan', 'executed-revision'})
+        self.assertEqual(len(record['cases']), 2)
+        for case in record['cases']:
+            for group in ('input', 'output'):
+                files, hashes = case[group + '_files'], case[group + '_sha256']
+                self.assertEqual(set(files), set(hashes))
+                self.assertTrue(files)
+                for name, content in files.items():
+                    self.assertEqual(digest(content.encode('utf-8')), hashes[name], name)
 
 
 if __name__ == '__main__':

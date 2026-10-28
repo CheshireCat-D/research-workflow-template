@@ -134,6 +134,40 @@ class UserPackage(unittest.TestCase):
                 self.assertFalse(target.exists())
                 path.unlink()
 
+    def test_revision_checker_runs_from_user_archive_without_its_source_tree(self):
+        archive = self.build()
+        extracted = self.base / 'checker-runtime'
+        with zipfile.ZipFile(archive) as source:
+            source.extractall(extracted)
+        runtime = extracted / package.ARCHIVE_ROOT
+        self.source.rename(self.base / 'source-moved-away')
+        project = self.base / 'revision'
+        project.mkdir()
+        (project / 'manuscript.md').write_text('We compare the four paired plot means.\n', encoding='utf-8')
+        (project / 'response.md').write_text('R1: The analysis unit is now explicit.\n', encoding='utf-8')
+        plan = {
+            'sources': [{'id': 'R1', 'text': 'State the analysis unit.'}],
+            'items': [{'id': 'R1.a', 'source_id': 'R1', 'severity': 'major',
+                       'decision': 'accept', 'status': 'done', 'depends_on': [],
+                       'reply': {'path': 'response.md', 'quote': 'R1: The analysis unit is now explicit.'},
+                       'changes': [{'path': 'manuscript.md', 'quote': 'We compare the four paired plot means.'}]}],
+        }
+        input_file = project / 'revision-plan.json'
+        input_file.write_text(json.dumps(plan), encoding='utf-8')
+        before = snapshot(extracted), snapshot(project)
+        command = [sys.executable, '-X', 'utf8', '-I', '-B',
+                   str(runtime / 'skills/rw-review/scripts/check_revision_plan.py'),
+                   str(input_file), '--root', str(project), '--delivery']
+        result = subprocess.run(command, capture_output=True, text=True, encoding='utf-8', timeout=30)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertTrue(json.loads(result.stdout)['passed'])
+        self.assertEqual((snapshot(extracted), snapshot(project)), before)
+        plan['items'][0]['reply']['quote'] = 'This response does not exist.'
+        input_file.write_text(json.dumps(plan), encoding='utf-8')
+        result = subprocess.run(command, capture_output=True, text=True, encoding='utf-8', timeout=30)
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        self.assertIn('quote_not_found', {e['code'] for e in json.loads(result.stdout)['errors']})
+
     def test_extracted_user_options_preserve_portable_scope_and_source_keeps_evidence(self):
         archive = self.build()
         extracted = self.base / 'extracted'
@@ -159,6 +193,7 @@ class UserPackage(unittest.TestCase):
     def test_missing_runtime_or_linked_reference_blocks_output(self):
         for name in ('core/storage.py', 'profiles/templates/legal-research.md',
                      'skills/rw-review/references/cross-material-consistency.md',
+                     'skills/rw-review/scripts/check_revision_plan.py',
                      'docs/user-package-guide.en.md'):
             with self.subTest(name=name):
                 path = self.source / name
