@@ -31,26 +31,6 @@
   "output_files": [
     "artifacts/results.json",
     "artifacts/run.py",
-    "checks/check-final.json",
-    "checks/check-final.stderr.txt",
-    "checks/check.json",
-    "checks/check.stderr.txt",
-    "checks/checkpoint.json",
-    "checks/checkpoint.stderr.txt",
-    "checks/commands.json",
-    "checks/configure.json",
-    "checks/configure.stderr.txt",
-    "checks/guidance.json",
-    "checks/input-copy-integrity.json",
-    "checks/interface-discovery.json",
-    "checks/machine.json",
-    "checks/register-batch.json",
-    "checks/register-batch.stderr.txt",
-    "checks/resume.json",
-    "checks/resume.stderr.txt",
-    "checks/skill-check.json",
-    "checks/skill-check.stderr.txt",
-    "checks/timings.json",
     "execution.json",
     "manuscript/report.md",
     "notes/analysis.md",
@@ -59,26 +39,6 @@
   "output_sha256": {
     "artifacts/results.json": "c7ee4ec4edac1a84796df13710f9b24b8f2b24f6433082a0a1987d0ea89597f7",
     "artifacts/run.py": "26519e2fa9c8e1e998087d800100e687cccef1f15cb44a47c8d84c46ebfc8465",
-    "checks/check-final.json": "2931922854af526a3d6683fc7c9942e1631add845f7adceecbea985678f32a55",
-    "checks/check-final.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/check.json": "361a0b35406ad54fdf28cb2b72d9e24196c588ed2b169c4d881fba0582dec31d",
-    "checks/check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/checkpoint.json": "9bcad3eb456a38b68344c6571b38986cb59a395951e67ccbc1f4f6274a918e8c",
-    "checks/checkpoint.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/commands.json": "70a7b540a59ff6988c7f385926f6109be171d63c4d39b1827a29d937865bf08f",
-    "checks/configure.json": "59d37dbbd0bf5940812a8bb7b6be2477835e190884e198f2d37b1e882b514a8f",
-    "checks/configure.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/guidance.json": "9bb4bd99d25bcd0c9374ef1d0fc99f0049399f62343880194b06949148e643e8",
-    "checks/input-copy-integrity.json": "36531209f44f0afb79138da9a3221427cd76eb8ee9b3461a4c5ff87bee41cb84",
-    "checks/interface-discovery.json": "36b3c9d53699544af9ae13f30f5ee8db69d2893be3a98deb8da7a76683b40cdc",
-    "checks/machine.json": "e0ceb74906f85c2469d7321688fe61331eb90f53060db6cea6e040bb3eb2de1d",
-    "checks/register-batch.json": "f5a79c689b235a5981e93b56cc3901095d72e58ead8a26dc80be7a40f5bf597a",
-    "checks/register-batch.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/resume.json": "54bd113c3606d9f91ac05c02cb9c6bfa18c8e71ac37e408d8cacd33210b2d454",
-    "checks/resume.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/skill-check.json": "f61519eaf9afc1195a09e0ec7857fa73be2481fc13afaa3dffd8d0105d37a562",
-    "checks/skill-check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/timings.json": "bb6f8d896568d590099418cf9749f362d4d48ae8e288226205e17fa506dbe9f7",
     "execution.json": "2536c49724106c7de55ec6e088534ac9c4383c7752811bc8eb914a5c1a9607c0",
     "manuscript/report.md": "958fc04e3bba9aa9852420386dca6d46cb25e963ffb460c82d60f7c3272f86d3",
     "notes/analysis.md": "bd0e90db5506912e08ee10652ae4b6acc68825d3bc033e59e6679dd6c0d22889",
@@ -87,56 +47,12 @@
   "executed_output_sha256": {
     "artifacts/results.json": "c7ee4ec4edac1a84796df13710f9b24b8f2b24f6433082a0a1987d0ea89597f7",
     "artifacts/run.py": "26519e2fa9c8e1e998087d800100e687cccef1f15cb44a47c8d84c46ebfc8465",
-    "checks/check-final.json": "2931922854af526a3d6683fc7c9942e1631add845f7adceecbea985678f32a55",
-    "checks/check-final.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/check.json": "361a0b35406ad54fdf28cb2b72d9e24196c588ed2b169c4d881fba0582dec31d",
-    "checks/check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/checkpoint.json": "9bcad3eb456a38b68344c6571b38986cb59a395951e67ccbc1f4f6274a918e8c",
-    "checks/checkpoint.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/commands.json": "bb8ff445cb2086783643ebf1744dfaf8659dd3493ba505bef7b88f7d39dffc4c",
-    "checks/configure.json": "59d37dbbd0bf5940812a8bb7b6be2477835e190884e198f2d37b1e882b514a8f",
-    "checks/configure.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/guidance.json": "751deb6bac34f8f50d69934e0623bbeb43e8fd17c489dd31aeb1b216cf8b8c25",
-    "checks/input-copy-integrity.json": "36531209f44f0afb79138da9a3221427cd76eb8ee9b3461a4c5ff87bee41cb84",
-    "checks/interface-discovery.json": "a51df73be7e10e94ca284a89c715429c90ead0666a6de2f0a8a561e37dff5688",
-    "checks/machine.json": "e1ed562825b22a88399242ed42e54472ec63ac6fb8547de8e07d8d327b7b4377",
-    "checks/register-batch.json": "f5a79c689b235a5981e93b56cc3901095d72e58ead8a26dc80be7a40f5bf597a",
-    "checks/register-batch.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/resume.json": "54bd113c3606d9f91ac05c02cb9c6bfa18c8e71ac37e408d8cacd33210b2d454",
-    "checks/resume.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/skill-check.json": "f61519eaf9afc1195a09e0ec7857fa73be2481fc13afaa3dffd8d0105d37a562",
-    "checks/skill-check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "checks/timings.json": "bb6f8d896568d590099418cf9749f362d4d48ae8e288226205e17fa506dbe9f7",
     "execution.json": "a532b6aa44780343c7712d18bff5ca4136dd7e36512c9f88d3a2e9c076ae3e00",
     "manuscript/report.md": "958fc04e3bba9aa9852420386dca6d46cb25e963ffb460c82d60f7c3272f86d3",
     "notes/analysis.md": "bd0e90db5506912e08ee10652ae4b6acc68825d3bc033e59e6679dd6c0d22889",
     "review.md": "814d23cc93c29432afb6c9114559c7ed4d1417fd6c2738b20328a627dda8e43d"
   },
   "output_normalizations": [
-    {
-      "path": "checks/commands.json",
-      "original_sha256": "bb8ff445cb2086783643ebf1744dfaf8659dd3493ba505bef7b88f7d39dffc4c",
-      "published_sha256": "70a7b540a59ff6988c7f385926f6109be171d63c4d39b1827a29d937865bf08f",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/WORKSPACE/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/guidance.json",
-      "original_sha256": "751deb6bac34f8f50d69934e0623bbeb43e8fd17c489dd31aeb1b216cf8b8c25",
-      "published_sha256": "9bb4bd99d25bcd0c9374ef1d0fc99f0049399f62343880194b06949148e643e8",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/WORKSPACE/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/interface-discovery.json",
-      "original_sha256": "a51df73be7e10e94ca284a89c715429c90ead0666a6de2f0a8a561e37dff5688",
-      "published_sha256": "36b3c9d53699544af9ae13f30f5ee8db69d2893be3a98deb8da7a76683b40cdc",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/WORKSPACE/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/machine.json",
-      "original_sha256": "e1ed562825b22a88399242ed42e54472ec63ac6fb8547de8e07d8d327b7b4377",
-      "published_sha256": "e0ceb74906f85c2469d7321688fe61331eb90f53060db6cea6e040bb3eb2de1d",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/WORKSPACE/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
     {
       "path": "execution.json",
       "original_sha256": "a532b6aa44780343c7712d18bff5ca4136dd7e36512c9f88d3a2e9c076ae3e00",
@@ -639,5 +555,79 @@
       "NEW"
     ],
     "result": "results.json"
+  },
+  "distribution_projection": {
+    "basis_commit": "436f50aebb25c5e479c53baf20b109b86df7a530",
+    "basis_recording_sha256": "8265722d9061353e322d7bfa549a8f8279c7d4f31cd634697224b7b2e8993b28",
+    "review_receipt_sha256": "212f23980cb343aac915f0c2a7529fec0e97a4f2f2191f95056468ada0baaa2b",
+    "scope": "Distribution-only omission of nonessential operational files; no new task execution or renewed content review. Kept bytes and replay state are unchanged. Original reviewed output hashes remain in independent-review.json.",
+    "replay_state_sha256": "e59afefc93e137ac165e3d43d515bcdc69677408a2ce6eccd920291550b7f8a0",
+    "omitted_outputs": [
+      {
+        "reason": "Byte-identical copy of retained data; distinct command events remain separate.",
+        "retained_at": [
+          "recording:observed-check.json",
+          "output:execution.json"
+        ],
+        "files": [
+          "checks/check-final.json"
+        ]
+      },
+      {
+        "reason": "Empty command stream; its event and exit status remain in the execution receipt.",
+        "retained_at": [
+          "output:execution.json"
+        ],
+        "files": [
+          "checks/check-final.stderr.txt",
+          "checks/check.stderr.txt",
+          "checks/checkpoint.stderr.txt",
+          "checks/configure.stderr.txt",
+          "checks/register-batch.stderr.txt",
+          "checks/resume.stderr.txt",
+          "checks/skill-check.stderr.txt"
+        ]
+      },
+      {
+        "reason": "Nonessential successful CLI, setup, timing or intermediate state snapshot; command identity and final research state are retained.",
+        "retained_at": [
+          "output:execution.json",
+          "recording:observed-check.json",
+          "recording:observed-resume.json",
+          "recording:recording.json"
+        ],
+        "files": [
+          "checks/check.json",
+          "checks/checkpoint.json",
+          "checks/configure.json",
+          "checks/guidance.json",
+          "checks/input-copy-integrity.json",
+          "checks/interface-discovery.json",
+          "checks/machine.json",
+          "checks/register-batch.json",
+          "checks/skill-check.json",
+          "checks/timings.json"
+        ]
+      },
+      {
+        "reason": "JSON command list duplicated inside the unchanged execution receipt.",
+        "retained_at": [
+          "output:execution.json#/commands"
+        ],
+        "files": [
+          "checks/commands.json"
+        ]
+      },
+      {
+        "reason": "Byte-identical copy of retained data; distinct command events remain separate.",
+        "retained_at": [
+          "recording:observed-resume.json",
+          "output:execution.json"
+        ],
+        "files": [
+          "checks/resume.json"
+        ]
+      }
+    ]
   }
 }

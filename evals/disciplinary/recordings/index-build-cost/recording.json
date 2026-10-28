@@ -33,15 +33,7 @@
   "output_files": [
     "artifacts/results.json",
     "artifacts/run.py",
-    "checks/check-before-checkpoint.json",
-    "checks/check.json",
-    "checks/checkpoint.json",
     "checks/computation.json",
-    "checks/guidance-read.json",
-    "checks/register.json",
-    "checks/registration-batch.json",
-    "checks/resume.json",
-    "checks/skill-connection.json",
     "execution.json",
     "manuscript/report.md",
     "notes/analysis.md",
@@ -50,15 +42,7 @@
   "output_sha256": {
     "artifacts/results.json": "62d5365bdeffab2935c110eb0f61db1602be9a86b4a82254c7269592ba10ce74",
     "artifacts/run.py": "cc9d429a8b776cd88c089a73ebdfb355f48cb747b9b80a78ec2cadacf9784b8c",
-    "checks/check-before-checkpoint.json": "494b68648e416da994abd8c59f01fd233391903eab344259214905ce40259972",
-    "checks/check.json": "140d31b695761b93318bc1f46e5ba622327297fb74360ce8575b34b4ad4903e5",
-    "checks/checkpoint.json": "f4fa2aa911744bc4efe749c5a133c2998df72b701284742de824ef5b3e51e0ef",
     "checks/computation.json": "e806865e1487c764005993a37cd97614b8fc4880d2e725ae2a0026d1284f3fa3",
-    "checks/guidance-read.json": "762a5d7d356f8b5b7fd48c5b449827f4b7332c53f78339385165c9d71ca43d06",
-    "checks/register.json": "378e2aca376dd17e75e4536b8bff58a09d75dcb8c3eef2100357d90c310a2040",
-    "checks/registration-batch.json": "ceb1730e1114fafbb0775fc11532bb9434d53178605e1897e935fbcb290ac2f5",
-    "checks/resume.json": "3257513ad15bbb125bc1841184803b94e3ca4a017154019724f59a860a6fc1d8",
-    "checks/skill-connection.json": "f11a4ba08470f5ecef07a818c6315a016a0cc07ef3e1fc2e1b400d4b417d9889",
     "execution.json": "86f01402271ec7bfc0679cf32446e1eaea5792f2c6495e260e66e5a9c3d0c392",
     "manuscript/report.md": "6454c09a0582fddf4c36084ee470efe5878b17fd5c23740dcc0a623f104124a6",
     "notes/analysis.md": "b7e30b67bd47e51949dd402d56182275dc1eaa9626ab13e398ca016ac854757f",
@@ -67,15 +51,7 @@
   "executed_output_sha256": {
     "artifacts/results.json": "62d5365bdeffab2935c110eb0f61db1602be9a86b4a82254c7269592ba10ce74",
     "artifacts/run.py": "cc9d429a8b776cd88c089a73ebdfb355f48cb747b9b80a78ec2cadacf9784b8c",
-    "checks/check-before-checkpoint.json": "b6076ee803d550ccbd11d81343e3d06724caf9d3cc3e47216c93d974f263daea",
-    "checks/check.json": "6a832a4d9a0242adaa081c6da0ccd2aaa93ac675584abd353eb121f757f341f5",
-    "checks/checkpoint.json": "42f40b043cae5d61e5cdef4fa52c3628b2dee41f59a2080c33e53930a4ef8cc1",
     "checks/computation.json": "09bcbfb24f6fb46f28b5423b9200848e4c9ec2cea4eeabaf442ebe24f1a302b1",
-    "checks/guidance-read.json": "c36e29a0bf9ff9771e8dfc6410649dd8639cfc7833582fea8f5502df5c8811d6",
-    "checks/register.json": "c7f45bb39165b418891d41b79f93f92ea061342f6e2a783926a4b488d0353433",
-    "checks/registration-batch.json": "ceb1730e1114fafbb0775fc11532bb9434d53178605e1897e935fbcb290ac2f5",
-    "checks/resume.json": "4815dea7f8d96f5166b51e71985ce9922bef23535be32a029c1a81848ebf007b",
-    "checks/skill-connection.json": "b8da6d2901ed04c3d696d43b05284f19403db61bf3bdb6478fe1f9a409039032",
     "execution.json": "115cb1cb3adb7cbda5d5f2fc9e7b18285d6d3031bb3f593fe3178d11a99cfcf2",
     "manuscript/report.md": "6454c09a0582fddf4c36084ee470efe5878b17fd5c23740dcc0a623f104124a6",
     "notes/analysis.md": "b7e30b67bd47e51949dd402d56182275dc1eaa9626ab13e398ca016ac854757f",
@@ -83,51 +59,9 @@
   },
   "output_normalizations": [
     {
-      "path": "checks/check-before-checkpoint.json",
-      "original_sha256": "b6076ee803d550ccbd11d81343e3d06724caf9d3cc3e47216c93d974f263daea",
-      "published_sha256": "494b68648e416da994abd8c59f01fd233391903eab344259214905ce40259972",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/check.json",
-      "original_sha256": "6a832a4d9a0242adaa081c6da0ccd2aaa93ac675584abd353eb121f757f341f5",
-      "published_sha256": "140d31b695761b93318bc1f46e5ba622327297fb74360ce8575b34b4ad4903e5",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/checkpoint.json",
-      "original_sha256": "42f40b043cae5d61e5cdef4fa52c3628b2dee41f59a2080c33e53930a4ef8cc1",
-      "published_sha256": "f4fa2aa911744bc4efe749c5a133c2998df72b701284742de824ef5b3e51e0ef",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
       "path": "checks/computation.json",
       "original_sha256": "09bcbfb24f6fb46f28b5423b9200848e4c9ec2cea4eeabaf442ebe24f1a302b1",
       "published_sha256": "e806865e1487c764005993a37cd97614b8fc4880d2e725ae2a0026d1284f3fa3",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/guidance-read.json",
-      "original_sha256": "c36e29a0bf9ff9771e8dfc6410649dd8639cfc7833582fea8f5502df5c8811d6",
-      "published_sha256": "762a5d7d356f8b5b7fd48c5b449827f4b7332c53f78339385165c9d71ca43d06",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/register.json",
-      "original_sha256": "c7f45bb39165b418891d41b79f93f92ea061342f6e2a783926a4b488d0353433",
-      "published_sha256": "378e2aca376dd17e75e4536b8bff58a09d75dcb8c3eef2100357d90c310a2040",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/resume.json",
-      "original_sha256": "4815dea7f8d96f5166b51e71985ce9922bef23535be32a029c1a81848ebf007b",
-      "published_sha256": "3257513ad15bbb125bc1841184803b94e3ca4a017154019724f59a860a6fc1d8",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/skill-connection.json",
-      "original_sha256": "b8da6d2901ed04c3d696d43b05284f19403db61bf3bdb6478fe1f9a409039032",
-      "published_sha256": "f11a4ba08470f5ecef07a818c6315a016a0cc07ef3e1fc2e1b400d4b417d9889",
       "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
     },
     {
@@ -729,5 +663,33 @@
       "NEW"
     ],
     "result": "results.json"
+  },
+  "distribution_projection": {
+    "basis_commit": "436f50aebb25c5e479c53baf20b109b86df7a530",
+    "basis_recording_sha256": "0e9e45c71debaba0f37029531af505a1090c6ca0d4f22703767fe05dca93e3f8",
+    "review_receipt_sha256": "212f23980cb343aac915f0c2a7529fec0e97a4f2f2191f95056468ada0baaa2b",
+    "scope": "Distribution-only omission of nonessential operational files; no new task execution or renewed content review. Kept bytes and replay state are unchanged. Original reviewed output hashes remain in independent-review.json.",
+    "replay_state_sha256": "f4278377e6bd12d2f0e04b6dbf29e33f934008e4adfcf7d1d614f462c09a7426",
+    "omitted_outputs": [
+      {
+        "reason": "Nonessential successful CLI, setup, timing or intermediate state snapshot; command identity and final research state are retained.",
+        "retained_at": [
+          "output:execution.json",
+          "recording:observed-check.json",
+          "recording:observed-resume.json",
+          "recording:recording.json"
+        ],
+        "files": [
+          "checks/check-before-checkpoint.json",
+          "checks/check.json",
+          "checks/checkpoint.json",
+          "checks/guidance-read.json",
+          "checks/register.json",
+          "checks/registration-batch.json",
+          "checks/resume.json",
+          "checks/skill-connection.json"
+        ]
+      }
+    ]
   }
 }

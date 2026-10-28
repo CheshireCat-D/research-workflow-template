@@ -53,7 +53,39 @@ class DisciplinaryRecordings(unittest.TestCase):
                 disciplines.update(manifest['project_init']['disciplines'])
                 self.assertEqual(review['status'], 'pass-in-scope')
                 self.assertEqual(review['input_sha256'], manifest['case_input_sha256'])
-                self.assertEqual(review['output_sha256'], manifest['output_sha256'])
+                projection = manifest['distribution_projection']
+                self.assertEqual(projection['review_receipt_sha256'], sha(EVAL / 'independent-review.json'))
+                omitted = [name for group in projection['omitted_outputs'] for name in group['files']]
+                self.assertEqual(len(omitted), len(set(omitted)))
+                self.assertFalse(set(omitted) & set(manifest['output_files']))
+                self.assertEqual(set(manifest['output_files']) | set(omitted), set(review['output_sha256']))
+                self.assertEqual(manifest['output_sha256'], {
+                    name: review['output_sha256'][name] for name in manifest['output_files']
+                })
+                self.assertEqual(manifest['executed_output_sha256'], {
+                    name: review['executed_output_sha256'][name] for name in manifest['output_files']
+                })
+                for group in projection['omitted_outputs']:
+                    self.assertTrue(group['reason'])
+                    self.assertTrue(group['retained_at'])
+                    for locator in group['retained_at']:
+                        prefix, name = locator.split(':', 1)
+                        base = {'output': EVAL / 'recordings' / case / 'outputs',
+                                'recording': EVAL / 'recordings' / case,
+                                'case': EVAL / 'cases' / case}[prefix]
+                        retained = base / name.split('#', 1)[0]
+                        self.assertTrue(retained.is_file(), locator)
+                    if group['reason'].startswith('Byte-identical copy'):
+                        prefix, canonical = group['retained_at'][0].split(':', 1)
+                        base = {'output': EVAL / 'recordings' / case / 'outputs',
+                                'recording': EVAL / 'recordings' / case,
+                                'case': EVAL / 'cases' / case}[prefix]
+                        digest = sha(base / canonical)
+                        self.assertTrue(all(review['output_sha256'][name] == digest
+                                            for name in group['files']))
+                    if group['reason'].startswith('Empty command stream'):
+                        self.assertTrue(all(review['output_sha256'][name] == hashlib.sha256(b'').hexdigest()
+                                            for name in group['files']))
                 self.assertEqual(review['guidance_sha256'], manifest['guidance_sha256'])
                 inputs = EVAL / 'cases' / case
                 outputs = EVAL / 'recordings' / case / 'outputs'
@@ -88,6 +120,30 @@ class DisciplinaryRecordings(unittest.TestCase):
                 self.assertTrue(review['reviewer'])
                 self.assertNotEqual(review['reviewer'], review['executor'])
         self.assertEqual(disciplines, {d['id'] for d in read(ROOT / 'design/catalog.json')['disciplines']})
+
+    def test_distribution_cleanup_preserves_replay_state_and_research_resources(self):
+        fields = ('project_init', 'case_files', 'case_input_sha256', 'records',
+                  'record_counts', 'cursor', 'guidance_sha256', 'reproduction')
+        for case in CASES:
+            with self.subTest(case=case):
+                manifest = read(EVAL / 'recordings' / case / 'recording.json')
+                projection = manifest['distribution_projection']
+                state = json.dumps({key: manifest[key] for key in fields}, ensure_ascii=False,
+                                   sort_keys=True, separators=(',', ':'), allow_nan=False).encode('utf-8')
+                self.assertEqual(hashlib.sha256(state).hexdigest(), projection['replay_state_sha256'])
+                outputs = EVAL / 'recordings' / case / 'outputs'
+                for item in manifest['records']:
+                    kind, data = item['kind'], item['record']
+                    location = (data['path'] if kind == 'artifact' else
+                                data.get('location', {}).get('path') if kind == 'evidence' else None)
+                    if location and not location.startswith('inputs/'):
+                        self.assertIn(location, manifest['output_files'])
+                        self.assertTrue((outputs / location).is_file())
+                reviewed = read(EVAL / 'independent-review.json')['cases'][case]['output_sha256']
+                for name in reviewed:
+                    if name.startswith(('artifacts/', 'notes/', 'manuscript/')) or name in {'review.md', 'execution.json'} or name.endswith('.py'):
+                        self.assertIn(name, manifest['output_files'])
+                        self.assertEqual(sha(outputs / name), reviewed[name])
 
     def test_recorded_projects_recover_read_only_and_changed_inputs_trigger_review(self):
         with tempfile.TemporaryDirectory(prefix='rw-disciplinary-replay-') as temporary:

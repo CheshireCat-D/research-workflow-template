@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-28T21:55:18.507369+00:00",
+  "checked_at_utc": "2026-10-28T22:24:45.016888+00:00",
   "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -24,11 +24,11 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 236,
+      "test_methods": 237,
       "check_groups": 7,
       "receipt": {
         "identifier": "local-evidence:check-core.json",
-        "sha256": "4cbc1dbe927ebe9a3046f1024d088c60cd24af26e9e4362deb4611f1166a74d2"
+        "sha256": "881db3a589408b4c191781f669a9df93d20d4c77c37bd69d2c8d1a2f35aad432"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,7 +36,7 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "b1a382848254677f0ab52e5f356e55cde6ff66825df4ec1e7fd4d0c844ac475c",
+        "sha256": "d89f5b5b2241d0d0da6a2d3963ff7052a7b8eed58fe3f0accb97d99f9ec75fee",
         "files": 33
       }
     }
@@ -207,6 +207,15 @@
       "Claim versus reported-claim registration roles corrected",
       "Closed-case legal input guard aligned with its declared boundary"
     ],
-    "scope": "Original synthetic packets, actual fresh-context execution, separate AI review and deterministic replay with independent arithmetic and changed inputs. No field-wide certification or human expert endorsement."
+    "scope": "Original synthetic packets, actual fresh-context execution, separate AI review and deterministic replay with independent arithmetic and changed inputs. No field-wide certification or human expert endorsement.",
+    "distribution_cleanup": {
+      "basis_commit": "436f50aebb25c5e479c53baf20b109b86df7a530",
+      "omitted_nonessential_operational_files": 201,
+      "retained_output_files": 77,
+      "unchanged_independent_review": true,
+      "unchanged_replay_state_and_research_resources": true,
+      "omission_map": "distribution_projection in each case recording.json",
+      "scope": "Source-only distribution cleanup with reference, identity and replay regression checks; original task and content-review records retain their scope."
+    }
   }
 }

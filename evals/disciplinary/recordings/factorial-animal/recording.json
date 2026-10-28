@@ -32,17 +32,8 @@
     "artifacts/primary/manifest.json",
     "artifacts/results.json",
     "artifacts/run.py",
-    "checks/check.json",
-    "checks/checkpoint.json",
     "checks/computation.json",
-    "checks/delivery-manifest.json",
-    "checks/editorial.json",
     "checks/failures.json",
-    "checks/machine.json",
-    "checks/registration.json",
-    "checks/resume.json",
-    "checks/setup.json",
-    "checks/skills-check.json",
     "execution.json",
     "manuscript/report.md",
     "notes/analysis.md",
@@ -52,17 +43,8 @@
     "artifacts/primary/manifest.json": "5c3fe2dd2d22f68f23f3b9454d33021adf0bbd48c16dd61f421e39b0ac92026c",
     "artifacts/results.json": "d9c5679012e71f2149f0615647ce009f4971dea4554df42c85c5092f20067fbc",
     "artifacts/run.py": "38b8f3efd5396762838c3edbe459273fcb520a84ef745d44c5bf92f50aa4dd01",
-    "checks/check.json": "b75053e8dc65cf03582a5f3b6ff8fe357d9c207b2cfae86bedd2179593503c36",
-    "checks/checkpoint.json": "60754cdfe0957be66fc7b38048523809ba8f7a0d403f157a5b54e1f6c2a60bf7",
     "checks/computation.json": "de61acffaaf1520c9beec15f2fa3adf2cb7191f354950adf2be6e957d542b294",
-    "checks/delivery-manifest.json": "028fd8d690da4e6f87e2ec0756a726ec07641a31fad5e97c8b96ca3ccc202064",
-    "checks/editorial.json": "8170023737cc72dad33434be58b350a6d15f00c781965c110ff1adcb05ee4e72",
     "checks/failures.json": "c9aa0c84c322853f282eedf360a1a04e7ff67f7072a4194f567d5a305a71b426",
-    "checks/machine.json": "7c9f2d009341b29ce8d952bfa9fc199640e62c83200721c3bdd8c9a410ecfac5",
-    "checks/registration.json": "a4c44c887e5b80bb1133caa04a1cb2aceeea7efa3a5db23f6ec5190565b3802b",
-    "checks/resume.json": "cdf60ac3a199b66c82a29e1fb6c8a494c5a19082afb203dab7765fe152a61e33",
-    "checks/setup.json": "a8f0d0003f0bfa6c9f0b688fa3997ff3510ec97f46ed97095f88897e06c19925",
-    "checks/skills-check.json": "47c1d731ec49e737f4cd306c3243c5efa7dc4892fcf3e77acb83650447d626ff",
     "execution.json": "32060ad4c9b47e7622f223203cb03c019be81f49bc01bf31de9405ff8e5cd49e",
     "manuscript/report.md": "d369d03a8dd1e5da74452cf50715690d9808a4202e35a5f637382ad15e39a776",
     "notes/analysis.md": "fc0436843d740249baf6dce5c8e2d69317a4e35fd1bee874bad541999db30885",
@@ -72,17 +54,8 @@
     "artifacts/primary/manifest.json": "5c3fe2dd2d22f68f23f3b9454d33021adf0bbd48c16dd61f421e39b0ac92026c",
     "artifacts/results.json": "d9c5679012e71f2149f0615647ce009f4971dea4554df42c85c5092f20067fbc",
     "artifacts/run.py": "38b8f3efd5396762838c3edbe459273fcb520a84ef745d44c5bf92f50aa4dd01",
-    "checks/check.json": "2b467d87b1e670b462b037e0b5d547f26c158f6e41219d7cf2e7650989f6b152",
-    "checks/checkpoint.json": "594a798363fad6ff8829e7cc0ed6d99de14cc7e052ad48a5fc49208bff96a519",
     "checks/computation.json": "de61acffaaf1520c9beec15f2fa3adf2cb7191f354950adf2be6e957d542b294",
-    "checks/delivery-manifest.json": "5d29d3762c008c875e42c9580c5562d14542f9a481651410ecc4bcd43a512489",
-    "checks/editorial.json": "8170023737cc72dad33434be58b350a6d15f00c781965c110ff1adcb05ee4e72",
     "checks/failures.json": "1a899a3afc99e353a4488a2a663d87e2b0cd5516e6881e0c1fdffa8c4ea01fb5",
-    "checks/machine.json": "7c9f2d009341b29ce8d952bfa9fc199640e62c83200721c3bdd8c9a410ecfac5",
-    "checks/registration.json": "33372898cfd9bbc7ef799b9423c56247943022b92873b8db512d082aee14a175",
-    "checks/resume.json": "779f46a459628ee87af64c7ab7aa9fa954033c68ed9c072fb4c818f7025f0189",
-    "checks/setup.json": "24a70459f357bdcce7de74a8640573fd9a70ea8ac4f4f0e3a35f6035e006d106",
-    "checks/skills-check.json": "3b953dd8f55eb46ab4b807697df431f4de83533f9270248bd9d3c2bbf1d18d71",
     "execution.json": "474a51a3a7c49b1c42bc3669acd929939ea6d3baf4f8de821cf499e233863544",
     "manuscript/report.md": "d369d03a8dd1e5da74452cf50715690d9808a4202e35a5f637382ad15e39a776",
     "notes/analysis.md": "fc0436843d740249baf6dce5c8e2d69317a4e35fd1bee874bad541999db30885",
@@ -90,51 +63,9 @@
   },
   "output_normalizations": [
     {
-      "path": "checks/check.json",
-      "original_sha256": "2b467d87b1e670b462b037e0b5d547f26c158f6e41219d7cf2e7650989f6b152",
-      "published_sha256": "b75053e8dc65cf03582a5f3b6ff8fe357d9c207b2cfae86bedd2179593503c36",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/checkpoint.json",
-      "original_sha256": "594a798363fad6ff8829e7cc0ed6d99de14cc7e052ad48a5fc49208bff96a519",
-      "published_sha256": "60754cdfe0957be66fc7b38048523809ba8f7a0d403f157a5b54e1f6c2a60bf7",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/delivery-manifest.json",
-      "original_sha256": "5d29d3762c008c875e42c9580c5562d14542f9a481651410ecc4bcd43a512489",
-      "published_sha256": "028fd8d690da4e6f87e2ec0756a726ec07641a31fad5e97c8b96ca3ccc202064",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
       "path": "checks/failures.json",
       "original_sha256": "1a899a3afc99e353a4488a2a663d87e2b0cd5516e6881e0c1fdffa8c4ea01fb5",
       "published_sha256": "c9aa0c84c322853f282eedf360a1a04e7ff67f7072a4194f567d5a305a71b426",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/registration.json",
-      "original_sha256": "33372898cfd9bbc7ef799b9423c56247943022b92873b8db512d082aee14a175",
-      "published_sha256": "a4c44c887e5b80bb1133caa04a1cb2aceeea7efa3a5db23f6ec5190565b3802b",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/resume.json",
-      "original_sha256": "779f46a459628ee87af64c7ab7aa9fa954033c68ed9c072fb4c818f7025f0189",
-      "published_sha256": "cdf60ac3a199b66c82a29e1fb6c8a494c5a19082afb203dab7765fe152a61e33",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/setup.json",
-      "original_sha256": "24a70459f357bdcce7de74a8640573fd9a70ea8ac4f4f0e3a35f6035e006d106",
-      "published_sha256": "a8f0d0003f0bfa6c9f0b688fa3997ff3510ec97f46ed97095f88897e06c19925",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/skills-check.json",
-      "original_sha256": "3b953dd8f55eb46ab4b807697df431f4de83533f9270248bd9d3c2bbf1d18d71",
-      "published_sha256": "47c1d731ec49e737f4cd306c3243c5efa7dc4892fcf3e77acb83650447d626ff",
       "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
     },
     {
@@ -699,5 +630,34 @@
       "NEW"
     ],
     "result": "results.json"
+  },
+  "distribution_projection": {
+    "basis_commit": "436f50aebb25c5e479c53baf20b109b86df7a530",
+    "basis_recording_sha256": "299f9c1cc382ac4dd3f253ace00a540e4e0b3a3dc9672da12fb5125ceb561d35",
+    "review_receipt_sha256": "212f23980cb343aac915f0c2a7529fec0e97a4f2f2191f95056468ada0baaa2b",
+    "scope": "Distribution-only omission of nonessential operational files; no new task execution or renewed content review. Kept bytes and replay state are unchanged. Original reviewed output hashes remain in independent-review.json.",
+    "replay_state_sha256": "ac9f60e37d15298651390bd26679fd8438a5c22ab2ad62f4ed8fff2b5af14b67",
+    "omitted_outputs": [
+      {
+        "reason": "Nonessential successful CLI, setup, timing or intermediate state snapshot; command identity and final research state are retained.",
+        "retained_at": [
+          "output:execution.json",
+          "recording:observed-check.json",
+          "recording:observed-resume.json",
+          "recording:recording.json"
+        ],
+        "files": [
+          "checks/check.json",
+          "checks/checkpoint.json",
+          "checks/delivery-manifest.json",
+          "checks/editorial.json",
+          "checks/machine.json",
+          "checks/registration.json",
+          "checks/resume.json",
+          "checks/setup.json",
+          "checks/skills-check.json"
+        ]
+      }
+    ]
   }
 }

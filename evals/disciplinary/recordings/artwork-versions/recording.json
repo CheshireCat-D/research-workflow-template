@@ -33,71 +33,11 @@
   "output_files": [
     "artifacts/results.json",
     "artifacts/run.py",
-    "checks/check-final.json",
-    "checks/check.json",
-    "checks/checkpoint.json",
-    "checks/compact-delivery.json",
-    "checks/connect-check.json",
-    "checks/connect-install.json",
-    "checks/connected-bundle-manifest.json",
-    "checks/init.json",
     "checks/initial-init-failure.json",
-    "checks/material-audit-command.json",
-    "checks/project-after-skills-restore-check.json",
-    "checks/project-after-skills-restore-resume.json",
-    "checks/register-batch.json",
     "checks/registration-semantic-review.md",
-    "checks/resume.json",
-    "checks/semantic-correction/after-activity-A-interpret.json",
-    "checks/semantic-correction/after-activity-A-ledger-semantic-correction.json",
-    "checks/semantic-correction/after-activity-A-next-context.json",
     "checks/semantic-correction/after-envelopes.json",
-    "checks/semantic-correction/after-evidence-E-init-failure.json",
-    "checks/semantic-correction/after-relation-R-industrial-E1.json",
-    "checks/semantic-correction/after-relation-R-industrial-counter.json",
-    "checks/semantic-correction/after-relation-R-industrial-draft.json",
-    "checks/semantic-correction/after-relation-R-nofigure-draft.json",
-    "checks/semantic-correction/after-statement-S-industrial.json",
-    "checks/semantic-correction/after-statement-S-nofigure.json",
-    "checks/semantic-correction/before-activity-A-interpret.json",
-    "checks/semantic-correction/before-activity-A-next-context.json",
     "checks/semantic-correction/before-envelopes.json",
-    "checks/semantic-correction/before-evidence-E-init-failure.json",
-    "checks/semantic-correction/before-relation-R-industrial-E1.json",
-    "checks/semantic-correction/before-relation-R-industrial-counter.json",
-    "checks/semantic-correction/before-statement-S-industrial.json",
-    "checks/semantic-correction/before-statement-S-nofigure.json",
     "checks/semantic-correction/check-before-rebinding.json",
-    "checks/semantic-correction/check-final.json",
-    "checks/semantic-correction/checkpoint.json",
-    "checks/semantic-correction/input-activity-A-interpret.json",
-    "checks/semantic-correction/input-activity-A-ledger-semantic-correction.json",
-    "checks/semantic-correction/input-activity-A-next-context.json",
-    "checks/semantic-correction/input-artifact-ART-ledger-semantic-review.json",
-    "checks/semantic-correction/input-evidence-E-init-failure.json",
-    "checks/semantic-correction/input-evidence-E-ledger-semantic-review.json",
-    "checks/semantic-correction/input-relation-R-industrial-E1.json",
-    "checks/semantic-correction/input-relation-R-industrial-counter.json",
-    "checks/semantic-correction/input-relation-R-industrial-draft.json",
-    "checks/semantic-correction/input-relation-R-nofigure-draft.json",
-    "checks/semantic-correction/input-statement-S-industrial.json",
-    "checks/semantic-correction/input-statement-S-nofigure.json",
-    "checks/semantic-correction/register-activity-A-interpret.json",
-    "checks/semantic-correction/register-activity-A-ledger-semantic-correction.json",
-    "checks/semantic-correction/register-activity-A-next-context.json",
-    "checks/semantic-correction/register-artifact-ART-ledger-semantic-review.json",
-    "checks/semantic-correction/register-evidence-E-init-failure.json",
-    "checks/semantic-correction/register-evidence-E-ledger-semantic-review.json",
-    "checks/semantic-correction/register-relation-R-industrial-E1.json",
-    "checks/semantic-correction/register-relation-R-industrial-counter.json",
-    "checks/semantic-correction/register-relation-R-industrial-draft.json",
-    "checks/semantic-correction/register-relation-R-nofigure-draft.json",
-    "checks/semantic-correction/register-statement-S-industrial.json",
-    "checks/semantic-correction/register-statement-S-nofigure.json",
-    "checks/semantic-correction/resume-final.json",
-    "checks/semantic-correction/skills-check-final.json",
-    "checks/skills-restore-check.json",
-    "checks/skills-restore-install.json",
     "execution.json",
     "manuscript/report.md",
     "notes/analysis.md",
@@ -107,71 +47,11 @@
   "output_sha256": {
     "artifacts/results.json": "3eae8dd6771bf9f99c566275fa27297d59372595a9a8301e201e0dbd415de338",
     "artifacts/run.py": "fe6f057951a10c44c9e9b642821994f82e43e4ecf37b4d45ae54379e8be4c364",
-    "checks/check-final.json": "34c9f68d4f9e75a444170ebb9dbc157b05d18c0054dfb623684d0fbb1dd17469",
-    "checks/check.json": "00dd0dd987b19660a48d8b0d4d668b21010a7df3948a1aa42cd6ef574ccf8800",
-    "checks/checkpoint.json": "842780a70a810fad8a530ce662555cffa8e8f770b6dfdff244d1a16af28ef7e6",
-    "checks/compact-delivery.json": "25e734aa11aa8ad62762143c2428b88f27b48c7929b2bd5938ff372e7e3c75cc",
-    "checks/connect-check.json": "915589f29ca0b73e672efbdb361a5160e4dc798a507fb253572fd31b477b7e9c",
-    "checks/connect-install.json": "5979f737d12014363c976e51b3a99fca21bf0441c1285296f99d412c8ac9a205",
-    "checks/connected-bundle-manifest.json": "40ef72cdce48c1534789e4dce91722a1de7c7299eb323f6ceaeaf91bd7d49c97",
-    "checks/init.json": "54a532b852bafd28d1324a4cb583d0b3b3d921406984136ceff4c96ea5e2cfbb",
     "checks/initial-init-failure.json": "4d1cef4c03636844e7ee7b3fefbb7ab6fecd047294fead6c158d521b850b5faa",
-    "checks/material-audit-command.json": "a71c83145704bcd294bcfeaf87375fe5911e4ab9ddb79bffcab5c1677f1e80a6",
-    "checks/project-after-skills-restore-check.json": "ad6d4516deddf9db46157b130d3640ab472eed8e0be291e492e6a19f8664cbd2",
-    "checks/project-after-skills-restore-resume.json": "c5f9dd042a7bdd2ff3fbf185de447c11b5bcb0dba85ed26901eb78c3e11c4e69",
-    "checks/register-batch.json": "07c405737697f00aab3486da4194142937ff26eef2656a28768020d8a9308e4b",
     "checks/registration-semantic-review.md": "d451395ca0a7a2577f0a6ed27b6e51436bb17c1ebc58198fb56ee2e19ad8a40b",
-    "checks/resume.json": "9b7389a6192e671278b5dc11d711b9e2f596ed5c8b52054e9c2234f50a237a2e",
-    "checks/semantic-correction/after-activity-A-interpret.json": "e2a6ef58c67ee474aaafb915fe557a4df947ff47fc6fa32f5333f343f84b4155",
-    "checks/semantic-correction/after-activity-A-ledger-semantic-correction.json": "d2aced6a02a0627b5d4285f8801120c5c5f85e39c0d2b07903f4409cf5e814dc",
-    "checks/semantic-correction/after-activity-A-next-context.json": "d27e2f3f9726438b0ba6f58f37170aad8cb670a9f8b3fea0989a2bf3a95ccaf7",
     "checks/semantic-correction/after-envelopes.json": "f7f4fe2107590d912ccd5e94a3830b8e60993647df6c43fd2273f8d1920a61a0",
-    "checks/semantic-correction/after-evidence-E-init-failure.json": "3bfb1aaf4dc6f25dd4994d33e6317d0318bf96097ef859c615167b74312873ed",
-    "checks/semantic-correction/after-relation-R-industrial-E1.json": "d8aa3cf3e72f45cd77b5b37d9c689d56a97e05a52d8adebedd0cf3964f6f2194",
-    "checks/semantic-correction/after-relation-R-industrial-counter.json": "a3b420c59b1933abb77f882a68003e58be18f07181ff6c54e31f76c4818a87f0",
-    "checks/semantic-correction/after-relation-R-industrial-draft.json": "72f9f3ed1fd5bff66f0ff9fad4ddb2a0093ec7f833e1d59bb3ae85015e4e7278",
-    "checks/semantic-correction/after-relation-R-nofigure-draft.json": "70f1c5dc4024485cdb4e62206a848f8a07cc4235e2a41ed2e9f41b4edb9fbc9c",
-    "checks/semantic-correction/after-statement-S-industrial.json": "a68d4d9734b1d27850fe6e2dfbb8de3e67d9272ea80c6836582688fa4f6f687d",
-    "checks/semantic-correction/after-statement-S-nofigure.json": "986f5a071655337e9baa6f3e5ad28481a39d9b59d522dc028ed71417a7f086d6",
-    "checks/semantic-correction/before-activity-A-interpret.json": "8427c71594933acc6b703fe10518d4ef1f0376249b1dacd3fef739e6801bf496",
-    "checks/semantic-correction/before-activity-A-next-context.json": "a2c32e89e7334b6f7c55f69bac68dd94dab4124ddaed2de618d99f861eba8cc3",
     "checks/semantic-correction/before-envelopes.json": "3047bb15093dac27182ade3bcb3c36bc3e434ab796e6194db0ab223f63247be5",
-    "checks/semantic-correction/before-evidence-E-init-failure.json": "039da847c1fad2d41a59727782be0cdac2db2fb109c7b7123d1d55b6608cc08c",
-    "checks/semantic-correction/before-relation-R-industrial-E1.json": "8284ad36e2d5f9c05d12ac0a4f1ab7f0c58e76303e546d253695b1a1e56b098e",
-    "checks/semantic-correction/before-relation-R-industrial-counter.json": "dc8395975952ad2a3ea4a4756d11fafe3aa0b34a55f7f293fad267dbceffcbab",
-    "checks/semantic-correction/before-statement-S-industrial.json": "65afa3224b38d2334e5f778af2b4457f38269c8fa5dcee37f5e9dba317bf222f",
-    "checks/semantic-correction/before-statement-S-nofigure.json": "3b051f0b72030101be297e0fcd76d9de5b1fb714264160c87b026121020d027d",
     "checks/semantic-correction/check-before-rebinding.json": "9b73deeaed67455b2881dab587dd082c2cfea63fd656217e371f47ffa0506ee7",
-    "checks/semantic-correction/check-final.json": "8878549611c6d6019162d392be844d1af7c9146bc658f9f996a6af2651b5dad8",
-    "checks/semantic-correction/checkpoint.json": "7f3ee50fa12d8d14035c0efa544c53a7efe731738aed64ee34c277e590034759",
-    "checks/semantic-correction/input-activity-A-interpret.json": "bc0182aea82325e0424c7687d199fca5f019d123465257b21e8f19e72cc9822e",
-    "checks/semantic-correction/input-activity-A-ledger-semantic-correction.json": "e535e7ab3dc522a3caa0e4adadf31e78380be616b707ba4c62dd82c25f8295c5",
-    "checks/semantic-correction/input-activity-A-next-context.json": "d3b5ba3ac27bff5cb831a9b83f5fbe816b0dc43504c5d36c15d78a87c91ed05d",
-    "checks/semantic-correction/input-artifact-ART-ledger-semantic-review.json": "d03d23c87d0ff3c766e570c2f2d1f9471aa47dccdd2ab21ca3111bb508e63503",
-    "checks/semantic-correction/input-evidence-E-init-failure.json": "17f00f56661b26a4b08120dab5ab7fa466644d4f542aae4d6c4f75cc47ca1af0",
-    "checks/semantic-correction/input-evidence-E-ledger-semantic-review.json": "23238b4d193560a0d2c1b57b7ade9eba0c407cd08609ff9482828c805c85ac20",
-    "checks/semantic-correction/input-relation-R-industrial-E1.json": "4fdcbd399fd94945d4a156b589aaee448a23e291ef01bbf339ed30e8eda4c754",
-    "checks/semantic-correction/input-relation-R-industrial-counter.json": "8311c6ac686f483861f897a1db075448bd922cc4344025789b6dd14bfa48585d",
-    "checks/semantic-correction/input-relation-R-industrial-draft.json": "1ed312aef259b061766d6949ba5c0a979df3aaf6407a4c5239cc91f7873a7ef2",
-    "checks/semantic-correction/input-relation-R-nofigure-draft.json": "014e852db8ed905bc28b1b556bf59d98adfdac00208556930e75427cc52add4a",
-    "checks/semantic-correction/input-statement-S-industrial.json": "5be99ddc412d2e0e143555b6669b6032c95bd33f244a9087c6e8d39500fbb270",
-    "checks/semantic-correction/input-statement-S-nofigure.json": "99610a479dc1d3f0f6f77d03a90576bdc14b134e9ac9159fd39f12f7b709d332",
-    "checks/semantic-correction/register-activity-A-interpret.json": "0e48bfe1b14c6602fe4f57b926eba8455f458dd29121aae0fa833126ddb957c2",
-    "checks/semantic-correction/register-activity-A-ledger-semantic-correction.json": "da2ecb92e5b463e14e209f03b8e78e4501319013531cade382083827c4dbd076",
-    "checks/semantic-correction/register-activity-A-next-context.json": "4bb4398927f5313143d72649a9ea358414555c130733769e8a1d73b0bbb3135f",
-    "checks/semantic-correction/register-artifact-ART-ledger-semantic-review.json": "c3f9b518d64f0cf6462e90e0690720e432c5889241cdb567bab8abb36a74d105",
-    "checks/semantic-correction/register-evidence-E-init-failure.json": "f1776f6442ff91f6da89fbe0f52c25e5f5bef6d483308074ab8e5a1d86b099eb",
-    "checks/semantic-correction/register-evidence-E-ledger-semantic-review.json": "bec181dcd63dd865f0237987d88c5a1b074327a9455cca4c9f69665ef917c81b",
-    "checks/semantic-correction/register-relation-R-industrial-E1.json": "4a22ab3a7180ac4b8aa570d4932aa15cb1ec5bf72540734b76100dadbdc2f0c4",
-    "checks/semantic-correction/register-relation-R-industrial-counter.json": "2288e4d2565c296feaa0ce011aec353c56bb251d03582b10a66dda210db04249",
-    "checks/semantic-correction/register-relation-R-industrial-draft.json": "1909e01678d2a2121ddcbfcff76559f1b33ee2581a7a47c5739524e60c53682b",
-    "checks/semantic-correction/register-relation-R-nofigure-draft.json": "96ce86abb19462ce952cd06bef07d8144d1051ab23b79f3188afcb8a42852023",
-    "checks/semantic-correction/register-statement-S-industrial.json": "c86f6adb5afd8f19419c60464529d70c929b2737946d4bbd77527eb020931231",
-    "checks/semantic-correction/register-statement-S-nofigure.json": "ebac5897c07e8c4c4c5a0dc872aaf87181ae68f666dfb39c1b3d2ada7ad4adef",
-    "checks/semantic-correction/resume-final.json": "ba625b596a985fe32d19e3077aba14ed1d08eb7d893ca81688176e8a090bec29",
-    "checks/semantic-correction/skills-check-final.json": "98823fb2394348996ddda8a659f5df252dbf50c0140a8a8d7f003e57a21ebea8",
-    "checks/skills-restore-check.json": "bdf63d4b04313326f6747b7449f6e3ffa0f27a41a6fc67747cc04ebf87e6eb59",
-    "checks/skills-restore-install.json": "c789ceb99436a2d9f7bd4923497a4d7943d8bb1ab8005f7ac6743cf1aa0d25a5",
     "execution.json": "387c2420a4a9e4f6c706bb26335b9ff89240a099dee365a2f3ae67ed13b40ef8",
     "manuscript/report.md": "4a52f78bc1fd01a34ae59d345df0f72db9716d886c6ab21e41ff6252d28f740b",
     "notes/analysis.md": "9187553bf955e03c1347253393eff8d3f59efb31750d4efa3637d3a25ffbbba5",
@@ -181,71 +61,11 @@
   "executed_output_sha256": {
     "artifacts/results.json": "3eae8dd6771bf9f99c566275fa27297d59372595a9a8301e201e0dbd415de338",
     "artifacts/run.py": "fe6f057951a10c44c9e9b642821994f82e43e4ecf37b4d45ae54379e8be4c364",
-    "checks/check-final.json": "a4ed909208fe03772f1fa2252e24ea8df3b76498c75f9473fd024c41cd2f88b5",
-    "checks/check.json": "b192e054e7c4c72c5fb829e348a451d164bd804e1490947526f87c18e042559d",
-    "checks/checkpoint.json": "a8b29423babeefdb0b99963da3cb1a98f731adbdbebd6a7ee8330e0f3d199ad7",
-    "checks/compact-delivery.json": "25e734aa11aa8ad62762143c2428b88f27b48c7929b2bd5938ff372e7e3c75cc",
-    "checks/connect-check.json": "f1ad492f3a43fbf7ec51b8a02a491e4b0dcfb2a0a4ff4429621d7b69a6331984",
-    "checks/connect-install.json": "b7a734bda561036628c2f297bc1d59cd0ee5d92e85f58178272f086b7099bd58",
-    "checks/connected-bundle-manifest.json": "40ef72cdce48c1534789e4dce91722a1de7c7299eb323f6ceaeaf91bd7d49c97",
-    "checks/init.json": "b8dea3d979e39d998bbfe3fb75342145339a3d3369842c6455e12a45938a75ce",
     "checks/initial-init-failure.json": "98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4",
-    "checks/material-audit-command.json": "f11712a44f379f5b5021e32843e1fff0063b097b392cb2a93ef5b672c8845563",
-    "checks/project-after-skills-restore-check.json": "c514fbf556071c0cac2d6b041216e974ca49bfb24cdca95e1cc7fe6f12ab1cee",
-    "checks/project-after-skills-restore-resume.json": "d92cef6bda18f09e5f71724d34b2744ed8f57ea7b4c961cffeb0f430f42bf718",
-    "checks/register-batch.json": "afb48877f258431c47391bdf0874fe04524957044c18c9804c403586e33b01da",
     "checks/registration-semantic-review.md": "d451395ca0a7a2577f0a6ed27b6e51436bb17c1ebc58198fb56ee2e19ad8a40b",
-    "checks/resume.json": "c7d0028306096444ed721bdd30b38804ea69831bcd32cd27389098306b01ae23",
-    "checks/semantic-correction/after-activity-A-interpret.json": "e83467f05bde4b25b5263c8683171a939761ddfb26f89d4b3978904d960c09ef",
-    "checks/semantic-correction/after-activity-A-ledger-semantic-correction.json": "af024798d759748fa5da27587244ab2a659f9bc30e203cec49c64af0b0af467c",
-    "checks/semantic-correction/after-activity-A-next-context.json": "bcc55051e6e89e5c74ea52f7627876baa0b6f5dc9a5c87e6705255a074e4c428",
     "checks/semantic-correction/after-envelopes.json": "672b47aa1dbfb2857222dc6cb4cd16625dcd95ae8e2a392c0377579e6bf9a8c0",
-    "checks/semantic-correction/after-evidence-E-init-failure.json": "6fac3fbf17d4a9ad4e300d882edcdfe139c29961f1c13bb2ea9dce450ee8c3ef",
-    "checks/semantic-correction/after-relation-R-industrial-E1.json": "d1cf4dc46eab519d3903edd1c6e9a11f1e947921b14c5770be177640d11e2e39",
-    "checks/semantic-correction/after-relation-R-industrial-counter.json": "53d0e6197ed39272720913bd6bf047707914bb65dfe2f1d12742760bd1f293a9",
-    "checks/semantic-correction/after-relation-R-industrial-draft.json": "7a292e5fbd1c00ef2860a3adf8f5cdd42a904e4d7c5245b14d6ef0e3b417ba00",
-    "checks/semantic-correction/after-relation-R-nofigure-draft.json": "a089e2317ba3aa6d8023eb55c7eb55a45cc6dd350a6d840e136a5546a7c52587",
-    "checks/semantic-correction/after-statement-S-industrial.json": "ac0b35090fcb09bc692ab63ad84457b08f8d9fce781036c480813aca557fa4f0",
-    "checks/semantic-correction/after-statement-S-nofigure.json": "4d1333f047011e2b27e0553a3a4d96cc3879cfb975c0efdb87a5c62266ef0c39",
-    "checks/semantic-correction/before-activity-A-interpret.json": "5e8a3529629c600d0121f6308c345e0b09a6276b0b2cdcb156b08380f8d59b23",
-    "checks/semantic-correction/before-activity-A-next-context.json": "6fc64f7bea355f015dd2b27ac318e9f618a93dd888de4edc17f91ce394c7638d",
     "checks/semantic-correction/before-envelopes.json": "3047bb15093dac27182ade3bcb3c36bc3e434ab796e6194db0ab223f63247be5",
-    "checks/semantic-correction/before-evidence-E-init-failure.json": "c1f7952d2f4045d4d0f6e781d66f8d9cf70b8d3fc80012e9d3e9e14196f5121d",
-    "checks/semantic-correction/before-relation-R-industrial-E1.json": "4d3744584124d3e975f4d977bc91be68acd848cdf2affacd79daba04d30c7370",
-    "checks/semantic-correction/before-relation-R-industrial-counter.json": "d611accb356dc88f67748acd17c6e7182fb5acd9ad9828b7ff40e38ca56365ce",
-    "checks/semantic-correction/before-statement-S-industrial.json": "a0e2570db6d08f4022dd0eeef0d56def292b5742f565dbc9dbf7d5a35ca955c2",
-    "checks/semantic-correction/before-statement-S-nofigure.json": "c7c536420ae09320541ae0e0f8f06e066c5d68f90d112eba27fb8b964963d82d",
     "checks/semantic-correction/check-before-rebinding.json": "ba8bf77c0dd1f66a7a3a6d6ed51377c601815f6874bc4e7920b91a4199ac71a3",
-    "checks/semantic-correction/check-final.json": "ec2698f465901892344c73e2327544166e16503c0e3338d95b4db18f8f1ac6df",
-    "checks/semantic-correction/checkpoint.json": "5b97b3b79e02fc1c870e6461e78d36b3ab52e7cccc320369a267ad9489a37be6",
-    "checks/semantic-correction/input-activity-A-interpret.json": "bc0182aea82325e0424c7687d199fca5f019d123465257b21e8f19e72cc9822e",
-    "checks/semantic-correction/input-activity-A-ledger-semantic-correction.json": "e535e7ab3dc522a3caa0e4adadf31e78380be616b707ba4c62dd82c25f8295c5",
-    "checks/semantic-correction/input-activity-A-next-context.json": "d3b5ba3ac27bff5cb831a9b83f5fbe816b0dc43504c5d36c15d78a87c91ed05d",
-    "checks/semantic-correction/input-artifact-ART-ledger-semantic-review.json": "d03d23c87d0ff3c766e570c2f2d1f9471aa47dccdd2ab21ca3111bb508e63503",
-    "checks/semantic-correction/input-evidence-E-init-failure.json": "67d894d338bf39289b6c9fa028c0a9bc634f07175070f585f9edfee306f43433",
-    "checks/semantic-correction/input-evidence-E-ledger-semantic-review.json": "23238b4d193560a0d2c1b57b7ade9eba0c407cd08609ff9482828c805c85ac20",
-    "checks/semantic-correction/input-relation-R-industrial-E1.json": "4fdcbd399fd94945d4a156b589aaee448a23e291ef01bbf339ed30e8eda4c754",
-    "checks/semantic-correction/input-relation-R-industrial-counter.json": "8311c6ac686f483861f897a1db075448bd922cc4344025789b6dd14bfa48585d",
-    "checks/semantic-correction/input-relation-R-industrial-draft.json": "1ed312aef259b061766d6949ba5c0a979df3aaf6407a4c5239cc91f7873a7ef2",
-    "checks/semantic-correction/input-relation-R-nofigure-draft.json": "014e852db8ed905bc28b1b556bf59d98adfdac00208556930e75427cc52add4a",
-    "checks/semantic-correction/input-statement-S-industrial.json": "5be99ddc412d2e0e143555b6669b6032c95bd33f244a9087c6e8d39500fbb270",
-    "checks/semantic-correction/input-statement-S-nofigure.json": "99610a479dc1d3f0f6f77d03a90576bdc14b134e9ac9159fd39f12f7b709d332",
-    "checks/semantic-correction/register-activity-A-interpret.json": "9f6a170e2840d67cec8f3f6fdc44f6ef44ce72d4552aaf2c4bdfe5efa81c264c",
-    "checks/semantic-correction/register-activity-A-ledger-semantic-correction.json": "249e7d012b1b8752a1046f5e94fe7abf12fda740ecb9f921518479dfb720bcee",
-    "checks/semantic-correction/register-activity-A-next-context.json": "a64b0fd8626e146d8fc46e62623b819d572f87afc3327ee33a1b2906d25ff05e",
-    "checks/semantic-correction/register-artifact-ART-ledger-semantic-review.json": "0f0e5735f620ddfd72a0aa5578451c4af9703aa522a988d6d09b81961b09b599",
-    "checks/semantic-correction/register-evidence-E-init-failure.json": "9fb9f2fa25447ab2572ad76de96756ed68e87b7152a43e09c71bcd628ddd961a",
-    "checks/semantic-correction/register-evidence-E-ledger-semantic-review.json": "9525dec010828b182820d234479659decca605500ed72b1d8cede1a0d4c2337a",
-    "checks/semantic-correction/register-relation-R-industrial-E1.json": "0b14f46b3635af6078ef1a6671d302c73fbfdea5a9b4343f572e8e334fb8a72e",
-    "checks/semantic-correction/register-relation-R-industrial-counter.json": "2faf2270e6a07b155377feaaab7bb62c79c08d19fd7a1e221a633d7f55f5f3e1",
-    "checks/semantic-correction/register-relation-R-industrial-draft.json": "e947073303e69f9df80db88b4e970e3784a08e6fa1b9e9024fc4be499399ae34",
-    "checks/semantic-correction/register-relation-R-nofigure-draft.json": "55b99c2d521c2870f43c2ba8a83faf0df1a1bc5ec129fd567b8cb5319c698cc5",
-    "checks/semantic-correction/register-statement-S-industrial.json": "56b95d7c245f32a43a7946b74440a582ffa69a6f0095f8d382027b2808381352",
-    "checks/semantic-correction/register-statement-S-nofigure.json": "63cf8c4e6d83b8a26935abda19ff41d9c4a843d51a3b13b554f089afbecc03e2",
-    "checks/semantic-correction/resume-final.json": "5ee83b2882df1ce000f88c765e12b939952c34538d5c8613d9f3b3e769fb86af",
-    "checks/semantic-correction/skills-check-final.json": "7564a7a1f9e3cff4a4e3e1acdc9725b4689322c3dbd7b2c59dba6d2042b2027e",
-    "checks/skills-restore-check.json": "2942409ab35f6f8823da68bd4e1f1051956d9f9e98af4dfddb2f7cda03045332",
-    "checks/skills-restore-install.json": "7d3da02b7e10f1f55112cc0f838629b6756d9ee4d3cbd16dcc8026847fd4dc18",
     "execution.json": "0fd458fa07d513bf991ee9d64ebcc3870aa6015afeb0d57aa8a751bedda5cbca",
     "manuscript/report.md": "4a52f78bc1fd01a34ae59d345df0f72db9716d886c6ab21e41ff6252d28f740b",
     "notes/analysis.md": "9187553bf955e03c1347253393eff8d3f59efb31750d4efa3637d3a25ffbbba5",
@@ -254,93 +74,9 @@
   },
   "output_normalizations": [
     {
-      "path": "checks/check-final.json",
-      "original_sha256": "a4ed909208fe03772f1fa2252e24ea8df3b76498c75f9473fd024c41cd2f88b5",
-      "published_sha256": "34c9f68d4f9e75a444170ebb9dbc157b05d18c0054dfb623684d0fbb1dd17469",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/check.json",
-      "original_sha256": "b192e054e7c4c72c5fb829e348a451d164bd804e1490947526f87c18e042559d",
-      "published_sha256": "00dd0dd987b19660a48d8b0d4d668b21010a7df3948a1aa42cd6ef574ccf8800",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/checkpoint.json",
-      "original_sha256": "a8b29423babeefdb0b99963da3cb1a98f731adbdbebd6a7ee8330e0f3d199ad7",
-      "published_sha256": "842780a70a810fad8a530ce662555cffa8e8f770b6dfdff244d1a16af28ef7e6",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/connect-check.json",
-      "original_sha256": "f1ad492f3a43fbf7ec51b8a02a491e4b0dcfb2a0a4ff4429621d7b69a6331984",
-      "published_sha256": "915589f29ca0b73e672efbdb361a5160e4dc798a507fb253572fd31b477b7e9c",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/connect-install.json",
-      "original_sha256": "b7a734bda561036628c2f297bc1d59cd0ee5d92e85f58178272f086b7099bd58",
-      "published_sha256": "5979f737d12014363c976e51b3a99fca21bf0441c1285296f99d412c8ac9a205",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/init.json",
-      "original_sha256": "b8dea3d979e39d998bbfe3fb75342145339a3d3369842c6455e12a45938a75ce",
-      "published_sha256": "54a532b852bafd28d1324a4cb583d0b3b3d921406984136ceff4c96ea5e2cfbb",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
       "path": "checks/initial-init-failure.json",
       "original_sha256": "98635410131b0de2c33d862fd802f270e2008bf77982502a8c9f043e9b5de1f4",
       "published_sha256": "4d1cef4c03636844e7ee7b3fefbb7ab6fecd047294fead6c158d521b850b5faa",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/material-audit-command.json",
-      "original_sha256": "f11712a44f379f5b5021e32843e1fff0063b097b392cb2a93ef5b672c8845563",
-      "published_sha256": "a71c83145704bcd294bcfeaf87375fe5911e4ab9ddb79bffcab5c1677f1e80a6",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/project-after-skills-restore-check.json",
-      "original_sha256": "c514fbf556071c0cac2d6b041216e974ca49bfb24cdca95e1cc7fe6f12ab1cee",
-      "published_sha256": "ad6d4516deddf9db46157b130d3640ab472eed8e0be291e492e6a19f8664cbd2",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/project-after-skills-restore-resume.json",
-      "original_sha256": "d92cef6bda18f09e5f71724d34b2744ed8f57ea7b4c961cffeb0f430f42bf718",
-      "published_sha256": "c5f9dd042a7bdd2ff3fbf185de447c11b5bcb0dba85ed26901eb78c3e11c4e69",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/register-batch.json",
-      "original_sha256": "afb48877f258431c47391bdf0874fe04524957044c18c9804c403586e33b01da",
-      "published_sha256": "07c405737697f00aab3486da4194142937ff26eef2656a28768020d8a9308e4b",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/resume.json",
-      "original_sha256": "c7d0028306096444ed721bdd30b38804ea69831bcd32cd27389098306b01ae23",
-      "published_sha256": "9b7389a6192e671278b5dc11d711b9e2f596ed5c8b52054e9c2234f50a237a2e",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/after-activity-A-interpret.json",
-      "original_sha256": "e83467f05bde4b25b5263c8683171a939761ddfb26f89d4b3978904d960c09ef",
-      "published_sha256": "e2a6ef58c67ee474aaafb915fe557a4df947ff47fc6fa32f5333f343f84b4155",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/after-activity-A-ledger-semantic-correction.json",
-      "original_sha256": "af024798d759748fa5da27587244ab2a659f9bc30e203cec49c64af0b0af467c",
-      "published_sha256": "d2aced6a02a0627b5d4285f8801120c5c5f85e39c0d2b07903f4409cf5e814dc",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/after-activity-A-next-context.json",
-      "original_sha256": "bcc55051e6e89e5c74ea52f7627876baa0b6f5dc9a5c87e6705255a074e4c428",
-      "published_sha256": "d27e2f3f9726438b0ba6f58f37170aad8cb670a9f8b3fea0989a2bf3a95ccaf7",
       "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
     },
     {
@@ -350,207 +86,9 @@
       "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
     },
     {
-      "path": "checks/semantic-correction/after-evidence-E-init-failure.json",
-      "original_sha256": "6fac3fbf17d4a9ad4e300d882edcdfe139c29961f1c13bb2ea9dce450ee8c3ef",
-      "published_sha256": "3bfb1aaf4dc6f25dd4994d33e6317d0318bf96097ef859c615167b74312873ed",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/after-relation-R-industrial-E1.json",
-      "original_sha256": "d1cf4dc46eab519d3903edd1c6e9a11f1e947921b14c5770be177640d11e2e39",
-      "published_sha256": "d8aa3cf3e72f45cd77b5b37d9c689d56a97e05a52d8adebedd0cf3964f6f2194",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/after-relation-R-industrial-counter.json",
-      "original_sha256": "53d0e6197ed39272720913bd6bf047707914bb65dfe2f1d12742760bd1f293a9",
-      "published_sha256": "a3b420c59b1933abb77f882a68003e58be18f07181ff6c54e31f76c4818a87f0",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/after-relation-R-industrial-draft.json",
-      "original_sha256": "7a292e5fbd1c00ef2860a3adf8f5cdd42a904e4d7c5245b14d6ef0e3b417ba00",
-      "published_sha256": "72f9f3ed1fd5bff66f0ff9fad4ddb2a0093ec7f833e1d59bb3ae85015e4e7278",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/after-relation-R-nofigure-draft.json",
-      "original_sha256": "a089e2317ba3aa6d8023eb55c7eb55a45cc6dd350a6d840e136a5546a7c52587",
-      "published_sha256": "70f1c5dc4024485cdb4e62206a848f8a07cc4235e2a41ed2e9f41b4edb9fbc9c",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/after-statement-S-industrial.json",
-      "original_sha256": "ac0b35090fcb09bc692ab63ad84457b08f8d9fce781036c480813aca557fa4f0",
-      "published_sha256": "a68d4d9734b1d27850fe6e2dfbb8de3e67d9272ea80c6836582688fa4f6f687d",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/after-statement-S-nofigure.json",
-      "original_sha256": "4d1333f047011e2b27e0553a3a4d96cc3879cfb975c0efdb87a5c62266ef0c39",
-      "published_sha256": "986f5a071655337e9baa6f3e5ad28481a39d9b59d522dc028ed71417a7f086d6",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/before-activity-A-interpret.json",
-      "original_sha256": "5e8a3529629c600d0121f6308c345e0b09a6276b0b2cdcb156b08380f8d59b23",
-      "published_sha256": "8427c71594933acc6b703fe10518d4ef1f0376249b1dacd3fef739e6801bf496",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/before-activity-A-next-context.json",
-      "original_sha256": "6fc64f7bea355f015dd2b27ac318e9f618a93dd888de4edc17f91ce394c7638d",
-      "published_sha256": "a2c32e89e7334b6f7c55f69bac68dd94dab4124ddaed2de618d99f861eba8cc3",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/before-evidence-E-init-failure.json",
-      "original_sha256": "c1f7952d2f4045d4d0f6e781d66f8d9cf70b8d3fc80012e9d3e9e14196f5121d",
-      "published_sha256": "039da847c1fad2d41a59727782be0cdac2db2fb109c7b7123d1d55b6608cc08c",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/before-relation-R-industrial-E1.json",
-      "original_sha256": "4d3744584124d3e975f4d977bc91be68acd848cdf2affacd79daba04d30c7370",
-      "published_sha256": "8284ad36e2d5f9c05d12ac0a4f1ab7f0c58e76303e546d253695b1a1e56b098e",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/before-relation-R-industrial-counter.json",
-      "original_sha256": "d611accb356dc88f67748acd17c6e7182fb5acd9ad9828b7ff40e38ca56365ce",
-      "published_sha256": "dc8395975952ad2a3ea4a4756d11fafe3aa0b34a55f7f293fad267dbceffcbab",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/before-statement-S-industrial.json",
-      "original_sha256": "a0e2570db6d08f4022dd0eeef0d56def292b5742f565dbc9dbf7d5a35ca955c2",
-      "published_sha256": "65afa3224b38d2334e5f778af2b4457f38269c8fa5dcee37f5e9dba317bf222f",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/before-statement-S-nofigure.json",
-      "original_sha256": "c7c536420ae09320541ae0e0f8f06e066c5d68f90d112eba27fb8b964963d82d",
-      "published_sha256": "3b051f0b72030101be297e0fcd76d9de5b1fb714264160c87b026121020d027d",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
       "path": "checks/semantic-correction/check-before-rebinding.json",
       "original_sha256": "ba8bf77c0dd1f66a7a3a6d6ed51377c601815f6874bc4e7920b91a4199ac71a3",
       "published_sha256": "9b73deeaed67455b2881dab587dd082c2cfea63fd656217e371f47ffa0506ee7",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/check-final.json",
-      "original_sha256": "ec2698f465901892344c73e2327544166e16503c0e3338d95b4db18f8f1ac6df",
-      "published_sha256": "8878549611c6d6019162d392be844d1af7c9146bc658f9f996a6af2651b5dad8",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/checkpoint.json",
-      "original_sha256": "5b97b3b79e02fc1c870e6461e78d36b3ab52e7cccc320369a267ad9489a37be6",
-      "published_sha256": "7f3ee50fa12d8d14035c0efa544c53a7efe731738aed64ee34c277e590034759",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/input-evidence-E-init-failure.json",
-      "original_sha256": "67d894d338bf39289b6c9fa028c0a9bc634f07175070f585f9edfee306f43433",
-      "published_sha256": "17f00f56661b26a4b08120dab5ab7fa466644d4f542aae4d6c4f75cc47ca1af0",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-activity-A-interpret.json",
-      "original_sha256": "9f6a170e2840d67cec8f3f6fdc44f6ef44ce72d4552aaf2c4bdfe5efa81c264c",
-      "published_sha256": "0e48bfe1b14c6602fe4f57b926eba8455f458dd29121aae0fa833126ddb957c2",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-activity-A-ledger-semantic-correction.json",
-      "original_sha256": "249e7d012b1b8752a1046f5e94fe7abf12fda740ecb9f921518479dfb720bcee",
-      "published_sha256": "da2ecb92e5b463e14e209f03b8e78e4501319013531cade382083827c4dbd076",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-activity-A-next-context.json",
-      "original_sha256": "a64b0fd8626e146d8fc46e62623b819d572f87afc3327ee33a1b2906d25ff05e",
-      "published_sha256": "4bb4398927f5313143d72649a9ea358414555c130733769e8a1d73b0bbb3135f",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-artifact-ART-ledger-semantic-review.json",
-      "original_sha256": "0f0e5735f620ddfd72a0aa5578451c4af9703aa522a988d6d09b81961b09b599",
-      "published_sha256": "c3f9b518d64f0cf6462e90e0690720e432c5889241cdb567bab8abb36a74d105",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-evidence-E-init-failure.json",
-      "original_sha256": "9fb9f2fa25447ab2572ad76de96756ed68e87b7152a43e09c71bcd628ddd961a",
-      "published_sha256": "f1776f6442ff91f6da89fbe0f52c25e5f5bef6d483308074ab8e5a1d86b099eb",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-evidence-E-ledger-semantic-review.json",
-      "original_sha256": "9525dec010828b182820d234479659decca605500ed72b1d8cede1a0d4c2337a",
-      "published_sha256": "bec181dcd63dd865f0237987d88c5a1b074327a9455cca4c9f69665ef917c81b",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-relation-R-industrial-E1.json",
-      "original_sha256": "0b14f46b3635af6078ef1a6671d302c73fbfdea5a9b4343f572e8e334fb8a72e",
-      "published_sha256": "4a22ab3a7180ac4b8aa570d4932aa15cb1ec5bf72540734b76100dadbdc2f0c4",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-relation-R-industrial-counter.json",
-      "original_sha256": "2faf2270e6a07b155377feaaab7bb62c79c08d19fd7a1e221a633d7f55f5f3e1",
-      "published_sha256": "2288e4d2565c296feaa0ce011aec353c56bb251d03582b10a66dda210db04249",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-relation-R-industrial-draft.json",
-      "original_sha256": "e947073303e69f9df80db88b4e970e3784a08e6fa1b9e9024fc4be499399ae34",
-      "published_sha256": "1909e01678d2a2121ddcbfcff76559f1b33ee2581a7a47c5739524e60c53682b",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-relation-R-nofigure-draft.json",
-      "original_sha256": "55b99c2d521c2870f43c2ba8a83faf0df1a1bc5ec129fd567b8cb5319c698cc5",
-      "published_sha256": "96ce86abb19462ce952cd06bef07d8144d1051ab23b79f3188afcb8a42852023",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-statement-S-industrial.json",
-      "original_sha256": "56b95d7c245f32a43a7946b74440a582ffa69a6f0095f8d382027b2808381352",
-      "published_sha256": "c86f6adb5afd8f19419c60464529d70c929b2737946d4bbd77527eb020931231",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/register-statement-S-nofigure.json",
-      "original_sha256": "63cf8c4e6d83b8a26935abda19ff41d9c4a843d51a3b13b554f089afbecc03e2",
-      "published_sha256": "ebac5897c07e8c4c4c5a0dc872aaf87181ae68f666dfb39c1b3d2ada7ad4adef",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/resume-final.json",
-      "original_sha256": "5ee83b2882df1ce000f88c765e12b939952c34538d5c8613d9f3b3e769fb86af",
-      "published_sha256": "ba625b596a985fe32d19e3077aba14ed1d08eb7d893ca81688176e8a090bec29",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/semantic-correction/skills-check-final.json",
-      "original_sha256": "7564a7a1f9e3cff4a4e3e1acdc9725b4689322c3dbd7b2c59dba6d2042b2027e",
-      "published_sha256": "98823fb2394348996ddda8a659f5df252dbf50c0140a8a8d7f003e57a21ebea8",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/skills-restore-check.json",
-      "original_sha256": "2942409ab35f6f8823da68bd4e1f1051956d9f9e98af4dfddb2f7cda03045332",
-      "published_sha256": "bdf63d4b04313326f6747b7449f6e3ffa0f27a41a6fc67747cc04ebf87e6eb59",
-      "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
-    },
-    {
-      "path": "checks/skills-restore-install.json",
-      "original_sha256": "7d3da02b7e10f1f55112cc0f838629b6756d9ee4d3cbd16dcc8026847fd4dc18",
-      "published_sha256": "c789ceb99436a2d9f7bd4923497a4d7943d8bb1ab8005f7ac6743cf1aa0d25a5",
       "transformation": "Only explicit machine-path prefixes replaced with PROJECT/RUN/TOOLKIT/PYTHON/RUN_ROOT; scientific values, code and wording unchanged."
     },
     {
@@ -1456,5 +994,96 @@
       "NEW"
     ],
     "result": "results.json"
+  },
+  "distribution_projection": {
+    "basis_commit": "436f50aebb25c5e479c53baf20b109b86df7a530",
+    "basis_recording_sha256": "20bbe05c6469379cf37d8c63898c619e3c17c72b35c7d1452c4a905b1e9e1919",
+    "review_receipt_sha256": "212f23980cb343aac915f0c2a7529fec0e97a4f2f2191f95056468ada0baaa2b",
+    "scope": "Distribution-only omission of nonessential operational files; no new task execution or renewed content review. Kept bytes and replay state are unchanged. Original reviewed output hashes remain in independent-review.json.",
+    "replay_state_sha256": "9f7bd58adbf730bec606d5be8ae05b18041426e93d360cfb7eadd3d4b2278683",
+    "omitted_outputs": [
+      {
+        "reason": "Nonessential successful CLI, setup, timing or intermediate state snapshot; command identity and final research state are retained.",
+        "retained_at": [
+          "output:execution.json",
+          "recording:observed-check.json",
+          "recording:observed-resume.json",
+          "recording:recording.json"
+        ],
+        "files": [
+          "checks/check-final.json",
+          "checks/check.json",
+          "checks/checkpoint.json",
+          "checks/compact-delivery.json",
+          "checks/connect-check.json",
+          "checks/connect-install.json",
+          "checks/connected-bundle-manifest.json",
+          "checks/init.json",
+          "checks/material-audit-command.json",
+          "checks/project-after-skills-restore-check.json",
+          "checks/project-after-skills-restore-resume.json",
+          "checks/register-batch.json",
+          "checks/resume.json",
+          "checks/skills-restore-check.json",
+          "checks/skills-restore-install.json"
+        ]
+      },
+      {
+        "reason": "Per-operation input, receipt or envelope covered by the aggregate before/after evidence and final records.",
+        "retained_at": [
+          "output:checks/semantic-correction/before-envelopes.json",
+          "output:checks/semantic-correction/after-envelopes.json",
+          "recording:recording.json",
+          "output:execution.json"
+        ],
+        "files": [
+          "checks/semantic-correction/after-activity-A-interpret.json",
+          "checks/semantic-correction/after-activity-A-ledger-semantic-correction.json",
+          "checks/semantic-correction/after-activity-A-next-context.json",
+          "checks/semantic-correction/after-evidence-E-init-failure.json",
+          "checks/semantic-correction/after-relation-R-industrial-E1.json",
+          "checks/semantic-correction/after-relation-R-industrial-counter.json",
+          "checks/semantic-correction/after-relation-R-industrial-draft.json",
+          "checks/semantic-correction/after-relation-R-nofigure-draft.json",
+          "checks/semantic-correction/after-statement-S-industrial.json",
+          "checks/semantic-correction/after-statement-S-nofigure.json",
+          "checks/semantic-correction/before-activity-A-interpret.json",
+          "checks/semantic-correction/before-activity-A-next-context.json",
+          "checks/semantic-correction/before-evidence-E-init-failure.json",
+          "checks/semantic-correction/before-relation-R-industrial-E1.json",
+          "checks/semantic-correction/before-relation-R-industrial-counter.json",
+          "checks/semantic-correction/before-statement-S-industrial.json",
+          "checks/semantic-correction/before-statement-S-nofigure.json",
+          "checks/semantic-correction/check-final.json",
+          "checks/semantic-correction/checkpoint.json",
+          "checks/semantic-correction/input-activity-A-interpret.json",
+          "checks/semantic-correction/input-activity-A-ledger-semantic-correction.json",
+          "checks/semantic-correction/input-activity-A-next-context.json",
+          "checks/semantic-correction/input-artifact-ART-ledger-semantic-review.json",
+          "checks/semantic-correction/input-evidence-E-init-failure.json",
+          "checks/semantic-correction/input-evidence-E-ledger-semantic-review.json",
+          "checks/semantic-correction/input-relation-R-industrial-E1.json",
+          "checks/semantic-correction/input-relation-R-industrial-counter.json",
+          "checks/semantic-correction/input-relation-R-industrial-draft.json",
+          "checks/semantic-correction/input-relation-R-nofigure-draft.json",
+          "checks/semantic-correction/input-statement-S-industrial.json",
+          "checks/semantic-correction/input-statement-S-nofigure.json",
+          "checks/semantic-correction/register-activity-A-interpret.json",
+          "checks/semantic-correction/register-activity-A-ledger-semantic-correction.json",
+          "checks/semantic-correction/register-activity-A-next-context.json",
+          "checks/semantic-correction/register-artifact-ART-ledger-semantic-review.json",
+          "checks/semantic-correction/register-evidence-E-init-failure.json",
+          "checks/semantic-correction/register-evidence-E-ledger-semantic-review.json",
+          "checks/semantic-correction/register-relation-R-industrial-E1.json",
+          "checks/semantic-correction/register-relation-R-industrial-counter.json",
+          "checks/semantic-correction/register-relation-R-industrial-draft.json",
+          "checks/semantic-correction/register-relation-R-nofigure-draft.json",
+          "checks/semantic-correction/register-statement-S-industrial.json",
+          "checks/semantic-correction/register-statement-S-nofigure.json",
+          "checks/semantic-correction/resume-final.json",
+          "checks/semantic-correction/skills-check-final.json"
+        ]
+      }
+    ]
   }
 }
