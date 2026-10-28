@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-28T22:24:45.016888+00:00",
+  "checked_at_utc": "2026-10-28T22:52:48.469394+00:00",
   "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -28,7 +28,7 @@
       "check_groups": 7,
       "receipt": {
         "identifier": "local-evidence:check-core.json",
-        "sha256": "881db3a589408b4c191781f669a9df93d20d4c77c37bd69d2c8d1a2f35aad432"
+        "sha256": "6ef8a81687975ebab939c44d8061a4c97f91ed9640842984f0fe22e42065c6db"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -168,7 +168,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 72,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "aef3c559f8fe6d75b5e62831c2b117bcaee27f3fe4c16757d23aea2924445da7",
+    "sha256": "2806a05190e600044b66c63230e178f66afce020660bbaaf3c1a15af796b38e1",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 65,
     "development_history_or_previous_editions_included": false,
@@ -217,5 +217,12 @@
       "omission_map": "distribution_projection in each case recording.json",
       "scope": "Source-only distribution cleanup with reference, identity and replay regression checks; original task and content-review records retain their scope."
     }
+  },
+  "user_guidance": {
+    "startup_paths": "Manual initialization and assistant-created initialization are alternatives; existing projects resume.",
+    "case_access": "Source repository or GitHub Source code archive; examples are excluded from user runtime.",
+    "actual_forward_commands": 6,
+    "moved_project_recovery_checked": true,
+    "scope": "Current guide and local engineering execution; no new research content review or UI skill-trigger validation."
   }
 }

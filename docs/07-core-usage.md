@@ -24,7 +24,7 @@
 
 单条和批量登记均可用 `--file -` 从标准输入读取 JSON，例如 `python3 tools/research.py register --root ../demo-formal --kind statement --file - < examples/synthetic/math-statement.json`。文件和标准输入共用严格 UTF-8 JSON 校验及 8 MiB **字节**上限，拒绝重复键、NaN／Infinity及非法编码。输入只是数据，不会被当作命令执行。
 
-`options` 不需要项目。每个方法的 `implementation.variant_evidence` 区分 `guidance_declared`（画像声明）、`explicit_case_bindings`（记录中显式填写变体的任务）、`method_only_cases`（只记录方法的任务）和 `unavailable_cases`（记录缺失或不可读）。有显式记录不等于整个变体已验证；没有变体字段也不等于该工作没有执行。摘要仅查看登记，内容支持与审阅范围另查相应任务证据。复制到研究项目的运行时不携带 `evals/`，其摘要为 `not-included-in-project-runtime`，不能借用完整发行包的记录假装已在项目内核对。
+`options` 不需要项目。每个方法的 `implementation.variant_evidence` 区分 `guidance_declared`（画像声明）、`explicit_case_bindings`（记录中显式填写变体的任务）、`method_only_cases`（只记录方法的任务）和 `unavailable_cases`（记录缺失或不可读）。有显式记录不等于整个变体已验证；没有变体字段也不等于该工作没有执行。摘要仅查看登记，内容支持与审阅范围另查相应任务证据。复制到研究项目的运行时不携带 `evals/`，其摘要为 `not-included-in-project-runtime`；任务材料位于源码仓库或 GitHub 的 `Source code` 源码归档，需要按原任务记录核对。
 
 ## 数学候选命题：从零到恢复
 

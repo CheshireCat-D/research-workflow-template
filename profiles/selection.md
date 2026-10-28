@@ -14,4 +14,4 @@
 
 `catalog.json` 中的 `supported_variants` 是画像声明的指导范围。`options` 的 `implementation.variant_evidence` 另列记录中的显式变体绑定与仅有方法级记录、未注明变体的任务。该摘要不重新核对内容审阅；具体结论和范围仍查任务审阅记录。未注明变体不等于未开展该工作，也不能据任务名自动补绑；列出一项任务不认证整个专业或变体。
 
-项目内运行副本携带本导航与画像，不携带完整 `evals/`。其证据摘要应明确标为未包含；需要追查任务时回到完整发行包，不能把缺少材料当成已经核实，也不能把完整包的证据位置误当项目内文件。
+项目内运行副本和精简用户包携带本导航与画像，任务材料位于[源码仓库的案例索引](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals)。需要离线追查时下载 GitHub 的 `Source code` 源码归档。项目副本不携带 `evals/`，其证据摘要标为未包含；具体证据路径按原任务记录的根目录解释。

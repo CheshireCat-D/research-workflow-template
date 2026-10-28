@@ -31,7 +31,7 @@ If the discipline or method is known, add options such as `--discipline law --me
 
 ## Start with an interest, even without a topic
 
-Open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
+If you have not created a project, the assistant can perform the initialization above for you. If you already ran those commands, describe your task in the new project. To ask the assistant to create the project, open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
 
 > Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step.
 
@@ -61,7 +61,7 @@ Discipline and method guidance is in `profiles/`; shared protocols are in `core/
 
 For a citation audit, say: “Check support for each claim, find missing, partial or irrelevant citations, and suggest specific corrections.” The assistant uses existing notes and reports to check compound claims and cross-source synthesis.
 
-The source repository provides [seven disciplinary worked examples](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/disciplinary), with synthetic inputs, actual analyses and manuscripts, separate agent reviews, and regression checks. Test materials stay in the source repository. Create a separate project for your own work.
+The source repository provides [seven disciplinary worked examples](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/disciplinary), with synthetic inputs, actual analyses and manuscripts, separate agent reviews, and regression checks. Test materials stay in the source repository; download GitHub's `Source code` archive for offline access. Create a separate project for your own work.
 
 ## Review, revision responses and submission materials
 

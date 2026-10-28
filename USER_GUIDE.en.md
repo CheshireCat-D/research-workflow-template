@@ -38,13 +38,13 @@ On Windows, choose an ordinary local project directory such as `C:\Research\my-p
 
 Replace `../my-research` with a new directory that does not yet exist. Initialization refuses to overwrite an existing directory. Keep your manuscript, data, and results in the new project; the toolkit folder holds the tools and skills.
 
-Then open the new research project in Codex. Use the startup example below or describe the current task; complete the work needed at that stage rather than running the entire workflow at once.
+After these commands, open the new research project in Codex and describe your interest, available materials or current task. Initialization is complete; continue in this project.
 
 You do not need to fill every field before starting or list the skill names in every request. Once the project skills are connected, the host assistant selects skills for the current task. Successful installation and file-integrity checks do not establish that the host interface has actually invoked a skill.
 
 ## Start with an interest, even without a topic
 
-Open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
+If you have not created a project, the assistant can perform the initialization above for you. Open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
 
 > Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step.
 
@@ -89,6 +89,8 @@ For legal research, initialize with `--discipline law --method legal-analysis` a
 For a citation audit, say: “Check the source support for each claim in this passage, then find missing, partial or irrelevant citations and suggest specific corrections.” The assistant checks separately verifiable parts of compound claims and explains cross-source synthesis in the existing notes or review report.
 
 See the [seven disciplinary examples](evals/disciplinary/README.md) for original synthetic inputs, actual analyses and short manuscripts, separate agent reviews, and reproducible checks. Use them as worked examples, then create a separate project for your own materials.
+
+For daily use, download `research-workflow-template.zip` from Releases. Cases and maintenance tests are in the source repository; download GitHub's `Source code` archive when you need them offline.
 
 ## Review, revision responses and submission materials
 
