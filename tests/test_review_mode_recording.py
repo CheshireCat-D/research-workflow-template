@@ -17,8 +17,17 @@ class ReviewModeRecording(unittest.TestCase):
 
     def test_forward_task_binds_actual_guidance_inputs_and_frozen_report_excerpts(self):
         record = self.record
+        historical = record['historical_guidance']
+        self.assertEqual(historical['recovered_from_commit'],
+                         '6843fbef19fceb06c0774f0f3d12cd992f46157a')
+        sources = historical['sources']
+        self.assertEqual(set(sources), {'skills/rw-review/SKILL.md'})
         for name, expected in record['guidance_sha256'].items():
-            self.assertEqual(digest((ROOT / name).read_bytes()), expected, name)
+            # Bind the old task to the guidance actually read then. The
+            # snapshot keeps this check self-contained in a source archive.
+            source = (sources[name]['source_text'].encode('utf-8') if name in sources
+                      else (ROOT / name).read_bytes())
+            self.assertEqual(digest(source), expected, name)
         self.assertEqual(set(record['input_files']), set(record['input_sha256']))
         for name, content in record['input_files'].items():
             self.assertEqual(digest(content.encode('utf-8')), record['input_sha256'][name], name)
@@ -47,6 +56,24 @@ class ReviewModeRecording(unittest.TestCase):
         self.assertEqual(files['figure1.svg'], record['input_files']['response-delivery/figure1.svg'])
         self.assertFalse(record['response_delivery']['submitted'])
         self.assertFalse(record['response_delivery']['uploaded'])
+
+
+class WritingTaskRecording(unittest.TestCase):
+    def test_recorded_tasks_bind_the_guidance_actually_used(self):
+        record = json.loads((ROOT / 'evals/current/skill-task-checks.json').read_text(encoding='utf-8'))['direct_prose']
+        self.assertIn(record['source_entrypoint'], record['guidance_sha256'])
+        for name, expected in record['guidance_sha256'].items():
+            self.assertEqual(digest((ROOT / name).read_bytes()), expected, name)
+        cases = record['cases']
+        self.assertEqual({case['id'] for case in cases}, {
+            'agriculture-results', 'observational-association',
+            'requested-statistical-explanation',
+        })
+        self.assertEqual(len(cases), 3)
+        for case in cases:
+            self.assertTrue(case['request'].strip())
+            self.assertTrue(case['output'].strip())
+        # These are traceable observations; wording checks do not measure style.
 
 
 if __name__ == '__main__':

@@ -78,6 +78,8 @@ For a manuscript that has not been registered, you can begin with a local task. 
 | `rw-review` | Self-review, structured or multiple simulated reviews, referee responses, cross-material consistency and submission preparation |
 | `rw-figures` | Create or inspect data figures and editable schematics, preserving sources and scientific meaning |
 
+Manuscripts state results, evidence and necessary conditions directly. Execution notes and review coverage belong in work records. Writing and review share the [prose guidance](skills/rw-writing/SKILL.md) to avoid repetitive disclaimer sentences.
+
 Combine specialist methods as needed. Finite numerical checks cannot replace a mathematical proof. Clinical, field, interview, and historical materials each have their own evidence, permission, and ethics requirements. See [disciplinary and method adaptation](docs/02-disciplinary-adaptation.md) for details.
 
 When a delivery includes several materials, such as a manuscript, figures, supplements, slides, or code, or an updated fact affects other materials, you can ask the assistant to check consistency. It first identifies the fact and its established authoritative basis, then checks the relevant expressions and records conflicts or justified exceptions in the existing review report. A read-only request adds no project records. For example: “Check the definitions, conditions, and values for the same result across these materials, and state what you actually checked.” See the [cross-material review reference](skills/rw-review/references/cross-material-consistency.md) for the procedure.

@@ -40,6 +40,8 @@ python3 tools/connect_skills.py check --root ../my-research
 
 不要为了走流程逐一调用所有技能，也不对单条已定方向强制做候选比赛。数据图与可编辑示意图已由 `rw-figures` 处理；独立表格和整稿格式扩展仍在计划中，当前路由只调用实际存在的入口。
 
+写作、审阅与流程交接共用 `rw-writing` 的[正文表达规则](../skills/rw-writing/SKILL.md)。论文直接陈述结果、依据与必要条件；工具运行与审阅覆盖的说明放在相应工作记录，避免被反复追加到稿件段落中。
+
 `rw-review` 的[跨材料参考](../skills/rw-review/references/cross-material-consistency.md)集中维护多份交付材料及共享事实更新的核对方法。它使用现有审阅报告；需要持续保存时复用 `artifact`、`activity` 及其引用和版本规则，不增加 Schema、CLI 或第二份台账。事实身份与语义核对由宿主执行，核心文件指纹检查不承担该判断。
 
 ## 审阅模式与自然请求

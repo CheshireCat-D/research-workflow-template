@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-26T22:33:31.880510+00:00",
+  "checked_at_utc": "2026-10-28T15:36:08.762193+00:00",
   "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -24,19 +24,19 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 197,
+      "test_methods": 198,
       "check_groups": 7,
       "receipt": {
-        "identifier": "local-evidence:rwt-cleanup-final-full.json",
-        "sha256": "f86dc6de14c8e1392d7a460822d5bc1e94764fee17c849ab1382d449967e72a5"
+        "identifier": "local-evidence:check-core.json",
+        "sha256": "621cc6820932897bb6f8696fb03e3d4d77cdb1b1c8c5bda795dec3b076648bce"
       },
       "platform_skips": {
         "native_windows_tests": 13,
         "reason": "Must execute on real Windows; macOS success does not certify them."
       },
       "checked_source_basis": {
-        "scope": "Sorted relative Python file names and raw SHA-256 bytes in core/, tools/ and tests/, excluding __pycache__",
-        "sha256": "3fba73be45d8fcadcd2db0b4b49fb89bc883a8134ad44654059669f6105482a5",
+        "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
+        "sha256": "faec5428749b8206fe409db017fb56dd130ecfd7099eb1db763dafa2594f3950",
         "files": 31
       }
     }
@@ -134,6 +134,16 @@
       "new_schema_or_runtime_dependency": false,
       "personal_package_files_copied": false,
       "scope": "Two fresh same-model review contexts plus one actual response/delivery exercise; wholly synthetic author-owned inputs only. Not real journal peer review, efficacy measurement or acceptance prediction."
+    },
+    "direct_prose": {
+      "owner": "rw-writing",
+      "shared_with": [
+        "rw-review",
+        "rw-workflow"
+      ],
+      "forward_requests": 3,
+      "record": "evals/current/skill-task-checks.json#direct_prose",
+      "scope": "Actual supplied synthetic writing tasks; the recorded outputs retain the estimates and inference conditions while removing repetitive precautionary prose."
     }
   },
   "user_distribution": {
@@ -141,7 +151,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 71,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "069b61001aba9c1b15b11539b1e4dff1f1fa86722f05a83dccce5811647ff543",
+    "sha256": "fab957a14d9329276917576dc2f17abe2b8e591b23979e3fbb6b72103af1edff",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 64,
     "development_history_or_previous_editions_included": false,

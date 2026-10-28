@@ -53,6 +53,8 @@ A chat interface may use the guide for discussion or editing according to its ac
 | `rw-figures` | Produce and inspect research figures, separating data, structure and visual appearance |
 | `rw-review` | Review, optional multiple simulated reports, point-by-point responses and submission preparation; check relevant shared facts |
 
+Manuscripts state results, evidence and necessary conditions directly. Execution notes and review coverage belong in work records. Writing and review share the prose guidance in `rw-writing` to avoid repetitive disclaimer sentences.
+
 Describe the task directly, for example: “Read these materials and help me define a small testable question.” For several materials, ask: “Check the definitions, conditions and values for the same result in the manuscript and figures, and state what you actually checked.” A read-only request does not add project records.
 
 Discipline and method guidance is in `profiles/`; shared protocols are in `core/`. They do not certify an entire specialty. Mathematical proofs, numerical observations, legal interpretations, ethics permissions and venue requirements each need their own evidence.

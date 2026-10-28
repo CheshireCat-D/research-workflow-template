@@ -146,5 +146,40 @@
       "Read-only cases remain unchanged; known-source fixes do not require renewed authorization."
     ],
     "requests_executed": 3
+  },
+  "direct_prose": {
+    "recorded_at_utc": "2026-10-28T00:01:21.302646+00:00",
+    "executor": "One fresh-context AI subagent; parent inspected actual outputs",
+    "source_entrypoint": "skills/rw-writing/SKILL.md",
+    "scope": "Three supplied synthetic text tasks; fresh-context execution with raw requests and current skill. No automatic style enforcement or population-level reliability claim.",
+    "guidance_sha256": {
+      "skills/rw-writing/SKILL.md": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+      "core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+      "core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9"
+    },
+    "path_normalization": "Machine-specific toolkit prefix omitted from the invocation; task texts and prose below preserve the executed material.",
+    "cases": [
+      {
+        "id": "agriculture-results",
+        "request": "将以下实验结果润色成可直接放进论文的简短结果段。合成肉鸡试验，6个匹配区组，每区组2栏，每栏10只，饲料在区组内按栏随机分配。先求栏均值，B减对照的平均差5.0 g；配对t参考95%区间[-14.6,24.6]g（独立近似正态区组差工作模型）；区组内整栏标签互换，双侧精确P=.6875，显著性水平.05。原稿：‘本研究可能只能较谨慎地给出有限提示。证据不足以支持提高增重，不等于证明无效。本研究仅供参考。’",
+        "output": "在6个匹配区组的合成肉鸡试验中，每区组设2栏、每栏10只，饲料在区组内按栏随机分配。先计算各栏平均增重，再进行区组内比较，B饲料较对照平均高5.0 g。在区组差独立且近似正态的工作模型下，配对t参考95%区间为[−14.6, 24.6] g；区组内整栏标签互换的双侧精确检验得到P=.6875，差异在.05水平下不显著。",
+        "assessment": "pass-in-supplied-task",
+        "observed": "Design, analysis unit, estimate, model condition, interval and P preserved; generic precautionary sentences removed."
+      },
+      {
+        "id": "observational-association",
+        "request": "润色现有段落，保留其研究信息：‘我们对某县2021—2023年40个农场进行观察调查，回归调整土壤类型与基线产量后，采用覆盖措施的农场产量平均高12%，95%区间[3%,21%]。因此我们证明覆盖措施导致增产并适用于全国所有农场。’",
+        "output": "在某县2021—2023年对40个农场开展的观察调查中，回归调整土壤类型与基线产量后，采用覆盖措施的农场产量平均高12%，95%区间为[3%, 21%]。在本次调查范围内，覆盖措施的采用与较高产量相关。",
+        "assessment": "pass-in-supplied-task",
+        "observed": "Unsupported causation and nationwide generalization repaired; original study facts and values preserved. Executor separately identified this substantive change."
+      },
+      {
+        "id": "requested-statistical-explanation",
+        "request": "用户明确要在统计教学讨论中解释‘P=.6875为何不能用来证明两种饲料等效’，请写两三句话，保留解释所需的推断区别。",
+        "output": "P=.6875说明这次双侧随机化检验在.05水平下未拒绝无饲料效应的原假设，不能据此证明两种饲料的增重差足够小。等效性判断需要预先规定有实际意义的可接受差异范围，并使用相应的等效性检验或置信区间；当前材料未给出这一范围。",
+        "assessment": "pass-in-supplied-task",
+        "observed": "Requested inference distinction and equivalence-margin requirement retained; rule did not become a blanket ban on necessary negative statements."
+      }
+    ]
   }
 }
