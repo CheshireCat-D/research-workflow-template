@@ -1,0 +1,152 @@
+{
+  "schema_version": "1",
+  "analysis": "descriptive, observational secondary analysis",
+  "input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+  "n_raw": 344,
+  "n_complete_overall": 333,
+  "matches_pinned_public_input": true,
+  "observed_islands": [
+    "Biscoe",
+    "Dream",
+    "Torgersen"
+  ],
+  "observed_years": [
+    "2007",
+    "2008",
+    "2009"
+  ],
+  "species_island_coverage": {
+    "Adelie": [
+      "Biscoe",
+      "Dream",
+      "Torgersen"
+    ],
+    "Chinstrap": [
+      "Dream"
+    ],
+    "Gentoo": [
+      "Biscoe"
+    ]
+  },
+  "n_excluded_overall": 11,
+  "n_complete_stratified": 333,
+  "missing_counts": {
+    "species": 0,
+    "island": 0,
+    "year": 0,
+    "sex": 11,
+    "body_mass_g": 2
+  },
+  "n_missing_sex_and_mass": 2,
+  "missing_tokens": [
+    "",
+    "NA"
+  ],
+  "mass_unit": "g",
+  "difference_definition": "mean(male) - mean(female), computed within species",
+  "stratum_grid": "3 species x 3 islands x 3 years, including empty cells",
+  "stratum_status_counts": {
+    "comparable": 15,
+    "no_observations": 12,
+    "no_complete_sex_comparison": 0
+  },
+  "standardization": "Within species: same weights for each sex; weight proportional to n_female+n_male in each comparable island-year stratum; renormalize over comparable strata only",
+  "inferential_statistics": "none: independence/pairing cannot be verified from this simplified CSV",
+  "species": [
+    {
+      "species": "Adelie",
+      "n_raw": 152,
+      "n_excluded": 6,
+      "n_missing_sex": 6,
+      "n_missing_mass": 1,
+      "n_female": 73,
+      "n_male": 73,
+      "mean_female_g": 3368.8356164383563,
+      "mean_male_g": 4043.4931506849316,
+      "male_minus_female_g": 674.6575342465753,
+      "difference_pct_female_mean": 20.026430822405207,
+      "median_difference_g": 600.0,
+      "comparable_strata_n": 9,
+      "stratum_min_difference_g": 300.0,
+      "stratum_max_difference_g": 833.0555555555557,
+      "positive_strata_n": 9,
+      "standardized_difference_g": 676.3174059578171,
+      "standardization_rows_n": 146,
+      "unknown_sex_known_mass_n": 5,
+      "unknown_sex_min_difference_g": 627.1710526315787,
+      "unknown_sex_max_difference_g": 677.7772902772904
+    },
+    {
+      "species": "Chinstrap",
+      "n_raw": 68,
+      "n_excluded": 0,
+      "n_missing_sex": 0,
+      "n_missing_mass": 0,
+      "n_female": 34,
+      "n_male": 34,
+      "mean_female_g": 3527.205882352941,
+      "mean_male_g": 3938.970588235294,
+      "male_minus_female_g": 411.76470588235316,
+      "difference_pct_female_mean": 11.673962893475096,
+      "median_difference_g": 400.0,
+      "comparable_strata_n": 3,
+      "stratum_min_difference_g": 250.0,
+      "stratum_max_difference_g": 655.5555555555552,
+      "positive_strata_n": 3,
+      "standardized_difference_g": 411.7647058823529,
+      "standardization_rows_n": 68,
+      "unknown_sex_known_mass_n": 0,
+      "unknown_sex_min_difference_g": 411.76470588235316,
+      "unknown_sex_max_difference_g": 411.76470588235316
+    },
+    {
+      "species": "Gentoo",
+      "n_raw": 124,
+      "n_excluded": 5,
+      "n_missing_sex": 5,
+      "n_missing_mass": 1,
+      "n_female": 58,
+      "n_male": 61,
+      "mean_female_g": 4679.741379310345,
+      "mean_male_g": 5484.836065573771,
+      "male_minus_female_g": 805.0946862634255,
+      "difference_pct_female_mean": 17.20382860947911,
+      "median_difference_g": 800.0,
+      "comparable_strata_n": 3,
+      "stratum_min_difference_g": 724.4642857142853,
+      "stratum_max_difference_g": 934.1911764705883,
+      "positive_strata_n": 3,
+      "standardized_difference_g": 804.9848928178571,
+      "standardization_rows_n": 119,
+      "unknown_sex_known_mass_n": 4,
+      "unknown_sex_min_difference_g": 749.8740053050396,
+      "unknown_sex_max_difference_g": 811.0457429931257
+    }
+  ],
+  "missing_sex_sensitivity": {
+    "Adelie": {
+      "unknown_sex_known_mass_n": 5,
+      "evaluated": true,
+      "assignments": 32,
+      "valid_assignments": 32,
+      "min_difference_g": 627.1710526315787,
+      "max_difference_g": 677.7772902772904
+    },
+    "Chinstrap": {
+      "unknown_sex_known_mass_n": 0,
+      "evaluated": true,
+      "assignments": 1,
+      "valid_assignments": 1,
+      "min_difference_g": 411.76470588235316,
+      "max_difference_g": 411.76470588235316
+    },
+    "Gentoo": {
+      "unknown_sex_known_mass_n": 4,
+      "evaluated": true,
+      "assignments": 16,
+      "valid_assignments": 16,
+      "min_difference_g": 749.8740053050396,
+      "max_difference_g": 811.0457429931257
+    }
+  }
+}

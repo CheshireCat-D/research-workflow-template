@@ -102,6 +102,8 @@ For a data-to-delivery walkthrough, run the [paired-pen example](examples/paired
 
 ## Review, revision responses and submission materials
 
+For a real public-data walkthrough, see the [penguin analysis](examples/public-penguins/README.md) and its [independent base-R review](evals/public-data/assessment.md). The [first-use records](evals/usability/README.md) separate AI-agent exercises from future human feedback. The user ZIP also includes a minimal offline batch-registration example; successes or difficulties can be reported through the [feedback form](https://github.com/CheshireCat-D/research-workflow-template/issues/new?template=first-use-feedback.yml).
+
 These capabilities use the existing `rw-review` entry and expand only for the requested task:
 
 - **Structured review:** “Prepare a structured peer-review draft with locations, evidence, impact and testable actions.” Apply the proof, experimental, data or interpretation obligations relevant to the manuscript rather than one article template.

@@ -16,6 +16,8 @@
 | 主张与引证支持 | [文献核对规则](../skills/rw-literature/references/search-and-library.md)、同一任务记录的 `citation_audit`：离线合成来源、逐项定位及只读产物 |
 | 七学科专项回归 | [专项案例与复核](../evals/disciplinary/README.md)、独立公式/计数及输入扰动、七例项目恢复；素材只进入源码 |
 | 科研质量实作 | [真实检索、审阅对照与资源调整](../evals/quality/README.md)；当前离线回归保留其身份与明确计算，不重跑模型和网络 |
+| 首次使用与反馈 | [两个代理情境](../evals/usability/README.md)、实际离线登记示例与公开反馈表；真人反馈另行收集 |
+| 公开实测数据 | [企鹅描述性分析](../examples/public-penguins/README.md)及[独立 R 复算](../evals/public-data/assessment.md)；实际下载、数值/图件/恢复检查与CI小夹具分别记录 |
 | 结果表与稿源交付 | [配对栏复算](../examples/paired-pens/README.md)、[表格/主稿示例](../examples/submission-table/README.md)；实际本地编译与页图检查，源码不携带生成PDF |
 | 当前软件与平台检查 | [唯一当前核验记录](../evals/current/latest.json)；只报告真正执行的环境，不沿用旧阶段通过状态 |
 | 当前用户归档 | `dist/research-workflow-template.zip`、相邻SHA文件及 `dist/release-validation.json`；核对用户资源闭包、链接、确定性构建和干净运行 |

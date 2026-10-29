@@ -55,6 +55,8 @@ A chat interface may use the guide for discussion or editing according to its ac
 
 Manuscripts state results, evidence and necessary conditions directly. Execution notes and review coverage belong in work records. Writing and review share the prose guidance in `rw-writing` to avoid repetitive disclaimer sentences.
 
+The English guide covers user operations. Detailed skill and method instructions are primarily Chinese and are intended for the assistant to read as needed; ask it to explain the steps and produce your outputs in your preferred language.
+
 Describe the task directly, for example: “Read these materials and help me define a small testable question.” For several materials, ask: “Check the definitions, conditions and values for the same result in the manuscript and figures, and state what you actually checked.” A read-only request does not add project records.
 
 Discipline and method guidance is in `profiles/`; shared protocols are in `core/`. They do not certify an entire specialty. Mathematical proofs, numerical observations, legal interpretations, ethics permissions and venue requirements each need their own evidence.
@@ -99,6 +101,21 @@ python3 tools/research.py checkpoint --root PROJECT --next-action 'Check the nex
 
 Use `python3 tools/research.py --help` and each subcommand's `--help` for arguments. Complete JSON examples and interface details are in the public [CLI guide](https://github.com/CheshireCat-D/research-workflow-template/blob/main/docs/07-core-usage.md).
 
+### A minimal offline registration example
+
+From the toolkit root, save the following as `statement-batch.json` and replace `PROJECT` with an initialized project path. Batch input is an array whose items contain `kind` and `record`; the bundled `core/schemas/` documents the record fields. This example registers a synthetic observation. Choose a new ID if `S1` already exists.
+
+```json
+[
+  {"kind": "statement", "record": {"id": "S1", "text": "This is a synthetic observation for registration practice.", "type": "empirical", "scope": "Offline interface practice"}}
+]
+```
+
+```sh
+python3 tools/research.py register-batch --root PROJECT --file statement-batch.json
+python3 tools/research.py show --root PROJECT --kind statement --id S1
+```
+
 ## Moving and updating
 
 An installed project contains its required guidance and runtime. After moving the complete project, run from its root:
@@ -115,6 +132,12 @@ python3 tools/connect_skills.py upgrade --root PROJECT
 ```
 
 An installed copy with local edits, missing files or unknown files is not overwritten. Preserve and review those changes first. An upgrade has a brief reader-switch gap and rollback after caught failures; it does not provide a power-loss transaction guarantee. The public [skill connection guide](https://github.com/CheshireCat-D/research-workflow-template/blob/main/docs/08-skills-and-methods.md) describes these boundaries.
+
+## Feedback
+
+Use the [first-use feedback form](https://github.com/CheshireCat-D/research-workflow-template/issues/new?template=first-use-feedback.yml) for successes or difficulties. Include the OS, Python, agent, intended task, step reached and actual error. Issues are public; use a privacy-clean synthetic reproduction. The form does not request a name or email, and the toolkit does not send usage records automatically.
+
+The [first-use records](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/usability) describe two isolated AI-agent simulations; human feedback is collected separately. The [public penguin-data case](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/public-penguins) provides a source-to-analysis, figure and recovery walkthrough.
 
 ## Package contents and boundaries
 

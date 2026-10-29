@@ -146,7 +146,7 @@ def classification(path):
         return 'synthetic-task-output-or-normalized-record'
     if path.startswith('profiles/'):
         return 'original-guidance-with-external-source-references'
-    if path.startswith('.github/'):
+    if path.startswith('.github/workflows/'):
         return 'original-workflow-referencing-pinned-external-actions'
     return 'original-project-content'
 

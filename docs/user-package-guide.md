@@ -99,6 +99,21 @@ python3 tools/research.py checkpoint --root PROJECT --next-action '核对下一�
 
 可用 `python3 tools/research.py --help` 及子命令 `--help` 查看参数。完整 JSON 示例与接口说明见公开的[命令行指南](https://github.com/CheshireCat-D/research-workflow-template/blob/main/docs/07-core-usage.md)。
 
+### 离线登记的最小示例
+
+在工具包根目录将下面内容保存为 `statement-batch.json`，把 `PROJECT` 换成已初始化的项目路径后执行。批量输入是数组，每项包含 `kind` 和 `record`；各类字段见包内 `core/schemas/`。示例只登记一条合成记录，已有 `S1` 时换用新 ID。
+
+```json
+[
+  {"kind": "statement", "record": {"id": "S1", "text": "这是一条用于练习登记的合成观察。", "type": "empirical", "scope": "离线接口练习"}}
+]
+```
+
+```sh
+python3 tools/research.py register-batch --root PROJECT --file statement-batch.json
+python3 tools/research.py show --root PROJECT --kind statement --id S1
+```
+
 ## 搬迁与更新
 
 安装后的项目包含所需指导和运行时。搬迁完整项目后，可从项目根运行：
@@ -115,6 +130,12 @@ python3 tools/connect_skills.py upgrade --root PROJECT
 ```
 
 副本有本地修改、缺失或未知文件时，升级拒绝覆盖，先保留并审阅这些变化。升级有短暂的读取切换间隙和已捕获失败回滚，不提供断电事务保证。具体边界见公开的[技能接入说明](https://github.com/CheshireCat-D/research-workflow-template/blob/main/docs/08-skills-and-methods.md)。
+
+## 使用反馈
+
+可用[首次使用反馈表](https://github.com/CheshireCat-D/research-workflow-template/issues/new?template=first-use-feedback.yml)报告成功体验或卡点：说明系统、Python、Agent、想完成的任务、实际停在哪一步及错误信息。Issue 公开可见，请使用去除隐私的合成复现。表单不要求姓名或邮箱，工具不自动发送使用记录。
+
+公开的[首次使用记录](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/usability)是两个隔离代理模拟；真人反馈单独收集。[企鹅实测数据案例](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/public-penguins)可用于跟做来源、分析、图表和恢复。
 
 ## 包含内容与边界
 

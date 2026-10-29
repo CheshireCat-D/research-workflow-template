@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-recorded-task-scope",
-  "checked_at_utc": "2026-10-29T15:06:08.690771+00:00",
+  "checked_at_utc": "2026-10-29T19:13:41.918196+00:00",
   "scope": "Current source regression and clean user-runtime distribution, plus separately scoped real-source investigation, isolated review controls, synthetic resource adaptation and actual local table/source delivery.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -24,11 +24,11 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 261,
+      "test_methods": 272,
       "check_groups": 7,
       "receipt": {
         "identifier": "local-evidence:check-core.json",
-        "sha256": "8834a6cadd39c07fc28627cfe8815c5dcdf3d70bd93207fe3ad96e36eefd07e9"
+        "sha256": "b9442abf3f2ad91f25926790366b5e78231975a14d84ca2f7509ebeb17332b1a"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,8 +36,8 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "d9b9dce340504bafa50506c46bad11205e9b15a8466004bfd07ea6696179fb21",
-        "files": 36
+        "sha256": "f16d281e05a62d3f166541ef5f2c2a7d35f0be1a505a4f33455af419dbf6c946",
+        "files": 38
       }
     }
   },
@@ -87,7 +87,7 @@
   "preservation": {
     "frozen_d2_d3_legal_files_byte_identical": 424,
     "scope": "Frozen case inputs, numerical algorithms, authored outputs and independent reviews unchanged. Existing historical-guidance evidence also contains the exact original core/protocol.md source bound by the old legal review; no old runnable release or renewed scientific content review. Personal package excluded.",
-    "previous_evaluation_files_byte_identical": 557
+    "previous_evaluation_files_byte_identical": 580
   },
   "hosted_ci": {
     "source_of_truth": "https://github.com/CheshireCat-D/research-workflow-template/actions",
@@ -169,7 +169,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 72,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "e8c3f21a12b084fc8f6e2862ed76bb531f0fd34c3d21d31c82630b14f75c6550",
+    "sha256": "c38cdcb6f6143e30ade6489475fd23ff6c9f158f52fb1f3ae3a4aeefbd2ea2ad",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 65,
     "development_history_or_previous_editions_included": false,
@@ -240,6 +240,16 @@
       "fresh_project": true,
       "project_bytes_and_mtime_unchanged": true,
       "query_verb": "show, with optional --id for one complete record"
+    },
+    "offline_batch_example": {
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "layout": "Actual user ZIP",
+      "executed_init_registration_show_and_resume": true,
+      "readonly_bytes_and_mtime_checked": true,
+      "regression": "tests/test_first_use.py"
     }
   },
   "public_worked_examples": {
@@ -270,5 +280,32 @@
     "actual_adaptation_registry_commands": 17,
     "new_skill_entrypoints": 0,
     "scope": "Small actual AI-agent exercises with separate review; CI preserves identities and recomputes finite calculations without live search, model review, or TeX."
+  },
+  "first_use_validation": {
+    "record": "evals/usability/recording.json",
+    "isolated_ai_scenarios": 2,
+    "human_participants": 0,
+    "human_feedback_received": 0,
+    "new_guide_regression": "tests/test_first_use.py",
+    "offline_bilingual_batch_examples_actually_executed": true,
+    "english_registration_seconds_corrected": 147.135799,
+    "correction": "Original 93.842017 seconds identified a help command, not registration. Original records unchanged.",
+    "feedback_entry": "https://github.com/CheshireCat-D/research-workflow-template/issues/new?template=first-use-feedback.yml",
+    "external_contacts_made": false
+  },
+  "public_data_validation": {
+    "record": "evals/public-data/recording.json",
+    "example": "examples/public-penguins/README.md",
+    "data_kind": "real public observational animal ecology records, separately downloaded CC0 input",
+    "raw_csv_in_distribution": false,
+    "rows": 344,
+    "complete_rows": 333,
+    "independent_base_R_comparison_checks": 92,
+    "independent_comparison_failures": 0,
+    "actual_figures_rendered_and_inspected": 2,
+    "post_review_registration_and_recovery_completed": true,
+    "parent_final_records": 36,
+    "parent_final_revision": 39,
+    "ci_scope": "Original synthetic arithmetic/input fixture and publication identity; no network, R or model/visual review in CI."
   }
 }

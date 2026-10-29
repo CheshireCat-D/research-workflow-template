@@ -1,0 +1,475 @@
+{
+  "schema_version": "1.0",
+  "record_type": "published minimal projection of two first-use AI-agent simulations and a separate read-only AI audit",
+  "projection_created_at_utc": "2026-10-29T19:06:10.014656+00:00",
+  "study_scope": {
+    "multilingual_ai_scenarios": 2,
+    "human_participants": 0,
+    "human_feedback_count": 0,
+    "human_usability_tested": false,
+    "english_only_human_usability_tested": false,
+    "timing": "AI wall clock only; public numerical seconds are approximate",
+    "start_clock_resolution_seconds": 1,
+    "complete_research_projects_distributed": false,
+    "external_people_contacted": false
+  },
+  "tested_distribution": {
+    "commit": "df511bba4f9e9c0719e001ad62c8c0d34cf4ae9a",
+    "user_zip_sha256": "e8c3f21a12b084fc8f6e2862ed76bb531f0fd34c3d21d31c82630b14f75c6550",
+    "user_zip_distributed_here": false,
+    "subsequent_guide_changes": "Added minimal offline kind/record array examples and clarified that primarily Chinese internal guidance is for the assistant. Original first-use outputs were not regenerated."
+  },
+  "cases": [
+    {
+      "id": "zh-interest",
+      "language": "zh",
+      "actor": "multilingual AI agent",
+      "request": "cases/zh-interest/request.md",
+      "first_output": "cases/zh-interest/first-output.md",
+      "input_csv": null,
+      "completed_in_scope": true,
+      "first_output_purpose": "Useful in scope for a four-week advisor-discussion start; no literature search or empirical result completed.",
+      "timing": {
+        "first_artifact_seconds": 145.411074,
+        "successful_registration_seconds": 145.486783,
+        "fresh_resume_seconds": 189.400156
+      },
+      "registration_count": 8,
+      "checkpoint_revision": 9,
+      "checkpoint_status": "current",
+      "completed_activity": "T1",
+      "pending_activity": "T2",
+      "historical_constraints": {
+        "offline_as_logged": true,
+        "no_personal_global_skills_as_logged": true,
+        "no_installation_except_project_local_runtime_as_logged": true,
+        "no_external_contacts_as_logged": true,
+        "not_os_level_access_audit": true
+      }
+    },
+    {
+      "id": "en-pilot",
+      "language": "en",
+      "actor": "multilingual AI agent",
+      "request": "cases/en-pilot/request.md",
+      "first_output": "cases/en-pilot/first-output.md",
+      "input_csv": "cases/en-pilot/input.csv",
+      "completed_in_scope": true,
+      "first_output_purpose": "Useful in scope for discussing the supplied six-row synthetic pilot; arithmetic and recoverable next action verified.",
+      "timing": {
+        "first_artifact_seconds": 83.541433,
+        "successful_registration_seconds": 147.135799,
+        "fresh_resume_seconds": 165.840615
+      },
+      "registration_count": 13,
+      "checkpoint_revision": 14,
+      "checkpoint_status": "current",
+      "completed_activity": "A1",
+      "pending_activity": "A2",
+      "historical_constraints": {
+        "offline_as_logged": true,
+        "no_personal_global_skills_as_logged": true,
+        "no_installation_except_project_local_runtime_as_logged": true,
+        "no_external_contacts_as_logged": true,
+        "not_os_level_access_audit": true
+      }
+    }
+  ],
+  "original_case_identities": {
+    "cases/zh-interest/request.md": {
+      "sha256": "6856788fa4bd41ffcdf58b9446a2bb8ffb158f0a4c8bd0c2bb3db00ee69a2063",
+      "bytes": 410,
+      "published_bytes": "unchanged"
+    },
+    "cases/zh-interest/first-output.md": {
+      "sha256": "2ac68d45b271bc50ef819f18281089dc73245d87bae704202fe83b8182ed6007",
+      "bytes": 6504,
+      "published_bytes": "unchanged"
+    },
+    "cases/en-pilot/request.md": {
+      "sha256": "56a922934258fc52b62da929e62b0863f9f9efa6778af2a3b46ee4f1cf76625b",
+      "bytes": 497,
+      "published_bytes": "unchanged"
+    },
+    "cases/en-pilot/input.csv": {
+      "sha256": "09ab10d28406c6dd4f3091f8a66b2f71ff14ea24d12fbf30606062a7fd9a9857",
+      "bytes": 152,
+      "published_bytes": "unchanged"
+    },
+    "cases/en-pilot/first-output.md": {
+      "sha256": "0c1f183043f14686865acaef86b9b8f156ed65fabd4dd3c6e5b9f64e11836745",
+      "bytes": 2389,
+      "published_bytes": "unchanged"
+    }
+  },
+  "original_audited_source_fingerprints": {
+    "source_zip": {
+      "sha256": "e8c3f21a12b084fc8f6e2862ed76bb531f0fd34c3d21d31c82630b14f75c6550",
+      "bytes": 424092
+    },
+    "zh_request": {
+      "sha256": "6856788fa4bd41ffcdf58b9446a2bb8ffb158f0a4c8bd0c2bb3db00ee69a2063",
+      "bytes": 410
+    },
+    "zh_request_constraints_retrospective_excerpt": {
+      "sha256": "1f5235916e89a073df24833e675433da40fb7ba0aad66d81fe8fb61152226779",
+      "bytes": 986
+    },
+    "zh_first_artifact": {
+      "sha256": "2ac68d45b271bc50ef819f18281089dc73245d87bae704202fe83b8182ed6007",
+      "bytes": 6504
+    },
+    "zh_execution": {
+      "sha256": "4f23ca8bc2de1119d2e8e0ce47ed33563c17e0e399d8edfc7346af1ab9ddf225",
+      "bytes": 54776
+    },
+    "zh_command_log": {
+      "sha256": "c4184509572c8046b2b629f7e2ed4f9f0f2bafdc46e5e6c6a1fd5121881f9f67",
+      "bytes": 42601
+    },
+    "zh_recovery_log": {
+      "sha256": "7fdb1263b9e79e694155f5979c2440ca200d0b2d2871138f31cf3566abcc7b54",
+      "bytes": 5574
+    },
+    "zh_recovery_verification": {
+      "sha256": "63bd13b77209ec9e4714bb6bc5278727e85559b9b1b5a2bf5ab874afcf5a3b6f",
+      "bytes": 6007
+    },
+    "en_request": {
+      "sha256": "56a922934258fc52b62da929e62b0863f9f9efa6778af2a3b46ee4f1cf76625b",
+      "bytes": 497
+    },
+    "en_supplied_csv": {
+      "sha256": "09ab10d28406c6dd4f3091f8a66b2f71ff14ea24d12fbf30606062a7fd9a9857",
+      "bytes": 152
+    },
+    "en_preserved_csv": {
+      "sha256": "09ab10d28406c6dd4f3091f8a66b2f71ff14ea24d12fbf30606062a7fd9a9857",
+      "bytes": 152
+    },
+    "en_first_artifact": {
+      "sha256": "0c1f183043f14686865acaef86b9b8f156ed65fabd4dd3c6e5b9f64e11836745",
+      "bytes": 2389
+    },
+    "en_summary": {
+      "sha256": "cabbe06b6c2d813852fc41cd3d2bf669a91309d6499738369924ed91ff9f0442",
+      "bytes": 1029
+    },
+    "en_analysis_script": {
+      "sha256": "fa262f3454a93214894731ff2d0087ab387e1f6e8f7276789b426da8b53eb648",
+      "bytes": 5798
+    },
+    "en_next_protocol": {
+      "sha256": "8703535beedda6df8d5ab8b11bc2e421c271c37aa10ed39ce0984aafbfa69d92",
+      "bytes": 1361
+    },
+    "en_execution": {
+      "sha256": "e4cccd082b01c4bbd96a74556d9c69f25356e2156a4f0fdb019a72c23d60feee",
+      "bytes": 33436
+    },
+    "en_command_log": {
+      "sha256": "99af54af2f312b00527d1809c21f85bf26ae8c06c9f724c185dca866321a0f9a",
+      "bytes": 22162
+    },
+    "en_resume_verification": {
+      "sha256": "9da9a422f607c1599d5180646b96f4f7e37e21b6d1116af17e2400d7ac201053",
+      "bytes": 5559
+    },
+    "en_harness_observation": {
+      "sha256": "3727153b05d104ec19fee828d6ee7d4fb00db90701325a8011ac1fa9a5196a76",
+      "bytes": 442
+    },
+    "en_frozen_manifest": {
+      "sha256": "a3793ef84189f54faea24fef3ecbb8ae746d00c9d40391e6bcea9927a8352aaf",
+      "bytes": 1748
+    }
+  },
+  "en_registration_correction": {
+    "original_reported_seconds": 93.842017,
+    "corrected_seconds": 147.135799,
+    "start_at_utc": "2026-10-29T18:47:54+00:00",
+    "help_event": {
+      "log_line": 7,
+      "command_tokens": [
+        "python3",
+        "tools/research.py",
+        "register-batch",
+        "--help"
+      ],
+      "ended_at_utc": "2026-10-29T18:49:27.842017+00:00",
+      "exit_code": 0,
+      "is_registration": false
+    },
+    "registration_event": {
+      "log_line": 8,
+      "command_tokens": [
+        "python3",
+        "tools/research.py",
+        "register-batch",
+        "--root",
+        "PROJECT",
+        "--file",
+        "REGISTRATION_BATCH.json"
+      ],
+      "ended_at_utc": "2026-10-29T18:50:21.135799+00:00",
+      "exit_code": 0,
+      "registered": true,
+      "registered_count": 13,
+      "is_registration": true
+    },
+    "public_correction": "Use approximately 147.14 s for successful registration; preserve original files and identify the old 93.84 s as a help-event selection error."
+  },
+  "failure_classification": {
+    "zh_navigation_failure": "Reconstructed early observation in execution.json; current read-only cat reproduces exit 1 at wrong cwd, and files exist at package cwd. Classify as agent navigation error.",
+    "en_init_failure": "Durable commands.jsonl line 1 records exit 2 and unrecognized guessed flags; help line 2 and corrected init line 3 succeed. Classify as execution-agent argument error.",
+    "en_outer_harness_failure": "Execution and harness-observations report outer exit 1 from asserting unchanged; retained subprocess records show exit 0 and status current. Wrong assertion is consistent, but no separate raw outer traceback or original harness script is retained. Do not claim an independently witnessed historical outer failure.",
+    "historical_restrictions": "Inspected logs are consistent with offline archive-only execution and no personal/global skills access, installs or external contacts; incomplete early logging is not an OS-level access audit."
+  },
+  "documentation_findings": [
+    {
+      "id": "offline-batch-wrapper",
+      "evidence": "Frozen USER_GUIDE.en.md line 100 sends complete examples online; bridge line 40 gives array only; logged help omits item wrapper; bundled core/project.py lines 355-365 requires kind and record.",
+      "effect": "Extra bundled implementation lookup; successful batch on first submission.",
+      "scope": "Frozen tested ZIP; the original timed first-use scenarios were not rerun. Subsequent guide examples are covered separately by the current offline interface regression."
+    },
+    {
+      "id": "english-route-language",
+      "evidence": "English README/guide lead to primarily Chinese workflow, validation/writing, protocol/bridge and computational profile.",
+      "effect": "Multilingual AI completed; English-only human effect not measured.",
+      "action": "Clarify assistant-executed internal guidance and English task/output support; a complete translation is outside this audit."
+    }
+  ],
+  "independent_review": {
+    "actor": "a separate AI-agent reviewer",
+    "human_review": false,
+    "original_assessment_json_sha256": "1326544f8bdeaaa51b59647b0446123e3a0b8cefbf2b057413a5a3a5d8f6bd5f",
+    "original_assessment_md_sha256": "63417afa7ee028b705485dae56b980ae4abaaa15765351bcc6a4c0813e5a2332",
+    "published_assessment": "assessment.md",
+    "published_assessment_is_edited_projection": true,
+    "original_current_cli_evidence_sha256": "257ca4a7992a1ee77a0b5865d6eb00627f2534b98653878c89a5a61cfb07b9be",
+    "original_arithmetic_evidence_sha256": "9d6725ce11bd69d51f293bf729dea5998b4245f33dd2e3f34a4862f4bb59f6a3",
+    "conclusions": {
+      "zh": "Useful in scope for a four-week advisor-discussion start; no literature search or empirical result completed.",
+      "en": "Useful in scope for discussing the supplied six-row synthetic pilot; arithmetic and recoverable next action verified.",
+      "publishable_after_correction": "Correct EN registration time from 93.84 s to 147.14 s; keep historical originals unchanged.",
+      "human_participants": 0,
+      "human_usability_validated": false
+    },
+    "csv_recomputation": {
+      "rows": 6,
+      "unique_method_seed_pairs": 6,
+      "baseline_mean_accuracy_percent": 79,
+      "candidate_mean_accuracy_percent": 80.66666666666667,
+      "accuracy_difference_pp": 1.6666666666666667,
+      "baseline_mean_train_seconds": 19,
+      "candidate_mean_train_seconds": 21,
+      "training_time_increase_percent": 10.526315789473685,
+      "seed_accuracy_differences_pp": [
+        3,
+        2,
+        0
+      ],
+      "seed_training_differences_seconds": [
+        3,
+        2,
+        1
+      ],
+      "input_preserved": true,
+      "scope": "Decimal arithmetic over supplied synthetic CSV; no model training, independence, statistical significance or real benchmark conclusion."
+    },
+    "tree_snapshots": {
+      "zh_project": {
+        "file_count": 75,
+        "snapshot_sha256": "55835f1b41bf0db38ebd4a659ced853740f4508290c7db8eb8245d8eb94bddea",
+        "bytes_snapshot_sha256": "d83572880cad271ce94c29ce54ef50f673beff87ea6bc6dc31a981163fb94e4d"
+      },
+      "zh_restored_project": {
+        "file_count": 75,
+        "snapshot_sha256": "55835f1b41bf0db38ebd4a659ced853740f4508290c7db8eb8245d8eb94bddea",
+        "bytes_snapshot_sha256": "d83572880cad271ce94c29ce54ef50f673beff87ea6bc6dc31a981163fb94e4d"
+      },
+      "en_project": {
+        "file_count": 78,
+        "snapshot_sha256": "e8f1e0690e3d932f3b616766dc39717f90a34df1951f4ad83605a41b966f4f14",
+        "bytes_snapshot_sha256": "44a344d460b4da229970ffb3a61b424e1575ca2dba5cb9cf2667b7c9264fd6ca"
+      },
+      "zh_extracted_package": {
+        "file_count": 73,
+        "snapshot_sha256": "b6c03a62ab311d0dcf753bd59ad162f6800aa7eb06b3d01977ae13bf94e8a7ec",
+        "bytes_snapshot_sha256": "e97ffd2fd6489f255f8841f7503d183ad36f53379eb9c7b03d6fbf8a094a6a5e"
+      },
+      "en_extracted_package": {
+        "file_count": 73,
+        "snapshot_sha256": "134a8ff37f92531398ca9d5362e97abdfc208b014e7b33fa48ade84e27e26a45",
+        "bytes_snapshot_sha256": "e97ffd2fd6489f255f8841f7503d183ad36f53379eb9c7b03d6fbf8a094a6a5e"
+      }
+    },
+    "snapshot_definition": "SHA256 of UTF-8 canonical JSON mapping sorted relative file paths to sha256, bytes and mtime_ns; bytes_snapshot excludes mtime_ns. Full temporary inventories retained outside the public projection.",
+    "current_reexecution": {
+      "commands_passed": 6,
+      "monitored_file_count": 407,
+      "sha256_size_mtime_unchanged": true,
+      "commands": [
+        {
+          "case": "zh-restored",
+          "command_tokens": [
+            "python3",
+            "-B",
+            "PROJECT_RUNTIME/tools/research.py",
+            "resume",
+            "--root",
+            "."
+          ],
+          "exit_code": 0,
+          "passed": true,
+          "checkpoint_status": "current",
+          "installed_integrity": null,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "case": "zh-restored",
+          "command_tokens": [
+            "python3",
+            "-B",
+            "PROJECT_RUNTIME/tools/connect_skills.py",
+            "check",
+            "--installed-only",
+            "--root",
+            "."
+          ],
+          "exit_code": 0,
+          "passed": true,
+          "checkpoint_status": null,
+          "installed_integrity": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "case": "zh-restored",
+          "command_tokens": [
+            "python3",
+            "-B",
+            "PROJECT_RUNTIME/tools/research.py",
+            "check",
+            "--root",
+            "."
+          ],
+          "exit_code": 0,
+          "passed": true,
+          "checkpoint_status": "current",
+          "installed_integrity": null,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "case": "en",
+          "command_tokens": [
+            "python3",
+            "-B",
+            "PROJECT_RUNTIME/tools/research.py",
+            "resume",
+            "--root",
+            "."
+          ],
+          "exit_code": 0,
+          "passed": true,
+          "checkpoint_status": "current",
+          "installed_integrity": null,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "case": "en",
+          "command_tokens": [
+            "python3",
+            "-B",
+            "PROJECT_RUNTIME/tools/connect_skills.py",
+            "check",
+            "--installed-only",
+            "--root",
+            "."
+          ],
+          "exit_code": 0,
+          "passed": true,
+          "checkpoint_status": null,
+          "installed_integrity": true,
+          "errors": [],
+          "warnings": []
+        },
+        {
+          "case": "en",
+          "command_tokens": [
+            "python3",
+            "-B",
+            "PROJECT_RUNTIME/tools/research.py",
+            "check",
+            "--root",
+            "."
+          ],
+          "exit_code": 0,
+          "passed": true,
+          "checkpoint_status": "current",
+          "installed_integrity": null,
+          "errors": [],
+          "warnings": []
+        }
+      ],
+      "zh_original_equals_restored": true,
+      "en_recovery_archive_matches_78_project_files": true,
+      "source_zip_matches_both_73_file_extractions": true,
+      "en_frozen_manifest_entries_matched": 11
+    },
+    "historical_evidence_limit": "Early reconstructed observations and reported outer harness failure remain distinct from durable subprocess logs and present reexecution."
+  },
+  "public_projection": {
+    "retains": "Original case requests, first outputs and required synthetic CSV; edited assessment and compact recording only.",
+    "omits": [
+      "full runtime projects",
+      "raw large logs",
+      "recovery ZIPs",
+      "407 individual fingerprints",
+      "fixed pilot script and summary",
+      "empty extraction and search templates"
+    ],
+    "not_self_contained_projects": true,
+    "first_output_relative_paths_refer_to_original_temporary_projects": true
+  },
+  "regression_entrypoint": "tests/test_first_use.py",
+  "feedback_entrypoint": "https://github.com/CheshireCat-D/research-workflow-template/issues/new?template=first-use-feedback.yml",
+  "manifest_scope": "All files in evals/usability except recording.json, plus the dedicated regression test. The record excludes itself to avoid a self-hash cycle.",
+  "published_files": {
+    "evals/usability/README.md": {
+      "sha256": "2ae47313c74c70ff87440c14951c1b394e64694ecef50dd62e8a05f10bdf3a72",
+      "bytes": 2977
+    },
+    "evals/usability/assessment.md": {
+      "sha256": "6befb3d40c58bae68f080f59c7c3ce7aa6515c3ccaf79ff15d47015519b8b3c5",
+      "bytes": 5766
+    },
+    "evals/usability/cases/en-pilot/first-output.md": {
+      "sha256": "0c1f183043f14686865acaef86b9b8f156ed65fabd4dd3c6e5b9f64e11836745",
+      "bytes": 2389
+    },
+    "evals/usability/cases/en-pilot/input.csv": {
+      "sha256": "09ab10d28406c6dd4f3091f8a66b2f71ff14ea24d12fbf30606062a7fd9a9857",
+      "bytes": 152
+    },
+    "evals/usability/cases/en-pilot/request.md": {
+      "sha256": "56a922934258fc52b62da929e62b0863f9f9efa6778af2a3b46ee4f1cf76625b",
+      "bytes": 497
+    },
+    "evals/usability/cases/zh-interest/first-output.md": {
+      "sha256": "2ac68d45b271bc50ef819f18281089dc73245d87bae704202fe83b8182ed6007",
+      "bytes": 6504
+    },
+    "evals/usability/cases/zh-interest/request.md": {
+      "sha256": "6856788fa4bd41ffcdf58b9446a2bb8ffb158f0a4c8bd0c2bb3db00ee69a2063",
+      "bytes": 410
+    },
+    "tests/test_first_use.py": {
+      "sha256": "9c7b1b28ea212787fd33de299f17d01016771306f6dfafb26353f32582be9c26",
+      "bytes": 12485
+    }
+  }
+}

@@ -1,0 +1,38 @@
+name: 首次使用反馈 / First-use feedback
+description: 告诉我们从下载到首份成果时遇到的具体卡点。Share what happened during your first use.
+title: "[First use] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        可报告成功体验或卡点。这里的 Issue 是公开的，请用合成材料复现，移除凭据、未发表稿件和私有数据。
+        Success reports and difficulties are both useful. Issues are public; use synthetic reproductions and remove credentials, unpublished manuscripts and private data.
+  - type: textarea
+    id: environment
+    attributes:
+      label: 运行环境 / Environment
+      description: 系统、Python、Agent 工具，以及使用用户 ZIP 还是源码。Unknown is fine.
+      placeholder: "Windows / macOS / Linux; Python version; Agent; user ZIP or source"
+    validations:
+      required: false
+  - type: textarea
+    id: goal
+    attributes:
+      label: 想完成什么、做到哪一步 / Goal and progress
+      description: 简述任务，是否已得到首份有用成果，以及是否能恢复项目。
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: 实际发生了什么 / What happened
+      description: 卡在哪个说明或命令、实际结果、期望结果；没有卡点也可直接说明。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 最小复现或改进建议 / Minimal reproduction or suggestion
+      description: 可选。贴去除敏感内容后的命令与错误，不需要上传真实论文或数据。
+    validations:
+      required: false

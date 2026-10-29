@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150px" height="440px" viewBox="0 0 1150 440" role="img" aria-labelledby="title desc">
+<title id="title">Body mass by species and sex</title>
+<desc id="desc">Means of available body masses; circles are female and squares are male. No error bars.</desc>
+<rect width="1150" height="440" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="25.00" y="38.00" font-size="24" fill="#222" text-anchor="start" font-weight="bold">Body mass within each species</text>
+<text x="25.00" y="65.00" font-size="15" fill="#222" text-anchor="start" font-weight="normal">Complete sex and mass records; dots/squares are means; no error bars</text>
+<line x1="185.0" y1="90" x2="185.0" y2="340" stroke="#ddd"/>
+<text x="185.00" y="367.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">3000</text>
+<line x1="288.3333333333333" y1="90" x2="288.3333333333333" y2="340" stroke="#ddd"/>
+<text x="288.33" y="367.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">3500</text>
+<line x1="391.66666666666663" y1="90" x2="391.66666666666663" y2="340" stroke="#ddd"/>
+<text x="391.67" y="367.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">4000</text>
+<line x1="495.0" y1="90" x2="495.0" y2="340" stroke="#ddd"/>
+<text x="495.00" y="367.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">4500</text>
+<line x1="598.3333333333333" y1="90" x2="598.3333333333333" y2="340" stroke="#ddd"/>
+<text x="598.33" y="367.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">5000</text>
+<line x1="701.6666666666667" y1="90" x2="701.6666666666667" y2="340" stroke="#ddd"/>
+<text x="701.67" y="367.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">5500</text>
+<line x1="805.0" y1="90" x2="805.0" y2="340" stroke="#ddd"/>
+<text x="805.00" y="367.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">6000</text>
+<text x="25.00" y="135.00" font-size="19" fill="#222" text-anchor="start" font-weight="bold">Adelie</text>
+<line x1="261.2260273972603" y1="130" x2="400.6552511415525" y2="130" stroke="#777" stroke-width="2"/>
+<circle cx="261.2260273972603" cy="130" r="6" fill="#B44B00"/>
+<text x="261.23" y="157.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">3,368.8</text>
+<rect x="394.6552511415525" y="124" width="12" height="12" fill="#166491"/>
+<text x="400.66" y="116.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">4,043.5</text>
+<text x="840.00" y="120.00" font-size="15" fill="#222" text-anchor="start" font-weight="normal">female n=73; male n=73</text>
+<text x="840.00" y="145.00" font-size="15" fill="#222" text-anchor="start" font-weight="normal">male - female: 674.7 g</text>
+<text x="25.00" y="225.00" font-size="19" fill="#222" text-anchor="start" font-weight="bold">Chinstrap</text>
+<line x1="293.9558823529411" y1="220" x2="379.05392156862746" y2="220" stroke="#777" stroke-width="2"/>
+<circle cx="293.9558823529411" cy="220" r="6" fill="#B44B00"/>
+<text x="293.96" y="247.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">3,527.2</text>
+<rect x="373.05392156862746" y="214" width="12" height="12" fill="#166491"/>
+<text x="379.05" y="206.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">3,939.0</text>
+<text x="840.00" y="210.00" font-size="15" fill="#222" text-anchor="start" font-weight="normal">female n=34; male n=34</text>
+<text x="840.00" y="235.00" font-size="15" fill="#222" text-anchor="start" font-weight="normal">male - female: 411.8 g</text>
+<text x="25.00" y="315.00" font-size="19" fill="#222" text-anchor="start" font-weight="bold">Gentoo</text>
+<line x1="532.1465517241379" y1="310" x2="698.532786885246" y2="310" stroke="#777" stroke-width="2"/>
+<circle cx="532.1465517241379" cy="310" r="6" fill="#B44B00"/>
+<text x="532.15" y="337.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">4,679.7</text>
+<rect x="692.532786885246" y="304" width="12" height="12" fill="#166491"/>
+<text x="698.53" y="296.00" font-size="14" fill="#222" text-anchor="middle" font-weight="normal">5,484.8</text>
+<text x="840.00" y="300.00" font-size="15" fill="#222" text-anchor="start" font-weight="normal">female n=58; male n=61</text>
+<text x="840.00" y="325.00" font-size="15" fill="#222" text-anchor="start" font-weight="normal">male - female: 805.1 g</text>
+<text x="495.00" y="398.00" font-size="17" fill="#222" text-anchor="middle" font-weight="normal">Mean body mass (g)</text>
+<text x="25.00" y="427.00" font-size="14" fill="#222" text-anchor="start" font-weight="normal">Female: orange circle. Male: blue square. Data: palmerpenguins; analysis of the supplied CSV.</text>
+</g></svg>

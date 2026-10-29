@@ -1,0 +1,600 @@
+{
+  "format_version": 1,
+  "scope": "Actual public-data descriptive task, separately executed independent base-R review, publication formatting and actual local recovery. Offline CI checks the original synthetic fixture and identities; it does not repeat internet retrieval, R, model review or visual inspection.",
+  "toolkit_used": {
+    "commit": "df511bba4f9e9c0719e001ad62c8c0d34cf4ae9a",
+    "user_zip_sha256": "e8c3f21a12b084fc8f6e2862ed76bb531f0fd34c3d21d31c82630b14f75c6550",
+    "entrypoints": 9
+  },
+  "request": "examples/public-penguins/question-method.md",
+  "public_input": {
+    "source_commit": "8957207b78d6ccd1b4654a9dd9c9041b657478ab",
+    "path": "inst/extdata/penguins.csv",
+    "sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+    "bytes": 15241,
+    "git_blob_sha": "25b46d384bf81f8399188500ea54917bb49d8890",
+    "rows": 344,
+    "url": "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/8957207b78d6ccd1b4654a9dd9c9041b657478ab/inst/extdata/penguins.csv",
+    "license": "CC0-1.0",
+    "license_url": "https://github.com/allisonhorst/palmerpenguins/blob/8957207b78d6ccd1b4654a9dd9c9041b657478ab/LICENSE.md",
+    "project_url": "https://allisonhorst.github.io/palmerpenguins/",
+    "paper_doi": "10.1371/journal.pone.0090081"
+  },
+  "execution": {
+    "started_utc": "2026-10-29T18:50:52.147024+00:00",
+    "original_recording_sha256": "4db27aa9b2954687631cc97249a7ca2b40d842abbfb4d318e418ce014dbb409c",
+    "original_freeze_manifest_sha256": "3ca21f6bf802581566d25914569122190f00edfd81a80322866502df3f45c2e5",
+    "recorded_commands": [
+      {
+        "label": "options",
+        "argv": [
+          "python3",
+          "TOOLKIT/tools/research.py",
+          "options"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "init",
+        "argv": [
+          "python3",
+          "TOOLKIT/tools/research.py",
+          "init",
+          "--output",
+          "PROJECT",
+          "--title",
+          "Species-specific penguin body mass by sex, island and year",
+          "--discipline",
+          "agriculture-life",
+          "--method",
+          "empirical-quantitative",
+          "--method",
+          "computational"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "install",
+        "argv": [
+          "python3",
+          "TOOLKIT/tools/connect_skills.py",
+          "install",
+          "--root",
+          "PROJECT"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "synthetic-tests",
+        "argv": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "TASK/example/tests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "real-analysis",
+        "argv": [
+          "python3",
+          "TASK/example/analyze.py",
+          "--input",
+          "DATA.csv",
+          "--output",
+          "TASK/real-results"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "svg-audit-species-mass",
+        "argv": [
+          "python3",
+          "TOOLKIT/skills/rw-figures/scripts/audit_svg_schematic.py",
+          "TASK/real-results/species-mass.svg"
+        ],
+        "exit_code": 1,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "real-analysis-v2",
+        "argv": [
+          "python3",
+          "TASK/example/analyze.py",
+          "--input",
+          "DATA.csv",
+          "--output",
+          "TASK/real-results-v2"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "synthetic-tests-v2",
+        "argv": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "TASK/example/tests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "svg-audit-v2-species-mass",
+        "argv": [
+          "python3",
+          "TOOLKIT/skills/rw-figures/scripts/audit_svg_schematic.py",
+          "TASK/real-results-v2/species-mass.svg"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "svg-audit-v2-stratum-differences",
+        "argv": [
+          "python3",
+          "TOOLKIT/skills/rw-figures/scripts/audit_svg_schematic.py",
+          "TASK/real-results-v2/stratum-differences.svg"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "render-previews",
+        "argv": [
+          "qlmanage",
+          "-t",
+          "-s",
+          "1600",
+          "-o",
+          "TASK/previews",
+          "TASK/real-results-v2/species-mass.svg",
+          "TASK/real-results-v2/stratum-differences.svg"
+        ],
+        "exit_code": 255,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "register-batch",
+        "argv": [
+          "python3",
+          "TOOLKIT/tools/research.py",
+          "register-batch",
+          "--root",
+          "PROJECT",
+          "--file",
+          "TASK/registration-batch.json"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "check",
+        "argv": [
+          "python3",
+          "TOOLKIT/tools/research.py",
+          "check",
+          "--root",
+          "PROJECT"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "checkpoint",
+        "argv": [
+          "python3",
+          "TOOLKIT/tools/research.py",
+          "checkpoint",
+          "--root",
+          "PROJECT",
+          "--next-action",
+          "Complete independent numeric/content review and render both SVGs; then inspect raw individual/nest IDs and sampling before any inferential model."
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "moved-resume",
+        "argv": [
+          "python3",
+          "-B",
+          "MOVED_PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+          "resume",
+          "--root",
+          "MOVED_PROJECT"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "moved-installed-check",
+        "argv": [
+          "python3",
+          "-B",
+          "MOVED_PROJECT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+          "check",
+          "--installed-only",
+          "--root",
+          "MOVED_PROJECT"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "moved-core-check",
+        "argv": [
+          "python3",
+          "-B",
+          "MOVED_PROJECT/.agents/skills/_rw-runtime/tools/research.py",
+          "check",
+          "--root",
+          "MOVED_PROJECT"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0
+      },
+      {
+        "label": "preview-server-bind",
+        "argv": [
+          "python3",
+          "-m",
+          "http.server",
+          "8768",
+          "--bind",
+          "127.0.0.1",
+          "--directory",
+          "TASK/real-results-v2"
+        ],
+        "exit_code": 1,
+        "expected_exit_code": 0,
+        "failure": "PermissionError: [Errno 1] Operation not permitted during socket bind; captured tool output, no server started"
+      }
+    ],
+    "initial_completion": {
+      "registered_records": 33,
+      "checkpoint_revision": 34,
+      "moved_project_readonly_verified": true,
+      "frozen_files_unchanged": true,
+      "fetch_data_network_execution": "not run: supplied real input used",
+      "independent_review": "not performed by this agent; parent arranged separately",
+      "visual_check": "this agent render attempt failed; parent separately reported successful render and visual inspection without changing frozen files"
+    },
+    "source_access": [
+      {
+        "action": "web source access",
+        "status": "partial article and relevant project sections read",
+        "urls": [
+          "https://allisonhorst.github.io/palmerpenguins/",
+          "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090081"
+        ]
+      },
+      {
+        "action": "local preview HTTP server",
+        "status": "failed",
+        "exit_code": 1,
+        "reason": "PermissionError on localhost bind"
+      },
+      {
+        "action": "browser SVG local-file preview",
+        "status": "denied",
+        "exit_code": null,
+        "reason": "browser URL policy permits http/https only; no bypass attempted"
+      }
+    ],
+    "initial_readonly_recovery": {
+      "same_paths": true,
+      "changed_paths": [],
+      "entry_count": 124,
+      "read_only_verified": true,
+      "method": "Compare relative path, type, mode, size, mtime_ns and SHA-256 for every project tree entry before and after resume, installed-only check, and core check; Python -B prevents interpreter cache writes."
+    },
+    "scope": "The supplied real input was used by the task; command records include numerical checks and failed render attempts. Full temporary project and logs omitted."
+  },
+  "publication": {
+    "original_execution_code_sha256": "55d2bc62ca868a651d79155144b11605f43774d212b62d7645399cc53fc344a5",
+    "public_code_sha256": "a7c4cbb6c8c8455b1dc2293298d962ae9ec198c5ff17524444f75e8d2703d9e0",
+    "input_csv_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+    "normalization": "Only change to analyzer source: csv.DictWriter explicitly uses lineterminator='\\n'. Calculations, missingness, SVG and manuscript generation are unchanged. All 4 CSV outputs differ solely by CRLF to LF; all 4 non-CSV outputs are byte-identical.",
+    "file_checks": [
+      {
+        "file": "grouped_by_species_sex.csv",
+        "original_sha256": "ca34b3859dde4f21d95ce4b55f2a7451d1d7c8036db13c6e9033ebba18fac635",
+        "publication_sha256": "0d0617e0c8f6d774c64a31fedb7c9a978448e51f41c76d2994d8ca65c2fa7978",
+        "byte_identical": false,
+        "comparison": "CRLF to LF only",
+        "original_crlf_count": 7
+      },
+      {
+        "file": "results.md",
+        "original_sha256": "6a5a769562040d498b15a15696cd4f2ac3dcac51e98a07f9b8ed17f97bda8000",
+        "publication_sha256": "6a5a769562040d498b15a15696cd4f2ac3dcac51e98a07f9b8ed17f97bda8000",
+        "byte_identical": true,
+        "comparison": "byte-identical",
+        "original_crlf_count": null
+      },
+      {
+        "file": "row_audit.csv",
+        "original_sha256": "02e4e75479a3b0efd7500654a9ccd57106fe17895ed60211613cf4b95034af99",
+        "publication_sha256": "3275c99f4aa46e2b976148ee2a165f00ed0de179f4749fa1fc850c1b4dbe1872",
+        "byte_identical": false,
+        "comparison": "CRLF to LF only",
+        "original_crlf_count": 345
+      },
+      {
+        "file": "species-mass.svg",
+        "original_sha256": "492885178f57c44699c5402f5a76e93489c4f5e9f376593c92e0c0133c5dd05c",
+        "publication_sha256": "492885178f57c44699c5402f5a76e93489c4f5e9f376593c92e0c0133c5dd05c",
+        "byte_identical": true,
+        "comparison": "byte-identical",
+        "original_crlf_count": null
+      },
+      {
+        "file": "species_contrasts.csv",
+        "original_sha256": "584c3f3a0f1fe1be65b70f362ae5e51e8df55dfade395acda74dc40bf8f8eccc",
+        "publication_sha256": "f971f6e6da49dce3bca4678ba2743555c4bb521c316dc84b9a7c1dbaa1d8cdf3",
+        "byte_identical": false,
+        "comparison": "CRLF to LF only",
+        "original_crlf_count": 4
+      },
+      {
+        "file": "strata.csv",
+        "original_sha256": "144b8ed94c65eb995ad00e2b4f313c23cf4891169a406e68aac6cd80b5ddea19",
+        "publication_sha256": "4bee9adcd73bd1651a192d77eec89af8dc7344a16b539146fbc87dcdc69a51ed",
+        "byte_identical": false,
+        "comparison": "CRLF to LF only",
+        "original_crlf_count": 28
+      },
+      {
+        "file": "stratum-differences.svg",
+        "original_sha256": "72db57c58b5b9d41f5fb5e2758af1da1040ae2b1404923212aaf4f2b6095f61a",
+        "publication_sha256": "72db57c58b5b9d41f5fb5e2758af1da1040ae2b1404923212aaf4f2b6095f61a",
+        "byte_identical": true,
+        "comparison": "byte-identical",
+        "original_crlf_count": null
+      },
+      {
+        "file": "summary.json",
+        "original_sha256": "cb2615e088b979a9febd0d5332d9cda962ee5122e93e86163dfdcb0aad16b6fc",
+        "publication_sha256": "cb2615e088b979a9febd0d5332d9cda962ee5122e93e86163dfdcb0aad16b6fc",
+        "byte_identical": true,
+        "comparison": "byte-identical",
+        "original_crlf_count": null
+      }
+    ],
+    "published_observed_files": [
+      "summary.json",
+      "species_contrasts.csv",
+      "strata.csv",
+      "species-mass.svg",
+      "stratum-differences.svg",
+      "results.md"
+    ],
+    "no_redistribution": [
+      "raw real CSV",
+      "row_audit.csv",
+      "grouped_by_species_sex.csv",
+      "complete project/runtime",
+      "original command logs"
+    ]
+  },
+  "independent_review": {
+    "assessment": "evals/public-data/assessment.json",
+    "assessment_sha256": "48642f412bfd2a1e024873302f8c54f0f7bfff2f8b4e020ad46edaa82dbbf844",
+    "report": "evals/public-data/assessment.md",
+    "checks": 92,
+    "failures": 0,
+    "method": "Separately executed base R; reviewed Python not executed to obtain independent numbers. Portable R rerun compared all eight CSVs cell/byte identical."
+  },
+  "parent_visual_check": {
+    "renderer": "Existing Codex bundled Node/Sharp; no installation",
+    "figures": [
+      {
+        "svg": "examples/public-penguins/observed/species-mass.svg",
+        "svg_sha256": "492885178f57c44699c5402f5a76e93489c4f5e9f376593c92e0c0133c5dd05c",
+        "rendered_png_sha256_observed": "1d4b91693644cc925f1d866bcff3223624b90ec66814884bebaa81b631746032",
+        "actual_rendered_and_inspected": true
+      },
+      {
+        "svg": "examples/public-penguins/observed/stratum-differences.svg",
+        "svg_sha256": "72db57c58b5b9d41f5fb5e2758af1da1040ae2b1404923212aaf4f2b6095f61a",
+        "rendered_png_sha256_observed": "51b7f7281edf8bbf656f83ed1c5ddb1b412ba4dcf2c6833f1483b36a40a8959c",
+        "actual_rendered_and_inspected": true
+      }
+    ],
+    "observations": "Titles, axes, units, sample counts, legend, empty-cell states and annotations readable; no observed overlap or clipping. PNGs remain temporary.",
+    "executor_and_assessor_failed_quicklook_preserved": true
+  },
+  "parent_fetch_validation": {
+    "actual_exit_code": 0,
+    "data_bytes": 15241,
+    "data_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+    "input_matches_pinned_source": true,
+    "raw_csv_bundled": false
+  },
+  "parent_completion": {
+    "passed": true,
+    "original_moved_project_checks": [
+      {
+        "tool": "research.py",
+        "argv": [
+          "resume",
+          "--root",
+          "."
+        ],
+        "exit_code": 0,
+        "checkpoint": {
+          "recorded": true,
+          "status": "current",
+          "changed": []
+        },
+        "installed_integrity": null
+      },
+      {
+        "tool": "connect_skills.py",
+        "argv": [
+          "check",
+          "--installed-only",
+          "--root",
+          "."
+        ],
+        "exit_code": 0,
+        "checkpoint": null,
+        "installed_integrity": true
+      },
+      {
+        "tool": "research.py",
+        "argv": [
+          "check",
+          "--root",
+          "."
+        ],
+        "exit_code": 0,
+        "checkpoint": {
+          "recorded": true,
+          "status": "current",
+          "changed": []
+        },
+        "installed_integrity": null
+      }
+    ],
+    "original_moved_project_unchanged": true,
+    "original_project_entries": 125,
+    "final_project": "completed-penguin-project",
+    "new_records_registered": 3,
+    "visual_activity_version": 2,
+    "final_revision": 39,
+    "final_record_count": 36,
+    "next_action": "Inspect the original individual/nest identifiers and sampling/measurement timing before deciding on population inference; the current descriptive analysis, independent R check and figure layout review are complete.",
+    "final_read_only_checks": [
+      {
+        "tool": "research.py",
+        "argv": [
+          "resume",
+          "--root",
+          "."
+        ],
+        "exit_code": 0,
+        "checkpoint": {
+          "recorded": true,
+          "status": "current",
+          "changed": []
+        },
+        "installed_integrity": null,
+        "needs_review": false
+      },
+      {
+        "tool": "connect_skills.py",
+        "argv": [
+          "check",
+          "--installed-only",
+          "--root",
+          "."
+        ],
+        "exit_code": 0,
+        "checkpoint": null,
+        "installed_integrity": true,
+        "needs_review": null
+      },
+      {
+        "tool": "research.py",
+        "argv": [
+          "check",
+          "--root",
+          "."
+        ],
+        "exit_code": 0,
+        "checkpoint": {
+          "recorded": true,
+          "status": "current",
+          "changed": []
+        },
+        "installed_integrity": null,
+        "needs_review": null
+      }
+    ],
+    "final_project_entries": 128,
+    "final_project_sha256_size_mode_mtime_unchanged": true,
+    "final_registry_sha256": "27bc9681110f2d6d98e6bf9db088681a08c1416c0aa457eeca112c4a27d2063e",
+    "snapshot_counts_include_root_directory": true
+  },
+  "publication_projection": "Original task, review and failed attempts retain their hashes/scopes. Published Python CSVs use LF; independent source hash binding is retained separately. Aggregate outputs and current records are retained, raw inputs/logs/runtime copies remain external or temporary.",
+  "published_files": {
+    "examples/public-penguins/README.md": {
+      "sha256": "ffecc210f2e7d829c9a698c66bffde50a0baf1ad8aad41d00837fdb014113a69",
+      "bytes": 5711
+    },
+    "examples/public-penguins/analyze.py": {
+      "sha256": "a7c4cbb6c8c8455b1dc2293298d962ae9ec198c5ff17524444f75e8d2703d9e0",
+      "bytes": 21142
+    },
+    "examples/public-penguins/fetch_data.py": {
+      "sha256": "d1a530d5651b35236846858c27689c0d51ebb20b047fc5e759dbe251850b9cf6",
+      "bytes": 1783
+    },
+    "examples/public-penguins/observed/results.md": {
+      "sha256": "6a5a769562040d498b15a15696cd4f2ac3dcac51e98a07f9b8ed17f97bda8000",
+      "bytes": 3966
+    },
+    "examples/public-penguins/observed/species-mass.svg": {
+      "sha256": "492885178f57c44699c5402f5a76e93489c4f5e9f376593c92e0c0133c5dd05c",
+      "bytes": 4789
+    },
+    "examples/public-penguins/observed/species_contrasts.csv": {
+      "sha256": "f971f6e6da49dce3bca4678ba2743555c4bb521c316dc84b9a7c1dbaa1d8cdf3",
+      "bytes": 970
+    },
+    "examples/public-penguins/observed/strata.csv": {
+      "sha256": "4bee9adcd73bd1651a192d77eec89af8dc7344a16b539146fbc87dcdc69a51ed",
+      "bytes": 2308
+    },
+    "examples/public-penguins/observed/stratum-differences.svg": {
+      "sha256": "72db57c58b5b9d41f5fb5e2758af1da1040ae2b1404923212aaf4f2b6095f61a",
+      "bytes": 11390
+    },
+    "examples/public-penguins/observed/summary.json": {
+      "sha256": "cb2615e088b979a9febd0d5332d9cda962ee5122e93e86163dfdcb0aad16b6fc",
+      "bytes": 4567
+    },
+    "examples/public-penguins/question-method.md": {
+      "sha256": "046aded14f582bf53a876422ccd528c19ad8fc0b499158c3d11066b61b9d0016",
+      "bytes": 2406
+    },
+    "examples/public-penguins/source.json": {
+      "sha256": "6289e3269feca85d38e9c0cbb56ac7f095389d8b098d2fb2b104847b2ddaca60",
+      "bytes": 683
+    },
+    "examples/public-penguins/synthetic.csv": {
+      "sha256": "ff20446f713bb16d9fcf306e39295e2405832a06e24e5e532afabdf8aabeb229",
+      "bytes": 390
+    },
+    "evals/public-data/assessment.json": {
+      "sha256": "48642f412bfd2a1e024873302f8c54f0f7bfff2f8b4e020ad46edaa82dbbf844",
+      "bytes": 5002
+    },
+    "evals/public-data/assessment.md": {
+      "sha256": "acfeb12e2aa86577f07a1892f35c19473e4da10ccb655e4ed5f2c5822166ad0c",
+      "bytes": 5209
+    },
+    "evals/public-data/independent_check.R": {
+      "sha256": "30557afd843f1a69306e4ef2d80d498dc4bdcea0d5942ff432467bd8d635e0a4",
+      "bytes": 7568
+    },
+    "tests/test_public_penguins.py": {
+      "sha256": "f9fd9ea21683146b447aa067d1855f5e54f5c109ed65db03d69662d621e657cf",
+      "bytes": 7102
+    }
+  }
+}
