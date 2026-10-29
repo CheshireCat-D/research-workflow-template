@@ -28,7 +28,6 @@ class ReviewModeRecording(unittest.TestCase):
             'core/skill-bridge.md',
             'core/cli.py',
             'core/project.py',
-            'skills/rw-workflow/SKILL.md',
         })
         self.assertEqual(set(sources), {
             'skills/rw-review/SKILL.md',

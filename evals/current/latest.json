@@ -2,8 +2,8 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-recorded-task-scope",
-  "checked_at_utc": "2026-10-29T20:31:48.227592+00:00",
-  "scope": "Current usability interfaces, existing-material intake, saved research constraints, editable record correction and first-deliverable recovery; software regression and original research observations retain separate scopes.",
+  "checked_at_utc": "2026-10-29T22:01:22.956882+00:00",
+  "scope": "Final maintained runtime with shared rules kept in one protocol and necessary original resource bytes retained; current distribution/regression and earlier research tasks have separate identities.",
   "scientific_validity": "not-assessed",
   "publication_style": {
     "archive_name": "research-workflow-template.zip",
@@ -28,7 +28,7 @@
       "check_groups": 7,
       "receipt": {
         "identifier": "local-evidence:check-core.json",
-        "sha256": "238a7532c36f6e21ad5be9f745d5740cc17a9a969aa535ac8ba1df45d44aafe3"
+        "sha256": "d5fa3821f18f22d584d765fc8cf5fe70dd1da97bf24dff81341c8c0eb058093b"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,7 +36,7 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "37a8adb27214e86ab93131ca50e8dff9e4ad0ca7bfa0e214324c39fc9f766284",
+        "sha256": "5aa667039e84fbfc359b4f8c5295c66cae0678c01f7cc6ac9fa7bd45cffddc22",
         "files": 39
       }
     }
@@ -90,9 +90,10 @@
   },
   "preservation": {
     "frozen_d2_d3_legal_files_byte_identical": 424,
-    "scope": "Frozen case inputs, scientific programs, authored results and independent reviews remain unchanged. Original resource bytes are retained in existing guidance-history for old review bindings; the current usability record updates only its published test identity. Personal package excluded.",
+    "scope": "Original case inputs, scientific programs, authored results and independent reviews remain unchanged. Required historical source bytes stay in guidance-history; the workflow snapshot identical to current source was removed. Personal package excluded.",
     "previous_evaluation_files_byte_identical": 579,
-    "current_baseline_case_and_example_files_byte_identical": 613
+    "current_baseline_case_and_example_files_byte_identical": 614,
+    "current_baseline_commit": "cb2da7cee5819f5d7003b2d6bccc1235573b72ac"
   },
   "hosted_ci": {
     "source_of_truth": "https://github.com/CheshireCat-D/research-workflow-template/actions",
@@ -174,7 +175,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 72,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "5d4875d896fbb2e3ec3d68a821f0aa39c67747cd7b5aa6608fc720640c163efb",
+    "sha256": "fe1d4d543586c536ae5a0f6dde4c58627f3c737fb188f87478b2428bf81f77a4",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 65,
     "development_history_or_previous_editions_included": false,
@@ -268,7 +269,7 @@
       "new_schema_skill_or_runtime_dependency": false,
       "scope": "Actual extracted-user-ZIP command journeys with synthetic inputs; no human usability study or scientific certification."
     },
-    "current_agent_followthrough": {
+    "recorded_agent_followthrough": {
       "delivered_user_zip_sha256": "5d4875d896fbb2e3ec3d68a821f0aa39c67747cd7b5aa6608fc720640c163efb",
       "case": "Eight original synthetic animal weight records; first mentor discussion output and a separate fresh-context read-only recovery.",
       "initial_task_contexts": 1,
@@ -281,7 +282,8 @@
         "identifier": "local-evidence:forward-use-validation.json",
         "sha256": "aef355ba885e91739f8ec7098b0dabe056f8959cbb3efe8d1c66efed217a9cdc"
       },
-      "scope": "Bounded AI-agent follow-through and recovery, not a human trial, automatic-host invocation test or new research-content review."
+      "scope": "Bounded AI-agent follow-through and recovery, not a human trial, automatic-host invocation test or new research-content review.",
+      "source_commit": "cb2da7cee5819f5d7003b2d6bccc1235573b72ac"
     }
   },
   "public_worked_examples": {
@@ -339,15 +341,5 @@
     "parent_final_records": 36,
     "parent_final_revision": 39,
     "ci_scope": "Original synthetic arithmetic/input fixture and publication identity; no network, R or model/visual review in CI."
-  },
-  "evaluation_record_cleanup": {
-    "scope": "Current usability/public-data record projection and navigation; original scientific products, timed cases and review identities retained.",
-    "standalone_json_files_removed": 1,
-    "duplicate_json_bytes_removed": 3368,
-    "frozen_review": "evals/public-data/recording.json#independent_review.frozen_assessment",
-    "frozen_review_reconstructed_sha256": "48642f412bfd2a1e024873302f8c54f0f7bfff2f8b4e020ad46edaa82dbbf844",
-    "new_original_case_and_scientific_files_byte_identical": 17,
-    "default_values_and_source_aliases_semantically_equivalent": true,
-    "prior_scientific_content_review_renewed": false
   }
 }
