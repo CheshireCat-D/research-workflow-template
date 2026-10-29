@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 import unittest
+from replay_support import reviewed_resource
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -24,6 +25,10 @@ class ReviewModeRecording(unittest.TestCase):
         later_changes = json.loads((ROOT / 'evals/current/guidance-history.json').read_text(encoding='utf-8'))
         self.assertEqual(set(later_changes['resources']), {
             'skills/rw-review/references/submission-delivery.md',
+            'core/skill-bridge.md',
+            'core/cli.py',
+            'core/project.py',
+            'skills/rw-workflow/SKILL.md',
         })
         self.assertEqual(set(sources), {
             'skills/rw-review/SKILL.md',
@@ -76,7 +81,7 @@ class WritingTaskRecording(unittest.TestCase):
         record = json.loads((ROOT / 'evals/current/skill-task-checks.json').read_text(encoding='utf-8'))['direct_prose']
         self.assertIn(record['source_entrypoint'], record['guidance_sha256'])
         for name, expected in record['guidance_sha256'].items():
-            self.assertEqual(digest((ROOT / name).read_bytes()), expected, name)
+            self.assertEqual(digest(reviewed_resource(name, expected)), expected, name)
         cases = record['cases']
         self.assertEqual({case['id'] for case in cases}, {
             'agriculture-results', 'observational-association',
@@ -102,7 +107,7 @@ class RevisionWorkflowRecording(unittest.TestCase):
         })
         for name, expected in record['guidance_sha256'].items():
             source = (sources[name]['source_text'].encode('utf-8') if name in sources
-                      else (ROOT / name).read_bytes())
+                      else reviewed_resource(name, expected))
             self.assertEqual(digest(source), expected, name)
             if name in sources:
                 self.assertEqual(digest(source), sources[name]['sha256'], name)
@@ -123,7 +128,7 @@ class CitationTaskRecording(unittest.TestCase):
         self.assertIn(record['source_entrypoint'], record['guidance_sha256'])
         self.assertIn('skills/rw-literature/references/search-and-library.md', record['guidance_sha256'])
         for name, expected in record['guidance_sha256'].items():
-            self.assertEqual(digest((ROOT / name).read_bytes()), expected, name)
+            self.assertEqual(digest(reviewed_resource(name, expected)), expected, name)
         self.assertEqual(set(record['input_files']), {'draft.md', 'sources.md'})
         self.assertEqual(set(record['output_files']), {'report.md'})
         for group in ('input', 'output'):

@@ -46,9 +46,11 @@ You do not need to fill every field before starting or list the skill names in e
 
 If you have not created a project, the assistant can perform the initialization above for you. Open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
 
-> Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step.
+> Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step. After the first step, give the actual output path, a short conclusion, its saved / registered status and the next action.
 
 If the journal is undecided, write “undecided” and continue the research already possible. The target journal guides audience, scope and submission requirements; it is not an acceptance prediction.
+
+The assistant saves known interests, deadlines, resources and goals in project configuration, with material details in actual notes and source records. For a question card, analysis or manuscript you will continue using, ask: “Save and register this, and give me its file path.” A discussion or temporary sentence edit can simply return text. Configuration and correction commands are described under daily operations below.
 
 A chat interface may use the guide for discussion or editing according to its actual attachment capabilities. Uploading a file does not establish skill installation or local execution. Initialization, registration and recovery require real directory and command access. A brand or model name alone does not establish one-click compatibility.
 
@@ -68,7 +70,9 @@ python3 .agents/skills/_rw-runtime/tools/research.py resume --root . --format ma
 
 Tell the assistant whether you need topic selection, literature positioning, proof review, experimental analysis, editing, or a response to reviewers. If your question is already settled, enter at the relevant stage; there is no requirement to restart topic selection.
 
-For a manuscript that has not been registered, you can begin with a local task. When you need persistent project management, create a separate project and have the assistant register the actual materials without overwriting the original manuscript directory.
+For a manuscript that has not been registered, you can begin with a local task. When you need persistent management, create a new RWT project beside the original folder, retain the originals, copy only materials needed now, and agree which working copies to edit thereafter. External or controlled materials can retain a locator; local checks do not track changes to those originals. Parent paths, absolute material paths and symbolic links do not replace intake. Complete [material-intake and correction examples](docs/user-package-guide.en.md) are also included in the current user package.
+
+For a new conversation, open the same research project. Ask the assistant to read its configuration, records and recovery summary, check material changes, then continue the saved next action. Do not initialize it again.
 
 ## What the nine skills do
 
@@ -127,10 +131,14 @@ Usually, you can describe the task in chat and let the assistant register the wo
 | Read a recovery summary | `python3 tools/research.py resume --root PROJECT --format markdown` |
 | List IDs and versions for one record kind | `python3 tools/research.py show --root PROJECT --kind statement` |
 | Read one complete record | `python3 tools/research.py show --root PROJECT --kind statement --id S1` |
+| Export an editable record object | `python3 tools/research.py show --root PROJECT --kind statement --id S1 --data-only` |
 | Add a method or target venue | `python3 tools/research.py configure --root PROJECT --add-method formal-theory --venue 'Target journal'` |
+| Save an interest, deadline and resources | `python3 tools/research.py configure --root PROJECT --interest 'Current question' --deadline 'Within four weeks' --add-capability 'Existing CSV and R environment'` |
 | Save a concrete next action | `python3 tools/research.py checkpoint --root PROJECT --next-action 'The specific next action'` |
 
 Replace `PROJECT` with your actual project path and quote paths containing spaces. Replace `S1` with an existing statement ID. JSON examples for single and batch registration, standard input, and explicit version replacement are in the [detailed CLI guide](docs/07-core-usage.md).
+
+`configure --budget` saves a budget; repeat `--add-capability` for several capabilities and omit unknown items. Recovery returns the saved startup information in `configuration`. When correcting a record, use the ordinary `show` response's `envelope.version` for `--expected-version` and the object exported with `--data-only` as editable input. Do not pass the entire query response to `register`.
 
 `options` also separates declared method guidance from explicit variant bindings in task records. Records without a variant remain method-level evidence; neither category certifies an entire specialty or method. [Subfield navigation](profiles/selection.md) gives entry examples for education, economics/management, psychology, philosophy and arts. Project copies do not include the full evaluation materials and report that evidence as unavailable locally.
 
@@ -143,6 +151,8 @@ The project's `project.json` and `records/registry.json` are the authoritative m
 - Exit code `2`: an argument, input, reference, or read/write operation was invalid or failed; follow the error message.
 
 `done` describes an activity's registered progress. When its inputs change, its effective state can become `stale`. The recovery summary identifies the relevant records, paths, and reasons. Review the changes, redo the necessary work, and explicitly update records and checkpoints. Do not rewrite scientific conclusions simply to make a check pass.
+
+`file_tracking` lists bound local files and source IDs without local evidence. `source.locator` stores identity only. To track file changes, register local `evidence`, connect it to the source through `source_ids`, and use that evidence as the activity input. Coverage and actual file drift are separate information; external locators are not automatically read.
 
 Local checks do not execute commands embedded in materials, upload data, submit manuscripts, or conduct research in the background. `scientific_validity: not-assessed` means that the tool has not certified scientific validity. Proofs, citations, experiments, and target-venue policies require their own verification. Follow the applicable submission policy for actual AI use and disclosure.
 

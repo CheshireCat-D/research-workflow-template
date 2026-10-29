@@ -52,12 +52,17 @@ def parser():
     query.add_argument('--root', required=True)
     query.add_argument('--kind', choices=RECORD_KINDS)
     query.add_argument('--id')
+    query.add_argument('--data-only', action='store_true', help='Export one editable record; requires --kind and --id')
     config = commands.add_parser('configure', help='Update supported project configuration; does not certify venue or governance compliance')
     config.add_argument('--root', required=True)
     config.add_argument('--add-discipline', action='append', default=[])
     config.add_argument('--add-method', action='append', default=[])
     config.add_argument('--mode', choices=['light', 'structured', 'reproducible'])
     config.add_argument('--venue')
+    config.add_argument('--interest')
+    config.add_argument('--deadline')
+    config.add_argument('--budget')
+    config.add_argument('--add-capability', action='append', default=[])
     config.add_argument('--governance-applicability', choices=['unknown', 'applicable', 'not-applicable'])
     config.add_argument('--add-governance-requirement', action='append', default=[])
     for command in ('check', 'status', 'resume'):
@@ -79,7 +84,23 @@ def recovery_markdown(result):
              'Revision: ' + str(result['revision']), '',
              'Checkpoint status: ' + result['checkpoint']['status'], '',
              'Needs review: ' + str(result['needs_review']).lower(), '',
-             '## Findings', '']
+             '## Project context', '']
+    configuration = result['configuration']
+    context = [('Title', configuration['title']), ('Question / interest', configuration['interest']),
+               ('Disciplines', configuration['disciplines']), ('Methods', configuration['methods']),
+               ('Venue', configuration['deliverable']['venue']),
+               ('Deadline', configuration['resources']['deadline']), ('Budget', configuration['resources']['budget']),
+               ('Available capabilities', configuration['resources']['available_capabilities'])]
+    lines.extend(label + ': ' + json.dumps(value, ensure_ascii=False) for label, value in context)
+    tracking = result['file_tracking']
+    lines.extend(['', '## File tracking', '',
+                  'Bound local files: ' + str(tracking['local_file_count']),
+                  'Local paths: ' + json.dumps(tracking['local_files'], ensure_ascii=False),
+                  'Sources without local evidence: ' + json.dumps(tracking['source_ids_without_local_evidence'], ensure_ascii=False),
+                  'Source locators identify materials; their file contents are not inspected. '
+                  'Link a local evidence record through source_ids to track a local copy. '
+                  'Bound paths can be missing or changed; review the findings below.',
+                  '', '## Findings', ''])
     if not result['findings']:
         lines.append('None reported by this local inspection.')
     for finding in result['findings']:
@@ -148,10 +169,12 @@ def main(argv=None):
         elif args.command == 'register-batch':
             result = register_batch(args.root, read_input(args.file))
         elif args.command == 'show':
-            result = show(args.root, kind=args.kind, identifier=args.id)
+            result = show(args.root, kind=args.kind, identifier=args.id, data_only=args.data_only)
         elif args.command == 'configure':
             result = configure(args.root, add_disciplines=args.add_discipline,
                                add_methods=args.add_method, mode=args.mode, venue=args.venue,
+                               interest=args.interest, deadline=args.deadline, budget=args.budget,
+                               add_capabilities=args.add_capability,
                                governance_applicability=args.governance_applicability,
                                add_governance_requirements=args.add_governance_requirement)
         elif args.command == 'checkpoint':

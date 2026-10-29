@@ -8,7 +8,11 @@
 
 用户给定的项目根优先；否则当前目录含 `project.json` 时使用它。已有项目先运行 `resume --root PROJECT`，读取问题、登记和变化，再选择眼下所需的技能。`resume` 退出 1 时审阅发现；退出 2 时处理接口错误，不能假装已恢复。尚无项目且用户要求持续研究时，用 `init --output NEW --title TITLE` 创建新目录。单次解释或局部润色可以只交付文本，无须为了技能而建立项目。
 
+已有材料目录不等于已初始化项目。需要持续管理时，在旁边创建 RWT 项目，保留原件，并与用户明确哪些工作副本以后在项目内更新；不要悄悄改为跟踪一份不再更新的副本。外部或受控材料可只登记定位和访问范围。
+
 若指定学科或方法，先运行 `tools/research.py options` 或读 [稳定 ID 目录](../design/catalog.json)：例如数学证明可选 `--discipline natural-sciences --method formal-theory`，计算工作可选 `--method computational`。该只读查询不需要项目。`proof` 等变体用于方法绑定，不能直接作为项目方法 ID。尚未确定时省略这些选项；后续经用户澄清后，用 `configure` 更新项目配置，不直接改 JSON 或猜测 CLI 接受中文标签。
+
+已知的研究兴趣、期限、预算和可用能力分别用 `configure --interest`、`--deadline`、`--budget`、可重复的 `--add-capability` 保存，目标期刊用 `--venue`，学科与方法沿用稳定 ID。材料详情保留在实际笔记和来源记录中；未知项不补造。恢复时读取 `configuration`，不要只沿用旧聊天中的约束。
 
 ```text
 python3 TOOLKIT/tools/research.py init --output NEW --title TITLE
@@ -39,11 +43,15 @@ python3 TOOLKIT/tools/research.py checkpoint --root PROJECT --next-action TEXT
 
 完整可选字段与枚举以模式为准。`register` 接受一个 JSON 对象，`--file -` 从标准输入读取；`register-batch` 接受有序数组，在同一写锁内全部校验成功后才提交。被引用对象须在已有登记或批次前项中存在。需要当前版本与完整绑定时用只读 `show`；重复 ID 必须读取其版本后，显式使用 `--replace --expected-version N`，不直接改写 `records/registry.json`。作者笔记 `PROJECT.md` 不会自动同步回登记。
 
+`source.locator` 保存来源身份，不绑定该位置的文件。要检测本地材料变化，另登记 `location.kind=local` 的 `evidence`，用 `source_ids` 连接来源，并将该证据作为实际活动输入。`file_tracking` 显示本地文件及尚无本地证据的来源 ID；缺少本地绑定不会自动使外部来源过期，也不意味着该来源未读。修订登记时，普通 `show` 的 `envelope.version` 是替换版本；`show --kind KIND --id ID --data-only` 导出可编辑的记录对象，不能把整个查询响应回灌 `register`。
+
 `activity.status=done` 表示所声明工作已做；判断主张的 `assessment` 是另一项有依据、有范围、署明执行者的记录。手工证明没有使用形式化工具时，`formal_verification` 应保持未开始或不适用，不写成机器证明完成。核心输出的 `scientific_validity=not-assessed` 不随作者评估改变。
 
 ## 留下可恢复的下一步
 
 持续任务结束前运行只读 `check`，报告仍存在的错误、警告或输入漂移；按实际完成情况登记活动，再保存具体的下一步检查点。检查点不会抹去过期证据或活动。恢复后若材料或版本变化，先查明原因，复核并显式重新登记受影响工作，最后更新检查点。
+
+由助手完成所需登记。首次及后续交付都给出本轮已保存成果的实际路径、简短结论、保存／登记状态和具体下一步；尚未生成文件时直接说明。讨论或临时建议不必创建记录；需要留待后续使用的问题卡、分析结果、稿件或决定，按实际成果保存并关联现有记录，不另建一套台账。
 
 只读检查或仅给建议的请求不新增记录、不保存检查点。只有任务要求产物、登记或持续工作时才写入。项目内接入技能的生成副本有独立清单；其存在及完整性不等于宿主已选择某项技能，也不替代实际任务测试。
 

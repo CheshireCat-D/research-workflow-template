@@ -33,9 +33,19 @@ If the discipline or method is known, add options such as `--discipline law --me
 
 If you have not created a project, the assistant can perform the initialization above for you. If you already ran those commands, describe your task in the new project. To ask the assistant to create the project, open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
 
-> Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step.
+> Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step. After the first step, give the actual output path, a short conclusion, its saved / registered status and the next action.
 
 If the journal is undecided, write “undecided” and continue the research already possible. The target journal guides audience, scope and submission requirements; it is not an acceptance prediction.
+
+The assistant saves known interests, deadlines, resources and goals in the project, with material details in actual notes and source records. You do not need to write registration JSON. For a question card, analysis or manuscript that you will continue using, ask: “Save and register this, and give me its file path.” A discussion or temporary sentence edit can simply return text.
+
+To save or revise startup information manually, run from the toolkit root and replace `PROJECT` with the project path. Omit unknown items:
+
+```sh
+python3 tools/research.py configure --root PROJECT --interest 'Compare strata in existing animal body-mass data' --deadline '2026-11-30' --venue 'undecided' --add-capability 'Existing CSV and an available R environment'
+```
+
+Use IDs from `options` for disciplines and methods. Use `--budget` for a budget and repeat `--add-capability` for several capabilities. Recovery returns these values in `configuration`. Review the effect of a configuration change before saving a new checkpoint.
 
 A chat interface may use the guide for discussion or editing according to its actual attachment capabilities. Uploading a file does not establish skill installation or local execution. Initialization, registration and recovery require real directory and command access. A brand or model name alone does not establish one-click compatibility.
 
@@ -93,6 +103,8 @@ python3 tools/research.py show --root PROJECT --kind statement --id S1
 
 `resume`, `status`, `check` and `show` are read-only commands. `show --kind statement` lists IDs and versions for that record kind; add `--id S1` to read one complete record. Replace `S1` with an existing record ID. Use `register --kind KIND --file INPUT.json` for one record and `register-batch --file INPUT.json` for a batch. Use `--file -` to read standard input. Changing an existing record requires explicit version replacement. Preserve project versions and dependencies; do not clear or directly edit the registry.
 
+`file_tracking.local_files` lists the local paths actually bound to records; `source_ids_without_local_evidence` lists source IDs without local evidence bindings. A source locator alone does not track file contents. The coverage summary does not mark external sources stale or replace reading the materials.
+
 Save the next action at a stopping point:
 
 ```sh
@@ -116,6 +128,51 @@ python3 tools/research.py register-batch --root PROJECT --file statement-batch.j
 python3 tools/research.py show --root PROJECT --kind statement --id S1
 ```
 
+### Connect existing materials and detect changes
+
+If an existing folder has no `project.json`, create a new RWT project beside it; do not run `init` over that folder. Keep the originals and copy only the ordinary files needed now into the new project, such as `notes/data.csv`. Confirm the destination file does not already exist. Agree to update this working copy inside the project thereafter, so RWT does not inspect an old copy while work continues elsewhere. Materials that cannot be copied, or must remain in an external workspace, can use `external` / `controlled` locations and access notes; local checks do not detect changes to those originals. Parent paths, absolute material paths and symbolic links cannot bypass this choice.
+
+Ask the assistant: “Keep the original folder, connect the selected materials to a new project, tell me which files to update from now on, save the source and local evidence records, and give the first output path.”
+
+After the material exists at `PROJECT/notes/data.csv`, save the following as UTF-8 `material-batch.json`. This records material intake; no statistical analysis has been performed. Use new IDs if these IDs already exist.
+
+```json
+[
+  {"kind": "source", "record": {"id": "SRC-MATERIAL", "title": "Existing CSV material", "locator": "notes/data.csv", "version": "working-copy-1", "content_access": "not-read"}},
+  {"kind": "evidence", "record": {"id": "E-MATERIAL", "type": "local-material", "description": "Working copy for subsequent analysis", "provenance": "Copied from an existing material folder; originals retained", "location": {"kind": "local", "path": "notes/data.csv"}, "source_ids": ["SRC-MATERIAL"]}},
+  {"kind": "activity", "record": {"id": "A-MATERIAL", "title": "Connect existing material", "status": "done", "inputs": ["evidence:E-MATERIAL"], "note": "Working copy placed in the project and registered; analysis has not started."}}
+]
+```
+
+```sh
+python3 tools/research.py register-batch --root PROJECT --file material-batch.json
+python3 tools/research.py checkpoint --root PROJECT --activity A-MATERIAL --next-action 'Read notes/data.csv and check variables and the analysis unit'
+python3 tools/research.py resume --root PROJECT --format markdown
+```
+
+`source` stores identity. Local `evidence` linked through `source_ids` binds the file fingerprint. Changing `notes/data.csv` after this example makes recovery report the changed file and stale activity. Review the change, actually repeat affected work, and explicitly update evidence, activities and the checkpoint. Saving another checkpoint does not perform that review.
+
+### Correct an existing record
+
+The ordinary `show` response contains the current record version in `envelope.version`. Use `--data-only` together with `--kind` and `--id` to export an editable record, rather than feeding the entire query response back as input.
+
+```sh
+python3 tools/research.py show --root PROJECT --kind source --id SRC-MATERIAL
+python3 tools/research.py show --root PROJECT --kind source --id SRC-MATERIAL --data-only > source-edit.json
+```
+
+Edit `source-edit.json` to reflect the correction. If the version just read was 1, run the following; otherwise replace 1 with the actual `envelope.version`:
+
+```sh
+python3 tools/research.py register --root PROJECT --kind source --file source-edit.json --replace --expected-version 1
+```
+
+A source correction can make dependent activities stale; follow the review sequence above. On PowerShell, replace `python3` with `py -3 -X utf8`. To avoid shell-dependent output encodings, use this export command or ask the assistant to save JSON with UTF-8 file tools:
+
+```powershell
+py -3 -X utf8 -c "from pathlib import Path; import subprocess,sys; data=subprocess.check_output([sys.executable,'tools/research.py','show','--root','PROJECT','--kind','source','--id','SRC-MATERIAL','--data-only']); Path('source-edit.json').write_bytes(data)"
+```
+
 ## Moving and updating
 
 An installed project contains its required guidance and runtime. After moving the complete project, run from its root:
@@ -124,6 +181,8 @@ An installed project contains its required guidance and runtime. After moving th
 python3 .agents/skills/_rw-runtime/tools/research.py resume --root .
 python3 .agents/skills/_rw-runtime/tools/connect_skills.py check --installed-only --root .
 ```
+
+For a new conversation, open this same research project and ask: “Read the configuration, records and recovery summary, check material changes, then continue the saved next action.” The installed commands above also work when the toolkit has moved.
 
 To update the toolkit, obtain the new current user package and keep the research project. Pause assistants using the project, then run from the new toolkit:
 

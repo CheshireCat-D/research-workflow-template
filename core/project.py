@@ -28,6 +28,15 @@ def require(errors):
         raise CoreError('invalid_registration', '; '.join(errors[:12]))
 
 
+def require_record(kind, data):
+    if isinstance(data, dict) and 'envelope' in data:
+        raise CoreError('wrapped_record',
+                        'register expects the record data, not a show response. '
+                        'Export it with show --kind KIND --id ID --data-only; '
+                        'read the current expected version from normal show: envelope.version.')
+    require(validate_record(kind, data))
+
+
 def envelope(registry, reference):
     try:
         kind, identifier = reference.split(':', 1)
@@ -146,7 +155,10 @@ def load(files):
     try:
         project_raw, registry_raw = files.read('project.json'), files.read(REGISTRY)
     except FileNotFoundError as exc:
-        raise CoreError('incomplete_project', 'Project needs project.json and records/registry.json') from exc
+        raise CoreError('incomplete_project',
+                        'Project needs project.json and records/registry.json. '
+                        'Point --root at an initialized RWT project. For an existing materials folder, '
+                        'create a separate new project and follow the existing-materials section in the user guide.') from exc
     project, registry = parse_json(project_raw), parse_json(registry_raw)
     require(validate_project(project) + validate_registry(registry))
     require(validate_links(project, registry, files))
@@ -227,6 +239,17 @@ def inspect(files):
         elif kind == 'evidence':
             warnings.append({'code': 'evidence_not_inspected', 'record': kind + ':' + identifier,
                              'location_kind': entry['data']['location']['kind']})
+    locally_bound_sources = {
+        source_id
+        for entry in registry['records']['evidence'].values()
+        if entry['data']['location']['kind'] == 'local'
+        for source_id in entry['data'].get('source_ids', [])
+    }
+    file_tracking = {
+        'local_files': sorted(file_values),
+        'local_file_count': len(file_values),
+        'source_ids_without_local_evidence': sorted(set(registry['records']['sources']) - locally_bound_sources),
+    }
     states = activity_states(files, registry)
     for state in states:
         if state['effective_status'] == 'stale':
@@ -250,6 +273,7 @@ def inspect(files):
         'scientific_validity': 'not-assessed', 'governance_approval': 'not-assessed',
         'venue_compliance': 'not-assessed', 'errors': [], 'warnings': warnings,
         'findings': findings, 'counts': {k: len(v) for k, v in registry['records'].items()},
+        'configuration': project, 'file_tracking': file_tracking,
         'activities': states, 'cursor': registry['cursor'],
         'checkpoint': {'recorded': checkpoint is not None,
                        'status': ('stale' if changed else 'current') if checkpoint else 'not-recorded',
@@ -259,8 +283,12 @@ def inspect(files):
 
 def initialize(output, title, *, interest=None, disciplines=(), methods=(), mode='light', language='zh', entry='question'):
     target = Path(output).absolute()
+    exists_hint = ('Initialization requires a new project directory. '
+                   'Resume an existing RWT project with resume --root PROJECT. '
+                   'For a materials folder, choose a new sibling directory and follow '
+                   'the existing-materials section in the user guide; existing files are not overwritten.')
     if target.name in ('', '.', '..') or os.path.lexists(target):
-        raise CoreError('output_exists', 'Initialization requires a new project directory')
+        raise CoreError('output_exists', exists_hint)
     if not target.parent.is_dir():
         raise CoreError('missing_parent', 'The output parent directory must already exist')
     project_id = 'P' + uuid.uuid4().hex
@@ -282,7 +310,7 @@ def initialize(output, title, *, interest=None, disciplines=(), methods=(), mode
     try:
         target.mkdir(mode=0o700)
     except FileExistsError as exc:
-        raise CoreError('output_exists', 'Initialization requires a new project directory') from exc
+        raise CoreError('output_exists', exists_hint) from exc
     with ProjectFiles(target) as files:
         with files.lock():
             files.write('PROJECT.md', ('# ' + title + '\n\n' +
@@ -298,7 +326,7 @@ def initialize(output, title, *, interest=None, disciplines=(), methods=(), mode
 
 def _apply_registration(files, project, updated, kind, data, *, replace=False, expected_version=None):
     """Apply one sequential registration to a private candidate registry."""
-    require(validate_record(kind, data))
+    require_record(kind, data)
     if type(replace) is not bool or (expected_version is not None and
             (type(expected_version) is not int or expected_version < 1)):
         raise CoreError('version_conflict', 'replace must be boolean and expected_version must be a positive integer')
@@ -307,7 +335,10 @@ def _apply_registration(files, project, updated, kind, data, *, replace=False, e
     previous = collection.get(identifier)
     if previous:
         if not replace or expected_version != previous['version']:
-            raise CoreError('version_conflict', 'Existing ID needs --replace and its current --expected-version')
+            raise CoreError('version_conflict',
+                            'Existing ID needs --replace and its current --expected-version. '
+                            'Read envelope.version with show --kind ' + kind + ' --id ' + identifier +
+                            '; export editable record data with --data-only.')
     elif replace or expected_version is not None:
         raise CoreError('version_conflict', 'Cannot replace a record that does not exist')
     # Compute parent status before replacing the current activity. Each earlier
@@ -342,7 +373,7 @@ def _apply_registration(files, project, updated, kind, data, *, replace=False, e
 
 
 def register(root, kind, data, *, replace=False, expected_version=None):
-    require(validate_record(kind, data))
+    require_record(kind, data)
     with ProjectFiles(root) as files, files.lock():
         project, registry, _, _ = load(files)
         updated = deepcopy(registry)
@@ -362,7 +393,7 @@ def register_batch(root, operations):
             raise CoreError('invalid_batch', 'Each batch item needs kind and record, with optional replace and expected_version')
         if not isinstance(operation['kind'], str) or operation['kind'] not in RECORD_KINDS:
             raise CoreError('invalid_batch', 'Unknown batch record kind')
-        require(validate_record(operation['kind'], operation['record']))
+        require_record(operation['kind'], operation['record'])
     with ProjectFiles(root) as files:
         load(files)  # Invalid projects must not gain a new writer lock.
         with files.lock():
@@ -378,12 +409,14 @@ def register_batch(root, operations):
                     'revision': updated['revision'], 'scientific_validity': 'not-assessed', 'scope': SCOPE}
 
 
-def show(root, *, kind=None, identifier=None):
+def show(root, *, kind=None, identifier=None, data_only=False):
     """Read registered envelopes or version summaries, without taking a writer lock."""
     if identifier is not None and kind is None:
         raise CoreError('arguments', '--id requires --kind')
     if kind is not None and kind not in RECORD_KINDS:
         raise CoreError('arguments', 'Unknown record kind')
+    if data_only and (kind is None or identifier is None):
+        raise CoreError('arguments', '--data-only requires --kind and --id')
     with ProjectFiles(root) as files:
         project, registry, project_raw, registry_raw = load(files)
         result = {'passed': True, 'read_only': True, 'scope': SCOPE,
@@ -402,10 +435,11 @@ def show(root, *, kind=None, identifier=None):
                 result['records'] = {record_kind: summary(record_kind) for record_kind in RECORD_KINDS}
         if files.read('project.json') != project_raw or files.read(REGISTRY) != registry_raw:
             raise CoreError('concurrent_change', 'Metadata changed during the read-only query; retry')
-        return result
+        return result['envelope']['data'] if data_only else result
 
 
 def configure(root, *, add_disciplines=(), add_methods=(), mode=None, venue=None,
+              interest=None, deadline=None, budget=None, add_capabilities=(),
               governance_applicability=None, add_governance_requirements=()):
     """Update supported configuration fields through one atomic project write.
 
@@ -413,6 +447,7 @@ def configure(root, *, add_disciplines=(), add_methods=(), mode=None, venue=None
     existing checkpoint's config digest therefore becomes stale naturally.
     """
     add_disciplines, add_methods = tuple(add_disciplines), tuple(add_methods)
+    add_capabilities = tuple(add_capabilities)
     add_governance_requirements = tuple(add_governance_requirements)
     def candidate(project, registry, files):
         updated = deepcopy(project)
@@ -424,6 +459,14 @@ def configure(root, *, add_disciplines=(), add_methods=(), mode=None, venue=None
             updated['workflow_mode'] = mode
         if venue is not None:
             updated['deliverable']['venue'] = venue
+        if interest is not None:
+            updated['interest'] = interest
+        for field, value in (('deadline', deadline), ('budget', budget)):
+            if value is not None:
+                updated['resources'][field] = value
+        for capability in add_capabilities:
+            if capability not in updated['resources']['available_capabilities']:
+                updated['resources']['available_capabilities'].append(capability)
         if governance_applicability is not None:
             updated['governance']['applicability'] = governance_applicability
         for value in add_governance_requirements:

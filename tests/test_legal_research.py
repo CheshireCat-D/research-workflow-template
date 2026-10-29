@@ -14,7 +14,7 @@ import sys
 import tempfile
 import unittest
 
-from replay_support import ReplayHarness
+from replay_support import ReplayHarness, reviewed_resource
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -223,16 +223,19 @@ class LegalResearchIntegration(unittest.TestCase):
                     # read then, not an evolving shared workflow. Preserve that
                     # byte identity; current software/forward tasks run apart.
                     # Legal-specific resources remain tied to current sources.
-                    frozen = snapshot['sources'].get(source_path.as_posix())
-                    source_bytes = (frozen['source_text'].encode('utf-8') if frozen
-                                    else (ROOT/source_path).read_bytes())
+                    source_bytes = reviewed_resource(source_path.as_posix(), source_hash,
+                                                     snapshot['sources'])
                     self.assertEqual(hashlib.sha256(source_bytes).hexdigest(), source_hash)
                     self.assertEqual(source_hash, reviewed_sources[destination])
                     payload_path = destination.removeprefix('.agents/skills/')
                     self.assertIn(payload_path, payload)
-                    executed_bytes = (_rewrite_skill_links(frozen['source_text'],
-                                      source_path.as_posix()).encode('utf-8') if frozen
-                                      else payload[payload_path])
+                    if source_bytes == (ROOT/source_path).read_bytes():
+                        executed_bytes = payload[payload_path]
+                    elif source_path.as_posix().startswith('skills/'):
+                        executed_bytes = _rewrite_skill_links(source_bytes.decode('utf-8'),
+                                                             source_path.as_posix()).encode('utf-8')
+                    else:
+                        executed_bytes = source_bytes
                     executed_hash = hashlib.sha256(executed_bytes).hexdigest()
                     self.assertEqual(executed_hash, resource['executed_sha256'])
                     self.assertEqual(executed_hash, reviewed_executed[destination])

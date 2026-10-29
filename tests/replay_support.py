@@ -1,5 +1,6 @@
 """Shared isolated project reconstruction for recorded evaluation artifacts."""
 from pathlib import Path
+import hashlib
 import json
 import os
 import shutil
@@ -7,6 +8,23 @@ import subprocess
 import sys
 
 ROOT=Path(__file__).resolve().parents[1]
+
+
+def reviewed_resource(relative, expected_sha256, historical=None):
+    """Bind an old task to its actual source; never relabel current guidance."""
+    saved = (historical or {}).get(relative)
+    if saved is None:
+        history = json.loads((ROOT/'evals/current/guidance-history.json').read_text(encoding='utf-8'))
+        candidate = history['resources'].get(relative)
+        if candidate and candidate['sha256'] == expected_sha256:
+            saved = candidate
+    data = saved['source_text'].encode('utf-8') if saved else (ROOT/relative).read_bytes()
+    actual = hashlib.sha256(data).hexdigest()
+    # Early legal snapshots store text only; their independent review supplies
+    # the mandatory expected hash. Later snapshots also declare their own hash.
+    if actual != expected_sha256 or (saved and actual != saved.get('sha256', expected_sha256)):
+        raise AssertionError('Recorded resource identity differs: ' + relative)
+    return data
 
 
 class ReplayHarness:

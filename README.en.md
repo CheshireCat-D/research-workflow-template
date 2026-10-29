@@ -42,6 +42,8 @@ An agent with local file and command access can read the user guide, then start 
 
 > My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […].
 
+Ask the assistant to save the research constraints and return the actual path to the first saved output, a short conclusion and the next action. The user guide covers existing materials, registration and record corrections.
+
 If the journal is undecided, write “undecided” and continue the research already possible. The target journal guides audience, scope and submission requirements; it is not an acceptance prediction.
 
 `rw-review` supports structured review, optional isolated simulated reviewers, point-by-point responses and submission preparation. State the task directly; see the [full guide](USER_GUIDE.en.md#review-revision-responses-and-submission-materials) for examples.

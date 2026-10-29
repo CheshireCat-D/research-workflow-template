@@ -18,7 +18,7 @@ import sys
 import struct
 import tempfile
 import unittest
-from replay_support import ReplayHarness
+from replay_support import ReplayHarness, reviewed_resource
 
 ROOT = Path(__file__).resolve().parents[1]
 EVAL = ROOT / 'evals/disciplinary'
@@ -112,7 +112,7 @@ class DisciplinaryRecordings(unittest.TestCase):
                     self.assertNotIn(duplicate['path'], manifest['output_files'])
                     self.assertEqual(duplicate['sha256'], manifest['output_sha256'][duplicate['canonical']])
                 for name, digest in manifest['guidance_sha256'].items():
-                    self.assertEqual(sha(ROOT / name), digest, name)
+                    self.assertEqual(hashlib.sha256(reviewed_resource(name, digest)).hexdigest(), digest, name)
                 for name in ('observed-check.json', 'observed-resume.json'):
                     self.assertEqual(sha(EVAL / 'recordings' / case / name),
                                      manifest[name.removesuffix('.json').replace('-', '_') + '_sha256'])

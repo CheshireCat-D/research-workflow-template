@@ -159,7 +159,9 @@ class CoreCLITests(unittest.TestCase):
         for target in (self.project, empty, file):
             with self.subTest(target=target.name):
                 before = snapshot(target) if target.is_dir() else target.read_bytes()
-                self.invoke("init", "--output", target, "--title", "Replacement", expected=2)
+                report = self.invoke("init", "--output", target, "--title", "Replacement", expected=2)
+                self.assertEqual(report['errors'][0]['code'], 'output_exists')
+                self.assertIn('resume --root', report['errors'][0]['message'])
                 after = snapshot(target) if target.is_dir() else target.read_bytes()
                 self.assertEqual(after, before)
 
@@ -375,6 +377,37 @@ class CoreCLITests(unittest.TestCase):
         self.assertEqual({row["record"] for row in report["warnings"]}, {"evidence:E1", "evidence:E2"})
         self.assertEqual(report["governance_approval"], "not-assessed")
 
+    def test_source_only_coverage_is_explicit_and_local_evidence_detects_changes(self):
+        evidence = self.local()
+        self.register('source', self.source(locator='notes/data.txt'))
+        self.register('activity', self.activity(status='done', inputs=['source:SRC1']))
+        self.invoke('checkpoint', '--root', self.project, '--next-action', 'Review the current material')
+        path = self.project / 'notes/data.txt'
+        path.write_text('changed source-only material\n', encoding='utf-8')
+        before = snapshot(self.project)
+        report = self.invoke('resume', '--root', self.project)
+        self.assertEqual(report['file_tracking'], {'local_files': [], 'local_file_count': 0,
+                         'source_ids_without_local_evidence': ['SRC1']})
+        self.assertEqual(report['activities'][0]['effective_status'], 'done')
+        self.assertEqual(report['checkpoint']['status'], 'current')
+        self.assertEqual(snapshot(self.project), before)
+        # Only an explicit evidence binding makes the local copy a tracked input.
+        self.register('evidence', {**evidence, 'source_ids': ['SRC1']})
+        self.register('activity', self.activity(status='done', inputs=['evidence:E1']), replace=True, version=1)
+        self.invoke('checkpoint', '--root', self.project, '--next-action', 'Inspect the bound input')
+        path.write_text('changed explicitly bound material\n', encoding='utf-8')
+        before = snapshot(self.project)
+        report = self.invoke('resume', '--root', self.project, expected=1)
+        self.assertEqual(report['file_tracking'], {'local_files': ['notes/data.txt'], 'local_file_count': 1,
+                         'source_ids_without_local_evidence': []})
+        self.assert_stale(report, 'A1')
+        self.assertIn('file_changed', {row['code'] for row in report['findings']})
+        self.assertEqual(snapshot(self.project), before)
+        path.unlink()
+        report = self.invoke('resume', '--root', self.project, expected=1)
+        self.assertEqual(report['file_tracking']['local_files'], ['notes/data.txt'])
+        self.assertIn('file_missing', {row['code'] for row in report['findings']})
+
     def test_support_and_challenge_preserved_without_automatic_truth_assessment(self):
         self.register("statement", self.statement(type="interpretive"))
         self.register("evidence", self.local())
@@ -570,6 +603,30 @@ class CoreCLITests(unittest.TestCase):
         self.assertEqual(invalid["errors"][0]["code"], "arguments")
         self.assertEqual(snapshot(self.project), before)
 
+    def test_editable_record_export_roundtrip_rejects_wrappers_and_stale_versions(self):
+        original = self.source()
+        self.register('source', original)
+        before = snapshot(self.project)
+        shown = self.invoke('show', '--root', self.project, '--kind', 'source', '--id', 'SRC1')
+        exported = self.invoke('show', '--root', self.project, '--kind', 'source', '--id', 'SRC1', '--data-only')
+        self.assertEqual(exported, original)
+        for args in ((), ('--kind', 'source')):
+            report = self.invoke('show', '--root', self.project, '--data-only', *args, expected=2)
+            self.assertEqual(report['errors'][0]['code'], 'arguments')
+        wrapped = self.register('source', shown, replace=True, version=1, expected=2)
+        self.assertEqual(wrapped['errors'][0]['code'], 'wrapped_record')
+        self.assertIn('--data-only', wrapped['errors'][0]['message'])
+        self.assertEqual(snapshot(self.project), before)
+        exported['title'] = 'Corrected synthetic source title'
+        result = self.register('source', exported, replace=True, version=shown['envelope']['version'])
+        self.assertEqual(result['version'], 2)
+        old = self.registry()['history'][-1]['previous']
+        self.assertEqual(old['version'], 1)
+        self.assertEqual(old['data'], original)
+        before = snapshot(self.project)
+        self.register('source', exported, replace=True, version=1, expected=2)
+        self.assertEqual(snapshot(self.project), before)
+
     def test_show_rejects_a_metadata_snapshot_that_changes_during_query(self):
         from core.project import show
         from core.storage import CoreError, ProjectFiles
@@ -712,6 +769,10 @@ class CoreCLITests(unittest.TestCase):
         report = self.invoke("configure", "--root", self.project, "--add-discipline", "engineering",
                              "--add-method", "computational", "--mode", "reproducible",
                              "--venue", "Example journal, policy not assessed",
+                             "--interest", "Compare the next scoped synthetic alternatives",
+                             "--deadline", "2026-12-01", "--budget", "Two working days",
+                             "--add-capability", "Existing CSV", "--add-capability", "R environment",
+                             "--add-capability", "Existing CSV",
                              "--governance-applicability", "applicable",
                              "--add-governance-requirement", "Verify permission before accessing restricted material")
         self.assertTrue(report["configured"])
@@ -721,6 +782,9 @@ class CoreCLITests(unittest.TestCase):
         self.assertEqual(config["workflow_mode"], "reproducible")
         self.assertIn("engineering", config["disciplines"])
         self.assertIn("computational", config["methods"])
+        self.assertEqual(config['interest'], 'Compare the next scoped synthetic alternatives')
+        self.assertEqual(config['resources'], {'deadline': '2026-12-01', 'budget': 'Two working days',
+                         'available_capabilities': ['Existing CSV', 'R environment']})
         self.assertEqual(config["governance"]["applicability"], "applicable")
         self.assertEqual(report["governance_approval"], "not-assessed")
         self.assertEqual(report["venue_compliance"], "not-assessed")
@@ -728,10 +792,19 @@ class CoreCLITests(unittest.TestCase):
         stale = self.invoke("resume", "--root", self.project, expected=1)
         self.assertEqual(stale["checkpoint"]["changed"], ["project-config"])
         self.assertEqual(stale["revision"], report["registry_revision"])
+        self.assertEqual(stale['configuration'], config)
+        before = snapshot(self.project)
+        again = self.invoke('configure', '--root', self.project,
+                            '--interest', config['interest'], '--deadline', '2026-12-01',
+                            '--budget', 'Two working days', '--add-capability', 'Existing CSV')
+        self.assertFalse(again['configured'])
+        self.assertEqual(snapshot(self.project), before)
 
     def test_configure_rejects_invalid_changes_without_mutating_configuration_or_registry(self):
         for options in (("--add-discipline", "not-a-discipline"), ("--add-method", "unknown"),
                         ("--venue", " "), ("--add-governance-requirement", " "),
+                        ("--interest", " "), ("--deadline", " "), ("--budget", " "),
+                        ("--add-capability", " "),
                         ("--governance-applicability", "approved")):
             before = snapshot(self.project)
             self.invoke("configure", "--root", self.project, *options, expected=2)

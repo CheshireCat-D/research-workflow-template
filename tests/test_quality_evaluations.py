@@ -18,6 +18,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from replay_support import reviewed_resource
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -119,7 +120,7 @@ class QualityEvaluations(unittest.TestCase):
         bound_guidance = {name for group in groups.values() for name in group}
         self.assertEqual(bound_guidance, set(manifest['guidance_sha256']))
         for name, expected in manifest['guidance_sha256'].items():
-            self.assertEqual(sha(ROOT / name), expected, name)
+            self.assertEqual(hashlib.sha256(reviewed_resource(name, expected)).hexdigest(), expected, name)
         for case in manifest['review']['cases']:
             expected = 'review_math' if case['id'] in ('R17', 'R42') else 'review_empirical'
             self.assertEqual(case['guidance_group'], expected)

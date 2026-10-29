@@ -33,9 +33,19 @@ Windows 项目请放在普通本地目录，例如 `C:\Research\my-project`。�
 
 如果尚未建项目，可以让助手代为完成上面的初始化；已运行这些命令时，直接在新项目中说明任务。需要代建时，在能读取本地目录并执行命令的 Agent 中打开解压后的工具包，发送：
 
-> 请先阅读中文使用说明，检查环境，在旁边的新目录初始化独立研究项目并接入所需技能。我的专业／研究方向是【……】，目前的兴趣和想法是【……】，已有知识、文献、材料与可用资源是【……】，时间限制是【……】，希望发表在【……】期刊。选题还没确定时，请先帮我缩小问题；有多个合适方向时比较其依据、主要反驳和可行性，再选择一项最小验证。信息足够就先推进，只追问会影响下一步的关键缺口，保留实际来源、成果和可恢复的下一步。
+> 请先阅读中文使用说明，检查环境，在旁边的新目录初始化独立研究项目并接入所需技能。我的专业／研究方向是【……】，目前的兴趣和想法是【……】，已有知识、文献、材料与可用资源是【……】，时间限制是【……】，希望发表在【……】期刊。选题还没确定时，请先帮我缩小问题；有多个合适方向时比较其依据、主要反驳和可行性，再选择一项最小验证。信息足够就先推进，只追问会影响下一步的关键缺口，保留实际来源、成果和可恢复的下一步。完成第一步后，给出成果的实际路径、简短结论、保存／登记状态和下一步。
 
 尚未确定期刊时可以填“待定”，先推进当前可开展的研究。目标期刊用于核对读者、研究范围和投稿要求，不代表录用承诺。
+
+助手将已知兴趣、期限、资源和目标保存在项目中，材料详情保留在实际笔记和来源记录里。你无需自己编写登记 JSON；需要以后继续使用的问题卡、分析结果或稿件，可直接说“请保存并登记，给我文件路径”。一次讨论或临时改句只需交付文字。
+
+手动保存或调整启动信息时，从工具包根运行，将 `PROJECT` 换成项目路径；未知项可以省略：
+
+```sh
+python3 tools/research.py configure --root PROJECT --interest '比较已有动物体重数据的分层结果' --deadline '2026-11-30' --venue '待定' --add-capability '已有CSV和可用的R环境'
+```
+
+学科和方法使用 `options` 列出的 ID；预算用 `--budget`，多项能力可重复使用 `--add-capability`。恢复结果的 `configuration` 会带回这些信息。配置改变后先核对其影响，再保存新的检查点。
 
 普通聊天工具可以按实际附件能力参考指南、讨论或润色文本；能上传文件不代表已安装技能或能操作本地项目。完整初始化、登记和恢复需要实际宿主具备文件访问与命令执行能力。品牌或模型名称本身不是接入验证，未实测的平台不列作一键兼容。
 
@@ -91,6 +101,8 @@ python3 tools/research.py show --root PROJECT --kind statement --id S1
 
 `resume`、`status`、`check` 和 `show` 是只读命令；`show --kind statement` 列出该类记录的 ID 与版本，加 `--id S1` 查看一条完整记录。`S1` 应替换成已有记录 ID。登记使用 `register --kind KIND --file INPUT.json`，批量使用 `register-batch --file INPUT.json`，也可用 `--file -` 从标准输入读取。已有记录的修改需要显式版本替换；保留项目的版本与依赖，不能直接清空或改写登记簿。
 
+`file_tracking.local_files` 列出实际绑定的本地路径，`source_ids_without_local_evidence` 列出尚无本地证据绑定的来源 ID。来源地址本身不追踪文件内容；覆盖摘要不把外部来源标成过期，也不替代材料阅读。
+
 工作告一段落后保存下一步：
 
 ```sh
@@ -114,6 +126,51 @@ python3 tools/research.py register-batch --root PROJECT --file statement-batch.j
 python3 tools/research.py show --root PROJECT --kind statement --id S1
 ```
 
+### 已有材料接入与文件变化
+
+已有文件夹尚无 `project.json` 时，在它旁边创建新 RWT 项目，不对原目录运行 `init`。保留原件，只把本轮需要的普通文件放入新项目，例如 `notes/data.csv`；先确认目标文件不存在。明确以后在项目内更新这份工作副本，避免原目录继续更新而 RWT 只检查旧副本。不能复制或需要保留外部工作位置的材料，使用 `external`／`controlled` 定位和访问说明，其原件变化不由本地检查检测。不能用父路径、绝对材料路径或符号链接绕过这一选择。
+
+可以让助手完成接入：“保留原文件夹，把选定材料接入新项目，说明后续更新哪份文件，保存来源与本地证据，并给出首份成果路径。”
+
+材料已位于 `PROJECT/notes/data.csv` 后，将下面内容保存为 UTF-8 的 `material-batch.json`。这里只完成材料接入，尚未执行统计分析；已有同名 ID 时换用新 ID。
+
+```json
+[
+  {"kind": "source", "record": {"id": "SRC-MATERIAL", "title": "已有CSV材料", "locator": "notes/data.csv", "version": "working-copy-1", "content_access": "not-read"}},
+  {"kind": "evidence", "record": {"id": "E-MATERIAL", "type": "local-material", "description": "后续分析使用的工作副本", "provenance": "从已有材料目录复制，保留原件", "location": {"kind": "local", "path": "notes/data.csv"}, "source_ids": ["SRC-MATERIAL"]}},
+  {"kind": "activity", "record": {"id": "A-MATERIAL", "title": "接入已有材料", "status": "done", "inputs": ["evidence:E-MATERIAL"], "note": "工作副本已放入项目并登记；分析尚未开始。"}}
+]
+```
+
+```sh
+python3 tools/research.py register-batch --root PROJECT --file material-batch.json
+python3 tools/research.py checkpoint --root PROJECT --activity A-MATERIAL --next-action '读取 notes/data.csv，核对变量与分析单位'
+python3 tools/research.py resume --root PROJECT --format markdown
+```
+
+`source` 只保存来源身份；通过 `source_ids` 连接的本地 `evidence` 才绑定文件指纹。上例之后修改 `notes/data.csv`，恢复会指出文件及活动过期。先审阅修改，实际重做受影响工作，再显式更新证据、活动和检查点；另存一份检查点不能替代复核。
+
+### 纠正一条已有登记
+
+普通 `show` 返回的 `envelope.version` 是该记录当前版本。`--data-only` 仅与 `--kind`、`--id` 一起使用，导出可编辑记录；输入不是整个查询响应。
+
+```sh
+python3 tools/research.py show --root PROJECT --kind source --id SRC-MATERIAL
+python3 tools/research.py show --root PROJECT --kind source --id SRC-MATERIAL --data-only > source-edit.json
+```
+
+按实际内容编辑 `source-edit.json`。如果刚才查询的版本为 1，可运行下面命令；已有其他版本时，把 1 换成实际的 `envelope.version`：
+
+```sh
+python3 tools/research.py register --root PROJECT --kind source --file source-edit.json --replace --expected-version 1
+```
+
+更正来源可能使引用它的活动过期，继续沿上面的复核流程处理。PowerShell 中把 `python3` 换成 `py -3 -X utf8`；为避免不同 shell 的重定向编码差异，导出可用下面命令，或让助手用 UTF-8 文件工具保存 JSON：
+
+```powershell
+py -3 -X utf8 -c "from pathlib import Path; import subprocess,sys; data=subprocess.check_output([sys.executable,'tools/research.py','show','--root','PROJECT','--kind','source','--id','SRC-MATERIAL','--data-only']); Path('source-edit.json').write_bytes(data)"
+```
+
 ## 搬迁与更新
 
 安装后的项目包含所需指导和运行时。搬迁完整项目后，可从项目根运行：
@@ -122,6 +179,8 @@ python3 tools/research.py show --root PROJECT --kind statement --id S1
 python3 .agents/skills/_rw-runtime/tools/research.py resume --root .
 python3 .agents/skills/_rw-runtime/tools/connect_skills.py check --installed-only --root .
 ```
+
+换新对话时也打开这个研究项目，并说：“请读取配置、登记和恢复摘要，先核对材料变化，再继续已保存的下一步。”上面的项目内命令可在工具包不在原位置时使用。
 
 更新工具包时，取得新的当前用户包，保留研究项目；暂停正在使用该项目的助手，再从新工具包运行：
 

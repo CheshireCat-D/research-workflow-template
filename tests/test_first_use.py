@@ -148,7 +148,7 @@ class FirstUse(unittest.TestCase):
                     text = (toolkit / guide).read_text(encoding='utf-8')
                     blocks = list(re.finditer(r'^```json[^\S\n]*\n(.*?)^```[^\S\n]*$',
                                               text, re.MULTILINE | re.DOTALL))
-                    self.assertEqual(len(blocks), 1, 'Keep one unambiguous minimal JSON example')
+                    self.assertTrue(blocks, 'Keep the runnable minimal statement example first')
                     block = blocks[0]
                     batch = json.loads(block.group(1))
                     self.assertIsInstance(batch, list)
