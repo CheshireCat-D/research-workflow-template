@@ -1,0 +1,316 @@
+{
+  "schema": "rwt-literature-source-audit-v1",
+  "audit_completed_at_utc": "2026-10-29T14:13:23Z",
+  "roles": {
+    "original_executor": "Codex agent named in original report",
+    "auditor_compiler": "separate Codex subagent /root/real_literature_audit"
+  },
+  "original_report": {
+    "path": "local-task-artifacts/report.md",
+    "expected_sha256": "0f138340ca3b55ff7783dac44534b7a3e0c4f94fe87600a20871899c2c6447e0",
+    "observed_sha256_before": "0f138340ca3b55ff7783dac44534b7a3e0c4f94fe87600a20871899c2c6447e0",
+    "observed_sha256_after": "0f138340ca3b55ff7783dac44534b7a3e0c4f94fe87600a20871899c2c6447e0",
+    "bytes": 21183,
+    "modified": false
+  },
+  "scope": {
+    "primary_sources": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "additional_identity_checks": [
+      "S5",
+      "S6",
+      "S7",
+      "Curtin record for S2",
+      "old UGA redirect"
+    ],
+    "method": "Targeted primary-source visits via web tool; section/table/metadata checks; local algebra/numeric spot-check. Retrieved pages may be cached tool renditions.",
+    "web_open_requests": 25,
+    "web_find_requests": 12,
+    "web_search_queries_executed_by_auditor": 0,
+    "original_13_queries_replayed": false,
+    "original_search_counts_and_execution_not_independently_reconstructed": true,
+    "not_done": [
+      "full-text systematic search",
+      "all 88 displayed items screened",
+      "raw bird-data acquisition",
+      "source PDF/image QA",
+      "Excel macro execution",
+      "source-provided references all rechecked",
+      "original access failures all replayed",
+      "author contact",
+      "RWT edits",
+      "personal-package reads",
+      "installations"
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://arriveguidelines.org/arrive-guidelines/study-design/1b/explanation",
+      "identity_status": "official current page verified",
+      "anchors": [
+        "Explanation paragraphs 2-6 (extraction lines 20-26)"
+      ],
+      "audit_access": "body text retrieved",
+      "claim_support": "matches report within stated scope"
+    },
+    {
+      "id": "S2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10239017/",
+      "doi": "10.1016/j.psj.2023.102698",
+      "pmid": "37245437",
+      "authors_ordered": [
+        "GM Pesti",
+        "L Billard",
+        "S-B Wu",
+        "NK Morgan",
+        "PS Taylor",
+        "S de las Heras-Saldana"
+      ],
+      "online_date": "2023-04-12",
+      "issue": "102(7):102698; 2023-07",
+      "identity_status": "verified against PMC; Curtin same DOI",
+      "anchors": [
+        "Materials and Methods (lines 156-175)",
+        "Table 2 (209-222)",
+        "Discussion (335-339, 370-375)"
+      ],
+      "audit_access": "selected body/table text retrieved; no PDF/image QA",
+      "claim_support": "hierarchy matches report; source count inconsistency already disclosed in original"
+    },
+    {
+      "id": "S3",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13087773/",
+      "doi": "10.1016/j.psj.2026.106879",
+      "pmid": "41933528",
+      "authors_ordered": [
+        "CJ Maynard",
+        "K Thompson",
+        "A Mauromoustakos",
+        "CM Owens"
+      ],
+      "online_date": "2026-03-28",
+      "issue": "105(7):106879; 2026-07",
+      "identity_status": "verified against PMC",
+      "anchors": [
+        "Materials and methods (101-113)",
+        "Tables 1/2 and notes (147, 165-174, 208, 222-232)",
+        "Results and discussion (298-308)",
+        "References 20/21 (340-341)"
+      ],
+      "audit_access": "selected body/table text retrieved; PubMed cache miss",
+      "claim_support": "reported values and interpretation match; allocation randomization remains unverified"
+    },
+    {
+      "id": "S4",
+      "url": "https://fieldreport.caes.uga.edu/publications/B1417/pen-size-optimization-workbook-of-experimental-research-design-power-for-poultry/",
+      "authors_ordered": [
+        "Mi Yeon Shim",
+        "Gene M. Pesti"
+      ],
+      "publication_date": "2013-03-31",
+      "identifier": "UGA Bulletin 1417",
+      "identity_status": "verified; old extension URL redirects to same bulletin",
+      "anchors": [
+        "Why Is Estimating Experimental Power Important? (210-215)",
+        "What Can Be Concluded from POWER for Poultry? (268-273)",
+        "Status and Revision History (311-313)"
+      ],
+      "audit_access": "selected official body text retrieved; macros not downloaded/run",
+      "claim_support": "resource-tradeoff attribution matches report"
+    },
+    {
+      "id": "S5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17517755/",
+      "doi": "10.3168/jds.2006-612",
+      "authors_ordered": [
+        "NR St-Pierre"
+      ],
+      "record": "2007; J Dairy Sci 90 Suppl 1:E87-99",
+      "identity_status": "metadata verified",
+      "anchors": [
+        "PubMed metadata (179-193)",
+        "Abstract (246-251)"
+      ],
+      "audit_access": "metadata/abstract only; did not replay original publisher 403 requests",
+      "claim_support": "not used for unexamined full-text details"
+    },
+    {
+      "id": "S6",
+      "url": "https://academic.oup.com/jas/article/doi/10.1093/jas/skae088/7640097",
+      "doi": "10.1093/jas/skae088",
+      "authors_ordered": [
+        "Abigail K Jenkins",
+        "Jenna J Bromm",
+        "Jordan T Gebhardt",
+        "Jason C Woodworth",
+        "Robert D Goodband",
+        "Mike D Tokach",
+        "Joel M DeRouchey"
+      ],
+      "record": "2024; J Anim Sci 102:skae088",
+      "published": "2024-04-04",
+      "corrected_and_typeset": "2024-04-22",
+      "identity_status": "publisher metadata and author order verified",
+      "anchors": [
+        "OUP metadata (60-239)",
+        "Abstract (244-254)"
+      ],
+      "audit_access": "redirected to abstract page; PubMed returned only footer; PMC not attempted",
+      "claim_support": "candidate overlap assessed at abstract scope only"
+    },
+    {
+      "id": "S7",
+      "url": "https://scholarworks.uark.edu/poscpub/4/",
+      "doi": "10.1016/j.japr.2022.100324",
+      "authors_ordered": [
+        "CJ Maynard",
+        "DS Nelson",
+        "SJ Rochell",
+        "CM Owens"
+      ],
+      "record": "2023; J Appl Poult Res 32(1):100324",
+      "identity_status": "repository metadata matches S3 reference 20",
+      "anchors": [
+        "Repository author list (18-21), Citation (38-40)",
+        "S3 Methods and Reference 20"
+      ],
+      "audit_access": "repository record retrieved; full text not attempted",
+      "claim_support": "reuse relationship attributed to S3; no independent experiment counted"
+    }
+  ],
+  "deduplication": [
+    {
+      "members": [
+        "S2 PMC",
+        "S2 Curtin"
+      ],
+      "decision": "one work by matching DOI; byte/version equality not asserted"
+    },
+    {
+      "members": [
+        "S3 PMC",
+        "S3 PubMed identifier",
+        "S3 online/issue dates"
+      ],
+      "decision": "one publication; audit identity based on PMC, not failed PubMed fetch"
+    },
+    {
+      "members": [
+        "S4 old UGA URL",
+        "S4 Field Report URL"
+      ],
+      "decision": "one bulletin; redirect observed"
+    },
+    {
+      "members": [
+        "S3",
+        "S7"
+      ],
+      "decision": "different publications with reused male-trial data; do not count as independent replication"
+    },
+    {
+      "members": [
+        "related 2023 conference abstract"
+      ],
+      "decision": "independence not established; excluded as additional evidence"
+    }
+  ],
+  "errors_in_original_report": [],
+  "clarifications_and_public_adjustments": [
+    {
+      "id": "C1",
+      "severity": "precision",
+      "location": "S3 rounded live-weight values",
+      "adjustment": "Use exact table entries in public digest; original approximation did not change conclusion."
+    },
+    {
+      "id": "C2",
+      "severity": "eligibility condition",
+      "location": "recommended candidate B / S3 trial 2",
+      "adjustment": "Explicitly leave original treatment-randomization procedure unverified until source/data protocol is obtained; this condition was already required in original next-step checklist."
+    },
+    {
+      "id": "C3",
+      "severity": "model scope",
+      "location": "formula versus proposed subsampling",
+      "adjustment": "Separate population-model variance from conditional finite-pen without-replacement resampling; future housing-design changes require additional assumptions."
+    },
+    {
+      "id": "C4",
+      "severity": "source internal issue already disclosed",
+      "location": "S2 Methods versus Table 2",
+      "adjustment": "Retain disclosed count inconsistency; do not import prediction tables or silently correct source."
+    }
+  ],
+  "mathematical_check": {
+    "formula": "Var(tau_hat_1 - tau_hat_0) = 2/r * (sigma_p^2 + sigma_w^2/m)",
+    "conditions": "independent pens and residuals; independent components; common variances; no house-treatment confounding",
+    "result": "variance addition valid within stated model",
+    "numeric_spot_check": {
+      "rho": [
+        0,
+        0.01,
+        0.1,
+        0.3
+      ],
+      "SE_8x5_over_4x10": [
+        1.0,
+        0.9768,
+        0.8584,
+        0.7711
+      ],
+      "status": "independently recalculated with Python standard library; matches report"
+    }
+  },
+  "recommendation_assessment": {
+    "verdict": "proportionate conditional local design diagnostic; no substantive error requiring reversal",
+    "data_eligibility_confirmed": false,
+    "global_novelty_confirmed": false,
+    "feed_efficacy_assessed": false,
+    "randomization_unit": "determined by actual treatment assignment and independence, not number of individual measurements",
+    "boundary": "sampling among existing pens is not by itself an intervention on future housing/stocking design"
+  },
+  "public_reuse": {
+    "direct_third_party_body_quotes": 0,
+    "full_text_or_figures_or_tables_copied": false,
+    "source_paraphrase_target": "at most 150 English words equivalent per source in public note including related synthesis; short source summaries and minimal carry-over",
+    "third_party_relicensing": false,
+    "original_report_is_unchanged": true,
+    "measured_source_blocks_english_words_including_identity_access_and_main_summary": {
+      "S1": 98,
+      "S2": 124,
+      "S3": 122,
+      "S4": 96,
+      "S5": 37,
+      "S6": 44,
+      "S7": 52
+    },
+    "word_count_method": "Whitespace word counts after link targets are removed, covering each identity/access row plus main summary. The cross-source reuse statement adds at most 22 words to S3, retaining the 150-word cap. Source-derived substantive claims are confined to these blocks."
+  },
+  "outputs": {
+    "public-notes.md": {
+      "sha256": "ba5be32cd61cf86b0dcf4e36e9527f9c4be8f8c9239c52b980a2218eaa3fd24a",
+      "bytes": 13792
+    },
+    "source-audit.json": {
+      "self_sha256": "reported externally to avoid recursive digest"
+    }
+  },
+  "publication_normalization": {
+    "raw_audit_sha256": "b1d1a8527c7420def721e5d77288e4416bbf9a6c0e6e94f3bc7fe8260ab818ed",
+    "changed_fields": [
+      "/original_report/path"
+    ],
+    "scope": "Machine-local path replaced by artifact identifier; Q6 domain-term/site-filter description corrected while preserving the exact query; source judgments and numerical findings unchanged.",
+    "public_notes_before_execution_record_correction": {
+      "sha256": "371ceadda3a1544d2c22f06457041e87cb99f1eb35ec4ee165a0e64eb06fa01e",
+      "bytes": 13635
+    }
+  },
+  "execution_record_note": "Q6 is preserved exactly as issued but lacks a site: operator; no effective site filter is asserted in the published digest."
+}

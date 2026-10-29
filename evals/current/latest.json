@@ -1,9 +1,9 @@
 {
   "format_version": 1,
   "edition": "current",
-  "status": "passed-in-checked-software-and-synthetic-task-scope",
-  "checked_at_utc": "2026-10-28T23:07:01.119269+00:00",
-  "scope": "Current source regression and a clean user-runtime distribution, including explicit resource closure, portable evidence availability, archive identity and isolated execution. Existing research/content task records retain their original limited scope.",
+  "status": "passed-in-checked-software-and-recorded-task-scope",
+  "checked_at_utc": "2026-10-29T14:36:38.269344+00:00",
+  "scope": "Current source regression and clean user-runtime distribution, plus separately scoped real-source investigation, isolated review controls, synthetic resource adaptation and actual local table/source delivery.",
   "scientific_validity": "not-assessed",
   "publication_style": {
     "archive_name": "research-workflow-template.zip",
@@ -24,11 +24,11 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 237,
+      "test_methods": 261,
       "check_groups": 7,
       "receipt": {
-        "identifier": "local-evidence:check-core.json",
-        "sha256": "58a49dd1fc02b8effb36af48362db1bd46f957bf2db0f90204cee3d538efd2b1"
+        "identifier": "local-evidence:check-core-final.json",
+        "sha256": "4d5814bd0a25ade06b2eeccb04182ed0879015c91c09b87353930255b58a8b2e"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,8 +36,8 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "5b6bd263d3c8c4d282680e2bde5aeae1b367cc54dd62aa99a81539991d167813",
-        "files": 33
+        "sha256": "d9b9dce340504bafa50506c46bad11205e9b15a8466004bfd07ea6696179fb21",
+        "files": 36
       }
     }
   },
@@ -86,7 +86,8 @@
   },
   "preservation": {
     "frozen_d2_d3_legal_files_byte_identical": 424,
-    "scope": "Frozen case inputs, numerical algorithms, authored outputs and independent reviews unchanged. Existing historical-guidance evidence also contains the exact original core/protocol.md source bound by the old legal review; no old runnable release or renewed scientific content review. Personal package excluded."
+    "scope": "Frozen case inputs, numerical algorithms, authored outputs and independent reviews unchanged. Existing historical-guidance evidence also contains the exact original core/protocol.md source bound by the old legal review; no old runnable release or renewed scientific content review. Personal package excluded.",
+    "previous_evaluation_files_byte_identical": 557
   },
   "hosted_ci": {
     "source_of_truth": "https://github.com/CheshireCat-D/research-workflow-template/actions",
@@ -168,7 +169,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 72,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "2806a05190e600044b66c63230e178f66afce020660bbaaf3c1a15af796b38e1",
+    "sha256": "88c1d80026b2729be940ff8e2ec26af1122502fef77941a633dc51343255e98e",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 65,
     "development_history_or_previous_editions_included": false,
@@ -224,6 +225,40 @@
     "case_access": "Source repository or GitHub Source code archive; examples are excluded from user runtime.",
     "actual_forward_commands": 6,
     "moved_project_recovery_checked": true,
-    "scope": "Current guide and local engineering execution; no new research content review or UI skill-trigger validation."
+    "scope": "Current guide and local engineering execution; no new research content review or UI skill-trigger validation.",
+    "project_root_recovery": {
+      "command": "python3 .agents/skills/_rw-runtime/tools/research.py resume --root . --format markdown",
+      "actual_exit_code": 0,
+      "project_bytes_and_mtime_unchanged": true
+    }
+  },
+  "public_worked_examples": {
+    "paired_pens": "examples/paired-pens/README.md",
+    "table_manuscript": "examples/submission-table/README.md",
+    "input": "120 original synthetic bird records in 12 pens / 6 blocks",
+    "local_pdf_checks": {
+      "passes": 2,
+      "pages_rendered_and_inspected": 1,
+      "tables_inspected": 2,
+      "engine": "pdfTeX with booktabs and dcolumn"
+    },
+    "record": "evals/quality/manifest.json",
+    "scope": "Actual data analysis and source generation; local PDF compilation and visual inspection recorded separately from CI."
+  },
+  "research_quality_tasks": {
+    "manifest": "evals/quality/manifest.json",
+    "performed_literature_queries": 13,
+    "independent_primary_source_checks": 4,
+    "isolated_single_case_reviews": 4,
+    "clean_and_defective_cases": {
+      "clean": 2,
+      "defective": 2
+    },
+    "supported_major_findings_on_defective_cases": 2,
+    "unsupported_major_findings_observed": 0,
+    "synthetic_resource_update": true,
+    "actual_adaptation_registry_commands": 17,
+    "new_skill_entrypoints": 0,
+    "scope": "Small actual AI-agent exercises with separate review; CI preserves identities and recomputes finite calculations without live search, model review, or TeX."
   }
 }

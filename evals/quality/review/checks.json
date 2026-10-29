@@ -1,0 +1,101 @@
+{
+  "check_type": "exact_fraction_enumeration_and_float_arithmetic",
+  "runtime": {
+    "implementation": "cpython",
+    "python_version": "3.14.6",
+    "dependencies": "standard library only"
+  },
+  "inputs_sha256": {
+    "cases/R17.md": "f29691e6a4d546fd01a0c1150701a7d229b128a7a732f3993255bc1fdd91ced7",
+    "reports/R17.md": "96f6afa6748563ef794d3913b0f7f761487debc48a6cbaea93686c86426d2f7b",
+    "cases/R42.md": "d7cf1ca8dd1cfe434c13807f96024fae3ed407c4fcd8b4de4028dc966efd21f0",
+    "reports/R42.md": "3d7206371ff4d189caf0db444e6b07e36995e1518620c57fb10ce4130af03606",
+    "cases/R63.md": "9afd80b7b3af71486d49ec59ffc4d400ef21af3ae01c38d6525146ea296952f6",
+    "reports/R63.md": "c44b3ac34797e9d0bd85c6cf74a866884daf0bd834cb1ef33912b046afb7707d",
+    "cases/R88.md": "1525eb2367a1e6814e49caee11eff1e8cc1558da4d39e8d1bcec7a17221f9ad5",
+    "reports/R88.md": "025fb8cf7430cc1029d5c90f40b477e67648d7c4177399409f56ab1f0145f233",
+    "reference-key.json": "08b7b46735ebe577a084796e6e9eced6a1d636d3c53a43b93b7a8d242f557420"
+  },
+  "inputs_unchanged_during_check": true,
+  "R42": {
+    "n": 2,
+    "support": [
+      -1,
+      1
+    ],
+    "probabilities": [
+      "1/2",
+      "1/2"
+    ],
+    "construction": "X1=X2=Z",
+    "mean": "0",
+    "variance_each": "1",
+    "covariance": "1",
+    "variance_average": "1",
+    "claimed_variance": "1/2"
+  },
+  "paired_pen_checks": {
+    "differences": [
+      20,
+      -10,
+      30,
+      0,
+      10,
+      -20
+    ],
+    "mean_exact": "5",
+    "centered_sum_squares_exact": "1750",
+    "sample_variance_exact": "350",
+    "standard_error": 7.637626158259733,
+    "t5_critical_given": 2.5705818356363146,
+    "t5_cdf_at_given_critical": 0.975,
+    "reference_interval": [
+      -14.63314306980324,
+      24.63314306980324
+    ],
+    "t5_statistic": 0.6546536707079772,
+    "t5_two_sided_p": 0.5416045607931201,
+    "randomization_assignments": 64,
+    "ties": 20,
+    "strictly_more_extreme": 24,
+    "at_least_as_extreme": 44,
+    "p_exact": "11/16",
+    "p_decimal": 0.6875,
+    "signed_sum_counts": {
+      "-90": 2,
+      "-70": 4,
+      "-50": 6,
+      "-30": 10,
+      "-10": 10,
+      "10": 10,
+      "30": 10,
+      "50": 6,
+      "70": 4,
+      "90": 2
+    }
+  },
+  "R88_duplicated_record_checks": {
+    "offset_sum": 0,
+    "records": 60,
+    "sum_squares_exact": "17500",
+    "sample_variance_exact": "17500/59",
+    "naive_standard_error": 2.223398935157332,
+    "naive_t_statistic": 2.248809208701987,
+    "nominal_critical_given": 2.001,
+    "naive_interval_using_given_critical": [
+      0.5509787307501792,
+      9.44902126924982
+    ],
+    "independent_randomization_decisions": 6
+  },
+  "scope_limits": [
+    "Finite exact enumeration checks arithmetic and the sharp-null design distribution for these inputs; it is not a general validity theorem.",
+    "R17 is checked by analytic variance expansion, not by numerical examples.",
+    "The t5 calculation checks the stated conditional working model; randomization alone does not imply normal block differences.",
+    "No bird-level source records, external sources, formal proof checker, or reviewer execution logs were audited."
+  ],
+  "scope_normalization": {
+    "revision_kind": "non-content scope correction",
+    "note": "Additional local mathematical guidance was consulted during adjudication. Its contents and fingerprints are omitted from public artifacts and are not open-source RWT dependencies. Numerical results and all nine input SHA-256 values are unchanged. No new local-guidance reads were performed for this correction."
+  }
+}

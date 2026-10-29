@@ -54,10 +54,16 @@ A chat interface may use the guide for discussion or editing according to its ac
 
 ## If you already have a manuscript or research materials
 
-For a project already created with this toolkit, resume it first:
+For a project already created with this toolkit, run from the toolkit root and replace the project path with its actual location:
 
 ```sh
 python3 tools/research.py resume --root '/path/to/your/project' --format markdown
+```
+
+If you are already in the research project root, use its installed runtime:
+
+```sh
+python3 .agents/skills/_rw-runtime/tools/research.py resume --root . --format markdown
 ```
 
 Tell the assistant whether you need topic selection, literature positioning, proof review, experimental analysis, editing, or a response to reviewers. If your question is already settled, enter at the relevant stage; there is no requirement to restart topic selection.
@@ -92,6 +98,8 @@ See the [seven disciplinary examples](evals/disciplinary/README.md) for original
 
 For daily use, download `research-workflow-template.zip` from Releases. Cases and maintenance tests are in the source repository; download GitHub's `Source code` archive when you need them offline.
 
+For a data-to-delivery walkthrough, run the [paired-pen example](examples/paired-pens/README.md) to reproduce the figures shown in the promotional demonstration, then use the [table and manuscript example](examples/submission-table/README.md) to create aligned tables, editable source and an actual file manifest. Analysis and source generation use standard-library Python; PDF compilation needs the TeX environment listed in the example. See the [research-quality tasks](evals/quality/README.md) for real retrieval, review controls and adaptation to changed resources.
+
 ## Review, revision responses and submission materials
 
 These capabilities use the existing `rw-review` entry and expand only for the requested task:
@@ -108,7 +116,7 @@ Mode details: [structured and multiple reviews](skills/rw-review/references/revi
 
 ## Common daily operations
 
-Usually, you can describe the task in chat and let the assistant register the work. To operate the tools yourself:
+Usually, you can describe the task in chat and let the assistant register the work. Run the commands below from the toolkit root; inside a research project, use the installed runtime path shown above:
 
 | Purpose | Command |
 |---|---|

@@ -21,6 +21,10 @@ class ReviewModeRecording(unittest.TestCase):
         self.assertEqual(historical['recovered_from_commit'],
                          '6843fbef19fceb06c0774f0f3d12cd992f46157a')
         sources = historical['sources']
+        later_changes = json.loads((ROOT / 'evals/current/guidance-history.json').read_text(encoding='utf-8'))
+        self.assertEqual(set(later_changes['resources']), {
+            'skills/rw-review/references/submission-delivery.md',
+        })
         self.assertEqual(set(sources), {
             'skills/rw-review/SKILL.md',
             'skills/rw-review/references/review-response.md',
@@ -28,8 +32,14 @@ class ReviewModeRecording(unittest.TestCase):
         for name, expected in record['guidance_sha256'].items():
             # Bind the old task to the guidance actually read then. The
             # snapshot keeps this check self-contained in a source archive.
-            source = (sources[name]['source_text'].encode('utf-8') if name in sources
-                      else (ROOT / name).read_bytes())
+            if name in sources:
+                source = sources[name]['source_text'].encode('utf-8')
+            elif name in later_changes['resources']:
+                saved = later_changes['resources'][name]
+                source = saved['source_text'].encode('utf-8')
+                self.assertEqual(digest(source), saved['sha256'], name)
+            else:
+                source = (ROOT / name).read_bytes()
             self.assertEqual(digest(source), expected, name)
         self.assertEqual(set(record['input_files']), set(record['input_sha256']))
         for name, content in record['input_files'].items():

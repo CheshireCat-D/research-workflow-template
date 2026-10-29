@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "assessment_type": "post_report_reference_key_adjudication",
+  "counting_unit": "Distinct central correctness defects; downstream consequences of one defect are not double counted.",
+  "key_status": "valid_without_correction",
+  "key_corrections": [],
+  "results": [
+    {
+      "case_id": "R17",
+      "judgment": "no-major-error",
+      "reference_expected": "no-major-error",
+      "reference_key_valid": true,
+      "key_disagreement": false,
+      "supported_major_findings": 0,
+      "unsupported_major_findings": 0,
+      "missed_reference_defect": false,
+      "case_locations": [
+        "cases/R17.md:6-15"
+      ],
+      "report_locations": [
+        "reports/R17.md:5",
+        "reports/R17.md:9-13",
+        "reports/R17.md:17-21"
+      ],
+      "supported_findings": [],
+      "unsupported_findings": [],
+      "basis": "The stated pairwise zero covariances justify every canceled term in the variance expansion. Finite second moments suffice; independence, Gaussianity and additional experiments are unnecessary.",
+      "optional_suggestions": "The centered-variable expansion is explicitly optional and is not counted as a major error."
+    },
+    {
+      "case_id": "R42",
+      "judgment": "major-error-found",
+      "reference_expected": "major-error",
+      "reference_key_valid": true,
+      "key_disagreement": false,
+      "supported_major_findings": 1,
+      "unsupported_major_findings": 0,
+      "missed_reference_defect": false,
+      "case_locations": [
+        "cases/R42.md:6",
+        "cases/R42.md:9",
+        "cases/R42.md:13-15"
+      ],
+      "report_locations": [
+        "reports/R42.md:7-20",
+        "reports/R42.md:24-33"
+      ],
+      "supported_findings": [
+        {
+          "finding_id": "R42-M1",
+          "description": "Identical marginal distributions do not imply zero covariance; the resulting universal variance formula is false.",
+          "evidence": "For n=2 and X1=X2=Z with P(Z=-1)=P(Z=1)=1/2, covariance=1, Var(M2)=1, and the claim gives 1/2.",
+          "report_location": "reports/R42.md:7-20"
+        }
+      ],
+      "unsupported_findings": [],
+      "basis": "The exact two-point counterexample satisfies all original assumptions and falsifies the central variance conclusion. The expectation conclusion remains valid.",
+      "optional_suggestions": "The report correctly distinguishes sufficient pairwise uncorrelatedness from the weaker exact requirement that the covariance sum vanish for fixed n."
+    },
+    {
+      "case_id": "R63",
+      "judgment": "no-major-error",
+      "reference_expected": "no-major-error",
+      "reference_key_valid": true,
+      "key_disagreement": false,
+      "supported_major_findings": 0,
+      "unsupported_major_findings": 0,
+      "missed_reference_defect": false,
+      "case_locations": [
+        "cases/R63.md:6",
+        "cases/R63.md:9-14"
+      ],
+      "report_locations": [
+        "reports/R63.md:5",
+        "reports/R63.md:9-12",
+        "reports/R63.md:14-16",
+        "reports/R63.md:20"
+      ],
+      "supported_findings": [],
+      "unsupported_findings": [],
+      "basis": "Pen-level treatment assignment, six block contrasts, conditional t5 reference model and the sharp-null 44/64 randomization test are internally consistent. All stated arithmetic was recomputed.",
+      "optional_suggestions": "Estimand versus estimator is a terminology clarification, explicitly optional, and does not invalidate the test or require unrelated assumptions, raw data or experiments."
+    },
+    {
+      "case_id": "R88",
+      "judgment": "major-error-found",
+      "reference_expected": "major-error",
+      "reference_key_valid": true,
+      "key_disagreement": false,
+      "supported_major_findings": 1,
+      "unsupported_major_findings": 0,
+      "missed_reference_defect": false,
+      "case_locations": [
+        "cases/R88.md:6",
+        "cases/R88.md:9",
+        "cases/R88.md:11",
+        "cases/R88.md:14"
+      ],
+      "report_locations": [
+        "reports/R88.md:11-15",
+        "reports/R88.md:26-47",
+        "reports/R88.md:53-55"
+      ],
+      "supported_findings": [
+        {
+          "finding_id": "R88-M1",
+          "description": "Within-block duplicated bird-pair records are treated as sixty independent treatment contrasts despite whole-pen assignment.",
+          "evidence": "Common offsets cancel, leaving each of six block differences repeated ten times. The assignment mechanism supplies only six independent swaps and the exact sharp-null P value is 44/64=0.6875.",
+          "report_location": "reports/R88.md:11-47"
+        }
+      ],
+      "unsupported_findings": [],
+      "basis": "The naive SE, t and interval arithmetic is numerically correct under a false independence premise. That unit-of-analysis error invalidates the claimed significance. Consequent SE, df, interval and conclusion errors count as one central finding.",
+      "optional_suggestions": "The report's t5 analysis is explicitly conditional on a block-level model and its estimand clarification is explicitly not counted as another confirmed error."
+    }
+  ],
+  "scope": {
+    "content_inputs": [
+      "cases/R17.md",
+      "reports/R17.md",
+      "cases/R42.md",
+      "reports/R42.md",
+      "cases/R63.md",
+      "reports/R63.md",
+      "cases/R88.md",
+      "reports/R88.md",
+      "reference-key.json"
+    ],
+    "content_input_count": 9,
+    "content_inputs_sha256": {
+      "cases/R17.md": "f29691e6a4d546fd01a0c1150701a7d229b128a7a732f3993255bc1fdd91ced7",
+      "reports/R17.md": "96f6afa6748563ef794d3913b0f7f761487debc48a6cbaea93686c86426d2f7b",
+      "cases/R42.md": "d7cf1ca8dd1cfe434c13807f96024fae3ed407c4fcd8b4de4028dc966efd21f0",
+      "reports/R42.md": "3d7206371ff4d189caf0db444e6b07e36995e1518620c57fb10ce4130af03606",
+      "cases/R63.md": "9afd80b7b3af71486d49ec59ffc4d400ef21af3ae01c38d6525146ea296952f6",
+      "reports/R63.md": "c44b3ac34797e9d0bd85c6cf74a866884daf0bd834cb1ef33912b046afb7707d",
+      "cases/R88.md": "1525eb2367a1e6814e49caee11eff1e8cc1558da4d39e8d1bcec7a17221f9ad5",
+      "reports/R88.md": "025fb8cf7430cc1029d5c90f40b477e67648d7c4177399409f56ab1f0145f233",
+      "reference-key.json": "08b7b46735ebe577a084796e6e9eced6a1d636d3c53a43b93b7a8d242f557420"
+    },
+    "inputs_unchanged_during_check": true,
+    "assessor_exposure": "All four cases, all four reports and the key were read before final adjudication; this assessment is not blinded.",
+    "auxiliary_crosscheck": {
+      "inputs": [
+        "cases/R63.md",
+        "cases/R88.md"
+      ],
+      "withheld": [
+        "reports",
+        "reference-key.json"
+      ],
+      "method": "Separate-context case-only mathematical crosscheck; conclusion agreed, but agreement is not proof or human expert validation."
+    },
+    "performed": [
+      "Analytic variance expansion for R17",
+      "Exact two-point counterexample for R42",
+      "Fraction arithmetic for means and sums of squares",
+      "Exact enumeration of all 64 whole-pen sign assignments",
+      "Floating-point interval and naive-t recomputation",
+      "Elementary closed-form t5 CDF evaluation",
+      "Input SHA-256 before and after checks"
+    ],
+    "not_performed": [
+      "External literature or internet access",
+      "Original bird-record aggregation audit",
+      "Audit of reviewers' full execution histories",
+      "Formal theorem proving",
+      "Real-world study verification",
+      "Submission or input/report edits"
+    ],
+    "interpretation_limits": [
+      "Four exercise-specific judgments are not an overall accuracy estimate.",
+      "No human-expert certification or workflow-wide validity claim is made.",
+      "Finite calculations validate only the stated examples and distributions.",
+      "Nonrejection of a sharp null does not establish zero treatment effect."
+    ],
+    "additional_local_guidance": "The assessor did consult additional local mathematical guidance. Its contents and fingerprints are omitted from these public artifacts and are not declared as open-source RWT dependencies. The earlier blanket statement that no personal-package material was accessed was inaccurate.",
+    "scope_normalization": {
+      "revision_kind": "non-content scope correction",
+      "unchanged": [
+        "All four case judgments and finding counts",
+        "Report locations and case-specific reasoning",
+        "All nine case/report/key SHA-256 values",
+        "All computed numerical results"
+      ],
+      "corrected": [
+        "Removed the inaccurate claim that no personal-package material was accessed",
+        "Removed local guidance paths and fingerprints from public artifacts",
+        "Removed the requirement to run the original auxiliary script with a local-guidance dependency"
+      ],
+      "new_personal_guidance_reads": false
+    }
+  },
+  "computed_evidence_file": "checks.json",
+  "computation_provenance": {
+    "runtime": {
+      "implementation": "cpython",
+      "python_version": "3.14.6",
+      "dependencies": "standard library only"
+    },
+    "method": "Python standard-library exact rational arithmetic, exhaustive assignment enumeration and elementary floating-point calculations; checks.json records the completed computations. These public assessment files do not require running the original auxiliary script."
+  }
+}

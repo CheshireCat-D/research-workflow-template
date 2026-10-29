@@ -46,6 +46,8 @@ If the journal is undecided, write “undecided” and continue the research alr
 
 `rw-review` supports structured review, optional isolated simulated reviewers, point-by-point responses and submission preparation. State the task directly; see the [full guide](USER_GUIDE.en.md#review-revision-responses-and-submission-materials) for examples.
 
+Follow the [paired-pen calculation](examples/paired-pens/README.md) to reproduce the promotional example, then generate [aligned tables and editable manuscript source](examples/submission-table/README.md). The [research-quality tasks](evals/quality/README.md) record real retrieval, correct/defective review controls and a recommendation revised after resources changed.
+
 ## Checks and evidence
 
 ```sh
@@ -54,7 +56,7 @@ python3 -B tools/release_package.py check
 python3 -B tools/package_user.py check
 ```
 
-[Current checks](evals/current/latest.json), [release acceptance](docs/10-release-readiness.md) and [platform validation](docs/11-linux-validation.md) distinguish executed environments from untested targets. Active synthetic inputs, frozen task evidence and regression fixtures remain in the source repository's `evals/`. The user ZIP omits these development materials; the release guide gives its build and clean-runtime commands.
+[Current checks](evals/current/latest.json), [release acceptance](docs/10-release-readiness.md) and [platform validation](docs/11-linux-validation.md) distinguish executed environments from untested targets. Synthetic tasks, original real-source notes, frozen evidence and regression fixtures remain in the source repository's `evals/`. The user ZIP omits these development materials; the release guide gives its build and clean-runtime commands.
 
 The core performs local registration and inspection, without executing commands embedded in sources, uploading data or submitting manuscripts. Software success is separate from scientific validity, ethics approval and venue compliance. The tool does not include a model API or a background research service. Hosted CI success must be established by an actual repository run.
 

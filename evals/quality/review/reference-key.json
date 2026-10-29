@@ -1,0 +1,18 @@
+{
+  "R17": {
+    "expected": "no-major-error",
+    "basis": "Variance expansion is valid under pairwise zero covariance; no independence or normality needed."
+  },
+  "R42": {
+    "expected": "major-error",
+    "basis": "Identical marginals do not give zero covariance; take all X_i equal to the same nondegenerate variable for n>1."
+  },
+  "R63": {
+    "expected": "no-major-error",
+    "basis": "Six independent randomized pen contrasts; correct mean, t5 reference model and 44/64 sharp-null randomization test."
+  },
+  "R88": {
+    "expected": "major-error",
+    "basis": "Randomization is at pen level; ten ordinal bird pairs per block are subsamples, not sixty independent treatment contrasts. Correct randomization P is 44/64."
+  }
+}

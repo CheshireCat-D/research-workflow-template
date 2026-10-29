@@ -1,0 +1,311 @@
+{
+  "format_version": 1,
+  "scope": "Actual bounded research-quality tasks and original public examples. CI preserves their identities and reexecutes stated calculations; it does not rerun language-model review or online retrieval.",
+  "guidance_groups": {
+    "review_math": [
+      "skills/rw-review/SKILL.md",
+      "core/skill-bridge.md",
+      "core/protocol.md",
+      "skills/rw-validation/SKILL.md",
+      "skills/rw-writing/SKILL.md",
+      "profiles/methods/formal-theory.md"
+    ],
+    "review_empirical": [
+      "skills/rw-review/SKILL.md",
+      "core/skill-bridge.md",
+      "core/protocol.md",
+      "skills/rw-validation/SKILL.md",
+      "skills/rw-writing/SKILL.md",
+      "profiles/methods/measurement-experiment.md",
+      "profiles/methods/empirical-quantitative.md"
+    ],
+    "literature": [
+      "skills/rw-literature/SKILL.md",
+      "core/skill-bridge.md",
+      "core/protocol.md",
+      "skills/rw-literature/references/search-and-library.md",
+      "profiles/methods/evidence-synthesis.md"
+    ],
+    "adaptation": [
+      "skills/rw-candidates/SKILL.md",
+      "skills/rw-validation/SKILL.md",
+      "profiles/methods/measurement-experiment.md",
+      "profiles/methods/empirical-quantitative.md",
+      "core/skill-bridge.md",
+      "core/protocol.md"
+    ],
+    "delivery": [
+      "skills/rw-review/references/submission-delivery.md",
+      "examples/paired-pens/analyze.py",
+      "examples/paired-pens/observations.csv",
+      "examples/submission-table/build.py"
+    ]
+  },
+  "guidance_sha256": {
+    "core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "core/skill-bridge.md": "0d80276238dc47b60a3db9718cec1854d58ea3a5a4a181fd95aed61d30be3daf",
+    "examples/paired-pens/analyze.py": "2d8cccb372196693182ad35e3ab7ff60252f6d0094c16ea467b4373e3673ac36",
+    "examples/paired-pens/observations.csv": "ed33942e6a32eb713d7093d9e4f3fc01b17fe64ce69140130685d8b62994c145",
+    "examples/submission-table/build.py": "b2e89adc5533f8ac639365a68eef9eb45b50baf9c4ab4e0308f5dd0ffc5d7044",
+    "profiles/methods/empirical-quantitative.md": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+    "profiles/methods/evidence-synthesis.md": "0a9fccdfea15ffd8b30c30a56bcb8e5511d40d30bf8ea094ee47cf8ce8e4fbdc",
+    "profiles/methods/formal-theory.md": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+    "profiles/methods/measurement-experiment.md": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd",
+    "skills/rw-candidates/SKILL.md": "82e9930a22e5a5ba4ef61844ce9627da1763d5738f0f364dc3c9f3b9efa25c63",
+    "skills/rw-literature/SKILL.md": "e5dd402251a95c5b1b1673b1b50c9a0369ba2769f7e9eeb55f3b6e5cf7c61088",
+    "skills/rw-literature/references/search-and-library.md": "833e05ed6fe7cba0b27aeebe453ea6a537450e4d56a5f78e5b15e04794018e44",
+    "skills/rw-review/SKILL.md": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+    "skills/rw-review/references/submission-delivery.md": "08e09b8fa45428aa1e05969c80178d088f7d0a9383060081154b7d7203165f5b",
+    "skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+    "skills/rw-writing/SKILL.md": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d"
+  },
+  "review": {
+    "request": "Single-report technical correctness review of one supplied original excerpt; no novelty or acceptance assessment.",
+    "contexts": "Four fresh execution contexts, each receiving only its case and relevant RWT guidance; reference key and other reports withheld. Same model family.",
+    "cases": [
+      {
+        "id": "R17",
+        "input": "review/cases/R17.md",
+        "report": "review/reports/R17.md",
+        "guidance_group": "review_math"
+      },
+      {
+        "id": "R42",
+        "input": "review/cases/R42.md",
+        "report": "review/reports/R42.md",
+        "guidance_group": "review_math"
+      },
+      {
+        "id": "R63",
+        "input": "review/cases/R63.md",
+        "report": "review/reports/R63.md",
+        "guidance_group": "review_empirical"
+      },
+      {
+        "id": "R88",
+        "input": "review/cases/R88.md",
+        "report": "review/reports/R88.md",
+        "guidance_group": "review_empirical"
+      }
+    ],
+    "reference_key": "review/reference-key.json",
+    "assessment": "review/assessment.json",
+    "assessment_report": "review/assessment.md",
+    "calculation_evidence": "review/checks.json",
+    "assessor": "Separate post-report adjudicator; not blind to the four cases and reference key.",
+    "limits": "Two clean and two defective exercises; observed judgments are not a population accuracy estimate or human expert certification."
+  },
+  "literature": {
+    "report": "literature/report.md",
+    "independent_audit": "literature/source-audit.json",
+    "guidance_group": "literature",
+    "original_report_sha256": "0f138340ca3b55ff7783dac44534b7a3e0c4f94fe87600a20871899c2c6447e0",
+    "publication": "Condensed original source notes compiled after independent primary-source checks; full original task report remains local, digest recorded. Search query log is preserved; the audit did not replay the original search.",
+    "performed_queries": 13,
+    "primary_sources_checked_by_auditor": 4,
+    "network_required_for_ci": false
+  },
+  "adaptation": {
+    "report": "adaptation/report.md",
+    "receipt": "adaptation/state-receipt.json",
+    "request": "adaptation/resource-update.md",
+    "input": "adaptation/pen-summary.csv",
+    "script": "adaptation/calculate.py",
+    "result": "adaptation/results.json",
+    "guidance_group": "adaptation",
+    "original_stage1_report_sha256": "0f138340ca3b55ff7783dac44534b7a3e0c4f94fe87600a20871899c2c6447e0",
+    "scope": "Synthetic resource update after real literature investigation; local retrospective registration preserves old and new recommendations. Compact receipt retained, full temporary practice-project and per-command logs omitted.",
+    "independent_check": {
+      "schema": "adaptation-independent-check/1",
+      "judgment": "supported-with-stated-scope",
+      "necessary_content_corrections": [],
+      "input_fingerprints": {
+        "adaptation/resource-update.md": {
+          "sha256": "e1ca6a2d1af87e787758a3b6d12968208d0d38d644869eaaf66833a08d110878",
+          "mtime_ns": 1793283349778422648
+        },
+        "adaptation/pen-summary.csv": {
+          "sha256": "10d0bf2ee3d41978d4aff6defd23caa1aae72faf167b14dcb01270fc61de781a",
+          "mtime_ns": 1793283349778648731
+        },
+        "adaptation/calculate.py": {
+          "sha256": "d3a2919ed3911a5d374219e9b44a50046c79e5f76c1af632f2bc1add0ea0c0f8",
+          "mtime_ns": 1793283349777845397
+        },
+        "adaptation/results.json": {
+          "sha256": "f49fe334ac059a7863d0f3367ab58ee17e33d6f080a9c75264c38d1f0dc1be8d",
+          "mtime_ns": 1793283349778131106
+        },
+        "adaptation/report.md": {
+          "sha256": "2c99f7dea5150ff32ad8f0ed3a1d198b4e669858371dcd48480c9700374cd1b9",
+          "mtime_ns": 1793283349777356563
+        },
+        "adaptation/state-receipt.json": {
+          "sha256": "48999cfc5785f179c674b5d448c26609ed86b5d34f30bc4b2f53a655175a973c",
+          "mtime_ns": 1793283349777627188
+        }
+      },
+      "current_registry_sha256": "fc49b37dcc6c23410b22ee0c8e8b466522fc61b9b7256cd5cc46ff9983cf29bb",
+      "current_project_config_sha256": "91f9df47930fe0b2e80ce02427b02f34345c8e13bff3b0b4b260122f86854c42",
+      "evidence_layers": {
+        "original_execution_log_consistency": {
+          "log_sha256": "2ef88d42788d57bb9c32f2ee74b84958943491f50524df58b4aa144b7bae63e6",
+          "receipt_command_count": 17,
+          "raw_log_command_count": 17,
+          "all_normalized_argv_match": true,
+          "all_recorded_exit_codes_match": true,
+          "all_recorded_exit_codes_zero": true,
+          "all_recorded_stderr_empty": true,
+          "receipt_final_check_resume_and_calculation_stdout_fields_match": true,
+          "decision_v1_v2_snapshots_match_registry": true,
+          "timestamped_entries": 13,
+          "scope": "Faithful receipt abbreviation of the supplied local log, not independent proof that historical commands actually ran or ran in that order. The raw log is temporary and is not distributed."
+        },
+        "current_measured_state": {
+          "readonly_commands_executed_now": [
+            {
+              "command": "check",
+              "exit_code": 0,
+              "passed": true,
+              "read_only": true,
+              "checkpoint_status": "current",
+              "activity_effective_status": "done"
+            },
+            {
+              "command": "resume",
+              "exit_code": 0,
+              "passed": true,
+              "read_only": true,
+              "needs_review": false
+            },
+            {
+              "command": "show decision D_PRIORITY",
+              "exit_code": 0,
+              "passed": true,
+              "read_only": true,
+              "version": 2
+            }
+          ],
+          "revision": 18,
+          "scientific_validity": "not-assessed",
+          "errors": [],
+          "warnings": [],
+          "decision_v1_preserved_in_replace_previous": true,
+          "decision_v1_matches_receipt_and_logged_show": true,
+          "decision_v2_matches_receipt_and_logged_show": true,
+          "original_reason_preserved": true,
+          "all_bound_input_output_copies_match_hashes": true,
+          "project_files_compared": 11,
+          "project_hash_and_mtime_unchanged": true,
+          "snapshot_before_sha256": "902c763b0c90d2bfd3cfc651efb5407caddc0290db78b5141984e9c3f21a219a",
+          "snapshot_after_sha256": "902c763b0c90d2bfd3cfc651efb5407caddc0290db78b5141984e9c3f21a219a",
+          "all_six_adaptation_inputs_hash_and_mtime_unchanged": true,
+          "scope": "Fresh local registration/fingerprint/state checks only; no scientific validity certification."
+        },
+        "independent_content_arithmetic": {
+          "recommendation_change_supported": true,
+          "reason": "Only eight pen summaries, no bird-level or within-pen variance/WB records, no acquisition authorization and one hour remain. Defer individual-sampling/WB comparison; analyze the four block summaries descriptively.",
+          "individual_records_reconstructed": 0,
+          "reported_count_sum": 144,
+          "pen_count": 8,
+          "block_difference_count": 4,
+          "difference_g_exact": [
+            "50",
+            "-50",
+            "20",
+            "40"
+          ],
+          "mean_difference_g_exact": "15",
+          "group_mean_of_pen_means_kg_exact": {
+            "control": "1403/400",
+            "B": "1409/400"
+          },
+          "centered_sum_squares_g2_exact": "6100",
+          "sample_variance_g2_exact": "6100/3",
+          "sample_sd_g": 45.09249752822894,
+          "standard_error_g": 22.54624876411447,
+          "t3_critical": 3.1824463052837064,
+          "conditional_95_percent_bounds_g": [
+            -56.752226077363424,
+            86.75222607736342
+          ],
+          "leave_one_block_out_g_exact": [
+            "10/3",
+            "110/3",
+            "40/3",
+            "20/3"
+          ],
+          "all_results_json_arithmetic_matches": true,
+          "units_and_analysis_level_correct": true,
+          "interval_scope_correct": "Conditional on iid normal block differences; neither independence nor randomization established by this summary table, and no causal/feed-efficacy interval is claimed.",
+          "not_identified": [
+            "individual variability",
+            "within-pen variance",
+            "ICC",
+            "5-versus-10 bird sampling precision",
+            "power",
+            "WB endpoint",
+            "actual feed efficacy"
+          ],
+          "method": "Independent Fraction arithmetic and a separately expressed elementary t3 CDF inversion using the Python standard library; no supplied calculation output was regenerated or overwritten."
+        }
+      },
+      "scope_limits": [
+        "The original stage-one literature interpretation was not re-audited; its project copy hash and recorded rationale were checked.",
+        "Original history logs are consistency evidence only.",
+        "No new personal or system skills were loaded, no network or delegation was used, and no project or frozen evaluation file was modified.",
+        "The four-case review assessment was not changed."
+      ]
+    }
+  },
+  "delivery": {
+    "guidance_group": "delivery",
+    "input_sha256": "ca6877019423d0f8f8bd57a0ec909ec71ea53d573e69a70fdf8e27c237c5170d",
+    "tex_sha256": "b80e8e0491f74906effa4df11dffc6b3fb9f595d1e0e6b3c10e79375552ca86b",
+    "pdf_sha256_observed": "8a2d0ffcb4cd0ecfb4b7bdb7d2893f7dc3f8d49fa69c3f33ae6b6fc3ed1b1631",
+    "engine": "pdfTeX with booktabs and dcolumn",
+    "compile_passes": 2,
+    "pages_rendered_and_inspected": [
+      1
+    ],
+    "tables_inspected": [
+      1,
+      2
+    ],
+    "relevant_log_findings": [],
+    "reviewers": [
+      "implementation agent",
+      "parent independent final-page review"
+    ],
+    "scope": "Actual local compilation/rendering of the supplied example. CI tests CSV/source fidelity and hashes without requiring a TeX installation. PDF byte identity is host/build-specific."
+  },
+  "files": {
+    "README.md": "6b88f589d1e3546e95694cbceeb4ee09f07cc4da0732b270c8cdfad755465ec2",
+    "adaptation/calculate.py": "d3a2919ed3911a5d374219e9b44a50046c79e5f76c1af632f2bc1add0ea0c0f8",
+    "adaptation/pen-summary.csv": "10d0bf2ee3d41978d4aff6defd23caa1aae72faf167b14dcb01270fc61de781a",
+    "adaptation/report.md": "2c99f7dea5150ff32ad8f0ed3a1d198b4e669858371dcd48480c9700374cd1b9",
+    "adaptation/resource-update.md": "e1ca6a2d1af87e787758a3b6d12968208d0d38d644869eaaf66833a08d110878",
+    "adaptation/results.json": "f49fe334ac059a7863d0f3367ab58ee17e33d6f080a9c75264c38d1f0dc1be8d",
+    "adaptation/state-receipt.json": "48999cfc5785f179c674b5d448c26609ed86b5d34f30bc4b2f53a655175a973c",
+    "literature/report.md": "ba5be32cd61cf86b0dcf4e36e9527f9c4be8f8c9239c52b980a2218eaa3fd24a",
+    "literature/source-audit.json": "e50a539447587754e7183a85d75f1ddacd56bfbfed2816af661ceb136c598c60",
+    "review/assessment.json": "c395acf9506bdd3f81bf59a293d60bcc8eae6be33c0e47c8e628a81def1d2d31",
+    "review/assessment.md": "f345a943934a22e1e0fb4bcbdad0934e6b7dc1b6a2d8d5019c31fd5e8fdd75c6",
+    "review/cases/R17.md": "f29691e6a4d546fd01a0c1150701a7d229b128a7a732f3993255bc1fdd91ced7",
+    "review/cases/R42.md": "d7cf1ca8dd1cfe434c13807f96024fae3ed407c4fcd8b4de4028dc966efd21f0",
+    "review/cases/R63.md": "9afd80b7b3af71486d49ec59ffc4d400ef21af3ae01c38d6525146ea296952f6",
+    "review/cases/R88.md": "1525eb2367a1e6814e49caee11eff1e8cc1558da4d39e8d1bcec7a17221f9ad5",
+    "review/checks.json": "f8df222106fa2ff00bbdad62771b87019b5a93ccd6338efe6bc1e29d21e4ce90",
+    "review/reference-key.json": "08b7b46735ebe577a084796e6e9eced6a1d636d3c53a43b93b7a8d242f557420",
+    "review/reports/R17.md": "96f6afa6748563ef794d3913b0f7f761487debc48a6cbaea93686c86426d2f7b",
+    "review/reports/R42.md": "3d7206371ff4d189caf0db444e6b07e36995e1518620c57fb10ce4130af03606",
+    "review/reports/R63.md": "c44b3ac34797e9d0bd85c6cf74a866884daf0bd834cb1ef33912b046afb7707d",
+    "review/reports/R88.md": "025fb8cf7430cc1029d5c90f40b477e67648d7c4177399409f56ab1f0145f233"
+  },
+  "recovery_guide": {
+    "root": "research project root after skill installation",
+    "command": "python3 .agents/skills/_rw-runtime/tools/research.py resume --root . --format markdown",
+    "actual_exit_code": 0,
+    "project_bytes_and_mtime_unchanged": true
+  }
+}

@@ -63,6 +63,8 @@ Windows 项目请放在普通本地目录，例如 `C:\Research\my-project`。�
 
 可先看公开仓库的[七学科专项案例](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/disciplinary)：合成输入、实际分析与短稿、独立代理复核及回归检查均在源码中。日常用户包不重复存放这些测试材料；需要离线查看时，下载 GitHub 的 `Source code` 源码归档。仿照案例时另建自己的项目。
 
+跟做介绍图的同一案例，可从源码运行[配对栏复算](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/paired-pens)，再生成[结果表与可编译稿源](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/submission-table)。表格与稿源准备沿用 `rw-review` 的投稿交付分支；分析与源文件生成只需标准库 Python，PDF 编译另需示例列出的 TeX 包。
+
 ## 审阅、返修与投稿材料
 
 这些能力沿用 `rw-review`，按当前请求展开，不需要再安装同义审阅入口：

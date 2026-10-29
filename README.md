@@ -49,6 +49,9 @@ py -3 -X utf8 tools/connect_skills.py check --root "../我的研究"
 | [技能检索与取舍](docs/12-skills-selection.md) | 已核验来源、选择理由与未采用边界 |
 | [学科适配](docs/02-disciplinary-adaptation.md) | 七类学科、十类方法及跨学科组合 |
 | [专业与问题导航](profiles/selection.md) | 教育、经管、心理、哲学与艺术的现有入口及未专测范围 |
+| [配对栏饲喂演示](examples/paired-pens/README.md) | 从120条合成记录复算海报同例的栏均值、区间与精确P值 |
+| [结果表与稿源交付](examples/submission-table/README.md) | 将同例数据整理成小数对齐的三线表与可编译主稿 |
+| [科研质量实作](evals/quality/README.md) | 真实检索、正确稿/缺陷稿审阅及资源改变后的推荐调整 |
 | [法学项目模板](profiles/templates/legal-research.md) | 法域、法条时效、效力依据、判例与引证台账 |
 | [证据契约](docs/03-evidence-contract.md) | 主张、材料、支持关系和研究进度的边界 |
 | [当前验收](evals/current/latest.json) | 当前内容的实际检查结果与执行范围 |
@@ -64,6 +67,6 @@ python3 -B tools/release_package.py check
 python3 -B tools/package_user.py check
 ```
 
-命令行离线工作，不执行材料中的命令、不上传数据或自动投稿。登记或软件检查通过不认证证明、创新性、伦理批准或期刊合规；相应检查仍由作者与实际执行者负责。源码中的 `evals/` 保留当前回归所需的合成材料与证据，用户 ZIP 不包含这些开发材料。构建与干净运行命令见[发行验收](docs/10-release-readiness.md)。
+命令行离线工作，不执行材料中的命令、不上传数据或自动投稿。登记或软件检查通过不认证证明、创新性、伦理批准或期刊合规；相应检查仍由作者与实际执行者负责。源码中的 `evals/` 保留当前回归所需的合成任务、真实来源笔记及复核证据，用户 ZIP 不包含这些开发材料。构建与干净运行命令见[发行验收](docs/10-release-readiness.md)。
 
 原创实现、指导与合成材料采用[MIT许可证](LICENSE)。外部方法资料保留自身权利，见[来源说明](provenance/ORIGIN.md)与[方法来源](profiles/sources.json)。维护流程见[贡献说明](CONTRIBUTING.md)，数据边界见[安全说明](SECURITY.md)。本目录与个人包独立，远程发布由维护者显式执行。

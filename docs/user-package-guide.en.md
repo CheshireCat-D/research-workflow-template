@@ -63,6 +63,8 @@ For a citation audit, say: “Check support for each claim, find missing, partia
 
 The source repository provides [seven disciplinary worked examples](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/disciplinary), with synthetic inputs, actual analyses and manuscripts, separate agent reviews, and regression checks. Test materials stay in the source repository; download GitHub's `Source code` archive for offline access. Create a separate project for your own work.
 
+To reproduce the same case shown in the promotional example, run the source-only [paired-pen calculation](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/paired-pens), then generate [aligned tables and editable manuscript source](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/submission-table). Table/source preparation uses the submission-delivery branch of `rw-review`. Analysis and source generation need standard-library Python; PDF compilation additionally needs the listed TeX packages.
+
 ## Review, revision responses and submission materials
 
 These capabilities use the existing `rw-review` entry and expand only for the requested task:

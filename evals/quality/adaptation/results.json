@@ -1,0 +1,82 @@
+{
+  "synthetic": true,
+  "input_file": "pen-summary.csv",
+  "input_sha256": "10d0bf2ee3d41978d4aff6defd23caa1aae72faf167b14dcb01270fc61de781a",
+  "unit": "kg",
+  "rows_are": "pen summaries; no individual observations reconstructed",
+  "checks": {
+    "rows": 8,
+    "distinct_pens": 8,
+    "blocks": 4,
+    "pens_per_treatment": 4,
+    "reported_count_per_pen": 18,
+    "sum_of_reported_counts": 144,
+    "missing_fields": 0,
+    "randomization_documented": false,
+    "within_pen_variance_available": false,
+    "woody_breast_available": false
+  },
+  "group_mean_of_pen_means_kg": {
+    "control": 3.5075,
+    "B": 3.5225
+  },
+  "within_block_differences": [
+    {
+      "block": "1",
+      "B_minus_control_kg": 0.050000000000000266
+    },
+    {
+      "block": "2",
+      "B_minus_control_kg": -0.04999999999999982
+    },
+    {
+      "block": "3",
+      "B_minus_control_kg": 0.020000000000000018
+    },
+    {
+      "block": "4",
+      "B_minus_control_kg": 0.040000000000000036
+    }
+  ],
+  "mean_B_minus_control_kg": 0.015000000000000124,
+  "sample_sd_of_block_differences_kg": 0.045092497528228935,
+  "conditional_model_standard_error_kg": 0.022546248764114468,
+  "conditional_normal_block_difference_interval": {
+    "confidence_level": 0.95,
+    "degrees_of_freedom": 3,
+    "t_critical": 3.1824463052837064,
+    "bounds_kg": [
+      -0.0567522260773633,
+      0.08675222607736355
+    ],
+    "assumptions": "four independent, identically distributed normal block differences",
+    "interpretation": "conditional model illustration, not a documented randomization or causal interval"
+  },
+  "leave_one_block_out": [
+    {
+      "omitted_block": "1",
+      "mean_B_minus_control_kg": 0.0033333333333334103
+    },
+    {
+      "omitted_block": "2",
+      "mean_B_minus_control_kg": 0.03666666666666677
+    },
+    {
+      "omitted_block": "3",
+      "mean_B_minus_control_kg": 0.013333333333333494
+    },
+    {
+      "omitted_block": "4",
+      "mean_B_minus_control_kg": 0.006666666666666821
+    }
+  ],
+  "not_identified": [
+    "bird-level variation",
+    "within-pen variance",
+    "ICC",
+    "effect of measuring 5 versus 10 birds per pen",
+    "power",
+    "woody-breast endpoint",
+    "actual feed efficacy"
+  ]
+}
