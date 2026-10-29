@@ -38,14 +38,7 @@
       "checkpoint_revision": 9,
       "checkpoint_status": "current",
       "completed_activity": "T1",
-      "pending_activity": "T2",
-      "historical_constraints": {
-        "offline_as_logged": true,
-        "no_personal_global_skills_as_logged": true,
-        "no_installation_except_project_local_runtime_as_logged": true,
-        "no_external_contacts_as_logged": true,
-        "not_os_level_access_audit": true
-      }
+      "pending_activity": "T2"
     },
     {
       "id": "en-pilot",
@@ -65,14 +58,7 @@
       "checkpoint_revision": 14,
       "checkpoint_status": "current",
       "completed_activity": "A1",
-      "pending_activity": "A2",
-      "historical_constraints": {
-        "offline_as_logged": true,
-        "no_personal_global_skills_as_logged": true,
-        "no_installation_except_project_local_runtime_as_logged": true,
-        "no_external_contacts_as_logged": true,
-        "not_os_level_access_audit": true
-      }
+      "pending_activity": "A2"
     }
   ],
   "original_case_identities": {
@@ -107,17 +93,9 @@
       "sha256": "e8c3f21a12b084fc8f6e2862ed76bb531f0fd34c3d21d31c82630b14f75c6550",
       "bytes": 424092
     },
-    "zh_request": {
-      "sha256": "6856788fa4bd41ffcdf58b9446a2bb8ffb158f0a4c8bd0c2bb3db00ee69a2063",
-      "bytes": 410
-    },
     "zh_request_constraints_retrospective_excerpt": {
       "sha256": "1f5235916e89a073df24833e675433da40fb7ba0aad66d81fe8fb61152226779",
       "bytes": 986
-    },
-    "zh_first_artifact": {
-      "sha256": "2ac68d45b271bc50ef819f18281089dc73245d87bae704202fe83b8182ed6007",
-      "bytes": 6504
     },
     "zh_execution": {
       "sha256": "4f23ca8bc2de1119d2e8e0ce47ed33563c17e0e399d8edfc7346af1ab9ddf225",
@@ -134,22 +112,6 @@
     "zh_recovery_verification": {
       "sha256": "63bd13b77209ec9e4714bb6bc5278727e85559b9b1b5a2bf5ab874afcf5a3b6f",
       "bytes": 6007
-    },
-    "en_request": {
-      "sha256": "56a922934258fc52b62da929e62b0863f9f9efa6778af2a3b46ee4f1cf76625b",
-      "bytes": 497
-    },
-    "en_supplied_csv": {
-      "sha256": "09ab10d28406c6dd4f3091f8a66b2f71ff14ea24d12fbf30606062a7fd9a9857",
-      "bytes": 152
-    },
-    "en_preserved_csv": {
-      "sha256": "09ab10d28406c6dd4f3091f8a66b2f71ff14ea24d12fbf30606062a7fd9a9857",
-      "bytes": 152
-    },
-    "en_first_artifact": {
-      "sha256": "0c1f183043f14686865acaef86b9b8f156ed65fabd4dd3c6e5b9f64e11836745",
-      "bytes": 2389
     },
     "en_summary": {
       "sha256": "cabbe06b6c2d813852fc41cd3d2bf669a91309d6499738369924ed91ff9f0442",
@@ -322,10 +284,7 @@
           ],
           "exit_code": 0,
           "passed": true,
-          "checkpoint_status": "current",
-          "installed_integrity": null,
-          "errors": [],
-          "warnings": []
+          "checkpoint_status": "current"
         },
         {
           "case": "zh-restored",
@@ -340,10 +299,7 @@
           ],
           "exit_code": 0,
           "passed": true,
-          "checkpoint_status": null,
-          "installed_integrity": true,
-          "errors": [],
-          "warnings": []
+          "installed_integrity": true
         },
         {
           "case": "zh-restored",
@@ -357,10 +313,7 @@
           ],
           "exit_code": 0,
           "passed": true,
-          "checkpoint_status": "current",
-          "installed_integrity": null,
-          "errors": [],
-          "warnings": []
+          "checkpoint_status": "current"
         },
         {
           "case": "en",
@@ -374,10 +327,7 @@
           ],
           "exit_code": 0,
           "passed": true,
-          "checkpoint_status": "current",
-          "installed_integrity": null,
-          "errors": [],
-          "warnings": []
+          "checkpoint_status": "current"
         },
         {
           "case": "en",
@@ -392,10 +342,7 @@
           ],
           "exit_code": 0,
           "passed": true,
-          "checkpoint_status": null,
-          "installed_integrity": true,
-          "errors": [],
-          "warnings": []
+          "installed_integrity": true
         },
         {
           "case": "en",
@@ -409,10 +356,7 @@
           ],
           "exit_code": 0,
           "passed": true,
-          "checkpoint_status": "current",
-          "installed_integrity": null,
-          "errors": [],
-          "warnings": []
+          "checkpoint_status": "current"
         }
       ],
       "zh_original_equals_restored": true,
@@ -468,8 +412,27 @@
       "bytes": 410
     },
     "tests/test_first_use.py": {
-      "sha256": "9c7b1b28ea212787fd33de299f17d01016771306f6dfafb26353f32582be9c26",
-      "bytes": 12485
+      "sha256": "ae08807b2c30297e0bbb2c6fe0b538946901c62bfd72a52ab375219f57a4b611",
+      "bytes": 12868
     }
+  },
+  "original_audited_source_aliases": {
+    "zh_request": "original_case_identities/cases/zh-interest/request.md",
+    "zh_first_artifact": "original_case_identities/cases/zh-interest/first-output.md",
+    "en_request": "original_case_identities/cases/en-pilot/request.md",
+    "en_supplied_csv": "original_case_identities/cases/en-pilot/input.csv",
+    "en_preserved_csv": "original_case_identities/cases/en-pilot/input.csv",
+    "en_first_artifact": "original_case_identities/cases/en-pilot/first-output.md"
+  },
+  "historical_constraints": {
+    "applies_to_case_ids": [
+      "zh-interest",
+      "en-pilot"
+    ],
+    "offline_as_logged": true,
+    "no_personal_global_skills_as_logged": true,
+    "no_installation_except_project_local_runtime_as_logged": true,
+    "no_external_contacts_as_logged": true,
+    "not_os_level_access_audit": true
   }
 }

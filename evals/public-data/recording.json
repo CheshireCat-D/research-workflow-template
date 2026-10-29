@@ -8,17 +8,8 @@
   },
   "request": "examples/public-penguins/question-method.md",
   "public_input": {
-    "source_commit": "8957207b78d6ccd1b4654a9dd9c9041b657478ab",
-    "path": "inst/extdata/penguins.csv",
-    "sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
-    "bytes": 15241,
-    "git_blob_sha": "25b46d384bf81f8399188500ea54917bb49d8890",
-    "rows": 344,
-    "url": "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/8957207b78d6ccd1b4654a9dd9c9041b657478ab/inst/extdata/penguins.csv",
-    "license": "CC0-1.0",
-    "license_url": "https://github.com/allisonhorst/palmerpenguins/blob/8957207b78d6ccd1b4654a9dd9c9041b657478ab/LICENSE.md",
-    "project_url": "https://allisonhorst.github.io/palmerpenguins/",
-    "paper_doi": "10.1371/journal.pone.0090081"
+    "metadata": "examples/public-penguins/source.json",
+    "metadata_sha256": "6289e3269feca85d38e9c0cbb56ac7f095389d8b098d2fb2b104847b2ddaca60"
   },
   "execution": {
     "started_utc": "2026-10-29T18:50:52.147024+00:00",
@@ -32,8 +23,7 @@
           "TOOLKIT/tools/research.py",
           "options"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "init",
@@ -52,8 +42,7 @@
           "--method",
           "computational"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "install",
@@ -64,8 +53,7 @@
           "--root",
           "PROJECT"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "synthetic-tests",
@@ -78,8 +66,7 @@
           "TASK/example/tests",
           "-v"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "real-analysis",
@@ -91,8 +78,7 @@
           "--output",
           "TASK/real-results"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "svg-audit-species-mass",
@@ -101,8 +87,7 @@
           "TOOLKIT/skills/rw-figures/scripts/audit_svg_schematic.py",
           "TASK/real-results/species-mass.svg"
         ],
-        "exit_code": 1,
-        "expected_exit_code": 0
+        "exit_code": 1
       },
       {
         "label": "real-analysis-v2",
@@ -114,8 +99,7 @@
           "--output",
           "TASK/real-results-v2"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "synthetic-tests-v2",
@@ -128,8 +112,7 @@
           "TASK/example/tests",
           "-v"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "svg-audit-v2-species-mass",
@@ -138,8 +121,7 @@
           "TOOLKIT/skills/rw-figures/scripts/audit_svg_schematic.py",
           "TASK/real-results-v2/species-mass.svg"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "svg-audit-v2-stratum-differences",
@@ -148,8 +130,7 @@
           "TOOLKIT/skills/rw-figures/scripts/audit_svg_schematic.py",
           "TASK/real-results-v2/stratum-differences.svg"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "render-previews",
@@ -163,8 +144,7 @@
           "TASK/real-results-v2/species-mass.svg",
           "TASK/real-results-v2/stratum-differences.svg"
         ],
-        "exit_code": 255,
-        "expected_exit_code": 0
+        "exit_code": 255
       },
       {
         "label": "register-batch",
@@ -177,8 +157,7 @@
           "--file",
           "TASK/registration-batch.json"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "check",
@@ -189,8 +168,7 @@
           "--root",
           "PROJECT"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "checkpoint",
@@ -203,8 +181,7 @@
           "--next-action",
           "Complete independent numeric/content review and render both SVGs; then inspect raw individual/nest IDs and sampling before any inferential model."
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "moved-resume",
@@ -216,8 +193,7 @@
           "--root",
           "MOVED_PROJECT"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "moved-installed-check",
@@ -230,8 +206,7 @@
           "--root",
           "MOVED_PROJECT"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "moved-core-check",
@@ -243,8 +218,7 @@
           "--root",
           "MOVED_PROJECT"
         ],
-        "exit_code": 0,
-        "expected_exit_code": 0
+        "exit_code": 0
       },
       {
         "label": "preview-server-bind",
@@ -259,7 +233,6 @@
           "TASK/real-results-v2"
         ],
         "exit_code": 1,
-        "expected_exit_code": 0,
         "failure": "PermissionError: [Errno 1] Operation not permitted during socket bind; captured tool output, no server started"
       }
     ],
@@ -301,7 +274,8 @@
       "read_only_verified": true,
       "method": "Compare relative path, type, mode, size, mtime_ns and SHA-256 for every project tree entry before and after resume, installed-only check, and core check; Python -B prevents interpreter cache writes."
     },
-    "scope": "The supplied real input was used by the task; command records include numerical checks and failed render attempts. Full temporary project and logs omitted."
+    "scope": "The supplied real input was used by the task; command records include numerical checks and failed render attempts. Full temporary project and logs omitted.",
+    "expected_exit_code": 0
   },
   "publication": {
     "original_execution_code_sha256": "55d2bc62ca868a651d79155144b11605f43774d212b62d7645399cc53fc344a5",
@@ -318,28 +292,12 @@
         "original_crlf_count": 7
       },
       {
-        "file": "results.md",
-        "original_sha256": "6a5a769562040d498b15a15696cd4f2ac3dcac51e98a07f9b8ed17f97bda8000",
-        "publication_sha256": "6a5a769562040d498b15a15696cd4f2ac3dcac51e98a07f9b8ed17f97bda8000",
-        "byte_identical": true,
-        "comparison": "byte-identical",
-        "original_crlf_count": null
-      },
-      {
         "file": "row_audit.csv",
         "original_sha256": "02e4e75479a3b0efd7500654a9ccd57106fe17895ed60211613cf4b95034af99",
         "publication_sha256": "3275c99f4aa46e2b976148ee2a165f00ed0de179f4749fa1fc850c1b4dbe1872",
         "byte_identical": false,
         "comparison": "CRLF to LF only",
         "original_crlf_count": 345
-      },
-      {
-        "file": "species-mass.svg",
-        "original_sha256": "492885178f57c44699c5402f5a76e93489c4f5e9f376593c92e0c0133c5dd05c",
-        "publication_sha256": "492885178f57c44699c5402f5a76e93489c4f5e9f376593c92e0c0133c5dd05c",
-        "byte_identical": true,
-        "comparison": "byte-identical",
-        "original_crlf_count": null
       },
       {
         "file": "species_contrasts.csv",
@@ -356,22 +314,6 @@
         "byte_identical": false,
         "comparison": "CRLF to LF only",
         "original_crlf_count": 28
-      },
-      {
-        "file": "stratum-differences.svg",
-        "original_sha256": "72db57c58b5b9d41f5fb5e2758af1da1040ae2b1404923212aaf4f2b6095f61a",
-        "publication_sha256": "72db57c58b5b9d41f5fb5e2758af1da1040ae2b1404923212aaf4f2b6095f61a",
-        "byte_identical": true,
-        "comparison": "byte-identical",
-        "original_crlf_count": null
-      },
-      {
-        "file": "summary.json",
-        "original_sha256": "cb2615e088b979a9febd0d5332d9cda962ee5122e93e86163dfdcb0aad16b6fc",
-        "publication_sha256": "cb2615e088b979a9febd0d5332d9cda962ee5122e93e86163dfdcb0aad16b6fc",
-        "byte_identical": true,
-        "comparison": "byte-identical",
-        "original_crlf_count": null
       }
     ],
     "published_observed_files": [
@@ -388,15 +330,124 @@
       "grouped_by_species_sex.csv",
       "complete project/runtime",
       "original command logs"
+    ],
+    "byte_identical_non_csv_files": [
+      "results.md",
+      "species-mass.svg",
+      "stratum-differences.svg",
+      "summary.json"
     ]
   },
   "independent_review": {
-    "assessment": "evals/public-data/assessment.json",
-    "assessment_sha256": "48642f412bfd2a1e024873302f8c54f0f7bfff2f8b4e020ad46edaa82dbbf844",
+    "frozen_assessment": {
+      "schema_version": 1,
+      "assessment": "passed within the frozen descriptive-analysis scope; no required corrections",
+      "source": {
+        "url": "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/8957207b78d6ccd1b4654a9dd9c9041b657478ab/inst/extdata/penguins.csv",
+        "sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+        "rows": 344,
+        "raw_csv_bundled": false
+      },
+      "reviewed_snapshot_sha256": {
+        "source-metadata.json": "6289e3269feca85d38e9c0cbb56ac7f095389d8b098d2fb2b104847b2ddaca60",
+        "example/analyze.py": "55d2bc62ca868a651d79155144b11605f43774d212b62d7645399cc53fc344a5",
+        "example/question-method.md": "046aded14f582bf53a876422ccd528c19ad8fc0b499158c3d11066b61b9d0016",
+        "freeze-manifest.json": "3ca21f6bf802581566d25914569122190f00edfd81a80322866502df3f45c2e5",
+        "real-results-v2/grouped_by_species_sex.csv": "ca34b3859dde4f21d95ce4b55f2a7451d1d7c8036db13c6e9033ebba18fac635",
+        "real-results-v2/results.md": "6a5a769562040d498b15a15696cd4f2ac3dcac51e98a07f9b8ed17f97bda8000",
+        "real-results-v2/row_audit.csv": "02e4e75479a3b0efd7500654a9ccd57106fe17895ed60211613cf4b95034af99",
+        "real-results-v2/species-mass.svg": "492885178f57c44699c5402f5a76e93489c4f5e9f376593c92e0c0133c5dd05c",
+        "real-results-v2/species_contrasts.csv": "584c3f3a0f1fe1be65b70f362ae5e51e8df55dfade395acda74dc40bf8f8eccc",
+        "real-results-v2/strata.csv": "144b8ed94c65eb995ad00e2b4f313c23cf4891169a406e68aac6cd80b5ddea19",
+        "real-results-v2/stratum-differences.svg": "72db57c58b5b9d41f5fb5e2758af1da1040ae2b1404923212aaf4f2b6095f61a",
+        "real-results-v2/summary.json": "cb2615e088b979a9febd0d5332d9cda962ee5122e93e86163dfdcb0aad16b6fc"
+      },
+      "original_review_sha256": {
+        "assessment.md": "b0104c791db86286e4e0abd61410d5099a426be815b681bb1fd1380595a25a35",
+        "assessment.json": "1cdb617fcacfd1e6a0e5549cf921db950cd3274d62c94ed82202b433ebdff9b2",
+        "independent_check.R": "1fbd6a8df7f6c6087f3e325932540e2b209dd90f0e9e1716e801fa710078253c",
+        "comparison-checks.json": "2defd4ea75477f5855b3edaca241aba21d83a24b82f7a2bee4e7e9744bcbc305"
+      },
+      "comparison_summary": {
+        "checks": 92,
+        "failures": 0,
+        "numeric_comparisons": {
+          "species_sex": 48,
+          "species_contrasts": 60,
+          "strata": 243
+        },
+        "max_absolute_numeric_difference_g": 4.547473508864641e-12,
+        "absolute_tolerance": 1e-08,
+        "full_temporary_check_log_bundled": false
+      },
+      "scientific_summary": {
+        "rows_included": 333,
+        "rows_excluded": 11,
+        "missing_sex": 11,
+        "missing_mass": 2,
+        "missing_both": 2,
+        "full_grid_cells": 27,
+        "comparable_strata": 15,
+        "no_observation_cells": 12,
+        "all_comparable_differences_positive": true,
+        "species_order": [
+          "Adelie",
+          "Chinstrap",
+          "Gentoo"
+        ],
+        "male_minus_female_mean_g": [
+          674.6575342465753,
+          411.76470588235316,
+          805.0946862634255
+        ],
+        "interpretation": "Observed within-species directions agree; magnitudes vary; no equivalence or population-inference claim."
+      },
+      "portable_execution": {
+        "runtime": "R 4.6.1 (2026-06-24), base R only",
+        "real_input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+        "fresh_output_directory": true,
+        "arguments_required": 2,
+        "scientific_body_unchanged": true,
+        "csv_files_compared": 8,
+        "all_csv_cells_identical": true,
+        "all_csv_bytes_identical": true,
+        "csv_line_endings": {
+          "original_independent_R": "LF",
+          "portable_independent_R": "LF",
+          "difference": false
+        },
+        "no_arguments_rejected": true,
+        "existing_output_rejected": true,
+        "network_or_installation_used": false
+      },
+      "current_resources_sha256": {
+        "assessment.md": "acfeb12e2aa86577f07a1892f35c19473e4da10ccb655e4ed5f2c5822166ad0c",
+        "independent_check.R": "30557afd843f1a69306e4ef2d80d498dc4bdcea0d5942ff432467bd8d635e0a4"
+      },
+      "projection_changes": "Removed machine paths and duplicate temporary logs/tables; retained scientific conclusions and frozen hashes. R changes only shebang, required arguments and refusal to overwrite. JSON self-hash is supplied by the enclosing release/work record.",
+      "scope": {
+        "reviewed_python_executed_for_independent_calculation": false,
+        "original_paper_read_by_independent_reviewer": false,
+        "source_metadata_read": true,
+        "svg_labels_and_coordinates_checked": true,
+        "successful_visual_render_by_independent_reviewer": false,
+        "quicklook_failure": {
+          "exit": 255,
+          "message": "sandbox initialization failed: invalid data type of path filter; expected pattern, got boolean"
+        },
+        "parent_visual_check": "separate evidence layer recorded by parent",
+        "ci_repeats_independent_R_or_human_review": false,
+        "ci_scope": "separate offline Python fixture; no R or network dependency",
+        "binding": "Only the frozen snapshot hashes above; publication Python CSV newline normalization is recorded separately; no certification of arbitrary later changes."
+      }
+    },
+    "published_projection_origin": {
+      "path": "evals/public-data/assessment.json",
+      "commit": "bd067658468631a4e724803f52d72d577ac10941",
+      "sha256": "48642f412bfd2a1e024873302f8c54f0f7bfff2f8b4e020ad46edaa82dbbf844"
+    },
     "report": "evals/public-data/assessment.md",
-    "checks": 92,
-    "failures": 0,
-    "method": "Separately executed base R; reviewed Python not executed to obtain independent numbers. Portable R rerun compared all eight CSVs cell/byte identical."
+    "scope": "The frozen assessment and its current_resources_sha256 values refer to the published projection at the commit above. Current resources are bound separately by published_files."
   },
   "parent_visual_check": {
     "renderer": "Existing Codex bundled Node/Sharp; no installation",
@@ -439,8 +490,7 @@
           "recorded": true,
           "status": "current",
           "changed": []
-        },
-        "installed_integrity": null
+        }
       },
       {
         "tool": "connect_skills.py",
@@ -451,7 +501,6 @@
           "."
         ],
         "exit_code": 0,
-        "checkpoint": null,
         "installed_integrity": true
       },
       {
@@ -466,8 +515,7 @@
           "recorded": true,
           "status": "current",
           "changed": []
-        },
-        "installed_integrity": null
+        }
       }
     ],
     "original_moved_project_unchanged": true,
@@ -492,7 +540,6 @@
           "status": "current",
           "changed": []
         },
-        "installed_integrity": null,
         "needs_review": false
       },
       {
@@ -504,9 +551,7 @@
           "."
         ],
         "exit_code": 0,
-        "checkpoint": null,
-        "installed_integrity": true,
-        "needs_review": null
+        "installed_integrity": true
       },
       {
         "tool": "research.py",
@@ -520,9 +565,7 @@
           "recorded": true,
           "status": "current",
           "changed": []
-        },
-        "installed_integrity": null,
-        "needs_review": null
+        }
       }
     ],
     "final_project_entries": 128,
@@ -532,9 +575,17 @@
   },
   "publication_projection": "Original task, review and failed attempts retain their hashes/scopes. Published Python CSVs use LF; independent source hash binding is retained separately. Aggregate outputs and current records are retained, raw inputs/logs/runtime copies remain external or temporary.",
   "published_files": {
+    "evals/public-data/assessment.md": {
+      "sha256": "79c0b280770883f6ddbf5df487a437f0c5c5d2d358e7039f7b5370cba7e7468c",
+      "bytes": 5593
+    },
+    "evals/public-data/independent_check.R": {
+      "sha256": "30557afd843f1a69306e4ef2d80d498dc4bdcea0d5942ff432467bd8d635e0a4",
+      "bytes": 7568
+    },
     "examples/public-penguins/README.md": {
-      "sha256": "ffecc210f2e7d829c9a698c66bffde50a0baf1ad8aad41d00837fdb014113a69",
-      "bytes": 5711
+      "sha256": "19383584c6d1c67270024b48efe3b1e8667c697c6ca7d6529762dd88afbb4ccc",
+      "bytes": 6181
     },
     "examples/public-penguins/analyze.py": {
       "sha256": "a7c4cbb6c8c8455b1dc2293298d962ae9ec198c5ff17524444f75e8d2703d9e0",
@@ -580,21 +631,9 @@
       "sha256": "ff20446f713bb16d9fcf306e39295e2405832a06e24e5e532afabdf8aabeb229",
       "bytes": 390
     },
-    "evals/public-data/assessment.json": {
-      "sha256": "48642f412bfd2a1e024873302f8c54f0f7bfff2f8b4e020ad46edaa82dbbf844",
-      "bytes": 5002
-    },
-    "evals/public-data/assessment.md": {
-      "sha256": "acfeb12e2aa86577f07a1892f35c19473e4da10ccb655e4ed5f2c5822166ad0c",
-      "bytes": 5209
-    },
-    "evals/public-data/independent_check.R": {
-      "sha256": "30557afd843f1a69306e4ef2d80d498dc4bdcea0d5942ff432467bd8d635e0a4",
-      "bytes": 7568
-    },
     "tests/test_public_penguins.py": {
-      "sha256": "f9fd9ea21683146b447aa067d1855f5e54f5c109ed65db03d69662d621e657cf",
-      "bytes": 7102
+      "sha256": "6268e3f004c0133014e5ca71666c96505524a2ebe78a345334ee8572196b0c34",
+      "bytes": 7996
     }
   }
 }

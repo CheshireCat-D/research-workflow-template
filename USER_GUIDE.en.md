@@ -100,9 +100,9 @@ For daily use, download `research-workflow-template.zip` from Releases. Cases an
 
 For a data-to-delivery walkthrough, run the [paired-pen example](examples/paired-pens/README.md) to reproduce the figures shown in the promotional demonstration, then use the [table and manuscript example](examples/submission-table/README.md) to create aligned tables, editable source and an actual file manifest. Analysis and source generation use standard-library Python; PDF compilation needs the TeX environment listed in the example. See the [research-quality tasks](evals/quality/README.md) for real retrieval, review controls and adaptation to changed resources.
 
-## Review, revision responses and submission materials
-
 For a real public-data walkthrough, see the [penguin analysis](examples/public-penguins/README.md) and its [independent base-R review](evals/public-data/assessment.md). The [first-use records](evals/usability/README.md) separate AI-agent exercises from future human feedback. The user ZIP also includes a minimal offline batch-registration example; successes or difficulties can be reported through the [feedback form](https://github.com/CheshireCat-D/research-workflow-template/issues/new?template=first-use-feedback.yml).
+
+## Review, revision responses and submission materials
 
 These capabilities use the existing `rw-review` entry and expand only for the requested task:
 

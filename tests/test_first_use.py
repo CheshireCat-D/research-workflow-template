@@ -73,6 +73,11 @@ class FirstUse(unittest.TestCase):
             self.assertEqual(digest((EVIDENCE / name).read_bytes()), checksum, name)
             self.assertEqual(originals[name]['sha256'], checksum, name)
             self.assertEqual(originals[name]['published_bytes'], 'unchanged', name)
+        for role, reference in record['original_audited_source_aliases'].items():
+            section, name = reference.split('/', 1)
+            self.assertEqual(record[section][name]['sha256'], ORIGINAL_IDENTITIES[name], role)
+        self.assertEqual(set(record['historical_constraints']['applies_to_case_ids']),
+                         {case['id'] for case in record['cases']})
         self.assertEqual({case['id'] for case in record['cases']}, {'zh-interest', 'en-pilot'})
         self.assertTrue(record['independent_review']['current_reexecution']['sha256_size_mtime_unchanged'])
         self.assertEqual(record['independent_review']['current_reexecution']['commands_passed'], 6)

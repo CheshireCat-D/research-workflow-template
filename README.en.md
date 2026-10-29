@@ -48,7 +48,7 @@ If the journal is undecided, write “undecided” and continue the research alr
 
 Follow the [paired-pen calculation](examples/paired-pens/README.md) to reproduce the promotional example, then generate [aligned tables and editable manuscript source](examples/submission-table/README.md). The [research-quality tasks](evals/quality/README.md) record real retrieval, correct/defective review controls and a recommendation revised after resources changed.
 
-The [first-use exercises](evals/usability/README.md) record two isolated AI-agent scenarios and the resulting offline-guide improvement; human feedback is collected separately. A [public penguin-data case](examples/public-penguins/README.md) adds an actual observational analysis, independent base-R checks and project recovery.
+The [first-use exercises](evals/usability/README.md) record two isolated AI-agent scenarios and the resulting offline-guide improvement; human feedback is collected separately. A [public penguin-data case](examples/public-penguins/README.md) adds an actual observational analysis, independent base-R checks and documented project recovery.
 
 ## Checks and evidence
 

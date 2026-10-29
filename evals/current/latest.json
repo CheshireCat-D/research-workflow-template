@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-recorded-task-scope",
-  "checked_at_utc": "2026-10-29T19:13:41.918196+00:00",
+  "checked_at_utc": "2026-10-29T19:42:45.969036+00:00",
   "scope": "Current source regression and clean user-runtime distribution, plus separately scoped real-source investigation, isolated review controls, synthetic resource adaptation and actual local table/source delivery.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -28,7 +28,7 @@
       "check_groups": 7,
       "receipt": {
         "identifier": "local-evidence:check-core.json",
-        "sha256": "b9442abf3f2ad91f25926790366b5e78231975a14d84ca2f7509ebeb17332b1a"
+        "sha256": "f644f558a32839d200e67338768a5fe746708c62e15730d2e15fdddc5493ad32"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,7 +36,7 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "f16d281e05a62d3f166541ef5f2c2a7d35f0be1a505a4f33455af419dbf6c946",
+        "sha256": "51676c33858ec670dfd5349c9263f85961ada2b77a3c4567ddc244b19793b58c",
         "files": 38
       }
     }
@@ -169,7 +169,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 72,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "c38cdcb6f6143e30ade6489475fd23ff6c9f158f52fb1f3ae3a4aeefbd2ea2ad",
+    "sha256": "deb26e54a38def3ca26cf8e90de1a98e48fed2aeb60057f8e0566b17c864cecb",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 65,
     "development_history_or_previous_editions_included": false,
@@ -307,5 +307,15 @@
     "parent_final_records": 36,
     "parent_final_revision": 39,
     "ci_scope": "Original synthetic arithmetic/input fixture and publication identity; no network, R or model/visual review in CI."
+  },
+  "evaluation_record_cleanup": {
+    "scope": "Current usability/public-data record projection and navigation; original scientific products, timed cases and review identities retained.",
+    "standalone_json_files_removed": 1,
+    "duplicate_json_bytes_removed": 3368,
+    "frozen_review": "evals/public-data/recording.json#independent_review.frozen_assessment",
+    "frozen_review_reconstructed_sha256": "48642f412bfd2a1e024873302f8c54f0f7bfff2f8b4e020ad46edaa82dbbf844",
+    "new_original_case_and_scientific_files_byte_identical": 17,
+    "default_values_and_source_aliases_semantically_equivalent": true,
+    "prior_scientific_content_review_renewed": false
   }
 }

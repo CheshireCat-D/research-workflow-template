@@ -137,7 +137,7 @@ An installed copy with local edits, missing files or unknown files is not overwr
 
 Use the [first-use feedback form](https://github.com/CheshireCat-D/research-workflow-template/issues/new?template=first-use-feedback.yml) for successes or difficulties. Include the OS, Python, agent, intended task, step reached and actual error. Issues are public; use a privacy-clean synthetic reproduction. The form does not request a name or email, and the toolkit does not send usage records automatically.
 
-The [first-use records](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/usability) describe two isolated AI-agent simulations; human feedback is collected separately. The [public penguin-data case](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/public-penguins) provides a source-to-analysis, figure and recovery walkthrough.
+The [first-use records](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/usability) describe two isolated AI-agent simulations; human feedback is collected separately. The [public penguin-data case](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/public-penguins) provides reproducible analysis and figures, with links to independent checks and the recorded project recovery.
 
 ## Package contents and boundaries
 

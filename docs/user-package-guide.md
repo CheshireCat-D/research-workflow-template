@@ -135,7 +135,7 @@ python3 tools/connect_skills.py upgrade --root PROJECT
 
 可用[首次使用反馈表](https://github.com/CheshireCat-D/research-workflow-template/issues/new?template=first-use-feedback.yml)报告成功体验或卡点：说明系统、Python、Agent、想完成的任务、实际停在哪一步及错误信息。Issue 公开可见，请使用去除隐私的合成复现。表单不要求姓名或邮箱，工具不自动发送使用记录。
 
-公开的[首次使用记录](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/usability)是两个隔离代理模拟；真人反馈单独收集。[企鹅实测数据案例](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/public-penguins)可用于跟做来源、分析、图表和恢复。
+公开的[首次使用记录](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/usability)是两个隔离代理模拟；真人反馈单独收集。[企鹅实测数据案例](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/public-penguins)提供来源、分析和图表复算步骤，并链接实际项目登记与恢复记录。
 
 ## 包含内容与边界
 

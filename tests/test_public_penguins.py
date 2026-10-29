@@ -32,9 +32,23 @@ class AnalysisTests(unittest.TestCase):
             data = (root/name).read_bytes()
             self.assertEqual(hashlib.sha256(data).hexdigest(), identity['sha256'], name)
             self.assertEqual(len(data), identity['bytes'], name)
-        review = json.loads((evidence/'assessment.json').read_text(encoding='utf-8'))
+        independent = record['independent_review']
+        review = independent['frozen_assessment']
+        origin = independent['published_projection_origin']
+        self.assertEqual(origin, {
+            'path': 'evals/public-data/assessment.json',
+            'commit': 'bd067658468631a4e724803f52d72d577ac10941',
+            'sha256': '48642f412bfd2a1e024873302f8c54f0f7bfff2f8b4e020ad46edaa82dbbf844',
+        })
+        original_json = (json.dumps(review, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+        self.assertEqual(hashlib.sha256(original_json).hexdigest(), origin['sha256'])
         self.assertEqual(review['comparison_summary']['failures'], 0)
         self.assertEqual(review['source']['sha256'], analysis.PUBLIC_INPUT_SHA256)
+        source = record['public_input']
+        self.assertEqual(source['metadata'], 'examples/public-penguins/source.json')
+        metadata_bytes = (root/source['metadata']).read_bytes()
+        self.assertEqual(hashlib.sha256(metadata_bytes).hexdigest(), source['metadata_sha256'])
+        self.assertEqual(json.loads(metadata_bytes)['sha256'], review['source']['sha256'])
         summary = json.loads((EXAMPLE/'observed/summary.json').read_text(encoding='utf-8'))
         self.assertEqual(summary['input_sha256'], review['source']['sha256'])
         self.assertEqual(summary['n_complete_overall'], review['scientific_summary']['rows_included'])

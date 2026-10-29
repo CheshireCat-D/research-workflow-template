@@ -53,7 +53,7 @@ py -3 -X utf8 tools/connect_skills.py check --root "../我的研究"
 | [结果表与稿源交付](examples/submission-table/README.md) | 将同例数据整理成小数对齐的三线表与可编译主稿 |
 | [科研质量实作](evals/quality/README.md) | 真实检索、正确稿/缺陷稿审阅及资源改变后的推荐调整 |
 | [首次使用与反馈](evals/usability/README.md) | 两个隔离代理情境、发现的离线登记卡点及真人反馈入口 |
-| [公开实测数据案例](examples/public-penguins/README.md) | 企鹅体质量分析、分层与缺失处理、独立 R 核对及恢复 |
+| [公开实测数据案例](examples/public-penguins/README.md) | 企鹅体质量分析、分层与缺失处理、独立 R 核对及恢复验证记录 |
 | [法学项目模板](profiles/templates/legal-research.md) | 法域、法条时效、效力依据、判例与引证台账 |
 | [证据契约](docs/03-evidence-contract.md) | 主张、材料、支持关系和研究进度的边界 |
 | [当前验收](evals/current/latest.json) | 当前内容的实际检查结果与执行范围 |

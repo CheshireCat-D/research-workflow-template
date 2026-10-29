@@ -40,7 +40,9 @@ The portable script was actually run on the same verified real CSV with R 4.6.1 
 
 ## Evidence and scope
 
-`assessment.json` is a compact provenance projection. It records the original input, reviewed code/plan/output hashes, original assessment hashes, original and portable R script hashes, and the 92-check summary. Complete temporary logs and duplicate numerical tables are not distributed. The JSON records the current Markdown and R script hashes; its own hash belongs in the enclosing release/work record, avoiding a self-referential hash.
+The compact provenance projection is retained without field changes at `recording.json` → `independent_review.frozen_assessment`. It records the original input, reviewed code/plan/output hashes, original assessment hashes, original and portable R script hashes, and the 92-check summary. Its original published path, commit and byte hash are retained alongside the object; no separate duplicate JSON is distributed. Complete temporary logs and duplicate numerical tables remain outside the source package.
+
+The nested `current_resources_sha256` identifies resources in that frozen publication, including this report before its record locator changed. The enclosing `published_files` map identifies the files currently distributed. Moving the object does not renew the scientific review or replace its original identities.
 
 The original review first froze its scientific input, code and products, calculated independently, and then compared the frozen products. Those originals remained unchanged. The source metadata was read; this reviewer did not fetch the original paper or verify its study design. The original study's methods and the parent agent's visual check are separate evidence layers. The original SVG check covered XML, labels and coordinates. This reviewer's Quick Look rendering attempt failed with exit 255 (`sandbox initialization failed: invalid data type of path filter; expected pattern, got boolean`), so this assessment does not claim a successful visual layout review.
 
