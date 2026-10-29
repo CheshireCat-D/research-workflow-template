@@ -85,11 +85,11 @@ From the toolkit root, replace `PROJECT` with the actual project path:
 python3 tools/research.py resume --root PROJECT
 python3 tools/research.py status --root PROJECT
 python3 tools/research.py check --root PROJECT
-python3 tools/research.py list --root PROJECT --kind statement
+python3 tools/research.py show --root PROJECT --kind statement
 python3 tools/research.py show --root PROJECT --kind statement --id S1
 ```
 
-`resume`, `status`, `check`, `list` and `show` are read-only commands. Replace `S1` with an existing record ID. Use `register --kind KIND --file INPUT.json` for one record and `register-batch --file INPUT.json` for a batch. Use `--file -` to read standard input. Changing an existing record requires explicit version replacement. Preserve project versions and dependencies; do not clear or directly edit the registry.
+`resume`, `status`, `check` and `show` are read-only commands. `show --kind statement` lists IDs and versions for that record kind; add `--id S1` to read one complete record. Replace `S1` with an existing record ID. Use `register --kind KIND --file INPUT.json` for one record and `register-batch --file INPUT.json` for a batch. Use `--file -` to read standard input. Changing an existing record requires explicit version replacement. Preserve project versions and dependencies; do not clear or directly edit the registry.
 
 Save the next action at a stopping point:
 

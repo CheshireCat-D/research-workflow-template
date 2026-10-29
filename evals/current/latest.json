@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-checked-software-and-recorded-task-scope",
-  "checked_at_utc": "2026-10-29T14:36:38.269344+00:00",
+  "checked_at_utc": "2026-10-29T15:06:08.690771+00:00",
   "scope": "Current source regression and clean user-runtime distribution, plus separately scoped real-source investigation, isolated review controls, synthetic resource adaptation and actual local table/source delivery.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -27,8 +27,8 @@
       "test_methods": 261,
       "check_groups": 7,
       "receipt": {
-        "identifier": "local-evidence:check-core-final.json",
-        "sha256": "4d5814bd0a25ade06b2eeccb04182ed0879015c91c09b87353930255b58a8b2e"
+        "identifier": "local-evidence:check-core.json",
+        "sha256": "8834a6cadd39c07fc28627cfe8815c5dcdf3d70bd93207fe3ad96e36eefd07e9"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -169,7 +169,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 72,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "88c1d80026b2729be940ff8e2ec26af1122502fef77941a633dc51343255e98e",
+    "sha256": "e8c3f21a12b084fc8f6e2862ed76bb531f0fd34c3d21d31c82630b14f75c6550",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 65,
     "development_history_or_previous_editions_included": false,
@@ -230,6 +230,16 @@
       "command": "python3 .agents/skills/_rw-runtime/tools/research.py resume --root . --format markdown",
       "actual_exit_code": 0,
       "project_bytes_and_mtime_unchanged": true
+    },
+    "daily_query_commands": {
+      "documents": [
+        "docs/user-package-guide.md",
+        "docs/user-package-guide.en.md"
+      ],
+      "actual_executions": 10,
+      "fresh_project": true,
+      "project_bytes_and_mtime_unchanged": true,
+      "query_verb": "show, with optional --id for one complete record"
     }
   },
   "public_worked_examples": {

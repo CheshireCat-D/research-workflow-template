@@ -85,11 +85,11 @@ Windows 项目请放在普通本地目录，例如 `C:\Research\my-project`。�
 python3 tools/research.py resume --root PROJECT
 python3 tools/research.py status --root PROJECT
 python3 tools/research.py check --root PROJECT
-python3 tools/research.py list --root PROJECT --kind statement
+python3 tools/research.py show --root PROJECT --kind statement
 python3 tools/research.py show --root PROJECT --kind statement --id S1
 ```
 
-`resume`、`status`、`check`、`list` 和 `show` 是只读命令；`S1` 应替换成已有记录 ID。登记使用 `register --kind KIND --file INPUT.json`，批量使用 `register-batch --file INPUT.json`，也可用 `--file -` 从标准输入读取。已有记录的修改需要显式版本替换；保留项目的版本与依赖，不能直接清空或改写登记簿。
+`resume`、`status`、`check` 和 `show` 是只读命令；`show --kind statement` 列出该类记录的 ID 与版本，加 `--id S1` 查看一条完整记录。`S1` 应替换成已有记录 ID。登记使用 `register --kind KIND --file INPUT.json`，批量使用 `register-batch --file INPUT.json`，也可用 `--file -` 从标准输入读取。已有记录的修改需要显式版本替换；保留项目的版本与依赖，不能直接清空或改写登记簿。
 
 工作告一段落后保存下一步：
 
