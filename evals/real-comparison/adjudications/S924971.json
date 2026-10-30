@@ -1,0 +1,64 @@
+{
+  "submission_id": "S924971",
+  "task_id": "data-b",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_units",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "report.md:7,16-53；work/update2012.py:audit_year；work/results_2012/audit.json、annual_summary.json；评审复跑adjudication_verify/checks.json。",
+      "rationale": "来源、观察小时和日聚合单位、全部行/日期/空单元格/重复键/恒等式/小时至日计数核验正确。2011/2012的8645/8734小时、365/366日、115/50缺小时、305/350完整日及年度总数、日均和两种增长率均吻合实跑。明确闰年分母和少小时日期，无补零或未经核实的事件归因；元信息冲突保留。"
+    },
+    {
+      "id": "temporal_design",
+      "score": 7,
+      "max_points": 7,
+      "evidence": "report.md:9-14；previous-report.md:冻结规则与评价口径、对构造草稿的逐项裁决；work/analyze.py:fit、predict；work/update2012.py:verify_model、main；work/results/model.json；adjudication_verify/checks.json:model_recovery。",
+      "rationale": "准确恢复2011 Jan-Sep的6442小时/273日训练和Q4的2203小时/92日留出，24/48单元的sum/n/未舍入mean全部与原训练记录一致。代码和冻结模型SHA与原交接一致，2012仅加载原参数，无重训或Q4回流；仅用hr/事前可知workingday，无类别计数、天气等泄漏。原报告明确反驳随机行拆分对未来检验的替代。"
+    },
+    {
+      "id": "metrics_sensitivity",
+      "score": 12,
+      "max_points": 12,
+      "evidence": "report.md:57-76；work/results_2012/results.json、comparison_metrics.csv；work/analyze.py:metrics、evaluate；adjudication_verify/checks.json；adjudication_verify/full_update/independent_verification.json。",
+      "rationale": "两模型总体MAE/RMSE/偏差、绝对差和相对降幅、两个日期等权MAE及其差/降幅、workingday两组、完整24小时敏感性全部实际产生。小时权重与日等权定义正确，bias为预测减实际。2012总体118.118276/108.708122、降幅7.966722%，日等权117.775867/108.360746、降幅7.994100%；各项与参考最大绝对误差2.85e-14以内。"
+    },
+    {
+      "id": "uncertainty",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "report.md:80-91；previous-handoff.md:配对循环日期块bootstrap协议；work/analyze.py:bootstrap、quantile；work/verify2012.py；adjudication_verify/full_update/independent_verification.json。",
+      "rationale": "完全保持配对排序日期、循环7/28日块、抽至D并截断、保留日内全部观察小时后合并加权、B=2000、seed=20261029、每块长重置seed、(B-1)p线性分位数。4000个复本与区间复核通过，参考差远低于1e-6。正确解释7日上限9.967439%略低于10%而28日上限11.589625%跨10%，不挑块长，不作稳健低于10%的断言；说明非独立小时、稳定性、循环边界、未含训练不确定性及未来保证限制。"
+    },
+    {
+      "id": "conclusion_update",
+      "score": 9,
+      "max_points": 9,
+      "evidence": "report.md:3,66-68,76,89-98；work/handoff.md:9-17。",
+      "rationale": "保留2011 Q4的24.231724%有限历史结论，同时承认2012仍改善、点估计未达10%、区间未稳健确立至少10%、不足部署。准确比较绝对误差倍增、绝对/相对改善减少与偏差约+1转为-91.5，并仅称与观察日均增长方向相容，考虑季度对全年构成差异而不擅定机制。后续28完整日水平滚动校准具体且明确为未测试新模型，保留未来验证集。"
+    },
+    {
+      "id": "reproducibility",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "work/analyze.py、update2012.py、verify2012.py、results/model.json、RUN.md:3-25、handoff.md:3-17；work/results_2012/provenance.json、model_recovery.json；adjudication_verify/exact_comparison.json。",
+      "rationale": "冻结参数、训练范围、输入身份、协议和限制足够新上下文恢复。评审在共同Python下直接运行未修改update2012.py及verify2012.py成功；9个科学结果文件与封存2012输出逐字节相同，原2011留出五文件亦由更新入口逐字节校验通过。报告6622字符在12000上限内；交接内容与实际代码结果一致，无补造证据迹象。"
+    }
+  ],
+  "raw_score": 50,
+  "effective_score": 50,
+  "max_score": 50,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "usable",
+  "notes": [
+    "依据组织者恢复封存生成CSV后的最终完整评分包评分；未将先前漏投当作作者错误，此前尚未写出初评。",
+    "arm_hidden=true仅表示组织者未提供组别映射，不表示完美盲法；未据产物猜测或确定方法身份，未访问其他盲包、执行记录、个人skills、memory、网络或其他agent。",
+    "仅在本包adjudication_verify新子目录生成核验结果，未修改提交源码或参数。除包装来源差异外，未发现参考数值或解释有误。",
+    "评分针对科学内容及可恢复性，不为特定字段、台账、目录层级或品牌加分；不施加额外data cap，effective=raw。"
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification.",
+  "report_sha256": "68fa8a9122156dadbb012aff70f179d73051906f677d32ab21ec0968b60c036e"
+}

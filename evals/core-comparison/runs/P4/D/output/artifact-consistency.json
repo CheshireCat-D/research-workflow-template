@@ -1,0 +1,28 @@
+{
+  "scope": "Existing-artifact consistency only; no scientific recomputation",
+  "parameters_match_approved": true,
+  "result_matches_parameters": false,
+  "table_matches_result": {
+    "observed_hours": true,
+    "observed_days": true,
+    "C0_MAE": true,
+    "C1_MAE": true,
+    "C0_RMSE": true,
+    "C1_RMSE": true,
+    "MAE_reduction_fraction": true
+  },
+  "summary_rounding_tokens": {
+    "C0_MAE": true,
+    "C1_MAE": true,
+    "C0_RMSE": true,
+    "C1_RMSE": true,
+    "C0_bias_prediction_minus_actual": true,
+    "C1_bias_prediction_minus_actual": true
+  },
+  "input_hash_matches": {
+    "parameters": true,
+    "calculator": true,
+    "hour_2011": true,
+    "frozen_model": true
+  }
+}

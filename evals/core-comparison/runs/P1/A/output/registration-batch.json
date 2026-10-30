@@ -1,0 +1,284 @@
+[
+  {
+    "kind": "source",
+    "record": {
+      "id": "T-SRC",
+      "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+      "locator": "https://arxiv.org/abs/1810.08240v9",
+      "version": "1810.08240v9",
+      "content_access": "metadata-only",
+      "rights": "restricted",
+      "limitations": "No live remote check or mathematical page reading; identity checked against supplied full local hash.",
+      "notes": "DOI https://doi.org/10.1214/20-AOS1991; private cache, do not redistribute original PDF."
+    }
+  },
+  {
+    "kind": "source",
+    "record": {
+      "id": "T-REMOTE",
+      "title": "Time-uniform Chernoff bounds via nonnegative supermartingales",
+      "locator": "https://arxiv.org/abs/1808.03204v7",
+      "version": "1808.03204v7",
+      "content_access": "metadata-only",
+      "limitations": "Only source identity; no local content binding and no current remote-content check."
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "T-RAW",
+      "type": "immutable-source-cache",
+      "description": "Supplied fixed primary PDF; exact bytes matched initial manifest.",
+      "provenance": "Supplied source-identities.json and MANIFEST.json, not fetched remotely.",
+      "location": {
+        "kind": "local",
+        "path": "sources/howard2021-arxiv-v9.pdf"
+      },
+      "source_ids": [
+        "T-SRC"
+      ],
+      "limitations": "Only file identity, header/raw metadata; no theorem-content audit."
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "T-PARAM",
+      "type": "author-parameters",
+      "description": "Current alpha=0.05 rho=1 and intrinsic time grid [0,1,10,100]; rho fixed before observation.",
+      "provenance": "Benchmark author initial working parameters, separate from original paper.",
+      "location": {
+        "kind": "local",
+        "path": "notes/parameters.json"
+      }
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "T-CLAIM",
+      "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+      "type": "interpretive",
+      "scope": "Current declared parameters and supplied sources only; scalar l0=1; two-sided alpha total; same V for S and -S.",
+      "assessment": {
+        "status": "supported-in-scope",
+        "scope": "Only supplied calculator numerical reproduction on v=[0,1,10,100], alpha=.05 rho=1.",
+        "rationale": "Fresh run exactly matches canonical JSON and numeric CSV; equivalent-form and v=0 arithmetic checks; underlying coverage theorem not assessed.",
+        "reviewer": "AI agent in stage A"
+      },
+      "formal_verification": {
+        "status": "not-started",
+        "scope": "No formal or new manual theorem proof performed.",
+        "tool": "none"
+      }
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "T-REL",
+      "statement_id": "T-CLAIM",
+      "evidence_id": "T-PARAM",
+      "relation": "qualifies",
+      "rationale": "Author parameters restrict the numerical claim; file registration is not a mathematical proof.",
+      "scope": "Current fixed alpha, rho selection and four intrinsic-time points."
+    }
+  },
+  {
+    "kind": "decision",
+    "record": {
+      "id": "T-CHOICE",
+      "choice": "Use the supplied initial alpha=.05 rho=1 fixed before observation, grid [0,1,10,100].",
+      "rationale": "Initial benchmark-author choice; task authorizes reproducing these supplied parameters.",
+      "responsible": "Benchmark author, as identified in supplied initial material; recorded by AI agent.",
+      "decided_at": "Original decision timestamp not supplied",
+      "evidence_refs": [
+        "T-PARAM"
+      ],
+      "revisit_when": "Explicit author parameter revision; preserve previous content and rationale.",
+      "notes": "No invented human expert approval."
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-CODE",
+      "type": "scientific-calculator",
+      "description": "Unmodified supplied standard-library calculator; SHA preserved.",
+      "path": "scripts/compute.py"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-RESULT",
+      "type": "numeric-result",
+      "description": "Canonical provided result, verified by fresh normal execution.",
+      "path": "results/result.json",
+      "derived_from": [
+        "evidence:T-PARAM",
+        "evidence:T-RAW",
+        "artifact:T-CODE",
+        "decision:T-CHOICE"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-TABLE",
+      "type": "numeric-table",
+      "description": "Companion delivered table; all numeric rows match fresh result.",
+      "path": "results/table.csv",
+      "derived_from": [
+        "artifact:T-RESULT"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-SUMMARY",
+      "type": "summary",
+      "description": "Provided summary reviewed for current parameters, rounding and bounded conclusion.",
+      "path": "results/summary.md",
+      "derived_from": [
+        "statement:T-CLAIM",
+        "artifact:T-RESULT"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-SOURCE-NOTE",
+      "type": "source-identity-note",
+      "description": "Fixed provided source card; full text read, independent of numerical parameter.",
+      "path": "notes/source-check.md",
+      "derived_from": [
+        "source:T-SRC",
+        "evidence:T-RAW"
+      ],
+      "notes": "Card is author-supplied paraphrase; no independent page/theorem confirmation claimed."
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-A-VALIDATION",
+      "type": "execution-evidence",
+      "description": "Actual commands/exits, values, identity scope, before/after hashes and bounded scientific audit.",
+      "path": "notes/stage-a-validation.json"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-INITIAL-SNAPSHOT",
+      "type": "version-manifest",
+      "description": "Manifest locating exact recoverable contents of four initial small files.",
+      "path": "history/stage-a-initial/manifest.json"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-INITIAL-1",
+      "type": "initial-version-content",
+      "description": "Exact initial bytes retained for notes/parameters.json",
+      "path": "history/stage-a-initial/notes/parameters.json"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-INITIAL-2",
+      "type": "initial-version-content",
+      "description": "Exact initial bytes retained for results/result.json",
+      "path": "history/stage-a-initial/results/result.json"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-INITIAL-3",
+      "type": "initial-version-content",
+      "description": "Exact initial bytes retained for results/table.csv",
+      "path": "history/stage-a-initial/results/table.csv"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-INITIAL-4",
+      "type": "initial-version-content",
+      "description": "Exact initial bytes retained for results/summary.md",
+      "path": "history/stage-a-initial/results/summary.md"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "T-RECOVERY",
+      "type": "recovery-guide",
+      "description": "Portable local recovery, authority, limits and concrete next action.",
+      "path": "RECOVERY.md"
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "T-SOURCE-CHECK",
+      "title": "Verify supplied fixed source identity and card scope",
+      "status": "done",
+      "inputs": [
+        "source:T-SRC",
+        "evidence:T-RAW"
+      ],
+      "outputs": [
+        "artifact:T-SOURCE-NOTE"
+      ],
+      "note": "AI agent verified full supplied SHA/bytes and metadata, read card; mathematical pages not examined. Source-only remote not current-content checked."
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "T-CALC",
+      "title": "Evaluate supplied calculator and verify current result and companion table",
+      "status": "done",
+      "inputs": [
+        "evidence:T-PARAM",
+        "evidence:T-RAW",
+        "artifact:T-CODE",
+        "decision:T-CHOICE"
+      ],
+      "outputs": [
+        "artifact:T-RESULT",
+        "artifact:T-TABLE",
+        "artifact:T-A-VALIDATION"
+      ],
+      "note": "AI execution, normal exit0; exact JSON/numeric CSV comparison and special-case arithmetic checked. Controlled alpha=1 exit2 preserved; effective originals unchanged."
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "T-SYNTH",
+      "title": "Review supplied summary within current claim and verified numeric result",
+      "status": "done",
+      "inputs": [
+        "statement:T-CLAIM",
+        "artifact:T-RESULT",
+        "artifact:T-TABLE"
+      ],
+      "outputs": [
+        "artifact:T-SUMMARY"
+      ],
+      "depends_on": [
+        "T-CALC"
+      ],
+      "note": "AI read provided summary and checked parameters, pre-observation rho, v10 rounding and no new-proof scope. Not human expert approval."
+    }
+  }
+]

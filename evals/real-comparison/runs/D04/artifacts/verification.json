@@ -1,0 +1,18 @@
+{
+  "input_manifest_sha": true,
+  "split_disjoint": true,
+  "train_rows": true,
+  "all_parameters_train_only": true,
+  "prediction_targets_match": true,
+  "C0_hour_weighted_MAE": true,
+  "C0_hour_weighted_RMSE": true,
+  "C0_mean_bias_pred_minus_true": true,
+  "C1_hour_weighted_MAE": true,
+  "C1_hour_weighted_RMSE": true,
+  "C1_mean_bias_pred_minus_true": true,
+  "bootstrap_7_all_replicates": true,
+  "bootstrap_7_intervals": true,
+  "bootstrap_28_all_replicates": true,
+  "bootstrap_28_intervals": true,
+  "all_pass": true
+}

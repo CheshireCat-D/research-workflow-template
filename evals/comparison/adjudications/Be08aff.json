@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "submission_id": "Be08aff",
+  "task_id": "Q58",
+  "report_sha256": "1b9947b247946b53221e24e6aa17387110f1e015d1024672350bc083749b1d66",
+  "judge_context": "fresh single-report context; read only this submission task.md, report.md, reference.json and template.json; no arm map, execution log, other reports, memory, skills or external sources",
+  "arm_visibility": "hidden-by-instruction",
+  "os_audited": false,
+  "scored": true,
+  "verdict": "unsupported",
+  "criteria": [
+    {
+      "id": "decision",
+      "score": 2,
+      "evidence": "report.md 第3行判定完整规则的错误率及本次显著性结论不成立；第16行说明7.03%超过5%；第24行明确本次不能在0.05水平拒绝尖锐零假设或宣称提高。",
+      "rationale": "明确区分正确的单侧数值与不成立的整体错误率及显著性结论，完成所需判断。"
+    },
+    {
+      "id": "selection",
+      "score": 2,
+      "evidence": "report.md 第3行：规则若根据观测值选择方向，仍须把两个可能方向共同计入零假设下的拒绝概率；第16行指出预先登记不能使该规则成为0.05水平检验。",
+      "rationale": "准确定位同一观测统计量选择方向后继续按单侧阈值拒绝的问题，并说明预先写入规则不消除两方向总概率。"
+    },
+    {
+      "id": "reported_tail",
+      "score": 2,
+      "evidence": "report.md 第5行：K=7、S=6及S=2K−8；第7行：P₀(S′≥6)=[C(8,7)+C(8,8)]/256=9/256=0.03515625；第3行承认这项单侧计算正确。",
+      "rationale": "完整复核观测值和固定正方向尾部，且将正确算术与完整规则的无效水平声明分开。"
+    },
+    {
+      "id": "actual_size",
+      "score": 2,
+      "evidence": "report.md 第11行比较S=6时9/256与S=4时37/256，推出拒绝域S≥6或S≤−6；第13—14行给出组合数总和18/256=0.0703125。",
+      "rationale": "拒绝域含两尾且互不相交，边界比较及计数均正确；独立二项式枚举也得到K∈{0,1,7,8}，总计18个符号向量。"
+    },
+    {
+      "id": "compatible_tail",
+      "score": 2,
+      "evidence": "report.md 第20—22行：p校准=P₀(|S′|≥|6|)=18/256=0.0703125；第24行给出等价的所选报告值分布解释及0.05不拒绝；第28行限定尖锐零假设并说明不拒绝不证明无效应。",
+      "rationale": "给出与观测选方向的完整规则相容的双侧尾部概率及正确结论，且没有将尖锐零假设检验扩展为对所有效应命题的证明。"
+    }
+  ],
+  "invented_major_objections": [],
+  "notes": "独立按K~Binomial(8,1/2)逐点核实参考：所选单侧尾部≤0.05恰对应K=0,1,7,8，权重为1,8,8,1，实际拒绝率18/256；观测|S|=6的双侧尾部同为18/256。参考正确。报告给出的可选更正规则在|S|=8才拒绝，拒绝率2/256，也正确；未发现捏造的主要异议。"
+}

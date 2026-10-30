@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "executed",
+  "started_at_utc": null,
+  "finished_at_utc": "2026-10-29T22:37:06.728640+00:00",
+  "duration_seconds": null,
+  "requested_configuration": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "context": "fork_turns=none for every task/arm",
+    "requested_output_unicode_limit": 5000,
+    "requested_tool_call_limit": 8,
+    "temperature": null,
+    "seed": null
+  },
+  "effective_configuration": {
+    "model": {
+      "value": null,
+      "source": "unknown"
+    },
+    "reasoning_effort": {
+      "value": null,
+      "source": "unknown"
+    },
+    "temperature": {
+      "value": null,
+      "source": "unknown"
+    },
+    "seed": {
+      "value": null,
+      "source": "unknown"
+    },
+    "hard_output_token_limit": {
+      "value": null,
+      "source": "unknown"
+    }
+  },
+  "context_isolation": {
+    "requested": "fresh context, fork_turns=none",
+    "evidence": "instruction-only",
+    "os_audited": false,
+    "same_metadata_catalogue_visible": true
+  },
+  "actual_reads": [
+    {
+      "logical_name": "tasks/Q37.md",
+      "sha256": "997698cfd2edaf430c25b5e987982ef81bfb6075db3ba3cf6d542016cc863025"
+    },
+    {
+      "logical_name": "executor-prompt.md",
+      "sha256": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09"
+    },
+    {
+      "logical_name": "templates/execution.template.json",
+      "sha256": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1"
+    }
+  ],
+  "tool_calls": 4,
+  "output_tokens": null,
+  "network_calls": 0,
+  "output_unicode_characters": 908,
+  "output_bytes": 2156,
+  "violations": [],
+  "uncertainties": [
+    "宿主未报告实际模型、reasoning effort、temperature、seed或硬性输出限制，均保留unknown。",
+    "未记录任务起始时刻，started_at_utc及整体duration_seconds未知。",
+    "上下文隔离只按指令执行，未进行操作系统审计；证据为instruction-only。",
+    "tool_calls包含2次functions.exec及其内部2次exec_command；未使用其他工具。",
+    "output_unicode_characters和output_bytes仅测量report.md；output_tokens未知。"
+  ],
+  "failure": null,
+  "outputs": {
+    "report": "runs/t07/report.md",
+    "execution": "runs/t07/execution.json"
+  },
+  "publication_projection": {
+    "raw_execution_sha256": "f599b9b79ed8369ef0e5b3a8797370d89e7c5dd8aed3cdca9a54bf0f059f2881",
+    "changes": [
+      "completed status label mapped to executed",
+      "logical path instructions.md mapped to executor-prompt.md",
+      "logical path execution.template.json mapped to templates/execution.template.json",
+      "temporary output file paths mapped to logical runs/ paths"
+    ],
+    "scope": "Administrative fields only; report bytes, effective unknowns and scientific content unchanged."
+  }
+}

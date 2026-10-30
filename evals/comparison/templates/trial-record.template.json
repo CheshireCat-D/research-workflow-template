@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "trial_id": "REPLACE",
+  "task_id": "Q11",
+  "arm": "baseline",
+  "freeze_sha256": "REPLACE",
+  "task_sha256": "REPLACE",
+  "report": {
+    "path": "runs/REPLACE/report.md",
+    "sha256": "REPLACE"
+  },
+  "execution": {
+    "path": "runs/REPLACE/execution.json",
+    "sha256": "REPLACE"
+  },
+  "blind": {
+    "submission_id": "REPLACE_ANONYMOUS",
+    "arm_revealed_to_judge": false,
+    "adjudication": {
+      "path": "adjudications/REPLACE_ANONYMOUS.json",
+      "sha256": "REPLACE"
+    }
+  }
+}

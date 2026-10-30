@@ -1,0 +1,32 @@
+{
+  "id": "C-final-verified",
+  "created_at": "2026-10-30T01:59:53Z",
+  "files": {
+    "RECOVERY.md": {
+      "sha256": "807fd2ffaa3968615fb191e1a13c16009c3d130b14fd8cecaa85b08bde62ee24",
+      "bytes": 3275
+    },
+    "results/result.json": {
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "bytes": 703
+    },
+    "results/table.csv": {
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "bytes": 100
+    },
+    "results/summary.md": {
+      "sha256": "d10158c47c54bdf88673606ca136716b97b65e042317bd17082dd6db7e2e5b27",
+      "bytes": 1134
+    },
+    "notes/parameters.json": {
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    ".research/state.json": {
+      "sha256": "68cf475ed8d8b5c8fececdcdfc3eb9083cb0f5a78b00af9daa5647510fe2108d",
+      "bytes": 19057
+    }
+  },
+  "evidence": ".research/evidence/C/final-status-execution.json",
+  "note": "Saved after actual scientific calculator execution and scope-limited checks; not expert approval."
+}

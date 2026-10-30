@@ -1,0 +1,571 @@
+{
+  "files": {
+    ".agents/skills/_rw-runtime/bundle-manifest.json": {
+      "sha256": "401eb2c41626b4e1f1d8933393e72f9d17d924525626c6217a615b9afa552627",
+      "bytes": 8036,
+      "mtime_ns": 1793322198287079239
+    },
+    ".agents/skills/_rw-runtime/core/__init__.py": {
+      "sha256": "747401e8a3ec02843d8ab825c1322b786a8c0e39a13d6d28affc57bbd4d3fd04",
+      "bytes": 596,
+      "mtime_ns": 1793322198280508545
+    },
+    ".agents/skills/_rw-runtime/core/bundle.py": {
+      "sha256": "3e2c08eba1ab540de1d0a807ffa5bafb0acd46a2bf00056f803554ec83de8cfa",
+      "bytes": 28639,
+      "mtime_ns": 1793322198280647127
+    },
+    ".agents/skills/_rw-runtime/core/cli.py": {
+      "sha256": "62519288f0573073f3b1be69de8e7c1537f038d9ccf40bae5fa53005c1f9c3fb",
+      "bytes": 13573,
+      "mtime_ns": 1793322198280783876
+    },
+    ".agents/skills/_rw-runtime/core/model.py": {
+      "sha256": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31",
+      "bytes": 16884,
+      "mtime_ns": 1793322198280906000
+    },
+    ".agents/skills/_rw-runtime/core/project.py": {
+      "sha256": "6cd8d83a195565d512ee5d2e74a880d09adfdd60a850395cfcfee8f3e18796f5",
+      "bytes": 27732,
+      "mtime_ns": 1793322198281044791
+    },
+    ".agents/skills/_rw-runtime/core/protocol.md": {
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "bytes": 3841,
+      "mtime_ns": 1793322198281176748
+    },
+    ".agents/skills/_rw-runtime/core/schemas/activity.schema.json": {
+      "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+      "bytes": 1479,
+      "mtime_ns": 1793322198281376788
+    },
+    ".agents/skills/_rw-runtime/core/schemas/artifact.schema.json": {
+      "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+      "bytes": 1067,
+      "mtime_ns": 1793322198281509495
+    },
+    ".agents/skills/_rw-runtime/core/schemas/decision.schema.json": {
+      "sha256": "c3f913c83476a4d63ff6e34f9dc4a835a3547dbbb9feb8896773fc72ce0d6f49",
+      "bytes": 1365,
+      "mtime_ns": 1793322198281645286
+    },
+    ".agents/skills/_rw-runtime/core/schemas/evidence.schema.json": {
+      "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+      "bytes": 2889,
+      "mtime_ns": 1793322198281787493
+    },
+    ".agents/skills/_rw-runtime/core/schemas/method-binding.schema.json": {
+      "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+      "bytes": 1204,
+      "mtime_ns": 1793322198281923867
+    },
+    ".agents/skills/_rw-runtime/core/schemas/project.schema.json": {
+      "sha256": "d3aea9cc6055a5e97776be07cf101ad35d8b764405042372439c3445aa80a558",
+      "bytes": 3912,
+      "mtime_ns": 1793322198282059740
+    },
+    ".agents/skills/_rw-runtime/core/schemas/registry.schema.json": {
+      "sha256": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
+      "bytes": 40973,
+      "mtime_ns": 1793322198282217406
+    },
+    ".agents/skills/_rw-runtime/core/schemas/relation.schema.json": {
+      "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+      "bytes": 1255,
+      "mtime_ns": 1793322198282356404
+    },
+    ".agents/skills/_rw-runtime/core/schemas/source.schema.json": {
+      "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+      "bytes": 1153,
+      "mtime_ns": 1793322198282493612
+    },
+    ".agents/skills/_rw-runtime/core/schemas/statement.schema.json": {
+      "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+      "bytes": 3018,
+      "mtime_ns": 1793322198282640694
+    },
+    ".agents/skills/_rw-runtime/core/skill-bridge.md": {
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "bytes": 7641,
+      "mtime_ns": 1793322198282781068
+    },
+    ".agents/skills/_rw-runtime/core/storage.py": {
+      "sha256": "dc84e24536f6d3dc93762c414b334ac24765cbad41fc48bda05f5626a577c9d8",
+      "bytes": 10394,
+      "mtime_ns": 1793322198282907775
+    },
+    ".agents/skills/_rw-runtime/core/windows_storage.py": {
+      "sha256": "2770971dc068eb3d670a17c9110aaeb53aa25c99950468a9b5c0985837735615",
+      "bytes": 12755,
+      "mtime_ns": 1793322198283045065
+    },
+    ".agents/skills/_rw-runtime/design/catalog.json": {
+      "sha256": "c164def668d75f14a2d12d414fee6dcf287f96d33e293fbdaf8536c9cbe798c9",
+      "bytes": 25477,
+      "mtime_ns": 1793322198283190064
+    },
+    ".agents/skills/_rw-runtime/profiles/disciplines/agriculture-life.md": {
+      "sha256": "66d86ef5e1f6deaa2af354e36e188469f9e1cf3423c14d31b4b48c854d46d583",
+      "bytes": 1201,
+      "mtime_ns": 1793322198283362729
+    },
+    ".agents/skills/_rw-runtime/profiles/disciplines/engineering.md": {
+      "sha256": "0c776e883840960b7eeb6c4dcb6a3be4974c1834d8bb142d0b3cde2acf502e30",
+      "bytes": 1092,
+      "mtime_ns": 1793322198283491437
+    },
+    ".agents/skills/_rw-runtime/profiles/disciplines/humanities.md": {
+      "sha256": "4ca1a988537c0f006d0fc5ce33dc1f8dfbcd09733c396a24bd4d2390dd406114",
+      "bytes": 1527,
+      "mtime_ns": 1793322198283617435
+    },
+    ".agents/skills/_rw-runtime/profiles/disciplines/law.md": {
+      "sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+      "bytes": 1563,
+      "mtime_ns": 1793322198283770517
+    },
+    ".agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md": {
+      "sha256": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
+      "bytes": 1332,
+      "mtime_ns": 1793322198283905683
+    },
+    ".agents/skills/_rw-runtime/profiles/disciplines/natural-sciences.md": {
+      "sha256": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a",
+      "bytes": 1060,
+      "mtime_ns": 1793322198284051682
+    },
+    ".agents/skills/_rw-runtime/profiles/disciplines/social-sciences.md": {
+      "sha256": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8",
+      "bytes": 1214,
+      "mtime_ns": 1793322198284208889
+    },
+    ".agents/skills/_rw-runtime/profiles/governance.md": {
+      "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+      "bytes": 2998,
+      "mtime_ns": 1793322198284371429
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/computational.md": {
+      "sha256": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+      "bytes": 2282,
+      "mtime_ns": 1793322198284558469
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/conceptual-normative.md": {
+      "sha256": "609f444f364e638a0e61c49f160a4912ecd56ab9310a6937cef9b7abadae8b72",
+      "bytes": 2079,
+      "mtime_ns": 1793322198284723093
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md": {
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+      "bytes": 2986,
+      "mtime_ns": 1793322198284889800
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/engineering-design.md": {
+      "sha256": "693c7a1a42001bdf87ce3684c866863c81b089af9bd6e521b813667de24423c8",
+      "bytes": 2161,
+      "mtime_ns": 1793322198285078256
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md": {
+      "sha256": "0a9fccdfea15ffd8b30c30a56bcb8e5511d40d30bf8ea094ee47cf8ce8e4fbdc",
+      "bytes": 2605,
+      "mtime_ns": 1793322198285280588
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/formal-theory.md": {
+      "sha256": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+      "bytes": 2389,
+      "mtime_ns": 1793322198285458961
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/historical-interpretive.md": {
+      "sha256": "0894387de28c40bbf2e5913dbf260b1df15f6eaed45abdd8df2a9c1360c8f4d9",
+      "bytes": 2288,
+      "mtime_ns": 1793322198285650960
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/legal-analysis.md": {
+      "sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+      "bytes": 5056,
+      "mtime_ns": 1793322198285858416
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/measurement-experiment.md": {
+      "sha256": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd",
+      "bytes": 2593,
+      "mtime_ns": 1793322198285998499
+    },
+    ".agents/skills/_rw-runtime/profiles/methods/qualitative.md": {
+      "sha256": "069f3880300a754dc2e8dd26eb64290278045ce2cabadd394160c68d02efb2c6",
+      "bytes": 2421,
+      "mtime_ns": 1793322198286140581
+    },
+    ".agents/skills/_rw-runtime/profiles/selection.md": {
+      "sha256": "0198e36085cec17ec7d3aa73220e90b33467c2e0c9d8d05af7952bce8ba21c49",
+      "bytes": 3249,
+      "mtime_ns": 1793322198286258663
+    },
+    ".agents/skills/_rw-runtime/profiles/sources.json": {
+      "sha256": "b8a05f32aea861bff470abfeeef0dcd1943fcae7dda30a14619ffcd853bd12c7",
+      "bytes": 31107,
+      "mtime_ns": 1793322198286383995
+    },
+    ".agents/skills/_rw-runtime/profiles/templates/legal-research.md": {
+      "sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+      "bytes": 3440,
+      "mtime_ns": 1793322198286533994
+    },
+    ".agents/skills/_rw-runtime/profiles/templates/legal-source.json": {
+      "sha256": "e127852f1bb0a051e3aad083d29e54719866296d6830f3df5d8b0513afcbece4",
+      "bytes": 1212,
+      "mtime_ns": 1793322198286658618
+    },
+    ".agents/skills/_rw-runtime/tools/connect_skills.py": {
+      "sha256": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+      "bytes": 2242,
+      "mtime_ns": 1793322198286796408
+    },
+    ".agents/skills/_rw-runtime/tools/research.py": {
+      "sha256": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b",
+      "bytes": 405,
+      "mtime_ns": 1793322198286913366
+    },
+    ".agents/skills/rw-candidates/SKILL.md": {
+      "sha256": "1e63dd370770263d981ee03678c54a3cbba6c8add0ca85d8552ef2e98ba63005",
+      "bytes": 3467,
+      "mtime_ns": 1793322198277717527
+    },
+    ".agents/skills/rw-figures/SKILL.md": {
+      "sha256": "cc9c901bc9b516512d4d0ca5ee5efd68efd85dc243e60800ec2291287fd748fa",
+      "bytes": 4671,
+      "mtime_ns": 1793322198279417805
+    },
+    ".agents/skills/rw-figures/agents/openai.yaml": {
+      "sha256": "0a8e433abbb264ae4610be7692503db534b6dcffbe6a6188841de88b57556d98",
+      "bytes": 256,
+      "mtime_ns": 1793322198279568095
+    },
+    ".agents/skills/rw-figures/assets/synthetic-figure-spec.json": {
+      "sha256": "a6aa429fe76a185f726b2c3bcafb65ba131c89c130e9b1156bbbcb3ef6cea591",
+      "bytes": 1799,
+      "mtime_ns": 1793322198279726885
+    },
+    ".agents/skills/rw-figures/assets/synthetic-workflow.svg": {
+      "sha256": "ba843559b5be505b2b4e21540de2c3fb48c46b7dca4d2e22c42f5f32d7a77717",
+      "bytes": 2219,
+      "mtime_ns": 1793322198279855009
+    },
+    ".agents/skills/rw-figures/examples/plot_demo.py": {
+      "sha256": "63c482011529440d36dcbd1df9506ecad47b0d3e17508ad40282d35342ae17ed",
+      "bytes": 2803,
+      "mtime_ns": 1793322198280007424
+    },
+    ".agents/skills/rw-figures/references/editable-schematics.md": {
+      "sha256": "f76450491c138c6d6518a7dccabe3890f9768ddd21b656b18bcfa0aa40368acd",
+      "bytes": 3316,
+      "mtime_ns": 1793322198280178090
+    },
+    ".agents/skills/rw-figures/scripts/audit_svg_schematic.py": {
+      "sha256": "8c87f1819e8c7887a7b7b5432f2e6f7e983157e6980d17346c47908f2b069d87",
+      "bytes": 8571,
+      "mtime_ns": 1793322198280336672
+    },
+    ".agents/skills/rw-innovation/SKILL.md": {
+      "sha256": "3817216a0d99514e78f6c9520d51ea0b2b279d7d83c6f55d82ee8aaeed418a09",
+      "bytes": 3316,
+      "mtime_ns": 1793322198277547570
+    },
+    ".agents/skills/rw-literature/SKILL.md": {
+      "sha256": "2d008d633e71e1cd8d4a39d66ec78c6a6e8fb4ee7f4d9daf73a8aad0a34dfed3",
+      "bytes": 3320,
+      "mtime_ns": 1793322198276913617
+    },
+    ".agents/skills/rw-literature/references/search-and-library.md": {
+      "sha256": "f2a69e0ff59e0a4e426c3f0109b7fd28c62090a284b5def33c5426cc16bf4631",
+      "bytes": 7467,
+      "mtime_ns": 1793322198277136782
+    },
+    ".agents/skills/rw-literature/scripts/search_crossref.py": {
+      "sha256": "5cbf7b63dcc4f1b7062231eab812b821b1e6c149424888f9c5fca56573334997",
+      "bytes": 18385,
+      "mtime_ns": 1793322198277382155
+    },
+    ".agents/skills/rw-question/SKILL.md": {
+      "sha256": "cbfe1f537202d9cad995949458a5bbe496624f6cc926956ed80ad2be97e0239a",
+      "bytes": 3478,
+      "mtime_ns": 1793322198276727661
+    },
+    ".agents/skills/rw-review/SKILL.md": {
+      "sha256": "a3d18fd88c1e76abac2a46d7b86a6582624f47ec5cf5d8cad4bc26c2bc495c0d",
+      "bytes": 5231,
+      "mtime_ns": 1793322198278235398
+    },
+    ".agents/skills/rw-review/references/cross-material-consistency.md": {
+      "sha256": "ddc1d7de400cb83c8b8c4fc160f0afa070793525ad5fb5963fbe5313a651f0cc",
+      "bytes": 4396,
+      "mtime_ns": 1793322198278430855
+    },
+    ".agents/skills/rw-review/references/review-modes.md": {
+      "sha256": "0d6253160bc164a6d07f704fb1c8eb2338f01738ba99cef8d1af70d87968e3e3",
+      "bytes": 4393,
+      "mtime_ns": 1793322198278598437
+    },
+    ".agents/skills/rw-review/references/review-response.md": {
+      "sha256": "f08a84ba4bef293858d6931658e206e4b1484c715afe45b2d064fbab78dfa019",
+      "bytes": 7851,
+      "mtime_ns": 1793322198278760477
+    },
+    ".agents/skills/rw-review/references/submission-delivery.md": {
+      "sha256": "08e09b8fa45428aa1e05969c80178d088f7d0a9383060081154b7d7203165f5b",
+      "bytes": 5179,
+      "mtime_ns": 1793322198278912309
+    },
+    ".agents/skills/rw-review/references/theory-review.md": {
+      "sha256": "6b046232cd71cc8f8d36d04c249981081481e7d23ae719406b42655cd694669c",
+      "bytes": 2704,
+      "mtime_ns": 1793322198279063308
+    },
+    ".agents/skills/rw-review/scripts/check_revision_plan.py": {
+      "sha256": "54cd825ea0bc3d8d0c798cf535afef66c89a82d17f0d476ddca88dfd77c36bc9",
+      "bytes": 14922,
+      "mtime_ns": 1793322198279243889
+    },
+    ".agents/skills/rw-validation/SKILL.md": {
+      "sha256": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2",
+      "bytes": 3823,
+      "mtime_ns": 1793322198277879901
+    },
+    ".agents/skills/rw-workflow/SKILL.md": {
+      "sha256": "0fdbe0845d7fb4f67211edc8f72d81bb537d846ce8a1560eead5cf65bab1aebc",
+      "bytes": 4576,
+      "mtime_ns": 1793322198276507954
+    },
+    ".agents/skills/rw-writing/SKILL.md": {
+      "sha256": "299efd19a165a38ca761306021befcc3c4f6ede959ed3da427aae199aa22a3b7",
+      "bytes": 4185,
+      "mtime_ns": 1793322198278048774
+    },
+    ".gitignore": {
+      "sha256": "83635ddc1e038ac2d24f44694b0d0c5172efdd30d0907415b46c05a866435ea7",
+      "bytes": 120,
+      "mtime_ns": 1793322198324672128
+    },
+    ".research/write.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1793322198266196334
+    },
+    "PROJECT.md": {
+      "sha256": "8277c3ac5ac2f5782191d725d94083ab154145167e9b467168e45819f835e9db",
+      "bytes": 440,
+      "mtime_ns": 1793322198266297083
+    },
+    "RECOVERY.md": {
+      "sha256": "3fb28aa6f96520a6b131fb7a0d71eb4d798425975847c0fbcac837fcbc40f744",
+      "bytes": 2927,
+      "mtime_ns": 1793322246207823679
+    },
+    "history/stage-a-initial/RECOVERY-before-runtime-path-fix.md": {
+      "sha256": "486b23fe202e616522e26c771ddd715ade314a490723a2c17e08a2b0e0c86896",
+      "bytes": 2897,
+      "mtime_ns": 1793322198370933650
+    },
+    "history/stage-a-initial/manifest.json": {
+      "sha256": "7c29c49c73a4f7db23076c7fbc530886c16bbb7115c6e8d4d91ad95f1d880f0c",
+      "bytes": 933,
+      "mtime_ns": 1793322198324624878
+    },
+    "history/stage-a-initial/notes/parameters.json": {
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "mtime_ns": 1793320885061235044
+    },
+    "history/stage-a-initial/results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "mtime_ns": 1793320885061699242
+    },
+    "history/stage-a-initial/results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "mtime_ns": 1793320885061840514
+    },
+    "history/stage-a-initial/results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "mtime_ns": 1793320885061776920
+    },
+    "notes/parameters.json": {
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161,
+      "mtime_ns": 1793322443472509447
+    },
+    "notes/rejected-parameters.json": {
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160,
+      "mtime_ns": 1793320885061323058
+    },
+    "notes/source-check.md": {
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521,
+      "mtime_ns": 1793320885061394110
+    },
+    "notes/stage-a-operational-corrections.json": {
+      "sha256": "f1c33cc09c438d70cf8d3dfe528e6fd60dfe0f79b7230e3faf82fb7a6bb96c75",
+      "bytes": 1743,
+      "mtime_ns": 1793322412444104899
+    },
+    "notes/stage-a-validation.json": {
+      "sha256": "d786eff3467730579d8e30e5b334d7169206509c42f70c4683d803a5397e4af2",
+      "bytes": 6348,
+      "mtime_ns": 1793322198370117740
+    },
+    "notes/unregistered-scratch.md": {
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "mtime_ns": 1793320885061457412
+    },
+    "project.json": {
+      "sha256": "524d57b3666e1ec2ca0224b04c33fd4b8f116e8bec20adb9ddf37619f8b80e5d",
+      "bytes": 995,
+      "mtime_ns": 1793322198317281399
+    },
+    "provenance/initial/BRIEF.md": {
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267,
+      "mtime_ns": 1793321551158134598
+    },
+    "provenance/initial/MANIFEST.json": {
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188,
+      "mtime_ns": 1793321551160210645
+    },
+    "provenance/initial/PROTOCOL.md": {
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "mtime_ns": 1793322011428283048
+    },
+    "provenance/initial/RECORDING.md": {
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "mtime_ns": 1793322011428408672
+    },
+    "provenance/initial/STAGE-A.md": {
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "mtime_ns": 1793322011428495672
+    },
+    "provenance/initial/access-manifest.json": {
+      "sha256": "c4a40e9c36a793b3dedd154a2953b9ee505339e6918bb2206b1e70aacab2819c",
+      "bytes": 4579,
+      "mtime_ns": 1793322198370878942
+    },
+    "provenance/initial/constraints.json": {
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064,
+      "mtime_ns": 1793321045048209518
+    },
+    "provenance/initial/obligations.json": {
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478,
+      "mtime_ns": 1793320885062025418
+    },
+    "provenance/initial/source-identities.json": {
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074,
+      "mtime_ns": 1793320885061531549
+    },
+    "records/registry.json": {
+      "sha256": "d91b1bb3fa5c72ae9a813ef5f524337bd613a4d15bbebe4a3d84069b022bcc8c",
+      "bytes": 27648,
+      "mtime_ns": 1793322412544201255
+    },
+    "results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "mtime_ns": 1793320885061699242
+    },
+    "results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "mtime_ns": 1793320885061840514
+    },
+    "results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "mtime_ns": 1793320885061776920
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "mtime_ns": 1793320885059972595
+    },
+    "sources/howard2021-arxiv-v9.pdf": {
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "mtime_ns": 1793320885060443878
+    },
+    "validation/stage-a/commands.json": {
+      "sha256": "b9a3b6e1fb48ac766231e7ff7e8d547208c004adb97a3b71b6e90ac03d0218b9",
+      "bytes": 1528,
+      "mtime_ns": 1793322198370602570
+    },
+    "validation/stage-a/normal/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "mtime_ns": 1793322198341219778
+    },
+    "validation/stage-a/normal/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "mtime_ns": 1793322198341309403
+    },
+    "validation/stage-a/preservation.json": {
+      "sha256": "0bddfff86e6baa075fe603ca023f499cd1792eabb8f64e2bfc905306b5bb0b15",
+      "bytes": 1204,
+      "mtime_ns": 1793322198370710319
+    }
+  },
+  "directories": {
+    ".": 1793322198370908567,
+    ".agents": 1793322198287167322,
+    ".agents/skills": 1793322198280416379,
+    ".agents/skills/_rw-runtime": 1793322198287122406,
+    ".agents/skills/_rw-runtime/core": 1793322198283093607,
+    ".agents/skills/_rw-runtime/core/schemas": 1793322198282692318,
+    ".agents/skills/_rw-runtime/design": 1793322198283241564,
+    ".agents/skills/_rw-runtime/profiles": 1793322198286466203,
+    ".agents/skills/_rw-runtime/profiles/disciplines": 1793322198284263263,
+    ".agents/skills/_rw-runtime/profiles/methods": 1793322198286184122,
+    ".agents/skills/_rw-runtime/profiles/templates": 1793322198286704659,
+    ".agents/skills/_rw-runtime/tools": 1793322198286955949,
+    ".agents/skills/rw-candidates": 1793322198277777485,
+    ".agents/skills/rw-figures": 1793322198280271922,
+    ".agents/skills/rw-figures/agents": 1793322198279626803,
+    ".agents/skills/rw-figures/assets": 1793322198279908759,
+    ".agents/skills/rw-figures/examples": 1793322198280067757,
+    ".agents/skills/rw-figures/references": 1793322198280233964,
+    ".agents/skills/rw-figures/scripts": 1793322198280390630,
+    ".agents/skills/rw-innovation": 1793322198277611111,
+    ".agents/skills/rw-literature": 1793322198277278781,
+    ".agents/skills/rw-literature/references": 1793322198277226240,
+    ".agents/skills/rw-literature/scripts": 1793322198277444988,
+    ".agents/skills/rw-question": 1793322198276799994,
+    ".agents/skills/rw-review": 1793322198279157807,
+    ".agents/skills/rw-review/references": 1793322198279122474,
+    ".agents/skills/rw-review/scripts": 1793322198279307306,
+    ".agents/skills/rw-validation": 1793322198277936317,
+    ".agents/skills/rw-workflow": 1793322198276592287,
+    ".agents/skills/rw-writing": 1793322198278112274,
+    ".research": 1793322198266197209,
+    "history": 1793322198323818801,
+    "history/stage-a-initial": 1793322246207514432,
+    "history/stage-a-initial/notes": 1793322198323892842,
+    "history/stage-a-initial/results": 1793322198324429463,
+    "notes": 1793322412444072066,
+    "provenance": 1793322198322545937,
+    "provenance/initial": 1793322198370838484,
+    "records": 1793322412544325337,
+    "results": 1793320885061816468,
+    "scripts": 1793320885059922004,
+    "sources": 1793320885060153832,
+    "validation": 1793322198370217198,
+    "validation/stage-a": 1793322198370683652,
+    "validation/stage-a/normal": 1793322198341268819
+  }
+}

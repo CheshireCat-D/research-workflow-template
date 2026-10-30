@@ -1,0 +1,138 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P7f7d33fec3a3404cb09bbea7b8f8419c",
+  "revision": 26,
+  "passed": false,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [
+    {
+      "code": "file_changed",
+      "record": "evidence:T-PARAM",
+      "path": "notes/parameters.json"
+    },
+    {
+      "code": "activity_stale",
+      "record": "activity:T-CALC"
+    },
+    {
+      "code": "activity_stale",
+      "record": "activity:T-SYNTH"
+    },
+    {
+      "code": "checkpoint_stale",
+      "changed": [
+        "local-files"
+      ]
+    }
+  ],
+  "counts": {
+    "activities": 3,
+    "artifacts": 13,
+    "decisions": 1,
+    "evidence": 2,
+    "method_bindings": 0,
+    "relations": 1,
+    "sources": 2,
+    "statements": 1
+  },
+  "configuration": {
+    "deliverable": {
+      "contribution_benchmarks": [],
+      "kind": "undecided",
+      "language": "zh",
+      "venue": "Undecided; do not invent a target journal"
+    },
+    "disciplines": [],
+    "entry_activity": "question",
+    "governance": {
+      "applicability": "unknown",
+      "relevant_requirements": []
+    },
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "methods": [],
+    "project_id": "P7f7d33fec3a3404cb09bbea7b8f8419c",
+    "resources": {
+      "available_capabilities": [
+        "local Python standard library",
+        "fixed source cache",
+        "author-provided working notes"
+      ],
+      "budget": "Offline Python standard library only; no new data collection or model refit",
+      "deadline": "2026-12-15"
+    },
+    "schema_version": "0.1",
+    "title": "固定精度正态混合边界的可恢复数值核对",
+    "workflow_mode": "light"
+  },
+  "file_tracking": {
+    "local_files": [
+      "RECOVERY.md",
+      "history/stage-a-initial/manifest.json",
+      "history/stage-a-initial/notes/parameters.json",
+      "history/stage-a-initial/results/result.json",
+      "history/stage-a-initial/results/summary.md",
+      "history/stage-a-initial/results/table.csv",
+      "notes/parameters.json",
+      "notes/source-check.md",
+      "notes/stage-a-operational-corrections.json",
+      "notes/stage-a-validation.json",
+      "results/result.json",
+      "results/summary.md",
+      "results/table.csv",
+      "scripts/compute.py",
+      "sources/howard2021-arxiv-v9.pdf"
+    ],
+    "local_file_count": 15,
+    "source_ids_without_local_evidence": [
+      "T-REMOTE"
+    ]
+  },
+  "activities": [
+    {
+      "id": "T-CALC",
+      "title": "Evaluate supplied calculator and verify current result and companion table",
+      "declared_status": "done",
+      "effective_status": "stale",
+      "stale_reasons": [
+        "Bound records or local files changed"
+      ]
+    },
+    {
+      "id": "T-SOURCE-CHECK",
+      "title": "Verify supplied fixed source identity and card scope",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "T-SYNTH",
+      "title": "Review supplied summary within current claim and verified numeric result",
+      "declared_status": "done",
+      "effective_status": "stale",
+      "stale_reasons": [
+        "A required activity is no longer done",
+        "Bound records or local files changed"
+      ]
+    }
+  ],
+  "cursor": {
+    "activity_id": "T-SYNTH",
+    "next_action": "先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "stale",
+    "changed": [
+      "local-files"
+    ]
+  },
+  "next_action": "先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。",
+  "needs_review": true,
+  "recovery_instruction": "Review changed inputs and affected activities before following the saved next action."
+}

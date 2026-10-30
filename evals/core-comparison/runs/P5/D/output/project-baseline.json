@@ -1,0 +1,869 @@
+[
+  {
+    "path": ".",
+    "type": "directory",
+    "mtime_ns": 1793324938928934794,
+    "size": 256
+  },
+  {
+    "path": ".research",
+    "type": "directory",
+    "mtime_ns": 1793325500750125899,
+    "size": 224
+  },
+  {
+    "path": ".research/checkpoints",
+    "type": "directory",
+    "mtime_ns": 1793325593058282316,
+    "size": 128
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute",
+    "type": "directory",
+    "mtime_ns": 1793325500755105932,
+    "size": 128
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files",
+    "type": "directory",
+    "mtime_ns": 1793325500754698430,
+    "size": 256
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research",
+    "type": "directory",
+    "mtime_ns": 1793325500752294622,
+    "size": 192
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/evidence",
+    "type": "directory",
+    "mtime_ns": 1793325500750282400,
+    "size": 96
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/evidence/A",
+    "type": "directory",
+    "mtime_ns": 1793325500751136281,
+    "size": 256
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/current-status.json",
+    "type": "file",
+    "mtime_ns": 1793325500750362067,
+    "size": 3614,
+    "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/normal",
+    "type": "directory",
+    "mtime_ns": 1793325500750651819,
+    "size": 128
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/normal/result.json",
+    "type": "file",
+    "mtime_ns": 1793325500750572361,
+    "size": 704,
+    "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/normal/table.csv",
+    "type": "file",
+    "mtime_ns": 1793325500750683236,
+    "size": 101,
+    "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/normal-execution.json",
+    "type": "file",
+    "mtime_ns": 1793325500750784654,
+    "size": 696,
+    "sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/rejected-execution.json",
+    "type": "file",
+    "mtime_ns": 1793325500750913155,
+    "size": 721,
+    "sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/status-execution.json",
+    "type": "file",
+    "mtime_ns": 1793325500751050072,
+    "size": 4225,
+    "sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/validation-checks.json",
+    "type": "file",
+    "mtime_ns": 1793325500751183948,
+    "size": 4643,
+    "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/provenance",
+    "type": "directory",
+    "mtime_ns": 1793325500751280824,
+    "size": 96
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial",
+    "type": "directory",
+    "mtime_ns": 1793325500752040454,
+    "size": 320
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/BRIEF.md",
+    "type": "file",
+    "mtime_ns": 1793325500751349199,
+    "size": 1267,
+    "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/MANIFEST.json",
+    "type": "file",
+    "mtime_ns": 1793325500751453283,
+    "size": 2188,
+    "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/PROTOCOL.md",
+    "type": "file",
+    "mtime_ns": 1793325500751555159,
+    "size": 2279,
+    "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/RECORDING.md",
+    "type": "file",
+    "mtime_ns": 1793325500751655826,
+    "size": 1300,
+    "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/STAGE-A.md",
+    "type": "file",
+    "mtime_ns": 1793325500751761202,
+    "size": 1214,
+    "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/constraints.json",
+    "type": "file",
+    "mtime_ns": 1793325500751857661,
+    "size": 1064,
+    "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/obligations.json",
+    "type": "file",
+    "mtime_ns": 1793325500751972037,
+    "size": 4478,
+    "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/source-identities.json",
+    "type": "file",
+    "mtime_ns": 1793325500752067537,
+    "size": 1074,
+    "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/state.json",
+    "type": "file",
+    "mtime_ns": 1793325500752222122,
+    "size": 16218,
+    "sha256": "826f355ae1301c9c879b4440b78edbe93f173cb696df00b28c1c26a6de338a95"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions",
+    "type": "directory",
+    "mtime_ns": 1793325500752450373,
+    "size": 128
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions/A-draft",
+    "type": "directory",
+    "mtime_ns": 1793325500752356081,
+    "size": 96
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions/A-draft/RECOVERY.md",
+    "type": "file",
+    "mtime_ns": 1793325500752386623,
+    "size": 3128,
+    "sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial",
+    "type": "directory",
+    "mtime_ns": 1793325500752703042,
+    "size": 160
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/index.json",
+    "type": "file",
+    "mtime_ns": 1793325500752510165,
+    "size": 1273,
+    "sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/notes",
+    "type": "directory",
+    "mtime_ns": 1793325500752610707,
+    "size": 96
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/notes/parameters.json",
+    "type": "file",
+    "mtime_ns": 1793325500752636166,
+    "size": 161,
+    "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/results",
+    "type": "directory",
+    "mtime_ns": 1793325500752915793,
+    "size": 160
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/results/result.json",
+    "type": "file",
+    "mtime_ns": 1793325500752759375,
+    "size": 704,
+    "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/results/summary.md",
+    "type": "file",
+    "mtime_ns": 1793325500752850792,
+    "size": 295,
+    "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/results/table.csv",
+    "type": "file",
+    "mtime_ns": 1793325500752940460,
+    "size": 101,
+    "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/RECOVERY.md",
+    "type": "file",
+    "mtime_ns": 1793325500753038585,
+    "size": 3254,
+    "sha256": "98608a9d3ce937ba87d7fd2689f8935798f641988ddf85b1f0c94f3a29d8153e"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/notes",
+    "type": "directory",
+    "mtime_ns": 1793325500753392838,
+    "size": 192
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/notes/parameters.json",
+    "type": "file",
+    "mtime_ns": 1793325500753148044,
+    "size": 161,
+    "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/notes/rejected-parameters.json",
+    "type": "file",
+    "mtime_ns": 1793325500753235837,
+    "size": 160,
+    "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/notes/source-check.md",
+    "type": "file",
+    "mtime_ns": 1793325500753328296,
+    "size": 521,
+    "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/notes/unregistered-scratch.md",
+    "type": "file",
+    "mtime_ns": 1793325500753424005,
+    "size": 132,
+    "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/results",
+    "type": "directory",
+    "mtime_ns": 1793325500753736798,
+    "size": 160
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/results/result.json",
+    "type": "file",
+    "mtime_ns": 1793325500753556005,
+    "size": 704,
+    "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/results/summary.md",
+    "type": "file",
+    "mtime_ns": 1793325500753663881,
+    "size": 295,
+    "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/results/table.csv",
+    "type": "file",
+    "mtime_ns": 1793325500753765173,
+    "size": 101,
+    "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/scripts",
+    "type": "directory",
+    "mtime_ns": 1793325500753991342,
+    "size": 128
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/scripts/compute.py",
+    "type": "file",
+    "mtime_ns": 1793325500753916674,
+    "size": 4157,
+    "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/scripts/manage.py",
+    "type": "file",
+    "mtime_ns": 1793325500754038092,
+    "size": 5383,
+    "sha256": "1dfc49a50e7a029ee6e91715cb7942be5d90869d66495ea84281efe3dcaf4655"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/sources",
+    "type": "directory",
+    "mtime_ns": 1793325500754727597,
+    "size": 96
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/files/sources/howard2021-arxiv-v9.pdf",
+    "type": "file",
+    "mtime_ns": 1793325500754841847,
+    "size": 1494142,
+    "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+  },
+  {
+    "path": ".research/checkpoints/C-drift-before-recompute/index.json",
+    "type": "file",
+    "mtime_ns": 1793325500755157141,
+    "size": 5384,
+    "sha256": "eb89ecd91b670ce1815cfae321d001f746f078fc0893a6d9b8c1d3c17daf9bb6"
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified",
+    "type": "directory",
+    "mtime_ns": 1793325593059250948,
+    "size": 128
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/files",
+    "type": "directory",
+    "mtime_ns": 1793325593058599985,
+    "size": 192
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/files/.research",
+    "type": "directory",
+    "mtime_ns": 1793325593058377442,
+    "size": 96
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/files/.research/state.json",
+    "type": "file",
+    "mtime_ns": 1793325593058404942,
+    "size": 19057,
+    "sha256": "68cf475ed8d8b5c8fececdcdfc3eb9083cb0f5a78b00af9daa5647510fe2108d"
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/files/RECOVERY.md",
+    "type": "file",
+    "mtime_ns": 1793325593058477901,
+    "size": 3275,
+    "sha256": "807fd2ffaa3968615fb191e1a13c16009c3d130b14fd8cecaa85b08bde62ee24"
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/files/notes",
+    "type": "directory",
+    "mtime_ns": 1793325593058541318,
+    "size": 96
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/files/notes/parameters.json",
+    "type": "file",
+    "mtime_ns": 1793325593058569151,
+    "size": 161,
+    "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117"
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/files/results",
+    "type": "directory",
+    "mtime_ns": 1793325593058786653,
+    "size": 160
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/files/results/result.json",
+    "type": "file",
+    "mtime_ns": 1793325593058663235,
+    "size": 703,
+    "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280"
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/files/results/summary.md",
+    "type": "file",
+    "mtime_ns": 1793325593058808319,
+    "size": 1134,
+    "sha256": "d10158c47c54bdf88673606ca136716b97b65e042317bd17082dd6db7e2e5b27"
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/files/results/table.csv",
+    "type": "file",
+    "mtime_ns": 1793325593058733986,
+    "size": 100,
+    "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d"
+  },
+  {
+    "path": ".research/checkpoints/C-final-verified/index.json",
+    "type": "file",
+    "mtime_ns": 1793325593059277323,
+    "size": 1095,
+    "sha256": "da859bc9249cc203ee1cc23b20b2c0dbefb263ceddd26e9a7f94e1bf7461816b"
+  },
+  {
+    "path": ".research/evidence",
+    "type": "directory",
+    "mtime_ns": 1793325500779842305,
+    "size": 128
+  },
+  {
+    "path": ".research/evidence/A",
+    "type": "directory",
+    "mtime_ns": 1793324938947049706,
+    "size": 256
+  },
+  {
+    "path": ".research/evidence/A/current-status.json",
+    "type": "file",
+    "mtime_ns": 1793324938946825955,
+    "size": 3614,
+    "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5"
+  },
+  {
+    "path": ".research/evidence/A/normal",
+    "type": "directory",
+    "mtime_ns": 1793324938904731092,
+    "size": 128
+  },
+  {
+    "path": ".research/evidence/A/normal/result.json",
+    "type": "file",
+    "mtime_ns": 1793324938904678425,
+    "size": 704,
+    "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460"
+  },
+  {
+    "path": ".research/evidence/A/normal/table.csv",
+    "type": "file",
+    "mtime_ns": 1793324938904773342,
+    "size": 101,
+    "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8"
+  },
+  {
+    "path": ".research/evidence/A/normal-execution.json",
+    "type": "file",
+    "mtime_ns": 1793324938907154358,
+    "size": 696,
+    "sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2"
+  },
+  {
+    "path": ".research/evidence/A/rejected-execution.json",
+    "type": "file",
+    "mtime_ns": 1793324938925247687,
+    "size": 721,
+    "sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888"
+  },
+  {
+    "path": ".research/evidence/A/status-execution.json",
+    "type": "file",
+    "mtime_ns": 1793324938946652037,
+    "size": 4225,
+    "sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb"
+  },
+  {
+    "path": ".research/evidence/A/validation-checks.json",
+    "type": "file",
+    "mtime_ns": 1793324938926446695,
+    "size": 4643,
+    "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e"
+  },
+  {
+    "path": ".research/evidence/C",
+    "type": "directory",
+    "mtime_ns": 1793325593057901355,
+    "size": 288
+  },
+  {
+    "path": ".research/evidence/C/final-status-execution.json",
+    "type": "file",
+    "mtime_ns": 1793325593057945481,
+    "size": 4232,
+    "sha256": "84bc25ab9ebf3948d0b68a4eaebcb77faf26ef7e259e7ef752c32d94902ea202"
+  },
+  {
+    "path": ".research/evidence/C/intermediate-read-only-check.json",
+    "type": "file",
+    "mtime_ns": 1793325500783025243,
+    "size": 163,
+    "sha256": "469b3beb0908533381bab178d77ceeffe7540f73cf8dbb9451c9256a76aa12e0"
+  },
+  {
+    "path": ".research/evidence/C/intermediate-status-execution.json",
+    "type": "file",
+    "mtime_ns": 1793325500779937764,
+    "size": 4425,
+    "sha256": "6e06b9ab9990be07a2ae47614656a146a3a7c0959fb2f6518d5abd6e29a71eeb"
+  },
+  {
+    "path": ".research/evidence/C/pre-recompute-state.json",
+    "type": "file",
+    "mtime_ns": 1793325593016945625,
+    "size": 17358,
+    "sha256": "87c10f5f6d4be7c4223aefde29718c08aeff5d20fd54d20fb4567bd932206767"
+  },
+  {
+    "path": ".research/evidence/C/recompute-execution.json",
+    "type": "file",
+    "mtime_ns": 1793325593036066085,
+    "size": 743,
+    "sha256": "85eaae10f1a32ad0d7b2126565665a437bbd72d87feb6e08284eb60426ab0026"
+  },
+  {
+    "path": ".research/evidence/C/recomputed",
+    "type": "directory",
+    "mtime_ns": 1793325593033542235,
+    "size": 128
+  },
+  {
+    "path": ".research/evidence/C/recomputed/result.json",
+    "type": "file",
+    "mtime_ns": 1793325593033498276,
+    "size": 703,
+    "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280"
+  },
+  {
+    "path": ".research/evidence/C/recomputed/table.csv",
+    "type": "file",
+    "mtime_ns": 1793325593033586485,
+    "size": 100,
+    "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d"
+  },
+  {
+    "path": ".research/evidence/C/validation-checks.json",
+    "type": "file",
+    "mtime_ns": 1793325593037587179,
+    "size": 1133,
+    "sha256": "fdf3e919a78089c6c9e9c086188f40936b7c1a4023d19540843f438e17a707a5"
+  },
+  {
+    "path": ".research/provenance",
+    "type": "directory",
+    "mtime_ns": 1793325593015789450,
+    "size": 128
+  },
+  {
+    "path": ".research/provenance/C",
+    "type": "directory",
+    "mtime_ns": 1793325593016222370,
+    "size": 192
+  },
+  {
+    "path": ".research/provenance/C/PROTOCOL.md",
+    "type": "file",
+    "mtime_ns": 1793325593015908826,
+    "size": 2279,
+    "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4"
+  },
+  {
+    "path": ".research/provenance/C/RECORDING.md",
+    "type": "file",
+    "mtime_ns": 1793325593016075827,
+    "size": 1300,
+    "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8"
+  },
+  {
+    "path": ".research/provenance/C/STAGE-C.md",
+    "type": "file",
+    "mtime_ns": 1793325593016170703,
+    "size": 761,
+    "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a"
+  },
+  {
+    "path": ".research/provenance/C/author-revision",
+    "type": "directory",
+    "mtime_ns": 1793325593016373579,
+    "size": 128
+  },
+  {
+    "path": ".research/provenance/C/author-revision/AUTHOR-REVISION.md",
+    "type": "file",
+    "mtime_ns": 1793325593016304329,
+    "size": 1371,
+    "sha256": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673"
+  },
+  {
+    "path": ".research/provenance/C/author-revision/approved-parameters.json",
+    "type": "file",
+    "mtime_ns": 1793325593016404454,
+    "size": 161,
+    "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117"
+  },
+  {
+    "path": ".research/provenance/initial",
+    "type": "directory",
+    "mtime_ns": 1793324938885165962,
+    "size": 320
+  },
+  {
+    "path": ".research/provenance/initial/BRIEF.md",
+    "type": "file",
+    "mtime_ns": 1793321551158134598,
+    "size": 1267,
+    "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a"
+  },
+  {
+    "path": ".research/provenance/initial/MANIFEST.json",
+    "type": "file",
+    "mtime_ns": 1793321551160210645,
+    "size": 2188,
+    "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b"
+  },
+  {
+    "path": ".research/provenance/initial/PROTOCOL.md",
+    "type": "file",
+    "mtime_ns": 1793323143417692193,
+    "size": 2279,
+    "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4"
+  },
+  {
+    "path": ".research/provenance/initial/RECORDING.md",
+    "type": "file",
+    "mtime_ns": 1793323143417850775,
+    "size": 1300,
+    "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8"
+  },
+  {
+    "path": ".research/provenance/initial/STAGE-A.md",
+    "type": "file",
+    "mtime_ns": 1793323143417964274,
+    "size": 1214,
+    "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7"
+  },
+  {
+    "path": ".research/provenance/initial/constraints.json",
+    "type": "file",
+    "mtime_ns": 1793321045048209518,
+    "size": 1064,
+    "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec"
+  },
+  {
+    "path": ".research/provenance/initial/obligations.json",
+    "type": "file",
+    "mtime_ns": 1793320885062025418,
+    "size": 4478,
+    "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214"
+  },
+  {
+    "path": ".research/provenance/initial/source-identities.json",
+    "type": "file",
+    "mtime_ns": 1793320885061531549,
+    "size": 1074,
+    "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3"
+  },
+  {
+    "path": ".research/state.json",
+    "type": "file",
+    "mtime_ns": 1793325593039758234,
+    "size": 19057,
+    "sha256": "68cf475ed8d8b5c8fececdcdfc3eb9083cb0f5a78b00af9daa5647510fe2108d"
+  },
+  {
+    "path": ".research/versions",
+    "type": "directory",
+    "mtime_ns": 1793325139078595535,
+    "size": 128
+  },
+  {
+    "path": ".research/versions/A-draft",
+    "type": "directory",
+    "mtime_ns": 1793325139078635410,
+    "size": 96
+  },
+  {
+    "path": ".research/versions/A-draft/RECOVERY.md",
+    "type": "file",
+    "mtime_ns": 1793325139078676244,
+    "size": 3128,
+    "sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0"
+  },
+  {
+    "path": ".research/versions/A-initial",
+    "type": "directory",
+    "mtime_ns": 1793324938927981538,
+    "size": 160
+  },
+  {
+    "path": ".research/versions/A-initial/index.json",
+    "type": "file",
+    "mtime_ns": 1793324938928006538,
+    "size": 1273,
+    "sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3"
+  },
+  {
+    "path": ".research/versions/A-initial/notes",
+    "type": "directory",
+    "mtime_ns": 1793324938927336034,
+    "size": 96
+  },
+  {
+    "path": ".research/versions/A-initial/notes/parameters.json",
+    "type": "file",
+    "mtime_ns": 1793320885061235044,
+    "size": 161,
+    "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67"
+  },
+  {
+    "path": ".research/versions/A-initial/results",
+    "type": "directory",
+    "mtime_ns": 1793324938927828662,
+    "size": 160
+  },
+  {
+    "path": ".research/versions/A-initial/results/result.json",
+    "type": "file",
+    "mtime_ns": 1793320885061699242,
+    "size": 704,
+    "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460"
+  },
+  {
+    "path": ".research/versions/A-initial/results/summary.md",
+    "type": "file",
+    "mtime_ns": 1793320885061840514,
+    "size": 295,
+    "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc"
+  },
+  {
+    "path": ".research/versions/A-initial/results/table.csv",
+    "type": "file",
+    "mtime_ns": 1793320885061776920,
+    "size": 101,
+    "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8"
+  },
+  {
+    "path": "RECOVERY.md",
+    "type": "file",
+    "mtime_ns": 1793325593039820152,
+    "size": 3275,
+    "sha256": "807fd2ffaa3968615fb191e1a13c16009c3d130b14fd8cecaa85b08bde62ee24"
+  },
+  {
+    "path": "notes",
+    "type": "directory",
+    "mtime_ns": 1793320885061432075,
+    "size": 192
+  },
+  {
+    "path": "notes/parameters.json",
+    "type": "file",
+    "mtime_ns": 1793325182005339083,
+    "size": 161,
+    "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117"
+  },
+  {
+    "path": "notes/rejected-parameters.json",
+    "type": "file",
+    "mtime_ns": 1793320885061323058,
+    "size": 160,
+    "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908"
+  },
+  {
+    "path": "notes/source-check.md",
+    "type": "file",
+    "mtime_ns": 1793320885061394110,
+    "size": 521,
+    "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d"
+  },
+  {
+    "path": "notes/unregistered-scratch.md",
+    "type": "file",
+    "mtime_ns": 1793320885061457412,
+    "size": 132,
+    "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a"
+  },
+  {
+    "path": "results",
+    "type": "directory",
+    "mtime_ns": 1793320885061816468,
+    "size": 160
+  },
+  {
+    "path": "results/result.json",
+    "type": "file",
+    "mtime_ns": 1793325593037207134,
+    "size": 703,
+    "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280"
+  },
+  {
+    "path": "results/summary.md",
+    "type": "file",
+    "mtime_ns": 1793325593037335552,
+    "size": 1134,
+    "sha256": "d10158c47c54bdf88673606ca136716b97b65e042317bd17082dd6db7e2e5b27"
+  },
+  {
+    "path": "results/table.csv",
+    "type": "file",
+    "mtime_ns": 1793325593037277885,
+    "size": 100,
+    "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d"
+  },
+  {
+    "path": "scripts",
+    "type": "directory",
+    "mtime_ns": 1793324938928860711,
+    "size": 128
+  },
+  {
+    "path": "scripts/compute.py",
+    "type": "file",
+    "mtime_ns": 1793320885059972595,
+    "size": 4157,
+    "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+  },
+  {
+    "path": "scripts/manage.py",
+    "type": "file",
+    "mtime_ns": 1793324938928901461,
+    "size": 5383,
+    "sha256": "1dfc49a50e7a029ee6e91715cb7942be5d90869d66495ea84281efe3dcaf4655"
+  },
+  {
+    "path": "sources",
+    "type": "directory",
+    "mtime_ns": 1793320885060153832,
+    "size": 96
+  },
+  {
+    "path": "sources/howard2021-arxiv-v9.pdf",
+    "type": "file",
+    "mtime_ns": 1793320885060443878,
+    "size": 1494142,
+    "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+  }
+]

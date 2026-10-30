@@ -1,0 +1,142 @@
+{
+  "case_id": "D",
+  "initial_parameters": {
+    "case_id": "D",
+    "evaluation_start": "2011-10-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "metric_weighting": "observed-hour"
+  },
+  "revised_parameters": {
+    "case_id": "D",
+    "evaluation_start": "2011-11-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "metric_weighting": "observed-hour"
+  },
+  "expected_B_changed_paths": [
+    "notes/parameters.json"
+  ],
+  "expected_B_missing_paths": [],
+  "B_directly_affected_activities": [
+    "D-CALC"
+  ],
+  "B_transitively_affected_activities": [
+    "D-SYNTH"
+  ],
+  "B_unaffected_completed_activities": [
+    "D-SOURCE-CHECK"
+  ],
+  "B_old_current_results_paths": [
+    "results/result.json",
+    "results/table.csv",
+    "results/summary.md"
+  ],
+  "B_checkpoint_freshness": "stale because author parameter file changed after the saved state; no write is authorized",
+  "B_old_next_action_scope": "Do not proceed to old review/discussion before changed-parameter recomputation and dependent summary review",
+  "C_intermediate_checkpoint": "Snapshot can be current, but old completed calculation and synthesis remain stale/unreviewed until explicit real revalidation; source identity branch remains valid",
+  "C_revalidation_order": [
+    "D-CALC",
+    "D-SYNTH"
+  ],
+  "initial_result": {
+    "case_id": "D",
+    "evaluation_start": "2011-10-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "observed_hours": 2203,
+    "observed_days": 92,
+    "C0_MAE": 58.825190494512434,
+    "C1_MAE": 44.570832407531775,
+    "C0_RMSE": 86.08056895633848,
+    "C1_RMSE": 67.99996906089847,
+    "C0_bias_prediction_minus_actual": 1.078965171773347,
+    "C1_bias_prediction_minus_actual": 0.9871531155146787,
+    "MAE_reduction_fraction": 0.24231724482575867,
+    "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+    "input_sha256": {
+      "parameters": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    }
+  },
+  "revised_result": {
+    "case_id": "D",
+    "evaluation_start": "2011-11-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "observed_hours": 1460,
+    "observed_days": 61,
+    "C0_MAE": 56.64127430990882,
+    "C1_MAE": 41.252622564018566,
+    "C0_RMSE": 81.70038360631688,
+    "C1_RMSE": 64.15826564867794,
+    "C0_bias_prediction_minus_actual": 13.433264561295244,
+    "C1_bias_prediction_minus_actual": 13.347664992606457,
+    "MAE_reduction_fraction": 0.2716861852664598,
+    "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+    "input_sha256": {
+      "parameters": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    }
+  },
+  "D_final_next_action": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。",
+  "D_final_constraints_unchanged_except_current_scope": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-11-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "unchanged_paths": [
+    "data/hour_2011.csv",
+    "scripts/compute.py",
+    "notes/source-check.md",
+    "model/frozen.json"
+  ],
+  "coverage_boundaries": {
+    "source_only": [
+      "D-REMOTE"
+    ],
+    "unregistered_file": [
+      "notes/unregistered-scratch.md"
+    ],
+    "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked."
+  },
+  "identity_scope": "Fingerprints prove byte identity only; no automatic scientific validity.",
+  "numeric_tolerance_absolute": 1e-10,
+  "extra_activity_rule": "Actual valid additional dependencies may add correctly affected activities; do not enforce only the expected three IDs against a richer truthful graph.",
+  "scientific_update_limit": "Only evaluation window changes, not model quality/refit; new relative MAE cannot be attributed to improved training.",
+  "standard_success_path": true,
+  "conditional_grading_rules": [
+    "Standard numeric/affected-set answers describe successful upstream setup, not facts to fabricate after an actual earlier failure.",
+    "For missing checkpoint or incomplete C, B/D must truthfully recover the actual recorded state (including not-recorded/pending/unknown) and give a safe conditional next step. Do not demand a fictional stale checkpoint or completed revised result.",
+    "Deduct an absent archive/constraint/record at its relevant creation or revision criterion. Later truthful reporting of that inherited gap is not itself another error; evaluate actual recovery information and correct handling under each later criterion. Do not automatically zero an entire downstream stage.",
+    "A definite desired recovery fact that cannot be retrieved still lacks that factual evidence; distinguish inability from dishonest false assertion and explain any deduction.",
+    "Exact next action means the required purpose and necessary conditions, not verbatim Chinese matching. A failed C requires actual pending repair and safe scope, rather than copying the successful-path D next action.",
+    "No extra critical cap or unannounced penalty. List critical errors separately and deduct only within applicable criterion components; avoid deducting the same finding twice inside a criterion.",
+    "Equivalent correct representations, scientific routes and additional genuine coverage are accepted. Do not require proprietary field names or presume remote/unregistered dependencies are automatically covered.",
+    "Parameter SHA in a calculator result must describe the actual input bytes used by that execution. Accept equivalent working-parameter JSON formatting and numeric spelling with identical strict semantics; compare scientific numbers by tolerance, not reference parameter SHA. Immutable original PDF/CSV, code and frozen model still require their original bytes."
+  ]
+}

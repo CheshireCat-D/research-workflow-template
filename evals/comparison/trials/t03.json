@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "trial_id": "t03",
+  "task_id": "Q37",
+  "arm": "critical-thinking",
+  "freeze_sha256": "67574361112904429701845488db896e792b41a2849c5c86d8e8a441af6fa475",
+  "task_sha256": "997698cfd2edaf430c25b5e987982ef81bfb6075db3ba3cf6d542016cc863025",
+  "report": {
+    "path": "runs/t03/report.md",
+    "sha256": "a90c20d503de12d20e6f606341812403aa2a59e5de153cff196cce585ef9aaa8"
+  },
+  "execution": {
+    "path": "runs/t03/execution.json",
+    "sha256": "2af3643c4c572ee49fb1d36f0ecb879ea081ebbfb4bc62b19a4b319480b85766"
+  },
+  "blind": {
+    "submission_id": "B29b4a4",
+    "arm_revealed_to_judge": false,
+    "adjudication": {
+      "path": "adjudications/B29b4a4.json",
+      "sha256": "7960acaaf050503d35652ed302597f7bf6845be1be4c8e06f058e4acf6e60cdf"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "case_id": "T",
+  "stage": "C",
+  "active_constraints": {
+    "alpha": 0.05,
+    "rho": 4.0,
+    "rho_selection": "fixed-before-observation",
+    "intrinsic_time_grid": [
+      0,
+      1,
+      10,
+      100
+    ],
+    "language": "zh",
+    "deadline": "2026-12-15",
+    "deadline_provenance": "Task author supplied",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "venue": "Undecided",
+    "human_expert_approval": false,
+    "submission_authorized": false,
+    "primary_source_and_script_unchanged": true
+  },
+  "next_action": "将rho=4、alpha=0.05、v=[0,1,10,100]的边界表与更新摘要交作者内容复核；暂不扩展到事后选择rho。",
+  "changed_or_missing_paths": {
+    "changed_before_recompute": [
+      "notes/parameters.json"
+    ],
+    "recomputed_or_revised": [
+      "results/result.json",
+      "results/table.csv",
+      "results/summary.md",
+      "RECOVERY.md",
+      "records/registry.json"
+    ],
+    "missing": [],
+    "immutable_verified": [
+      "sources/howard2021-arxiv-v9.pdf",
+      "scripts/compute.py",
+      "notes/source-check.md",
+      "project.json"
+    ]
+  },
+  "affected_activities": [
+    {
+      "id": "T-CALC",
+      "before": "stale",
+      "after": "done",
+      "actual_work": "Original calculator executed with approved rho=4, numerical checks passed; re-registered v2."
+    },
+    {
+      "id": "T-SYNTH",
+      "before": "stale",
+      "after": "done",
+      "actual_work": "Summary revised and checked against current values and scope; re-registered v2."
+    }
+  ],
+  "unaffected_activities": [
+    {
+      "id": "T-SOURCE-CHECK",
+      "before": "done",
+      "after": "done",
+      "reason": "Independent source identity/card inputs unchanged; exact registered envelope not replaced."
+    }
+  ],
+  "checkpoint_freshness": {
+    "before_new_drift_checkpoint": "stale",
+    "after_new_drift_checkpoint": "current while T-PARAM changed and dependent activities stale",
+    "checkpoint_save_is_revalidation": false,
+    "after_actual_revalidation_before_final_checkpoint": "stale due to registered-records and local-files",
+    "final": "current",
+    "final_revision": 46
+  },
+  "scientific_scope": {
+    "completed": "Four-point formula evaluation at alpha=.05 and preselected rho=4; JSON/CSV and summary checks.",
+    "not_performed": [
+      "Coverage theorem proof",
+      "Coverage simulation",
+      "Full mathematical source review",
+      "Independent human expert approval",
+      "Submission acceptance"
+    ],
+    "core_scientific_validity": "not-assessed"
+  },
+  "source_tracking_limits": [
+    "T-REMOTE: source identity only; no supplied local copy or live remote-content check.",
+    "notes/unregistered-scratch.md is unregistered and outside automatic dependency coverage.",
+    "Primary PDF checked by full fingerprint only in this stage; original cache not redistributed."
+  ],
+  "material_paths": {
+    "current_results": [
+      "results/result.json",
+      "results/table.csv",
+      "results/summary.md"
+    ],
+    "author_approval": [
+      "provenance/stage-c/AUTHOR-REVISION.md",
+      "provenance/stage-c/approved-parameters.json"
+    ],
+    "validation": [
+      "notes/stage-c-validation.json",
+      "notes/stage-c-operational-corrections.json",
+      "validation/stage-c/check-drift.json"
+    ],
+    "history": [
+      "history/stage-a-initial",
+      "history/stage-c-before-recompute"
+    ],
+    "recovery": "RECOVERY.md",
+    "authority": [
+      "project.json",
+      "records/registry.json"
+    ]
+  },
+  "notes": [
+    "Initial full rho=1 contents and pre-recompute drift snapshot preserved.",
+    "All metadata mutations used formal register replacement with observed expected versions; no hand edits to authoritative JSON.",
+    "Three actual operational errors and their remedies preserved; failed final-checkpoint output was not overwritten."
+  ]
+}

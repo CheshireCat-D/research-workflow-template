@@ -1,0 +1,10 @@
+{
+  "id": "D-C-INVALID-VALIDATION",
+  "type": "negative-input-test",
+  "description": "Actual controlled start-after-end rejection, no output and canonical files preserved; prior shared-output bindings no longer used for this independent test",
+  "path": "validation/stage-C/invalid-test.json",
+  "derived_from": [
+    "evidence:D-INVALID-PARAM",
+    "artifact:D-CODE"
+  ]
+}

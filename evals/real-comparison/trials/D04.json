@@ -1,0 +1,28 @@
+{
+  "trial_id": "D04",
+  "task_id": "data-b",
+  "arm": "rwt",
+  "replicate": 1,
+  "predecessor": "D02",
+  "freeze_sha256": "a4f6b970d95c96a9472ce47265e78a1b70ec0af1783b7b927848a0ac0bfaca48",
+  "report": {
+    "path": "runs/D04/report.md",
+    "sha256": "68fa8a9122156dadbb012aff70f179d73051906f677d32ab21ec0968b60c036e"
+  },
+  "execution": {
+    "path": "runs/D04/execution.json",
+    "sha256": "a86734c69b6ea292c0fce95a3968801ef07a326b8c7619a2fb154cb7b3f6b362"
+  },
+  "artifacts": {
+    "path": "runs/D04/artifacts.json",
+    "sha256": "555317563a8a34b680d91bdf5a872ce535e6206cd8ae5ca02e86b7db8fd297e5"
+  },
+  "adjudication": {
+    "path": "adjudications/S924971.json",
+    "sha256": "c7ff5cbadce584d89b0686eedae8287b30e395f6ada01b45f3ab2d46837d3bb8"
+  },
+  "raw_report_sha256": "68fa8a9122156dadbb012aff70f179d73051906f677d32ab21ec0968b60c036e",
+  "public_report_sha256": "68fa8a9122156dadbb012aff70f179d73051906f677d32ab21ec0968b60c036e",
+  "raw_report_characters": 6622,
+  "public_report_characters": 6622
+}

@@ -1,0 +1,37 @@
+{
+  "status": "executed",
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 7,
+  "tool_call_count_basis": "tool_calls",
+  "network_calls": 0,
+  "violations": [
+    {
+      "tool_call": 2,
+      "kind": "interpreter_path_deviation",
+      "description": "Used python3 -I -B instead of the designated EVAL_PYTHON for an instruction-read/hash command. The command succeeded and did not write project files.",
+      "remediation": "All subsequent Python commands use the designated interpreter with -I -B; original deviation retained."
+    }
+  ],
+  "scope": "instruction-only; no OS audit",
+  "raw_execution": {
+    "path": "runs/P1/B/raw-execution.json",
+    "sha256": "aaca844f7f6e36443f4d1346246636f8e0576fec93b0b162ee63df26b6d593d2",
+    "original_sha256": "dba8d0e1cc5d84750d4def62f80723a19369dae7684e9b049945eda060563299"
+  },
+  "publication_projection": [
+    "Administrative status/configuration shape; unknown effective settings retained. Full self-report preserved separately."
+  ],
+  "requested": {
+    "max_outer_tool_calls": 16,
+    "max_report_characters": 10000,
+    "model_override": null,
+    "reasoning_override": null,
+    "fork_turns": "none"
+  }
+}

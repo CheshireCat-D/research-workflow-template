@@ -1,0 +1,243 @@
+{
+  "submission_id": "S92c2fa",
+  "task_id": "theory",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_conditions",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:5,11-15,49,93,104-136；固定 PDF S1 pp.9-13，S2 pp.4-6,9-10,12,14,27-28,30,35。",
+      "rationale": "两份固定作者版的身份、关键编号、PDF 页序和所述假设与原文相符。未发现把一般适应性误当成 sub-psi 充分条件、把线性主定理混同曲线混合界，或对 S2 额外附加 iid/共同均值/正态数据条件。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:5,11-13；work/results/checks.json:34-36；judge-checks/independent-checks.json 的 pdf_sha256 与 source_checks。",
+          "rationale": "固定 v7/v9 身份与哈希匹配，逐页复核了所引定义、定理、命题和公式。S2 首页 August 9, 2022 也与第 5 行说明相符。"
+        },
+        {
+          "index": 2,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:11,15,67；S1 PDF pp.9-11 Definition 1 (2.1)-(2.2) 及其说明。",
+          "rationale": "准确说明条件约束 (S,V) 一对、适应 V 可以允许，但需要逐 lambda 的超鞅支配；没有把不可预测性本身当作排除理由。"
+        },
+        {
+          "index": 3,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:11-12,15；S1 Theorem 1 (2.7)，S2 (14)/Proposition 5 (51)。",
+          "rationale": "正确区分过滤下无限时域的线性 crossing 与固定 rho 的双尾正态混合曲线；明确不要求 iid 或正态观测。"
+        },
+        {
+          "index": 4,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:13,104-136；S2 PDF p.14 Theorem 4 (23), p.35 (89)-(90)。",
+          "rationale": "记录了有界 X、有界可预测预测器、平均条件均值目标、残差平方和、scale b-a 和双尾 2 倍单尾预算，均与原文相符。"
+        }
+      ]
+    },
+    {
+      "id": "gaussian_mixture",
+      "score": 15,
+      "max_points": 15,
+      "evidence": "report.md:19-49，尤其 25-29 的条件期望、35-40 的配方和 45-49 的反演。",
+      "rationale": "高斯密度精度、归一化常数和阈值均正确；SG 加可预测增量证明固定 lambda 过程为超鞅，再用联合可测性与非负条件 Tonelli 混合。双尾总预算 alpha 与截断论证成立。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 7,
+          "max_points": 7,
+          "evidence": "report.md:31-40：A_t=V_t+rho；积分得到 sqrt(rho/A_t) exp(S_t^2/(2A_t))。",
+          "rationale": "密度 sqrt(rho/(2pi))、配方中心 S_t/A_t 和剩余指数 S_t^2/(2A_t) 全部正确。"
+        },
+        {
+          "index": 2,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:23-29：E_prev L_t=L_(t-1)exp(-lambda^2 DeltaV/2)E_prev exp(lambda DeltaS)<=L_(t-1)。",
+          "rationale": "显式证明超鞅、初始财富 1、可积性和联合可测性，正确使用非负条件 Tonelli；对每个固定 lambda 的零测集问题也处理准确。"
+        },
+        {
+          "index": 3,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:43-49：M_t>=1/alpha iff |S_t|>=b_(rho,alpha)(V_t)。",
+          "rationale": "Ville 反演常数正确，接受 A；全实轴混合已计双尾，不重复折半 alpha。闭区间与 [0,1] 截断只扩大所需好事件。"
+        }
+      ]
+    },
+    {
+      "id": "finite_counterexample",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:53-67；rho=1/4, n=200, iid Bernoulli(1/100), 全零事件；judge-checks/independent-checks.json 的 counterexample。",
+      "rationale": "这是可接受且严格的替代见证。原指定预测器在事件上给 Vhat=1/4、|S|=2，而边界 sqrt(log(800)/2)=1.82819743568...<2；解析概率 (99/100)^200=0.13397967485...>0.05。正文中的 Taylor 下界和 Bernoulli 不等式链可独立证明严格性。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:53-60：iid Bernoulli(.01)，alpha=1/20,rho=1/4,n=200，E={X_1=...=X_200=0}。",
+          "rationale": "满足有界和共同条件均值；逐项使用题设预测器，事件确实使错误区间排除 mu。无需采用参考键 n=280,rho=1。"
+        },
+        {
+          "index": 2,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:59-67：Vhat=1/4，|S|=2，b=sqrt(log800/2)<2；P(E)=(99/100)^200>(9/10)^20>1/9>1/20。",
+          "rationale": "严格不等式的解析证明正确：e^8 的 0 至 6 阶 Taylor 部分和 >800，严格 Bernoulli 不等式给概率链，3*9^10>10^10 保证其中第二步。独立精确有理数和 80 位 Decimal 核验通过。"
+        },
+        {
+          "index": 3,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:11,15,67,97-109。",
+          "rationale": "失败机制定位为未证明 (S,Vhat) 的 psi_N 控制，而不是把适应 V 一概禁止；后文保留固定 rho 和合法代理 V=t/4 的正态混合构造。"
+        }
+      ]
+    },
+    {
+      "id": "moving_precision",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:71-93：r=v/rho，最优根 r=log(alpha^(-2))+log(1+r)，包络 kappa_alpha sqrt(v)，合法 V=t/4 下 LIL 反证。",
+      "rationale": "求导、唯一根、Lambert W 分支和最小值均正确。明确将固定目标 m 的一次优化与逐时下包络区分；LIL 给合法 Bernoulli(.5) 过程中失覆盖概率 1，并处理 v=0 的不取到问题。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:71-84：f(r)=(1+1/r)[L+log(1+r)]，f'(r)=[r-L-log(1+r)]/r^2，W_(-1) 分支。",
+          "rationale": "导数和单调性准确给唯一全局极小点，根方程和等价 Lambert W 公式正确。"
+        },
+        {
+          "index": 2,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:79-83,93：rho*(v)=v/r_alpha，inf b=sqrt(1+r_alpha)*sqrt(v)；固定 m 只选一次 rho。",
+          "rationale": "最小值正确且没有把 S2 Proposition 3 的定点优化误解释为无需代价的逐时优化。"
+        },
+        {
+          "index": 3,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:86-91：iid Bernoulli(.5)，S_t=(1/2)sum R_i，V=t/4，Rademacher LIL。",
+          "rationale": "合法确定性方差代理满足 SG，LIL 使 sum R_i 超过任意固定 kappa sqrt(t) 无穷多次 a.s.，故同时覆盖概率 0。"
+        },
+        {
+          "index": 4,
+          "score": 2,
+          "max_points": 2,
+          "evidence": "report.md:84：v=0 时 b^2=rho L，inf=0 但 rho>0 内不取到。",
+          "rationale": "端点准确，且没有用此小问题代替核心无限时域失败证明。"
+        }
+      ]
+    },
+    {
+      "id": "valid_repairs",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:97-147，特别是 99-102 的 Hoeffding、106-115 的 psi_E 与固定均匀混合、117-135 的条件期望验证、140-147 的可数预算。",
+      "rationale": "三类修复均有效。经验 Bernstein 采用合法的固定 Uniform(0,1) lambda 混合，其隐式边界有限且唯一，标量不等式的独立推导和条件期望一步验证正确；两尾各 alpha/2。没有中心修复错误。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 7,
+          "max_points": 7,
+          "evidence": "report.md:97-102：E_prev exp(lambda(X_t-mu))<=exp(lambda^2/8)，V=t/4，rho 预先固定。",
+          "rationale": "适用于题设全部有界共同条件均值过程；A 的双尾总错误不超过 alpha 结论可直接应用，明确无需 iid。"
+        },
+        {
+          "index": 2,
+          "score": 8,
+          "max_points": 8,
+          "evidence": "report.md:104-136：psi_E=-log(1-lambda)-lambda, lambda in [0,1)；Uniform(0,1) 混合阈值 1/delta；E_prev exp(lambdaY-psi_E xi^2)<=exp(lambda d)(1-lambda d)<=1；delta=alpha/2。",
+          "rationale": "预测器条件、c=1、双尾预算齐备。h(z)=int_0^1 u/(1+uz)du 的单调性确实证明 exp(lambda xi-psi_E xi^2)<=1+lambda xi；可预测 d 与条件零均值给一步超鞅。混合积分在 s=0 <=1、随 s 严格递增且趋于无穷，隐式边界定义有效。"
+        },
+        {
+          "index": 3,
+          "score": 3,
+          "max_points": 3,
+          "evidence": "report.md:138-147：rho_k=2^(k-1)rho_0，alpha_k=alpha*2^(-k)，sum alpha_k=alpha，取交集/inf 边界。",
+          "rationale": "可数联合界保证对所有 t,k 的共同好事件，事后选 k_t 或取区间交集均合法，没有未经校正的连续上确界或逐点选择。"
+        }
+      ]
+    },
+    {
+      "id": "reviewable_short_memo",
+      "score": 13,
+      "max_points": 13,
+      "evidence": "report.md:3,11-15,51-93,149-157；正文包含解析计算和来源表，自查只作为数值核验。",
+      "rationale": "A-E 判定全部正确；清楚区分构造稿与来源论文，修订结论准确归功已有框架并限定此次审查贡献。E 由路径事件包含给出，不强加停止时刻可积性。交付自包含且可沿原文编号复核。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 5,
+          "max_points": 5,
+          "evidence": "report.md:3，及 A、B、C、E 分节和 15 行对 D 的说明。",
+          "rationale": "A=true、B=false、C=false、D=false、E=true，各得 1/1。"
+        },
+        {
+          "index": 2,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:3,15,153-155。",
+          "rationale": "明确原稿为本次构造，已有无限时域 sub-psi/混合和 EB 结果归功 Howard 等；本次仅核查、反例与修复，不以两篇检索宣称全球首创。"
+        },
+        {
+          "index": 3,
+          "score": 2,
+          "max_points": 2,
+          "evidence": "report.md:151：G={forall t>=1:mu in C_t}，在 {tau<infty} 上 G subset {mu in C_tau}。",
+          "rationale": "对 a.s.有限正整数停止时刻由事件包含直接推得覆盖，无需 E tau 条件或可选抽样；推广到任意有限随机索引也正确。"
+        },
+        {
+          "index": 4,
+          "score": 2,
+          "max_points": 2,
+          "evidence": "report.md:5,9-15,59-67,71-84,106-136,157；work/checks.py 和 work/results/checks.json。",
+          "rationale": "短稿自包含，关键数值有计算式和解析证明，固定版页码/公式可追溯，未把计算或网格当作证明，交付未复制来源全文。"
+        }
+      ]
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "usable",
+  "notes": [
+    "The report uses a correct alternative finite witness (Bernoulli(.01), rho=.25, n=200). It is not penalized for differing from the reference witness. Exact probability and Taylor comparisons independently passed.",
+    "The fixed Uniform(0,1) sub-exponential mixing distribution is a valid alternative to the named gamma-exponential construction; it is backed by the report's one-step proof and a valid threshold inversion.",
+    "No substantive false positive, central mathematical error, fabricated source statement, or critical-cap trigger found. The reference key has no material disagreement with the independent checks.",
+    "Only the authorized submission material and supplied source PDFs/text were used; the arm map was withheld and no group attribution was inferred.",
+    "Independent verification evidence is saved in judge-checks/verify.py and judge-checks/independent-checks.json. Numeric calculations are checks of the analytic reasoning, not substitutes for proof."
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification.",
+  "source_check": {
+    "status": "pass",
+    "fixed_versions": "S1 arXiv:1808.03204v7; S2 arXiv:1810.08240v9; both PDF hashes match input/source-manifest.json.",
+    "method": "Read and compare relevant pages directly from the supplied PDFs; no internet or external sources.",
+    "locators_checked": [
+      "S1 Definition 1 (2.1)-(2.2), PDF pp.9-11",
+      "S1 Theorem 1 (2.7)-(2.10), PDF pp.12-13",
+      "S1 Ville Lemma 1 (2.11), PDF p.13",
+      "S2 target average conditional means and sub-psi, PDF pp.4-6",
+      "S2 Lemma 2 (13), PDF p.9 and proof pp.27-28",
+      "S2 normal mixture (14), PDF p.10 and Proposition 5 (51), p.28",
+      "S2 Proposition 3 (21), PDF p.12",
+      "S2 Theorem 4 (23), PDF p.14",
+      "S2 gamma-exponential Proposition 9 (64)-(66), PDF p.30",
+      "S2 EB proof (89)-(90), PDF p.35"
+    ],
+    "material_mismatches": []
+  },
+  "unresolved_mathematical_disagreements": [],
+  "report_sha256": "3c08114f4573775e9c316b78f60fa47a9b4cc403b1e1b491fab7e699a74f74e2"
+}

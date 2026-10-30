@@ -1,0 +1,108 @@
+{
+  "parameters_authorization_scope_agree": true,
+  "result_inputs": {
+    "parameters": true,
+    "calculator": true,
+    "hour_2011": true,
+    "frozen_model": true
+  },
+  "result_parameter_fields": {
+    "case_id": true,
+    "evaluation_start": true,
+    "evaluation_end": true,
+    "model_policy": true
+  },
+  "table_matches_stored_result": true,
+  "activity_bindings": {
+    "D-SOURCE-CHECK": true,
+    "D-CALC": true,
+    "D-SYNTH": true
+  },
+  "checkpoints": {
+    "C-pre-recompute": {
+      "manifest_entries": 31,
+      "mismatches": [],
+      "metadata": {
+        "stage": "C",
+        "status": "captured_before_recompute",
+        "content_review": false,
+        "makes_prior_work_valid": false
+      }
+    },
+    "C-final": {
+      "manifest_entries": 6,
+      "mismatches": [],
+      "metadata": {
+        "stage": "C",
+        "content_review": "pending author review",
+        "scientific_approval": false,
+        "basis": "actual recompute, independent numeric check, revised summary",
+        "next_action": "将2011年11月至12月的冻结模型指标（1460观察小时、61日）与更新摘要交作者内容复核；保留原Q4结果作历史记录。尚无内容认可或投稿授权；继续前运行management/status.py和management/verify_current.py，不重训、不外推2012。"
+      }
+    }
+  },
+  "current_checkpoint_tree_matches_current": {
+    "notes/parameters.json": true,
+    "results/result.json": true,
+    "results/table.csv": true,
+    "results/summary.md": true,
+    "management/constraints.json": true,
+    "management/state.json": true
+  },
+  "initial_protected_materials_unchanged": {
+    "data/hour_2011.csv": true,
+    "scripts/compute.py": true,
+    "model/frozen.json": true,
+    "management/source-identities.json": true,
+    "notes/source-check.md": true
+  },
+  "migration_resources": {
+    "RECOVERY.md": true,
+    "management/status.py": true,
+    "management/verify_current.py": true,
+    "scripts/compute.py": true,
+    "model/frozen.json": true,
+    "data/hour_2011.csv": true,
+    "management/evidence/C/authorization/AUTHOR-REVISION.md": true
+  },
+  "registered_file_count": 35,
+  "registered_paths": [
+    "RECOVERY.md",
+    "data/hour_2011.csv",
+    "management/BRIEF.md",
+    "management/checkpoints/C-pre-recompute/checkpoint.json",
+    "management/constraints.json",
+    "management/evidence/A/checks.json",
+    "management/evidence/A/invalid-after.json",
+    "management/evidence/A/invalid-before.json",
+    "management/evidence/A/normal-run/result.json",
+    "management/evidence/A/normal-run/table.csv",
+    "management/evidence/C/authorization/AUTHOR-REVISION.md",
+    "management/evidence/C/authorization/approved-parameters.json",
+    "management/evidence/C/checks-before-promotion.json",
+    "management/evidence/C/compute-run.json",
+    "management/evidence/C/intermediate-check.json",
+    "management/evidence/C/intermediate-status.stderr.txt",
+    "management/evidence/C/intermediate-status.stdout.json",
+    "management/evidence/C/recomputed/result.json",
+    "management/evidence/C/recomputed/table.csv",
+    "management/evidence/C/summary-review.json",
+    "management/obligations.json",
+    "management/source-identities.json",
+    "management/status.py",
+    "management/verify_current.py",
+    "management/versions/A-initial/notes/parameters.json",
+    "management/versions/A-initial/results/result.json",
+    "management/versions/A-initial/results/summary.md",
+    "management/versions/A-initial/results/table.csv",
+    "model/frozen.json",
+    "notes/parameters.json",
+    "notes/source-check.md",
+    "results/result.json",
+    "results/summary.md",
+    "results/table.csv",
+    "scripts/compute.py"
+  ],
+  "legacy_checkpoint_id": "A-verified-initial",
+  "numerical_recomputation_performed": false
+}

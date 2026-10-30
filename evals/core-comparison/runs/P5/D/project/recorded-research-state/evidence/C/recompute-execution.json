@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/runs/P5/project/scripts/compute.py",
+    "--root",
+    "STUDY_ROOT/runs/P5/project",
+    "--output",
+    "STUDY_ROOT/runs/P5/project/.research/evidence/C/recomputed"
+  ],
+  "cwd": "STUDY_ROOT/runs/P5/project",
+  "exit_code": 0,
+  "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/runs/P5/project/.research/evidence/C/recomputed/result.json\", \"parameters_sha256\": \"340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117\"}\n",
+  "stderr": "",
+  "completed_at": "2026-10-30T01:59:53Z"
+}

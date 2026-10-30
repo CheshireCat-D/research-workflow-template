@@ -1,0 +1,9 @@
+{
+  "id": "D-C-VERIFY-CODE",
+  "type": "verification-script",
+  "description": "Actual stage-C independent metric verification code after preserved first-failure correction; original scientific calculator unchanged",
+  "path": "validation/stage-C/verify.py",
+  "derived_from": [
+    "artifact:D-CODE"
+  ]
+}

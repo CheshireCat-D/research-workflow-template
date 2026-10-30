@@ -1,0 +1,58 @@
+{
+  "state_version": 3,
+  "configuration_sha256": "b9c4a2113cc2316b236149c00198d98368868592b86538797c44cf752779b54a",
+  "record_signatures": {
+    "D-SRC": "207d67dc133e11bc3b4bfe29f50257bd84449fd22cecc3dee03f8eccb3fc651e",
+    "D-REMOTE": "baff8d098ab62069f5dc4b17e5a81c7eddafcc89be9c27962e49fc2a778e2b9c",
+    "D-RAW": "7645be90cd713b9f371d0f9f74e68b91a5401fc260be8630e16a116b698a4749",
+    "D-PARAM": "885250aef02f50efdd569c72bbc6203ac5c69a440fd8ab471e64df2c9813a245",
+    "D-CLAIM": "84d0f5727279aad646b60193bef7bd9684c240114b9c9ab2f55297fe5857a7e0",
+    "D-REL": "d6ffc91e836a8685ab173977878e1d6fe2084d3b3588aaeb34c4fd612762fded",
+    "D-CHOICE": "8c5f54bc27ed989bde8af57d932aab935fb9c8de70b45e1e842edce667fe3b6a",
+    "D-CODE": "646a88ae8d16a248a5080f63569283fe6a808287c0b7bf2d03215d6e5eefb592",
+    "D-MODEL": "ad1ac0226d44710231bced55f47deadd77a073c8a7b80826be495d057ebc9745",
+    "D-RESULT": "da5e0558fa0610120ae1da96f6ca04afce3c5ec58d039d24f7062ca510857906",
+    "D-TABLE": "c2d14009ee6d0bf92eb9327427c71734638ecd6e38dc5d2dbea19b4838b7a6df",
+    "D-SUMMARY": "e15a3965c0d477274404ec00045ca82fb9093859b06fb5dae7496278f96f947c",
+    "D-SOURCE-NOTE": "524485300468c6355f2bc7ea96000b155a1e43de1faa2289738ab1885be9491f",
+    "D-SOURCE-CHECK": "9fb9caa1b2674ceb6c623cc7862a40573933b63d8b643288bfb10885e07d91f9",
+    "D-CALC": "8dd7771c07f901c78b590ee177dc8d11854fc7dcd74dc9e337f838766364a797",
+    "D-SYNTH": "ee83dc15af6f6a6117a8c9bcf6e82b0b79289922ade5df30e11d981a9e79cc89"
+  },
+  "files": {
+    "data/hour_2011.csv": {
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    "notes/parameters.json": {
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "model/frozen.json": {
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    "results/result.json": {
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999
+    },
+    "results/table.csv": {
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203
+    },
+    "results/summary.md": {
+      "sha256": "0c178129e75f928b92f184ecb65231fbb0c96d333e7b43d1089dcc3908bdfe3d",
+      "bytes": 905
+    },
+    "notes/source-check.md": {
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474
+    }
+  },
+  "next_action": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。不重训、不外推2012；尚未有人类专家认可，也没有投稿授权。",
+  "meaning": "Saved current context only; completion binding validity is checked separately."
+}

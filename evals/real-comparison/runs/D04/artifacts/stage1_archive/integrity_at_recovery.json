@@ -1,0 +1,29 @@
+{
+  "all_preexisting_manifest_hashes_match": true,
+  "checks": {
+    "RUN.md": true,
+    "analyze.py": true,
+    "execution.json": true,
+    "finalize.py": true,
+    "handoff.md": true,
+    "report.md": true,
+    "reproduction_check.json": true,
+    "results/audit.json": true,
+    "results/bootstrap_28.csv": true,
+    "results/bootstrap_7.csv": true,
+    "results/daily_errors.csv": true,
+    "results/model.json": true,
+    "results/predictions.csv": true,
+    "results/results.json": true,
+    "results/runtime.json": true,
+    "score_check/bootstrap_28.csv": true,
+    "score_check/bootstrap_7.csv": true,
+    "score_check/daily_errors.csv": true,
+    "score_check/predictions.csv": true,
+    "score_check/results.json": true,
+    "score_check/score_provenance.json": true,
+    "verification.json": true,
+    "verify.py": true,
+    "write_delivery.py": true
+  }
+}

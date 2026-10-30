@@ -1,0 +1,11 @@
+{
+  "project_root": "PROJECT_ROOT",
+  "comparison": "full SHA256 and byte length for every regular file, lstat mtime_ns/mode/size and complete path sets including root and all directories",
+  "unchanged": true,
+  "file_count": 32,
+  "directory_count": 14,
+  "differences": [],
+  "baseline": "project-before.json captured before running project status program",
+  "final": "project-after.json",
+  "atime_not_a_requested_invariant": true
+}

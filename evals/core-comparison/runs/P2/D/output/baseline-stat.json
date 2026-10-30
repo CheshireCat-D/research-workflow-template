@@ -1,0 +1,764 @@
+[
+  {
+    "path": ".",
+    "is_dir": true,
+    "size": 288,
+    "mtime_ns": 1793322214672985402
+  },
+  {
+    "path": "RECOVERY.md",
+    "is_dir": false,
+    "size": 2841,
+    "mtime_ns": 1793322720294086355
+  },
+  {
+    "path": "data",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322214608676950
+  },
+  {
+    "path": "data/hour_2011.csv",
+    "is_dir": false,
+    "size": 568668,
+    "mtime_ns": 1793322214608738033
+  },
+  {
+    "path": "management",
+    "is_dir": true,
+    "size": 448,
+    "mtime_ns": 1793322720294127104
+  },
+  {
+    "path": "management/BRIEF.md",
+    "is_dir": false,
+    "size": 1078,
+    "mtime_ns": 1793322214609934981
+  },
+  {
+    "path": "management/MANIFEST.json",
+    "is_dir": false,
+    "size": 2329,
+    "mtime_ns": 1793322214610214479
+  },
+  {
+    "path": "management/checkpoints",
+    "is_dir": true,
+    "size": 128,
+    "mtime_ns": 1793322720294217395
+  },
+  {
+    "path": "management/checkpoints/C-final",
+    "is_dir": true,
+    "size": 160,
+    "mtime_ns": 1793322746813401969
+  },
+  {
+    "path": "management/checkpoints/C-final/checkpoint.json",
+    "is_dir": false,
+    "size": 1424,
+    "mtime_ns": 1793322720297576992
+  },
+  {
+    "path": "management/checkpoints/C-final/tree",
+    "is_dir": true,
+    "size": 160,
+    "mtime_ns": 1793322720294934806
+  },
+  {
+    "path": "management/checkpoints/C-final/tree/management",
+    "is_dir": true,
+    "size": 128,
+    "mtime_ns": 1793322720296988330
+  },
+  {
+    "path": "management/checkpoints/C-final/tree/management/constraints.json",
+    "is_dir": false,
+    "size": 1070,
+    "mtime_ns": 1793322720295019388
+  },
+  {
+    "path": "management/checkpoints/C-final/tree/management/state.json",
+    "is_dir": false,
+    "size": 25965,
+    "mtime_ns": 1793322720297028413
+  },
+  {
+    "path": "management/checkpoints/C-final/tree/notes",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322720294349019
+  },
+  {
+    "path": "management/checkpoints/C-final/tree/notes/parameters.json",
+    "is_dir": false,
+    "size": 171,
+    "mtime_ns": 1793322720294376144
+  },
+  {
+    "path": "management/checkpoints/C-final/tree/results",
+    "is_dir": true,
+    "size": 160,
+    "mtime_ns": 1793322720294833098
+  },
+  {
+    "path": "management/checkpoints/C-final/tree/results/result.json",
+    "is_dir": false,
+    "size": 999,
+    "mtime_ns": 1793322720294598934
+  },
+  {
+    "path": "management/checkpoints/C-final/tree/results/summary.md",
+    "is_dir": false,
+    "size": 1124,
+    "mtime_ns": 1793322720294869348
+  },
+  {
+    "path": "management/checkpoints/C-final/tree/results/table.csv",
+    "is_dir": false,
+    "size": 203,
+    "mtime_ns": 1793322720294735307
+  },
+  {
+    "path": "management/checkpoints/C-final/verification.json",
+    "is_dir": false,
+    "size": 6785,
+    "mtime_ns": 1793322746813443094
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute",
+    "is_dir": true,
+    "size": 128,
+    "mtime_ns": 1793322580682034485
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/checkpoint.json",
+    "is_dir": false,
+    "size": 5228,
+    "mtime_ns": 1793322580682086860
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree",
+    "is_dir": true,
+    "size": 288,
+    "mtime_ns": 1793322580681817154
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/RECOVERY.md",
+    "is_dir": false,
+    "size": 3157,
+    "mtime_ns": 1793322214673011944
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/data",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322580677625940
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/data/hour_2011.csv",
+    "is_dir": false,
+    "size": 568668,
+    "mtime_ns": 1793322214608738033
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management",
+    "is_dir": true,
+    "size": 384,
+    "mtime_ns": 1793322580680049169
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/BRIEF.md",
+    "is_dir": false,
+    "size": 1078,
+    "mtime_ns": 1793322214609934981
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/MANIFEST.json",
+    "is_dir": false,
+    "size": 2329,
+    "mtime_ns": 1793322214610214479
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/constraints.json",
+    "is_dir": false,
+    "size": 1070,
+    "mtime_ns": 1793322214609999564
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/evidence",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322580678274726
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/evidence/A",
+    "is_dir": true,
+    "size": 192,
+    "mtime_ns": 1793322580678727889
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/evidence/A/checks.json",
+    "is_dir": false,
+    "size": 9234,
+    "mtime_ns": 1793322214670376258
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/evidence/A/invalid-after.json",
+    "is_dir": false,
+    "size": 5553,
+    "mtime_ns": 1793322214670649630
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/evidence/A/invalid-before.json",
+    "is_dir": false,
+    "size": 5553,
+    "mtime_ns": 1793322214670523798
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run",
+    "is_dir": true,
+    "size": 128,
+    "mtime_ns": 1793322580678880054
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run/result.json",
+    "is_dir": false,
+    "size": 1000,
+    "mtime_ns": 1793322214670030011
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run/table.csv",
+    "is_dir": false,
+    "size": 205,
+    "mtime_ns": 1793322214670140677
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/obligations.json",
+    "is_dir": false,
+    "size": 4723,
+    "mtime_ns": 1793322214610085771
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/protocol",
+    "is_dir": true,
+    "size": 192,
+    "mtime_ns": 1793322580679524715
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/protocol/PROTOCOL.md",
+    "is_dir": false,
+    "size": 2279,
+    "mtime_ns": 1793322214610308561
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/protocol/RECORDING.md",
+    "is_dir": false,
+    "size": 1300,
+    "mtime_ns": 1793322214610377269
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/protocol/REQUEST.md",
+    "is_dir": false,
+    "size": 2145,
+    "mtime_ns": 1793322214610509726
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/protocol/STAGE-A.md",
+    "is_dir": false,
+    "size": 1214,
+    "mtime_ns": 1793322214610448518
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/source-identities.json",
+    "is_dir": false,
+    "size": 1200,
+    "mtime_ns": 1793322214610150062
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/state.json",
+    "is_dir": false,
+    "size": 19166,
+    "mtime_ns": 1793322214672943361
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/status.py",
+    "is_dir": false,
+    "size": 3331,
+    "mtime_ns": 1793322214670719172
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/versions",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322580680077419
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial",
+    "is_dir": true,
+    "size": 128,
+    "mtime_ns": 1793322580680284250
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/notes",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322580680143752
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/notes/parameters.json",
+    "is_dir": false,
+    "size": 171,
+    "mtime_ns": 1793322214610654016
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results",
+    "is_dir": true,
+    "size": 160,
+    "mtime_ns": 1793322580680597623
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/result.json",
+    "is_dir": false,
+    "size": 1000,
+    "mtime_ns": 1793322214610782474
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/summary.md",
+    "is_dir": false,
+    "size": 280,
+    "mtime_ns": 1793322214610987680
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/table.csv",
+    "is_dir": false,
+    "size": 205,
+    "mtime_ns": 1793322214610883931
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/model",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322580680747746
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/model/frozen.json",
+    "is_dir": false,
+    "size": 2320,
+    "mtime_ns": 1793322214608995906
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/notes",
+    "is_dir": true,
+    "size": 192,
+    "mtime_ns": 1793322580681281742
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/notes/parameters.json",
+    "is_dir": false,
+    "size": 171,
+    "mtime_ns": 1793322336192461771
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/notes/rejected-parameters.json",
+    "is_dir": false,
+    "size": 171,
+    "mtime_ns": 1793322214609220779
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/notes/source-check.md",
+    "is_dir": false,
+    "size": 474,
+    "mtime_ns": 1793322214609299570
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/notes/unregistered-scratch.md",
+    "is_dir": false,
+    "size": 132,
+    "mtime_ns": 1793322214609393361
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/results",
+    "is_dir": true,
+    "size": 160,
+    "mtime_ns": 1793322580681688613
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/results/result.json",
+    "is_dir": false,
+    "size": 1000,
+    "mtime_ns": 1793322214609523193
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/results/summary.md",
+    "is_dir": false,
+    "size": 280,
+    "mtime_ns": 1793322214609602650
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/results/table.csv",
+    "is_dir": false,
+    "size": 205,
+    "mtime_ns": 1793322214609681191
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/scripts",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322580681852570
+  },
+  {
+    "path": "management/checkpoints/C-pre-recompute/tree/scripts/compute.py",
+    "is_dir": false,
+    "size": 4157,
+    "mtime_ns": 1793322214609833232
+  },
+  {
+    "path": "management/constraints.json",
+    "is_dir": false,
+    "size": 1070,
+    "mtime_ns": 1793322720292382786
+  },
+  {
+    "path": "management/evidence",
+    "is_dir": true,
+    "size": 128,
+    "mtime_ns": 1793322635450064278
+  },
+  {
+    "path": "management/evidence/A",
+    "is_dir": true,
+    "size": 192,
+    "mtime_ns": 1793322214670605547
+  },
+  {
+    "path": "management/evidence/A/checks.json",
+    "is_dir": false,
+    "size": 9234,
+    "mtime_ns": 1793322214670376258
+  },
+  {
+    "path": "management/evidence/A/invalid-after.json",
+    "is_dir": false,
+    "size": 5553,
+    "mtime_ns": 1793322214670649630
+  },
+  {
+    "path": "management/evidence/A/invalid-before.json",
+    "is_dir": false,
+    "size": 5553,
+    "mtime_ns": 1793322214670523798
+  },
+  {
+    "path": "management/evidence/A/normal-run",
+    "is_dir": true,
+    "size": 128,
+    "mtime_ns": 1793322214670114677
+  },
+  {
+    "path": "management/evidence/A/normal-run/result.json",
+    "is_dir": false,
+    "size": 1000,
+    "mtime_ns": 1793322214670030011
+  },
+  {
+    "path": "management/evidence/A/normal-run/table.csv",
+    "is_dir": false,
+    "size": 205,
+    "mtime_ns": 1793322214670140677
+  },
+  {
+    "path": "management/evidence/C",
+    "is_dir": true,
+    "size": 480,
+    "mtime_ns": 1793322746813308387
+  },
+  {
+    "path": "management/evidence/C/authorization",
+    "is_dir": true,
+    "size": 128,
+    "mtime_ns": 1793322635450541649
+  },
+  {
+    "path": "management/evidence/C/authorization/AUTHOR-REVISION.md",
+    "is_dir": false,
+    "size": 1443,
+    "mtime_ns": 1793322635450445817
+  },
+  {
+    "path": "management/evidence/C/authorization/approved-parameters.json",
+    "is_dir": false,
+    "size": 171,
+    "mtime_ns": 1793322635450581316
+  },
+  {
+    "path": "management/evidence/C/checks-before-promotion.json",
+    "is_dir": false,
+    "size": 1382,
+    "mtime_ns": 1793322635490984513
+  },
+  {
+    "path": "management/evidence/C/compute-run.json",
+    "is_dir": false,
+    "size": 493,
+    "mtime_ns": 1793322635481112972
+  },
+  {
+    "path": "management/evidence/C/final-check.json",
+    "is_dir": false,
+    "size": 6785,
+    "mtime_ns": 1793322746813346678
+  },
+  {
+    "path": "management/evidence/C/final-numerical-verification.stderr.txt",
+    "is_dir": false,
+    "size": 0,
+    "mtime_ns": 1793322746813249304
+  },
+  {
+    "path": "management/evidence/C/final-numerical-verification.stdout.json",
+    "is_dir": false,
+    "size": 663,
+    "mtime_ns": 1793322746813209179
+  },
+  {
+    "path": "management/evidence/C/final-status.stderr.txt",
+    "is_dir": false,
+    "size": 0,
+    "mtime_ns": 1793322746813134555
+  },
+  {
+    "path": "management/evidence/C/final-status.stdout.json",
+    "is_dir": false,
+    "size": 4680,
+    "mtime_ns": 1793322746813090347
+  },
+  {
+    "path": "management/evidence/C/intermediate-check.json",
+    "is_dir": false,
+    "size": 37102,
+    "mtime_ns": 1793322635450869021
+  },
+  {
+    "path": "management/evidence/C/intermediate-status.stderr.txt",
+    "is_dir": false,
+    "size": 0,
+    "mtime_ns": 1793322635450734564
+  },
+  {
+    "path": "management/evidence/C/intermediate-status.stdout.json",
+    "is_dir": false,
+    "size": 4051,
+    "mtime_ns": 1793322635450676857
+  },
+  {
+    "path": "management/evidence/C/recomputed",
+    "is_dir": true,
+    "size": 128,
+    "mtime_ns": 1793322635478524078
+  },
+  {
+    "path": "management/evidence/C/recomputed/result.json",
+    "is_dir": false,
+    "size": 999,
+    "mtime_ns": 1793322635478463203
+  },
+  {
+    "path": "management/evidence/C/recomputed/table.csv",
+    "is_dir": false,
+    "size": 203,
+    "mtime_ns": 1793322635478560536
+  },
+  {
+    "path": "management/evidence/C/summary-review.json",
+    "is_dir": false,
+    "size": 827,
+    "mtime_ns": 1793322720294010105
+  },
+  {
+    "path": "management/obligations.json",
+    "is_dir": false,
+    "size": 4723,
+    "mtime_ns": 1793322214610085771
+  },
+  {
+    "path": "management/protocol",
+    "is_dir": true,
+    "size": 192,
+    "mtime_ns": 1793322214610489351
+  },
+  {
+    "path": "management/protocol/PROTOCOL.md",
+    "is_dir": false,
+    "size": 2279,
+    "mtime_ns": 1793322214610308561
+  },
+  {
+    "path": "management/protocol/RECORDING.md",
+    "is_dir": false,
+    "size": 1300,
+    "mtime_ns": 1793322214610377269
+  },
+  {
+    "path": "management/protocol/REQUEST.md",
+    "is_dir": false,
+    "size": 2145,
+    "mtime_ns": 1793322214610509726
+  },
+  {
+    "path": "management/protocol/STAGE-A.md",
+    "is_dir": false,
+    "size": 1214,
+    "mtime_ns": 1793322214610448518
+  },
+  {
+    "path": "management/source-identities.json",
+    "is_dir": false,
+    "size": 1200,
+    "mtime_ns": 1793322214610150062
+  },
+  {
+    "path": "management/state.json",
+    "is_dir": false,
+    "size": 25965,
+    "mtime_ns": 1793322720296906914
+  },
+  {
+    "path": "management/status.py",
+    "is_dir": false,
+    "size": 3331,
+    "mtime_ns": 1793322214670719172
+  },
+  {
+    "path": "management/verify_current.py",
+    "is_dir": false,
+    "size": 4198,
+    "mtime_ns": 1793322720294184020
+  },
+  {
+    "path": "management/versions",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322214610564850
+  },
+  {
+    "path": "management/versions/A-initial",
+    "is_dir": true,
+    "size": 128,
+    "mtime_ns": 1793322214610722641
+  },
+  {
+    "path": "management/versions/A-initial/notes",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322214610625225
+  },
+  {
+    "path": "management/versions/A-initial/notes/parameters.json",
+    "is_dir": false,
+    "size": 171,
+    "mtime_ns": 1793322214610654016
+  },
+  {
+    "path": "management/versions/A-initial/results",
+    "is_dir": true,
+    "size": 160,
+    "mtime_ns": 1793322214610965806
+  },
+  {
+    "path": "management/versions/A-initial/results/result.json",
+    "is_dir": false,
+    "size": 1000,
+    "mtime_ns": 1793322214610782474
+  },
+  {
+    "path": "management/versions/A-initial/results/summary.md",
+    "is_dir": false,
+    "size": 280,
+    "mtime_ns": 1793322214610987680
+  },
+  {
+    "path": "management/versions/A-initial/results/table.csv",
+    "is_dir": false,
+    "size": 205,
+    "mtime_ns": 1793322214610883931
+  },
+  {
+    "path": "model",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322214608965239
+  },
+  {
+    "path": "model/frozen.json",
+    "is_dir": false,
+    "size": 2320,
+    "mtime_ns": 1793322214608995906
+  },
+  {
+    "path": "notes",
+    "is_dir": true,
+    "size": 192,
+    "mtime_ns": 1793322214609371569
+  },
+  {
+    "path": "notes/parameters.json",
+    "is_dir": false,
+    "size": 171,
+    "mtime_ns": 1793322336192461771
+  },
+  {
+    "path": "notes/rejected-parameters.json",
+    "is_dir": false,
+    "size": 171,
+    "mtime_ns": 1793322214609220779
+  },
+  {
+    "path": "notes/source-check.md",
+    "is_dir": false,
+    "size": 474,
+    "mtime_ns": 1793322214609299570
+  },
+  {
+    "path": "notes/unregistered-scratch.md",
+    "is_dir": false,
+    "size": 132,
+    "mtime_ns": 1793322214609393361
+  },
+  {
+    "path": "results",
+    "is_dir": true,
+    "size": 160,
+    "mtime_ns": 1793322214609659567
+  },
+  {
+    "path": "results/result.json",
+    "is_dir": false,
+    "size": 999,
+    "mtime_ns": 1793322720292083205
+  },
+  {
+    "path": "results/summary.md",
+    "is_dir": false,
+    "size": 1124,
+    "mtime_ns": 1793322720292263203
+  },
+  {
+    "path": "results/table.csv",
+    "is_dir": false,
+    "size": 203,
+    "mtime_ns": 1793322720292200996
+  },
+  {
+    "path": "scripts",
+    "is_dir": true,
+    "size": 96,
+    "mtime_ns": 1793322214609779107
+  },
+  {
+    "path": "scripts/compute.py",
+    "is_dir": false,
+    "size": 4157,
+    "mtime_ns": 1793322214609833232
+  }
+]

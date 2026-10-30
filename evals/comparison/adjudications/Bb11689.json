@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "submission_id": "Bb11689",
+  "task_id": "Q37",
+  "report_sha256": "82e2763afce8f0f4e5a2d74bc59213a4534f4d410f0b7bdf3ad16b433febb3f2",
+  "judge_context": "全新、仅针对 Bb11689 的单份匿名报告裁定上下文；裁定输入限本目录 task.md、report.md、reference.json、template.json；未读取组别映射、执行记录或其他报告，未联网，未调用其他代理。",
+  "arm_visibility": "hidden-by-instruction",
+  "os_audited": false,
+  "scored": true,
+  "verdict": "supported",
+  "criteria": [
+    {
+      "id": "decision",
+      "score": 2,
+      "evidence": "report.md:3 明确判断“稿件的计数、精确双侧 p 值和主要结论均成立，无需实质更正”；report.md:29 接受不拒绝且不证明零效应或等效；report.md:31 将补表列为可选改进。",
+      "rationale": "正确认定给定分析成立；没有把补充分配表等呈现建议升级为实质错误。"
+    },
+    {
+      "id": "design",
+      "score": 2,
+      "evidence": "report.md:7 指出六个带编号实验单位、20 个三元子集及每个概率 1/20，并说明相同结果不能合并为等概率组合；report.md:9 说明尖锐零假设使所有允许分配下结果可确定。",
+      "rationale": "完整说明分配单位、真实等概率样本空间与尖锐零假设下固定结果重分配的依据，满足该项全部义务。"
+    },
+    {
+      "id": "statistic",
+      "score": 2,
+      "evidence": "report.md:13 重算处理组均值 5/3、对照组均值 1/3、T_obs=4/3 和总和 6；report.md:15 给出 T=s/3−(6−s)/3=(2s−6)/3。",
+      "rationale": "观测差与一般分配公式均可直接复算且正确，未混淆结果和、均值和分配概率。"
+    },
+    {
+      "id": "tails",
+      "score": 2,
+      "evidence": "report.md:17 推出 s≤1 或 s≥5；report.md:19–21 给出 s=1,2,3,4,5 对应计数 2,4,8,4,2；report.md:23 列出下尾 {1,2,3}、{1,2,4} 和上尾 {3,5,6}、{4,5,6}，并得含相等值的 p=4/20=0.20。",
+      "rationale": "独立枚举得到同一完整分布与四个尾部分配。报告准确处理相等值；本题四个尾部分配都恰好达到观测绝对统计量，故双侧精确概率正确。"
+    },
+    {
+      "id": "inference",
+      "score": 2,
+      "evidence": "report.md:29 根据 0.20>0.05 不拒绝尖锐零假设，明确不证明存在效应、不证明零效应或等效，且缺少总体抽样机制不能自动外推；report.md:9 明确无需正态或独立同分布假设。",
+      "rationale": "准确限定本次随机化检验的结论，区分不拒绝与证实零效应、等效及总体外推；未附加不必要的分布前提。"
+    }
+  ],
+  "invented_major_objections": [],
+  "notes": "已独立核实参考：六个结果总和为 6；20 个带编号分配的处理组和分布为 {1:2,2:4,3:8,4:4,5:2}，四个含相等尾部分配给出 p=0.20。reference.json 的预期判定与五项义务正确。报告第25行自述的先前工具执行不作为评分依据；本裁定根据报告实际给出的公式、计数和集合及本次独立复算评分。五项共 10/10。"
+}

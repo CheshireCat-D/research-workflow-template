@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "status": "executed",
+  "started_at_utc": null,
+  "finished_at_utc": "2026-10-29T22:35:44.159885+00:00",
+  "duration_seconds": null,
+  "requested_configuration": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "context": "fork_turns=none for every task/arm",
+    "requested_output_unicode_limit": 5000,
+    "requested_tool_call_limit": 8,
+    "temperature": null,
+    "seed": null
+  },
+  "effective_configuration": {
+    "model": {
+      "value": null,
+      "source": "unknown"
+    },
+    "reasoning_effort": {
+      "value": null,
+      "source": "unknown"
+    },
+    "temperature": {
+      "value": null,
+      "source": "unknown"
+    },
+    "seed": {
+      "value": null,
+      "source": "unknown"
+    },
+    "hard_output_token_limit": {
+      "value": null,
+      "source": "unknown"
+    }
+  },
+  "context_isolation": {
+    "requested": "fresh context, fork_turns=none",
+    "evidence": "instruction-only",
+    "os_audited": false,
+    "same_metadata_catalogue_visible": true
+  },
+  "actual_reads": [
+    {
+      "logical_name": "executor-prompt.md",
+      "sha256": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09"
+    },
+    {
+      "logical_name": "templates/execution.template.json",
+      "sha256": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1"
+    },
+    {
+      "logical_name": "tasks/Q58.md",
+      "sha256": "bebd6b87aef817e404bb6fd00be3ea09d555eaa1fcd89b2925b689efbe5ac786"
+    }
+  ],
+  "tool_calls": 2,
+  "output_tokens": null,
+  "network_calls": 0,
+  "output_unicode_characters": 912,
+  "output_bytes": 2054,
+  "violations": [],
+  "uncertainties": [
+    "初次工具调用开始时未记录 UTC 时间，因此总耗时和开始时间未知。",
+    "实际宿主模型、reasoning effort、temperature、seed、硬输出 token 限制均未报告；请求的字符与工具调用限制不等于已验证的宿主硬限制。",
+    "未独立核验进程或操作系统隔离；隔离证据仅为 instruction-only。",
+    "tool_calls 计数为两次 functions.exec 调用，各含一次 exec_command；累计四个工具调用事件，若将编排及嵌套事件分别计数。",
+    "output_tokens 未测量；字符数与字节数针对 report.md。",
+    "actual spawn setting unknown; template requested fork_turns=none"
+  ],
+  "failure": null,
+  "computation_output": {
+    "denominator": 256,
+    "null_distribution_and_rule": [
+      {
+        "S": -8,
+        "count": 1,
+        "reported_p_numerator": 1,
+        "reject": true
+      },
+      {
+        "S": -6,
+        "count": 8,
+        "reported_p_numerator": 9,
+        "reject": true
+      },
+      {
+        "S": -4,
+        "count": 28,
+        "reported_p_numerator": 37,
+        "reject": false
+      },
+      {
+        "S": -2,
+        "count": 56,
+        "reported_p_numerator": 93,
+        "reject": false
+      },
+      {
+        "S": 0,
+        "count": 70,
+        "reported_p_numerator": 163,
+        "reject": false
+      },
+      {
+        "S": 2,
+        "count": 56,
+        "reported_p_numerator": 93,
+        "reject": false
+      },
+      {
+        "S": 4,
+        "count": 28,
+        "reported_p_numerator": 37,
+        "reject": false
+      },
+      {
+        "S": 6,
+        "count": 8,
+        "reported_p_numerator": 9,
+        "reject": true
+      },
+      {
+        "S": 8,
+        "count": 1,
+        "reported_p_numerator": 1,
+        "reject": true
+      }
+    ],
+    "rejection_count": 18,
+    "actual_rejection_probability": 0.0703125,
+    "observed_reported_p": 0.03515625,
+    "observed_selection_adjusted_p": 0.0703125,
+    "adjusted_005_rejection_count": 2,
+    "adjusted_005_rejection_probability": 0.0078125
+  },
+  "observed_tool_events": {
+    "functions.exec": 2,
+    "exec_command": 2,
+    "total_including_wrappers": 4
+  },
+  "measured_calculation_and_write_seconds": 0.00033299997448921204,
+  "publication_projection": {
+    "raw_execution_sha256": "372a03815306c4e7b628d36b2059744293dbe6019acf6887e59fa10fe7513a27",
+    "changes": [
+      "completed status label mapped to executed",
+      "logical path instructions.md mapped to executor-prompt.md",
+      "logical path execution.template.json mapped to templates/execution.template.json",
+      "requested context restored from actual coordinator fork_turns=none request; effective isolation remains unverified"
+    ],
+    "scope": "Administrative fields only; report bytes, effective unknowns and scientific content unchanged."
+  }
+}

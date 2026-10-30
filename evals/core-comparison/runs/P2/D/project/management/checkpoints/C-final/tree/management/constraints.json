@@ -1,0 +1,25 @@
+{
+  "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+  "deadline": "2026-12-15",
+  "budget": "Offline Python standard library only; no new data collection or model refit",
+  "available_capabilities": [
+    "local Python standard library",
+    "fixed source cache",
+    "author-provided working notes"
+  ],
+  "venue": "Undecided; do not invent a target journal",
+  "language": "zh",
+  "current_scope": {
+    "case_id": "D",
+    "evaluation_start": "2011-11-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "metric_weighting": "observed-hour"
+  },
+  "unknowns": [
+    "No human expert approval has occurred",
+    "No external submission authorized"
+  ],
+  "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+  "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+}

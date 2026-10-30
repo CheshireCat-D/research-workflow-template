@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "status": "executed",
+  "started_at_utc": null,
+  "finished_at_utc": "2026-10-29T22:37:40.205719+00:00",
+  "duration_seconds": null,
+  "requested_configuration": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "context": "fork_turns=none for every task/arm",
+    "requested_output_unicode_limit": 5000,
+    "requested_tool_call_limit": 8,
+    "temperature": null,
+    "seed": null
+  },
+  "effective_configuration": {
+    "model": {
+      "value": null,
+      "source": "unknown"
+    },
+    "reasoning_effort": {
+      "value": null,
+      "source": "unknown"
+    },
+    "temperature": {
+      "value": null,
+      "source": "unknown"
+    },
+    "seed": {
+      "value": null,
+      "source": "unknown"
+    },
+    "hard_output_token_limit": {
+      "value": null,
+      "source": "unknown"
+    }
+  },
+  "context_isolation": {
+    "requested": "fresh context, fork_turns=none",
+    "evidence": "instruction-only",
+    "os_audited": false,
+    "same_metadata_catalogue_visible": true
+  },
+  "actual_reads": [
+    {
+      "logical_name": "tasks/Q11.md",
+      "sha256": "81b8cc0c73ce55acb1ff68ac67516273a424a8e5915a615708042ace0d5864a1"
+    },
+    {
+      "logical_name": "executor-prompt.md",
+      "sha256": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09"
+    },
+    {
+      "logical_name": "templates/execution.template.json",
+      "sha256": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1"
+    },
+    {
+      "logical_name": "competitor/scientific-critical-thinking/SKILL.md",
+      "sha256": "563af70571b7dcd6a96bf2e303bedfdcba623b4e9f082d58f04aacbc961fdae4"
+    }
+  ],
+  "tool_calls": 2,
+  "output_tokens": null,
+  "network_calls": 0,
+  "output_unicode_characters": 727,
+  "output_bytes": 1611,
+  "violations": [],
+  "uncertainties": [
+    "宿主未报告实际模型、推理强度、temperature、seed、硬性输出上限或输出 token 数。",
+    "未在首个工具调用前捕获时钟，准确开始时间与总耗时未知；未估造。",
+    "上下文隔离仅由指令约束，未进行操作系统审计。",
+    "工具次数及报告字符数按本次执行记录，未声称宿主已强制执行限制。"
+  ],
+  "failure": null,
+  "outputs": [
+    {
+      "path": "runs/t09/report.md",
+      "sha256": "aa01ddcfe46b43c3711d32953c6ba70ec0a5c6b5c3cfe182ac36c933b12eedb1"
+    },
+    {
+      "path": "runs/t09/execution.json"
+    }
+  ],
+  "publication_projection": {
+    "raw_execution_sha256": "ba7ebffb38c2e3674c2af17cb04d1ae57a7b33b938e6cfc33f6fe0236b045a9e",
+    "changes": [
+      "temporary output file paths mapped to logical runs/ paths"
+    ],
+    "scope": "Administrative fields only; report bytes, effective unknowns and scientific content unchanged."
+  }
+}

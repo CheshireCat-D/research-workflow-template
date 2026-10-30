@@ -1,0 +1,130 @@
+{
+  "status": "draft-not-frozen",
+  "case_summaries": {
+    "T": {
+      "title": "固定精度正态混合边界的可恢复数值核对",
+      "activities": [
+        "T-SOURCE-CHECK",
+        "T-CALC",
+        "T-SYNTH"
+      ],
+      "initial_result": {
+        "case_id": "T",
+        "alpha": 0.05,
+        "rho": 1.0,
+        "rho_selection": "fixed-before-observation",
+        "values": [
+          {
+            "v": 0,
+            "boundary": 2.4477468306808166
+          },
+          {
+            "v": 1,
+            "boundary": 3.6563948713638483
+          },
+          {
+            "v": 10,
+            "boundary": 9.606401928868575
+          },
+          {
+            "v": 100,
+            "boundary": 32.73018624234933
+          }
+        ],
+        "interpretation": "Numerical boundary evaluation under the supplied fixed-parameter theorem; no new proof or coverage simulation.",
+        "input_sha256": {
+          "parameters": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+          "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+        }
+      },
+      "revised_result": {
+        "case_id": "T",
+        "alpha": 0.05,
+        "rho": 4.0,
+        "rho_selection": "fixed-before-observation",
+        "values": [
+          {
+            "v": 0,
+            "boundary": 4.895493661361633
+          },
+          {
+            "v": 1,
+            "boundary": 5.57431973357386
+          },
+          {
+            "v": 10,
+            "boundary": 10.070709270872976
+          },
+          {
+            "v": 100,
+            "boundary": 31.015388968276124
+          }
+        ],
+        "interpretation": "Numerical boundary evaluation under the supplied fixed-parameter theorem; no new proof or coverage simulation.",
+        "input_sha256": {
+          "parameters": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+          "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+        }
+      },
+      "initial_file_count": 19
+    },
+    "D": {
+      "title": "冻结自行车需求模型的评价范围修订",
+      "activities": [
+        "D-SOURCE-CHECK",
+        "D-CALC",
+        "D-SYNTH"
+      ],
+      "initial_result": {
+        "case_id": "D",
+        "evaluation_start": "2011-10-01",
+        "evaluation_end": "2011-12-31",
+        "model_policy": "frozen-2011-Jan-Sep",
+        "observed_hours": 2203,
+        "observed_days": 92,
+        "C0_MAE": 58.825190494512434,
+        "C1_MAE": 44.570832407531775,
+        "C0_RMSE": 86.08056895633848,
+        "C1_RMSE": 67.99996906089847,
+        "C0_bias_prediction_minus_actual": 1.078965171773347,
+        "C1_bias_prediction_minus_actual": 0.9871531155146787,
+        "MAE_reduction_fraction": 0.24231724482575867,
+        "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+        "input_sha256": {
+          "parameters": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+          "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+          "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+          "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+        }
+      },
+      "revised_result": {
+        "case_id": "D",
+        "evaluation_start": "2011-11-01",
+        "evaluation_end": "2011-12-31",
+        "model_policy": "frozen-2011-Jan-Sep",
+        "observed_hours": 1460,
+        "observed_days": 61,
+        "C0_MAE": 56.64127430990882,
+        "C1_MAE": 41.252622564018566,
+        "C0_RMSE": 81.70038360631688,
+        "C1_RMSE": 64.15826564867794,
+        "C0_bias_prediction_minus_actual": 13.433264561295244,
+        "C1_bias_prediction_minus_actual": 13.347664992606457,
+        "MAE_reduction_fraction": 0.2716861852664598,
+        "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+        "input_sha256": {
+          "parameters": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+          "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+          "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+          "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+        }
+      },
+      "initial_file_count": 21
+    }
+  },
+  "common_dependency_graph": "working-parameters + decision + primary/code/(D frozen-model) -> CALC -> SYNTH; SOURCE-CHECK remains independently effective",
+  "contexts_if_all_cases_and_arms": 24,
+  "only_repository_reads_and_private_material_writes": true,
+  "personal_package_accessed": false,
+  "lifecycle_trials_executed": 0
+}

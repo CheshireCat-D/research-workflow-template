@@ -19,17 +19,13 @@ Use Python 3.11 or later on Windows, macOS or Linux. Platform implementation and
 Open the toolkit folder in Codex. In a terminal, change to the same folder and run:
 
 ```sh
-python3 tools/research.py init --output '../my-research' --title 'My research question' --interest 'The area I want to investigate'
-python3 tools/connect_skills.py install --root '../my-research'
-python3 tools/connect_skills.py check --root '../my-research'
+python3 tools/research.py init --output '../my-research' --title 'My research question' --interest 'The area I want to investigate' --connect-skills
 ```
 
 On Windows PowerShell, run the same tools with the Python launcher:
 
 ```powershell
-py -3 -X utf8 tools/research.py init --output "../my-research" --title "My research question"
-py -3 -X utf8 tools/connect_skills.py install --root "../my-research"
-py -3 -X utf8 tools/connect_skills.py check --root "../my-research"
+py -3 -X utf8 tools/research.py init --output "../my-research" --title "My research question" --connect-skills
 ```
 
 Check `py -3 --version` for Python 3.11 or later. If the launcher is unavailable, replace `py -3` with the installed `python`. Project-root arguments may use native paths; material paths stored inside project records use `/` on every platform.
@@ -41,6 +37,8 @@ Replace `../my-research` with a new directory that does not yet exist. Initializ
 After these commands, open the new research project in Codex and describe your interest, available materials or current task. Initialization is complete; continue in this project.
 
 You do not need to fill every field before starting or list the skill names in every request. Once the project skills are connected, the host assistant selects skills for the current task. Successful installation and file-integrity checks do not establish that the host interface has actually invoked a skill.
+
+For a separate skill-copy diagnostic, use `python3 tools/connect_skills.py check --root PROJECT`; it is not required after initialization or every recovery.
 
 ## Start with an interest, even without a topic
 
@@ -65,14 +63,28 @@ python3 tools/research.py resume --root '/path/to/your/project' --format markdow
 If you are already in the research project root, use its installed runtime:
 
 ```sh
-python3 .agents/skills/_rw-runtime/tools/research.py resume --root . --format markdown
+python3 .agents/skills/_rw-runtime/tools/research.py resume --format markdown
 ```
+
+One recovery already includes configuration, the next action, file changes and stale activities; there is no need to run `status`, `check` and `show` in sequence. Omitting `--root` uses only the current directory, without searching parents or initializing a project.
 
 Tell the assistant whether you need topic selection, literature positioning, proof review, experimental analysis, editing, or a response to reviewers. If your question is already settled, enter at the relevant stage; there is no requirement to restart topic selection.
 
 For a manuscript that has not been registered, you can begin with a local task. When you need persistent management, create a new RWT project beside the original folder, retain the originals, copy only materials needed now, and agree which working copies to edit thereafter. External or controlled materials can retain a locator; local checks do not track changes to those originals. Parent paths, absolute material paths and symbolic links do not replace intake. Complete [material-intake and correction examples](docs/user-package-guide.en.md) are also included in the current user package.
 
 For a new conversation, open the same research project. Ask the assistant to read its configuration, records and recovery summary, check material changes, then continue the saved next action. Do not initialize it again.
+
+## Try the complete public-data project
+
+The user ZIP includes a reproducible example. From the toolkit folder, run:
+
+```sh
+python3 -B examples/public-penguins/run_project.py --output ../penguins-project
+```
+
+This retrieves one pinned CC0 dataset, produces tables and editable figures, registers the actual outputs, and verifies a saved recovery state. Use a new output directory. Add `--input FILE` for an offline local CSV; its identity is checked before describing it as the pinned public input. This example needs no model or additional Python package.
+
+For literature metadata, `skills/rw-literature/scripts/search_crossref.py` accepts `--query` and `--output`, with bounded cursor pagination and saved response fingerprints. It sends the query to Crossref and provides metadata rather than verified full text.
 
 ## What the nine skills do
 
@@ -126,19 +138,16 @@ Usually, you can describe the task in chat and let the assistant register the wo
 
 | Purpose | Command |
 |---|---|
-| List supported disciplines, methods, and entry points | `python3 tools/research.py options` |
-| Inspect current status and changes | `python3 tools/research.py status --root PROJECT` |
-| Read a recovery summary | `python3 tools/research.py resume --root PROJECT --format markdown` |
-| List IDs and versions for one record kind | `python3 tools/research.py show --root PROJECT --kind statement` |
-| Read one complete record | `python3 tools/research.py show --root PROJECT --kind statement --id S1` |
-| Export an editable record object | `python3 tools/research.py show --root PROJECT --kind statement --id S1 --data-only` |
-| Add a method or target venue | `python3 tools/research.py configure --root PROJECT --add-method formal-theory --venue 'Target journal'` |
+| Recover the project and inspect changes | `python3 tools/research.py resume --root PROJECT --format markdown` |
+| Export selected records with their versions | `python3 tools/research.py show --root PROJECT --edit evidence:E1 activity:A1` |
+| Save records and the next action together | `python3 tools/research.py register-batch --root PROJECT --file BATCH.json --next-action 'The specific next action'` |
+| Save only a stopping point and inspect findings | `python3 tools/research.py checkpoint --root PROJECT --next-action 'The specific next action' --report` |
+| List disciplines, methods and entry points | `python3 tools/research.py options` |
 | Save an interest, deadline and resources | `python3 tools/research.py configure --root PROJECT --interest 'Current question' --deadline 'Within four weeks' --add-capability 'Existing CSV and R environment'` |
-| Save a concrete next action | `python3 tools/research.py checkpoint --root PROJECT --next-action 'The specific next action'` |
 
-Replace `PROJECT` with your actual project path and quote paths containing spaces. Replace `S1` with an existing statement ID. JSON examples for single and batch registration, standard input, and explicit version replacement are in the [detailed CLI guide](docs/07-core-usage.md).
+Replace `PROJECT` with the project path, quoting spaces, and `E1` / `A1` with existing IDs. `show --edit` returns a batch array with each record's kind, data, replacement flag and fixed `expected_version`. Edit it and pass it directly to `register-batch`; no separate version query is needed. If a version conflicts, read and compare changes again rather than just changing the number. Single-record `register` also accepts `--next-action`. The combined save returns `recovery`, so another recovery command is unnecessary. Use a separate `checkpoint --report` only when records have not changed.
 
-`configure --budget` saves a budget; repeat `--add-capability` for several capabilities and omit unknown items. Recovery returns the saved startup information in `configuration`. When correcting a record, use the ordinary `show` response's `envelope.version` for `--expected-version` and the object exported with `--data-only` as editable input. Do not pass the entire query response to `register`.
+For a targeted query, `show --kind statement --id S1` remains available. `--edit` cannot be combined with `--kind`, `--id` or `--data-only`. See the [CLI guide](docs/07-core-usage.md) for JSON, standard input and replacement details. `configure --budget` saves a budget; repeat `--add-capability` as needed and omit unknown items. Use `--venue` for the target journal and `--add-method` for another method. Recovery returns the saved startup information in `configuration`.
 
 `options` also separates declared method guidance from explicit variant bindings in task records. Records without a variant remain method-level evidence; neither category certifies an entire specialty or method. [Subfield navigation](profiles/selection.md) gives entry examples for education, economics/management, psychology, philosophy and arts. Project copies do not include the full evaluation materials and report that evidence as unavailable locally.
 
@@ -147,10 +156,10 @@ The project's `project.json` and `records/registry.json` are the authoritative m
 ## Understanding check results
 
 - Exit code `0`: the requested registration or file/reference check passed.
-- Exit code `1`: changes, missing files, or stale activities were found; review the reported findings.
+- Exit code `1`: recovery found changes, missing files or stale activities. A combined save may already be committed; inspect `registered` / `checkpoint_saved` and `recovery` before retrying.
 - Exit code `2`: an argument, input, reference, or read/write operation was invalid or failed; follow the error message.
 
-`done` describes an activity's registered progress. When its inputs change, its effective state can become `stale`. The recovery summary identifies the relevant records, paths, and reasons. Review the changes, redo the necessary work, and explicitly update records and checkpoints. Do not rewrite scientific conclusions simply to make a check pass.
+`done` describes an activity's registered progress. When its inputs change, its effective state can become `stale`. The recovery summary identifies the relevant records, paths, and reasons. Review changes and do the necessary work, then update evidence, artifacts and activities from upstream to downstream and save them with the next action. Register `done` again only after actually completing that work. Refreshing old status or a checkpoint does not redo the work. Do not rewrite scientific conclusions simply to make a check pass. Validation failures before commit write nothing; after a write error, recover and confirm the actual saved state first.
 
 `file_tracking` lists bound local files and source IDs without local evidence. `source.locator` stores identity only. To track file changes, register local `evidence`, connect it to the source through `source_ids`, and use that evidence as the activity input. Coverage and actual file drift are separate information; external locators are not automatically read.
 
@@ -158,16 +167,15 @@ Local checks do not execute commands embedded in materials, upload data, submit 
 
 ## Moving projects and updating skills
 
-The project skills include a shared runtime copy. After moving a project, you can use:
+The project skills include a shared runtime copy. After moving the complete project, run from its new root:
 
 ```sh
-python3 '/new/project/path/.agents/skills/_rw-runtime/tools/research.py' resume --root '/new/project/path' --format markdown
+python3 .agents/skills/_rw-runtime/tools/research.py resume --format markdown
 ```
 
 To update the project skills, run these commands from the complete toolkit:
 
 ```sh
-python3 tools/connect_skills.py check --root '/path/to/your/project'
 python3 tools/connect_skills.py upgrade --root '/path/to/your/project'
 ```
 

@@ -1,0 +1,39 @@
+{
+  "stage": "C-drift",
+  "metadata_revision": 2,
+  "configuration_sha256": "20ce3612e01041fc2f3219b6ac7828f8e5213e445f49777444944c5ce5476e82",
+  "records_sha256": "d8e7415a7ce12b18d9381c7cc565355080144761b6f160d32f39ceffe6c1539b",
+  "activities_sha256": "bd2a8a57913b4307d01bfaeb34fcb2fe9f1deb5f1a95f0c4edcc94dc7088fec3",
+  "tracked_files": {
+    "sources/howard2021-arxiv-v9.pdf": {
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    "notes/parameters.json": {
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    "notes/source-check.md": {
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    "results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    }
+  },
+  "next_action": "先只读检查漂移断点；仅随后按作者批准的 rho=4 参数真实复算并修订摘要。",
+  "note": "Recovery snapshot only; does not rebind old activities or establish scientific validity."
+}

@@ -1,0 +1,145 @@
+{
+  "status": "executed",
+  "requested": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "fork_turns": "none",
+    "max_tool_calls": 18,
+    "max_report_characters": 12000
+  },
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 9,
+  "network_calls": 0,
+  "violations": [],
+  "reads": [
+    {
+      "logical_name": "common/executor.md",
+      "sha256": "316392fda85274a6b9a3ac7150125ef140d35d96edde46759348ef82020239fb"
+    },
+    {
+      "logical_name": "common/execution.template.json",
+      "sha256": "4202f4e551078d2e12ccd1e271ddb0eaba5bac56eb2cccc204cacf1e9b66330e"
+    },
+    {
+      "logical_name": "input/theory/TASK.md",
+      "sha256": "56d7eff3d121991ac8a907a8f285fe822e26e2627715fd2863180aadd96b51cd"
+    },
+    {
+      "logical_name": "input/theory/draft.tex",
+      "sha256": "8550d8ea0188a72384bf5a4d596cdc23b3c8fa58cddeb30350c71adb26a2ba63"
+    },
+    {
+      "logical_name": "input/theory/source-manifest.json",
+      "sha256": "ab51a486e3bed01f34e863a7221c58481d288bef2efde8b7dbb10ef2001994c4"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2020-arxiv-v7.pdf",
+      "sha256": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2020-arxiv-v7.txt",
+      "sha256": "674f6bf98e64159aa294b114ba765f19ee40b5b89f1fab7c25a9419f86f8ce99"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2021-arxiv-v9.txt",
+      "sha256": "7826e3691e725d8017655d2be40aaf1a37c1aa2969b7344f3e0b4060f50141da"
+    }
+  ],
+  "commands": [
+    {
+      "tool_call": 1,
+      "command": "cat EXECUTOR.md execution.template.json",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 2,
+      "command": "cat input/TASK.md; rg --files input",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 3,
+      "command": "cat input/draft.tex input/source-manifest.json; rg -n relevant theorem and mixture keywords in both source texts",
+      "exit_code": 0,
+      "note": "Long search output was truncated; subsequent targeted reads recovered needed sections."
+    },
+    {
+      "tool_call": 4,
+      "command": "EVAL_PYTHON -I -B inline: attempt source text page splitting on form feeds, inspect theorem matches",
+      "exit_code": 0,
+      "note": "Texts use explicit PDF PAGE markers instead of form feeds; corrected in next call. Output truncated."
+    },
+    {
+      "tool_call": 5,
+      "command": "EVAL_PYTHON -I -B inline: split explicit PDF PAGE markers; read S1 pages 9-13 and S2 pages 6,9,10,14,25,26,35",
+      "exit_code": 0,
+      "note": "Output partly truncated; targeted follow-up read required relevant mixture propositions."
+    },
+    {
+      "tool_call": 6,
+      "command": "EVAL_PYTHON -I -B inline: read S2 pages containing Propositions 3,5,6 and Lemma 2 proof; compute B arithmetic; pypdf read S1 PDF page 9 and S2 PDF page 14",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 7,
+      "command": "mkdir -p workspace; shell heredocs write report.md checks.py RUN.md; cp report.md audit.md; EVAL_PYTHON -I -B workspace/checks.py --input input --output workspace",
+      "exit_code": 0,
+      "note": "Inline generated file payloads are retained in the named artifacts rather than duplicated in this log. First checks.json retained."
+    },
+    {
+      "tool_call": 8,
+      "command": "EVAL_PYTHON -I -B inline: locate S2 Proposition 9 PDF page 30; pypdf verify S1 pages 10-13 and S2 pages 9,10,12,28,35,37; check report length and audit identity",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 9,
+      "command": "EVAL_PYTHON -I -B inline: correct optional Proposition 9 locator to PDF page 30; synchronize audit.md; hash inputs; write and validate execution.json and artifact checks",
+      "exit_code": 0
+    }
+  ],
+  "duration_seconds": null,
+  "scope": "instruction-only; no OS audit",
+  "failure": null,
+  "command_context": {
+    "cwd": "STUDY_ROOT/runs/T05",
+    "python": "EVAL_PYTHON",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "command_text_policy": "Command summaries preserve executables, arguments, operations and outcomes; large inline source or report payloads are described, not duplicated. No shell command returned nonzero."
+  },
+  "validation": {
+    "report_characters": 7000,
+    "report_han_characters": 1728,
+    "audit_identical_to_report": true,
+    "checks_status": "passed",
+    "analytic_scope": "A integral and inversion; B finite Bernoulli event; C optimizer and supplied LIL; E event inclusion; explicit EB one-step inequality and countable error budgets",
+    "pdf_page_convention": "one-based fixed author-version PDF page index",
+    "full_source_copies_in_workspace": false
+  },
+  "output_sha256": {
+    "RUN.md": "b2accc90fcc8362eb5786432d9ccdcee79209ca2c5e743c7df0e1b1089488302",
+    "audit.md": "68dedc503d65e67c9e36253fa32c2d2ee92daf99f718fb687c49b4f41415b24d",
+    "checks.json": "9838c889632c9e4b4569c7a1062f60821d016d513e1bd3367b1119a859b88041",
+    "checks.py": "33ae5371cc41ca751c129390faee5fa6664aa277492167896b4406aa2710d564",
+    "report.md": "68dedc503d65e67c9e36253fa32c2d2ee92daf99f718fb687c49b4f41415b24d"
+  },
+  "unknown_configuration_note": "Host did not report effective model, reasoning effort, temperature, seed or output token limit. Wall-clock start was not instrumented; duration remains null.",
+  "publication_projection": {
+    "raw_execution_sha256": "6a988fadfa666d5cd9d8a4deb964e820a4b5c5bf1abe393cf46b6c5c89ee57fa",
+    "changes": [
+      "absolute paths mapped to logical locators"
+    ],
+    "scope": "Administrative labels/locators only; effective unknowns and scientific content retained."
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "stage": "A",
+  "case_id": "D",
+  "commands": [
+    {
+      "argv": [
+        "/bin/zsh",
+        "-lc",
+        "cat STUDY_ROOT/runs/P2/A/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "read current request",
+      "shell_argv": [
+        "/bin/zsh",
+        "-lc",
+        "cat STUDY_ROOT/runs/P2/A/REQUEST.md"
+      ]
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-c",
+        "from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR\"); print(\"INPUT_FILES\"); print(\"\\n\".join(str(x.relative_to(p)) for x in sorted(p.rglob(\"*\")) if x.is_file())); names=[\"PROTOCOL.md\",\"RECORDING.md\",\"STAGE-A.md\"]; [(print(\"\\nFILE \"+n+\" SHA256 \"+hashlib.sha256((p/n).read_bytes()).hexdigest()+\" BYTES \"+str((p/n).stat().st_size)), print((p/n).read_text())) for n in names]"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "list input files; read protocol, recording, stage A",
+      "shell_argv": [
+        "/bin/zsh",
+        "-lc",
+        "EVAL_PYTHON -I -B -c 'from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR\"); print(\"INPUT_FILES\"); print(\"\\n\".join(str(x.relative_to(p)) for x in sorted(p.rglob(\"*\")) if x.is_file())); names=[\"PROTOCOL.md\",\"RECORDING.md\",\"STAGE-A.md\"]; [(print(\"\\nFILE \"+n+\" SHA256 \"+hashlib.sha256((p/n).read_bytes()).hexdigest()+\" BYTES \"+str((p/n).stat().st_size)), print((p/n).read_text())) for n in names]'"
+      ]
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-c",
+        "from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR/initial\"); files=[x for x in sorted(p.rglob(\"*\")) if x.is_file()]; [(print(\"\\nFILE \"+str(x.relative_to(p))+\" SHA256 \"+hashlib.sha256(x.read_bytes()).hexdigest()+\" BYTES \"+str(x.stat().st_size)), print(x.read_text() if x.suffix!=\".csv\" or x.name==\"table.csv\" else \"DATA CSV FIRST 8 LINES\\n\"+\"\\n\".join(x.read_text().splitlines()[:8])+\"\\nDATA CSV LAST 3 LINES\\n\"+\"\\n\".join(x.read_text().splitlines()[-3:]))) for x in files]"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "read all initial material bytes; full text except displayed data first8/last3",
+      "shell_argv": [
+        "/bin/zsh",
+        "-lc",
+        "EVAL_PYTHON -I -B -c 'from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR/initial\"); files=[x for x in sorted(p.rglob(\"*\")) if x.is_file()]; [(print(\"\\nFILE \"+str(x.relative_to(p))+\" SHA256 \"+hashlib.sha256(x.read_bytes()).hexdigest()+\" BYTES \"+str(x.stat().st_size)), print(x.read_text() if x.suffix!=\".csv\" or x.name==\"table.csv\" else \"DATA CSV FIRST 8 LINES\\n\"+\"\\n\".join(x.read_text().splitlines()[:8])+\"\\nDATA CSV LAST 3 LINES\\n\"+\"\\n\".join(x.read_text().splitlines()[-3:]))) for x in files]'"
+      ]
+    },
+    {
+      "argv": [
+        "/bin/zsh",
+        "-lc",
+        "mkdir -p OUTPUT_DIR\ncat > OUTPUT_DIR/build_stage_a.py <<'PY'\nfrom pathlib import Path\nimport csv, datetime, hashlib, io, json, math, os, re, shutil, subprocess, sys\n\nBASE=Path('STUDY_ROOT/runs/P2/A')\nINP=BASE/'input'; OUT=BASE/'output'; ROOT=BASE.parent/'project'\nPYTHON='EVAL_PYTHON'\nCWD=str(Path.cwd())\nreads={}; commands=[]; writes=[]\ndef digest_bytes(b): return hashlib.sha256(b).hexdigest()\ndef read(p,scope='full file bytes'):\n    p=Path(p); b=p.read_bytes(); reads[str(p)]={'path':str(p),'sha256':digest_bytes(b),'bytes':len(b),'read_scope':scope}; return b\ndef load(p): return json.loads(read(p))\ndef obj(p):\n    b=read(p); return {'sha256':digest_bytes(b),'bytes':len(b)}\ndef dump(p,v):\n    p.parent.mkdir(parents=True,exist_ok=True); p.write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\\n',encoding='utf-8'); writes.append(str(p))\ndef textfile(p,v):\n    p.parent.mkdir(parents=True,exist_ok=True); p.write_text(v,encoding='utf-8'); writes.append(str(p))\ndef run(argv):\n    p=subprocess.run(argv,cwd=str(ROOT),capture_output=True,text=True)\n    r={'argv':argv,'cwd':str(ROOT),'exit_code':p.returncode,'stdout':p.stdout,'stderr':p.stderr}; commands.append(r); return r\n\ndef tree_snapshot(root):\n    return {str(p.relative_to(root)):{'kind':'directory' if p.is_dir() else 'file','mtime_ns':p.stat().st_mtime_ns,**({} if p.is_dir() else obj(p))} for p in sorted(root.rglob('*'))}\n\nrequest=BASE/'REQUEST.md'; read(request)\nfor p in sorted(INP.rglob('*')):\n    if p.is_file(): read(p)\nconstraints=load(INP/'initial/constraints.json'); obligations=load(INP/'initial/obligations.json'); identities=load(INP/'initial/source-identities.json'); supplied=load(INP/'initial/MANIFEST.json')\nmanifest_checks=[]\nfor rel,expected in supplied['files'].items():\n    actual=obj(INP/'initial'/rel); manifest_checks.append({'path':rel,'expected':expected,'actual':actual,'match':expected==actual})\nassert all(x['match'] for x in manifest_checks),'Initial manifest mismatch'\nif ROOT.exists(): raise RuntimeError('Project already exists; refusing to overwrite')\nROOT.mkdir()\nfor p in sorted((INP/'initial/project_payload').rglob('*')):\n    rel=p.relative_to(INP/'initial/project_payload'); q=ROOT/rel\n    if p.is_dir(): q.mkdir(parents=True,exist_ok=True)\n    else: q.parent.mkdir(parents=True,exist_ok=True); q.write_bytes(read(p)); writes.append(str(q))\nMG=ROOT/'management'; MG.mkdir()\nfor name in ['BRIEF.md','constraints.json','obligations.json','source-identities.json','MANIFEST.json']:\n    q=MG/name; q.write_bytes(read(INP/'initial'/name)); writes.append(str(q))\nfor name in ['PROTOCOL.md','RECORDING.md','STAGE-A.md']:\n    q=MG/'protocol'/name; q.parent.mkdir(exist_ok=True); q.write_bytes(read(INP/name)); writes.append(str(q))\nq=MG/'protocol/REQUEST.md'; q.write_bytes(read(request)); writes.append(str(q))\nversion_paths=['notes/parameters.json','results/result.json','results/table.csv','results/summary.md']\nversions=[]\nfor rel in version_paths:\n    p=ROOT/rel; q=MG/'versions/A-initial'/rel; q.parent.mkdir(parents=True,exist_ok=True); q.write_bytes(read(p)); writes.append(str(q))\n    versions.append({'logical_path':rel,'version':'A-initial','snapshot_path':str(q.relative_to(ROOT)),**obj(q),'rationale':'本阶段收到的初始版本；任何后续修订须保留该原字节和修订依据。'})\n\nnormal_out=OUT/'verification-normal'\nnormal_argv=[PYTHON,'-I','-B',str(ROOT/'scripts/compute.py'),'--root',str(ROOT),'--output',str(normal_out)]\nnormal=run(normal_argv)\nassert normal['exit_code']==0,normal\nresult=load(ROOT/'results/result.json'); verified=load(normal_out/'result.json')\nnormal_equal={rel:read(ROOT/'results'/rel)==read(normal_out/rel) for rel in ['result.json','table.csv']}\nassert all(normal_equal.values()),normal_equal\nrows=list(csv.DictReader(io.StringIO(read(ROOT/'data/hour_2011.csv').decode('utf-8'))))\nparams=load(ROOT/'notes/parameters.json'); model=load(ROOT/'model/frozen.json')\nselected=[r for r in rows if params['evaluation_start']<=r['dteday']<=params['evaluation_end']]\nsource_observations={'row_count':len(rows),'yr_values':sorted(set(r['yr'] for r in rows)),'date_min':min(r['dteday'] for r in rows),'date_max':max(r['dteday'] for r in rows),'evaluation_observed_hours':len(selected),'evaluation_observed_days':len({r['dteday'] for r in selected}),'local_sha_matches_identity':obj(ROOT/'data/hour_2011.csv')['sha256']==identities['primary']['sha256'],'full_original_hour_csv_available':False,'remote_access_performed':False}\nassert len(rows)==8645 and source_observations['yr_values']==['0'] and len(selected)==2203\nassert result['observed_hours']==len(selected) and result['observed_days']==92\nnumeric={}\nfor label in ['C0','C1']:\n    errors=[]\n    for row in selected:\n        a=model['C0'][row['hr']]; prediction=a if label=='C0' else model['C1'].get(row['workingday']+':'+row['hr'],a)\n        errors.append(prediction-int(row['cnt']))\n    numeric[label+'_MAE']=math.fsum(abs(e) for e in errors)/len(errors)\n    numeric[label+'_RMSE']=math.sqrt(math.fsum(e*e for e in errors)/len(errors))\n    numeric[label+'_bias_prediction_minus_actual']=math.fsum(errors)/len(errors)\nnumeric['MAE_reduction_fraction']=1-numeric['C1_MAE']/numeric['C0_MAE']\nassert all(math.isclose(v,result[k],rel_tol=1e-14,abs_tol=1e-14) for k,v in numeric.items())\ntable=list(csv.DictReader(io.StringIO(read(ROOT/'results/table.csv').decode('utf-8'))))\nassert all(math.isclose(float(r['value']),result[r['metric']],rel_tol=1e-14,abs_tol=1e-14) for r in table)\nsummary=read(ROOT/'results/summary.md').decode('utf-8')\nsummary_checks={'dates_and_counts':all(t in summary for t in ['2011-10-01','12-31','2203','92']),'rounded_MAE':all(format(result[k],'.12f') in summary for k in ['C0_MAE','C1_MAE']),'reduction_percent':format(100*result['MAE_reduction_fraction'],'.8f')+'%' in summary,'bounded_scope':all(t in summary for t in ['不重训','因果','2012','无置信区间'])}\nassert all(summary_checks.values()),summary_checks\nbefore_invalid=tree_snapshot(ROOT)\nbad_out=OUT/'verification-rejected'\nbad_argv=[PYTHON,'-I','-B',str(ROOT/'scripts/compute.py'),'--root',str(ROOT),'--spec',str(ROOT/'notes/rejected-parameters.json'),'--output',str(bad_out)]\nbad=run(bad_argv)\nafter_invalid=tree_snapshot(ROOT)\nbad_check={'expected_exit_code':2,'actual_exit_code':bad['exit_code'],'error':json.loads(bad['stderr']),'output_directory_exists':bad_out.exists(),'project_tree_bytes_and_mtimes_unchanged':before_invalid==after_invalid,'canonical_results_before':{p:before_invalid[p] for p in ['results/result.json','results/table.csv','results/summary.md']},'canonical_results_after':{p:after_invalid[p] for p in ['results/result.json','results/table.csv','results/summary.md']},'meaning':'有意提交起点晚于终点的无效评价期；这是受控输入拒绝测试，不是实际科学研究分析失败。'}\nassert bad['exit_code']==2 and not bad_out.exists() and before_invalid==after_invalid\nE=MG/'evidence/A'; E.mkdir(parents=True)\nfor rel in ['result.json','table.csv']:\n    q=E/'normal-run'/rel; q.parent.mkdir(exist_ok=True); q.write_bytes(read(normal_out/rel)); writes.append(str(q))\nevidence={'normal_command':normal,'rejected_command':bad,'initial_manifest_checks':manifest_checks,'normal_equals_canonical_bytes':normal_equal,'independent_metric_recalculation':numeric,'table_agrees_with_result':True,'summary_checks':summary_checks,'source_observations':source_observations,'invalid_input_test':bad_check}\ndump(E/'checks.json',evidence)\n# Keep the pre/post evidence itself in the project, independent of external execution files.\ndump(E/'invalid-before.json',before_invalid); dump(E/'invalid-after.json',after_invalid)\n\nstatus_source=r'''from pathlib import Path\nimport argparse, hashlib, json, sys\n\ndef main():\n    a=argparse.ArgumentParser(description='Read-only project identity and dependency recovery; no scientific certification')\n    a.add_argument('--root',type=Path,default=Path(__file__).resolve().parent.parent)\n    args=a.parse_args(); root=args.root.resolve()\n    state=json.loads((root/'management/state.json').read_text(encoding='utf-8'))\n    changes=[]; current={}\n    for rel,ref in state['tracked_files'].items():\n        p=root/rel\n        if not p.is_file(): changes.append({'path':rel,'state':'missing','expected_sha256':ref['sha256']}); continue\n        b=p.read_bytes(); h=hashlib.sha256(b).hexdigest(); current[rel]={'sha256':h,'bytes':len(b)}\n        if h!=ref['sha256'] or len(b)!=ref['bytes']: changes.append({'path':rel,'state':'changed','expected_sha256':ref['sha256'],'current_sha256':h,'current_bytes':len(b)})\n    changed_paths={c['path'] for c in changes}\n    directly_changed=set()\n    for node in state['logical_nodes']:\n        if set(node.get('material_paths',[])) & changed_paths: directly_changed.add(node['id'])\n    affected=set(directly_changed)\n    while True:\n        nxt=affected|{n['id'] for n in state['logical_nodes'] if set(n.get('dependencies',[])) & affected}\n        if nxt==affected: break\n        affected=nxt\n    activities=state['activities']\n    affected_activities=sorted(a for a in activities if a in affected)\n    unaffected=sorted(a for a in activities if a not in affected)\n    constraint_changes=changed_paths & {'management/constraints.json','management/obligations.json','management/source-identities.json','management/state.json'}\n    if constraint_changes:\n        affected_activities=sorted(activities); unaffected=[]\n    snapshots=[]\n    for version in state['versions']:\n        p=root/version['snapshot_path']\n        h=hashlib.sha256(p.read_bytes()).hexdigest() if p.is_file() else None\n        snapshots.append({'logical_path':version['logical_path'],'snapshot_path':version['snapshot_path'],'intact':h==version['sha256']})\n    actual_parameters=None\n    try: actual_parameters=json.loads((root/'notes/parameters.json').read_text(encoding='utf-8'))\n    except (ValueError,OSError) as e: actual_parameters={'read_error':str(e)}\n    answer={'case_id':state['case_id'],'state_authority':'management/state.json with supplied governance; current bytes take precedence over old recorded completion','active_parameters_observed':actual_parameters,'authoritative_constraints_at_checkpoint':state['active_constraints'],'changed_or_missing_paths':changes,'affected_activities':affected_activities,'unaffected_activities':unaffected,'checkpoint_freshness':'fresh-for-registered-local-files' if not changes else 'stale-requires-reconciliation','scientific_scope':state['scientific_scope'],'source_tracking_limits':state['source_tracking_limits'],'versions':snapshots,'next_action':state['next_action'] if not changes else '先按changed_or_missing_paths核对当前作者依据，保留旧内容；对受影响活动重新核验并更新权威状态。旧done/checkpoint不代表当前结果仍有效。','writes_project':False}\n    print(json.dumps(answer,ensure_ascii=False,indent=2)); return 0 if not changes and all(v['intact'] for v in snapshots) else 3\nif __name__=='__main__': raise SystemExit(main())\n'''\ntextfile(MG/'status.py',status_source)\nsource_limits={'D-SRC':'已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。','D-REMOTE':'仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。','notes/unregistered-scratch.md':'已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。','source_card_discrepancy':'卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。','publication_rule':identities['publication_rule']}\nscope='2011-10-01至2011-12-31、2203实际观察小时/92日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。'\nnext_action='当前指标、表格、摘要已核对；下一步由作者讨论2011第四季度冻结模型比较及其研究表述。尚无作者审阅决定；不发送、不投稿、不重训、不外推2012。继续前运行 management/status.py 检查依赖新鲜度。'\nnode_files={'D-SRC':['management/source-identities.json'],'D-REMOTE':[],'D-RAW':['data/hour_2011.csv'],'D-PARAM':['notes/parameters.json'],'D-CLAIM':['management/constraints.json'],'D-REL':[],'D-CHOICE':['notes/parameters.json'],'D-CODE':['scripts/compute.py'],'D-MODEL':['model/frozen.json'],'D-RESULT':['results/result.json','results/table.csv'],'D-SUMMARY':['results/summary.md'],'D-SOURCE-NOTE':['notes/source-check.md'],'D-SOURCE-CHECK':[],'D-CALC':[],'D-SYNTH':[]}\nnodes=[]\nfor old in obligations['nodes']:\n    n=dict(old); deps=[]\n    deps.extend(old.get('derived_from',[])); deps.extend(old.get('inputs',[])); deps.extend(old.get('depends_on',[]))\n    if old['id']=='D-SOURCE-CHECK': deps+=['D-SOURCE-NOTE']\n    if old['id']=='D-CALC': deps+=['D-RESULT']\n    if old['id']=='D-SYNTH': deps+=['D-SUMMARY']\n    if old['id']=='D-SOURCE-NOTE': deps+=['D-SRC','D-RAW']\n    if old['id']=='D-CHOICE': deps+=['D-PARAM']\n    if old['id']=='D-REL': deps+=['D-PARAM','D-CLAIM']\n    # Frozen model provenance is recorded separately: evaluation never refits the model.\n    n['dependencies']=list(dict.fromkeys(deps)); n['material_paths']=node_files[old['id']]; nodes.append(n)\ntracked_paths=set(obligations['local_tracking_paths']+[obligations['companion_deliverable'],'management/constraints.json','management/obligations.json','management/source-identities.json','management/BRIEF.md','management/status.py'])\n# Evidence and snapshots are checked too; they never expand scratch or remote scientific coverage.\ntracked_paths.update(str(p.relative_to(ROOT)) for p in sorted((MG/'versions').rglob('*')) if p.is_file())\ntracked_paths.update(str(p.relative_to(ROOT)) for p in sorted(E.rglob('*')) if p.is_file())\ntracked={rel:obj(ROOT/rel) for rel in sorted(tracked_paths)}\nactivities={}\nfor aid in obligations['required_completed_activities']:\n    node=next(n for n in nodes if n['id']==aid)\n    bind_ids=node.get('inputs',[])+node.get('outputs',[])\n    paths=sorted({p for n in nodes if n['id'] in bind_ids for p in n['material_paths']})\n    activities[aid]={'status':'done','status_meaning':'本阶段限定工作已实际完成；不等于专家科学认证、形式化证明或未来版本有效。','evidence':'management/evidence/A/checks.json','bound_materials':{p:obj(ROOT/p) for p in paths},'verification':{'D-SOURCE-CHECK':'验证所给本地身份、完整散列、2011行数及来源卡口径；原完整数据和远端信息仍为提供方陈述。','D-CALC':'实际运行供给计算器，和预制JSON/表格逐字节相符，并另用标准库按定义重算全部指标。','D-SYNTH':'核对预制摘要评价范围、观察数、MAE和降低比例及边界表述；未冒称从零创作。'}[aid]}\nstate={'schema_version':1,'case_id':'D','stage':'A','created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'authority':'management/state.json 是项目生命周期记录唯一权威；management/constraints.json保存所给约束，notes/parameters.json为实际运行参数。新字节/经授权新决定优先于旧done，需显式保留版本后更新此记录。','active_constraints':constraints,'research_question':constraints['interest'],'logical_nodes':nodes,'activities':activities,'decision':{'id':'D-CHOICE','choice':'使用所给初始2011第四季度评价参数和现有冻结模型','author':'material provider','authorization':'initial supplied request; no human approval invented','evidence':['management/constraints.json','notes/parameters.json'],'no_revisions_in_A':True},'tracked_files':tracked,'versions':versions,'checkpoint':{'id':'A-verified-initial','status':'fresh-for-bound-local-files','bound_paths':list(tracked),'evidence':'management/evidence/A/checks.json','not_scientific_certification':True},'scientific_scope':scope,'source_tracking_limits':source_limits,'next_action':next_action,'unknowns':{'human_expert_approval':None,'author_discussion_decision':None,'target_journal':None,'model':None,'temperature':None,'seed':None,'token_budget':None},'history':[{'stage':'A','event':'保留初始字节，验证正常运行与摘要，有意无效参数被拒，原有效结果不变。','before_version':'A-initial','evidence':'management/evidence/A/checks.json','next_action':next_action}]}\ndump(MG/'state.json',state)\nreadme='''# 项目恢复入口\n\n权威状态是 `management/state.json`；给定的研究约束、逻辑义务、来源身份原件分别保存在同目录对应JSON，活动历史在state.history。预制结果仍为 `results/result.json`，`results/table.csv` 必须一致，摘要为 `results/summary.md`。本阶段未改写预制科研材料。\n\n从任何迁移后的项目目录运行：\n\n```sh\n/path/to/python -I -B management/status.py --root .\n```\n\n只需Python标准库，无第三方包。解释器路径由接续者指向实际可用Python；脚本依据自身路径或显式root运行，不依赖原绝对地址。退出0代表已登记本地身份与快照一致；3代表存在变更、缺失或快照损坏，须读JSON并复核。该程序只读，不写缓存，也不把文件身份检查说成科学认证。不要靠旧handoff或旧done覆盖当前有效字节。状态脚本不能自证 `management/state.json` 从未被篡改，应由授权修订记录与后续给定事件核对其权威内容。\n\n`management/versions/A-initial/` 保存 parameters、result、table、summary 四个原始版本的完整字节和SHA对应记录，可恢复旧成果；不要用旧快照自动覆盖后来经授权修订的文件。需要修订时先保存修订前原字节、修订理由与提供方依据，再更新当前参数、依赖、结果、摘要、活动状态和版本记录。若只改变评价期，D-CALC及D-SYNTH需复核；来源/数据/卡片不变时D-SOURCE-CHECK不因评价期变化而自动失效。任何输入或输出变化均按state中的依赖传播；新保存checkpoint不能替代重新计算和摘要核对。\n\n正常重算须指定新的外部目录，且重新检查当前参数范围：\n\n```sh\n/path/to/python -I -B scripts/compute.py --root . --output /new/nonexistent/verification-directory\n```\n\n脚本拒绝已存在输出目录；若验证失败，保留原错误与退出码，不覆盖有效results。A的真实运行证据、成功结果副本、失败前后字节/mtime快照均在 `management/evidence/A/`，可独立于外部答卷恢复核验记录。无效输入演练exit=2，未生成其输出目录，整个项目当时字节与目录/文件mtime不变；这是受控无效输入测试。\n\n下一步：当前季度指标、表格与预制摘要已核对，由作者讨论研究表述；作者决定仍未知。禁止重训、2012外推或未经授权外部投稿。截止日期2026-12-15来自所给任务，目标期刊未定。主范围是观察小时加权的描述性留出比较，不包含因果或未来表现保证。\n\n来源覆盖边界：2011切片已实际读取并绑定完整SHA，原完整hour.csv/ZIP、DOI文章和当前网页均未读取。来源卡的17379/17389行差异作为提供方记录保留。`notes/unregistered-scratch.md`虽保留但不登记科学依赖，status不检测该随手草稿变化。不能据此宣称覆盖整个项目所有文件。\n\n本地原始CSV仅供私有研究缓存。发布/迁移前区分私有缓存与公开仓库，遵守所给source-identities.json的“不分发原始PDF/CSV，保留身份与项目结果”规则；本次未联网、未发布。\n'''\ntextfile(ROOT/'RECOVERY.md',readme)\nstatus_before=tree_snapshot(ROOT)\nstatus_run=run([PYTHON,'-I','-B',str(MG/'status.py'),'--root',str(ROOT)])\nstatus_after=tree_snapshot(ROOT)\nassert status_run['exit_code']==0 and status_before==status_after,status_run\nstatus_answer=json.loads(status_run['stdout'])\n# Do not persist status self-check evidence into the tracked set after it was frozen.\ndump(OUT/'status-check.json',{'command':status_run,'project_tree_unchanged':status_before==status_after})\nanswer={'case_id':'D','stage':'A','active_constraints':constraints,'next_action':next_action,'changed_or_missing_paths':[],'affected_activities':[],'unaffected_activities':obligations['required_completed_activities'],'checkpoint_freshness':'fresh-for-bound-local-files; no scientific certification','scientific_scope':scope,'source_tracking_limits':source_limits,'material_paths':{'project_root':str(ROOT),'authority':'management/state.json','recovery':'RECOVERY.md','calculator':'scripts/compute.py','parameters':'notes/parameters.json','canonical_result':'results/result.json','table':'results/table.csv','summary':'results/summary.md','initial_versions':'management/versions/A-initial/','checks':'management/evidence/A/checks.json','normal_verification':str(normal_out)},'verified_metrics':{k:result[k] for k in ['observed_hours','observed_days',*numeric.keys()]},'controlled_invalid_input':bad_check,'notes':['预制数值和摘要来自所给材料；本阶段已实际独立运行与范围核对。','未发生任何人类专家审阅、形式化证明、作者讨论决定或外部提交。','A未修改初始参数或规范科研成果，后续修订须保留旧字节与依据。']}\ndump(OUT/'state-answer.json',answer)\nreport=f'''# 阶段交付\n\n项目已建立在 `{ROOT}`。权威生命周期记录为 `management/state.json`；约束、来源身份、逻辑义务、版本字节、计算证据和恢复程序均已实际保存在项目内，恢复不依赖本外部答卷。\n\n正常输入实际运行退出0，输出 `{normal_out}`。生成的 result.json 与 table.csv 均和预制规范成果逐字节一致。另以标准库从实际观察记录重算全部指标，按定义核对；摘要评价范围、观察数、舍入数值和表述边界均相符。\n\n|指标|C0|C1|\n|---|---:|---:|\n|MAE|{result['C0_MAE']:.12f}|{result['C1_MAE']:.12f}|\n|RMSE|{result['C0_RMSE']:.12f}|{result['C1_RMSE']:.12f}|\n|偏差（预测减实际）|{result['C0_bias_prediction_minus_actual']:.12f}|{result['C1_bias_prediction_minus_actual']:.12f}|\n\n评价期2011-10-01至2011-12-31，2203观察小时、92日，C1的MAE相对降低{100*result['MAE_reduction_fraction']:.8f}%。这里只核对所给冻结模型在该期观察小时上的描述性留出比较；不重训，无置信区间、因果或2012/任意未来表现保证。预制成果由提供方准备，本阶段是重算与核验。\n\n有意无效输入 `notes/rejected-parameters.json` 的起点2012-01-01晚于终点2011-12-31。真实运行退出2，stderr为 `ValueError: evaluation_start must be no later than evaluation_end`，未创建拒绝测试输出目录。失败前后整个当时项目的文件字节、文件mtime及目录mtime完全相同；原有效 result/table/summary保持不变。原失败、命令、前后快照保存在 `management/evidence/A/`。这是受控无效输入测试。\n\nD-SOURCE-CHECK、D-CALC、D-SYNTH在所绑定的当前本地版本下均已完成限定检查。恢复程序实际只读运行退出0，其执行前后项目字节与mtime相同。checkpoint对登记的本地文件新鲜；它不代表科学认证。参数、计算输入或输出变化须传播至相应活动并复核；若仅评价期改变，计算与综合会受影响，来源身份活动可保持有效。\n\n2011本地切片实际读取8645行，日期2011-01-01至12-31，yr仅0，完整SHA为 `{identities['primary']['sha256']}`。所给初始manifest的全部14项SHA和字节数均一致。UCI来源DOI为10.24432/C5W894；标题、许可证和原完整CSV身份来自提供的来源资料，离线未重取官方ZIP或网页。卡片称完整CSV17379行与官网metadata17389有差异，已原样保留，该阶段仅能直接核验所给8645行切片。D-REMOTE仅DOI身份（10.1007/s13748-013-0040-3），无文章副本或远端内容检查。未登记scratch保留但不在自动科学依赖覆盖内；不能宣称自动检查所有文件。原CSV限私有缓存，不作公开分发。\n\n四个初始小文件的完整字节位于 `management/versions/A-initial/notes/parameters.json` 及同一快照目录中的 `results/result.json`、`results/table.csv`、`results/summary.md`；SHA与版本依据在权威state中。原数据及冻结模型和脚本均保留原字节。\n\n下一步：运行 `python -I -B management/status.py --root .` 复核当前依赖，然后由作者讨论已核对的2011第四季度指标与摘要。作者决定、人类专家审批和目标期刊均未知；不发送或提交任何材料。任务给定截止日为2026-12-15，约束为离线标准库、不采集新数据、不重新拟合。\n\n本目录的 `execution.json` 保存实际argv/cwd/退出码、完整读取清单、失败与补救、工具调用数和未知设置；`inputs-and-artifacts.json` 保存输入/产物完整SHA与字节数。精确科学命令也保存在项目证据，可供迁移后复核。\n'''\ntextfile(OUT/'report.md',report)\n# Record these first three read-only shell invocations as issued before this driver.\nprior_commands=[\n{'argv':['/bin/zsh','-lc','cat STUDY_ROOT/runs/P2/A/REQUEST.md'],'cwd':CWD,'exit_code':0,'purpose':'read current request'},\n{'argv':['EVAL_PYTHON','-I','-B','-c','from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR\"); print(\"INPUT_FILES\"); print(\"\\\\n\".join(str(x.relative_to(p)) for x in sorted(p.rglob(\"*\")) if x.is_file())); names=[\"PROTOCOL.md\",\"RECORDING.md\",\"STAGE-A.md\"]; [(print(\"\\\\nFILE \"+n+\" SHA256 \"+hashlib.sha256((p/n).read_bytes()).hexdigest()+\" BYTES \"+str((p/n).stat().st_size)), print((p/n).read_text())) for n in names]'],'cwd':CWD,'exit_code':0,'purpose':'list input files; read protocol, recording, stage A'},\n{'argv':['EVAL_PYTHON','-I','-B','-c','from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR/initial\"); files=[x for x in sorted(p.rglob(\"*\")) if x.is_file()]; [(print(\"\\\\nFILE \"+str(x.relative_to(p))+\" SHA256 \"+hashlib.sha256(x.read_bytes()).hexdigest()+\" BYTES \"+str(x.stat().st_size)), print(x.read_text() if x.suffix!=\".csv\" or x.name==\"table.csv\" else \"DATA CSV FIRST 8 LINES\\\\n\"+\"\\\\n\".join(x.read_text().splitlines()[:8])+\"\\\\nDATA CSV LAST 3 LINES\\\\n\"+\"\\\\n\".join(x.read_text().splitlines()[-3:]))) for x in files]'],'cwd':CWD,'exit_code':0,'purpose':'read all initial material bytes; full text except displayed data first8/last3'}]\nread(Path(__file__))\nexecution={'stage':'A','case_id':'D','commands':prior_commands+[{'argv':[PYTHON,'-I','-B',str(Path(__file__))],'cwd':CWD,'exit_code':0,'purpose':'create fresh project, preserve governance and versions, execute and verify calculators, persist state and reports'}]+commands,'recording_note':'Shell output/build creation and final audit commands are appended by the final audit step. Python code and read hashes preserve executed construction. Prior scientific reads loaded complete file bytes; CSV display was sampled. Standard-library imports are runtime resources, not project/source claims.','tool_calls':5,'network_calls':0,'install_calls':0,'agent_calls':0,'violations':[],'failures':[{'intentional':True,**bad}],'remediation':['无意外失败；无效输入按预期被拒，未修复或覆盖原成果。'],'read_inventory':list(reads.values()),'written_paths':sorted(set(writes)),'unknown_runtime_settings':{'effective_model':None,'temperature':None,'seed':None,'token_budget':None,'system_token_limit':None},'project_status_unchanged_by_read_only_check':True}\ndump(OUT/'execution.json',execution)\nartifacts={'case_id':'D','stage':'A','inputs':[{'relative_path':str(p.relative_to(BASE)) if p.is_relative_to(BASE) else 'REQUEST.md','path':str(p),**obj(p)} for p in [request]+[p for p in sorted(INP.rglob('*')) if p.is_file()]],'project_artifacts':[{'relative_path':str(p.relative_to(ROOT)),'path':str(p),**obj(p)} for p in sorted(ROOT.rglob('*')) if p.is_file()],'output_artifacts':[{'relative_path':str(p.relative_to(OUT)),'path':str(p),**obj(p)} for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='inputs-and-artifacts.json'],'hash_manifest_self_exclusion':'This manifest cannot include its own final SHA without recursion; it is listed as an output path in execution. Directory mtimes are operational evidence, not scientific content versions.','non_distribution_scope':'Original PDF/CSV only private research cache; do not redistribute source data publicly. No article PDF or full original hour.csv supplied; no remote content bound.'}\ndump(OUT/'inputs-and-artifacts.json',artifacts)\nprint(json.dumps({'project':str(ROOT),'report':str(OUT/'report.md'),'normal_exit':normal['exit_code'],'rejected_exit':bad['exit_code'],'status_exit':status_run['exit_code'],'invalid_test_preserved_project':before_invalid==after_invalid,'normal_byte_matches':normal_equal,'source_observations':source_observations,'files':len(artifacts['project_artifacts'])},ensure_ascii=False))\nPY"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "create stage execution resource in output; no project exists yet"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/build_stage_a.py"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "create fresh project, preserve governance and versions, execute and verify calculators, persist state and reports"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--output",
+        "OUTPUT_DIR/verification-normal"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"result\": \"OUTPUT_DIR/verification-normal/result.json\", \"parameters_sha256\": \"16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--spec",
+        "PROJECT_ROOT/notes/rejected-parameters.json",
+        "--output",
+        "OUTPUT_DIR/verification-rejected"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"evaluation_start must be no later than evaluation_end\"}\n"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/management/status.py",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"case_id\": \"D\",\n  \"state_authority\": \"management/state.json with supplied governance; current bytes take precedence over old recorded completion\",\n  \"active_parameters_observed\": {\n    \"case_id\": \"D\",\n    \"evaluation_start\": \"2011-10-01\",\n    \"evaluation_end\": \"2011-12-31\",\n    \"model_policy\": \"frozen-2011-Jan-Sep\",\n    \"metric_weighting\": \"observed-hour\"\n  },\n  \"authoritative_constraints_at_checkpoint\": {\n    \"interest\": \"在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"D\",\n      \"evaluation_start\": \"2011-10-01\",\n      \"evaluation_end\": \"2011-12-31\",\n      \"model_policy\": \"frozen-2011-Jan-Sep\",\n      \"metric_weighting\": \"observed-hour\"\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"changed_or_missing_paths\": [],\n  \"affected_activities\": [],\n  \"unaffected_activities\": [\n    \"D-CALC\",\n    \"D-SOURCE-CHECK\",\n    \"D-SYNTH\"\n  ],\n  \"checkpoint_freshness\": \"fresh-for-registered-local-files\",\n  \"scientific_scope\": \"2011-10-01至2011-12-31、2203实际观察小时/92日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。\",\n  \"source_tracking_limits\": {\n    \"D-SRC\": \"已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。\",\n    \"D-REMOTE\": \"仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。\",\n    \"notes/unregistered-scratch.md\": \"已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。\",\n    \"source_card_discrepancy\": \"卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。\",\n    \"publication_rule\": \"Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.\"\n  },\n  \"versions\": [\n    {\n      \"logical_path\": \"notes/parameters.json\",\n      \"snapshot_path\": \"management/versions/A-initial/notes/parameters.json\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/result.json\",\n      \"snapshot_path\": \"management/versions/A-initial/results/result.json\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/table.csv\",\n      \"snapshot_path\": \"management/versions/A-initial/results/table.csv\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/summary.md\",\n      \"snapshot_path\": \"management/versions/A-initial/results/summary.md\",\n      \"intact\": true\n    }\n  ],\n  \"next_action\": \"当前指标、表格、摘要已核对；下一步由作者讨论2011第四季度冻结模型比较及其研究表述。尚无作者审阅决定；不发送、不投稿、不重训、不外推2012。继续前运行 management/status.py 检查依赖新鲜度。\",\n  \"writes_project\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/bin/zsh",
+        "-lc",
+        "cat > OUTPUT_DIR/finalize_audit.py <<'PY'\nfrom pathlib import Path\nimport hashlib, json, os, subprocess\n\nBASE=Path('STUDY_ROOT/runs/P2/A'); OUT=BASE/'output'; ROOT=BASE.parent/'project'; INP=BASE/'input'; PYTHON='EVAL_PYTHON'; CWD='TASK_WORKSPACE'\nreads=[]\ndef read(p):\n    p=Path(p); b=p.read_bytes(); reads.append({'path':str(p),'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b),'read_scope':'full file bytes; final audit'}); return b\ndef obj(p):\n    b=read(p); return {'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}\ndef load(p): return json.loads(read(p))\ndef dump(p,v): p.write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\\n',encoding='utf-8')\ndef tree():\n    return {str(p.relative_to(ROOT)):{'kind':'directory' if p.is_dir() else 'file','mtime_ns':p.stat().st_mtime_ns,**({} if p.is_dir() else obj(p))} for p in sorted(ROOT.rglob('*'))}\n\nstate=load(ROOT/'management/state.json'); ex=load(OUT/'execution.json'); answer=load(OUT/'state-answer.json'); initial=load(ROOT/'management/MANIFEST.json')\nfor p,expected in state['tracked_files'].items(): assert obj(ROOT/p)==expected,p\nfor v in state['versions']: assert obj(ROOT/v['snapshot_path'])=={'sha256':v['sha256'],'bytes':v['bytes']},v\nfor rel in ['notes/parameters.json','results/result.json','results/table.csv','results/summary.md']:\n    assert read(ROOT/rel)==read(ROOT/'management/versions/A-initial'/rel),rel\nfor rel,ref in initial['files'].items():\n    if rel.startswith('project_payload/'): assert obj(ROOT/rel.removeprefix('project_payload/'))==ref,rel\nassert answer['changed_or_missing_paths']==[]\nassert all(a['status']=='done' for a in state['activities'].values())\nassert len(read(OUT/'report.md').decode('utf-8'))<10000\nbefore=tree()\nargv=[PYTHON,'-I','-B',str(ROOT/'management/status.py'),'--root',str(ROOT)]\np=subprocess.run(argv,cwd=str(ROOT),capture_output=True,text=True)\nafter=tree()\nassert p.returncode==0 and before==after\ncurrent=json.loads(p.stdout)\nassert current['checkpoint_freshness']=='fresh-for-registered-local-files' and current['changed_or_missing_paths']==[]\nassert sorted(current['unaffected_activities'])==['D-CALC','D-SOURCE-CHECK','D-SYNTH']\nassert not (OUT/'verification-rejected').exists()\nchecks=load(ROOT/'management/evidence/A/checks.json')\nassert checks['invalid_input_test']['project_tree_bytes_and_mtimes_unchanged'] is True\nassert checks['invalid_input_test']['actual_exit_code']==2\n\n# Reconstruct the literal shell command arguments for the initial read calls.\ncode2=r'''from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR\"); print(\"INPUT_FILES\"); print(\"\\n\".join(str(x.relative_to(p)) for x in sorted(p.rglob(\"*\")) if x.is_file())); names=[\"PROTOCOL.md\",\"RECORDING.md\",\"STAGE-A.md\"]; [(print(\"\\nFILE \"+n+\" SHA256 \"+hashlib.sha256((p/n).read_bytes()).hexdigest()+\" BYTES \"+str((p/n).stat().st_size)), print((p/n).read_text())) for n in names]'''\ncode3=r'''from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR/initial\"); files=[x for x in sorted(p.rglob(\"*\")) if x.is_file()]; [(print(\"\\nFILE \"+str(x.relative_to(p))+\" SHA256 \"+hashlib.sha256(x.read_bytes()).hexdigest()+\" BYTES \"+str(x.stat().st_size)), print(x.read_text() if x.suffix!=\".csv\" or x.name==\"table.csv\" else \"DATA CSV FIRST 8 LINES\\n\"+\"\\n\".join(x.read_text().splitlines()[:8])+\"\\nDATA CSV LAST 3 LINES\\n\"+\"\\n\".join(x.read_text().splitlines()[-3:]))) for x in files]'''\nfor ix,code in [(1,code2),(2,code3)]:\n    ex['commands'][ix]['argv']=[PYTHON,'-I','-B','-c',code]\n    ex['commands'][ix]['shell_argv']=['/bin/zsh','-lc',PYTHON+\" -I -B -c '\"+code+\"'\"]\nex['commands'][0]['shell_argv']=ex['commands'][0]['argv']\nbuild=read(OUT/'build_stage_a.py').decode('utf-8')\nfinalizer=read(Path(__file__)).decode('utf-8')\nwrite_build=\"mkdir -p OUTPUT_DIR\\ncat > OUTPUT_DIR/build_stage_a.py <<'PY'\\n\"+build+'PY'\nwrite_final=\"cat > OUTPUT_DIR/finalize_audit.py <<'PY'\\n\"+finalizer+'PY'\nex['commands'].insert(3,{'argv':['/bin/zsh','-lc',write_build],'cwd':CWD,'exit_code':0,'purpose':'create stage execution resource in output; no project exists yet'})\nex['commands'].extend([\n    {'argv':['/bin/zsh','-lc',write_final],'cwd':CWD,'exit_code':0,'purpose':'write independent final audit and execution finalizer'},\n    {'argv':[PYTHON,'-I','-B',str(Path(__file__))],'shell_argv':['/bin/zsh','-lc',PYTHON+' -I -B '+str(Path(__file__))],'cwd':CWD,'exit_code':0,'purpose':'audit project and versions, preserve exact commands and finalize external records'},\n    {'argv':argv,'cwd':str(ROOT),'exit_code':p.returncode,'stdout':p.stdout,'stderr':p.stderr,'purpose':'final read-only status and project mtime/byte preservation audit'}])\nfor e in ex['commands']:\n    if e['argv'][0]==PYTHON and 'shell_argv' not in e and e['purpose'] if 'purpose' in e else False: pass\nex['tool_calls']=7\nex['tool_call_count_scope']='Seven outer functions.exec invocations, each with one exec_command; scientific/status subprocesses recorded separately.'\nex['recording_note']='All shell read/write and main Python commands plus scientific/status subprocesses are recorded. Nested Python file operations use standard library and are preserved in the exact executed scripts. Input/project/source resources have complete SHA and bytes; standard-library implementation files are not scientific inputs. Records of earlier file versions retain the SHA observed when read. No network, installation, parent messages, other agent calls, memory or skills accessed.'\nex['read_inventory'].extend(reads)\n# Include all original request/input files again as exact final-audit reads.\nfor q in [BASE/'REQUEST.md']+[q for q in sorted(INP.rglob('*')) if q.is_file()]: obj(q)\n# Record external outputs whose bytes are read during inventory, before execution is finalized.\nfor q in sorted(OUT.rglob('*')):\n    if q.is_file() and q.name not in ['execution.json','inputs-and-artifacts.json']: obj(q)\nex['read_inventory'].extend(reads[len(ex['read_inventory'])-len(ex['read_inventory']):] if False else [])\n# Deduplicate observations by path and SHA, not path alone: multiple versions may have been read.\nall_reads=ex['read_inventory']+reads\nunique={}\nfor r in all_reads: unique[(r['path'],r['sha256'])]=r\nex['read_inventory']=list(unique.values())\nex['written_paths']=sorted(set(ex['written_paths'])|{str(q) for q in OUT.rglob('*') if q.is_file()}|{str(OUT/'execution.json'),str(OUT/'inputs-and-artifacts.json')})\nex['final_audit']={'tracked_file_count':len(state['tracked_files']),'initial_snapshot_count':len(state['versions']),'all_initial_payload_bytes_preserved':True,'all_versions_recoverable':True,'registered_local_files_current':True,'read_only_status_preserves_project_bytes_and_mtimes':True,'project_tree_file_count':sum(v['kind']=='file' for v in after.values())}\ndump(OUT/'execution.json',ex)\n# Snapshot every final artifact other than this inventory's own self-referential hash.\nart={'case_id':'D','stage':'A','inputs':[{'relative_path':str(q.relative_to(BASE)),'path':str(q),**obj(q)} for q in [BASE/'REQUEST.md']+[q for q in sorted(INP.rglob('*')) if q.is_file()]],'project_artifacts':[{'relative_path':str(q.relative_to(ROOT)),'path':str(q),**obj(q)} for q in sorted(ROOT.rglob('*')) if q.is_file()],'output_artifacts':[{'relative_path':str(q.relative_to(OUT)),'path':str(q),**obj(q)} for q in sorted(OUT.rglob('*')) if q.is_file() and q.name!='inputs-and-artifacts.json'],'hash_manifest_self_exclusion':'inputs-and-artifacts.json excludes its own hash to avoid recursion; it is an output path in execution. Execution is hashed here after finalization. Directory mtimes are operational evidence, not scientific content versions.','non_distribution_scope':'No remote/PDF/full original hour.csv acquired. Original supplied CSV is private cache only; do not publicly redistribute source data. Publish source identities and results only under supplied rule.'}\ndump(OUT/'inputs-and-artifacts.json',art)\nprint(json.dumps({'report':str(OUT/'report.md'),'state_answer':str(OUT/'state-answer.json'),'execution':str(OUT/'execution.json'),'inventory':str(OUT/'inputs-and-artifacts.json'),'project':str(ROOT),'outer_tool_calls':7,'audit':ex['final_audit']},ensure_ascii=False))\nPY"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "write independent final audit and execution finalizer"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/finalize_audit.py"
+      ],
+      "shell_argv": [
+        "/bin/zsh",
+        "-lc",
+        "EVAL_PYTHON -I -B OUTPUT_DIR/finalize_audit.py"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "audit project and versions, preserve exact commands and finalize external records"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/management/status.py",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"case_id\": \"D\",\n  \"state_authority\": \"management/state.json with supplied governance; current bytes take precedence over old recorded completion\",\n  \"active_parameters_observed\": {\n    \"case_id\": \"D\",\n    \"evaluation_start\": \"2011-10-01\",\n    \"evaluation_end\": \"2011-12-31\",\n    \"model_policy\": \"frozen-2011-Jan-Sep\",\n    \"metric_weighting\": \"observed-hour\"\n  },\n  \"authoritative_constraints_at_checkpoint\": {\n    \"interest\": \"在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"D\",\n      \"evaluation_start\": \"2011-10-01\",\n      \"evaluation_end\": \"2011-12-31\",\n      \"model_policy\": \"frozen-2011-Jan-Sep\",\n      \"metric_weighting\": \"observed-hour\"\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"changed_or_missing_paths\": [],\n  \"affected_activities\": [],\n  \"unaffected_activities\": [\n    \"D-CALC\",\n    \"D-SOURCE-CHECK\",\n    \"D-SYNTH\"\n  ],\n  \"checkpoint_freshness\": \"fresh-for-registered-local-files\",\n  \"scientific_scope\": \"2011-10-01至2011-12-31、2203实际观察小时/92日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。\",\n  \"source_tracking_limits\": {\n    \"D-SRC\": \"已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。\",\n    \"D-REMOTE\": \"仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。\",\n    \"notes/unregistered-scratch.md\": \"已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。\",\n    \"source_card_discrepancy\": \"卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。\",\n    \"publication_rule\": \"Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.\"\n  },\n  \"versions\": [\n    {\n      \"logical_path\": \"notes/parameters.json\",\n      \"snapshot_path\": \"management/versions/A-initial/notes/parameters.json\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/result.json\",\n      \"snapshot_path\": \"management/versions/A-initial/results/result.json\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/table.csv\",\n      \"snapshot_path\": \"management/versions/A-initial/results/table.csv\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/summary.md\",\n      \"snapshot_path\": \"management/versions/A-initial/results/summary.md\",\n      \"intact\": true\n    }\n  ],\n  \"next_action\": \"当前指标、表格、摘要已核对；下一步由作者讨论2011第四季度冻结模型比较及其研究表述。尚无作者审阅决定；不发送、不投稿、不重训、不外推2012。继续前运行 management/status.py 检查依赖新鲜度。\",\n  \"writes_project\": false\n}\n",
+      "stderr": "",
+      "purpose": "final read-only status and project mtime/byte preservation audit"
+    }
+  ],
+  "recording_note": "All shell read/write and main Python commands plus scientific/status subprocesses are recorded. Nested Python file operations use standard library and are preserved in the exact executed scripts. Input/project/source resources have complete SHA and bytes; standard-library implementation files are not scientific inputs. Records of earlier file versions retain the SHA observed when read. No network, installation, parent messages, other agent calls, memory or skills accessed.",
+  "tool_calls": 7,
+  "network_calls": 0,
+  "install_calls": 0,
+  "agent_calls": 0,
+  "violations": [],
+  "failures": [
+    {
+      "intentional": true,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--spec",
+        "PROJECT_ROOT/notes/rejected-parameters.json",
+        "--output",
+        "OUTPUT_DIR/verification-rejected"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"evaluation_start must be no later than evaluation_end\"}\n"
+    }
+  ],
+  "remediation": [
+    "无意外失败；无效输入按预期被拒，未修复或覆盖原成果。"
+  ],
+  "read_inventory": [
+    {
+      "path": "STUDY_ROOT/runs/P2/A/REQUEST.md",
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "bytes": 2145,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "INPUT_DIR/initial/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/versions/A-initial/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/versions/A-initial/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/versions/A-initial/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/versions/A-initial/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "OUTPUT_DIR/verification-normal/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "OUTPUT_DIR/verification-normal/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/protocol/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/protocol/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/protocol/REQUEST.md",
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "bytes": 2145,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/protocol/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/A/checks.json",
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "bytes": 9234,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/A/invalid-after.json",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/A/invalid-before.json",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/A/normal-run/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/A/normal-run/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/status.py",
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98",
+      "bytes": 3331,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVERY.md",
+      "sha256": "065dac75fd841afc777180f5263c65748344c6448a1639ad8fd6d9630115548d",
+      "bytes": 3157,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "PROJECT_ROOT/management/state.json",
+      "sha256": "78986837437208d8346c7a8b83ebe34d470234c840b5f2055284bba2480aaf77",
+      "bytes": 19166,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "OUTPUT_DIR/build_stage_a.py",
+      "sha256": "990e7df35cfe2fea23696624384947d95721eeadc57d1d8c2c43fc2397a12659",
+      "bytes": 29251,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "OUTPUT_DIR/execution.json",
+      "sha256": "3152988b8b59523026917bd1488d4950e9a4e1d04197a3d7c236819d82d01626",
+      "bytes": 26685,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "OUTPUT_DIR/state-answer.json",
+      "sha256": "48bad06a03a116443011f09ebeb45e91ad1f40861f42da0f0a7401238686358a",
+      "bytes": 5950,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "OUTPUT_DIR/report.md",
+      "sha256": "bb7342d2b2f4b554507020c0ca1a572a0d3a4e6e16b64ad715c5c979722a4c59",
+      "bytes": 3649,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "OUTPUT_DIR/finalize_audit.py",
+      "sha256": "867a6f2b862698c0b2d423e44cded304c8a73043b18f4a5b4cdfb2d4bbff8d0a",
+      "bytes": 8400,
+      "read_scope": "full file bytes; final audit"
+    },
+    {
+      "path": "OUTPUT_DIR/status-check.json",
+      "sha256": "b312caf12cc8c4dfd678adc0deffcfa15ed8ef12d117751bbd76d0a415ca763b",
+      "bytes": 4548,
+      "read_scope": "full file bytes; final audit"
+    }
+  ],
+  "written_paths": [
+    "OUTPUT_DIR/build_stage_a.py",
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/finalize_audit.py",
+    "OUTPUT_DIR/inputs-and-artifacts.json",
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/state-answer.json",
+    "OUTPUT_DIR/status-check.json",
+    "OUTPUT_DIR/verification-normal/result.json",
+    "OUTPUT_DIR/verification-normal/table.csv",
+    "PROJECT_ROOT/RECOVERY.md",
+    "PROJECT_ROOT/data/hour_2011.csv",
+    "PROJECT_ROOT/management/BRIEF.md",
+    "PROJECT_ROOT/management/MANIFEST.json",
+    "PROJECT_ROOT/management/constraints.json",
+    "PROJECT_ROOT/management/evidence/A/checks.json",
+    "PROJECT_ROOT/management/evidence/A/invalid-after.json",
+    "PROJECT_ROOT/management/evidence/A/invalid-before.json",
+    "PROJECT_ROOT/management/evidence/A/normal-run/result.json",
+    "PROJECT_ROOT/management/evidence/A/normal-run/table.csv",
+    "PROJECT_ROOT/management/obligations.json",
+    "PROJECT_ROOT/management/protocol/PROTOCOL.md",
+    "PROJECT_ROOT/management/protocol/RECORDING.md",
+    "PROJECT_ROOT/management/protocol/REQUEST.md",
+    "PROJECT_ROOT/management/protocol/STAGE-A.md",
+    "PROJECT_ROOT/management/source-identities.json",
+    "PROJECT_ROOT/management/state.json",
+    "PROJECT_ROOT/management/status.py",
+    "PROJECT_ROOT/management/versions/A-initial/notes/parameters.json",
+    "PROJECT_ROOT/management/versions/A-initial/results/result.json",
+    "PROJECT_ROOT/management/versions/A-initial/results/summary.md",
+    "PROJECT_ROOT/management/versions/A-initial/results/table.csv",
+    "PROJECT_ROOT/model/frozen.json",
+    "PROJECT_ROOT/notes/parameters.json",
+    "PROJECT_ROOT/notes/rejected-parameters.json",
+    "PROJECT_ROOT/notes/source-check.md",
+    "PROJECT_ROOT/notes/unregistered-scratch.md",
+    "PROJECT_ROOT/results/result.json",
+    "PROJECT_ROOT/results/summary.md",
+    "PROJECT_ROOT/results/table.csv",
+    "PROJECT_ROOT/scripts/compute.py"
+  ],
+  "unknown_runtime_settings": {
+    "effective_model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "system_token_limit": null
+  },
+  "project_status_unchanged_by_read_only_check": true,
+  "tool_call_count_scope": "Seven outer functions.exec invocations, each with one exec_command; scientific/status subprocesses recorded separately.",
+  "final_audit": {
+    "tracked_file_count": 22,
+    "initial_snapshot_count": 4,
+    "all_initial_payload_bytes_preserved": true,
+    "all_versions_recoverable": true,
+    "registered_local_files_current": true,
+    "read_only_status_preserves_project_bytes_and_mtimes": true,
+    "project_tree_file_count": 31
+  }
+}

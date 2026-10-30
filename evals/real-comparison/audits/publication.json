@@ -1,0 +1,141 @@
+{
+  "scope": "Organizer audit records and replay-time scripts. Raw records retained locally; only absolute machine locators projected. Scripts reflect the actual temporary study layout and need provisioned source inputs; not a new turnkey product command.",
+  "files": [
+    {
+      "source_logical_name": "numeric-replay-audit.md",
+      "original_sha256": "b651a0e392628cdd866fbf5ef8180d4ae689add2d3e61416ce02446ff236db11",
+      "public_path": "audits/numeric-replay-audit.md",
+      "public_sha256": "96b74f70c4afb2b8a7cc0d2a0c722421d114a2a0b8ed4bd0b9a58060f96e4715",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "numeric-replay-audit.json",
+      "original_sha256": "1a6d7072d14ec1965e067604d7417ed119771994a777806d56f400c44328c8b8",
+      "public_path": "audits/numeric-replay-audit.json",
+      "public_sha256": "388c6d94d31a9e163c274b542ab161f396b59f83f72383e429fd598515f1d85f",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "theory-replays.json",
+      "original_sha256": "ce8dded6565c5dae22b5a2397fb615f00c25fff484744ea097c2911b4fcb8eff",
+      "public_path": "audits/theory-replays.json",
+      "public_sha256": "64f013f4943f3b27e931327c7f29123d7c56eb3a48c1fa6ca2ae70d2593a4974",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "read-identity-audit.json",
+      "original_sha256": "0861ed954e1fbdb41860ec2f86275403a6587e6ccbbe8042bffe2e433443df82",
+      "public_path": "audits/read-identity-audit.json",
+      "public_sha256": "0861ed954e1fbdb41860ec2f86275403a6587e6ccbbe8042bffe2e433443df82",
+      "changes": []
+    },
+    {
+      "source_logical_name": "preservation-audit.json",
+      "original_sha256": "17a50bfe8b94293b3bd1185f8804ebe91dd24d41fabd48827247b18109abaf4c",
+      "public_path": "audits/preservation-audit.json",
+      "public_sha256": "17a50bfe8b94293b3bd1185f8804ebe91dd24d41fabd48827247b18109abaf4c",
+      "changes": []
+    },
+    {
+      "source_logical_name": "blind-packet-correction.json",
+      "original_sha256": "24a61d0995f71ab84688647f941c19c8e1dbb663bd9d11c8c0ceeb819fe03a91",
+      "public_path": "audits/blind-packet-correction.json",
+      "public_sha256": "24a61d0995f71ab84688647f941c19c8e1dbb663bd9d11c8c0ceeb819fe03a91",
+      "changes": []
+    },
+    {
+      "source_logical_name": "numeric-replays/launch_replays.py",
+      "original_sha256": "8d7701d5f7f4df695c9d3ad2e6c84788b42ff360eb82359d9fc1e4809fa4183d",
+      "public_path": "audits/numeric-replays/launch_replays.py",
+      "public_sha256": "cd7e5670e4defc56b6918c4c801465d13d2fbd5b55ef25a29d1c5541e662379b",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "numeric-replays/compare_replays.py",
+      "original_sha256": "b640bfc0ca1115b1bf04fcbd910a0d913339c44986fb9a191f61ed1647627502",
+      "public_path": "audits/numeric-replays/compare_replays.py",
+      "public_sha256": "5fa7cbe6c79abae533045ea61e8bb7d40a7b683abe0e9f8454946a2588d02f48",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "numeric-replays/finalize_audit.py",
+      "original_sha256": "a71d04d50f4f523896da4bf4691ea90b425a922a4ce17ac0fbb2e46753994c97",
+      "public_path": "audits/numeric-replays/finalize_audit.py",
+      "public_sha256": "55820cd1d13618c56cce6e6aee6bcb4a6a5e9728152255a4349bdfa7cca132ab",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "theory-consistency-review.json",
+      "original_sha256": "ba74ce597729438751e989d76108afc19dd6fe141d3ea03c042409cc1740579f",
+      "public_path": "audits/theory-consistency-review.json",
+      "public_sha256": "f30651f0280627012f22e689826b2827bd784a0cef5be8c3f50e0a275dc8f31c",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "theory-consistency-review.md",
+      "original_sha256": "fe85c57e3ed2e47d750b5e3f1c6a8cb47bd77cebc3d9d6f3b77fbb43044e4691",
+      "public_path": "audits/theory-consistency-review.md",
+      "public_sha256": "924b6caab6b7d23f9906dce70acdd4508bc74d6034b4834296e986dd0dc505fc",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "data-consistency-review.json",
+      "original_sha256": "8bbb5de0208e6c41d07dd88ee83b0fa5380705c33e4fcd5232ac34b96c72dae0",
+      "public_path": "audits/data-consistency-review.json",
+      "public_sha256": "d64511f7efd9f2e6a770ef537a6c16be0cf74993dc3812b3f31df9ec040f3260",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "data-consistency-review.md",
+      "original_sha256": "2754888b4b1f7b6cfc0fbb863645e49e18c1b61fba83c8c967fb8b3c6b0bee1b",
+      "public_path": "audits/data-consistency-review.md",
+      "public_sha256": "7be2e552632f8e45e3501bf9ebdc771f84d67fc6f35b399b9b130e34fe1530bb",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "secondary-theory/independent-checks.json",
+      "original_sha256": "0db575adbd488d6e360c61a6a1271e01ad895cd32333ff2161a1858228e86520",
+      "public_path": "audits/secondary-theory/independent-checks.json",
+      "public_sha256": "0db575adbd488d6e360c61a6a1271e01ad895cd32333ff2161a1858228e86520",
+      "changes": []
+    },
+    {
+      "source_logical_name": "secondary-data/independent_checks.json",
+      "original_sha256": "3ccd57dd3d2c0dbfdfbd429a6b4c2b5e46c01d5a5c60b450a7322050e6ef2f3f",
+      "public_path": "audits/secondary-data/independent_checks.json",
+      "public_sha256": "50c81dacf316112ead9706366c6b42849e4bab8b8c188100511e1477370ff0a0",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "source_logical_name": "secondary-data/independent_check.py",
+      "original_sha256": "02848bede553410376393d214f6d4d5f9c2aae982c79bf9e723f2ad89692faad",
+      "public_path": "audits/secondary-data/independent_check.py",
+      "public_sha256": "e6910217740543d977f5001889d02918e3ae9585c2719a57bcc98f1684f2973a",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    }
+  ]
+}

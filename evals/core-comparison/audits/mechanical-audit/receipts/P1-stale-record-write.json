@@ -1,0 +1,26 @@
+{
+  "name": "P1-stale-record-write",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P1/record-CAS/project/.agents/skills/_rw-runtime/tools/research.py",
+    "register",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P1/record-CAS/project",
+    "--kind",
+    "evidence",
+    "--file",
+    "STUDY_ROOT/mechanical-audit/P1/record-CAS/legal.json",
+    "--replace",
+    "--expected-version",
+    "2"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P1/record-CAS/project",
+  "exit_code": 2,
+  "stdout": "{\n  \"passed\": false,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"errors\": [\n    {\n      \"code\": \"version_conflict\",\n      \"message\": \"Existing ID needs --replace and its current --expected-version. Read envelope.version with show --kind evidence --id T-PARAM; export editable record data with --data-only.\"\n    }\n  ]\n}\n",
+  "stderr": "",
+  "project_identical_bytes_mtime_directory_mtime": true,
+  "changed_files": [],
+  "changed_directories": []
+}

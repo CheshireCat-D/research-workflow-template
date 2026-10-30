@@ -1,0 +1,14 @@
+{
+  "reviewer": "assistant agent",
+  "checks": {
+    "C0_MAE": true,
+    "C1_MAE": true,
+    "C0_RMSE": true,
+    "C1_RMSE": true,
+    "C0_bias_prediction_minus_actual": true,
+    "C1_bias_prediction_minus_actual": true,
+    "relative_reduction": true,
+    "range": true
+  },
+  "scope": "Numbers, window, model identity and descriptive interpretation; author content review still pending."
+}

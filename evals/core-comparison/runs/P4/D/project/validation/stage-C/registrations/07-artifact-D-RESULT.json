@@ -1,0 +1,13 @@
+{
+  "derived_from": [
+    "evidence:D-PARAM",
+    "evidence:D-RAW",
+    "artifact:D-CODE",
+    "decision:D-CHOICE",
+    "artifact:D-MODEL"
+  ],
+  "description": "Canonical revised-window result copied from successful fresh supplied-calculator rerun; independently checked counts, MAE, RMSE, bias and input SHA",
+  "id": "D-RESULT",
+  "path": "results/result.json",
+  "type": "numeric-result"
+}

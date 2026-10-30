@@ -1,0 +1,99 @@
+{
+  "case_id": "T",
+  "authority": "research/state.json; notes, provenance and checkpoints do not override current configuration or records",
+  "metadata_revision": 4,
+  "active_constraints": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 4.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "将 alpha=0.05、预先固定 rho=4 的四点边界表（results/table.csv）与更新摘要（results/summary.md）交作者内容复核，确认 V 与给定过程控制条件；暂不扩展到事后选择 rho；没有投稿授权。",
+  "changed_or_missing_paths": [],
+  "activities": {
+    "T-SOURCE-CHECK": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "T-CALC": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "T-SYNTH": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    }
+  },
+  "checkpoint_freshness": {
+    "fresh": true,
+    "reasons": []
+  },
+  "scientific_scope": {
+    "formula": "sqrt((v+rho)*(log(1+v/rho)+2*log(1/alpha)))",
+    "l0": 1,
+    "process_conditions": "S and -S have the required sub-Gaussian exponential control for the same nonnegative intrinsic time V; alpha is the total two-sided error budget",
+    "rho_rule": "fixed before observation",
+    "assessment": "rho=4 specified numerical values, result/CSV correspondence and revised summary checked by AI assistant; proof, simulation coverage, novelty and human approval not assessed",
+    "formal_verification": "not-started; not required in this numerical task"
+  },
+  "source_tracking_limits": {
+    "source_only": [
+      "T-REMOTE"
+    ],
+    "unregistered_file": [
+      "notes/unregistered-scratch.md"
+    ],
+    "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked."
+  },
+  "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.",
+  "resume_is_read_only": true,
+  "no_scientific_certification": true,
+  "stage": "C",
+  "affected_activities": [
+    "T-CALC",
+    "T-SYNTH"
+  ],
+  "unaffected_activities": [
+    "T-SOURCE-CHECK"
+  ],
+  "material_paths": {
+    "result": "results/result.json",
+    "table": "results/table.csv",
+    "summary": "results/summary.md",
+    "revision": "provenance/stage-C/AUTHOR-REVISION.md",
+    "drift_snapshot": ".history/C-drift/",
+    "initial": ".history/A-initial/files/"
+  },
+  "notes": [
+    "Checkpoint save alone did not validate old completed activities.",
+    "Only after actual rerun/review were two affected activities rebound.",
+    "All stated done activities mean bounded declared work, not scientific approval."
+  ]
+}

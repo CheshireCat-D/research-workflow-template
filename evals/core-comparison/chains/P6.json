@@ -1,0 +1,86 @@
+{
+  "chain_id": "P6",
+  "case_id": "D",
+  "arm": "guidance",
+  "freeze_sha256": "bd6922d8655be77ff13941c6bc9ca0ccd578a3dd8e48543a092d173eb1c361f6",
+  "stages": {
+    "A": {
+      "status": "executed",
+      "report": {
+        "path": "runs/P6/A/report.md",
+        "sha256": "fc0ffe7d992593e413950b86daecb56f9b7305ab757395653721e5d38a1e1585"
+      },
+      "execution": {
+        "path": "runs/P6/A/execution.json",
+        "sha256": "b392c2f7ad6dced2cfc609c34dfa14c3028ff9c158857d83f239f742e7a3629a"
+      },
+      "project_manifest": {
+        "path": "runs/P6/A/project-manifest.json",
+        "sha256": "02a33d7d8788514c67147fc03a4d3045a40c02aedd1c88bc48054347bca51aef"
+      },
+      "readonly_audit": null
+    },
+    "B": {
+      "status": "executed",
+      "report": {
+        "path": "runs/P6/B/report.md",
+        "sha256": "b192cd2d73950b30dc1b984e46ed41757c11ae67e5134cc02506d8e571cf20b9"
+      },
+      "execution": {
+        "path": "runs/P6/B/execution.json",
+        "sha256": "aeaed2fe86d4fb908d879fe1771d9f43cd1e1721d975999015299a7ba904ad6f"
+      },
+      "project_manifest": {
+        "path": "runs/P6/B/project-manifest.json",
+        "sha256": "53b33375cfe1803269c782e1809dc6587ec6a4342b91b11f287e7fd225e8d794"
+      },
+      "readonly_audit": {
+        "path": "runs/P6/B/readonly-audit.json",
+        "sha256": "ef5aea245bf92affc2a41f1a23732b6a1f8843033dc31dbaaf010a4e6105f02d"
+      }
+    },
+    "C": {
+      "status": "executed",
+      "report": {
+        "path": "runs/P6/C/report.md",
+        "sha256": "21ac053d997eaf7b3a7e4d5cbc8c50885a92aa6eabbcc4a39829567158fbcb38"
+      },
+      "execution": {
+        "path": "runs/P6/C/execution.json",
+        "sha256": "df2220905508592c721a6def1754c67f8481e1a0f512f735ea9cb2a57bfd0d90"
+      },
+      "project_manifest": {
+        "path": "runs/P6/C/project-manifest.json",
+        "sha256": "3c75241450b74c6f0e1857fc69fb1e043f5ae64eccaf659adb0d67e3538de61f"
+      },
+      "readonly_audit": null
+    },
+    "D": {
+      "status": "executed",
+      "report": {
+        "path": "runs/P6/D/report.md",
+        "sha256": "c65aad5bc51b8babd060384f375da3bc0586732cd1c99a5ba094f6dff31934dc"
+      },
+      "execution": {
+        "path": "runs/P6/D/execution.json",
+        "sha256": "f7df5e6416f707088a026cdc13204d56939570cdcfe12f54ac81171874433e5b"
+      },
+      "project_manifest": {
+        "path": "runs/P6/D/project-manifest.json",
+        "sha256": "b1b82e769c8903e4383333601e5a2864229455b1152083be4024d84268a713c7"
+      },
+      "readonly_audit": {
+        "path": "runs/P6/D/readonly-audit.json",
+        "sha256": "ef5aea245bf92affc2a41f1a23732b6a1f8843033dc31dbaaf010a4e6105f02d"
+      }
+    }
+  },
+  "adjudication": {
+    "path": "adjudications/K7dc50a.json",
+    "sha256": "01b1f89a1e577342318c9f2606e5b8f20b2180387e18dc6233464e22feaeeb18"
+  },
+  "probes": {
+    "path": "audits/probes/P6.json",
+    "sha256": "ba1516e5ff517ed4fb76880fa290e9faa31ebc9e1dfe4835b77d0a1e5ef0b764"
+  }
+}

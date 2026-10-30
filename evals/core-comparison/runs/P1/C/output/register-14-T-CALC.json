@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "activity",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"id\": \"T-CALC\", \"inputs\": [\"evidence:T-PARAM\", \"evidence:T-RAW\", \"artifact:T-CODE\", \"decision:T-CHOICE\", \"evidence:T-C-AUTHOR\", \"artifact:T-C-APPROVED-SPEC\"], \"note\": \"AI actually ran unchanged calculator at approved rho=4, exit0; equivalent-form arithmetic (1e-14), v=0, exact CSV/JSON rows and parameter/code SHA checks passed. Original PDF/code/config/source card unchanged. Old results and prior failed alpha=1 trial retained. This is numerical work only.\", \"outputs\": [\"artifact:T-RESULT\", \"artifact:T-TABLE\", \"artifact:T-C-VALIDATION\"], \"status\": \"done\", \"title\": \"Evaluate supplied calculator and verify current result and companion table\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"T-CALC\",\n  \"version\": 2,\n  \"revision\": 42,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

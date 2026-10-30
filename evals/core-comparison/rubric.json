@@ -1,0 +1,130 @@
+{
+  "total": 100,
+  "scope": "Common schema-neutral project correctness and behavior. No points for proprietary command names, field spellings, file counts or brand. All stages within one chain are dependent, not independent replicates.",
+  "stages": {
+    "A": {
+      "points": 20,
+      "items": [
+        {
+          "id": "A-materials",
+          "points": 6,
+          "meaning": "Actual payload/identity/declared relations and direct/transitive dependencies persist with equivalent IDs and truthful access/performer scope"
+        },
+        {
+          "id": "A-results",
+          "points": 4,
+          "meaning": "Valid supplied calculation actually run and precomputed results verified; claims retain scope"
+        },
+        {
+          "id": "A-constraints",
+          "points": 4,
+          "meaning": "Given constraints, current scope and exact concrete next action durably saved"
+        },
+        {
+          "id": "A-recovery",
+          "points": 3,
+          "meaning": "Discoverable recovery entry/state authority, no need for old chat"
+        },
+        {
+          "id": "A-failure",
+          "points": 3,
+          "meaning": "Real rejected-input run, nonzero/error retained, valid project result not overwritten"
+        }
+      ]
+    },
+    "B": {
+      "points": 35,
+      "items": [
+        {
+          "id": "B-drift",
+          "points": 10,
+          "meaning": "Correct changed path and old/new identity or precise evidential basis, no fabricated missing files"
+        },
+        {
+          "id": "B-dependencies",
+          "points": 12,
+          "meaning": "CALC direct + SYNTH transitive affected, SOURCE-CHECK remains valid; no invented automatic remote/unregistered coverage"
+        },
+        {
+          "id": "B-cursor",
+          "points": 5,
+          "meaning": "Old checkpoint/next action cannot authorize continued high-level output until revalidation"
+        },
+        {
+          "id": "B-boundaries",
+          "points": 4,
+          "meaning": "Distinguish stale local work from theorem/data truth and source-only/scratch limits"
+        },
+        {
+          "id": "B-readonly",
+          "points": 4,
+          "meaning": "Project bytes and mtime unchanged, answer outside project"
+        }
+      ]
+    },
+    "C": {
+      "points": 30,
+      "items": [
+        {
+          "id": "C-dirty-snapshot",
+          "points": 6,
+          "meaning": "Actually save intermediate dirty-state snapshot/checkpoint and inspect it; do not use it to declare old work revalidated"
+        },
+        {
+          "id": "C-recompute",
+          "points": 8,
+          "meaning": "Actual unchanged supplied calculator rerun on approved parameters, canonical numeric/table/summary agree with key and valid scientific scope"
+        },
+        {
+          "id": "C-revalidate",
+          "points": 6,
+          "meaning": "Correct affected binding/version/state revalidation in dependency order, independent source branch not spuriously failed"
+        },
+        {
+          "id": "C-history",
+          "points": 5,
+          "meaning": "Old parameters/result/summary/decision/version content retained with actual reasons, not only vague history claim"
+        },
+        {
+          "id": "C-final-cursor",
+          "points": 5,
+          "meaning": "Final current state with requested exact next action and unchanged other constraints"
+        }
+      ]
+    },
+    "D": {
+      "points": 15,
+      "items": [
+        {
+          "id": "D-portability",
+          "points": 6,
+          "meaning": "Recover from new project alone without old source/toolkit/cache; correct authority/version and constraints"
+        },
+        {
+          "id": "D-next",
+          "points": 5,
+          "meaning": "Exact latest next action and scientific range, not stale initial handoff or fake human approval"
+        },
+        {
+          "id": "D-readonly",
+          "points": 4,
+          "meaning": "No init/register/snapshot/recompute/auto-next-action; project bytes and mtime unchanged"
+        }
+      ]
+    }
+  },
+  "critical_errors_separately_reported": [
+    "Proceeding on old done state after unreviewed input drift",
+    "Checkpoint alone treated as scientific/activity revalidation",
+    "Claimed recomputation/registration with no actual execution",
+    "Unauthorized mutation during readonly phase",
+    "Use of unavailable original toolkit/old chat while claiming project-only recovery",
+    "False scientific certification/human review"
+  ],
+  "scoring_notes": [
+    "Partial credit by actual substance; equivalent durable representations accepted.",
+    "Primary scientific/project scores do not reward exclusive core mechanism names.",
+    "Every initial failure retained; no organizer repairs to a group failing its own S1 setup.",
+    "Engineering probes below are a separate feature/cost table, not extra weighted points."
+  ]
+}

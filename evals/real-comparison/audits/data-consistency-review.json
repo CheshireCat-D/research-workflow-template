@@ -1,0 +1,614 @@
+{
+  "review_type": "第二轮独立匿名数据研究链复核",
+  "created_at_utc": "2026-10-30T00:22:29.734135+00:00",
+  "blindness_declaration": {
+    "initial_adjudication_seen": false,
+    "arm_map_seen": false,
+    "execution_logs_seen": false,
+    "memory_or_personal_skills_read": false,
+    "network_used": false,
+    "brand_inference_attempted": false,
+    "statement": "未见初评或组映射；未读取adjudication、template、arm-map或执行日志，未使用memory、个人skills或网络；未推断品牌。"
+  },
+  "scope": {
+    "assigned_chains": {
+      "P": [
+        "S733011",
+        "Sb68670"
+      ],
+      "Q": [
+        "Sdfb334",
+        "S924971"
+      ],
+      "R": [
+        "S3f44a8",
+        "S127718"
+      ]
+    },
+    "inputs_read": "仅指定六包的input、report.md、work、rubric.md、reference.md、numbers.json，及B的previous-report.md/previous-handoff.md。",
+    "non_assigned_package_contents_read": false,
+    "execution_environment": "STUDY_ROOT/env/bin/python -I -B",
+    "reviewer_outputs": "DATA_REVIEW_WORK",
+    "source_files_modified": false,
+    "basis": "按每包共同rubric逐维独立评分，不为格式、文件数量、台账或品牌加分。组织者此前漏投CSV信息只来自本次委托；本轮恢复CSV已逐行核对，不计作者错误。"
+  },
+  "rubric_sha256": "470ccea7103578e6efdfb452e29d58b0a408cf4463e1b19db3d2c1779f35101e",
+  "rubric_identical_in_all_packages": true,
+  "independent_validation": {
+    "evidence_file": "DATA_REVIEW_WORK/independent_checks.json",
+    "script": "DATA_REVIEW_WORK/independent_check.py",
+    "method": "先用独立标准库程序由原始切片计算指标与所有7/28日块复本，未调用作者函数；再独立运行三份A评分及三份B更新入口到新目录检验handoff实用性。",
+    "required_metrics_reference_max_absolute_error": 2.842170943040401e-14,
+    "per_package_results_and_bootstrap_max_absolute_error": 0.0,
+    "all_six_relocation_commands_exit_zero": true,
+    "all_six_relocation_results_equal_delivered_2012": true,
+    "A_B_frozen_model_bytes_equal_all_chains": true,
+    "A_B_original_scoring_code_bytes_equal_all_chains": true,
+    "B_previous_report_and_handoff_equal_A_all_chains": true,
+    "original_report_and_model_hashes_unchanged_after_review": true
+  },
+  "key_findings": {
+    "2011Q4": {
+      "observed_hours": 2203,
+      "days": 92,
+      "relative_improvement_percent": 24.231724482575867,
+      "scope": "只支持该系统该留出期已观察小时，不是跨年保证。"
+    },
+    "2012": {
+      "observed_hours": 8734,
+      "days": 366,
+      "relative_improvement_percent": 7.966722003631166,
+      "point_estimate_meets_10_percent": false,
+      "positive_improvement_supported_conditionally": true,
+      "relative_CI95_percent_7day": [
+        6.476413180843968,
+        9.967438859012917
+      ],
+      "relative_CI95_percent_28day": [
+        5.709841034889167,
+        11.589625362630876
+      ],
+      "interpretation": "7日上端略低10%，28日跨10%；不能择优挑区间，也不能综合宣称已稳健证明真实改善一定低于10%。",
+      "day_equal_relative_percent": 7.994100277339922,
+      "complete24_relative_percent": 7.776923135594593,
+      "workingday0_relative_percent": 17.408897566264926,
+      "workingday1_relative_percent": 3.0071519252312773,
+      "C1_bias_prediction_minus_actual": -91.61346537392994
+    },
+    "growth": {
+      "annual_total_percent": 64.87579870694545,
+      "daily_mean_percent": 64.42531838260952,
+      "interpretation": "365/366天分母不同；增长与低估相符，但不能把Q4对全年误差比较的全部变化归因为增长或纯年份机制。"
+    }
+  },
+  "packages": [
+    {
+      "package_id": "S733011",
+      "anonymous_chain": "P",
+      "stage": "A",
+      "report_sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57",
+      "total_score": 50,
+      "maximum_score": 50,
+      "core_failure": false,
+      "scores": [
+        {
+          "criterion": "数据、来源、覆盖与单位",
+          "score": 8,
+          "maximum": 8,
+          "reason": "输入身份、hour/day样本单位、重复键/空格/逐日计数汇总及115个缺小时均正确；README与当前摘录的行数、season及温度冲突保留且未改值。"
+        },
+        {
+          "criterion": "时间设计与预测可用信息",
+          "score": 9,
+          "maximum": 9,
+          "reason": "实际训练为2011-01-01至09-30的6442小时/273日；2011Q4的2203小时/92日一次留出。72组训练sum/n/mean独立精确核对；仅日历输入、均值不取整、无泄漏。"
+        },
+        {
+          "criterion": "算术、指标与分组敏感性",
+          "score": 10,
+          "maximum": 10,
+          "reason": "总体MAE/RMSE/偏差、两模型各自日等权MAE与比较量、87完整日及workingday两组，保存数值均与独立计算完全一致；2203行预测全部核对。"
+        },
+        {
+          "criterion": "依赖与不确定性",
+          "score": 8,
+          "maximum": 8,
+          "reason": "7/28日成对循环日期块、B=2000、同seed分别重置、截断及(B-1)p插值均符合协议；4000次保存复本全部精确核对，正确说明时间稳定性/块长与跨年限制。"
+        },
+        {
+          "criterion": "结论与新证据影响",
+          "score": 6,
+          "maximum": 6,
+          "reason": "24.231724%仅用于2011Q4已观察小时；正确分开正改善与10%门槛，并纠正随机拆分、同期类别/天气泄漏、独立小时及因果/跨年保证草稿。"
+        },
+        {
+          "criterion": "可复现、交接与执行证据",
+          "score": 9,
+          "maximum": 9,
+          "reason": "参数、训练范围、源数据摘要、评分接口和解释边界足以全新上下文恢复。按handoff/RUN指定新目录执行score成功，直接用A冻结模型给2012评分，所得结果与B交付一致。"
+        }
+      ],
+      "substantive_issues": [],
+      "conclusion": "本任务范围内科学要求及可恢复性得到满足，未发现实质扣分项。",
+      "evidence": [
+        "blind/S733011/report.md",
+        "blind/S733011/work/analysis.py:106-227",
+        "blind/S733011/work/analysis.py:314-353",
+        "blind/S733011/work/model.json",
+        "blind/S733011/work/results.json",
+        "blind/S733011/work/handoff.md",
+        "blind/S733011/work/RUN.md"
+      ],
+      "independent_check": {
+        "chain": "P",
+        "stage": "A",
+        "report_sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57",
+        "report_characters": 4216,
+        "handoff_sha256": "a7aee9524bb683d98b79c28e84e9f24f62c5ca331d64e11f9e108091096b8c91",
+        "model_sha256": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47",
+        "model_cells": 72,
+        "max_model_parameter_error": 0,
+        "max_result_error": 0.0,
+        "prediction_rows_checked": 2203,
+        "max_prediction_error": 0,
+        "bootstrap_replicates_checked": 4000,
+        "max_bootstrap_error": 0,
+        "input_hashes_match_common_data": {
+          "hour_2011.csv": true,
+          "day_2011.csv": true
+        },
+        "result_directory": "work"
+      }
+    },
+    {
+      "package_id": "Sb68670",
+      "anonymous_chain": "P",
+      "stage": "B",
+      "report_sha256": "4ce7fec7be22bf7a148f7f7736ee59bb3424800dede803cd8d9c1dfacf7d7f68",
+      "total_score": 50,
+      "maximum_score": 50,
+      "core_failure": false,
+      "scores": [
+        {
+          "criterion": "数据、来源、覆盖与单位",
+          "score": 8,
+          "maximum": 8,
+          "reason": "新2012数据8734小时/366日、无重复键/空格/计数及日汇总冲突、50个缺小时/350完整日正确；少小时不补零、不无证据归因；年度总数及日均和365/366分母解释正确。"
+        },
+        {
+          "criterion": "时间设计与预测可用信息",
+          "score": 7,
+          "maximum": 7,
+          "reason": "A/B模型文件字节相同、原评分代码字节相同，72组参数与2011前九个月原记录一致；无2012重训、无Q4回流。B的previous-report和previous-handoff与相应A字节相同。"
+        },
+        {
+          "criterion": "算术、指标与分组敏感性",
+          "score": 12,
+          "maximum": 12,
+          "reason": "2012总体MAE/RMSE/偏差、日等权均值及差/降幅、完整日和workingday结果与独立计算完全一致；8734行预测全部核对。"
+        },
+        {
+          "criterion": "依赖与不确定性",
+          "score": 10,
+          "maximum": 10,
+          "reason": "2012两块长共4000次保存复本与独立算法精确一致；明确7日上端9.967438859%略低10%，28日[5.709841035%,11.589625363%]跨10%，并列呈现、不挑区间，未断言稳健证明低于10%。"
+        },
+        {
+          "criterion": "结论与新证据影响",
+          "score": 9,
+          "maximum": 9,
+          "reason": "保留2011Q4有限结论；更新为2012仍改善7.966722%但点估计未达10%，绝对MAE与低估增大。将全年增长视为相容描述，注意Q4对全年组成差异而不擅自判机制；后续候选明确尚未检验。"
+        },
+        {
+          "criterion": "可复现、交接与执行证据",
+          "score": 4,
+          "maximum": 4,
+          "reason": "B更新入口以新的输入/输出路径完成双年审计、冻结核对及2012评分，退出0，结果JSON与交付相同；handoff足以继续。"
+        }
+      ],
+      "substantive_issues": [],
+      "conclusion": "本任务范围内科学要求及可恢复性得到满足，未发现实质扣分项。",
+      "evidence": [
+        "blind/Sb68670/report.md",
+        "blind/Sb68670/work/stage_b.py:77-140",
+        "blind/Sb68670/work/model.json",
+        "blind/Sb68670/work/stage_b_results/results.json",
+        "blind/Sb68670/work/handoff.md",
+        "blind/Sb68670/work/RUN.md"
+      ],
+      "independent_check": {
+        "chain": "P",
+        "stage": "B",
+        "report_sha256": "4ce7fec7be22bf7a148f7f7736ee59bb3424800dede803cd8d9c1dfacf7d7f68",
+        "report_characters": 6207,
+        "handoff_sha256": "34f2a414c83b59cf2b2b40a67435a2ec8464bf8150008942d07fcfa9a04eb37a",
+        "model_sha256": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47",
+        "model_cells": 72,
+        "max_model_parameter_error": 0,
+        "max_result_error": 0.0,
+        "prediction_rows_checked": 8734,
+        "max_prediction_error": 0,
+        "bootstrap_replicates_checked": 4000,
+        "max_bootstrap_error": 0,
+        "input_hashes_match_common_data": {
+          "hour_2011.csv": true,
+          "hour_2012.csv": true,
+          "day_2011.csv": true,
+          "day_2012.csv": true
+        },
+        "result_directory": "work/stage_b_results",
+        "A_B_model_bytes_equal": true,
+        "previous_report_matches_A": true,
+        "previous_handoff_matches_A": true
+      }
+    },
+    {
+      "package_id": "Sdfb334",
+      "anonymous_chain": "Q",
+      "stage": "A",
+      "report_sha256": "a27e12ef0cdaa5d3a64a4eee21820fc9431945921bad02d048427c05580c3698",
+      "total_score": 50,
+      "maximum_score": 50,
+      "core_failure": false,
+      "scores": [
+        {
+          "criterion": "数据、来源、覆盖与单位",
+          "score": 8,
+          "maximum": 8,
+          "reason": "输入身份、hour/day样本单位、重复键/空格/逐日计数汇总及115个缺小时均正确；README与当前摘录的行数、season及温度冲突保留且未改值。"
+        },
+        {
+          "criterion": "时间设计与预测可用信息",
+          "score": 9,
+          "maximum": 9,
+          "reason": "实际训练为2011-01-01至09-30的6442小时/273日；2011Q4的2203小时/92日一次留出。72组训练sum/n/mean独立精确核对；仅日历输入、均值不取整、无泄漏。"
+        },
+        {
+          "criterion": "算术、指标与分组敏感性",
+          "score": 10,
+          "maximum": 10,
+          "reason": "总体MAE/RMSE/偏差、两模型各自日等权MAE与比较量、87完整日及workingday两组，保存数值均与独立计算完全一致；2203行预测全部核对。"
+        },
+        {
+          "criterion": "依赖与不确定性",
+          "score": 8,
+          "maximum": 8,
+          "reason": "7/28日成对循环日期块、B=2000、同seed分别重置、截断及(B-1)p插值均符合协议；4000次保存复本全部精确核对，正确说明时间稳定性/块长与跨年限制。"
+        },
+        {
+          "criterion": "结论与新证据影响",
+          "score": 6,
+          "maximum": 6,
+          "reason": "24.231724%仅用于2011Q4已观察小时；正确分开正改善与10%门槛，并纠正随机拆分、同期类别/天气泄漏、独立小时及因果/跨年保证草稿。"
+        },
+        {
+          "criterion": "可复现、交接与执行证据",
+          "score": 9,
+          "maximum": 9,
+          "reason": "参数、训练范围、源数据摘要、评分接口和解释边界足以全新上下文恢复。按handoff/RUN指定新目录执行score成功，直接用A冻结模型给2012评分，所得结果与B交付一致。"
+        }
+      ],
+      "substantive_issues": [],
+      "conclusion": "本任务范围内科学要求及可恢复性得到满足，未发现实质扣分项。",
+      "evidence": [
+        "blind/Sdfb334/report.md",
+        "blind/Sdfb334/work/analyze.py:48-143",
+        "blind/Sdfb334/work/results/model.json",
+        "blind/Sdfb334/work/results/results.json",
+        "blind/Sdfb334/work/handoff.md",
+        "blind/Sdfb334/work/RUN.md"
+      ],
+      "independent_check": {
+        "chain": "Q",
+        "stage": "A",
+        "report_sha256": "a27e12ef0cdaa5d3a64a4eee21820fc9431945921bad02d048427c05580c3698",
+        "report_characters": 4662,
+        "handoff_sha256": "887f3b7882055c7f7eef39ea96aeb8f2d31f931be94f556ec0624baccac188f8",
+        "model_sha256": "f8a758c6c73cf7e0cfcfa0936b594afb8f23b1260610ecae15929f601dc8e5d4",
+        "model_cells": 72,
+        "max_model_parameter_error": 0,
+        "max_result_error": 0.0,
+        "prediction_rows_checked": 2203,
+        "max_prediction_error": 0,
+        "bootstrap_replicates_checked": 4000,
+        "max_bootstrap_error": 0,
+        "input_hashes_match_common_data": {
+          "hour_2011.csv": true,
+          "day_2011.csv": true
+        },
+        "result_directory": "work/results"
+      }
+    },
+    {
+      "package_id": "S924971",
+      "anonymous_chain": "Q",
+      "stage": "B",
+      "report_sha256": "68fa8a9122156dadbb012aff70f179d73051906f677d32ab21ec0968b60c036e",
+      "total_score": 50,
+      "maximum_score": 50,
+      "core_failure": false,
+      "scores": [
+        {
+          "criterion": "数据、来源、覆盖与单位",
+          "score": 8,
+          "maximum": 8,
+          "reason": "新2012数据8734小时/366日、无重复键/空格/计数及日汇总冲突、50个缺小时/350完整日正确；少小时不补零、不无证据归因；年度总数及日均和365/366分母解释正确。"
+        },
+        {
+          "criterion": "时间设计与预测可用信息",
+          "score": 7,
+          "maximum": 7,
+          "reason": "A/B模型文件字节相同、原评分代码字节相同，72组参数与2011前九个月原记录一致；无2012重训、无Q4回流。B的previous-report和previous-handoff与相应A字节相同。"
+        },
+        {
+          "criterion": "算术、指标与分组敏感性",
+          "score": 12,
+          "maximum": 12,
+          "reason": "2012总体MAE/RMSE/偏差、日等权均值及差/降幅、完整日和workingday结果与独立计算完全一致；8734行预测全部核对。"
+        },
+        {
+          "criterion": "依赖与不确定性",
+          "score": 10,
+          "maximum": 10,
+          "reason": "2012两块长共4000次保存复本与独立算法精确一致；明确7日上端9.967438859%略低10%，28日[5.709841035%,11.589625363%]跨10%，并列呈现、不挑区间，未断言稳健证明低于10%。"
+        },
+        {
+          "criterion": "结论与新证据影响",
+          "score": 9,
+          "maximum": 9,
+          "reason": "保留2011Q4有限结论；更新为2012仍改善7.966722%但点估计未达10%，绝对MAE与低估增大。将全年增长视为相容描述，注意Q4对全年组成差异而不擅自判机制；后续候选明确尚未检验。"
+        },
+        {
+          "criterion": "可复现、交接与执行证据",
+          "score": 4,
+          "maximum": 4,
+          "reason": "B更新入口以新的输入/输出路径完成双年审计、冻结核对及2012评分，退出0，结果JSON与交付相同；handoff足以继续。"
+        }
+      ],
+      "substantive_issues": [],
+      "conclusion": "本任务范围内科学要求及可恢复性得到满足，未发现实质扣分项。",
+      "evidence": [
+        "blind/S924971/report.md",
+        "blind/S924971/work/update2012.py:37-95",
+        "blind/S924971/work/results/model.json",
+        "blind/S924971/work/results_2012/results.json",
+        "blind/S924971/work/handoff.md",
+        "blind/S924971/work/RUN.md"
+      ],
+      "independent_check": {
+        "chain": "Q",
+        "stage": "B",
+        "report_sha256": "68fa8a9122156dadbb012aff70f179d73051906f677d32ab21ec0968b60c036e",
+        "report_characters": 6622,
+        "handoff_sha256": "caebab9e26192bc6dbeed3c1db700640c5f3a0815b5ff8125ba0c2074b32f6e9",
+        "model_sha256": "f8a758c6c73cf7e0cfcfa0936b594afb8f23b1260610ecae15929f601dc8e5d4",
+        "model_cells": 72,
+        "max_model_parameter_error": 0,
+        "max_result_error": 0.0,
+        "prediction_rows_checked": 8734,
+        "max_prediction_error": 0,
+        "bootstrap_replicates_checked": 4000,
+        "max_bootstrap_error": 0,
+        "input_hashes_match_common_data": {
+          "hour_2011.csv": true,
+          "hour_2012.csv": true,
+          "day_2011.csv": true,
+          "day_2012.csv": true
+        },
+        "result_directory": "work/results_2012",
+        "A_B_model_bytes_equal": true,
+        "previous_report_matches_A": true,
+        "previous_handoff_matches_A": true
+      }
+    },
+    {
+      "package_id": "S3f44a8",
+      "anonymous_chain": "R",
+      "stage": "A",
+      "report_sha256": "37f9bab62244549f2898aad4d2612bb762bee63f8b94b5960a6e8e14ba0223a6",
+      "total_score": 50,
+      "maximum_score": 50,
+      "core_failure": false,
+      "scores": [
+        {
+          "criterion": "数据、来源、覆盖与单位",
+          "score": 8,
+          "maximum": 8,
+          "reason": "输入身份、hour/day样本单位、重复键/空格/逐日计数汇总及115个缺小时均正确；README与当前摘录的行数、season及温度冲突保留且未改值。"
+        },
+        {
+          "criterion": "时间设计与预测可用信息",
+          "score": 9,
+          "maximum": 9,
+          "reason": "实际训练为2011-01-01至09-30的6442小时/273日；2011Q4的2203小时/92日一次留出。72组训练sum/n/mean独立精确核对；仅日历输入、均值不取整、无泄漏。"
+        },
+        {
+          "criterion": "算术、指标与分组敏感性",
+          "score": 10,
+          "maximum": 10,
+          "reason": "总体MAE/RMSE/偏差、两模型各自日等权MAE与比较量、87完整日及workingday两组，保存数值均与独立计算完全一致；2203行预测全部核对。"
+        },
+        {
+          "criterion": "依赖与不确定性",
+          "score": 8,
+          "maximum": 8,
+          "reason": "7/28日成对循环日期块、B=2000、同seed分别重置、截断及(B-1)p插值均符合协议；4000次保存复本全部精确核对，正确说明时间稳定性/块长与跨年限制。"
+        },
+        {
+          "criterion": "结论与新证据影响",
+          "score": 6,
+          "maximum": 6,
+          "reason": "24.231724%仅用于2011Q4已观察小时；正确分开正改善与10%门槛，并纠正随机拆分、同期类别/天气泄漏、独立小时及因果/跨年保证草稿。"
+        },
+        {
+          "criterion": "可复现、交接与执行证据",
+          "score": 9,
+          "maximum": 9,
+          "reason": "参数、训练范围、源数据摘要、评分接口和解释边界足以全新上下文恢复。按handoff/RUN指定新目录执行score成功，直接用A冻结模型给2012评分，所得结果与B交付一致。"
+        }
+      ],
+      "substantive_issues": [],
+      "conclusion": "本任务范围内科学要求及可恢复性得到满足，未发现实质扣分项。",
+      "evidence": [
+        "blind/S3f44a8/report.md",
+        "blind/S3f44a8/work/analyze.py:110-236",
+        "blind/S3f44a8/work/results/model.json",
+        "blind/S3f44a8/work/results/results.json",
+        "blind/S3f44a8/work/handoff.md",
+        "blind/S3f44a8/work/RUN.md"
+      ],
+      "independent_check": {
+        "chain": "R",
+        "stage": "A",
+        "report_sha256": "37f9bab62244549f2898aad4d2612bb762bee63f8b94b5960a6e8e14ba0223a6",
+        "report_characters": 5409,
+        "handoff_sha256": "0c3fb010d95a1e8a028a8b8b49f4d93be7c188ea00152e9fc382894fa43bf521",
+        "model_sha256": "dba591a44fff2d14514b4b38d00c8985e93f41cf2b1ab684a6abd2f2620d078d",
+        "model_cells": 72,
+        "max_model_parameter_error": 0,
+        "max_result_error": 0.0,
+        "prediction_rows_checked": 2203,
+        "max_prediction_error": 0,
+        "bootstrap_replicates_checked": 4000,
+        "max_bootstrap_error": 0,
+        "input_hashes_match_common_data": {
+          "hour_2011.csv": true,
+          "day_2011.csv": true
+        },
+        "result_directory": "work/results"
+      }
+    },
+    {
+      "package_id": "S127718",
+      "anonymous_chain": "R",
+      "stage": "B",
+      "report_sha256": "847f2ebf504b89270f2cf3e4de1817caf64ffa6e0a4238ad86037855ef5b2387",
+      "total_score": 50,
+      "maximum_score": 50,
+      "core_failure": false,
+      "scores": [
+        {
+          "criterion": "数据、来源、覆盖与单位",
+          "score": 8,
+          "maximum": 8,
+          "reason": "新2012数据8734小时/366日、无重复键/空格/计数及日汇总冲突、50个缺小时/350完整日正确；少小时不补零、不无证据归因；年度总数及日均和365/366分母解释正确。"
+        },
+        {
+          "criterion": "时间设计与预测可用信息",
+          "score": 7,
+          "maximum": 7,
+          "reason": "A/B模型文件字节相同、原评分代码字节相同，72组参数与2011前九个月原记录一致；无2012重训、无Q4回流。B的previous-report和previous-handoff与相应A字节相同。"
+        },
+        {
+          "criterion": "算术、指标与分组敏感性",
+          "score": 12,
+          "maximum": 12,
+          "reason": "2012总体MAE/RMSE/偏差、日等权均值及差/降幅、完整日和workingday结果与独立计算完全一致；8734行预测全部核对。"
+        },
+        {
+          "criterion": "依赖与不确定性",
+          "score": 10,
+          "maximum": 10,
+          "reason": "2012两块长共4000次保存复本与独立算法精确一致；明确7日上端9.967438859%略低10%，28日[5.709841035%,11.589625363%]跨10%，并列呈现、不挑区间，未断言稳健证明低于10%。"
+        },
+        {
+          "criterion": "结论与新证据影响",
+          "score": 9,
+          "maximum": 9,
+          "reason": "保留2011Q4有限结论；更新为2012仍改善7.966722%但点估计未达10%，绝对MAE与低估增大。将全年增长视为相容描述，注意Q4对全年组成差异而不擅自判机制；后续候选明确尚未检验。"
+        },
+        {
+          "criterion": "可复现、交接与执行证据",
+          "score": 4,
+          "maximum": 4,
+          "reason": "B更新入口以新的输入/输出路径完成双年审计、冻结核对及2012评分，退出0，结果JSON与交付相同；handoff足以继续。"
+        }
+      ],
+      "substantive_issues": [],
+      "conclusion": "本任务范围内科学要求及可恢复性得到满足，未发现实质扣分项。",
+      "evidence": [
+        "blind/S127718/report.md",
+        "blind/S127718/work/update_2012.py:106-181",
+        "blind/S127718/work/results/model.json",
+        "blind/S127718/work/results2012/results.json",
+        "blind/S127718/work/handoff.md",
+        "blind/S127718/work/RUN.md"
+      ],
+      "independent_check": {
+        "chain": "R",
+        "stage": "B",
+        "report_sha256": "847f2ebf504b89270f2cf3e4de1817caf64ffa6e0a4238ad86037855ef5b2387",
+        "report_characters": 7172,
+        "handoff_sha256": "474cd17c4ffd239a4e4734ebc803665fe06ba9d505485d3995f46d8d80b5d138",
+        "model_sha256": "dba591a44fff2d14514b4b38d00c8985e93f41cf2b1ab684a6abd2f2620d078d",
+        "model_cells": 72,
+        "max_model_parameter_error": 0,
+        "max_result_error": 0.0,
+        "prediction_rows_checked": 8734,
+        "max_prediction_error": 0,
+        "bootstrap_replicates_checked": 4000,
+        "max_bootstrap_error": 0,
+        "input_hashes_match_common_data": {
+          "hour_2011.csv": true,
+          "hour_2012.csv": true,
+          "day_2011.csv": true,
+          "day_2012.csv": true
+        },
+        "result_directory": "work/results2012",
+        "A_B_model_bytes_equal": true,
+        "previous_report_matches_A": true,
+        "previous_handoff_matches_A": true
+      }
+    }
+  ],
+  "chain_totals": [
+    {
+      "chain": "P",
+      "A_package": "S733011",
+      "A_score": 50,
+      "B_package": "Sb68670",
+      "B_score": 50,
+      "total_score": 100,
+      "maximum_score": 100,
+      "core_failure": false,
+      "task_threshold_met": true
+    },
+    {
+      "chain": "Q",
+      "A_package": "Sdfb334",
+      "A_score": 50,
+      "B_package": "S924971",
+      "B_score": 50,
+      "total_score": 100,
+      "maximum_score": 100,
+      "core_failure": false,
+      "task_threshold_met": true
+    },
+    {
+      "chain": "R",
+      "A_package": "S3f44a8",
+      "A_score": 50,
+      "B_package": "S127718",
+      "B_score": 50,
+      "total_score": 100,
+      "maximum_score": 100,
+      "core_failure": false,
+      "task_threshold_met": true
+    }
+  ],
+  "reference_key_disagreements": [],
+  "accepted_equivalences": [
+    "各包模型JSON的字段名、键分隔符、排列和元数据不同，导致文件SHA不同；72组数学参数与训练范围相同，且每条A/B链字节冻结，应予接受。numbers.json中的model_file_sha256是参考模型自身序列化摘要，不能要求所有实现复制该字节摘要。",
+    "参考数值含额外weathersit分组；公共任务与rubric只要求workingday，未提供额外天气组不扣分。",
+    "按日先求绝对误差总和再在抽样后合并小时，等价于保留日内小时后重算主MAE；不是日等权指标替代。"
+  ],
+  "research_content_vs_organization": {
+    "research_content": "在本任务核心结论、冻结参数、全部要求指标、区间解释和新证据更新上，三条链没有查出可支持差别评分的实质差异。",
+    "future_proposals": "P提出近期水平/季节更新，Q提出过去28个完整日乘数校准，R提出56日窗口每28日更新；均正确标为后续未测试方案，其不同不能据此排序已完成研究质量。",
+    "organization": "快照位置、文件名、哈希台账细密程度和报告排版属于整理选择；未作为评分差异。"
+  },
+  "limits": [
+    "工具调用次数未独立核验：复核范围禁止读取执行日志；无证据认定超预算，因此未扣分。报告字符数已核对，六份均少于12000。",
+    "本结论只针对指定单系统冻结日历模型任务；100/100是该rubric覆盖项满足，不是所有科研能力的满分证明，也不构成全领域排名。"
+  ]
+}

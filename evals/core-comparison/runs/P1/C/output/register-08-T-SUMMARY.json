@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"derived_from\": [\"statement:T-CLAIM\", \"artifact:T-RESULT\"], \"description\": \"Revised rho=4 Chinese summary; parameters, four rounded values, v10 and restricted interpretation checked.\", \"id\": \"T-SUMMARY\", \"path\": \"results/summary.md\", \"type\": \"summary\", \"notes\": \"Old full bytes in history/stage-c-before-recompute/results and history/stage-a-initial; revision reason in notes/stage-c-validation.json.\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"T-SUMMARY\",\n  \"version\": 2,\n  \"revision\": 36,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

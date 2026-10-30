@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "statement",
+    "--id",
+    "T-CLAIM"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 27,\n  \"kind\": \"statement\",\n  \"id\": \"T-CLAIM\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"assessment\": {\n        \"rationale\": \"Fresh run exactly matches canonical JSON and numeric CSV; equivalent-form and v=0 arithmetic checks; underlying coverage theorem not assessed.\",\n        \"reviewer\": \"AI agent in stage A\",\n        \"scope\": \"Only supplied calculator numerical reproduction on v=[0,1,10,100], alpha=.05 rho=1.\",\n        \"status\": \"supported-in-scope\"\n      },\n      \"formal_verification\": {\n        \"scope\": \"No formal or new manual theorem proof performed.\",\n        \"status\": \"not-started\",\n        \"tool\": \"none\"\n      },\n      \"id\": \"T-CLAIM\",\n      \"scope\": \"Current declared parameters and supplied sources only; scalar l0=1; two-sided alpha total; same V for S and -S.\",\n      \"text\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n      \"type\": \"interpretive\"\n    },\n    \"registered_at\": \"2026-10-30T01:03:18.400032+00:00\",\n    \"version\": 1\n  }\n}\n",
+  "stderr": ""
+}

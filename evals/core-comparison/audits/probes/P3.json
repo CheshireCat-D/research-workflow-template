@@ -1,0 +1,544 @@
+{
+  "chain_id": "P3",
+  "scope": "Independent engineering observations, no scientific score added. Exact per-chain extraction of the bound common audit.",
+  "source_record": {
+    "path": "audits/mechanical-audit/engineering.json",
+    "sha256": "795e030e5eb9530d2fcaa5518eb3ff896ebbb633eb3fb6e5903aee6133066608"
+  },
+  "engineering": {
+    "readonly_B": {
+      "name": "P3-B-readonly",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P3/readonly-B/project/resume.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P3/readonly-B/project"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P3/readonly-B/project",
+      "exit_code": 1,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": []
+    },
+    "B_status": {
+      "case_id": "T",
+      "authority": "research/state.json; notes, provenance and checkpoints do not override current configuration or records",
+      "metadata_revision": 1,
+      "active_constraints": {
+        "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+        "deadline": "2026-12-15",
+        "budget": "Offline Python standard library only; no new data collection or model refit",
+        "available_capabilities": [
+          "local Python standard library",
+          "fixed source cache",
+          "author-provided working notes"
+        ],
+        "venue": "Undecided; do not invent a target journal",
+        "language": "zh",
+        "current_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 1.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "unknowns": [
+          "No human expert approval has occurred",
+          "No external submission authorized"
+        ],
+        "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+        "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+      },
+      "next_action": "将 alpha=0.05、rho=1 的四点边界表和摘要交作者讨论：先确认 intrinsic time V 的含义及过程是否满足给定 sub-Gaussian 控制，rho 在观察前固定；未经内容复核不投稿。",
+      "changed_or_missing_paths": [
+        "notes/parameters.json"
+      ],
+      "activities": {
+        "T-SOURCE-CHECK": {
+          "declared_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        },
+        "T-CALC": {
+          "declared_status": "done",
+          "effective_status": "stale",
+          "reasons": [
+            {
+              "file": "notes/parameters.json",
+              "expected": {
+                "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+                "bytes": 161
+              },
+              "actual": {
+                "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+                "bytes": 161
+              }
+            }
+          ]
+        },
+        "T-SYNTH": {
+          "declared_status": "done",
+          "effective_status": "stale",
+          "reasons": [
+            {
+              "file": "notes/parameters.json",
+              "expected": {
+                "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+                "bytes": 161
+              },
+              "actual": {
+                "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+                "bytes": 161
+              }
+            },
+            {
+              "depends_on": "T-CALC",
+              "cause": "dependency not currently complete"
+            }
+          ]
+        }
+      },
+      "checkpoint_freshness": {
+        "fresh": false,
+        "reasons": [
+          "tracked file bytes changed or missing"
+        ]
+      },
+      "scientific_scope": {
+        "formula": "sqrt((v+rho)*(log(1+v/rho)+2*log(1/alpha)))",
+        "l0": 1,
+        "process_conditions": "S and -S have the required sub-Gaussian exponential control for the same nonnegative intrinsic time V; alpha is the total two-sided error budget",
+        "rho_rule": "fixed before observation",
+        "assessment": "specified numerical values and summary checked; proof, simulation coverage, novelty and human approval not assessed",
+        "formal_verification": "not-started; not required in this numerical task"
+      },
+      "source_tracking_limits": {
+        "source_only": [
+          "T-REMOTE"
+        ],
+        "unregistered_file": [
+          "notes/unregistered-scratch.md"
+        ],
+        "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked."
+      },
+      "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.",
+      "resume_is_read_only": true,
+      "no_scientific_certification": true
+    },
+    "migration": {
+      "name": "P3-migration-readonly",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P3/迁移后 科研项目/resume.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P3/迁移后 科研项目"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P3/迁移后 科研项目",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "old_copy_path": "STUDY_ROOT/mechanical-audit/P3/migration-origin/project",
+      "old_copy_unreachable": true,
+      "new_copy_path": "STUDY_ROOT/mechanical-audit/P3/迁移后 科研项目",
+      "empty_HOME_and_XDG_CACHE_HOME": true,
+      "os_access_enforcement": false,
+      "scope": "Own project entry executed from renamed copy with common interpreter. Actual old paths verified absent separately; public cache exclusion remains an instruction boundary, not syscall evidence."
+    },
+    "migrated_status": {
+      "case_id": "T",
+      "authority": "research/state.json; notes, provenance and checkpoints do not override current configuration or records",
+      "metadata_revision": 4,
+      "active_constraints": {
+        "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+        "deadline": "2026-12-15",
+        "budget": "Offline Python standard library only; no new data collection or model refit",
+        "available_capabilities": [
+          "local Python standard library",
+          "fixed source cache",
+          "author-provided working notes"
+        ],
+        "venue": "Undecided; do not invent a target journal",
+        "language": "zh",
+        "current_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "unknowns": [
+          "No human expert approval has occurred",
+          "No external submission authorized"
+        ],
+        "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+        "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+      },
+      "next_action": "将 alpha=0.05、预先固定 rho=4 的四点边界表（results/table.csv）与更新摘要（results/summary.md）交作者内容复核，确认 V 与给定过程控制条件；暂不扩展到事后选择 rho；没有投稿授权。",
+      "changed_or_missing_paths": [],
+      "activities": {
+        "T-SOURCE-CHECK": {
+          "declared_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        },
+        "T-CALC": {
+          "declared_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        },
+        "T-SYNTH": {
+          "declared_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        }
+      },
+      "checkpoint_freshness": {
+        "fresh": true,
+        "reasons": []
+      },
+      "scientific_scope": {
+        "formula": "sqrt((v+rho)*(log(1+v/rho)+2*log(1/alpha)))",
+        "l0": 1,
+        "process_conditions": "S and -S have the required sub-Gaussian exponential control for the same nonnegative intrinsic time V; alpha is the total two-sided error budget",
+        "rho_rule": "fixed before observation",
+        "assessment": "rho=4 specified numerical values, result/CSV correspondence and revised summary checked by AI assistant; proof, simulation coverage, novelty and human approval not assessed",
+        "formal_verification": "not-started; not required in this numerical task"
+      },
+      "source_tracking_limits": {
+        "source_only": [
+          "T-REMOTE"
+        ],
+        "unregistered_file": [
+          "notes/unregistered-scratch.md"
+        ],
+        "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked."
+      },
+      "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.",
+      "resume_is_read_only": true,
+      "no_scientific_certification": true
+    },
+    "stale_write": {
+      "level": "global metadata_revision and per-record expected_version",
+      "legal_update": {
+        "name": "P3-legal-update",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P3/record-CAS/project/update-state.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P3/record-CAS/project",
+          "--expected-revision",
+          "4",
+          "--patch",
+          "STUDY_ROOT/mechanical-audit/P3/record-CAS/legal.json"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P3/record-CAS/project",
+        "exit_code": 0,
+        "project_identical_bytes_mtime_directory_mtime": false,
+        "changed_files": [
+          ".history/metadata/revision-4.json",
+          "research/state.json"
+        ],
+        "changed_directories": [
+          ".history/metadata",
+          "research"
+        ]
+      },
+      "stale_global_request": {
+        "name": "P3-stale-global-write",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P3/record-CAS/project/update-state.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P3/record-CAS/project",
+          "--expected-revision",
+          "4",
+          "--patch",
+          "STUDY_ROOT/mechanical-audit/P3/record-CAS/legal.json"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P3/record-CAS/project",
+        "exit_code": 2,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": [],
+        "authoritative_bytes_preserved": true
+      },
+      "stale_record_request": {
+        "name": "P3-stale-record-write",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P3/record-CAS/project/update-state.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P3/record-CAS/project",
+          "--expected-revision",
+          "5",
+          "--patch",
+          "STUDY_ROOT/mechanical-audit/P3/record-CAS/legal.json"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P3/record-CAS/project",
+        "exit_code": 2,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": [],
+        "authoritative_bytes_preserved": true
+      }
+    },
+    "dangling_reference": {
+      "name": "P3-dangling-reference",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P3/dangling/project/update-state.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P3/dangling/project",
+        "--expected-revision",
+        "4",
+        "--patch",
+        "STUDY_ROOT/mechanical-audit/P3/dangling/dangling.json"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P3/dangling/project",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": false,
+      "changed_files": [
+        ".history/metadata/revision-4.json",
+        "research/state.json"
+      ],
+      "changed_directories": [
+        ".history/metadata",
+        "research"
+      ],
+      "authoritative_bytes_preserved": false,
+      "dangling_target_committed": true,
+      "authority_sha_before": "60e8182caa623e246749cee8445683655a0a43e71cd0c849cf112c7ee21ce061",
+      "authority_sha_after": "d84fbe49d21d4f0aecb9a8b439e344f80a91e9fce07da74a7e8df5c65f7f3819"
+    },
+    "batch_invalid-version": {
+      "name": "P3-batch-invalid-version",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P3/batch-invalid-version/project/update-state.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P3/batch-invalid-version/project",
+        "--expected-revision",
+        "4",
+        "--patch",
+        "STUDY_ROOT/mechanical-audit/P3/batch-invalid-version/batch.json"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P3/batch-invalid-version/project",
+      "exit_code": 2,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "authoritative_bytes_preserved": true,
+      "valid_first_committed": false
+    },
+    "batch_dangling": {
+      "name": "P3-batch-dangling",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P3/batch-dangling/project/update-state.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P3/batch-dangling/project",
+        "--expected-revision",
+        "4",
+        "--patch",
+        "STUDY_ROOT/mechanical-audit/P3/batch-dangling/batch.json"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P3/batch-dangling/project",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": false,
+      "changed_files": [
+        ".history/metadata/revision-4.json",
+        "research/state.json"
+      ],
+      "changed_directories": [
+        ".history/metadata",
+        "research"
+      ],
+      "authoritative_bytes_preserved": false,
+      "valid_first_committed": true,
+      "authority_sha_before": "60e8182caa623e246749cee8445683655a0a43e71cd0c849cf112c7ee21ce061",
+      "authority_sha_after": "896a2412a59cb330fca695209456b5815fdbf1d6b73e08c3c033aa01d3a87640"
+    },
+    "dirty_checkpoint": {
+      "automatic_checkpoint_interface": false,
+      "adapter": "Replay preserved dirty archive plus exact saved checkpoint; P5 checkpoint fingerprints refreshed by audit adapter to reproduce saved intermediate stdout. Activity completion bindings not changed. P2 has separate checkpoint tree but no auto checkpoint API.",
+      "subsequent_status": {
+        "name": "P3-dirty-checkpoint-replay",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P3/dirty-replay/project/resume.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P3/dirty-replay/project"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P3/dirty-replay/project",
+        "exit_code": 1,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": []
+      },
+      "result": {
+        "case_id": "T",
+        "authority": "research/state.json; notes, provenance and checkpoints do not override current configuration or records",
+        "metadata_revision": 2,
+        "active_constraints": {
+          "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+          "deadline": "2026-12-15",
+          "budget": "Offline Python standard library only; no new data collection or model refit",
+          "available_capabilities": [
+            "local Python standard library",
+            "fixed source cache",
+            "author-provided working notes"
+          ],
+          "venue": "Undecided; do not invent a target journal",
+          "language": "zh",
+          "current_scope": {
+            "case_id": "T",
+            "alpha": 0.05,
+            "rho": 1.0,
+            "rho_selection": "fixed-before-observation",
+            "intrinsic_time_grid": [
+              0,
+              1,
+              10,
+              100
+            ]
+          },
+          "unknowns": [
+            "No human expert approval has occurred",
+            "No external submission authorized"
+          ],
+          "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+          "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+        },
+        "next_action": "将 alpha=0.05、rho=1 的四点边界表和摘要交作者讨论：先确认 intrinsic time V 的含义及过程是否满足给定 sub-Gaussian 控制，rho 在观察前固定；未经内容复核不投稿。",
+        "changed_or_missing_paths": [
+          "notes/parameters.json"
+        ],
+        "activities": {
+          "T-SOURCE-CHECK": {
+            "declared_status": "done",
+            "effective_status": "done",
+            "reasons": []
+          },
+          "T-CALC": {
+            "declared_status": "done",
+            "effective_status": "stale",
+            "reasons": [
+              {
+                "file": "notes/parameters.json",
+                "expected": {
+                  "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+                  "bytes": 161
+                },
+                "actual": {
+                  "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+                  "bytes": 161
+                }
+              }
+            ]
+          },
+          "T-SYNTH": {
+            "declared_status": "done",
+            "effective_status": "stale",
+            "reasons": [
+              {
+                "file": "notes/parameters.json",
+                "expected": {
+                  "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+                  "bytes": 161
+                },
+                "actual": {
+                  "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+                  "bytes": 161
+                }
+              },
+              {
+                "depends_on": "T-CALC",
+                "cause": "dependency not currently complete"
+              }
+            ]
+          }
+        },
+        "checkpoint_freshness": {
+          "fresh": true,
+          "reasons": []
+        },
+        "scientific_scope": {
+          "formula": "sqrt((v+rho)*(log(1+v/rho)+2*log(1/alpha)))",
+          "l0": 1,
+          "process_conditions": "S and -S have the required sub-Gaussian exponential control for the same nonnegative intrinsic time V; alpha is the total two-sided error budget",
+          "rho_rule": "fixed before observation",
+          "assessment": "specified numerical values and summary checked; proof, simulation coverage, novelty and human approval not assessed",
+          "formal_verification": "not-started; not required in this numerical task"
+        },
+        "source_tracking_limits": {
+          "source_only": [
+            "T-REMOTE"
+          ],
+          "unregistered_file": [
+            "notes/unregistered-scratch.md"
+          ],
+          "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked."
+        },
+        "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.",
+        "resume_is_read_only": true,
+        "no_scientific_certification": true
+      }
+    },
+    "batch_prefix_positive_control": {
+      "name": "P3-valid-prefix-positive",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P3/valid-prefix-positive/project/update-state.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P3/valid-prefix-positive/project",
+        "--expected-revision",
+        "4",
+        "--patch",
+        "STUDY_ROOT/mechanical-audit/P3/valid-prefix-positive/valid.json"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P3/valid-prefix-positive/project",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": false,
+      "changed_files": [
+        ".history/metadata/revision-4.json",
+        "research/state.json"
+      ],
+      "changed_directories": [
+        ".history/metadata",
+        "research"
+      ],
+      "actual_saved": true
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "status": "executed",
+  "started_at_utc": null,
+  "finished_at_utc": "2026-10-29T22:34:09.117315+00:00",
+  "duration_seconds": null,
+  "requested_configuration": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "context": "fork_turns=none for every task/arm",
+    "requested_output_unicode_limit": 5000,
+    "requested_tool_call_limit": 8,
+    "temperature": null,
+    "seed": null
+  },
+  "effective_configuration": {
+    "model": {
+      "value": null,
+      "source": "unknown"
+    },
+    "reasoning_effort": {
+      "value": null,
+      "source": "unknown"
+    },
+    "temperature": {
+      "value": null,
+      "source": "unknown"
+    },
+    "seed": {
+      "value": null,
+      "source": "unknown"
+    },
+    "hard_output_token_limit": {
+      "value": null,
+      "source": "unknown"
+    }
+  },
+  "context_isolation": {
+    "requested": "fresh context, fork_turns=none",
+    "evidence": "instruction-only",
+    "os_audited": false,
+    "same_metadata_catalogue_visible": true
+  },
+  "actual_reads": [
+    {
+      "logical_name": "tasks/Q11.md",
+      "sha256": "81b8cc0c73ce55acb1ff68ac67516273a424a8e5915a615708042ace0d5864a1"
+    },
+    {
+      "logical_name": "executor-prompt.md",
+      "sha256": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09"
+    },
+    {
+      "logical_name": "templates/execution.template.json",
+      "sha256": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1"
+    }
+  ],
+  "tool_calls": 2,
+  "output_tokens": null,
+  "network_calls": 0,
+  "output_unicode_characters": 720,
+  "output_bytes": 1612,
+  "violations": [],
+  "uncertainties": [
+    "未测得本次完整执行的起始时刻和总耗时，started_at_utc、duration_seconds 保持 null。",
+    "实际模型、推理强度、温度、seed、硬性输出 token 限制与输出 token 数均未由宿主报告，保持 unknown/null。",
+    "上下文隔离仅依指令；未进行操作系统层审计。",
+    "工具调用和报告 Unicode 字符数为本执行者计数；不声称宿主硬限制已生效。",
+    "output_unicode_characters 与 output_bytes 仅度量 report.md。"
+  ],
+  "failure": null,
+  "outputs": [
+    {
+      "logical_name": "report.md",
+      "sha256": "7d7f03e345457047208e1d590e22c32ac75142f011e3d1e430765bf881e561fe",
+      "unicode_characters": 720,
+      "bytes": 1612
+    },
+    {
+      "logical_name": "execution.json"
+    }
+  ],
+  "computation_outputs": [
+    "ε/3 + ε/3 + ε/3 = ε；有限最大值 N=max_i N_i 同时适用于全部中心。",
+    "无须数值试验；核验使用任务列明的基础事实和三角不等式。"
+  ],
+  "publication_projection": {
+    "raw_execution_sha256": "4ec407ea4470b317848757b58f60d21f2f28405aee8e70fd2f1b751d8eaa83b9",
+    "changes": [
+      "completed status label mapped to executed",
+      "logical path task/Q11.md mapped to tasks/Q11.md",
+      "logical path instructions.md mapped to executor-prompt.md",
+      "logical path execution.template.json mapped to templates/execution.template.json"
+    ],
+    "scope": "Administrative fields only; report bytes, effective unknowns and scientific content unchanged."
+  }
+}

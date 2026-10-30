@@ -1,0 +1,76 @@
+{
+  "files": [
+    {
+      "path": "RUN.md",
+      "sha256": "55667576fd0fe728e30b6b4388a24135675247304f946206100dc37bd5f4a8f9",
+      "bytes": 737,
+      "distributed": true,
+      "public_path": "runs/T06/artifacts/RUN.md",
+      "public_sha256": "f1aa4c2aff8c2e966ced387c5b0a64899b8f242764599dd4d83635bb0a7936f7",
+      "public_bytes": 563
+    },
+    {
+      "path": "audit.md",
+      "sha256": "4f17f0013a905dc225cfb3d2367f7621536fa74de419d98114053c55b7e6d8a6",
+      "bytes": 13039,
+      "distributed": false,
+      "omission": "Exact duplicate of the canonical report; original bytes remain sealed."
+    },
+    {
+      "path": "checks.py",
+      "sha256": "5ccd8b370c1cf9486e9a3ee0a459ccd6f94e500ba16a1157e6c0a65bba9e00f6",
+      "bytes": 2716,
+      "distributed": true,
+      "public_path": "runs/T06/artifacts/checks.py",
+      "public_sha256": "5ccd8b370c1cf9486e9a3ee0a459ccd6f94e500ba16a1157e6c0a65bba9e00f6",
+      "public_bytes": 2716
+    },
+    {
+      "path": "execution.json",
+      "sha256": "0860d7e5e378d0527c3c7386620fd6ef39444fa5d1e3ce71be67bda2a3afe99a",
+      "bytes": 8918,
+      "distributed": false
+    },
+    {
+      "path": "read_log.json",
+      "sha256": "24c9d2b9f913baad4ed5b03e68cdd7e49bf50756589726278c27c1f08f53ade9",
+      "bytes": 2094,
+      "distributed": true,
+      "public_path": "runs/T06/artifacts/read_log.json",
+      "public_sha256": "24c9d2b9f913baad4ed5b03e68cdd7e49bf50756589726278c27c1f08f53ade9",
+      "public_bytes": 2094
+    },
+    {
+      "path": "report.md",
+      "sha256": "4f17f0013a905dc225cfb3d2367f7621536fa74de419d98114053c55b7e6d8a6",
+      "bytes": 13039,
+      "distributed": true,
+      "public_path": "runs/T06/report.md",
+      "public_sha256": "4f17f0013a905dc225cfb3d2367f7621536fa74de419d98114053c55b7e6d8a6",
+      "public_bytes": 13039
+    },
+    {
+      "path": "results/checks_results.json",
+      "sha256": "55fae824bba857c4c3c9be1ecbb665d25f52063e2bd00979641592c3d8670951",
+      "bytes": 1751,
+      "distributed": true,
+      "public_path": "runs/T06/artifacts/results/checks_results.json",
+      "public_sha256": "55fae824bba857c4c3c9be1ecbb665d25f52063e2bd00979641592c3d8670951",
+      "public_bytes": 1751
+    },
+    {
+      "path": "started.json",
+      "sha256": "703b36dce84525558130bdd237aed483c547913d9bb3cacf973c1223f1b7ec62",
+      "bytes": 28,
+      "distributed": true,
+      "public_path": "runs/T06/artifacts/started.json",
+      "public_sha256": "703b36dce84525558130bdd237aed483c547913d9bb3cacf973c1223f1b7ec62",
+      "public_bytes": 28
+    }
+  ],
+  "sealed_at_utc": "2026-10-29T23:50:46.187348+00:00",
+  "scope": "Original workspace bytes captured at executor completion; runtime copies and raw inputs omitted from public distribution.",
+  "publication_changes": [
+    "RUN.md: absolute paths mapped to logical locators"
+  ]
+}

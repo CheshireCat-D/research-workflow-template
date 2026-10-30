@@ -1,0 +1,36 @@
+{
+  "scope": "numerical checks, not a proof or simulated coverage estimate",
+  "input_sha256": {
+    "TASK.md": "56d7eff3d121991ac8a907a8f285fe822e26e2627715fd2863180aadd96b51cd",
+    "draft.tex": "8550d8ea0188a72384bf5a4d596cdc23b3c8fa58cddeb30350c71adb26a2ba63",
+    "sources/howard2020-arxiv-v7.pdf": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e",
+    "sources/howard2020-arxiv-v7.txt": "674f6bf98e64159aa294b114ba765f19ee40b5b89f1fab7c25a9419f86f8ce99",
+    "sources/howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+    "sources/howard2021-arxiv-v9.txt": "7826e3691e725d8017655d2be40aaf1a37c1aa2969b7344f3e0b4060f50141da"
+  },
+  "B": {
+    "n": 20,
+    "mu": "1/10",
+    "alpha": "1/20",
+    "rho": "1/4",
+    "event": "first 20 observations all zero",
+    "probability_exact": "12157665459056928801/100000000000000000000",
+    "probability_float": 0.1215766545905693,
+    "b_squared_formula": "(1/2)*log(800)",
+    "b_squared": 3.3423058638339636,
+    "b": 1.8281974356819242,
+    "interval_upper_on_event": 0.09140987178409621,
+    "integer_probability_comparison": true
+  },
+  "C": {
+    "equation": "x-log(1+x)=log(alpha**-2)",
+    "x": 8.211968062068255,
+    "residual": 8.881784197001252e-16,
+    "sqrt_coefficient": 3.0351224130285512,
+    "v": "1/4",
+    "rho_star": 0.030443372174664224,
+    "min_b_squared": 2.302992015517064,
+    "formula_agreement_abs_error": 8.881784197001252e-16
+  },
+  "checks_passed": true
+}

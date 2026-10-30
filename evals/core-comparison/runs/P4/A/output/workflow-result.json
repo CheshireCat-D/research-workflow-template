@@ -1,0 +1,35 @@
+{
+  "case_id": "D",
+  "stage": "A",
+  "normal_result": {
+    "case_id": "D",
+    "evaluation_start": "2011-10-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "observed_hours": 2203,
+    "observed_days": 92,
+    "C0_MAE": 58.825190494512434,
+    "C1_MAE": 44.570832407531775,
+    "C0_RMSE": 86.08056895633848,
+    "C1_RMSE": 67.99996906089847,
+    "C0_bias_prediction_minus_actual": 1.078965171773347,
+    "C1_bias_prediction_minus_actual": 0.9871531155146787,
+    "MAE_reduction_fraction": 0.24231724482575867,
+    "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+    "input_sha256": {
+      "parameters": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    }
+  },
+  "unchanged_protected": true,
+  "next_action": "2011第四季度指标与摘要已逐项核对；下一步由作者讨论该描述性比较的解释与用途。恢复先运行项目内 resume，核对当前 parameters/result/table/summary 及依赖；若有漂移，保留旧字节与原因并复核 D-CALC、D-SYNTH 后显式重登，不重训或外推2012。",
+  "commands_count": 9,
+  "project": "PROJECT_ROOT",
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  }
+}

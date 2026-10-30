@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "submission_id": "B58870f",
+  "task_id": "Q24",
+  "report_sha256": "b8339a8ccd92e1d553ce40cd0c72366d0fd6e9ccbc35e73339ab87baa77c758e",
+  "judge_context": "全新单报告上下文；仅读取本目录 task.md、report.md、reference.json、template.json；未读取父目录、组别映射、执行日志、其他报告、memory、个人包或其他技能；未联网或调用其他 agent。",
+  "arm_visibility": "hidden-by-instruction",
+  "os_audited": false,
+  "scored": true,
+  "verdict": "unsupported",
+  "criteria": [
+    {
+      "id": "decision",
+      "score": 2,
+      "evidence": "“核对结论”首段：“主张不成立”，并指出不能保证极限函数在0处可微。",
+      "rationale": "明确否定原主张及稿件所称导数存在且为0的结论，判定正确。"
+    },
+    {
+      "id": "failed_step",
+      "score": 2,
+      "evidence": "“证明中的确切问题”前两段：固定 ε 并选定 N 后，2ε/|h| 趋于正无穷；若 ε 随 h 变化，则 N 也随 h 变化，缺少对所有这些 N 有效的统一邻域。",
+      "rationale": "准确保留了三角不等式的有效性，并将失效定位到最后的极限推断；同时说明了参数依赖与缺少统一差商控制的实质问题。"
+    },
+    {
+      "id": "counterexample",
+      "score": 2,
+      "evidence": "“满足全部条件的反例”：f_n(x)=√(x²+n⁻²)，−1≤x≤1；f_n′(x)=x/√(x²+n⁻²)。",
+      "rationale": "该具体函数列在整个闭区间有定义，根号内处处严格为正，逐项可微；使用与参考不同的常数平移不影响反例成立。"
+    },
+    {
+      "id": "assumptions",
+      "score": 2,
+      "evidence": "“满足全部条件的反例”：逐项连续、开区间可微且 f_n′(0)=0；0≤f_n(x)−|x|=n⁻²/(√(x²+n⁻²)+|x|)≤1/n，并指出 x=0 取得等号。",
+      "rationale": "连续性与可微性理由充分；导数公式直接核对了原点条件。分母至少为1/n，故给出的误差界对全部 x 统一成立，确证一致收敛。"
+    },
+    {
+      "id": "contradiction",
+      "score": 2,
+      "evidence": "“满足全部条件的反例”：f(h)−f(0) 的差商为 |h|/h，h>0 时为1，h<0 时为−1，故左右差商极限不同。",
+      "rationale": "明确证明一致极限 f(x)=|x| 在0不可微，直接违反原主张中的可微性，从而构成满足全部前提的反例。"
+    }
+  ],
+  "invented_major_objections": [],
+  "notes": "独立核实：参考中的减去1/n的函数列及其误差区间均正确；报告采用未减去1/n的函数列，统一误差恰为1/n，同样有效。报告给出的新增统一差商条件足以推出目标结论，并清楚标明其为额外假设；符号建议亦与实质性错误分开。总分10/10。"
+}

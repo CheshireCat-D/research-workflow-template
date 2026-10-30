@@ -1,0 +1,237 @@
+[
+  {
+    "argv": [
+      "cat",
+      "STUDY_ROOT/runs/P6/C/REQUEST.md"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 1
+  },
+  {
+    "argv": [
+      "cat",
+      "INPUT_DIR/PROTOCOL.md",
+      "INPUT_DIR/RECORDING.md",
+      "INPUT_DIR/STAGE-C.md",
+      "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md",
+      "TOOLKIT_ROOT/core/skill-bridge.md",
+      "TOOLKIT_ROOT/core/protocol.md"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 2
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "-"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 3,
+    "stdin_description": "List only own project and current input; try root-level revision filenames (absent); no file contents from absent files."
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "-"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 4,
+    "stdin_description": "Read current C author files, RECOVER, initial brief/constraints/obligations/source identities, state, three project scripts, parameters, source note, three results. Tool output was truncated; state record subset reread next."
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "-"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 5,
+    "stdin_description": "Read state D-CHOICE/D-RESULT/D-TABLE/D-SUMMARY/D-SOURCE-NOTE/three activities and frozen model."
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "-"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 6,
+    "stdin_description": "Create output directory and this controller using standard-library Path.write_text; controller full bytes retained."
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/scripts/guarded_state_update.py",
+      "--root",
+      "PROJECT_ROOT",
+      "--candidate",
+      "OUTPUT_DIR/drift-checkpoint-save-candidate.json",
+      "--expected-version",
+      "1",
+      "--expected-sha256",
+      "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "--reason",
+      "Save drifted snapshot and fresh checkpoint before any recomputation; no material rebind and no activity revalidation"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout_path": "OUTPUT_DIR/drift-checkpoint-save.stdout.json",
+    "stderr_path": "OUTPUT_DIR/drift-checkpoint-save.stderr.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/scripts/project_status.py",
+      "--root",
+      "PROJECT_ROOT"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 1,
+    "stdout_path": "OUTPUT_DIR/intermediate-check.stdout.json",
+    "stderr_path": "OUTPUT_DIR/intermediate-check.stderr.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "OUTPUT_DIR/stage_c_driver.py",
+      "snapshot"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 7,
+    "stdin_description": "Execute snapshot driver; actual pre-recomputation status preserved"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "-"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 1,
+    "tool_call": 8,
+    "stdin_description": "Attempt controller extension; Python parser rejected nested triple-quoted snippet before executing any writes"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "-"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 9,
+    "stdin_description": "Preserve snapshot driver and correct extension quoting; retain preceding failure"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/scripts/compute.py",
+      "--root",
+      "PROJECT_ROOT",
+      "--spec",
+      "PROJECT_ROOT/notes/parameters.json",
+      "--output",
+      "PROJECT_ROOT/results-evaluations/C-approved"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout_path": "OUTPUT_DIR/approved-recomputation.stdout.json",
+    "stderr_path": "OUTPUT_DIR/approved-recomputation.stderr.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/scripts/guarded_state_update.py",
+      "--root",
+      "PROJECT_ROOT",
+      "--candidate",
+      "OUTPUT_DIR/authorized-state-update-candidate.json",
+      "--expected-version",
+      "2",
+      "--expected-sha256",
+      "d686169299fbbaa8ac8b39f246340f1c931a8b7fb66702d12295bee538b6fc43",
+      "--reason",
+      "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout_path": "OUTPUT_DIR/authorized-state-update.stdout.json",
+    "stderr_path": "OUTPUT_DIR/authorized-state-update.stderr.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/scripts/project_status.py",
+      "--root",
+      "PROJECT_ROOT"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout_path": "OUTPUT_DIR/final-check.stdout.json",
+    "stderr_path": "OUTPUT_DIR/final-check.stderr.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "OUTPUT_DIR/stage_c_driver.py",
+      "recompute"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 10,
+    "stdin_description": "Actual authorized recomputation and explicit state revision"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "-"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 11,
+    "stdin_description": "Inspect final summary/recovery text, initial snapshots manifest and current record versions/status"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "-"
+    ],
+    "cwd": "TASK_WORKSPACE",
+    "exit_code": 0,
+    "tool_call": 12,
+    "stdin_description": "Verify retained history and immutable identities, write final report/state answer, finalize execution and full input/artifact manifests"
+  }
+]

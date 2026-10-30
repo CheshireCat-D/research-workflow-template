@@ -1,0 +1,65 @@
+{
+  "submission_id": "Sdfb334",
+  "task_id": "data-a",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_units",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "report.md:7-38；work/analyze.py:16-45；work/results/audit.json:2-47,269-290；input/INPUT_MANIFEST.json:2-10。",
+      "rationale": "输入两文件SHA与清单一致；正确报告8645小时行、365日行、全年115个缺小时和留出5个缺小时。逐小时/日聚合单位、空单元格与缺行、重复键、三个计数恒等及日汇总核对均正确，未把缺小时补零。保留实例数、season及温度元数据冲突，未篡改数据；实跑audit经JSON键类型规范后与保存结果完全一致。"
+    },
+    {
+      "id": "temporal_design",
+      "score": 9,
+      "max_points": 9,
+      "evidence": "report.md:42-46,87-88；work/analyze.py:48-64,129-143；work/results/model.json:3-17,382-391；work/handoff.md:9-11,35。",
+      "rationale": "明确2011 Jan–Sep训练6442小时/273日、Q4留出2203小时/92日；逐项从输入重算24个C0、48个C1参数，sum_cnt/n/mean全部精确相同。C1回退C0规则与不舍入预测正确，仅使用hr/workingday；排除标签分解和同小时实测天气泄漏，说明日历事先可知条件及随机行拆分不能替代未来检验。score路径只载入冻结参数，无重训。"
+    },
+    {
+      "id": "metrics_sensitivity",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "report.md:46,54-67；work/analyze.py:67-77,104-118；work/results/results.json:2-102。",
+      "rationale": "两模型MAE/RMSE/预测减真实偏差、绝对差和比例改善、两个日等权MAE及差/降幅均正确；完整24h日期87日/2088小时及workingday=0/1分组均正确，未混淆小时权重和日等权。独立从输入和冻结参数复算所有这些指标，与numbers.json阶段1的最大绝对差为1.4211e-14；原作者evaluate内存实跑与已保存results.json完全相同。"
+    },
+    {
+      "id": "uncertainty",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "report.md:71-80,89；work/analyze.py:80-97；work/results/results.json:104-136。",
+      "rationale": "排序日期、两个模型共享配对抽样、循环7/28日块、抽至D再截断、保留全部日内小时并按合并小时数重算MAE、B=2000、seed=20261029、randrange(D)、每块长重置seed及线性分位数均符合协议。独立复算两组区间与参考最大差分别3.5527e-15和0；正确解释冻结模型条件下的时段经验不确定性，说明未涵盖训练波动、缺小时和跨年漂移，披露稳定性/边界/长依赖与92日限制。"
+    },
+    {
+      "id": "conclusion_update",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "report.md:3,30,67,78-93；work/handoff.md:19-23,35。",
+      "rationale": "正确区分C1改善与达到10%门槛：2011 Q4点降幅24.231724%，两种块长相对区间下限均超过10%。结论限定于单系统、2011留出观察小时；逐项纠正草稿，无因果、个体或跨年性能保证。要求下一阶段冻结模型检验且不更改阈值；未因A阶段没有2012实际评价扣分，也未用未来结果否定历史有限结论。"
+    },
+    {
+      "id": "reproducibility",
+      "score": 8,
+      "max_points": 9,
+      "evidence": "work/analyze.py:48-64,104-143；work/RUN.md:3-26,31-36；work/handoff.md:3,9-35；report.md:97；work/verify.py:20,31,50。",
+      "rationale": "标准库代码、精确冻结参数、输入身份、训练/留出范围、指标定义、结论界限及下一阶段载入评分命令足够恢复。实跑作者fit与evaluate（仅截获文件写入、未改作者代码）可精确恢复model/results和92行daily_errors；score_check/results.json亦完全一致，模型SHA与handoff一致。扣1分：当前包没有交接声称保留的results/predictions.csv和bootstrap_7/28.csv，实际运行verify.py在第20行即因predictions.csv不存在而失败，故其“独立验证直接可复跑”交接不完整；这不是按文件数量扣分，主分析代码可重建缺失中间产物。"
+    }
+  ],
+  "raw_score": 49,
+  "effective_score": 49,
+  "max_score": 50,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "usable",
+  "notes": [
+    "仅检查指定匿名目录的input、报告、科学代码/结果及rubric/reference/numbers/template；未读组别映射、父目录、其它报告、执行日志、memory或个人skills，未联网、安装或调用其他agent。arm_hidden=true表示未获组别映射；未据措辞推定组别。",
+    "评分只针对阶段A的2011数据与50分规程；参考材料中的2012数值未用于奖惩。无额外数据cap，effective_score等于raw_score。",
+    "报告SHA-256实测与template给定值完全一致；未发现阶段A参考数值错误。报告正文4662字符，满足12000字符限制；历史工具调用预算不从执行日志审计，未据此加减分。",
+    "独立复核使用指定EVAL_PYTHON，且未修改输入、作者代码和原结果；作者科学函数的保存/CSV输出在内存中截获。所有主要数值及7/28日区间可恢复，不以退出码代替科学核验。",
+    "当前匿名评分包缺失交接所称预测/bootstrap CSV，导致verify.py直接失败；无法仅据本包判断是提交漏交还是评分包裁剪。此处只对当前可运行交接扣1分，不视为伪造执行或核心科学失败。"
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification.",
+  "report_sha256": "a27e12ef0cdaa5d3a64a4eee21820fc9431945921bad02d048427c05580c3698"
+}

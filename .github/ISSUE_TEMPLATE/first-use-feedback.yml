@@ -15,6 +15,18 @@ body:
       placeholder: "Windows / macOS / Linux; Python version; Agent; user ZIP or source"
     validations:
       required: false
+  - type: dropdown
+    id: participant
+    attributes:
+      label: 反馈来源 / Feedback source
+      description: 区分真人体验、AI模拟和命令行测试；不收集身份信息。
+      options:
+        - 真人科研用户 / Human researcher
+        - AI 代理模拟 / AI-agent simulation
+        - 自动脚本测试 / Automated script
+        - 混合或不确定 / Mixed or unknown
+    validations:
+      required: true
   - type: textarea
     id: goal
     attributes:

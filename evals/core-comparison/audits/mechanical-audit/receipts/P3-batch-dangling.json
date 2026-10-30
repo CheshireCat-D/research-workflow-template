@@ -1,0 +1,28 @@
+{
+  "name": "P3-batch-dangling",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P3/batch-dangling/project/update-state.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P3/batch-dangling/project",
+    "--expected-revision",
+    "4",
+    "--patch",
+    "STUDY_ROOT/mechanical-audit/P3/batch-dangling/batch.json"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P3/batch-dangling/project",
+  "exit_code": 0,
+  "stdout": "{\"metadata_revision\": 5, \"scientific_activities_rebound\": false, \"checkpoint_updated\": false}\n",
+  "stderr": "",
+  "project_identical_bytes_mtime_directory_mtime": false,
+  "changed_files": [
+    ".history/metadata/revision-4.json",
+    "research/state.json"
+  ],
+  "changed_directories": [
+    ".history/metadata",
+    "research"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "author_parameters_match": true,
+  "independent_metrics": {
+    "observed_hours": 1460,
+    "observed_days": 61,
+    "C0_MAE": 56.64127430990882,
+    "C0_RMSE": 81.70038360631688,
+    "C0_bias_prediction_minus_actual": 13.433264561295244,
+    "C1_MAE": 41.252622564018566,
+    "C1_RMSE": 64.15826564867794,
+    "C1_bias_prediction_minus_actual": 13.347664992606457,
+    "MAE_reduction_fraction": 0.2716861852664598
+  },
+  "table_agrees": true,
+  "source_slice_rows": 8645,
+  "immutable_files": {
+    "data/hour_2011.csv": {
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "model/frozen.json": {
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    "management/source-identities.json": {
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200
+    },
+    "notes/source-check.md": {
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474
+    }
+  },
+  "input_bindings_match": true,
+  "scope": "Observed-hour descriptive comparison for authorized evaluation window; no refit or expert approval."
+}

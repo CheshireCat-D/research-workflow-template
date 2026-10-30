@@ -1,0 +1,39 @@
+{
+  "counterexample": {
+    "alpha": "1/20",
+    "rho": "1/4",
+    "mu": "1/100",
+    "t": 200,
+    "event": "X_1=...=X_200=0",
+    "Vhat_on_event": "1/4",
+    "S_on_event": -2,
+    "boundary_formula": "sqrt(log(800)/2)",
+    "boundary": 1.8281974356819242,
+    "event_probability_formula": "(99/100)^200",
+    "event_probability": 0.13397967485796194,
+    "exact_probability_above_alpha": true,
+    "exp8_lower_Taylor_sum": 934.1555555555556
+  },
+  "optimization": {
+    "alpha": 0.05,
+    "r": 8.211968062068255,
+    "residual": 8.881784197001252e-16,
+    "kappa": 3.0351224130285512,
+    "rho_star_formula": "v/r",
+    "inf_boundary_formula": "kappa*sqrt(v)"
+  },
+  "normal_mixture_numeric_check": {
+    "s": 1.2,
+    "v": 3.0,
+    "rho": 0.7,
+    "quadrature": 0.528395994285645,
+    "closed_form": 0.528395994285645,
+    "absolute_error": 0.0
+  },
+  "empirical_Bernstein_scalar_grid_max_excess": 0.0,
+  "pdf_sha256": {
+    "howard2020-arxiv-v7.pdf": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e",
+    "howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+  },
+  "scope": "Exact finite probability comparison and deterministic numeric checks; no simulation, no proof by grid."
+}

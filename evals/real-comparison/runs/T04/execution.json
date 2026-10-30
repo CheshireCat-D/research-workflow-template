@@ -1,0 +1,358 @@
+{
+  "status": "executed",
+  "requested": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "fork_turns": "none",
+    "max_tool_calls": 18,
+    "max_report_characters": 12000
+  },
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 12,
+  "network_calls": 0,
+  "violations": [],
+  "reads": [
+    {
+      "logical_name": "common/executor.md",
+      "path": "STUDY_ROOT/runs/T04/EXECUTOR.md",
+      "sha256": "316392fda85274a6b9a3ac7150125ef140d35d96edde46759348ef82020239fb"
+    },
+    {
+      "logical_name": "common/execution.template.json",
+      "path": "STUDY_ROOT/runs/T04/execution.template.json",
+      "sha256": "4202f4e551078d2e12ccd1e271ddb0eaba5bac56eb2cccc204cacf1e9b66330e"
+    },
+    {
+      "logical_name": "guidance/proof-audit/SKILL.md",
+      "path": "GUIDANCE_ROOT/SKILL.md",
+      "sha256": "54adbe2ca1665697dc2a1be48b1614ae60b9e2589997c5d8b6d297acba422626"
+    },
+    {
+      "logical_name": "input/theory/TASK.md",
+      "path": "INPUT_DIR/TASK.md",
+      "sha256": "56d7eff3d121991ac8a907a8f285fe822e26e2627715fd2863180aadd96b51cd"
+    },
+    {
+      "logical_name": "input/theory/draft.tex",
+      "path": "INPUT_DIR/draft.tex",
+      "sha256": "8550d8ea0188a72384bf5a4d596cdc23b3c8fa58cddeb30350c71adb26a2ba63"
+    },
+    {
+      "logical_name": "input/theory/source-manifest.json",
+      "path": "INPUT_DIR/source-manifest.json",
+      "sha256": "ab51a486e3bed01f34e863a7221c58481d288bef2efde8b7dbb10ef2001994c4"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2020-arxiv-v7.txt",
+      "path": "INPUT_DIR/sources/howard2020-arxiv-v7.txt",
+      "sha256": "674f6bf98e64159aa294b114ba765f19ee40b5b89f1fab7c25a9419f86f8ce99"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2020-arxiv-v7.pdf",
+      "path": "INPUT_DIR/sources/howard2020-arxiv-v7.pdf",
+      "sha256": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2021-arxiv-v9.txt",
+      "path": "INPUT_DIR/sources/howard2021-arxiv-v9.txt",
+      "sha256": "7826e3691e725d8017655d2be40aaf1a37c1aa2969b7344f3e0b4060f50141da"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2021-arxiv-v9.pdf",
+      "path": "INPUT_DIR/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+    }
+  ],
+  "commands": [
+    {
+      "outer_tool_call": 1,
+      "command": "cat",
+      "arguments": {
+        "files": [
+          "EXECUTOR.md",
+          "execution.template.json",
+          "guidance/proof-audit/SKILL.md"
+        ]
+      },
+      "result": "Read common request, template, and designated guidance.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 2,
+      "command": "cat; nl -ba; rg --files",
+      "arguments": {
+        "input_dir": "INPUT_DIR"
+      },
+      "result": "Read TASK.md and numbered draft.tex; inventory only this trial input.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 3,
+      "command": "rg -n; cat",
+      "arguments": {
+        "files": [
+          "input/sources/howard2020-arxiv-v7.txt",
+          "input/sources/howard2021-arxiv-v9.txt",
+          "input/source-manifest.json"
+        ]
+      },
+      "result": "Locate definition, theorem, normal-mixture, optimization and empirical-Bernstein passages; read manifest.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 4,
+      "command": "EVAL_PYTHON",
+      "arguments": {
+        "argv": [
+          "-I",
+          "-B",
+          "-"
+        ],
+        "stdin": "Inline Python: read the two supplied TXT files, attempt form-feed page splitting, print pages with target terms."
+      },
+      "result": "Page split returned one block because supplied extraction uses explicit PDF PAGE markers. Output was truncated; corrected in call 5.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 5,
+      "command": "EVAL_PYTHON",
+      "arguments": {
+        "argv": [
+          "-I",
+          "-B",
+          "-"
+        ],
+        "stdin": "Inline Python: regex-split explicit PDF PAGE markers and read S1 pages 9,10,12,13 and S2 pages 7,8,11,16,23,33."
+      },
+      "result": "Read source assumptions and master theorem; several S2 page selections were exploratory.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 6,
+      "command": "EVAL_PYTHON",
+      "arguments": {
+        "argv": [
+          "-I",
+          "-B",
+          "-"
+        ],
+        "stdin": "Inline Python: marker-split S2 and print pages 1,3,4,5,9,12,13,14 plus hits for named theorem/proposition/proof terms."
+      },
+      "result": "Read the actual empirical-Bernstein theorem and proof, mixture condition and normal-mixture proposition. A portion of page 12 was output-truncated; read fully in call 7.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 7,
+      "command": "EVAL_PYTHON",
+      "arguments": {
+        "argv": [
+          "-I",
+          "-B",
+          "-"
+        ],
+        "stdin": "Inline Python: read S2 pages 6,9,10,12,18 in full; use pypdf PdfReader on both supplied PDFs, verify page counts and inspect page openings on S1 9,12 and S2 12,14,28,35."
+      },
+      "result": "Verified exact version page indices, psi domain, fixed-target tuning, and comparison with naive self-normalization.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 8,
+      "command": "EVAL_PYTHON",
+      "arguments": {
+        "argv": [
+          "-I",
+          "-B",
+          "-"
+        ],
+        "stdin": "Inline Python: create workspace/audit backbone, structure graph, candidate error index, seven source-item files, and workspace-start timestamp."
+      },
+      "result": "Saved intermediate state before completing all proofs.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 9,
+      "command": "EVAL_PYTHON",
+      "arguments": {
+        "argv": [
+          "-I",
+          "-B",
+          "-"
+        ],
+        "stdin": "Inline Python: read S2 page 19, write checks.py and RUN.md. Then invoke the checks.py command recorded below."
+      },
+      "result": "Read stopping-time lemma; execute exact finite-event and scalar optimization checks.",
+      "exit_code": 0,
+      "child_command": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "WORKSPACE/checks.py",
+        "--input-dir",
+        "INPUT_DIR",
+        "--output-dir",
+        "WORKSPACE/results"
+      ]
+    },
+    {
+      "outer_tool_call": 10,
+      "command": "EVAL_PYTHON",
+      "arguments": {
+        "argv": [
+          "-I",
+          "-B",
+          "-"
+        ],
+        "stdin": "Inline Python: write report.md and audit.md; complete seven atomic audit proofs; validate E01-E03 against exact draft lines; update structure and error index."
+      },
+      "result": "Completed requested mathematics and corrective constructions.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 11,
+      "command": "EVAL_PYTHON",
+      "arguments": {
+        "argv": [
+          "-I",
+          "-B",
+          "-"
+        ],
+        "stdin": "Inline Python: make the D-transform parameter domain explicit; verify report size, paired math delimiters, identical report/audit copies, Python AST, seven completed items and no unvalidated flags; hash PDFs against manifest; save qa.json."
+      },
+      "result": "All final checks passed.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 12,
+      "command": "EVAL_PYTHON",
+      "arguments": {
+        "argv": [
+          "-I",
+          "-B",
+          "-"
+        ],
+        "stdin": "Inline Python: compute actual supplied-file SHA256 values; save execution.json with commands, configuration, outputs and counts."
+      },
+      "result": "Execution bookkeeping completed.",
+      "exit_code": 0
+    }
+  ],
+  "duration_seconds": null,
+  "scope": "instruction-only; no OS audit",
+  "failure": null,
+  "duration_note": "Full execution start time was not exposed; no total wall-clock duration is inferred. Workspace elapsed is recorded separately and excludes earlier input reads.",
+  "workspace_elapsed_seconds": 295.5413308143616,
+  "configuration_note": "No model or reasoning-effort override used. Effective host model, effort, temperature, seed and token limit were not reported and remain null.",
+  "read_scope": "reads lists supplied research inputs, designated guidance and common execution files. Output files were also read for deterministic checks and SHA256 bookkeeping; no article full text is copied into outputs.",
+  "source_pages_read": {
+    "S1": [
+      9,
+      10,
+      12,
+      13
+    ],
+    "S2": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      19,
+      23,
+      27,
+      28,
+      33,
+      35
+    ]
+  },
+  "source_page_note": "The explicit targeted page reads above followed an initial incorrectly form-feed-split, output-truncated whole-text print; the targeted original passages used in the report were subsequently read with correct page markers.",
+  "outputs": [
+    {
+      "path": "WORKSPACE/RUN.md",
+      "sha256": "963be539c0ef27175a1f9bac3b0636d331a3d0abbf591a6ca073711a7d91ed3a"
+    },
+    {
+      "path": "WORKSPACE/audit/01_def_setup.md",
+      "sha256": "c0a3f0f3a35ec4be9d5337c5e246f818fe2bcb75eba33ccd7453b166d1595b57"
+    },
+    {
+      "path": "WORKSPACE/audit/02_assump_sg.md",
+      "sha256": "f0e5f19978496248277877d037a982aa7ef193e5d40907497dd9d203494f6b43"
+    },
+    {
+      "path": "WORKSPACE/audit/03_claim_a.md",
+      "sha256": "3935b1decf537b441bad4c10fda6c813d0ba6f1ceb19982e0fbf0260057c050c"
+    },
+    {
+      "path": "WORKSPACE/audit/04_claim_b.md",
+      "sha256": "f372cf96f5ddd05fcf3ba2e223686dcc7d6d857605ee28bad4e63e4592b53660"
+    },
+    {
+      "path": "WORKSPACE/audit/05_claim_c.md",
+      "sha256": "9f5504c7810eeca950b1f52b82d6f94c5d4fe18bf97fb4f88cf338929e399e6a"
+    },
+    {
+      "path": "WORKSPACE/audit/06_claim_d.md",
+      "sha256": "c5a61c1d2aefc1667b770a67ffafbe7fa39eaff2e659eadd5266ebc33b81919b"
+    },
+    {
+      "path": "WORKSPACE/audit/07_claim_e.md",
+      "sha256": "5c4b1968733dbfe2bed0a9ea9a7d2246bf3fa2db4d8e97bd1405e66e56239a26"
+    },
+    {
+      "path": "WORKSPACE/audit/error_table.md",
+      "sha256": "e9ad92fa5a8fa8be1c954a3c14407e074cbb2dab8c4969c7b7d2b7fd6f743f5c"
+    },
+    {
+      "path": "WORKSPACE/audit/run_start.json",
+      "sha256": "082b466e355487041438844b75c23e755caebbe1e5a8eb6c2a346124443b87d8"
+    },
+    {
+      "path": "WORKSPACE/audit/structure.md",
+      "sha256": "1a4e3fa16b48194319f7f53eb5d56965c9f84ea891806f4c1398166f9a156733"
+    },
+    {
+      "path": "WORKSPACE/audit.md",
+      "sha256": "7d64c3b6e896244508076f2ad1a5fd03ba098cfbeea08acc5be6b759625e5d9a"
+    },
+    {
+      "path": "WORKSPACE/checks.py",
+      "sha256": "cd0798d2e18a93cfd106dc0058dd8707645ae72d220afd2d2c9ab714adb84962"
+    },
+    {
+      "path": "WORKSPACE/report.md",
+      "sha256": "7d64c3b6e896244508076f2ad1a5fd03ba098cfbeea08acc5be6b759625e5d9a"
+    },
+    {
+      "path": "WORKSPACE/results/checks.json",
+      "sha256": "93b5431e401826016b88a7926a705ae55c5265ab05ae07db8983e566ed0a9aa9"
+    },
+    {
+      "path": "WORKSPACE/results/qa.json",
+      "sha256": "19ea54629037ed90320e773df5b114ae09cea3452b1f0ddd5dc7104e7d6a3029"
+    }
+  ],
+  "report_characters": 7515,
+  "publication_projection": {
+    "raw_execution_sha256": "ffd1718cb713fbe5cca1db7c4a9e1e7101b404e8db93c4db572e4118075d659f",
+    "changes": [
+      "absolute paths mapped to logical locators"
+    ],
+    "scope": "Administrative labels/locators only; effective unknowns and scientific content retained."
+  }
+}

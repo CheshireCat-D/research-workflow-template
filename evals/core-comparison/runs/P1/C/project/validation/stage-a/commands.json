@@ -1,0 +1,38 @@
+[
+  {
+    "label": "valid-current-parameters",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/scripts/compute.py",
+      "--root",
+      "PROJECT_ROOT",
+      "--output",
+      "STUDY_ROOT/runs/P1/A/output/validation-normal"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/runs/P1/A/output/validation-normal/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+    "stderr": ""
+  },
+  {
+    "label": "controlled-invalid-alpha",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/scripts/compute.py",
+      "--root",
+      "PROJECT_ROOT",
+      "--spec",
+      "PROJECT_ROOT/notes/rejected-parameters.json",
+      "--output",
+      "STUDY_ROOT/runs/P1/A/output/validation-rejected"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times\"}\n"
+  }
+]

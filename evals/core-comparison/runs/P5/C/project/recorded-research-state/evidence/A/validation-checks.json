@@ -1,0 +1,155 @@
+{
+  "supplied_manifest_all_files_match": true,
+  "normal_exit_code": 0,
+  "result_json_semantic_equal": true,
+  "result_json_byte_equal": true,
+  "table_csv_rows_equal": true,
+  "table_csv_byte_equal": true,
+  "table_csv_equal_after_newline_normalization": true,
+  "table_agrees_with_result": true,
+  "summary_current_scope_checked": true,
+  "summary_v10_rounding_equal": true,
+  "rejected_exit_code": 2,
+  "rejected_error": {
+    "passed": false,
+    "error": "ValueError",
+    "message": "Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times"
+  },
+  "rejected_output_directory_exists": false,
+  "project_registered_bytes_and_mtimes_unchanged_by_runs": true,
+  "normal_validation_bytes_and_mtimes_unchanged_by_invalid_run": true,
+  "registered_before": {
+    "sources/howard2021-arxiv-v9.pdf": {
+      "identity": {
+        "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+        "bytes": 1494142
+      },
+      "mtime_ns": 1793320885060443878
+    },
+    "notes/parameters.json": {
+      "identity": {
+        "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+        "bytes": 161
+      },
+      "mtime_ns": 1793320885061235044
+    },
+    "scripts/compute.py": {
+      "identity": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      },
+      "mtime_ns": 1793320885059972595
+    },
+    "results/result.json": {
+      "identity": {
+        "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+        "bytes": 704
+      },
+      "mtime_ns": 1793320885061699242
+    },
+    "results/summary.md": {
+      "identity": {
+        "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+        "bytes": 295
+      },
+      "mtime_ns": 1793320885061840514
+    },
+    "notes/source-check.md": {
+      "identity": {
+        "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+        "bytes": 521
+      },
+      "mtime_ns": 1793320885061394110
+    },
+    "results/table.csv": {
+      "identity": {
+        "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+        "bytes": 101
+      },
+      "mtime_ns": 1793320885061776920
+    }
+  },
+  "registered_after": {
+    "sources/howard2021-arxiv-v9.pdf": {
+      "identity": {
+        "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+        "bytes": 1494142
+      },
+      "mtime_ns": 1793320885060443878
+    },
+    "notes/parameters.json": {
+      "identity": {
+        "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+        "bytes": 161
+      },
+      "mtime_ns": 1793320885061235044
+    },
+    "scripts/compute.py": {
+      "identity": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      },
+      "mtime_ns": 1793320885059972595
+    },
+    "results/result.json": {
+      "identity": {
+        "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+        "bytes": 704
+      },
+      "mtime_ns": 1793320885061699242
+    },
+    "results/summary.md": {
+      "identity": {
+        "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+        "bytes": 295
+      },
+      "mtime_ns": 1793320885061840514
+    },
+    "notes/source-check.md": {
+      "identity": {
+        "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+        "bytes": 521
+      },
+      "mtime_ns": 1793320885061394110
+    },
+    "results/table.csv": {
+      "identity": {
+        "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+        "bytes": 101
+      },
+      "mtime_ns": 1793320885061776920
+    }
+  },
+  "normal_before_invalid": {
+    "result.json": {
+      "identity": {
+        "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+        "bytes": 704
+      },
+      "mtime_ns": 1793324938904678425
+    },
+    "table.csv": {
+      "identity": {
+        "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+        "bytes": 101
+      },
+      "mtime_ns": 1793324938904773342
+    }
+  },
+  "normal_after_invalid": {
+    "result.json": {
+      "identity": {
+        "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+        "bytes": 704
+      },
+      "mtime_ns": 1793324938904678425
+    },
+    "table.csv": {
+      "identity": {
+        "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+        "bytes": 101
+      },
+      "mtime_ns": 1793324938904773342
+    }
+  }
+}

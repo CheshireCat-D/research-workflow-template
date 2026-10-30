@@ -1,0 +1,165 @@
+{
+  "case_id": "D",
+  "stage": "B",
+  "project_root": "PROJECT_ROOT",
+  "authority": {
+    "path": "records/state.json",
+    "state_version": 1,
+    "sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+    "history_entries": 0,
+    "registered_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-10-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "material_conflict": "The actual parameter file starts 2011-11-01 while authority, checkpoint and outputs retain 2011-10-01. No explicit revision recorded; do not silently choose either."
+  },
+  "active_constraints": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-10-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": {
+    "immediate": "先审阅并确认评价起点变化的意图/依据，保留当前参数与初始快照，解决配置/参数冲突。当前只读阶段不重算、不登记、不保存检查点、不交付旧结论作为新范围结果。",
+    "after_explicit_resolution": "在授权写入阶段显式修订相关配置、D-PARAM/D-CHOICE及主张范围与历史；保留旧结果后以同一冻结模型复核D-CALC的result/table，复核D-SYNTH摘要及其范围，更新实际完成绑定，最后保存新检查点；若变更无意，先保留新参数再获授权恢复旧范围。",
+    "not_executed": true,
+    "old_checkpoint_action_suspended": true
+  },
+  "changed_or_missing_paths": [
+    {
+      "path": "notes/parameters.json",
+      "logical_id": "D-PARAM",
+      "state": "changed",
+      "bytes": 171,
+      "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "actual_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "semantic_diff": {
+        "evaluation_start": {
+          "registered_and_initial": "2011-10-01",
+          "current_file": "2011-11-01"
+        }
+      }
+    }
+  ],
+  "missing_paths": [],
+  "affected_activities": [
+    {
+      "id": "D-CALC",
+      "declared_status": "done",
+      "effective_status": "stale",
+      "impact": "direct: changed D-PARAM input; old result/table hashes match their old bindings but are not verified under the changed start date"
+    },
+    {
+      "id": "D-SYNTH",
+      "declared_status": "done",
+      "effective_status": "stale",
+      "impact": "transitive dependency D-CALC; its saved closure also binds the changed parameter file; old summary remains Q4"
+    }
+  ],
+  "unaffected_activities": [
+    {
+      "id": "D-SOURCE-CHECK",
+      "declared_status": "done",
+      "effective_status": "done",
+      "basis": "D-SRC record, D-RAW local content and D-SOURCE-NOTE binding unchanged; source identity/coverage only"
+    }
+  ],
+  "affected_records_or_deliverables": [
+    "D-PARAM conflicts with configuration/D-CHOICE/D-CLAIM scope",
+    "D-RESULT and D-TABLE are unchanged historic outputs but downstream use is stale",
+    "D-SUMMARY is unchanged historic prose but downstream use is stale"
+  ],
+  "checkpoint_freshness": {
+    "status": "stale",
+    "reasons": [
+      "changed or missing checkpoint file notes/parameters.json"
+    ],
+    "state_and_configuration_record_signatures_match": true,
+    "old_next_action": "将已核对的2011第四季度冻结模型指标与摘要交作者讨论；只比较指定观察小时，不重训、不外推2012。若材料或配置发生修订，先运行只读状态检查，定位D-CALC及D-SYNTH的失效范围，再显式复核和更新其版本。",
+    "checkpoint_does_not_certify_science": true
+  },
+  "scientific_scope": {
+    "method": "descriptive time holdout; observed-hour weighting; supplied C0/C1 frozen from Jan-Sep 2011; no refit",
+    "old_result": {
+      "scope": "2011-10-01 to 2011-12-31",
+      "observed_hours": 2203,
+      "observed_days": 92,
+      "C0_MAE": 58.825190494512434,
+      "C1_MAE": 44.570832407531775,
+      "MAE_reduction_fraction": 0.24231724482575867
+    },
+    "new_scope_result": "not computed or verified",
+    "conclusion": "File identity/dependency drift is established. It does not establish that old metrics are false on their old Q4 domain, nor certify scientific validity under either scope. No causal/future-year guarantee, confidence interval, proof or human expert approval."
+  },
+  "source_tracking_limits": {
+    "tracked_local_paths": [
+      "data/hour_2011.csv",
+      "notes/parameters.json",
+      "scripts/compute.py",
+      "model/frozen.json",
+      "results/result.json",
+      "results/table.csv",
+      "results/summary.md",
+      "notes/source-check.md"
+    ],
+    "source_only": {
+      "id": "D-REMOTE",
+      "uri": "https://doi.org/10.1007/s13748-013-0040-3",
+      "access": "metadata-only, no local copy/content binding or live check"
+    },
+    "unregistered_scratch": "notes/unregistered-scratch.md is not in activity/checkpoint tracking; manually fingerprinted here, matching supplied initial manifest; no scientific dependency inferred",
+    "rejected_trial": "notes/rejected-parameters.json is a rejected invalid trial, not current input",
+    "primary_scope": "Current full local CSV hash and 8645 yr=0 rows checked; original full hour.csv, ZIP and remote website/article not read; original row-count discrepancy 17379 vs metadata 17389 remains a supplied source-card assertion",
+    "publication_rule": "Original PDF/CSV private cache only; do not redistribute. This output contains hashes/metadata and project result descriptions, not original CSV rows.",
+    "automatic_coverage_is_not_all_project_files": true
+  },
+  "material_paths": {
+    "authoritative_state": "records/state.json",
+    "recovery_instructions": "RECOVER.md",
+    "current_parameters": "notes/parameters.json",
+    "old_parameter_bytes": "snapshots/initial/notes/parameters.json",
+    "preserved_initial_manifest": "provenance/initial/MANIFEST.json",
+    "initial_constraints": "provenance/initial/constraints.json",
+    "obligations": "provenance/initial/obligations.json",
+    "source_identity": "provenance/initial/source-identities.json",
+    "historical_outputs": [
+      "results/result.json",
+      "results/table.csv",
+      "results/summary.md"
+    ],
+    "old_output_snapshots": [
+      "snapshots/initial/results/result.json",
+      "snapshots/initial/results/table.csv",
+      "snapshots/initial/results/summary.md"
+    ]
+  },
+  "notes": [
+    "Read-only project_status.py actually exited 1 with drift findings; no stderr. No compute/update/checkpoint program executed.",
+    "All eight tracked local paths exist. Seven match bindings; only the parameter bytes differ.",
+    "Initial manifest comparison: only notes/parameters.json mismatches; all four initial snapshots match saved hashes.",
+    "State history is empty and state_version remains 1; no accepted later revision is evidenced.",
+    "Actual model/temperature/seed/token limits unknown and not inferred."
+  ]
+}

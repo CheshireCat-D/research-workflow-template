@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "submission_id": "B266cb7",
+  "task_id": "Q11",
+  "report_sha256": "7d7f03e345457047208e1d590e22c32ac75142f011e3d1e430765bf881e561fe",
+  "judge_context": "fresh single-report context; read only the designated task.md, report.md, reference.json and template.json; no other reports, arm map, execution log, memory, skill text, network or agent consultation",
+  "arm_visibility": "hidden-by-instruction",
+  "os_audited": false,
+  "scored": true,
+  "verdict": "supported",
+  "criteria": [
+    {
+      "id": "decision",
+      "score": 2,
+      "evidence": "report.md:3：‘主要结论成立，给定证明正确且完整；未发现实质性错误。’",
+      "rationale": "独立核验可由共同连续性尺度、有限有理中心覆盖及中心处收敛推出全区间一致收敛；报告判定正确，没有捏造实质缺陷。"
+    },
+    {
+      "id": "finite_cover",
+      "score": 2,
+      "evidence": "report.md:9：取‘U_q=(q−δ/2,q+δ/2)∩[0,1]’，并说明‘有理数稠密保证这些集合覆盖 [0,1]；闭区间紧致保证存在有限子覆盖 U_{q₁},…,U_{qₘ}’，且相对开集处理端点。",
+      "rationale": "半径 δ/2 严格小于共同 δ；任意区间内点均可由稠密性找到距离小于 δ/2 的有理中心，端点同样被相对开集覆盖。紧致性允许从该开覆盖中取有限子覆盖，满足全部覆盖义务。"
+    },
+    {
+      "id": "uniform_index",
+      "score": 2,
+      "evidence": "report.md:7：‘取 δ=min(δ₁,δ₂)’，‘δ 与 n 无关’；report.md:11：‘取有限最大值 N=maxᵢNᵢ’，且‘N 与 x 无关’。",
+      "rationale": "δ₁ 来自对全部函数统一的等度连续性，δ₂ 来自 f 的一致连续性，取最小值后两类邻近误差同时有效。有限多个中心各自收敛的阈值取最大值后，对全部中心和全部 n≥N 同时成立；该 N 在选取任意 x 之前固定。"
+    },
+    {
+      "id": "epsilon_bound",
+      "score": 2,
+      "evidence": "report.md:13：明确要求‘所有 n≥N 和所有 x∈[0,1]’；report.md:15：‘|fₙ(x)−f(x)| ≤ |fₙ(x)−fₙ(qᵢ)| + |fₙ(qᵢ)−f(qᵢ)| + |f(qᵢ)−f(x)| < ε/3+ε/3+ε/3=ε’；report.md:17：重述一致收敛量词。",
+      "rationale": "第一、第三项由距离小于共同 δ 控制，第二项由固定的 N 对全部中心控制。故任意 x 和全部 n≥N 的三项误差均严格小于 ε/3，相加得到 ε；报告未将逐点阈值误当为统一阈值。"
+    },
+    {
+      "id": "scope",
+      "score": 2,
+      "evidence": "report.md:21：‘实质问题：无，无需更正。’；report.md:23：仅建议展开有限覆盖来源，并明确‘此展开不是证明成立所必需的补救’。",
+      "rationale": "报告准确区分原证明已成立与可选的覆盖构造细节，没有把省略已获准使用的基础事实当成错误，也没有额外要求在全部有理点上一致收敛或索要不必要数据。"
+    }
+  ],
+  "invented_major_objections": [],
+  "notes": "仅据题文独立核验：原论证有效，报告五项义务均充分完成，合计 10/10；未发现参考答案错误。"
+}

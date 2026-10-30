@@ -1,0 +1,177 @@
+{
+  "scope": "No scientific prose, numeric or score changes; only absolute locator projections and explicit distribution omissions. Original source and execution bytes remain sealed.",
+  "files": [
+    {
+      "original_sha256": "c845187646b700eff21301fd8f39737c82dc857e737c4bdaa929fc6854250d71",
+      "path": "runs/P1/A/report.md",
+      "sha256": "c845187646b700eff21301fd8f39737c82dc857e737c4bdaa929fc6854250d71",
+      "changes": []
+    },
+    {
+      "original_sha256": "255a878d033285c24649b0f78f8697ab7ad53b05751607af5619eea557f0b95c",
+      "path": "runs/P1/A/raw-execution.json",
+      "sha256": "af4d863e07f9b565420a6a1eb632421500cc4d6e58f182caae4ffa0c0bdab713",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "d786eff3467730579d8e30e5b334d7169206509c42f70c4683d803a5397e4af2",
+      "path": "runs/P1/A/project/notes/stage-a-validation.json",
+      "sha256": "1098c931b04c44ed1151d12ddcf8392f6833f3d836c1c1f2047004dd7dc8624a",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "b9a3b6e1fb48ac766231e7ff7e8d547208c004adb97a3b71b6e90ac03d0218b9",
+      "path": "runs/P1/A/project/validation/stage-a/commands.json",
+      "sha256": "572b25e7774b7a718b8cf2043e6e8765ef1bd493459afafaa3e9cdea113f8bed",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "b0688cf4f00c09ef2ee63e7f008b2ce854518ded9152277f0b9e0a58e4640746",
+      "path": "runs/P1/A/output/actual-commands-before-cwd-correction.json",
+      "sha256": "0ccc3ee8acb94b5435d0baf43bfbf0ada7e1b843df844003cc3d002291db7f61",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "5067c084a38fefcc9ca3eeabda4bc406e0dcf97175629b1169a2e27f46f91869",
+      "path": "runs/P1/A/output/actual-commands.json",
+      "sha256": "5dd335b082343a2db56050ca00992c20488249b2fc31d5aa412290ff83e0af23",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "9aab17dd2d2de43d9a10f4122badab06e92c25ab74e3b0e9da15456b01c9fe87",
+      "path": "runs/P1/A/output/environment.json",
+      "sha256": "9aab17dd2d2de43d9a10f4122badab06e92c25ab74e3b0e9da15456b01c9fe87",
+      "changes": []
+    },
+    {
+      "original_sha256": "f1c33cc09c438d70cf8d3dfe528e6fd60dfe0f79b7230e3faf82fb7a6bb96c75",
+      "path": "runs/P1/A/output/failure-and-remediation.json",
+      "sha256": "f1c33cc09c438d70cf8d3dfe528e6fd60dfe0f79b7230e3faf82fb7a6bb96c75",
+      "changes": []
+    },
+    {
+      "original_sha256": "ef851904f0a4bc71f12f25f713a9e8ec8d6a15f175b5381e7c38b8cd442a1939",
+      "path": "runs/P1/A/output/final-recovery.json",
+      "sha256": "ef851904f0a4bc71f12f25f713a9e8ec8d6a15f175b5381e7c38b8cd442a1939",
+      "changes": []
+    },
+    {
+      "original_sha256": "85ee2f1cedd4dc6334e9694f29c5964f90d44155c99afa6aa1d6fb19a4985a51",
+      "path": "runs/P1/A/output/finalize.py",
+      "sha256": "a351f208d36b0e50351ea0401a1cf4d70e34a96b90e1a08ed2d849254af76edf",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "8ee3ef8f60b09a3002ebfe33441a7ddfcb6e8cb213e90b06f4cb10f5421e8ff3",
+      "path": "runs/P1/A/output/input-manifest-verification.json",
+      "sha256": "8ee3ef8f60b09a3002ebfe33441a7ddfcb6e8cb213e90b06f4cb10f5421e8ff3",
+      "changes": []
+    },
+    {
+      "original_sha256": "dace61b1d68bd6b9f4147cedf7f46cbe60bb7e0404776dd52263710ef565feb7",
+      "path": "runs/P1/A/output/inputs-and-artifacts.json",
+      "sha256": "538666ac9430d69cc0b32bc558e457f213d8c1616512d81f141639a9ba077823",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "a14b2896f01d0fc1f5dbd8126bf5840b9663294390d0d4ec08310e811b0dac40",
+      "path": "runs/P1/A/output/installed-runtime-check.json",
+      "sha256": "a14b2896f01d0fc1f5dbd8126bf5840b9663294390d0d4ec08310e811b0dac40",
+      "changes": []
+    },
+    {
+      "original_sha256": "4d8cf014f8980e351e46c6b906f84584bd00930eb52af713fc7026038684bfa3",
+      "path": "runs/P1/A/output/operation-log-record.json",
+      "sha256": "4d8cf014f8980e351e46c6b906f84584bd00930eb52af713fc7026038684bfa3",
+      "changes": []
+    },
+    {
+      "original_sha256": "68a27d1e72ab1cce73da2fc2e7340a81d9bb64952100acd25f14a9b4bbe11042",
+      "path": "runs/P1/A/output/recovery-artifact-replacement.json",
+      "sha256": "68a27d1e72ab1cce73da2fc2e7340a81d9bb64952100acd25f14a9b4bbe11042",
+      "changes": []
+    },
+    {
+      "original_sha256": "de90490fb867ba64021e83b4366331896a5fa7eb39b3bce91a1dd694e3f1edfc",
+      "path": "runs/P1/A/output/registration-batch.json",
+      "sha256": "de90490fb867ba64021e83b4366331896a5fa7eb39b3bce91a1dd694e3f1edfc",
+      "changes": []
+    },
+    {
+      "original_sha256": "8975f61ce74dd74f45c9beaf09417609f20878c9400b1d8c37d27d7b04d4704b",
+      "path": "runs/P1/A/output/repair_and_finish.py",
+      "sha256": "d32c218227166af1fc4d37348a55ae3eee79b4917a0ef73a4ff0ed3266e2ace9",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "2eecd83018f56261c65ac5c75f300df923a9a3fca7f37b6f2aa68f921c4d25e4",
+      "path": "runs/P1/A/output/reviewed-intermediate-check.json",
+      "sha256": "2eecd83018f56261c65ac5c75f300df923a9a3fca7f37b6f2aa68f921c4d25e4",
+      "changes": []
+    },
+    {
+      "original_sha256": "795651cb977335b117713b14cedd81824780227833d450927a2fcc97ffff37aa",
+      "path": "runs/P1/A/output/run_stage_a.py",
+      "sha256": "35351d665895791ba0aec11f825ce7682b89f2808f9e2dcfb90a658eb5aacefe",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "c90293f85d449eb51288a88812e250158f3a8d06b4f90bc78467045ee31beab0",
+      "path": "runs/P1/A/output/state-answer.json",
+      "sha256": "fbf31dcecc9d615272af08b180a6e6af12d44a4562319ce8f002eaebcfe9867f",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "0bddfff86e6baa075fe603ca023f499cd1792eabb8f64e2bfc905306b5bb0b15",
+      "path": "runs/P1/A/output/valid-output-preservation.json",
+      "sha256": "0bddfff86e6baa075fe603ca023f499cd1792eabb8f64e2bfc905306b5bb0b15",
+      "changes": []
+    },
+    {
+      "original_sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "path": "runs/P1/A/output/validation-normal/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "changes": []
+    },
+    {
+      "original_sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "path": "runs/P1/A/output/validation-normal/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "changes": []
+    },
+    {
+      "original_sha256": "b70a861b75ccbed9fd407557b069581c008f7d2db0bd47263b9a5880e95df82d",
+      "path": "runs/P1/A/output/verify_delivery.py",
+      "sha256": "eaaf0064254b7a9b2ee15cffd781c48c28c4ba7fc40612b06d732b556393fd67",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "cd6e0d205e637f8579bb7426b76cd1d233661ca79ad69182de72f79515d0039c",
+      "path": "runs/P1/A/seal.json",
+      "sha256": "cd6e0d205e637f8579bb7426b76cd1d233661ca79ad69182de72f79515d0039c",
+      "changes": []
+    }
+  ]
+}

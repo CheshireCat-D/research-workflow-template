@@ -1,0 +1,864 @@
+{
+  "case_id": "T",
+  "stage": "A",
+  "tool_calls": 8,
+  "tool_calls_definition": "Outer functions.exec invocations; nested actual subprocesses recorded separately.",
+  "outer_calls": [
+    {
+      "call": 1,
+      "tool": "exec_command",
+      "argv": [
+        "cat",
+        "STUDY_ROOT/runs/P5/A/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "output_summary": "Printed the full REQUEST.md; SHA256 and bytes included in read_files."
+    },
+    {
+      "call": 2,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-c",
+        "from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR\"); print(\"INPUT FILES\"); [print(str(x.relative_to(p)),x.stat().st_size) for x in sorted(p.rglob(\"*\")) if x.is_file()]; [(print(\"\\nFILE\",str(p/n)),print((p/n).read_text())) for n in (\"PROTOCOL.md\",\"RECORDING.md\",\"STAGE-A.md\")]; q=Path(\"STUDY_ROOT/runs/P5/A/REQUEST.md\"); print(\"REQUEST_HASH\",hashlib.sha256(q.read_bytes()).hexdigest(),q.stat().st_size)"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "output_summary": "Listed input paths/sizes; printed PROTOCOL, RECORDING, STAGE-A and full REQUEST hash."
+    },
+    {
+      "call": 3,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-c",
+        "from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR\"); fs=[x for x in sorted((p/\"initial\").rglob(\"*\")) if x.is_file()]; [(print(\"\\nFILE\",str(x.relative_to(p)),\"SHA256\",hashlib.sha256(x.read_bytes()).hexdigest(),\"BYTES\",x.stat().st_size),print(x.read_text()) if x.suffix!=\".pdf\" else print(\"PDF content not inspected; identity hash only\")) for x in fs]; q=Path(\"PROJECT_ROOT\"); o=Path(\"OUTPUT_DIR\"); print(\"PROJECT_EXISTS\",q.exists(),\"OUTPUT_EXISTS\",o.exists()); print(\"OUTPUT_NAMES\",[x.name for x in o.iterdir()] if o.exists() else [])"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "output_summary": "Printed all initial text and all initial-file SHA256/bytes; PDF hash only. Confirmed project absent and output empty."
+    },
+    {
+      "call": 4,
+      "tool": "apply_patch",
+      "argv": null,
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": null,
+      "success": true,
+      "output_summary": "Created output/stage_driver.py."
+    },
+    {
+      "call": 5,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/stage_driver.py"
+      ],
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "output_summary": "Created project; normal exit 0; controlled rejected input exit 2; JSON/CSV bytes equal; registered content unchanged; three activities done."
+    },
+    {
+      "call": 6,
+      "tool": "apply_patch",
+      "argv": null,
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": null,
+      "success": true,
+      "output_summary": "Corrected an unverified CSV newline assumption in generated recovery prose and generator, preserving the correction record; created finalize.py."
+    },
+    {
+      "call": 7,
+      "tool": "apply_patch",
+      "argv": null,
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": null,
+      "success": true,
+      "output_summary": "Extended final audit to preserve exact executed driver and original recovery draft by reversing the sole documented prose correction; corrected actual tool-call count."
+    },
+    {
+      "call": 8,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/finalize.py"
+      ],
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "output_summary": "Verified snapshots and read-only status; wrote report, state answer, full execution and manifest."
+    }
+  ],
+  "commands": [
+    {
+      "call": 1,
+      "tool": "exec_command",
+      "argv": [
+        "cat",
+        "STUDY_ROOT/runs/P5/A/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "output_summary": "Printed the full REQUEST.md; SHA256 and bytes included in read_files."
+    },
+    {
+      "call": 2,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-c",
+        "from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR\"); print(\"INPUT FILES\"); [print(str(x.relative_to(p)),x.stat().st_size) for x in sorted(p.rglob(\"*\")) if x.is_file()]; [(print(\"\\nFILE\",str(p/n)),print((p/n).read_text())) for n in (\"PROTOCOL.md\",\"RECORDING.md\",\"STAGE-A.md\")]; q=Path(\"STUDY_ROOT/runs/P5/A/REQUEST.md\"); print(\"REQUEST_HASH\",hashlib.sha256(q.read_bytes()).hexdigest(),q.stat().st_size)"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "output_summary": "Listed input paths/sizes; printed PROTOCOL, RECORDING, STAGE-A and full REQUEST hash."
+    },
+    {
+      "call": 3,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-c",
+        "from pathlib import Path; import hashlib; p=Path(\"INPUT_DIR\"); fs=[x for x in sorted((p/\"initial\").rglob(\"*\")) if x.is_file()]; [(print(\"\\nFILE\",str(x.relative_to(p)),\"SHA256\",hashlib.sha256(x.read_bytes()).hexdigest(),\"BYTES\",x.stat().st_size),print(x.read_text()) if x.suffix!=\".pdf\" else print(\"PDF content not inspected; identity hash only\")) for x in fs]; q=Path(\"PROJECT_ROOT\"); o=Path(\"OUTPUT_DIR\"); print(\"PROJECT_EXISTS\",q.exists(),\"OUTPUT_EXISTS\",o.exists()); print(\"OUTPUT_NAMES\",[x.name for x in o.iterdir()] if o.exists() else [])"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "output_summary": "Printed all initial text and all initial-file SHA256/bytes; PDF hash only. Confirmed project absent and output empty."
+    },
+    {
+      "call": 5,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/stage_driver.py"
+      ],
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "output_summary": "Created project; normal exit 0; controlled rejected input exit 2; JSON/CSV bytes equal; registered content unchanged; three activities done."
+    },
+    {
+      "call": 8,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/finalize.py"
+      ],
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "output_summary": "Verified snapshots and read-only status; wrote report, state answer, full execution and manifest."
+    },
+    {
+      "label": "normal",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--output",
+        "OUTPUT_DIR/validation-normal"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"result\": \"OUTPUT_DIR/validation-normal/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+      "stderr": ""
+    },
+    {
+      "label": "rejected",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--spec",
+        "PROJECT_ROOT/notes/rejected-parameters.json",
+        "--output",
+        "OUTPUT_DIR/validation-rejected"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times\"}\n"
+    },
+    {
+      "label": "status",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/manage.py",
+        "status"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"case_id\": \"T\",\n  \"authoritative_state\": \".research/state.json\",\n  \"revision\": 1,\n  \"active_constraints\": {\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"T\",\n      \"alpha\": 0.05,\n      \"rho\": 1.0,\n      \"rho_selection\": \"fixed-before-observation\",\n      \"intrinsic_time_grid\": [\n        0,\n        1,\n        10,\n        100\n      ]\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"next_action\": \"在交作者讨论前运行只读状态核对，确认当前 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的结果与摘要仍对应；向作者报告四点数值、sub-Gaussian/V 条件和未作证明/模拟覆盖验证的范围，等待作者实际决定。未经内容复核不投稿。\",\n  \"changed_paths\": [],\n  \"missing_paths\": [],\n  \"activities\": {\n    \"T-SOURCE-CHECK\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-CALC\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-SYNTH\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    }\n  },\n  \"checkpoint_freshness\": \"fresh_for_registered_bytes\",\n  \"coverage_limits\": {\n    \"source_only\": [\n      \"T-REMOTE\"\n    ],\n    \"excluded_unregistered_paths\": [\n      \"notes/unregistered-scratch.md\"\n    ],\n    \"all_project_files_covered\": false,\n    \"note\": \"Scratch is retained but is not a declared scientific dependency. Hash inventory is not scientific review. Remote identity metadata does not monitor content.\"\n  },\n  \"source_access\": {\n    \"T-SRC\": {\n      \"status\": \"local_fixed_identity_checked\",\n      \"local_path\": \"sources/howard2021-arxiv-v9.pdf\",\n      \"sha256\": \"eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8\",\n      \"bytes\": 1494142,\n      \"actual_read_scope\": \"Whole local PDF read as bytes for SHA256 and manifest binding only. No PDF text extraction, page inspection, or independent theorem review. Title/version/DOI and page references are supplied metadata/card assertions.\"\n    },\n    \"T-REMOTE\": {\n      \"status\": \"metadata-only\",\n      \"local_copy\": null,\n      \"live_access\": false,\n      \"content_binding\": false\n    }\n  },\n  \"scientific_scope\": {\n    \"id\": \"T-CLAIM\",\n    \"text\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"scope\": \"l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha is the total two-sided budget; rho fixed before observations; numerical evaluation only.\"\n  },\n  \"author_review\": {\n    \"status\": \"not_occurred\",\n    \"submission_authorized\": false,\n    \"venue\": null\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "final-read-only-status",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/manage.py",
+        "status"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"case_id\": \"T\",\n  \"authoritative_state\": \".research/state.json\",\n  \"revision\": 1,\n  \"active_constraints\": {\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"T\",\n      \"alpha\": 0.05,\n      \"rho\": 1.0,\n      \"rho_selection\": \"fixed-before-observation\",\n      \"intrinsic_time_grid\": [\n        0,\n        1,\n        10,\n        100\n      ]\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"next_action\": \"在交作者讨论前运行只读状态核对，确认当前 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的结果与摘要仍对应；向作者报告四点数值、sub-Gaussian/V 条件和未作证明/模拟覆盖验证的范围，等待作者实际决定。未经内容复核不投稿。\",\n  \"changed_paths\": [],\n  \"missing_paths\": [],\n  \"activities\": {\n    \"T-SOURCE-CHECK\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-CALC\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-SYNTH\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    }\n  },\n  \"checkpoint_freshness\": \"fresh_for_registered_bytes\",\n  \"coverage_limits\": {\n    \"source_only\": [\n      \"T-REMOTE\"\n    ],\n    \"excluded_unregistered_paths\": [\n      \"notes/unregistered-scratch.md\"\n    ],\n    \"all_project_files_covered\": false,\n    \"note\": \"Scratch is retained but is not a declared scientific dependency. Hash inventory is not scientific review. Remote identity metadata does not monitor content.\"\n  },\n  \"source_access\": {\n    \"T-SRC\": {\n      \"status\": \"local_fixed_identity_checked\",\n      \"local_path\": \"sources/howard2021-arxiv-v9.pdf\",\n      \"sha256\": \"eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8\",\n      \"bytes\": 1494142,\n      \"actual_read_scope\": \"Whole local PDF read as bytes for SHA256 and manifest binding only. No PDF text extraction, page inspection, or independent theorem review. Title/version/DOI and page references are supplied metadata/card assertions.\"\n    },\n    \"T-REMOTE\": {\n      \"status\": \"metadata-only\",\n      \"local_copy\": null,\n      \"live_access\": false,\n      \"content_binding\": false\n    }\n  },\n  \"scientific_scope\": {\n    \"id\": \"T-CLAIM\",\n    \"text\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"scope\": \"l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha is the total two-sided budget; rho fixed before observations; numerical evaluation only.\"\n  },\n  \"author_review\": {\n    \"status\": \"not_occurred\",\n    \"submission_authorized\": false,\n    \"venue\": null\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "network_calls": 0,
+  "installations": 0,
+  "agents_called": 0,
+  "violations": [],
+  "failures": [
+    {
+      "kind": "expected_controlled_invalid_input",
+      "label": "rejected",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--spec",
+        "PROJECT_ROOT/notes/rejected-parameters.json",
+        "--output",
+        "OUTPUT_DIR/validation-rejected"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times\"}\n",
+      "valid_outputs_preserved": true
+    }
+  ],
+  "unexpected_runtime_failures": [],
+  "remedies": [
+    {
+      "kind": "reporting_correction",
+      "original_statement": "Recovery prose initially assumed generated CSV CRLF differed from supplied LF.",
+      "observed_evidence": "Actual comparison returned table_csv_byte_equal=true.",
+      "correction": "Corrected RECOVERY.md and its generator to actual JSON/CSV byte identity; no numerical files were changed.",
+      "original_recovery_draft": ".research/versions/A-draft/RECOVERY.md",
+      "executed_driver_copy": "stage_driver.executed.py",
+      "preservation_method": "Reverse the sole explicitly recorded line replacement; no executed command was repeated."
+    }
+  ],
+  "read_files": [
+    {
+      "path": "STUDY_ROOT/runs/P5/A/REQUEST.md",
+      "relative_path": "REQUEST.md",
+      "scope": "request",
+      "sha256": "14c9bbef72ec49fc480d5e632060ae04844e4ce365e350e929c7402f221f9f6c",
+      "bytes": 2145,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/PROTOCOL.md",
+      "relative_path": "PROTOCOL.md",
+      "scope": "input",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/RECORDING.md",
+      "relative_path": "RECORDING.md",
+      "scope": "input",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/STAGE-A.md",
+      "relative_path": "STAGE-A.md",
+      "scope": "input",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/BRIEF.md",
+      "relative_path": "initial/BRIEF.md",
+      "scope": "input",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/MANIFEST.json",
+      "relative_path": "initial/MANIFEST.json",
+      "scope": "input",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/constraints.json",
+      "relative_path": "initial/constraints.json",
+      "scope": "input",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/obligations.json",
+      "relative_path": "initial/obligations.json",
+      "scope": "input",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/parameters.json",
+      "relative_path": "initial/project_payload/notes/parameters.json",
+      "scope": "input",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/rejected-parameters.json",
+      "relative_path": "initial/project_payload/notes/rejected-parameters.json",
+      "scope": "input",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/source-check.md",
+      "relative_path": "initial/project_payload/notes/source-check.md",
+      "scope": "input",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/unregistered-scratch.md",
+      "relative_path": "initial/project_payload/notes/unregistered-scratch.md",
+      "scope": "input",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/result.json",
+      "relative_path": "initial/project_payload/results/result.json",
+      "scope": "input",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/summary.md",
+      "relative_path": "initial/project_payload/results/summary.md",
+      "scope": "input",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/table.csv",
+      "relative_path": "initial/project_payload/results/table.csv",
+      "scope": "input",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/scripts/compute.py",
+      "relative_path": "initial/project_payload/scripts/compute.py",
+      "scope": "input",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/sources/howard2021-arxiv-v9.pdf",
+      "relative_path": "initial/project_payload/sources/howard2021-arxiv-v9.pdf",
+      "scope": "input",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "read_scope": "whole file for SHA256 inventory; content interpreted only for text/code/JSON/CSV as described"
+    },
+    {
+      "path": "INPUT_DIR/initial/source-identities.json",
+      "relative_path": "initial/source-identities.json",
+      "scope": "input",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/current-status.json",
+      "relative_path": ".research/evidence/A/current-status.json",
+      "scope": "project",
+      "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "bytes": 3614,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/normal/result.json",
+      "relative_path": ".research/evidence/A/normal/result.json",
+      "scope": "project",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/normal/table.csv",
+      "relative_path": ".research/evidence/A/normal/table.csv",
+      "scope": "project",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/normal-execution.json",
+      "relative_path": ".research/evidence/A/normal-execution.json",
+      "scope": "project",
+      "sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2",
+      "bytes": 696,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/rejected-execution.json",
+      "relative_path": ".research/evidence/A/rejected-execution.json",
+      "scope": "project",
+      "sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888",
+      "bytes": 721,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/status-execution.json",
+      "relative_path": ".research/evidence/A/status-execution.json",
+      "scope": "project",
+      "sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb",
+      "bytes": 4225,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/validation-checks.json",
+      "relative_path": ".research/evidence/A/validation-checks.json",
+      "scope": "project",
+      "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "bytes": 4643,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/BRIEF.md",
+      "relative_path": ".research/provenance/initial/BRIEF.md",
+      "scope": "project",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/MANIFEST.json",
+      "relative_path": ".research/provenance/initial/MANIFEST.json",
+      "scope": "project",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/PROTOCOL.md",
+      "relative_path": ".research/provenance/initial/PROTOCOL.md",
+      "scope": "project",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/RECORDING.md",
+      "relative_path": ".research/provenance/initial/RECORDING.md",
+      "scope": "project",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/STAGE-A.md",
+      "relative_path": ".research/provenance/initial/STAGE-A.md",
+      "scope": "project",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/constraints.json",
+      "relative_path": ".research/provenance/initial/constraints.json",
+      "scope": "project",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/obligations.json",
+      "relative_path": ".research/provenance/initial/obligations.json",
+      "scope": "project",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/source-identities.json",
+      "relative_path": ".research/provenance/initial/source-identities.json",
+      "scope": "project",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/state.json",
+      "relative_path": ".research/state.json",
+      "scope": "project",
+      "sha256": "826f355ae1301c9c879b4440b78edbe93f173cb696df00b28c1c26a6de338a95",
+      "bytes": 16218,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-draft/RECOVERY.md",
+      "relative_path": ".research/versions/A-draft/RECOVERY.md",
+      "scope": "project",
+      "sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0",
+      "bytes": 3128,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/index.json",
+      "relative_path": ".research/versions/A-initial/index.json",
+      "scope": "project",
+      "sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3",
+      "bytes": 1273,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/notes/parameters.json",
+      "relative_path": ".research/versions/A-initial/notes/parameters.json",
+      "scope": "project",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/results/result.json",
+      "relative_path": ".research/versions/A-initial/results/result.json",
+      "scope": "project",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/results/summary.md",
+      "relative_path": ".research/versions/A-initial/results/summary.md",
+      "scope": "project",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/results/table.csv",
+      "relative_path": ".research/versions/A-initial/results/table.csv",
+      "scope": "project",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVERY.md",
+      "relative_path": "RECOVERY.md",
+      "scope": "project",
+      "sha256": "98608a9d3ce937ba87d7fd2689f8935798f641988ddf85b1f0c94f3a29d8153e",
+      "bytes": 3254,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/parameters.json",
+      "relative_path": "notes/parameters.json",
+      "scope": "project",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "relative_path": "notes/rejected-parameters.json",
+      "scope": "project",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/source-check.md",
+      "relative_path": "notes/source-check.md",
+      "scope": "project",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "relative_path": "notes/unregistered-scratch.md",
+      "scope": "project",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "relative_path": "results/result.json",
+      "scope": "project",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "relative_path": "results/summary.md",
+      "scope": "project",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "relative_path": "results/table.csv",
+      "scope": "project",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/compute.py",
+      "relative_path": "scripts/compute.py",
+      "scope": "project",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/manage.py",
+      "relative_path": "scripts/manage.py",
+      "scope": "project",
+      "sha256": "1dfc49a50e7a029ee6e91715cb7942be5d90869d66495ea84281efe3dcaf4655",
+      "bytes": 5383,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "PROJECT_ROOT/sources/howard2021-arxiv-v9.pdf",
+      "relative_path": "sources/howard2021-arxiv-v9.pdf",
+      "scope": "project",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "read_scope": "whole file for SHA256 inventory; content interpreted only for text/code/JSON/CSV as described"
+    },
+    {
+      "path": "OUTPUT_DIR/current-status.json",
+      "relative_path": "current-status.json",
+      "scope": "output",
+      "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "bytes": 3614,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/final-verification.json",
+      "relative_path": "final-verification.json",
+      "scope": "output",
+      "sha256": "92b2fda542d739e139abaf87dba2e44f22a86fec201cf768d4f0fb42c552d1e1",
+      "bytes": 368,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/finalize.py",
+      "relative_path": "finalize.py",
+      "scope": "output",
+      "sha256": "f9ebeee77311cec83a76e947e1a54ea52ef64e8612a7d4740b71198235e43cba",
+      "bytes": 18332,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/normal-execution.json",
+      "relative_path": "normal-execution.json",
+      "scope": "output",
+      "sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2",
+      "bytes": 696,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/rejected-execution.json",
+      "relative_path": "rejected-execution.json",
+      "scope": "output",
+      "sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888",
+      "bytes": 721,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/report.md",
+      "relative_path": "report.md",
+      "scope": "output",
+      "sha256": "3ab74fa5bd492dc3a1be17d749b3881ed1627a1eb6f74b48f8a22f1b7d1a05b4",
+      "bytes": 5287,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/stage-driver-result.json",
+      "relative_path": "stage-driver-result.json",
+      "scope": "output",
+      "sha256": "972785e36fd84e4001f0f9f99a44988c6117be0161a390b3c025006abab90347",
+      "bytes": 10556,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/stage_driver.executed.py",
+      "relative_path": "stage_driver.executed.py",
+      "scope": "output",
+      "sha256": "7eecb6c5fc43690569f13534b5e5ab97077c42434aa859a0b465b36bdba86491",
+      "bytes": 21604,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/stage_driver.py",
+      "relative_path": "stage_driver.py",
+      "scope": "output",
+      "sha256": "3fe229938a83582b9a29b421cd88b05df7727ba3141202458b6d5e4f93b833ec",
+      "bytes": 21730,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/state-answer.json",
+      "relative_path": "state-answer.json",
+      "scope": "output",
+      "sha256": "a908c774c1bf4b4e1ef767ec1cbc9e2a4998672628e8685a512bf940a9172711",
+      "bytes": 4531,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/status-execution.json",
+      "relative_path": "status-execution.json",
+      "scope": "output",
+      "sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb",
+      "bytes": 4225,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/validation-checks.json",
+      "relative_path": "validation-checks.json",
+      "scope": "output",
+      "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "bytes": 4643,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/validation-normal/result.json",
+      "relative_path": "validation-normal/result.json",
+      "scope": "output",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    },
+    {
+      "path": "OUTPUT_DIR/validation-normal/table.csv",
+      "relative_path": "validation-normal/table.csv",
+      "scope": "output",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "read_scope": "whole file, textual/scientific content or audit/hash inspection"
+    }
+  ],
+  "historical_executed_read_versions": [
+    {
+      "path": "OUTPUT_DIR/stage_driver.py",
+      "at_outer_call": 5,
+      "sha256": "7eecb6c5fc43690569f13534b5e5ab97077c42434aa859a0b465b36bdba86491",
+      "bytes": 21604,
+      "exact_content_preserved_at": "OUTPUT_DIR/stage_driver.executed.py"
+    }
+  ],
+  "read_recording_limits": "Standard-library implementation modules and operating-system process startup are runtime dependencies, not scientific material reads. Audit execution.json and inputs-and-artifacts.json omit self-hashes to avoid recursive checksums; execution is hashed by the separate manifest.",
+  "written_paths": [
+    "OUTPUT_DIR/current-status.json",
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/final-verification.json",
+    "OUTPUT_DIR/finalize.py",
+    "OUTPUT_DIR/inputs-and-artifacts.json",
+    "OUTPUT_DIR/normal-execution.json",
+    "OUTPUT_DIR/rejected-execution.json",
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/stage-driver-result.json",
+    "OUTPUT_DIR/stage_driver.executed.py",
+    "OUTPUT_DIR/stage_driver.py",
+    "OUTPUT_DIR/state-answer.json",
+    "OUTPUT_DIR/status-execution.json",
+    "OUTPUT_DIR/validation-checks.json",
+    "OUTPUT_DIR/validation-normal/result.json",
+    "OUTPUT_DIR/validation-normal/table.csv",
+    "PROJECT_ROOT/.research/evidence/A/current-status.json",
+    "PROJECT_ROOT/.research/evidence/A/normal-execution.json",
+    "PROJECT_ROOT/.research/evidence/A/normal/result.json",
+    "PROJECT_ROOT/.research/evidence/A/normal/table.csv",
+    "PROJECT_ROOT/.research/evidence/A/rejected-execution.json",
+    "PROJECT_ROOT/.research/evidence/A/status-execution.json",
+    "PROJECT_ROOT/.research/evidence/A/validation-checks.json",
+    "PROJECT_ROOT/.research/provenance/initial/BRIEF.md",
+    "PROJECT_ROOT/.research/provenance/initial/MANIFEST.json",
+    "PROJECT_ROOT/.research/provenance/initial/PROTOCOL.md",
+    "PROJECT_ROOT/.research/provenance/initial/RECORDING.md",
+    "PROJECT_ROOT/.research/provenance/initial/STAGE-A.md",
+    "PROJECT_ROOT/.research/provenance/initial/constraints.json",
+    "PROJECT_ROOT/.research/provenance/initial/obligations.json",
+    "PROJECT_ROOT/.research/provenance/initial/source-identities.json",
+    "PROJECT_ROOT/.research/state.json",
+    "PROJECT_ROOT/.research/versions/A-draft/RECOVERY.md",
+    "PROJECT_ROOT/.research/versions/A-initial/index.json",
+    "PROJECT_ROOT/.research/versions/A-initial/notes/parameters.json",
+    "PROJECT_ROOT/.research/versions/A-initial/results/result.json",
+    "PROJECT_ROOT/.research/versions/A-initial/results/summary.md",
+    "PROJECT_ROOT/.research/versions/A-initial/results/table.csv",
+    "PROJECT_ROOT/RECOVERY.md",
+    "PROJECT_ROOT/notes/parameters.json",
+    "PROJECT_ROOT/notes/rejected-parameters.json",
+    "PROJECT_ROOT/notes/source-check.md",
+    "PROJECT_ROOT/notes/unregistered-scratch.md",
+    "PROJECT_ROOT/results/result.json",
+    "PROJECT_ROOT/results/summary.md",
+    "PROJECT_ROOT/results/table.csv",
+    "PROJECT_ROOT/scripts/compute.py",
+    "PROJECT_ROOT/scripts/manage.py",
+    "PROJECT_ROOT/sources/howard2021-arxiv-v9.pdf"
+  ],
+  "settings": {
+    "effective_model": null,
+    "temperature": null,
+    "seed": null,
+    "token_usage": null,
+    "token_budget": null,
+    "system_context_limit": null
+  },
+  "report_unicode_characters": 2797,
+  "project_authority": ".research/state.json",
+  "raw_material_distribution": "Private local cache only; original PDF is not authorized for public repository redistribution."
+}

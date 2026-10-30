@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "decision",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"choice\": \"Use author-approved alpha=.05 rho=4 fixed before observation, grid [0,1,10,100].\", \"decided_at\": \"Author decision timestamp not supplied; no date invented.\", \"evidence_refs\": [\"T-PARAM\", \"T-C-AUTHOR\"], \"id\": \"T-CHOICE\", \"notes\": \"No human expert content approval or submission authorization. Not original-source revision; no post-observation rho optimization.\", \"rationale\": \"AUTHOR-REVISION.md explicitly accepts current working parameters as revised numerical scope; alpha and preselection policy unchanged. Old rho=1 parameter/result/table/summary bytes retained.\", \"responsible\": \"Benchmark author as explicitly stated in supplied revision; choice recorded and calculation executed by AI agent.\", \"revisit_when\": \"Explicit author parameter revision; preserve previous content and rationale.\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"decision\",\n  \"id\": \"T-CHOICE\",\n  \"version\": 2,\n  \"revision\": 33,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

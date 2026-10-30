@@ -1,0 +1,99 @@
+{
+  "hour_rows": 8645,
+  "day_rows": 365,
+  "hour_columns": [
+    "instant",
+    "dteday",
+    "season",
+    "yr",
+    "mnth",
+    "hr",
+    "holiday",
+    "weekday",
+    "workingday",
+    "weathersit",
+    "temp",
+    "atemp",
+    "hum",
+    "windspeed",
+    "casual",
+    "registered",
+    "cnt"
+  ],
+  "day_columns": [
+    "instant",
+    "dteday",
+    "season",
+    "yr",
+    "mnth",
+    "holiday",
+    "weekday",
+    "workingday",
+    "weathersit",
+    "temp",
+    "atemp",
+    "hum",
+    "windspeed",
+    "casual",
+    "registered",
+    "cnt"
+  ],
+  "date_start": "2011-01-01",
+  "date_end": "2011-12-31",
+  "hour_date_count": 365,
+  "day_date_count": 365,
+  "hour_duplicate_keys": 0,
+  "day_duplicate_keys": 0,
+  "hour_duplicate_full_rows": 0,
+  "day_duplicate_full_rows": 0,
+  "hour_empty_cells": 0,
+  "day_empty_cells": 0,
+  "hour_count_identity_failures": 0,
+  "day_count_identity_failures": 0,
+  "hour_count_negative_values": 0,
+  "hour_out_of_range": 0,
+  "hour_yr_values": [
+    0
+  ],
+  "day_yr_values": [
+    0
+  ],
+  "hour_wrong_calendar_year": 0,
+  "day_wrong_calendar_year": 0,
+  "hour_count_distribution": {
+    "8": 1,
+    "12": 1,
+    "16": 1,
+    "17": 1,
+    "18": 2,
+    "22": 6,
+    "23": 48,
+    "24": 305
+  },
+  "complete_24h_dates": 305,
+  "missing_calendar_hours": 115,
+  "missing_whole_dates": [],
+  "hour_only_dates": [],
+  "day_only_dates": [],
+  "daily_count_mismatches": [],
+  "calendar_field_mismatches": [],
+  "source_sha256": {
+    "TASK.md": "d27a3abf88230bc2b78833d573da380ba6260f83f6dbb077f26fa171e2042ceb",
+    "SOURCES.md": "647a33e2683dbc60dfcbcf2e2873185aea94f7bfee49d6a3e3b3eacd6d85a786",
+    "ORIGINAL_README.txt": "b92c8628622948bf0828c43a1b315d1517c3d7fd63654730d0dea379b8e88175",
+    "UCI_PAGE_EXCERPT.txt": "06797117bf42c99729802c59237e8884610e8a7a9ad3e256ca6b0a7f5dff7115",
+    "INPUT_MANIFEST.json": "84d74db7b66f0a45f407372553324591095abe121f784a1331ca9dfc4a252d8c",
+    "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+    "data/day_2011.csv": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b"
+  },
+  "manifest_checks": {
+    "data/hour_2011.csv": {
+      "hash_match": true,
+      "rows_match": true
+    },
+    "data/day_2011.csv": {
+      "hash_match": true,
+      "rows_match": true
+    }
+  }
+}

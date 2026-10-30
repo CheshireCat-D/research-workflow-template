@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "status": "executed",
+  "started_at_utc": null,
+  "finished_at_utc": "2026-10-29T22:36:47.047350+00:00",
+  "duration_seconds": null,
+  "requested_configuration": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "context": "fork_turns=none for every task/arm",
+    "requested_output_unicode_limit": 5000,
+    "requested_tool_call_limit": 8,
+    "temperature": null,
+    "seed": null
+  },
+  "effective_configuration": {
+    "model": {
+      "value": null,
+      "source": "unknown"
+    },
+    "reasoning_effort": {
+      "value": null,
+      "source": "unknown"
+    },
+    "temperature": {
+      "value": null,
+      "source": "unknown"
+    },
+    "seed": {
+      "value": null,
+      "source": "unknown"
+    },
+    "hard_output_token_limit": {
+      "value": null,
+      "source": "unknown"
+    }
+  },
+  "context_isolation": {
+    "requested": "fresh context, fork_turns=none",
+    "evidence": "instruction-only",
+    "os_audited": false,
+    "same_metadata_catalogue_visible": true
+  },
+  "actual_reads": [
+    {
+      "logical_name": "tasks/Q24.md",
+      "sha256": "c59e5901613eefb006fcef57768ed60e4925af92ea67d068ffb3d859a441009f"
+    },
+    {
+      "logical_name": "executor-prompt.md",
+      "sha256": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09"
+    },
+    {
+      "logical_name": "templates/execution.template.json",
+      "sha256": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1"
+    },
+    {
+      "logical_name": "competitor/scientific-critical-thinking/SKILL.md",
+      "sha256": "563af70571b7dcd6a96bf2e303bedfdcba623b4e9f082d58f04aacbc961fdae4"
+    }
+  ],
+  "tool_calls": 5,
+  "output_tokens": null,
+  "network_calls": 0,
+  "output_unicode_characters": 1066,
+  "output_bytes": 1994,
+  "violations": [],
+  "uncertainties": [
+    "Host did not report effective model, reasoning effort, temperature, seed, hard output token limit, or output token count.",
+    "Task start time was not independently recorded; started_at_utc and duration_seconds are unknown.",
+    "Tool-call count includes 2 functions.exec wrapper calls and 3 nested exec_command calls, including this output-writing call. The top-level invocation count is 2.",
+    "Requested tool and character limits were followed by execution accounting; host hard enforcement is unknown."
+  ],
+  "failure": null,
+  "tool_call_breakdown": {
+    "functions.exec": 2,
+    "exec_command": 3
+  },
+  "outputs": [
+    "report.md",
+    "execution.json"
+  ],
+  "publication_projection": {
+    "raw_execution_sha256": "05c7009a671f851c556ba78f7536bc663a963d5a952475e1902d5b9f5d89de81",
+    "changes": [
+      "completed status label mapped to executed",
+      "logical path instructions.md mapped to executor-prompt.md",
+      "logical path execution.template.json mapped to templates/execution.template.json"
+    ],
+    "scope": "Administrative fields only; report bytes, effective unknowns and scientific content unchanged."
+  }
+}

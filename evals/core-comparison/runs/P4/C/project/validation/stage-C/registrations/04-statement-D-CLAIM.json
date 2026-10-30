@@ -1,0 +1,17 @@
+{
+  "assessment": {
+    "status": "supported-in-scope",
+    "reviewer": "assistant agent",
+    "scope": "Actual supplied-script rerun plus independent observed-hour metric/table and summary consistency checks",
+    "rationale": "Recalculation exit 0 and independent MAE/RMSE/bias/counts agree within 1e-14 tolerances; protected data/code/model identities unchanged; no human expert content acceptance."
+  },
+  "formal_verification": {
+    "scope": "Descriptive numerical calculation",
+    "status": "not-applicable",
+    "tool": "none"
+  },
+  "id": "D-CLAIM",
+  "scope": "Current author parameters: 2011-11-01 to 2011-12-31; 1460 observed hours, 61 days; supplied frozen C0/C1; no refit, causal inference or future-year guarantee",
+  "text": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+  "type": "empirical"
+}

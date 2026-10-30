@@ -1,0 +1,1088 @@
+{
+  "reads": [
+    {
+      "path": "STUDY_ROOT/runs/P5/C/REQUEST.md",
+      "scope": "full bytes; text supplied to executor for instruction/authorization files",
+      "sha256": "3d3d5930a0a8fbb9e3e733f77ea08aac84f6631177519be91c470ae66a8097ab",
+      "bytes": 2145
+    },
+    {
+      "path": "INPUT_DIR/PROTOCOL.md",
+      "scope": "full bytes; text supplied to executor for instruction/authorization files",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "path": "INPUT_DIR/RECORDING.md",
+      "scope": "full bytes; text supplied to executor for instruction/authorization files",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "path": "INPUT_DIR/STAGE-C.md",
+      "scope": "full bytes; text supplied to executor for instruction/authorization files",
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "bytes": 761
+    },
+    {
+      "path": "INPUT_DIR/author-revision/AUTHOR-REVISION.md",
+      "scope": "full bytes; text supplied to executor for instruction/authorization files",
+      "sha256": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+      "bytes": 1371
+    },
+    {
+      "path": "INPUT_DIR/author-revision/approved-parameters.json",
+      "scope": "full bytes; text supplied to executor for instruction/authorization files",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/current-status.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "bytes": 3614
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/normal/result.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/normal/table.csv",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/normal-execution.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2",
+      "bytes": 696
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/rejected-execution.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888",
+      "bytes": 721
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/status-execution.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb",
+      "bytes": 4225
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/validation-checks.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "bytes": 4643
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/BRIEF.md",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/MANIFEST.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/PROTOCOL.md",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/RECORDING.md",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/STAGE-A.md",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/constraints.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/obligations.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/source-identities.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074
+    },
+    {
+      "path": "PROJECT_ROOT/.research/state.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "826f355ae1301c9c879b4440b78edbe93f173cb696df00b28c1c26a6de338a95",
+      "bytes": 16218
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-draft/RECOVERY.md",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0",
+      "bytes": 3128
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/index.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3",
+      "bytes": 1273
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/notes/parameters.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/results/result.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/results/summary.md",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/results/table.csv",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVERY.md",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "98608a9d3ce937ba87d7fd2689f8935798f641988ddf85b1f0c94f3a29d8153e",
+      "bytes": 3254
+    },
+    {
+      "path": "PROJECT_ROOT/notes/parameters.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    {
+      "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160
+    },
+    {
+      "path": "PROJECT_ROOT/notes/source-check.md",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    {
+      "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/compute.py",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/manage.py",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "1dfc49a50e7a029ee6e91715cb7942be5d90869d66495ea84281efe3dcaf4655",
+      "bytes": 5383
+    },
+    {
+      "path": "PROJECT_ROOT/sources/howard2021-arxiv-v9.pdf",
+      "scope": "full bytes for exact snapshot/hash; PDF not extracted or visually inspected",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/current-status.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "bytes": 3614
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/normal/result.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/normal/table.csv",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/normal-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2",
+      "bytes": 696
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/rejected-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888",
+      "bytes": 721
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/status-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb",
+      "bytes": 4225
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/validation-checks.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "bytes": 4643
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/BRIEF.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/MANIFEST.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/PROTOCOL.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/RECORDING.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/STAGE-A.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/constraints.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/obligations.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/source-identities.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/state.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "826f355ae1301c9c879b4440b78edbe93f173cb696df00b28c1c26a6de338a95",
+      "bytes": 16218
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-draft/RECOVERY.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0",
+      "bytes": 3128
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/index.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3",
+      "bytes": 1273
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/notes/parameters.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/results/result.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/results/summary.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/results/table.csv",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/RECOVERY.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "98608a9d3ce937ba87d7fd2689f8935798f641988ddf85b1f0c94f3a29d8153e",
+      "bytes": 3254
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/notes/parameters.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/notes/rejected-parameters.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/notes/source-check.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/notes/unregistered-scratch.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/results/result.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/results/summary.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/results/table.csv",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/scripts/compute.py",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/scripts/manage.py",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "1dfc49a50e7a029ee6e91715cb7942be5d90869d66495ea84281efe3dcaf4655",
+      "bytes": 5383
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/sources/howard2021-arxiv-v9.pdf",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/index.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "eb89ecd91b670ce1815cfae321d001f746f078fc0893a6d9b8c1d3c17daf9bb6",
+      "bytes": 5384
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/.research/state.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "68cf475ed8d8b5c8fececdcdfc3eb9083cb0f5a78b00af9daa5647510fe2108d",
+      "bytes": 19057
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/RECOVERY.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "807fd2ffaa3968615fb191e1a13c16009c3d130b14fd8cecaa85b08bde62ee24",
+      "bytes": 3275
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/notes/parameters.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/results/result.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "bytes": 703
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/results/summary.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "d10158c47c54bdf88673606ca136716b97b65e042317bd17082dd6db7e2e5b27",
+      "bytes": 1134
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/results/table.csv",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "bytes": 100
+    },
+    {
+      "path": "PROJECT_ROOT/.research/checkpoints/C-final-verified/index.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "da859bc9249cc203ee1cc23b20b2c0dbefb263ceddd26e9a7f94e1bf7461816b",
+      "bytes": 1095
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/current-status.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "bytes": 3614
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/normal/result.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/normal/table.csv",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/normal-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2",
+      "bytes": 696
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/rejected-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888",
+      "bytes": 721
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/status-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb",
+      "bytes": 4225
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/A/validation-checks.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "bytes": 4643
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/C/final-status-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "84bc25ab9ebf3948d0b68a4eaebcb77faf26ef7e259e7ef752c32d94902ea202",
+      "bytes": 4232
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/C/intermediate-read-only-check.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "469b3beb0908533381bab178d77ceeffe7540f73cf8dbb9451c9256a76aa12e0",
+      "bytes": 163
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/C/intermediate-status-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "6e06b9ab9990be07a2ae47614656a146a3a7c0959fb2f6518d5abd6e29a71eeb",
+      "bytes": 4425
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/C/pre-recompute-state.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "87c10f5f6d4be7c4223aefde29718c08aeff5d20fd54d20fb4567bd932206767",
+      "bytes": 17358
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/C/recompute-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "85eaae10f1a32ad0d7b2126565665a437bbd72d87feb6e08284eb60426ab0026",
+      "bytes": 743
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/C/recomputed/result.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "bytes": 703
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/C/recomputed/table.csv",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "bytes": 100
+    },
+    {
+      "path": "PROJECT_ROOT/.research/evidence/C/validation-checks.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "fdf3e919a78089c6c9e9c086188f40936b7c1a4023d19540843f438e17a707a5",
+      "bytes": 1133
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/C/PROTOCOL.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/C/RECORDING.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/C/STAGE-C.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "bytes": 761
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/C/author-revision/AUTHOR-REVISION.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+      "bytes": 1371
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/C/author-revision/approved-parameters.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/BRIEF.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/MANIFEST.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/PROTOCOL.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/RECORDING.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/STAGE-A.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/constraints.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/obligations.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478
+    },
+    {
+      "path": "PROJECT_ROOT/.research/provenance/initial/source-identities.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074
+    },
+    {
+      "path": "PROJECT_ROOT/.research/state.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "68cf475ed8d8b5c8fececdcdfc3eb9083cb0f5a78b00af9daa5647510fe2108d",
+      "bytes": 19057
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-draft/RECOVERY.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0",
+      "bytes": 3128
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/index.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3",
+      "bytes": 1273
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/notes/parameters.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/results/result.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/results/summary.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    {
+      "path": "PROJECT_ROOT/.research/versions/A-initial/results/table.csv",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVERY.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "807fd2ffaa3968615fb191e1a13c16009c3d130b14fd8cecaa85b08bde62ee24",
+      "bytes": 3275
+    },
+    {
+      "path": "PROJECT_ROOT/notes/parameters.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    {
+      "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160
+    },
+    {
+      "path": "PROJECT_ROOT/notes/source-check.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    {
+      "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "bytes": 703
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "d10158c47c54bdf88673606ca136716b97b65e042317bd17082dd6db7e2e5b27",
+      "bytes": 1134
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "bytes": 100
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/compute.py",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/manage.py",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "1dfc49a50e7a029ee6e91715cb7942be5d90869d66495ea84281efe3dcaf4655",
+      "bytes": 5383
+    },
+    {
+      "path": "PROJECT_ROOT/sources/howard2021-arxiv-v9.pdf",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    {
+      "path": "INPUT_DIR/PROTOCOL.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "path": "INPUT_DIR/RECORDING.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "path": "INPUT_DIR/STAGE-C.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "bytes": 761
+    },
+    {
+      "path": "INPUT_DIR/author-revision/AUTHOR-REVISION.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+      "bytes": 1371
+    },
+    {
+      "path": "INPUT_DIR/author-revision/approved-parameters.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    {
+      "path": "OUTPUT_DIR/final-status-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "84bc25ab9ebf3948d0b68a4eaebcb77faf26ef7e259e7ef752c32d94902ea202",
+      "bytes": 4232
+    },
+    {
+      "path": "OUTPUT_DIR/final-status.stdout.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "1ba75489513d1de22c02424e1ae080019dad14e18d967fce651afec9dd17e2ad",
+      "bytes": 3600
+    },
+    {
+      "path": "OUTPUT_DIR/intermediate-read-only-check.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "2febf123da0544ed9757215df9a3c5955c8d95a856a35eacef93f5b242d9cd9f",
+      "bytes": 26990
+    },
+    {
+      "path": "OUTPUT_DIR/intermediate-status-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "6e06b9ab9990be07a2ae47614656a146a3a7c0959fb2f6518d5abd6e29a71eeb",
+      "bytes": 4425
+    },
+    {
+      "path": "OUTPUT_DIR/intermediate-status.stderr.txt",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "OUTPUT_DIR/intermediate-status.stdout.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "426eacc21dfc47ef508f478b67a0951df16730bd44baff1d8751d1772f92b313",
+      "bytes": 3781
+    },
+    {
+      "path": "OUTPUT_DIR/recompute-execution.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "85eaae10f1a32ad0d7b2126565665a437bbd72d87feb6e08284eb60426ab0026",
+      "bytes": 743
+    },
+    {
+      "path": "OUTPUT_DIR/report.md",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "a35c5083f3645a09f9fcbdc7ce0a23c6f96256e368875216672a786f651cd708",
+      "bytes": 5958
+    },
+    {
+      "path": "OUTPUT_DIR/stage-c.py",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "cd2d42194b2737c70bd18a6fb9d9a55c1a4c395c87a12bc041f64dbf720b2dbf",
+      "bytes": 32491
+    },
+    {
+      "path": "OUTPUT_DIR/state-answer.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "43e4d7e6c6771de797d8824952db5bfac00516a0bf0c06c6e0fcd73aa5dbff11",
+      "bytes": 5194
+    },
+    {
+      "path": "OUTPUT_DIR/validation-checks.json",
+      "scope": "full bytes for final hash inventory; content inspection only where separately reported",
+      "sha256": "90bce0aba52a36b6b86ce7534e758ba6d570c521f9ab20ff4497a66ea3b428d0",
+      "bytes": 943
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/manage.py",
+        "status"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"case_id\": \"T\",\n  \"authoritative_state\": \".research/state.json\",\n  \"revision\": 1,\n  \"active_constraints\": {\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"T\",\n      \"alpha\": 0.05,\n      \"rho\": 1.0,\n      \"rho_selection\": \"fixed-before-observation\",\n      \"intrinsic_time_grid\": [\n        0,\n        1,\n        10,\n        100\n      ]\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"next_action\": \"在交作者讨论前运行只读状态核对，确认当前 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的结果与摘要仍对应；向作者报告四点数值、sub-Gaussian/V 条件和未作证明/模拟覆盖验证的范围，等待作者实际决定。未经内容复核不投稿。\",\n  \"changed_paths\": [\n    \"notes/parameters.json\"\n  ],\n  \"missing_paths\": [],\n  \"activities\": {\n    \"T-SOURCE-CHECK\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-CALC\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"needs_recheck\",\n      \"reasons\": [\n        \"missing or changed material: notes/parameters.json\"\n      ]\n    },\n    \"T-SYNTH\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"needs_recheck\",\n      \"reasons\": [\n        \"dependency needs recheck: T-CALC\"\n      ]\n    }\n  },\n  \"checkpoint_freshness\": \"fresh_for_registered_bytes\",\n  \"coverage_limits\": {\n    \"source_only\": [\n      \"T-REMOTE\"\n    ],\n    \"excluded_unregistered_paths\": [\n      \"notes/unregistered-scratch.md\"\n    ],\n    \"all_project_files_covered\": false,\n    \"note\": \"Scratch is retained but is not a declared scientific dependency. Hash inventory is not scientific review. Remote identity metadata does not monitor content.\"\n  },\n  \"source_access\": {\n    \"T-SRC\": {\n      \"status\": \"local_fixed_identity_checked\",\n      \"local_path\": \"sources/howard2021-arxiv-v9.pdf\",\n      \"sha256\": \"eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8\",\n      \"bytes\": 1494142,\n      \"actual_read_scope\": \"Whole local PDF read as bytes for SHA256 and manifest binding only. No PDF text extraction, page inspection, or independent theorem review. Title/version/DOI and page references are supplied metadata/card assertions.\"\n    },\n    \"T-REMOTE\": {\n      \"status\": \"metadata-only\",\n      \"local_copy\": null,\n      \"live_access\": false,\n      \"content_binding\": false\n    }\n  },\n  \"scientific_scope\": {\n    \"id\": \"T-CLAIM\",\n    \"text\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"scope\": \"l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha is the total two-sided budget; rho fixed before observations; numerical evaluation only.\"\n  },\n  \"author_review\": {\n    \"status\": \"not_occurred\",\n    \"submission_authorized\": false,\n    \"venue\": null\n  }\n}\n",
+      "stderr": "",
+      "completed_at": "2026-10-30T01:58:20Z"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--output",
+        "PROJECT_ROOT/.research/evidence/C/recomputed"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"result\": \"PROJECT_ROOT/.research/evidence/C/recomputed/result.json\", \"parameters_sha256\": \"340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117\"}\n",
+      "stderr": "",
+      "completed_at": "2026-10-30T01:59:53Z"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/manage.py",
+        "status"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"case_id\": \"T\",\n  \"authoritative_state\": \".research/state.json\",\n  \"revision\": 2,\n  \"active_constraints\": {\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"T\",\n      \"alpha\": 0.05,\n      \"rho\": 4.0,\n      \"rho_selection\": \"fixed-before-observation\",\n      \"intrinsic_time_grid\": [\n        0,\n        1,\n        10,\n        100\n      ]\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"next_action\": \"将 alpha=0.05、rho=4（观察前固定）、v=[0,1,10,100] 的边界表 results/table.csv 与更新摘要 results/summary.md 交作者内容复核；暂不扩展到事后选择 rho。尚无人类专家认可、目标期刊未定且未经投稿授权，不执行投稿。\",\n  \"changed_paths\": [],\n  \"missing_paths\": [],\n  \"activities\": {\n    \"T-SOURCE-CHECK\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-CALC\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-SYNTH\": {\n      \"recorded_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    }\n  },\n  \"checkpoint_freshness\": \"fresh_for_registered_bytes\",\n  \"coverage_limits\": {\n    \"source_only\": [\n      \"T-REMOTE\"\n    ],\n    \"excluded_unregistered_paths\": [\n      \"notes/unregistered-scratch.md\"\n    ],\n    \"all_project_files_covered\": false,\n    \"note\": \"Scratch is retained but is not a declared scientific dependency. Hash inventory is not scientific review. Remote identity metadata does not monitor content.\"\n  },\n  \"source_access\": {\n    \"T-SRC\": {\n      \"status\": \"local_fixed_identity_checked\",\n      \"local_path\": \"sources/howard2021-arxiv-v9.pdf\",\n      \"sha256\": \"eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8\",\n      \"bytes\": 1494142,\n      \"actual_read_scope\": \"Whole local PDF read as bytes for SHA256 and manifest binding only. No PDF text extraction, page inspection, or independent theorem review. Title/version/DOI and page references are supplied metadata/card assertions.\"\n    },\n    \"T-REMOTE\": {\n      \"status\": \"metadata-only\",\n      \"local_copy\": null,\n      \"live_access\": false,\n      \"content_binding\": false\n    }\n  },\n  \"scientific_scope\": {\n    \"id\": \"T-CLAIM\",\n    \"text\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"scope\": \"l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha=0.05 total two-sided budget; rho=4 fixed before observations; v=[0,1,10,100]; numerical evaluation only.\"\n  },\n  \"author_review\": {\n    \"status\": \"not_occurred\",\n    \"submission_authorized\": false,\n    \"venue\": null\n  }\n}\n",
+      "stderr": "",
+      "completed_at": "2026-10-30T01:59:53Z"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/stage-c.py",
+        "snapshot"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "Returned snapshot path and original intermediate-status JSON; actual child output retained separately.",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/stage-c.py",
+        "revise"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "Returned values, validation-checks, and final-status JSON; actual child output retained separately.",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/stage-c.py",
+        "finish"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "Delivery report/execution/manifest saved.",
+      "stderr": "",
+      "note": "Exit code recorded at successful end of this operation."
+    }
+  ],
+  "failures": [],
+  "network_calls": 0,
+  "violations": [],
+  "unknown_settings": {
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "system_limit": null
+  },
+  "shell_reads_before_driver": [
+    {
+      "argv": [
+        "zsh",
+        "-lc",
+        "cat STUDY_ROOT/runs/P5/C/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "zsh",
+        "-lc",
+        "ls -la INPUT_DIR && cat INPUT_DIR/PROTOCOL.md INPUT_DIR/RECORDING.md INPUT_DIR/STAGE-C.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "zsh",
+        "-lc",
+        "find PROJECT_ROOT -type f -maxdepth 5 -print && cat INPUT_DIR/author-revision/AUTHOR-REVISION.md INPUT_DIR/author-revision/approved-parameters.json"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "zsh",
+        "-lc",
+        "cat PROJECT_ROOT/RECOVERY.md PROJECT_ROOT/.research/state.json PROJECT_ROOT/scripts/manage.py PROJECT_ROOT/scripts/compute.py PROJECT_ROOT/notes/parameters.json PROJECT_ROOT/results/summary.md PROJECT_ROOT/results/result.json PROJECT_ROOT/results/table.csv PROJECT_ROOT/notes/source-check.md PROJECT_ROOT/.research/provenance/initial/obligations.json PROJECT_ROOT/.research/provenance/initial/constraints.json PROJECT_ROOT/.research/provenance/initial/source-identities.json PROJECT_ROOT/.research/provenance/initial/BRIEF.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    }
+  ],
+  "tool_calls": 10,
+  "tool_call_breakdown": {
+    "functions_exec_outer_calls": 10,
+    "exec_command": 7,
+    "apply_patch": 3,
+    "actual_child_processes_inside_driver": 3,
+    "network": 0
+  },
+  "file_edit_tools": [
+    {
+      "tool": "apply_patch",
+      "target": "OUTPUT_DIR/stage-c.py",
+      "operation": "create then extend orchestration/report script in three successful calls",
+      "exit_code": 0
+    }
+  ],
+  "failure_history_preserved": {
+    "stage_C_failures": [],
+    "intermediate_staleness_is_not_execution_failure": true,
+    "stage_A_existing_controlled_rejection": ".research/evidence/A/rejected-execution.json; exit_code=2; not rerun or overwritten"
+  },
+  "written_paths": [
+    "PROJECT_ROOT/RECOVERY.md",
+    "PROJECT_ROOT/results/result.json",
+    "PROJECT_ROOT/results/table.csv",
+    "PROJECT_ROOT/results/summary.md",
+    "PROJECT_ROOT/.research/state.json",
+    "PROJECT_ROOT/.research/evidence/C/intermediate-read-only-check.json",
+    "PROJECT_ROOT/.research/evidence/C/final-status-execution.json",
+    "PROJECT_ROOT/.research/evidence/C/pre-recompute-state.json",
+    "PROJECT_ROOT/.research/evidence/C/intermediate-status-execution.json",
+    "PROJECT_ROOT/.research/evidence/C/recompute-execution.json",
+    "PROJECT_ROOT/.research/evidence/C/validation-checks.json",
+    "PROJECT_ROOT/.research/evidence/C/recomputed/result.json",
+    "PROJECT_ROOT/.research/evidence/C/recomputed/table.csv",
+    "PROJECT_ROOT/.research/checkpoints/C-final-verified/index.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/index.json",
+    "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/RECOVERY.md",
+    "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/results/result.json",
+    "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/results/table.csv",
+    "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/results/summary.md",
+    "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/notes/parameters.json",
+    "PROJECT_ROOT/.research/checkpoints/C-final-verified/files/.research/state.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/RECOVERY.md",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/results/result.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/results/table.csv",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/results/summary.md",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/notes/parameters.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/notes/source-check.md",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/notes/unregistered-scratch.md",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/notes/rejected-parameters.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/scripts/manage.py",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/scripts/compute.py",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/state.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/sources/howard2021-arxiv-v9.pdf",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/rejected-execution.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/current-status.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/normal-execution.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/status-execution.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/validation-checks.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/normal/result.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/evidence/A/normal/table.csv",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/index.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-draft/RECOVERY.md",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/results/result.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/results/table.csv",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/results/summary.md",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/versions/A-initial/notes/parameters.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/STAGE-A.md",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/RECORDING.md",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/MANIFEST.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/BRIEF.md",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/source-identities.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/obligations.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/constraints.json",
+    "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute/files/.research/provenance/initial/PROTOCOL.md",
+    "PROJECT_ROOT/.research/provenance/C/STAGE-C.md",
+    "PROJECT_ROOT/.research/provenance/C/RECORDING.md",
+    "PROJECT_ROOT/.research/provenance/C/PROTOCOL.md",
+    "PROJECT_ROOT/.research/provenance/C/author-revision/AUTHOR-REVISION.md",
+    "PROJECT_ROOT/.research/provenance/C/author-revision/approved-parameters.json",
+    "OUTPUT_DIR/intermediate-read-only-check.json",
+    "OUTPUT_DIR/intermediate-status.stderr.txt",
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/final-status-execution.json",
+    "OUTPUT_DIR/audit-ledger.json",
+    "OUTPUT_DIR/final-status.stdout.json",
+    "OUTPUT_DIR/state-answer.json",
+    "OUTPUT_DIR/intermediate-status-execution.json",
+    "OUTPUT_DIR/recompute-execution.json",
+    "OUTPUT_DIR/validation-checks.json",
+    "OUTPUT_DIR/stage-c.py",
+    "OUTPUT_DIR/intermediate-status.stdout.json",
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/inputs-and-artifacts.json"
+  ],
+  "read_inventory_note": "Multiple entries preserve before/after hashes for the same path. Files copied/hash-read are not thereby semantically reviewed. Python standard-library import/runtime files are environment tooling, not scientific inputs."
+}

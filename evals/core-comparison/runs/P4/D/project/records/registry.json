@@ -1,0 +1,1350 @@
+{
+  "checkpoint": {
+    "config_sha256": "4079b82d3854d0c0cee44e92fee4ac75a233e4ca97b2bc9d5a800c161e67ca45",
+    "created_at": "2026-10-30T02:06:41.422287+00:00",
+    "files": {
+      "context/stage-C/AUTHOR-REVISION.md": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6",
+      "context/stage-C/approved-parameters.json": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "model/frozen.json": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "notes/parameters.json": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "notes/rejected-parameters.json": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "notes/source-check.md": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "notes/stage-C-revision.md": "1886f68202f0978fbdff972af782158d4037682009a0e6f34dd3b7e24fbca003",
+      "results/result.json": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "results/summary.md": "f72403c2361bf332b70616353ec39ca323ffe0d173d84f0f2a56fe8c27c5c7e5",
+      "results/table.csv": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "validation/stage-A/comparison.json": "257cf475416fb23a69f4bbad91b1e1cdda26cd649e3524959d8e76189d72fe16",
+      "validation/stage-A/source-verification.json": "d9c06d6c76df3d0e689ac2aad52b3dec4498d197081cdb2081cbfa916f3db919",
+      "validation/stage-C/invalid-test.json": "8fec885f5f10767c1127e5b2b25a6b68f524dec13c6cbecbdbebbead9bcf7e7f",
+      "validation/stage-C/revision-review.json": "54c0c241a9f30daf2b250944db7dd99a5dca4fec60dfa660ac0a8fef3f930f61",
+      "validation/stage-C/summary-review.json": "93afdda61d0b1cc36d54aec6ee5d685b3727076d1f0f2d0cb2f9cce125b21653",
+      "validation/stage-C/verification.json": "6b7251003c6e1023dbeecc9a14c4a6b813effe60b56600dd3cf1c262ab9560a7",
+      "validation/stage-C/verify.py": "b50144616d073a7499e698ef85cc88d0a8e1585b5ed75e34f74702c3f2f9b1a8"
+    },
+    "note": "Recovery checkpoint; not scientific certification.",
+    "records_sha256": "25464db9ae63b156bb8ade6e852c0e19295b0c51c929b631e2d4b8049ec8f750"
+  },
+  "cursor": {
+    "activity_id": null,
+    "next_action": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。恢复先核对当前2011-11-01至12-31参数与1460小时结果的依赖；不重训，不外推2012。"
+  },
+  "history": [
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.647422+00:00",
+      "id": "D-SRC",
+      "kind": "source",
+      "previous": null,
+      "revision": 1
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.647827+00:00",
+      "id": "D-REMOTE",
+      "kind": "source",
+      "previous": null,
+      "revision": 2
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.648688+00:00",
+      "id": "D-RAW",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 3
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.649462+00:00",
+      "id": "D-PARAM",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 4
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.650225+00:00",
+      "id": "D-CLAIM",
+      "kind": "statement",
+      "previous": null,
+      "revision": 5
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.651046+00:00",
+      "id": "D-REL",
+      "kind": "relation",
+      "previous": null,
+      "revision": 6
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.651929+00:00",
+      "id": "D-CHOICE",
+      "kind": "decision",
+      "previous": null,
+      "revision": 7
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.652964+00:00",
+      "id": "D-CODE",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 8
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.654121+00:00",
+      "id": "D-MODEL",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 9
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.655415+00:00",
+      "id": "D-RESULT",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 10
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.657006+00:00",
+      "id": "D-TABLE",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 11
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.658584+00:00",
+      "id": "D-SUMMARY",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 12
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.660243+00:00",
+      "id": "D-SOURCE-NOTE",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 13
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.662078+00:00",
+      "id": "D-SOURCE-VERIFICATION",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 14
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.664040+00:00",
+      "id": "D-VALIDATION",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 15
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.666172+00:00",
+      "id": "D-INVALID-PARAM",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 16
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.668758+00:00",
+      "id": "D-SOURCE-CHECK",
+      "kind": "activity",
+      "previous": null,
+      "revision": 17
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.671981+00:00",
+      "id": "D-CALC",
+      "kind": "activity",
+      "previous": null,
+      "revision": 18
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.676717+00:00",
+      "id": "D-SYNTH",
+      "kind": "activity",
+      "previous": null,
+      "revision": 19
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.681512+00:00",
+      "id": "D-INVALID-TEST",
+      "kind": "activity",
+      "previous": null,
+      "revision": 20
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:47:24.684293+00:00",
+      "id": "D-COMPUTATIONAL",
+      "kind": "method-binding",
+      "previous": null,
+      "revision": 21
+    },
+    {
+      "action": "checkpoint",
+      "at": "2026-10-30T01:47:24.754592+00:00",
+      "id": null,
+      "kind": null,
+      "previous": null,
+      "revision": 22
+    },
+    {
+      "action": "checkpoint",
+      "at": "2026-10-30T02:00:48.885471+00:00",
+      "id": null,
+      "kind": null,
+      "previous": null,
+      "revision": 23
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T02:06:09.357874+00:00",
+      "id": "D-AUTHOR-REVISION",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 24
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T02:06:09.391526+00:00",
+      "id": "D-APPROVED-PARAM",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 25
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.424181+00:00",
+      "id": "D-PARAM",
+      "kind": "evidence",
+      "previous": {
+        "bindings": {
+          "files": {
+            "notes/parameters.json": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Current declared frozen-model evaluation interval and observed-hour weighting",
+          "id": "D-PARAM",
+          "location": {
+            "kind": "local",
+            "path": "notes/parameters.json"
+          },
+          "provenance": "Benchmark author working parameters, not original dataset content",
+          "type": "author-parameters"
+        },
+        "registered_at": "2026-10-30T01:47:24.648883+00:00",
+        "version": 1
+      },
+      "revision": 26
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.457576+00:00",
+      "id": "D-CLAIM",
+      "kind": "statement",
+      "previous": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "Independent execution of supplied calculator reproduces canonical result/table exactly and summary rounding agrees; no human expert review or inferential guarantee",
+            "reviewer": "assistant agent",
+            "scope": "Rerun and descriptive consistency only",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "Descriptive numerical calculation",
+            "status": "not-applicable",
+            "tool": "none"
+          },
+          "id": "D-CLAIM",
+          "scope": "Current author parameters: 2011-10-01 to 2011-12-31; supplied frozen C0/C1 and observed hours only",
+          "text": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+          "type": "empirical"
+        },
+        "registered_at": "2026-10-30T01:47:24.649669+00:00",
+        "version": 1
+      },
+      "revision": 27
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.491060+00:00",
+      "id": "D-REL",
+      "kind": "relation",
+      "previous": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "D-PARAM",
+          "id": "D-REL",
+          "rationale": "Declared period and weighting delimit the current comparison",
+          "relation": "qualifies",
+          "scope": "Current numerical/descriptive claim; registration is not mathematical proof",
+          "statement_id": "D-CLAIM"
+        },
+        "registered_at": "2026-10-30T01:47:24.650462+00:00",
+        "version": 1
+      },
+      "revision": 28
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.524311+00:00",
+      "id": "D-CHOICE",
+      "kind": "decision",
+      "previous": {
+        "bindings": null,
+        "data": {
+          "choice": "Use initial supplied author parameters and Jan-Sep frozen model; do not refit",
+          "decided_at": "Unspecified in supplied materials; no author decision date invented",
+          "evidence_refs": [
+            "D-PARAM"
+          ],
+          "extensions": {
+            "decision_date": null,
+            "recorded_by": "assistant agent"
+          },
+          "id": "D-CHOICE",
+          "rationale": "Given constraints and author-supplied initial evaluation specification",
+          "responsible": "benchmark author, as attributed in supplied material",
+          "revisit_when": "Only upon explicit authorized parameter/scope revision; retain prior content and reason"
+        },
+        "registered_at": "2026-10-30T01:47:24.651313+00:00",
+        "version": 1
+      },
+      "revision": 29
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.558071+00:00",
+      "id": "D-RESULT",
+      "kind": "artifact",
+      "previous": {
+        "bindings": {
+          "files": {
+            "results/result.json": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:D-PARAM",
+            "evidence:D-RAW",
+            "artifact:D-CODE",
+            "decision:D-CHOICE",
+            "artifact:D-MODEL"
+          ],
+          "description": "Canonical numeric result verified byte-for-byte against fresh calculation",
+          "id": "D-RESULT",
+          "path": "results/result.json",
+          "type": "numeric-result"
+        },
+        "registered_at": "2026-10-30T01:47:24.654491+00:00",
+        "version": 1
+      },
+      "revision": 30
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.592250+00:00",
+      "id": "D-TABLE",
+      "kind": "artifact",
+      "previous": {
+        "bindings": {
+          "files": {
+            "results/table.csv": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "artifact:D-RESULT"
+          ],
+          "description": "Companion table verified byte-for-byte and metric-by-metric",
+          "id": "D-TABLE",
+          "path": "results/table.csv",
+          "type": "numeric-table"
+        },
+        "registered_at": "2026-10-30T01:47:24.655867+00:00",
+        "version": 1
+      },
+      "revision": 31
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.626632+00:00",
+      "id": "D-SUMMARY",
+      "kind": "artifact",
+      "previous": {
+        "bindings": {
+          "files": {
+            "results/summary.md": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "statement:D-CLAIM",
+            "artifact:D-RESULT",
+            "artifact:D-TABLE"
+          ],
+          "description": "Supplied current summary checked for numbers, rounding, interval and scope",
+          "id": "D-SUMMARY",
+          "path": "results/summary.md",
+          "type": "summary"
+        },
+        "registered_at": "2026-10-30T01:47:24.657454+00:00",
+        "version": 1
+      },
+      "revision": 32
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.661374+00:00",
+      "id": "D-VALIDATION",
+      "kind": "artifact",
+      "previous": {
+        "bindings": {
+          "files": {
+            "validation/stage-A/comparison.json": "257cf475416fb23a69f4bbad91b1e1cdda26cd649e3524959d8e76189d72fe16"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:D-PARAM",
+            "evidence:D-RAW",
+            "artifact:D-CODE",
+            "artifact:D-MODEL",
+            "artifact:D-RESULT",
+            "artifact:D-TABLE",
+            "artifact:D-SUMMARY"
+          ],
+          "description": "Real normal/invalid calculator runs, output comparison and unchanged protected hashes",
+          "id": "D-VALIDATION",
+          "path": "validation/stage-A/comparison.json",
+          "type": "validation-record"
+        },
+        "registered_at": "2026-10-30T01:47:24.662619+00:00",
+        "version": 1
+      },
+      "revision": 33
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T02:06:09.696185+00:00",
+      "id": "D-C-VERIFY-CODE",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 34
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T02:06:09.731257+00:00",
+      "id": "D-C-VALIDATION",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 35
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T02:06:09.766347+00:00",
+      "id": "D-C-INVALID-VALIDATION",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 36
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T02:06:09.801717+00:00",
+      "id": "D-C-SUMMARY-REVIEW",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 37
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T02:06:09.837516+00:00",
+      "id": "D-C-REVISION-REVIEW",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 38
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T02:06:09.873273+00:00",
+      "id": "D-C-REVISION-NOTE",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 39
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.911818+00:00",
+      "id": "D-CALC",
+      "kind": "activity",
+      "previous": {
+        "bindings": {
+          "files": {
+            "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "model/frozen.json": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "notes/parameters.json": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+            "results/result.json": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+            "results/table.csv": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+          },
+          "records": {
+            "artifact:D-CODE": "cfeca5cf013cb848d63435950d5dfac79718bc4a385233b7f3aadb1e5568c228",
+            "artifact:D-MODEL": "77d32c956b0fa5112fe3d0776f15881d09679cf77cbc1982b588ed23f162263b",
+            "artifact:D-RESULT": "dd5f2612b560166303dace3075243867ca4be065cef8267a96819fbebe5c8cca",
+            "artifact:D-TABLE": "42759d8506bd5bd695037987ced904e99f4c3d06fa9e65b04d94e7877b894c2a",
+            "decision:D-CHOICE": "f8b31781f70161ca6e16233f2a607717c64a6b0ee8cb3eb7104655c4e54dc01d",
+            "evidence:D-PARAM": "54476866d7ecdff8338de7df1c682320b211aa0c264429c04425e94f5ade92ef",
+            "evidence:D-RAW": "82d293d3c727eb948ce5f73e6c45373b8b411dd8102027f4c9ee54b6c20669b1",
+            "source:D-SRC": "2d8be802de8a23da6f4e77e162114385501af408e33442926ea9577cb19b36fa"
+          }
+        },
+        "data": {
+          "id": "D-CALC",
+          "inputs": [
+            "evidence:D-PARAM",
+            "evidence:D-RAW",
+            "artifact:D-CODE",
+            "decision:D-CHOICE",
+            "artifact:D-MODEL"
+          ],
+          "note": "Actual command exit 0; result.json/table.csv byte-identical to canonical prebuilt files; read-time files and command evidence preserved",
+          "outputs": [
+            "artifact:D-RESULT",
+            "artifact:D-TABLE"
+          ],
+          "status": "done",
+          "title": "Rerun supplied calculator and verify canonical numeric result and companion table"
+        },
+        "registered_at": "2026-10-30T01:47:24.669845+00:00",
+        "version": 1
+      },
+      "revision": 40
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.950066+00:00",
+      "id": "D-INVALID-TEST",
+      "kind": "activity",
+      "previous": {
+        "bindings": {
+          "files": {
+            "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "model/frozen.json": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "notes/parameters.json": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+            "notes/rejected-parameters.json": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+            "results/result.json": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+            "results/summary.md": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+            "results/table.csv": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "validation/stage-A/comparison.json": "257cf475416fb23a69f4bbad91b1e1cdda26cd649e3524959d8e76189d72fe16"
+          },
+          "records": {
+            "artifact:D-CODE": "cfeca5cf013cb848d63435950d5dfac79718bc4a385233b7f3aadb1e5568c228",
+            "artifact:D-MODEL": "77d32c956b0fa5112fe3d0776f15881d09679cf77cbc1982b588ed23f162263b",
+            "artifact:D-RESULT": "dd5f2612b560166303dace3075243867ca4be065cef8267a96819fbebe5c8cca",
+            "artifact:D-SUMMARY": "520b1845da10ec43d95a21f2d98a8e302929da705d047b922b0b81f8a6ac051e",
+            "artifact:D-TABLE": "42759d8506bd5bd695037987ced904e99f4c3d06fa9e65b04d94e7877b894c2a",
+            "artifact:D-VALIDATION": "f6b792b572099c03456832fb7ff1611a925c5cc95c6658ddc8b19457d8f1002a",
+            "decision:D-CHOICE": "f8b31781f70161ca6e16233f2a607717c64a6b0ee8cb3eb7104655c4e54dc01d",
+            "evidence:D-INVALID-PARAM": "29b425267eba7720640d419d79528d2c57c375625189894d5ef484209d015bd5",
+            "evidence:D-PARAM": "54476866d7ecdff8338de7df1c682320b211aa0c264429c04425e94f5ade92ef",
+            "evidence:D-RAW": "82d293d3c727eb948ce5f73e6c45373b8b411dd8102027f4c9ee54b6c20669b1",
+            "relation:D-REL": "7ce2d2da265f6ae8ec078b96a543be53bd5afc726d82d0b9993fa422461723ac",
+            "source:D-SRC": "2d8be802de8a23da6f4e77e162114385501af408e33442926ea9577cb19b36fa",
+            "statement:D-CLAIM": "5356159ba734fb5898ca07a17990843cb71f793a50b7e21aaedf7a43b106b7ae"
+          }
+        },
+        "data": {
+          "id": "D-INVALID-TEST",
+          "inputs": [
+            "evidence:D-INVALID-PARAM",
+            "artifact:D-CODE"
+          ],
+          "note": "Expected calculator exit 2 with start-after-end ValueError; no invalid output directory; valid material before/after SHA identical. Successful negative-input test, not scientific-analysis failure.",
+          "outputs": [
+            "artifact:D-VALIDATION"
+          ],
+          "status": "done",
+          "title": "Controlled invalid parameter rejection and canonical preservation check"
+        },
+        "registered_at": "2026-10-30T01:47:24.679030+00:00",
+        "version": 1
+      },
+      "revision": 41
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T02:06:09.988837+00:00",
+      "id": "D-SYNTH",
+      "kind": "activity",
+      "previous": {
+        "bindings": {
+          "files": {
+            "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "model/frozen.json": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "notes/parameters.json": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+            "results/result.json": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+            "results/summary.md": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+            "results/table.csv": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+          },
+          "records": {
+            "activity:D-CALC": "ec7cd9215979a880326abc4cc1472bca76fb8a9d18424106c37aab0129eefcb6",
+            "artifact:D-CODE": "cfeca5cf013cb848d63435950d5dfac79718bc4a385233b7f3aadb1e5568c228",
+            "artifact:D-MODEL": "77d32c956b0fa5112fe3d0776f15881d09679cf77cbc1982b588ed23f162263b",
+            "artifact:D-RESULT": "dd5f2612b560166303dace3075243867ca4be065cef8267a96819fbebe5c8cca",
+            "artifact:D-SUMMARY": "520b1845da10ec43d95a21f2d98a8e302929da705d047b922b0b81f8a6ac051e",
+            "artifact:D-TABLE": "42759d8506bd5bd695037987ced904e99f4c3d06fa9e65b04d94e7877b894c2a",
+            "decision:D-CHOICE": "f8b31781f70161ca6e16233f2a607717c64a6b0ee8cb3eb7104655c4e54dc01d",
+            "evidence:D-PARAM": "54476866d7ecdff8338de7df1c682320b211aa0c264429c04425e94f5ade92ef",
+            "evidence:D-RAW": "82d293d3c727eb948ce5f73e6c45373b8b411dd8102027f4c9ee54b6c20669b1",
+            "relation:D-REL": "7ce2d2da265f6ae8ec078b96a543be53bd5afc726d82d0b9993fa422461723ac",
+            "source:D-SRC": "2d8be802de8a23da6f4e77e162114385501af408e33442926ea9577cb19b36fa",
+            "statement:D-CLAIM": "5356159ba734fb5898ca07a17990843cb71f793a50b7e21aaedf7a43b106b7ae"
+          }
+        },
+        "data": {
+          "depends_on": [
+            "D-CALC"
+          ],
+          "id": "D-SYNTH",
+          "inputs": [
+            "statement:D-CLAIM",
+            "artifact:D-RESULT",
+            "artifact:D-TABLE"
+          ],
+          "note": "Assistant reviewed interval/counts/rounding and no-refit/no-causal/no-2012 scope; supplied summary kept unchanged",
+          "outputs": [
+            "artifact:D-SUMMARY"
+          ],
+          "status": "done",
+          "title": "Check supplied summary within current claim and verified result"
+        },
+        "registered_at": "2026-10-30T01:47:24.674204+00:00",
+        "version": 1
+      },
+      "revision": 42
+    },
+    {
+      "action": "checkpoint",
+      "at": "2026-10-30T02:06:41.422612+00:00",
+      "id": null,
+      "kind": null,
+      "previous": null,
+      "revision": 43
+    }
+  ],
+  "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+  "records": {
+    "activities": {
+      "D-CALC": {
+        "bindings": {
+          "files": {
+            "context/stage-C/AUTHOR-REVISION.md": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6",
+            "context/stage-C/approved-parameters.json": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+            "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "model/frozen.json": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "notes/parameters.json": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+            "results/result.json": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+            "results/table.csv": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "validation/stage-C/verification.json": "6b7251003c6e1023dbeecc9a14c4a6b813effe60b56600dd3cf1c262ab9560a7",
+            "validation/stage-C/verify.py": "b50144616d073a7499e698ef85cc88d0a8e1585b5ed75e34f74702c3f2f9b1a8"
+          },
+          "records": {
+            "artifact:D-C-VALIDATION": "1eb0302a2a471d35782da45e3a91310a22ae7b5d650c9631adee796712e1139d",
+            "artifact:D-C-VERIFY-CODE": "20f7522c17b4580d14e3ed31c18f66ff3e6ba9924c78db85302ab792371200a9",
+            "artifact:D-CODE": "cfeca5cf013cb848d63435950d5dfac79718bc4a385233b7f3aadb1e5568c228",
+            "artifact:D-MODEL": "77d32c956b0fa5112fe3d0776f15881d09679cf77cbc1982b588ed23f162263b",
+            "artifact:D-RESULT": "d1060f09c211297d6aeb092a8782bad592d04e97a8bc40b14936e84452aeb89f",
+            "artifact:D-TABLE": "7834fc6d5a4d22e5a27373a6dfd2012753001c341c79cbdf5d448d17263c2a43",
+            "decision:D-CHOICE": "b4e068f6de03374ff07ca43ab994cd4df111deca7aa0b62db9eb6d1c44704599",
+            "evidence:D-APPROVED-PARAM": "6e4dbb863183c3ea9743d06d5c8b1ffc55e0f760519272f17efd33e6a50d4a04",
+            "evidence:D-AUTHOR-REVISION": "976555df9d9d10cef62c1bda0b17404c0415c3dbb62219add77496938fc12c5c",
+            "evidence:D-PARAM": "b8290d1e80f8b3cbed034985824a8f28bf7f6326eefc2e96c5f05f95ac1a1cf4",
+            "evidence:D-RAW": "82d293d3c727eb948ce5f73e6c45373b8b411dd8102027f4c9ee54b6c20669b1",
+            "source:D-SRC": "2d8be802de8a23da6f4e77e162114385501af408e33442926ea9577cb19b36fa"
+          }
+        },
+        "data": {
+          "id": "D-CALC",
+          "inputs": [
+            "evidence:D-PARAM",
+            "evidence:D-RAW",
+            "artifact:D-CODE",
+            "decision:D-CHOICE",
+            "artifact:D-MODEL"
+          ],
+          "note": "Executed unchanged supplied calculator on current approved parameters, exit 0; independent observed-hour metrics and input identities match; first verifier TypeError preserved then corrected in own code only. Assistant-executed computation, no human expert acceptance.",
+          "outputs": [
+            "artifact:D-RESULT",
+            "artifact:D-TABLE",
+            "artifact:D-C-VALIDATION"
+          ],
+          "status": "done",
+          "title": "Rerun supplied calculator and verify canonical numeric result and companion table"
+        },
+        "registered_at": "2026-10-30T02:06:09.908505+00:00",
+        "version": 2
+      },
+      "D-INVALID-TEST": {
+        "bindings": {
+          "files": {
+            "notes/rejected-parameters.json": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "validation/stage-C/invalid-test.json": "8fec885f5f10767c1127e5b2b25a6b68f524dec13c6cbecbdbebbead9bcf7e7f"
+          },
+          "records": {
+            "artifact:D-C-INVALID-VALIDATION": "e80af9c2a002d5c57087c337f4fe2cf68351acd3263b72b9e32f5740bddedea2",
+            "artifact:D-CODE": "cfeca5cf013cb848d63435950d5dfac79718bc4a385233b7f3aadb1e5568c228",
+            "evidence:D-INVALID-PARAM": "29b425267eba7720640d419d79528d2c57c375625189894d5ef484209d015bd5"
+          }
+        },
+        "data": {
+          "id": "D-INVALID-TEST",
+          "inputs": [
+            "evidence:D-INVALID-PARAM",
+            "artifact:D-CODE"
+          ],
+          "note": "Actually reran controlled start-after-end input: exit 2, output absent, canonical old Q4 files unchanged at test time. Replaced shared historical validation output by dedicated negative-test record; independent frozen source branch untouched.",
+          "outputs": [
+            "artifact:D-C-INVALID-VALIDATION"
+          ],
+          "status": "done",
+          "title": "Controlled invalid parameter rejection and canonical preservation check"
+        },
+        "registered_at": "2026-10-30T02:06:09.947076+00:00",
+        "version": 2
+      },
+      "D-SOURCE-CHECK": {
+        "bindings": {
+          "files": {
+            "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "notes/source-check.md": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+            "validation/stage-A/source-verification.json": "d9c06d6c76df3d0e689ac2aad52b3dec4498d197081cdb2081cbfa916f3db919"
+          },
+          "records": {
+            "artifact:D-SOURCE-NOTE": "6237b49b1022aeb9f67bdf0fb2630ec34b28d3d06c727317e1d4cd18eb3a1c3e",
+            "artifact:D-SOURCE-VERIFICATION": "0eb1ad15fab2369683e0c0a1d1fad6ae967c4e07c90f8c8bca5f795214ca3559",
+            "evidence:D-RAW": "82d293d3c727eb948ce5f73e6c45373b8b411dd8102027f4c9ee54b6c20669b1",
+            "source:D-REMOTE": "2e4718aa92ba0d82da73419b644ccea1a688ec4b6213a4647e19b3ea4eff9393",
+            "source:D-SRC": "2d8be802de8a23da6f4e77e162114385501af408e33442926ea9577cb19b36fa"
+          }
+        },
+        "data": {
+          "id": "D-SOURCE-CHECK",
+          "inputs": [
+            "source:D-SRC",
+            "evidence:D-RAW"
+          ],
+          "note": "Performed by assistant/local standard library checks; no remote reacquisition, article review or human approval",
+          "outputs": [
+            "artifact:D-SOURCE-NOTE",
+            "artifact:D-SOURCE-VERIFICATION"
+          ],
+          "status": "done",
+          "title": "Verify supplied source identity, local slice and source card"
+        },
+        "registered_at": "2026-10-30T01:47:24.666814+00:00",
+        "version": 1
+      },
+      "D-SYNTH": {
+        "bindings": {
+          "files": {
+            "context/stage-C/AUTHOR-REVISION.md": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6",
+            "context/stage-C/approved-parameters.json": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+            "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "model/frozen.json": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "notes/parameters.json": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+            "notes/stage-C-revision.md": "1886f68202f0978fbdff972af782158d4037682009a0e6f34dd3b7e24fbca003",
+            "results/result.json": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+            "results/summary.md": "f72403c2361bf332b70616353ec39ca323ffe0d173d84f0f2a56fe8c27c5c7e5",
+            "results/table.csv": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "validation/stage-C/revision-review.json": "54c0c241a9f30daf2b250944db7dd99a5dca4fec60dfa660ac0a8fef3f930f61",
+            "validation/stage-C/summary-review.json": "93afdda61d0b1cc36d54aec6ee5d685b3727076d1f0f2d0cb2f9cce125b21653",
+            "validation/stage-C/verification.json": "6b7251003c6e1023dbeecc9a14c4a6b813effe60b56600dd3cf1c262ab9560a7",
+            "validation/stage-C/verify.py": "b50144616d073a7499e698ef85cc88d0a8e1585b5ed75e34f74702c3f2f9b1a8"
+          },
+          "records": {
+            "activity:D-CALC": "6f4a50919a37c87804412e5c39594f067826ceadf2db77de73e4c6c8191bb4e2",
+            "artifact:D-C-REVISION-NOTE": "b5cdc9964a7759126e4a642a96cc280f8c7e965c325f1682640d2ac39e34f923",
+            "artifact:D-C-REVISION-REVIEW": "16624f603ffa31aeff2e77506cdaa05fefb37fde0efcde02193cfc8ca66c6ad9",
+            "artifact:D-C-SUMMARY-REVIEW": "d6fa569e676ffee8f47b829da36e52b5e2641cb9745557f29e89b81e5b711d0c",
+            "artifact:D-C-VALIDATION": "1eb0302a2a471d35782da45e3a91310a22ae7b5d650c9631adee796712e1139d",
+            "artifact:D-C-VERIFY-CODE": "20f7522c17b4580d14e3ed31c18f66ff3e6ba9924c78db85302ab792371200a9",
+            "artifact:D-CODE": "cfeca5cf013cb848d63435950d5dfac79718bc4a385233b7f3aadb1e5568c228",
+            "artifact:D-MODEL": "77d32c956b0fa5112fe3d0776f15881d09679cf77cbc1982b588ed23f162263b",
+            "artifact:D-RESULT": "d1060f09c211297d6aeb092a8782bad592d04e97a8bc40b14936e84452aeb89f",
+            "artifact:D-SUMMARY": "6b2a1c78488dc508333ceaffc376ce33b5dbd88b79891910c0b86deb410c3047",
+            "artifact:D-TABLE": "7834fc6d5a4d22e5a27373a6dfd2012753001c341c79cbdf5d448d17263c2a43",
+            "decision:D-CHOICE": "b4e068f6de03374ff07ca43ab994cd4df111deca7aa0b62db9eb6d1c44704599",
+            "evidence:D-APPROVED-PARAM": "6e4dbb863183c3ea9743d06d5c8b1ffc55e0f760519272f17efd33e6a50d4a04",
+            "evidence:D-AUTHOR-REVISION": "976555df9d9d10cef62c1bda0b17404c0415c3dbb62219add77496938fc12c5c",
+            "evidence:D-PARAM": "b8290d1e80f8b3cbed034985824a8f28bf7f6326eefc2e96c5f05f95ac1a1cf4",
+            "evidence:D-RAW": "82d293d3c727eb948ce5f73e6c45373b8b411dd8102027f4c9ee54b6c20669b1",
+            "relation:D-REL": "7a6d735b7b49ece2d0ff9350140cbd00e76f5077158198fff4fefdef862c2f44",
+            "source:D-SRC": "2d8be802de8a23da6f4e77e162114385501af408e33442926ea9577cb19b36fa",
+            "statement:D-CLAIM": "c0ff44b5cab77e38ce00812ae0cb4c0f4ec6767a77d678fa97002e6f81cd8e85"
+          }
+        },
+        "data": {
+          "depends_on": [
+            "D-CALC"
+          ],
+          "id": "D-SYNTH",
+          "inputs": [
+            "statement:D-CLAIM",
+            "artifact:D-RESULT",
+            "artifact:D-TABLE"
+          ],
+          "note": "Assistant revised and reviewed 2011 November-December summary, metric precision, unchanged model and historical Q4 comparison; content review by author remains next action.",
+          "outputs": [
+            "artifact:D-SUMMARY",
+            "artifact:D-C-SUMMARY-REVIEW",
+            "artifact:D-C-REVISION-NOTE"
+          ],
+          "status": "done",
+          "title": "Check supplied summary within current claim and verified result"
+        },
+        "registered_at": "2026-10-30T02:06:09.985170+00:00",
+        "version": 2
+      }
+    },
+    "artifacts": {
+      "D-C-INVALID-VALIDATION": {
+        "bindings": {
+          "files": {
+            "validation/stage-C/invalid-test.json": "8fec885f5f10767c1127e5b2b25a6b68f524dec13c6cbecbdbebbead9bcf7e7f"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:D-INVALID-PARAM",
+            "artifact:D-CODE"
+          ],
+          "description": "Actual controlled start-after-end rejection, no output and canonical files preserved; prior shared-output bindings no longer used for this independent test",
+          "id": "D-C-INVALID-VALIDATION",
+          "path": "validation/stage-C/invalid-test.json",
+          "type": "negative-input-test"
+        },
+        "registered_at": "2026-10-30T02:06:09.763895+00:00",
+        "version": 1
+      },
+      "D-C-REVISION-NOTE": {
+        "bindings": {
+          "files": {
+            "notes/stage-C-revision.md": "1886f68202f0978fbdff972af782158d4037682009a0e6f34dd3b7e24fbca003"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "artifact:D-C-REVISION-REVIEW"
+          ],
+          "description": "Persistent author authorization, recovery state, failures and limited scientific scope",
+          "id": "D-C-REVISION-NOTE",
+          "path": "notes/stage-C-revision.md",
+          "type": "work-note"
+        },
+        "registered_at": "2026-10-30T02:06:09.870668+00:00",
+        "version": 1
+      },
+      "D-C-REVISION-REVIEW": {
+        "bindings": {
+          "files": {
+            "validation/stage-C/revision-review.json": "54c0c241a9f30daf2b250944db7dd99a5dca4fec60dfa660ac0a8fef3f930f61"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:D-AUTHOR-REVISION",
+            "evidence:D-APPROVED-PARAM",
+            "artifact:D-C-VALIDATION"
+          ],
+          "description": "Reason, original/revised scope, actual drift check, failed verifier and remedy, protected identities and pending next step",
+          "id": "D-C-REVISION-REVIEW",
+          "path": "validation/stage-C/revision-review.json",
+          "type": "revision-and-failure-record"
+        },
+        "registered_at": "2026-10-30T02:06:09.834989+00:00",
+        "version": 1
+      },
+      "D-C-SUMMARY-REVIEW": {
+        "bindings": {
+          "files": {
+            "validation/stage-C/summary-review.json": "93afdda61d0b1cc36d54aec6ee5d685b3727076d1f0f2d0cb2f9cce125b21653"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "statement:D-CLAIM",
+            "artifact:D-RESULT",
+            "artifact:D-TABLE",
+            "artifact:D-SUMMARY"
+          ],
+          "description": "Actual interval/counts/metric-rounding review of revised summary; author content review remains pending",
+          "id": "D-C-SUMMARY-REVIEW",
+          "path": "validation/stage-C/summary-review.json",
+          "type": "summary-consistency-review"
+        },
+        "registered_at": "2026-10-30T02:06:09.799239+00:00",
+        "version": 1
+      },
+      "D-C-VALIDATION": {
+        "bindings": {
+          "files": {
+            "validation/stage-C/verification.json": "6b7251003c6e1023dbeecc9a14c4a6b813effe60b56600dd3cf1c262ab9560a7"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:D-PARAM",
+            "evidence:D-RAW",
+            "artifact:D-CODE",
+            "artifact:D-MODEL",
+            "artifact:D-RESULT",
+            "artifact:D-TABLE",
+            "artifact:D-C-VERIFY-CODE"
+          ],
+          "description": "Actual revised-window rerun, independent metrics, table/input checks and protected-file identity comparison",
+          "id": "D-C-VALIDATION",
+          "path": "validation/stage-C/verification.json",
+          "type": "validation-record"
+        },
+        "registered_at": "2026-10-30T02:06:09.728916+00:00",
+        "version": 1
+      },
+      "D-C-VERIFY-CODE": {
+        "bindings": {
+          "files": {
+            "validation/stage-C/verify.py": "b50144616d073a7499e698ef85cc88d0a8e1585b5ed75e34f74702c3f2f9b1a8"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "artifact:D-CODE"
+          ],
+          "description": "Actual stage-C independent metric verification code after preserved first-failure correction; original scientific calculator unchanged",
+          "id": "D-C-VERIFY-CODE",
+          "path": "validation/stage-C/verify.py",
+          "type": "verification-script"
+        },
+        "registered_at": "2026-10-30T02:06:09.693863+00:00",
+        "version": 1
+      },
+      "D-CODE": {
+        "bindings": {
+          "files": {
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Supplied deterministic calculator, unchanged",
+          "id": "D-CODE",
+          "path": "scripts/compute.py",
+          "type": "scientific-calculator"
+        },
+        "registered_at": "2026-10-30T01:47:24.652222+00:00",
+        "version": 1
+      },
+      "D-MODEL": {
+        "bindings": {
+          "files": {
+            "model/frozen.json": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:D-RAW"
+          ],
+          "description": "Supplied C0 hour means and C1 workingday/hour means, trained before 2011-10-01; no refit performed",
+          "id": "D-MODEL",
+          "notes": "Training provenance is supplied; this activity did not independently refit the model",
+          "path": "model/frozen.json",
+          "type": "frozen-model"
+        },
+        "registered_at": "2026-10-30T01:47:24.653290+00:00",
+        "version": 1
+      },
+      "D-RESULT": {
+        "bindings": {
+          "files": {
+            "results/result.json": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:D-PARAM",
+            "evidence:D-RAW",
+            "artifact:D-CODE",
+            "decision:D-CHOICE",
+            "artifact:D-MODEL"
+          ],
+          "description": "Canonical revised-window result copied from successful fresh supplied-calculator rerun; independently checked counts, MAE, RMSE, bias and input SHA",
+          "id": "D-RESULT",
+          "path": "results/result.json",
+          "type": "numeric-result"
+        },
+        "registered_at": "2026-10-30T02:06:09.556095+00:00",
+        "version": 2
+      },
+      "D-SOURCE-NOTE": {
+        "bindings": {
+          "files": {
+            "notes/source-check.md": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Supplied source/version/coverage note; independent of chosen evaluation interval",
+          "id": "D-SOURCE-NOTE",
+          "path": "notes/source-check.md",
+          "type": "source-card"
+        },
+        "registered_at": "2026-10-30T01:47:24.659049+00:00",
+        "version": 1
+      },
+      "D-SOURCE-VERIFICATION": {
+        "bindings": {
+          "files": {
+            "validation/stage-A/source-verification.json": "d9c06d6c76df3d0e689ac2aad52b3dec4498d197081cdb2081cbfa916f3db919"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "source:D-SRC",
+            "evidence:D-RAW",
+            "source:D-REMOTE"
+          ],
+          "description": "Actual local source check and declared remote/unread limits",
+          "id": "D-SOURCE-VERIFICATION",
+          "path": "validation/stage-A/source-verification.json",
+          "type": "verification-record"
+        },
+        "registered_at": "2026-10-30T01:47:24.660741+00:00",
+        "version": 1
+      },
+      "D-SUMMARY": {
+        "bindings": {
+          "files": {
+            "results/summary.md": "f72403c2361bf332b70616353ec39ca323ffe0d173d84f0f2a56fe8c27c5c7e5"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "statement:D-CLAIM",
+            "artifact:D-RESULT",
+            "artifact:D-TABLE"
+          ],
+          "description": "Revised 2011 November-December summary, checked against current result/table, with original Q4 comparison explicitly historical",
+          "id": "D-SUMMARY",
+          "path": "results/summary.md",
+          "type": "summary"
+        },
+        "registered_at": "2026-10-30T02:06:09.624523+00:00",
+        "version": 2
+      },
+      "D-TABLE": {
+        "bindings": {
+          "files": {
+            "results/table.csv": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "artifact:D-RESULT"
+          ],
+          "description": "Current companion table for 2011 November-December; all table metrics checked against canonical JSON",
+          "id": "D-TABLE",
+          "path": "results/table.csv",
+          "type": "numeric-table"
+        },
+        "registered_at": "2026-10-30T02:06:09.590180+00:00",
+        "version": 2
+      },
+      "D-VALIDATION": {
+        "bindings": {
+          "files": {
+            "validation/stage-A/comparison.json": "257cf475416fb23a69f4bbad91b1e1cdda26cd649e3524959d8e76189d72fe16"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:D-RAW",
+            "artifact:D-CODE",
+            "artifact:D-MODEL"
+          ],
+          "description": "Historical stage-A Q4 normal/invalid validation record; preserved bytes, not revised-window validation",
+          "id": "D-VALIDATION",
+          "notes": "Original mutable Q4 dependencies are recorded in registry history and history/stage-C-before-recalculation/records/registry.json; this artifact is historical.",
+          "path": "validation/stage-A/comparison.json",
+          "type": "validation-record"
+        },
+        "registered_at": "2026-10-30T02:06:09.659204+00:00",
+        "version": 2
+      }
+    },
+    "decisions": {
+      "D-CHOICE": {
+        "bindings": null,
+        "data": {
+          "choice": "Use author-approved 2011-11-01 to 2011-12-31 window, observed-hour weighting and unchanged Jan-Sep frozen C0/C1",
+          "decided_at": "Unspecified in supplied materials; no author decision date invented",
+          "evidence_refs": [
+            "D-PARAM",
+            "D-AUTHOR-REVISION",
+            "D-APPROVED-PARAM"
+          ],
+          "extensions": {
+            "decision_date": null,
+            "recorded_by": "assistant agent"
+          },
+          "id": "D-CHOICE",
+          "rationale": "Explicit author acceptance in context/stage-C/AUTHOR-REVISION.md; original Q4 parameter/result/summary and drift-state snapshot retained. Window shift is not evidence of improved model training.",
+          "responsible": "author of supplied scope-revision instruction, as attributed; implementation and checking by assistant agent",
+          "revisit_when": "Only upon explicit authorized parameter/scope revision; retain prior content and reason"
+        },
+        "registered_at": "2026-10-30T02:06:09.522435+00:00",
+        "version": 2
+      }
+    },
+    "evidence": {
+      "D-APPROVED-PARAM": {
+        "bindings": {
+          "files": {
+            "context/stage-C/approved-parameters.json": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Approved 2011-11-01 through 2011-12-31 observed-hour evaluation; frozen model unchanged",
+          "id": "D-APPROVED-PARAM",
+          "location": {
+            "kind": "local",
+            "path": "context/stage-C/approved-parameters.json"
+          },
+          "provenance": "Current stage supplied approved parameter file retained verbatim",
+          "type": "approved-author-parameters"
+        },
+        "registered_at": "2026-10-30T02:06:09.389866+00:00",
+        "version": 1
+      },
+      "D-AUTHOR-REVISION": {
+        "bindings": {
+          "files": {
+            "context/stage-C/AUTHOR-REVISION.md": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Explicit accepted evaluation-window revision, no expert content approval or submission authorization",
+          "id": "D-AUTHOR-REVISION",
+          "location": {
+            "kind": "local",
+            "path": "context/stage-C/AUTHOR-REVISION.md"
+          },
+          "provenance": "Current stage author revision supplied offline; retained verbatim",
+          "type": "author-scope-authorization"
+        },
+        "registered_at": "2026-10-30T02:06:09.356107+00:00",
+        "version": 1
+      },
+      "D-INVALID-PARAM": {
+        "bindings": {
+          "files": {
+            "notes/rejected-parameters.json": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Deliberately invalid start-after-end input; not current parameters",
+          "id": "D-INVALID-PARAM",
+          "location": {
+            "kind": "local",
+            "path": "notes/rejected-parameters.json"
+          },
+          "provenance": "Supplied controlled invalid input",
+          "type": "controlled-invalid-input"
+        },
+        "registered_at": "2026-10-30T01:47:24.664612+00:00",
+        "version": 1
+      },
+      "D-PARAM": {
+        "bindings": {
+          "files": {
+            "notes/parameters.json": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Current approved evaluation: 2011-11-01 to 2011-12-31; observed-hour weighting, frozen Jan-Sep model",
+          "id": "D-PARAM",
+          "location": {
+            "kind": "local",
+            "path": "notes/parameters.json"
+          },
+          "provenance": "Current author revision context/stage-C/AUTHOR-REVISION.md and approved-parameters.json; prior Q4 bytes retained in history/stage-A-initial/",
+          "type": "author-parameters"
+        },
+        "registered_at": "2026-10-30T02:06:09.422527+00:00",
+        "version": 2
+      },
+      "D-RAW": {
+        "bindings": {
+          "files": {
+            "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Immutable supplied official-hour.csv 2011 slice, 8645 observed hour rows",
+          "id": "D-RAW",
+          "limitations": "Full original CSV/remote origin not independently reacquired",
+          "location": {
+            "kind": "local",
+            "path": "data/hour_2011.csv"
+          },
+          "provenance": "Supplied local cache and source identities; local SHA and row coverage verified",
+          "source_ids": [
+            "D-SRC"
+          ],
+          "type": "observed-data"
+        },
+        "registered_at": "2026-10-30T01:47:24.647949+00:00",
+        "version": 1
+      }
+    },
+    "method_bindings": {
+      "D-COMPUTATIONAL": {
+        "bindings": null,
+        "data": {
+          "applies_to": [
+            "activity:D-CALC",
+            "activity:D-INVALID-TEST"
+          ],
+          "id": "D-COMPUTATIONAL",
+          "method_id": "computational",
+          "profile_version": "0.1",
+          "reason": "Rerun deterministic frozen-model observed-hour metrics and preserve actual execution evidence"
+        },
+        "registered_at": "2026-10-30T01:47:24.682442+00:00",
+        "version": 1
+      }
+    },
+    "relations": {
+      "D-REL": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "D-PARAM",
+          "id": "D-REL",
+          "rationale": "Approved parameter revision restricts the descriptive comparison to observed hours from 2011-11-01 to 2011-12-31, with model and weighting unchanged",
+          "relation": "qualifies",
+          "scope": "Current revised-window numerical/descriptive claim; parameter authorization and registration do not prove scientific validity",
+          "statement_id": "D-CLAIM"
+        },
+        "registered_at": "2026-10-30T02:06:09.489278+00:00",
+        "version": 2
+      }
+    },
+    "sources": {
+      "D-REMOTE": {
+        "bindings": null,
+        "data": {
+          "content_access": "metadata-only",
+          "id": "D-REMOTE",
+          "limitations": "No local article content binding; no current remote-content check.",
+          "locator": "https://doi.org/10.1007/s13748-013-0040-3",
+          "title": "Original Bike Sharing research article DOI identity",
+          "version": "DOI identity only; no article copy supplied"
+        },
+        "registered_at": "2026-10-30T01:47:24.647507+00:00",
+        "version": 1
+      },
+      "D-SRC": {
+        "bindings": null,
+        "data": {
+          "content_access": "partial",
+          "extensions": {
+            "access_detail": "Full supplied 2011 CSV parsed (8645 rows); supplied frozen model/code/parameter/result/table/summary/source note read. Original full hour.csv, official ZIP, website and research article not supplied or inspected.",
+            "doi": "https://doi.org/10.24432/C5W894",
+            "license": "CC-BY-4.0",
+            "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+          },
+          "id": "D-SRC",
+          "limitations": "Only supplied 2011 slice inspected; no current remote verification or full dataset/website inspection.",
+          "locator": "https://archive.ics.uci.edu/dataset/275/bike%2Bsharing%2Bdataset",
+          "rights": "restricted",
+          "title": "UCI Bike Sharing dataset",
+          "version": "Official ZIP member hour.csv; yr=0 slice retained 2026-10-29"
+        },
+        "registered_at": "2026-10-30T01:47:24.647079+00:00",
+        "version": 1
+      }
+    },
+    "statements": {
+      "D-CLAIM": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "Recalculation exit 0 and independent MAE/RMSE/bias/counts agree within 1e-14 tolerances; protected data/code/model identities unchanged; no human expert content acceptance.",
+            "reviewer": "assistant agent",
+            "scope": "Actual supplied-script rerun plus independent observed-hour metric/table and summary consistency checks",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "Descriptive numerical calculation",
+            "status": "not-applicable",
+            "tool": "none"
+          },
+          "id": "D-CLAIM",
+          "scope": "Current author parameters: 2011-11-01 to 2011-12-31; 1460 observed hours, 61 days; supplied frozen C0/C1; no refit, causal inference or future-year guarantee",
+          "text": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+          "type": "empirical"
+        },
+        "registered_at": "2026-10-30T02:06:09.455865+00:00",
+        "version": 2
+      }
+    }
+  },
+  "revision": 43,
+  "schema_version": "0.1"
+}

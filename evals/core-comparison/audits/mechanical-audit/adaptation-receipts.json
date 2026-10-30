@@ -1,0 +1,204 @@
+[
+  {
+    "name": "P1-statement-dangling",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P1/statement-dangling/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P1/statement-dangling/project",
+      "--kind",
+      "relation",
+      "--file",
+      "STUDY_ROOT/mechanical-audit/P1/statement-dangling/dangling-statement.json"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P1/statement-dangling/project",
+    "exit_code": 2,
+    "stdout": "{\n  \"passed\": false,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"errors\": [\n    {\n      \"code\": \"invalid_registration\",\n      \"message\": \"Unknown typed reference: statement:AUDIT-MISSING\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "project_identical_bytes_mtime_directory_mtime": true,
+    "changed_files": [],
+    "changed_directories": []
+  },
+  {
+    "name": "P1-valid-prefix-positive",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P1/valid-prefix-positive/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P1/valid-prefix-positive/project",
+      "--kind",
+      "source",
+      "--file",
+      "STUDY_ROOT/mechanical-audit/P1/valid-prefix-positive/valid-source.json"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P1/valid-prefix-positive/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"source\",\n  \"id\": \"AUDIT-VALID-SOURCE\",\n  \"version\": 1,\n  \"revision\": 47,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": "",
+    "project_identical_bytes_mtime_directory_mtime": false,
+    "changed_files": [
+      "records/registry.json"
+    ],
+    "changed_directories": [
+      "records"
+    ]
+  },
+  {
+    "name": "P1-batch-statement-dangling",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P1/batch-statement-dangling/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register-batch",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P1/batch-statement-dangling/project",
+      "--file",
+      "STUDY_ROOT/mechanical-audit/P1/batch-statement-dangling/batch.json"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P1/batch-statement-dangling/project",
+    "exit_code": 2,
+    "stdout": "{\n  \"passed\": false,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"errors\": [\n    {\n      \"code\": \"invalid_registration\",\n      \"message\": \"Unknown typed reference: statement:AUDIT-MISSING\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "project_identical_bytes_mtime_directory_mtime": true,
+    "changed_files": [],
+    "changed_directories": []
+  },
+  {
+    "name": "P4-statement-dangling",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P4/statement-dangling/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P4/statement-dangling/project",
+      "--kind",
+      "relation",
+      "--file",
+      "STUDY_ROOT/mechanical-audit/P4/statement-dangling/dangling-statement.json"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P4/statement-dangling/project",
+    "exit_code": 2,
+    "stdout": "{\n  \"passed\": false,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"errors\": [\n    {\n      \"code\": \"invalid_registration\",\n      \"message\": \"Unknown typed reference: statement:AUDIT-MISSING\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "project_identical_bytes_mtime_directory_mtime": true,
+    "changed_files": [],
+    "changed_directories": []
+  },
+  {
+    "name": "P4-valid-prefix-positive",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P4/valid-prefix-positive/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P4/valid-prefix-positive/project",
+      "--kind",
+      "source",
+      "--file",
+      "STUDY_ROOT/mechanical-audit/P4/valid-prefix-positive/valid-source.json"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P4/valid-prefix-positive/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"source\",\n  \"id\": \"AUDIT-VALID-SOURCE\",\n  \"version\": 1,\n  \"revision\": 44,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": "",
+    "project_identical_bytes_mtime_directory_mtime": false,
+    "changed_files": [
+      "records/registry.json"
+    ],
+    "changed_directories": [
+      "records"
+    ]
+  },
+  {
+    "name": "P4-batch-statement-dangling",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P4/batch-statement-dangling/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register-batch",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P4/batch-statement-dangling/project",
+      "--file",
+      "STUDY_ROOT/mechanical-audit/P4/batch-statement-dangling/batch.json"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P4/batch-statement-dangling/project",
+    "exit_code": 2,
+    "stdout": "{\n  \"passed\": false,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"errors\": [\n    {\n      \"code\": \"invalid_registration\",\n      \"message\": \"Unknown typed reference: statement:AUDIT-MISSING\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "project_identical_bytes_mtime_directory_mtime": true,
+    "changed_files": [],
+    "changed_directories": []
+  },
+  {
+    "name": "P3-valid-prefix-positive",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P3/valid-prefix-positive/project/update-state.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P3/valid-prefix-positive/project",
+      "--expected-revision",
+      "4",
+      "--patch",
+      "STUDY_ROOT/mechanical-audit/P3/valid-prefix-positive/valid.json"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P3/valid-prefix-positive/project",
+    "exit_code": 0,
+    "stdout": "{\"metadata_revision\": 5, \"scientific_activities_rebound\": false, \"checkpoint_updated\": false}\n",
+    "stderr": "",
+    "project_identical_bytes_mtime_directory_mtime": false,
+    "changed_files": [
+      ".history/metadata/revision-4.json",
+      "research/state.json"
+    ],
+    "changed_directories": [
+      ".history/metadata",
+      "research"
+    ]
+  },
+  {
+    "name": "P6-valid-prefix-positive",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P6/valid-prefix-positive/project/scripts/guarded_state_update.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P6/valid-prefix-positive/project",
+      "--candidate",
+      "STUDY_ROOT/mechanical-audit/P6/valid-prefix-positive/valid.json",
+      "--expected-version",
+      "3",
+      "--expected-sha256",
+      "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+      "--reason",
+      "audit prefix positive control"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P6/valid-prefix-positive/project",
+    "exit_code": 0,
+    "stdout": "{\"updated\": true, \"state_version\": 4, \"old_state_snapshot\": \"STUDY_ROOT/mechanical-audit/P6/valid-prefix-positive/project/snapshots/authority/v3-18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc.json\"}\n",
+    "stderr": "",
+    "project_identical_bytes_mtime_directory_mtime": false,
+    "changed_files": [
+      "records/state.json",
+      "snapshots/authority/v3-18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc.json"
+    ],
+    "changed_directories": [
+      "records",
+      "snapshots/authority"
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+{
+  "case_id": "T",
+  "stage": "C",
+  "executor": "AI assistant",
+  "recomputation": {
+    "checks": {
+      "approved_parameters_match": true,
+      "alpha_unchanged": true,
+      "rho_policy_unchanged": true,
+      "grid_unchanged": true,
+      "result_parameters_match": true,
+      "grid_matches": true,
+      "direct_formula_matches": true,
+      "csv_matches_result": true,
+      "result_parameters_sha_matches": true,
+      "calculator_unchanged": true
+    },
+    "values": [
+      {
+        "v": 0,
+        "boundary": 4.895493661361633
+      },
+      {
+        "v": 1,
+        "boundary": 5.57431973357386
+      },
+      {
+        "v": 10,
+        "boundary": 10.070709270872976
+      },
+      {
+        "v": 100,
+        "boundary": 31.015388968276124
+      }
+    ],
+    "scientific_limit": "Only current fixed-parameter arithmetic checked; no proof, simulation coverage, novelty, human approval or submission."
+  },
+  "summary_review": {
+    "read_complete_summary": true,
+    "rho4_and_v10_match": true,
+    "conditions_preserved": true,
+    "awaiting_author_content_review": true
+  },
+  "unchanged_materials": {
+    "sources/howard2021-arxiv-v9.pdf": {
+      "bytes_sha_unchanged": true,
+      "mtime_unchanged": true
+    },
+    "scripts/compute.py": {
+      "bytes_sha_unchanged": true,
+      "mtime_unchanged": true
+    },
+    "notes/source-check.md": {
+      "bytes_sha_unchanged": true,
+      "mtime_unchanged": true
+    },
+    "notes/parameters.json": {
+      "bytes_sha_unchanged": true,
+      "mtime_unchanged": true
+    }
+  },
+  "source_activity_rebound": false,
+  "independent_source_reason": "T-SOURCE-CHECK inputs, output, captured records and bytes unchanged; rho is not its dependency.",
+  "commands": [
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P3/project/resume.py",
+        "--root",
+        "STUDY_ROOT/runs/P3/project"
+      ],
+      "cwd": "STUDY_ROOT/runs/P3/project",
+      "exit_code": 1,
+      "stdout": "STUDY_ROOT/runs/P3/C/output/intermediate-resume.stdout",
+      "stderr": "STUDY_ROOT/runs/P3/C/output/intermediate-resume.stderr"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P3/project/scripts/compute.py",
+        "--root",
+        "STUDY_ROOT/runs/P3/project",
+        "--output",
+        "STUDY_ROOT/runs/P3/project/validation/stage-C-recompute"
+      ],
+      "cwd": "STUDY_ROOT/runs/P3/project",
+      "exit_code": 0,
+      "stdout": "STUDY_ROOT/runs/P3/C/output/recompute.stdout",
+      "stderr": "STUDY_ROOT/runs/P3/C/output/recompute.stderr"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P3/project/update-state.py",
+        "--root",
+        "STUDY_ROOT/runs/P3/project",
+        "--expected-revision",
+        "2",
+        "--patch",
+        "STUDY_ROOT/runs/P3/project/provenance/stage-C/metadata-patch.json"
+      ],
+      "cwd": "STUDY_ROOT/runs/P3/project",
+      "exit_code": 0,
+      "stdout": "STUDY_ROOT/runs/P3/C/output/metadata-revision.stdout",
+      "stderr": "STUDY_ROOT/runs/P3/C/output/metadata-revision.stderr"
+    }
+  ],
+  "human_expert_approval": false,
+  "formal_verification": "not-started",
+  "external_submission_authorized": false,
+  "intermediate_check": {
+    "exit_code": 1,
+    "checkpoint_fresh": true,
+    "activities_still_stale": [
+      "T-CALC",
+      "T-SYNTH"
+    ],
+    "raw_output_preserved_in_project": "validation/stage-C-intermediate-resume.stdout"
+  }
+}

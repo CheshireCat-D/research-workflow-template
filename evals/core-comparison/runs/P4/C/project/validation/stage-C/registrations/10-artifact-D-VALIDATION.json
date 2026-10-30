@@ -1,0 +1,12 @@
+{
+  "derived_from": [
+    "evidence:D-RAW",
+    "artifact:D-CODE",
+    "artifact:D-MODEL"
+  ],
+  "description": "Historical stage-A Q4 normal/invalid validation record; preserved bytes, not revised-window validation",
+  "id": "D-VALIDATION",
+  "path": "validation/stage-A/comparison.json",
+  "type": "validation-record",
+  "notes": "Original mutable Q4 dependencies are recorded in registry history and history/stage-C-before-recalculation/records/registry.json; this artifact is historical."
+}

@@ -1,0 +1,1265 @@
+{
+  "case_id": "D",
+  "stage": "C",
+  "commands": [
+    {
+      "outer_tool_call": 1,
+      "argv": [
+        "cat",
+        "STUDY_ROOT/runs/P2/C/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "Read current request"
+    },
+    {
+      "outer_tool_call": 2,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_kind": "Python standard-library script submitted through exec_command",
+      "purpose": "Read all current input documents and inventory own project"
+    },
+    {
+      "outer_tool_call": 3,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_kind": "Python standard-library script submitted through exec_command",
+      "purpose": "Preserve full drift checkpoint then read current project records and calculator"
+    },
+    {
+      "outer_tool_call": 4,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_kind": "Python standard-library script submitted through exec_command",
+      "purpose": "Run and preserve read-only intermediate status plus unchanged tree proof"
+    },
+    {
+      "outer_tool_call": 5,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_kind": "Python standard-library script submitted through exec_command",
+      "purpose": "Copy authorization and original intermediate results; run original calculator; independently recompute metrics and compare table"
+    },
+    {
+      "outer_tool_call": 6,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_kind": "Python standard-library script submitted through exec_command",
+      "purpose": "Promote verified artifacts, revise summary/authority/choice/bindings and save current checkpoint plus standalone read-only verifier"
+    },
+    {
+      "outer_tool_call": 7,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_kind": "Python standard-library script submitted through exec_command",
+      "purpose": "Run and preserve final identity/numeric checks; validate checkpoint files"
+    },
+    {
+      "outer_tool_call": 8,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_kind": "Python standard-library script submitted through exec_command",
+      "purpose": "Write report, state answer, read ledger, execution record and identities manifest"
+    },
+    {
+      "parent_outer_tool_call": 4,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "management/status.py",
+        "--root",
+        "."
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 3,
+      "purpose": "Original intermediate read-only state check",
+      "stdout_path": "intermediate-status.stdout.json",
+      "stderr_path": "intermediate-status.stderr.txt"
+    },
+    {
+      "parent_outer_tool_call": 5,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "scripts/compute.py",
+        "--root",
+        ".",
+        "--output",
+        "management/evidence/C/recomputed"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"result\": \"management/evidence/C/recomputed/result.json\", \"parameters_sha256\": \"86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864\"}\n",
+      "stderr": "",
+      "purpose": "Authorized frozen-model recalculation"
+    },
+    {
+      "parent_outer_tool_call": 7,
+      "name": "final-status",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "management/status.py",
+        "--root",
+        "."
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"case_id\": \"D\",\n  \"state_authority\": \"management/state.json with supplied governance; current bytes take precedence over old recorded completion\",\n  \"active_parameters_observed\": {\n    \"case_id\": \"D\",\n    \"evaluation_start\": \"2011-11-01\",\n    \"evaluation_end\": \"2011-12-31\",\n    \"model_policy\": \"frozen-2011-Jan-Sep\",\n    \"metric_weighting\": \"observed-hour\"\n  },\n  \"authoritative_constraints_at_checkpoint\": {\n    \"interest\": \"在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"D\",\n      \"evaluation_start\": \"2011-11-01\",\n      \"evaluation_end\": \"2011-12-31\",\n      \"model_policy\": \"frozen-2011-Jan-Sep\",\n      \"metric_weighting\": \"observed-hour\"\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"changed_or_missing_paths\": [],\n  \"affected_activities\": [],\n  \"unaffected_activities\": [\n    \"D-CALC\",\n    \"D-SOURCE-CHECK\",\n    \"D-SYNTH\"\n  ],\n  \"checkpoint_freshness\": \"fresh-for-registered-local-files\",\n  \"scientific_scope\": \"2011-11-01至2011-12-31、1460实际观察小时/61日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。\",\n  \"source_tracking_limits\": {\n    \"D-SRC\": \"已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。\",\n    \"D-REMOTE\": \"仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。\",\n    \"notes/unregistered-scratch.md\": \"已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。\",\n    \"source_card_discrepancy\": \"卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。\",\n    \"publication_rule\": \"Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.\"\n  },\n  \"versions\": [\n    {\n      \"logical_path\": \"notes/parameters.json\",\n      \"snapshot_path\": \"management/versions/A-initial/notes/parameters.json\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/result.json\",\n      \"snapshot_path\": \"management/versions/A-initial/results/result.json\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/table.csv\",\n      \"snapshot_path\": \"management/versions/A-initial/results/table.csv\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/summary.md\",\n      \"snapshot_path\": \"management/versions/A-initial/results/summary.md\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"notes/parameters.json\",\n      \"snapshot_path\": \"management/checkpoints/C-final/tree/notes/parameters.json\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/result.json\",\n      \"snapshot_path\": \"management/checkpoints/C-final/tree/results/result.json\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/table.csv\",\n      \"snapshot_path\": \"management/checkpoints/C-final/tree/results/table.csv\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"results/summary.md\",\n      \"snapshot_path\": \"management/checkpoints/C-final/tree/results/summary.md\",\n      \"intact\": true\n    },\n    {\n      \"logical_path\": \"management/constraints.json\",\n      \"snapshot_path\": \"management/checkpoints/C-final/tree/management/constraints.json\",\n      \"intact\": true\n    }\n  ],\n  \"next_action\": \"将2011年11月至12月的冻结模型指标（1460观察小时、61日）与更新摘要交作者内容复核；保留原Q4结果作历史记录。尚无内容认可或投稿授权；继续前运行management/status.py和management/verify_current.py，不重训、不外推2012。\",\n  \"writes_project\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "parent_outer_tool_call": 7,
+      "name": "final-numerical-verification",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "management/verify_current.py",
+        "--root",
+        "."
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"errors\": [],\n  \"independent_metrics\": {\n    \"observed_hours\": 1460,\n    \"observed_days\": 61,\n    \"C0_MAE\": 56.64127430990882,\n    \"C0_RMSE\": 81.70038360631688,\n    \"C0_bias_prediction_minus_actual\": 13.433264561295244,\n    \"C1_MAE\": 41.252622564018566,\n    \"C1_RMSE\": 64.15826564867794,\n    \"C1_bias_prediction_minus_actual\": 13.347664992606457,\n    \"MAE_reduction_fraction\": 0.2716861852664598\n  },\n  \"table_agrees\": true,\n  \"activities_checked\": [\n    \"D-SOURCE-CHECK\",\n    \"D-CALC\",\n    \"D-SYNTH\"\n  ],\n  \"writes_project\": false,\n  \"interpretation\": \"Numeric and local binding verification only; author content review remains pending.\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "tool_calls": 8,
+  "outer_tool_calls": 8,
+  "network_calls": 0,
+  "agent_calls": 0,
+  "violations": [],
+  "failures": [
+    {
+      "stage": "intermediate",
+      "exit_code": 3,
+      "type": "expected stale dependency failure",
+      "paths": [
+        "notes/parameters.json"
+      ],
+      "affected_activities": [
+        "D-CALC",
+        "D-SYNTH"
+      ],
+      "raw_stdout": "intermediate-status.stdout.json",
+      "remedy": "Author-authorized actual recalculation, independent numeric verification, summary revision, active scope and bindings updated; original failure retained."
+    }
+  ],
+  "recording_limits": [
+    {
+      "outer_tool_call": 3,
+      "type": "tool display truncated",
+      "meaning": "The displayed project text exceeded the result budget; full actual bytes were preserved in the checkpoint and full read hashes recorded. Relevant authority fields were subsequently displayed separately."
+    }
+  ],
+  "writes_project": true,
+  "written_project_paths": [
+    {
+      "path": "PROJECT_ROOT/RECOVERY.md",
+      "operation": "revised",
+      "sha256": "6859cf68b9e263e28429eabf6cbd2ba038cc0b4877c7bc88afbb9472f4add585",
+      "bytes": 2841
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/checkpoint.json",
+      "operation": "created",
+      "sha256": "8dce51003a30f276fb32b9869fd284aa7aefc0fc2843d1e0d8ad50c2bd59e8d4",
+      "bytes": 1424
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/management/constraints.json",
+      "operation": "created",
+      "sha256": "06f10fae9ecc9bdcb91b69666bb84e26439b8a2c11258d3778f4168098cf446d",
+      "bytes": 1070
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/management/state.json",
+      "operation": "created",
+      "sha256": "be49d09c6ae1c69c058bfa9b9926cb4e4b76a90b52126096f484f7400b01b2fa",
+      "bytes": 25965
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/notes/parameters.json",
+      "operation": "created",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/results/result.json",
+      "operation": "created",
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/results/summary.md",
+      "operation": "created",
+      "sha256": "b7b9af6a4cb12e1e30c5ef6c9b19f92a2513d0bb31f511d350110203abc45705",
+      "bytes": 1124
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/results/table.csv",
+      "operation": "created",
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/verification.json",
+      "operation": "created",
+      "sha256": "32f1a61b60a7dea8ec5ab6ad342ac17f50201f30d48becc9783cca16bdd3a54f",
+      "bytes": 6785
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/checkpoint.json",
+      "operation": "created",
+      "sha256": "c9e1b3be936d88bcdf9d8e3faba204816da43d902ffccdb60f1f50aad47f5986",
+      "bytes": 5228
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/RECOVERY.md",
+      "operation": "created",
+      "sha256": "065dac75fd841afc777180f5263c65748344c6448a1639ad8fd6d9630115548d",
+      "bytes": 3157
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/data/hour_2011.csv",
+      "operation": "created",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/BRIEF.md",
+      "operation": "created",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/MANIFEST.json",
+      "operation": "created",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/constraints.json",
+      "operation": "created",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/evidence/A/checks.json",
+      "operation": "created",
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "bytes": 9234
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/evidence/A/invalid-after.json",
+      "operation": "created",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/evidence/A/invalid-before.json",
+      "operation": "created",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run/result.json",
+      "operation": "created",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run/table.csv",
+      "operation": "created",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/obligations.json",
+      "operation": "created",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/protocol/PROTOCOL.md",
+      "operation": "created",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/protocol/RECORDING.md",
+      "operation": "created",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/protocol/REQUEST.md",
+      "operation": "created",
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "bytes": 2145
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/protocol/STAGE-A.md",
+      "operation": "created",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/source-identities.json",
+      "operation": "created",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/state.json",
+      "operation": "created",
+      "sha256": "78986837437208d8346c7a8b83ebe34d470234c840b5f2055284bba2480aaf77",
+      "bytes": 19166
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/status.py",
+      "operation": "created",
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98",
+      "bytes": 3331
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/notes/parameters.json",
+      "operation": "created",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/result.json",
+      "operation": "created",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/summary.md",
+      "operation": "created",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/table.csv",
+      "operation": "created",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/model/frozen.json",
+      "operation": "created",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/notes/parameters.json",
+      "operation": "created",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/notes/rejected-parameters.json",
+      "operation": "created",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/notes/source-check.md",
+      "operation": "created",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/notes/unregistered-scratch.md",
+      "operation": "created",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/results/result.json",
+      "operation": "created",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/results/summary.md",
+      "operation": "created",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/results/table.csv",
+      "operation": "created",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/scripts/compute.py",
+      "operation": "created",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    {
+      "path": "PROJECT_ROOT/management/constraints.json",
+      "operation": "revised",
+      "sha256": "06f10fae9ecc9bdcb91b69666bb84e26439b8a2c11258d3778f4168098cf446d",
+      "bytes": 1070
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/authorization/AUTHOR-REVISION.md",
+      "operation": "created",
+      "sha256": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6",
+      "bytes": 1443
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/authorization/approved-parameters.json",
+      "operation": "created",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/checks-before-promotion.json",
+      "operation": "created",
+      "sha256": "94cf8cdf1d128c1a13d6c1b82e5e98c0feed9b4697ccad3bc1dff0c936325428",
+      "bytes": 1382
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/compute-run.json",
+      "operation": "created",
+      "sha256": "61fd4a33242e0010c34c9fa5344e43060477a8617af76b77600bda361999e204",
+      "bytes": 493
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/final-check.json",
+      "operation": "created",
+      "sha256": "32f1a61b60a7dea8ec5ab6ad342ac17f50201f30d48becc9783cca16bdd3a54f",
+      "bytes": 6785
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/final-numerical-verification.stderr.txt",
+      "operation": "created",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/final-numerical-verification.stdout.json",
+      "operation": "created",
+      "sha256": "2bc5c50ab5fd344e26a03475961e57eb237f6cb6f67ab6144479797d4ef69c17",
+      "bytes": 663
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/final-status.stderr.txt",
+      "operation": "created",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/final-status.stdout.json",
+      "operation": "created",
+      "sha256": "4ef934a248d93ba35ad5b4bd3321cbe9a7c5cd04deefa8e1b84f3a969a65cee9",
+      "bytes": 4680
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/intermediate-check.json",
+      "operation": "created",
+      "sha256": "d464618d2f1d2e55f702e790955db6c9fefd3653bb9edbd4f7429bb9e07e350b",
+      "bytes": 37102
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/intermediate-status.stderr.txt",
+      "operation": "created",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/intermediate-status.stdout.json",
+      "operation": "created",
+      "sha256": "c745d525f7c610bb1ba5b4d3c7f5d8826fabd32091ca01041dd8e14984041361",
+      "bytes": 4051
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/recomputed/result.json",
+      "operation": "created",
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/recomputed/table.csv",
+      "operation": "created",
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/summary-review.json",
+      "operation": "created",
+      "sha256": "d292cc274751bc0f84b4f66eb59092389c725ef8e2d691a0127ab4f848357872",
+      "bytes": 827
+    },
+    {
+      "path": "PROJECT_ROOT/management/state.json",
+      "operation": "revised",
+      "sha256": "be49d09c6ae1c69c058bfa9b9926cb4e4b76a90b52126096f484f7400b01b2fa",
+      "bytes": 25965
+    },
+    {
+      "path": "PROJECT_ROOT/management/verify_current.py",
+      "operation": "created",
+      "sha256": "d79b48b511c0f38d5f19c5bbd37509368c87d23bcf527b0bebfe4ebb3b11d741",
+      "bytes": 4198
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "operation": "revised",
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "operation": "revised",
+      "sha256": "b7b9af6a4cb12e1e30c5ef6c9b19f92a2513d0bb31f511d350110203abc45705",
+      "bytes": 1124
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "operation": "revised",
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203
+    }
+  ],
+  "written_output_paths": [
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/state-answer.json",
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/inputs-and-artifacts.json",
+    "OUTPUT_DIR/read-ledger.json",
+    "OUTPUT_DIR/intermediate-status.stdout.json",
+    "OUTPUT_DIR/intermediate-status.stderr.txt",
+    "OUTPUT_DIR/intermediate-check.json",
+    "OUTPUT_DIR/compute-run.json",
+    "OUTPUT_DIR/final-status.stdout.json",
+    "OUTPUT_DIR/final-status.stderr.txt",
+    "OUTPUT_DIR/final-numerical-verification.stdout.json",
+    "OUTPUT_DIR/final-numerical-verification.stderr.txt",
+    "OUTPUT_DIR/final-check.json"
+  ],
+  "read_manifest": [
+    {
+      "path": "STUDY_ROOT/runs/P2/C/REQUEST.md",
+      "sha256": "ed8ac98c66cfa1c42bbd95bbb3867eb8635a888526902ab65fd8ae0ee9d969a0",
+      "bytes": 2145,
+      "purpose": "current request and stage input"
+    },
+    {
+      "path": "INPUT_DIR/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "purpose": "current request and stage input"
+    },
+    {
+      "path": "INPUT_DIR/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "purpose": "current request and stage input"
+    },
+    {
+      "path": "INPUT_DIR/STAGE-C.md",
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "bytes": 761,
+      "purpose": "current request and stage input"
+    },
+    {
+      "path": "INPUT_DIR/author-revision/AUTHOR-REVISION.md",
+      "sha256": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6",
+      "bytes": 1443,
+      "purpose": "author authorization preserved"
+    },
+    {
+      "path": "INPUT_DIR/author-revision/approved-parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "purpose": "author authorization preserved"
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVERY.md",
+      "sha256": "065dac75fd841afc777180f5263c65748344c6448a1639ad8fd6d9630115548d",
+      "bytes": 3157,
+      "purpose": "read-only pre-recompute tree identity and mtime check"
+    },
+    {
+      "path": "PROJECT_ROOT/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070,
+      "purpose": "preserve fixed constraints while accepting scope"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/A/checks.json",
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "bytes": 9234,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/A/invalid-after.json",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/A/invalid-before.json",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/A/normal-run/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/A/normal-run/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/protocol/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/protocol/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/protocol/REQUEST.md",
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "bytes": 2145,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/protocol/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/state.json",
+      "sha256": "78986837437208d8346c7a8b83ebe34d470234c840b5f2055284bba2480aaf77",
+      "bytes": 19166,
+      "purpose": "authority before revision"
+    },
+    {
+      "path": "PROJECT_ROOT/management/status.py",
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98",
+      "bytes": 3331,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/versions/A-initial/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/versions/A-initial/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/versions/A-initial/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/versions/A-initial/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "purpose": "retain former Q4 result"
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "purpose": "read-only pre-recompute tree identity and mtime check"
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "purpose": "read-only pre-recompute tree identity and mtime check"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/checkpoint.json",
+      "sha256": "c9e1b3be936d88bcdf9d8e3faba204816da43d902ffccdb60f1f50aad47f5986",
+      "bytes": 5228,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/RECOVERY.md",
+      "sha256": "065dac75fd841afc777180f5263c65748344c6448a1639ad8fd6d9630115548d",
+      "bytes": 3157,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/evidence/A/checks.json",
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "bytes": 9234,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/evidence/A/invalid-after.json",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/evidence/A/invalid-before.json",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/protocol/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/protocol/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/protocol/REQUEST.md",
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "bytes": 2145,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/protocol/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/state.json",
+      "sha256": "78986837437208d8346c7a8b83ebe34d470234c840b5f2055284bba2480aaf77",
+      "bytes": 19166,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/status.py",
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98",
+      "bytes": 3331,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/notes/parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-pre-recompute/tree/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/intermediate-status.stdout.json",
+      "sha256": "c745d525f7c610bb1ba5b4d3c7f5d8826fabd32091ca01041dd8e14984041361",
+      "bytes": 4051,
+      "purpose": "state answer original drift"
+    },
+    {
+      "path": "OUTPUT_DIR/intermediate-status.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "preserve original intermediate check in project"
+    },
+    {
+      "path": "OUTPUT_DIR/intermediate-check.json",
+      "sha256": "d464618d2f1d2e55f702e790955db6c9fefd3653bb9edbd4f7429bb9e07e350b",
+      "bytes": 37102,
+      "purpose": "report preserved intermediate result"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/authorization/approved-parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/recomputed/result.json",
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/recomputed/table.csv",
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/checks-before-promotion.json",
+      "sha256": "94cf8cdf1d128c1a13d6c1b82e5e98c0feed9b4697ccad3bc1dff0c936325428",
+      "bytes": 1382,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/constraints.json",
+      "sha256": "06f10fae9ecc9bdcb91b69666bb84e26439b8a2c11258d3778f4168098cf446d",
+      "bytes": 1070,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "b7b9af6a4cb12e1e30c5ef6c9b19f92a2513d0bb31f511d350110203abc45705",
+      "bytes": 1124,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/notes/parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/results/result.json",
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/results/table.csv",
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/results/summary.md",
+      "sha256": "b7b9af6a4cb12e1e30c5ef6c9b19f92a2513d0bb31f511d350110203abc45705",
+      "bytes": 1124,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/management/constraints.json",
+      "sha256": "06f10fae9ecc9bdcb91b69666bb84e26439b8a2c11258d3778f4168098cf446d",
+      "bytes": 1070,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVERY.md",
+      "sha256": "6859cf68b9e263e28429eabf6cbd2ba038cc0b4877c7bc88afbb9472f4add585",
+      "bytes": 2841,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/verify_current.py",
+      "sha256": "d79b48b511c0f38d5f19c5bbd37509368c87d23bcf527b0bebfe4ebb3b11d741",
+      "bytes": 4198,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/authorization/AUTHOR-REVISION.md",
+      "sha256": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6",
+      "bytes": 1443,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/compute-run.json",
+      "sha256": "61fd4a33242e0010c34c9fa5344e43060477a8617af76b77600bda361999e204",
+      "bytes": 493,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/intermediate-check.json",
+      "sha256": "d464618d2f1d2e55f702e790955db6c9fefd3653bb9edbd4f7429bb9e07e350b",
+      "bytes": 37102,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/intermediate-status.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/intermediate-status.stdout.json",
+      "sha256": "c745d525f7c610bb1ba5b4d3c7f5d8826fabd32091ca01041dd8e14984041361",
+      "bytes": 4051,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/summary-review.json",
+      "sha256": "d292cc274751bc0f84b4f66eb59092389c725ef8e2d691a0127ab4f848357872",
+      "bytes": 827,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/state.json",
+      "sha256": "be49d09c6ae1c69c058bfa9b9926cb4e4b76a90b52126096f484f7400b01b2fa",
+      "bytes": 25965,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/tree/management/state.json",
+      "sha256": "be49d09c6ae1c69c058bfa9b9926cb4e4b76a90b52126096f484f7400b01b2fa",
+      "bytes": 25965,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/checkpoint.json",
+      "sha256": "8dce51003a30f276fb32b9869fd284aa7aefc0fc2843d1e0d8ad50c2bd59e8d4",
+      "bytes": 1424,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/final-status.stdout.json",
+      "sha256": "4ef934a248d93ba35ad5b4bd3321cbe9a7c5cd04deefa8e1b84f3a969a65cee9",
+      "bytes": 4680,
+      "purpose": "preserve final actual check in project"
+    },
+    {
+      "path": "OUTPUT_DIR/final-status.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "preserve final actual check in project"
+    },
+    {
+      "path": "OUTPUT_DIR/final-numerical-verification.stdout.json",
+      "sha256": "2bc5c50ab5fd344e26a03475961e57eb237f6cb6f67ab6144479797d4ef69c17",
+      "bytes": 663,
+      "purpose": "preserve final actual check in project"
+    },
+    {
+      "path": "OUTPUT_DIR/final-numerical-verification.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "preserve final actual check in project"
+    },
+    {
+      "path": "OUTPUT_DIR/final-check.json",
+      "sha256": "32f1a61b60a7dea8ec5ab6ad342ac17f50201f30d48becc9783cca16bdd3a54f",
+      "bytes": 6785,
+      "purpose": "report actual final checks"
+    },
+    {
+      "path": "PROJECT_ROOT/management/checkpoints/C-final/verification.json",
+      "sha256": "32f1a61b60a7dea8ec5ab6ad342ac17f50201f30d48becc9783cca16bdd3a54f",
+      "bytes": 6785,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/final-check.json",
+      "sha256": "32f1a61b60a7dea8ec5ab6ad342ac17f50201f30d48becc9783cca16bdd3a54f",
+      "bytes": 6785,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/final-numerical-verification.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/final-numerical-verification.stdout.json",
+      "sha256": "2bc5c50ab5fd344e26a03475961e57eb237f6cb6f67ab6144479797d4ef69c17",
+      "bytes": 663,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/final-status.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "final artifacts inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/management/evidence/C/final-status.stdout.json",
+      "sha256": "4ef934a248d93ba35ad5b4bd3321cbe9a7c5cd04deefa8e1b84f3a969a65cee9",
+      "bytes": 4680,
+      "purpose": "final artifacts inventory"
+    }
+  ],
+  "read_manifest_meaning": "Full SHA256 and bytes of observed research inputs, project files, scripts, preserved versions and substantive audit outputs; distinct content versions retained per path. Auxiliary ledger self-reading is bookkeeping, not scientific input. Standard-library implementation files are runtime rather than research materials.",
+  "settings": {
+    "effective_model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "system_limit": null,
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "python_executable": "EVAL_PYTHON"
+  },
+  "final_checks": {
+    "status_exit_code": 0,
+    "numeric_exit_code": 0,
+    "registered_changed_or_missing_paths": [],
+    "checkpoints": {
+      "C-pre-recompute": {
+        "intact": true,
+        "mismatch_paths": [],
+        "files": 31
+      },
+      "C-final": {
+        "intact": true,
+        "mismatch_paths": [],
+        "files": 6
+      }
+    },
+    "read_only_check_project_unchanged": true
+  },
+  "completion_meaning": "Actual authorized local work completed; no human expert approval or submission authorization."
+}

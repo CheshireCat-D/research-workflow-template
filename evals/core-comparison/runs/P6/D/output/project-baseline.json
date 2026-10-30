@@ -1,0 +1,625 @@
+[
+  {
+    "scope": "project",
+    "path": ".",
+    "size": 416,
+    "mtime_ns": 1793326130371525901,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": ".gitignore",
+    "size": 89,
+    "mtime_ns": 1793325457660395662,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "RECOVER.md",
+    "size": 2283,
+    "mtime_ns": 1793326130405346556,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "data",
+    "size": 96,
+    "mtime_ns": 1793325289323862069,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "data/hour_2011.csv",
+    "size": 568668,
+    "mtime_ns": 1793325289323916611,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "model",
+    "size": 96,
+    "mtime_ns": 1793325289324071195,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "model/frozen.json",
+    "size": 2320,
+    "mtime_ns": 1793325289324099612,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "notes",
+    "size": 192,
+    "mtime_ns": 1793325289324498740,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "notes/parameters.json",
+    "size": 171,
+    "mtime_ns": 1793325515099437024,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "notes/rejected-parameters.json",
+    "size": 171,
+    "mtime_ns": 1793325289324338739,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "notes/source-check.md",
+    "size": 474,
+    "mtime_ns": 1793325289324429948,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "notes/unregistered-scratch.md",
+    "size": 132,
+    "mtime_ns": 1793325289324527532,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance",
+    "size": 160,
+    "mtime_ns": 1793325951019185188,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "provenance/initial",
+    "size": 224,
+    "mtime_ns": 1793325289325723039,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "provenance/initial/BRIEF.md",
+    "size": 1078,
+    "mtime_ns": 1793325289325304162,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/initial/MANIFEST.json",
+    "size": 2329,
+    "mtime_ns": 1793325289325748665,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/initial/constraints.json",
+    "size": 1070,
+    "mtime_ns": 1793325289325430621,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/initial/obligations.json",
+    "size": 4723,
+    "mtime_ns": 1793325289325575205,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/initial/source-identities.json",
+    "size": 1200,
+    "mtime_ns": 1793325289325660706,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-A",
+    "size": 160,
+    "mtime_ns": 1793325289326007708,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-A/PROTOCOL.md",
+    "size": 2279,
+    "mtime_ns": 1793325289325857874,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-A/RECORDING.md",
+    "size": 1300,
+    "mtime_ns": 1793325289325950916,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-A/STAGE-A.md",
+    "size": 1214,
+    "mtime_ns": 1793325289326036750,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-C",
+    "size": 192,
+    "mtime_ns": 1793325951019433274,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-C/PROTOCOL.md",
+    "size": 2279,
+    "mtime_ns": 1793325951019235314,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-C/RECORDING.md",
+    "size": 1300,
+    "mtime_ns": 1793325951019313190,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-C/STAGE-C.md",
+    "size": 761,
+    "mtime_ns": 1793325951019390690,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-C/author-revision",
+    "size": 128,
+    "mtime_ns": 1793325951019528358,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-C/author-revision/AUTHOR-REVISION.md",
+    "size": 1443,
+    "mtime_ns": 1793325951019479608,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "provenance/task-C/author-revision/approved-parameters.json",
+    "size": 171,
+    "mtime_ns": 1793325951019549317,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records",
+    "size": 480,
+    "mtime_ns": 1793326130425448955,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "records/.edit.lock",
+    "size": 0,
+    "mtime_ns": 1793325950994648830,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/checkpoint-C-final.json",
+    "size": 2933,
+    "mtime_ns": 1793326130425411497,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/commands-A.json",
+    "size": 16077,
+    "mtime_ns": 1793325457716572328,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/commands-C.json",
+    "size": 8683,
+    "mtime_ns": 1793326268270119844,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/drift-checkpoint-C.json",
+    "size": 2918,
+    "mtime_ns": 1793325951019802444,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/final-check-C.json",
+    "size": 5367,
+    "mtime_ns": 1793326130425488122,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/guard-validation-A.json",
+    "size": 330,
+    "mtime_ns": 1793325457716718954,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/initial-snapshots.json",
+    "size": 527,
+    "mtime_ns": 1793325289381739329,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/inputs-A.json",
+    "size": 11713,
+    "mtime_ns": 1793325289400830622,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/intermediate-check-C.json",
+    "size": 5589,
+    "mtime_ns": 1793325951019623901,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/state.json",
+    "size": 22266,
+    "mtime_ns": 1793326130402533238,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/validation-A.json",
+    "size": 8200,
+    "mtime_ns": 1793325289380463695,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "records/validation-C.json",
+    "size": 2742,
+    "mtime_ns": 1793326130384839320,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "results",
+    "size": 160,
+    "mtime_ns": 1793325289324927701,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "results/result.json",
+    "size": 999,
+    "mtime_ns": 1793326130383537974,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "results/summary.md",
+    "size": 905,
+    "mtime_ns": 1793326130383708601,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "results/table.csv",
+    "size": 203,
+    "mtime_ns": 1793326130383654308,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "results-evaluations",
+    "size": 96,
+    "mtime_ns": 1793326130371571110,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "results-evaluations/C-approved",
+    "size": 128,
+    "mtime_ns": 1793326130371770487,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "results-evaluations/C-approved/result.json",
+    "size": 999,
+    "mtime_ns": 1793326130371684861,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "results-evaluations/C-approved/table.csv",
+    "size": 203,
+    "mtime_ns": 1793326130371809821,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "scripts",
+    "size": 160,
+    "mtime_ns": 1793325289381565411,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "scripts/compute.py",
+    "size": 4157,
+    "mtime_ns": 1793325289325099410,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "scripts/guarded_state_update.py",
+    "size": 2642,
+    "mtime_ns": 1793325289381593953,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "scripts/project_status.py",
+    "size": 4080,
+    "mtime_ns": 1793325289381457535,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots",
+    "size": 160,
+    "mtime_ns": 1793325950994944125,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/authority",
+    "size": 128,
+    "mtime_ns": 1793326130402156359,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/authority/v1-d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa.json",
+    "size": 19212,
+    "mtime_ns": 1793325950995024375,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/authority/v2-d686169299fbbaa8ac8b39f246340f1c931a8b7fb66702d12295bee538b6fc43.json",
+    "size": 19622,
+    "mtime_ns": 1793326130402210318,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/initial",
+    "size": 128,
+    "mtime_ns": 1793325289326870172,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/initial/notes",
+    "size": 96,
+    "mtime_ns": 1793325289326824214,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/initial/notes/parameters.json",
+    "size": 171,
+    "mtime_ns": 1793325289326847130,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/initial/results",
+    "size": 160,
+    "mtime_ns": 1793325289327071548,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/initial/results/result.json",
+    "size": 1000,
+    "mtime_ns": 1793325289326930589,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/initial/results/summary.md",
+    "size": 280,
+    "mtime_ns": 1793325289327093257,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/initial/results/table.csv",
+    "size": 205,
+    "mtime_ns": 1793325289327004006,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute",
+    "size": 320,
+    "mtime_ns": 1793325950976684451,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/RECOVER.md",
+    "size": 2824,
+    "mtime_ns": 1793325950974646433,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/data",
+    "size": 96,
+    "mtime_ns": 1793325950974999018,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/data/hour_2011.csv",
+    "size": 568668,
+    "mtime_ns": 1793325950975056936,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/manifest.json",
+    "size": 1532,
+    "mtime_ns": 1793325950976712118,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/model",
+    "size": 96,
+    "mtime_ns": 1793325950976075654,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/model/frozen.json",
+    "size": 2320,
+    "mtime_ns": 1793325950976107195,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/notes",
+    "size": 128,
+    "mtime_ns": 1793325950976545825,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/notes/parameters.json",
+    "size": 171,
+    "mtime_ns": 1793325950975760067,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/notes/source-check.md",
+    "size": 474,
+    "mtime_ns": 1793325950976578325,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/records",
+    "size": 96,
+    "mtime_ns": 1793325950974074094,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/records/state.json",
+    "size": 19212,
+    "mtime_ns": 1793325950974136469,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/results",
+    "size": 160,
+    "mtime_ns": 1793325950976433574,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/results/result.json",
+    "size": 1000,
+    "mtime_ns": 1793325950976240530,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/results/summary.md",
+    "size": 280,
+    "mtime_ns": 1793325950976459282,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/results/table.csv",
+    "size": 205,
+    "mtime_ns": 1793325950976353740,
+    "directory": false
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/scripts",
+    "size": 96,
+    "mtime_ns": 1793325950975886318,
+    "directory": true
+  },
+  {
+    "scope": "project",
+    "path": "snapshots/stage-C-before-recompute/scripts/compute.py",
+    "size": 4157,
+    "mtime_ns": 1793325950975938611,
+    "directory": false
+  },
+  {
+    "scope": "input",
+    "path": ".",
+    "size": 160,
+    "mtime_ns": 1793326298617160555,
+    "directory": true
+  },
+  {
+    "scope": "input",
+    "path": "PROTOCOL.md",
+    "size": 2279,
+    "mtime_ns": 1793326298616988095,
+    "directory": false
+  },
+  {
+    "scope": "input",
+    "path": "RECORDING.md",
+    "size": 1300,
+    "mtime_ns": 1793326298617097263,
+    "directory": false
+  },
+  {
+    "scope": "input",
+    "path": "STAGE-D.md",
+    "size": 638,
+    "mtime_ns": 1793326298617198805,
+    "directory": false
+  }
+]

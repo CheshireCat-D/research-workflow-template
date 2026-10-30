@@ -1,0 +1,1030 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "management/status.py",
+    "--root",
+    "."
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 3,
+  "project_bytes_and_mtimes_unchanged": true,
+  "before": {
+    ".": {
+      "kind": "dir",
+      "mtime_ns": 1793322214672985402
+    },
+    "RECOVERY.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214673011944,
+      "bytes": 3157,
+      "sha256": "065dac75fd841afc777180f5263c65748344c6448a1639ad8fd6d9630115548d"
+    },
+    "data": {
+      "kind": "dir",
+      "mtime_ns": 1793322214608676950
+    },
+    "data/hour_2011.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214608738033,
+      "bytes": 568668,
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115"
+    },
+    "management": {
+      "kind": "dir",
+      "mtime_ns": 1793322580676989028
+    },
+    "management/BRIEF.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609934981,
+      "bytes": 1078,
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80"
+    },
+    "management/MANIFEST.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610214479,
+      "bytes": 2329,
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072"
+    },
+    "management/checkpoints": {
+      "kind": "dir",
+      "mtime_ns": 1793322580677034278
+    },
+    "management/checkpoints/C-pre-recompute": {
+      "kind": "dir",
+      "mtime_ns": 1793322580682034485
+    },
+    "management/checkpoints/C-pre-recompute/checkpoint.json": {
+      "kind": "file",
+      "mtime_ns": 1793322580682086860,
+      "bytes": 5228,
+      "sha256": "c9e1b3be936d88bcdf9d8e3faba204816da43d902ffccdb60f1f50aad47f5986"
+    },
+    "management/checkpoints/C-pre-recompute/tree": {
+      "kind": "dir",
+      "mtime_ns": 1793322580681817154
+    },
+    "management/checkpoints/C-pre-recompute/tree/RECOVERY.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214673011944,
+      "bytes": 3157,
+      "sha256": "065dac75fd841afc777180f5263c65748344c6448a1639ad8fd6d9630115548d"
+    },
+    "management/checkpoints/C-pre-recompute/tree/data": {
+      "kind": "dir",
+      "mtime_ns": 1793322580677625940
+    },
+    "management/checkpoints/C-pre-recompute/tree/data/hour_2011.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214608738033,
+      "bytes": 568668,
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680049169
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/BRIEF.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609934981,
+      "bytes": 1078,
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/MANIFEST.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610214479,
+      "bytes": 2329,
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/constraints.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609999564,
+      "bytes": 1070,
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence": {
+      "kind": "dir",
+      "mtime_ns": 1793322580678274726
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A": {
+      "kind": "dir",
+      "mtime_ns": 1793322580678727889
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/checks.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670376258,
+      "bytes": 9234,
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/invalid-after.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670649630,
+      "bytes": 5553,
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/invalid-before.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670523798,
+      "bytes": 5553,
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run": {
+      "kind": "dir",
+      "mtime_ns": 1793322580678880054
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670030011,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214670140677,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/obligations.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610085771,
+      "bytes": 4723,
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/protocol": {
+      "kind": "dir",
+      "mtime_ns": 1793322580679524715
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/protocol/PROTOCOL.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610308561,
+      "bytes": 2279,
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/protocol/RECORDING.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610377269,
+      "bytes": 1300,
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/protocol/REQUEST.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610509726,
+      "bytes": 2145,
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/protocol/STAGE-A.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610448518,
+      "bytes": 1214,
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/source-identities.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610150062,
+      "bytes": 1200,
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/state.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214672943361,
+      "bytes": 19166,
+      "sha256": "78986837437208d8346c7a8b83ebe34d470234c840b5f2055284bba2480aaf77"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/status.py": {
+      "kind": "file",
+      "mtime_ns": 1793322214670719172,
+      "bytes": 3331,
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680077419
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680284250
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/notes": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680143752
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/notes/parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610654016,
+      "bytes": 171,
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680597623
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610782474,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/summary.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610987680,
+      "bytes": 280,
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214610883931,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "management/checkpoints/C-pre-recompute/tree/model": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680747746
+    },
+    "management/checkpoints/C-pre-recompute/tree/model/frozen.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214608995906,
+      "bytes": 2320,
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    },
+    "management/checkpoints/C-pre-recompute/tree/notes": {
+      "kind": "dir",
+      "mtime_ns": 1793322580681281742
+    },
+    "management/checkpoints/C-pre-recompute/tree/notes/parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322336192461771,
+      "bytes": 171,
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+    },
+    "management/checkpoints/C-pre-recompute/tree/notes/rejected-parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609220779,
+      "bytes": 171,
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1"
+    },
+    "management/checkpoints/C-pre-recompute/tree/notes/source-check.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609299570,
+      "bytes": 474,
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48"
+    },
+    "management/checkpoints/C-pre-recompute/tree/notes/unregistered-scratch.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609393361,
+      "bytes": 132,
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a"
+    },
+    "management/checkpoints/C-pre-recompute/tree/results": {
+      "kind": "dir",
+      "mtime_ns": 1793322580681688613
+    },
+    "management/checkpoints/C-pre-recompute/tree/results/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609523193,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "management/checkpoints/C-pre-recompute/tree/results/summary.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609602650,
+      "bytes": 280,
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+    },
+    "management/checkpoints/C-pre-recompute/tree/results/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214609681191,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "management/checkpoints/C-pre-recompute/tree/scripts": {
+      "kind": "dir",
+      "mtime_ns": 1793322580681852570
+    },
+    "management/checkpoints/C-pre-recompute/tree/scripts/compute.py": {
+      "kind": "file",
+      "mtime_ns": 1793322214609833232,
+      "bytes": 4157,
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+    },
+    "management/constraints.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609999564,
+      "bytes": 1070,
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502"
+    },
+    "management/evidence": {
+      "kind": "dir",
+      "mtime_ns": 1793322214669909012
+    },
+    "management/evidence/A": {
+      "kind": "dir",
+      "mtime_ns": 1793322214670605547
+    },
+    "management/evidence/A/checks.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670376258,
+      "bytes": 9234,
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd"
+    },
+    "management/evidence/A/invalid-after.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670649630,
+      "bytes": 5553,
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724"
+    },
+    "management/evidence/A/invalid-before.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670523798,
+      "bytes": 5553,
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724"
+    },
+    "management/evidence/A/normal-run": {
+      "kind": "dir",
+      "mtime_ns": 1793322214670114677
+    },
+    "management/evidence/A/normal-run/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670030011,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "management/evidence/A/normal-run/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214670140677,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "management/obligations.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610085771,
+      "bytes": 4723,
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8"
+    },
+    "management/protocol": {
+      "kind": "dir",
+      "mtime_ns": 1793322214610489351
+    },
+    "management/protocol/PROTOCOL.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610308561,
+      "bytes": 2279,
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4"
+    },
+    "management/protocol/RECORDING.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610377269,
+      "bytes": 1300,
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8"
+    },
+    "management/protocol/REQUEST.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610509726,
+      "bytes": 2145,
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358"
+    },
+    "management/protocol/STAGE-A.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610448518,
+      "bytes": 1214,
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7"
+    },
+    "management/source-identities.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610150062,
+      "bytes": 1200,
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5"
+    },
+    "management/state.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214672943361,
+      "bytes": 19166,
+      "sha256": "78986837437208d8346c7a8b83ebe34d470234c840b5f2055284bba2480aaf77"
+    },
+    "management/status.py": {
+      "kind": "file",
+      "mtime_ns": 1793322214670719172,
+      "bytes": 3331,
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98"
+    },
+    "management/versions": {
+      "kind": "dir",
+      "mtime_ns": 1793322214610564850
+    },
+    "management/versions/A-initial": {
+      "kind": "dir",
+      "mtime_ns": 1793322214610722641
+    },
+    "management/versions/A-initial/notes": {
+      "kind": "dir",
+      "mtime_ns": 1793322214610625225
+    },
+    "management/versions/A-initial/notes/parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610654016,
+      "bytes": 171,
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837"
+    },
+    "management/versions/A-initial/results": {
+      "kind": "dir",
+      "mtime_ns": 1793322214610965806
+    },
+    "management/versions/A-initial/results/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610782474,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "management/versions/A-initial/results/summary.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610987680,
+      "bytes": 280,
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+    },
+    "management/versions/A-initial/results/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214610883931,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "model": {
+      "kind": "dir",
+      "mtime_ns": 1793322214608965239
+    },
+    "model/frozen.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214608995906,
+      "bytes": 2320,
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    },
+    "notes": {
+      "kind": "dir",
+      "mtime_ns": 1793322214609371569
+    },
+    "notes/parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322336192461771,
+      "bytes": 171,
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+    },
+    "notes/rejected-parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609220779,
+      "bytes": 171,
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1"
+    },
+    "notes/source-check.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609299570,
+      "bytes": 474,
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48"
+    },
+    "notes/unregistered-scratch.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609393361,
+      "bytes": 132,
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a"
+    },
+    "results": {
+      "kind": "dir",
+      "mtime_ns": 1793322214609659567
+    },
+    "results/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609523193,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "results/summary.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609602650,
+      "bytes": 280,
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+    },
+    "results/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214609681191,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "scripts": {
+      "kind": "dir",
+      "mtime_ns": 1793322214609779107
+    },
+    "scripts/compute.py": {
+      "kind": "file",
+      "mtime_ns": 1793322214609833232,
+      "bytes": 4157,
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+    }
+  },
+  "after": {
+    ".": {
+      "kind": "dir",
+      "mtime_ns": 1793322214672985402
+    },
+    "RECOVERY.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214673011944,
+      "bytes": 3157,
+      "sha256": "065dac75fd841afc777180f5263c65748344c6448a1639ad8fd6d9630115548d"
+    },
+    "data": {
+      "kind": "dir",
+      "mtime_ns": 1793322214608676950
+    },
+    "data/hour_2011.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214608738033,
+      "bytes": 568668,
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115"
+    },
+    "management": {
+      "kind": "dir",
+      "mtime_ns": 1793322580676989028
+    },
+    "management/BRIEF.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609934981,
+      "bytes": 1078,
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80"
+    },
+    "management/MANIFEST.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610214479,
+      "bytes": 2329,
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072"
+    },
+    "management/checkpoints": {
+      "kind": "dir",
+      "mtime_ns": 1793322580677034278
+    },
+    "management/checkpoints/C-pre-recompute": {
+      "kind": "dir",
+      "mtime_ns": 1793322580682034485
+    },
+    "management/checkpoints/C-pre-recompute/checkpoint.json": {
+      "kind": "file",
+      "mtime_ns": 1793322580682086860,
+      "bytes": 5228,
+      "sha256": "c9e1b3be936d88bcdf9d8e3faba204816da43d902ffccdb60f1f50aad47f5986"
+    },
+    "management/checkpoints/C-pre-recompute/tree": {
+      "kind": "dir",
+      "mtime_ns": 1793322580681817154
+    },
+    "management/checkpoints/C-pre-recompute/tree/RECOVERY.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214673011944,
+      "bytes": 3157,
+      "sha256": "065dac75fd841afc777180f5263c65748344c6448a1639ad8fd6d9630115548d"
+    },
+    "management/checkpoints/C-pre-recompute/tree/data": {
+      "kind": "dir",
+      "mtime_ns": 1793322580677625940
+    },
+    "management/checkpoints/C-pre-recompute/tree/data/hour_2011.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214608738033,
+      "bytes": 568668,
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680049169
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/BRIEF.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609934981,
+      "bytes": 1078,
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/MANIFEST.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610214479,
+      "bytes": 2329,
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/constraints.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609999564,
+      "bytes": 1070,
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence": {
+      "kind": "dir",
+      "mtime_ns": 1793322580678274726
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A": {
+      "kind": "dir",
+      "mtime_ns": 1793322580678727889
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/checks.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670376258,
+      "bytes": 9234,
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/invalid-after.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670649630,
+      "bytes": 5553,
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/invalid-before.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670523798,
+      "bytes": 5553,
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run": {
+      "kind": "dir",
+      "mtime_ns": 1793322580678880054
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670030011,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/evidence/A/normal-run/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214670140677,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/obligations.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610085771,
+      "bytes": 4723,
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/protocol": {
+      "kind": "dir",
+      "mtime_ns": 1793322580679524715
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/protocol/PROTOCOL.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610308561,
+      "bytes": 2279,
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/protocol/RECORDING.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610377269,
+      "bytes": 1300,
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/protocol/REQUEST.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610509726,
+      "bytes": 2145,
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/protocol/STAGE-A.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610448518,
+      "bytes": 1214,
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/source-identities.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610150062,
+      "bytes": 1200,
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/state.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214672943361,
+      "bytes": 19166,
+      "sha256": "78986837437208d8346c7a8b83ebe34d470234c840b5f2055284bba2480aaf77"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/status.py": {
+      "kind": "file",
+      "mtime_ns": 1793322214670719172,
+      "bytes": 3331,
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680077419
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680284250
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/notes": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680143752
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/notes/parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610654016,
+      "bytes": 171,
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680597623
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610782474,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/summary.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610987680,
+      "bytes": 280,
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+    },
+    "management/checkpoints/C-pre-recompute/tree/management/versions/A-initial/results/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214610883931,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "management/checkpoints/C-pre-recompute/tree/model": {
+      "kind": "dir",
+      "mtime_ns": 1793322580680747746
+    },
+    "management/checkpoints/C-pre-recompute/tree/model/frozen.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214608995906,
+      "bytes": 2320,
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    },
+    "management/checkpoints/C-pre-recompute/tree/notes": {
+      "kind": "dir",
+      "mtime_ns": 1793322580681281742
+    },
+    "management/checkpoints/C-pre-recompute/tree/notes/parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322336192461771,
+      "bytes": 171,
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+    },
+    "management/checkpoints/C-pre-recompute/tree/notes/rejected-parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609220779,
+      "bytes": 171,
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1"
+    },
+    "management/checkpoints/C-pre-recompute/tree/notes/source-check.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609299570,
+      "bytes": 474,
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48"
+    },
+    "management/checkpoints/C-pre-recompute/tree/notes/unregistered-scratch.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609393361,
+      "bytes": 132,
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a"
+    },
+    "management/checkpoints/C-pre-recompute/tree/results": {
+      "kind": "dir",
+      "mtime_ns": 1793322580681688613
+    },
+    "management/checkpoints/C-pre-recompute/tree/results/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609523193,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "management/checkpoints/C-pre-recompute/tree/results/summary.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609602650,
+      "bytes": 280,
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+    },
+    "management/checkpoints/C-pre-recompute/tree/results/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214609681191,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "management/checkpoints/C-pre-recompute/tree/scripts": {
+      "kind": "dir",
+      "mtime_ns": 1793322580681852570
+    },
+    "management/checkpoints/C-pre-recompute/tree/scripts/compute.py": {
+      "kind": "file",
+      "mtime_ns": 1793322214609833232,
+      "bytes": 4157,
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+    },
+    "management/constraints.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609999564,
+      "bytes": 1070,
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502"
+    },
+    "management/evidence": {
+      "kind": "dir",
+      "mtime_ns": 1793322214669909012
+    },
+    "management/evidence/A": {
+      "kind": "dir",
+      "mtime_ns": 1793322214670605547
+    },
+    "management/evidence/A/checks.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670376258,
+      "bytes": 9234,
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd"
+    },
+    "management/evidence/A/invalid-after.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670649630,
+      "bytes": 5553,
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724"
+    },
+    "management/evidence/A/invalid-before.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670523798,
+      "bytes": 5553,
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724"
+    },
+    "management/evidence/A/normal-run": {
+      "kind": "dir",
+      "mtime_ns": 1793322214670114677
+    },
+    "management/evidence/A/normal-run/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214670030011,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "management/evidence/A/normal-run/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214670140677,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "management/obligations.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610085771,
+      "bytes": 4723,
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8"
+    },
+    "management/protocol": {
+      "kind": "dir",
+      "mtime_ns": 1793322214610489351
+    },
+    "management/protocol/PROTOCOL.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610308561,
+      "bytes": 2279,
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4"
+    },
+    "management/protocol/RECORDING.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610377269,
+      "bytes": 1300,
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8"
+    },
+    "management/protocol/REQUEST.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610509726,
+      "bytes": 2145,
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358"
+    },
+    "management/protocol/STAGE-A.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610448518,
+      "bytes": 1214,
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7"
+    },
+    "management/source-identities.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610150062,
+      "bytes": 1200,
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5"
+    },
+    "management/state.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214672943361,
+      "bytes": 19166,
+      "sha256": "78986837437208d8346c7a8b83ebe34d470234c840b5f2055284bba2480aaf77"
+    },
+    "management/status.py": {
+      "kind": "file",
+      "mtime_ns": 1793322214670719172,
+      "bytes": 3331,
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98"
+    },
+    "management/versions": {
+      "kind": "dir",
+      "mtime_ns": 1793322214610564850
+    },
+    "management/versions/A-initial": {
+      "kind": "dir",
+      "mtime_ns": 1793322214610722641
+    },
+    "management/versions/A-initial/notes": {
+      "kind": "dir",
+      "mtime_ns": 1793322214610625225
+    },
+    "management/versions/A-initial/notes/parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610654016,
+      "bytes": 171,
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837"
+    },
+    "management/versions/A-initial/results": {
+      "kind": "dir",
+      "mtime_ns": 1793322214610965806
+    },
+    "management/versions/A-initial/results/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214610782474,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "management/versions/A-initial/results/summary.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214610987680,
+      "bytes": 280,
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+    },
+    "management/versions/A-initial/results/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214610883931,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "model": {
+      "kind": "dir",
+      "mtime_ns": 1793322214608965239
+    },
+    "model/frozen.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214608995906,
+      "bytes": 2320,
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    },
+    "notes": {
+      "kind": "dir",
+      "mtime_ns": 1793322214609371569
+    },
+    "notes/parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322336192461771,
+      "bytes": 171,
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+    },
+    "notes/rejected-parameters.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609220779,
+      "bytes": 171,
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1"
+    },
+    "notes/source-check.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609299570,
+      "bytes": 474,
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48"
+    },
+    "notes/unregistered-scratch.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609393361,
+      "bytes": 132,
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a"
+    },
+    "results": {
+      "kind": "dir",
+      "mtime_ns": 1793322214609659567
+    },
+    "results/result.json": {
+      "kind": "file",
+      "mtime_ns": 1793322214609523193,
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b"
+    },
+    "results/summary.md": {
+      "kind": "file",
+      "mtime_ns": 1793322214609602650,
+      "bytes": 280,
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+    },
+    "results/table.csv": {
+      "kind": "file",
+      "mtime_ns": 1793322214609681191,
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589"
+    },
+    "scripts": {
+      "kind": "dir",
+      "mtime_ns": 1793322214609779107
+    },
+    "scripts/compute.py": {
+      "kind": "file",
+      "mtime_ns": 1793322214609833232,
+      "bytes": 4157,
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+    }
+  },
+  "meaning": "New C-pre-recompute checkpoint preserves drift; it does not recalculate or renew earlier completion."
+}

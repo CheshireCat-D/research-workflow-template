@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--id",
+    "T-C-OPS"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 44,\n  \"kind\": \"artifact\",\n  \"id\": \"T-C-OPS\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"notes/stage-c-operational-corrections.json\": \"e6f0e098d8dbde78f7a82f41ea2073c24757277ddfca7a7f78b29e1c7837c1ff\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"description\": \"Preserved actual input-path error, mistaken checkpoint-field assertion and their remedies; no calculator or content result failure.\",\n      \"id\": \"T-C-OPS\",\n      \"path\": \"notes/stage-c-operational-corrections.json\",\n      \"type\": \"operational-corrections\"\n    },\n    \"registered_at\": \"2026-10-30T01:16:10.795424+00:00\",\n    \"version\": 1\n  }\n}\n",
+  "stderr": ""
+}

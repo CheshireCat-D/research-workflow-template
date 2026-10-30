@@ -1,0 +1,226 @@
+{
+  "files": [
+    {
+      "path": "RUN.md",
+      "sha256": "363c00a347fc3c2aa862c678fee4ab7c12c502221bf48ff0ae41182eec3119a2",
+      "bytes": 2495,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/RUN.md",
+      "public_sha256": "ac5a6c9544193f68fb1ac7a95a9661e237aa0820fdfa2ad4c3de0aefc48bb8b7",
+      "public_bytes": 2067
+    },
+    {
+      "path": "analysis.py",
+      "sha256": "e22ae01683059c937d53ac0f1342cf8d7ae0b1b0fb8905a680eb35144d3735e6",
+      "bytes": 23938,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/analysis.py",
+      "public_sha256": "e22ae01683059c937d53ac0f1342cf8d7ae0b1b0fb8905a680eb35144d3735e6",
+      "public_bytes": 23938
+    },
+    {
+      "path": "bootstrap_L28.csv",
+      "sha256": "17bd9a3c5f7663b67544e692d79231b6f9a8fc49cff94c8210e5a0a2813a10eb",
+      "bytes": 176358,
+      "distributed": false
+    },
+    {
+      "path": "bootstrap_L7.csv",
+      "sha256": "f41d65b2854caa123da3ca74c2facdaf1a61cd539f59f0c5b780afbae15ebf09",
+      "bytes": 176514,
+      "distributed": false
+    },
+    {
+      "path": "daily_count_mismatches.csv",
+      "sha256": "50f7603165b2b0a3df3a176cc7002095c57639bbacd5aa7de5d6175cdb3e0ca4",
+      "bytes": 32,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/daily_count_mismatches.csv",
+      "public_sha256": "50f7603165b2b0a3df3a176cc7002095c57639bbacd5aa7de5d6175cdb3e0ca4",
+      "public_bytes": 32
+    },
+    {
+      "path": "daily_errors.csv",
+      "sha256": "df9b1b6044a2a4aca8b6076d4a95e0547857399b566926712a425fa783ffcd5f",
+      "bytes": 8372,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/daily_errors.csv",
+      "public_sha256": "df9b1b6044a2a4aca8b6076d4a95e0547857399b566926712a425fa783ffcd5f",
+      "public_bytes": 8372
+    },
+    {
+      "path": "data_audit.json",
+      "sha256": "d50467a894d2d1017f87ebcd998740ba5dfd37142b8edb40f911c2aca48d4c86",
+      "bytes": 2309,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/data_audit.json",
+      "public_sha256": "d50467a894d2d1017f87ebcd998740ba5dfd37142b8edb40f911c2aca48d4c86",
+      "public_bytes": 2309
+    },
+    {
+      "path": "date_coverage.csv",
+      "sha256": "b8295bbadf582bb17f46a1089c2db5970127cd30a6bd0875453aab5c6c8b7da2",
+      "bytes": 7165,
+      "distributed": false
+    },
+    {
+      "path": "execution.json",
+      "sha256": "cf24b4eceb2b267a3413d519f47efc1720ec347e1166ba596720f0d5bb37d1c0",
+      "bytes": 21284,
+      "distributed": false
+    },
+    {
+      "path": "handoff.md",
+      "sha256": "896f8443b8782768d22b0173802c97ea815f79057081dbe050d9af31706aea36",
+      "bytes": 6390,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/handoff.md",
+      "public_sha256": "a7aee9524bb683d98b79c28e84e9f24f62c5ca331d64e11f9e108091096b8c91",
+      "public_bytes": 6348
+    },
+    {
+      "path": "model.json",
+      "sha256": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47",
+      "bytes": 6830,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/model.json",
+      "public_sha256": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47",
+      "public_bytes": 6830
+    },
+    {
+      "path": "predictions.csv",
+      "sha256": "38d967436201dce3400a4aa0f1f5919ec78ce8fc2614975107190708b3ad093f",
+      "bytes": 295344,
+      "distributed": false
+    },
+    {
+      "path": "report.md",
+      "sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57",
+      "bytes": 8743,
+      "distributed": true,
+      "public_path": "runs/D01/report.md",
+      "public_sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57",
+      "public_bytes": 8743
+    },
+    {
+      "path": "results.json",
+      "sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb",
+      "bytes": 3898,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/results.json",
+      "public_sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb",
+      "public_bytes": 3898
+    },
+    {
+      "path": "run.log",
+      "sha256": "a7ac8a7780531e8603f09b5a2e40e019f2a1111bfb1b24d84c4972f8d2db7707",
+      "bytes": 6715,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/run.log",
+      "public_sha256": "a7ac8a7780531e8603f09b5a2e40e019f2a1111bfb1b24d84c4972f8d2db7707",
+      "public_bytes": 6715
+    },
+    {
+      "path": "run_summary.json",
+      "sha256": "1b1375dd324ed675415d50d1a23ab8e829f85ef5f9988778f0ab1227f79fdd8c",
+      "bytes": 246,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/run_summary.json",
+      "public_sha256": "1b1375dd324ed675415d50d1a23ab8e829f85ef5f9988778f0ab1227f79fdd8c",
+      "public_bytes": 246
+    },
+    {
+      "path": "score_replay/bootstrap_L28.csv",
+      "sha256": "17bd9a3c5f7663b67544e692d79231b6f9a8fc49cff94c8210e5a0a2813a10eb",
+      "bytes": 176358,
+      "distributed": false
+    },
+    {
+      "path": "score_replay/bootstrap_L7.csv",
+      "sha256": "f41d65b2854caa123da3ca74c2facdaf1a61cd539f59f0c5b780afbae15ebf09",
+      "bytes": 176514,
+      "distributed": false
+    },
+    {
+      "path": "score_replay/daily_errors.csv",
+      "sha256": "df9b1b6044a2a4aca8b6076d4a95e0547857399b566926712a425fa783ffcd5f",
+      "bytes": 8372,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/score_replay/daily_errors.csv",
+      "public_sha256": "df9b1b6044a2a4aca8b6076d4a95e0547857399b566926712a425fa783ffcd5f",
+      "public_bytes": 8372
+    },
+    {
+      "path": "score_replay/predictions.csv",
+      "sha256": "38d967436201dce3400a4aa0f1f5919ec78ce8fc2614975107190708b3ad093f",
+      "bytes": 295344,
+      "distributed": false
+    },
+    {
+      "path": "score_replay/results.json",
+      "sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb",
+      "bytes": 3898,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/score_replay/results.json",
+      "public_sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb",
+      "public_bytes": 3898
+    },
+    {
+      "path": "score_replay/score_provenance.json",
+      "sha256": "de777f4e4b1c68deb2dc311aa5533b53fd41f9923b0ea09a873cb40ed77aad14",
+      "bytes": 216,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/score_replay/score_provenance.json",
+      "public_sha256": "de777f4e4b1c68deb2dc311aa5533b53fd41f9923b0ea09a873cb40ed77aad14",
+      "public_bytes": 216
+    },
+    {
+      "path": "score_replay.log",
+      "sha256": "6b9240830dd4d96dfb943259cdc75766ac77e3596bf3adc715510422ee090bc8",
+      "bytes": 700,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/score_replay.log",
+      "public_sha256": "6b9240830dd4d96dfb943259cdc75766ac77e3596bf3adc715510422ee090bc8",
+      "public_bytes": 700
+    },
+    {
+      "path": "score_replay_check.json",
+      "sha256": "339789628bd86f6f9dc8be026bfd7ce8ba802239a6b40319c90d95f457d62850",
+      "bytes": 314,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/score_replay_check.json",
+      "public_sha256": "339789628bd86f6f9dc8be026bfd7ce8ba802239a6b40319c90d95f457d62850",
+      "public_bytes": 314
+    },
+    {
+      "path": "validation_input/data/hour_holdout.csv",
+      "sha256": "499f2058be51843378f2a3d2c63ad4e1481100ab2a3a49a23b455cdc0c032c6f",
+      "bytes": 146345,
+      "distributed": false
+    },
+    {
+      "path": "verification.json",
+      "sha256": "9ed3a758a629f00193273e661e8542d3902d8c51ee36e78d58c05225840857f6",
+      "bytes": 426,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/verification.json",
+      "public_sha256": "9ed3a758a629f00193273e661e8542d3902d8c51ee36e78d58c05225840857f6",
+      "public_bytes": 426
+    },
+    {
+      "path": "verify.py",
+      "sha256": "3262b123f8172ee66061020aa28172f0e754a4d5023024055dfe5c35c02b88e2",
+      "bytes": 4012,
+      "distributed": true,
+      "public_path": "runs/D01/artifacts/verify.py",
+      "public_sha256": "3262b123f8172ee66061020aa28172f0e754a4d5023024055dfe5c35c02b88e2",
+      "public_bytes": 4012
+    }
+  ],
+  "sealed_at_utc": "2026-10-29T23:53:01.051784+00:00",
+  "scope": "Original workspace bytes captured at executor completion; runtime copies and raw inputs omitted from public distribution.",
+  "publication_changes": [
+    "RUN.md: absolute paths mapped to logical locators",
+    "handoff.md: absolute paths mapped to logical locators"
+  ]
+}

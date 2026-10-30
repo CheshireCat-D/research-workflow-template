@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "status": "executed",
+  "started_at_utc": null,
+  "finished_at_utc": "2026-10-29T22:38:09.403947+00:00",
+  "duration_seconds": null,
+  "requested_configuration": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "context": "fork_turns=none for every task/arm",
+    "requested_output_unicode_limit": 5000,
+    "requested_tool_call_limit": 8,
+    "temperature": null,
+    "seed": null
+  },
+  "effective_configuration": {
+    "model": {
+      "value": null,
+      "source": "unknown"
+    },
+    "reasoning_effort": {
+      "value": null,
+      "source": "unknown"
+    },
+    "temperature": {
+      "value": null,
+      "source": "unknown"
+    },
+    "seed": {
+      "value": null,
+      "source": "unknown"
+    },
+    "hard_output_token_limit": {
+      "value": null,
+      "source": "unknown"
+    }
+  },
+  "context_isolation": {
+    "requested": "fresh context, fork_turns=none",
+    "evidence": "instruction-only",
+    "os_audited": false,
+    "same_metadata_catalogue_visible": true
+  },
+  "actual_reads": [
+    {
+      "logical_name": "tasks/Q24.md",
+      "sha256": "c59e5901613eefb006fcef57768ed60e4925af92ea67d068ffb3d859a441009f"
+    },
+    {
+      "logical_name": "executor-prompt.md",
+      "sha256": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09"
+    },
+    {
+      "logical_name": "templates/execution.template.json",
+      "sha256": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1"
+    }
+  ],
+  "tool_calls": 2,
+  "output_tokens": null,
+  "network_calls": 0,
+  "output_unicode_characters": 1155,
+  "output_bytes": 2267,
+  "violations": [],
+  "uncertainties": [
+    "Host model, reasoning effort, temperature, seed and hard output token limit were not reported.",
+    "The initial wall-clock timestamp was not captured; started_at_utc and duration_seconds are unknown.",
+    "Output token count is unknown. Unicode character and byte counts refer to report.md.",
+    "Tool calls count the two functions.exec invocations, each containing one exec_command call. Requested limits were followed by the executor; host enforcement is unknown."
+  ],
+  "failure": null,
+  "output_files": [
+    "runs/t10/report.md",
+    "runs/t10/execution.json"
+  ],
+  "publication_projection": {
+    "raw_execution_sha256": "94a039314a0433468459d3d28ef9f696141bf712c0889ae3b21e503a4d24dcbb",
+    "changes": [
+      "temporary output file paths mapped to logical runs/ paths"
+    ],
+    "scope": "Administrative fields only; report bytes, effective unknowns and scientific content unchanged."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"T-C-OPS\",\n  \"version\": 2,\n  \"revision\": 45,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": "",
+  "stdin": "{\"description\": \"Preserved actual path error, wrong checkpoint-field assertion, unsupported CLI option failure and corrections; no scientific-computation failure.\", \"id\": \"T-C-OPS\", \"path\": \"notes/stage-c-operational-corrections.json\", \"type\": \"operational-corrections\"}"
+}

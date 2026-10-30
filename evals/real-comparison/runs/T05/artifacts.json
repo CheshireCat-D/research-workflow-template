@@ -1,0 +1,58 @@
+{
+  "files": [
+    {
+      "path": "RUN.md",
+      "sha256": "b2accc90fcc8362eb5786432d9ccdcee79209ca2c5e743c7df0e1b1089488302",
+      "bytes": 728,
+      "distributed": true,
+      "public_path": "runs/T05/artifacts/RUN.md",
+      "public_sha256": "5859e228d10462295a2727a4020c8d7cf186ea2c483cf07d327807a0ee4f5076",
+      "public_bytes": 554
+    },
+    {
+      "path": "audit.md",
+      "sha256": "68dedc503d65e67c9e36253fa32c2d2ee92daf99f718fb687c49b4f41415b24d",
+      "bytes": 10934,
+      "distributed": false,
+      "omission": "Exact duplicate of the canonical report; original bytes remain sealed."
+    },
+    {
+      "path": "checks.json",
+      "sha256": "9838c889632c9e4b4569c7a1062f60821d016d513e1bd3367b1119a859b88041",
+      "bytes": 1579,
+      "distributed": true,
+      "public_path": "runs/T05/artifacts/checks.json",
+      "public_sha256": "9838c889632c9e4b4569c7a1062f60821d016d513e1bd3367b1119a859b88041",
+      "public_bytes": 1579
+    },
+    {
+      "path": "checks.py",
+      "sha256": "33ae5371cc41ca751c129390faee5fa6664aa277492167896b4406aa2710d564",
+      "bytes": 3487,
+      "distributed": true,
+      "public_path": "runs/T05/artifacts/checks.py",
+      "public_sha256": "33ae5371cc41ca751c129390faee5fa6664aa277492167896b4406aa2710d564",
+      "public_bytes": 3487
+    },
+    {
+      "path": "execution.json",
+      "sha256": "6a988fadfa666d5cd9d8a4deb964e820a4b5c5bf1abe393cf46b6c5c89ee57fa",
+      "bytes": 5668,
+      "distributed": false
+    },
+    {
+      "path": "report.md",
+      "sha256": "68dedc503d65e67c9e36253fa32c2d2ee92daf99f718fb687c49b4f41415b24d",
+      "bytes": 10934,
+      "distributed": true,
+      "public_path": "runs/T05/report.md",
+      "public_sha256": "68dedc503d65e67c9e36253fa32c2d2ee92daf99f718fb687c49b4f41415b24d",
+      "public_bytes": 10934
+    }
+  ],
+  "sealed_at_utc": "2026-10-29T23:48:53.599038+00:00",
+  "scope": "Original workspace bytes captured at executor completion; runtime copies and raw inputs omitted from public distribution.",
+  "publication_changes": [
+    "RUN.md: absolute paths mapped to logical locators"
+  ]
+}

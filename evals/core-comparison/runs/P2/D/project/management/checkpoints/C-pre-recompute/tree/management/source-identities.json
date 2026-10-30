@@ -1,0 +1,25 @@
+{
+  "primary": {
+    "id": "D-SRC",
+    "title": "UCI Bike Sharing dataset",
+    "uri": "https://archive.ics.uci.edu/dataset/275/bike%2Bsharing%2Bdataset",
+    "version": "Official ZIP member hour.csv; yr=0 slice retained 2026-10-29",
+    "doi": "https://doi.org/10.24432/C5W894",
+    "license": "CC-BY-4.0",
+    "local_path": "data/hour_2011.csv",
+    "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+    "rows": 8645,
+    "original_hour_csv_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+    "slice_origin": "Exact unchanged 2011 rows of official hour.csv, previously independently audited."
+  },
+  "source_only": {
+    "id": "D-REMOTE",
+    "title": "Original Bike Sharing research article DOI identity",
+    "uri": "https://doi.org/10.1007/s13748-013-0040-3",
+    "version": "DOI identity only; no article copy supplied",
+    "local_copy_supplied": false,
+    "access": "metadata-only",
+    "tracking_limit": "No local article content binding; no current remote-content check."
+  },
+  "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+}

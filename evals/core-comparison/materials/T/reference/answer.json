@@ -1,0 +1,170 @@
+{
+  "case_id": "T",
+  "initial_parameters": {
+    "case_id": "T",
+    "alpha": 0.05,
+    "rho": 1.0,
+    "rho_selection": "fixed-before-observation",
+    "intrinsic_time_grid": [
+      0,
+      1,
+      10,
+      100
+    ]
+  },
+  "revised_parameters": {
+    "case_id": "T",
+    "alpha": 0.05,
+    "rho": 4.0,
+    "rho_selection": "fixed-before-observation",
+    "intrinsic_time_grid": [
+      0,
+      1,
+      10,
+      100
+    ]
+  },
+  "expected_B_changed_paths": [
+    "notes/parameters.json"
+  ],
+  "expected_B_missing_paths": [],
+  "B_directly_affected_activities": [
+    "T-CALC"
+  ],
+  "B_transitively_affected_activities": [
+    "T-SYNTH"
+  ],
+  "B_unaffected_completed_activities": [
+    "T-SOURCE-CHECK"
+  ],
+  "B_old_current_results_paths": [
+    "results/result.json",
+    "results/table.csv",
+    "results/summary.md"
+  ],
+  "B_checkpoint_freshness": "stale because author parameter file changed after the saved state; no write is authorized",
+  "B_old_next_action_scope": "Do not proceed to old review/discussion before changed-parameter recomputation and dependent summary review",
+  "C_intermediate_checkpoint": "Snapshot can be current, but old completed calculation and synthesis remain stale/unreviewed until explicit real revalidation; source identity branch remains valid",
+  "C_revalidation_order": [
+    "T-CALC",
+    "T-SYNTH"
+  ],
+  "initial_result": {
+    "case_id": "T",
+    "alpha": 0.05,
+    "rho": 1.0,
+    "rho_selection": "fixed-before-observation",
+    "values": [
+      {
+        "v": 0,
+        "boundary": 2.4477468306808166
+      },
+      {
+        "v": 1,
+        "boundary": 3.6563948713638483
+      },
+      {
+        "v": 10,
+        "boundary": 9.606401928868575
+      },
+      {
+        "v": 100,
+        "boundary": 32.73018624234933
+      }
+    ],
+    "interpretation": "Numerical boundary evaluation under the supplied fixed-parameter theorem; no new proof or coverage simulation.",
+    "input_sha256": {
+      "parameters": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+    }
+  },
+  "revised_result": {
+    "case_id": "T",
+    "alpha": 0.05,
+    "rho": 4.0,
+    "rho_selection": "fixed-before-observation",
+    "values": [
+      {
+        "v": 0,
+        "boundary": 4.895493661361633
+      },
+      {
+        "v": 1,
+        "boundary": 5.57431973357386
+      },
+      {
+        "v": 10,
+        "boundary": 10.070709270872976
+      },
+      {
+        "v": 100,
+        "boundary": 31.015388968276124
+      }
+    ],
+    "interpretation": "Numerical boundary evaluation under the supplied fixed-parameter theorem; no new proof or coverage simulation.",
+    "input_sha256": {
+      "parameters": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+    }
+  },
+  "D_final_next_action": "将 rho=4 的边界表与更新摘要交作者内容复核；暂不扩展到事后选择 rho。",
+  "D_final_constraints_unchanged_except_current_scope": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 4.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "unchanged_paths": [
+    "sources/howard2021-arxiv-v9.pdf",
+    "scripts/compute.py",
+    "notes/source-check.md"
+  ],
+  "coverage_boundaries": {
+    "source_only": [
+      "T-REMOTE"
+    ],
+    "unregistered_file": [
+      "notes/unregistered-scratch.md"
+    ],
+    "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked."
+  },
+  "identity_scope": "Fingerprints prove byte identity only; no automatic scientific validity.",
+  "numeric_tolerance_absolute": 1e-10,
+  "extra_activity_rule": "Actual valid additional dependencies may add correctly affected activities; do not enforce only the expected three IDs against a richer truthful graph.",
+  "scientific_update_limit": "Alpha and fixed-before-observation policy unchanged; recomputation evaluates the formula, not a new mathematical coverage proof.",
+  "standard_success_path": true,
+  "conditional_grading_rules": [
+    "Standard numeric/affected-set answers describe successful upstream setup, not facts to fabricate after an actual earlier failure.",
+    "For missing checkpoint or incomplete C, B/D must truthfully recover the actual recorded state (including not-recorded/pending/unknown) and give a safe conditional next step. Do not demand a fictional stale checkpoint or completed revised result.",
+    "Deduct an absent archive/constraint/record at its relevant creation or revision criterion. Later truthful reporting of that inherited gap is not itself another error; evaluate actual recovery information and correct handling under each later criterion. Do not automatically zero an entire downstream stage.",
+    "A definite desired recovery fact that cannot be retrieved still lacks that factual evidence; distinguish inability from dishonest false assertion and explain any deduction.",
+    "Exact next action means the required purpose and necessary conditions, not verbatim Chinese matching. A failed C requires actual pending repair and safe scope, rather than copying the successful-path D next action.",
+    "No extra critical cap or unannounced penalty. List critical errors separately and deduct only within applicable criterion components; avoid deducting the same finding twice inside a criterion.",
+    "Equivalent correct representations, scientific routes and additional genuine coverage are accepted. Do not require proprietary field names or presume remote/unregistered dependencies are automatically covered.",
+    "Parameter SHA in a calculator result must describe the actual input bytes used by that execution. Accept equivalent working-parameter JSON formatting and numeric spelling with identical strict semantics; compare scientific numbers by tolerance, not reference parameter SHA. Immutable original PDF/CSV, code and frozen model still require their original bytes."
+  ]
+}

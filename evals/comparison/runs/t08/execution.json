@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "executed",
+  "started_at_utc": null,
+  "finished_at_utc": "2026-10-29T22:37:56.519159+00:00",
+  "duration_seconds": null,
+  "requested_configuration": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "context": "fork_turns=none for every task/arm",
+    "requested_output_unicode_limit": 5000,
+    "requested_tool_call_limit": 8,
+    "temperature": null,
+    "seed": null
+  },
+  "effective_configuration": {
+    "model": {
+      "value": null,
+      "source": "unknown"
+    },
+    "reasoning_effort": {
+      "value": null,
+      "source": "unknown"
+    },
+    "temperature": {
+      "value": null,
+      "source": "unknown"
+    },
+    "seed": {
+      "value": null,
+      "source": "unknown"
+    },
+    "hard_output_token_limit": {
+      "value": null,
+      "source": "unknown"
+    }
+  },
+  "context_isolation": {
+    "requested": "fresh context, fork_turns=none",
+    "evidence": "instruction-only",
+    "os_audited": false,
+    "same_metadata_catalogue_visible": true
+  },
+  "actual_reads": [
+    {
+      "sha256": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09",
+      "logical_name": "executor-prompt.md"
+    },
+    {
+      "sha256": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1",
+      "logical_name": "templates/execution.template.json"
+    },
+    {
+      "sha256": "bebd6b87aef817e404bb6fd00be3ea09d555eaa1fcd89b2925b689efbe5ac786",
+      "logical_name": "tasks/Q58.md"
+    },
+    {
+      "sha256": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+      "logical_name": "rwt/skills/rw-review/SKILL.md"
+    },
+    {
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "logical_name": "rwt/core/skill-bridge.md"
+    },
+    {
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "logical_name": "rwt/core/protocol.md"
+    },
+    {
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "logical_name": "rwt/skills/rw-validation/SKILL.md"
+    },
+    {
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+      "logical_name": "rwt/profiles/methods/empirical-quantitative.md"
+    }
+  ],
+  "tool_calls": 3,
+  "output_tokens": null,
+  "network_calls": 0,
+  "output_unicode_characters": 1265,
+  "output_bytes": 2687,
+  "violations": [],
+  "uncertainties": [
+    "Start timestamp was not captured; started_at_utc and total duration_seconds are unknown.",
+    "Host model, reasoning effort, temperature, seed, hard output token limit, and output token count were not reported.",
+    "The requested tool/output limits were followed by counting operations and measuring the report; host hard enforcement is unknown."
+  ],
+  "failure": null,
+  "outputs": [
+    "runs/t08/report.md",
+    "runs/t08/execution.json"
+  ],
+  "tool_call_accounting": "3 functions.exec calls, each containing exactly one exec_command operation; wrapper and command are counted together.",
+  "checks_executed": [
+    "Exhaustive standard-library enumeration of all 256 sign vectors",
+    "Independent binomial count of rejection region and selection-adjusted tail"
+  ],
+  "publication_projection": {
+    "raw_execution_sha256": "ebf3782b068b88717658d4fa031b4ac19e0d64582b11c9f3a1ddfae1a238d5b2",
+    "changes": [
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "temporary output file paths mapped to logical runs/ paths"
+    ],
+    "scope": "Administrative fields only; report bytes, effective unknowns and scientific content unchanged."
+  }
+}

@@ -1,0 +1,783 @@
+{
+  "case_id": "T",
+  "stage": "C",
+  "commands": [
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/resume.py",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 1,
+      "stdout": "OUTPUT_DIR/intermediate-resume.stdout",
+      "stderr": "OUTPUT_DIR/intermediate-resume.stderr"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--output",
+        "PROJECT_ROOT/validation/stage-C-recompute"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "OUTPUT_DIR/recompute.stdout",
+      "stderr": "OUTPUT_DIR/recompute.stderr"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/update-state.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--expected-revision",
+        "2",
+        "--patch",
+        "PROJECT_ROOT/provenance/stage-C/metadata-patch.json"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "OUTPUT_DIR/metadata-revision.stdout",
+      "stderr": "OUTPUT_DIR/metadata-revision.stderr"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/resume.py",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "OUTPUT_DIR/final-resume.stdout",
+      "stderr": "OUTPUT_DIR/final-resume.stderr"
+    }
+  ],
+  "tool_calls": 9,
+  "read_files": {
+    "STUDY_ROOT/runs/P3/C/REQUEST.md": {
+      "sha256": "754aa3d778f68a28f1c6c86f2dd7cef0fba95922a8a1978f7ca2fa7679eaef89",
+      "bytes": 2370
+    },
+    "INPUT_DIR/PROTOCOL.md": {
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    "INPUT_DIR/RECORDING.md": {
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    "INPUT_DIR/STAGE-C.md": {
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "bytes": 761
+    },
+    "INPUT_DIR/author-revision/AUTHOR-REVISION.md": {
+      "sha256": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+      "bytes": 1371
+    },
+    "INPUT_DIR/author-revision/approved-parameters.json": {
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md": {
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "bytes": 4540
+    },
+    "TOOLKIT_ROOT/core/skill-bridge.md": {
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "bytes": 7641
+    },
+    "TOOLKIT_ROOT/core/protocol.md": {
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "bytes": 3841
+    },
+    "PROJECT_ROOT/.history/A-initial/files/notes/parameters.json": {
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    "PROJECT_ROOT/.history/A-initial/files/results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "PROJECT_ROOT/.history/A-initial/files/results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    "PROJECT_ROOT/.history/A-initial/files/results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    "PROJECT_ROOT/.history/A-initial/manifest.json": {
+      "sha256": "c5154b88f6fb1ab3becff5fc8fd93849ab004db20110623b7ab7ea5828940667",
+      "bytes": 1008
+    },
+    "PROJECT_ROOT/.history/A-initial/state.json": {
+      "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+      "bytes": 16515
+    },
+    "PROJECT_ROOT/PROJECT.md": {
+      "sha256": "d0c22d4a5b575701b6f891cb85155634891de89966d244784debac69638cd659",
+      "bytes": 2357
+    },
+    "PROJECT_ROOT/notes/parameters.json": {
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    "PROJECT_ROOT/notes/rejected-parameters.json": {
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160
+    },
+    "PROJECT_ROOT/notes/source-check.md": {
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    "PROJECT_ROOT/notes/unregistered-scratch.md": {
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132
+    },
+    "PROJECT_ROOT/provenance/initial/BRIEF.md": {
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267
+    },
+    "PROJECT_ROOT/provenance/initial/MANIFEST.json": {
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188
+    },
+    "PROJECT_ROOT/provenance/initial/constraints.json": {
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064
+    },
+    "PROJECT_ROOT/provenance/initial/obligations.json": {
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478
+    },
+    "PROJECT_ROOT/provenance/initial/source-identities.json": {
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074
+    },
+    "PROJECT_ROOT/provenance/stage-A/PROTOCOL.md": {
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    "PROJECT_ROOT/provenance/stage-A/RECORDING.md": {
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    "PROJECT_ROOT/provenance/stage-A/STAGE-A.md": {
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214
+    },
+    "PROJECT_ROOT/research/state.json": {
+      "sha256": "60e8182caa623e246749cee8445683655a0a43e71cd0c849cf112c7ee21ce061",
+      "bytes": 19846
+    },
+    "PROJECT_ROOT/results/result.json": {
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "bytes": 703
+    },
+    "PROJECT_ROOT/results/summary.md": {
+      "sha256": "d4bfd0eaba49bb6a45dc5579ff0d14ad2bbbd3364ea9718f9ea48c6abad298fd",
+      "bytes": 1233
+    },
+    "PROJECT_ROOT/results/table.csv": {
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "bytes": 100
+    },
+    "PROJECT_ROOT/resume.py": {
+      "sha256": "9fc48a77f1f3c0cc6094e7205d6debfebe44e2ba1d7c46263c4b634214faba4e",
+      "bytes": 3168
+    },
+    "PROJECT_ROOT/scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "PROJECT_ROOT/sources/howard2021-arxiv-v9.pdf": {
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    "PROJECT_ROOT/update-state.py": {
+      "sha256": "4fd4ab75762f99b3fb7be55f309c189af76afb93608568a7e7504af226832441",
+      "bytes": 2929
+    },
+    "PROJECT_ROOT/validation/stage-A-normal/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "PROJECT_ROOT/validation/stage-A-normal/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    "PROJECT_ROOT/validation/stage-A.json": {
+      "sha256": "339e302cf75cbd5ac43e0380f79ceada6dc0c2abe9c25359be6996961c526b8e",
+      "bytes": 5003
+    },
+    "PROJECT_ROOT/.history/C-drift/manifest.json": {
+      "sha256": "9aeb437d1441b3385b0ae3400b277e6db28e2c570678ab0ba04f641e90ffcbb1",
+      "bytes": 5343
+    },
+    "PROJECT_ROOT/validation/stage-C-recompute/result.json": {
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "bytes": 703
+    },
+    "PROJECT_ROOT/validation/stage-C-recompute/table.csv": {
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "bytes": 100
+    },
+    "OUTPUT_DIR/recompute-verification.json": {
+      "sha256": "f4075a3df508eef1b3d92159fc58dbada35fb4cd93128ecd8a79ec08f54733a7",
+      "bytes": 777
+    },
+    "PROJECT_ROOT/provenance/stage-C/approved-parameters.json": {
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    "OUTPUT_DIR/intermediate-resume.stdout": {
+      "sha256": "af76613d2dc0ef4faaf06fdd7205ed54d39fcf2b5c2a94cc6b6a972e7acb1ce7",
+      "bytes": 3875
+    },
+    "OUTPUT_DIR/intermediate-resume.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "OUTPUT_DIR/intermediate-interpretation.json": {
+      "sha256": "db5ebf6d0061cad76f879962fd2d8d946e3594b3a45b100e366a13ed5ce73620",
+      "bytes": 392
+    },
+    "OUTPUT_DIR/final-resume.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "OUTPUT_DIR/final-resume.stdout": {
+      "sha256": "d36864844c4ef28c18f67c39c5c1301d342d9cc8b89b39aad52e48f8a62551ff",
+      "bytes": 3181
+    },
+    "OUTPUT_DIR/finalize.py": {
+      "sha256": "75a10dc117924efd312a4eee3ca83ca18cba8a816b85e4c939aa2030439af0ce",
+      "bytes": 12513
+    },
+    "OUTPUT_DIR/metadata-revision.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "OUTPUT_DIR/metadata-revision.stdout": {
+      "sha256": "7785bfd356ca56e33347ac67019eb742cad65134782e6158980e24256f758fef",
+      "bytes": 94
+    },
+    "OUTPUT_DIR/recompute.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "OUTPUT_DIR/recompute.stdout": {
+      "sha256": "4dbab4469b66911f1bc93a630fad60765f594c0dfd94736538ce802809244509",
+      "bytes": 213
+    },
+    "OUTPUT_DIR/report.md": {
+      "sha256": "c5a2017337e36d27bb5a9926a5d32a2d0f6b9611f210216a77f934cb76fd645e",
+      "bytes": 5297
+    },
+    "OUTPUT_DIR/revision-audit.json": {
+      "sha256": "8a554279ecfeeacdaa769954eab66bfb1c3a4ee75eae52c2b8b06a3f53d64633",
+      "bytes": 2535
+    },
+    "OUTPUT_DIR/stage_c.py": {
+      "sha256": "cc973c8c9dbb69df4984f5472206e333bff282bcb6ffd1d389d7363118a62934",
+      "bytes": 20733
+    },
+    "OUTPUT_DIR/state-answer.json": {
+      "sha256": "14458f40efe258fd14b3c58da3192c2c54c8fce1621d06dbeec6264f50688200",
+      "bytes": 3842
+    },
+    "PROJECT_ROOT/.history/C-drift/checkpoint.json": {
+      "sha256": "47a2f288571484b006d5f59ec9412952e43ee48cfa6b15a4e756ddbfcb85c0eb",
+      "bytes": 1562
+    },
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/notes/parameters.json": {
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/manifest.json": {
+      "sha256": "c5154b88f6fb1ab3becff5fc8fd93849ab004db20110623b7ab7ea5828940667",
+      "bytes": 1008
+    },
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/state.json": {
+      "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+      "bytes": 16515
+    },
+    "PROJECT_ROOT/.history/C-drift/files/PROJECT.md": {
+      "sha256": "82756fffd7df67dabf0889f3a8e36996083d043cda78e8266415cb6d915cc6bc",
+      "bytes": 2205
+    },
+    "PROJECT_ROOT/.history/C-drift/files/notes/parameters.json": {
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    "PROJECT_ROOT/.history/C-drift/files/notes/rejected-parameters.json": {
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160
+    },
+    "PROJECT_ROOT/.history/C-drift/files/notes/source-check.md": {
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    "PROJECT_ROOT/.history/C-drift/files/notes/unregistered-scratch.md": {
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132
+    },
+    "PROJECT_ROOT/.history/C-drift/files/provenance/initial/BRIEF.md": {
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267
+    },
+    "PROJECT_ROOT/.history/C-drift/files/provenance/initial/MANIFEST.json": {
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188
+    },
+    "PROJECT_ROOT/.history/C-drift/files/provenance/initial/constraints.json": {
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064
+    },
+    "PROJECT_ROOT/.history/C-drift/files/provenance/initial/obligations.json": {
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478
+    },
+    "PROJECT_ROOT/.history/C-drift/files/provenance/initial/source-identities.json": {
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074
+    },
+    "PROJECT_ROOT/.history/C-drift/files/provenance/stage-A/PROTOCOL.md": {
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    "PROJECT_ROOT/.history/C-drift/files/provenance/stage-A/RECORDING.md": {
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    "PROJECT_ROOT/.history/C-drift/files/provenance/stage-A/STAGE-A.md": {
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214
+    },
+    "PROJECT_ROOT/.history/C-drift/files/research/state.json": {
+      "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+      "bytes": 16515
+    },
+    "PROJECT_ROOT/.history/C-drift/files/results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "PROJECT_ROOT/.history/C-drift/files/results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    "PROJECT_ROOT/.history/C-drift/files/results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    "PROJECT_ROOT/.history/C-drift/files/resume.py": {
+      "sha256": "9fc48a77f1f3c0cc6094e7205d6debfebe44e2ba1d7c46263c4b634214faba4e",
+      "bytes": 3168
+    },
+    "PROJECT_ROOT/.history/C-drift/files/scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "PROJECT_ROOT/.history/C-drift/files/sources/howard2021-arxiv-v9.pdf": {
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    "PROJECT_ROOT/.history/C-drift/files/update-state.py": {
+      "sha256": "4fd4ab75762f99b3fb7be55f309c189af76afb93608568a7e7504af226832441",
+      "bytes": 2929
+    },
+    "PROJECT_ROOT/.history/C-drift/files/validation/stage-A-normal/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "PROJECT_ROOT/.history/C-drift/files/validation/stage-A-normal/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    "PROJECT_ROOT/.history/C-drift/files/validation/stage-A.json": {
+      "sha256": "339e302cf75cbd5ac43e0380f79ceada6dc0c2abe9c25359be6996961c526b8e",
+      "bytes": 5003
+    },
+    "PROJECT_ROOT/.history/metadata/revision-1.json": {
+      "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+      "bytes": 16515
+    },
+    "PROJECT_ROOT/.history/metadata/revision-2.json": {
+      "sha256": "55897b629e416348492855307da45c23ed1f2b459b340d41d5d33019cfca072e",
+      "bytes": 16571
+    },
+    "PROJECT_ROOT/.history/metadata/revision-3.json": {
+      "sha256": "12c9264eee940d192124ffb04fc4c4d7432ae906cbcfd8a72631cf41f349844c",
+      "bytes": 19196
+    },
+    "PROJECT_ROOT/provenance/stage-C/AUTHOR-REVISION.md": {
+      "sha256": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+      "bytes": 1371
+    },
+    "PROJECT_ROOT/provenance/stage-C/PROTOCOL.md": {
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    "PROJECT_ROOT/provenance/stage-C/RECORDING.md": {
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    "PROJECT_ROOT/provenance/stage-C/STAGE-C.md": {
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "bytes": 761
+    },
+    "PROJECT_ROOT/provenance/stage-C/metadata-patch.json": {
+      "sha256": "d4cd9003cadfb984eac0b6637d044860381a817112efdf0776b10c4d43d4e2c5",
+      "bytes": 7041
+    },
+    "PROJECT_ROOT/research/checkpoints/C-final.json": {
+      "sha256": "0a7ad0d3deb541039418f7fbd7a512a9636c181a669512c9ecdf1a2eab512c6f",
+      "bytes": 1697
+    },
+    "PROJECT_ROOT/research/write.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "PROJECT_ROOT/validation/stage-C-final-resume.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "PROJECT_ROOT/validation/stage-C-final-resume.stdout": {
+      "sha256": "d36864844c4ef28c18f67c39c5c1301d342d9cc8b89b39aad52e48f8a62551ff",
+      "bytes": 3181
+    },
+    "PROJECT_ROOT/validation/stage-C-intermediate-interpretation.json": {
+      "sha256": "db5ebf6d0061cad76f879962fd2d8d946e3594b3a45b100e366a13ed5ce73620",
+      "bytes": 392
+    },
+    "PROJECT_ROOT/validation/stage-C-intermediate-resume.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "PROJECT_ROOT/validation/stage-C-intermediate-resume.stdout": {
+      "sha256": "af76613d2dc0ef4faaf06fdd7205ed54d39fcf2b5c2a94cc6b6a972e7acb1ce7",
+      "bytes": 3875
+    },
+    "PROJECT_ROOT/validation/stage-C-recompute-verification.json": {
+      "sha256": "f4075a3df508eef1b3d92159fc58dbada35fb4cd93128ecd8a79ec08f54733a7",
+      "bytes": 777
+    },
+    "PROJECT_ROOT/validation/stage-C.json": {
+      "sha256": "f8ef2d3b58d5ea7269db4b81ac7a1edf1b361e524591713868f4ed96b5910f93",
+      "bytes": 4083
+    }
+  },
+  "network_calls": 0,
+  "violations": [],
+  "failures_or_nonzero_checks": [
+    {
+      "label": "initial-batched-display",
+      "meaning": "Tool display truncated; exact complete resume.py and update-state.py reread, state parsed in full by this script."
+    },
+    {
+      "label": "intermediate-resume",
+      "exit_code": 1,
+      "meaning": "Expected and preserved actual stale result after new drift checkpoint; T-CALC/T-SYNTH required actual recomputation/review; repaired only afterward."
+    }
+  ],
+  "written_paths": [
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/final-resume.stderr",
+    "OUTPUT_DIR/final-resume.stdout",
+    "OUTPUT_DIR/inputs-and-artifacts.json",
+    "OUTPUT_DIR/intermediate-interpretation.json",
+    "OUTPUT_DIR/intermediate-resume.stderr",
+    "OUTPUT_DIR/intermediate-resume.stdout",
+    "OUTPUT_DIR/metadata-revision.stderr",
+    "OUTPUT_DIR/metadata-revision.stdout",
+    "OUTPUT_DIR/recompute-verification.json",
+    "OUTPUT_DIR/recompute.stderr",
+    "OUTPUT_DIR/recompute.stdout",
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/revision-audit.json",
+    "OUTPUT_DIR/state-answer.json",
+    "PROJECT_ROOT/.history/C-drift/checkpoint.json",
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/notes/parameters.json",
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/results/result.json",
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/results/summary.md",
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/results/table.csv",
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/manifest.json",
+    "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/state.json",
+    "PROJECT_ROOT/.history/C-drift/files/PROJECT.md",
+    "PROJECT_ROOT/.history/C-drift/files/notes/parameters.json",
+    "PROJECT_ROOT/.history/C-drift/files/notes/rejected-parameters.json",
+    "PROJECT_ROOT/.history/C-drift/files/notes/source-check.md",
+    "PROJECT_ROOT/.history/C-drift/files/notes/unregistered-scratch.md",
+    "PROJECT_ROOT/.history/C-drift/files/provenance/initial/BRIEF.md",
+    "PROJECT_ROOT/.history/C-drift/files/provenance/initial/MANIFEST.json",
+    "PROJECT_ROOT/.history/C-drift/files/provenance/initial/constraints.json",
+    "PROJECT_ROOT/.history/C-drift/files/provenance/initial/obligations.json",
+    "PROJECT_ROOT/.history/C-drift/files/provenance/initial/source-identities.json",
+    "PROJECT_ROOT/.history/C-drift/files/provenance/stage-A/PROTOCOL.md",
+    "PROJECT_ROOT/.history/C-drift/files/provenance/stage-A/RECORDING.md",
+    "PROJECT_ROOT/.history/C-drift/files/provenance/stage-A/STAGE-A.md",
+    "PROJECT_ROOT/.history/C-drift/files/research/state.json",
+    "PROJECT_ROOT/.history/C-drift/files/results/result.json",
+    "PROJECT_ROOT/.history/C-drift/files/results/summary.md",
+    "PROJECT_ROOT/.history/C-drift/files/results/table.csv",
+    "PROJECT_ROOT/.history/C-drift/files/resume.py",
+    "PROJECT_ROOT/.history/C-drift/files/scripts/compute.py",
+    "PROJECT_ROOT/.history/C-drift/files/sources/howard2021-arxiv-v9.pdf",
+    "PROJECT_ROOT/.history/C-drift/files/update-state.py",
+    "PROJECT_ROOT/.history/C-drift/files/validation/stage-A-normal/result.json",
+    "PROJECT_ROOT/.history/C-drift/files/validation/stage-A-normal/table.csv",
+    "PROJECT_ROOT/.history/C-drift/files/validation/stage-A.json",
+    "PROJECT_ROOT/.history/C-drift/manifest.json",
+    "PROJECT_ROOT/.history/metadata/revision-1.json",
+    "PROJECT_ROOT/.history/metadata/revision-3.json",
+    "PROJECT_ROOT/PROJECT.md",
+    "PROJECT_ROOT/provenance/stage-C/AUTHOR-REVISION.md",
+    "PROJECT_ROOT/provenance/stage-C/PROTOCOL.md",
+    "PROJECT_ROOT/provenance/stage-C/RECORDING.md",
+    "PROJECT_ROOT/provenance/stage-C/STAGE-C.md",
+    "PROJECT_ROOT/provenance/stage-C/approved-parameters.json",
+    "PROJECT_ROOT/provenance/stage-C/metadata-patch.json",
+    "PROJECT_ROOT/research/checkpoints/C-final.json",
+    "PROJECT_ROOT/research/state.json",
+    "PROJECT_ROOT/results/result.json",
+    "PROJECT_ROOT/results/summary.md",
+    "PROJECT_ROOT/results/table.csv",
+    "PROJECT_ROOT/validation/stage-C-final-resume.stderr",
+    "PROJECT_ROOT/validation/stage-C-final-resume.stdout",
+    "PROJECT_ROOT/validation/stage-C-intermediate-interpretation.json",
+    "PROJECT_ROOT/validation/stage-C-intermediate-resume.stderr",
+    "PROJECT_ROOT/validation/stage-C-intermediate-resume.stdout",
+    "PROJECT_ROOT/validation/stage-C-recompute-verification.json",
+    "PROJECT_ROOT/validation/stage-C.json"
+  ],
+  "settings": {
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "system_limit": null
+  },
+  "executor": "AI assistant; no human expert approval",
+  "bootstrap_commands": [
+    {
+      "argv": [
+        "cat",
+        "STUDY_ROOT/runs/P3/C/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "cat",
+        "INPUT_DIR/PROTOCOL.md",
+        "INPUT_DIR/RECORDING.md",
+        "INPUT_DIR/STAGE-C.md",
+        "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md",
+        "TOOLKIT_ROOT/core/skill-bridge.md",
+        "TOOLKIT_ROOT/core/protocol.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "find",
+        "INPUT_DIR",
+        "PROJECT_ROOT",
+        "-type",
+        "f",
+        "-maxdepth",
+        "5",
+        "-print"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "cat",
+        "INPUT_DIR/author-revision/AUTHOR-REVISION.md",
+        "INPUT_DIR/author-revision/approved-parameters.json",
+        "PROJECT_ROOT/research/state.json",
+        "PROJECT_ROOT/resume.py",
+        "PROJECT_ROOT/update-state.py",
+        "PROJECT_ROOT/PROJECT.md",
+        "PROJECT_ROOT/provenance/initial/obligations.json",
+        "PROJECT_ROOT/provenance/initial/constraints.json",
+        "PROJECT_ROOT/provenance/initial/source-identities.json",
+        "PROJECT_ROOT/provenance/initial/BRIEF.md",
+        "PROJECT_ROOT/scripts/compute.py",
+        "PROJECT_ROOT/notes/parameters.json",
+        "PROJECT_ROOT/notes/rejected-parameters.json",
+        "PROJECT_ROOT/notes/source-check.md",
+        "PROJECT_ROOT/notes/unregistered-scratch.md",
+        "PROJECT_ROOT/results/result.json",
+        "PROJECT_ROOT/results/table.csv",
+        "PROJECT_ROOT/results/summary.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "output_display_truncated": true
+    },
+    {
+      "argv": [
+        "cat",
+        "PROJECT_ROOT/resume.py",
+        "PROJECT_ROOT/update-state.py"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    }
+  ],
+  "driver_commands": [
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/stage_c.py",
+        "prepare"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/stage_c.py",
+        "compute"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/stage_c.py",
+        "revise"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "meaning": "standard-input local file assembly to add revise mode to stage_c.py; source retained in final script"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/finalize.py"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "meaning": "this finalization; record written only after assertions below pass"
+    }
+  ],
+  "shell_wrapper_argv": null,
+  "shell_wrapper_note": "Program argv above is determined by submitted command text; tool-managed shell process argv is not exposed.",
+  "read_version_evidence": {
+    "PROJECT_ROOT/research/state.json": [
+      {
+        "path": "PROJECT_ROOT/.history/C-drift/files/research/state.json",
+        "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+        "bytes": 16515
+      },
+      {
+        "path": "PROJECT_ROOT/research/state.json",
+        "sha256": "60e8182caa623e246749cee8445683655a0a43e71cd0c849cf112c7ee21ce061",
+        "bytes": 19846
+      },
+      {
+        "path": "PROJECT_ROOT/.history/metadata/revision-1.json",
+        "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+        "bytes": 16515
+      },
+      {
+        "path": "PROJECT_ROOT/.history/metadata/revision-2.json",
+        "sha256": "55897b629e416348492855307da45c23ed1f2b459b340d41d5d33019cfca072e",
+        "bytes": 16571
+      },
+      {
+        "path": "PROJECT_ROOT/.history/metadata/revision-3.json",
+        "sha256": "12c9264eee940d192124ffb04fc4c4d7432ae906cbcfd8a72631cf41f349844c",
+        "bytes": 19196
+      }
+    ],
+    "PROJECT_ROOT/results/result.json": [
+      {
+        "path": "PROJECT_ROOT/.history/C-drift/files/results/result.json",
+        "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+        "bytes": 704
+      },
+      {
+        "path": "PROJECT_ROOT/results/result.json",
+        "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+        "bytes": 703
+      }
+    ],
+    "PROJECT_ROOT/results/table.csv": [
+      {
+        "path": "PROJECT_ROOT/.history/C-drift/files/results/table.csv",
+        "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+        "bytes": 101
+      },
+      {
+        "path": "PROJECT_ROOT/results/table.csv",
+        "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+        "bytes": 100
+      }
+    ],
+    "PROJECT_ROOT/results/summary.md": [
+      {
+        "path": "PROJECT_ROOT/.history/C-drift/files/results/summary.md",
+        "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+        "bytes": 295
+      },
+      {
+        "path": "PROJECT_ROOT/results/summary.md",
+        "sha256": "d4bfd0eaba49bb6a45dc5579ff0d14ad2bbbd3364ea9718f9ea48c6abad298fd",
+        "bytes": 1233
+      }
+    ]
+  },
+  "read_scope_note": "Whole-byte SHA reads do not mean full content review. Original source PDF hashed/copied only in C; no PDF page/theorem read. Directory inventory alone did not read file contents."
+}

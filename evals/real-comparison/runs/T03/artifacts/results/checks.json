@@ -1,0 +1,217 @@
+{
+  "formula_B": "alpha=1/16; rho=1/4; b^2(1/4)=(1/2)*log(512)",
+  "B_boundary_squared": 3.119162312519754,
+  "B_boundary": 1.766115033773212,
+  "B_failure_probability_t4_exact": "1/8",
+  "B_nominal_alpha_exact": "1/16",
+  "formula_C": "x-log(1+x)=2*log(1/alpha); rho*=v/x; inf b^2=(1+x)*v",
+  "C_alpha": 0.0625,
+  "C_x": 7.709603739407498,
+  "C_q": 8.709603739407498,
+  "C_rho_for_v7": 0.9079584679844994,
+  "C_minimized_b2_v7": 60.967226175852495,
+  "finite_path_enumeration": [
+    {
+      "path": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "Vhat4": "1/4",
+      "S4": "-2",
+      "boundary_squared": 3.119162312519754,
+      "fails_t4": true
+    },
+    {
+      "path": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "Vhat4": "5/4",
+      "S4": "-1",
+      "boundary_squared": 11.005405370561427,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "Vhat4": "49/36",
+      "S4": "-1",
+      "boundary_squared": 11.93574891405573,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "Vhat4": "61/36",
+      "S4": "0",
+      "boundary_squared": 14.770871323430253,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "Vhat4": "29/18",
+      "S4": "-1",
+      "boundary_squared": 14.056312433272186,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "Vhat4": "35/18",
+      "S4": "0",
+      "boundary_squared": 16.935407134700522,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "Vhat4": "35/18",
+      "S4": "0",
+      "boundary_squared": 16.935407134700522,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "Vhat4": "29/18",
+      "S4": "1",
+      "boundary_squared": 14.056312433272186,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "Vhat4": "29/18",
+      "S4": "-1",
+      "boundary_squared": 14.056312433272186,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "Vhat4": "35/18",
+      "S4": "0",
+      "boundary_squared": 16.935407134700522,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "Vhat4": "35/18",
+      "S4": "0",
+      "boundary_squared": 16.935407134700522,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "Vhat4": "29/18",
+      "S4": "1",
+      "boundary_squared": 14.056312433272186,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "Vhat4": "61/36",
+      "S4": "0",
+      "boundary_squared": 14.770871323430253,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "Vhat4": "49/36",
+      "S4": "1",
+      "boundary_squared": 11.93574891405573,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "Vhat4": "5/4",
+      "S4": "1",
+      "boundary_squared": 11.005405370561427,
+      "fails_t4": false
+    },
+    {
+      "path": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "Vhat4": "1/4",
+      "S4": "2",
+      "boundary_squared": 3.119162312519754,
+      "fails_t4": true
+    }
+  ],
+  "input_sha256": {
+    "TASK.md": "56d7eff3d121991ac8a907a8f285fe822e26e2627715fd2863180aadd96b51cd",
+    "draft.tex": "8550d8ea0188a72384bf5a4d596cdc23b3c8fa58cddeb30350c71adb26a2ba63",
+    "source-manifest.json": "ab51a486e3bed01f34e863a7221c58481d288bef2efde8b7dbb10ef2001994c4",
+    "sources/howard2020-arxiv-v7.pdf": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e",
+    "sources/howard2020-arxiv-v7.txt": "674f6bf98e64159aa294b114ba765f19ee40b5b89f1fab7c25a9419f86f8ce99",
+    "sources/howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+    "sources/howard2021-arxiv-v9.txt": "7826e3691e725d8017655d2be40aaf1a37c1aa2969b7344f3e0b4060f50141da"
+  },
+  "scope": "Exact path enumeration plus floating point arithmetic; no simulation and no proof from numerical agreement."
+}

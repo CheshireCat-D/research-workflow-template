@@ -1,0 +1,346 @@
+{
+  "case_id": "T",
+  "stage": "A",
+  "input_root": "INPUT_DIR",
+  "project_root": "PROJECT_ROOT",
+  "output_root": "OUTPUT_DIR",
+  "inputs": [
+    {
+      "relative_path": "../REQUEST.md",
+      "sha256": "14c9bbef72ec49fc480d5e632060ae04844e4ce365e350e929c7402f221f9f6c",
+      "bytes": 2145
+    },
+    {
+      "relative_path": "PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "relative_path": "RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "relative_path": "STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214
+    },
+    {
+      "relative_path": "initial/BRIEF.md",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267
+    },
+    {
+      "relative_path": "initial/MANIFEST.json",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188
+    },
+    {
+      "relative_path": "initial/constraints.json",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064
+    },
+    {
+      "relative_path": "initial/obligations.json",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478
+    },
+    {
+      "relative_path": "initial/project_payload/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    {
+      "relative_path": "initial/project_payload/notes/rejected-parameters.json",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160
+    },
+    {
+      "relative_path": "initial/project_payload/notes/source-check.md",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    {
+      "relative_path": "initial/project_payload/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132
+    },
+    {
+      "relative_path": "initial/project_payload/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "relative_path": "initial/project_payload/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    {
+      "relative_path": "initial/project_payload/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "relative_path": "initial/project_payload/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    {
+      "relative_path": "initial/project_payload/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    {
+      "relative_path": "initial/source-identities.json",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074
+    }
+  ],
+  "project_artifacts": [
+    {
+      "relative_path": ".research/evidence/A/current-status.json",
+      "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "bytes": 3614
+    },
+    {
+      "relative_path": ".research/evidence/A/normal/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "relative_path": ".research/evidence/A/normal/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "relative_path": ".research/evidence/A/normal-execution.json",
+      "sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2",
+      "bytes": 696
+    },
+    {
+      "relative_path": ".research/evidence/A/rejected-execution.json",
+      "sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888",
+      "bytes": 721
+    },
+    {
+      "relative_path": ".research/evidence/A/status-execution.json",
+      "sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb",
+      "bytes": 4225
+    },
+    {
+      "relative_path": ".research/evidence/A/validation-checks.json",
+      "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "bytes": 4643
+    },
+    {
+      "relative_path": ".research/provenance/initial/BRIEF.md",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267
+    },
+    {
+      "relative_path": ".research/provenance/initial/MANIFEST.json",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188
+    },
+    {
+      "relative_path": ".research/provenance/initial/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "relative_path": ".research/provenance/initial/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "relative_path": ".research/provenance/initial/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214
+    },
+    {
+      "relative_path": ".research/provenance/initial/constraints.json",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064
+    },
+    {
+      "relative_path": ".research/provenance/initial/obligations.json",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478
+    },
+    {
+      "relative_path": ".research/provenance/initial/source-identities.json",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074
+    },
+    {
+      "relative_path": ".research/state.json",
+      "sha256": "826f355ae1301c9c879b4440b78edbe93f173cb696df00b28c1c26a6de338a95",
+      "bytes": 16218
+    },
+    {
+      "relative_path": ".research/versions/A-draft/RECOVERY.md",
+      "sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0",
+      "bytes": 3128
+    },
+    {
+      "relative_path": ".research/versions/A-initial/index.json",
+      "sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3",
+      "bytes": 1273
+    },
+    {
+      "relative_path": ".research/versions/A-initial/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    {
+      "relative_path": ".research/versions/A-initial/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "relative_path": ".research/versions/A-initial/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    {
+      "relative_path": ".research/versions/A-initial/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "relative_path": "RECOVERY.md",
+      "sha256": "98608a9d3ce937ba87d7fd2689f8935798f641988ddf85b1f0c94f3a29d8153e",
+      "bytes": 3254
+    },
+    {
+      "relative_path": "notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    {
+      "relative_path": "notes/rejected-parameters.json",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160
+    },
+    {
+      "relative_path": "notes/source-check.md",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    {
+      "relative_path": "notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132
+    },
+    {
+      "relative_path": "results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "relative_path": "results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    {
+      "relative_path": "results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    {
+      "relative_path": "scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    {
+      "relative_path": "scripts/manage.py",
+      "sha256": "1dfc49a50e7a029ee6e91715cb7942be5d90869d66495ea84281efe3dcaf4655",
+      "bytes": 5383
+    },
+    {
+      "relative_path": "sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    }
+  ],
+  "outputs": [
+    {
+      "relative_path": "current-status.json",
+      "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "bytes": 3614
+    },
+    {
+      "relative_path": "execution.json",
+      "sha256": "6970cd3edd9fc02ccdd58f6701b41729ff7df8ed78f1a36fc4185c25482abe46",
+      "bytes": 50695
+    },
+    {
+      "relative_path": "final-verification.json",
+      "sha256": "92b2fda542d739e139abaf87dba2e44f22a86fec201cf768d4f0fb42c552d1e1",
+      "bytes": 368
+    },
+    {
+      "relative_path": "finalize.py",
+      "sha256": "f9ebeee77311cec83a76e947e1a54ea52ef64e8612a7d4740b71198235e43cba",
+      "bytes": 18332
+    },
+    {
+      "relative_path": "normal-execution.json",
+      "sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2",
+      "bytes": 696
+    },
+    {
+      "relative_path": "rejected-execution.json",
+      "sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888",
+      "bytes": 721
+    },
+    {
+      "relative_path": "report.md",
+      "sha256": "3ab74fa5bd492dc3a1be17d749b3881ed1627a1eb6f74b48f8a22f1b7d1a05b4",
+      "bytes": 5287
+    },
+    {
+      "relative_path": "stage-driver-result.json",
+      "sha256": "972785e36fd84e4001f0f9f99a44988c6117be0161a390b3c025006abab90347",
+      "bytes": 10556
+    },
+    {
+      "relative_path": "stage_driver.executed.py",
+      "sha256": "7eecb6c5fc43690569f13534b5e5ab97077c42434aa859a0b465b36bdba86491",
+      "bytes": 21604
+    },
+    {
+      "relative_path": "stage_driver.py",
+      "sha256": "3fe229938a83582b9a29b421cd88b05df7727ba3141202458b6d5e4f93b833ec",
+      "bytes": 21730
+    },
+    {
+      "relative_path": "state-answer.json",
+      "sha256": "a908c774c1bf4b4e1ef767ec1cbc9e2a4998672628e8685a512bf940a9172711",
+      "bytes": 4531
+    },
+    {
+      "relative_path": "status-execution.json",
+      "sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb",
+      "bytes": 4225
+    },
+    {
+      "relative_path": "validation-checks.json",
+      "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "bytes": 4643
+    },
+    {
+      "relative_path": "validation-normal/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    {
+      "relative_path": "validation-normal/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    }
+  ],
+  "self_hash_exclusion": "This manifest excludes its own checksum to avoid recursion.",
+  "non_distribution_scope": "Original PDF/CSV only for private research cache per supplied source identities. No public repository redistribution; distribute identities and derived project results instead.",
+  "mtime_policy": "Directory mtime is not a scientific content version."
+}

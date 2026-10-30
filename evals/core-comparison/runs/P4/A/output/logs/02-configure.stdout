@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "configured": true,
+  "configuration": {
+    "deliverable": {
+      "contribution_benchmarks": [],
+      "kind": "undecided",
+      "language": "zh",
+      "venue": null
+    },
+    "disciplines": [],
+    "entry_activity": "question",
+    "governance": {
+      "applicability": "unknown",
+      "relevant_requirements": []
+    },
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "methods": [
+      "computational"
+    ],
+    "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+    "resources": {
+      "available_capabilities": [
+        "local Python standard library",
+        "fixed source cache",
+        "author-provided working notes"
+      ],
+      "budget": "Offline Python standard library only; no new data collection or model refit",
+      "deadline": "2026-12-15"
+    },
+    "schema_version": "0.1",
+    "title": "冻结自行车需求模型的评价范围修订",
+    "workflow_mode": "reproducible"
+  },
+  "config_sha256": "4079b82d3854d0c0cee44e92fee4ac75a233e4ca97b2bc9d5a800c161e67ca45",
+  "registry_revision": 0,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification."
+}

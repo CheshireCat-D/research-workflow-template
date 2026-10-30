@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "PROJECT_ROOT/scripts/manage.py",
+    "status"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout_path": "status.stdout.txt",
+  "stderr_path": "status.stderr.txt"
+}

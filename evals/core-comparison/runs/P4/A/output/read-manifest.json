@@ -1,0 +1,1460 @@
+[
+  {
+    "path": "STUDY_ROOT/runs/P4/A/REQUEST.md",
+    "sha256": "b79a79450829bc135e2b19d9d6734f8606c942f38b9efbc630d6ece3d59798ad",
+    "bytes": 2283,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/PROTOCOL.md",
+    "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+    "bytes": 2279,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/RECORDING.md",
+    "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+    "bytes": 1300,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/STAGE-A.md",
+    "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+    "bytes": 1214,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/BRIEF.md",
+    "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+    "bytes": 1078,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/MANIFEST.json",
+    "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+    "bytes": 2329,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/constraints.json",
+    "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+    "bytes": 1070,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/obligations.json",
+    "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+    "bytes": 4723,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/project_payload/data/hour_2011.csv",
+    "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+    "bytes": 568668,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/project_payload/model/frozen.json",
+    "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+    "bytes": 2320,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/project_payload/notes/parameters.json",
+    "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+    "bytes": 171,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/project_payload/notes/rejected-parameters.json",
+    "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+    "bytes": 171,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/project_payload/notes/source-check.md",
+    "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+    "bytes": 474,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/project_payload/notes/unregistered-scratch.md",
+    "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+    "bytes": 132,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/project_payload/results/result.json",
+    "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+    "bytes": 1000,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/project_payload/results/summary.md",
+    "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+    "bytes": 280,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/project_payload/results/table.csv",
+    "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+    "bytes": 205,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/project_payload/scripts/compute.py",
+    "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+    "bytes": 4157,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "INPUT_DIR/initial/source-identities.json",
+    "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+    "bytes": 1200,
+    "read_scope": "full bytes; input text inspected, CSV parsed by controller/calculator"
+  },
+  {
+    "path": "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md",
+    "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+    "bytes": 4540,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/skill-bridge.md",
+    "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+    "bytes": 7641,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/protocol.md",
+    "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "bytes": 3841,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/tools/research.py",
+    "sha256": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b",
+    "bytes": 405,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/cli.py",
+    "sha256": "62519288f0573073f3b1be69de8e7c1537f038d9ccf40bae5fa53005c1f9c3fb",
+    "bytes": 13573,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/bundle.py",
+    "sha256": "3e2c08eba1ab540de1d0a807ffa5bafb0acd46a2bf00056f803554ec83de8cfa",
+    "bytes": 28639,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/tools/connect_skills.py",
+    "sha256": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+    "bytes": 2242,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/project.py",
+    "sha256": "6cd8d83a195565d512ee5d2e74a880d09adfdd60a850395cfcfee8f3e18796f5",
+    "bytes": 27732,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/model.py",
+    "sha256": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31",
+    "bytes": 16884,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/skills/rw-validation/SKILL.md",
+    "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+    "bytes": 3697,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/profiles/methods/computational.md",
+    "sha256": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+    "bytes": 2282,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/profiles/methods/empirical-quantitative.md",
+    "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+    "bytes": 2986,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/schemas/source.schema.json",
+    "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    "bytes": 1153,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/schemas/statement.schema.json",
+    "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    "bytes": 3018,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/schemas/evidence.schema.json",
+    "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    "bytes": 2889,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/schemas/relation.schema.json",
+    "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    "bytes": 1255,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/schemas/artifact.schema.json",
+    "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    "bytes": 1067,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/schemas/activity.schema.json",
+    "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    "bytes": 1479,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/schemas/decision.schema.json",
+    "sha256": "c3f913c83476a4d63ff6e34f9dc4a835a3547dbbb9feb8896773fc72ce0d6f49",
+    "bytes": 1365,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/schemas/method-binding.schema.json",
+    "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    "bytes": 1204,
+    "read_scope": "earlier direct read or bounded text search; complete fingerprint now retained"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/pkgutil.cpython-312.pyc",
+    "sha256": "5e48577fb28407fb2396feaa164c13c04b0b6d2c5ae04810927e32a24e1bee09",
+    "bytes": 19995,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/weakref.cpython-312.pyc",
+    "sha256": "1938b3d769a8aab5af0a9a69cd7bd1a9c7bbe516f7cab862f65644fa9227ea5c",
+    "bytes": 31319,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/_weakrefset.cpython-312.pyc",
+    "sha256": "85c90001bce52730914629247affcc0fa9f31a283f8eaa1507be9b565225ca8b",
+    "bytes": 11845,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/typing.cpython-312.pyc",
+    "sha256": "64f521057c9cff96af9dd8f8c5c6c87f2e95c68c47790ab12bb2e4438dc19631",
+    "bytes": 142494,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/collections/__pycache__/abc.cpython-312.pyc",
+    "sha256": "211a962db66e3f75971c9c7f8e756fb4500ec4f5cd9a5e007905544c19a04c3f",
+    "bytes": 357,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/contextlib.cpython-312.pyc",
+    "sha256": "b3b621e670d040782c78e91d9f93c16defc2e74004ba7d63248d4c66ebc75046",
+    "bytes": 30458,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/__init__.py",
+    "sha256": "747401e8a3ec02843d8ab825c1322b786a8c0e39a13d6d28affc57bbd4d3fd04",
+    "bytes": 596,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/__future__.cpython-312.pyc",
+    "sha256": "172afe8c65e4756d5fd7037e4771124af67ae31ef283f6518719b4eccfadc4fd",
+    "bytes": 4812,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/copy.cpython-312.pyc",
+    "sha256": "300e0c129e82ba0539fd3d8e062f099b1075dda1ef1f2aedd32536b9986277a6",
+    "bytes": 9865,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/argparse.cpython-312.pyc",
+    "sha256": "b38f90f3c0abe2f721860cfdf462dfd697ec84c7dd1ea3c541ea1186ec87d249",
+    "bytes": 101126,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/gettext.cpython-312.pyc",
+    "sha256": "277e07bf8f5f84dc45b511890e4003e0e4707542f73646e7d04ae7e82d08909f",
+    "bytes": 21891,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/shutil.cpython-312.pyc",
+    "sha256": "3e1083ba0aae1ba436dd0e1037e8796b9f84aa9677775cade841e9d55bbd46d3",
+    "bytes": 65423,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/bz2.cpython-312.pyc",
+    "sha256": "0348ede096afba44cbeeffe49c615edf0c9fcb8e7ff72a64216e30185fe0c1c4",
+    "bytes": 15241,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/_compression.cpython-312.pyc",
+    "sha256": "d431486229d255f3177a1284e643abc5ac8bcc6bb9edce883a1cb0187858f571",
+    "bytes": 7586,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/lzma.cpython-312.pyc",
+    "sha256": "44809775131fed77c4983e81e4f69a712afb4f47656f583e55b289faa5f03feb",
+    "bytes": 15963,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/uuid.cpython-312.pyc",
+    "sha256": "765fc8dc438e71675ce4c249a935ba63fdf8ebfefb55808956dffebd661c6148",
+    "bytes": 33094,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/datetime.cpython-312.pyc",
+    "sha256": "bb758523fb9b11f1dc49b85c5ef69c9b2396f0431d4ba9da6c670971c5ca617d",
+    "bytes": 517,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "TOOLKIT_ROOT/core/storage.py",
+    "sha256": "dc84e24536f6d3dc93762c414b334ac24765cbad41fc48bda05f5626a577c9d8",
+    "bytes": 10394,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/locale.cpython-312.pyc",
+    "sha256": "50eb78bcc41e648e61823e9d094178ea41638d9b4fd9fafa99345b324a33638f",
+    "bytes": 59596,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "TOOLKIT_ROOT/design/catalog.json",
+    "sha256": "c164def668d75f14a2d12d414fee6dcf287f96d33e293fbdaf8536c9cbe798c9",
+    "bytes": 25477,
+    "recorded_by": "logs/01-init.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/scripts/compute.py",
+    "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+    "bytes": 4157,
+    "recorded_by": "logs/03-normal-calculation.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/csv.cpython-312.pyc",
+    "sha256": "5acb0f437dded3c1a1eea4050a59e4cc30ece33fd90c8696792d77e42904982c",
+    "bytes": 18408,
+    "recorded_by": "logs/03-normal-calculation.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/notes/parameters.json",
+    "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+    "bytes": 171,
+    "recorded_by": "logs/03-normal-calculation.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/model/frozen.json",
+    "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+    "bytes": 2320,
+    "recorded_by": "logs/03-normal-calculation.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/data/hour_2011.csv",
+    "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+    "bytes": 568668,
+    "recorded_by": "logs/03-normal-calculation.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+    "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+    "bytes": 171,
+    "recorded_by": "logs/04-controlled-invalid-calculation.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/register-batch.json",
+    "sha256": "25f97ff523b1371870d3214dc3be22c23953607aa207246b4514d54034be12bc",
+    "bytes": 10079,
+    "recorded_by": "logs/05-register.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/perform.py",
+    "sha256": "59cff26987e54f6b16a1f9e8126c1f24237023a842daafaaebc035940a71fd97",
+    "bytes": 18324,
+    "recorded_by": "logs/controller-first-failed.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/platform.cpython-312.pyc",
+    "sha256": "397f475b5ddc57771d084f774ac30523de7c75586604d736fd53f5ac4626d03c",
+    "bytes": 41687,
+    "recorded_by": "logs/controller-first-failed.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/subprocess.cpython-312.pyc",
+    "sha256": "3adc785f1b1c50afcf78996630099a91c4de9f1a90c5163c607b007ce4842a08",
+    "bytes": 79162,
+    "recorded_by": "logs/controller-first-failed.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/signal.cpython-312.pyc",
+    "sha256": "4af3a161c219c1ba277a10daa8eb4aba689b8b0dc056fb33cf1c9012b921b4c9",
+    "bytes": 4565,
+    "recorded_by": "logs/controller-first-failed.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/threading.cpython-312.pyc",
+    "sha256": "d09943fa8aabfb53cb84a86feb24ec866632c3c2896cab2486b332fb47425c42",
+    "bytes": 65324,
+    "recorded_by": "logs/controller-first-failed.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/selectors.cpython-312.pyc",
+    "sha256": "d63b05321b7023d01c93388c0862d7a909c87340218e2384db6162767a129d28",
+    "bytes": 26211,
+    "recorded_by": "logs/controller-first-failed.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/perform.py",
+    "sha256": "d19eb0514fbcb09b90a23e9ec40c6ad4994b44dbc6419c2994788875cb0a8d30",
+    "bytes": 18384,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/commands.json",
+    "sha256": "07457441b53c78d04c8bb3435a55f3ab51c89e3c16ddf169eec68ad445b44476",
+    "bytes": 2152,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/results/result.json",
+    "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+    "bytes": 1000,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/results/table.csv",
+    "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+    "bytes": 205,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/results/summary.md",
+    "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+    "bytes": 280,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/history/stage-A-initial/notes/parameters.json",
+    "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+    "bytes": 171,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/history/stage-A-initial/results/result.json",
+    "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+    "bytes": 1000,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/history/stage-A-initial/results/table.csv",
+    "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+    "bytes": 205,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/history/stage-A-initial/results/summary.md",
+    "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+    "bytes": 280,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/validation-normal/result.json",
+    "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+    "bytes": 1000,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/validation-normal/table.csv",
+    "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+    "bytes": 205,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/03-normal-calculation.stdout",
+    "sha256": "de73f16f459d6f15815d245202a3238dd2315032aff07428f8fd8c1f3e60a91a",
+    "bytes": 203,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/03-normal-calculation.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/04-controlled-invalid-calculation.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/04-controlled-invalid-calculation.stderr",
+    "sha256": "c93f3dbbe32be7b71f266da256ccc75175cbd4ea8aa22e1758cace3b8cb20318",
+    "bytes": 109,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/context/BRIEF.md",
+    "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+    "bytes": 1078,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/context/MANIFEST.json",
+    "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+    "bytes": 2329,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/context/PROTOCOL.md",
+    "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+    "bytes": 2279,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/context/RECORDING.md",
+    "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+    "bytes": 1300,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/context/STAGE-A.md",
+    "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+    "bytes": 1214,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/context/constraints.json",
+    "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+    "bytes": 1070,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/context/obligations.json",
+    "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+    "bytes": 4723,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/context/source-identities.json",
+    "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+    "bytes": 1200,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/history/stage-A-initial/manifest.json",
+    "sha256": "f5fff52697972fa9b19472ac699aa0e8473c207189bd339e4923f0885c75f6d5",
+    "bytes": 700,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/notes/source-check.md",
+    "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+    "bytes": 474,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+    "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+    "bytes": 132,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/08-resume.stdout",
+    "sha256": "f23c96e01cf99e1ae9ae0513d5481dab6d0856d1d9b393706c0a57b75a61c1f6",
+    "bytes": 4020,
+    "recorded_by": "logs/controller.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/finalize.py",
+    "sha256": "a2133c5b5a2f167c6c2d1d7406863267b8b4fa8ccb3a2e3a76c1f2971d5e864a",
+    "bytes": 12959,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/final-status.json",
+    "sha256": "f23c96e01cf99e1ae9ae0513d5481dab6d0856d1d9b393706c0a57b75a61c1f6",
+    "bytes": 4020,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/commands.json",
+    "sha256": "c6ee298ae7819c2f29c947d394c05dad6e0e9cba8ab67db13e3739b78b34be92",
+    "bytes": 31915,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/01-init.reads.json",
+    "sha256": "fa17de67df7925dc00240ee4bc18a20a472641c207ebffdef4312e992fe738df",
+    "bytes": 6023,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/01b-init.reads.json",
+    "sha256": "fa17de67df7925dc00240ee4bc18a20a472641c207ebffdef4312e992fe738df",
+    "bytes": 6023,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/02-configure.reads.json",
+    "sha256": "fa17de67df7925dc00240ee4bc18a20a472641c207ebffdef4312e992fe738df",
+    "bytes": 6023,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/03-normal-calculation.reads.json",
+    "sha256": "400f74a7d51ae4fca359c50f871d7348465225201bc321d343d2f09ba0ba3c12",
+    "bytes": 4324,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/04-controlled-invalid-calculation.reads.json",
+    "sha256": "0503dc2ae3914c6b5b33413567a89850937a05280ce1142165cd2cc2464e1259",
+    "bytes": 3940,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/05-register.reads.json",
+    "sha256": "7fbda6f3f23849de6f50dab2151e38548cce97fb5780a402520a422fd56c1821",
+    "bytes": 6222,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/06-check.reads.json",
+    "sha256": "fa17de67df7925dc00240ee4bc18a20a472641c207ebffdef4312e992fe738df",
+    "bytes": 6023,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/07-checkpoint.reads.json",
+    "sha256": "fa17de67df7925dc00240ee4bc18a20a472641c207ebffdef4312e992fe738df",
+    "bytes": 6023,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/08-resume.reads.json",
+    "sha256": "fa17de67df7925dc00240ee4bc18a20a472641c207ebffdef4312e992fe738df",
+    "bytes": 6023,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/controller-first-failed.reads.json",
+    "sha256": "4d87ac2c1072ce56de741444b43db4d5983d15167e07df75ca82676f166e6a5c",
+    "bytes": 7716,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/controller.reads.json",
+    "sha256": "d2b50dc9e47e5f9d70b9d04605c74f836cbf31be467145498e350d66e0656c97",
+    "bytes": 14626,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/bundle-manifest.json",
+    "sha256": "401eb2c41626b4e1f1d8933393e72f9d17d924525626c6217a615b9afa552627",
+    "bytes": 8036,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/__init__.py",
+    "sha256": "747401e8a3ec02843d8ab825c1322b786a8c0e39a13d6d28affc57bbd4d3fd04",
+    "bytes": 596,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/bundle.py",
+    "sha256": "3e2c08eba1ab540de1d0a807ffa5bafb0acd46a2bf00056f803554ec83de8cfa",
+    "bytes": 28639,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/cli.py",
+    "sha256": "62519288f0573073f3b1be69de8e7c1537f038d9ccf40bae5fa53005c1f9c3fb",
+    "bytes": 13573,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/model.py",
+    "sha256": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31",
+    "bytes": 16884,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/project.py",
+    "sha256": "6cd8d83a195565d512ee5d2e74a880d09adfdd60a850395cfcfee8f3e18796f5",
+    "bytes": 27732,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/protocol.md",
+    "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "bytes": 3841,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+    "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+    "bytes": 1479,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+    "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+    "bytes": 1067,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/decision.schema.json",
+    "sha256": "c3f913c83476a4d63ff6e34f9dc4a835a3547dbbb9feb8896773fc72ce0d6f49",
+    "bytes": 1365,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+    "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+    "bytes": 2889,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/method-binding.schema.json",
+    "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+    "bytes": 1204,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/project.schema.json",
+    "sha256": "d3aea9cc6055a5e97776be07cf101ad35d8b764405042372439c3445aa80a558",
+    "bytes": 3912,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/registry.schema.json",
+    "sha256": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
+    "bytes": 40973,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+    "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+    "bytes": 1255,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/source.schema.json",
+    "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+    "bytes": 1153,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+    "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+    "bytes": 3018,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+    "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+    "bytes": 7641,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/storage.py",
+    "sha256": "dc84e24536f6d3dc93762c414b334ac24765cbad41fc48bda05f5626a577c9d8",
+    "bytes": 10394,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/windows_storage.py",
+    "sha256": "2770971dc068eb3d670a17c9110aaeb53aa25c99950468a9b5c0985837735615",
+    "bytes": 12755,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/design/catalog.json",
+    "sha256": "c164def668d75f14a2d12d414fee6dcf287f96d33e293fbdaf8536c9cbe798c9",
+    "bytes": 25477,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/agriculture-life.md",
+    "sha256": "66d86ef5e1f6deaa2af354e36e188469f9e1cf3423c14d31b4b48c854d46d583",
+    "bytes": 1201,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/engineering.md",
+    "sha256": "0c776e883840960b7eeb6c4dcb6a3be4974c1834d8bb142d0b3cde2acf502e30",
+    "bytes": 1092,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/humanities.md",
+    "sha256": "4ca1a988537c0f006d0fc5ce33dc1f8dfbcd09733c396a24bd4d2390dd406114",
+    "bytes": 1527,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/law.md",
+    "sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+    "bytes": 1563,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md",
+    "sha256": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
+    "bytes": 1332,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/natural-sciences.md",
+    "sha256": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a",
+    "bytes": 1060,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/social-sciences.md",
+    "sha256": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8",
+    "bytes": 1214,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/governance.md",
+    "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+    "bytes": 2998,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/computational.md",
+    "sha256": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+    "bytes": 2282,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/conceptual-normative.md",
+    "sha256": "609f444f364e638a0e61c49f160a4912ecd56ab9310a6937cef9b7abadae8b72",
+    "bytes": 2079,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md",
+    "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+    "bytes": 2986,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/engineering-design.md",
+    "sha256": "693c7a1a42001bdf87ce3684c866863c81b089af9bd6e521b813667de24423c8",
+    "bytes": 2161,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md",
+    "sha256": "0a9fccdfea15ffd8b30c30a56bcb8e5511d40d30bf8ea094ee47cf8ce8e4fbdc",
+    "bytes": 2605,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/formal-theory.md",
+    "sha256": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+    "bytes": 2389,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/historical-interpretive.md",
+    "sha256": "0894387de28c40bbf2e5913dbf260b1df15f6eaed45abdd8df2a9c1360c8f4d9",
+    "bytes": 2288,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/legal-analysis.md",
+    "sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+    "bytes": 5056,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/measurement-experiment.md",
+    "sha256": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd",
+    "bytes": 2593,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/qualitative.md",
+    "sha256": "069f3880300a754dc2e8dd26eb64290278045ce2cabadd394160c68d02efb2c6",
+    "bytes": 2421,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/selection.md",
+    "sha256": "0198e36085cec17ec7d3aa73220e90b33467c2e0c9d8d05af7952bce8ba21c49",
+    "bytes": 3249,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/sources.json",
+    "sha256": "b8a05f32aea861bff470abfeeef0dcd1943fcae7dda30a14619ffcd853bd12c7",
+    "bytes": 31107,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/templates/legal-research.md",
+    "sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+    "bytes": 3440,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/templates/legal-source.json",
+    "sha256": "e127852f1bb0a051e3aad083d29e54719866296d6830f3df5d8b0513afcbece4",
+    "bytes": 1212,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+    "sha256": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+    "bytes": 2242,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+    "sha256": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b",
+    "bytes": 405,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-candidates/SKILL.md",
+    "sha256": "1e63dd370770263d981ee03678c54a3cbba6c8add0ca85d8552ef2e98ba63005",
+    "bytes": 3467,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-figures/SKILL.md",
+    "sha256": "cc9c901bc9b516512d4d0ca5ee5efd68efd85dc243e60800ec2291287fd748fa",
+    "bytes": 4671,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-figures/agents/openai.yaml",
+    "sha256": "0a8e433abbb264ae4610be7692503db534b6dcffbe6a6188841de88b57556d98",
+    "bytes": 256,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-figures/assets/synthetic-figure-spec.json",
+    "sha256": "a6aa429fe76a185f726b2c3bcafb65ba131c89c130e9b1156bbbcb3ef6cea591",
+    "bytes": 1799,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-figures/assets/synthetic-workflow.svg",
+    "sha256": "ba843559b5be505b2b4e21540de2c3fb48c46b7dca4d2e22c42f5f32d7a77717",
+    "bytes": 2219,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-figures/examples/plot_demo.py",
+    "sha256": "63c482011529440d36dcbd1df9506ecad47b0d3e17508ad40282d35342ae17ed",
+    "bytes": 2803,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-figures/references/editable-schematics.md",
+    "sha256": "f76450491c138c6d6518a7dccabe3890f9768ddd21b656b18bcfa0aa40368acd",
+    "bytes": 3316,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-figures/scripts/audit_svg_schematic.py",
+    "sha256": "8c87f1819e8c7887a7b7b5432f2e6f7e983157e6980d17346c47908f2b069d87",
+    "bytes": 8571,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-innovation/SKILL.md",
+    "sha256": "3817216a0d99514e78f6c9520d51ea0b2b279d7d83c6f55d82ee8aaeed418a09",
+    "bytes": 3316,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-literature/SKILL.md",
+    "sha256": "2d008d633e71e1cd8d4a39d66ec78c6a6e8fb4ee7f4d9daf73a8aad0a34dfed3",
+    "bytes": 3320,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-literature/references/search-and-library.md",
+    "sha256": "f2a69e0ff59e0a4e426c3f0109b7fd28c62090a284b5def33c5426cc16bf4631",
+    "bytes": 7467,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-literature/scripts/search_crossref.py",
+    "sha256": "5cbf7b63dcc4f1b7062231eab812b821b1e6c149424888f9c5fca56573334997",
+    "bytes": 18385,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-question/SKILL.md",
+    "sha256": "cbfe1f537202d9cad995949458a5bbe496624f6cc926956ed80ad2be97e0239a",
+    "bytes": 3478,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-review/SKILL.md",
+    "sha256": "a3d18fd88c1e76abac2a46d7b86a6582624f47ec5cf5d8cad4bc26c2bc495c0d",
+    "bytes": 5231,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-review/references/cross-material-consistency.md",
+    "sha256": "ddc1d7de400cb83c8b8c4fc160f0afa070793525ad5fb5963fbe5313a651f0cc",
+    "bytes": 4396,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-review/references/review-modes.md",
+    "sha256": "0d6253160bc164a6d07f704fb1c8eb2338f01738ba99cef8d1af70d87968e3e3",
+    "bytes": 4393,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-review/references/review-response.md",
+    "sha256": "f08a84ba4bef293858d6931658e206e4b1484c715afe45b2d064fbab78dfa019",
+    "bytes": 7851,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-review/references/submission-delivery.md",
+    "sha256": "08e09b8fa45428aa1e05969c80178d088f7d0a9383060081154b7d7203165f5b",
+    "bytes": 5179,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-review/references/theory-review.md",
+    "sha256": "6b046232cd71cc8f8d36d04c249981081481e7d23ae719406b42655cd694669c",
+    "bytes": 2704,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-review/scripts/check_revision_plan.py",
+    "sha256": "54cd825ea0bc3d8d0c798cf535afef66c89a82d17f0d476ddca88dfd77c36bc9",
+    "bytes": 14922,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-validation/SKILL.md",
+    "sha256": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2",
+    "bytes": 3823,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-workflow/SKILL.md",
+    "sha256": "0fdbe0845d7fb4f67211edc8f72d81bb537d846ce8a1560eead5cf65bab1aebc",
+    "bytes": 4576,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.agents/skills/rw-writing/SKILL.md",
+    "sha256": "299efd19a165a38ca761306021befcc3c4f6ede959ed3da427aae199aa22a3b7",
+    "bytes": 4185,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/plistlib.cpython-312.pyc",
+    "sha256": "a9a368c19ad33ee0d046e095c16b782d63f20ae1d2425ee8f51eacbd43bd93aa",
+    "bytes": 41320,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/struct.cpython-312.pyc",
+    "sha256": "4607dd7c93dc3bb4edf88622c37c6185b53e6d186c6a3a11e287fd5c96184774",
+    "bytes": 433,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/xml/__pycache__/__init__.cpython-312.pyc",
+    "sha256": "6003be97655b098f00e7625b46d9424c6f2bd2a6610cd12da50088839f533101",
+    "bytes": 815,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/xml/parsers/__pycache__/__init__.cpython-312.pyc",
+    "sha256": "824f762bf2bf83292a0d0e2eab563190a64d642f77f0a6f4869b6644bc3fba7a",
+    "bytes": 425,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/xml/parsers/__pycache__/expat.cpython-312.pyc",
+    "sha256": "cd5dca488a4198ca0906d2968266b08630ada1177034be7b8fbce7ad444a09bb",
+    "bytes": 524,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "/System/Library/CoreServices/SystemVersion.plist",
+    "sha256": "6151cb883e5b48d43a33d4d41956405a1cd502e0c8622319388d943e2cb804a1",
+    "bytes": 603,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.gitignore",
+    "sha256": "ad2624eebe4c879c147366692134361aa951a879b02c4746472bca5057361901",
+    "bytes": 61,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/.research/write.lock",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/PROJECT.md",
+    "sha256": "50c3722b2886a9426239f5bc88979a79e922babe4caa5e7cc4321318554c98d0",
+    "bytes": 552,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/RECOVERY.md",
+    "sha256": "906b82ca369d7561a66c33850b114d874ef451b5a5e76120d75bba358fb1ffe0",
+    "bytes": 2061,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/project.json",
+    "sha256": "4079b82d3854d0c0cee44e92fee4ac75a233e4ca97b2bc9d5a800c161e67ca45",
+    "bytes": 969,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/records/registry.json",
+    "sha256": "deb47ba2379cfe1a24cc6872e36a925854c15a41af5d754661bbc6b9e71f9361",
+    "bytes": 28222,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/validation/stage-A/03-normal-calculation.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/validation/stage-A/03-normal-calculation.stdout",
+    "sha256": "de73f16f459d6f15815d245202a3238dd2315032aff07428f8fd8c1f3e60a91a",
+    "bytes": 203,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/validation/stage-A/04-controlled-invalid-calculation.stderr",
+    "sha256": "c93f3dbbe32be7b71f266da256ccc75175cbd4ea8aa22e1758cace3b8cb20318",
+    "bytes": 109,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/validation/stage-A/04-controlled-invalid-calculation.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/validation/stage-A/comparison.json",
+    "sha256": "257cf475416fb23a69f4bbad91b1e1cdda26cd649e3524959d8e76189d72fe16",
+    "bytes": 6875,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/validation/stage-A/initial-identities.json",
+    "sha256": "3d6663ecd8c87b3fd5f4dbd4ba821a39a53c28448616fb2bf723f8af58da992d",
+    "bytes": 3573,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/validation/stage-A/normal/result.json",
+    "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+    "bytes": 1000,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/validation/stage-A/normal/table.csv",
+    "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+    "bytes": 205,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/validation/stage-A/resume-at-handoff.json",
+    "sha256": "f23c96e01cf99e1ae9ae0513d5481dab6d0856d1d9b393706c0a57b75a61c1f6",
+    "bytes": 4020,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/validation/stage-A/source-verification.json",
+    "sha256": "d9c06d6c76df3d0e689ac2aad52b3dec4498d197081cdb2081cbfa916f3db919",
+    "bytes": 2232,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/auditrun.py",
+    "sha256": "dd1469b58964fe6eade69bdda39cd83b3a0d48cdfd597198dc826bb902dbb73d",
+    "bytes": 1114,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/execution.json",
+    "sha256": "eca2daa17a3f32cb13461dd379c400ba4effcc6f91b8879105f9859127783f25",
+    "bytes": 81768,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/input-manifest-check.json",
+    "sha256": "9f7031e9a76a43921ac6c2582da2e87a1022f94399998599202996dd2dad0e8b",
+    "bytes": 2725,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/installed-resources.json",
+    "sha256": "6250751f219e2e7a8d1719797eca42110db8dfbc4c26f13e426275acbe3c6ad1",
+    "bytes": 18800,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/01-init.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/01-init.stdout",
+    "sha256": "d9700a4295b4dab8100d2300749ce279d3f7c587fdb07413c5bb52832a05650f",
+    "bytes": 341,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/01b-init.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/01b-init.stdout",
+    "sha256": "11f92c6f70c2e738236f204e4f0b62b0b3ec5325a311bbcc59b479e4eb01cf33",
+    "bytes": 950,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/02-configure.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/02-configure.stdout",
+    "sha256": "b41980fe08383efa6ae942bcef8b97ef7a4d03bdc77f089af2c5e21231bde5a9",
+    "bytes": 1467,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/05-register.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/05-register.stdout",
+    "sha256": "577c48ae079bf517e6515f086d8c371d43f2b075713261b8c36018c92218de0d",
+    "bytes": 7037,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/06-check.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/06-check.stdout",
+    "sha256": "096d01003e4a2762d3ec31aeb2094c6649178e1bf6520a5ce78c1174a9363cd8",
+    "bytes": 3321,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/07-checkpoint.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/07-checkpoint.stdout",
+    "sha256": "c3566b3c6613e676647bc5ce70810849b49f38b6b6f07ef628eea00e9f61a55f",
+    "bytes": 615,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/08-resume.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/perform-first-failed.py",
+    "sha256": "59cff26987e54f6b16a1f9e8126c1f24237023a842daafaaebc035940a71fd97",
+    "bytes": 18324,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/read-manifest.json",
+    "sha256": "ed168a630a7b987dffb2ef9381d5764a2b686bbb9dba85c168a0ec809b074538",
+    "bytes": 28657,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/report.md",
+    "sha256": "475b193f9e600fb637b1d8e961889c168e75dfd43d64d63dd23290d03e4fee55",
+    "bytes": 3789,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/state-answer.json",
+    "sha256": "ac560b902eafa92f4b49f29836764817fc8046fcaefe719e9e4550bd52863705",
+    "bytes": 3984,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/workflow-result.json",
+    "sha256": "ef56a76140b80bcf70a44eb10a0b8ae9268a9c4c817e6b271ea0e9ed60f38abf",
+    "bytes": 1643,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/finalize.py",
+    "sha256": "7194145bf03b3706aa248b110e55d606b852d491a0935791004bf86fff2c0bdf",
+    "bytes": 12974,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/finalizer.reads.json",
+    "sha256": "9c0ddc6d76b055e37d6d0d44deecc3c3fab6bf1971caf559aa8c588dfb03d14d",
+    "bytes": 46159,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "PROJECT_ROOT/RECOVERY.md",
+    "sha256": "ff8f4ccd18db729b5d0e4f3b2d42b566a9e65a83fafe885c7859a4ab3656cddd",
+    "bytes": 2091,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/execution.json",
+    "sha256": "c353000aa2a647c94fa73ef2993ecce2f6a39a8e9795f7013b688f7104385ed8",
+    "bytes": 117955,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/failure-preservation/execution.json",
+    "sha256": "eca2daa17a3f32cb13461dd379c400ba4effcc6f91b8879105f9859127783f25",
+    "bytes": 81768,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/failure-preservation/report.md",
+    "sha256": "475b193f9e600fb637b1d8e961889c168e75dfd43d64d63dd23290d03e4fee55",
+    "bytes": 3789,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/09-portable-resume.stderr",
+    "sha256": "2e998100692f5dca2223ffd1adbb32c4be210e1df497a760b008383723d8bbd3",
+    "bytes": 191,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/09-portable-resume.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/read-manifest.json",
+    "sha256": "95406e19947d5a54abad56b1ee4f9408dba7017b89326e53f2efbe73af8b2f13",
+    "bytes": 62498,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/report.md",
+    "sha256": "3fe6690a6638f0b46571dc0912193549bef6dcef4414fe76162efa988fe438c1",
+    "bytes": 3804,
+    "recorded_by": "logs/finalizer.reads.json"
+  },
+  {
+    "path": "OUTPUT_DIR/failure-preservation/finalizer.reads.json",
+    "sha256": "9c0ddc6d76b055e37d6d0d44deecc3c3fab6bf1971caf559aa8c588dfb03d14d",
+    "bytes": 46159,
+    "read_scope": "Full-byte final verification inventory"
+  },
+  {
+    "path": "OUTPUT_DIR/final_check.py",
+    "sha256": "b9647dee0a3c98f9aa82f7ef320d1859a5e3c37634607790336e15b68a9f9da2",
+    "bytes": 6232,
+    "read_scope": "Full-byte final verification inventory"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/09-portable-resume-failed.stderr",
+    "sha256": "2e998100692f5dca2223ffd1adbb32c4be210e1df497a760b008383723d8bbd3",
+    "bytes": 191,
+    "read_scope": "Full-byte final verification inventory"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/09-portable-resume-failed.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "read_scope": "Full-byte final verification inventory"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/10-portable-resume.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "read_scope": "Full-byte final verification inventory"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/10-portable-resume.stdout",
+    "sha256": "f23c96e01cf99e1ae9ae0513d5481dab6d0856d1d9b393706c0a57b75a61c1f6",
+    "bytes": 4020,
+    "read_scope": "Full-byte final verification inventory"
+  },
+  {
+    "path": "OUTPUT_DIR/logs/finalizer.reads.json",
+    "sha256": "71906fa2c4d78435f56c596a6c0cfbb081ef7775af9cd350adaff5e931b771ef",
+    "bytes": 47203,
+    "read_scope": "Full-byte final verification inventory"
+  },
+  {
+    "path": "OUTPUT_DIR/execution.json",
+    "sha256": "5df6834d899ff188ab98f56488e37c55341843f66256bd93f916d4bcf36bde93",
+    "bytes": 132240,
+    "recorded_by": "logs/final-check.reads.json"
+  }
+]

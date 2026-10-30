@@ -1,0 +1,33 @@
+[
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+      "resume",
+      "--root",
+      "PROJECT_ROOT"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 1,
+    "stdout_file": "resume.stdout.txt",
+    "stderr_file": "resume.stderr.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+      "check",
+      "--installed-only",
+      "--root",
+      "PROJECT_ROOT"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout_file": "installed-check.stdout.txt",
+    "stderr_file": "installed-check.stderr.txt"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "relation",
+    "--id",
+    "T-REL"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 27,\n  \"kind\": \"relation\",\n  \"id\": \"T-REL\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"evidence_id\": \"T-PARAM\",\n      \"id\": \"T-REL\",\n      \"rationale\": \"Author parameters restrict the numerical claim; file registration is not a mathematical proof.\",\n      \"relation\": \"qualifies\",\n      \"scope\": \"Current fixed alpha, rho selection and four intrinsic-time points.\",\n      \"statement_id\": \"T-CLAIM\"\n    },\n    \"registered_at\": \"2026-10-30T01:03:18.400657+00:00\",\n    \"version\": 1\n  }\n}\n",
+  "stderr": ""
+}

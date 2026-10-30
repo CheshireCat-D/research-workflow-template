@@ -1,0 +1,22 @@
+{
+  "name": "P3-batch-invalid-version",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P3/batch-invalid-version/project/update-state.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P3/batch-invalid-version/project",
+    "--expected-revision",
+    "4",
+    "--patch",
+    "STUDY_ROOT/mechanical-audit/P3/batch-invalid-version/batch.json"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P3/batch-invalid-version/project",
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "{\"error\": \"ValueError\", \"message\": \"Conflict: record T-REL version differs\"}\n",
+  "project_identical_bytes_mtime_directory_mtime": true,
+  "changed_files": [],
+  "changed_directories": []
+}

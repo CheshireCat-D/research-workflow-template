@@ -1,0 +1,64 @@
+{
+  "submission_id": "Sb68670",
+  "task_id": "data-b",
+  "report_sha256": "4ce7fec7be22bf7a148f7f7736ee59bb3424800dede803cd8d9c1dfacf7d7f68",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_units",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "report.md:17-30；work/stage_b.py:audit；input/INPUT_MANIFEST.json；adjudicator_check/summary.json。报告区分小时/日和空单元格/少行；2011/2012为8645/8734小时、365/366日，年度总数1243103/2049576，日均3405.761644/5599.934426；增长64.8758%/64.4253%。",
+      "rationale": "四份输入身份、逐日三种计数汇总、年度分母和覆盖均正确。350个2012完整日及两个极少小时日期准确，缺行未补零或擅自归因；两切片合计17379、页面17389及season/温度冲突均保留。"
+    },
+    {
+      "id": "temporal_design",
+      "score": 7,
+      "max_points": 7,
+      "evidence": "report.md:9-13、84；work/stage_b.py:main；work/analysis.py:predict；work/handoff.md:7；adjudicator_check/summary.json。2011-01-01至09-30为6442小时/273日，Q4为2203小时/92日；原模型SHA为84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47。",
+      "rationale": "模型与stage_a_snapshot逐字节相同，72个sum/n/mean与原训练范围完全一致，评分函数原样复用且无fit调用。特征仅hr/workingday，预测不取整；排除同期组成和实测天气，反对随机拆小时替代未来验证。未使用2012重估或并入Q4。"
+    },
+    {
+      "id": "metrics_sensitivity",
+      "score": 12,
+      "max_points": 12,
+      "evidence": "report.md:34-65；work/stage_b_results/results.json与comparison_metrics.csv；adjudicator_check/check.py、summary.json；adjudicator_check/replay/results.json与提交结果字节一致。2012小时MAE为118.11827620046033/108.70812150008842，日等权MAE为117.77586740335869/108.3607464606273。",
+      "rationale": "独立核验总体、完整24h及workingday=0/1下两模型MAE/RMSE/bias/日等权MAE及两种改善口径，全部符合参考容差。完整日改善7.776923%、非工作日17.408898%、工作日3.007152%正确；偏差明确为预测减实际，小时加权与日期等权未混淆。108项比较最大误差2.84e-14。"
+    },
+    {
+      "id": "uncertainty",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "report.md:69-80；work/analysis.py:block_bootstrap、quantile；work/stage_b_results/results.json；adjudicator_check/check.py重新计算4000次配对抽样。7天相对区间[0.06476413180843968,0.09967438859012917]，28天[0.05709841034889167,0.11589625362630877]。",
+      "rationale": "配对日期、循环7/28天块、每次同seed重置、B=2000、抽至D天截断、按抽样总小时误差及(B-1)p线性分位数均符合协议且可复现。解释日内与日期依赖、稳定性、循环连接和长期漂移限制。明确7天上端略低于10%、28天跨10%，两者均支持正改善而均未稳健支持至少10%，未挑选有利块长。"
+    },
+    {
+      "id": "conclusion_update",
+      "score": 9,
+      "max_points": 9,
+      "evidence": "report.md:3-5、61-65、78-88；previous-report.md；work/handoff.md:11-13、26。历史改善24.2317%保留；2012点改善7.9667%，偏差转为约-91.6；后续候选为近期水平及季节更新，另设未见年份评价。",
+      "rationale": "保留有效的2011有限结论，并收窄跨年10%可用性主张，同时承认2012中C1仍改善。绝对误差和低估扩大与已观察日均增长相符，但未将增长认定为因果机制且指出Q4与全年季节组成不同。部署证据不足，未来改模明确尚未验证且不冒充冻结C1。"
+    },
+    {
+      "id": "reproducibility",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "work/stage_b.py、work/analysis.py、work/model.json、work/RUN.md、work/handoff.md及stage_a_snapshot；评审者实际执行stage_b.py到adjudicator_check/replay成功，结果与原stage_b_results/results.json字节一致；独立check.py和summary.json通过。",
+      "rationale": "实际代码可从给定输入与原冻结参数恢复全部结果，原模型与评分代码保存且匹配，交接清楚区分根目录旧结果与stage_b_results新结果，包含训练范围、输入、指标、限制及复跑命令。对本包结果的当前执行和独立核验支持其可恢复性；未把文档格式或文件数量当作科学加分。"
+    }
+  ],
+  "raw_score": 50,
+  "effective_score": 50,
+  "max_score": 50,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "usable",
+  "notes": [
+    "仅访问指定Sb68670盲包的任务、规程、报告、交接、源码、输入、参考与数值，并在本包adjudicator_check新子目录核验；未读取其他盲包、arm_map、外部执行记录、个人skills、memory、网络或其他agent产物。",
+    "组织者未提供arm映射；arm_hidden=true表示映射隐藏，不代表完美盲法。未对方法/工具身份作猜测，未据其评分。",
+    "无额外data cap；effective_score等于raw_score，caps_applied为空。未因公开发行大CSV的省略或补全扣分。",
+    "未发现影响本阶段评分的参考数值错误。报告正文6207字符；未用字段名称、格式、文件数或品牌加分。"
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification."
+}

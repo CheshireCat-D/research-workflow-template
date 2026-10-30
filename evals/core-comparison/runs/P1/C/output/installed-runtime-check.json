@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+    "check",
+    "--installed-only",
+    "--root",
+    "PROJECT_ROOT"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"installed_integrity\": true,\n  \"source_version_matches\": null,\n  \"source_comparison_performed\": false,\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 67,\n  \"payload_sha256\": \"c2dd5fa54cee747ff61cb597779320ca498a9cb145c8fce422735091cdc5fcc1\",\n  \"findings\": []\n}\n",
+  "stderr": ""
+}

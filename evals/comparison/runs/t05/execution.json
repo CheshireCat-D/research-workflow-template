@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "status": "executed",
+  "started_at_utc": null,
+  "finished_at_utc": "2026-10-29T22:36:23.153062+00:00",
+  "duration_seconds": null,
+  "requested_configuration": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "context": "fork_turns=none for every task/arm",
+    "requested_output_unicode_limit": 5000,
+    "requested_tool_call_limit": 8,
+    "temperature": null,
+    "seed": null
+  },
+  "effective_configuration": {
+    "model": {
+      "value": null,
+      "source": "unknown"
+    },
+    "reasoning_effort": {
+      "value": null,
+      "source": "unknown"
+    },
+    "temperature": {
+      "value": null,
+      "source": "unknown"
+    },
+    "seed": {
+      "value": null,
+      "source": "unknown"
+    },
+    "hard_output_token_limit": {
+      "value": null,
+      "source": "unknown"
+    }
+  },
+  "context_isolation": {
+    "requested": "fresh context, fork_turns=none",
+    "evidence": "instruction-only",
+    "os_audited": false,
+    "same_metadata_catalogue_visible": true
+  },
+  "actual_reads": [
+    {
+      "logical_name": "executor-prompt.md",
+      "sha256": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09"
+    },
+    {
+      "logical_name": "templates/execution.template.json",
+      "sha256": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1"
+    },
+    {
+      "logical_name": "rwt/skills/rw-review/SKILL.md",
+      "sha256": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5"
+    },
+    {
+      "logical_name": "rwt/core/skill-bridge.md",
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a"
+    },
+    {
+      "logical_name": "rwt/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9"
+    },
+    {
+      "logical_name": "rwt/skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5"
+    },
+    {
+      "logical_name": "rwt/profiles/methods/formal-theory.md",
+      "sha256": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c"
+    },
+    {
+      "logical_name": "tasks/Q11.md",
+      "sha256": "81b8cc0c73ce55acb1ff68ac67516273a424a8e5915a615708042ace0d5864a1"
+    }
+  ],
+  "tool_calls": 3,
+  "output_tokens": null,
+  "network_calls": 0,
+  "output_unicode_characters": 1154,
+  "output_bytes": 2052,
+  "violations": [],
+  "uncertainties": [
+    "宿主未报告实际模型、推理强度、温度、随机种子或硬输出限制。",
+    "未采集首次读取的开始时间，故 started_at_utc 与 duration_seconds 保持 null。",
+    "output_tokens 未由宿主报告；字符数与字节数仅计 report.md。",
+    "tool_calls 按对外 functions.exec 调用计数，共3次；每次内部各调用 exec_command 1次。"
+  ],
+  "failure": null,
+  "outputs": [
+    {
+      "path": "report.md",
+      "sha256": "21cd63b9819f9fef6b02980ee48f8122afb25b44f1696ea17e655605ec808f98"
+    }
+  ],
+  "verification": {
+    "report_unicode_limit_passed": true,
+    "report_control_characters_checked": true,
+    "execution_json_parse_passed": true,
+    "temporary_rendering_escape_corrected": true
+  },
+  "publication_projection": {
+    "raw_execution_sha256": "8a0204c882f174d7f93d657fb60dfeb7607fb90d336d9c2973978943e52483f2",
+    "changes": [
+      "completed status label mapped to executed",
+      "logical path instructions.md mapped to executor-prompt.md",
+      "logical path execution.template.json mapped to templates/execution.template.json"
+    ],
+    "scope": "Administrative fields only; report bytes, effective unknowns and scientific content unchanged."
+  }
+}

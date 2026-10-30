@@ -1,0 +1,650 @@
+{
+  "schema_version": 1,
+  "case_id": "D",
+  "stage": "C",
+  "created_utc": "2026-10-30T01:03:34.672621+00:00",
+  "authority": "management/state.json 是项目生命周期记录唯一权威；management/constraints.json保存所给约束，notes/parameters.json为实际运行参数。新字节/经授权新决定优先于旧done，需显式保留版本后更新此记录。",
+  "active_constraints": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-11-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "research_question": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+  "logical_nodes": [
+    {
+      "id": "D-SRC",
+      "entity": "source",
+      "meaning": "Primary real source identity from source-identities.json; record actual access scope",
+      "dependencies": [],
+      "material_paths": [
+        "management/source-identities.json"
+      ]
+    },
+    {
+      "id": "D-REMOTE",
+      "entity": "source",
+      "meaning": "Source identity only; no supplied local copy or live content inspection",
+      "dependencies": [],
+      "material_paths": []
+    },
+    {
+      "id": "D-RAW",
+      "entity": "local material",
+      "path": "data/hour_2011.csv",
+      "source": "D-SRC",
+      "meaning": "Immutable primary local material and its full SHA",
+      "dependencies": [],
+      "material_paths": [
+        "data/hour_2011.csv"
+      ]
+    },
+    {
+      "id": "D-PARAM",
+      "entity": "local material",
+      "path": "notes/parameters.json",
+      "meaning": "Author working parameters; a separate local material, not the original paper/dataset",
+      "dependencies": [],
+      "material_paths": [
+        "notes/parameters.json"
+      ]
+    },
+    {
+      "id": "D-CLAIM",
+      "entity": "statement",
+      "meaning": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+      "scope": "2011-11-01至2011-12-31、1460实际观察小时/61日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。",
+      "dependencies": [],
+      "material_paths": [
+        "management/constraints.json"
+      ]
+    },
+    {
+      "id": "D-REL",
+      "entity": "relation",
+      "from": "D-PARAM",
+      "to": "D-CLAIM",
+      "meaning": "2011-11-01至12-31的授权评价参数限定当前描述性比较；该选择不修改原始来源、不代表模型经重训改善。",
+      "dependencies": [
+        "D-PARAM",
+        "D-CLAIM"
+      ],
+      "material_paths": []
+    },
+    {
+      "id": "D-CHOICE",
+      "entity": "decision",
+      "meaning": "接受作者授权的2011年11月至12月评价窗口，继续使用原冻结模型与observed-hour权重；原Q4结果留作历史。",
+      "evidence": [
+        "management/evidence/C/authorization/approved-parameters.json",
+        "notes/parameters.json"
+      ],
+      "dependencies": [
+        "D-PARAM"
+      ],
+      "material_paths": [
+        "notes/parameters.json",
+        "management/evidence/C/authorization/AUTHOR-REVISION.md",
+        "management/evidence/C/authorization/approved-parameters.json"
+      ]
+    },
+    {
+      "id": "D-CODE",
+      "entity": "artifact",
+      "path": "scripts/compute.py",
+      "meaning": "Supplied scientific calculator; preserve byte identity",
+      "dependencies": [],
+      "material_paths": [
+        "scripts/compute.py"
+      ]
+    },
+    {
+      "id": "D-MODEL",
+      "entity": "artifact",
+      "path": "model/frozen.json",
+      "meaning": "Supplied Jan–Sep fixed C0/C1 parameters; no refit",
+      "derived_from": [
+        "D-RAW"
+      ],
+      "dependencies": [
+        "D-RAW"
+      ],
+      "material_paths": [
+        "model/frozen.json"
+      ]
+    },
+    {
+      "id": "D-RESULT",
+      "entity": "artifact",
+      "path": "results/result.json",
+      "meaning": "Current canonical numeric result; the companion results/table.csv is delivered and must agree",
+      "derived_from": [
+        "D-PARAM",
+        "D-RAW",
+        "D-CODE",
+        "D-CHOICE",
+        "D-MODEL"
+      ],
+      "dependencies": [
+        "D-PARAM",
+        "D-RAW",
+        "D-CODE",
+        "D-CHOICE",
+        "D-MODEL"
+      ],
+      "material_paths": [
+        "results/result.json",
+        "results/table.csv"
+      ]
+    },
+    {
+      "id": "D-SUMMARY",
+      "entity": "artifact",
+      "path": "results/summary.md",
+      "meaning": "Current summary consistent with canonical numeric result",
+      "derived_from": [
+        "D-CLAIM",
+        "D-RESULT"
+      ],
+      "dependencies": [
+        "D-CLAIM",
+        "D-RESULT"
+      ],
+      "material_paths": [
+        "results/summary.md"
+      ]
+    },
+    {
+      "id": "D-SOURCE-NOTE",
+      "entity": "artifact",
+      "path": "notes/source-check.md",
+      "meaning": "Fixed source identity/coverage note; independent of chosen numeric/evaluation parameter",
+      "dependencies": [
+        "D-SRC",
+        "D-RAW"
+      ],
+      "material_paths": [
+        "notes/source-check.md"
+      ]
+    },
+    {
+      "id": "D-SOURCE-CHECK",
+      "entity": "activity",
+      "meaning": "Verify supplied primary source identity/version and note, not full scientific certification",
+      "inputs": [
+        "D-SRC",
+        "D-RAW"
+      ],
+      "outputs": [
+        "D-SOURCE-NOTE"
+      ],
+      "status": "done",
+      "dependencies": [
+        "D-SRC",
+        "D-RAW",
+        "D-SOURCE-NOTE"
+      ],
+      "material_paths": []
+    },
+    {
+      "id": "D-CALC",
+      "entity": "activity",
+      "meaning": "Evaluate the supplied calculator under current author parameters and verify provided result",
+      "inputs": [
+        "D-PARAM",
+        "D-RAW",
+        "D-CODE",
+        "D-CHOICE",
+        "D-MODEL"
+      ],
+      "outputs": [
+        "D-RESULT"
+      ],
+      "status": "done",
+      "dependencies": [
+        "D-PARAM",
+        "D-RAW",
+        "D-CODE",
+        "D-CHOICE",
+        "D-MODEL",
+        "D-RESULT"
+      ],
+      "material_paths": []
+    },
+    {
+      "id": "D-SYNTH",
+      "entity": "activity",
+      "meaning": "Prepare summary within current claim and verified result",
+      "inputs": [
+        "D-CLAIM",
+        "D-RESULT"
+      ],
+      "outputs": [
+        "D-SUMMARY"
+      ],
+      "depends_on": [
+        "D-CALC"
+      ],
+      "status": "done",
+      "dependencies": [
+        "D-CLAIM",
+        "D-RESULT",
+        "D-CALC",
+        "D-SUMMARY"
+      ],
+      "material_paths": []
+    }
+  ],
+  "activities": {
+    "D-SOURCE-CHECK": {
+      "status": "done",
+      "status_meaning": "本阶段限定工作已实际完成；不等于专家科学认证、形式化证明或未来版本有效。",
+      "evidence": "management/evidence/A/checks.json",
+      "bound_materials": {
+        "data/hour_2011.csv": {
+          "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+          "bytes": 568668
+        },
+        "management/source-identities.json": {
+          "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+          "bytes": 1200
+        },
+        "notes/source-check.md": {
+          "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+          "bytes": 474
+        }
+      },
+      "verification": "验证所给本地身份、完整散列、2011行数及来源卡口径；原完整数据和远端信息仍为提供方陈述。",
+      "continued_validity": "来源身份文件、2011切片和来源卡字节与原绑定完全相符；本次只改评价期，独立来源分支保持原限定工作完成，不扩大远端核验范围。"
+    },
+    "D-CALC": {
+      "status": "done",
+      "status_meaning": "本阶段限定工作已实际完成；不等于专家科学认证、形式化证明或未来版本有效。",
+      "evidence": "management/evidence/C/checks-before-promotion.json",
+      "bound_materials": {
+        "data/hour_2011.csv": {
+          "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+          "bytes": 568668
+        },
+        "model/frozen.json": {
+          "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+          "bytes": 2320
+        },
+        "notes/parameters.json": {
+          "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+          "bytes": 171
+        },
+        "results/result.json": {
+          "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+          "bytes": 999
+        },
+        "results/table.csv": {
+          "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+          "bytes": 203
+        },
+        "scripts/compute.py": {
+          "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+          "bytes": 4157
+        }
+      },
+      "verification": "实际运行原脚本得到11月至12月指标，独立按定义重算MAE、RMSE、偏差与降幅，并核对表格和完整输入散列；原始CSV、脚本、冻结模型字节未改。"
+    },
+    "D-SYNTH": {
+      "status": "done",
+      "status_meaning": "本阶段限定工作已实际完成；不等于专家科学认证、形式化证明或未来版本有效。",
+      "evidence": "management/evidence/C/summary-review.json",
+      "bound_materials": {
+        "management/constraints.json": {
+          "sha256": "06f10fae9ecc9bdcb91b69666bb84e26439b8a2c11258d3778f4168098cf446d",
+          "bytes": 1070
+        },
+        "results/result.json": {
+          "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+          "bytes": 999
+        },
+        "results/summary.md": {
+          "sha256": "b7b9af6a4cb12e1e30c5ef6c9b19f92a2513d0bb31f511d350110203abc45705",
+          "bytes": 1124
+        },
+        "results/table.csv": {
+          "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+          "bytes": 203
+        }
+      },
+      "verification": "实际修订摘要的窗口、样本数、指标、旧Q4对比和解释边界；由本地数值和文本检查复核，作者内容认可仍待完成。"
+    }
+  },
+  "decision": {
+    "id": "D-CHOICE",
+    "choice": "接受作者授权的2011年11月至12月评价窗口，继续使用原冻结模型与observed-hour权重；原Q4结果留作历史。",
+    "author": "supplied author revision",
+    "authorization": "management/evidence/C/authorization/AUTHOR-REVISION.md",
+    "evidence": [
+      "management/evidence/C/authorization/approved-parameters.json",
+      "notes/parameters.json"
+    ],
+    "rationale": "作者接受当前参数为新工作范围；只是评价窗口修订，不是原始来源修订或模型改进证据。",
+    "expert_content_approval": false,
+    "submission_authorized": false
+  },
+  "tracked_files": {
+    "data/hour_2011.csv": {
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    "management/BRIEF.md": {
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078
+    },
+    "management/constraints.json": {
+      "sha256": "06f10fae9ecc9bdcb91b69666bb84e26439b8a2c11258d3778f4168098cf446d",
+      "bytes": 1070
+    },
+    "management/evidence/A/checks.json": {
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "bytes": 9234
+    },
+    "management/evidence/A/invalid-after.json": {
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553
+    },
+    "management/evidence/A/invalid-before.json": {
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553
+    },
+    "management/evidence/A/normal-run/result.json": {
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    "management/evidence/A/normal-run/table.csv": {
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    "management/obligations.json": {
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723
+    },
+    "management/source-identities.json": {
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200
+    },
+    "management/status.py": {
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98",
+      "bytes": 3331
+    },
+    "management/versions/A-initial/notes/parameters.json": {
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171
+    },
+    "management/versions/A-initial/results/result.json": {
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    "management/versions/A-initial/results/summary.md": {
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280
+    },
+    "management/versions/A-initial/results/table.csv": {
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    "model/frozen.json": {
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    "notes/parameters.json": {
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171
+    },
+    "notes/source-check.md": {
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474
+    },
+    "results/result.json": {
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999
+    },
+    "results/summary.md": {
+      "sha256": "b7b9af6a4cb12e1e30c5ef6c9b19f92a2513d0bb31f511d350110203abc45705",
+      "bytes": 1124
+    },
+    "results/table.csv": {
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "RECOVERY.md": {
+      "sha256": "6859cf68b9e263e28429eabf6cbd2ba038cc0b4877c7bc88afbb9472f4add585",
+      "bytes": 2841
+    },
+    "management/verify_current.py": {
+      "sha256": "d79b48b511c0f38d5f19c5bbd37509368c87d23bcf527b0bebfe4ebb3b11d741",
+      "bytes": 4198
+    },
+    "management/checkpoints/C-pre-recompute/checkpoint.json": {
+      "sha256": "c9e1b3be936d88bcdf9d8e3faba204816da43d902ffccdb60f1f50aad47f5986",
+      "bytes": 5228
+    },
+    "management/evidence/C/authorization/AUTHOR-REVISION.md": {
+      "sha256": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6",
+      "bytes": 1443
+    },
+    "management/evidence/C/authorization/approved-parameters.json": {
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171
+    },
+    "management/evidence/C/checks-before-promotion.json": {
+      "sha256": "94cf8cdf1d128c1a13d6c1b82e5e98c0feed9b4697ccad3bc1dff0c936325428",
+      "bytes": 1382
+    },
+    "management/evidence/C/compute-run.json": {
+      "sha256": "61fd4a33242e0010c34c9fa5344e43060477a8617af76b77600bda361999e204",
+      "bytes": 493
+    },
+    "management/evidence/C/intermediate-check.json": {
+      "sha256": "d464618d2f1d2e55f702e790955db6c9fefd3653bb9edbd4f7429bb9e07e350b",
+      "bytes": 37102
+    },
+    "management/evidence/C/intermediate-status.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "management/evidence/C/intermediate-status.stdout.json": {
+      "sha256": "c745d525f7c610bb1ba5b4d3c7f5d8826fabd32091ca01041dd8e14984041361",
+      "bytes": 4051
+    },
+    "management/evidence/C/recomputed/result.json": {
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999
+    },
+    "management/evidence/C/recomputed/table.csv": {
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203
+    },
+    "management/evidence/C/summary-review.json": {
+      "sha256": "d292cc274751bc0f84b4f66eb59092389c725ef8e2d691a0127ab4f848357872",
+      "bytes": 827
+    }
+  },
+  "versions": [
+    {
+      "logical_path": "notes/parameters.json",
+      "version": "A-initial",
+      "snapshot_path": "management/versions/A-initial/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "rationale": "本阶段收到的初始版本；任何后续修订须保留该原字节和修订依据。"
+    },
+    {
+      "logical_path": "results/result.json",
+      "version": "A-initial",
+      "snapshot_path": "management/versions/A-initial/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "rationale": "本阶段收到的初始版本；任何后续修订须保留该原字节和修订依据。"
+    },
+    {
+      "logical_path": "results/table.csv",
+      "version": "A-initial",
+      "snapshot_path": "management/versions/A-initial/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "rationale": "本阶段收到的初始版本；任何后续修订须保留该原字节和修订依据。"
+    },
+    {
+      "logical_path": "results/summary.md",
+      "version": "A-initial",
+      "snapshot_path": "management/versions/A-initial/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "rationale": "本阶段收到的初始版本；任何后续修订须保留该原字节和修订依据。"
+    },
+    {
+      "logical_path": "notes/parameters.json",
+      "version": "C-author-revision",
+      "snapshot_path": "management/checkpoints/C-final/tree/notes/parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "rationale": "作者接受11月至12月评价窗口；在真实重新计算与摘要修订后保留。"
+    },
+    {
+      "logical_path": "results/result.json",
+      "version": "C-author-revision",
+      "snapshot_path": "management/checkpoints/C-final/tree/results/result.json",
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999,
+      "rationale": "作者接受11月至12月评价窗口；在真实重新计算与摘要修订后保留。"
+    },
+    {
+      "logical_path": "results/table.csv",
+      "version": "C-author-revision",
+      "snapshot_path": "management/checkpoints/C-final/tree/results/table.csv",
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203,
+      "rationale": "作者接受11月至12月评价窗口；在真实重新计算与摘要修订后保留。"
+    },
+    {
+      "logical_path": "results/summary.md",
+      "version": "C-author-revision",
+      "snapshot_path": "management/checkpoints/C-final/tree/results/summary.md",
+      "sha256": "b7b9af6a4cb12e1e30c5ef6c9b19f92a2513d0bb31f511d350110203abc45705",
+      "bytes": 1124,
+      "rationale": "作者接受11月至12月评价窗口；在真实重新计算与摘要修订后保留。"
+    },
+    {
+      "logical_path": "management/constraints.json",
+      "version": "C-author-revision",
+      "snapshot_path": "management/checkpoints/C-final/tree/management/constraints.json",
+      "sha256": "06f10fae9ecc9bdcb91b69666bb84e26439b8a2c11258d3778f4168098cf446d",
+      "bytes": 1070,
+      "rationale": "作者接受11月至12月评价窗口；在真实重新计算与摘要修订后保留。"
+    }
+  ],
+  "checkpoint": {
+    "id": "A-verified-initial",
+    "status": "fresh-for-bound-local-files",
+    "bound_paths": [
+      "data/hour_2011.csv",
+      "management/BRIEF.md",
+      "management/constraints.json",
+      "management/evidence/A/checks.json",
+      "management/evidence/A/invalid-after.json",
+      "management/evidence/A/invalid-before.json",
+      "management/evidence/A/normal-run/result.json",
+      "management/evidence/A/normal-run/table.csv",
+      "management/obligations.json",
+      "management/source-identities.json",
+      "management/status.py",
+      "management/versions/A-initial/notes/parameters.json",
+      "management/versions/A-initial/results/result.json",
+      "management/versions/A-initial/results/summary.md",
+      "management/versions/A-initial/results/table.csv",
+      "model/frozen.json",
+      "notes/parameters.json",
+      "notes/source-check.md",
+      "results/result.json",
+      "results/summary.md",
+      "results/table.csv",
+      "scripts/compute.py"
+    ],
+    "evidence": "management/evidence/A/checks.json",
+    "not_scientific_certification": true
+  },
+  "scientific_scope": "2011-11-01至2011-12-31、1460实际观察小时/61日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。",
+  "source_tracking_limits": {
+    "D-SRC": "已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。",
+    "D-REMOTE": "仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。",
+    "notes/unregistered-scratch.md": "已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。",
+    "source_card_discrepancy": "卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。",
+    "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+  },
+  "next_action": "将2011年11月至12月的冻结模型指标（1460观察小时、61日）与更新摘要交作者内容复核；保留原Q4结果作历史记录。尚无内容认可或投稿授权；继续前运行management/status.py和management/verify_current.py，不重训、不外推2012。",
+  "unknowns": {
+    "human_expert_approval": null,
+    "author_discussion_decision": null,
+    "target_journal": null,
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null
+  },
+  "history": [
+    {
+      "stage": "A",
+      "event": "保留初始字节，验证正常运行与摘要，有意无效参数被拒，原有效结果不变。",
+      "before_version": "A-initial",
+      "evidence": "management/evidence/A/checks.json",
+      "next_action": "当前指标、表格、摘要已核对；下一步由作者讨论2011第四季度冻结模型比较及其研究表述。尚无作者审阅决定；不发送、不投稿、不重训、不外推2012。继续前运行 management/status.py 检查依赖新鲜度。"
+    },
+    {
+      "stage": "C",
+      "event": "先保存未重算漂移态，再只读检查exit=3；只有参数漂移使D-CALC/D-SYNTH待复核。随后按作者授权实算并修订当前成果与范围。",
+      "pre_recompute_checkpoint": "management/checkpoints/C-pre-recompute/checkpoint.json",
+      "intermediate_check": "management/evidence/C/intermediate-check.json",
+      "before_parameter_version": "A-initial",
+      "before_result_version": "A-initial",
+      "authorization": "management/evidence/C/authorization/AUTHOR-REVISION.md",
+      "evidence": [
+        "management/evidence/C/compute-run.json",
+        "management/evidence/C/checks-before-promotion.json",
+        "management/evidence/C/summary-review.json"
+      ],
+      "source_branch": "D-SOURCE-CHECK maintained with unchanged bound inputs",
+      "next_action": "将2011年11月至12月的冻结模型指标（1460观察小时、61日）与更新摘要交作者内容复核；保留原Q4结果作历史记录。尚无内容认可或投稿授权；继续前运行management/status.py和management/verify_current.py，不重训、不外推2012。"
+    }
+  ],
+  "updated_utc": "2026-10-30T01:12:00.292403+00:00",
+  "checkpoints": {
+    "pre_recompute": {
+      "path": "management/checkpoints/C-pre-recompute/checkpoint.json",
+      "preserves_drift": true,
+      "renews_completed_work": false
+    },
+    "current": {
+      "path": "management/checkpoints/C-final/checkpoint.json",
+      "basis": "actual authorized recalculation and summary revision; file identity is not scientific approval"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--id",
+    "T-RECOVERY"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 27,\n  \"kind\": \"artifact\",\n  \"id\": \"T-RECOVERY\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"RECOVERY.md\": \"3fb28aa6f96520a6b131fb7a0d71eb4d798425975847c0fbcac837fcbc40f744\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"description\": \"Portable local recovery, authority, limits and concrete next action.\",\n      \"id\": \"T-RECOVERY\",\n      \"path\": \"RECOVERY.md\",\n      \"type\": \"recovery-guide\"\n    },\n    \"registered_at\": \"2026-10-30T01:04:06.268857+00:00\",\n    \"version\": 2\n  }\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "parameters_match_explicit_authorization": true,
+    "rho_fixed_before_observation": true,
+    "alpha_unchanged": true,
+    "rho_is_four": true,
+    "grid_matches": true,
+    "bound_parameters_match": true,
+    "bound_calculator_match": true,
+    "table_rows_match_result": true,
+    "formula_evaluation_check": true,
+    "immutable_primary_and_scripts": true,
+    "independent_source_note_unchanged": true,
+    "original_initial_versions_still_intact": true,
+    "canonical_result_byte_equal_rerun": true,
+    "canonical_table_byte_equal_rerun": true,
+    "summary_all_four_rounded_values": true,
+    "summary_scope_rho4_and_next_step": true
+  },
+  "values": [
+    {
+      "v": 0,
+      "boundary": 4.895493661361633
+    },
+    {
+      "v": 1,
+      "boundary": 5.57431973357386
+    },
+    {
+      "v": 10,
+      "boundary": 10.070709270872976
+    },
+    {
+      "v": 100,
+      "boundary": 31.015388968276124
+    }
+  ]
+}

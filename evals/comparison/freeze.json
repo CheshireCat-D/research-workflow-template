@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "study_id": "RWT-four-task-pilot-v1",
+  "declared_freeze_date": "2026-10-29",
+  "scope": "four purposive tasks; no population accuracy estimate",
+  "tasks": [
+    "Q11",
+    "Q24",
+    "Q37",
+    "Q58"
+  ],
+  "arms": [
+    "baseline",
+    "rwt",
+    "critical-thinking"
+  ],
+  "files": {
+    "executor-prompt.md": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09",
+    "protocol.md": "2f0ffaece07b79d1d733cfa318bba05a4fbb081c8a579a7038eefa720c6c51c4",
+    "reference-key.json": "e83a098d79e27dbb083791c3e94a980b7bfe8fa19e18654301fa999af89e783c",
+    "run-configuration.json": "a7973c1504f9aed3c8a85ae7c3fc47a4293e378f173aa4b31d500bb769d529a1",
+    "tasks/Q11.md": "81b8cc0c73ce55acb1ff68ac67516273a424a8e5915a615708042ace0d5864a1",
+    "tasks/Q24.md": "c59e5901613eefb006fcef57768ed60e4925af92ea67d068ffb3d859a441009f",
+    "tasks/Q37.md": "997698cfd2edaf430c25b5e987982ef81bfb6075db3ba3cf6d542016cc863025",
+    "tasks/Q58.md": "bebd6b87aef817e404bb6fd00be3ea09d555eaa1fcd89b2925b689efbe5ac786",
+    "templates/adjudication.template.json": "396ce11dfecdf4e63ab5a44f05a34732693d7f69eb4e4a143476b789b595eea7",
+    "templates/execution.template.json": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1",
+    "templates/trial-record.template.json": "c6654afd961954e3fdcd05689e967ee6a577f21ddca309241c26fc01c121373d"
+  },
+  "guidance_sha256": {
+    "rwt/skills/rw-review/SKILL.md": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+    "rwt/core/skill-bridge.md": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+    "rwt/core/protocol.md": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+    "rwt/skills/rw-validation/SKILL.md": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+    "rwt/profiles/methods/formal-theory.md": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+    "rwt/profiles/methods/empirical-quantitative.md": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+    "competitor/scientific-critical-thinking/SKILL.md": "563af70571b7dcd6a96bf2e303bedfdcba623b4e9f082d58f04aacbc961fdae4",
+    "competitor/scientific-critical-thinking/references/common_biases.md": "641e8e8e6dfadac1643ea8691b7d3e4e58cf013f134cd42c71301878096a5a39",
+    "competitor/scientific-critical-thinking/references/core_capabilities.md": "0f337b96aa2d7453433a17824368fbd0638b9469d4f90a5fd23f4167c9dee180",
+    "competitor/scientific-critical-thinking/references/evidence_hierarchy.md": "534fbe991ecfb2d162f755004dc528118ce74a78862917c2911595a522d76e6c",
+    "competitor/scientific-critical-thinking/references/experimental_design.md": "eca7e42025393984c07676f3d4bc354d217e5604dc2209c76215d31953a7c74c",
+    "competitor/scientific-critical-thinking/references/logical_fallacies.md": "becfc5bfac7b831dca67cc442cd0fcb42d8eea527a6fc2921c1b704e592ff593",
+    "competitor/scientific-critical-thinking/references/review_sources.md": "71e75106f36f3e69b28959ad1fec503ccdb21b7f5361ab230173e4812accbf62",
+    "competitor/scientific-critical-thinking/references/scientific_method.md": "5aa925b97c7a916f819dafc8b42a9c24e4bd3eb2836594e724f1e7f9ae75ea0f",
+    "competitor/scientific-critical-thinking/references/statistical_pitfalls.md": "0c43204a0a81110cfeb7c982fa4caa89f274bdcebf096e09e5adfccf31241cb9"
+  },
+  "required_guidance": {
+    "baseline": [],
+    "rwt": [
+      "rwt/skills/rw-review/SKILL.md",
+      "rwt/core/skill-bridge.md",
+      "rwt/core/protocol.md",
+      "rwt/skills/rw-validation/SKILL.md"
+    ],
+    "critical-thinking": [
+      "competitor/scientific-critical-thinking/SKILL.md"
+    ]
+  },
+  "method_guidance": {
+    "Q11": "rwt/profiles/methods/formal-theory.md",
+    "Q24": "rwt/profiles/methods/formal-theory.md",
+    "Q37": "rwt/profiles/methods/empirical-quantitative.md",
+    "Q58": "rwt/profiles/methods/empirical-quantitative.md"
+  },
+  "guidance_source": {
+    "rwt": "frozen snapshot before pilot; source checkout HEAD dbe09bf65a59f5d7fb093b11e423f4bde0ec7a1a",
+    "competitor": {
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/5f2bc0341354fd5590aef76a533ada1e1e5b4e62/skills/scientific-critical-thinking",
+      "commit": "5f2bc0341354fd5590aef76a533ada1e1e5b4e62",
+      "normalization": "trailing blank lines normalized; delivered hashes authoritative"
+    }
+  },
+  "trial_plan": [
+    {
+      "task_id": "Q11",
+      "arm": "baseline"
+    },
+    {
+      "task_id": "Q24",
+      "arm": "rwt"
+    },
+    {
+      "task_id": "Q37",
+      "arm": "critical-thinking"
+    },
+    {
+      "task_id": "Q58",
+      "arm": "baseline"
+    },
+    {
+      "task_id": "Q11",
+      "arm": "rwt"
+    },
+    {
+      "task_id": "Q24",
+      "arm": "critical-thinking"
+    },
+    {
+      "task_id": "Q37",
+      "arm": "baseline"
+    },
+    {
+      "task_id": "Q58",
+      "arm": "rwt"
+    },
+    {
+      "task_id": "Q11",
+      "arm": "critical-thinking"
+    },
+    {
+      "task_id": "Q24",
+      "arm": "baseline"
+    },
+    {
+      "task_id": "Q37",
+      "arm": "rwt"
+    },
+    {
+      "task_id": "Q58",
+      "arm": "critical-thinking"
+    }
+  ],
+  "isolation_evidence": "instruction-only; no OS audit",
+  "configuration_file": "run-configuration.json"
+}

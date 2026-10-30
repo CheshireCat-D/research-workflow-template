@@ -1,0 +1,101 @@
+{
+  "submission_id": "Q7d813",
+  "report_sha256": "a372ff7e29a8291939011e2faec9e8a07f47d4286cd71cc15c619a3e383b042e",
+  "rubric_version": "1.0-design-review",
+  "criteria": [
+    {
+      "id": "source_conditions",
+      "score": 18,
+      "max_points": 18,
+      "evidence": [
+        "report.md:5,11-13,17,19,21",
+        "S1 fixed v7 PDF pp.9-10,12-13; S2 fixed v9 PDF pp.4-5,9-10,12,14,28,35,37 independently checked"
+      ],
+      "rationale": "4/4 版本、书目信息、页码及编号匹配已供PDF；4/4 明确sub-psi针对(S,V)，适应性不足，且未把不可预测性本身当定义禁令；4/4 区分S1无限时域线性crossing与S2正态混合曲线，排除iid/固定n和正态观测限制；6/6 Theorem 4的有界观测、可预测有界预测器、平均条件均值目标、残差平方和、scale b-a、单尾delta/双尾2delta均准确。"
+    },
+    {
+      "id": "gaussian_mixture",
+      "score": 15,
+      "max_points": 15,
+      "evidence": [
+        "report.md:32-72",
+        "S2 fixed v9 PDF pp.9,27-28, Lemma 2 and Proposition 5; S1 fixed v7 PDF p.13 Lemma 1"
+      ],
+      "rationale": "7/7 正态精度rho和配方逐步计算正确，前因子与指数常数无误；4/4 给出SG下固定lambda的一步超鞅、可预测增量、初值1、联合可测性及非负条件Tonelli，混合可积性处理正确；4/4 从Ville阈值1/alpha反演得到题定边界，一个全实轴对称混合已用总错误alpha控制双尾，闭区间及[0,1]截断说明正确。"
+    },
+    {
+      "id": "finite_counterexample",
+      "score": 18,
+      "max_points": 18,
+      "evidence": [
+        "report.md:76-93",
+        "independent-adjudication-checks/verification.json: counterexample"
+      ],
+      "rationale": "6/6 接受严格替代反例：iid Bernoulli(1/10)、自然过滤、alpha=1/20、rho=1/4、n=20，使用题定首预测1/2和之后样本均值；6/6 全零事件上Vhat=1/4、|S|=2，b^2=(1/2)log800<4，概率(9/10)^20=12157665459056928801/10^20>1/20，均为解析严格比较，足以证明单时刻及同时失覆盖超标；6/6 第17行明确失败是未建立(S,Vhat)的psi_N控制，仍承认一般适应V可合法，不否定固定rho正态混合本身。无需强迫参考n=280参数。"
+    },
+    {
+      "id": "moving_precision",
+      "score": 18,
+      "max_points": 18,
+      "evidence": [
+        "report.md:19,97-124",
+        "S2 fixed v9 PDF p.12 Proposition 3 (21), p.37 (98)-(101)"
+      ],
+      "rationale": "6/6 对x=v/rho求导正确，以x-log(1+x)单调性和端点发散证明唯一极小根x=log((1+x)/alpha^2)，Lambert W使用-1分支正确；4/4 得到inf b=sqrt((1+x_alpha)v)，区分预定m优化一条固定边界与逐时下包络；6/6 用iid Bernoulli(1/2)验证SG和合法V=t/4，明列许可的Rademacher LIL，由sqrt(loglog t)发散推出无穷多次越界和失覆盖概率1，且rho_t完全确定；2/2 v=0下确界为0、不取到的端点单独正确处理。"
+    },
+    {
+      "id": "valid_repairs",
+      "score": 18,
+      "max_points": 18,
+      "evidence": [
+        "report.md:128-168",
+        "S2 fixed v9 PDF p.14 Theorem 4 and p.35 (89)-(90)"
+      ],
+      "rationale": "7/7 条件Hoeffding给所有实lambda的exp(lambda^2/8)并取V=t/4、预定rho，覆盖陈述完整；8/8 EB指定psi_E=-log(1-lambda)-lambda和[0,1)域，预测器可预测有界，以积分恒等式证明点态指数不等式，再得e^{lambda d}(1-lambda d)<=1，一步条件期望及反向成立；明确lambda_k网格、可和权重和逐尾alpha/2分配，最小值取得及可数并界给合法残差平方边界；3/3 多rho_j使用alpha q_j的双尾预算，联合对所有j,t成立后取inf有效，另述固定权重再混合也有效。"
+    },
+    {
+      "id": "reviewable_short_memo",
+      "score": 13,
+      "max_points": 13,
+      "evidence": [
+        "report.md:3,15-28,74-93,170-172",
+        "work/checks.py and work/checks-results.json identify arithmetic/source identity checks as distinct from proof"
+      ],
+      "rationale": "5/5 A真B假C假D假E真明确；4/4 修订结论准确承认S1/S2已有框架和EB结果，把本次贡献限定为构造稿核查、反例和修复，无全球首创推断；2/2 E由好事件包含证明，对几乎处处有限正整数随机索引成立，不强加E tau条件；2/2 中文短稿自包含，约2017个汉字，源定位可复核，数值写出计算式，代码未代替证明，交付报告不复制论文全文。"
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "caps_applied": [],
+  "source_check": {
+    "status": "pass",
+    "scope": "本包两固定PDF相关原文页及配套提取；版本identity独立计算，关键条件、公式和页码与报告匹配。未使用网络。",
+    "checked_locations": [
+      "S1 pp.9-10 Definition 1 and conditional Hoeffding discussion",
+      "S1 pp.12-13 Theorem 1 and Lemma 1",
+      "S2 pp.4-5 target and definitions",
+      "S2 p.9 Lemma 2; pp.27-28 mixture proof and Proposition 5",
+      "S2 p.10 (14); p.12 Proposition 3; p.37 proof",
+      "S2 p.14 Theorem 4; p.35 (89)-(90)",
+      "S2 p.19 Lemma 3; p.30 Proposition 9"
+    ]
+  },
+  "usability": {
+    "status": "usable_within_task_scope",
+    "assessment": "六项任务均给出可沿公式与原文页复核的实质数学论证；替代有限反例更短且严格有效。无需实质修复。",
+    "issues": []
+  },
+  "notes": [
+    "按冻结六项rubric独立评分；分项满分表示满足本任务要求，不是全领域正确性或全球文献完备性认证。",
+    "未识别出影响A-E、严格反例、LIL失效或三种修复的未解决数学争议。审查范围仅覆盖任务所需主张及所引相关原文，不覆盖两论文全部结果、全部文献或软件实现。",
+    "关于Vhat通常不可预测的句子被明示为不能直接沿用A的一项附带原因，主理由已正确放在pair-based psi_N未获验证；因此不按错误禁止适应V扣分。",
+    "替代参数Bernoulli(0.1), rho=0.25, n=20严格满足题义；不因偏离设计者参考参数扣分。",
+    "代码只核验算术和PDF identity，完整数学得分依赖正文解析推导。未运行提交者checks.py，避免其脚本写入不存在的work/report.md或其他原始工作内容。",
+    "盲审非完美：可见本包report/work材料与reference/locations；未读父目录映射或日志，未访问个人skills/memory/网络/其他agent，未推断分组。"
+  ],
+  "unresolved_disagreements": [],
+  "scored": true,
+  "arm_hidden": true
+}

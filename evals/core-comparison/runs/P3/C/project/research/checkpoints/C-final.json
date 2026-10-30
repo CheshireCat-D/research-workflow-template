@@ -1,0 +1,39 @@
+{
+  "stage": "C-final",
+  "metadata_revision": 4,
+  "configuration_sha256": "5519303084ebd032fcba9ff8ff9e236aebaee3f5aed558dc56cedeb362261ebf",
+  "records_sha256": "13a1aefef7ae022ea013d0f83f488a0a02e63fb8a8180fa8d5d5f578619c266a",
+  "activities_sha256": "3eabc8a139ed44fcf280455aef3fc45bac6311359eb416bc13b9d3c5031176cb",
+  "tracked_files": {
+    "sources/howard2021-arxiv-v9.pdf": {
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    "notes/parameters.json": {
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "results/result.json": {
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "bytes": 703
+    },
+    "results/summary.md": {
+      "sha256": "d4bfd0eaba49bb6a45dc5579ff0d14ad2bbbd3364ea9718f9ea48c6abad298fd",
+      "bytes": 1233
+    },
+    "notes/source-check.md": {
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    "results/table.csv": {
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "bytes": 100
+    }
+  },
+  "next_action": "将 alpha=0.05、预先固定 rho=4 的四点边界表（results/table.csv）与更新摘要（results/summary.md）交作者内容复核，确认 V 与给定过程控制条件；暂不扩展到事后选择 rho；没有投稿授权。",
+  "note": "Recovery snapshot only; does not rebind old activities or establish scientific validity."
+}

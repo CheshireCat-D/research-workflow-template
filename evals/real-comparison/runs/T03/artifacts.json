@@ -1,0 +1,148 @@
+{
+  "files": [
+    {
+      "path": "RUN.md",
+      "sha256": "cf1a961122173ebbdca412e9bbed82b284cc3c4103107d9983b302d877dcf0f1",
+      "bytes": 866,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/RUN.md",
+      "public_sha256": "f5843f46db9755e27651d04e445a048c42f737e9b8c5fd8bb5afa3687e723cf6",
+      "public_bytes": 652
+    },
+    {
+      "path": "audit/01_assumptions.md",
+      "sha256": "20ce3595c495f8d591cdcfb0349decb2d1dcb58f5161647a49d0ed02bc353cf0",
+      "bytes": 1503,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/audit/01_assumptions.md",
+      "public_sha256": "20ce3595c495f8d591cdcfb0349decb2d1dcb58f5161647a49d0ed02bc353cf0",
+      "public_bytes": 1503
+    },
+    {
+      "path": "audit/02_boundary.md",
+      "sha256": "40eba64b24f99a96305a4abee4228833cb7fc84cbb1f921e2a90c57cf01b30a1",
+      "bytes": 811,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/audit/02_boundary.md",
+      "public_sha256": "40eba64b24f99a96305a4abee4228833cb7fc84cbb1f921e2a90c57cf01b30a1",
+      "public_bytes": 811
+    },
+    {
+      "path": "audit/03_claim_A.md",
+      "sha256": "759135a123737980b59e0ed6613ab2af9a8cbffbd543bd432474e86a40ef6d3a",
+      "bytes": 2146,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/audit/03_claim_A.md",
+      "public_sha256": "759135a123737980b59e0ed6613ab2af9a8cbffbd543bd432474e86a40ef6d3a",
+      "public_bytes": 2146
+    },
+    {
+      "path": "audit/04_claim_B.md",
+      "sha256": "a0646315db74374a46cda49d484be877320416702b4fc8fac0f08cedef708c5f",
+      "bytes": 1534,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/audit/04_claim_B.md",
+      "public_sha256": "a0646315db74374a46cda49d484be877320416702b4fc8fac0f08cedef708c5f",
+      "public_bytes": 1534
+    },
+    {
+      "path": "audit/05_claim_C.md",
+      "sha256": "0cb1e6420d49a381cd5ee6caf79a0e6cdeb16c2a008a52d2ee18caaa927d0ba4",
+      "bytes": 1949,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/audit/05_claim_C.md",
+      "public_sha256": "0cb1e6420d49a381cd5ee6caf79a0e6cdeb16c2a008a52d2ee18caaa927d0ba4",
+      "public_bytes": 1949
+    },
+    {
+      "path": "audit/06_claim_D.md",
+      "sha256": "a2bb5a9e319786865de556e5aaaf50b3b0c452fa2d8963767e751b8daaa9b897",
+      "bytes": 1614,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/audit/06_claim_D.md",
+      "public_sha256": "a2bb5a9e319786865de556e5aaaf50b3b0c452fa2d8963767e751b8daaa9b897",
+      "public_bytes": 1614
+    },
+    {
+      "path": "audit/07_claim_E.md",
+      "sha256": "e97b9ea0718e3d41e8ca106373228f35ce5583ead089a7257e1c981cfef4934e",
+      "bytes": 1179,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/audit/07_claim_E.md",
+      "public_sha256": "e97b9ea0718e3d41e8ca106373228f35ce5583ead089a7257e1c981cfef4934e",
+      "public_bytes": 1179
+    },
+    {
+      "path": "audit/error_table.md",
+      "sha256": "9388790fb53576248f6ac498e095cbb94e3ebeda8a03bb83b4a96dc448fc3adb",
+      "bytes": 1024,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/audit/error_table.md",
+      "public_sha256": "9388790fb53576248f6ac498e095cbb94e3ebeda8a03bb83b4a96dc448fc3adb",
+      "public_bytes": 1024
+    },
+    {
+      "path": "audit/run_meta.json",
+      "sha256": "4b6a4aa6286878faab9db13af35057dd451542e841dd4a8ab976ac9ce1760141",
+      "bytes": 76,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/audit/run_meta.json",
+      "public_sha256": "4b6a4aa6286878faab9db13af35057dd451542e841dd4a8ab976ac9ce1760141",
+      "public_bytes": 76
+    },
+    {
+      "path": "audit/structure.md",
+      "sha256": "291c9352c5d0e288701a48229ae5e3ec3d645c56c7f522441f9f3eb1706c9abd",
+      "bytes": 1439,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/audit/structure.md",
+      "public_sha256": "291c9352c5d0e288701a48229ae5e3ec3d645c56c7f522441f9f3eb1706c9abd",
+      "public_bytes": 1439
+    },
+    {
+      "path": "audit.md",
+      "sha256": "8f675f1008ca53dff749216ce135d8431da8af264bbbb386f5cceea6eee53b5c",
+      "bytes": 12340,
+      "distributed": false,
+      "omission": "Exact duplicate of the canonical report; original bytes remain sealed."
+    },
+    {
+      "path": "checks.py",
+      "sha256": "8097f4646af43f36a27d84ed055036528bc3fbb36b739452c443a091b91a9573",
+      "bytes": 2516,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/checks.py",
+      "public_sha256": "8097f4646af43f36a27d84ed055036528bc3fbb36b739452c443a091b91a9573",
+      "public_bytes": 2516
+    },
+    {
+      "path": "execution.json",
+      "sha256": "18cfde295910f1733843bf23564b375d005969836abbd541d31d93614741a29c",
+      "bytes": 7802,
+      "distributed": false
+    },
+    {
+      "path": "report.md",
+      "sha256": "8f675f1008ca53dff749216ce135d8431da8af264bbbb386f5cceea6eee53b5c",
+      "bytes": 12340,
+      "distributed": true,
+      "public_path": "runs/T03/report.md",
+      "public_sha256": "8f675f1008ca53dff749216ce135d8431da8af264bbbb386f5cceea6eee53b5c",
+      "public_bytes": 12340
+    },
+    {
+      "path": "results/checks.json",
+      "sha256": "a0cc9ef10715762021873f05f72034901232c58d3c34014c4750ff66a6dfbaa2",
+      "bytes": 4387,
+      "distributed": true,
+      "public_path": "runs/T03/artifacts/results/checks.json",
+      "public_sha256": "a0cc9ef10715762021873f05f72034901232c58d3c34014c4750ff66a6dfbaa2",
+      "public_bytes": 4387
+    }
+  ],
+  "sealed_at_utc": "2026-10-29T23:48:53.596510+00:00",
+  "scope": "Original workspace bytes captured at executor completion; runtime copies and raw inputs omitted from public distribution.",
+  "publication_changes": [
+    "RUN.md: absolute paths mapped to logical locators"
+  ]
+}

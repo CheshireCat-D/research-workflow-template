@@ -1,0 +1,169 @@
+{
+  "case_id": "T",
+  "stage": "B",
+  "active_constraints": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 1.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "current_authoritative_state": {
+    "path": ".research/state.json",
+    "revision": 1,
+    "declared_rho": 1.0,
+    "working_file_rho": 4.0,
+    "resolution": "Authority still declares initial rho=1; the changed working file is observed rho=4, but no approved revision or rationale is present. Do not infer a newer accepted decision from file mtime."
+  },
+  "next_action": "先解决 notes/parameters.json 中 rho=4 与权威选择 rho=1 的冲突及修改依据；保留当前字节，不据旧交接自动回滚。未来可写阶段由作者确认有效参数，保存旧内容与修订依据并更新权威状态，随后重算 T-CALC、核对 result/table，再复核 T-SYNTH。当前阶段只读，不执行恢复或旧交接中的计算/交作者步骤。",
+  "changed_or_missing_paths": {
+    "changed": [
+      {
+        "path": "notes/parameters.json",
+        "id": "T-PARAM",
+        "change": {
+          "rho": {
+            "registered": 1.0,
+            "working": 4.0
+          }
+        },
+        "registered": {
+          "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+          "bytes": 161
+        },
+        "current": {
+          "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+          "bytes": 161
+        }
+      }
+    ],
+    "missing": [],
+    "unchanged_registered_paths": [
+      "sources/howard2021-arxiv-v9.pdf",
+      "scripts/compute.py",
+      "results/result.json",
+      "results/summary.md",
+      "notes/source-check.md",
+      "results/table.csv"
+    ]
+  },
+  "affected_activities": [
+    {
+      "id": "T-CALC",
+      "recorded_status": "done",
+      "effective_status": "needs_recheck",
+      "effect": "direct",
+      "reason": "Recorded completed input fingerprint differs from current T-PARAM; old result binds rho=1 input."
+    },
+    {
+      "id": "T-SYNTH",
+      "recorded_status": "done",
+      "effective_status": "needs_recheck",
+      "effect": "transitive",
+      "dependency": "T-CALC",
+      "reason": "Summary retains rho=1 and depends on unrefreshed calculation."
+    }
+  ],
+  "unaffected_activities": [
+    {
+      "id": "T-SOURCE-CHECK",
+      "recorded_status": "done",
+      "effective_status": "done",
+      "scope": "Fixed local source identity and source card only; no scientific theorem/page review."
+    }
+  ],
+  "checkpoint_freshness": {
+    "id": "A-verified-initial",
+    "status": "stale_for_registered_bytes",
+    "still_applicable": "Historical rho=1 evidence and exact initial content, not current rho=4 work or scientific certification.",
+    "freshness_failure_path": "notes/parameters.json"
+  },
+  "scientific_scope": {
+    "statement": {
+      "id": "T-CLAIM",
+      "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+      "scope": "l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha is the total two-sided budget; rho fixed before observations; numerical evaluation only."
+    },
+    "formula_read_from_calculator": "sqrt((v+rho)*(log1p(v/rho)+2*log(1/alpha)))",
+    "current_rho4_result_verified": false,
+    "old_rho1_table_matches_old_result": true,
+    "not_inferred": [
+      "Theorem false",
+      "rho=4 scientifically invalid",
+      "Author approved revised rho",
+      "Current result verified for rho=4",
+      "Coverage, novelty, simulation or formal proof certification"
+    ]
+  },
+  "source_tracking_limits": {
+    "local_pdf": {
+      "path": "sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "access": "Full bytes hashed only; no page or theorem inspection."
+    },
+    "metadata_only_source": {
+      "id": "T-REMOTE",
+      "title": "Time-uniform Chernoff bounds via nonnegative supermartingales",
+      "uri": "https://arxiv.org/abs/1808.03204v7",
+      "version": "1808.03204v7",
+      "local_copy_supplied": false,
+      "access": "metadata-only",
+      "tracking_limit": "Only source identity; no local content binding and no current remote-content check."
+    },
+    "unregistered_scratch": "notes/unregistered-scratch.md",
+    "all_project_files_automatically_tracked": false,
+    "automatic_registered_paths": [
+      "sources/howard2021-arxiv-v9.pdf",
+      "notes/parameters.json",
+      "scripts/compute.py",
+      "results/result.json",
+      "results/summary.md",
+      "notes/source-check.md",
+      "results/table.csv"
+    ],
+    "limits": "Status follows declared material and selected logical fingerprints. It does not monitor remote content, certify assumptions, validate every prose/evidence file, or establish author intent."
+  },
+  "material_paths": {
+    "authority": ".research/state.json",
+    "current_parameters": "notes/parameters.json",
+    "result": "results/result.json",
+    "table": "results/table.csv",
+    "summary": "results/summary.md",
+    "source_note": "notes/source-check.md",
+    "originals_index": ".research/versions/A-initial/index.json",
+    "read_only_program": "scripts/manage.py",
+    "historical_status": ".research/evidence/A/current-status.json"
+  },
+  "notes": [
+    "All registered local paths are present.",
+    "Original preserved parameter/result/table/summary bytes verify against version index.",
+    "Historical current-status.json says fresh, but the newly executed read-only status says stale; historical evidence is not current authority.",
+    "RECOVERY.md and historical notes do not authorize restoring initial bytes or overwrite newer effective decisions.",
+    "No expert review or external submission authorization is recorded; venue remains undecided.",
+    "Project bytes, file mtimes and directory mtimes were unchanged across the recorded audit snapshot window."
+  ]
+}

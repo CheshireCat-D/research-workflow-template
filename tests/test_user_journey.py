@@ -284,7 +284,7 @@ class UserJourney(unittest.TestCase):
                 self.assertIsNotNone(following)
                 documented = [shlex.split(line) for line in following.group(1).splitlines() if line.strip()]
                 self.assertEqual([tokens[2] for tokens in documented],
-                                 ['register-batch', 'checkpoint', 'resume'])
+                                 ['register-batch'])
                 project = self.initialize(self.base / ('documented-' + language))
                 (project / 'notes').mkdir()
                 (project / 'notes/data.csv').write_bytes(b'bird,weight_g\n1,100\n2,110\n')
@@ -295,9 +295,14 @@ class UserJourney(unittest.TestCase):
                     arguments = [str(project) if token == 'PROJECT' else
                                  str(input_file) if token == 'material-batch.json' else token
                                  for token in tokens[2:]]
-                    self.invoke(*arguments, json_output='markdown' not in arguments)
+                    saved = self.invoke(*arguments)
+                    self.assertTrue(saved['registered'])
+                    self.assertTrue(saved['checkpoint_saved'])
+                    self.assertTrue(saved['passed'])
+                    self.assertEqual(saved['recovery']['checkpoint']['status'], 'current')
                 before = snapshot(project)
                 resumed = self.invoke('resume', '--root', project)
+                self.assertEqual(resumed, saved['recovery'])
                 self.assertEqual(snapshot(project), before)
                 self.assertEqual(resumed['file_tracking']['local_files'], ['notes/data.csv'])
                 self.assertEqual(resumed['file_tracking']['source_ids_without_local_evidence'], [])

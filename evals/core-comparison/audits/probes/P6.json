@@ -1,0 +1,782 @@
+{
+  "chain_id": "P6",
+  "scope": "Independent engineering observations, no scientific score added. Exact per-chain extraction of the bound common audit.",
+  "source_record": {
+    "path": "audits/mechanical-audit/engineering.json",
+    "sha256": "795e030e5eb9530d2fcaa5518eb3ff896ebbb633eb3fb6e5903aee6133066608"
+  },
+  "engineering": {
+    "readonly_B": {
+      "name": "P6-B-readonly",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P6/readonly-B/project/scripts/project_status.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P6/readonly-B/project"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P6/readonly-B/project",
+      "exit_code": 1,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": []
+    },
+    "B_status": {
+      "root": "STUDY_ROOT/mechanical-audit/P6/readonly-B/project",
+      "authority": "STUDY_ROOT/mechanical-audit/P6/readonly-B/project/records/state.json",
+      "state_version": 1,
+      "state_sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "files": {
+        "data/hour_2011.csv": {
+          "record": "D-RAW",
+          "expected": {
+            "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "bytes": 568668
+          },
+          "actual": {
+            "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "bytes": 568668
+          },
+          "state": "current"
+        },
+        "notes/parameters.json": {
+          "record": "D-PARAM",
+          "expected": {
+            "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+            "bytes": 171
+          },
+          "actual": {
+            "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+            "bytes": 171
+          },
+          "state": "changed"
+        },
+        "scripts/compute.py": {
+          "record": "D-CODE",
+          "expected": {
+            "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "bytes": 4157
+          },
+          "actual": {
+            "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "bytes": 4157
+          },
+          "state": "current"
+        },
+        "model/frozen.json": {
+          "record": "D-MODEL",
+          "expected": {
+            "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "bytes": 2320
+          },
+          "actual": {
+            "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "bytes": 2320
+          },
+          "state": "current"
+        },
+        "results/result.json": {
+          "record": "D-RESULT",
+          "expected": {
+            "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+            "bytes": 1000
+          },
+          "actual": {
+            "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+            "bytes": 1000
+          },
+          "state": "current"
+        },
+        "results/table.csv": {
+          "record": "D-TABLE",
+          "expected": {
+            "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+            "bytes": 205
+          },
+          "actual": {
+            "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+            "bytes": 205
+          },
+          "state": "current"
+        },
+        "results/summary.md": {
+          "record": "D-SUMMARY",
+          "expected": {
+            "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+            "bytes": 280
+          },
+          "actual": {
+            "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+            "bytes": 280
+          },
+          "state": "current"
+        },
+        "notes/source-check.md": {
+          "record": "D-SOURCE-NOTE",
+          "expected": {
+            "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+            "bytes": 474
+          },
+          "actual": {
+            "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+            "bytes": 474
+          },
+          "state": "current"
+        }
+      },
+      "changed_or_missing_paths": [
+        "notes/parameters.json"
+      ],
+      "activities": {
+        "D-SOURCE-CHECK": {
+          "declared_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        },
+        "D-CALC": {
+          "declared_status": "done",
+          "effective_status": "stale",
+          "reasons": [
+            "changed or missing file notes/parameters.json"
+          ]
+        },
+        "D-SYNTH": {
+          "declared_status": "done",
+          "effective_status": "stale",
+          "reasons": [
+            "changed or missing file notes/parameters.json",
+            "dependency activity not current: D-CALC"
+          ]
+        }
+      },
+      "checkpoint_freshness": "stale",
+      "checkpoint_reasons": [
+        "changed or missing checkpoint file notes/parameters.json"
+      ],
+      "configuration_parameter_conflicts": [
+        "evaluation_start"
+      ],
+      "configuration": {
+        "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+        "deadline": "2026-12-15",
+        "budget": "Offline Python standard library only; no new data collection or model refit",
+        "available_capabilities": [
+          "local Python standard library",
+          "fixed source cache",
+          "author-provided working notes"
+        ],
+        "venue": "Undecided; do not invent a target journal",
+        "language": "zh",
+        "current_scope": {
+          "case_id": "D",
+          "evaluation_start": "2011-10-01",
+          "evaluation_end": "2011-12-31",
+          "model_policy": "frozen-2011-Jan-Sep",
+          "metric_weighting": "observed-hour"
+        },
+        "unknowns": [
+          "No human expert approval has occurred",
+          "No external submission authorized"
+        ],
+        "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+        "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+      },
+      "next_action": "将已核对的2011第四季度冻结模型指标与摘要交作者讨论；只比较指定观察小时，不重训、不外推2012。若材料或配置发生修订，先运行只读状态检查，定位D-CALC及D-SYNTH的失效范围，再显式复核和更新其版本。",
+      "coverage_limits": {
+        "source_only": [
+          "D-REMOTE"
+        ],
+        "unregistered": [
+          "notes/unregistered-scratch.md"
+        ],
+        "rejected_trial_not_current_input": "notes/rejected-parameters.json",
+        "untracked_files_not_automatically_scientific_dependencies": true
+      },
+      "scientific_validity": "not-certified by identity check"
+    },
+    "migration": {
+      "name": "P6-migration-readonly",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P6/迁移后 科研项目/scripts/project_status.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P6/迁移后 科研项目"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P6/迁移后 科研项目",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "old_copy_path": "STUDY_ROOT/mechanical-audit/P6/migration-origin/project",
+      "old_copy_unreachable": true,
+      "new_copy_path": "STUDY_ROOT/mechanical-audit/P6/迁移后 科研项目",
+      "empty_HOME_and_XDG_CACHE_HOME": true,
+      "os_access_enforcement": false,
+      "scope": "Own project entry executed from renamed copy with common interpreter. Actual old paths verified absent separately; public cache exclusion remains an instruction boundary, not syscall evidence."
+    },
+    "migrated_status": {
+      "root": "STUDY_ROOT/mechanical-audit/P6/迁移后 科研项目",
+      "authority": "STUDY_ROOT/mechanical-audit/P6/迁移后 科研项目/records/state.json",
+      "state_version": 3,
+      "state_sha256": "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+      "files": {
+        "data/hour_2011.csv": {
+          "record": "D-RAW",
+          "expected": {
+            "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "bytes": 568668
+          },
+          "actual": {
+            "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "bytes": 568668
+          },
+          "state": "current"
+        },
+        "notes/parameters.json": {
+          "record": "D-PARAM",
+          "expected": {
+            "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+            "bytes": 171
+          },
+          "actual": {
+            "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+            "bytes": 171
+          },
+          "state": "current"
+        },
+        "scripts/compute.py": {
+          "record": "D-CODE",
+          "expected": {
+            "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "bytes": 4157
+          },
+          "actual": {
+            "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "bytes": 4157
+          },
+          "state": "current"
+        },
+        "model/frozen.json": {
+          "record": "D-MODEL",
+          "expected": {
+            "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "bytes": 2320
+          },
+          "actual": {
+            "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "bytes": 2320
+          },
+          "state": "current"
+        },
+        "results/result.json": {
+          "record": "D-RESULT",
+          "expected": {
+            "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+            "bytes": 999
+          },
+          "actual": {
+            "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+            "bytes": 999
+          },
+          "state": "current"
+        },
+        "results/table.csv": {
+          "record": "D-TABLE",
+          "expected": {
+            "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+            "bytes": 203
+          },
+          "actual": {
+            "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+            "bytes": 203
+          },
+          "state": "current"
+        },
+        "results/summary.md": {
+          "record": "D-SUMMARY",
+          "expected": {
+            "sha256": "0c178129e75f928b92f184ecb65231fbb0c96d333e7b43d1089dcc3908bdfe3d",
+            "bytes": 905
+          },
+          "actual": {
+            "sha256": "0c178129e75f928b92f184ecb65231fbb0c96d333e7b43d1089dcc3908bdfe3d",
+            "bytes": 905
+          },
+          "state": "current"
+        },
+        "notes/source-check.md": {
+          "record": "D-SOURCE-NOTE",
+          "expected": {
+            "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+            "bytes": 474
+          },
+          "actual": {
+            "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+            "bytes": 474
+          },
+          "state": "current"
+        }
+      },
+      "changed_or_missing_paths": [],
+      "activities": {
+        "D-SOURCE-CHECK": {
+          "declared_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        },
+        "D-CALC": {
+          "declared_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        },
+        "D-SYNTH": {
+          "declared_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        }
+      },
+      "checkpoint_freshness": "current",
+      "checkpoint_reasons": [],
+      "configuration_parameter_conflicts": [],
+      "configuration": {
+        "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+        "deadline": "2026-12-15",
+        "budget": "Offline Python standard library only; no new data collection or model refit",
+        "available_capabilities": [
+          "local Python standard library",
+          "fixed source cache",
+          "author-provided working notes"
+        ],
+        "venue": "Undecided; do not invent a target journal",
+        "language": "zh",
+        "current_scope": {
+          "case_id": "D",
+          "evaluation_start": "2011-11-01",
+          "evaluation_end": "2011-12-31",
+          "model_policy": "frozen-2011-Jan-Sep",
+          "metric_weighting": "observed-hour"
+        },
+        "unknowns": [
+          "No human expert approval has occurred",
+          "No external submission authorized"
+        ],
+        "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+        "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+      },
+      "next_action": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。不重训、不外推2012；尚未有人类专家认可，也没有投稿授权。",
+      "coverage_limits": {
+        "source_only": [
+          "D-REMOTE"
+        ],
+        "unregistered": [
+          "notes/unregistered-scratch.md"
+        ],
+        "rejected_trial_not_current_input": "notes/rejected-parameters.json",
+        "untracked_files_not_automatically_scientific_dependencies": true
+      },
+      "scientific_validity": "not-certified by identity check"
+    },
+    "stale_write": {
+      "level": "global state_version + full-state SHA; record content/version increment validation",
+      "legal_update": {
+        "name": "P6-legal-update",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P6/record-CAS/project/scripts/guarded_state_update.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P6/record-CAS/project",
+          "--candidate",
+          "STUDY_ROOT/mechanical-audit/P6/record-CAS/P6-legal-update.json",
+          "--expected-version",
+          "3",
+          "--expected-sha256",
+          "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+          "--reason",
+          "independent audit probe"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P6/record-CAS/project",
+        "exit_code": 0,
+        "project_identical_bytes_mtime_directory_mtime": false,
+        "changed_files": [
+          "records/state.json",
+          "snapshots/authority/v3-18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc.json"
+        ],
+        "changed_directories": [
+          "records",
+          "snapshots/authority"
+        ]
+      },
+      "stale_global_request": {
+        "name": "P6-stale-global-write",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P6/record-CAS/project/scripts/guarded_state_update.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P6/record-CAS/project",
+          "--candidate",
+          "STUDY_ROOT/mechanical-audit/P6/record-CAS/P6-stale-global-write.json",
+          "--expected-version",
+          "3",
+          "--expected-sha256",
+          "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+          "--reason",
+          "independent audit probe"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P6/record-CAS/project",
+        "exit_code": 2,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": [],
+        "authoritative_bytes_preserved": true
+      },
+      "stale_record_request": {
+        "name": "P6-stale-record-write",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P6/record-CAS/project/scripts/guarded_state_update.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P6/record-CAS/project",
+          "--candidate",
+          "STUDY_ROOT/mechanical-audit/P6/record-CAS/P6-stale-record-write.json",
+          "--expected-version",
+          "4",
+          "--expected-sha256",
+          "7163f332eae9da4136d0ae91e0a0e2493b5adeca55b5b22b04418dea8c3edba5",
+          "--reason",
+          "independent audit probe"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P6/record-CAS/project",
+        "exit_code": 2,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": [],
+        "authoritative_bytes_preserved": true
+      }
+    },
+    "dangling_reference": {
+      "name": "P6-dangling-reference",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P6/dangling/project/scripts/guarded_state_update.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P6/dangling/project",
+        "--candidate",
+        "STUDY_ROOT/mechanical-audit/P6/dangling/P6-dangling-reference.json",
+        "--expected-version",
+        "3",
+        "--expected-sha256",
+        "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+        "--reason",
+        "independent audit probe"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P6/dangling/project",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": false,
+      "changed_files": [
+        "records/state.json",
+        "snapshots/authority/v3-18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc.json"
+      ],
+      "changed_directories": [
+        "records",
+        "snapshots/authority"
+      ],
+      "authoritative_bytes_preserved": false,
+      "dangling_target_committed": true,
+      "authority_sha_before": "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+      "authority_sha_after": "82fcb0188f02685219d992e0531399669dd7d9244f1e980642332742a67e6261"
+    },
+    "batch_invalid-version": {
+      "name": "P6-batch-invalid-version",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P6/batch-invalid-version/project/scripts/guarded_state_update.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P6/batch-invalid-version/project",
+        "--candidate",
+        "STUDY_ROOT/mechanical-audit/P6/batch-invalid-version/P6-batch-invalid-version.json",
+        "--expected-version",
+        "3",
+        "--expected-sha256",
+        "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+        "--reason",
+        "independent audit probe"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P6/batch-invalid-version/project",
+      "exit_code": 2,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "authoritative_bytes_preserved": true,
+      "valid_first_committed": false
+    },
+    "batch_dangling": {
+      "name": "P6-batch-dangling",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P6/batch-dangling/project/scripts/guarded_state_update.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P6/batch-dangling/project",
+        "--candidate",
+        "STUDY_ROOT/mechanical-audit/P6/batch-dangling/P6-batch-dangling.json",
+        "--expected-version",
+        "3",
+        "--expected-sha256",
+        "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+        "--reason",
+        "independent audit probe"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P6/batch-dangling/project",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": false,
+      "changed_files": [
+        "records/state.json",
+        "snapshots/authority/v3-18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc.json"
+      ],
+      "changed_directories": [
+        "records",
+        "snapshots/authority"
+      ],
+      "authoritative_bytes_preserved": false,
+      "valid_first_committed": true,
+      "authority_sha_before": "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+      "authority_sha_after": "3f7b4cd001d60b9a3e0e861c22c72db5ba96a48a33e64e16cfe850d8829ee6bf"
+    },
+    "dirty_checkpoint": {
+      "automatic_checkpoint_interface": false,
+      "adapter": "Replay preserved dirty archive plus exact saved checkpoint; P5 checkpoint fingerprints refreshed by audit adapter to reproduce saved intermediate stdout. Activity completion bindings not changed. P2 has separate checkpoint tree but no auto checkpoint API.",
+      "subsequent_status": {
+        "name": "P6-dirty-checkpoint-replay",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P6/dirty-replay/project/scripts/project_status.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P6/dirty-replay/project"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P6/dirty-replay/project",
+        "exit_code": 1,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": []
+      },
+      "result": {
+        "root": "STUDY_ROOT/mechanical-audit/P6/dirty-replay/project",
+        "authority": "STUDY_ROOT/mechanical-audit/P6/dirty-replay/project/records/state.json",
+        "state_version": 2,
+        "state_sha256": "24e5cb54999269c52773e5a38a32864ba58a28230bb1c53c6b235fa73a59d0f5",
+        "files": {
+          "data/hour_2011.csv": {
+            "record": "D-RAW",
+            "expected": {
+              "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+              "bytes": 568668
+            },
+            "actual": {
+              "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+              "bytes": 568668
+            },
+            "state": "current"
+          },
+          "notes/parameters.json": {
+            "record": "D-PARAM",
+            "expected": {
+              "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+              "bytes": 171
+            },
+            "actual": {
+              "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+              "bytes": 171
+            },
+            "state": "changed"
+          },
+          "scripts/compute.py": {
+            "record": "D-CODE",
+            "expected": {
+              "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+              "bytes": 4157
+            },
+            "actual": {
+              "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+              "bytes": 4157
+            },
+            "state": "current"
+          },
+          "model/frozen.json": {
+            "record": "D-MODEL",
+            "expected": {
+              "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+              "bytes": 2320
+            },
+            "actual": {
+              "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+              "bytes": 2320
+            },
+            "state": "current"
+          },
+          "results/result.json": {
+            "record": "D-RESULT",
+            "expected": {
+              "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+              "bytes": 1000
+            },
+            "actual": {
+              "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+              "bytes": 1000
+            },
+            "state": "current"
+          },
+          "results/table.csv": {
+            "record": "D-TABLE",
+            "expected": {
+              "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+              "bytes": 205
+            },
+            "actual": {
+              "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+              "bytes": 205
+            },
+            "state": "current"
+          },
+          "results/summary.md": {
+            "record": "D-SUMMARY",
+            "expected": {
+              "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+              "bytes": 280
+            },
+            "actual": {
+              "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+              "bytes": 280
+            },
+            "state": "current"
+          },
+          "notes/source-check.md": {
+            "record": "D-SOURCE-NOTE",
+            "expected": {
+              "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+              "bytes": 474
+            },
+            "actual": {
+              "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+              "bytes": 474
+            },
+            "state": "current"
+          }
+        },
+        "changed_or_missing_paths": [
+          "notes/parameters.json"
+        ],
+        "activities": {
+          "D-SOURCE-CHECK": {
+            "declared_status": "done",
+            "effective_status": "done",
+            "reasons": []
+          },
+          "D-CALC": {
+            "declared_status": "done",
+            "effective_status": "stale",
+            "reasons": [
+              "changed or missing file notes/parameters.json"
+            ]
+          },
+          "D-SYNTH": {
+            "declared_status": "done",
+            "effective_status": "stale",
+            "reasons": [
+              "changed or missing file notes/parameters.json",
+              "dependency activity not current: D-CALC"
+            ]
+          }
+        },
+        "checkpoint_freshness": "current",
+        "checkpoint_reasons": [],
+        "configuration_parameter_conflicts": [
+          "evaluation_start"
+        ],
+        "configuration": {
+          "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+          "deadline": "2026-12-15",
+          "budget": "Offline Python standard library only; no new data collection or model refit",
+          "available_capabilities": [
+            "local Python standard library",
+            "fixed source cache",
+            "author-provided working notes"
+          ],
+          "venue": "Undecided; do not invent a target journal",
+          "language": "zh",
+          "current_scope": {
+            "case_id": "D",
+            "evaluation_start": "2011-10-01",
+            "evaluation_end": "2011-12-31",
+            "model_policy": "frozen-2011-Jan-Sep",
+            "metric_weighting": "observed-hour"
+          },
+          "unknowns": [
+            "No human expert approval has occurred",
+            "No external submission authorized"
+          ],
+          "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+          "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+        },
+        "next_action": "接受参数前先检查漂移：现参数为11月至12月，旧成果仍为Q4；保存断点不能恢复D-CALC或D-SYNTH的有效性。按授权真实复算后交作者内容复核。",
+        "coverage_limits": {
+          "source_only": [
+            "D-REMOTE"
+          ],
+          "unregistered": [
+            "notes/unregistered-scratch.md"
+          ],
+          "rejected_trial_not_current_input": "notes/rejected-parameters.json",
+          "untracked_files_not_automatically_scientific_dependencies": true
+        },
+        "scientific_validity": "not-certified by identity check"
+      }
+    },
+    "batch_prefix_positive_control": {
+      "name": "P6-valid-prefix-positive",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P6/valid-prefix-positive/project/scripts/guarded_state_update.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P6/valid-prefix-positive/project",
+        "--candidate",
+        "STUDY_ROOT/mechanical-audit/P6/valid-prefix-positive/valid.json",
+        "--expected-version",
+        "3",
+        "--expected-sha256",
+        "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+        "--reason",
+        "audit prefix positive control"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P6/valid-prefix-positive/project",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": false,
+      "changed_files": [
+        "records/state.json",
+        "snapshots/authority/v3-18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc.json"
+      ],
+      "changed_directories": [
+        "records",
+        "snapshots/authority"
+      ],
+      "actual_saved": true
+    }
+  }
+}

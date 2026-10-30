@@ -1,0 +1,95 @@
+{
+  "scope": "No scientific prose, numeric or score changes; only absolute locator projections and explicit distribution omissions. Original source and execution bytes remain sealed.",
+  "files": [
+    {
+      "original_sha256": "bb7342d2b2f4b554507020c0ca1a572a0d3a4e6e16b64ad715c5c979722a4c59",
+      "path": "runs/P2/A/report.md",
+      "sha256": "443e1ed249ae53715cd9417df013f6e5b7066cb6363eb3182c26833c25d0045e",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "dec035edbc6c7d61b3128a74cfcc65d5b25b4017065dbe4a4947df70b11cd87c",
+      "path": "runs/P2/A/raw-execution.json",
+      "sha256": "9955700d0247a3f6853b0b2dc8920683cc8c654b51f55ad633a318b063b7cdfd",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "path": "runs/P2/A/project/management/evidence/A/checks.json",
+      "sha256": "cd8ca895c1e6f7ee912a06d4daf9fc19d644d27c8be8929ac3e0f8813a86bfb9",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "path": "runs/P2/A/project/management/protocol/REQUEST.md",
+      "sha256": "b4cea187f88d4efda71aacaeb9829fb7b9a88ac34c7878507d708dcbbbedd2bc",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "990e7df35cfe2fea23696624384947d95721eeadc57d1d8c2c43fc2397a12659",
+      "path": "runs/P2/A/output/build_stage_a.py",
+      "sha256": "ecd65596422cbb070a90b8edaf087bccb3ddb5966cf6a2cd01baf8729de590c5",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "867a6f2b862698c0b2d423e44cded304c8a73043b18f4a5b4cdfb2d4bbff8d0a",
+      "path": "runs/P2/A/output/finalize_audit.py",
+      "sha256": "aff77f76e21b67db1a68745ef28c9d107781a65c4ad3e1a3df1332b5f5d86e62",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "07196f7bf89bce5b1491834fb0a92ae763e96d14d71f056f0c8ca820c4b5ca3e",
+      "path": "runs/P2/A/output/inputs-and-artifacts.json",
+      "sha256": "ee99b281b7cc78aed9b4c09fe6272c0119cfd1576065f6945737c4bb31d73ace",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "48bad06a03a116443011f09ebeb45e91ad1f40861f42da0f0a7401238686358a",
+      "path": "runs/P2/A/output/state-answer.json",
+      "sha256": "715e44cd24296235cd0118d46be5b655dd30e337b81a042285f2a9921908a1a3",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "b312caf12cc8c4dfd678adc0deffcfa15ed8ef12d117751bbd76d0a415ca763b",
+      "path": "runs/P2/A/output/status-check.json",
+      "sha256": "daad7916e18e336b5e6596721aa50049baa31538c3395ebbddee2b25524b28f8",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "path": "runs/P2/A/output/verification-normal/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "changes": []
+    },
+    {
+      "original_sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "path": "runs/P2/A/output/verification-normal/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "changes": []
+    },
+    {
+      "original_sha256": "d5b1eea08fef4afcc75a44b6b7a77faf4b721e6bcb064daba70d0963051b004b",
+      "path": "runs/P2/A/seal.json",
+      "sha256": "d5b1eea08fef4afcc75a44b6b7a77faf4b721e6bcb064daba70d0963051b004b",
+      "changes": []
+    }
+  ]
+}

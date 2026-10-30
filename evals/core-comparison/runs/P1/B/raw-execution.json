@@ -1,0 +1,202 @@
+{
+  "case_id": "T",
+  "stage": "B",
+  "commands": [
+    {
+      "tool_call": 1,
+      "argv": [
+        "cat",
+        "STUDY_ROOT/runs/P1/B/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdout": "Full REQUEST.md displayed; later fully hashed.",
+      "stderr": ""
+    },
+    {
+      "tool_call": 2,
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_description": "Read/hash REQUEST, three stage input instructions and three specified toolkit guidance files; list input files and project top-level entries.",
+      "stdout": "Complete guidance and hashes displayed; input contains only PROTOCOL.md, RECORDING.md, STAGE-B.md.",
+      "stderr": ""
+    },
+    {
+      "tool_call": 3,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "stdin_description": "Hash/snapshot all allowed project files and directory mtimes; read RECOVERY.md, PROJECT.md, project.json and registry; locate project-local research.py.",
+      "stdout": "Saved project-before.json and displayed authoritative state.",
+      "stderr": ""
+    },
+    {
+      "tool_call": 4,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "stdin_description": "Sequentially invoke only project-local read-only resume and installed integrity check; save complete stdout/stderr and argv; read scientific files and retained original constraints.",
+      "stdout": "resume exit1 (file drift, two stale activities, stale checkpoint); installed check exit0; scientific files read and hashes displayed.",
+      "stderr": ""
+    },
+    {
+      "tool_call": 5,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "stdin_description": "Read retained validation/correction notes and initial manifest; compare checkpoint hashes against independently observed current hashes.",
+      "stdout": "One changed bound path notes/parameters.json; zero missing; saved checkpoint-comparison.json.",
+      "stderr": ""
+    },
+    {
+      "tool_call": 6,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "stdin_description": "Write report.md, state-answer.json and initial execution.json in external OUTPUT_DIR only.",
+      "stdout": "Artifacts written.",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 1,
+      "stdout_file": "resume.stdout.txt",
+      "stderr_file": "resume.stderr.txt",
+      "parent_tool_call": 4,
+      "output_base": "OUTPUT_DIR"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+        "check",
+        "--installed-only",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout_file": "installed-check.stdout.txt",
+      "stderr_file": "installed-check.stderr.txt",
+      "parent_tool_call": 4,
+      "output_base": "OUTPUT_DIR"
+    },
+    {
+      "tool_call": 7,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "stdin_description": "Rehash and stat allowed project tree; assert exact preservation; finalize external report, execution and full input/output fingerprint manifest.",
+      "stdout": {
+        "project_readonly_preserved": true,
+        "files": 103,
+        "directories": 44,
+        "output_directory": "OUTPUT_DIR"
+      },
+      "stderr": ""
+    }
+  ],
+  "tool_calls": 7,
+  "outer_tool_call_definition": "One functions.exec call containing one exec_command invocation counts as one outer tool call.",
+  "network_calls": 0,
+  "agents_contacted": 0,
+  "project_writes": [],
+  "failures": [
+    {
+      "command": "resume",
+      "exit_code": 1,
+      "expected_review_state": true,
+      "findings": [
+        "file_changed evidence:T-PARAM",
+        "activity_stale T-CALC",
+        "activity_stale T-SYNTH",
+        "checkpoint_stale local-files"
+      ],
+      "remediation": "No repair authorized; findings preserved and reported."
+    }
+  ],
+  "violations": [
+    {
+      "tool_call": 2,
+      "kind": "interpreter_path_deviation",
+      "description": "Used python3 -I -B instead of the designated EVAL_PYTHON for an instruction-read/hash command. The command succeeded and did not write project files.",
+      "remediation": "All subsequent Python commands use the designated interpreter with -I -B; original deviation retained."
+    }
+  ],
+  "read_manifest": "inputs-and-artifacts.json inputs, including project-before.json full project file identities",
+  "written_paths": [
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/state-answer.json",
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/inputs-and-artifacts.json",
+    "OUTPUT_DIR/project-before.json",
+    "OUTPUT_DIR/project-after.json",
+    "OUTPUT_DIR/project-readonly-verification.json",
+    "OUTPUT_DIR/readonly-commands.json",
+    "OUTPUT_DIR/resume.stdout.txt",
+    "OUTPUT_DIR/resume.stderr.txt",
+    "OUTPUT_DIR/installed-check.stdout.txt",
+    "OUTPUT_DIR/installed-check.stderr.txt",
+    "OUTPUT_DIR/checkpoint-comparison.json"
+  ],
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_usage": null,
+    "token_limit": null,
+    "effective_model_settings": null
+  },
+  "report_unicode_characters": 3647,
+  "scientific_calculator_executed": false,
+  "future_recovery_state_added_to_project": false,
+  "project_preservation": {
+    "passed": true,
+    "verification_file": "project-readonly-verification.json",
+    "files": 103,
+    "directories": 44
+  }
+}

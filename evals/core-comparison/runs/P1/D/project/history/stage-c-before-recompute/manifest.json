@@ -1,0 +1,36 @@
+{
+  "reason": "Author explicitly accepts current rho=4 parameters; before recompute canonical result/table/summary and authoritative records still describe rho=1. New drift checkpoint does not revalidate those activities.",
+  "initial_contents": "history/stage-a-initial retains complete original rho=1 parameter/result/table/summary bytes.",
+  "files": {
+    "project.json": {
+      "sha256": "524d57b3666e1ec2ca0224b04c33fd4b8f116e8bec20adb9ddf37619f8b80e5d",
+      "bytes": 995
+    },
+    "RECOVERY.md": {
+      "sha256": "3fb28aa6f96520a6b131fb7a0d71eb4d798425975847c0fbcac837fcbc40f744",
+      "bytes": 2927
+    },
+    "records/registry.json": {
+      "sha256": "008927e4340235ef61ded8b80ed94f9bb647985a3d7fb1cbd742b71f7efc39f6",
+      "bytes": 27471
+    },
+    "results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    "results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    "notes/parameters.json": {
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    }
+  },
+  "intermediate_check": "validation/stage-c/check-drift.json",
+  "checkpoint_note_correction": "Intermediate checkpoint used informal T1/T2/T5/T6/T3 shorthand. Actual obligation IDs are T-PARAM/T-RESULT/T-SUMMARY/T-CALC/T-SYNTH and independent T-SOURCE-CHECK; only actual IDs used in registration."
+}

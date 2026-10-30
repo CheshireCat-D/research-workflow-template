@@ -1,0 +1,406 @@
+{
+  "stage": "B",
+  "commands": [
+    {
+      "tool_call": 1,
+      "argv": [
+        "cat",
+        "STUDY_ROOT/runs/P2/B/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 2,
+      "argv": null,
+      "shell_command": "ls -la INPUT_DIR && cat INPUT_DIR/PROTOCOL.md INPUT_DIR/RECORDING.md INPUT_DIR/STAGE-B.md",
+      "component_argv": [
+        [
+          "ls",
+          "-la",
+          "INPUT_DIR"
+        ],
+        [
+          "cat",
+          "INPUT_DIR/PROTOCOL.md",
+          "INPUT_DIR/RECORDING.md",
+          "INPUT_DIR/STAGE-B.md"
+        ]
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "note": "shell completion status; individual component exit codes not separately captured"
+    },
+    {
+      "tool_call": 3,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_program_purpose": "Snapshot complete project file bytes, SHA256 and file/directory mtime; write external baseline only",
+      "stdin_program_source_saved": false
+    },
+    {
+      "tool_call": 4,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_program_purpose": "Read project recovery, governance, authoritative state and status program",
+      "stdin_program_source_saved": false
+    },
+    {
+      "tool_call": 5,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_program_purpose": "Read scientific materials and in-project historical evidence; execute read-only status child",
+      "stdin_program_source_saved": false
+    },
+    {
+      "tool_call": 6,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_program_purpose": "Independently compare 22 tracked files and 14 source manifest mappings; inspect CSV identity/scope and old result/table consistency",
+      "stdin_program_source_saved": false
+    },
+    {
+      "tool_call": 7,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdin_program_purpose": "Write external report, semantic state answer, provenance inventory and execution record; compare final project bytes/mtime against baseline",
+      "stdin_program_source_saved": false
+    },
+    {
+      "tool_call": 5,
+      "child_process": true,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/management/status.py",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 3,
+      "stdout": "status.stdout.json",
+      "stderr": "status.stderr.txt"
+    }
+  ],
+  "tool_calls": 7,
+  "tool_call_count_scope": "functions.exec outer calls, each containing one exec_command; one nested status subprocess additionally recorded",
+  "read_files": [
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "RECOVERY.md",
+      "sha256": "065dac75fd841afc777180f5263c65748344c6448a1639ad8fd6d9630115548d",
+      "bytes": 3157,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/state.json",
+      "sha256": "78986837437208d8346c7a8b83ebe34d470234c840b5f2055284bba2480aaf77",
+      "bytes": 19166,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/status.py",
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98",
+      "bytes": 3331,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/evidence/A/checks.json",
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "bytes": 9234,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/evidence/A/invalid-after.json",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/evidence/A/invalid-before.json",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/evidence/A/normal-run/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/evidence/A/normal-run/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/versions/A-initial/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/versions/A-initial/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/versions/A-initial/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/versions/A-initial/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/protocol/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/protocol/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/protocol/REQUEST.md",
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "bytes": 2145,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "management/protocol/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "notes/parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "read_scope": "complete bytes for hash; selected scientific/governance files also semantically inspected"
+    },
+    {
+      "base": "STAGE_ROOT",
+      "relative_path": "REQUEST.md",
+      "sha256": "ab8fb3064688b97369ad4762563c024ebc8102ff18196f44c4db2f7a4aeed3af",
+      "bytes": 2145,
+      "read_scope": "complete text"
+    },
+    {
+      "base": "STAGE_ROOT",
+      "relative_path": "input/STAGE-B.md",
+      "sha256": "03b613592f1272691a11d47f5f0cb1f69a39b34801448a46b7d65b7cb482294b",
+      "bytes": 746,
+      "read_scope": "complete text"
+    },
+    {
+      "base": "STAGE_ROOT",
+      "relative_path": "input/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "read_scope": "complete text"
+    },
+    {
+      "base": "STAGE_ROOT",
+      "relative_path": "input/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "read_scope": "complete text"
+    }
+  ],
+  "generated_bookkeeping_reads": "Output files read for analysis/verification and artifact hashing are identified in inputs-and-artifacts.json; that generated file cannot hash itself.",
+  "network_calls": 0,
+  "other_agents_called": 0,
+  "violations": [],
+  "failures": [
+    {
+      "command": "management/status.py --root PROJECT_ROOT",
+      "exit_code": 3,
+      "meaning": "expected detected parameter identity drift; not repaired",
+      "stdout": "status.stdout.json",
+      "stderr": "status.stderr.txt"
+    }
+  ],
+  "remedies": [
+    "No repair authorized in read-only stage; preserve discrepancy and report prerequisite author reconciliation."
+  ],
+  "written_paths": [
+    "OUTPUT_DIR/baseline-project-snapshot.json",
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/final-project-snapshot.json",
+    "OUTPUT_DIR/independent-inspection.json",
+    "OUTPUT_DIR/inputs-and-artifacts.json",
+    "OUTPUT_DIR/read-only-check.json",
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/state-answer.json",
+    "OUTPUT_DIR/status.command.json",
+    "OUTPUT_DIR/status.stderr.txt",
+    "OUTPUT_DIR/status.stdout.json"
+  ],
+  "project_unchanged": true,
+  "settings": {
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "system_limit": null
+  },
+  "recording_limits": [
+    "Python stdin programs were executed but their full source text was not separately saved; argv and purpose are recorded.",
+    "Early shell component exit codes were not separately captured; enclosing command exit_code is recorded."
+  ]
+}

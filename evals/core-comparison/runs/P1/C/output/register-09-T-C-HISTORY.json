@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--file",
+    "-"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"id\": \"T-C-HISTORY\", \"type\": \"revision-history\", \"description\": \"Pre-recompute full-byte snapshot manifest and explicit revision reason; original initial content retained.\", \"path\": \"history/stage-c-before-recompute/manifest.json\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"T-C-HISTORY\",\n  \"version\": 1,\n  \"revision\": 37,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

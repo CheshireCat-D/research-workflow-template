@@ -1,0 +1,86 @@
+{
+  "task_id": "T-CS-01",
+  "version": "1.0-design-review",
+  "status": "frozen_before_execution_pending_independent_review",
+  "total_points": 100,
+  "scope": "Research audit of an explicitly constructed memo against two real primary papers; not a novelty proof or assessment of the source papers' correctness.",
+  "claim_truth": {"A": true, "B": false, "C": false, "D": false, "E": true},
+  "items": [
+    {
+      "id": "source_conditions",
+      "points": 18,
+      "subitems": [
+        {"points": 4, "criterion": "Both fixed source versions actually used, accurate source identity plus theorem/equation and PDF-page locators. Equivalent publisher locators accepted only if verifiably mapped to the same statements."},
+        {"points": 4, "criterion": "Explains pair (S,V) sub-psi domination condition; V may be adapted; adaptedness alone is insufficient and non-predictability is not itself the disqualifying issue."},
+        {"points": 4, "criterion": "Distinguishes S1 Theorem1 infinite-time line crossing under filtered sub-psi conditions from S2 normal-mixture curved boundary; no iid/fixed-n or normal-data restriction invented."},
+        {"points": 6, "criterion": "S2 Theorem4 accurately recorded: bounded X and predictable bounded forecasts, target average conditional means, residual-squares intrinsic time, sub-exponential scale b-a, two-sided error 2 times single-tail alpha."}
+      ]
+    },
+    {
+      "id": "gaussian_mixture",
+      "points": 15,
+      "subitems": [
+        {"points": 7, "criterion": "Completes square with Gaussian density precision rho, obtains prefactor sqrt(rho/(v+rho)) and exp(s^2/(2(v+rho))) with all constants correct."},
+        {"points": 4, "criterion": "Shows fixed-lambda exponential supermartingale from SG and predictable increments, then fixed probability mixing with joint measurability and nonnegative conditional Tonelli/Fubini; initial wealth one."},
+        {"points": 4, "criterion": "Ville at 1/alpha inverted to b_rho,alpha, already two-sided at total alpha; A accepted, truncation to [0,1] justified."}
+      ]
+    },
+    {
+      "id": "finite_counterexample",
+      "points": 18,
+      "subitems": [
+        {"points": 6, "criterion": "Gives finite-n distribution satisfying bounded common conditional mean and uses exactly specified predictor, with an explicit event forcing exclusion."},
+        {"points": 6, "criterion": "Computes residual variance, boundary, true error and analytic event probability rigorously enough to show strict probability above alpha, rather than Monte Carlo."},
+        {"points": 6, "criterion": "Correct failure mechanism: no established psi_N control for (S,Vhat); distinguishes generic adapted V allowance from applicable self-normalized assumptions; does not claim fixed-rho normal-mixture is intrinsically invalid."}
+      ],
+      "reference_witness": {"distribution": "iid Bernoulli(0.01)", "alpha": 0.05, "rho": 1, "n": 280, "event": "first 280 observations zero", "Vhat_on_event": 0.25, "abs_S_on_event": 2.8, "boundary_on_event": 2.78715986678693, "event_probability": 0.05995901467146544},
+      "acceptable_alternatives": "Any other exact or rigorously bounded finite-time counterexample with the prescribed predictor and strict miscoverage greater than its stated alpha. Exact finite-state enumeration with controlled arithmetic is acceptable; unsupported simulation or an unattained bound is not."
+    },
+    {
+      "id": "moving_precision",
+      "points": 18,
+      "subitems": [
+        {"points": 6, "criterion": "For v>0 derives r=v/rho and unique root r=log((1+r)/alpha^2), or an algebraically equivalent Lambert W condition with correct branch."},
+        {"points": 4, "criterion": "Obtains inf b=sqrt((1+r_alpha)v) and separates a fixed target m optimization from moving per-time optimization."},
+        {"points": 6, "criterion": "Shows invalidity even for legal deterministic V=t/4 using iid Bernoulli(1/2) and the supplied LIL, with probability-one eventual crossing; an independently rigorous finite-time crossing proof is also acceptable."},
+        {"points": 2, "criterion": "Notes v=0 infimum zero but argmin over positive rho need not exist; avoids treating this minor endpoint as the only issue."}
+      ],
+      "acceptable_alternatives": "A rigorous argument that b^2(v)=constant times v by scale invariance, plus a correct proof/cited standard LIL showing failure and a valid optimizer characterization, may use different variables. A rigorously lower bounded finite-time crossing event above alpha can replace LIL."
+    },
+    {
+      "id": "valid_repairs",
+      "points": 18,
+      "subitems": [
+        {"points": 7, "criterion": "Gives fixed-rho normal-mixture CS using bounded conditional-mean Hoeffding variance proxy V=t/4 (or another proven valid proxy), and correctly states the simultaneous probability."},
+        {"points": 8, "criterion": "Gives empirical-Bernstein repair using Vhat with psi_E(lambda)=-log(1-lambda)-lambda, 0<=lambda<1, c=1; predictable bounded forecasts; shows conditional one-step inequality using delta and exp(lambda*delta)(1-lambda*delta)<=1; single-tail alpha/2 produces total alpha. Correct equivalent scaling or a rigorously proven alternative EB construction accepted."},
+        {"points": 3, "criterion": "Correct tuning repair: fixed countable rho grid with summable error allocations alpha*w_j and simultaneous union bound, or fixed mixture over rho; no unpenalized supremum/intersection claim."}
+      ],
+      "acceptable_alternatives": "For the EB boundary, a legitimate fixed-lambda sub-exponential linear boundary is valid if explicitly identified as generally not shrinking; gamma-exponential mixture, stitching, or another proven sub-exponential boundary is preferred if shrinking width claimed. Do not require a specific package or gamma special-function implementation."
+    },
+    {
+      "id": "reviewable_short_memo",
+      "points": 13,
+      "subitems": [
+        {"points": 5, "criterion": "Explicitly resolves A true, B false, C false, D false, E true, one point each; independent of whether supporting derivations earn their other item points."},
+        {"points": 4, "criterion": "Rewritten research conclusion accurately credits prior framework and CS/EB results, labels new work here as checking/repairing this constructed memo, and does not claim global novelty from only two papers."},
+        {"points": 2, "criterion": "E justified by pathwise event containment for an a.s. finite positive integer index; no E[tau] condition or optional-stopping theorem imposed; nonfinite index issue handled if discussed."},
+        {"points": 2, "criterion": "Short self-contained artifact with traceable source coordinates and numerical calculation expressions; no paper fulltext redistribution; code output distinguished from proof."}
+      ]
+    }
+  ],
+  "critical_caps": [
+    {"max_total": 49, "trigger": "Final repaired recommendation endorses B's uncorrected normal-mixture empirical substitution as generally valid."},
+    {"max_total": 49, "trigger": "Final repaired recommendation endorses C's unpenalized moving-rho envelope as an infinite-horizon CS."},
+    {"max_total": 49, "trigger": "Invented substantive theorem, source attribution, or claimed source verification is used as decisive evidence; ordinary correctable page typo alone does not activate this cap."},
+    {"max_total": 49, "trigger": "Represents the constructed draft or planted claims as an actual published paper's assertions or errors."}
+  ],
+  "scoring_rules": [
+    "Blind artifact scoring only. Hide arm, model, skills, tool count, runtime, and executor self-assessments until primary adjudication.",
+    "Score mathematical substance, source support, and utility. Skill/tool use itself earns no points.",
+    "Partial credit follows subitems; no post-hoc new criteria after any output is visible.",
+    "Reference numeric tolerances must preserve strict inequalities. b(1/4) between 2.78715 and 2.78717 and probability between 0.05995 and 0.05997 are sufficient.",
+    "A simulation-only counterexample earns no analytic-probability points; it does not automatically zero unrelated source or mixture work.",
+    "A correct alternative proof or counterexample is accepted and documented; graders may not require the designer's exact witness or prose.",
+    "Report item scores, any caps, source-check pass/fail, and unresolved mathematical disagreements separately from the aggregate."
+  ]
+}

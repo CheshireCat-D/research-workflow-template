@@ -1,0 +1,20 @@
+{
+  "hour_sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+  "frozen_model_sha256": "f8a758c6c73cf7e0cfcfa0936b594afb8f23b1260610ecae15929f601dc8e5d4",
+  "code_sha256": "9aa68881931fdb685b4c27ea5c5f976b9576e49fac937140b18cc396bad6f32b",
+  "argv": [
+    "WORKSPACE/analyze.py",
+    "score",
+    "--hour-file",
+    "INPUT_DIR/data/hour_2011.csv",
+    "--model",
+    "WORKSPACE/results/model.json",
+    "--start",
+    "2011-10-01",
+    "--end",
+    "2011-12-31",
+    "--output-dir",
+    "WORKSPACE/score_check"
+  ],
+  "retrained": false
+}

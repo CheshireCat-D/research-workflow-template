@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "PROJECT_ROOT/scripts/compute.py",
+    "--root",
+    "PROJECT_ROOT",
+    "--output",
+    "PROJECT_ROOT/.research/evidence/C/recomputed"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\"passed\": true, \"result\": \"PROJECT_ROOT/.research/evidence/C/recomputed/result.json\", \"parameters_sha256\": \"340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117\"}\n",
+  "stderr": "",
+  "completed_at": "2026-10-30T01:59:53Z"
+}

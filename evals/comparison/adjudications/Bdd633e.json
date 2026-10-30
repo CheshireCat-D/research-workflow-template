@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "submission_id": "Bdd633e",
+  "task_id": "Q11",
+  "report_sha256": "21cd63b9819f9fef6b02980ee48f8122afb25b44f1696ea17e655605ec808f98",
+  "judge_context": "fresh single-report context; reviewed only task.md, report.md, reference.json and template.json in this submission directory; no arm map, execution log, other reports, memory or external sources",
+  "arm_visibility": "hidden-by-instruction",
+  "os_audited": false,
+  "scored": true,
+  "verdict": "supported",
+  "criteria": [
+    {
+      "id": "decision",
+      "score": 2,
+      "evidence": "“核对结论”首段：“主要结论成立，给定证明有效，未发现实质性错误”；“实质问题与可选建议”明确写“实质性问题：无”。",
+      "rationale": "正确认定原材料在所列条件下支持一致收敛，并未将合法的有限覆盖步骤或共同指标选择误判为缺陷。"
+    },
+    {
+      "id": "finite_cover",
+      "score": 2,
+      "evidence": "“关键推理核验”第2项定义 U_q=(q−δ/2,q+δ/2)∩[0,1]，说明有理数稠密保证覆盖，0∈U_0、1∈U_1，并由紧致性取得有限子覆盖 U_{q_1},…,U_{q_m}。",
+      "rationale": "相对开集的半径严格小于共同 δ；稠密性确保每个点落入某个集合，闭区间紧致确保有限子覆盖，端点处理也正确。"
+    },
+    {
+      "id": "uniform_index",
+      "score": 2,
+      "evidence": "“关键推理核验”第1项取 δ=min(δ_1,δ_2)，指出 δ_1 对全部 n 有效；第3项取 N=max_{1≤i≤m}N_i；第4项末句说明 N 不依赖 x。",
+      "rationale": "报告分别核验了对所有函数共同有效的连续性尺度与有限个收敛指标的最大值。中心及其指标先于任意 x 固定，所得 N 对全区间有效。"
+    },
+    {
+      "id": "epsilon_bound",
+      "score": 2,
+      "evidence": "“关键推理核验”开头明确一致收敛量词；第4项对任意 x 及 n≥N 写出 |f_n(x)−f(x)|≤|f_n(x)−f_n(q_i)|+|f_n(q_i)−f(q_i)|+|f(q_i)−f(x)|<ε/3+ε/3+ε/3=ε。",
+      "rationale": "三项估计各自有合法依据，并对任意 x 和同一个 N 之后的全部 n 同时成立；没有将逐点收敛直接当作一致收敛。"
+    },
+    {
+      "id": "scope",
+      "score": 2,
+      "evidence": "“实质问题与可选建议”将补写“先由稠密性构造开覆盖，再由紧致性抽取有限子覆盖”明确列为可选表述建议，并说明“不影响原证明成立”。",
+      "rationale": "可选细化与实质错误区分清楚；报告只使用原有的有理点逐点收敛及允许的基础事实，没有额外要求有理点上一致收敛或无关数据。"
+    }
+  ],
+  "invented_major_objections": [],
+  "notes": "已独立核实参考：共同连续性尺度、稠密有理中心的有限覆盖、有限中心的共同收敛指标及三角不等式确实推出一致收敛。参考判定和五项义务正确；报告全部满足。总分 10/10。"
+}

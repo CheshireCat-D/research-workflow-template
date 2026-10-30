@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"derived_from\": [\"evidence:T-PARAM\", \"evidence:T-RAW\", \"artifact:T-CODE\", \"decision:T-CHOICE\"], \"description\": \"Canonical rho=4 result from actual original calculator execution; input SHA and equivalent-form arithmetic checked.\", \"id\": \"T-RESULT\", \"path\": \"results/result.json\", \"type\": \"numeric-result\", \"notes\": \"Old full bytes in history/stage-c-before-recompute/results and history/stage-a-initial; revision reason in notes/stage-c-validation.json.\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"T-RESULT\",\n  \"version\": 2,\n  \"revision\": 34,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

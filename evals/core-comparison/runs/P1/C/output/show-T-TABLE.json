@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--id",
+    "T-TABLE"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 27,\n  \"kind\": \"artifact\",\n  \"id\": \"T-TABLE\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"results/table.csv\": \"e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"derived_from\": [\n        \"artifact:T-RESULT\"\n      ],\n      \"description\": \"Companion delivered table; all numeric rows match fresh result.\",\n      \"id\": \"T-TABLE\",\n      \"path\": \"results/table.csv\",\n      \"type\": \"numeric-table\"\n    },\n    \"registered_at\": \"2026-10-30T01:03:18.403832+00:00\",\n    \"version\": 1\n  }\n}\n",
+  "stderr": ""
+}

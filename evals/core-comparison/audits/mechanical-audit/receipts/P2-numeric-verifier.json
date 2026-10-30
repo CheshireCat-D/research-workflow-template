@@ -1,0 +1,18 @@
+{
+  "name": "P2-numeric-verifier",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P2/迁移后 科研项目/management/verify_current.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P2/迁移后 科研项目"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P2/迁移后 科研项目",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"errors\": [],\n  \"independent_metrics\": {\n    \"observed_hours\": 1460,\n    \"observed_days\": 61,\n    \"C0_MAE\": 56.64127430990882,\n    \"C0_RMSE\": 81.70038360631688,\n    \"C0_bias_prediction_minus_actual\": 13.433264561295244,\n    \"C1_MAE\": 41.252622564018566,\n    \"C1_RMSE\": 64.15826564867794,\n    \"C1_bias_prediction_minus_actual\": 13.347664992606457,\n    \"MAE_reduction_fraction\": 0.2716861852664598\n  },\n  \"table_agrees\": true,\n  \"activities_checked\": [\n    \"D-SOURCE-CHECK\",\n    \"D-CALC\",\n    \"D-SYNTH\"\n  ],\n  \"writes_project\": false,\n  \"interpretation\": \"Numeric and local binding verification only; author content review remains pending.\"\n}\n",
+  "stderr": "",
+  "project_identical_bytes_mtime_directory_mtime": true,
+  "changed_files": [],
+  "changed_directories": []
+}

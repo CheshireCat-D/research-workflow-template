@@ -1,0 +1,29 @@
+{
+  "initialized": true,
+  "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+  "revision": 0,
+  "scientific_validity": "not-assessed",
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "skill_connection": {
+    "passed": true,
+    "installed": true,
+    "scope": "Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.",
+    "target": ".agents/skills",
+    "skills": [
+      "rw-workflow",
+      "rw-question",
+      "rw-literature",
+      "rw-innovation",
+      "rw-candidates",
+      "rw-validation",
+      "rw-writing",
+      "rw-review",
+      "rw-figures"
+    ],
+    "files": 67,
+    "payload_sha256": "c2dd5fa54cee747ff61cb597779320ca498a9cb145c8fce422735091cdc5fcc1",
+    "global_installation": false,
+    "project_records_modified": false
+  },
+  "passed": true
+}

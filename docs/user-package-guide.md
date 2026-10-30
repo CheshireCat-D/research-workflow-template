@@ -7,18 +7,13 @@
 解压后进入 `research-workflow-template`，运行：
 
 ```sh
-python3 tools/research.py options
-python3 tools/research.py init --output ../my-research --title '我的研究问题'
-python3 tools/connect_skills.py install --root ../my-research
-python3 tools/connect_skills.py check --root ../my-research
+python3 tools/research.py init --output ../my-research --title '我的研究问题' --connect-skills
 ```
 
 Windows PowerShell 可运行同一组命令：
 
 ```powershell
-py -3 -X utf8 tools/research.py init --output "../我的研究" --title "我的研究问题"
-py -3 -X utf8 tools/connect_skills.py install --root "../我的研究"
-py -3 -X utf8 tools/connect_skills.py check --root "../我的研究"
+py -3 -X utf8 tools/research.py init --output "../我的研究" --title "我的研究问题" --connect-skills
 ```
 
 先用 `py -3 --version` 确认 Python 为 3.11 或更新版本；若没有 `py` 启动器，把 `py -3` 换成已安装的 `python`。命令中的项目根路径可使用系统惯用路径，登记材料的项目相对路径统一用 `/`。
@@ -26,6 +21,8 @@ py -3 -X utf8 tools/connect_skills.py check --root "../我的研究"
 Windows 项目请放在普通本地目录，例如 `C:\Research\my-project`。本版本拒绝项目路径中的重解析点（包括 junction、符号链接与云盘占位符）；网络盘和云同步目录不作为本轮已验证目标。
 
 输出目录必须尚不存在；路径含空格时加引号。然后在兼容宿主中打开 `my-research`，说明研究兴趣、已有材料或当前任务。工具包目录与研究项目目录分别保存；安装只写入所选项目的 `.agents/skills/`，不改全局技能。
+
+需要单独诊断技能副本时，可运行 `python3 tools/connect_skills.py check --root PROJECT`；它不是初始化后的必做步骤。
 
 已知学科或方法时，可在 `init` 加入 `--discipline law --method legal-analysis` 等选项；合法 ID 以 `options` 为准。尚未确定时先省略，之后用 `configure` 更新。
 
@@ -48,6 +45,18 @@ python3 tools/research.py configure --root PROJECT --interest '比较已有动�
 学科和方法使用 `options` 列出的 ID；预算用 `--budget`，多项能力可重复使用 `--add-capability`。恢复结果的 `configuration` 会带回这些信息。配置改变后先核对其影响，再保存新的检查点。
 
 普通聊天工具可以按实际附件能力参考指南、讨论或润色文本；能上传文件不代表已安装技能或能操作本地项目。完整初始化、登记和恢复需要实际宿主具备文件访问与命令执行能力。品牌或模型名称本身不是接入验证，未实测的平台不列作一键兼容。
+
+## 先跑通一个完整公开数据项目
+
+用户包自带完整示例。在工具包目录运行：
+
+```sh
+python3 -B examples/public-penguins/run_project.py --output ../penguins-project
+```
+
+它下载一份固定 CC0 数据，生成表格与可编辑图件，登记实际产物并核对保存的恢复状态。输出目录必须尚不存在。已有本地 CSV 时加 `--input FILE` 离线运行；只有输入指纹匹配时才称为固定公开数据。这个案例不需要模型或额外 Python 包。
+
+查询论文题录可使用 `skills/rw-literature/scripts/search_crossref.py`，传入 `--query` 与 `--output`；脚本保存受限游标分页和响应指纹。查询会发送到 Crossref，返回的是元数据，全文支持需要另行核对。
 
 ## 九个技能如何配合
 
@@ -89,27 +98,25 @@ python3 tools/research.py configure --root PROJECT --interest '比较已有动�
 
 ## 日常恢复与登记
 
-在工具包根目录执行，把 `PROJECT` 换成实际项目路径：
+通常让助手完成这些操作即可。在研究项目根目录开始工作时，只需一次恢复：
 
 ```sh
-python3 tools/research.py resume --root PROJECT
-python3 tools/research.py status --root PROJECT
-python3 tools/research.py check --root PROJECT
-python3 tools/research.py show --root PROJECT --kind statement
-python3 tools/research.py show --root PROJECT --kind statement --id S1
+python3 .agents/skills/_rw-runtime/tools/research.py resume --format markdown
 ```
 
-`resume`、`status`、`check` 和 `show` 是只读命令；`show --kind statement` 列出该类记录的 ID 与版本，加 `--id S1` 查看一条完整记录。`S1` 应替换成已有记录 ID。登记使用 `register --kind KIND --file INPUT.json`，批量使用 `register-batch --file INPUT.json`，也可用 `--file -` 从标准输入读取。已有记录的修改需要显式版本替换；保留项目的版本与依赖，不能直接清空或改写登记簿。
+项目命令省略 `--root` 时只用当前目录，不向上查找或自动初始化。从工具包根目录调用时，改用 `python3 tools/research.py resume --root PROJECT --format markdown`。摘要已包含配置、下一步、文件变化及过期活动，无须再连跑 `status`、`check`、`show`；只需查看某条记录时再用 `show --kind statement --id S1`。
 
-`file_tracking.local_files` 列出实际绑定的本地路径，`source_ids_without_local_evidence` 列出尚无本地证据绑定的来源 ID。来源地址本身不追踪文件内容；覆盖摘要不把外部来源标成过期，也不替代材料阅读。
-
-工作告一段落后保存下一步：
+完成实际研究和复核后，把本轮记录与下一步一次保存。下面命令从工具包根运行，`PROJECT` 是实际项目路径，`INPUT.json` 是有序批次数组：
 
 ```sh
-python3 tools/research.py checkpoint --root PROJECT --next-action '核对下一份原始来源'
+python3 tools/research.py register-batch --root PROJECT --file INPUT.json --next-action '核对下一份原始来源'
 ```
 
-可用 `python3 tools/research.py --help` 及子命令 `--help` 查看参数。完整 JSON 示例与接口说明见公开的[命令行指南](https://github.com/CheshireCat-D/research-workflow-template/blob/main/docs/07-core-usage.md)。
+单条 `register --kind KIND --file INPUT.json` 也可加 `--next-action`；需要时加 `--activity ID` / `--note TEXT`，两者必须与下一步一起使用。返回的 `recovery` 已包含保存后的检查，无须再运行 `resume`。没有记录变化、只需保存断点时，用 `checkpoint --root PROJECT --next-action '下一步' --report`。
+
+恢复、查询均只读；重定向导出文件是调用者的写入。保存返回退出 1 时，先查看 `registered` / `checkpoint_saved`：数据可能已保存，只是恢复检查仍有发现，不能盲目重试。提交前的字段、版本、引用或检查点校验失败不写回；写入异常时先恢复确认实际保存状态。`scientific_validity: not-assessed` 不随保存成功改变。
+
+`file_tracking.local_files` 列出实际绑定的本地路径，`source_ids_without_local_evidence` 列出尚无本地证据绑定的来源 ID。来源地址本身不追踪文件内容；覆盖摘要不把外部来源标成过期，也不替代材料阅读。完整参数和 JSON 示例见公开的[命令行指南](https://github.com/CheshireCat-D/research-workflow-template/blob/main/docs/07-core-usage.md)。
 
 ### 离线登记的最小示例
 
@@ -122,8 +129,7 @@ python3 tools/research.py checkpoint --root PROJECT --next-action '核对下一�
 ```
 
 ```sh
-python3 tools/research.py register-batch --root PROJECT --file statement-batch.json
-python3 tools/research.py show --root PROJECT --kind statement --id S1
+python3 tools/research.py register-batch --root PROJECT --file statement-batch.json --next-action '核对这条观察的实际依据'
 ```
 
 ### 已有材料接入与文件变化
@@ -143,32 +149,27 @@ python3 tools/research.py show --root PROJECT --kind statement --id S1
 ```
 
 ```sh
-python3 tools/research.py register-batch --root PROJECT --file material-batch.json
-python3 tools/research.py checkpoint --root PROJECT --activity A-MATERIAL --next-action '读取 notes/data.csv，核对变量与分析单位'
-python3 tools/research.py resume --root PROJECT --format markdown
+python3 tools/research.py register-batch --root PROJECT --file material-batch.json --activity A-MATERIAL --next-action '读取 notes/data.csv，核对变量与分析单位'
 ```
 
-`source` 只保存来源身份；通过 `source_ids` 连接的本地 `evidence` 才绑定文件指纹。上例之后修改 `notes/data.csv`，恢复会指出文件及活动过期。先审阅修改，实际重做受影响工作，再显式更新证据、活动和检查点；另存一份检查点不能替代复核。
+`source` 只保存来源身份；通过 `source_ids` 连接的本地 `evidence` 才绑定文件指纹。上例之后修改 `notes/data.csv`，恢复会指出文件及活动过期。先审阅修改，真实复核并按上游到下游更新证据、产物和活动，再连同下一步一次保存。确实重做完成才可再次登记 `done`；未完成改为真实进度，不能刷新旧 `done` 或另存检查点冒充复核。
 
-### 纠正一条已有登记
+### 纠正已有登记
 
-普通 `show` 返回的 `envelope.version` 是该记录当前版本。`--data-only` 仅与 `--kind`、`--id` 一起使用，导出可编辑记录；输入不是整个查询响应。
+用 `show --edit` 一次导出所选记录的可编辑批次数组，直接携带 `kind`、`record`、`replace:true` 和固定的 `expected_version`，不用另外查版本：
 
 ```sh
-python3 tools/research.py show --root PROJECT --kind source --id SRC-MATERIAL
-python3 tools/research.py show --root PROJECT --kind source --id SRC-MATERIAL --data-only > source-edit.json
+python3 tools/research.py show --root PROJECT --edit source:SRC-MATERIAL > source-edit.json
+# 按真实修改编辑 record，保留 expected_version。
+python3 tools/research.py register-batch --root PROJECT --file source-edit.json --next-action '复核来源修改对后续工作的影响'
 ```
 
-按实际内容编辑 `source-edit.json`。如果刚才查询的版本为 1，可运行下面命令；已有其他版本时，把 1 换成实际的 `envelope.version`：
+多个记录可写成 `--edit evidence:E-MATERIAL activity:A-MATERIAL`，并按上游到下游排列；先真实复核，再据实际进度编辑活动。导出后有人更新同一 ID 时，旧版本会被拒绝，应重新读取并比较修改，不能只改版本号强行保存。更正来源也可能使下游活动过期，按恢复发现继续复核。
 
-```sh
-python3 tools/research.py register --root PROJECT --kind source --file source-edit.json --replace --expected-version 1
-```
-
-更正来源可能使引用它的活动过期，继续沿上面的复核流程处理。PowerShell 中把 `python3` 换成 `py -3 -X utf8`；为避免不同 shell 的重定向编码差异，导出可用下面命令，或让助手用 UTF-8 文件工具保存 JSON：
+`--edit` 不与 `--kind`、`--id`、`--data-only` 混用。普通查询与单条替换接口仍保留，不能把整个查询包装当作记录输入，也不要直接改登记簿。PowerShell 中把 `python3` 换成 `py -3 -X utf8`；为避免 shell 重定向编码差异，可让助手用 UTF-8 文件工具保存 JSON，或使用：
 
 ```powershell
-py -3 -X utf8 -c "from pathlib import Path; import subprocess,sys; data=subprocess.check_output([sys.executable,'tools/research.py','show','--root','PROJECT','--kind','source','--id','SRC-MATERIAL','--data-only']); Path('source-edit.json').write_bytes(data)"
+py -3 -X utf8 -c "from pathlib import Path; import subprocess,sys; data=subprocess.check_output([sys.executable,'tools/research.py','show','--root','PROJECT','--edit','source:SRC-MATERIAL']); Path('source-edit.json').write_bytes(data)"
 ```
 
 ## 搬迁与更新
@@ -176,11 +177,10 @@ py -3 -X utf8 -c "from pathlib import Path; import subprocess,sys; data=subproce
 安装后的项目包含所需指导和运行时。搬迁完整项目后，可从项目根运行：
 
 ```sh
-python3 .agents/skills/_rw-runtime/tools/research.py resume --root .
-python3 .agents/skills/_rw-runtime/tools/connect_skills.py check --installed-only --root .
+python3 .agents/skills/_rw-runtime/tools/research.py resume --format markdown
 ```
 
-换新对话时也打开这个研究项目，并说：“请读取配置、登记和恢复摘要，先核对材料变化，再继续已保存的下一步。”上面的项目内命令可在工具包不在原位置时使用。
+换新对话时也打开这个研究项目，并说：“请读取配置、登记和恢复摘要，先核对材料变化，再继续已保存的下一步。”上面的项目内命令可在工具包不在原位置时使用。需要另查已安装资源完整性时，再运行 `python3 .agents/skills/_rw-runtime/tools/connect_skills.py check --installed-only --root .`；这不是每次恢复的必需步骤。
 
 更新工具包时，取得新的当前用户包，保留研究项目；暂停正在使用该项目的助手，再从新工具包运行：
 

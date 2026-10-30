@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "activity",
+    "--id",
+    "T-SOURCE-CHECK"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 27,\n  \"kind\": \"activity\",\n  \"id\": \"T-SOURCE-CHECK\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"notes/source-check.md\": \"41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d\",\n        \"sources/howard2021-arxiv-v9.pdf\": \"eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8\"\n      },\n      \"records\": {\n        \"artifact:T-SOURCE-NOTE\": \"39aed04092a951142f35efc0219b781b149a376828136945af2881f0b33e2a96\",\n        \"evidence:T-RAW\": \"ee6f739763307ec7bb182bc932cb9baa16b63276ee3259ddbb4e70cd309694bd\",\n        \"source:T-SRC\": \"ab82116316befe189365fe3e98f9922c2ab5aeb2ba12ffb35d4302a803a02267\"\n      }\n    },\n    \"data\": {\n      \"id\": \"T-SOURCE-CHECK\",\n      \"inputs\": [\n        \"source:T-SRC\",\n        \"evidence:T-RAW\"\n      ],\n      \"note\": \"AI agent verified full supplied SHA/bytes and metadata, read card; mathematical pages not examined. Source-only remote not current-content checked.\",\n      \"outputs\": [\n        \"artifact:T-SOURCE-NOTE\"\n      ],\n      \"status\": \"done\",\n      \"title\": \"Verify supplied fixed source identity and card scope\"\n    },\n    \"registered_at\": \"2026-10-30T01:03:18.418591+00:00\",\n    \"version\": 1\n  }\n}\n",
+  "stderr": ""
+}

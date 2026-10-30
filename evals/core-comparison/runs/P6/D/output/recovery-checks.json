@@ -1,0 +1,217 @@
+{
+  "canonical_table_values_agree": true,
+  "canonical_result_bytes_equal_recorded_run": true,
+  "canonical_table_bytes_equal_recorded_run": true,
+  "checkpoint_external_copy_agrees": true,
+  "authority_history": [
+    {
+      "version": 1,
+      "snapshot": "snapshots/authority/v1-d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa.json",
+      "sha_matches": true
+    },
+    {
+      "version": 2,
+      "snapshot": "snapshots/authority/v2-d686169299fbbaa8ac8b39f246340f1c931a8b7fb66702d12295bee538b6fc43.json",
+      "sha_matches": true
+    }
+  ],
+  "past_commands": [
+    {
+      "record": "records/commands-A.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/compute.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/project",
+        "--output",
+        "STUDY_ROOT/runs/P6/A/output/validation-valid"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "tool_call": null
+    },
+    {
+      "record": "records/commands-A.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/compute.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/project",
+        "--output",
+        "STUDY_ROOT/runs/P6/A/output/validation-rejected",
+        "--spec",
+        "STUDY_ROOT/runs/P6/project/notes/rejected-parameters.json"
+      ],
+      "exit_code": 2,
+      "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"evaluation_start must be no later than evaluation_end\"}\n",
+      "tool_call": null
+    },
+    {
+      "record": "records/commands-A.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/project_status.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/project"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "tool_call": null
+    },
+    {
+      "record": "records/commands-A.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/guarded_state_update.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/A/output/guarded-update-test",
+        "--candidate",
+        "STUDY_ROOT/runs/P6/A/output/guarded-update-test/candidate.json",
+        "--expected-version",
+        "1",
+        "--expected-sha256",
+        "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+        "--reason",
+        "Controlled guard validation on isolated copy; no scientific revision"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "tool_call": null
+    },
+    {
+      "record": "records/commands-A.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/guarded_state_update.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/A/output/guarded-update-test",
+        "--candidate",
+        "STUDY_ROOT/runs/P6/A/output/guarded-update-test/candidate.json",
+        "--expected-version",
+        "1",
+        "--expected-sha256",
+        "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+        "--reason",
+        "Controlled stale state guard test"
+      ],
+      "exit_code": 2,
+      "stderr": "",
+      "tool_call": null
+    },
+    {
+      "record": "records/commands-A.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/project_status.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/project"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "tool_call": null
+    },
+    {
+      "record": "records/commands-C.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/guarded_state_update.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/project",
+        "--candidate",
+        "STUDY_ROOT/runs/P6/C/output/drift-checkpoint-save-candidate.json",
+        "--expected-version",
+        "1",
+        "--expected-sha256",
+        "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+        "--reason",
+        "Save drifted snapshot and fresh checkpoint before any recomputation; no material rebind and no activity revalidation"
+      ],
+      "exit_code": 0,
+      "stderr": null,
+      "tool_call": null
+    },
+    {
+      "record": "records/commands-C.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/project_status.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/project"
+      ],
+      "exit_code": 1,
+      "stderr": null,
+      "tool_call": null
+    },
+    {
+      "record": "records/commands-C.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/compute.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/project",
+        "--spec",
+        "STUDY_ROOT/runs/P6/project/notes/parameters.json",
+        "--output",
+        "STUDY_ROOT/runs/P6/project/results-evaluations/C-approved"
+      ],
+      "exit_code": 0,
+      "stderr": null,
+      "tool_call": null
+    },
+    {
+      "record": "records/commands-C.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/guarded_state_update.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/project",
+        "--candidate",
+        "STUDY_ROOT/runs/P6/C/output/authorized-state-update-candidate.json",
+        "--expected-version",
+        "2",
+        "--expected-sha256",
+        "d686169299fbbaa8ac8b39f246340f1c931a8b7fb66702d12295bee538b6fc43",
+        "--reason",
+        "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+      ],
+      "exit_code": 0,
+      "stderr": null,
+      "tool_call": null
+    },
+    {
+      "record": "records/commands-C.json",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/runs/P6/project/scripts/project_status.py",
+        "--root",
+        "STUDY_ROOT/runs/P6/project"
+      ],
+      "exit_code": 0,
+      "stderr": null,
+      "tool_call": null
+    }
+  ],
+  "no_research_recomputation_in_D": true
+}

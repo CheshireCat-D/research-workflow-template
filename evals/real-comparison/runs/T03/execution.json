@@ -1,0 +1,199 @@
+{
+  "status": "executed",
+  "requested": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "fork_turns": "none",
+    "max_tool_calls": 18,
+    "max_report_characters": 12000
+  },
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 12,
+  "network_calls": 0,
+  "violations": [],
+  "reads": [
+    {
+      "logical_name": "common/executor.md",
+      "sha256": "316392fda85274a6b9a3ac7150125ef140d35d96edde46759348ef82020239fb"
+    },
+    {
+      "logical_name": "common/execution.template.json",
+      "sha256": "4202f4e551078d2e12ccd1e271ddb0eaba5bac56eb2cccc204cacf1e9b66330e"
+    },
+    {
+      "logical_name": "guidance/proof-audit/SKILL.md",
+      "sha256": "54adbe2ca1665697dc2a1be48b1614ae60b9e2589997c5d8b6d297acba422626"
+    },
+    {
+      "logical_name": "input/theory/TASK.md",
+      "sha256": "56d7eff3d121991ac8a907a8f285fe822e26e2627715fd2863180aadd96b51cd"
+    },
+    {
+      "logical_name": "input/theory/draft.tex",
+      "sha256": "8550d8ea0188a72384bf5a4d596cdc23b3c8fa58cddeb30350c71adb26a2ba63"
+    },
+    {
+      "logical_name": "input/theory/source-manifest.json",
+      "sha256": "ab51a486e3bed01f34e863a7221c58481d288bef2efde8b7dbb10ef2001994c4"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2020-arxiv-v7.pdf",
+      "sha256": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2020-arxiv-v7.txt",
+      "sha256": "674f6bf98e64159aa294b114ba765f19ee40b5b89f1fab7c25a9419f86f8ce99"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2021-arxiv-v9.txt",
+      "sha256": "7826e3691e725d8017655d2be40aaf1a37c1aa2969b7344f3e0b4060f50141da"
+    }
+  ],
+  "commands": [
+    {
+      "tool_call": 1,
+      "operations": [
+        "pwd",
+        "cat EXECUTOR.md",
+        "cat execution.template.json",
+        "cat designated guidance/proof-audit/SKILL.md"
+      ],
+      "exit_code": 0
+    },
+    {
+      "tool_call": 2,
+      "operations": [
+        "cat input/TASK.md",
+        "cat input/draft.tex",
+        "rg --files input"
+      ],
+      "exit_code": 0
+    },
+    {
+      "tool_call": 3,
+      "operations": [
+        "rg -n selected theorem/definition/variance/optimization patterns in both supplied source texts, head -180"
+      ],
+      "exit_code": 0
+    },
+    {
+      "tool_call": 4,
+      "operations": [
+        "cat input/source-manifest.json",
+        "rg -n selected patterns in S2 text, head -135",
+        "sed -n 428,540p and 600,680p in S1 text"
+      ],
+      "exit_code": 0
+    },
+    {
+      "tool_call": 5,
+      "operations": [
+        "mkdir -p workspace/audit",
+        "EVAL_PYTHON -I -B with inline Python: create seven mathematical-item files, initial error index and dependency graph",
+        "sed -n 240,320p; 548,630p; 730,770p; 806,854p; 1760,1788p in S2 text",
+        "rg selected proof patterns in S2 text, tail -45"
+      ],
+      "exit_code": 0
+    },
+    {
+      "tool_call": 6,
+      "operations": [
+        "sed -n 1715,1778p; 2430,2482p; 2760,2805p in S2 text",
+        "EVAL_PYTHON -I -B with inline Python: locate PDF-page markers and extract S1 PDF pages 9,12,13; S2 pages 12,14,28 using existing pypdf",
+        "nl -ba input/draft.tex | sed -n 13,100p"
+      ],
+      "exit_code": 0
+    },
+    {
+      "tool_call": 7,
+      "operations": [
+        "sed -n 35,170p and 1182,1208p in S2 text",
+        "EVAL_PYTHON -I -B with inline Python: SHA256 source PDFs, read S1 PDF pages 10,11 and S2 pages 2,5,9,10,35"
+      ],
+      "exit_code": 0
+    },
+    {
+      "tool_call": 8,
+      "operations": [
+        "rg -n selected stopping-time patterns in S2 text",
+        "EVAL_PYTHON -I -B with inline Python: extract S2 Lemma 3 context and locate PDF page 19"
+      ],
+      "exit_code": 0
+    },
+    {
+      "tool_call": 9,
+      "operations": [
+        "write workspace/report.md, copy it to workspace/audit.md, write checks.py and RUN.md using shell heredocs",
+        "EVAL_PYTHON -I -B WORKSPACE/checks.py --input INPUT_DIR --output WORKSPACE/results",
+        "EVAL_PYTHON -I -B with inline Python: count report Unicode characters"
+      ],
+      "exit_code": 0,
+      "result": "First numerical result preserved in results/checks.json: B failure 1/8, boundary squared (1/2)log512."
+    },
+    {
+      "tool_call": 10,
+      "operations": [
+        "EVAL_PYTHON -I -B with inline Python: verify S2 source anchors on PDF pages 18,19,30; read PDF pages 18,19,30,31; append atomic proof audits, exact source-line validation and finalize error table"
+      ],
+      "exit_code": 0
+    },
+    {
+      "tool_call": 11,
+      "operations": [
+        "EVAL_PYTHON -I -B with inline Python: add self-contained setup to report, synchronize audit.md, finalize dependency graph, check report length and byte equality"
+      ],
+      "exit_code": 0
+    },
+    {
+      "tool_call": 12,
+      "operations": [
+        "EVAL_PYTHON -I -B with inline Python: hash actual evidence files, save execution.json, validate required artifacts, report limit, aliases, first results, source hashes and completed item/error statuses"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "duration_seconds": null,
+  "scope": "instruction-only; no OS audit",
+  "failure": null,
+  "reads_scope": "Actual research-input and instruction-file reads; excludes interpreter library internals and rereads of self-authored outputs. Logical input/theory paths map to this trial input directory.",
+  "command_record_scope": "Commands are recorded by tool-call operation and relevant arguments; long inline write/audit Python bodies are summarized, not represented as literal shell transcripts. Numerical code and its rerun command are retained.",
+  "duration_note": "No timestamp was recorded at the first call; elapsed duration is unknown rather than inferred.",
+  "completed_utc": "2026-10-29T23:43:45.262057+00:00",
+  "report_characters": 8108,
+  "first_result_path": "results/checks.json",
+  "output_sha256": {
+    "RUN.md": "cf1a961122173ebbdca412e9bbed82b284cc3c4103107d9983b302d877dcf0f1",
+    "audit/01_assumptions.md": "20ce3595c495f8d591cdcfb0349decb2d1dcb58f5161647a49d0ed02bc353cf0",
+    "audit/02_boundary.md": "40eba64b24f99a96305a4abee4228833cb7fc84cbb1f921e2a90c57cf01b30a1",
+    "audit/03_claim_A.md": "759135a123737980b59e0ed6613ab2af9a8cbffbd543bd432474e86a40ef6d3a",
+    "audit/04_claim_B.md": "a0646315db74374a46cda49d484be877320416702b4fc8fac0f08cedef708c5f",
+    "audit/05_claim_C.md": "0cb1e6420d49a381cd5ee6caf79a0e6cdeb16c2a008a52d2ee18caaa927d0ba4",
+    "audit/06_claim_D.md": "a2bb5a9e319786865de556e5aaaf50b3b0c452fa2d8963767e751b8daaa9b897",
+    "audit/07_claim_E.md": "e97b9ea0718e3d41e8ca106373228f35ce5583ead089a7257e1c981cfef4934e",
+    "audit/error_table.md": "9388790fb53576248f6ac498e095cbb94e3ebeda8a03bb83b4a96dc448fc3adb",
+    "audit/run_meta.json": "4b6a4aa6286878faab9db13af35057dd451542e841dd4a8ab976ac9ce1760141",
+    "audit/structure.md": "291c9352c5d0e288701a48229ae5e3ec3d645c56c7f522441f9f3eb1706c9abd",
+    "audit.md": "8f675f1008ca53dff749216ce135d8431da8af264bbbb386f5cceea6eee53b5c",
+    "checks.py": "8097f4646af43f36a27d84ed055036528bc3fbb36b739452c443a091b91a9573",
+    "report.md": "8f675f1008ca53dff749216ce135d8431da8af264bbbb386f5cceea6eee53b5c",
+    "results/checks.json": "a0cc9ef10715762021873f05f72034901232c58d3c34014c4750ff66a6dfbaa2"
+  },
+  "publication_projection": {
+    "raw_execution_sha256": "18cfde295910f1733843bf23564b375d005969836abbd541d31d93614741a29c",
+    "changes": [
+      "completed status label mapped to executed",
+      "absolute paths mapped to logical locators"
+    ],
+    "scope": "Administrative labels/locators only; effective unknowns and scientific content retained."
+  }
+}

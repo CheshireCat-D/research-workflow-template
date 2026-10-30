@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "question": "Standalone theoretical review via rw-review; one real-material task, one fresh execution per entry version.",
+  "trials": [
+    {
+      "arm": "previous-entry",
+      "report": {
+        "path": "theory-route/previous-entry/report.md",
+        "sha256": "bea60052bf84a8aaf14d10410c6241fcc7dc0e8604d9c2ae63c769485938efb1"
+      },
+      "original_report_sha256": "bea60052bf84a8aaf14d10410c6241fcc7dc0e8604d9c2ae63c769485938efb1",
+      "execution": {
+        "path": "theory-route/previous-entry/execution.json",
+        "sha256": "2e81ed72546e593bf468c70efc3bc7f7d5fd6482ddd87a48737fe85cd480d70d"
+      },
+      "adjudication": {
+        "path": "theory-route/previous-entry/adjudication.json",
+        "sha256": "b53b183b0545f15a65e4c11b9e6a23c09518104fe89b51e52b76c78df25acb5c"
+      },
+      "grade_binds_original_report": "bea60052bf84a8aaf14d10410c6241fcc7dc0e8604d9c2ae63c769485938efb1",
+      "score": 100,
+      "max_score": 100,
+      "guidance_files": 6,
+      "whole_file_guidance_bytes": 25513,
+      "declared_outer_tool_calls": 14,
+      "finite_check_replay": {
+        "path": "theory-route/previous-entry/replay.json",
+        "sha256": "a641a04b943e028cd0ac99e1fcb37c598952e2cf9122bfbd5331f8ac272f1233"
+      },
+      "effective_model": null,
+      "measured_token_cost": null
+    },
+    {
+      "arm": "short-entry",
+      "report": {
+        "path": "theory-route/short-entry/report.md",
+        "sha256": "a372ff7e29a8291939011e2faec9e8a07f47d4286cd71cc15c619a3e383b042e"
+      },
+      "original_report_sha256": "a372ff7e29a8291939011e2faec9e8a07f47d4286cd71cc15c619a3e383b042e",
+      "execution": {
+        "path": "theory-route/short-entry/execution.json",
+        "sha256": "c4d001e9de3e9c30c122f6672e00165e66e8ca8d14d65bed2f0dfbfc13be5060"
+      },
+      "adjudication": {
+        "path": "theory-route/short-entry/adjudication.json",
+        "sha256": "f3034613ccea1d441193515e03ea0c9d4232eb07a4dc934ab2eef18c22e540d6"
+      },
+      "grade_binds_original_report": "a372ff7e29a8291939011e2faec9e8a07f47d4286cd71cc15c619a3e383b042e",
+      "score": 100,
+      "max_score": 100,
+      "guidance_files": 2,
+      "whole_file_guidance_bytes": 7908,
+      "declared_outer_tool_calls": 13,
+      "finite_check_replay": {
+        "path": "theory-route/short-entry/replay.json",
+        "sha256": "b8cc7d35f9207d59ef672b538d1179f78dd1d92791bbac724aabac866443fc20"
+      },
+      "effective_model": null,
+      "measured_token_cost": null
+    }
+  ],
+  "read_byte_reduction_fraction": 0.6900403715752754,
+  "target_archive_sha256": "1bf658b7895711bf786b3cf415a3c47dc2b214a31bace1d82e5b22ef00849ff2",
+  "previous_archive_sha256": "55ef076d58a7b15865093ba6d2713ebf453c12bf8901a68ad6e517e9b3fcea8b",
+  "interpretation": "Observed read-path reduction with equal frozen-task AI scores; not statistical equivalence, token/cost/speed proof, automatic-host routing validation, or new mathematical certification.",
+  "original_task_reference": "evals/real-comparison/tasks/theory.md",
+  "reference_base": "repository-root",
+  "fresh_ai_blind_reviews": 2,
+  "human_experts": 0
+}

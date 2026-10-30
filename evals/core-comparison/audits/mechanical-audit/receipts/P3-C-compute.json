@@ -1,0 +1,17 @@
+{
+  "name": "P3-C-compute",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P3/numeric-C/project/scripts/compute.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P3/numeric-C/project",
+    "--output",
+    "STUDY_ROOT/mechanical-audit/P3/numeric-C/fresh-calculation"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P3/numeric-C/project",
+  "exit_code": 0,
+  "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P3/numeric-C/fresh-calculation/result.json\", \"parameters_sha256\": \"340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117\"}\n",
+  "stderr": ""
+}

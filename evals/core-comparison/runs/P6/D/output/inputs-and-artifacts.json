@@ -1,0 +1,577 @@
+{
+  "stage": "D",
+  "inputs": [
+    {
+      "scope": "project",
+      "path": ".gitignore",
+      "bytes": 89,
+      "sha256": "667251f02f98a2e7fb0aa017bfabcb3158cb09472d88d379ed47e11ca9dde3a7",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "RECOVER.md",
+      "bytes": 2283,
+      "sha256": "666302d1b0bdc26d605f635fb4bc814490bb375a16d32ea37188ee9c0889be81",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "data/hour_2011.csv",
+      "bytes": 568668,
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "model/frozen.json",
+      "bytes": 2320,
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "notes/parameters.json",
+      "bytes": 171,
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "notes/rejected-parameters.json",
+      "bytes": 171,
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "notes/source-check.md",
+      "bytes": 474,
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "notes/unregistered-scratch.md",
+      "bytes": 132,
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/initial/BRIEF.md",
+      "bytes": 1078,
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/initial/MANIFEST.json",
+      "bytes": 2329,
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/initial/constraints.json",
+      "bytes": 1070,
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/initial/obligations.json",
+      "bytes": 4723,
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/initial/source-identities.json",
+      "bytes": 1200,
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/task-A/PROTOCOL.md",
+      "bytes": 2279,
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/task-A/RECORDING.md",
+      "bytes": 1300,
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/task-A/STAGE-A.md",
+      "bytes": 1214,
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/task-C/PROTOCOL.md",
+      "bytes": 2279,
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/task-C/RECORDING.md",
+      "bytes": 1300,
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/task-C/STAGE-C.md",
+      "bytes": 761,
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/task-C/author-revision/AUTHOR-REVISION.md",
+      "bytes": 1443,
+      "sha256": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "provenance/task-C/author-revision/approved-parameters.json",
+      "bytes": 171,
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/.edit.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/checkpoint-C-final.json",
+      "bytes": 2933,
+      "sha256": "199bbb0d4a5b12d87e82888cc9faa36364a3d82ea2570d084be542a42623bb5b",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/commands-A.json",
+      "bytes": 16077,
+      "sha256": "1b84466dea513e1514643b53fbefc77c3512396fb3adab26722a765dbcb07105",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/commands-C.json",
+      "bytes": 8683,
+      "sha256": "76bdf9be427278c573fad8bd52e0876afc95ef8f9ce15082ea1f20e6edd4a4ce",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/drift-checkpoint-C.json",
+      "bytes": 2918,
+      "sha256": "3e77c5b5d884f320e944912b18717e9c1bda618d62179a96db75db66ecc6c611",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/final-check-C.json",
+      "bytes": 5367,
+      "sha256": "20ae9a0c6c248e9459caca664793cd97bbc5e2d10a511e319ca8e158ea1bbeef",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/guard-validation-A.json",
+      "bytes": 330,
+      "sha256": "04b88fdac1a4b08f30b5f172d0ddf67a8a4d112fe6ffe9e5eea87d1f261daaa9",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/initial-snapshots.json",
+      "bytes": 527,
+      "sha256": "9c6d5ced3ada9f4a8071078abe15756f22ae88c2a7f6baccb74caf20164e8769",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/inputs-A.json",
+      "bytes": 11713,
+      "sha256": "86b090d5fae2349d64380c5b426aaab93373be47848bfc527e15a652c0213a9d",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/intermediate-check-C.json",
+      "bytes": 5589,
+      "sha256": "d7f484d177b2de418297e9988b501d0d13488891df51708b6113ba051862883b",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/state.json",
+      "bytes": 22266,
+      "sha256": "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/validation-A.json",
+      "bytes": 8200,
+      "sha256": "b891b76e2b0264ab71feafe5df5144a870c146205690a829e3b89e6da4b92dce",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "records/validation-C.json",
+      "bytes": 2742,
+      "sha256": "680dc9bf34912de58d9f7a536151975e512c44b2930a363a33a3587d368bc93a",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "results/result.json",
+      "bytes": 999,
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "results/summary.md",
+      "bytes": 905,
+      "sha256": "0c178129e75f928b92f184ecb65231fbb0c96d333e7b43d1089dcc3908bdfe3d",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "results/table.csv",
+      "bytes": 203,
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "results-evaluations/C-approved/result.json",
+      "bytes": 999,
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "results-evaluations/C-approved/table.csv",
+      "bytes": 203,
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "scripts/compute.py",
+      "bytes": 4157,
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "scripts/guarded_state_update.py",
+      "bytes": 2642,
+      "sha256": "1459933f428b1cde70a7a475e7b41c74d3bd3e91a8a2ad46af821a94fac4206b",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "scripts/project_status.py",
+      "bytes": 4080,
+      "sha256": "2403ad240e0642c67e0de548a817b4d3a72663c551c27f8a8188c6637eaaf7ab",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/authority/v1-d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa.json",
+      "bytes": 19212,
+      "sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/authority/v2-d686169299fbbaa8ac8b39f246340f1c931a8b7fb66702d12295bee538b6fc43.json",
+      "bytes": 19622,
+      "sha256": "d686169299fbbaa8ac8b39f246340f1c931a8b7fb66702d12295bee538b6fc43",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/initial/notes/parameters.json",
+      "bytes": 171,
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/initial/results/result.json",
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/initial/results/summary.md",
+      "bytes": 280,
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/initial/results/table.csv",
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/RECOVER.md",
+      "bytes": 2824,
+      "sha256": "bab3b3d04c66872ae1983f26856e56a95ccd80b6eaca38a789db1a09ce6c7a97",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/data/hour_2011.csv",
+      "bytes": 568668,
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/manifest.json",
+      "bytes": 1532,
+      "sha256": "461ae0254f138cf9ccb23f6846bb024c7dfbcfb7f30dbe07bec6eb44619015fe",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/model/frozen.json",
+      "bytes": 2320,
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/notes/parameters.json",
+      "bytes": 171,
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/notes/source-check.md",
+      "bytes": 474,
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/records/state.json",
+      "bytes": 19212,
+      "sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/results/result.json",
+      "bytes": 1000,
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/results/summary.md",
+      "bytes": 280,
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/results/table.csv",
+      "bytes": 205,
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "project",
+      "path": "snapshots/stage-C-before-recompute/scripts/compute.py",
+      "bytes": 4157,
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "input",
+      "path": "PROTOCOL.md",
+      "bytes": 2279,
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "input",
+      "path": "RECORDING.md",
+      "bytes": 1300,
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "input",
+      "path": "STAGE-D.md",
+      "bytes": 638,
+      "sha256": "dfa746cb14e0f020d64aa8306241a5be177b56246b1f343be79144990c5674f2",
+      "read_scope": "entire bytes for identity; only selected text inspected semantically"
+    },
+    {
+      "scope": "request",
+      "path": "REQUEST.md",
+      "bytes": 2070,
+      "sha256": "50de1aa6aa2dd78c49c43e5daa407ffa10a62f0e3b45c8a864234700fca74913",
+      "read_scope": "full text"
+    }
+  ],
+  "output_versions_read": [
+    {
+      "scope": "current_output",
+      "path": "execution.json",
+      "bytes": 23023,
+      "sha256": "fa8dfa70da21e06cb303bd4e4c1e22d0adb35203ba55f2b2a893e3a47009e43e",
+      "read_scope": "entire bytes; this is the version observed before final manifest/log updates"
+    },
+    {
+      "scope": "current_output",
+      "path": "project-baseline.json",
+      "bytes": 13867,
+      "sha256": "222c2967a25d28523f0e782bfa833d95f41452b610bb6313d410dca8782baa4c",
+      "read_scope": "entire bytes; this is the version observed before final manifest/log updates"
+    },
+    {
+      "scope": "current_output",
+      "path": "read-manifest.json",
+      "bytes": 17083,
+      "sha256": "ca7a6a3d62654a1bc1c517c8ef7016f2c24efd2dad88ebfafd72af5828b4e863",
+      "read_scope": "entire bytes; this is the version observed before final manifest/log updates"
+    },
+    {
+      "scope": "current_output",
+      "path": "readonly-verification.json",
+      "bytes": 438,
+      "sha256": "3c8a04ec60ad71d338e240f7a66094f374dee6624d62ab2a5d92d36a10fd6039",
+      "read_scope": "entire bytes; this is the version observed before final manifest/log updates"
+    },
+    {
+      "scope": "current_output",
+      "path": "recovery-checks.json",
+      "bytes": 7429,
+      "sha256": "a7f11f73f1a8093f65dc35b9a0dca1e5c7060b77795966cece056be657d29140",
+      "read_scope": "entire bytes; this is the version observed before final manifest/log updates"
+    },
+    {
+      "scope": "current_output",
+      "path": "report.md",
+      "bytes": 6492,
+      "sha256": "3ef61b210240abb947a7f4eab0e143295c06775fd653553a80a3cb38bfbd93de",
+      "read_scope": "entire bytes; this is the version observed before final manifest/log updates"
+    },
+    {
+      "scope": "current_output",
+      "path": "state-answer.json",
+      "bytes": 4534,
+      "sha256": "74185d151ed0f73fda717bc6cec5ae751df45be00703bf5af27d63e2b8c362f7",
+      "read_scope": "entire bytes; this is the version observed before final manifest/log updates"
+    },
+    {
+      "scope": "current_output",
+      "path": "status-D.json",
+      "bytes": 5397,
+      "sha256": "528d5de393308e5aed28cd920dead2e857f692119a2e2408f0d4a03d756b7c46",
+      "read_scope": "entire bytes; this is the version observed before final manifest/log updates"
+    },
+    {
+      "scope": "current_output",
+      "path": "status-run.json",
+      "bytes": 436,
+      "sha256": "0ae80c75aa5efddb06de78e8c7b30de0a08de4b2390d5d221cb0914c059e4c60",
+      "read_scope": "entire bytes; this is the version observed before final manifest/log updates"
+    }
+  ],
+  "artifacts": [
+    {
+      "scope": "output",
+      "path": "execution.json",
+      "bytes": 26292,
+      "sha256": "5745c4acb5f79a3b32e1da8be11229779d210ab17c85aaf76738ce23f37fe1ce"
+    },
+    {
+      "scope": "output",
+      "path": "project-baseline.json",
+      "bytes": 13867,
+      "sha256": "222c2967a25d28523f0e782bfa833d95f41452b610bb6313d410dca8782baa4c"
+    },
+    {
+      "scope": "output",
+      "path": "read-manifest.json",
+      "bytes": 19523,
+      "sha256": "a9bb313bb2b1d013d3aef8f4457325046c5d4030ea5965d7d854897c41631e47"
+    },
+    {
+      "scope": "output",
+      "path": "readonly-verification.json",
+      "bytes": 438,
+      "sha256": "3c8a04ec60ad71d338e240f7a66094f374dee6624d62ab2a5d92d36a10fd6039"
+    },
+    {
+      "scope": "output",
+      "path": "recovery-checks.json",
+      "bytes": 7429,
+      "sha256": "a7f11f73f1a8093f65dc35b9a0dca1e5c7060b77795966cece056be657d29140"
+    },
+    {
+      "scope": "output",
+      "path": "report.md",
+      "bytes": 6492,
+      "sha256": "3ef61b210240abb947a7f4eab0e143295c06775fd653553a80a3cb38bfbd93de"
+    },
+    {
+      "scope": "output",
+      "path": "state-answer.json",
+      "bytes": 4534,
+      "sha256": "74185d151ed0f73fda717bc6cec5ae751df45be00703bf5af27d63e2b8c362f7"
+    },
+    {
+      "scope": "output",
+      "path": "status-D.json",
+      "bytes": 5397,
+      "sha256": "528d5de393308e5aed28cd920dead2e857f692119a2e2408f0d4a03d756b7c46"
+    },
+    {
+      "scope": "output",
+      "path": "status-run.json",
+      "bytes": 436,
+      "sha256": "0ae80c75aa5efddb06de78e8c7b30de0a08de4b2390d5d221cb0914c059e4c60"
+    }
+  ],
+  "self_hash_excluded": "inputs-and-artifacts.json to avoid recursive content hash",
+  "redistribution": "No source CSV/PDF copied into output; only project identities, fingerprints, state summaries and checks are delivered.",
+  "allowed_roots_used": [
+    "current input",
+    "REQUEST.md",
+    "moved project",
+    "current output",
+    "common Python runtime"
+  ],
+  "network_calls": 0
+}

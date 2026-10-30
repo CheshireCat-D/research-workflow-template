@@ -1,0 +1,264 @@
+{
+  "case_id": "T",
+  "stage": "D",
+  "project_root": "PROJECT_ROOT",
+  "authoritative_state": ".research/state.json",
+  "authority_revision": 2,
+  "active_constraints": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 4.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "将 alpha=0.05、rho=4（观察前固定）、v=[0,1,10,100] 的边界表 results/table.csv 与更新摘要 results/summary.md 交作者内容复核；暂不扩展到事后选择 rho。尚无人类专家认可、目标期刊未定且未经投稿授权，不执行投稿。",
+  "next_action_executed": false,
+  "changed_or_missing_paths": {
+    "changed": [],
+    "missing": []
+  },
+  "affected_activities": {
+    "historically_affected_by_rho_revision": [
+      "T-CALC",
+      "T-SYNTH"
+    ],
+    "currently_needing_recheck": []
+  },
+  "unaffected_activities": [
+    "T-SOURCE-CHECK"
+  ],
+  "activities": {
+    "T-SOURCE-CHECK": {
+      "recorded_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "T-CALC": {
+      "recorded_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "T-SYNTH": {
+      "recorded_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    }
+  },
+  "checkpoint_freshness": {
+    "current": "fresh_for_registered_bytes",
+    "final_checkpoint_archived_files_match_index": true,
+    "final_checkpoint_matches_current": true,
+    "checkpoint_is_scientific_revalidation": false,
+    "historical_intermediate": {
+      "exit_code": 0,
+      "checkpoint_freshness": "fresh_for_registered_bytes",
+      "activities": {
+        "T-SOURCE-CHECK": {
+          "recorded_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        },
+        "T-CALC": {
+          "recorded_status": "done",
+          "effective_status": "needs_recheck",
+          "reasons": [
+            "missing or changed material: notes/parameters.json"
+          ]
+        },
+        "T-SYNTH": {
+          "recorded_status": "done",
+          "effective_status": "needs_recheck",
+          "reasons": [
+            "dependency needs recheck: T-CALC"
+          ]
+        }
+      }
+    }
+  },
+  "scientific_scope": {
+    "id": "T-CLAIM",
+    "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "scope": "l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha=0.05 total two-sided budget; rho=4 fixed before observations; v=[0,1,10,100]; numerical evaluation only."
+  },
+  "source_tracking_limits": {
+    "source_only": [
+      "T-REMOTE"
+    ],
+    "excluded_unregistered_paths": [
+      "notes/unregistered-scratch.md"
+    ],
+    "all_project_files_covered": false,
+    "note": "Scratch is retained but is not a declared scientific dependency. Hash inventory is not scientific review. Remote identity metadata does not monitor content."
+  },
+  "source_access": {
+    "T-SRC": {
+      "status": "local_fixed_identity_checked",
+      "local_path": "sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "actual_read_scope": "Whole local PDF read as bytes for SHA256 and manifest binding only. No PDF text extraction, page inspection, or independent theorem review. Title/version/DOI and page references are supplied metadata/card assertions."
+    },
+    "T-REMOTE": {
+      "status": "metadata-only",
+      "local_copy": null,
+      "live_access": false,
+      "content_binding": false
+    }
+  },
+  "material_paths": {
+    "T-RAW": [
+      "sources/howard2021-arxiv-v9.pdf"
+    ],
+    "T-PARAM": [
+      "notes/parameters.json"
+    ],
+    "T-CODE": [
+      "scripts/compute.py"
+    ],
+    "T-RESULT": [
+      "results/result.json",
+      "results/table.csv"
+    ],
+    "T-SUMMARY": [
+      "results/summary.md"
+    ],
+    "T-SOURCE-NOTE": [
+      "notes/source-check.md"
+    ]
+  },
+  "history": {
+    "initial_versions": {
+      "notes/parameters.json": {
+        "version": "A-initial",
+        "content_path": ".research/versions/A-initial/notes/parameters.json",
+        "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+        "bytes": 161,
+        "rationale": "Exact supplied initial bytes preserved before any future revision."
+      },
+      "results/result.json": {
+        "version": "A-initial",
+        "content_path": ".research/versions/A-initial/results/result.json",
+        "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+        "bytes": 704,
+        "rationale": "Exact supplied initial bytes preserved before any future revision."
+      },
+      "results/table.csv": {
+        "version": "A-initial",
+        "content_path": ".research/versions/A-initial/results/table.csv",
+        "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+        "bytes": 101,
+        "rationale": "Exact supplied initial bytes preserved before any future revision."
+      },
+      "results/summary.md": {
+        "version": "A-initial",
+        "content_path": ".research/versions/A-initial/results/summary.md",
+        "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+        "bytes": 295,
+        "rationale": "Exact supplied initial bytes preserved before any future revision."
+      }
+    },
+    "revision_history": [
+      {
+        "stage": "C",
+        "from_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 1.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "to_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "rationale": "Explicit stage C author instruction accepts rho=4 as another positive rho fixed before observations; alpha and fixed-before-observation policy unchanged. This author instruction is not expert content approval.",
+        "author_instruction": ".research/provenance/C/author-revision/AUTHOR-REVISION.md",
+        "old_exact_contents": ".research/checkpoints/C-drift-before-recompute/files",
+        "initial_exact_contents": ".research/versions/A-initial",
+        "affected_activities": [
+          "T-CALC",
+          "T-SYNTH"
+        ],
+        "independent_unchanged_activity": "T-SOURCE-CHECK"
+      }
+    ],
+    "author_revision": ".research/provenance/C/author-revision/",
+    "initial_contents": ".research/versions/A-initial/",
+    "drift_contents": ".research/checkpoints/C-drift-before-recompute/files/",
+    "current_checkpoint": ".research/checkpoints/C-final-verified/",
+    "historical_rejected_operation": {
+      "path": ".research/evidence/A/rejected-execution.json",
+      "exit_code": 2,
+      "current_stage_failure": false
+    }
+  },
+  "author_review": {
+    "status": "not_occurred",
+    "submission_authorized": false,
+    "venue": null
+  },
+  "retained_runtime": {
+    "status_script": "scripts/manage.py",
+    "calculator": "scripts/compute.py",
+    "external_toolkit_required": false,
+    "third_party_packages_required": false,
+    "runtime": "common Python standard library",
+    "minimum_for_guarded_restore": "3.9",
+    "old_location_accessed": false
+  },
+  "readonly": {
+    "all_files_and_directories_unchanged": true,
+    "file_count": 87,
+    "directory_count": 43,
+    "comparison_fields": [
+      "path",
+      "type",
+      "mtime_ns",
+      "size",
+      "sha256 for files"
+    ],
+    "scientific_recomputation_performed": false
+  },
+  "notes": [
+    "No scientific recomputation or next action executed.",
+    "All historical content read only from the migrated project.",
+    "Primary PDF access was whole-byte hashing only.",
+    "No missing runtime material was inferred from old chats or external answers."
+  ]
+}

@@ -221,8 +221,8 @@ def record_files(files, registry):
     return values
 
 
-def inspect(files):
-    project, registry, project_raw, registry_raw = load(files)
+def _inspect_state(files, project, registry, project_raw):
+    """Inspect an explicit registry candidate without loading or writing metadata."""
     findings, warnings, file_values = [], [], {}
     for kind, identifier, entry in items(registry):
         path = local_path(kind, entry['data'])
@@ -265,8 +265,6 @@ def inspect(files):
             changed.append('local-files')
         if changed:
             findings.append({'code': 'checkpoint_stale', 'changed': changed})
-    if files.read('project.json') != project_raw or files.read(REGISTRY) != registry_raw:
-        raise CoreError('concurrent_change', 'Metadata changed during the read-only inspection; retry')
     return {
         'scope': SCOPE, 'schema_version': SCHEMA_VERSION, 'project_id': project['project_id'],
         'revision': registry['revision'], 'passed': not findings, 'read_only': True,
@@ -279,6 +277,29 @@ def inspect(files):
                        'status': ('stale' if changed else 'current') if checkpoint else 'not-recorded',
                        'changed': changed},
     }
+
+
+def _unchanged_metadata(files, project_raw, registry_raw):
+    if files.read('project.json') != project_raw or files.read(REGISTRY) != registry_raw:
+        raise CoreError('concurrent_change', 'Metadata changed during the inspection; retry')
+
+
+def inspect(files):
+    project, registry, project_raw, registry_raw = load(files)
+    result = _inspect_state(files, project, registry, project_raw)
+    _unchanged_metadata(files, project_raw, registry_raw)
+    return result
+
+
+def recovery_view(snapshot):
+    """Add recovery guidance to a copied inspection snapshot, without I/O."""
+    result = deepcopy(snapshot)
+    result['next_action'] = result['cursor']['next_action']
+    result['needs_review'] = not result['passed']
+    result['recovery_instruction'] = (
+        'Review changed inputs and affected activities before following the saved next action.'
+        if not result['passed'] else 'Continue the recorded next action within its existing scope.')
+    return result
 
 
 def initialize(output, title, *, interest=None, disciplines=(), methods=(), mode='light', language='zh', entry='question'):
@@ -372,19 +393,71 @@ def _apply_registration(files, project, updated, kind, data, *, replace=False, e
             'revision': updated['revision'], 'scientific_validity': 'not-assessed', 'scope': SCOPE}
 
 
-def register(root, kind, data, *, replace=False, expected_version=None):
+def _checkpoint_request(next_action, activity, note):
+    if next_action is None:
+        if activity is not None or note is not None:
+            raise CoreError('arguments', 'activity and note require a next action')
+    elif not isinstance(next_action, str) or not next_action.strip():
+        raise CoreError('empty_next_action', 'A concrete next action is required')
+
+
+def _apply_checkpoint(files, project_raw, updated, next_action, *, activity=None, note=None):
+    """Bind a checkpoint on a private registry candidate, without committing it."""
+    if activity is not None and activity not in updated['records']['activities']:
+        raise CoreError('missing_reference', 'Unknown checkpoint activity')
+    updated['cursor'] = {'activity_id': activity, 'next_action': next_action}
+    try:
+        fingerprints = record_files(files, updated)
+    except FileNotFoundError as exc:
+        raise CoreError('file_missing', 'Cannot checkpoint a missing local resource') from exc
+    updated['checkpoint'] = {'created_at': now(), 'config_sha256': sha(project_raw),
+                             'records_sha256': object_sha(updated['records']),
+                             'files': fingerprints, 'note': note or 'Recovery checkpoint; not scientific certification.'}
+    updated['revision'] += 1
+    updated['history'].append({'revision': updated['revision'], 'at': now(), 'action': 'checkpoint',
+                               'kind': None, 'id': None, 'previous': None})
+    require(validate_registry(updated))
+
+
+def _checkpoint_report(files, project, updated, project_raw, registry_raw,
+                       next_action, *, activity=None, note=None):
+    """Complete every fallible checkpoint/inspection step before the sole write."""
+    _apply_checkpoint(files, project_raw, updated, next_action, activity=activity, note=note)
+    serialized = json_bytes(updated)
+    recovery = recovery_view(_inspect_state(files, project, updated, project_raw))
+    _unchanged_metadata(files, project_raw, registry_raw)
+    return serialized, recovery
+
+
+def _saved_recovery(result, updated, recovery):
+    result.update(checkpoint_saved=True, revision=updated['revision'], read_only=False,
+                  recovery=recovery, passed=recovery['passed'])
+    return result
+
+
+def register(root, kind, data, *, replace=False, expected_version=None,
+             next_action=None, activity=None, note=None):
     require_record(kind, data)
+    _checkpoint_request(next_action, activity, note)
     with ProjectFiles(root) as files, files.lock():
-        project, registry, _, _ = load(files)
+        project, registry, project_raw, registry_raw = load(files)
         updated = deepcopy(registry)
         result = _apply_registration(files, project, updated, kind, data, replace=replace,
                                      expected_version=expected_version)
-        files.write(REGISTRY, json_bytes(updated))
+        if next_action is not None:
+            serialized, recovery = _checkpoint_report(
+                files, project, updated, project_raw, registry_raw, next_action,
+                activity=activity, note=note)
+            _saved_recovery(result, updated, recovery)
+        else:
+            serialized = json_bytes(updated)
+        files.write(REGISTRY, serialized)
         return result
 
 
-def register_batch(root, operations):
+def register_batch(root, operations, *, next_action=None, activity=None, note=None):
     """Commit an ordered batch through one writer lock and one registry replace."""
+    _checkpoint_request(next_action, activity, note)
     if not isinstance(operations, list) or not operations:
         raise CoreError('invalid_batch', 'A batch must be a nonempty JSON array')
     for operation in operations:
@@ -397,20 +470,39 @@ def register_batch(root, operations):
     with ProjectFiles(root) as files:
         load(files)  # Invalid projects must not gain a new writer lock.
         with files.lock():
-            project, registry, _, _ = load(files)
+            project, registry, project_raw, registry_raw = load(files)
             updated, results = deepcopy(registry), []
             for operation in operations:
                 results.append(_apply_registration(
                     files, project, updated, operation['kind'], operation['record'],
                     replace=operation.get('replace', False),
                     expected_version=operation.get('expected_version')))
-            files.write(REGISTRY, json_bytes(updated))
-            return {'registered': True, 'registered_count': len(results), 'records': results,
-                    'revision': updated['revision'], 'scientific_validity': 'not-assessed', 'scope': SCOPE}
+            result = {'registered': True, 'registered_count': len(results), 'records': results,
+                      'revision': updated['revision'], 'scientific_validity': 'not-assessed', 'scope': SCOPE}
+            if next_action is not None:
+                serialized, recovery = _checkpoint_report(
+                    files, project, updated, project_raw, registry_raw, next_action,
+                    activity=activity, note=note)
+                _saved_recovery(result, updated, recovery)
+            else:
+                serialized = json_bytes(updated)
+            files.write(REGISTRY, serialized)
+            return result
 
 
-def show(root, *, kind=None, identifier=None, data_only=False):
+def show(root, *, kind=None, identifier=None, data_only=False, edit_refs=None):
     """Read registered envelopes or version summaries, without taking a writer lock."""
+    if edit_refs is not None:
+        if kind is not None or identifier is not None or data_only:
+            raise CoreError('arguments', 'Edit references cannot be combined with kind, id or data-only')
+        if not isinstance(edit_refs, (list, tuple)) or not edit_refs:
+            raise CoreError('arguments', 'Edit references must be a nonempty list of typed references')
+        for reference in edit_refs:
+            if (not isinstance(reference, str) or reference.count(':') != 1 or
+                    reference.split(':', 1)[0] not in RECORD_KINDS or not reference.split(':', 1)[1]):
+                raise CoreError('arguments', 'Edit references must have the form KIND:ID')
+        if len(set(edit_refs)) != len(edit_refs):
+            raise CoreError('arguments', 'Edit references must not repeat')
     if identifier is not None and kind is None:
         raise CoreError('arguments', '--id requires --kind')
     if kind is not None and kind not in RECORD_KINDS:
@@ -419,6 +511,15 @@ def show(root, *, kind=None, identifier=None, data_only=False):
         raise CoreError('arguments', '--data-only requires --kind and --id')
     with ProjectFiles(root) as files:
         project, registry, project_raw, registry_raw = load(files)
+        if edit_refs is not None:
+            result = []
+            for reference in edit_refs:
+                record_kind, _ = reference.split(':', 1)
+                entry = envelope(registry, reference)
+                result.append({'kind': record_kind, 'record': deepcopy(entry['data']),
+                               'replace': True, 'expected_version': entry['version']})
+            _unchanged_metadata(files, project_raw, registry_raw)
+            return result
         result = {'passed': True, 'read_only': True, 'scope': SCOPE,
                   'scientific_validity': 'not-assessed', 'project_id': project['project_id'],
                   'revision': registry['revision']}
@@ -498,26 +599,23 @@ def configure(root, *, add_disciplines=(), add_methods=(), mode=None, venue=None
             return result(updated, registry, new_bytes, changed)
 
 
-def checkpoint(root, next_action, *, activity=None, note=None):
-    if not next_action.strip():
+def checkpoint(root, next_action, *, activity=None, note=None, with_recovery=False):
+    _checkpoint_request(next_action, activity, note)
+    if next_action is None:
         raise CoreError('empty_next_action', 'A concrete next action is required')
     with ProjectFiles(root) as files, files.lock():
-        project, registry, project_raw, _ = load(files)
-        if activity is not None and activity not in registry['records']['activities']:
-            raise CoreError('missing_reference', 'Unknown checkpoint activity')
+        project, registry, project_raw, registry_raw = load(files)
         updated = deepcopy(registry)
-        updated['cursor'] = {'activity_id': activity, 'next_action': next_action}
-        try:
-            fingerprints = record_files(files, updated)
-        except FileNotFoundError as exc:
-            raise CoreError('file_missing', 'Cannot checkpoint a missing local resource') from exc
-        updated['checkpoint'] = {'created_at': now(), 'config_sha256': sha(project_raw),
-                                 'records_sha256': object_sha(updated['records']),
-                                 'files': fingerprints, 'note': note or 'Recovery checkpoint; not scientific certification.'}
-        updated['revision'] += 1
-        updated['history'].append({'revision': updated['revision'], 'at': now(), 'action': 'checkpoint',
-                                   'kind': None, 'id': None, 'previous': None})
-        require(validate_registry(updated))
-        files.write(REGISTRY, json_bytes(updated))
-        return {'checkpoint_saved': True, 'revision': updated['revision'],
-                'cursor': updated['cursor'], 'scientific_validity': 'not-assessed', 'scope': SCOPE}
+        if with_recovery:
+            serialized, recovery = _checkpoint_report(
+                files, project, updated, project_raw, registry_raw, next_action,
+                activity=activity, note=note)
+        else:
+            _apply_checkpoint(files, project_raw, updated, next_action, activity=activity, note=note)
+            serialized = json_bytes(updated)
+        result = {'checkpoint_saved': True, 'revision': updated['revision'],
+                  'cursor': updated['cursor'], 'scientific_validity': 'not-assessed', 'scope': SCOPE}
+        if with_recovery:
+            _saved_recovery(result, updated, recovery)
+        files.write(REGISTRY, serialized)
+        return result

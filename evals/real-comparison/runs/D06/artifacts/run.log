@@ -1,0 +1,230 @@
+{
+  "audit": {
+    "hour_rows": 8645,
+    "day_rows": 365,
+    "hour_columns": [
+      "instant",
+      "dteday",
+      "season",
+      "yr",
+      "mnth",
+      "hr",
+      "holiday",
+      "weekday",
+      "workingday",
+      "weathersit",
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed",
+      "casual",
+      "registered",
+      "cnt"
+    ],
+    "day_columns": [
+      "instant",
+      "dteday",
+      "season",
+      "yr",
+      "mnth",
+      "holiday",
+      "weekday",
+      "workingday",
+      "weathersit",
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed",
+      "casual",
+      "registered",
+      "cnt"
+    ],
+    "date_start": "2011-01-01",
+    "date_end": "2011-12-31",
+    "hour_date_count": 365,
+    "day_date_count": 365,
+    "hour_duplicate_keys": 0,
+    "day_duplicate_keys": 0,
+    "hour_duplicate_full_rows": 0,
+    "day_duplicate_full_rows": 0,
+    "hour_empty_cells": 0,
+    "day_empty_cells": 0,
+    "hour_count_identity_failures": 0,
+    "day_count_identity_failures": 0,
+    "hour_count_negative_values": 0,
+    "hour_out_of_range": 0,
+    "hour_yr_values": [
+      0
+    ],
+    "day_yr_values": [
+      0
+    ],
+    "hour_wrong_calendar_year": 0,
+    "day_wrong_calendar_year": 0,
+    "hour_count_distribution": {
+      "8": 1,
+      "12": 1,
+      "16": 1,
+      "17": 1,
+      "18": 2,
+      "22": 6,
+      "23": 48,
+      "24": 305
+    },
+    "complete_24h_dates": 305,
+    "missing_calendar_hours": 115,
+    "missing_whole_dates": [],
+    "hour_only_dates": [],
+    "day_only_dates": [],
+    "daily_count_mismatches": [],
+    "calendar_field_mismatches": [],
+    "source_sha256": {
+      "TASK.md": "d27a3abf88230bc2b78833d573da380ba6260f83f6dbb077f26fa171e2042ceb",
+      "SOURCES.md": "647a33e2683dbc60dfcbcf2e2873185aea94f7bfee49d6a3e3b3eacd6d85a786",
+      "ORIGINAL_README.txt": "b92c8628622948bf0828c43a1b315d1517c3d7fd63654730d0dea379b8e88175",
+      "UCI_PAGE_EXCERPT.txt": "06797117bf42c99729802c59237e8884610e8a7a9ad3e256ca6b0a7f5dff7115",
+      "INPUT_MANIFEST.json": "84d74db7b66f0a45f407372553324591095abe121f784a1331ca9dfc4a252d8c",
+      "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "data/day_2011.csv": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b"
+    },
+    "manifest_checks": {
+      "data/hour_2011.csv": {
+        "hash_match": true,
+        "rows_match": true
+      },
+      "data/day_2011.csv": {
+        "hash_match": true,
+        "rows_match": true
+      }
+    }
+  },
+  "results": {
+    "overall": {
+      "n_hours": 2203,
+      "n_dates": 92,
+      "date_start": "2011-10-01",
+      "date_end": "2011-12-31",
+      "C0": {
+        "MAE": 58.825190494512434,
+        "RMSE": 86.08056895633848,
+        "bias_prediction_minus_actual": 1.078965171773347,
+        "day_equal_MAE": 58.848612994531926
+      },
+      "C1": {
+        "MAE": 44.570832407531775,
+        "RMSE": 67.99996906089847,
+        "bias_prediction_minus_actual": 0.9871531155146787,
+        "day_equal_MAE": 44.62015379783553
+      },
+      "hour_weighted_absolute_improvement": 14.254358086980659,
+      "hour_weighted_relative_improvement": 0.24231724482575867,
+      "day_equal_absolute_improvement": 14.228459196696399,
+      "day_equal_relative_improvement": 0.24178070599588253,
+      "C1_fallback_rows": 0
+    },
+    "complete_24h_dates": {
+      "n_hours": 2088,
+      "n_dates": 87,
+      "date_start": "2011-10-01",
+      "date_end": "2011-12-31",
+      "C0": {
+        "MAE": 58.25551221817632,
+        "RMSE": 85.46995638895245,
+        "bias_prediction_minus_actual": -1.9402373790969112,
+        "day_equal_MAE": 58.25551221817632
+      },
+      "C1": {
+        "MAE": 43.37124548933945,
+        "RMSE": 66.34386467313968,
+        "bias_prediction_minus_actual": -2.0303810549520023,
+        "day_equal_MAE": 43.37124548933945
+      },
+      "hour_weighted_absolute_improvement": 14.88426672883687,
+      "hour_weighted_relative_improvement": 0.25549971431189,
+      "day_equal_absolute_improvement": 14.88426672883687,
+      "day_equal_relative_improvement": 0.25549971431189,
+      "C1_fallback_rows": 0
+    },
+    "by_workingday": {
+      "0": {
+        "n_hours": 742,
+        "n_dates": 31,
+        "date_start": "2011-10-01",
+        "date_end": "2011-12-31",
+        "C0": {
+          "MAE": 81.15601440711939,
+          "RMSE": 109.2968064715611,
+          "bias_prediction_minus_actual": 6.291172350904271,
+          "day_equal_MAE": 81.21663142660834
+        },
+        "C1": {
+          "MAE": 50.626250699049855,
+          "RMSE": 74.70678158635515,
+          "bias_prediction_minus_actual": 5.511023568715348,
+          "day_equal_MAE": 50.766035692985085
+        },
+        "hour_weighted_absolute_improvement": 30.52976370806953,
+        "hour_weighted_relative_improvement": 0.37618608960904465,
+        "day_equal_absolute_improvement": 30.45059573362326,
+        "day_equal_relative_improvement": 0.37493054315038954,
+        "C1_fallback_rows": 0
+      },
+      "1": {
+        "n_hours": 1461,
+        "n_dates": 61,
+        "date_start": "2011-10-03",
+        "date_end": "2011-12-30",
+        "C0": {
+          "MAE": 47.48400545470794,
+          "RMSE": 71.45765762651197,
+          "bias_prediction_minus_actual": -1.5681653736853425,
+          "day_equal_MAE": 47.48125936511604
+        },
+        "C1": {
+          "MAE": 41.495459120532175,
+          "RMSE": 64.32657600992741,
+          "bias_prediction_minus_actual": -1.3103909476440463,
+          "day_equal_MAE": 41.49683676915296
+        },
+        "hour_weighted_absolute_improvement": 5.988546334175766,
+        "hour_weighted_relative_improvement": 0.12611712674255904,
+        "day_equal_absolute_improvement": 5.984422595963082,
+        "day_equal_relative_improvement": 0.1260375709486714,
+        "C1_fallback_rows": 0
+      }
+    },
+    "bootstrap": {
+      "7": {
+        "block_length_days": 7,
+        "B": 2000,
+        "seed": 20261029,
+        "D": 92,
+        "quantile_rule": "sorted linear interpolation at (B-1)*p",
+        "absolute_improvement_95ci": [
+          10.800923355912134,
+          17.578081630439435
+        ],
+        "relative_improvement_95ci": [
+          0.17071940679252828,
+          0.3148328823524696
+        ]
+      },
+      "28": {
+        "block_length_days": 28,
+        "B": 2000,
+        "seed": 20261029,
+        "D": 92,
+        "quantile_rule": "sorted linear interpolation at (B-1)*p",
+        "absolute_improvement_95ci": [
+          9.815819623823897,
+          18.33421270659497
+        ],
+        "relative_improvement_95ci": [
+          0.15571346410314052,
+          0.325449081470458
+        ]
+      }
+    }
+  },
+  "report_characters": 4216
+}

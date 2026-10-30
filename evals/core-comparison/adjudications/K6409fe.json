@@ -1,0 +1,551 @@
+{
+  "submission_id": "K6409fe",
+  "chain_id": "P4",
+  "case_id": "D",
+  "scored": true,
+  "arm_hidden": true,
+  "report_sha256_by_stage": {
+    "A": "a080b7e37bc62c95bb8ed5272f1e68397fdb5da3d34ac25be27d37ee17756c26",
+    "B": "f5720f4c5b5a1e4d7a3a0f76634ce404de1f07f921ee1ac8f2b1daad36870a2a",
+    "C": "d1ae900c2b6c199210bd14d0aa64531ee000e7a89c0ce7be6b56ab88f6ed2f63",
+    "D": "51c97c7f1b9d3076895c18f00cabccae5fb24a01fa68b34dfd52e27252f6aee1"
+  },
+  "criteria": [
+    {
+      "id": "A-materials",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "A/project/context/source-identities.json; A/project/validation/stage-A/source-verification.json; A/project/records/registry.json sources/evidence; audit/verification.json immutable_inputs_all_stages | A/project/records/registry.json: D-RAW→D-SRC, D-REL, D-CHOICE, D-RESULT, D-TABLE, D-SUMMARY; activities D-CALC/D-SYNTH/D-SOURCE-CHECK | A/project/records/registry.json revision 22 and v1 records; A/project/history/stage-A-initial/; audit/verification.json current_bindings.A",
+      "rationale": "2/2：本地原始切片、参数、代码、模型及成果均有完整SHA和相对路径；来源DOI、8645行切片的实际解析范围、远端仅身份范围及助手/本地程序执行者如实区分。；2/2：来源、证据、主张、限定关系、选择、成果及活动分开；计算输入与结果/表、摘要及CALC→SYNTH依赖完整，独立来源分支未依赖评价窗口。；2/2：登记与版本持久化，所有当前文件绑定核对无差异，初始四份内容实际保存；不是只在报告中声称登记。",
+      "components": [
+        {
+          "meaning": "Actual local/source identities and truthful access scope",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "A/project/context/source-identities.json; A/project/validation/stage-A/source-verification.json; A/project/records/registry.json sources/evidence; audit/verification.json immutable_inputs_all_stages",
+          "rationale": "本地原始切片、参数、代码、模型及成果均有完整SHA和相对路径；来源DOI、8645行切片的实际解析范围、远端仅身份范围及助手/本地程序执行者如实区分。"
+        },
+        {
+          "meaning": "Required direct/transitive associations with equivalent logical IDs",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "A/project/records/registry.json: D-RAW→D-SRC, D-REL, D-CHOICE, D-RESULT, D-TABLE, D-SUMMARY; activities D-CALC/D-SYNTH/D-SOURCE-CHECK",
+          "rationale": "来源、证据、主张、限定关系、选择、成果及活动分开；计算输入与结果/表、摘要及CALC→SYNTH依赖完整，独立来源分支未依赖评价窗口。"
+        },
+        {
+          "meaning": "Durable records and actual version identity",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "A/project/records/registry.json revision 22 and v1 records; A/project/history/stage-A-initial/; audit/verification.json current_bindings.A",
+          "rationale": "登记与版本持久化，所有当前文件绑定核对无差异，初始四份内容实际保存；不是只在报告中声称登记。"
+        }
+      ]
+    },
+    {
+      "id": "A-results",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "A/project/validation/stage-A/comparison.json normal_command exit_code=0; A/project/validation/stage-A/03-normal-calculation.stdout; A/deliverables/validation-normal/; audit/verification.json calculator_reproduction.A | A/project/results/result.json, table.csv, summary.md; A/project/validation/stage-A/comparison.json; audit/verification.json calculator_reproduction.A",
+      "rationale": "2/2：原阶段正常参数真实执行留有命令、退出0、原始输出与数值产物；本次只在副本独立重跑原计算器复现相同结果。；2/2：2203小时/92日及全部指标与reference绝对容差1e-10一致，表逐字节匹配重跑输出；参数与不可变输入SHA均正确，描述性/不重训/不作因果或未来保证范围准确。",
+      "components": [
+        {
+          "meaning": "Actual normal-parameter execution",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "A/project/validation/stage-A/comparison.json normal_command exit_code=0; A/project/validation/stage-A/03-normal-calculation.stdout; A/deliverables/validation-normal/; audit/verification.json calculator_reproduction.A",
+          "rationale": "原阶段正常参数真实执行留有命令、退出0、原始输出与数值产物；本次只在副本独立重跑原计算器复现相同结果。"
+        },
+        {
+          "meaning": "Numeric/table agreement and valid scope",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "A/project/results/result.json, table.csv, summary.md; A/project/validation/stage-A/comparison.json; audit/verification.json calculator_reproduction.A",
+          "rationale": "2203小时/92日及全部指标与reference绝对容差1e-10一致，表逐字节匹配重跑输出；参数与不可变输入SHA均正确，描述性/不重训/不作因果或未来保证范围准确。"
+        }
+      ]
+    },
+    {
+      "id": "A-constraints",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "A/project/project.json; A/project/context/constraints.json; A/project/RECOVERY.md | A/project/records/registry.json cursor.next_action; A/project/PROJECT.md; A/project/RECOVERY.md",
+      "rationale": "2/2：截止2026-12-15、离线标准库、既有资料、禁止重训/新数据、语言中文、期刊未定及无人类认可/投稿授权均可从项目恢复，原始Q4范围保存。；2/2：已实际核对Q4指标和摘要后交作者讨论的具体下一步，以及先恢复核对、遇漂移先留档复核的条件明确持久化；没有提前执行讨论。",
+      "components": [
+        {
+          "meaning": "Given constraints actually persisted",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "A/project/project.json; A/project/context/constraints.json; A/project/RECOVERY.md",
+          "rationale": "截止2026-12-15、离线标准库、既有资料、禁止重训/新数据、语言中文、期刊未定及无人类认可/投稿授权均可从项目恢复，原始Q4范围保存。"
+        },
+        {
+          "meaning": "Concrete next action and scope persisted",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "A/project/records/registry.json cursor.next_action; A/project/PROJECT.md; A/project/RECOVERY.md",
+          "rationale": "已实际核对Q4指标和摘要后交作者讨论的具体下一步，以及先恢复核对、遇漂移先留档复核的条件明确持久化；没有提前执行讨论。"
+        }
+      ]
+    },
+    {
+      "id": "A-recovery",
+      "score": 3,
+      "max_points": 3,
+      "evidence": "A/project/PROJECT.md; A/project/RECOVERY.md; A/project/project.json; A/project/records/registry.json | A/project/RECOVERY.md; A/project/.agents/skills/_rw-runtime/; A/deliverables/logs/10-portable-resume.stdout",
+      "rationale": "2/2：入口清楚指向配置与登记权威，并声明旧说明不能覆盖后续有效版本，所需材料与实际核验在项目内。；1/1：恢复命令使用项目相对运行资源并显式root，未要求旧聊天；项目内保留完整所需资源，后续迁移副本运行亦成功。",
+      "components": [
+        {
+          "meaning": "Discoverable authoritative current state",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "A/project/PROJECT.md; A/project/RECOVERY.md; A/project/project.json; A/project/records/registry.json",
+          "rationale": "入口清楚指向配置与登记权威，并声明旧说明不能覆盖后续有效版本，所需材料与实际核验在项目内。"
+        },
+        {
+          "meaning": "Usable recovery entry or instructions",
+          "max_points": 1,
+          "score": 1,
+          "evidence": "A/project/RECOVERY.md; A/project/.agents/skills/_rw-runtime/; A/deliverables/logs/10-portable-resume.stdout",
+          "rationale": "恢复命令使用项目相对运行资源并显式root，未要求旧聊天；项目内保留完整所需资源，后续迁移副本运行亦成功。"
+        }
+      ]
+    },
+    {
+      "id": "A-failure",
+      "score": 3,
+      "max_points": 3,
+      "evidence": "A/project/validation/stage-A/comparison.json controlled_invalid_command; A/project/validation/stage-A/04-controlled-invalid-calculation.stderr; audit/verification.json invalid_reproduction | A/project/validation/stage-A/comparison.json controlled_invalid_test; raw stdout/stderr; A/deliverables/logs/04-controlled-invalid-calculation.* | A/project/validation/stage-A/comparison.json protected_before/protected_after and invalid_output_created=false; audit/verification.json invalid_reproduction",
+      "rationale": "1/1：起点晚于终点的受控输入实际返回2及明确ValueError；本次在副本复现退出2。；1/1：原始错误、退出和输入身份保留，且明确为预期负例而非科学失败；未把失败重写成成功。；1/1：原有效参数和规范成果在负例前后SHA相同，无无效输出目录；现存原始成果也与初始输入及独立正常复现一致。",
+      "components": [
+        {
+          "meaning": "Actual invalid-input nonzero/error",
+          "max_points": 1,
+          "score": 1,
+          "evidence": "A/project/validation/stage-A/comparison.json controlled_invalid_command; A/project/validation/stage-A/04-controlled-invalid-calculation.stderr; audit/verification.json invalid_reproduction",
+          "rationale": "起点晚于终点的受控输入实际返回2及明确ValueError；本次在副本复现退出2。"
+        },
+        {
+          "meaning": "Failure evidence retained truthfully",
+          "max_points": 1,
+          "score": 1,
+          "evidence": "A/project/validation/stage-A/comparison.json controlled_invalid_test; raw stdout/stderr; A/deliverables/logs/04-controlled-invalid-calculation.*",
+          "rationale": "原始错误、退出和输入身份保留，且明确为预期负例而非科学失败；未把失败重写成成功。"
+        },
+        {
+          "meaning": "Valid canonical results unchanged",
+          "max_points": 1,
+          "score": 1,
+          "evidence": "A/project/validation/stage-A/comparison.json protected_before/protected_after and invalid_output_created=false; audit/verification.json invalid_reproduction",
+          "rationale": "原有效参数和规范成果在负例前后SHA相同，无无效输出目录；现存原始成果也与初始输入及独立正常复现一致。"
+        }
+      ]
+    },
+    {
+      "id": "B-drift",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "B/report.md 具体差异; B/deliverables/manual-review.json file_changes; audit/verification.json A_to_B_changed_file_bytes | B/report.md SHA表; B/deliverables/state-answer.json changed_or_missing_paths; B/project/history/stage-A-initial/notes/parameters.json; audit/verification.json parameters_semantics | B/project/records/registry.json D-PARAM binding/checkpoint; B/project/notes/parameters.json; B/deliverables/manual-review.json",
+      "rationale": "4/4：唯一可证实变更为notes/parameters.json；无登记文件缺失，项目A→B实际字节差异也只有该参数。；3/3：完整旧SHA 16a467…与当前86afdf…、起点10-01→11-01及实际旧内容均准确，不捏造授权或修订者。；3/3：从当前文件、保存绑定和初始历史字节三者定位漂移，并区分已登记范围与当前工作文件；证据独立于猜测。",
+      "components": [
+        {
+          "meaning": "Correct changed/missing path or truthful specific lack of prior binding",
+          "max_points": 4,
+          "score": 4,
+          "evidence": "B/report.md 具体差异; B/deliverables/manual-review.json file_changes; audit/verification.json A_to_B_changed_file_bytes",
+          "rationale": "唯一可证实变更为notes/parameters.json；无登记文件缺失，项目A→B实际字节差异也只有该参数。"
+        },
+        {
+          "meaning": "Actual old/current identity or explicit unavailable prior identity",
+          "max_points": 3,
+          "score": 3,
+          "evidence": "B/report.md SHA表; B/deliverables/state-answer.json changed_or_missing_paths; B/project/history/stage-A-initial/notes/parameters.json; audit/verification.json parameters_semantics",
+          "rationale": "完整旧SHA 16a467…与当前86afdf…、起点10-01→11-01及实际旧内容均准确，不捏造授权或修订者。"
+        },
+        {
+          "meaning": "Evidential basis, not invented drift",
+          "max_points": 3,
+          "score": 3,
+          "evidence": "B/project/records/registry.json D-PARAM binding/checkpoint; B/project/notes/parameters.json; B/deliverables/manual-review.json",
+          "rationale": "从当前文件、保存绑定和初始历史字节三者定位漂移，并区分已登记范围与当前工作文件；证据独立于猜测。"
+        }
+      ]
+    },
+    {
+      "id": "B-dependencies",
+      "score": 12,
+      "max_points": 12,
+      "evidence": "B/report.md 活动影响表; B/deliverables/manual-review.json activities D-CALC; B/project/records/registry.json D-CALC | B/report.md 活动影响表; B/project/records/registry.json D-SYNTH depends_on D-CALC; B/deliverables/state-answer.json | B/report.md D-SOURCE-CHECK及覆盖边界; B/deliverables/manual-review.json; audit/verification.json source_branch_identical_A_C",
+      "rationale": "4/4：正确判定参数直接影响旧CALC，done声明不能使其继续有效；当前仍为Q4的数值产物不能代表新窗口。；4/4：正确解释CALC→SYNTH及结果/表到摘要的传递影响；额外INVALID-TEST的stale来自真实保存依赖，未把历史负例误称为科学失败。；4/4：来源、切片、来源卡不依赖评价起点，仍保留独立SOURCE-CHECK有效；未声称远端全文或未登记scratch自动覆盖。",
+      "components": [
+        {
+          "meaning": "Direct CALC effect or actual conditional state",
+          "max_points": 4,
+          "score": 4,
+          "evidence": "B/report.md 活动影响表; B/deliverables/manual-review.json activities D-CALC; B/project/records/registry.json D-CALC",
+          "rationale": "正确判定参数直接影响旧CALC，done声明不能使其继续有效；当前仍为Q4的数值产物不能代表新窗口。"
+        },
+        {
+          "meaning": "Transitive SYNTH effect or actual conditional state",
+          "max_points": 4,
+          "score": 4,
+          "evidence": "B/report.md 活动影响表; B/project/records/registry.json D-SYNTH depends_on D-CALC; B/deliverables/state-answer.json",
+          "rationale": "正确解释CALC→SYNTH及结果/表到摘要的传递影响；额外INVALID-TEST的stale来自真实保存依赖，未把历史负例误称为科学失败。"
+        },
+        {
+          "meaning": "Independent SOURCE-CHECK preserved; no unsupported blanket staleness",
+          "max_points": 4,
+          "score": 4,
+          "evidence": "B/report.md D-SOURCE-CHECK及覆盖边界; B/deliverables/manual-review.json; audit/verification.json source_branch_identical_A_C",
+          "rationale": "来源、切片、来源卡不依赖评价起点，仍保留独立SOURCE-CHECK有效；未声称远端全文或未登记scratch自动覆盖。"
+        }
+      ]
+    },
+    {
+      "id": "B-cursor",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "B/report.md 最近checkpoint; B/deliverables/state-answer.json checkpoint_freshness; B/project/records/registry.json checkpoint | B/report.md 开头及检查方法/下一步; B/deliverables/state-answer.json scientific_scope | B/deliverables/state-answer.json next_action; B/report.md 最后段",
+      "rationale": "2/2：正确恢复revision 22旧断点及配置/记录仍匹配但本地参数变化所致stale，未虚构缺失断点。；2/2：明确暂停旧交作者讨论的前提，旧Q4结果不作为新范围结果；保存新断点也不能承认旧活动已复核。；1/1：先确认参数修订意图/授权，获准写入后留旧版、用冻结模型复算及核对摘要再显式更新；无意改动则由授权者恢复并核实，续作安全具体。",
+      "components": [
+        {
+          "meaning": "Actual checkpoint existence/freshness",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "B/report.md 最近checkpoint; B/deliverables/state-answer.json checkpoint_freshness; B/project/records/registry.json checkpoint",
+          "rationale": "正确恢复revision 22旧断点及配置/记录仍匹配但本地参数变化所致stale，未虚构缺失断点。"
+        },
+        {
+          "meaning": "No unsupported reuse of affected output",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "B/report.md 开头及检查方法/下一步; B/deliverables/state-answer.json scientific_scope",
+          "rationale": "明确暂停旧交作者讨论的前提，旧Q4结果不作为新范围结果；保存新断点也不能承认旧活动已复核。"
+        },
+        {
+          "meaning": "Safe concrete continuation",
+          "max_points": 1,
+          "score": 1,
+          "evidence": "B/deliverables/state-answer.json next_action; B/report.md 最后段",
+          "rationale": "先确认参数修订意图/授权，获准写入后留旧版、用冻结模型复算及核对摘要再显式更新；无意改动则由授权者恢复并核实，续作安全具体。"
+        }
+      ]
+    },
+    {
+      "id": "B-boundaries",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "B/report.md 旧数值及科学真假说明; B/deliverables/state-answer.json scientific_scope | B/report.md 来源和覆盖边界; B/deliverables/state-answer.json source_tracking_limits",
+      "rationale": "2/2：将本地身份/依赖过期与数值或科学真假分开；没有把哈希、done、checkpoint当作科学认证。；2/2：DOI-only文章没有本地内容绑定/实时核查，scratch未登记且不自动追踪；全树手动hash也不扩张自动依赖覆盖，来源计数差异保留。",
+      "components": [
+        {
+          "meaning": "Local freshness distinct from scientific truth",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "B/report.md 旧数值及科学真假说明; B/deliverables/state-answer.json scientific_scope",
+          "rationale": "将本地身份/依赖过期与数值或科学真假分开；没有把哈希、done、checkpoint当作科学认证。"
+        },
+        {
+          "meaning": "Actual source-only/scratch coverage limits",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "B/report.md 来源和覆盖边界; B/deliverables/state-answer.json source_tracking_limits",
+          "rationale": "DOI-only文章没有本地内容绑定/实时核查，scratch未登记且不自动追踪；全树手动hash也不扩张自动依赖覆盖，来源计数差异保留。"
+        }
+      ]
+    },
+    {
+      "id": "B-readonly",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "B/readonly-audit.json passed=true, file_differences=[]; B/deliverables/project-before.json and project-after.json; B/report.md | B/readonly-audit.json directory_mtime_differences=[] and file_differences=[]; B/deliverables/state-answer.json preservation",
+      "rationale": "2/2：独立只读审计确认项目文件字节未变，答卷位于项目外；失败resume及手动核查未转成修复或重算。；2/2：文件及目录mtime、路径集合保持；报告对自身未重读的受限文件范围作了精确说明，未夸大自证范围。",
+      "components": [
+        {
+          "meaning": "Project file bytes unchanged",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "B/readonly-audit.json passed=true, file_differences=[]; B/deliverables/project-before.json and project-after.json; B/report.md",
+          "rationale": "独立只读审计确认项目文件字节未变，答卷位于项目外；失败resume及手动核查未转成修复或重算。"
+        },
+        {
+          "meaning": "File and directory mtime unchanged",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "B/readonly-audit.json directory_mtime_differences=[] and file_differences=[]; B/deliverables/state-answer.json preservation",
+          "rationale": "文件及目录mtime、路径集合保持；报告对自身未重读的受限文件范围作了精确说明，未夸大自证范围。"
+        }
+      ]
+    },
+    {
+      "id": "C-dirty-snapshot",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "C/project/history/stage-C-before-recalculation/records/registry.json revision 23; C/deliverables/01-drift-checkpoint.txt; audit/verification.json intermediate_snapshot | C/deliverables/02-check-after-drift-checkpoint.txt; project/history/stage-C-before-recalculation/02-check-after-drift-checkpoint.txt | C/report.md 先保存漂移态; C/project/validation/stage-C/revision-review.json check_after_drift_checkpoint",
+      "rationale": "2/2：确实先保存修订参数但旧Q4结果尚在的持久断点与内容快照；参数SHA为新、CALC/SYNTH绑定仍旧，顺序和脏态可核查。；2/2：断点后的实际只读检查原始输出单独保留：checkpoint current，CALC/INVALID-TEST/SYNTH仍stale，SOURCE-CHECK done；未被最终成功结果覆盖。；2/2：明确说明快照只保存身份状态，不能复核旧活动；之后才执行实质复算及版本重登记，没有用快照洗白旧done。",
+      "components": [
+        {
+          "meaning": "Actual intermediate dirty snapshot/checkpoint",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/history/stage-C-before-recalculation/records/registry.json revision 23; C/deliverables/01-drift-checkpoint.txt; audit/verification.json intermediate_snapshot",
+          "rationale": "确实先保存修订参数但旧Q4结果尚在的持久断点与内容快照；参数SHA为新、CALC/SYNTH绑定仍旧，顺序和脏态可核查。"
+        },
+        {
+          "meaning": "Actual post-snapshot state inspection",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/deliverables/02-check-after-drift-checkpoint.txt; project/history/stage-C-before-recalculation/02-check-after-drift-checkpoint.txt",
+          "rationale": "断点后的实际只读检查原始输出单独保留：checkpoint current，CALC/INVALID-TEST/SYNTH仍stale，SOURCE-CHECK done；未被最终成功结果覆盖。"
+        },
+        {
+          "meaning": "Does not treat snapshot as revalidation",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/report.md 先保存漂移态; C/project/validation/stage-C/revision-review.json check_after_drift_checkpoint",
+          "rationale": "明确说明快照只保存身份状态，不能复核旧活动；之后才执行实质复算及版本重登记，没有用快照洗白旧done。"
+        }
+      ]
+    },
+    {
+      "id": "C-recompute",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "C/project/validation/stage-C/verification.json commands[0] exit_code=0; recalculation-retry/; 03-normal-recalculation.stdout; audit/verification.json calculator_reproduction.C | C/project/results/result.json; audit/verification.json calculator_reproduction.C | C/project/results/table.csv; validation/stage-C/recalculation-retry/table.csv; audit/verification.json calculator_reproduction.C | C/project/results/summary.md; C/project/validation/stage-C/summary-review.json; C/report.md",
+      "rationale": "2/2：批准参数语义相符，原科学计算器/数据/冻结模型字节保持，真实正常重跑与重试证据存在；副本重跑独立复现，结果参数SHA对应实际输入。；2/2：1460小时/61日及MAE、RMSE、偏差、相对降幅全部与reference一致，独立重跑逐项差为0。；2/2：配套表的观察数、MAE、RMSE及降幅与规范JSON及独立重跑表一致。；2/2：摘要窗口、样本量、舍入指标正确，旧Q4明确历史；保留观察小时描述性、固定模型边界，未把改窗降幅变大解释为重训或模型改善。",
+      "components": [
+        {
+          "meaning": "Actual unchanged calculator execution on approved parameters",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/validation/stage-C/verification.json commands[0] exit_code=0; recalculation-retry/; 03-normal-recalculation.stdout; audit/verification.json calculator_reproduction.C",
+          "rationale": "批准参数语义相符，原科学计算器/数据/冻结模型字节保持，真实正常重跑与重试证据存在；副本重跑独立复现，结果参数SHA对应实际输入。"
+        },
+        {
+          "meaning": "Correct canonical numeric result",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/results/result.json; audit/verification.json calculator_reproduction.C",
+          "rationale": "1460小时/61日及MAE、RMSE、偏差、相对降幅全部与reference一致，独立重跑逐项差为0。"
+        },
+        {
+          "meaning": "Correct companion table",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/results/table.csv; validation/stage-C/recalculation-retry/table.csv; audit/verification.json calculator_reproduction.C",
+          "rationale": "配套表的观察数、MAE、RMSE及降幅与规范JSON及独立重跑表一致。"
+        },
+        {
+          "meaning": "Correct summary and scientific scope",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/results/summary.md; C/project/validation/stage-C/summary-review.json; C/report.md",
+          "rationale": "摘要窗口、样本量、舍入指标正确，旧Q4明确历史；保留观察小时描述性、固定模型边界，未把改窗降幅变大解释为重训或模型改善。"
+        }
+      ]
+    },
+    {
+      "id": "C-revalidate",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "C/project/records/registry.json revisions 26–39: D-PARAM/D-CLAIM/D-REL/D-CHOICE/D-RESULT/D-TABLE/D-SUMMARY v2; audit/verification.json current_bindings.C | C/project/records/registry.json revisions 40 D-CALC,41 D-INVALID-TEST,42 D-SYNTH; verification.json; summary-review.json | C/project/records/registry.json D-SOURCE-CHECK v1; verification.json protected_before/after; audit/verification.json source_branch_identical_A_C",
+      "rationale": "2/2：参数、主张范围、限定关系、作者选择及成果依赖显式更新，当前文件绑定无差异，授权原文实际保留。；2/2：实际计算和摘要核对后分别显式重登v2，CALC先于依赖它的SYNTH；额外负例活动也真实重跑并改为专用验证依赖，未仅改状态。；2/2：独立来源活动完整封装与A相同，来源相关字节一致；给出不依赖评价起点的依据，未无故判失败或重做。",
+      "components": [
+        {
+          "meaning": "Affected material/version/choice bindings addressed",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/records/registry.json revisions 26–39: D-PARAM/D-CLAIM/D-REL/D-CHOICE/D-RESULT/D-TABLE/D-SUMMARY v2; audit/verification.json current_bindings.C",
+          "rationale": "参数、主张范围、限定关系、作者选择及成果依赖显式更新，当前文件绑定无差异，授权原文实际保留。"
+        },
+        {
+          "meaning": "Affected activities explicitly rechecked in dependency order",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/records/registry.json revisions 40 D-CALC,41 D-INVALID-TEST,42 D-SYNTH; verification.json; summary-review.json",
+          "rationale": "实际计算和摘要核对后分别显式重登v2，CALC先于依赖它的SYNTH；额外负例活动也真实重跑并改为专用验证依赖，未仅改状态。"
+        },
+        {
+          "meaning": "Independent branch remains valid",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/records/registry.json D-SOURCE-CHECK v1; verification.json protected_before/after; audit/verification.json source_branch_identical_A_C",
+          "rationale": "独立来源活动完整封装与A相同，来源相关字节一致；给出不依赖评价起点的依据，未无故判失败或重做。"
+        }
+      ]
+    },
+    {
+      "id": "C-history",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "C/project/history/stage-A-initial/notes/parameters.json and results/result.json; history/stage-C-before-recalculation/; audit/verification.json initial_four_archives.C | C/project/history/stage-A-initial/results/table.csv and summary.md; audit/verification.json initial_four_archives.C | C/project/notes/stage-C-revision.md; validation/stage-C/revision-review.json; records/registry.json history previous v1 records including D-CHOICE",
+      "rationale": "2/2：初始参数与完整结果实际字节保留且与初始材料完全一致，另保留接受新参数但尚未复算的中间态。；2/2：原表格和摘要均可直接恢复，非仅SHA或笼统有旧版声明；当前改写未破坏初始档案。；1/1：明确真实作者改窗理由、旧选择/关系/活动版本及完整previous内容留存；首个自写核验TypeError代码/输出保留，日志覆盖局限如实披露。",
+      "components": [
+        {
+          "meaning": "Recoverable old parameter and result content",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/history/stage-A-initial/notes/parameters.json and results/result.json; history/stage-C-before-recalculation/; audit/verification.json initial_four_archives.C",
+          "rationale": "初始参数与完整结果实际字节保留且与初始材料完全一致，另保留接受新参数但尚未复算的中间态。"
+        },
+        {
+          "meaning": "Recoverable old table and summary content",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/history/stage-A-initial/results/table.csv and summary.md; audit/verification.json initial_four_archives.C",
+          "rationale": "原表格和摘要均可直接恢复，非仅SHA或笼统有旧版声明；当前改写未破坏初始档案。"
+        },
+        {
+          "meaning": "Actual revision/version reason retained",
+          "max_points": 1,
+          "score": 1,
+          "evidence": "C/project/notes/stage-C-revision.md; validation/stage-C/revision-review.json; records/registry.json history previous v1 records including D-CHOICE",
+          "rationale": "明确真实作者改窗理由、旧选择/关系/活动版本及完整previous内容留存；首个自写核验TypeError代码/输出保留，日志覆盖局限如实披露。"
+        }
+      ]
+    },
+    {
+      "id": "C-final-cursor",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "C/project/records/registry.json revision 43; C/deliverables/07-final-check.txt and 08-final-resume.txt; audit/verification.json current_bindings.C | C/project/records/registry.json cursor; C/project/RECOVERY.md; C/report.md | C/project/project.json; context/constraints.json; context/stage-C/; C/project/RECOVERY.md",
+      "rationale": "2/2：最终保存新断点，实际检查/恢复退出0且无发现；当前本地绑定和四活动状态与实际复核证据相符。；2/2：最新下一步准确为将11月至12月冻结指标与更新摘要交作者内容复核并保留Q4历史，附当前依赖核对和不重训/不外推条件；仍为待做。；1/1：除批准窗口外，原期限/资源/语言/期刊未定及人类认可与投稿授权未知约束保留；初始约束作为历史来源不覆盖当前范围。",
+      "components": [
+        {
+          "meaning": "Actual final saved state freshness",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/records/registry.json revision 43; C/deliverables/07-final-check.txt and 08-final-resume.txt; audit/verification.json current_bindings.C",
+          "rationale": "最终保存新断点，实际检查/恢复退出0且无发现；当前本地绑定和四活动状态与实际复核证据相符。"
+        },
+        {
+          "meaning": "Concrete conditional next action",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "C/project/records/registry.json cursor; C/project/RECOVERY.md; C/report.md",
+          "rationale": "最新下一步准确为将11月至12月冻结指标与更新摘要交作者内容复核并保留Q4历史，附当前依赖核对和不重训/不外推条件；仍为待做。"
+        },
+        {
+          "meaning": "Other constraints preserved",
+          "max_points": 1,
+          "score": 1,
+          "evidence": "C/project/project.json; context/constraints.json; context/stage-C/; C/project/RECOVERY.md",
+          "rationale": "除批准窗口外，原期限/资源/语言/期刊未定及人类认可与投稿授权未知约束保留；初始约束作为历史来源不覆盖当前范围。"
+        }
+      ]
+    },
+    {
+      "id": "D-portability",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "D/report.md; D/deliverables/check.stdout.json and resume.stdout.json; D/project/RECOVERY.md; audit/verification.json relocated_runtime_reproduction | D/report.md 权威说明; D/deliverables/state-answer.json authority; D/project/records/registry.json; audit/verification.json C_to_D_changed_file_bytes/current_bindings.D | D/report.md 约束继续有效; D/deliverables/state-answer.json active_constraints; D/project/context/constraints.json and context/stage-C/",
+      "rationale": "2/2：报告只依据迁移项目留存资源，原阶段恢复证据存在；本次在另一项目副本显式root运行check/resume均退出0，未执行任何历史绝对路径命令。；2/2：正确恢复配置/登记权威revision 43、当前成果和活动版本v2、来源v1；识别初始Q4约束已被stage-C授权覆盖，迁移未被误判为输入漂移。；2/2：当前11-01至12-31、observed-hour、冻结模型及原期限/离线标准库/不采新数据/不重训/不外推/中文/期刊未定等约束准确恢复，无旧聊天暗补。",
+      "components": [
+        {
+          "meaning": "Recovery from relocated project resources only",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "D/report.md; D/deliverables/check.stdout.json and resume.stdout.json; D/project/RECOVERY.md; audit/verification.json relocated_runtime_reproduction",
+          "rationale": "报告只依据迁移项目留存资源，原阶段恢复证据存在；本次在另一项目副本显式root运行check/resume均退出0，未执行任何历史绝对路径命令。"
+        },
+        {
+          "meaning": "Actual current authority/version recovered",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "D/report.md 权威说明; D/deliverables/state-answer.json authority; D/project/records/registry.json; audit/verification.json C_to_D_changed_file_bytes/current_bindings.D",
+          "rationale": "正确恢复配置/登记权威revision 43、当前成果和活动版本v2、来源v1；识别初始Q4约束已被stage-C授权覆盖，迁移未被误判为输入漂移。"
+        },
+        {
+          "meaning": "Actual constraints recovered or precise inherited gap truthfully located",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "D/report.md 约束继续有效; D/deliverables/state-answer.json active_constraints; D/project/context/constraints.json and context/stage-C/",
+          "rationale": "当前11-01至12-31、observed-hour、冻结模型及原期限/离线标准库/不采新数据/不重训/不外推/中文/期刊未定等约束准确恢复，无旧聊天暗补。"
+        }
+      ]
+    },
+    {
+      "id": "D-next",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "D/report.md 最后具体下一步; D/deliverables/state-answer.json next_action; D/project/records/registry.json cursor | D/report.md 工作状态表及需保留失败; D/deliverables/state-answer.json activities; D/project/validation/stage-C/ | D/report.md 数值范围/授权说明; D/deliverables/state-answer.json scientific_scope",
+      "rationale": "2/2：最新实际游标的目的和必要条件准确，交作者内容复核11月至12月指标与更新摘要并保留Q4历史，没有退回旧Q4交接或自动执行。；2/2：正确区分四项已复核工作与仍待作者内容复核，报告原始核验失败及首次stdout缺口；保存快照和后来实质复核分开，负例旧成果SHA也按当时历史解释。；1/1：当前1460小时/61日数值与reference相符，限定描述性冻结模型；无重算D、无虚构专家认可、因果、未来表现或投稿授权。",
+      "components": [
+        {
+          "meaning": "Latest actual next action",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "D/report.md 最后具体下一步; D/deliverables/state-answer.json next_action; D/project/records/registry.json cursor",
+          "rationale": "最新实际游标的目的和必要条件准确，交作者内容复核11月至12月指标与更新摘要并保留Q4历史，没有退回旧Q4交接或自动执行。"
+        },
+        {
+          "meaning": "Actual complete/pending state and required conditions",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "D/report.md 工作状态表及需保留失败; D/deliverables/state-answer.json activities; D/project/validation/stage-C/",
+          "rationale": "正确区分四项已复核工作与仍待作者内容复核，报告原始核验失败及首次stdout缺口；保存快照和后来实质复核分开，负例旧成果SHA也按当时历史解释。"
+        },
+        {
+          "meaning": "Correct scientific scope and no invented human approval",
+          "max_points": 1,
+          "score": 1,
+          "evidence": "D/report.md 数值范围/授权说明; D/deliverables/state-answer.json scientific_scope",
+          "rationale": "当前1460小时/61日数值与reference相符，限定描述性冻结模型；无重算D、无虚构专家认可、因果、未来表现或投稿授权。"
+        }
+      ]
+    },
+    {
+      "id": "D-readonly",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "D/readonly-audit.json passed=true,file_differences=[]; D/deliverables/project-unchanged.json; audit/verification.json copied_D_runtime_bytes_mtimes_unchanged | D/readonly-audit.json directory_mtime_differences=[]; D/deliverables/project-unchanged.json",
+      "rationale": "2/2：独立只读审计确认文件字节无变，答卷在项目外；实际只读check/resume未初始化、登记、保存快照、重算或执行下一步，本次副本验证同样无文件变化。；2/2：文件mtime与目录mtime、路径集合保持，满足迁移恢复只读要求。",
+      "components": [
+        {
+          "meaning": "Project file bytes unchanged",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "D/readonly-audit.json passed=true,file_differences=[]; D/deliverables/project-unchanged.json; audit/verification.json copied_D_runtime_bytes_mtimes_unchanged",
+          "rationale": "独立只读审计确认文件字节无变，答卷在项目外；实际只读check/resume未初始化、登记、保存快照、重算或执行下一步，本次副本验证同样无文件变化。"
+        },
+        {
+          "meaning": "File and directory mtime unchanged",
+          "max_points": 2,
+          "score": 2,
+          "evidence": "D/readonly-audit.json directory_mtime_differences=[]; D/deliverables/project-unchanged.json",
+          "rationale": "文件mtime与目录mtime、路径集合保持，满足迁移恢复只读要求。"
+        }
+      ]
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "usability": "usable",
+  "notes": [
+    "评分仅按冻结rubric/codebook的实际科学/项目内容；未为专有格式、运行器名称、命令、品牌、文件数或工程探针加分。全部分项组件满足，A20/B35/C30/D15，raw=effective=100，无额外cap。",
+    "非完美盲：包内项目布局、命令和历史绝对路径可能暴露实现方法；未读取父目录、组映射、其他链、外部执行历史、memory、个人skills或网络，也未推断组别。arm_hidden=true表示组织者未提供映射，而非严格不可识别。",
+    "B报告及state-answer主动披露首次SHA盘点读取过当阶段受限的项目内design/catalog.json，随后正式resume被其读取防护拒绝；改用现有绑定手动恢复，未声称该接口检查成功。只读审计确认无项目写入。此访问边界问题单独记录，冻结内容评分没有为只读访问设独立扣分项，未施加未预告惩罚。",
+    "C重试复用了首次正常计算器stdout/stderr名称，首次原始正常日志无法恢复；首次数值目录、自写核验失败代码及TypeError原始输出、成功重试命令和输出仍在，且报告/修订记录如实披露。该缺口未破坏实际复算、旧科学内容、版本理由或中间漂移检查的证据，不重复或额外扣分。",
+    "D最初格式断言将结果未重复metric_weighting键误判为参数不匹配，保留false原始记录并另行说明共享字段、真实参数SHA、代码观察小时均值及摘要证据；修正未改项目。",
+    "额外D-INVALID-TEST受影响由A真实较宽输出传递依赖产生；B解释该来源，C实际重跑并建立专用负例产物，符合允许真实额外依赖的规则，未硬套只允许三活动。",
+    "独立核验仅在本包新建audit子目录执行项目副本；原计算器用显式--root/--output/--spec指向副本，未执行嵌入旧绝对路径的核验脚本或历史argv。初始/修订全部数值与reference差为0，实际输入SHA正确；D副本仅靠自带资源check/resume成功，原四项目字节及文件/目录mtime保持。详见audit/verification.json和audit/commands.json。",
+    "本题仅核给定数值与生命周期管理；状态/身份通过不等于长证明、来源全文复审、远端数据重新获取、专家认可或外部投稿认证。"
+  ],
+  "scope": "Independent fresh chain-level AI review; organizer withheld arm mapping and external execution history. Layout may reveal method; no human certification.",
+  "stage_scores": {
+    "A": 20,
+    "B": 35,
+    "C": 30,
+    "D": 15
+  },
+  "publication_projection": {
+    "original_chain_id": "anonymous-K6409fe",
+    "original_grade_sha256": "bf914ee527c56dccbb722db6986168690477db93d705741543c446718a7a3a22",
+    "changes": [
+      "opaque-chain-label-to-plan-label",
+      "absolute-locators-to-logical-paths"
+    ],
+    "scope": "Administrative identity/locator mapping only; scores, rationales, critical errors and original report bindings unchanged."
+  }
+}

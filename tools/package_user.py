@@ -60,10 +60,12 @@ SKILL_RESOURCES = (
     'rw-figures/references/editable-schematics.md',
     'rw-figures/scripts/audit_svg_schematic.py',
     'rw-literature/references/search-and-library.md',
+    'rw-literature/scripts/search_crossref.py',
     'rw-review/references/cross-material-consistency.md',
     'rw-review/references/review-modes.md',
     'rw-review/references/review-response.md',
     'rw-review/references/submission-delivery.md',
+    'rw-review/references/theory-review.md',
     'rw-review/scripts/check_revision_plan.py',
 )
 RUNTIME_FILES = frozenset((
@@ -78,7 +80,11 @@ RUNTIME_FILES = frozenset((
     *('skills/' + skill + '/SKILL.md' for skill in SKILLS),
     *('skills/' + name for name in SKILL_RESOURCES),
 ))
-REQUIRED = RUNTIME_FILES | frozenset((
+EXAMPLE_FILES = frozenset('examples/public-penguins/' + name for name in (
+    'README.md', 'question-method.md', 'source.json', 'fetch_data.py',
+    'analyze.py', 'run_project.py',
+))
+REQUIRED = RUNTIME_FILES | EXAMPLE_FILES | frozenset((
     'README.md', 'README.en.md', '中文介绍与使用说明.md', 'USER_GUIDE.en.md',
     'LICENSE', 'SECURITY.md', 'provenance/ORIGIN.md',
 ))
@@ -92,8 +98,7 @@ def readme(english=False):
                 'The current local runtime contains nine research skills, method guidance, '
                 'and standard-library Python tools. Use Python 3.11+ on macOS, Linux or Windows.\n\n'
                 '```sh\n'
-                "python3 tools/research.py init --output ../my-research --title 'My research question'\n"
-                'python3 tools/connect_skills.py install --root ../my-research\n'
+                "python3 tools/research.py init --output ../my-research --title 'My research question' --connect-skills\n"
                 'python3 tools/research.py resume --root ../my-research\n'
                 '```\n\n'
                 'In Windows PowerShell, replace `python3` with `py -3` '
@@ -102,6 +107,8 @@ def readme(english=False):
                 'Choose a new output directory, then open that project in a compatible skill host. '
                 'Ask the assistant for the path to the first saved output, its conclusion and the next action. '
                 'The guide covers existing materials, research constraints, records, corrections and upgrades. The '
+                '[complete public-data example](examples/public-penguins/README.md) creates '
+                'analysis, figures, registered evidence and recovery state in one command. The '
                 '[source repository](' + SOURCE_URL + ') provides development checks and '
                 'evaluation evidence separately. This runtime carries no evaluation cases, '
                 'development logs or previous editions.\n\n'
@@ -113,15 +120,16 @@ def readme(english=False):
             '当前用户包包含九个科研技能、方法指导与标准库 Python 工具。'
             '需要 Python 3.11 或更新版本，支持 macOS、Linux 与 Windows。\n\n'
             '```sh\n'
-            "python3 tools/research.py init --output ../my-research --title '我的研究问题'\n"
-            'python3 tools/connect_skills.py install --root ../my-research\n'
+            "python3 tools/research.py init --output ../my-research --title '我的研究问题' --connect-skills\n"
             'python3 tools/research.py resume --root ../my-research\n'
             '```\n\n'
             'Windows PowerShell 中将 `python3` 换成 `py -3`，或已配置为 '
             'Python 3.11+ 的 `python`。使用本地项目目录，技能升级前先暂停其他写入者。\n\n'
             '将输出路径换成尚不存在的新目录，再在兼容的技能宿主中打开新项目。'
             '请助手交付首份成果的实际路径、简短结论和下一步。'
-            '指南说明已有材料接入、研究约束、登记纠错与升级。开发检查和评估证据另见'
+            '指南说明已有材料接入、研究约束、登记纠错与升级。'
+            '[完整公开数据示例](examples/public-penguins/README.md)一条命令生成分析、图件、登记和恢复状态。'
+            '开发检查和评估证据另见'
             '[源码仓库](' + SOURCE_URL + ')；用户包不携带评估案例、开发日志或旧版。\n\n'
             '[MIT许可证](LICENSE) · [来源归属](provenance/ORIGIN.md) · '
             '[数据与安全边界](SECURITY.md)\n')
@@ -160,7 +168,7 @@ def inventory(root=ROOT):
                 raise ReleaseError('Unreviewed resource outside the current user runtime: ' + relative)
             # The standard source layout keeps all original skill links.
             entries[relative] = (files.read(relative) if relative.startswith('skills/') else data)
-        for name in ('LICENSE', 'SECURITY.md'):
+        for name in ('LICENSE', 'SECURITY.md', *sorted(EXAMPLE_FILES)):
             entries[name] = files.read(name)
         for source, destination in GUIDES.items():
             entries[destination] = files.read(source)

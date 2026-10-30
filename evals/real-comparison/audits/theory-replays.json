@@ -1,0 +1,110 @@
+[
+  {
+    "trial_id": "T01",
+    "script_sha256": "7e4d05cb18d1f2992ad9eb676869be3e430e2540a11820d566c32e751a49448b",
+    "command": [
+      "STUDY_ROOT/env/bin/python",
+      "-I",
+      "-B",
+      "STUDY_ROOT/replays/T01/checks.py",
+      "--input",
+      "STUDY_ROOT/runs/T01/input",
+      "--output",
+      "STUDY_ROOT/replays/T01/output"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"counterexample\": {\n    \"alpha\": \"1/20\",\n    \"rho\": \"1/4\",\n    \"mu\": \"1/100\",\n    \"t\": 200,\n    \"event\": \"X_1=...=X_200=0\",\n    \"Vhat_on_event\": \"1/4\",\n    \"S_on_event\": -2,\n    \"boundary_formula\": \"sqrt(log(800)/2)\",\n    \"boundary\": 1.8281974356819242,\n    \"event_probability_formula\": \"(99/100)^200\",\n    \"event_probability\": 0.13397967485796194,\n    \"exact_probability_above_alpha\": true,\n    \"exp8_lower_Taylor_sum\": 934.1555555555556\n  },\n  \"optimization\": {\n    \"alpha\": 0.05,\n    \"r\": 8.211968062068255,\n    \"residual\": 8.881784197001252e-16,\n    \"kappa\": 3.0351224130285512,\n    \"rho_star_formula\": \"v/r\",\n    \"inf_boundary_formula\": \"kappa*sqrt(v)\"\n  },\n  \"normal_mixture_numeric_check\": {\n    \"s\": 1.2,\n    \"v\": 3.0,\n    \"rho\": 0.7,\n    \"quadrature\": 0.528395994285645,\n    \"closed_form\": 0.528395994285645,\n    \"absolute_error\": 0.0\n  },\n  \"empirical_Bernstein_scalar_grid_max_excess\": 0.0,\n  \"pdf_sha256\": {\n    \"howard2020-arxiv-v7.pdf\": \"e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e\",\n    \"howard2021-arxiv-v9.pdf\": \"eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8\"\n  },\n  \"scope\": \"Exact finite probability comparison and deterministic numeric checks; no simulation, no proof by grid.\"\n}\n",
+    "stderr": "",
+    "scope": "Delivered finite arithmetic/input checks only; no whole-proof certification."
+  },
+  {
+    "trial_id": "T02",
+    "script_sha256": "79cb1debb074c7ada45bf26737b7a17be40af956c06b232416f4a19e5c4fd059",
+    "command": [
+      "STUDY_ROOT/env/bin/python",
+      "-I",
+      "-B",
+      "STUDY_ROOT/replays/T02/checks.py",
+      "--input-dir",
+      "STUDY_ROOT/runs/T02/input",
+      "--output-dir",
+      "STUDY_ROOT/replays/T02/output"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"scope\": \"numerical checks, not a proof or simulated coverage estimate\",\n  \"input_sha256\": {\n    \"TASK.md\": \"56d7eff3d121991ac8a907a8f285fe822e26e2627715fd2863180aadd96b51cd\",\n    \"draft.tex\": \"8550d8ea0188a72384bf5a4d596cdc23b3c8fa58cddeb30350c71adb26a2ba63\",\n    \"sources/howard2020-arxiv-v7.pdf\": \"e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e\",\n    \"sources/howard2020-arxiv-v7.txt\": \"674f6bf98e64159aa294b114ba765f19ee40b5b89f1fab7c25a9419f86f8ce99\",\n    \"sources/howard2021-arxiv-v9.pdf\": \"eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8\",\n    \"sources/howard2021-arxiv-v9.txt\": \"7826e3691e725d8017655d2be40aaf1a37c1aa2969b7344f3e0b4060f50141da\"\n  },\n  \"B\": {\n    \"n\": 20,\n    \"mu\": \"1/10\",\n    \"alpha\": \"1/20\",\n    \"rho\": \"1/4\",\n    \"event\": \"first 20 observations all zero\",\n    \"probability_exact\": \"12157665459056928801/100000000000000000000\",\n    \"probability_float\": 0.1215766545905693,\n    \"b_squared_formula\": \"(1/2)*log(800)\",\n    \"b_squared\": 3.3423058638339636,\n    \"b\": 1.8281974356819242,\n    \"interval_upper_on_event\": 0.09140987178409621,\n    \"integer_probability_comparison\": true\n  },\n  \"C\": {\n    \"equation\": \"x-log(1+x)=log(alpha**-2)\",\n    \"x\": 8.211968062068255,\n    \"residual\": 8.881784197001252e-16,\n    \"sqrt_coefficient\": 3.0351224130285512,\n    \"v\": \"1/4\",\n    \"rho_star\": 0.030443372174664224,\n    \"min_b_squared\": 2.302992015517064,\n    \"formula_agreement_abs_error\": 8.881784197001252e-16\n  },\n  \"checks_passed\": true\n}\n",
+    "stderr": "",
+    "scope": "Delivered finite arithmetic/input checks only; no whole-proof certification."
+  },
+  {
+    "trial_id": "T03",
+    "script_sha256": "8097f4646af43f36a27d84ed055036528bc3fbb36b739452c443a091b91a9573",
+    "command": [
+      "STUDY_ROOT/env/bin/python",
+      "-I",
+      "-B",
+      "STUDY_ROOT/replays/T03/checks.py",
+      "--input",
+      "STUDY_ROOT/runs/T03/input",
+      "--output",
+      "STUDY_ROOT/replays/T03/output"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"B_boundary_squared\": 3.119162312519754, \"B_failure_probability_t4_exact\": \"1/8\", \"C_x\": 7.709603739407498, \"C_q\": 8.709603739407498}\n",
+    "stderr": "",
+    "scope": "Delivered finite arithmetic/input checks only; no whole-proof certification."
+  },
+  {
+    "trial_id": "T05",
+    "script_sha256": "33ae5371cc41ca751c129390faee5fa6664aa277492167896b4406aa2710d564",
+    "command": [
+      "STUDY_ROOT/env/bin/python",
+      "-I",
+      "-B",
+      "STUDY_ROOT/replays/T05/checks.py",
+      "--input",
+      "STUDY_ROOT/runs/T05/input",
+      "--output",
+      "STUDY_ROOT/replays/T05/output"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"kind\": \"numerical checks only, not proof\",\n  \"status\": \"passed\",\n  \"B\": {\n    \"probability_formula\": \"(9/10)^20\",\n    \"probability_exact\": \"12157665459056928801/100000000000000000000\",\n    \"probability\": 0.1215766545905693,\n    \"variance_exact\": \"1/4\",\n    \"S_exact\": \"-2\",\n    \"boundary_formula\": \"sqrt(log(200)/2)\",\n    \"boundary\": 1.6276236307187293\n  },\n  \"C\": {\n    \"alpha\": 0.1,\n    \"r_equation\": \"r-log(1+r)=log(alpha^-2)\",\n    \"r\": 6.638352067993811,\n    \"rho_at_v_quarter\": 0.03765994895108855,\n    \"minimum_squared\": 1.909588016998453\n  },\n  \"A\": {\n    \"S\": 0.7,\n    \"V\": 2.0,\n    \"rho\": 1.3,\n    \"quadrature\": 0.6760172552413095,\n    \"closed_form\": 0.6760172552413095,\n    \"absolute_difference\": 0.0,\n    \"quadrature_cutoff\": 12.0,\n    \"simpson_intervals\": 20000\n  },\n  \"EB\": {\n    \"grid_only\": true,\n    \"max_scalar_inequality_excess\": 0.0\n  },\n  \"input_sha256\": {\n    \"TASK.md\": \"56d7eff3d121991ac8a907a8f285fe822e26e2627715fd2863180aadd96b51cd\",\n    \"draft.tex\": \"8550d8ea0188a72384bf5a4d596cdc23b3c8fa58cddeb30350c71adb26a2ba63\",\n    \"source-manifest.json\": \"ab51a486e3bed01f34e863a7221c58481d288bef2efde8b7dbb10ef2001994c4\",\n    \"sources/howard2020-arxiv-v7.pdf\": \"e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e\",\n    \"sources/howard2020-arxiv-v7.txt\": \"674f6bf98e64159aa294b114ba765f19ee40b5b89f1fab7c25a9419f86f8ce99\",\n    \"sources/howard2021-arxiv-v9.pdf\": \"eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8\",\n    \"sources/howard2021-arxiv-v9.txt\": \"7826e3691e725d8017655d2be40aaf1a37c1aa2969b7344f3e0b4060f50141da\"\n  }\n}\n",
+    "stderr": "",
+    "scope": "Delivered finite arithmetic/input checks only; no whole-proof certification."
+  },
+  {
+    "trial_id": "T04",
+    "script_sha256": "cd0798d2e18a93cfd106dc0058dd8707645ae72d220afd2d2c9ab714adb84962",
+    "command": [
+      "STUDY_ROOT/env/bin/python",
+      "-I",
+      "-B",
+      "STUDY_ROOT/replays/T04/checks.py",
+      "--input-dir",
+      "STUDY_ROOT/runs/T04/input",
+      "--output-dir",
+      "STUDY_ROOT/replays/T04/output"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"B\": {\n    \"alpha_formula\": \"1/20\",\n    \"rho_formula\": \"1/4\",\n    \"mu_formula\": \"1/100\",\n    \"event\": \"X_1=...=X_200=0 for iid Bernoulli(1/100)\",\n    \"variance_formula\": \"(0-1/2)^2+199*(0-0)^2=1/4\",\n    \"s_abs_formula\": \"200/100=2\",\n    \"boundary_squared_formula\": \"log(800)/2\",\n    \"boundary\": 1.8281974356819242,\n    \"event_probability_formula\": \"(99/100)^200\",\n    \"event_probability\": 0.13397967485796194,\n    \"exact_comparison\": \"20*99^200 > 100^200\",\n    \"exact_comparison_passed\": true,\n    \"probability_lower_bound_formula\": \"exp(-200/99)\",\n    \"probability_lower_bound\": 0.13262866870306303\n  },\n  \"C_at_alpha_1_over_20\": {\n    \"root_equation\": \"x-log(1+x)=2*log(20)\",\n    \"x_star\": 8.211968062068255,\n    \"optimized_constant_formula\": \"sqrt(1+x_star)\",\n    \"optimized_constant\": 3.0351224130285512,\n    \"rho_at_v_1_over_4_formula\": \"(1/4)/x_star\",\n    \"rho_at_v_1_over_4\": 0.030443372174664224\n  },\n  \"scope\": \"Exact arithmetic for the finite event comparison and scalar numerical checks; no simulation, theorem proving, compilation or citation-wide audit.\"\n}\n",
+    "stderr": "",
+    "scope": "Finite arithmetic/input checks only, not whole-proof certification."
+  },
+  {
+    "trial_id": "T06",
+    "script_sha256": "5ccd8b370c1cf9486e9a3ee0a459ccd6f94e500ba16a1157e6c0a65bba9e00f6",
+    "command": [
+      "STUDY_ROOT/env/bin/python",
+      "-I",
+      "-B",
+      "STUDY_ROOT/replays/T06/checks.py",
+      "--input",
+      "STUDY_ROOT/runs/T06/input",
+      "--output",
+      "STUDY_ROOT/replays/T06/output"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"result\": \"STUDY_ROOT/replays/T06/output/checks_results.json\", \"B_probability\": 0.1215766545905693, \"B_boundary\": 1.8281974356819242, \"C_q\": 8.211968062068255, \"C_K\": 9.211968062068255, \"report_proof_required\": true}\n",
+    "stderr": "",
+    "scope": "Finite arithmetic/input checks only, not whole-proof certification."
+  }
+]

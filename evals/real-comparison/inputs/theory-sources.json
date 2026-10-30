@@ -1,0 +1,57 @@
+{
+  "task_id": "T-CS-01",
+  "source_verification_utc": "2026-10-29T23:19:14.642455+00:00",
+  "page_convention": "PDF one-based page index for fixed author versions, not journal page number",
+  "sources": [
+    {
+      "source_id": "S1",
+      "title": "Time-uniform Chernoff bounds via nonnegative supermartingales",
+      "authors": [
+        "Steven R. Howard",
+        "Aaditya Ramdas",
+        "Jon McAuliffe",
+        "Jasjeet Sekhon"
+      ],
+      "journal_reference": "Probability Surveys 17:257-317",
+      "publication_year": 2020,
+      "doi": "https://doi.org/10.1214/18-PS321",
+      "fixed_arxiv_id": "1808.03204v7",
+      "abstract_url": "https://arxiv.org/abs/1808.03204v7",
+      "pdf_url": "https://arxiv.org/pdf/1808.03204v7",
+      "license_identifier": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://arxiv.org/abs/1808.03204v7",
+      "pdf_sha256": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e",
+      "pdf_bytes": 1240151,
+      "pdf_pages": 63,
+      "abstract_page_cache_sha256": "c41a9de97e4a8d5d0c0e03df724d1524827dcdaac0ca932c48313f4dbb74774b",
+      "copyright_handling": "Full article PDF/text retained only in local research cache; not redistributed in this repository."
+    },
+    {
+      "source_id": "S2",
+      "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+      "authors": [
+        "Steven R. Howard",
+        "Aaditya Ramdas",
+        "Jon McAuliffe",
+        "Jasjeet Sekhon"
+      ],
+      "journal_reference": "Annals of Statistics 49(2):1055-1080",
+      "publication_year": 2021,
+      "doi": "https://doi.org/10.1214/20-AOS1991",
+      "fixed_arxiv_id": "1810.08240v9",
+      "abstract_url": "https://arxiv.org/abs/1810.08240v9",
+      "pdf_url": "https://arxiv.org/pdf/1810.08240v9",
+      "license_identifier": "arXiv-nonexclusive-distrib-1.0",
+      "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html",
+      "license_evidence_url": "https://arxiv.org/abs/1810.08240v9",
+      "pdf_sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "pdf_bytes": 1494142,
+      "pdf_pages": 48,
+      "abstract_page_cache_sha256": "fd0646ebb49e9081c835a065f9c4a7442ea52da48ef7e770ab3f2749aeb45f05",
+      "copyright_handling": "Full article PDF/text retained only in local research cache; not redistributed in this repository."
+    }
+  ],
+  "source_cache_not_for_repository": true,
+  "cache_location": "sources/ within each theory input; not included in repository"
+}

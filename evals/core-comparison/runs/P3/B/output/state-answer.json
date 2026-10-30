@@ -1,0 +1,187 @@
+{
+  "case_id": "T",
+  "stage": "B",
+  "authority": {
+    "path": "research/state.json",
+    "metadata_revision": 1,
+    "record_versions": {
+      "T-SRC": 1,
+      "T-REMOTE": 1,
+      "T-RAW": 1,
+      "T-PARAM": 1,
+      "T-CLAIM": 1,
+      "T-REL": 1,
+      "T-CHOICE": 1,
+      "T-CODE": 1,
+      "T-RESULT": 1,
+      "T-SUMMARY": 1,
+      "T-SOURCE-NOTE": 1,
+      "T-SOURCE-CHECK": 1,
+      "T-CALC": 1,
+      "T-SYNTH": 1
+    },
+    "configuration_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 1.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "working_file_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 4.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "conflict": "Authority still declares rho=1.0; current unregistered working-parameter bytes say rho=4.0. No durable authorized revision or rationale establishes a new active rho."
+  },
+  "active_constraints": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 1.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": {
+    "first": "先由作者确认 notes/parameters.json 中 rho 从1到4的意图和变更依据，决定维持权威 rho=1 还是明确采用 rho=4；本阶段只报告，不改文件或登记。",
+    "after_authorized_resolution": "在可写阶段保留旧字节和依据，以预期元数据/记录版本防冲突更新相关配置与选择；按获准参数在独立新目录重算并核对 result.json、table.csv，复核摘要，再逐项重绑 T-CALC、T-SYNTH 并更新检查点。",
+    "then": "将 alpha=0.05、rho=1 的四点边界表和摘要交作者讨论：先确认 intrinsic time V 的含义及过程是否满足给定 sub-Gaussian 控制，rho 在观察前固定；未经内容复核不投稿。",
+    "old_action_executed": false
+  },
+  "changed_or_missing_paths": [
+    {
+      "path": "notes/parameters.json",
+      "status": "changed",
+      "expected": {
+        "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+        "bytes": 161
+      },
+      "actual": {
+        "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+        "bytes": 161
+      }
+    }
+  ],
+  "missing_tracked_paths": [],
+  "affected_activities": [
+    {
+      "id": "T-CALC",
+      "declared_status": "done",
+      "effective_status": "stale",
+      "direct_cause": "T-PARAM working file fingerprint changed; output retains rho=1 and old parameter SHA."
+    },
+    {
+      "id": "T-SYNTH",
+      "declared_status": "done",
+      "effective_status": "stale",
+      "transitive_cause": "depends_on T-CALC; its captured parameter fingerprint also differs.",
+      "affected_artifacts": [
+        "T-RESULT",
+        "results/table.csv",
+        "T-SUMMARY"
+      ]
+    }
+  ],
+  "unaffected_activities": [
+    {
+      "id": "T-SOURCE-CHECK",
+      "declared_status": "done",
+      "effective_status": "done",
+      "evidence": "Primary PDF and notes/source-check.md byte hashes match captured files; captured source/record versions also match.",
+      "scope": "Local fixed identity and limited source card access only; not full scientific certification."
+    }
+  ],
+  "checkpoint_freshness": {
+    "fresh": false,
+    "reasons": [
+      "tracked file bytes changed or missing"
+    ],
+    "stage": "A",
+    "configuration_records_and_activities_digests_match": true,
+    "metadata_revision_matches": true,
+    "usable_as": "Historical recovery pointer for rho=1; cannot certify currently changed working inputs.",
+    "saved_or_rebound_in_B": false
+  },
+  "scientific_scope": {
+    "formula": "sqrt((v+rho)*(log(1+v/rho)+2*log(1/alpha)))",
+    "l0": 1,
+    "process_conditions": "S and -S have the required sub-Gaussian exponential control for the same nonnegative intrinsic time V; alpha is the total two-sided error budget",
+    "rho_rule": "fixed before observation",
+    "assessment": "specified numerical values and summary checked; proof, simulation coverage, novelty and human approval not assessed",
+    "formal_verification": "not-started; not required in this numerical task",
+    "current_B_review": "Read-only identity and dependency audit. No new numerical run, theorem review, simulation, novelty assessment, human approval, or submission.",
+    "staleness_meaning": "File/registration consistency failure; does not establish the theorem or the historical rho=1 numbers are false.",
+    "conditions": "l0=1; S and -S satisfy required sub-Gaussian exponential control for the same nonnegative intrinsic time V; alpha is total two-sided error; rho fixed before observation. No replacement of V by arbitrary empirical variance."
+  },
+  "source_tracking_limits": {
+    "source_only": [
+      "T-REMOTE"
+    ],
+    "unregistered_file": [
+      "notes/unregistered-scratch.md"
+    ],
+    "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked.",
+    "local_file_binding_count": 7,
+    "remote": "T-REMOTE has metadata-only source identity, no local copy or live remote verification.",
+    "scratch": "notes/unregistered-scratch.md was manually hashed/read here but is outside registered activity invalidation coverage.",
+    "primary_pdf_access_this_stage": "Full bytes hashed only; no PDF page, formula, proof or remote-content review.",
+    "historical_source_access": "State reports prior partial stream/source-card access; no independent full review claimed.",
+    "program_coverage": "resume.py checks seven registered local paths plus captured record/configuration digests and declared dependencies; it does not infer all unregistered files or unmodeled dependencies."
+  },
+  "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.",
+  "material_paths": {
+    "authoritative_state": "research/state.json",
+    "current_parameters": "notes/parameters.json",
+    "retained_initial_parameters": ".history/A-initial/files/notes/parameters.json",
+    "retained_history_manifest": ".history/A-initial/manifest.json",
+    "canonical_result": "results/result.json",
+    "companion_table": "results/table.csv",
+    "summary": "results/summary.md",
+    "source_identity_card": "notes/source-check.md",
+    "source_identities": "provenance/initial/source-identities.json",
+    "obligations": "provenance/initial/obligations.json",
+    "constraints": "provenance/initial/constraints.json",
+    "prior_validation": "validation/stage-A.json",
+    "recovery_program": "resume.py"
+  },
+  "notes": [
+    "All registered files present; only notes/parameters.json differs from captured bytes.",
+    "Original parameter bytes are retained and verified against history manifest.",
+    "Old results and summary still match initial bytes and rho=1. They have not been recomputed for rho=4.",
+    "Project update-state.py has not been executed; source recovery script exited1 for actual drift."
+  ]
+}

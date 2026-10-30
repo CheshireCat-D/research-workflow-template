@@ -1,0 +1,71 @@
+{
+  "submission_id": "Sdd4c61",
+  "task_id": "theory",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_conditions",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:11,15–17（固定v7/v9版本和三行证据表）：S1的exp{λS−ψ(λ)V}由L(λ)支配；S1(2.7)线性跨界；S2(14)/(51)双尾正态混合；S2(23)的μ_t=t^{-1}ΣE_{i−1}X_i、残差平方内在时间和双尾2δ。report.md:25,47,92,121,144,146补充原文定位。",
+      "rationale": "按子项4/4+4/4+4/4+6/6。独立核读固定PDF后，S1 p9 Definition1/(2.1)、p12–13 Theorem1/(2.7)–(2.10)与p13 Lemma1/(2.11)，S2 p9 Lemma2、p10(14)、p12 Proposition3/(21)、p14 Theorem4/(23)、p27–28(49)–(51)、p35(89)–(90)、p18 Naive SN和p19 Lemma3均与报告实质对应。报告准确区分适应性与对(S,V)的指数支配，未把非可预测性当成定义禁令；未制造iid、固定n、共同均值或正态数据限制。Theorem4的预测器取值、可预测性、目标、scale和双尾预算均齐全。"
+    },
+    {
+      "id": "gaussian_mixture",
+      "score": 15,
+      "max_points": 15,
+      "evidence": "report.md:19–25给E_{t−1}L_t=L_{t−1}e^{−λ²ΔV/2}E_{t−1}e^{λ(X_t−μ)}≤L_{t−1}及联合可测/条件Tonelli；27–35将N(0,1/ρ)密度配方为sqrt(ρ/a)exp(S_t²/(2a))；38–47反演M≥1/α为|S|≥sqrt(a log(a/(α²ρ)))。",
+      "rationale": "按子项7/7+4/4+4/4。密度精度ρ、2π、平方完成项和前因子全部正确。可预测ΔV使一步条件期望推导成立；固定概率混合、非负核、联合可测和初值1使条件积分交换及可积性成立。Ville阈值与双尾总α正确，且闭区间失覆盖包含于跨界事件；截断到[0,1]不排除真μ。"
+    },
+    {
+      "id": "finite_counterexample",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:49–66：iid Ber(1/10)、n=20、ρ=1/4、α=1/20，事件A_20={前20次全零}。按指定预测器Vhat_20=1/4、|S_20|=2，b²=(1/2)log800<4；e^8>Σ_{k=0}^6 8^k/k!>800，P(A_20)=12157665459056928801/10^20>1/20。",
+      "rationale": "按子项6/6+6/6+6/6。这是合法的替代有限反例，无需使用参考键的n=280、ρ=1见证。事件内区间上端点严格小于μ=0.1，事件概率约0.121576655严格大于0.05；独立精确有理数核验给Σ_{k=0}^6 8^k/k!=42037/45>800及同一概率。解析严格比较已写在正文，不依赖模拟。失败机制明确为未经证明的(S,Vhat)的ψ_N支配；报告保留固定ρ正态混合在合法V上的有效性。"
+    },
+    {
+      "id": "moving_precision",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:68–83：q=v/ρ，h(q)=(1+q^{-1})(log(1+q)+L)，h′=(q−log(1+q)−L)/q²；唯一根q_α−log(1+q_α)=L，ρ_*=v/q_α，inf b=sqrt((1+q_α)v)。85–92用iid Rademacher、X=(1+R)/2、V=t/4及给定LIL推出几乎必然无穷次跨越。",
+      "rationale": "按子项6/6+4/4+6/6+2/2。导数、唯一根、端点发散和全局最小值正确，与参考变量r等价。明确区分固定目标m的调参和逐时拼接最优值。对确定合法V=t/4，S_t/sqrt(t)的上极限为∞，因此O(sqrt(t))包络的同时覆盖为0，排除了经验方差混用造成的混淆。v=0时inf为0但argmin为空的说明也正确。"
+    },
+    {
+      "id": "valid_repairs",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:94–99以条件Hoeffding界e^{λ²/8}证明V=t/4合法；101–121给ψ_E=−log(1−λ)−λ、0≤λ<1和log级数不等式，进而E_{t−1}exp{λY−ψ_E(Y−d)²}≤e^{λd}(1−λd)≤1；123–134以λ_k=2^{−k}、w_k=1/[k(k+1)]构造u_δ及两侧α/2；136–142用α_j=α/[j(j+1)]校正ρ网格。",
+      "rationale": "按子项7/7+8/8+3/3。正态混合修复证明适用于有界适应共同条件均值过程，无需独立。EB修复正确使用有界可预测预测器和c=1的次指数ψ，级数论证覆盖|ξ|≤1，条件一步不等式及负方向均成立。所给直线下包络因截距趋∞而在每个有限v达到，故可数并集预算确实给一尾δ；双侧总α。多ρ方案对同一合法V采用可和的双尾预算，允许自适应选择或交集，没有未经校正的上确界。"
+    },
+    {
+      "id": "reviewable_short_memo",
+      "score": 13,
+      "max_points": 13,
+      "evidence": "report.md:3明确A/E真、B/C/D假且限定构造稿身份；144给文献定位；146以G={∀t:μ∈C_t}⊆{μ∈C_τ}证明E；148提供可直接采用的修订结论；150将代码数值核验与手工证明区分。",
+      "rationale": "按子项5/5+4/4+2/2+2/2。五项判断全部明确正确。修订结论准确归功已有超鞅、混合和EB框架，把此次工作限定为构造稿核查、有限反例与边界分析，未从两篇来源宣称全球新颖性。E用几乎处处有限正整数随机索引的路径事件包含，不加Eτ条件；也没有凭空定义C_∞。报告自包含，关键式子可复算且版本/页码可追溯，交付正文未重分发论文全文，配套有限网格仅作校验。"
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "usable",
+  "notes": [
+    "Source-check: PASS。已独立核读两篇固定PDF的关键定理及证明，PDF哈希与input/source-manifest.json一致；未发现实质性来源错引或页码错位。",
+    "参考键所列n=280、ρ=1不是必要见证；报告的Ber(0.1)、n=20、ρ=0.25解析反例成立且严格失覆盖裕量更大，按rubric接受。",
+    "未发现中心修复错误、主要误报或未解决的数学分歧；无critical cap触发。",
+    "已核对实际report.md的SHA256与template.json所载一致；独立计算记录在judge-checks/independent_verification.json。",
+    "arm_hidden=true仅指未提供组别映射；未据文风或自查措辞推断来源。未读取组别映射、执行日志、memory或个人skills，未联网、安装或调用其他agent。"
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification.",
+  "report_sha256": "4f17f0013a905dc225cfb3d2367f7621536fa74de419d98114053c55b7e6d8a6",
+  "source_check": {
+    "status": "pass",
+    "basis": "Independent reading of the fixed input PDF statements/proofs; PDF hashes verified against source-manifest.json.",
+    "substantive_errors": []
+  },
+  "unresolved_mathematical_disagreements": []
+}

@@ -1,0 +1,390 @@
+{
+  "status": "executed",
+  "requested": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "fork_turns": "none",
+    "max_tool_calls": 18,
+    "max_report_characters": 12000
+  },
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 10,
+  "network_calls": 0,
+  "violations": [],
+  "reads": [
+    {
+      "logical_name": "common/EXECUTOR.md",
+      "sha256": "316392fda85274a6b9a3ac7150125ef140d35d96edde46759348ef82020239fb"
+    },
+    {
+      "logical_name": "common/execution.template.json",
+      "sha256": "4202f4e551078d2e12ccd1e271ddb0eaba5bac56eb2cccc204cacf1e9b66330e"
+    },
+    {
+      "logical_name": "input/data-b/INPUT_MANIFEST.json",
+      "sha256": "11b8827f74fc67af3b0e85c06a5e65b24d67ebfbacd7f93b66d3e7c4e24908f7"
+    },
+    {
+      "logical_name": "input/data-b/ORIGINAL_README.txt",
+      "sha256": "b92c8628622948bf0828c43a1b315d1517c3d7fd63654730d0dea379b8e88175"
+    },
+    {
+      "logical_name": "input/data-b/SOURCES.md",
+      "sha256": "647a33e2683dbc60dfcbcf2e2873185aea94f7bfee49d6a3e3b3eacd6d85a786"
+    },
+    {
+      "logical_name": "input/data-b/TASK.md",
+      "sha256": "adada7990891049377599ad4f4234f24f881dd4429fa8f7854ebc42337f953be"
+    },
+    {
+      "logical_name": "input/data-b/UCI_PAGE_EXCERPT.txt",
+      "sha256": "06797117bf42c99729802c59237e8884610e8a7a9ad3e256ca6b0a7f5dff7115"
+    },
+    {
+      "logical_name": "input/data-b/data/day_2011.csv",
+      "sha256": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b"
+    },
+    {
+      "logical_name": "input/data-b/data/day_2012.csv",
+      "sha256": "75c2dd61bc5f8a3cd6ae5c787c74c0fbc1547201d47c5cba878d29f3083f09b6"
+    },
+    {
+      "logical_name": "input/data-b/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115"
+    },
+    {
+      "logical_name": "input/data-b/data/hour_2012.csv",
+      "sha256": "d73ae7f2aba616d775b5bccb3540910a9de49fe88e7f5926f7bf0a3fe840602d"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/RUN.md",
+      "sha256": "363c00a347fc3c2aa862c678fee4ab7c12c502221bf48ff0ae41182eec3119a2"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/analysis.py",
+      "sha256": "e22ae01683059c937d53ac0f1342cf8d7ae0b1b0fb8905a680eb35144d3735e6"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/bootstrap_L28.csv",
+      "sha256": "17bd9a3c5f7663b67544e692d79231b6f9a8fc49cff94c8210e5a0a2813a10eb"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/bootstrap_L7.csv",
+      "sha256": "f41d65b2854caa123da3ca74c2facdaf1a61cd539f59f0c5b780afbae15ebf09"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/daily_count_mismatches.csv",
+      "sha256": "50f7603165b2b0a3df3a176cc7002095c57639bbacd5aa7de5d6175cdb3e0ca4"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/daily_errors.csv",
+      "sha256": "df9b1b6044a2a4aca8b6076d4a95e0547857399b566926712a425fa783ffcd5f"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/data_audit.json",
+      "sha256": "d50467a894d2d1017f87ebcd998740ba5dfd37142b8edb40f911c2aca48d4c86"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/date_coverage.csv",
+      "sha256": "b8295bbadf582bb17f46a1089c2db5970127cd30a6bd0875453aab5c6c8b7da2"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/execution.json",
+      "sha256": "cf24b4eceb2b267a3413d519f47efc1720ec347e1166ba596720f0d5bb37d1c0"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/handoff.md",
+      "sha256": "896f8443b8782768d22b0173802c97ea815f79057081dbe050d9af31706aea36"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/model.json",
+      "sha256": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/predictions.csv",
+      "sha256": "38d967436201dce3400a4aa0f1f5919ec78ce8fc2614975107190708b3ad093f"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/report.md",
+      "sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/results.json",
+      "sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/run.log",
+      "sha256": "a7ac8a7780531e8603f09b5a2e40e019f2a1111bfb1b24d84c4972f8d2db7707"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/run_summary.json",
+      "sha256": "1b1375dd324ed675415d50d1a23ab8e829f85ef5f9988778f0ab1227f79fdd8c"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/score_replay_check.json",
+      "sha256": "339789628bd86f6f9dc8be026bfd7ce8ba802239a6b40319c90d95f457d62850"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/verification.json",
+      "sha256": "9ed3a758a629f00193273e661e8542d3902d8c51ee36e78d58c05225840857f6"
+    },
+    {
+      "logical_name": "workspace/stage_a_snapshot/verify.py",
+      "sha256": "3262b123f8172ee66061020aa28172f0e754a4d5023024055dfe5c35c02b88e2"
+    },
+    {
+      "logical_name": "workspace/analysis.py",
+      "sha256": "e22ae01683059c937d53ac0f1342cf8d7ae0b1b0fb8905a680eb35144d3735e6"
+    },
+    {
+      "logical_name": "workspace/verify.py",
+      "sha256": "3262b123f8172ee66061020aa28172f0e754a4d5023024055dfe5c35c02b88e2"
+    },
+    {
+      "logical_name": "workspace/model.json",
+      "sha256": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47"
+    },
+    {
+      "logical_name": "workspace/results.json",
+      "sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb"
+    },
+    {
+      "logical_name": "workspace/report.md",
+      "sha256": "4ce7fec7be22bf7a148f7f7736ee59bb3424800dede803cd8d9c1dfacf7d7f68"
+    },
+    {
+      "logical_name": "workspace/handoff.md",
+      "sha256": "34f2a414c83b59cf2b2b40a67435a2ec8464bf8150008942d07fcfa9a04eb37a"
+    },
+    {
+      "logical_name": "workspace/RUN.md",
+      "sha256": "b7f3f0314202e50e561b5bc0b40764e16d230ede9ff5d040c6e03609594097d7"
+    },
+    {
+      "logical_name": "workspace/stage_b.py",
+      "sha256": "09d153bcc9f812204adc590adfed0a321ccb4ca9245b81e8aeacce48299addf0"
+    },
+    {
+      "logical_name": "workspace/verify_b.py",
+      "sha256": "c5e0aa32b63e7f6a9c3acd007dcfe2a209da35d6dec0c2d6c332ce0e9919a889"
+    },
+    {
+      "logical_name": "workspace/publish_b.py",
+      "sha256": "ff6473088958056524d096ed22f09a37c0c4f9fe8396a1c0d649aa3786d52411"
+    },
+    {
+      "logical_name": "workspace/audit_execution_b.py",
+      "sha256": "d6d3a08511767e9fa7b5e7dcb192322dc38b4fd706e83d4c86f3441239a7d3a8"
+    },
+    {
+      "logical_name": "workspace/stage_b_run.log",
+      "sha256": "92af487ef75ea9558fe4ed55bcb2db6979af6192816f56c0033a72a47b08568e"
+    },
+    {
+      "logical_name": "workspace/stage_b_verify.log",
+      "sha256": "fc13716e10fd34a63bd5afc9b723c76acc3ca2fd455b22e4c9d7b61d9030a99c"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/annual_growth.json",
+      "sha256": "386819839f186706da3dad930517e4dd9780834261261d8917f377186e8c72e7"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/bootstrap_L28.csv",
+      "sha256": "2f6476d979fed16b693acdf536c19c8e2e9cea29374118d91fc799426abbab87"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/bootstrap_L7.csv",
+      "sha256": "823b2e1e47840853dc5783eb42989d45e1252151a17393e690733a1885f7c919"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/comparison_metrics.csv",
+      "sha256": "702a3ac8cf432bc54bf94d3159ab5fa9ce88a1bbdcb0d194685bac26059e3a4d"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/daily_count_mismatches_2011.csv",
+      "sha256": "50f7603165b2b0a3df3a176cc7002095c57639bbacd5aa7de5d6175cdb3e0ca4"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/daily_count_mismatches_2012.csv",
+      "sha256": "50f7603165b2b0a3df3a176cc7002095c57639bbacd5aa7de5d6175cdb3e0ca4"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/daily_errors.csv",
+      "sha256": "a8adbaa612b602eb6848e17704c6a80427eadc451946dd3b45e4f687be38a76c"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/data_audit.json",
+      "sha256": "fcccb3c1810d6bd5affd5fd1820d496369aff164adb331ca310f003dbd968558"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/date_coverage_2011.csv",
+      "sha256": "b8295bbadf582bb17f46a1089c2db5970127cd30a6bd0875453aab5c6c8b7da2"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/date_coverage_2012.csv",
+      "sha256": "a58f5a308a79f78b59b40bdbc1dec3cb8b3b7548f29e7aff9edb97643efee12b"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/predictions.csv",
+      "sha256": "2dd8b32513d665845d6f6566eb8e731d7f9d5121334e1eb916f39feb5aa8203d"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/results.json",
+      "sha256": "52a13ee74e5fd4131eb2a59657f7312899564282766d563077c78a9e1aacc9f2"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/score_provenance.json",
+      "sha256": "bfd49203230af1882dbf65b6cec1f460f8a4bd8db864b5fba9d8f14d530b569c"
+    },
+    {
+      "logical_name": "workspace/stage_b_results/verification.json",
+      "sha256": "fc13716e10fd34a63bd5afc9b723c76acc3ca2fd455b22e4c9d7b61d9030a99c"
+    },
+    {
+      "logical_name": "common/python",
+      "sha256": "d90bce0f5ac3aa40e2ee5900ad243bad0b2205ce17408278f088b34aed737840"
+    },
+    {
+      "logical_name": "common/stdlib/argparse.py",
+      "sha256": "7cc582dcb3b76e2c957f78a3f74e9809d6c311d6aab7bcaa2c9954d0cbff5f30"
+    },
+    {
+      "logical_name": "common/stdlib/collections/__init__.py",
+      "sha256": "7fdb04dd248ab37909f46d2085bfee56b32d7e91e49ad3a2fad99c453295659b"
+    },
+    {
+      "logical_name": "common/stdlib/csv.py",
+      "sha256": "2fd2a39ec59a5cbcd71596a93205001e593c65dc2ca3bef6028f148372028a88"
+    },
+    {
+      "logical_name": "common/stdlib/datetime.py",
+      "sha256": "ef20dc6b3554cd585dddffdc573f1f9a7a54c522f2a3fb4576c44edbb1e14238"
+    },
+    {
+      "logical_name": "common/stdlib/hashlib.py",
+      "sha256": "6dbdebf270868b391080e21dc9687eddfaf321c965ad979f68d3f5c423c613ab"
+    },
+    {
+      "logical_name": "common/stdlib/json/__init__.py",
+      "sha256": "d5d41e2c29049515d295d81a6d40b4890fbec8d8482cfb401630f8ef2f77e4d5"
+    },
+    {
+      "logical_name": "common/stdlib/pathlib.py",
+      "sha256": "10ba48ae8063cfe7589436041d0d4628c05f427c7709cf8e75e486f8930cc32c"
+    },
+    {
+      "logical_name": "common/stdlib/random.py",
+      "sha256": "de48263a837339c7e01cf9f3c4d756696e0e0775f7778eb9cf81ad5b00134569"
+    },
+    {
+      "logical_name": "common/stdlib/runpy.py",
+      "sha256": "81e07da29bb2235111079bb64efea7d291639c5d2cf163e7af187d6a38cef389"
+    },
+    {
+      "logical_name": "common/stdlib/sysconfig.py",
+      "sha256": "ce56212ba89be181fb90fe62496e6d2e436befaf2dffd10e87ce37d1685271a8"
+    },
+    {
+      "logical_name": "common/stdlib/fractions.py",
+      "sha256": "d52d1ab9d5be26924e4914a5e40069c992bbfa68f773694c2e5ee8452d0766a0"
+    }
+  ],
+  "commands": [
+    {
+      "call": 1,
+      "operation": "read",
+      "command": "cat STUDY_ROOT/runs/D06/EXECUTOR.md STUDY_ROOT/runs/D06/execution.template.json INPUT_DIR/TASK.md",
+      "exit_code": 0
+    },
+    {
+      "call": 2,
+      "operation": "inventory",
+      "command": "ls workspace; find INPUT -maxdepth 3 -type f; find WORKSPACE -maxdepth 3 -type f",
+      "exit_code": 0
+    },
+    {
+      "call": 3,
+      "operation": "read",
+      "command": "cat workspace/{handoff.md,RUN.md,model.json,results.json} input/data-b/{INPUT_MANIFEST.json,SOURCES.md,UCI_PAGE_EXCERPT.txt,ORIGINAL_README.txt}",
+      "exit_code": 0
+    },
+    {
+      "call": 4,
+      "operation": "read",
+      "command": "cat workspace/{analysis.py,verify.py,report.md}",
+      "exit_code": 0
+    },
+    {
+      "call": 5,
+      "operation": "preserve-write-run",
+      "command": "mkdir stage_a_snapshot; cp original root artifacts to stage_a_snapshot; write stage_b.py by heredoc; EVAL_PYTHON -I -B WORKSPACE/stage_b.py --input-dir INPUT_DIR --prior-dir WORKSPACE/stage_a_snapshot --model WORKSPACE/model.json --output-dir WORKSPACE/stage_b_results > WORKSPACE/stage_b_run.log",
+      "exit_code": 0
+    },
+    {
+      "call": 6,
+      "operation": "read",
+      "command": "cat workspace/stage_b_results/{data_audit.json,annual_growth.json,results.json,score_provenance.json}",
+      "exit_code": 0
+    },
+    {
+      "call": 7,
+      "operation": "write-run",
+      "command": "write verify_b.py by heredoc; EVAL_PYTHON -I -B WORKSPACE/verify_b.py --result-dir WORKSPACE/stage_b_results --model WORKSPACE/model.json > WORKSPACE/stage_b_verify.log",
+      "execution_session": 38201,
+      "exit_code": 0
+    },
+    {
+      "call": 8,
+      "operation": "await-completion",
+      "command": "write_stdin(session_id=38201, chars=\"\")",
+      "exit_code": 0
+    },
+    {
+      "call": 9,
+      "operation": "write-run",
+      "command": "write publish_b.py by heredoc; EVAL_PYTHON -I -B WORKSPACE/publish_b.py --workspace WORKSPACE --result-dir WORKSPACE/stage_b_results",
+      "exit_code": 0
+    },
+    {
+      "call": 10,
+      "operation": "write-validate-record",
+      "command": "write audit_execution_b.py by heredoc; EVAL_PYTHON -I -B WORKSPACE/audit_execution_b.py",
+      "exit_code": 0
+    }
+  ],
+  "duration_seconds": null,
+  "scope": "instruction-only; no OS audit",
+  "failure": null,
+  "trial_id": "D06",
+  "phase": "B",
+  "checks": {
+    "report_characters": 6207,
+    "model_unchanged": true,
+    "original_results_preserved": true,
+    "training_verified_sum_n_mean_cells": 72,
+    "new_prediction_rows": 8734,
+    "bootstrap_expanded_replicates_verified": 4000,
+    "verification_status": "passed",
+    "scientific_seed": 20261029,
+    "scientific_bootstrap_B": 2000
+  },
+  "notes": [
+    "No model or reasoning-effort override requested; effective host model/effort not reported, kept null.",
+    "duration_seconds unavailable for the full outer-tool run, kept null.",
+    "Command descriptions abbreviate heredoc bodies; exact created code is retained and hashed.",
+    "No stage-A chats, other trials, organizer design/answers, memory, skills, network, installs or agent messaging were used."
+  ],
+  "publication_projection": {
+    "raw_execution_sha256": "a7faee36a1820d0c958ed9a2b2e278debc67ac0a04fb678fe0f94b136bcc9f2c",
+    "changes": [
+      "absolute paths mapped to logical locators"
+    ],
+    "scope": "Administrative labels/locators only; effective unknowns and scientific content retained."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--id",
+    "T-RESULT"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 27,\n  \"kind\": \"artifact\",\n  \"id\": \"T-RESULT\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"results/result.json\": \"ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"derived_from\": [\n        \"evidence:T-PARAM\",\n        \"evidence:T-RAW\",\n        \"artifact:T-CODE\",\n        \"decision:T-CHOICE\"\n      ],\n      \"description\": \"Canonical provided result, verified by fresh normal execution.\",\n      \"id\": \"T-RESULT\",\n      \"path\": \"results/result.json\",\n      \"type\": \"numeric-result\"\n    },\n    \"registered_at\": \"2026-10-30T01:03:18.402904+00:00\",\n    \"version\": 1\n  }\n}\n",
+  "stderr": ""
+}

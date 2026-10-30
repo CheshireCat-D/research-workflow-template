@@ -1,0 +1,627 @@
+{
+  "archives": {
+    "new": {
+      "bytes": 538434,
+      "sha256": "d410a4d0a18b41ab49527da58da041416af7150cdf94c4180f93e8008c1390e1"
+    },
+    "old": {
+      "bytes": 528969,
+      "sha256": "1bf658b7895711bf786b3cf415a3c47dc2b214a31bace1d82e5b22ef00849ff2"
+    }
+  },
+  "client_actions_json_sha256": "9f5ac078476011af6184acaf408551b7bc27f34c6b98ede6be05ec9a940e74bb",
+  "commands_json_sha256": "67d2cc51f4e630b7abab3b7b88260a9c105a8b386df88a9fd76435b5916cfd44",
+  "edit_export_cli_syntax": "Repeated --edit options, with one typed reference per option.",
+  "excluded_commands": {
+    "analysis": 6,
+    "probe": 4,
+    "setup": 2
+  },
+  "experiment": "Deterministic offline software journey using real public observations.",
+  "limits": [
+    "One fixed dataset and deterministic software journey; no human-user efficiency measurement.",
+    "Command counts exclude common initialization, data analysis, derivation and client JSON edits.",
+    "No measurement of scientific accuracy, novelty, proof correctness or ranking against other skills.",
+    "The derived 343-row input is a sensitivity subset, not newly collected or corrected data.",
+    "No network verification was performed; local cached input matches the recorded upstream identity."
+  ],
+  "passed": true,
+  "readonly_bytes_and_mtimes_unchanged": true,
+  "readonly_checks": 9,
+  "results": {
+    "final-fingerprints": {
+      "new": {
+        "code/analysis.py": "93b6b2f9f970e068650e87d5ec83b35f5d617cadbfb169474c4c3acabfbe2389",
+        "data/penguins.csv": "316f8c61ff8e2c9e41284d8662112cb37430e002028290aebf395f9286143def"
+      },
+      "old": {
+        "code/analysis.py": "93b6b2f9f970e068650e87d5ec83b35f5d617cadbfb169474c4c3acabfbe2389",
+        "data/penguins.csv": "316f8c61ff8e2c9e41284d8662112cb37430e002028290aebf395f9286143def"
+      }
+    },
+    "initial": {
+      "new": {
+        "activities": [
+          {
+            "declared_status": "done",
+            "effective_status": "done",
+            "id": "A1",
+            "stale_reasons": [],
+            "title": "Compute species/sex mass descriptions"
+          }
+        ],
+        "checkpoint": {
+          "changed": [],
+          "recorded": true,
+          "status": "current"
+        },
+        "complete_species_sex_mass": 333,
+        "counts": {
+          "activities": 1,
+          "artifacts": 0,
+          "decisions": 0,
+          "evidence": 2,
+          "method_bindings": 0,
+          "relations": 0,
+          "sources": 1,
+          "statements": 0
+        },
+        "file_tracking": {
+          "local_file_count": 2,
+          "local_files": [
+            "code/analysis.py",
+            "data/penguins.csv"
+          ],
+          "source_ids_without_local_evidence": []
+        },
+        "input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+        "next_action": "核实原始抽样单位和重复测量标识，再决定推断方法。",
+        "revision": 5,
+        "rows": 344,
+        "species_contrasts": [
+          {
+            "male_minus_female_g": 674.6575342465753,
+            "mean_female_g": 3368.8356164383563,
+            "mean_male_g": 4043.4931506849316,
+            "n_female": 73,
+            "n_male": 73,
+            "species": "Adelie"
+          },
+          {
+            "male_minus_female_g": 411.76470588235316,
+            "mean_female_g": 3527.205882352941,
+            "mean_male_g": 3938.970588235294,
+            "n_female": 34,
+            "n_male": 34,
+            "species": "Chinstrap"
+          },
+          {
+            "male_minus_female_g": 805.0946862634255,
+            "mean_female_g": 4679.741379310345,
+            "mean_male_g": 5484.836065573771,
+            "n_female": 58,
+            "n_male": 61,
+            "species": "Gentoo"
+          }
+        ]
+      },
+      "old": {
+        "activities": [
+          {
+            "declared_status": "done",
+            "effective_status": "done",
+            "id": "A1",
+            "stale_reasons": [],
+            "title": "Compute species/sex mass descriptions"
+          }
+        ],
+        "checkpoint": {
+          "changed": [],
+          "recorded": true,
+          "status": "current"
+        },
+        "complete_species_sex_mass": 333,
+        "counts": {
+          "activities": 1,
+          "artifacts": 0,
+          "decisions": 0,
+          "evidence": 2,
+          "method_bindings": 0,
+          "relations": 0,
+          "sources": 1,
+          "statements": 0
+        },
+        "file_tracking": {
+          "local_file_count": 2,
+          "local_files": [
+            "code/analysis.py",
+            "data/penguins.csv"
+          ],
+          "source_ids_without_local_evidence": []
+        },
+        "input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+        "next_action": "核实原始抽样单位和重复测量标识，再决定推断方法。",
+        "revision": 5,
+        "rows": 344,
+        "species_contrasts": [
+          {
+            "male_minus_female_g": 674.6575342465753,
+            "mean_female_g": 3368.8356164383563,
+            "mean_male_g": 4043.4931506849316,
+            "n_female": 73,
+            "n_male": 73,
+            "species": "Adelie"
+          },
+          {
+            "male_minus_female_g": 411.76470588235316,
+            "mean_female_g": 3527.205882352941,
+            "mean_male_g": 3938.970588235294,
+            "n_female": 34,
+            "n_male": 34,
+            "species": "Chinstrap"
+          },
+          {
+            "male_minus_female_g": 805.0946862634255,
+            "mean_female_g": 4679.741379310345,
+            "mean_male_g": 5484.836065573771,
+            "n_female": 58,
+            "n_male": 61,
+            "species": "Gentoo"
+          }
+        ]
+      }
+    },
+    "moved-resume": {
+      "new": {
+        "activities": [
+          {
+            "declared_status": "done",
+            "effective_status": "done",
+            "id": "A1",
+            "stale_reasons": [],
+            "title": "Compute species/sex mass descriptions"
+          }
+        ],
+        "checkpoint": {
+          "changed": [],
+          "recorded": true,
+          "status": "current"
+        },
+        "complete_species_sex_mass": 332,
+        "counts": {
+          "activities": 1,
+          "artifacts": 0,
+          "decisions": 0,
+          "evidence": 2,
+          "method_bindings": 0,
+          "relations": 0,
+          "sources": 1,
+          "statements": 0
+        },
+        "file_tracking": {
+          "local_file_count": 2,
+          "local_files": [
+            "code/analysis.py",
+            "data/penguins.csv"
+          ],
+          "source_ids_without_local_evidence": []
+        },
+        "input_sha256": "316f8c61ff8e2c9e41284d8662112cb37430e002028290aebf395f9286143def",
+        "next_action": "核实原始抽样单位和重复测量标识，再决定推断方法。",
+        "revision": 8,
+        "rows": 343,
+        "species_contrasts": [
+          {
+            "male_minus_female_g": 678.7338280060881,
+            "mean_female_g": 3368.8356164383563,
+            "mean_male_g": 4047.5694444444443,
+            "n_female": 73,
+            "n_male": 72,
+            "species": "Adelie"
+          },
+          {
+            "male_minus_female_g": 411.76470588235316,
+            "mean_female_g": 3527.205882352941,
+            "mean_male_g": 3938.970588235294,
+            "n_female": 34,
+            "n_male": 34,
+            "species": "Chinstrap"
+          },
+          {
+            "male_minus_female_g": 805.0946862634255,
+            "mean_female_g": 4679.741379310345,
+            "mean_male_g": 5484.836065573771,
+            "n_female": 58,
+            "n_male": 61,
+            "species": "Gentoo"
+          }
+        ]
+      },
+      "old": {
+        "activities": [
+          {
+            "declared_status": "done",
+            "effective_status": "done",
+            "id": "A1",
+            "stale_reasons": [],
+            "title": "Compute species/sex mass descriptions"
+          }
+        ],
+        "checkpoint": {
+          "changed": [],
+          "recorded": true,
+          "status": "current"
+        },
+        "complete_species_sex_mass": 332,
+        "counts": {
+          "activities": 1,
+          "artifacts": 0,
+          "decisions": 0,
+          "evidence": 2,
+          "method_bindings": 0,
+          "relations": 0,
+          "sources": 1,
+          "statements": 0
+        },
+        "file_tracking": {
+          "local_file_count": 2,
+          "local_files": [
+            "code/analysis.py",
+            "data/penguins.csv"
+          ],
+          "source_ids_without_local_evidence": []
+        },
+        "input_sha256": "316f8c61ff8e2c9e41284d8662112cb37430e002028290aebf395f9286143def",
+        "next_action": "核实原始抽样单位和重复测量标识，再决定推断方法。",
+        "revision": 8,
+        "rows": 343,
+        "species_contrasts": [
+          {
+            "male_minus_female_g": 678.7338280060881,
+            "mean_female_g": 3368.8356164383563,
+            "mean_male_g": 4047.5694444444443,
+            "n_female": 73,
+            "n_male": 72,
+            "species": "Adelie"
+          },
+          {
+            "male_minus_female_g": 411.76470588235316,
+            "mean_female_g": 3527.205882352941,
+            "mean_male_g": 3938.970588235294,
+            "n_female": 34,
+            "n_male": 34,
+            "species": "Chinstrap"
+          },
+          {
+            "male_minus_female_g": 805.0946862634255,
+            "mean_female_g": 4679.741379310345,
+            "mean_male_g": 5484.836065573771,
+            "n_female": 58,
+            "n_male": 61,
+            "species": "Gentoo"
+          }
+        ]
+      }
+    },
+    "refresh": {
+      "new": {
+        "activities": [
+          {
+            "declared_status": "done",
+            "effective_status": "done",
+            "id": "A1",
+            "stale_reasons": [],
+            "title": "Compute species/sex mass descriptions"
+          }
+        ],
+        "checkpoint": {
+          "changed": [],
+          "recorded": true,
+          "status": "current"
+        },
+        "complete_species_sex_mass": 332,
+        "counts": {
+          "activities": 1,
+          "artifacts": 0,
+          "decisions": 0,
+          "evidence": 2,
+          "method_bindings": 0,
+          "relations": 0,
+          "sources": 1,
+          "statements": 0
+        },
+        "file_tracking": {
+          "local_file_count": 2,
+          "local_files": [
+            "code/analysis.py",
+            "data/penguins.csv"
+          ],
+          "source_ids_without_local_evidence": []
+        },
+        "input_sha256": "316f8c61ff8e2c9e41284d8662112cb37430e002028290aebf395f9286143def",
+        "next_action": "核实原始抽样单位和重复测量标识，再决定推断方法。",
+        "revision": 8,
+        "rows": 343,
+        "species_contrasts": [
+          {
+            "male_minus_female_g": 678.7338280060881,
+            "mean_female_g": 3368.8356164383563,
+            "mean_male_g": 4047.5694444444443,
+            "n_female": 73,
+            "n_male": 72,
+            "species": "Adelie"
+          },
+          {
+            "male_minus_female_g": 411.76470588235316,
+            "mean_female_g": 3527.205882352941,
+            "mean_male_g": 3938.970588235294,
+            "n_female": 34,
+            "n_male": 34,
+            "species": "Chinstrap"
+          },
+          {
+            "male_minus_female_g": 805.0946862634255,
+            "mean_female_g": 4679.741379310345,
+            "mean_male_g": 5484.836065573771,
+            "n_female": 58,
+            "n_male": 61,
+            "species": "Gentoo"
+          }
+        ]
+      },
+      "old": {
+        "activities": [
+          {
+            "declared_status": "done",
+            "effective_status": "done",
+            "id": "A1",
+            "stale_reasons": [],
+            "title": "Compute species/sex mass descriptions"
+          }
+        ],
+        "checkpoint": {
+          "changed": [],
+          "recorded": true,
+          "status": "current"
+        },
+        "complete_species_sex_mass": 332,
+        "counts": {
+          "activities": 1,
+          "artifacts": 0,
+          "decisions": 0,
+          "evidence": 2,
+          "method_bindings": 0,
+          "relations": 0,
+          "sources": 1,
+          "statements": 0
+        },
+        "file_tracking": {
+          "local_file_count": 2,
+          "local_files": [
+            "code/analysis.py",
+            "data/penguins.csv"
+          ],
+          "source_ids_without_local_evidence": []
+        },
+        "input_sha256": "316f8c61ff8e2c9e41284d8662112cb37430e002028290aebf395f9286143def",
+        "next_action": "核实原始抽样单位和重复测量标识，再决定推断方法。",
+        "revision": 8,
+        "rows": 343,
+        "species_contrasts": [
+          {
+            "male_minus_female_g": 678.7338280060881,
+            "mean_female_g": 3368.8356164383563,
+            "mean_male_g": 4047.5694444444443,
+            "n_female": 73,
+            "n_male": 72,
+            "species": "Adelie"
+          },
+          {
+            "male_minus_female_g": 411.76470588235316,
+            "mean_female_g": 3527.205882352941,
+            "mean_male_g": 3938.970588235294,
+            "n_female": 34,
+            "n_male": 34,
+            "species": "Chinstrap"
+          },
+          {
+            "male_minus_female_g": 805.0946862634255,
+            "mean_female_g": 4679.741379310345,
+            "mean_male_g": 5484.836065573771,
+            "n_female": 58,
+            "n_male": 61,
+            "species": "Gentoo"
+          }
+        ]
+      }
+    },
+    "save-report": {
+      "new": {
+        "activities": [
+          {
+            "declared_status": "done",
+            "effective_status": "done",
+            "id": "A1",
+            "stale_reasons": [],
+            "title": "Compute species/sex mass descriptions"
+          }
+        ],
+        "checkpoint": {
+          "changed": [],
+          "recorded": true,
+          "status": "current"
+        },
+        "complete_species_sex_mass": 332,
+        "counts": {
+          "activities": 1,
+          "artifacts": 0,
+          "decisions": 0,
+          "evidence": 2,
+          "method_bindings": 0,
+          "relations": 0,
+          "sources": 1,
+          "statements": 0
+        },
+        "file_tracking": {
+          "local_file_count": 2,
+          "local_files": [
+            "code/analysis.py",
+            "data/penguins.csv"
+          ],
+          "source_ids_without_local_evidence": []
+        },
+        "input_sha256": "316f8c61ff8e2c9e41284d8662112cb37430e002028290aebf395f9286143def",
+        "next_action": "核实原始抽样单位和重复测量标识，再决定推断方法。",
+        "revision": 9,
+        "rows": 343,
+        "species_contrasts": [
+          {
+            "male_minus_female_g": 678.7338280060881,
+            "mean_female_g": 3368.8356164383563,
+            "mean_male_g": 4047.5694444444443,
+            "n_female": 73,
+            "n_male": 72,
+            "species": "Adelie"
+          },
+          {
+            "male_minus_female_g": 411.76470588235316,
+            "mean_female_g": 3527.205882352941,
+            "mean_male_g": 3938.970588235294,
+            "n_female": 34,
+            "n_male": 34,
+            "species": "Chinstrap"
+          },
+          {
+            "male_minus_female_g": 805.0946862634255,
+            "mean_female_g": 4679.741379310345,
+            "mean_male_g": 5484.836065573771,
+            "n_female": 58,
+            "n_male": 61,
+            "species": "Gentoo"
+          }
+        ]
+      },
+      "old": {
+        "activities": [
+          {
+            "declared_status": "done",
+            "effective_status": "done",
+            "id": "A1",
+            "stale_reasons": [],
+            "title": "Compute species/sex mass descriptions"
+          }
+        ],
+        "checkpoint": {
+          "changed": [],
+          "recorded": true,
+          "status": "current"
+        },
+        "complete_species_sex_mass": 332,
+        "counts": {
+          "activities": 1,
+          "artifacts": 0,
+          "decisions": 0,
+          "evidence": 2,
+          "method_bindings": 0,
+          "relations": 0,
+          "sources": 1,
+          "statements": 0
+        },
+        "file_tracking": {
+          "local_file_count": 2,
+          "local_files": [
+            "code/analysis.py",
+            "data/penguins.csv"
+          ],
+          "source_ids_without_local_evidence": []
+        },
+        "input_sha256": "316f8c61ff8e2c9e41284d8662112cb37430e002028290aebf395f9286143def",
+        "next_action": "核实原始抽样单位和重复测量标识，再决定推断方法。",
+        "revision": 9,
+        "rows": 343,
+        "species_contrasts": [
+          {
+            "male_minus_female_g": 678.7338280060881,
+            "mean_female_g": 3368.8356164383563,
+            "mean_male_g": 4047.5694444444443,
+            "n_female": 73,
+            "n_male": 72,
+            "species": "Adelie"
+          },
+          {
+            "male_minus_female_g": 411.76470588235316,
+            "mean_female_g": 3527.205882352941,
+            "mean_male_g": 3938.970588235294,
+            "n_female": 34,
+            "n_male": 34,
+            "species": "Chinstrap"
+          },
+          {
+            "male_minus_female_g": 805.0946862634255,
+            "mean_female_g": 4679.741379310345,
+            "mean_male_g": 5484.836065573771,
+            "n_female": 58,
+            "n_male": 61,
+            "species": "Gentoo"
+          }
+        ]
+      }
+    },
+    "stale_negative": {
+      "checkpoint_status": "current",
+      "exit_code": 1,
+      "findings": [
+        {
+          "code": "file_changed",
+          "path": "data/penguins.csv",
+          "record": "evidence:E1"
+        },
+        {
+          "code": "activity_stale",
+          "record": "activity:A1"
+        }
+      ],
+      "old_bindings_unchanged": true,
+      "saved": true
+    },
+    "version_negative": {
+      "error": "version_conflict",
+      "exit_code": 2,
+      "failed_project_bytes_and_mtimes_unchanged": true,
+      "rejected_export_version": 2
+    }
+  },
+  "runner_sha256": "93b6b2f9f970e068650e87d5ec83b35f5d617cadbfb169474c4c3acabfbe2389",
+  "source": {
+    "bytes": 15241,
+    "license": "CC0-1.0",
+    "license_url": "https://github.com/allisonhorst/palmerpenguins/blob/8957207b78d6ccd1b4654a9dd9c9041b657478ab/LICENSE.md",
+    "path": "inst/extdata/penguins.csv",
+    "rows": 344,
+    "sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+    "source_commit": "8957207b78d6ccd1b4654a9dd9c9041b657478ab",
+    "url": "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/8957207b78d6ccd1b4654a9dd9c9041b657478ab/inst/extdata/penguins.csv"
+  },
+  "workflow_cli_counts": {
+    "initial": {
+      "new": 1,
+      "old": 3
+    },
+    "moved-resume": {
+      "new": 1,
+      "old": 1
+    },
+    "refresh": {
+      "new": 2,
+      "old": 5
+    },
+    "save-report": {
+      "new": 1,
+      "old": 2
+    }
+  },
+  "workflow_cli_totals": {
+    "new": 5,
+    "old": 11
+  }
+}

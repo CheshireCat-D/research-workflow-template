@@ -1,0 +1,23 @@
+{
+  "n_hours": 2203,
+  "n_dates": 92,
+  "date_start": "2011-10-01",
+  "date_end": "2011-12-31",
+  "C0": {
+    "MAE": 58.825190494512434,
+    "RMSE": 86.08056895633848,
+    "bias_prediction_minus_actual": 1.078965171773347,
+    "day_equal_MAE": 58.848612994531926
+  },
+  "C1": {
+    "MAE": 44.570832407531775,
+    "RMSE": 67.99996906089847,
+    "bias_prediction_minus_actual": 0.9871531155146787,
+    "day_equal_MAE": 44.62015379783553
+  },
+  "hour_weighted_absolute_improvement": 14.254358086980659,
+  "hour_weighted_relative_improvement": 0.24231724482575867,
+  "day_equal_absolute_improvement": 14.228459196696399,
+  "day_equal_relative_improvement": 0.24178070599588253,
+  "C1_fallback_rows": 0
+}

@@ -1,0 +1,442 @@
+{
+  "chain_id": "P5",
+  "scope": "Independent engineering observations, no scientific score added. Exact per-chain extraction of the bound common audit.",
+  "source_record": {
+    "path": "audits/mechanical-audit/engineering.json",
+    "sha256": "795e030e5eb9530d2fcaa5518eb3ff896ebbb633eb3fb6e5903aee6133066608"
+  },
+  "engineering": {
+    "readonly_B": {
+      "name": "P5-B-readonly",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P5/readonly-B/project/scripts/manage.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P5/readonly-B/project",
+        "status"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P5/readonly-B/project",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": []
+    },
+    "B_status": {
+      "case_id": "T",
+      "authoritative_state": ".research/state.json",
+      "revision": 1,
+      "active_constraints": {
+        "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+        "deadline": "2026-12-15",
+        "budget": "Offline Python standard library only; no new data collection or model refit",
+        "available_capabilities": [
+          "local Python standard library",
+          "fixed source cache",
+          "author-provided working notes"
+        ],
+        "venue": "Undecided; do not invent a target journal",
+        "language": "zh",
+        "current_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 1.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "unknowns": [
+          "No human expert approval has occurred",
+          "No external submission authorized"
+        ],
+        "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+        "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+      },
+      "next_action": "在交作者讨论前运行只读状态核对，确认当前 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的结果与摘要仍对应；向作者报告四点数值、sub-Gaussian/V 条件和未作证明/模拟覆盖验证的范围，等待作者实际决定。未经内容复核不投稿。",
+      "changed_paths": [
+        "notes/parameters.json"
+      ],
+      "missing_paths": [],
+      "activities": {
+        "T-SOURCE-CHECK": {
+          "recorded_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        },
+        "T-CALC": {
+          "recorded_status": "done",
+          "effective_status": "needs_recheck",
+          "reasons": [
+            "missing or changed material: notes/parameters.json"
+          ]
+        },
+        "T-SYNTH": {
+          "recorded_status": "done",
+          "effective_status": "needs_recheck",
+          "reasons": [
+            "dependency needs recheck: T-CALC"
+          ]
+        }
+      },
+      "checkpoint_freshness": "stale_for_registered_bytes",
+      "coverage_limits": {
+        "source_only": [
+          "T-REMOTE"
+        ],
+        "excluded_unregistered_paths": [
+          "notes/unregistered-scratch.md"
+        ],
+        "all_project_files_covered": false,
+        "note": "Scratch is retained but is not a declared scientific dependency. Hash inventory is not scientific review. Remote identity metadata does not monitor content."
+      },
+      "source_access": {
+        "T-SRC": {
+          "status": "local_fixed_identity_checked",
+          "local_path": "sources/howard2021-arxiv-v9.pdf",
+          "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+          "bytes": 1494142,
+          "actual_read_scope": "Whole local PDF read as bytes for SHA256 and manifest binding only. No PDF text extraction, page inspection, or independent theorem review. Title/version/DOI and page references are supplied metadata/card assertions."
+        },
+        "T-REMOTE": {
+          "status": "metadata-only",
+          "local_copy": null,
+          "live_access": false,
+          "content_binding": false
+        }
+      },
+      "scientific_scope": {
+        "id": "T-CLAIM",
+        "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+        "scope": "l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha is the total two-sided budget; rho fixed before observations; numerical evaluation only."
+      },
+      "author_review": {
+        "status": "not_occurred",
+        "submission_authorized": false,
+        "venue": null
+      }
+    },
+    "migration": {
+      "name": "P5-migration-readonly",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P5/迁移后 科研项目/scripts/manage.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P5/迁移后 科研项目",
+        "status"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P5/迁移后 科研项目",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "old_copy_path": "STUDY_ROOT/mechanical-audit/P5/migration-origin/project",
+      "old_copy_unreachable": true,
+      "new_copy_path": "STUDY_ROOT/mechanical-audit/P5/迁移后 科研项目",
+      "empty_HOME_and_XDG_CACHE_HOME": true,
+      "os_access_enforcement": false,
+      "scope": "Own project entry executed from renamed copy with common interpreter. Actual old paths verified absent separately; public cache exclusion remains an instruction boundary, not syscall evidence."
+    },
+    "migrated_status": {
+      "case_id": "T",
+      "authoritative_state": ".research/state.json",
+      "revision": 2,
+      "active_constraints": {
+        "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+        "deadline": "2026-12-15",
+        "budget": "Offline Python standard library only; no new data collection or model refit",
+        "available_capabilities": [
+          "local Python standard library",
+          "fixed source cache",
+          "author-provided working notes"
+        ],
+        "venue": "Undecided; do not invent a target journal",
+        "language": "zh",
+        "current_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "unknowns": [
+          "No human expert approval has occurred",
+          "No external submission authorized"
+        ],
+        "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+        "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+      },
+      "next_action": "将 alpha=0.05、rho=4（观察前固定）、v=[0,1,10,100] 的边界表 results/table.csv 与更新摘要 results/summary.md 交作者内容复核；暂不扩展到事后选择 rho。尚无人类专家认可、目标期刊未定且未经投稿授权，不执行投稿。",
+      "changed_paths": [],
+      "missing_paths": [],
+      "activities": {
+        "T-SOURCE-CHECK": {
+          "recorded_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        },
+        "T-CALC": {
+          "recorded_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        },
+        "T-SYNTH": {
+          "recorded_status": "done",
+          "effective_status": "done",
+          "reasons": []
+        }
+      },
+      "checkpoint_freshness": "fresh_for_registered_bytes",
+      "coverage_limits": {
+        "source_only": [
+          "T-REMOTE"
+        ],
+        "excluded_unregistered_paths": [
+          "notes/unregistered-scratch.md"
+        ],
+        "all_project_files_covered": false,
+        "note": "Scratch is retained but is not a declared scientific dependency. Hash inventory is not scientific review. Remote identity metadata does not monitor content."
+      },
+      "source_access": {
+        "T-SRC": {
+          "status": "local_fixed_identity_checked",
+          "local_path": "sources/howard2021-arxiv-v9.pdf",
+          "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+          "bytes": 1494142,
+          "actual_read_scope": "Whole local PDF read as bytes for SHA256 and manifest binding only. No PDF text extraction, page inspection, or independent theorem review. Title/version/DOI and page references are supplied metadata/card assertions."
+        },
+        "T-REMOTE": {
+          "status": "metadata-only",
+          "local_copy": null,
+          "live_access": false,
+          "content_binding": false
+        }
+      },
+      "scientific_scope": {
+        "id": "T-CLAIM",
+        "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+        "scope": "l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha=0.05 total two-sided budget; rho=4 fixed before observations; v=[0,1,10,100]; numerical evaluation only."
+      },
+      "author_review": {
+        "status": "not_occurred",
+        "submission_authorized": false,
+        "venue": null
+      }
+    },
+    "stale_write": {
+      "level": "current file SHA expected-current; restore-initial only, not logical record CAS",
+      "original_sha": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "after_legal_restore_sha": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "legal_update": {
+        "name": "P5-legal-restore",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P5/file-CAS/project/scripts/manage.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+          "restore-initial",
+          "notes/parameters.json",
+          "--expected-current",
+          "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+          "--write"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+        "exit_code": 0,
+        "project_identical_bytes_mtime_directory_mtime": false,
+        "changed_files": [
+          ".research/versions/pre-restore/340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117/notes/parameters.json",
+          "notes/parameters.json"
+        ],
+        "changed_directories": [
+          ".research/versions",
+          ".research/versions/pre-restore",
+          ".research/versions/pre-restore/340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+          ".research/versions/pre-restore/340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117/notes"
+        ]
+      },
+      "stale_request": {
+        "name": "P5-stale-file-write",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P5/file-CAS/project/scripts/manage.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+          "restore-initial",
+          "notes/parameters.json",
+          "--expected-current",
+          "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+          "--write"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+        "exit_code": 2,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": []
+      },
+      "newer_file_preserved": true,
+      "logical_record_update_interface": "not-provided"
+    },
+    "invalid_restore_path": {
+      "name": "P5-invalid-unpreserved-path",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P5/file-CAS/project/scripts/manage.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+        "restore-initial",
+        "AUDIT-MISSING",
+        "--expected-current",
+        "MISSING",
+        "--write"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+      "exit_code": 2,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": []
+    },
+    "dangling_reference": {
+      "status": "not-provided/not-comparable",
+      "reason": "No logical record update interface. Exact-byte initial file restoration does not accept record links."
+    },
+    "batch_invalid_later_reference": {
+      "status": "not-provided/not-comparable",
+      "reason": "No multi-file/record batch update API delivered."
+    },
+    "dirty_checkpoint": {
+      "automatic_checkpoint_interface": false,
+      "adapter": "Replay preserved dirty archive plus exact saved checkpoint; P5 checkpoint fingerprints refreshed by audit adapter to reproduce saved intermediate stdout. Activity completion bindings not changed. P2 has separate checkpoint tree but no auto checkpoint API.",
+      "subsequent_status": {
+        "name": "P5-dirty-checkpoint-replay",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P5/dirty-replay/project/scripts/manage.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P5/dirty-replay/project",
+          "status"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P5/dirty-replay/project",
+        "exit_code": 0,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": []
+      },
+      "result": {
+        "case_id": "T",
+        "authoritative_state": ".research/state.json",
+        "revision": 1,
+        "active_constraints": {
+          "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+          "deadline": "2026-12-15",
+          "budget": "Offline Python standard library only; no new data collection or model refit",
+          "available_capabilities": [
+            "local Python standard library",
+            "fixed source cache",
+            "author-provided working notes"
+          ],
+          "venue": "Undecided; do not invent a target journal",
+          "language": "zh",
+          "current_scope": {
+            "case_id": "T",
+            "alpha": 0.05,
+            "rho": 1.0,
+            "rho_selection": "fixed-before-observation",
+            "intrinsic_time_grid": [
+              0,
+              1,
+              10,
+              100
+            ]
+          },
+          "unknowns": [
+            "No human expert approval has occurred",
+            "No external submission authorized"
+          ],
+          "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+          "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+        },
+        "next_action": "在交作者讨论前运行只读状态核对，确认当前 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的结果与摘要仍对应；向作者报告四点数值、sub-Gaussian/V 条件和未作证明/模拟覆盖验证的范围，等待作者实际决定。未经内容复核不投稿。",
+        "changed_paths": [
+          "notes/parameters.json"
+        ],
+        "missing_paths": [],
+        "activities": {
+          "T-SOURCE-CHECK": {
+            "recorded_status": "done",
+            "effective_status": "done",
+            "reasons": []
+          },
+          "T-CALC": {
+            "recorded_status": "done",
+            "effective_status": "needs_recheck",
+            "reasons": [
+              "missing or changed material: notes/parameters.json"
+            ]
+          },
+          "T-SYNTH": {
+            "recorded_status": "done",
+            "effective_status": "needs_recheck",
+            "reasons": [
+              "dependency needs recheck: T-CALC"
+            ]
+          }
+        },
+        "checkpoint_freshness": "fresh_for_registered_bytes",
+        "coverage_limits": {
+          "source_only": [
+            "T-REMOTE"
+          ],
+          "excluded_unregistered_paths": [
+            "notes/unregistered-scratch.md"
+          ],
+          "all_project_files_covered": false,
+          "note": "Scratch is retained but is not a declared scientific dependency. Hash inventory is not scientific review. Remote identity metadata does not monitor content."
+        },
+        "source_access": {
+          "T-SRC": {
+            "status": "local_fixed_identity_checked",
+            "local_path": "sources/howard2021-arxiv-v9.pdf",
+            "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+            "bytes": 1494142,
+            "actual_read_scope": "Whole local PDF read as bytes for SHA256 and manifest binding only. No PDF text extraction, page inspection, or independent theorem review. Title/version/DOI and page references are supplied metadata/card assertions."
+          },
+          "T-REMOTE": {
+            "status": "metadata-only",
+            "local_copy": null,
+            "live_access": false,
+            "content_binding": false
+          }
+        },
+        "scientific_scope": {
+          "id": "T-CLAIM",
+          "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+          "scope": "l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha is the total two-sided budget; rho fixed before observations; numerical evaluation only."
+        },
+        "author_review": {
+          "status": "not_occurred",
+          "submission_authorized": false,
+          "venue": null
+        }
+      }
+    }
+  }
+}

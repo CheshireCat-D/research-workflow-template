@@ -1,0 +1,127 @@
+{
+  "case_id": "D",
+  "stage": "A",
+  "active_constraints": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-10-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "当前指标、表格、摘要已核对；下一步由作者讨论2011第四季度冻结模型比较及其研究表述。尚无作者审阅决定；不发送、不投稿、不重训、不外推2012。继续前运行 management/status.py 检查依赖新鲜度。",
+  "changed_or_missing_paths": [],
+  "affected_activities": [],
+  "unaffected_activities": [
+    "D-SOURCE-CHECK",
+    "D-CALC",
+    "D-SYNTH"
+  ],
+  "checkpoint_freshness": "fresh-for-bound-local-files; no scientific certification",
+  "scientific_scope": "2011-10-01至2011-12-31、2203实际观察小时/92日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。",
+  "source_tracking_limits": {
+    "D-SRC": "已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。",
+    "D-REMOTE": "仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。",
+    "notes/unregistered-scratch.md": "已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。",
+    "source_card_discrepancy": "卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。",
+    "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+  },
+  "material_paths": {
+    "project_root": "PROJECT_ROOT",
+    "authority": "management/state.json",
+    "recovery": "RECOVERY.md",
+    "calculator": "scripts/compute.py",
+    "parameters": "notes/parameters.json",
+    "canonical_result": "results/result.json",
+    "table": "results/table.csv",
+    "summary": "results/summary.md",
+    "initial_versions": "management/versions/A-initial/",
+    "checks": "management/evidence/A/checks.json",
+    "normal_verification": "OUTPUT_DIR/verification-normal"
+  },
+  "verified_metrics": {
+    "observed_hours": 2203,
+    "observed_days": 92,
+    "C0_MAE": 58.825190494512434,
+    "C0_RMSE": 86.08056895633848,
+    "C0_bias_prediction_minus_actual": 1.078965171773347,
+    "C1_MAE": 44.570832407531775,
+    "C1_RMSE": 67.99996906089847,
+    "C1_bias_prediction_minus_actual": 0.9871531155146787,
+    "MAE_reduction_fraction": 0.24231724482575867
+  },
+  "controlled_invalid_input": {
+    "expected_exit_code": 2,
+    "actual_exit_code": 2,
+    "error": {
+      "passed": false,
+      "error": "ValueError",
+      "message": "evaluation_start must be no later than evaluation_end"
+    },
+    "output_directory_exists": false,
+    "project_tree_bytes_and_mtimes_unchanged": true,
+    "canonical_results_before": {
+      "results/result.json": {
+        "kind": "file",
+        "mtime_ns": 1793322214609523193,
+        "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+        "bytes": 1000
+      },
+      "results/table.csv": {
+        "kind": "file",
+        "mtime_ns": 1793322214609681191,
+        "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+        "bytes": 205
+      },
+      "results/summary.md": {
+        "kind": "file",
+        "mtime_ns": 1793322214609602650,
+        "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+        "bytes": 280
+      }
+    },
+    "canonical_results_after": {
+      "results/result.json": {
+        "kind": "file",
+        "mtime_ns": 1793322214609523193,
+        "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+        "bytes": 1000
+      },
+      "results/table.csv": {
+        "kind": "file",
+        "mtime_ns": 1793322214609681191,
+        "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+        "bytes": 205
+      },
+      "results/summary.md": {
+        "kind": "file",
+        "mtime_ns": 1793322214609602650,
+        "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+        "bytes": 280
+      }
+    },
+    "meaning": "有意提交起点晚于终点的无效评价期；这是受控输入拒绝测试，不是实际科学研究分析失败。"
+  },
+  "notes": [
+    "预制数值和摘要来自所给材料；本阶段已实际独立运行与范围核对。",
+    "未发生任何人类专家审阅、形式化证明、作者讨论决定或外部提交。",
+    "A未修改初始参数或规范科研成果，后续修订须保留旧字节与依据。"
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "tracked_materials": {
+    "sources/howard2021-arxiv-v9.pdf": {
+      "matches": true,
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    "notes/parameters.json": {
+      "matches": true,
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161
+    },
+    "scripts/compute.py": {
+      "matches": true,
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "results/result.json": {
+      "matches": true,
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "bytes": 703
+    },
+    "results/summary.md": {
+      "matches": true,
+      "sha256": "d10158c47c54bdf88673606ca136716b97b65e042317bd17082dd6db7e2e5b27",
+      "bytes": 1134
+    },
+    "notes/source-check.md": {
+      "matches": true,
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    "results/table.csv": {
+      "matches": true,
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "bytes": 100
+    }
+  },
+  "checkpoints": {
+    "C-final-verified": {
+      "RECOVERY.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "results/result.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "results/table.csv": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "results/summary.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "notes/parameters.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/state.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      }
+    },
+    "C-drift-before-recompute": {
+      ".research/evidence/A/current-status.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/evidence/A/normal/result.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/evidence/A/normal/table.csv": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/evidence/A/normal-execution.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/evidence/A/rejected-execution.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/evidence/A/status-execution.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/evidence/A/validation-checks.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/provenance/initial/BRIEF.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/provenance/initial/MANIFEST.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/provenance/initial/PROTOCOL.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/provenance/initial/RECORDING.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/provenance/initial/STAGE-A.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/provenance/initial/constraints.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/provenance/initial/obligations.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/provenance/initial/source-identities.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/state.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": false
+      },
+      ".research/versions/A-draft/RECOVERY.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/versions/A-initial/index.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/versions/A-initial/notes/parameters.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/versions/A-initial/results/result.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/versions/A-initial/results/summary.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      ".research/versions/A-initial/results/table.csv": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "RECOVERY.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": false
+      },
+      "notes/parameters.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "notes/rejected-parameters.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "notes/source-check.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "notes/unregistered-scratch.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "results/result.json": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": false
+      },
+      "results/summary.md": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": false
+      },
+      "results/table.csv": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": false
+      },
+      "scripts/compute.py": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "scripts/manage.py": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      },
+      "sources/howard2021-arxiv-v9.pdf": {
+        "archived_bytes_match_index": true,
+        "current_bytes_match_index": true
+      }
+    }
+  },
+  "initial_versions": {
+    "notes/parameters.json": {
+      "content_path": ".research/versions/A-initial/notes/parameters.json",
+      "matches_saved_fingerprint": true
+    },
+    "results/result.json": {
+      "content_path": ".research/versions/A-initial/results/result.json",
+      "matches_saved_fingerprint": true
+    },
+    "results/table.csv": {
+      "content_path": ".research/versions/A-initial/results/table.csv",
+      "matches_saved_fingerprint": true
+    },
+    "results/summary.md": {
+      "content_path": ".research/versions/A-initial/results/summary.md",
+      "matches_saved_fingerprint": true
+    }
+  },
+  "current_consistency": {
+    "parameters_match_author_approval": true,
+    "parameters_match_active_scope": true,
+    "parameters_match_choice": true,
+    "result_parameters_match": true,
+    "result_input_parameters_sha_matches": true,
+    "result_input_calculator_sha_matches": true,
+    "result_table_rows_match": true,
+    "summary_all_rounded_result_values": true,
+    "canonical_results_match_retained_recomputation": true
+  },
+  "historical_intermediate_status": {
+    "exit_code": 0,
+    "checkpoint_freshness": "fresh_for_registered_bytes",
+    "activities": {
+      "T-SOURCE-CHECK": {
+        "recorded_status": "done",
+        "effective_status": "done",
+        "reasons": []
+      },
+      "T-CALC": {
+        "recorded_status": "done",
+        "effective_status": "needs_recheck",
+        "reasons": [
+          "missing or changed material: notes/parameters.json"
+        ]
+      },
+      "T-SYNTH": {
+        "recorded_status": "done",
+        "effective_status": "needs_recheck",
+        "reasons": [
+          "dependency needs recheck: T-CALC"
+        ]
+      }
+    }
+  },
+  "readonly_project_comparison": {
+    "all_files_and_directories_unchanged": true,
+    "file_count": 87,
+    "directory_count": 43,
+    "comparison_fields": [
+      "path",
+      "type",
+      "mtime_ns",
+      "size",
+      "sha256 for files"
+    ],
+    "scientific_recomputation_performed": false
+  },
+  "final_readonly_project_comparison": {
+    "all_files_and_directories_unchanged": true,
+    "file_count": 87,
+    "directory_count": 43,
+    "scientific_recomputation_performed": false,
+    "report_unicode_characters": 3874
+  }
+}

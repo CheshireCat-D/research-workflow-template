@@ -1,0 +1,25 @@
+{
+  "status": "not-run",
+  "requested": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "fork_turns": "none",
+    "max_tool_calls": 18,
+    "max_report_characters": 12000
+  },
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": null,
+  "network_calls": null,
+  "violations": [],
+  "reads": [],
+  "commands": [],
+  "duration_seconds": null,
+  "scope": "instruction-only; no OS audit",
+  "failure": null
+}

@@ -1,0 +1,47 @@
+{
+  "verification": "passed",
+  "checks": [
+    "input SHA256 and row counts match provided manifest",
+    "all 72 saved means match independent statistics.mean",
+    "holdout row identities match predictions",
+    "MAE and RMSE match sklearn.metrics",
+    "frozen score replay results and 4 CSV artifacts match exactly"
+  ],
+  "sklearn_version": "1.9.1",
+  "model_sha256": "dba591a44fff2d14514b4b38d00c8985e93f41cf2b1ab684a6abd2f2620d078d",
+  "training_hours": 6442,
+  "holdout_hours": 2203,
+  "holdout_incomplete_dates": [
+    {
+      "dteday": "2011-10-19",
+      "rows": "23",
+      "distinct_hours": "23",
+      "missing_hours": "3"
+    },
+    {
+      "dteday": "2011-11-28",
+      "rows": "23",
+      "distinct_hours": "23",
+      "missing_hours": "2"
+    },
+    {
+      "dteday": "2011-12-25",
+      "rows": "23",
+      "distinct_hours": "23",
+      "missing_hours": "4"
+    },
+    {
+      "dteday": "2011-12-26",
+      "rows": "23",
+      "distinct_hours": "23",
+      "missing_hours": "3"
+    },
+    {
+      "dteday": "2011-12-28",
+      "rows": "23",
+      "distinct_hours": "23",
+      "missing_hours": "4"
+    }
+  ],
+  "report_character_count": 5409
+}

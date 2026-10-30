@@ -1,0 +1,36 @@
+{
+  "status": "executed",
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 22,
+  "tool_call_count_basis": "outer_tool_call_count",
+  "network_calls": 0,
+  "violations": [
+    {
+      "type": "implicit-tool-resource-access",
+      "path": "TOOLKIT_ROOT/design/catalog.json",
+      "reason": "Mandatory init --connect-skills and core validation internally read the stable catalog under design/. This runtime access conflicts with a literal no-design-read interpretation. No manual content inspection, evaluator material or eval directory access occurred. Required official interface was retained; the exception is disclosed rather than hidden."
+    }
+  ],
+  "scope": "instruction-only; no OS audit",
+  "raw_execution": {
+    "path": "runs/P4/A/raw-execution.json",
+    "sha256": "bc896916ccfa42cc209207fcad73977e85eaed3680191fe21840349b664b21b1",
+    "original_sha256": "0296831b12c2250abfefd69ad6f25619fa2ceab1d5f5b329af6802d86102cf05"
+  },
+  "publication_projection": [
+    "Administrative status/configuration shape; unknown effective settings retained. Full self-report preserved separately."
+  ],
+  "requested": {
+    "max_outer_tool_calls": 24,
+    "max_report_characters": 10000,
+    "model_override": null,
+    "reasoning_override": null,
+    "fork_turns": "none"
+  }
+}

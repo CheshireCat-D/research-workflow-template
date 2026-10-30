@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "submission_id": "Bbbc81a",
+  "task_id": "Q11",
+  "report_sha256": "aa01ddcfe46b43c3711d32953c6ba70ec0a5c6b5c3cfe182ac36c933b12eedb1",
+  "judge_context": "全新单报告裁定上下文；仅阅读本目录的 task.md、report.md、reference.json、template.json，未读取其他报告、组别映射、执行日志、记忆、个人包或其他技能，未联网或调用其他 agent。",
+  "arm_visibility": "hidden-by-instruction",
+  "os_audited": false,
+  "scored": true,
+  "verdict": "supported",
+  "criteria": [
+    {
+      "id": "decision",
+      "score": 2,
+      "evidence": "报告首段：“结论成立，稿件证明正确……没有影响结论的实质性错误。”",
+      "rationale": "正确认定一致等度连续与稠密有理点上的点态收敛足以推出所述一致收敛；后文核验支持该判断，未提出虚构的实质缺陷。"
+    },
+    {
+      "id": "finite_cover",
+      "score": 2,
+      "evidence": "关键核验第2项定义 U_q=(q−δ/2,q+δ/2)∩[0,1]，由有理数稠密得到覆盖，再由紧致性选 U_{q₁},…,U_{q_m}；并写明 |x−q_i|<δ/2<δ，包括端点。",
+      "rationale": "给出了半径严格小于共同 δ 的相对开覆盖的具体构造，并正确使用紧致性取有限子覆盖；稠密性与端点处理均充分。"
+    },
+    {
+      "id": "uniform_index",
+      "score": 2,
+      "evidence": "关键核验第1项取 δ=min(δ₁,δ₂)，并说明“δ 与 n、x、y 均无关”；第3项取 N=max_i N_i，并说明“N 不随 x 改变”。",
+      "rationale": "共同 δ 的选择对全体函数统一有效；有限个中心的各自收敛阈值可取最大值，因此即使中心随 x 改变，同一个 N 仍控制所有 x。"
+    },
+    {
+      "id": "epsilon_bound",
+      "score": 2,
+      "evidence": "关键核验第4项对“任意 x∈[0,1] 与 n≥N”写出 |f_n(x)−f(x)| ≤ |f_n(x)−f_n(q_i)| + |f_n(q_i)−f(q_i)| + |f(q_i)−f(x)| < ε；随后明确“一切 n≥N、一切 x∈[0,1]”。",
+      "rationale": "三项分别由共同等度连续性、有限中心上的收敛以及 f 的一致连续性控制为 ε/3，且 N 先于任意 x 确定；量词准确地给出一致收敛。"
+    },
+    {
+      "id": "scope",
+      "score": 2,
+      "evidence": "报告末尾：“实质性问题：无，无需更正，也无需反例。”并将展开有限覆盖的说明列为“可选表述建议”；第4项后说明不依赖未给出的有界性假设或外部定理。",
+      "rationale": "正确区分补充说明和实质错误，没有额外要求有理点集上的一致收敛、外部数据或无必要的假设；所提补充只是对原稿正确步骤的展开。"
+    }
+  ],
+  "invented_major_objections": [],
+  "notes": "独立核实：参考裁定及五项义务正确。原论证中共同 δ、稠密有理中心的有限覆盖、有限最大阈值和三角不等式均成立，所用基础事实全部在题目许可范围内；报告已充分核验这些步骤。五项合计 10/10。"
+}

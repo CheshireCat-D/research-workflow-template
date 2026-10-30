@@ -1,0 +1,173 @@
+{
+  "case_id": "D",
+  "stage": "D",
+  "project_root": "PROJECT_ROOT",
+  "research_question": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+  "state_authority": "management/state.json; actual notes/parameters.json + retained author authorization + management/constraints.json + C-final checkpoint; legacy initial manifests are historical",
+  "active_constraints": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-11-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "active_parameters": {
+    "case_id": "D",
+    "evaluation_start": "2011-11-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "metric_weighting": "observed-hour"
+  },
+  "effective_version": "C-author-revision, C-final; 2011-11-01 through 2011-12-31",
+  "next_action": "将2011年11月至12月的冻结模型指标（1460观察小时、61日）与更新摘要交作者内容复核；保留原Q4结果作历史记录。尚无内容认可或投稿授权；继续前运行management/status.py和management/verify_current.py，不重训、不外推2012。",
+  "next_action_performed": false,
+  "changed_or_missing_paths": [],
+  "affected_activities": [],
+  "unaffected_activities": [
+    "D-CALC",
+    "D-SOURCE-CHECK",
+    "D-SYNTH"
+  ],
+  "completed_activities": {
+    "D-SOURCE-CHECK": {
+      "status": "done",
+      "evidence": "management/evidence/A/checks.json",
+      "binding_matches_current_files": true
+    },
+    "D-CALC": {
+      "status": "done",
+      "evidence": "management/evidence/C/checks-before-promotion.json",
+      "binding_matches_current_files": true
+    },
+    "D-SYNTH": {
+      "status": "done",
+      "evidence": "management/evidence/C/summary-review.json",
+      "binding_matches_current_files": true
+    }
+  },
+  "checkpoint_freshness": {
+    "registered_files": "fresh-for-registered-local-files",
+    "registered_file_count": 35,
+    "version_snapshots": 9,
+    "all_version_snapshots_intact": true,
+    "historical_and_current_checkpoints": {
+      "C-pre-recompute": {
+        "manifest_entries": 31,
+        "mismatches": [],
+        "metadata": {
+          "stage": "C",
+          "status": "captured_before_recompute",
+          "content_review": false,
+          "makes_prior_work_valid": false
+        }
+      },
+      "C-final": {
+        "manifest_entries": 6,
+        "mismatches": [],
+        "metadata": {
+          "stage": "C",
+          "content_review": "pending author review",
+          "scientific_approval": false,
+          "basis": "actual recompute, independent numeric check, revised summary",
+          "next_action": "将2011年11月至12月的冻结模型指标（1460观察小时、61日）与更新摘要交作者内容复核；保留原Q4结果作历史记录。尚无内容认可或投稿授权；继续前运行management/status.py和management/verify_current.py，不重训、不外推2012。"
+        }
+      }
+    },
+    "current_checkpoint_matches_current_six_files": true,
+    "saving_pre_recompute_checkpoint_renewed_work": false,
+    "migration_alone_is_scientific_change": false
+  },
+  "scientific_scope": "2011-11-01至2011-12-31、1460实际观察小时/61日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。",
+  "current_stored_result": {
+    "case_id": "D",
+    "evaluation_start": "2011-11-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "observed_hours": 1460,
+    "observed_days": 61,
+    "C0_MAE": 56.64127430990882,
+    "C1_MAE": 41.252622564018566,
+    "C0_RMSE": 81.70038360631688,
+    "C1_RMSE": 64.15826564867794,
+    "C0_bias_prediction_minus_actual": 13.433264561295244,
+    "C1_bias_prediction_minus_actual": 13.347664992606457,
+    "MAE_reduction_fraction": 0.2716861852664598,
+    "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+    "input_sha256": {
+      "parameters": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    }
+  },
+  "scientific_checks_in_this_stage": "No recalculation. Compared stored result to stored table, parameters/authorization/scope, input hashes, activity bindings, checkpoint bytes, history and read-only status. Historical numerical verification retained in project is evidence of earlier work, not a new numerical verification here.",
+  "source_tracking_limits": {
+    "D-SRC": "已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。",
+    "D-REMOTE": "仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。",
+    "notes/unregistered-scratch.md": "已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。",
+    "source_card_discrepancy": "卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。",
+    "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+  },
+  "material_paths": {
+    "entrypoint": "RECOVERY.md",
+    "authority": "management/state.json",
+    "constraints": "management/constraints.json",
+    "parameters": "notes/parameters.json",
+    "authorization": "management/evidence/C/authorization/AUTHOR-REVISION.md",
+    "authorization_parameters": "management/evidence/C/authorization/approved-parameters.json",
+    "data": "data/hour_2011.csv",
+    "model": "model/frozen.json",
+    "calculator": "scripts/compute.py",
+    "result": "results/result.json",
+    "table": "results/table.csv",
+    "summary": "results/summary.md",
+    "source_note": "notes/source-check.md",
+    "source_identities": "management/source-identities.json",
+    "read_only_status": "management/status.py",
+    "numerical_verifier_not_run": "management/verify_current.py",
+    "initial_history": "management/versions/A-initial/",
+    "drift_checkpoint": "management/checkpoints/C-pre-recompute/",
+    "effective_checkpoint": "management/checkpoints/C-final/"
+  },
+  "resource_gaps": [],
+  "maintenance_caveats": [
+    "state.checkpoint.id still says A-verified-initial; effective current pointer is state.checkpoints.current to C-final.",
+    "management/MANIFEST.json is initial source inventory and carries initial parameter/result hashes, not an updated current-state manifest.",
+    "Unregistered scratch is outside status dependency coverage. State authority cannot independently certify its own authenticity.",
+    "verify_current.py computes metrics; it was read but not run because this stage prohibits recomputing research results."
+  ],
+  "pending_author_content_review": true,
+  "human_expert_approval_occurred": false,
+  "submission_authorized": false,
+  "unknown_settings": {
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "system_limit": null
+  },
+  "project_unchanged": true,
+  "notes": [
+    "All recovery used only migrated project, current input and the specified Python runtime.",
+    "Historical records may contain old cwd strings; no old location was accessed.",
+    "Raw CSV/PDF were not redistributed; this output contains identities and project-derived figures only."
+  ]
+}

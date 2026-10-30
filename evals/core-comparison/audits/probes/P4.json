@@ -1,0 +1,682 @@
+{
+  "chain_id": "P4",
+  "scope": "Independent engineering observations, no scientific score added. Exact per-chain extraction of the bound common audit.",
+  "source_record": {
+    "path": "audits/mechanical-audit/engineering.json",
+    "sha256": "795e030e5eb9530d2fcaa5518eb3ff896ebbb633eb3fb6e5903aee6133066608"
+  },
+  "engineering": {
+    "readonly_B": {
+      "name": "P4-B-readonly",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P4/readonly-B/project/.agents/skills/_rw-runtime/tools/research.py",
+        "resume",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P4/readonly-B/project"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P4/readonly-B/project",
+      "exit_code": 1,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": []
+    },
+    "B_status": {
+      "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+      "schema_version": "0.1",
+      "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+      "revision": 22,
+      "passed": false,
+      "read_only": true,
+      "scientific_validity": "not-assessed",
+      "governance_approval": "not-assessed",
+      "venue_compliance": "not-assessed",
+      "errors": [],
+      "warnings": [],
+      "findings": [
+        {
+          "code": "file_changed",
+          "record": "evidence:D-PARAM",
+          "path": "notes/parameters.json"
+        },
+        {
+          "code": "activity_stale",
+          "record": "activity:D-CALC"
+        },
+        {
+          "code": "activity_stale",
+          "record": "activity:D-INVALID-TEST"
+        },
+        {
+          "code": "activity_stale",
+          "record": "activity:D-SYNTH"
+        },
+        {
+          "code": "checkpoint_stale",
+          "changed": [
+            "local-files"
+          ]
+        }
+      ],
+      "counts": {
+        "activities": 4,
+        "artifacts": 8,
+        "decisions": 1,
+        "evidence": 3,
+        "method_bindings": 1,
+        "relations": 1,
+        "sources": 2,
+        "statements": 1
+      },
+      "configuration": {
+        "deliverable": {
+          "contribution_benchmarks": [],
+          "kind": "undecided",
+          "language": "zh",
+          "venue": null
+        },
+        "disciplines": [],
+        "entry_activity": "question",
+        "governance": {
+          "applicability": "unknown",
+          "relevant_requirements": []
+        },
+        "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+        "methods": [
+          "computational"
+        ],
+        "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+        "resources": {
+          "available_capabilities": [
+            "local Python standard library",
+            "fixed source cache",
+            "author-provided working notes"
+          ],
+          "budget": "Offline Python standard library only; no new data collection or model refit",
+          "deadline": "2026-12-15"
+        },
+        "schema_version": "0.1",
+        "title": "冻结自行车需求模型的评价范围修订",
+        "workflow_mode": "reproducible"
+      },
+      "file_tracking": {
+        "local_files": [
+          "data/hour_2011.csv",
+          "model/frozen.json",
+          "notes/parameters.json",
+          "notes/rejected-parameters.json",
+          "notes/source-check.md",
+          "results/result.json",
+          "results/summary.md",
+          "results/table.csv",
+          "scripts/compute.py",
+          "validation/stage-A/comparison.json",
+          "validation/stage-A/source-verification.json"
+        ],
+        "local_file_count": 11,
+        "source_ids_without_local_evidence": [
+          "D-REMOTE"
+        ]
+      },
+      "activities": [
+        {
+          "id": "D-CALC",
+          "title": "Rerun supplied calculator and verify canonical numeric result and companion table",
+          "declared_status": "done",
+          "effective_status": "stale",
+          "stale_reasons": [
+            "Bound records or local files changed"
+          ]
+        },
+        {
+          "id": "D-INVALID-TEST",
+          "title": "Controlled invalid parameter rejection and canonical preservation check",
+          "declared_status": "done",
+          "effective_status": "stale",
+          "stale_reasons": [
+            "Bound records or local files changed"
+          ]
+        },
+        {
+          "id": "D-SOURCE-CHECK",
+          "title": "Verify supplied source identity, local slice and source card",
+          "declared_status": "done",
+          "effective_status": "done",
+          "stale_reasons": []
+        },
+        {
+          "id": "D-SYNTH",
+          "title": "Check supplied summary within current claim and verified result",
+          "declared_status": "done",
+          "effective_status": "stale",
+          "stale_reasons": [
+            "A required activity is no longer done",
+            "Bound records or local files changed"
+          ]
+        }
+      ],
+      "cursor": {
+        "activity_id": "D-SYNTH",
+        "next_action": "2011第四季度指标与摘要已逐项核对；下一步由作者讨论该描述性比较的解释与用途。恢复先运行项目内 resume，核对当前 parameters/result/table/summary 及依赖；若有漂移，保留旧字节与原因并复核 D-CALC、D-SYNTH 后显式重登，不重训或外推2012。"
+      },
+      "checkpoint": {
+        "recorded": true,
+        "status": "stale",
+        "changed": [
+          "local-files"
+        ]
+      },
+      "next_action": "2011第四季度指标与摘要已逐项核对；下一步由作者讨论该描述性比较的解释与用途。恢复先运行项目内 resume，核对当前 parameters/result/table/summary 及依赖；若有漂移，保留旧字节与原因并复核 D-CALC、D-SYNTH 后显式重登，不重训或外推2012。",
+      "needs_review": true,
+      "recovery_instruction": "Review changed inputs and affected activities before following the saved next action."
+    },
+    "migration": {
+      "name": "P4-migration-readonly",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P4/迁移后 科研项目/.agents/skills/_rw-runtime/tools/research.py",
+        "resume",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P4/迁移后 科研项目"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P4/迁移后 科研项目",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "old_copy_path": "STUDY_ROOT/mechanical-audit/P4/migration-origin/project",
+      "old_copy_unreachable": true,
+      "new_copy_path": "STUDY_ROOT/mechanical-audit/P4/迁移后 科研项目",
+      "empty_HOME_and_XDG_CACHE_HOME": true,
+      "os_access_enforcement": false,
+      "scope": "Own project entry executed from renamed copy with common interpreter. Actual old paths verified absent separately; public cache exclusion remains an instruction boundary, not syscall evidence."
+    },
+    "migrated_status": {
+      "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+      "schema_version": "0.1",
+      "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+      "revision": 43,
+      "passed": true,
+      "read_only": true,
+      "scientific_validity": "not-assessed",
+      "governance_approval": "not-assessed",
+      "venue_compliance": "not-assessed",
+      "errors": [],
+      "warnings": [],
+      "findings": [],
+      "counts": {
+        "activities": 4,
+        "artifacts": 14,
+        "decisions": 1,
+        "evidence": 5,
+        "method_bindings": 1,
+        "relations": 1,
+        "sources": 2,
+        "statements": 1
+      },
+      "configuration": {
+        "deliverable": {
+          "contribution_benchmarks": [],
+          "kind": "undecided",
+          "language": "zh",
+          "venue": null
+        },
+        "disciplines": [],
+        "entry_activity": "question",
+        "governance": {
+          "applicability": "unknown",
+          "relevant_requirements": []
+        },
+        "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+        "methods": [
+          "computational"
+        ],
+        "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+        "resources": {
+          "available_capabilities": [
+            "local Python standard library",
+            "fixed source cache",
+            "author-provided working notes"
+          ],
+          "budget": "Offline Python standard library only; no new data collection or model refit",
+          "deadline": "2026-12-15"
+        },
+        "schema_version": "0.1",
+        "title": "冻结自行车需求模型的评价范围修订",
+        "workflow_mode": "reproducible"
+      },
+      "file_tracking": {
+        "local_files": [
+          "context/stage-C/AUTHOR-REVISION.md",
+          "context/stage-C/approved-parameters.json",
+          "data/hour_2011.csv",
+          "model/frozen.json",
+          "notes/parameters.json",
+          "notes/rejected-parameters.json",
+          "notes/source-check.md",
+          "notes/stage-C-revision.md",
+          "results/result.json",
+          "results/summary.md",
+          "results/table.csv",
+          "scripts/compute.py",
+          "validation/stage-A/comparison.json",
+          "validation/stage-A/source-verification.json",
+          "validation/stage-C/invalid-test.json",
+          "validation/stage-C/revision-review.json",
+          "validation/stage-C/summary-review.json",
+          "validation/stage-C/verification.json",
+          "validation/stage-C/verify.py"
+        ],
+        "local_file_count": 19,
+        "source_ids_without_local_evidence": [
+          "D-REMOTE"
+        ]
+      },
+      "activities": [
+        {
+          "id": "D-CALC",
+          "title": "Rerun supplied calculator and verify canonical numeric result and companion table",
+          "declared_status": "done",
+          "effective_status": "done",
+          "stale_reasons": []
+        },
+        {
+          "id": "D-INVALID-TEST",
+          "title": "Controlled invalid parameter rejection and canonical preservation check",
+          "declared_status": "done",
+          "effective_status": "done",
+          "stale_reasons": []
+        },
+        {
+          "id": "D-SOURCE-CHECK",
+          "title": "Verify supplied source identity, local slice and source card",
+          "declared_status": "done",
+          "effective_status": "done",
+          "stale_reasons": []
+        },
+        {
+          "id": "D-SYNTH",
+          "title": "Check supplied summary within current claim and verified result",
+          "declared_status": "done",
+          "effective_status": "done",
+          "stale_reasons": []
+        }
+      ],
+      "cursor": {
+        "activity_id": null,
+        "next_action": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。恢复先核对当前2011-11-01至12-31参数与1460小时结果的依赖；不重训，不外推2012。"
+      },
+      "checkpoint": {
+        "recorded": true,
+        "status": "current",
+        "changed": []
+      },
+      "next_action": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。恢复先核对当前2011-11-01至12-31参数与1460小时结果的依赖；不重训，不外推2012。",
+      "needs_review": false,
+      "recovery_instruction": "Continue the recorded next action within its existing scope."
+    },
+    "stale_write": {
+      "level": "logical record expected_version; observed vN then legal vN+1",
+      "old_version": 2,
+      "current_version": 3,
+      "legal_update": {
+        "name": "P4-legal-update",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P4/record-CAS/project/.agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P4/record-CAS/project",
+          "--kind",
+          "evidence",
+          "--file",
+          "STUDY_ROOT/mechanical-audit/P4/record-CAS/legal.json",
+          "--replace",
+          "--expected-version",
+          "2"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P4/record-CAS/project",
+        "exit_code": 0,
+        "project_identical_bytes_mtime_directory_mtime": false,
+        "changed_files": [
+          "records/registry.json"
+        ],
+        "changed_directories": [
+          "records"
+        ]
+      },
+      "stale_request": {
+        "name": "P4-stale-record-write",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P4/record-CAS/project/.agents/skills/_rw-runtime/tools/research.py",
+          "register",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P4/record-CAS/project",
+          "--kind",
+          "evidence",
+          "--file",
+          "STUDY_ROOT/mechanical-audit/P4/record-CAS/legal.json",
+          "--replace",
+          "--expected-version",
+          "2"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P4/record-CAS/project",
+        "exit_code": 2,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": [],
+        "authoritative_bytes_preserved": true
+      }
+    },
+    "dangling_reference": {
+      "name": "P4-dangling-reference",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P4/dangling/project/.agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P4/dangling/project",
+        "--kind",
+        "relation",
+        "--file",
+        "STUDY_ROOT/mechanical-audit/P4/dangling/dangling.json"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P4/dangling/project",
+      "exit_code": 2,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "authoritative_bytes_preserved": true,
+      "reference_field": "evidence_id=AUDIT-MISSING"
+    },
+    "batch_invalid_later_reference": {
+      "name": "P4-batch-invalid-later-reference",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P4/atomic-batch/project/.agents/skills/_rw-runtime/tools/research.py",
+        "register-batch",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P4/atomic-batch/project",
+        "--file",
+        "STUDY_ROOT/mechanical-audit/P4/atomic-batch/batch.json"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P4/atomic-batch/project",
+      "exit_code": 2,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "authoritative_bytes_preserved": true,
+      "valid_first_absent": true
+    },
+    "dirty_checkpoint": {
+      "automatic_checkpoint_interface": true,
+      "checkpoint_call": {
+        "name": "P4-dirty-save-checkpoint",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P4/dirty-checkpoint/project/.agents/skills/_rw-runtime/tools/research.py",
+          "checkpoint",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P4/dirty-checkpoint/project",
+          "--next-action",
+          "audit: recompute before review"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P4/dirty-checkpoint/project",
+        "exit_code": 0,
+        "project_identical_bytes_mtime_directory_mtime": false,
+        "changed_files": [
+          "records/registry.json"
+        ],
+        "changed_directories": [
+          "records"
+        ]
+      },
+      "subsequent_status": {
+        "name": "P4-dirty-status-after-checkpoint",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P4/dirty-checkpoint/project/.agents/skills/_rw-runtime/tools/research.py",
+          "resume",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P4/dirty-checkpoint/project"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P4/dirty-checkpoint/project",
+        "exit_code": 1,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": []
+      },
+      "result": {
+        "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+        "schema_version": "0.1",
+        "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+        "revision": 23,
+        "passed": false,
+        "read_only": true,
+        "scientific_validity": "not-assessed",
+        "governance_approval": "not-assessed",
+        "venue_compliance": "not-assessed",
+        "errors": [],
+        "warnings": [],
+        "findings": [
+          {
+            "code": "file_changed",
+            "record": "evidence:D-PARAM",
+            "path": "notes/parameters.json"
+          },
+          {
+            "code": "activity_stale",
+            "record": "activity:D-CALC"
+          },
+          {
+            "code": "activity_stale",
+            "record": "activity:D-INVALID-TEST"
+          },
+          {
+            "code": "activity_stale",
+            "record": "activity:D-SYNTH"
+          }
+        ],
+        "counts": {
+          "activities": 4,
+          "artifacts": 8,
+          "decisions": 1,
+          "evidence": 3,
+          "method_bindings": 1,
+          "relations": 1,
+          "sources": 2,
+          "statements": 1
+        },
+        "configuration": {
+          "deliverable": {
+            "contribution_benchmarks": [],
+            "kind": "undecided",
+            "language": "zh",
+            "venue": null
+          },
+          "disciplines": [],
+          "entry_activity": "question",
+          "governance": {
+            "applicability": "unknown",
+            "relevant_requirements": []
+          },
+          "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+          "methods": [
+            "computational"
+          ],
+          "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+          "resources": {
+            "available_capabilities": [
+              "local Python standard library",
+              "fixed source cache",
+              "author-provided working notes"
+            ],
+            "budget": "Offline Python standard library only; no new data collection or model refit",
+            "deadline": "2026-12-15"
+          },
+          "schema_version": "0.1",
+          "title": "冻结自行车需求模型的评价范围修订",
+          "workflow_mode": "reproducible"
+        },
+        "file_tracking": {
+          "local_files": [
+            "data/hour_2011.csv",
+            "model/frozen.json",
+            "notes/parameters.json",
+            "notes/rejected-parameters.json",
+            "notes/source-check.md",
+            "results/result.json",
+            "results/summary.md",
+            "results/table.csv",
+            "scripts/compute.py",
+            "validation/stage-A/comparison.json",
+            "validation/stage-A/source-verification.json"
+          ],
+          "local_file_count": 11,
+          "source_ids_without_local_evidence": [
+            "D-REMOTE"
+          ]
+        },
+        "activities": [
+          {
+            "id": "D-CALC",
+            "title": "Rerun supplied calculator and verify canonical numeric result and companion table",
+            "declared_status": "done",
+            "effective_status": "stale",
+            "stale_reasons": [
+              "Bound records or local files changed"
+            ]
+          },
+          {
+            "id": "D-INVALID-TEST",
+            "title": "Controlled invalid parameter rejection and canonical preservation check",
+            "declared_status": "done",
+            "effective_status": "stale",
+            "stale_reasons": [
+              "Bound records or local files changed"
+            ]
+          },
+          {
+            "id": "D-SOURCE-CHECK",
+            "title": "Verify supplied source identity, local slice and source card",
+            "declared_status": "done",
+            "effective_status": "done",
+            "stale_reasons": []
+          },
+          {
+            "id": "D-SYNTH",
+            "title": "Check supplied summary within current claim and verified result",
+            "declared_status": "done",
+            "effective_status": "stale",
+            "stale_reasons": [
+              "A required activity is no longer done",
+              "Bound records or local files changed"
+            ]
+          }
+        ],
+        "cursor": {
+          "activity_id": null,
+          "next_action": "audit: recompute before review"
+        },
+        "checkpoint": {
+          "recorded": true,
+          "status": "current",
+          "changed": []
+        },
+        "next_action": "audit: recompute before review",
+        "needs_review": true,
+        "recovery_instruction": "Review changed inputs and affected activities before following the saved next action."
+      }
+    },
+    "statement_target_dangling": {
+      "name": "P4-statement-dangling",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P4/statement-dangling/project/.agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P4/statement-dangling/project",
+        "--kind",
+        "relation",
+        "--file",
+        "STUDY_ROOT/mechanical-audit/P4/statement-dangling/dangling-statement.json"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P4/statement-dangling/project",
+      "exit_code": 2,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "authority_sha_before": "d46d3aeffb397c5f3995667b3247bebe8c9f11c6fcedccb62f43a6a3b13a3185",
+      "authority_sha_after": "d46d3aeffb397c5f3995667b3247bebe8c9f11c6fcedccb62f43a6a3b13a3185",
+      "authority_preserved": true
+    },
+    "batch_prefix_positive_control": {
+      "name": "P4-valid-prefix-positive",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P4/valid-prefix-positive/project/.agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P4/valid-prefix-positive/project",
+        "--kind",
+        "source",
+        "--file",
+        "STUDY_ROOT/mechanical-audit/P4/valid-prefix-positive/valid-source.json"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P4/valid-prefix-positive/project",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": false,
+      "changed_files": [
+        "records/registry.json"
+      ],
+      "changed_directories": [
+        "records"
+      ],
+      "actual_saved": true
+    },
+    "batch_statement_target_dangling": {
+      "name": "P4-batch-statement-dangling",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P4/batch-statement-dangling/project/.agents/skills/_rw-runtime/tools/research.py",
+        "register-batch",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P4/batch-statement-dangling/project",
+        "--file",
+        "STUDY_ROOT/mechanical-audit/P4/batch-statement-dangling/batch.json"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P4/batch-statement-dangling/project",
+      "exit_code": 2,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "authority_sha_before": "d46d3aeffb397c5f3995667b3247bebe8c9f11c6fcedccb62f43a6a3b13a3185",
+      "authority_sha_after": "d46d3aeffb397c5f3995667b3247bebe8c9f11c6fcedccb62f43a6a3b13a3185",
+      "authority_preserved": true,
+      "valid_prefix_absent": true
+    }
+  }
+}

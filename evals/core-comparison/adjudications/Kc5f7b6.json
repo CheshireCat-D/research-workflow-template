@@ -1,0 +1,170 @@
+{
+  "submission_id": "Kc5f7b6",
+  "chain_id": "P2",
+  "case_id": "D",
+  "scored": true,
+  "arm_hidden": true,
+  "report_sha256_by_stage": {
+    "A": "443e1ed249ae53715cd9417df013f6e5b7066cb6363eb3182c26833c25d0045e",
+    "B": "87da4bcfd0363261e95b263a638b5c66f38b2dea94d2d730da5e8e3bdce479fc",
+    "C": "6ae458665ff4cb5562116a0aedb10c05770959dc9e0025095e679b57d878684a",
+    "D": "d33238663c7b3bcd49b8ea98384d6f1fef08b88914193b285ff8a3e5c352e01a"
+  },
+  "criteria": [
+    {
+      "id": "A-materials",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "A/project/management/state.json: logical_nodes, activities.bound_materials, tracked_files, versions；management/source-identities.json；management/obligations.json；A/deliverables/inputs-and-artifacts.json；audit/verification.json。",
+      "rationale": "2+2+2=6。实际2011切片、原脚本和冻结模型均与初始输入字节相同；源DOI与远端仅身份/未读取范围如实保留。参数、关系、决定、CALC及SYNTH的直接和传递依赖持久化，独立来源支路单列；四份初始版本的真实字节及SHA均可恢复。"
+    },
+    {
+      "id": "A-results",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "A/project/management/evidence/A/checks.json: normal_command exit_code=0, normal_equals_canonical_bytes；A/deliverables/verification-normal/{result.json,table.csv}；A/project/results/summary.md；audit/verification.json: A。",
+      "rationale": "2+2=4。留有真实正常命令和产物；评审在包内副本重跑与规范result/table逐字节一致，另按观察小时定义独立核对全部指标与reference的绝对误差不超1e-10。2203小时/92日、降幅0.24231724482575867，摘要保留冻结模型描述性范围。"
+    },
+    {
+      "id": "A-constraints",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "A/project/management/constraints.json；management/state.json: active_constraints, scientific_scope, next_action；RECOVERY.md。",
+      "rationale": "2+2=4。截止日、离线标准库、不采集/重训、中文、期刊未定、无人类专家批准与无投稿授权等约束实际保存；核对Q4指标后由作者讨论的具体续作及先检查依赖的条件持久化。"
+    },
+    {
+      "id": "A-recovery",
+      "score": 3,
+      "max_points": 3,
+      "evidence": "A/project/RECOVERY.md；management/state.json: authority；management/status.py；A/deliverables/status-check.json: exit_code=0；audit/verification.json: A.status_exit=0。",
+      "rationale": "2+1=3。项目根有可发现入口，唯一权威台账、参数与约束的职责明确；恢复程序和数据均自包含且可只读运行，无需旧聊天。"
+    },
+    {
+      "id": "A-failure",
+      "score": 3,
+      "max_points": 3,
+      "evidence": "A/project/management/evidence/A/checks.json: rejected_command exit_code=2及ValueError；invalid-before.json与invalid-after.json；audit/verification.json: A.reviewer_rejected_input及original_invalid_before_after_same。",
+      "rationale": "1+1+1=3。确有起点晚于终点的无效参数真实失败记录，保留错误及命令，前后整个当时项目身份与mtime相同；副本复核同样退出2且不创建输出，原有效result/table/summary未变。受控拒绝没有被写成科学分析失败。"
+    },
+    {
+      "id": "B-drift",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "B/report.md；B/deliverables/independent-inspection.json；B/deliverables/status.stdout.json；B/project/notes/parameters.json；B/project/management/versions/A-initial/notes/parameters.json；audit/verification.json: B。",
+      "rationale": "4+3+3=10。仅notes/parameters.json改变，无缺失；正确给出旧SHA16a467c8…b0c837和现SHA86afdf87…524e864，起点10月1日变11月1日，其余参数不变。旧快照、台账与result输入SHA构成实际可查依据，未编造缺失远端文章。"
+    },
+    {
+      "id": "B-dependencies",
+      "score": 12,
+      "max_points": 12,
+      "evidence": "B/report.md的依赖影响段；B/deliverables/state-answer.json与status.stdout.json；B/project/management/state.json的活动绑定和logical_nodes；audit/verification.json: B affected/unaffected及source_branch_bindings_match。",
+      "rationale": "4+4+4=12。明确D-CALC直接受参数漂移影响，D-SYNTH经结果/CALC传递受影响；独立D-SOURCE-CHECK输入字节仍匹配并保持限定完成。未将来源身份、未登记scratch或全部文件错误地视为自动科学覆盖。"
+    },
+    {
+      "id": "B-cursor",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "B/report.md的旧断点适用性和下一步顺序；B/project/management/state.json: checkpoint A-verified-initial；A-initial四份快照；B/deliverables/status.stdout.json: stale-requires-reconciliation。",
+      "rationale": "2+2+1=5。识别真实存在的旧断点及其漂移后失效；不以旧done继续使用Q4结果代表11月至12月，也不执行旧讨论下一步。先取得窗口修订依据，再经授权真实复算CALC、复核SYNTH的续作具体安全。"
+    },
+    {
+      "id": "B-boundaries",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "B/report.md的科学真假、来源与跟踪覆盖段；B/deliverables/state-answer.json: source_tracking_limits。",
+      "rationale": "2+2=4。将本地绑定失配与旧数值科学真假区分，不以hash/状态脚本代替科学认证；DOI仅身份、未读全文/完整数据/远端网页、scratch不在科学依赖覆盖等边界明确。"
+    },
+    {
+      "id": "B-readonly",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "B/readonly-audit.json: passed=true, file_differences=[], directory_mtime_differences=[]；B/deliverables/read-only-check.json；baseline-project-snapshot.json与final-project-snapshot.json；外部B/report.md。",
+      "rationale": "2+2=4。独立机械audit与提交的前后记录一致支持项目文件字节、文件mtime及目录mtime未变，答卷在project外；报告无修复、重绑定、快照或重算。"
+    },
+    {
+      "id": "C-dirty-snapshot",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "C/project/management/checkpoints/C-pre-recompute/{checkpoint.json,tree/}；C/deliverables/intermediate-check.json；intermediate-status.stdout.json；audit/verification.json: C_dirty_snapshot_equals_B_project=true。",
+      "rationale": "2+2+2=6。真实保留尚未重算的完整漂移项目，树字节与B项目一致；随后只读检查exit=3的原始输出外部及项目内均保留，明确CALC/SYNTH仍待复核且快照本身不恢复旧done的有效性。"
+    },
+    {
+      "id": "C-recompute",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "C/project/management/evidence/C/compute-run.json: exit_code=0；recomputed/{result.json,table.csv}；checks-before-promotion.json；C/project/results/{result.json,table.csv,summary.md}；audit/verification.json: C。",
+      "rationale": "2+2+2+2=8。真实用原字节脚本和原数据/冻结模型按批准参数重算；评审副本重跑result/table逐字节一致，并独立核对全部数值符合reference容差，参数hash指向实际输入。1460小时/61日、MAE56.64127430990882/41.252622564018566、降幅0.2716861852664598，表和摘要相符；窗口变化未被解释为模型改善。"
+    },
+    {
+      "id": "C-revalidate",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "C/project/management/state.json: D-REL, D-CHOICE, D-CLAIM, activities, versions, history；evidence/C/checks-before-promotion.json及summary-review.json；audit/verification.json: C活动绑定均匹配。",
+      "rationale": "2+2+2=6。参数/范围关系、作者决定、成果版本和活动绑定已同步授权；先真实计算并核验，再修订和复核摘要，顺序与依赖一致。D-SOURCE-CHECK原绑定全部不变，明确保留独立限定完成而不虚假扩大来源检查。"
+    },
+    {
+      "id": "C-history",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "C/project/management/versions/A-initial/{notes/parameters.json,results/result.json,results/table.csv,results/summary.md}；checkpoints/C-pre-recompute/tree/management/state.json；evidence/C/authorization/AUTHOR-REVISION.md；state.json: decision, history。",
+      "rationale": "2+2+1=5。初始参数/结果/表/摘要实际旧字节均与初始输入一致；漂移快照还保留旧决定与状态。作者授权、窗口修订原因、旧Q4保留及非重训说明可查，非仅hash或泛称历史。"
+    },
+    {
+      "id": "C-final-cursor",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "C/project/management/checkpoints/C-final/{checkpoint.json,tree/}；C/deliverables/final-check.json；final-status.stdout.json；C/project/management/state.json和constraints.json；RECOVERY.md；audit/verification.json: C。",
+      "rationale": "2+2+1=5。最终当前材料和活动绑定新鲜，最终断点六份内容匹配当前，数值另已核验；当前next明确交作者复核11月至12月指标/摘要并保留Q4历史，未声称作者已认可。除授权窗口外其他约束保留。旧checkpoint.id残留由较新checkpoints.current、版本和next明确消歧，不造成当前状态错误。"
+    },
+    {
+      "id": "D-portability",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "D/project/RECOVERY.md；management/state.json、constraints.json、status.py；evidence/C/authorization/；D/deliverables/recovery-checks.json和state-answer.json；audit/verification.json: D status_exit=0, D_project_equals_C_project=true。",
+      "rationale": "2+2+2=6。项目自身具有运行资源、来源身份、授权、版本、断点与恢复说明；迁移后只用项目程序恢复当前C-author-revision/C-final及全部约束。报告辨明旧路径仅历史命令字符串，没有以旧初始handoff/manifest覆盖较新状态，也未声称迁移本身改变科学证据。"
+    },
+    {
+      "id": "D-next",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "D/report.md的有效版本、工作状态、当前下一步；D/deliverables/state-answer.json: next_action_performed=false, pending_author_content_review=true；D/project/management/state.json: next_action。",
+      "rationale": "2+2+1=5。准确恢复11月至12月冻结模型指标与更新摘要交作者内容复核、保留Q4历史的最新具体next；当前CALC/SYNTH限定核对完成与作者复核待办区分清楚，科学范围、未重训、无人类专家认可和无投稿授权均正确。"
+    },
+    {
+      "id": "D-readonly",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "D/readonly-audit.json: passed=true且无文件/目录差异；D/deliverables/readonly-verification.json；baseline-stat.json与baseline-hashes.json；recovery-checks.json: numerical_recomputation_performed=false；D/report.md。",
+      "rationale": "2+2=4。独立机械audit支持文件字节、文件mtime和目录mtime未变；仅执行只读status，明确未运行会重算指标的verify_current或计算器，没有初始化/登记/快照/修复或执行下一步。"
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "usability": "usable",
+  "notes": [
+    "按共同rubric/codebook逐组件实质评分，未按品牌、字段拼写、文件数量或专有命令给分。四阶段作为同一相依生命周期链审查。",
+    "包内全部303份分发文件已读取并记录SHA；评审核验仅写audit子目录，运行项目副本，未修改作者四阶段原件，未访问嵌入的旧绝对路径。独立指标定义计算与reference绝对容差1e-10均通过；未将CLI通过视为科学正确或证明。",
+    "A受控无效输入原始exit=2与前后不变证据齐全；C中间漂移原始exit=3未被最终成功替换；B和D独立只读机械audit均通过。",
+    "维护备注：当前state仍含历史checkpoint.id=A-verified-initial及初始manifest，但checkpoints.current、授权、有效版本、current scope及next一致且D已正确消歧；未构成实质错误，不额外扣分。",
+    "盲法局限：组织者未提供arm映射；项目布局和历史路径可能包含实现线索，因此arm_hidden=true仅表示未给映射，不表示完美盲法。未推断arm、未访问其他链/父目录/外部执行历史/memory/个人skills/网络/其他agent。",
+    "未发现应单列的关键错误；当前作者内容复核确实待办，并非专家认可或投稿验收。工程探针无科学加分。"
+  ],
+  "scope": "Independent fresh chain-level AI review; organizer withheld arm mapping and external execution history. Layout may reveal method; no human certification.",
+  "stage_scores": {
+    "A": 20,
+    "B": 35,
+    "C": 30,
+    "D": 15
+  },
+  "publication_projection": {
+    "original_chain_id": "anonymous-Kc5f7b6",
+    "original_grade_sha256": "ad947feb4776c5e69456e4b3ce3ffc1c155f1d569456f332c3e8736e8b9ec03a",
+    "changes": [
+      "opaque-chain-label-to-plan-label",
+      "absolute-locators-to-logical-paths"
+    ],
+    "scope": "Administrative identity/locator mapping only; scores, rationales, critical errors and original report bindings unchanged."
+  }
+}

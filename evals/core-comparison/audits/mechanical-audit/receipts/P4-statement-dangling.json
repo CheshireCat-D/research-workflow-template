@@ -1,0 +1,23 @@
+{
+  "name": "P4-statement-dangling",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P4/statement-dangling/project/.agents/skills/_rw-runtime/tools/research.py",
+    "register",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P4/statement-dangling/project",
+    "--kind",
+    "relation",
+    "--file",
+    "STUDY_ROOT/mechanical-audit/P4/statement-dangling/dangling-statement.json"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P4/statement-dangling/project",
+  "exit_code": 2,
+  "stdout": "{\n  \"passed\": false,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"errors\": [\n    {\n      \"code\": \"invalid_registration\",\n      \"message\": \"Unknown typed reference: statement:AUDIT-MISSING\"\n    }\n  ]\n}\n",
+  "stderr": "",
+  "project_identical_bytes_mtime_directory_mtime": true,
+  "changed_files": [],
+  "changed_directories": []
+}

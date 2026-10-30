@@ -1,0 +1,208 @@
+{
+  "rationale": "作者明确批准 rho=4；已真实重算并核对数值/CSV、改写和读取摘要；保留旧成果和漂移检查，不重做独立来源身份核验。",
+  "configuration": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 4.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "records": {
+    "T-PARAM": {
+      "expected_version": 1,
+      "data": {
+        "id": "T-PARAM",
+        "entity": "local material",
+        "path": "notes/parameters.json",
+        "meaning": "Author working parameters; a separate local material, not the original paper/dataset",
+        "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+        "bytes": 161,
+        "approved_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "revision_basis": "provenance/stage-C/AUTHOR-REVISION.md"
+      }
+    },
+    "T-CLAIM": {
+      "expected_version": 1,
+      "data": {
+        "id": "T-CLAIM",
+        "entity": "statement",
+        "meaning": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+        "scope": {
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ],
+          "claim_limit": "Only supplied formula arithmetic under stated sub-Gaussian process conditions; no new coverage proof."
+        }
+      }
+    },
+    "T-REL": {
+      "expected_version": 1,
+      "data": {
+        "id": "T-REL",
+        "entity": "relation",
+        "from": "T-PARAM",
+        "to": "T-CLAIM",
+        "meaning": "作者批准的预先固定 rho=4 参数限定当前数值主张；参数更改并非原论文修订，也非覆盖证明。",
+        "parameter_version": 2,
+        "claim_version": 2
+      }
+    },
+    "T-CHOICE": {
+      "expected_version": 1,
+      "data": {
+        "id": "T-CHOICE",
+        "entity": "decision",
+        "meaning": "Use author-approved rho=4 fixed before observation; retain alpha .05 and other constraints.",
+        "evidence": [
+          "T-PARAM"
+        ],
+        "responsible": "benchmark material author supplied revision; assistant executed arithmetic and record revision",
+        "rationale": "provenance/stage-C/AUTHOR-REVISION.md accepts current parameters; not new theorem or post-observation tuning.",
+        "decided_at": null,
+        "approval_path": "provenance/stage-C/approved-parameters.json",
+        "approval_sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117"
+      }
+    },
+    "T-RESULT": {
+      "expected_version": 1,
+      "data": {
+        "id": "T-RESULT",
+        "entity": "artifact",
+        "path": "results/result.json",
+        "meaning": "Current canonical numeric result; the companion results/table.csv is delivered and must agree",
+        "derived_from": [
+          "T-PARAM",
+          "T-RAW",
+          "T-CODE",
+          "T-CHOICE"
+        ],
+        "companion_paths": [
+          "results/table.csv"
+        ],
+        "parameter_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "revision_basis": "validation/stage-C.json",
+        "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280"
+      }
+    },
+    "T-SUMMARY": {
+      "expected_version": 1,
+      "data": {
+        "id": "T-SUMMARY",
+        "entity": "artifact",
+        "path": "results/summary.md",
+        "meaning": "Current summary consistent with canonical numeric result",
+        "derived_from": [
+          "T-CLAIM",
+          "T-RESULT"
+        ],
+        "parameter_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "revision_basis": "validation/stage-C.json",
+        "sha256": "d4bfd0eaba49bb6a45dc5579ff0d14ad2bbbd3364ea9718f9ea48c6abad298fd"
+      }
+    },
+    "T-CALC": {
+      "expected_version": 1,
+      "data": {
+        "id": "T-CALC",
+        "entity": "activity",
+        "meaning": "Evaluate the supplied calculator under current author parameters and verify provided result",
+        "inputs": [
+          "T-PARAM",
+          "T-RAW",
+          "T-CODE",
+          "T-CHOICE"
+        ],
+        "outputs": [
+          "T-RESULT"
+        ],
+        "status": "done",
+        "execution_evidence": "validation/stage-C.json",
+        "scope": "Actual recomputation with approved rho=4; full result/CSV and direct formula comparison; no proof."
+      }
+    },
+    "T-SYNTH": {
+      "expected_version": 1,
+      "data": {
+        "id": "T-SYNTH",
+        "entity": "activity",
+        "meaning": "Prepare summary within current claim and verified result",
+        "inputs": [
+          "T-CLAIM",
+          "T-RESULT"
+        ],
+        "outputs": [
+          "T-SUMMARY"
+        ],
+        "depends_on": [
+          "T-CALC"
+        ],
+        "status": "done",
+        "execution_evidence": "validation/stage-C.json",
+        "scope": "Summary revised and read against actual rho=4 values and unchanged conditional scope; awaits author content review."
+      }
+    }
+  },
+  "next_action": "将 alpha=0.05、预先固定 rho=4 的四点边界表（results/table.csv）与更新摘要（results/summary.md）交作者内容复核，确认 V 与给定过程控制条件；暂不扩展到事后选择 rho；没有投稿授权。"
+}

@@ -1,0 +1,65 @@
+{
+  "submission_id": "S9f4d01",
+  "task_id": "theory",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_conditions",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:5-19 给出两份固定 arXiv 版本和 PDF 页码证据表；16-17 行记录 pair-based 支配与 S1 线性无限时域界，18 行为 S2 双尾 normal-mixture，19 行为定理4的预测器、残差平方和、平均条件均值和 2 beta 预算。report.md:169 进一步排除 iid/正态/共同均值限制的误读。已直接核对本目录两份原始 PDF，对应式与页码一致。",
+      "rationale": "4/4：版本身份和关键页/式均能从本地原始 PDF 复核。4/4：正确说明 sub-psi 针对 (S,V) 且单纯适应不足，不把不可预测当成一般禁令。4/4：清楚区分 S1 的无限时域线性 crossing 与 S2 曲线双尾混合，无附加 iid、固定n或正态误差假设。6/6：定理4的区间、可预测有界预测、目标 mu_t、残差平方和、scale b-a 和双尾2beta全部准确。"
+    },
+    {
+      "id": "gaussian_mixture",
+      "score": 15,
+      "max_points": 15,
+      "evidence": "report.md:23-38 从 SG 写出固定 lambda 一步超鞅、初值1、联合可测和条件 Tonelli；40-48 显示密度 sqrt(rho/(2pi))、q=V+rho 及平方配方；53-58 完成 Ville 阈值反演，说明已双尾 alpha 及 [0,1] 截断。",
+      "rationale": "7/7：Gaussian precision、前因子和指数常数全部正确，配方过程可复核。4/4：SG 到一步超鞅、固定概率混合、联合可测和非负条件积分交换齐全，初始资本1。4/4：Ville 反演正确，双尾总 alpha 与截断解释正确。"
+    },
+    {
+      "id": "finite_counterexample",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:62-80 给出 iid Bernoulli(1/100)、alpha=1/20、rho=1/4、前200次全零事件；该事件上 Vhat=1/4、|S|=2、b^2=log(800)/2<4，事件概率 (99/100)^200>exp(-200/99)>exp(-5/2)>1/20。16、62、141 行区分 adaptedness 与有效 psi 控制。judge-checks/independent-checks.json 独立核验边界约1.828197、概率约0.133980及精确整数概率比较。",
+      "rationale": "6/6：替代见证完全满足任务的共同条件均值及指定预测器，事件明确且确实排除真均值。6/6：边界、残差、误差和解析概率链均严格成立；不依赖 Monte Carlo。6/6：失败归因是没有验证该 (S,Vhat) 的 psi_N 支配，同时保留合法固定 rho 方法的效力。与参考 n280/rho1 不同不构成缺点。"
+    },
+    {
+      "id": "moving_precision",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:84-101 导出 f(x)、f'(x)、唯一根 x-log(1+x)=2log(1/alpha)、rho*=v/x、最小边界 sqrt((1+x)v)，说明零端点和固定目标 m；103-112 在 iid Bernoulli(1/2)、合法 V=t/4 下写出 Rademacher LIL，推出几乎必然无限次越界、同时覆盖率0。",
+      "rationale": "6/6：一阶导数、唯一根与 Lambert W 的 -1 支准确。4/4：极小值 sqrt((1+x_alpha)v) 和固定目标优化/逐时重选区别明确。6/6：独立于错误经验替换，使用合法确定时间和题供 LIL 证明无限时域失效，结论正确。2/2：零点下确界不达已处理。"
+    },
+    {
+      "id": "valid_repairs",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:116-120 用条件 Hoeffding 给 V=t/4 的固定正态混合 CS；124-141 给 psi_E=-log(1-lambda)-lambda, 0<=lambda<1、预测器条件及积分恒等式推出一步条件期望 <=exp(lambda delta)(1-lambda delta)<=1；143-153 用固定 Uniform(0,1) 混合定义唯一根 u_beta，双尾 beta=alpha/2；155-165 给 rho_j=rho_0 2^j 和 alpha_j=alpha/[j(j+1)] 的可数预算、交集与并集界。",
+      "rationale": "7/7：固定 rho 与 Hoeffding 合法代理给出正确同时概率。8/8：经验 Bernstein 一步不等式实证成立，两尾对称处理有效，Uniform(0,1) 固定混合及其反演给出完整可用的有效 EB CS。其正根连续递增/发散论证充分，不必强求参考 gamma-exponential。3/3：可数预算可求和，联合控制后再选参数/取交集正确。中心修复没有错误。"
+    },
+    {
+      "id": "reviewable_short_memo",
+      "score": 13,
+      "max_points": 13,
+      "evidence": "report.md:3 明判 A/E真、B/C/D假；169及178 准确归属已有框架并把本次内容限定为构造稿核查与修订；171-176 直接使用 G 与有限随机索引的事件包含，无 E tau 条件；7-19、72-80、84-110 提供可追踪坐标与数值表达式；180 明确代码仅作核验。",
+      "rationale": "5/5：A-E显式判断正确。4/4：修订结论正确归属前人，未把构造稿错误加给真实论文，也未以两文献论证全球首创。2/2：有限索引的路径事件包含证明充分。2/2：短稿自足地承载关键推导、数值式和来源坐标，未复制论文全文，且区分数值校验与证明。"
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "usable",
+  "notes": [
+    "Source-check PASS：实际原始 PDF 的页数及 SHA256 与输入 manifest 一致，已核对上述关键定理、公式及定位；详见 judge-checks/independent-checks.json。",
+    "接受报告的 n=200、rho=1/4 替代解析见证及 Uniform(0,1) 次指数混合修复；二者数学正确，不要求复用参考见证或指定边界包。",
+    "未发现实质误报、主要数学错误或中心修复错误；未触发任何列明 critical cap。没有未解决的数学分歧。参考键所列相关条件与结论经本次独立核对无误。",
+    "arm_hidden=true 仅表示未提供组别映射；报告及配套自查存在审查模板式措辞，可能形成风格线索，但不足以可靠识别来源，本评审未据此推断或加减分。",
+    "仅在分配的匿名目录内读取任务、原文、报告、参考键及数学自查附录；未读取 RUN.md、执行日志、其它匿名报告、映射、memory 或个人 skills，未联网、安装或调用其它 agent。"
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification.",
+  "report_sha256": "7d64c3b6e896244508076f2ad1a5fd03ba098cfbeea08acc5be6b759625e5d9a"
+}

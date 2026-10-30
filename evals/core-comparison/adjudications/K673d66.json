@@ -1,0 +1,169 @@
+{
+  "submission_id": "K673d66",
+  "chain_id": "P3",
+  "case_id": "T",
+  "scored": true,
+  "arm_hidden": true,
+  "report_sha256_by_stage": {
+    "A": "32bdfb3b2798658f8cb945980d8074b4ae9aa286de6b10cc93f4356eeb8585fa",
+    "B": "a0ccc617164e4c4306ff9bbddf36af95adde58d63eb9529ed968ddafdfebbae4",
+    "C": "c5a2017337e36d27bb5a9926a5d32a2d0f6b9611f210216a77f934cb76fd645e",
+    "D": "5d65f4eec8ff3355ed464ca22ac235613d56b45f4e972d4cdcd5dadc75632e8e"
+  },
+  "criteria": [
+    {
+      "id": "A-materials",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "A/project/research/state.json records T-SRC/T-REMOTE/T-RAW/T-PARAM/T-CLAIM/T-REL/T-CHOICE/T-CODE/T-RESULT/T-SUMMARY and the three activities; tracked_files supplies full SHA256/bytes, including the companion table. A/project/provenance/initial preserves identities and obligations. A/report.md and the T-SRC access record limit access to supplied identity/card and partial decoded text. audit/verification.json confirms immutable PDF/code/source-note bytes and initial archives.",
+      "rationale": "2+2+2=6: Actual local/source identity and limited access are truthful; direct CALC inputs and CALC→SYNTH dependency plus the independent source branch are durable; version-1 records, file identities and actual initial content are recoverable. No credit depends on field names or file count."
+    },
+    {
+      "id": "A-results",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "A/deliverables/verification.json retains the normal calculator argv, exit 0, stdout and equality checks; A/deliverables/verification-normal and A/project/validation/stage-A-normal retain the actual output. audit/verification.json A_calculation independently reproduces canonical JSON/table on a copy, matches reference values within 1e-10, and verifies result input SHA against actual parameters/code.",
+      "rationale": "2+2=4: Evidence supports actual normal execution and verification of the supplied precomputed result. JSON, CSV and the initial summary agree; the report retains fixed-rho conditional numerical scope without a new proof or coverage claim."
+    },
+    {
+      "id": "A-constraints",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "A/project/research/state.json configuration matches initial-input/constraints.json, including deadline provenance, offline standard-library budget, capabilities, venue undecided, language, rho=1 scope and unknown human approval/submission status. Its next_action and PROJECT.md name the boundary table/summary, V/process conditions, pre-observation rho and content review before submission.",
+      "rationale": "2+2=4: All given constraints persist, with an exact purpose and conditions for the next action. Recovery does not need the external answer to recover these facts."
+    },
+    {
+      "id": "A-recovery",
+      "score": 3,
+      "max_points": 3,
+      "evidence": "A/project/PROJECT.md identifies research/state.json as authority and documents python3 -I -B resume.py; A/project/resume.py is self-contained standard-library code. A/deliverables/resume-status.json and readonly-recovery-test.json retain successful reads; audit/verification.json copied_resume_results.A reproduces revision 1, all three done and fresh checkpoint.",
+      "rationale": "2+1=3: The current authority is discoverable and usable from the project alone. The recovery entry checks declared files/records/dependencies without running the scientific next step."
+    },
+    {
+      "id": "A-failure",
+      "score": 3,
+      "max_points": 3,
+      "evidence": "A/deliverables/verification.json and A/project/validation/stage-A.json retain the real alpha=1 rejected-input command, exit 2 and ValueError stderr, protected before/after hashes/bytes/mtime and no rejected output directory. Canonical A artifacts still match initial-input and retained normal output. audit/verification.json independently reproduces exit 2 and unchanged copied project.",
+      "rationale": "1+1+1=3: Actual invalid execution, truthful preserved failure and intact valid canonical results are all evidenced. It is correctly called controlled validation, not a scientific failure."
+    },
+    {
+      "id": "B-drift",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "B/report.md and B/deliverables/state-answer.json identify only notes/parameters.json as changed, with no missing registered paths: prior SHA 230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67/rho=1 and current SHA 340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117/rho=4, both 161 bytes. B/project/.history/A-initial/files retains the prior bytes. B/deliverables/resume.stdout.json and copied audit reproduce the same drift.",
+      "rationale": "4+3+3=10: Correct changed path, actual old/current identities, and a verifiable prior binding support the finding. The unchanged size does not hide drift, and no missing file is invented."
+    },
+    {
+      "id": "B-dependencies",
+      "score": 12,
+      "max_points": 12,
+      "evidence": "B/report.md activity table and B/deliverables/resume.stdout.json give T-CALC stale from changed T-PARAM and T-SYNTH stale via T-CALC (plus its captured parameter), while T-SOURCE-CHECK remains done. B/project/research/state.json shows the matching graph and unchanged source inputs/output; audit/verification.json copied_resume_results.B reproduces it.",
+      "rationale": "4+4+4=12: Direct and transitive effects are correctly separated. The independent source-identity branch remains valid within its prior scope. Neither remote metadata nor scratch is claimed as automatic dependency coverage."
+    },
+    {
+      "id": "B-cursor",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "B/project/research/state.json contains the A checkpoint; B/deliverables/resume.stdout.json marks it fresh=false because tracked file bytes changed. B/report.md says old outputs are historical rho=1, blocks use for current rho=4, and requires author resolution followed by approved-parameter recomputation, JSON/CSV checking, summary review and affected-activity update before the old review direction resumes.",
+      "rationale": "2+2+1=5: The actual checkpoint exists and is stale; prior done state does not authorize reuse. The concrete continuation is conditional on authorization and revalidation, and no old next action is executed."
+    },
+    {
+      "id": "B-boundaries",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "B/report.md scientific/tracking sections and B/deliverables/state-answer.json distinguish byte/registration staleness from theorem or historical-number falsity; state PDF hash-only access this stage; identify T-REMOTE as metadata-only and notes/unregistered-scratch.md outside registered automatic coverage despite manual hashing.",
+      "rationale": "2+2=4: Local freshness and scientific truth are kept distinct. Source-only, scratch and modeled-dependency limits are accurate without claiming live remote or whole-project scientific validation."
+    },
+    {
+      "id": "B-readonly",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "B/readonly-audit.json passed with empty file/directory differences. B/deliverables/project-before.json and project-after.json are exactly equal, including whole-file SHA256/bytes, file mtime_ns and directory mtime_ns; project-readonly-check.json places answer evidence outside project. audit/verification.json independently confirms snapshot equality.",
+      "rationale": "2+2=4: The available complete before/after evidence establishes unchanged project file bytes and file/directory mtimes. No repair, rebind, snapshot or recomputation occurred in B."
+    },
+    {
+      "id": "C-dirty-snapshot",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "C/project/.history/C-drift/files and manifest.json retain the actual unrecomputed B contents; checkpoint.json matches archived metadata revision 2. C/deliverables/intermediate-resume.stdout and project validation copy retain exit-1 inspection with fresh checkpoint, T-CALC/T-SYNTH stale and T-SOURCE-CHECK done; intermediate-interpretation.json explicitly says old_work_revalidated=false. audit/verification.json reconstructs revision 2 on a copy and exactly reproduces that output.",
+      "rationale": "2+2+2=6: A real dirty snapshot/checkpoint was saved before recomputation, actually inspected, and not treated as activity/scientific revalidation. Old activity captures remain intact in revision 2."
+    },
+    {
+      "id": "C-recompute",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "C/project/validation/stage-C.json retains the unchanged calculator command and exit 0; C/deliverables/recompute.stdout and validation/stage-C-recompute preserve output. Canonical result/table equal that output, parameters match author approval, metadata SHA describes the actual input bytes, and PDF/code bytes match the initial payload. audit/verification.json C_calculation independently confirms all four reference values, CSV correspondence and input SHA. C/project/results/summary.md has rho=4, values and the conditional fixed-rho scope.",
+      "rationale": "2+2+2+2=8: Actual approved-parameter execution, correct numeric result, correct companion table and updated summary are evidenced. Alpha and the pre-observation policy remain fixed, and recomputation is not described as a new coverage proof."
+    },
+    {
+      "id": "C-revalidate",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "C/project/provenance/stage-C/metadata-patch.json, metadata-revision.stdout and .history/metadata/revision-3.json record explicit v1→v2 changes to T-PARAM/T-CLAIM/T-REL/T-CHOICE/T-RESULT/T-SUMMARY/T-CALC/T-SYNTH. C/deliverables/stage_c.py revises results/summary after actual compute, then binds T-CALC before T-SYNTH; final revision 4 captures new file/record identities. Source-check activity is byte-for-byte equal to its prior activity record; audit confirms this.",
+      "rationale": "2+2+2=6: Affected material, relation, choice and version bindings are addressed; CALC and SYNTH are explicitly rechecked/rebound in dependency order only after their work. The independent source branch is correctly retained."
+    },
+    {
+      "id": "C-history",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "C/project/.history/A-initial/files preserves exact initial parameter/result/table/summary bytes, confirmed against initial-input. .history/C-drift/files preserves actual prerecompute contents and authority; .history/metadata/revision-1.json through revision-3.json retain real earlier state/decision/version content. Author revision, approved parameters, metadata patch and state history give the change rationale. audit/verification.json verifies archive hashes, B-content equality and initial-state identity.",
+      "rationale": "2+2+1=5: Old parameters/result and old table/summary remain recoverable as content. The actual authorization and revision reasons are durable, rather than only a vague claim that history exists."
+    },
+    {
+      "id": "C-final-cursor",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "C/project/research/state.json is revision 4; research/checkpoints/C-final.json equals its embedded checkpoint. C/deliverables/final-resume.stdout and copied audit show no changed paths, all three activities done and fresh checkpoint. The saved next_action sends the rho=4 table/updated summary for author content review, keeps V/process conditions and excludes post-observation rho/submission. audit confirms all other constraints preserved.",
+      "rationale": "2+2+1=5: Actual final state is current; the exact latest next purpose and required conditions persist. Other given constraints, absence of human approval and absence of submission authorization remain intact."
+    },
+    {
+      "id": "D-portability",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "D/project contains PROJECT.md, research/state.json, resume.py, local scientific artifacts, source identity, initial/revision evidence and history. D/report.md and state-answer.json recover revision 4 and correct v2 affected records with unchanged v1 source branch/constraints. D/deliverables/resume.stdout.json is a project-root read-only recovery; inspected resume.py reads only root-relative project state/files. audit copied_resume_results.D reproduces it from a new local copy without opening embedded old log paths.",
+      "rationale": "2+2+2=6: Recovery resources are genuinely carried in the relocated project, current authority/version is correct, and constraints are recovered from that project. Historical absolute command paths are treated as evidence only, without dependence on original toolkit/cache/old chat."
+    },
+    {
+      "id": "D-next",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "D/report.md and D/deliverables/state-answer.json recover the current rho=4 table plus revised summary for author content review, retain pre-observation rho and V/process conditions, and state not to extend to post-observation rho. They report all three bounded activities done/current while author content approval is pending, and next_action_executed=false.",
+      "rationale": "2+2+1=5: Latest actual next action, complete/pending distinction and required conditions are correct. The stated scientific range remains numerical formula evaluation, with no invented expert approval or external submission."
+    },
+    {
+      "id": "D-readonly",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "D/readonly-audit.json passed with no file/directory differences. D/deliverables/initial-snapshot.json and final-snapshot.json are exactly equal; read-only-audit.json and existing-content-checks.json distinguish comparing existing values from recomputation. D/report.md records no init/register/snapshot/recompute/automatic next action. audit/verification.json verifies snapshot equality and C/D project byte identity.",
+      "rationale": "2+2=4: File bytes and file/directory mtimes are unchanged. The read-only recovery and existing-content comparisons did not mutate scientific or management state."
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "usability": "usable",
+  "notes": [
+    "No substantive weighted error or separately reportable critical error was found. All frozen codebook components receive full credit; no extra cap or engineering-feature bonus was applied.",
+    "Independent checks and all script executions are confined to this packet and audit copies. Explicit root/spec/output parameters point to copies; no embedded old absolute project/toolkit path was followed. Original A/B/C/D project bytes and mtimes were unchanged by this adjudication.",
+    "Original execution assessment uses retained commands/exit codes, raw stdout/stderr, outputs, version history and readonly audits. Copy replays verify artifact behavior and numeric agreement; they are not represented as the original stage executions. External execution history was not accessed.",
+    "Anonymity is not perfect: package layout and embedded paths/tool-related text can reveal implementation clues. No arm mapping, other chain, personal skill/memory, network or other agent was accessed, and no arm assignment was inferred.",
+    "This is the bounded numerical/project-lifecycle assessment requested by rubric/reference, not a fresh long-proof audit or human scientific certification."
+  ],
+  "scope": "Independent fresh chain-level AI review; organizer withheld arm mapping and external execution history. Layout may reveal method; no human certification.",
+  "stage_scores": {
+    "A": 20,
+    "B": 35,
+    "C": 30,
+    "D": 15
+  },
+  "publication_projection": {
+    "original_chain_id": "anonymous-K673d66",
+    "original_grade_sha256": "5f778e17d8877e2f5869d17b6eef30b42dd047e29c3fdddcc4cb78820cc9b2d9",
+    "changes": [
+      "opaque-chain-label-to-plan-label",
+      "absolute-locators-to-logical-paths"
+    ],
+    "scope": "Administrative identity/locator mapping only; scores, rationales, critical errors and original report bindings unchanged."
+  }
+}

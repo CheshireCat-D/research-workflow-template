@@ -1,0 +1,17 @@
+{
+  "choice": "Use author-approved 2011-11-01 to 2011-12-31 window, observed-hour weighting and unchanged Jan-Sep frozen C0/C1",
+  "decided_at": "Unspecified in supplied materials; no author decision date invented",
+  "evidence_refs": [
+    "D-PARAM",
+    "D-AUTHOR-REVISION",
+    "D-APPROVED-PARAM"
+  ],
+  "extensions": {
+    "decision_date": null,
+    "recorded_by": "assistant agent"
+  },
+  "id": "D-CHOICE",
+  "rationale": "Explicit author acceptance in context/stage-C/AUTHOR-REVISION.md; original Q4 parameter/result/summary and drift-state snapshot retained. Window shift is not evidence of improved model training.",
+  "responsible": "author of supplied scope-revision instruction, as attributed; implementation and checking by assistant agent",
+  "revisit_when": "Only upon explicit authorized parameter/scope revision; retain prior content and reason"
+}

@@ -2,7 +2,35 @@
 
 本例对真实动物生态测量数据做一项有限的描述性二次分析：分别计算三物种的雄性均值减雌性均值，并按岛屿和年份共同分层。先读 `question-method.md`。本例不主张重现原论文的全部模型，也不把这项小分析称为新的论文成果。
 
-使用 Python 3.11+ 标准库，无须安装依赖。在仓库根目录运行，输出目录必须尚不存在、其父目录必须已经存在：
+使用 Python 3.11+ 标准库，无须安装依赖。在工具包根目录运行一条命令，输出项目必须尚不存在、其父目录必须已经存在：
+
+```sh
+python3 -B examples/public-penguins/run_project.py --output ../penguins-project
+```
+
+程序只从 `source.json` 中的固定 URL 下载并核验真实 CSV，然后实际初始化项目、安装项目内 RWT 技能、保存输入和问题方案、计算统计表和两张 SVG、生成中文结果简稿、登记来源/证据/主张/产物/活动、保存检查点，最后用项目内运行时执行只读 `resume`。成功时输出 `passed: true`、`checkpoint_status: current`、简稿和图件的实际路径，以及后续恢复命令。研究主张保留 `draft`，科学有效性为 `not-assessed`；人工阅读结果、视觉检查和核实原始抽样单位仍是保存的下一步。
+
+已有本地 CSV 时可以完全离线运行：
+
+```sh
+python3 -B examples/public-penguins/run_project.py --input /path/to/penguins.csv --output ../penguins-project-offline
+```
+
+只有字节数和 SHA-256 同时匹配固定来源，程序才把输入标为 `pinned-public-observations`。其他兼容 CSV 标为 `user-supplied-or-test`，简稿和来源登记也会注明不是固定公开数据结果，且不会推断其许可。输入原文件不改写，项目保存工作副本。
+
+进入生成项目后，可随时恢复；工具包移走后仍使用这个项目内命令：
+
+```sh
+python3 -B .agents/skills/_rw-runtime/tools/research.py resume --root . --format markdown
+```
+
+项目的 `notes/input-identity.json` 保存实际输入哈希、字节数和获取方式；`notes/environment.json` 保存 Python、操作系统、复制脚本身份及复算命令；`notes/execution.json` 保存到分析完成为止的实际命令收据。`notes/run-receipt.json` 另存登记、检查点和恢复的完整收据，避免最后写收据使已绑定产物的检查点过期。源 CSV、复制的分析器、问题方案和分析产物均受登记和指纹跟踪。`code/` 保留本次实际使用的脚本及固定来源元数据，方便从项目内复算到另一个新目录。
+
+已有输出会在下载前被拒绝。下载、分析或登记失败时，程序返回非零退出码，在错误 JSON 中给出实际 `stage`、已创建的项目路径与可用收据；不会打印成功。它保留已取得的输入和部分产物，便于检查失败原因。重试完整流程时换一个新的 `--output`；若已有正确 CSV，可用 `--input` 避免重复下载。
+
+## 分步取得和分析
+
+如果只需要分析文件，也可分别运行原有两条命令；这两条命令不创建 RWT 项目：
 
 ```sh
 python3 -B examples/public-penguins/fetch_data.py --output ../penguins-input
@@ -23,7 +51,7 @@ Windows PowerShell 可把 `python3` 换成 `py -3 -X utf8`。也可从其他工�
 
 固定真实输入共344行，性别、物种和体质量完整333行。性别缺失11行，体质量缺失2行，二者重叠2行；不是排除13行。三物种的雄减雌均值差为 Adelie `674.6575 g`、Chinstrap `411.7647 g`、Gentoo `805.0947 g`。15个可比较岛屿—年份层均为正，但幅度不同；全部27个网格中的12个空层仍保留。Adelie 覆盖三个岛屿，Chinstrap 仅 Dream，Gentoo 仅 Biscoe。
 
-`observed/` 保存本次实际复算的紧凑结果：`summary.json`、`species_contrasts.csv`、`strata.csv`、两份可编辑 SVG 及 `results.md`。没有把原始 CSV、逐行排除表、完整练习项目或冗长日志放进示例。
+源码仓库中的 `observed/` 保存已执行真实复算的紧凑结果：`summary.json`、`species_contrasts.csv`、`strata.csv`、两份可编辑 SVG 及 `results.md`。用户运行包不包含 `observed/` 或 `evals/`；运行上面的命令会根据实际取得的输入生成自己的结果。没有把原始 CSV、逐行排除表、完整练习项目或冗长日志放进示例。
 
 用户实际重跑时，新输出目录包含：
 
@@ -45,16 +73,17 @@ CSV 中不可计算的统计量留空，JSON 中为 `null`；标准差至少需�
 
 ## 审阅与项目恢复记录
 
-[独立 base-R 核对](../../evals/public-data/assessment.md)给出实际复算结论与重跑命令；[执行记录](../../evals/public-data/recording.json)保留来源、失败与纠正、登记及迁移恢复的范围。上面的命令生成分析产物；需要持续管理时，按[命令行指南](../../docs/07-core-usage.md)将产物登记到独立的 RWT 项目，再恢复该项目。这里不分发完整临时项目副本。
+源码仓库的[独立 base-R 核对](https://github.com/CheshireCat-D/research-workflow-template/blob/main/evals/public-data/assessment.md)给出既有真实复算结论与重跑命令；[执行记录](https://github.com/CheshireCat-D/research-workflow-template/blob/main/evals/public-data/recording.json)保留当次来源、失败与纠正、登记及迁移恢复的范围。旧记录不表示本次新项目接受了独立审阅。本次项目的一键执行和恢复以新项目自己的收据为准；分步分析的产物也可按[命令行指南](https://github.com/CheshireCat-D/research-workflow-template/blob/main/docs/07-core-usage.md)登记。这里不分发完整旧临时项目副本。
 
-## 单一离线测试入口
+## 离线测试
 
 在仓库根目录运行：
 
 ```sh
 python3 -B -m unittest discover -s tests -p test_public_penguins.py -v
+python3 -B -m unittest discover -s tests -p test_penguins_project.py -v
 ```
 
-专项测试只定义于 `tests/test_public_penguins.py`；`synthetic.csv` 是原创、可手算的小夹具，用于核对均值/标准差、缺失分母、空层与单性别层、共同权重、未知性别穷举范围、输入校验、原生 SVG、LF 输出与拒绝覆盖。夹具数值不是生态研究结果，CI 不联网也不下载真实 CSV。真实数据复算是上面单独的取得与运行步骤。
+分析专项测试定义于 `tests/test_public_penguins.py`；`synthetic.csv` 是原创、可手算的小夹具，用于核对均值/标准差、缺失分母、空层与单性别层、共同权重、未知性别穷举范围、输入校验、原生 SVG、LF 输出与拒绝覆盖。`tests/test_penguins_project.py` 使用同一合成夹具实际执行新项目、项目内接入、登记、检查点、任意工作目录与迁移后的只读恢复，检查输入改变后的过期状态、拒绝覆盖和失败阶段；下载边界使用离线注入失败核对，不冒充真实下载成功。夹具数值不是生态研究结果，CI 不联网也不下载真实 CSV。真实数据复算是上面单独的取得与运行步骤。
 
 背景来源：Gorman KB, Williams TD, Fraser WR (2014). *Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis)*. PLoS ONE 9(3):e90081. [doi:10.1371/journal.pone.0090081](https://doi.org/10.1371/journal.pone.0090081)。来源支持范围见本例的资料说明；本例只做体质量的描述性比较。

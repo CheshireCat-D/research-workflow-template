@@ -1,0 +1,210 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--output",
+        "OUTPUT_DIR/verification-normal"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"result\": \"OUTPUT_DIR/verification-normal/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--spec",
+        "PROJECT_ROOT/notes/rejected-parameters.json",
+        "--output",
+        "OUTPUT_DIR/verification-rejected"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times\"}\n"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/resume.py"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"case_id\": \"T\",\n  \"authority\": \"research/state.json; notes, provenance and checkpoints do not override current configuration or records\",\n  \"metadata_revision\": 1,\n  \"active_constraints\": {\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"T\",\n      \"alpha\": 0.05,\n      \"rho\": 1.0,\n      \"rho_selection\": \"fixed-before-observation\",\n      \"intrinsic_time_grid\": [\n        0,\n        1,\n        10,\n        100\n      ]\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"next_action\": \"将 alpha=0.05、rho=1 的四点边界表和摘要交作者讨论：先确认 intrinsic time V 的含义及过程是否满足给定 sub-Gaussian 控制，rho 在观察前固定；未经内容复核不投稿。\",\n  \"changed_or_missing_paths\": [],\n  \"activities\": {\n    \"T-SOURCE-CHECK\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-CALC\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-SYNTH\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    }\n  },\n  \"checkpoint_freshness\": {\n    \"fresh\": true,\n    \"reasons\": []\n  },\n  \"scientific_scope\": {\n    \"formula\": \"sqrt((v+rho)*(log(1+v/rho)+2*log(1/alpha)))\",\n    \"l0\": 1,\n    \"process_conditions\": \"S and -S have the required sub-Gaussian exponential control for the same nonnegative intrinsic time V; alpha is the total two-sided error budget\",\n    \"rho_rule\": \"fixed before observation\",\n    \"assessment\": \"specified numerical values and summary checked; proof, simulation coverage, novelty and human approval not assessed\",\n    \"formal_verification\": \"not-started; not required in this numerical task\"\n  },\n  \"source_tracking_limits\": {\n    \"source_only\": [\n      \"T-REMOTE\"\n    ],\n    \"unregistered_file\": [\n      \"notes/unregistered-scratch.md\"\n    ],\n    \"meaning\": \"Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked.\"\n  },\n  \"publication_rule\": \"Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.\",\n  \"resume_is_read_only\": true,\n  \"no_scientific_certification\": true\n}\n",
+      "stderr": ""
+    }
+  ],
+  "reads": {
+    "STUDY_ROOT/runs/P3/A/REQUEST.md": {
+      "sha256": "48bbc468e1f51d04818b26747eb53eda4f04c3a5f380eadebab53379ad144075",
+      "bytes": 2370,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/PROTOCOL.md": {
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/RECORDING.md": {
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/STAGE-A.md": {
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "access": "full text/content"
+    },
+    "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md": {
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "bytes": 4540,
+      "access": "full text/content"
+    },
+    "TOOLKIT_ROOT/core/skill-bridge.md": {
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "bytes": 7641,
+      "access": "full text/content"
+    },
+    "TOOLKIT_ROOT/core/protocol.md": {
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "bytes": 3841,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/MANIFEST.json": {
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/BRIEF.md": {
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/constraints.json": {
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/obligations.json": {
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/source-identities.json": {
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/project_payload/notes/parameters.json": {
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/project_payload/notes/rejected-parameters.json": {
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/project_payload/notes/source-check.md": {
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/project_payload/notes/unregistered-scratch.md": {
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "access": "full bytes copied and hashed; PDF only partial decoded text identity inspection; scratch content not used"
+    },
+    "INPUT_DIR/initial/project_payload/results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/project_payload/results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/project_payload/results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/project_payload/scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "access": "full text/content"
+    },
+    "INPUT_DIR/initial/project_payload/sources/howard2021-arxiv-v9.pdf": {
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "access": "full bytes copied and hashed; PDF only partial decoded text identity inspection; scratch content not used"
+    },
+    "PROJECT_ROOT/results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "access": "full text/content"
+    },
+    "OUTPUT_DIR/verification-normal/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "access": "full text/content"
+    },
+    "PROJECT_ROOT/results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "access": "full text/content"
+    },
+    "OUTPUT_DIR/verification-normal/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "access": "full text/content"
+    },
+    "PROJECT_ROOT/notes/parameters.json": {
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "access": "full text/content"
+    },
+    "PROJECT_ROOT/results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "access": "full text/content"
+    }
+  },
+  "writes": [
+    "PROJECT_ROOT/provenance/initial/MANIFEST.json",
+    "PROJECT_ROOT/provenance/initial/BRIEF.md",
+    "PROJECT_ROOT/provenance/initial/source-identities.json",
+    "PROJECT_ROOT/provenance/initial/obligations.json",
+    "PROJECT_ROOT/provenance/initial/constraints.json",
+    "PROJECT_ROOT/provenance/stage-A/PROTOCOL.md",
+    "PROJECT_ROOT/provenance/stage-A/RECORDING.md",
+    "PROJECT_ROOT/provenance/stage-A/STAGE-A.md",
+    "OUTPUT_DIR/verification.json",
+    "PROJECT_ROOT/validation/stage-A.json",
+    "PROJECT_ROOT/.history/A-initial/manifest.json",
+    "PROJECT_ROOT/research/state.json",
+    "PROJECT_ROOT/.history/A-initial/state.json",
+    "PROJECT_ROOT/resume.py",
+    "PROJECT_ROOT/PROJECT.md",
+    "OUTPUT_DIR/resume-status.json"
+  ],
+  "manifest_all_match": true,
+  "bootstrap_argv": [
+    "OUTPUT_DIR/build_project.py"
+  ],
+  "bootstrap_cwd": "OUTPUT_DIR"
+}

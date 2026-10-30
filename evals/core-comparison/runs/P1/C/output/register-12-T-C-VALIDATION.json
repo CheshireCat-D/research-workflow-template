@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--file",
+    "-"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"id\": \"T-C-VALIDATION\", \"type\": \"validation-record\", \"description\": \"Actual approved recomputation command, independent arithmetic/CSV checks, immutable fingerprints, preserved failure and scope.\", \"path\": \"notes/stage-c-validation.json\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"T-C-VALIDATION\",\n  \"version\": 1,\n  \"revision\": 40,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

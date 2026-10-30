@@ -1,0 +1,30 @@
+{
+  "status": "executed",
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 8,
+  "tool_call_count_basis": "tool_calls",
+  "network_calls": 0,
+  "violations": [],
+  "scope": "instruction-only; no OS audit",
+  "raw_execution": {
+    "path": "runs/P3/D/raw-execution.json",
+    "sha256": "d9f61dbffa7f7797b8c3f321f7d67439f3300375dd01f8afb55761f6541fbcdb",
+    "original_sha256": "9a71be854426365cf03db2a580ff892f6bfeb543af21f51c6e01add96e487322"
+  },
+  "publication_projection": [
+    "Administrative status/configuration shape; unknown effective settings retained. Full self-report preserved separately."
+  ],
+  "requested": {
+    "max_outer_tool_calls": 16,
+    "max_report_characters": 10000,
+    "model_override": null,
+    "reasoning_override": null,
+    "fork_turns": "none"
+  }
+}

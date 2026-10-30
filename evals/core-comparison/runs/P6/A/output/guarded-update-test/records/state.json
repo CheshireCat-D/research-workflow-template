@@ -1,0 +1,534 @@
+{
+  "format": "local-research-ledger-v1",
+  "state_version": 2,
+  "authority": "This JSON contains current configuration and logical records. prose notes, source cards, command logs and old handoffs do not overwrite it. Bound material files remain scientific byte authority; mismatches are conflicts requiring explicit review.",
+  "configuration": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-10-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "records": [
+    {
+      "id": "D-SRC",
+      "kind": "source",
+      "version": 1,
+      "identity": {
+        "id": "D-SRC",
+        "title": "UCI Bike Sharing dataset",
+        "uri": "https://archive.ics.uci.edu/dataset/275/bike%2Bsharing%2Bdataset",
+        "version": "Official ZIP member hour.csv; yr=0 slice retained 2026-10-29",
+        "doi": "https://doi.org/10.24432/C5W894",
+        "license": "CC-BY-4.0",
+        "local_path": "data/hour_2011.csv",
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "rows": 8645,
+        "original_hour_csv_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+        "slice_origin": "Exact unchanged 2011 rows of official hour.csv, previously independently audited."
+      },
+      "access": {
+        "level": "full local slice; metadata-only remote identity",
+        "local_range": "8645 2011 rows parsed; full file SHA verified",
+        "remote_fetched": false,
+        "original_zip_or_full_hour_csv_read": false,
+        "verification_scope": "Supplied cached identity, not independently established official provenance"
+      }
+    },
+    {
+      "id": "D-REMOTE",
+      "kind": "source",
+      "version": 1,
+      "identity": {
+        "id": "D-REMOTE",
+        "title": "Original Bike Sharing research article DOI identity",
+        "uri": "https://doi.org/10.1007/s13748-013-0040-3",
+        "version": "DOI identity only; no article copy supplied",
+        "local_copy_supplied": false,
+        "access": "metadata-only",
+        "tracking_limit": "No local article content binding; no current remote-content check."
+      },
+      "access": {
+        "level": "metadata-only",
+        "remote_fetched": false,
+        "local_copy": null,
+        "content_fingerprint": null
+      }
+    },
+    {
+      "id": "D-RAW",
+      "kind": "material",
+      "version": 1,
+      "path": "data/hour_2011.csv",
+      "source_ids": [
+        "D-SRC"
+      ],
+      "immutable": true,
+      "binding": {
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "bytes": 568668
+      }
+    },
+    {
+      "id": "D-PARAM",
+      "kind": "material",
+      "version": 1,
+      "path": "notes/parameters.json",
+      "meaning": "Author working specification, separate from original dataset",
+      "specification": {
+        "case_id": "D",
+        "evaluation_start": "2011-10-01",
+        "evaluation_end": "2011-12-31",
+        "model_policy": "frozen-2011-Jan-Sep",
+        "metric_weighting": "observed-hour"
+      },
+      "revision_reason": "Initial author-supplied evaluation scope",
+      "recoverable_content": "snapshots/initial/notes/parameters.json",
+      "binding": {
+        "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+        "bytes": 171
+      }
+    },
+    {
+      "id": "D-CLAIM",
+      "kind": "statement",
+      "version": 1,
+      "text": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+      "scope": "2011-10-01 through 2011-12-31; observed-hour weighting; supplied frozen C0/C1; descriptive time holdout",
+      "assessment": {
+        "scientific_certification": false,
+        "formal_proof": "not-applicable",
+        "human_expert_approval": false
+      }
+    },
+    {
+      "id": "D-REL",
+      "kind": "relation",
+      "version": 1,
+      "from_id": "D-PARAM",
+      "to_id": "D-CLAIM",
+      "relation": "qualifies scope",
+      "rationale": "Evaluation parameters bound the current numerical comparison, not proof by registration"
+    },
+    {
+      "id": "D-CHOICE",
+      "kind": "decision",
+      "version": 1,
+      "choice": "Use supplied initial frozen-model parameters",
+      "rationale": "Initial benchmark author specification",
+      "responsible": "Benchmark author; executor only implements this supplied choice",
+      "decided_at": null,
+      "evidence": [
+        "D-PARAM"
+      ]
+    },
+    {
+      "id": "D-CODE",
+      "kind": "artifact",
+      "version": 1,
+      "path": "scripts/compute.py",
+      "description": "Supplied calculator preserved byte for byte",
+      "binding": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      }
+    },
+    {
+      "id": "D-MODEL",
+      "kind": "artifact",
+      "version": 1,
+      "path": "model/frozen.json",
+      "derived_from": [
+        "D-RAW"
+      ],
+      "derivation_access": "Supplied provenance only; frozen Jan-Sep model consumed without refit",
+      "binding": {
+        "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+        "bytes": 2320
+      }
+    },
+    {
+      "id": "D-RESULT",
+      "kind": "artifact",
+      "version": 1,
+      "path": "results/result.json",
+      "derived_from": [
+        "D-PARAM",
+        "D-RAW",
+        "D-CODE",
+        "D-CHOICE",
+        "D-MODEL"
+      ],
+      "recoverable_content": "snapshots/initial/results/result.json",
+      "binding": {
+        "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+        "bytes": 1000
+      }
+    },
+    {
+      "id": "D-TABLE",
+      "kind": "artifact",
+      "version": 1,
+      "path": "results/table.csv",
+      "derived_from": [
+        "D-RESULT"
+      ],
+      "description": "Explicitly tracked companion deliverable",
+      "recoverable_content": "snapshots/initial/results/table.csv",
+      "binding": {
+        "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+        "bytes": 205
+      }
+    },
+    {
+      "id": "D-SUMMARY",
+      "kind": "artifact",
+      "version": 1,
+      "path": "results/summary.md",
+      "derived_from": [
+        "D-CLAIM",
+        "D-RESULT"
+      ],
+      "recoverable_content": "snapshots/initial/results/summary.md",
+      "binding": {
+        "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+        "bytes": 280
+      }
+    },
+    {
+      "id": "D-SOURCE-NOTE",
+      "kind": "artifact",
+      "version": 1,
+      "path": "notes/source-check.md",
+      "description": "Supplied fixed identity and coverage note; original remote counts remain supplied assertions",
+      "binding": {
+        "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+        "bytes": 474
+      }
+    },
+    {
+      "id": "D-SOURCE-CHECK",
+      "kind": "activity",
+      "version": 1,
+      "title": "Check supplied primary source identity and coverage card",
+      "status": "done",
+      "inputs": [
+        "D-SRC",
+        "D-RAW"
+      ],
+      "outputs": [
+        "D-SOURCE-NOTE"
+      ],
+      "depends_on": [],
+      "executor": "AI agent plus standard-library file/CSV checks",
+      "completion_scope": "Local full SHA and 8645 yr=0 rows agree with supplied identity; note reviewed; no full-source or remote scientific certification",
+      "completion_bindings": {
+        "D-RAW": {
+          "version": 1,
+          "record_sha256": "7645be90cd713b9f371d0f9f74e68b91a5401fc260be8630e16a116b698a4749",
+          "path": "data/hour_2011.csv",
+          "file": {
+            "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "bytes": 568668
+          }
+        },
+        "D-SOURCE-NOTE": {
+          "version": 1,
+          "record_sha256": "524485300468c6355f2bc7ea96000b155a1e43de1faa2289738ab1885be9491f",
+          "path": "notes/source-check.md",
+          "file": {
+            "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+            "bytes": 474
+          }
+        },
+        "D-SRC": {
+          "version": 1,
+          "record_sha256": "207d67dc133e11bc3b4bfe29f50257bd84449fd22cecc3dee03f8eccb3fc651e"
+        }
+      }
+    },
+    {
+      "id": "D-CALC",
+      "kind": "activity",
+      "version": 1,
+      "title": "Evaluate supplied calculator and compare canonical outputs",
+      "status": "done",
+      "inputs": [
+        "D-PARAM",
+        "D-RAW",
+        "D-CODE",
+        "D-CHOICE",
+        "D-MODEL"
+      ],
+      "outputs": [
+        "D-RESULT",
+        "D-TABLE"
+      ],
+      "depends_on": [],
+      "executor": "AI agent running supplied Python calculator",
+      "completion_scope": "Actual normal execution exit 0; generated result and table byte-identical to canonical artifacts",
+      "evidence": [
+        "records/validation-A.json",
+        "records/commands-A.json"
+      ],
+      "completion_bindings": {
+        "D-CHOICE": {
+          "version": 1,
+          "record_sha256": "50c99c6742481e64331e17a1ec02c07909e67b6f5ea0f23c135be5fc2aded4f9"
+        },
+        "D-CODE": {
+          "version": 1,
+          "record_sha256": "646a88ae8d16a248a5080f63569283fe6a808287c0b7bf2d03215d6e5eefb592",
+          "path": "scripts/compute.py",
+          "file": {
+            "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "bytes": 4157
+          }
+        },
+        "D-MODEL": {
+          "version": 1,
+          "record_sha256": "ad1ac0226d44710231bced55f47deadd77a073c8a7b80826be495d057ebc9745",
+          "path": "model/frozen.json",
+          "file": {
+            "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "bytes": 2320
+          }
+        },
+        "D-PARAM": {
+          "version": 1,
+          "record_sha256": "d0777371b25bd11812aaf8f8db1aa9c5d6e23f5d5c719c54f705d785ba9d5d3b",
+          "path": "notes/parameters.json",
+          "file": {
+            "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+            "bytes": 171
+          }
+        },
+        "D-RAW": {
+          "version": 1,
+          "record_sha256": "7645be90cd713b9f371d0f9f74e68b91a5401fc260be8630e16a116b698a4749",
+          "path": "data/hour_2011.csv",
+          "file": {
+            "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "bytes": 568668
+          }
+        },
+        "D-RESULT": {
+          "version": 1,
+          "record_sha256": "89f8e8ecbba9a55d59255a763bbde57473dd7add4b0df1e0444ea56e1496b6c3",
+          "path": "results/result.json",
+          "file": {
+            "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+            "bytes": 1000
+          }
+        },
+        "D-TABLE": {
+          "version": 1,
+          "record_sha256": "cdb4d092ef5ef692a7a72c90b236bfbe12259e4fda4b2d6c013fa682abd37e17",
+          "path": "results/table.csv",
+          "file": {
+            "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+            "bytes": 205
+          }
+        }
+      }
+    },
+    {
+      "id": "D-SYNTH",
+      "kind": "activity",
+      "version": 1,
+      "title": "Verify supplied summary against current claim and numeric result",
+      "status": "done",
+      "inputs": [
+        "D-CLAIM",
+        "D-RESULT"
+      ],
+      "outputs": [
+        "D-SUMMARY"
+      ],
+      "depends_on": [
+        "D-CALC"
+      ],
+      "executor": "AI agent",
+      "completion_scope": "Existing author-supplied summary read and checked against dates, counts, MAEs, reduction and stated scope; not authored from scratch or human-reviewed",
+      "completion_bindings": {
+        "D-CALC": {
+          "version": 1,
+          "record_sha256": "a3b3d965279c2d1479f07bc5c25c0ac805347ba8ba3da4c32bb4ee163f12d623"
+        },
+        "D-CHOICE": {
+          "version": 1,
+          "record_sha256": "50c99c6742481e64331e17a1ec02c07909e67b6f5ea0f23c135be5fc2aded4f9"
+        },
+        "D-CLAIM": {
+          "version": 1,
+          "record_sha256": "c1f600e3a19d69f2fb4611592e679ea39c8a2a4e6071bbd81502486178d61773"
+        },
+        "D-CODE": {
+          "version": 1,
+          "record_sha256": "646a88ae8d16a248a5080f63569283fe6a808287c0b7bf2d03215d6e5eefb592",
+          "path": "scripts/compute.py",
+          "file": {
+            "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "bytes": 4157
+          }
+        },
+        "D-MODEL": {
+          "version": 1,
+          "record_sha256": "ad1ac0226d44710231bced55f47deadd77a073c8a7b80826be495d057ebc9745",
+          "path": "model/frozen.json",
+          "file": {
+            "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "bytes": 2320
+          }
+        },
+        "D-PARAM": {
+          "version": 1,
+          "record_sha256": "d0777371b25bd11812aaf8f8db1aa9c5d6e23f5d5c719c54f705d785ba9d5d3b",
+          "path": "notes/parameters.json",
+          "file": {
+            "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+            "bytes": 171
+          }
+        },
+        "D-RAW": {
+          "version": 1,
+          "record_sha256": "7645be90cd713b9f371d0f9f74e68b91a5401fc260be8630e16a116b698a4749",
+          "path": "data/hour_2011.csv",
+          "file": {
+            "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "bytes": 568668
+          }
+        },
+        "D-RESULT": {
+          "version": 1,
+          "record_sha256": "89f8e8ecbba9a55d59255a763bbde57473dd7add4b0df1e0444ea56e1496b6c3",
+          "path": "results/result.json",
+          "file": {
+            "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+            "bytes": 1000
+          }
+        },
+        "D-SUMMARY": {
+          "version": 1,
+          "record_sha256": "44f5af6b46de40d74c9edfaa1bb05a8af2a6b971980d02b4ff1112c087e8fb04",
+          "path": "results/summary.md",
+          "file": {
+            "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+            "bytes": 280
+          }
+        },
+        "D-TABLE": {
+          "version": 1,
+          "record_sha256": "cdb4d092ef5ef692a7a72c90b236bfbe12259e4fda4b2d6c013fa682abd37e17",
+          "path": "results/table.csv",
+          "file": {
+            "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+            "bytes": 205
+          }
+        }
+      }
+    }
+  ],
+  "history": [
+    {
+      "prior_state_version": 1,
+      "prior_state_sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "snapshot": "snapshots/authority/v1-d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa.json",
+      "reason": "Controlled guard validation on isolated copy; no scientific revision",
+      "executor": "current explicit local update; no implied human scientific approval"
+    }
+  ],
+  "coverage_limits": {
+    "source_only": [
+      "D-REMOTE"
+    ],
+    "unregistered": [
+      "notes/unregistered-scratch.md"
+    ],
+    "rejected_trial_not_current_input": "notes/rejected-parameters.json",
+    "untracked_files_not_automatically_scientific_dependencies": true
+  },
+  "checkpoint": {
+    "state_version": 1,
+    "configuration_sha256": "b5dbf74d35f3725b8ee1d3eb3cf68dce0eb47f30f0f5ec262d58a6eb27775dc5",
+    "record_signatures": {
+      "D-SRC": "207d67dc133e11bc3b4bfe29f50257bd84449fd22cecc3dee03f8eccb3fc651e",
+      "D-REMOTE": "baff8d098ab62069f5dc4b17e5a81c7eddafcc89be9c27962e49fc2a778e2b9c",
+      "D-RAW": "7645be90cd713b9f371d0f9f74e68b91a5401fc260be8630e16a116b698a4749",
+      "D-PARAM": "d0777371b25bd11812aaf8f8db1aa9c5d6e23f5d5c719c54f705d785ba9d5d3b",
+      "D-CLAIM": "c1f600e3a19d69f2fb4611592e679ea39c8a2a4e6071bbd81502486178d61773",
+      "D-REL": "2d4dc40d2a15619e6866a1fc13e1f3fe5a211cb78c1367cefd2dc25c62b50992",
+      "D-CHOICE": "50c99c6742481e64331e17a1ec02c07909e67b6f5ea0f23c135be5fc2aded4f9",
+      "D-CODE": "646a88ae8d16a248a5080f63569283fe6a808287c0b7bf2d03215d6e5eefb592",
+      "D-MODEL": "ad1ac0226d44710231bced55f47deadd77a073c8a7b80826be495d057ebc9745",
+      "D-RESULT": "89f8e8ecbba9a55d59255a763bbde57473dd7add4b0df1e0444ea56e1496b6c3",
+      "D-TABLE": "cdb4d092ef5ef692a7a72c90b236bfbe12259e4fda4b2d6c013fa682abd37e17",
+      "D-SUMMARY": "44f5af6b46de40d74c9edfaa1bb05a8af2a6b971980d02b4ff1112c087e8fb04",
+      "D-SOURCE-NOTE": "524485300468c6355f2bc7ea96000b155a1e43de1faa2289738ab1885be9491f",
+      "D-SOURCE-CHECK": "9fb9caa1b2674ceb6c623cc7862a40573933b63d8b643288bfb10885e07d91f9",
+      "D-CALC": "a3b3d965279c2d1479f07bc5c25c0ac805347ba8ba3da4c32bb4ee163f12d623",
+      "D-SYNTH": "2a023ed8a1c6377c2f7ec19443144e6687777a36ec61aef4df9fb268ef1be7b2"
+    },
+    "files": {
+      "data/hour_2011.csv": {
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "bytes": 568668
+      },
+      "model/frozen.json": {
+        "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+        "bytes": 2320
+      },
+      "notes/parameters.json": {
+        "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+        "bytes": 171
+      },
+      "notes/source-check.md": {
+        "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+        "bytes": 474
+      },
+      "results/result.json": {
+        "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+        "bytes": 1000
+      },
+      "results/summary.md": {
+        "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+        "bytes": 280
+      },
+      "results/table.csv": {
+        "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+        "bytes": 205
+      },
+      "scripts/compute.py": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      }
+    },
+    "next_action": "将已核对的2011第四季度冻结模型指标与摘要交作者讨论；只比较指定观察小时，不重训、不外推2012。若材料或配置发生修订，先运行只读状态检查，定位D-CALC及D-SYNTH的失效范围，再显式复核和更新其版本。",
+    "meaning": "Saved recovery context, not additional scientific validation"
+  },
+  "settings": {
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "system_limit": null
+  }
+}

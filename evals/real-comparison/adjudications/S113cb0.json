@@ -1,0 +1,225 @@
+{
+  "submission_id": "S113cb0",
+  "task_id": "theory",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_conditions",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:3–11（固定版本、三行证据表），19、30、80、90–108、131；已直接对照 S1 固定 PDF pp.9–13 和 S2 固定 PDF pp.4–6、9–10、12、14、27–28、35、37。",
+      "rationale": "两篇作者版身份和关键编号/页码均吻合原文。表中正确区分 pair-based 指数支配条件与 V 的适应性、S1 的无限时域直线界与 S2 的曲线混合边界；Theorem 4 的预测器、目标、残差平方、尺度及双尾预算记录完整。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:5、9–11、19、80；原 PDF 首页版本戳分别为 1808.03204v7 与 1810.08240v9。",
+          "rationale": "两份固定原文均有准确身份和可复核的定理、公式及 PDF 页序定位。"
+        },
+        {
+          "index": 2,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:9、19、54；S1 PDF pp.9–11 Definition 1、(2.1)–(2.2)。",
+          "rationale": "明确要求 (S,V) 的逐 lambda 超鞅支配，未将适应性当充分条件，也未用不可预测性简单否决经验量。"
+        },
+        {
+          "index": 3,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:9–10、131；S1 PDF pp.12–13 Theorem 1、S2 PDF pp.9–10 (13)–(14)、p.28 Proposition 5。",
+          "rationale": "准确说明 S1 一般过滤下的无限时域线性 crossing；S2 normal-mixture 是不同的曲线结果，未添加 iid、固定 n 或正态数据要求。"
+        },
+        {
+          "index": 4,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:11、90–108、131；S2 PDF p.14 Theorem 4 (23)、p.35 (89)–(90)。",
+          "rationale": "有界数据、可预测有界预测、平均条件期望目标、预测残差平方、c=b-a 和双尾 2delta 均准确。"
+        }
+      ]
+    },
+    {
+      "id": "gaussian_mixture",
+      "score": 15,
+      "max_points": 15,
+      "evidence": "report.md:15–36，尤其 17 的一步条件期望、19 的联合可测性与条件 Tonelli、25–27 的带密度积分、32–35 的反演。",
+      "rationale": "完整计算采用精度 rho 的正态密度，前因子和指数常数正确；固定 lambda 超鞅、固定分布积分和初值 1 足以应用 Ville。反演本身已控制双尾 alpha，闭区间及 [0,1] 截断处理正确。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 7,
+          "max_points": 7,
+          "evidence": "report.md:21–28：sqrt(rho/(2pi)) 积分，平方中心 S_t/(V_t+rho)，最后 sqrt(rho/(V_t+rho)) exp(S_t^2/[2(V_t+rho)])。",
+          "rationale": "配方和高斯积分各常数无误。"
+        },
+        {
+          "index": 2,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:15–19。",
+          "rationale": "利用可预测增量外提，从 SG 得到非负超鞅；说明有限实值保证联合可测，非负条件 Tonelli 及 EM<=1，初值为 1。"
+        },
+        {
+          "index": 3,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:30–36。",
+          "rationale": "Ville 阈值 1/alpha 反演为给定边界，明确全实轴混合一次控制两尾，截断不损失真均值覆盖。"
+        }
+      ]
+    },
+    {
+      "id": "finite_counterexample",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:40–54：iid Ber(1/10)，alpha=1/10、rho=1/4、n=20，E 为前20次全零；Vhat=1/4、S=-2、b=sqrt(log(200)/2)<2；P(E)=9^20/10^20>1/10。独立精确算术见 judge-checks/independent-checks.json。",
+      "rationale": "这是任务允许的正确替代见证。严格使用指定预测器，事件强制排除真实均值；边界严格比较有纯解析证书，概率有精确有理式。解释错误位于未建立 (S,Vhat) 的 psi_N 控制，没有否定固定 rho 混合本身。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:40–46。",
+          "rationale": "自然过滤下 iid Ber(0.1) 满足有界共同条件均值；全零事件使首预测为1/2，余下预测为0，完全符合题设。"
+        },
+        {
+          "index": 2,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:46–52。",
+          "rationale": "Vhat=1/4，真实累计偏差2；rho=1/4 和 alpha=0.1 给 b^2=log(200)/2<4；9^20/10^20=0.12157665459056928801>0.1，已在固定 n=20 严格失效。"
+        },
+        {
+          "index": 3,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:54，并结合9–11及84–108。",
+          "rationale": "区分适应过程的定义许可与特定 pair 的指数控制，给出 psi_E 的适当方向，未误归因于经验量不可预测或 normal-mixture 本身。"
+        }
+      ]
+    },
+    {
+      "id": "moving_precision",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:58–80，包含 f及导数、唯一根、rho*(v)、sqrt((1+r_alpha)v)、v=0端点、合法 V=t/4 上的 Rademacher LIL 和固定目标 m 的解释。",
+      "rationale": "优化推导代数正确且说明全局唯一极值。LIL 推出归一化随机游走上方无界，足以证明对合法确定性 V 的移动包络几乎必然反复越界，未混用 B 的问题。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:58–67，r-log(1+r)=log(alpha^-2)。",
+          "rationale": "与 r=log((1+r)/alpha^2) 等价，导数和唯一根论证正确。"
+        },
+        {
+          "index": 2,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:69–70、80。",
+          "rationale": "极小边界 sqrt((1+r_alpha)v) 与 rho=v/r_alpha 正确；清楚区分预先固定目标 m 与逐时选择。"
+        },
+        {
+          "index": 3,
+          "score": 6,
+          "max_points": 6,
+          "evidence": "report.md:74–78。",
+          "rationale": "iid Bernoulli(1/2) 的 V=t/4 合法；明确写出题给 LIL，再推出 S_t/sqrt(t) 上方无界，故移动包络的无限时域覆盖概率为0。"
+        },
+        {
+          "index": 4,
+          "score": 2,
+          "max_points": 2,
+          "evidence": "report.md:72。",
+          "rationale": "正确说明 v=0 下确界0但正 rho 无最小点，且未将端点当作唯一反驳。"
+        }
+      ]
+    },
+    {
+      "id": "valid_repairs",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:84–127：Hoeffding 的 t/4 正态混合修复；psi_E 及标量积分证明、一步条件期望；lambda_j=2^{-(j+1)} 和 q_j=1/[(j+1)(j+2)] 的预算线下包络；多 rho 的 alpha w_k 校正。",
+      "rationale": "三个修复均可直接审查。EB 的下包络不同于错误 C：每条线、每尾均明确支付 alpha q_j/2 且并集预算可求和，最小值存在也说明清楚；一步超鞅证明足够支撑该构造。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 7,
+          "max_points": 7,
+          "evidence": "report.md:84–88。",
+          "rationale": "条件 Hoeffding mgf exp(lambda^2/8) 对应 V=t/4，固定 rho 后明确给无限时域水平1-alpha。"
+        },
+        {
+          "index": 2,
+          "score": 8,
+          "max_points": 8,
+          "evidence": "report.md:90–121，尤其92–106与112–119。",
+          "rationale": "psi_E=-log(1-lambda)-lambda，0<=lambda<1，c=1；预测器有界可预测，delta论证完整。标量不等式的积分证明正确，exp(lambda delta)(1-lambda delta)<=1，正负两尾的可求和预算保证总alpha。"
+        },
+        {
+          "index": 3,
+          "score": 3,
+          "max_points": 3,
+          "evidence": "report.md:123–127。",
+          "rationale": "固定可数 rho_k、正权重和<=1，以alpha w_k构造各完整双尾界并用并集界，因而允许事后选取或交集。"
+        }
+      ]
+    },
+    {
+      "id": "reviewable_short_memo",
+      "score": 13,
+      "max_points": 13,
+      "evidence": "report.md:3、131–137；全文证据表及解析式。",
+      "rationale": "A、E真，B、C、D假全部明确。修订结论将现有框架和本次构造稿审查分开，有限两篇核查没有被夸大成全球首创。E以路径事件包含证明，无可积性条件。文稿自包含且源坐标、算术、可选代码性质可追踪。",
+      "subitems": [
+        {
+          "index": 1,
+          "score": 5,
+          "max_points": 5,
+          "evidence": "report.md:3，A/B/C各节及131–133。",
+          "rationale": "五项真值全部正确且明确。"
+        },
+        {
+          "index": 2,
+          "score": 4,
+          "max_points": 4,
+          "evidence": "report.md:3、131、135。",
+          "rationale": "清楚标识待审稿为本次构造，准确归功现有时间一致、非参数与EB工作，本次内容仅为核查、反例和修正；没有全球新颖性断言。"
+        },
+        {
+          "index": 3,
+          "score": 2,
+          "max_points": 2,
+          "evidence": "report.md:133。",
+          "rationale": "使用 G=交_t{mu in C_t} 的路径包含，a.s.有限正整数索引足够，无需停止性质及E tau有限。"
+        },
+        {
+          "index": 4,
+          "score": 2,
+          "max_points": 2,
+          "evidence": "report.md:5–11、46–52、137；work/checks.py:40–49、work/RUN.md:9。",
+          "rationale": "来源链接/固定页码及数值计算式充分；交付报告没有复制原文全文，明确把数值核验与解析证明分开。"
+        }
+      ]
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "ready-to-use",
+  "notes": [
+    "Source-check PASS：已读取允许目录中的两份固定原文提取文本，并用固定PDF关键页重新抽取核对。PDF首页版本戳与输入清单吻合。所用主定理、混合、优化、EB条件及公式定位均通过；未发现实质来源归属错误。",
+    "接受替代反例 n=20、Ber(0.1)、alpha=0.1、rho=0.25；其解析概率和边界严格不等式独立核验成立，不要求参考答案的 n=280 见证。",
+    "主要实质错误或误报：未发现。修复推荐未认可未经校正的B或C，不触发任何critical cap。",
+    "参考键与关键原文和本次独立推导之间未发现需记录的数学分歧。",
+    "arm_hidden=true仅表示未提供组别映射；未读取父目录、其他匿名报告、执行日志、memory或个人skills，也未联网、安装或调用子agent。报告内容未提供可验证的组别或模型身份；未据文风推断来源。",
+    "独立计算文件仅作算术复核，原输入未修改；没有把该AI审查描述为人工专家认证。"
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification.",
+  "report_sha256": "68dedc503d65e67c9e36253fa32c2d2ee92daf99f718fb687c49b4f41415b24d"
+}

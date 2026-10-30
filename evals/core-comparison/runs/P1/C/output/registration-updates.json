@@ -1,0 +1,235 @@
+[
+  {
+    "kind": "evidence",
+    "data": {
+      "id": "T-C-AUTHOR",
+      "type": "author-authorization",
+      "description": "Author explicitly accepts rho=4 current working parameters; no original paper revision or expert approval.",
+      "provenance": "Current supplied author revision, copied verbatim for future recovery.",
+      "location": {
+        "kind": "local",
+        "path": "provenance/stage-c/AUTHOR-REVISION.md"
+      }
+    },
+    "expected_version": null
+  },
+  {
+    "kind": "artifact",
+    "data": {
+      "id": "T-C-APPROVED-SPEC",
+      "type": "approved-parameters",
+      "description": "Verbatim stage C approved parameter JSON; matches notes/parameters.json.",
+      "path": "provenance/stage-c/approved-parameters.json",
+      "derived_from": [
+        "evidence:T-C-AUTHOR"
+      ]
+    },
+    "expected_version": null
+  },
+  {
+    "kind": "evidence",
+    "data": {
+      "description": "Current alpha=0.05, rho=4, grid [0,1,10,100]; rho fixed before observation.",
+      "id": "T-PARAM",
+      "location": {
+        "kind": "local",
+        "path": "notes/parameters.json"
+      },
+      "provenance": "Author revision explicitly accepts existing working parameters; original paper unchanged. See provenance/stage-c/AUTHOR-REVISION.md and approved-parameters.json. Initial rho=1 bytes and rationale preserved in history/stage-a-initial and registry history.",
+      "type": "author-parameters"
+    },
+    "expected_version": 1
+  },
+  {
+    "kind": "statement",
+    "data": {
+      "assessment": {
+        "status": "supported-in-scope",
+        "scope": "Four supplied calculator values, v=[0,1,10,100], alpha=.05 rho=4 fixed before observation.",
+        "rationale": "Real recomputation, equivalent algebraic formula with 1e-14 tolerance, v=0 special case and exact numeric CSV/JSON comparison all passed; notes/stage-c-validation.json. No theorem or coverage validation.",
+        "reviewer": "AI agent in stage C"
+      },
+      "formal_verification": {
+        "scope": "No formal or new manual theorem proof performed.",
+        "status": "not-started",
+        "tool": "none"
+      },
+      "id": "T-CLAIM",
+      "scope": "Current declared parameters and supplied sources only; scalar l0=1; two-sided alpha total; same V for S and -S.",
+      "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+      "type": "interpretive"
+    },
+    "expected_version": 1
+  },
+  {
+    "kind": "relation",
+    "data": {
+      "evidence_id": "T-PARAM",
+      "id": "T-REL",
+      "rationale": "Author-approved alpha=.05, preselected rho=4 and four v points qualify the numerical claim; material registration and recomputation are not coverage proofs.",
+      "relation": "qualifies",
+      "scope": "alpha=.05, rho=4 fixed-before-observation, v=[0,1,10,100].",
+      "statement_id": "T-CLAIM",
+      "notes": "Replaces rho=1 working scope after explicit author authorization; prior relation retained in version history."
+    },
+    "expected_version": 1
+  },
+  {
+    "kind": "decision",
+    "data": {
+      "choice": "Use author-approved alpha=.05 rho=4 fixed before observation, grid [0,1,10,100].",
+      "decided_at": "Author decision timestamp not supplied; no date invented.",
+      "evidence_refs": [
+        "T-PARAM",
+        "T-C-AUTHOR"
+      ],
+      "id": "T-CHOICE",
+      "notes": "No human expert content approval or submission authorization. Not original-source revision; no post-observation rho optimization.",
+      "rationale": "AUTHOR-REVISION.md explicitly accepts current working parameters as revised numerical scope; alpha and preselection policy unchanged. Old rho=1 parameter/result/table/summary bytes retained.",
+      "responsible": "Benchmark author as explicitly stated in supplied revision; choice recorded and calculation executed by AI agent.",
+      "revisit_when": "Explicit author parameter revision; preserve previous content and rationale."
+    },
+    "expected_version": 1
+  },
+  {
+    "kind": "artifact",
+    "data": {
+      "derived_from": [
+        "evidence:T-PARAM",
+        "evidence:T-RAW",
+        "artifact:T-CODE",
+        "decision:T-CHOICE"
+      ],
+      "description": "Canonical rho=4 result from actual original calculator execution; input SHA and equivalent-form arithmetic checked.",
+      "id": "T-RESULT",
+      "path": "results/result.json",
+      "type": "numeric-result",
+      "notes": "Old full bytes in history/stage-c-before-recompute/results and history/stage-a-initial; revision reason in notes/stage-c-validation.json."
+    },
+    "expected_version": 1
+  },
+  {
+    "kind": "artifact",
+    "data": {
+      "derived_from": [
+        "artifact:T-RESULT"
+      ],
+      "description": "Current rho=4 companion table copied from actual calculation; every numeric row matches canonical JSON.",
+      "id": "T-TABLE",
+      "path": "results/table.csv",
+      "type": "numeric-table",
+      "notes": "Old full bytes in history/stage-c-before-recompute/results and history/stage-a-initial; revision reason in notes/stage-c-validation.json."
+    },
+    "expected_version": 1
+  },
+  {
+    "kind": "artifact",
+    "data": {
+      "derived_from": [
+        "statement:T-CLAIM",
+        "artifact:T-RESULT"
+      ],
+      "description": "Revised rho=4 Chinese summary; parameters, four rounded values, v10 and restricted interpretation checked.",
+      "id": "T-SUMMARY",
+      "path": "results/summary.md",
+      "type": "summary",
+      "notes": "Old full bytes in history/stage-c-before-recompute/results and history/stage-a-initial; revision reason in notes/stage-c-validation.json."
+    },
+    "expected_version": 1
+  },
+  {
+    "kind": "artifact",
+    "data": {
+      "id": "T-C-HISTORY",
+      "type": "revision-history",
+      "description": "Pre-recompute full-byte snapshot manifest and explicit revision reason; original initial content retained.",
+      "path": "history/stage-c-before-recompute/manifest.json"
+    },
+    "expected_version": null
+  },
+  {
+    "kind": "artifact",
+    "data": {
+      "id": "T-C-DRIFT-CHECK",
+      "type": "workflow-check",
+      "description": "Raw check immediately after new drift checkpoint: checkpoint current but T-PARAM file changed and T-CALC/T-SYNTH stale.",
+      "path": "validation/stage-c/check-drift.json"
+    },
+    "expected_version": null
+  },
+  {
+    "kind": "artifact",
+    "data": {
+      "id": "T-C-DRIFT-CHECKPOINT",
+      "type": "workflow-checkpoint-log",
+      "description": "Actual intermediate checkpoint save output, before any recomputation; this save did not revalidate activities.",
+      "path": "validation/stage-c/checkpoint-drift.json"
+    },
+    "expected_version": null
+  },
+  {
+    "kind": "artifact",
+    "data": {
+      "id": "T-C-VALIDATION",
+      "type": "validation-record",
+      "description": "Actual approved recomputation command, independent arithmetic/CSV checks, immutable fingerprints, preserved failure and scope.",
+      "path": "notes/stage-c-validation.json"
+    },
+    "expected_version": null
+  },
+  {
+    "kind": "artifact",
+    "data": {
+      "description": "Current portable recovery guide for rho=4 author-approved results, pre-recompute drift evidence, preserved history and next author review.",
+      "id": "T-RECOVERY",
+      "path": "RECOVERY.md",
+      "type": "recovery-guide"
+    },
+    "expected_version": 2
+  },
+  {
+    "kind": "activity",
+    "data": {
+      "id": "T-CALC",
+      "inputs": [
+        "evidence:T-PARAM",
+        "evidence:T-RAW",
+        "artifact:T-CODE",
+        "decision:T-CHOICE",
+        "evidence:T-C-AUTHOR",
+        "artifact:T-C-APPROVED-SPEC"
+      ],
+      "note": "AI actually ran unchanged calculator at approved rho=4, exit0; equivalent-form arithmetic (1e-14), v=0, exact CSV/JSON rows and parameter/code SHA checks passed. Original PDF/code/config/source card unchanged. Old results and prior failed alpha=1 trial retained. This is numerical work only.",
+      "outputs": [
+        "artifact:T-RESULT",
+        "artifact:T-TABLE",
+        "artifact:T-C-VALIDATION"
+      ],
+      "status": "done",
+      "title": "Evaluate supplied calculator and verify current result and companion table"
+    },
+    "expected_version": 1
+  },
+  {
+    "kind": "activity",
+    "data": {
+      "depends_on": [
+        "T-CALC"
+      ],
+      "id": "T-SYNTH",
+      "inputs": [
+        "statement:T-CLAIM",
+        "artifact:T-RESULT",
+        "artifact:T-TABLE",
+        "relation:T-REL"
+      ],
+      "note": "AI revised and reviewed current summary: alpha=.05 rho=4 preselected, grid, all 12-decimal table values and v10 match actual result; explanation remains conditional formula evaluation, no new coverage guarantee. No human expert approval. Depends on newly revalidated T-CALC.",
+      "outputs": [
+        "artifact:T-SUMMARY"
+      ],
+      "status": "done",
+      "title": "Review supplied summary within current claim and verified numeric result"
+    },
+    "expected_version": 1
+  }
+]

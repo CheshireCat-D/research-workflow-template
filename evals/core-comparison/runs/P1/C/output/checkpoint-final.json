@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "checkpoint",
+    "--root",
+    "PROJECT_ROOT",
+    "--activity-id",
+    "T-SYNTH",
+    "--next-action",
+    "将rho=4、alpha=0.05、v=[0,1,10,100]的边界表与更新摘要交作者内容复核；暂不扩展到事后选择rho。"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 2,
+  "stdout": "{\n  \"passed\": false,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"errors\": [\n    {\n      \"code\": \"arguments\",\n      \"message\": \"unrecognized arguments: --activity-id T-SYNTH\"\n    }\n  ]\n}\n",
+  "stderr": ""
+}

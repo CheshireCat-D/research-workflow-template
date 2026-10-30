@@ -1,0 +1,14 @@
+{
+  "model_sha256": "f8a758c6c73cf7e0cfcfa0936b594afb8f23b1260610ecae15929f601dc8e5d4",
+  "code_sha256": "9aa68881931fdb685b4c27ea5c5f976b9576e49fac937140b18cc396bad6f32b",
+  "train_start": "2011-01-01",
+  "train_end": "2011-09-30",
+  "train_n_hours": 6442,
+  "train_n_dates": 273,
+  "all_parameters_match_original_training_records": true,
+  "training_reperformed_for_prediction": false,
+  "used_2012_labels_to_modify_model": false,
+  "C0_cells": 24,
+  "C1_cells": 48,
+  "2011_holdout_exact_result_match": true
+}

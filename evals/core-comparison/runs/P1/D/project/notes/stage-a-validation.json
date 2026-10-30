@@ -1,0 +1,166 @@
+{
+  "case_id": "T",
+  "stage": "A",
+  "operator": "AI agent in this execution; no human review",
+  "parameters": {
+    "case_id": "T",
+    "alpha": 0.05,
+    "rho": 1.0,
+    "rho_selection": "fixed-before-observation",
+    "intrinsic_time_grid": [
+      0,
+      1,
+      10,
+      100
+    ]
+  },
+  "formula": "sqrt((v+rho)*(log(1+v/rho)+2*log(1/alpha)))",
+  "conditions": "scalar l0=1; S and -S controlled for the same nonnegative intrinsic time V; alpha is total two-sided budget; rho fixed before observation",
+  "normal_execution": {
+    "label": "valid-current-parameters",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P1/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/runs/P1/project",
+      "--output",
+      "STUDY_ROOT/runs/P1/A/output/validation-normal"
+    ],
+    "cwd": "STUDY_ROOT/runs/P1/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/runs/P1/A/output/validation-normal/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+    "stderr": ""
+  },
+  "invalid_execution": {
+    "label": "controlled-invalid-alpha",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P1/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/runs/P1/project",
+      "--spec",
+      "STUDY_ROOT/runs/P1/project/notes/rejected-parameters.json",
+      "--output",
+      "STUDY_ROOT/runs/P1/A/output/validation-rejected"
+    ],
+    "cwd": "STUDY_ROOT/runs/P1/project",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times\"}\n"
+  },
+  "numeric_values": [
+    {
+      "v": 0,
+      "boundary": 2.4477468306808166
+    },
+    {
+      "v": 1,
+      "boundary": 3.6563948713638483
+    },
+    {
+      "v": 10,
+      "boundary": 9.606401928868575
+    },
+    {
+      "v": 100,
+      "boundary": 32.73018624234933
+    }
+  ],
+  "comparisons": {
+    "result_json_semantic_equal": true,
+    "result_json_bytes_equal": true,
+    "csv_numeric_rows_equal": true,
+    "csv_bytes_equal": true,
+    "csv_byte_difference": "Supplied table uses LF; csv module generated CRLF. Rows and floating point values exactly match.",
+    "summary_parameters_and_rounded_v10_checked": true,
+    "v0_special_case_checked": true,
+    "equivalent_log_formula_checked_tolerance": {
+      "relative": 1e-14,
+      "absolute": 1e-14
+    }
+  },
+  "canonical_before": {
+    "notes/parameters.json": {
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    "results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    "results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    }
+  },
+  "canonical_after_invalid": {
+    "notes/parameters.json": {
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    "results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    "results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    }
+  },
+  "canonical_unchanged": true,
+  "controlled_failure_scope": "Intentionally invalid alpha=1 input. Not a failure of scientific analysis and not evidence about coverage.",
+  "source_access": {
+    "T-SRC": "metadata-only: complete local bytes hashed; PDF header and raw metadata inspected; supplied version identity matched by full SHA; no mathematical pages or theorem proof read",
+    "T-REMOTE": "metadata-only supplied identity, no local copy or live content check"
+  },
+  "source_identity": {
+    "primary": {
+      "id": "T-SRC",
+      "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+      "uri": "https://arxiv.org/abs/1810.08240v9",
+      "version": "1810.08240v9",
+      "doi": "https://doi.org/10.1214/20-AOS1991",
+      "local_path": "sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "access_instruction": "记录自己实际读取范围；来源核验活动只要求核对所给固定版本身份，不要求宣称全文独立审阅。"
+    },
+    "source_only": {
+      "id": "T-REMOTE",
+      "title": "Time-uniform Chernoff bounds via nonnegative supermartingales",
+      "uri": "https://arxiv.org/abs/1808.03204v7",
+      "version": "1808.03204v7",
+      "local_copy_supplied": false,
+      "access": "metadata-only",
+      "tracking_limit": "Only source identity; no local content binding and no current remote-content check."
+    },
+    "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+  },
+  "source_hash": {
+    "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+    "bytes": 1494142
+  },
+  "scientific_scope": "Reproduction of supplied deterministic calculator and bounded arithmetic checks for the four initial parameters only. No new proof, coverage simulation, novelty assessment, human expert approval, or submission.",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "stdlib_only": true,
+    "network_calls": 0,
+    "randomness": "deterministic; no random generator used",
+    "model": null,
+    "temperature": null,
+    "model_seed": null,
+    "token_usage": null
+  }
+}

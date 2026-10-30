@@ -1,0 +1,26 @@
+{
+  "trial_id": "D01",
+  "task_id": "data-a",
+  "arm": "baseline",
+  "replicate": 1,
+  "predecessor": null,
+  "freeze_sha256": "a4f6b970d95c96a9472ce47265e78a1b70ec0af1783b7b927848a0ac0bfaca48",
+  "report": {
+    "path": "runs/D01/report.md",
+    "sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57"
+  },
+  "execution": {
+    "path": "runs/D01/execution.json",
+    "sha256": "4e4997563c2b113e8cde12cb9f1f9890e371513e90e6bb39f01b8cef9d33d941"
+  },
+  "artifacts": {
+    "path": "runs/D01/artifacts.json",
+    "sha256": "9dfb466cc48014e435d43ced0c5cf5bd7c6175e1d2233f49755c077a7f8ef9ee"
+  },
+  "adjudication": {
+    "path": "adjudications/S733011.json",
+    "sha256": "2eb16b98213f66e2526ef4b2352bce90c89c665088e39895e5136073a5a2353e"
+  },
+  "raw_report_sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57",
+  "public_report_sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57"
+}

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "checkpoint",
+    "--root",
+    "PROJECT_ROOT",
+    "--next-action",
+    "按AUTHOR-REVISION批准参数重新计算T1/T2，修订T5/T6并保留漂移检查；T3独立来源检查不重做。"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"checkpoint_saved\": true,\n  \"revision\": 27,\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"按AUTHOR-REVISION批准参数重新计算T1/T2，修订T5/T6并保留漂移检查；T3独立来源检查不重做。\"\n  },\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

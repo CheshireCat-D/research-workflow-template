@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "executed",
+  "started_at_utc": null,
+  "finished_at_utc": "2026-10-29T22:39:21.871783+00:00",
+  "duration_seconds": null,
+  "requested_configuration": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "context": "fork_turns=none for every task/arm",
+    "requested_output_unicode_limit": 5000,
+    "requested_tool_call_limit": 8,
+    "temperature": null,
+    "seed": null
+  },
+  "effective_configuration": {
+    "model": {
+      "value": null,
+      "source": "unknown"
+    },
+    "reasoning_effort": {
+      "value": null,
+      "source": "unknown"
+    },
+    "temperature": {
+      "value": null,
+      "source": "unknown"
+    },
+    "seed": {
+      "value": null,
+      "source": "unknown"
+    },
+    "hard_output_token_limit": {
+      "value": null,
+      "source": "unknown"
+    }
+  },
+  "context_isolation": {
+    "requested": "fresh context, fork_turns=none",
+    "evidence": "instruction-only",
+    "os_audited": false,
+    "same_metadata_catalogue_visible": true
+  },
+  "actual_reads": [
+    {
+      "logical_name": "tasks/Q58.md",
+      "sha256": "bebd6b87aef817e404bb6fd00be3ea09d555eaa1fcd89b2925b689efbe5ac786"
+    },
+    {
+      "logical_name": "executor-prompt.md",
+      "sha256": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09"
+    },
+    {
+      "logical_name": "templates/execution.template.json",
+      "sha256": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1"
+    },
+    {
+      "logical_name": "competitor/scientific-critical-thinking/SKILL.md",
+      "sha256": "563af70571b7dcd6a96bf2e303bedfdcba623b4e9f082d58f04aacbc961fdae4"
+    },
+    {
+      "logical_name": "competitor/scientific-critical-thinking/references/statistical_pitfalls.md",
+      "sha256": "0c43204a0a81110cfeb7c982fa4caa89f274bdcebf096e09e5adfccf31241cb9"
+    }
+  ],
+  "tool_calls": 3,
+  "output_tokens": null,
+  "network_calls": 0,
+  "output_unicode_characters": 1165,
+  "output_bytes": 2459,
+  "violations": [],
+  "uncertainties": [
+    "宿主未报告有效模型、reasoning effort、temperature、seed或硬输出token限制，均保留unknown；未设置模型或effort override。",
+    "未在首个工具调用前记录时钟，开始时间与总耗时未知；finished_at_utc为写出记录时读取的UTC时钟。",
+    "tool_calls计数为本次3个functions.exec调用，每个仅执行一次exec_command；计入读文件、枚举及写入。",
+    "输出字符数和字节数仅计report.md；输出token数未测量。5000字符和8次工具调用为请求限制，未证实宿主硬性实施。",
+    "隔离依据为instruction-only，未作操作系统审计。"
+  ],
+  "failure": null,
+  "outputs": [
+    "runs/t12/report.md",
+    "runs/t12/execution.json"
+  ],
+  "verification": {
+    "enumerated_vectors": 256,
+    "rejecting_vectors": 18,
+    "actual_type_I_error": "18/256 = 0.0703125",
+    "compatible_observed_tail": "18/256 = 0.0703125",
+    "report_sha256": "29153ded46409c392b831237d1eeff2c3862b527e03acf8d8c1c10ef305fd853"
+  },
+  "publication_projection": {
+    "raw_execution_sha256": "825cbd5c33afcc167b7c1f6be0c2660191230a17c53bd78c6386d4290653c0ef",
+    "changes": [
+      "temporary output file paths mapped to logical runs/ paths"
+    ],
+    "scope": "Administrative fields only; report bytes, effective unknowns and scientific content unchanged."
+  }
+}

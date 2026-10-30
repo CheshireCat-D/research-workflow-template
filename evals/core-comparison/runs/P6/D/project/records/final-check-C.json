@@ -1,0 +1,162 @@
+{
+  "root": "STUDY_ROOT/runs/P6/project",
+  "authority": "STUDY_ROOT/runs/P6/project/records/state.json",
+  "state_version": 3,
+  "state_sha256": "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+  "files": {
+    "data/hour_2011.csv": {
+      "record": "D-RAW",
+      "expected": {
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "bytes": 568668
+      },
+      "actual": {
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "bytes": 568668
+      },
+      "state": "current"
+    },
+    "notes/parameters.json": {
+      "record": "D-PARAM",
+      "expected": {
+        "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+        "bytes": 171
+      },
+      "actual": {
+        "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+        "bytes": 171
+      },
+      "state": "current"
+    },
+    "scripts/compute.py": {
+      "record": "D-CODE",
+      "expected": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      },
+      "actual": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      },
+      "state": "current"
+    },
+    "model/frozen.json": {
+      "record": "D-MODEL",
+      "expected": {
+        "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+        "bytes": 2320
+      },
+      "actual": {
+        "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+        "bytes": 2320
+      },
+      "state": "current"
+    },
+    "results/result.json": {
+      "record": "D-RESULT",
+      "expected": {
+        "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+        "bytes": 999
+      },
+      "actual": {
+        "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+        "bytes": 999
+      },
+      "state": "current"
+    },
+    "results/table.csv": {
+      "record": "D-TABLE",
+      "expected": {
+        "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+        "bytes": 203
+      },
+      "actual": {
+        "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+        "bytes": 203
+      },
+      "state": "current"
+    },
+    "results/summary.md": {
+      "record": "D-SUMMARY",
+      "expected": {
+        "sha256": "0c178129e75f928b92f184ecb65231fbb0c96d333e7b43d1089dcc3908bdfe3d",
+        "bytes": 905
+      },
+      "actual": {
+        "sha256": "0c178129e75f928b92f184ecb65231fbb0c96d333e7b43d1089dcc3908bdfe3d",
+        "bytes": 905
+      },
+      "state": "current"
+    },
+    "notes/source-check.md": {
+      "record": "D-SOURCE-NOTE",
+      "expected": {
+        "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+        "bytes": 474
+      },
+      "actual": {
+        "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+        "bytes": 474
+      },
+      "state": "current"
+    }
+  },
+  "changed_or_missing_paths": [],
+  "activities": {
+    "D-SOURCE-CHECK": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "D-CALC": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "D-SYNTH": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    }
+  },
+  "checkpoint_freshness": "current",
+  "checkpoint_reasons": [],
+  "configuration_parameter_conflicts": [],
+  "configuration": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-11-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。不重训、不外推2012；尚未有人类专家认可，也没有投稿授权。",
+  "coverage_limits": {
+    "source_only": [
+      "D-REMOTE"
+    ],
+    "unregistered": [
+      "notes/unregistered-scratch.md"
+    ],
+    "rejected_trial_not_current_input": "notes/rejected-parameters.json",
+    "untracked_files_not_automatically_scientific_dependencies": true
+  },
+  "scientific_validity": "not-certified by identity check"
+}

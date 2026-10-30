@@ -12,6 +12,40 @@
 
 这些记录服务于本轮问题，不规定搜够多少篇才可结束。单篇定位无需承担系统综述的流程；开展综合时按实际方法选择报告规范，不把 PRISMA 作为所有文献工作的通用门槛。
 
+### 可运行的 Crossref 元数据检索
+
+需要外部题录时，可使用随技能携带的标准库 Python 3.11+ 脚本，无需密钥或安装依赖。
+`SKILL_DIR` 为本次实际使用的 `rw-literature` 目录；`--output` 指向**尚不存在**的目录，其父目录须已存在：
+
+```sh
+python3 SKILL_DIR/scripts/search_crossref.py --query "rough paths regularity structures" --output literature/crossref-search --rows 20 --max-pages 3 --max-records 60
+```
+
+检索文本会发送到 Crossref；确认其属于当前任务允许外部检索的内容。可显式加
+`--mailto researcher@example.org` 进入官方建议的联系模式，该邮箱也会保存在请求 URL 中。
+不提供邮箱时使用公开接口，不读取账户或环境中的凭据。脚本只访问固定的 Crossref works
+元数据接口，不获取题录中的正文链接；`metadata-only` 不表示已读摘要、全文或核对主张支持。
+
+输出 `search.json` 包含原始查询与限制、访问层级、每页请求 URL／游标、时间和重试、接口报告的
+总量、实际取回与保留数、DOI 去重、分页停止原因及截断状态。`records` 保留首次出现的元数据
+和对应页号；缺 DOI 的题录按元数据指纹去重，原始页仍保留版本差异。`pages/` 保存原始响应，
+每页有字节数和 SHA-256；指纹标识本次响应，不能使变化中的接口变成固定快照。
+
+默认每页 20 条、最多 5 页／100 条保留记录，串行请求；默认每次 socket 超时 15 秒、每页
+最多重试 2 次，总时间预算 120 秒（在请求与读取边界检查，单次阻塞仍受 socket 超时约束）。
+429 及部分临时服务器错误会退避；遵守不超过 30 秒的 `Retry-After`，更长等待直接保留失败。
+每页默认最多保存 2 MiB、总响应默认 20 MiB；超过大小上限仅保存受限前缀及其指纹，明确标为
+不完整，不将其解析成题录。参数另有硬上限，见 `--help`。
+
+退出 `0` 表示本次受限检索完成，**仍须查看 `pagination.truncated`**；页数或题录上限不是完整
+文献覆盖。退出 `2` 表示参数、网络、接口或写入失败；已取得的页和题录可在新目录中保留，
+`passed=false`，不会将后续失败写成成功。已有目录（包括空目录）拒绝覆盖。失败后调整条件并
+使用另一个新目录；该工具不自动登记项目、不支持断点续传，也不替代研究级筛选或全文核对。
+
+实现依据为 Crossref 官方[访问说明](https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/)、
+[分页与使用建议](https://www.crossref.org/documentation/retrieve-metadata/rest-api/tips-for-using-the-crossref-rest-api/)
+及[接口说明](https://api.crossref.org/swagger-ui/index.html)；仅调用接口，未复制第三方实现。
+
 ## 反复查阅的项目资料
 
 先检查已有来源登记、书目、笔记与文件，再决定是否需要补索引。优先扩展已有材料，用主题或研究问题指向需要的章节、页码、条款、定理或段落。打印页与文件页不同则分别注明；未核对的位置标为待核，不从目录或摘要推定正文已读。

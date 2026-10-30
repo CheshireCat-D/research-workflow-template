@@ -1,0 +1,11 @@
+{
+  "id": "D-C-REVISION-REVIEW",
+  "type": "revision-and-failure-record",
+  "description": "Reason, original/revised scope, actual drift check, failed verifier and remedy, protected identities and pending next step",
+  "path": "validation/stage-C/revision-review.json",
+  "derived_from": [
+    "evidence:D-AUTHOR-REVISION",
+    "evidence:D-APPROVED-PARAM",
+    "artifact:D-C-VALIDATION"
+  ]
+}

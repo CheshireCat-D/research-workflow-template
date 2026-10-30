@@ -1,0 +1,112 @@
+{
+  "case_id": "T",
+  "stage": "C",
+  "active_constraints": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 4.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "将 alpha=0.05、rho=4（观察前固定）、v=[0,1,10,100] 的边界表 results/table.csv 与更新摘要 results/summary.md 交作者内容复核；暂不扩展到事后选择 rho。尚无人类专家认可、目标期刊未定且未经投稿授权，不执行投稿。",
+  "changed_or_missing_paths": {
+    "intermediate_changed": [
+      "notes/parameters.json"
+    ],
+    "final_changed": [],
+    "final_missing": [],
+    "actual_revised_vs_drift_snapshot": [
+      ".research/state.json",
+      "RECOVERY.md",
+      "results/result.json",
+      "results/summary.md",
+      "results/table.csv"
+    ]
+  },
+  "affected_activities": {
+    "T-CALC": "needs_recheck at intermediate; actual rho=4 recomputation and comparison completed",
+    "T-SYNTH": "needs_recheck through dependency at intermediate; four-point summary revised and checked"
+  },
+  "unaffected_activities": {
+    "T-SOURCE-CHECK": "Remains done within existing fixed-identity-only scope: primary/source note unchanged; not parameter-dependent"
+  },
+  "checkpoint_freshness": {
+    "intermediate": "fresh_for_registered_bytes",
+    "intermediate_does_revalidate": false,
+    "final": "fresh_for_registered_bytes",
+    "actual_checks_required": true
+  },
+  "scientific_scope": {
+    "id": "T-CLAIM",
+    "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "scope": "l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha=0.05 total two-sided budget; rho=4 fixed before observations; v=[0,1,10,100]; numerical evaluation only."
+  },
+  "source_tracking_limits": {
+    "source_only": [
+      "T-REMOTE"
+    ],
+    "excluded_unregistered_paths": [
+      "notes/unregistered-scratch.md"
+    ],
+    "all_project_files_covered": false,
+    "note": "Scratch is retained but is not a declared scientific dependency. Hash inventory is not scientific review. Remote identity metadata does not monitor content."
+  },
+  "source_access": {
+    "T-SRC": {
+      "status": "local_fixed_identity_checked",
+      "local_path": "sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "actual_read_scope": "Whole local PDF read as bytes for SHA256 and manifest binding only. No PDF text extraction, page inspection, or independent theorem review. Title/version/DOI and page references are supplied metadata/card assertions."
+    },
+    "T-REMOTE": {
+      "status": "metadata-only",
+      "local_copy": null,
+      "live_access": false,
+      "content_binding": false
+    }
+  },
+  "author_review": {
+    "status": "not_occurred",
+    "submission_authorized": false,
+    "venue": null
+  },
+  "material_paths": {
+    "authoritative_state": "PROJECT_ROOT/.research/state.json",
+    "old_actual_contents": "PROJECT_ROOT/.research/checkpoints/C-drift-before-recompute",
+    "initial_contents": "PROJECT_ROOT/.research/versions/A-initial",
+    "final_snapshot": "PROJECT_ROOT/.research/checkpoints/C-final-verified",
+    "result": "PROJECT_ROOT/results/result.json",
+    "table": "PROJECT_ROOT/results/table.csv",
+    "summary": "PROJECT_ROOT/results/summary.md",
+    "recovery": "PROJECT_ROOT/RECOVERY.md"
+  },
+  "notes": [
+    "New observational checkpoint did not revalidate stale calculations.",
+    "No new scientific coverage theorem or expert review; no submission authorized.",
+    "All current project dependencies and recovery resources remain within project; external output is not required for later recovery."
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "submission_id": "K95a485",
+  "chain_id": "P1",
+  "case_id": "T",
+  "scored": true,
+  "arm_hidden": true,
+  "report_sha256_by_stage": {
+    "A": "c845187646b700eff21301fd8f39737c82dc857e737c4bdaa929fc6854250d71",
+    "B": "f82b762719fba7a7d87bbc7fb5f05e2ab26e9303912e89b99fe6fc940f4e305b",
+    "C": "a6e1f4e2debe4f12dd326a2ba49335288c3ab404b653a0d85b98c67781155967",
+    "D": "1d9300c5fe8a1f11003a690f8a932891cfc74b8dd21c48f81a8e7bf1edda59bb"
+  },
+  "criteria": [
+    {
+      "id": "A-materials",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "A/project/records/registry.json: T-SRC/T-REMOTE 来源、T-RAW/T-PARAM 本地材料、T-CLAIM/T-REL/T-CHOICE、T-CODE/T-RESULT/T-TABLE/T-SUMMARY 和三活动均实际持久化，envelope.version/bindings 留完整身份；provenance/initial/source-identities.json、notes/source-check.md、RECOVERY.md 记录实际访问范围。audit/verification.json 核对原 PDF/code SHA 与来源及冻结输入一致。",
+      "rationale": "6/6：实际本地/来源身份与有限访问范围 2/2；材料—主张、选择、成果和 CALC→SYNTH 依赖及独立来源分支 2/2；持久化记录、版本和完整指纹 2/2。只宣称身份/卡片和数值检查，未虚构数学页阅读或人类审阅。"
+    },
+    {
+      "id": "A-results",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "A/project/notes/stage-a-validation.json 的 normal_execution 保留实际 argv、exit_code=0 和 stdout；A/project/validation/stage-a/normal/ 与 A/deliverables/validation-normal/ 有实际结果；A/project/results/result.json、table.csv、summary.md 为 rho=1。audit/compute-A.json 和 audit/verification.json：原样计算器在审计副本重跑退出0，JSON等于规范成果，四值及CSV在1e-10内一致，输入参数/code SHA正确。",
+      "rationale": "4/4：实际正常参数执行 2/2；正确数值、配套表和限定科学范围 2/2。换行格式无科学影响；没有把重现公式计算说成新证明或覆盖模拟。"
+    },
+    {
+      "id": "A-constraints",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "A/project/project.json、provenance/initial/constraints.json、BRIEF.md、RECOVERY.md 和 records/registry.json.cursor 持久保存离线标准库、期限2026-12-15及其任务作者来源、中文、期刊未定、无新数据/重拟合、无人类批准及无投稿授权；初始参数范围和先核对表摘要再交作者讨论的条件式下一步也已保存。",
+      "rationale": "4/4：全部给定约束持久化 2/2；具体下一步和 rho=1 初始范围、漂移时先复核及未经内容复核不投稿的条件持久化 2/2。"
+    },
+    {
+      "id": "A-recovery",
+      "score": 3,
+      "max_points": 3,
+      "evidence": "A/project/RECOVERY.md 明确 project.json 为配置权威、records/registry.json 为登记/版本/断点权威，并提供项目内只读恢复命令；项目自带所需运行资源。audit/resume-A.json：仅在复制的项目显式 --root 下恢复，revision=26、三活动done、checkpoint=current，副本无改动。",
+      "rationale": "3/3：可发现的当前权威状态 2/2；可独立使用的恢复入口 1/1。恢复不依赖原聊天或外部阶段执行记录。"
+    },
+    {
+      "id": "A-failure",
+      "score": 3,
+      "max_points": 3,
+      "evidence": "A/project/notes/stage-a-validation.json.invalid_execution、validation/stage-a/commands.json 保存 rejected-parameters.json(alpha=1) 的真实 exit_code=2 和 ValueError 原文；validation/stage-a/preservation.json 保存有效四文件前后完整SHA/bytes相同、拒绝输出不存在。audit/invalid-A.json/verification.json 的副本重放同样退出2且保留有效成果。",
+      "rationale": "3/3：实际无效输入非零退出 1/1；真实错误留档并正确称受控拒绝测试 1/1；有效参数、JSON、表和摘要未覆盖 1/1。"
+    },
+    {
+      "id": "B-drift",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "B/report.md、deliverables/state-answer.json、checkpoint-comparison.json 具体指出 notes/parameters.json 从 rho=1/SHA230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67 变为 rho=4/SHA340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117；无缺失文件。audit/verification.json 对原绑定逐一核验，唯一漂移正是该路径；B登记与A登记字节相同，旧内容可在初始历史中恢复。",
+      "rationale": "10/10：正确变化路径/无虚构缺失 4/4；实际旧/现身份 3/3；文件、绑定与可恢复旧内容提供真实证据 3/3。结果输入SHA仍对应旧次执行，B明确其与当前参数失配。"
+    },
+    {
+      "id": "B-dependencies",
+      "score": 12,
+      "max_points": 12,
+      "evidence": "B/report.md 的影响表及 deliverables/resume.stdout.txt 列 T-CALC done/stale、T-SYNTH done/stale、T-SOURCE-CHECK done/done。实际 registry 中 CALC 输入包括T-PARAM，SYNTH depends_on CALC；SOURCE-CHECK只依T-SRC/T-RAW并输出来源卡。audit/resume-B.json 重现完全相同影响集合。",
+      "rationale": "12/12：直接 CALC 影响 4/4；传递 SYNTH 影响 4/4；独立 SOURCE-CHECK 保持有限身份检查有效且无全项目一律过期断言 4/4。"
+    },
+    {
+      "id": "B-cursor",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "B/report.md 明确最近断点仅因local-files过期，旧游标“身份与活动仍新鲜”条件不满足；不得把旧rho=1结果交作rho=4成果。下一步仅在后续授权写入时先确认参数修订依据、保留旧内容，再真算新参数、复核CALC后复核SYNTH并更新登记。B/deliverables/resume.stdout.txt 和 audit/resume-B.json 均为checkpoint=stale。",
+      "rationale": "5/5：真实旧断点及新鲜度 2/2；拒绝沿用受影响旧成果 2/2；安全且具体的后续条件式动作 1/1。"
+    },
+    {
+      "id": "B-boundaries",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "B/report.md 的来源/覆盖章节及 state-answer.json 区分登记/工作新鲜度与定理真假，scientific_validity=not-assessed；T-REMOTE明确metadata-only、无本地绑定或当前远端核验；notes/unregistered-scratch.md未登记；本阶段全文件哈希观察不冒充原有自动覆盖。",
+      "rationale": "4/4：局部失效与科学真假明确分开 2/2；准确交代source-only及未登记scratch的实际覆盖边界 2/2。"
+    },
+    {
+      "id": "B-readonly",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "B/readonly-audit.json 的全项目文件字节+mtime和目录mtime审计 passed=true、差异为空；B/deliverables/project-before.json 与 project-after.json 完全一致；project-readonly-verification.json 的changes及writes_to_project为空，答卷保存在project外。",
+      "rationale": "4/4：项目文件字节不变 2/2；文件与目录mtime不变 2/2。阶段内没有登记、修复、断点或复算的证据，组织者全范围审计也未发现写入。"
+    },
+    {
+      "id": "C-dirty-snapshot",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "C/project/validation/stage-c/checkpoint-drift.json 保留实际checkpoint exit0、revision27；紧接的 check-drift.json 保留实际只读check exit1。其stdout中checkpoint=current，但T-PARAM file_changed、T-CALC/T-SYNTH stale、T-SOURCE-CHECK done；外部同名deliverables原始输出也保留。history/stage-c-before-recompute/records/registry.json 保存revision27状态。C/report.md明确保存不等于复核。",
+      "rationale": "6/6：真实中间漂移断点 2/2；断点后真实状态检查 2/2；没有洗白旧活动 2/2。中间简称虽不规范，后续更正已明确真实ID，且原始输出未被最终结果覆盖。"
+    },
+    {
+      "id": "C-recompute",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "C/project/notes/stage-c-validation.json.execution 与 deliverables/compute-rho4.json 保留现有脚本在批准参数下的实际exit0；canonical results/result.json、table.csv、summary.md及validation/stage-c/rho4/已更新。audit/verification.json：code/PDF保持原字节、工作参数等于批准JSON、真实输入SHA正确，审计副本重跑JSON与canonical全等，四个边界4.895493661361633/5.57431973357386/10.070709270872976/31.015388968276124及表均符合1e-10容差。",
+      "rationale": "8/8：原样计算器在批准参数上实际执行 2/2；规范JSON数值 2/2；配套表 2/2；摘要及固定rho、alpha总预算、同一内在时间等条件范围 2/2。未将程序复算升级为覆盖证明、事后rho选择或人类认可。"
+    },
+    {
+      "id": "C-revalidate",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "C/project/records/registry.json 中T-PARAM/T-CLAIM/T-REL/T-CHOICE/T-RESULT/T-TABLE/T-SUMMARY更新到v2；history保留previous和作者批准理由。T-CALC在revision42替换，T-SYNTH在43随后替换；独立T-SOURCE-CHECK envelope与A逐字相同、仍v1。audit/resume-C.json恢复全部done且findings空；audit/verification.json确认依赖次序及独立分支未改。",
+      "rationale": "6/6：受影响材料/版本/选择绑定更新 2/2；真实重算与摘要核对后按CALC→SYNTH重登记 2/2；独立来源分支保留有效 2/2。"
+    },
+    {
+      "id": "C-history",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "C/project/history/stage-a-initial/ 有rho=1参数、结果、表、摘要的完整原字节；history/stage-c-before-recompute/ 有重算前rho=4参数与仍rho=1成果、配置、登记、旧RECOVERY全文；manifest写明作者接受新参数及旧成果未重算的真实原因。registry.history的previous保留旧选择、关系、主张、活动等实际版本。audit/verification.json对所有历史manifest逐项SHA/bytes核验无差异。",
+      "rationale": "5/5：旧参数及结果可恢复 2/2；旧表及摘要可恢复 2/2；明确实际修订/版本理由 1/1。没有仅留哈希或“曾有旧版”文字。"
+    },
+    {
+      "id": "C-final-cursor",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "C/project/records/registry.json revision46 的断点current；最终cursor及RECOVERY.md保存“将rho=4、alpha=.05、v=[0,1,10,100]边界表与更新摘要交作者内容复核；暂不扩展到事后选择rho”。C/deliverables/check-final.json、resume-final.json与audit/resume-C.json均无findings，三活动done；其他原约束和未有人类批准/投稿授权在项目内继续保留。",
+      "rationale": "5/5：实际最终状态新鲜 2/2；正确具体下一步及若再漂移需先复核的条件 2/2；其余约束保留 1/1。"
+    },
+    {
+      "id": "D-portability",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "D/report.md、deliverables/text-read-paths.json、state-answer.json显示从迁移项目中的RECOVERY、配置、登记、批准材料、成果和历史恢复；自带运行资源实际resume成功。audit/resume-D.json只运行进一步迁移的审计副本并显式--root副本，也恢复revision46、主要v2/来源v1与全部约束，不执行历史日志里的旧绝对路径。",
+      "rationale": "6/6：仅用新项目资源可恢复 2/2；权威/版本准确 2/2；约束与未知批准状态准确 2/2。项目中的旧绝对路径被当作历史文本，无需原工具包、旧聊天或公共缓存。"
+    },
+    {
+      "id": "D-next",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "D/report.md、deliverables/state-answer.json 与项目当前cursor一致，下一步为将rho=4边界表/更新摘要交作者内容复核，暂不扩展事后选择rho；准确区分三活动已完成数值/摘要工作、作者内容复核待做、理论正文与远端内容未独立核验、无投稿授权；D说明只读取既存四值未重算。",
+      "rationale": "5/5：最新实际下一步 2/2；完成/待办状态及条件正确 2/2；限定数值范围且无虚构人类认可 1/1。没有退回旧rho=1 handoff。"
+    },
+    {
+      "id": "D-readonly",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "D/readonly-audit.json passed=true，文件及目录mtime差异均空；D/deliverables/project-baseline.json 与 project-after.json全等，read-only-verification.json记录未重算、未修改，答卷在project外。D报告无init/register/snapshot/recompute/自动下一步，审计副本只读resume也未改动。",
+      "rationale": "4/4：项目文件字节不变 2/2；文件和目录mtime不变 2/2。未执行禁止的写入或后续科研动作。"
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "usability": "usable: 当前状态、证据、历史内容和项目内恢复入口足以支持下一位恢复者在限定范围内继续。",
+  "notes": [
+    "仅按冻结rubric/codebook的共同生命周期内容评分；不因专有字段、品牌、命令名称、文件数或工程特性加分。各阶段是同一条依赖链。",
+    "非完美盲：包内目录布局、嵌入工具名称及历史路径标记可暴露实现线索；未查看父目录、分组映射、其他链、外部执行历史、个人skills/memory、网络或其他agent，也未推断实验组。",
+    "科学核验仅限本题要求的公式数值、表、摘要及输入身份；不重做长证明，不认证原定理、发表资格或人类认可。",
+    "审计在packet新audit目录复制project后执行，仅显式指向副本；没有访问历史日志中的旧绝对路径。audit/verification.json证实全部原project文件字节和mtime未被本次审计改变。B中旧结果参数SHA与当前参数不符是被正确识别的预期漂移；该SHA仍真实对应旧次计算输入，不作为结果伪造扣分。",
+    "非实质记录瑕疵：A/project/notes/stage-a-validation.json的csv_bytes_equal=true与同处LF/CRLF差异说明矛盾；报告正确承认换行差异，数值行、输入指纹和结果已实核一致，因此不影响冻结数值/表评分。C中间断点使用非规范简称已在持久更正记录映射到实际ID，未影响真实漂移状态及依赖处理。",
+    "操作错误均保留并补救，未以最终成功替换原始失败；本包没有发现需单列的关键错误。"
+  ],
+  "scope": "Independent fresh chain-level AI review; organizer withheld arm mapping and external execution history. Layout may reveal method; no human certification.",
+  "stage_scores": {
+    "A": 20,
+    "B": 35,
+    "C": 30,
+    "D": 15
+  },
+  "publication_projection": {
+    "original_chain_id": "anonymous-K95a485",
+    "original_grade_sha256": "0dd36746e9ab52d5a13650af5787f8234d1bfde209e8f29f2bebd387daef015f",
+    "changes": [
+      "opaque-chain-label-to-plan-label",
+      "absolute-locators-to-logical-paths"
+    ],
+    "scope": "Administrative identity/locator mapping only; scores, rationales, critical errors and original report bindings unchanged."
+  }
+}

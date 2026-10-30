@@ -1,0 +1,314 @@
+[
+  {
+    "kind": "source",
+    "record": {
+      "id": "D-SRC",
+      "title": "UCI Bike Sharing dataset",
+      "locator": "https://archive.ics.uci.edu/dataset/275/bike%2Bsharing%2Bdataset",
+      "version": "Official ZIP member hour.csv; yr=0 slice retained 2026-10-29",
+      "content_access": "partial",
+      "rights": "restricted",
+      "limitations": "Only supplied 2011 slice inspected; no current remote verification or full dataset/website inspection.",
+      "extensions": {
+        "doi": "https://doi.org/10.24432/C5W894",
+        "license": "CC-BY-4.0",
+        "access_detail": "Full supplied 2011 CSV parsed (8645 rows); supplied frozen model/code/parameter/result/table/summary/source note read. Original full hour.csv, official ZIP, website and research article not supplied or inspected.",
+        "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+      }
+    }
+  },
+  {
+    "kind": "source",
+    "record": {
+      "id": "D-REMOTE",
+      "title": "Original Bike Sharing research article DOI identity",
+      "locator": "https://doi.org/10.1007/s13748-013-0040-3",
+      "version": "DOI identity only; no article copy supplied",
+      "content_access": "metadata-only",
+      "limitations": "No local article content binding; no current remote-content check."
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "D-RAW",
+      "type": "observed-data",
+      "description": "Immutable supplied official-hour.csv 2011 slice, 8645 observed hour rows",
+      "provenance": "Supplied local cache and source identities; local SHA and row coverage verified",
+      "location": {
+        "kind": "local",
+        "path": "data/hour_2011.csv"
+      },
+      "source_ids": [
+        "D-SRC"
+      ],
+      "limitations": "Full original CSV/remote origin not independently reacquired"
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "D-PARAM",
+      "type": "author-parameters",
+      "description": "Current declared frozen-model evaluation interval and observed-hour weighting",
+      "provenance": "Benchmark author working parameters, not original dataset content",
+      "location": {
+        "kind": "local",
+        "path": "notes/parameters.json"
+      }
+    }
+  },
+  {
+    "kind": "statement",
+    "record": {
+      "id": "D-CLAIM",
+      "text": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+      "type": "empirical",
+      "scope": "Current author parameters: 2011-10-01 to 2011-12-31; supplied frozen C0/C1 and observed hours only",
+      "assessment": {
+        "status": "supported-in-scope",
+        "scope": "Rerun and descriptive consistency only",
+        "rationale": "Independent execution of supplied calculator reproduces canonical result/table exactly and summary rounding agrees; no human expert review or inferential guarantee",
+        "reviewer": "assistant agent"
+      },
+      "formal_verification": {
+        "status": "not-applicable",
+        "scope": "Descriptive numerical calculation",
+        "tool": "none"
+      }
+    }
+  },
+  {
+    "kind": "relation",
+    "record": {
+      "id": "D-REL",
+      "statement_id": "D-CLAIM",
+      "evidence_id": "D-PARAM",
+      "relation": "qualifies",
+      "rationale": "Declared period and weighting delimit the current comparison",
+      "scope": "Current numerical/descriptive claim; registration is not mathematical proof"
+    }
+  },
+  {
+    "kind": "decision",
+    "record": {
+      "id": "D-CHOICE",
+      "choice": "Use initial supplied author parameters and Jan-Sep frozen model; do not refit",
+      "rationale": "Given constraints and author-supplied initial evaluation specification",
+      "responsible": "benchmark author, as attributed in supplied material",
+      "decided_at": "Unspecified in supplied materials; no author decision date invented",
+      "evidence_refs": [
+        "D-PARAM"
+      ],
+      "revisit_when": "Only upon explicit authorized parameter/scope revision; retain prior content and reason",
+      "extensions": {
+        "decision_date": null,
+        "recorded_by": "assistant agent"
+      }
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "D-CODE",
+      "type": "scientific-calculator",
+      "description": "Supplied deterministic calculator, unchanged",
+      "path": "scripts/compute.py"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "D-MODEL",
+      "type": "frozen-model",
+      "description": "Supplied C0 hour means and C1 workingday/hour means, trained before 2011-10-01; no refit performed",
+      "path": "model/frozen.json",
+      "derived_from": [
+        "evidence:D-RAW"
+      ],
+      "notes": "Training provenance is supplied; this activity did not independently refit the model"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "D-RESULT",
+      "type": "numeric-result",
+      "description": "Canonical numeric result verified byte-for-byte against fresh calculation",
+      "path": "results/result.json",
+      "derived_from": [
+        "evidence:D-PARAM",
+        "evidence:D-RAW",
+        "artifact:D-CODE",
+        "decision:D-CHOICE",
+        "artifact:D-MODEL"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "D-TABLE",
+      "type": "numeric-table",
+      "description": "Companion table verified byte-for-byte and metric-by-metric",
+      "path": "results/table.csv",
+      "derived_from": [
+        "artifact:D-RESULT"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "D-SUMMARY",
+      "type": "summary",
+      "description": "Supplied current summary checked for numbers, rounding, interval and scope",
+      "path": "results/summary.md",
+      "derived_from": [
+        "statement:D-CLAIM",
+        "artifact:D-RESULT",
+        "artifact:D-TABLE"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "D-SOURCE-NOTE",
+      "type": "source-card",
+      "description": "Supplied source/version/coverage note; independent of chosen evaluation interval",
+      "path": "notes/source-check.md"
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "D-SOURCE-VERIFICATION",
+      "type": "verification-record",
+      "description": "Actual local source check and declared remote/unread limits",
+      "path": "validation/stage-A/source-verification.json",
+      "derived_from": [
+        "source:D-SRC",
+        "evidence:D-RAW",
+        "source:D-REMOTE"
+      ]
+    }
+  },
+  {
+    "kind": "artifact",
+    "record": {
+      "id": "D-VALIDATION",
+      "type": "validation-record",
+      "description": "Real normal/invalid calculator runs, output comparison and unchanged protected hashes",
+      "path": "validation/stage-A/comparison.json",
+      "derived_from": [
+        "evidence:D-PARAM",
+        "evidence:D-RAW",
+        "artifact:D-CODE",
+        "artifact:D-MODEL",
+        "artifact:D-RESULT",
+        "artifact:D-TABLE",
+        "artifact:D-SUMMARY"
+      ]
+    }
+  },
+  {
+    "kind": "evidence",
+    "record": {
+      "id": "D-INVALID-PARAM",
+      "type": "controlled-invalid-input",
+      "description": "Deliberately invalid start-after-end input; not current parameters",
+      "provenance": "Supplied controlled invalid input",
+      "location": {
+        "kind": "local",
+        "path": "notes/rejected-parameters.json"
+      }
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "D-SOURCE-CHECK",
+      "title": "Verify supplied source identity, local slice and source card",
+      "status": "done",
+      "inputs": [
+        "source:D-SRC",
+        "evidence:D-RAW"
+      ],
+      "outputs": [
+        "artifact:D-SOURCE-NOTE",
+        "artifact:D-SOURCE-VERIFICATION"
+      ],
+      "note": "Performed by assistant/local standard library checks; no remote reacquisition, article review or human approval"
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "D-CALC",
+      "title": "Rerun supplied calculator and verify canonical numeric result and companion table",
+      "status": "done",
+      "inputs": [
+        "evidence:D-PARAM",
+        "evidence:D-RAW",
+        "artifact:D-CODE",
+        "decision:D-CHOICE",
+        "artifact:D-MODEL"
+      ],
+      "outputs": [
+        "artifact:D-RESULT",
+        "artifact:D-TABLE"
+      ],
+      "note": "Actual command exit 0; result.json/table.csv byte-identical to canonical prebuilt files; read-time files and command evidence preserved"
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "D-SYNTH",
+      "title": "Check supplied summary within current claim and verified result",
+      "status": "done",
+      "inputs": [
+        "statement:D-CLAIM",
+        "artifact:D-RESULT",
+        "artifact:D-TABLE"
+      ],
+      "outputs": [
+        "artifact:D-SUMMARY"
+      ],
+      "depends_on": [
+        "D-CALC"
+      ],
+      "note": "Assistant reviewed interval/counts/rounding and no-refit/no-causal/no-2012 scope; supplied summary kept unchanged"
+    }
+  },
+  {
+    "kind": "activity",
+    "record": {
+      "id": "D-INVALID-TEST",
+      "title": "Controlled invalid parameter rejection and canonical preservation check",
+      "status": "done",
+      "inputs": [
+        "evidence:D-INVALID-PARAM",
+        "artifact:D-CODE"
+      ],
+      "outputs": [
+        "artifact:D-VALIDATION"
+      ],
+      "note": "Expected calculator exit 2 with start-after-end ValueError; no invalid output directory; valid material before/after SHA identical. Successful negative-input test, not scientific-analysis failure."
+    }
+  },
+  {
+    "kind": "method-binding",
+    "record": {
+      "id": "D-COMPUTATIONAL",
+      "method_id": "computational",
+      "profile_version": "0.1",
+      "reason": "Rerun deterministic frozen-model observed-hour metrics and preserve actual execution evidence",
+      "applies_to": [
+        "activity:D-CALC",
+        "activity:D-INVALID-TEST"
+      ]
+    }
+  }
+]

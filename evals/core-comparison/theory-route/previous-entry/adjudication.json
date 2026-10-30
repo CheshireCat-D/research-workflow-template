@@ -1,0 +1,97 @@
+{
+  "submission_id": "Q2a940",
+  "report_sha256": "bea60052bf84a8aaf14d10410c6241fcc7dc0e8604d9c2ae63c769485938efb1",
+  "criteria": [
+    {
+      "id": "source_conditions",
+      "score": 18,
+      "max_points": 18,
+      "evidence": [
+        "report.md:7-20: fixed-version identities, PDF page convention, comparison table, and pair-based domination condition.",
+        "S1 PDF pp9-10 Definition 1/(2.1), p12 Theorem 1(a)/(2.7), and p10 bounded-increment discussion verified against provided original.",
+        "S2 PDF p5 Definition 1/(4), p12 Proposition 3/(21), p14 Theorem 4/(23), and p28 Proposition 5/(51) verified against provided original."
+      ],
+      "rationale": "4/4: both fixed versions, identities and key page/formula coordinates agree with originals. 4/4: explicitly distinguishes adaptedness from a certificate for the same (S,V), rather than excluding adapted V categorically. 4/4: correctly separates S1 filtered infinite-time line crossing from S2 normal-mixture curved bounds and rejects iid/fixed-n/normal-data restrictions. 6/6: records bounded predictable forecasts, varying average conditional-mean target, residual-square intrinsic time, scale b-a, and total two-sided 2 delta in Theorem 4."
+    },
+    {
+      "id": "gaussian_mixture",
+      "score": 15,
+      "max_points": 15,
+      "evidence": [
+        "report.md:24-40: fixed-lambda supermartingale, predictable increment, joint measurability, conditional Tonelli and initial wealth one.",
+        "report.md:42-59: explicit square completion and inversion at 1/alpha.",
+        "S2 PDF pp27-28 Lemma 2 proof/(49)-(50) and Proposition 5/(51)."
+      ],
+      "rationale": "7/7: normal density has precision rho and completion yields exactly sqrt(rho/(v+rho)) exp(s^2/(2(v+rho))). 4/4: gives the conditional one-step argument, nonnegative integration, joint measurability and integrability. 4/4: correct Ville threshold, alpha-squared inside logarithm, total two-sided alpha, and harmless closed intervals/[0,1] truncation. No extra factor two or data-normality assumption."
+    },
+    {
+      "id": "finite_counterexample",
+      "score": 18,
+      "max_points": 18,
+      "evidence": [
+        "report.md:63-80: iid Bernoulli(1/10), alpha=1/20, rho=1/4, n=20, all-zero event and prescribed predictor.",
+        "report.md:70-79: Vhat=1/4, |S|=2, b^2=log(800)/2<4 and event probability (9/10)^20>1/20.",
+        "adjudicator-verification/verification.json: independent exact-integer and arithmetic checks."
+      ],
+      "rationale": "6/6: legitimate alternative finite witness uses exactly initial forecast 1/2 and subsequent past sample means. 6/6: event forces exclusion since b<2, and its exact probability is about 0.12157665, strictly larger than 0.05; logarithm comparison has an analytic bound via e>8/3, and probability comparison reduces to an integer inequality. 6/6: identifies missing psi_N control for (S,Vhat), preserves validity of fixed-rho normal mixing under its real assumptions, and does not treat mere nonpredictability as the decisive failure. The rubric explicitly permits this alternative to the reference n=280 witness."
+    },
+    {
+      "id": "moving_precision",
+      "score": 18,
+      "max_points": 18,
+      "evidence": [
+        "report.md:84-101: derivative, unique q_alpha root, optimizer, envelope and v=0 nonattainment.",
+        "report.md:103-110: legal deterministic V=t/4, iid Rademacher LIL crossing, and fixed-target m interpretation.",
+        "S2 PDF p12 Proposition 3/(21), p37 proof/(98)-(101)."
+      ],
+      "rationale": "6/6: derivative is correct and q-log(1+q)=2 log(1/alpha) uniquely characterizes the positive root. 4/4: obtains rho*=v/q_alpha and inf b=sqrt((1+q_alpha)v), and separates optimization at one fixed target m from a moving envelope. 6/6: correctly transforms the Bernoulli(1/2) example to Rademacher sums; the stated LIL entails infinitely many upper crossings of any constant times sqrt(t), so simultaneous coverage is zero even for deterministic rho_t. 2/2: v=0 infimum is zero but no positive minimizer, treated as secondary rather than the main refutation."
+    },
+    {
+      "id": "valid_repairs",
+      "score": 18,
+      "max_points": 18,
+      "evidence": [
+        "report.md:114-119: conditional Hoeffding proof and fixed-rho normal mixture with V=t/4.",
+        "report.md:121-158: psi_E domain/scaling, forecast assumptions, integral proof of scalar inequality, conditional step, gamma-exponential mixture and two-tail budget.",
+        "report.md:160-166: rho_k=2^k, summable alpha_k=alpha*2^(-(k+1)) and countable union bound.",
+        "S2 PDF p30 Proposition 9/(66), p35 proof of Theorem 4/(89)-(90)."
+      ],
+      "rationale": "7/7: bounded conditional-mean observations have mgf <= exp(lambda^2/8) for all real lambda, proving V=t/4 and the simultaneous guarantee. 8/8: correct psi_E=-log(1-lambda)-lambda on [0,1), bounded predictable forecasts, and explicit conditional inequality with exp(lambda*d)(1-lambda*d)<=1 for either tail. The c=rho=1 specialization of the source gamma-exponential density is correctly e^lambda/(e-1); its mixture integral and existence/uniqueness argument give a legitimate one-sided boundary, each tail receives alpha/2. 3/3: correct countable-grid repair with explicit summable errors; taking the calibrated infimum/intersection is valid."
+    },
+    {
+      "id": "reviewable_short_memo",
+      "score": 13,
+      "max_points": 13,
+      "evidence": [
+        "report.md:3: explicit A/E true and B/C/D false.",
+        "report.md:170-175: source positioning, pathwise stopping argument and directly usable revised conclusion.",
+        "report.md:7-18,63-80,177: traceable source coordinates, explicit numeric expressions, code/proof distinction."
+      ],
+      "rationale": "5/5: resolves all five claims explicitly. 4/4: gives an accurate replacement conclusion crediting the existing Howard et al. framework and limiting this work to audit/counterexample/repair, without global novelty claims or attribution of planted claims to the papers. 2/2: stopping-time conclusion follows by event containment for any a.s. finite positive-integer random index and imposes no expectation condition. 2/2: self-contained and readable, with formulas and source locators; contains no fulltext redistribution and explicitly limits numerical checks. Suggested word length is not a frozen strict cutoff."
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "caps_applied": [],
+  "source_check": {
+    "status": "pass",
+    "scope": "Checked substantive cited statements and page/formula coordinates against the two provided fixed original PDFs/text; both PDFs match the provided manifest hashes and page counts.",
+    "historical_workflow_limitation": "No executor logs were read; accuracy of the artifact and available source identities is verified, not a historical certification of every claimed executor action."
+  },
+  "unresolved_mathematical_disagreements": [],
+  "usability": {
+    "status": "usable_within_task_scope",
+    "assessment": "Can serve as a self-contained Chinese audit and replacement memo for these five constructed claims. No substantive correction is required under the frozen rubric.",
+    "scope_limit": "This is a local assessment of the stated task, the two fixed source versions and the displayed arguments, not a full-field correctness, novelty or publication certification."
+  },
+  "notes": [
+    "Independent artifact grading restricted to this submission package, its provided input/source material, rubric, reference and locations. No arm/model/tool-count/runtime information, parent mappings, external network, memories, skills or other agents were consulted.",
+    "arm_hidden=true records that group identity was not supplied or inferred. Blinding is not perfect: the report contains its own source-verification assertions, and the task-author reference/locations were available as authorized aids. Scores were based on mathematical substance and original-source checks, not those assertions.",
+    "The alternative Bernoulli(0.1), n=20 witness and explicit gamma-exponential repair were independently accepted on their actual arguments; reference parameters or prose were not required.",
+    "No critical-cap trigger is present. Full rubric credit does not assert proof formalization, exhaustive literature review or universal certification; numerical code was treated only as arithmetic support."
+  ],
+  "scored": true,
+  "arm_hidden": true
+}

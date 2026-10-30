@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "2"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"description\": \"Current portable recovery guide for rho=4 author-approved results, pre-recompute drift evidence, preserved history and next author review.\", \"id\": \"T-RECOVERY\", \"path\": \"RECOVERY.md\", \"type\": \"recovery-guide\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"T-RECOVERY\",\n  \"version\": 3,\n  \"revision\": 41,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

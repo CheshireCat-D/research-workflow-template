@@ -1,0 +1,16 @@
+{
+  "case_id": "T",
+  "event_applied": true,
+  "scope": "Organizer working-parameter event only; no silent setup repair or source-file replacement.",
+  "changed_paths": [
+    "notes/parameters.json"
+  ],
+  "before_sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+  "canonical_before_sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+  "format_only_initial_difference": false,
+  "after_sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+  "actual_changed_paths": [
+    "notes/parameters.json"
+  ],
+  "no_project_mutation_when_event_rejected": null
+}

@@ -77,7 +77,8 @@ class ProjectSkillConnection(unittest.TestCase):
                      'profiles/templates/legal-research.md',
                      'skills/rw-review/references/review-modes.md',
                      'skills/rw-review/references/review-response.md',
-                     'skills/rw-review/references/submission-delivery.md'):
+                     'skills/rw-review/references/submission-delivery.md',
+                     'skills/rw-review/references/theory-review.md'):
             with self.subTest(resource=name):
                 source = self.copy_source('missing-' + Path(name).stem)
                 (source / name).unlink()

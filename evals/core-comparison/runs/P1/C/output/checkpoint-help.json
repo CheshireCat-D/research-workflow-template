@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "checkpoint",
+    "--help"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "usage: research.py checkpoint [-h] --root ROOT --next-action NEXT_ACTION\n                              [--activity ACTIVITY] [--note NOTE]\n\noptions:\n  -h, --help            show this help message and exit\n  --root ROOT\n  --next-action NEXT_ACTION\n  --activity ACTIVITY\n  --note NOTE\n",
+  "stderr": ""
+}

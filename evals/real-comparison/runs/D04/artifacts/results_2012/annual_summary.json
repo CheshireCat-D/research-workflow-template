@@ -1,0 +1,19 @@
+{
+  "years": {
+    "2011": {
+      "annual_total_cnt": 1243103,
+      "mean_daily_cnt": 3405.7616438356163,
+      "day_rows": 365,
+      "hour_rows": 8645
+    },
+    "2012": {
+      "annual_total_cnt": 2049576,
+      "mean_daily_cnt": 5599.934426229508,
+      "day_rows": 366,
+      "hour_rows": 8734
+    }
+  },
+  "total_count_growth": 0.6487579870694544,
+  "daily_mean_growth": 0.6442531838260952,
+  "daily_mean_growth_identity": "(1+total_count_growth)*365/366 - 1"
+}

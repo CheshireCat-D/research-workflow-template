@@ -1,0 +1,672 @@
+{
+  "status": "executed",
+  "requested": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "fork_turns": "none",
+    "max_tool_calls": 18,
+    "max_report_characters": 12000
+  },
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 9,
+  "network_calls": 0,
+  "violations": [],
+  "reads": [
+    {
+      "logical_name": "input/data-b/EXECUTOR.md",
+      "sha256": "316392fda85274a6b9a3ac7150125ef140d35d96edde46759348ef82020239fb",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/execution.template.json",
+      "sha256": "4202f4e551078d2e12ccd1e271ddb0eaba5bac56eb2cccc204cacf1e9b66330e",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/TASK.md",
+      "sha256": "adada7990891049377599ad4f4234f24f881dd4429fa8f7854ebc42337f953be",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/INPUT_MANIFEST.json",
+      "sha256": "11b8827f74fc67af3b0e85c06a5e65b24d67ebfbacd7f93b66d3e7c4e24908f7",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/ORIGINAL_README.txt",
+      "sha256": "b92c8628622948bf0828c43a1b315d1517c3d7fd63654730d0dea379b8e88175",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/SOURCES.md",
+      "sha256": "647a33e2683dbc60dfcbcf2e2873185aea94f7bfee49d6a3e3b3eacd6d85a786",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/UCI_PAGE_EXCERPT.txt",
+      "sha256": "06797117bf42c99729802c59237e8884610e8a7a9ad3e256ca6b0a7f5dff7115",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/core/skill-bridge.md",
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/profiles/methods/computational.md",
+      "sha256": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/profiles/methods/empirical-quantitative.md",
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+      "access": "full"
+    },
+    {
+      "logical_name": "prior-input/data-a/TASK.md",
+      "sha256": "d27a3abf88230bc2b78833d573da380ba6260f83f6dbb077f26fa171e2042ceb",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/RUN.md",
+      "sha256": "917a40375b8cc8d0ab57110867f5faf859ae8b312294a6ea01e4563b7e8000b6",
+      "access": "full",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/analyze.py",
+      "sha256": "9aa68881931fdb685b4c27ea5c5f976b9576e49fac937140b18cc396bad6f32b",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/execution.json",
+      "sha256": "6825b7b9f61966b6c0f73ea1f28fd1ac78ca33924ab1f77f7b1092a3d0386fe9",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/finalize.py",
+      "sha256": "44a4e409b534f676561954411de5d5d7f00f69cc674f089051780cbee1d858e3",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/handoff.md",
+      "sha256": "f33eb2582a1f25b0e935824f673bf5dc9f6ba7509586cbe20fe9959b94c6964d",
+      "access": "full",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/report.md",
+      "sha256": "a27e12ef0cdaa5d3a64a4eee21820fc9431945921bad02d048427c05580c3698",
+      "access": "full",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/reproduction_check.json",
+      "sha256": "b3e05987bd431c9d5805257b1b8c39e49facee7124b90084e28216fd25530455",
+      "access": "full",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/results/audit.json",
+      "sha256": "34268c19febda47738645d9aa1eb1599a5b7426148849d7089c2d448a588e739",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/results/bootstrap_28.csv",
+      "sha256": "5fc3bcf61018ba1226ef6582459ee3cf078dae203d49366940e94a428d3a0e6b",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/results/bootstrap_7.csv",
+      "sha256": "982c98b431c35db3c292f515e3d2f33743f4eca667dc67f26045fb512880faea",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/results/daily_errors.csv",
+      "sha256": "f9a4086798d3e0e8f621d198349e3a0b8f99728aff9279a3da66fb5af2a0ee52",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/results/model.json",
+      "sha256": "f8a758c6c73cf7e0cfcfa0936b594afb8f23b1260610ecae15929f601dc8e5d4",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results/predictions.csv",
+      "sha256": "fdf3fda08ca4adec36ff62fd0b2850b24d51e9287b5a5ef110ca64f70e0d143b",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/results/results.json",
+      "sha256": "900286e5e1937b477a53e90baecd88e61b1e57bd25065fdce3c894cc9601018d",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results/runtime.json",
+      "sha256": "29957565027f63900ce2670d358839eebbdad8322bdf99eace1633c2b33d8155",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/score_check/bootstrap_28.csv",
+      "sha256": "5fc3bcf61018ba1226ef6582459ee3cf078dae203d49366940e94a428d3a0e6b",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/score_check/bootstrap_7.csv",
+      "sha256": "982c98b431c35db3c292f515e3d2f33743f4eca667dc67f26045fb512880faea",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/score_check/daily_errors.csv",
+      "sha256": "f9a4086798d3e0e8f621d198349e3a0b8f99728aff9279a3da66fb5af2a0ee52",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/score_check/predictions.csv",
+      "sha256": "fdf3fda08ca4adec36ff62fd0b2850b24d51e9287b5a5ef110ca64f70e0d143b",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/score_check/results.json",
+      "sha256": "900286e5e1937b477a53e90baecd88e61b1e57bd25065fdce3c894cc9601018d",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/score_check/score_provenance.json",
+      "sha256": "b3ddb9d342f62cd9985fa36e006ccc33776b58c81e0de3dc444b3c19075a2ffd",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/verification.json",
+      "sha256": "2b1e39b4246a2969df66bd7a7990404d5576b0686f3d0e2835eef99c2335b78d",
+      "access": "full",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/verify.py",
+      "sha256": "0ee85eaaa43fb248876e1d9cd8522dacff5a24fd165dc73e38b0ebb2d3945bcc",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/write_delivery.py",
+      "sha256": "f99dadb99f8d8a42d33ad7d634407a6733f2eb1c779263c6529e0ac92ab2f02e",
+      "access": "digest-only",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "workspace/artifact_manifest.json",
+      "sha256": "f6875606f27562072e01d58591984c2301513dd79d805ed3571674e07c9e0391",
+      "access": "full",
+      "version": "stage1"
+    },
+    {
+      "logical_name": "input/data-b/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/day_2011.csv",
+      "sha256": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b",
+      "access": "full"
+    },
+    {
+      "logical_name": "prior-input/data-a/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "access": "digest-only"
+    },
+    {
+      "logical_name": "prior-input/data-a/day_2011.csv",
+      "sha256": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b",
+      "access": "digest-only"
+    },
+    {
+      "logical_name": "input/data-b/hour_2012.csv",
+      "sha256": "d73ae7f2aba616d775b5bccb3540910a9de49fe88e7f5926f7bf0a3fe840602d",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/day_2012.csv",
+      "sha256": "75c2dd61bc5f8a3cd6ae5c787c74c0fbc1547201d47c5cba878d29f3083f09b6",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/update2012.py",
+      "sha256": "d83980da17c54f116aa26da88b34ea5e1a1a1b4aae87c17e6427e00542d6a95f",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/verify2012.py",
+      "sha256": "782472d1ce4438a1e9b14d4a2590102294144a5787a5813435c0e62d764181bb",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/write_stage2.py",
+      "sha256": "31e388d625b5cf180e3981752f70afe96fa6d954558d676057e4307572521b8a",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/finalize_stage2.py",
+      "sha256": "2a77d81ce204d686be72863ab59ea29ce8cb0f341d1c45311dab86a0e6837e2a",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/report.md",
+      "sha256": "68fa8a9122156dadbb012aff70f179d73051906f677d32ab21ec0968b60c036e",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/handoff.md",
+      "sha256": "caebab9e26192bc6dbeed3c1db700640c5f3a0815b5ff8125ba0c2074b32f6e9",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/RUN.md",
+      "sha256": "e180dfc8889a430df3294489fec739d3b8d70be14e55c4d9f6cb8f99e798e2e9",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results_2012/results.json",
+      "sha256": "9e05ffdffcf4d9ae4d412c0b40b9774124047b77a4b3bbf66564430a3bc2acfe",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results_2012/audit.json",
+      "sha256": "ad0fa275753e025612a05c3b171a07b1f2c568be22e7dfd6b8c9af9c090a9b8d",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results_2012/annual_summary.json",
+      "sha256": "3a9fc38cea3531115544d90d8e1ec3cc93af046705fc6e148cd6e7b38a861656",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results_2012/model_recovery.json",
+      "sha256": "6ec94306848acf061939fbadcd9ea875f7ceb342a301b92315d7ef32f5c48a2a",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results_2012/provenance.json",
+      "sha256": "dc8a13f277ab21226522870294e178c95030edc9269500fc833e2b6aaeb58e4d",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results_2012/independent_verification.json",
+      "sha256": "496fdeb88b31efe26d9a3df500ea4a4d14eaff27d6377f95a27acbd9d7a1137a",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results_2012/reproduction_check.json",
+      "sha256": "62f9f0eefbe7b9805642db592b71cbaf7800dd2a2098c05f6987ec6f00905da2",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results_2012/predictions.csv",
+      "sha256": "b18944fc947c89c29531f1dc221a14dfa2d089f084c651a6e4775425409ff217",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results_2012/daily_errors.csv",
+      "sha256": "d7092f51a25f0174346fd94130e4a2325f011a917c4e70abc912e1106e385cda",
+      "access": "digest-only"
+    },
+    {
+      "logical_name": "workspace/results_2012/bootstrap_7.csv",
+      "sha256": "4fecab89dcfdbddaeb986f66629b719f885b9bc7841a7fe07932ce1ef8ef9124",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results_2012/bootstrap_28.csv",
+      "sha256": "d672d852e2085f208c5aa8f242d2f72d4e18c00dd5d3e38f559e65503b90d1f0",
+      "access": "full"
+    },
+    {
+      "logical_name": "common/python",
+      "sha256": "d90bce0f5ac3aa40e2ee5900ad243bad0b2205ce17408278f088b34aed737840",
+      "access": "digest-only"
+    },
+    {
+      "logical_name": "common/lib/python3.12/_collections_abc.py",
+      "sha256": "d4945c8410c4bab351741b04bca3de066f7c27ed7e38df89e206a96617102ffb",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/site-packages/_distutils_hack/__init__.py",
+      "sha256": "ced72e54431ecf2d8d7dbd8a1e27724f1b171af3ca1503c304bf11c59a7fe861",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/importlib/_bootstrap_external.py",
+      "sha256": "e6ad72f3f0f9b65c99ab52598cd02ab748511dcdce1dd51f18dace9be9a680c6",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/_sitebuiltins.py",
+      "sha256": "b9388bc1d6d12ed6be12da420ab1feca40f99c0e33ec315d92b1e01cb69b25bc",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/abc.py",
+      "sha256": "e558702a95cdce3febd289da021715d2b92bc43995b8a1bc58dfa1c3d8010287",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/codecs.py",
+      "sha256": "7b7839e53a77961153240aecfe11edc8054d05b1dedd83894450dae21ec05785",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/collections/__init__.py",
+      "sha256": "7fdb04dd248ab37909f46d2085bfee56b32d7e91e49ad3a2fad99c453295659b",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/copyreg.py",
+      "sha256": "c8eda41f05c6bf95a4da4726a530409d2485ae060b8d019b3a8034389a15d3e9",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/csv.py",
+      "sha256": "2fd2a39ec59a5cbcd71596a93205001e593c65dc2ca3bef6028f148372028a88",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/encodings/__init__.py",
+      "sha256": "78c4744d407690f321565488710b5aaf6486b5afa8d185637aa1e7633ab59cd8",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/encodings/aliases.py",
+      "sha256": "6fdcc49ba23a0203ae6cf28e608f8e6297d7c4d77d52e651db3cb49b9564c6d2",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/encodings/utf_8.py",
+      "sha256": "ba0cac060269583523ca9506473a755203037c57d466a11aa89a30a5f6756f3d",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/encodings/utf_8_sig.py",
+      "sha256": "1ef3da8d8aa08149e7f274dc64dbfce2155da812e5258ca8e8f832428d3b5c2d",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/enum.py",
+      "sha256": "f35e542d8c4c1d2b5e910138d726fa48774925f3c4dc5462793ebcb66aa55501",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/fnmatch.py",
+      "sha256": "6683da36e47af523f3f41e18ad244d837783e19e98911cc0b7415dea81494ebc",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/functools.py",
+      "sha256": "de4a1d37c795e2a065124b5c49357893433bc6bb111b41277ccc9930ef08d4c9",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/genericpath.py",
+      "sha256": "2b0b35d2206778af4081cf81dd9b513876e72c35a55bec941402e1fa62b1f1aa",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/hashlib.py",
+      "sha256": "6dbdebf270868b391080e21dc9687eddfaf321c965ad979f68d3f5c423c613ab",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/io.py",
+      "sha256": "7cec3cb8ac004058dd0a5af246e6d950fb59c7ddd0058fda48bcb3fcb98d8822",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/ipaddress.py",
+      "sha256": "ba8d3389ff084fcb232b48204ec04f2b3ea4bd0eadf7b18c814947d185de2c64",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/json/__init__.py",
+      "sha256": "d5d41e2c29049515d295d81a6d40b4890fbec8d8482cfb401630f8ef2f77e4d5",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/json/decoder.py",
+      "sha256": "382cd02af6f7efede5a6d4abbcda1015e5c7a75794b0016022878f9cf32a24f6",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/json/encoder.py",
+      "sha256": "52bfb1b66029cc70fa3bd7fe11df9f2e03922d413407a341b387a22c987f24f8",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/json/scanner.py",
+      "sha256": "572958017eae8842eeddd0e3d18d3c56cc0a197348224915e1d87ce937841764",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/keyword.py",
+      "sha256": "18c2be738c04ad20ad375f6a71db34b3823c7f40b0340f5294d0e89f3c9b093b",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/ntpath.py",
+      "sha256": "6c0d55ee892f98ef87b1ed3c50c9dfc7e267a98d2db47e08d3dc67529af56725",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/operator.py",
+      "sha256": "b2af20f67667203c1730e686cc5d0427becc94db4c97f1d3efe3ed2158473f6a",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/os.py",
+      "sha256": "54c43a1fc69c979c70d8f7d097174cee163bfe59937723ee353043dd4a0211e1",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/posixpath.py",
+      "sha256": "03825681086638649a43480954f7f6a16b4da3bd41ece956864ae96e4f795cd9",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/pathlib.py",
+      "sha256": "10ba48ae8063cfe7589436041d0d4628c05f427c7709cf8e75e486f8930cc32c",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/platform.py",
+      "sha256": "f5ff83f15c841792be42709a6710dc8d7a9f72791c1ae4cad719b1fb0abe0a05",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/re/__init__.py",
+      "sha256": "8ff3c37c63b917fcf8dc8d50993a502292a3dc159e41de4f4018c72a53d1c07b",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/re/_casefix.py",
+      "sha256": "1b12d9136f23db6c3f6f26053fefc15ca964b886838c7b9c1fabf8d2efc1e5c8",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/re/_compiler.py",
+      "sha256": "c75620761098a70ed75b9accef63ef2881d8abb6d4e5cbfd10074bd165eefe4d",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/re/_constants.py",
+      "sha256": "fa4fdb200f238f9e7817b63892b0d69833d8165134801e775e10cc113348a375",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/re/_parser.py",
+      "sha256": "a51a85b37cf3f44ba7ff25754da5f31306e4ccfa6eb3c017f9d37bdf4e770840",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/reprlib.py",
+      "sha256": "e177bc70da83a7fbcde6fd261dc15da34e8a20873b1cccd4f9a1f8f27cca3779",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/site.py",
+      "sha256": "b39ab288cc7a6d0cb3bb2655179221411340b22418e4efdee4c20175537a5fa2",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/stat.py",
+      "sha256": "052af0327eae6941b69b05c088b3e748f79995635f80ac4cc7125eb333eb4c77",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/types.py",
+      "sha256": "345474ef027a1273f353da9bdc1f7c18f65335e72e681bcc0376774cc51f2405",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/urllib/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/urllib/parse.py",
+      "sha256": "e6af7f475262f1de335bb2e41e26adb94d6103977cf5fe1ddc430dc6a3b1623f",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/warnings.py",
+      "sha256": "6405e281882932205eae641b2d31fba7776f94517a206d289465a1caffbf310e",
+      "access": "runtime-import"
+    },
+    {
+      "logical_name": "common/lib/python3.12/zipimport.py",
+      "sha256": "a96f1d7a7b6aaf421a3cf382b94b1422f4f0ad452fdd0bb61d635b560d7a4e91",
+      "access": "runtime-import"
+    }
+  ],
+  "commands": [
+    {
+      "tool_call": 1,
+      "command": "cat runs/D04/EXECUTOR.md, execution.template.json, input/TASK.md and six specified guidance files (absolute allowed paths)",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 2,
+      "command": "rg --files WORKSPACE INPUT_DIR PRIOR_INPUT_DIR",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 3,
+      "command": "cat allowed prior code, handoff, report, RUN, model, results, verification; new input manifest and three source documents; prior TASK.md",
+      "exit_code": 0,
+      "note": "Tool presentation truncated aggregate text; code/task/source contents available; full prior report read again in call 4."
+    },
+    {
+      "tool_call": 4,
+      "command": "cat WORKSPACE/RUN.md WORKSPACE/report.md WORKSPACE/reproduction_check.json WORKSPACE/artifact_manifest.json",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 5,
+      "command": "write update2012.py; EVAL_PYTHON -I -B - (archive seven prior delivery files and verify 24 original manifest hashes)",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 5,
+      "command": "EVAL_PYTHON -I -B WORKSPACE/update2012.py --input-dir INPUT_DIR --prior-input PRIOR_INPUT_DIR --model WORKSPACE/results/model.json --prior-results WORKSPACE/results/results.json --original-code WORKSPACE/analyze.py --output-dir WORKSPACE/results_2012",
+      "exit_code": 0,
+      "first_scientific_run": true
+    },
+    {
+      "tool_call": 6,
+      "command": "write verify2012.py; EVAL_PYTHON -I -B WORKSPACE/verify2012.py --output-dir WORKSPACE/results_2012 --model WORKSPACE/results/model.json",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 6,
+      "command": "EVAL_PYTHON -I -B WORKSPACE/update2012.py --input-dir INPUT_DIR --prior-input PRIOR_INPUT_DIR --model WORKSPACE/results/model.json --prior-results WORKSPACE/results/results.json --original-code WORKSPACE/analyze.py --output-dir WORKSPACE/reproduction_2012 > WORKSPACE/reproduction_2012.log",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 6,
+      "command": "EVAL_PYTHON -I -B - (compare nine scientific output hashes; print incomplete-date audit)",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 7,
+      "command": "write write_stage2.py; EVAL_PYTHON -I -B WORKSPACE/write_stage2.py",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 8,
+      "command": "write finalize_stage2.py; EVAL_PYTHON -I -B WORKSPACE/finalize_stage2.py",
+      "exit_code": 0
+    },
+    {
+      "tool_call": 9,
+      "command": "EVAL_PYTHON -I -B - (final readback: requested fields, output files, source/model/code hashes, report limit and execution log; save final artifact manifest)",
+      "exit_code": 0,
+      "status": "executed"
+    }
+  ],
+  "duration_seconds": null,
+  "scope": "instruction-only; no OS audit",
+  "failure": null,
+  "duration_note": "Wall clock for whole agent turn unavailable; individual analysis elapsed_seconds recorded in results_2012/provenance.json.",
+  "analysis_configuration": {
+    "bootstrap_seed": 20261029,
+    "bootstrap_B": 2000,
+    "block_lengths_days": [
+      7,
+      28
+    ],
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "model_or_effort_override_used": false,
+    "fit_called": false
+  },
+  "publication_projection": {
+    "raw_execution_sha256": "61be5ff4df24d93ff4f3ce94b87c780df4812c45ec581ce0f39289c4a9f67d91",
+    "changes": [
+      "absolute paths mapped to logical locators"
+    ],
+    "scope": "Administrative labels/locators only; effective unknowns and scientific content retained."
+  }
+}

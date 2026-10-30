@@ -1,0 +1,23 @@
+{
+  "name": "P5-invalid-unpreserved-path",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P5/file-CAS/project/scripts/manage.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+    "restore-initial",
+    "AUDIT-MISSING",
+    "--expected-current",
+    "MISSING",
+    "--write"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"No preserved initial content for requested path\"}\n",
+  "project_identical_bytes_mtime_directory_mtime": true,
+  "changed_files": [],
+  "changed_directories": []
+}

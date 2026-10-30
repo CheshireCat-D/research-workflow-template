@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "trial_id": "t07",
+  "task_id": "Q37",
+  "arm": "baseline",
+  "freeze_sha256": "67574361112904429701845488db896e792b41a2849c5c86d8e8a441af6fa475",
+  "task_sha256": "997698cfd2edaf430c25b5e987982ef81bfb6075db3ba3cf6d542016cc863025",
+  "report": {
+    "path": "runs/t07/report.md",
+    "sha256": "b382340e0a114cc93369f09498baca24b0a271a40ef757ccc6b1f9faae915f5a"
+  },
+  "execution": {
+    "path": "runs/t07/execution.json",
+    "sha256": "6f0259c179caf1a2a9171832b6a540053fa9b9f1096da430347c560d3893f7bc"
+  },
+  "blind": {
+    "submission_id": "B1a6373",
+    "arm_revealed_to_judge": false,
+    "adjudication": {
+      "path": "adjudications/B1a6373.json",
+      "sha256": "5d9b4a4127b14f34e080667a536734ce727fcb587446a82fbe0c9ff34293ba78"
+    }
+  }
+}

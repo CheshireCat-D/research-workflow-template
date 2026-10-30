@@ -1,0 +1,45 @@
+{
+  "performer": "assistant agent plus local deterministic Python checks; no human approval",
+  "primary_identity": {
+    "id": "D-SRC",
+    "title": "UCI Bike Sharing dataset",
+    "uri": "https://archive.ics.uci.edu/dataset/275/bike%2Bsharing%2Bdataset",
+    "version": "Official ZIP member hour.csv; yr=0 slice retained 2026-10-29",
+    "doi": "https://doi.org/10.24432/C5W894",
+    "license": "CC-BY-4.0",
+    "local_path": "data/hour_2011.csv",
+    "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+    "rows": 8645,
+    "original_hour_csv_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+    "slice_origin": "Exact unchanged 2011 rows of official hour.csv, previously independently audited."
+  },
+  "remote_identity": {
+    "id": "D-REMOTE",
+    "title": "Original Bike Sharing research article DOI identity",
+    "uri": "https://doi.org/10.1007/s13748-013-0040-3",
+    "version": "DOI identity only; no article copy supplied",
+    "local_copy_supplied": false,
+    "access": "metadata-only",
+    "tracking_limit": "No local article content binding; no current remote-content check."
+  },
+  "actual_read_scope": "Full supplied 2011 CSV parsed (8645 rows); supplied frozen model/code/parameter/result/table/summary/source note read. Original full hour.csv, official ZIP, website and research article not supplied or inspected.",
+  "checks": {
+    "supplied_manifest_all_match": true,
+    "local_2011_row_count": 8645,
+    "local_year_values": [
+      "0"
+    ],
+    "date_min": "2011-01-01",
+    "date_max": "2011-12-31",
+    "unique_date_hour_count": 8645,
+    "frozen_model_train_before": "2011-10-01"
+  },
+  "source_note_limits": "Source note says full CSV has 17379 rows while web metadata says 17389. Both counts are supplied provenance, not freshly verified. Do not alter observations or claim a remote-content check.",
+  "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.",
+  "not_checked": [
+    "Full remote article content",
+    "Original full CSV byte hash against remote",
+    "Independent re-creation of fitted coefficients",
+    "Human expert approval"
+  ]
+}

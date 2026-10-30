@@ -1,0 +1,118 @@
+{
+  "reads": [
+    {
+      "logical_name": "common/EXECUTOR.md",
+      "sha256": "316392fda85274a6b9a3ac7150125ef140d35d96edde46759348ef82020239fb"
+    },
+    {
+      "logical_name": "common/execution.template.json",
+      "sha256": "4202f4e551078d2e12ccd1e271ddb0eaba5bac56eb2cccc204cacf1e9b66330e"
+    },
+    {
+      "logical_name": "input/data-b/TASK.md",
+      "sha256": "adada7990891049377599ad4f4234f24f881dd4429fa8f7854ebc42337f953be"
+    },
+    {
+      "logical_name": "input/data-b/INPUT_MANIFEST.json",
+      "sha256": "11b8827f74fc67af3b0e85c06a5e65b24d67ebfbacd7f93b66d3e7c4e24908f7"
+    },
+    {
+      "logical_name": "input/data-b/SOURCES.md",
+      "sha256": "647a33e2683dbc60dfcbcf2e2873185aea94f7bfee49d6a3e3b3eacd6d85a786"
+    },
+    {
+      "logical_name": "input/data-b/ORIGINAL_README.txt",
+      "sha256": "b92c8628622948bf0828c43a1b315d1517c3d7fd63654730d0dea379b8e88175"
+    },
+    {
+      "logical_name": "input/data-b/UCI_PAGE_EXCERPT.txt",
+      "sha256": "06797117bf42c99729802c59237e8884610e8a7a9ad3e256ca6b0a7f5dff7115"
+    },
+    {
+      "logical_name": "input/data-b/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115"
+    },
+    {
+      "logical_name": "input/data-b/data/day_2011.csv",
+      "sha256": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b"
+    },
+    {
+      "logical_name": "input/data-b/data/hour_2012.csv",
+      "sha256": "d73ae7f2aba616d775b5bccb3540910a9de49fe88e7f5926f7bf0a3fe840602d"
+    },
+    {
+      "logical_name": "input/data-b/data/day_2012.csv",
+      "sha256": "75c2dd61bc5f8a3cd6ae5c787c74c0fbc1547201d47c5cba878d29f3083f09b6"
+    },
+    {
+      "logical_name": "prior-input/data-a/TASK.md",
+      "sha256": "d27a3abf88230bc2b78833d573da380ba6260f83f6dbb077f26fa171e2042ceb"
+    },
+    {
+      "logical_name": "guidance/scikit-learn/SKILL.md",
+      "sha256": "a1765797d072ab40094522abe68fb04505d0881f66b7dfceeb8582422dbe488d"
+    },
+    {
+      "logical_name": "guidance/scikit-learn/references/model_evaluation.md",
+      "sha256": "e6f581c0ce2abffaac2f0bafc1a7bfbe86ec18f8969c6e9b91cc732a12a5fea5"
+    },
+    {
+      "logical_name": "workspace/analyze.py",
+      "sha256": "ddcfbed9e5fbb64fd336e2df20f04d1550dad77a2ae30bba2634a415d3b16d49"
+    },
+    {
+      "logical_name": "workspace/report.md",
+      "sha256": "37f9bab62244549f2898aad4d2612bb762bee63f8b94b5960a6e8e14ba0223a6"
+    },
+    {
+      "logical_name": "workspace/handoff.md",
+      "sha256": "0c3fb010d95a1e8a028a8b8b49f4d93be7c188ea00152e9fc382894fa43bf521"
+    },
+    {
+      "logical_name": "workspace/RUN.md",
+      "sha256": "2633851f70f5e5600727f658e7d42c6f8bafbaa46d034814fc95fac874b7247d"
+    },
+    {
+      "logical_name": "workspace/execution.json",
+      "sha256": "a507228e0f8a97c9c89d535ffd759f4c8f77972884e58d9cb2bb543bd6ca81d3"
+    },
+    {
+      "logical_name": "workspace/verification.json",
+      "sha256": "db716b852f06f5c94f0d051505944066c8fda0fecc1229de4ece7324ae50c070"
+    },
+    {
+      "logical_name": "workspace/artifacts.sha256",
+      "sha256": "e87eb7683d7d95d0559fe68e9893df737528c5c4b73258afe0999bafccbb36da"
+    },
+    {
+      "logical_name": "workspace/results/model.json",
+      "sha256": "dba591a44fff2d14514b4b38d00c8985e93f41cf2b1ab684a6abd2f2620d078d"
+    },
+    {
+      "logical_name": "workspace/results/results.json",
+      "sha256": "f34e9189fa3c1bd2f2aa0fa070f295f62a6635656b2077b2fc4aa7e13b3a79f2"
+    },
+    {
+      "logical_name": "workspace/results/runtime.json",
+      "sha256": "9043288a4053e2e4bd0ef58a0c901fd7b83a9f81a4769acf4338157b1ab4c0bc"
+    },
+    {
+      "logical_name": "workspace/results/predictions.csv",
+      "sha256": "fdf3fda08ca4adec36ff62fd0b2850b24d51e9287b5a5ef110ca64f70e0d143b"
+    },
+    {
+      "logical_name": "workspace/results/daily_errors.csv",
+      "sha256": "d806c1a00dd81db64f3a5cdc6258b12c9304ac27f9ba6b9d89db6ab2345e0166"
+    },
+    {
+      "logical_name": "workspace/results/bootstrap_7d.csv",
+      "sha256": "086b5784566ece851db6e0e70533f8803581a5b7d0f2246c620132e329892845"
+    },
+    {
+      "logical_name": "workspace/results/bootstrap_28d.csv",
+      "sha256": "36acfac6117dbd44d32e0cc3546d57dd79d7cc43ce9e0b4d6eac1bae021ea595"
+    }
+  ],
+  "record_created_utc": "2026-10-29T23:58:41Z",
+  "note": "Original report, handoff, RUN and execution hashes refer to preserved stage1_snapshot copies."
+}

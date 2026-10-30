@@ -1,0 +1,78 @@
+{
+  "case_id": "T",
+  "authority": "research/state.json; notes, provenance and checkpoints do not override current configuration or records",
+  "metadata_revision": 1,
+  "active_constraints": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 1.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "将 alpha=0.05、rho=1 的四点边界表和摘要交作者讨论：先确认 intrinsic time V 的含义及过程是否满足给定 sub-Gaussian 控制，rho 在观察前固定；未经内容复核不投稿。",
+  "changed_or_missing_paths": [],
+  "activities": {
+    "T-SOURCE-CHECK": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "T-CALC": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "T-SYNTH": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    }
+  },
+  "checkpoint_freshness": {
+    "fresh": true,
+    "reasons": []
+  },
+  "scientific_scope": {
+    "formula": "sqrt((v+rho)*(log(1+v/rho)+2*log(1/alpha)))",
+    "l0": 1,
+    "process_conditions": "S and -S have the required sub-Gaussian exponential control for the same nonnegative intrinsic time V; alpha is the total two-sided error budget",
+    "rho_rule": "fixed before observation",
+    "assessment": "specified numerical values and summary checked; proof, simulation coverage, novelty and human approval not assessed",
+    "formal_verification": "not-started; not required in this numerical task"
+  },
+  "source_tracking_limits": {
+    "source_only": [
+      "T-REMOTE"
+    ],
+    "unregistered_file": [
+      "notes/unregistered-scratch.md"
+    ],
+    "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked."
+  },
+  "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.",
+  "resume_is_read_only": true,
+  "no_scientific_certification": true
+}

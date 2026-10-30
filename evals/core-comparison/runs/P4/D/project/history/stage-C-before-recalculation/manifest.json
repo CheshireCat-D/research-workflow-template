@@ -1,0 +1,45 @@
+{
+  "reason": "保存已获授权但尚未重算的漂移态；checkpoint current 仅保存当前身份，不能重新认证旧活动。",
+  "files": [
+    {
+      "path": "project.json",
+      "sha256": "4079b82d3854d0c0cee44e92fee4ac75a233e4ca97b2bc9d5a800c161e67ca45",
+      "bytes": 969
+    },
+    {
+      "path": "records/registry.json",
+      "sha256": "c5a0c0630c1f753b21c694a1dc7a685afec1830836c1c25004121cd0463f5c16",
+      "bytes": 28103
+    },
+    {
+      "path": "PROJECT.md",
+      "sha256": "50c3722b2886a9426239f5bc88979a79e922babe4caa5e7cc4321318554c98d0",
+      "bytes": 552
+    },
+    {
+      "path": "RECOVERY.md",
+      "sha256": "ff8f4ccd18db729b5d0e4f3b2d42b566a9e65a83fafe885c7859a4ab3656cddd",
+      "bytes": 2091
+    },
+    {
+      "path": "notes/parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171
+    },
+    {
+      "path": "results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    {
+      "path": "results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    {
+      "path": "results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280
+    }
+  ]
+}

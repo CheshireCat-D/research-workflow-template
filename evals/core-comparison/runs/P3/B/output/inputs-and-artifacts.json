@@ -1,0 +1,385 @@
+{
+  "case_id": "T",
+  "stage": "B",
+  "inputs": [
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "resume.py",
+      "absolute_path": "PROJECT_ROOT/resume.py",
+      "sha256": "9fc48a77f1f3c0cc6094e7205d6debfebe44e2ba1d7c46263c4b634214faba4e",
+      "bytes": 3168,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "PROJECT.md",
+      "absolute_path": "PROJECT_ROOT/PROJECT.md",
+      "sha256": "82756fffd7df67dabf0889f3a8e36996083d043cda78e8266415cb6d915cc6bc",
+      "bytes": 2205,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "update-state.py",
+      "absolute_path": "PROJECT_ROOT/update-state.py",
+      "sha256": "4fd4ab75762f99b3fb7be55f309c189af76afb93608568a7e7504af226832441",
+      "bytes": 2929,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "research/state.json",
+      "absolute_path": "PROJECT_ROOT/research/state.json",
+      "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+      "bytes": 16515,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": ".history/A-initial/state.json",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/state.json",
+      "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+      "bytes": 16515,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": ".history/A-initial/manifest.json",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/manifest.json",
+      "sha256": "c5154b88f6fb1ab3becff5fc8fd93849ab004db20110623b7ab7ea5828940667",
+      "bytes": 1008,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": ".history/A-initial/files/results/result.json",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/files/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": ".history/A-initial/files/results/table.csv",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/files/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": ".history/A-initial/files/results/summary.md",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/files/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": ".history/A-initial/files/notes/parameters.json",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/files/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "results/result.json",
+      "absolute_path": "PROJECT_ROOT/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "results/table.csv",
+      "absolute_path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "results/summary.md",
+      "absolute_path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "notes/parameters.json",
+      "absolute_path": "PROJECT_ROOT/notes/parameters.json",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "notes/source-check.md",
+      "absolute_path": "PROJECT_ROOT/notes/source-check.md",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "notes/unregistered-scratch.md",
+      "absolute_path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "notes/rejected-parameters.json",
+      "absolute_path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "provenance/initial/MANIFEST.json",
+      "absolute_path": "PROJECT_ROOT/provenance/initial/MANIFEST.json",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "provenance/initial/BRIEF.md",
+      "absolute_path": "PROJECT_ROOT/provenance/initial/BRIEF.md",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "provenance/initial/source-identities.json",
+      "absolute_path": "PROJECT_ROOT/provenance/initial/source-identities.json",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "provenance/initial/obligations.json",
+      "absolute_path": "PROJECT_ROOT/provenance/initial/obligations.json",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "provenance/initial/constraints.json",
+      "absolute_path": "PROJECT_ROOT/provenance/initial/constraints.json",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "provenance/stage-A/STAGE-A.md",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-A/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "provenance/stage-A/RECORDING.md",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-A/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "provenance/stage-A/PROTOCOL.md",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-A/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "scripts/compute.py",
+      "absolute_path": "PROJECT_ROOT/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "sources/howard2021-arxiv-v9.pdf",
+      "absolute_path": "PROJECT_ROOT/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "validation/stage-A.json",
+      "absolute_path": "PROJECT_ROOT/validation/stage-A.json",
+      "sha256": "339e302cf75cbd5ac43e0380f79ceada6dc0c2abe9c25359be6996961c526b8e",
+      "bytes": 5003,
+      "scope": "content inspected and whole bytes hashed"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "validation/stage-A-normal/result.json",
+      "absolute_path": "PROJECT_ROOT/validation/stage-A-normal/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "PROJECT_ROOT",
+      "relative_path": "validation/stage-A-normal/table.csv",
+      "absolute_path": "PROJECT_ROOT/validation/stage-A-normal/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "scope": "whole-byte hash only; contents not semantically inspected"
+    },
+    {
+      "base": "STAGE_ROOT",
+      "relative_path": "REQUEST.md",
+      "absolute_path": "STUDY_ROOT/runs/P3/B/REQUEST.md",
+      "sha256": "73495141f5c6e9ab40d558c9ed418575d94b3ec64c6839596d712ebfd5e9e03a",
+      "bytes": 2370,
+      "scope": "instructions"
+    },
+    {
+      "base": "STAGE_ROOT",
+      "relative_path": "input/PROTOCOL.md",
+      "absolute_path": "INPUT_DIR/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "scope": "instructions"
+    },
+    {
+      "base": "STAGE_ROOT",
+      "relative_path": "input/RECORDING.md",
+      "absolute_path": "INPUT_DIR/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "scope": "instructions"
+    },
+    {
+      "base": "STAGE_ROOT",
+      "relative_path": "input/STAGE-B.md",
+      "absolute_path": "INPUT_DIR/STAGE-B.md",
+      "sha256": "03b613592f1272691a11d47f5f0cb1f69a39b34801448a46b7d65b7cb482294b",
+      "bytes": 746,
+      "scope": "instructions"
+    },
+    {
+      "base": "GUIDANCE_ROOT",
+      "relative_path": "skills/rw-workflow/SKILL.md",
+      "absolute_path": "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "bytes": 4540,
+      "scope": "guidance only; no engine source accessed"
+    },
+    {
+      "base": "GUIDANCE_ROOT",
+      "relative_path": "core/skill-bridge.md",
+      "absolute_path": "TOOLKIT_ROOT/core/skill-bridge.md",
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "bytes": 7641,
+      "scope": "guidance only; no engine source accessed"
+    },
+    {
+      "base": "GUIDANCE_ROOT",
+      "relative_path": "core/protocol.md",
+      "absolute_path": "TOOLKIT_ROOT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "bytes": 3841,
+      "scope": "guidance only; no engine source accessed"
+    }
+  ],
+  "outputs": [
+    {
+      "base": "OUTPUT_DIR",
+      "relative_path": "execution.json",
+      "sha256": "541b44e7203dde4e985bb579da16f9b92d45203d268938fceae3aceafd62ce8e",
+      "bytes": 20468
+    },
+    {
+      "base": "OUTPUT_DIR",
+      "relative_path": "finalize.py",
+      "sha256": "f2d5e7fc25db18de0267b8a837d2069ab5152d436d3c45959e8a0e243207711b",
+      "bytes": 18154
+    },
+    {
+      "base": "OUTPUT_DIR",
+      "relative_path": "project-after.json",
+      "sha256": "f1b90f589bfaa9f1755cdb93db3b6048d705df1a610db40829f0bc6fe7fd3b86",
+      "bytes": 7638
+    },
+    {
+      "base": "OUTPUT_DIR",
+      "relative_path": "project-before.json",
+      "sha256": "f1b90f589bfaa9f1755cdb93db3b6048d705df1a610db40829f0bc6fe7fd3b86",
+      "bytes": 7638
+    },
+    {
+      "base": "OUTPUT_DIR",
+      "relative_path": "project-readonly-check.json",
+      "sha256": "13bbb009642145920855fb37ca949c9f49c89d60b095e4630208ae46fdeceb3f",
+      "bytes": 443
+    },
+    {
+      "base": "OUTPUT_DIR",
+      "relative_path": "report.md",
+      "sha256": "a0ccc617164e4c4306ff9bbddf36af95adde58d63eb9529ed968ddafdfebbae4",
+      "bytes": 5149
+    },
+    {
+      "base": "OUTPUT_DIR",
+      "relative_path": "resume-command.json",
+      "sha256": "959038931b54e127ca99a2df28eb44912fc56e205952b5f25179d3b7f560640e",
+      "bytes": 392
+    },
+    {
+      "base": "OUTPUT_DIR",
+      "relative_path": "resume.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "base": "OUTPUT_DIR",
+      "relative_path": "resume.stdout.json",
+      "sha256": "e6f6b41910009a5359960930cc80e227b93cefaaeb09fed3e531125fd5b0cecf",
+      "bytes": 4036
+    },
+    {
+      "base": "OUTPUT_DIR",
+      "relative_path": "state-answer.json",
+      "sha256": "614cb7e6b23f0e23ed9dca85d5e05370380aa2c3a5958f859c40c1558b1f2c43",
+      "bytes": 8202
+    }
+  ],
+  "self_hash_excluded": "inputs-and-artifacts.json is excluded from its own manifest to avoid recursive self-hashing.",
+  "redistribution": {
+    "original_source_pdf_copied_to_output": false,
+    "raw_source_policy": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.",
+    "outputs_contain": "Paths, identities, hashes, local audit results, bounded quoted working material and self-written audit script; no original PDF binary."
+  },
+  "source_tracking_limits": {
+    "source_only": [
+      "T-REMOTE"
+    ],
+    "unregistered_file": [
+      "notes/unregistered-scratch.md"
+    ],
+    "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked.",
+    "local_file_binding_count": 7,
+    "remote": "T-REMOTE has metadata-only source identity, no local copy or live remote verification.",
+    "scratch": "notes/unregistered-scratch.md was manually hashed/read here but is outside registered activity invalidation coverage.",
+    "primary_pdf_access_this_stage": "Full bytes hashed only; no PDF page, formula, proof or remote-content review.",
+    "historical_source_access": "State reports prior partial stream/source-card access; no independent full review claimed.",
+    "program_coverage": "resume.py checks seven registered local paths plus captured record/configuration digests and declared dependencies; it does not infer all unregistered files or unmodeled dependencies."
+  }
+}

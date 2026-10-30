@@ -1,0 +1,390 @@
+{
+  "chain_id": "P2",
+  "scope": "Independent engineering observations, no scientific score added. Exact per-chain extraction of the bound common audit.",
+  "source_record": {
+    "path": "audits/mechanical-audit/engineering.json",
+    "sha256": "795e030e5eb9530d2fcaa5518eb3ff896ebbb633eb3fb6e5903aee6133066608"
+  },
+  "engineering": {
+    "readonly_B": {
+      "name": "P2-B-readonly",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P2/readonly-B/project/management/status.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P2/readonly-B/project"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P2/readonly-B/project",
+      "exit_code": 3,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": []
+    },
+    "B_status": {
+      "case_id": "D",
+      "state_authority": "management/state.json with supplied governance; current bytes take precedence over old recorded completion",
+      "active_parameters_observed": {
+        "case_id": "D",
+        "evaluation_start": "2011-11-01",
+        "evaluation_end": "2011-12-31",
+        "model_policy": "frozen-2011-Jan-Sep",
+        "metric_weighting": "observed-hour"
+      },
+      "authoritative_constraints_at_checkpoint": {
+        "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+        "deadline": "2026-12-15",
+        "budget": "Offline Python standard library only; no new data collection or model refit",
+        "available_capabilities": [
+          "local Python standard library",
+          "fixed source cache",
+          "author-provided working notes"
+        ],
+        "venue": "Undecided; do not invent a target journal",
+        "language": "zh",
+        "current_scope": {
+          "case_id": "D",
+          "evaluation_start": "2011-10-01",
+          "evaluation_end": "2011-12-31",
+          "model_policy": "frozen-2011-Jan-Sep",
+          "metric_weighting": "observed-hour"
+        },
+        "unknowns": [
+          "No human expert approval has occurred",
+          "No external submission authorized"
+        ],
+        "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+        "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+      },
+      "changed_or_missing_paths": [
+        {
+          "path": "notes/parameters.json",
+          "state": "changed",
+          "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+          "current_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+          "current_bytes": 171
+        }
+      ],
+      "affected_activities": [
+        "D-CALC",
+        "D-SYNTH"
+      ],
+      "unaffected_activities": [
+        "D-SOURCE-CHECK"
+      ],
+      "checkpoint_freshness": "stale-requires-reconciliation",
+      "scientific_scope": "2011-10-01至2011-12-31、2203实际观察小时/92日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。",
+      "source_tracking_limits": {
+        "D-SRC": "已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。",
+        "D-REMOTE": "仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。",
+        "notes/unregistered-scratch.md": "已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。",
+        "source_card_discrepancy": "卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。",
+        "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+      },
+      "versions": [
+        {
+          "logical_path": "notes/parameters.json",
+          "snapshot_path": "management/versions/A-initial/notes/parameters.json",
+          "intact": true
+        },
+        {
+          "logical_path": "results/result.json",
+          "snapshot_path": "management/versions/A-initial/results/result.json",
+          "intact": true
+        },
+        {
+          "logical_path": "results/table.csv",
+          "snapshot_path": "management/versions/A-initial/results/table.csv",
+          "intact": true
+        },
+        {
+          "logical_path": "results/summary.md",
+          "snapshot_path": "management/versions/A-initial/results/summary.md",
+          "intact": true
+        }
+      ],
+      "next_action": "先按changed_or_missing_paths核对当前作者依据，保留旧内容；对受影响活动重新核验并更新权威状态。旧done/checkpoint不代表当前结果仍有效。",
+      "writes_project": false
+    },
+    "migration": {
+      "name": "P2-migration-readonly",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P2/迁移后 科研项目/management/status.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P2/迁移后 科研项目"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P2/迁移后 科研项目",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "old_copy_path": "STUDY_ROOT/mechanical-audit/P2/migration-origin/project",
+      "old_copy_unreachable": true,
+      "new_copy_path": "STUDY_ROOT/mechanical-audit/P2/迁移后 科研项目",
+      "empty_HOME_and_XDG_CACHE_HOME": true,
+      "os_access_enforcement": false,
+      "scope": "Own project entry executed from renamed copy with common interpreter. Actual old paths verified absent separately; public cache exclusion remains an instruction boundary, not syscall evidence."
+    },
+    "migrated_status": {
+      "case_id": "D",
+      "state_authority": "management/state.json with supplied governance; current bytes take precedence over old recorded completion",
+      "active_parameters_observed": {
+        "case_id": "D",
+        "evaluation_start": "2011-11-01",
+        "evaluation_end": "2011-12-31",
+        "model_policy": "frozen-2011-Jan-Sep",
+        "metric_weighting": "observed-hour"
+      },
+      "authoritative_constraints_at_checkpoint": {
+        "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+        "deadline": "2026-12-15",
+        "budget": "Offline Python standard library only; no new data collection or model refit",
+        "available_capabilities": [
+          "local Python standard library",
+          "fixed source cache",
+          "author-provided working notes"
+        ],
+        "venue": "Undecided; do not invent a target journal",
+        "language": "zh",
+        "current_scope": {
+          "case_id": "D",
+          "evaluation_start": "2011-11-01",
+          "evaluation_end": "2011-12-31",
+          "model_policy": "frozen-2011-Jan-Sep",
+          "metric_weighting": "observed-hour"
+        },
+        "unknowns": [
+          "No human expert approval has occurred",
+          "No external submission authorized"
+        ],
+        "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+        "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+      },
+      "changed_or_missing_paths": [],
+      "affected_activities": [],
+      "unaffected_activities": [
+        "D-CALC",
+        "D-SOURCE-CHECK",
+        "D-SYNTH"
+      ],
+      "checkpoint_freshness": "fresh-for-registered-local-files",
+      "scientific_scope": "2011-11-01至2011-12-31、1460实际观察小时/61日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。",
+      "source_tracking_limits": {
+        "D-SRC": "已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。",
+        "D-REMOTE": "仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。",
+        "notes/unregistered-scratch.md": "已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。",
+        "source_card_discrepancy": "卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。",
+        "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+      },
+      "versions": [
+        {
+          "logical_path": "notes/parameters.json",
+          "snapshot_path": "management/versions/A-initial/notes/parameters.json",
+          "intact": true
+        },
+        {
+          "logical_path": "results/result.json",
+          "snapshot_path": "management/versions/A-initial/results/result.json",
+          "intact": true
+        },
+        {
+          "logical_path": "results/table.csv",
+          "snapshot_path": "management/versions/A-initial/results/table.csv",
+          "intact": true
+        },
+        {
+          "logical_path": "results/summary.md",
+          "snapshot_path": "management/versions/A-initial/results/summary.md",
+          "intact": true
+        },
+        {
+          "logical_path": "notes/parameters.json",
+          "snapshot_path": "management/checkpoints/C-final/tree/notes/parameters.json",
+          "intact": true
+        },
+        {
+          "logical_path": "results/result.json",
+          "snapshot_path": "management/checkpoints/C-final/tree/results/result.json",
+          "intact": true
+        },
+        {
+          "logical_path": "results/table.csv",
+          "snapshot_path": "management/checkpoints/C-final/tree/results/table.csv",
+          "intact": true
+        },
+        {
+          "logical_path": "results/summary.md",
+          "snapshot_path": "management/checkpoints/C-final/tree/results/summary.md",
+          "intact": true
+        },
+        {
+          "logical_path": "management/constraints.json",
+          "snapshot_path": "management/checkpoints/C-final/tree/management/constraints.json",
+          "intact": true
+        }
+      ],
+      "next_action": "将2011年11月至12月的冻结模型指标（1460观察小时、61日）与更新摘要交作者内容复核；保留原Q4结果作历史记录。尚无内容认可或投稿授权；继续前运行management/status.py和management/verify_current.py，不重训、不外推2012。",
+      "writes_project": false
+    },
+    "delivered_independent_numeric_verifier": {
+      "name": "P2-numeric-verifier",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "STUDY_ROOT/mechanical-audit/P2/迁移后 科研项目/management/verify_current.py",
+        "--root",
+        "STUDY_ROOT/mechanical-audit/P2/迁移后 科研项目"
+      ],
+      "cwd": "STUDY_ROOT/mechanical-audit/P2/迁移后 科研项目",
+      "exit_code": 0,
+      "project_identical_bytes_mtime_directory_mtime": true,
+      "changed_files": [],
+      "changed_directories": [],
+      "result": {
+        "passed": true,
+        "errors": [],
+        "independent_metrics": {
+          "observed_hours": 1460,
+          "observed_days": 61,
+          "C0_MAE": 56.64127430990882,
+          "C0_RMSE": 81.70038360631688,
+          "C0_bias_prediction_minus_actual": 13.433264561295244,
+          "C1_MAE": 41.252622564018566,
+          "C1_RMSE": 64.15826564867794,
+          "C1_bias_prediction_minus_actual": 13.347664992606457,
+          "MAE_reduction_fraction": 0.2716861852664598
+        },
+        "table_agrees": true,
+        "activities_checked": [
+          "D-SOURCE-CHECK",
+          "D-CALC",
+          "D-SYNTH"
+        ],
+        "writes_project": false,
+        "interpretation": "Numeric and local binding verification only; author content review remains pending."
+      }
+    },
+    "stale_write": {
+      "status": "not-provided/not-comparable",
+      "reason": "Delivered status/verify_current are read-only; revisions done by explicit file workflow. No automated update API."
+    },
+    "dangling_reference": {
+      "status": "not-provided/not-comparable",
+      "reason": "No record-write API."
+    },
+    "batch_invalid_later_reference": {
+      "status": "not-provided/not-comparable",
+      "reason": "No batch-write API."
+    },
+    "dirty_checkpoint": {
+      "automatic_checkpoint_interface": false,
+      "adapter": "Replay preserved dirty archive plus exact saved checkpoint; P5 checkpoint fingerprints refreshed by audit adapter to reproduce saved intermediate stdout. Activity completion bindings not changed. P2 has separate checkpoint tree but no auto checkpoint API.",
+      "subsequent_status": {
+        "name": "P2-dirty-checkpoint-replay",
+        "argv": [
+          "EVAL_PYTHON",
+          "-I",
+          "-B",
+          "STUDY_ROOT/mechanical-audit/P2/dirty-replay/project/management/status.py",
+          "--root",
+          "STUDY_ROOT/mechanical-audit/P2/dirty-replay/project"
+        ],
+        "cwd": "STUDY_ROOT/mechanical-audit/P2/dirty-replay/project",
+        "exit_code": 3,
+        "project_identical_bytes_mtime_directory_mtime": true,
+        "changed_files": [],
+        "changed_directories": []
+      },
+      "result": {
+        "case_id": "D",
+        "state_authority": "management/state.json with supplied governance; current bytes take precedence over old recorded completion",
+        "active_parameters_observed": {
+          "case_id": "D",
+          "evaluation_start": "2011-11-01",
+          "evaluation_end": "2011-12-31",
+          "model_policy": "frozen-2011-Jan-Sep",
+          "metric_weighting": "observed-hour"
+        },
+        "authoritative_constraints_at_checkpoint": {
+          "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+          "deadline": "2026-12-15",
+          "budget": "Offline Python standard library only; no new data collection or model refit",
+          "available_capabilities": [
+            "local Python standard library",
+            "fixed source cache",
+            "author-provided working notes"
+          ],
+          "venue": "Undecided; do not invent a target journal",
+          "language": "zh",
+          "current_scope": {
+            "case_id": "D",
+            "evaluation_start": "2011-10-01",
+            "evaluation_end": "2011-12-31",
+            "model_policy": "frozen-2011-Jan-Sep",
+            "metric_weighting": "observed-hour"
+          },
+          "unknowns": [
+            "No human expert approval has occurred",
+            "No external submission authorized"
+          ],
+          "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+          "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+        },
+        "changed_or_missing_paths": [
+          {
+            "path": "notes/parameters.json",
+            "state": "changed",
+            "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+            "current_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+            "current_bytes": 171
+          }
+        ],
+        "affected_activities": [
+          "D-CALC",
+          "D-SYNTH"
+        ],
+        "unaffected_activities": [
+          "D-SOURCE-CHECK"
+        ],
+        "checkpoint_freshness": "stale-requires-reconciliation",
+        "scientific_scope": "2011-10-01至2011-12-31、2203实际观察小时/92日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。",
+        "source_tracking_limits": {
+          "D-SRC": "已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。",
+          "D-REMOTE": "仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。",
+          "notes/unregistered-scratch.md": "已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。",
+          "source_card_discrepancy": "卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。",
+          "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+        },
+        "versions": [
+          {
+            "logical_path": "notes/parameters.json",
+            "snapshot_path": "management/versions/A-initial/notes/parameters.json",
+            "intact": true
+          },
+          {
+            "logical_path": "results/result.json",
+            "snapshot_path": "management/versions/A-initial/results/result.json",
+            "intact": true
+          },
+          {
+            "logical_path": "results/table.csv",
+            "snapshot_path": "management/versions/A-initial/results/table.csv",
+            "intact": true
+          },
+          {
+            "logical_path": "results/summary.md",
+            "snapshot_path": "management/versions/A-initial/results/summary.md",
+            "intact": true
+          }
+        ],
+        "next_action": "先按changed_or_missing_paths核对当前作者依据，保留旧内容；对受影响活动重新核验并更新权威状态。旧done/checkpoint不代表当前结果仍有效。",
+        "writes_project": false
+      }
+    }
+  }
+}

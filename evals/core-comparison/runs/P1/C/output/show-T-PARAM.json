@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "evidence",
+    "--id",
+    "T-PARAM"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 27,\n  \"kind\": \"evidence\",\n  \"id\": \"T-PARAM\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"notes/parameters.json\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"description\": \"Current alpha=0.05 rho=1 and intrinsic time grid [0,1,10,100]; rho fixed before observation.\",\n      \"id\": \"T-PARAM\",\n      \"location\": {\n        \"kind\": \"local\",\n        \"path\": \"notes/parameters.json\"\n      },\n      \"provenance\": \"Benchmark author initial working parameters, separate from original paper.\",\n      \"type\": \"author-parameters\"\n    },\n    \"registered_at\": \"2026-10-30T01:03:18.399436+00:00\",\n    \"version\": 1\n  }\n}\n",
+  "stderr": ""
+}

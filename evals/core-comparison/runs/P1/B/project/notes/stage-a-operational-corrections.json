@@ -1,0 +1,29 @@
+{
+  "controlled_invalid_input": {
+    "command_label": "controlled-invalid-alpha",
+    "exit_code": 2,
+    "expected": true,
+    "message": "Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times",
+    "scientific_scope": "Intentional input rejection only; canonical four files unchanged."
+  },
+  "unexpected_runtime_path_error": {
+    "command_label": "check-portable-runtime",
+    "exit_code": 2,
+    "outer_script": "run_stage_a.py",
+    "outer_exit_code": 1,
+    "message": "Project/_rw-runtime was absent; actual init installed .agents/skills/_rw-runtime.",
+    "remediation": "Retained old RECOVERY, corrected runtime paths, read artifact version, replaced using formal interface, successfully checked actual installed runtime."
+  },
+  "intermediate_checkpoint_review": {
+    "command_label": "recheck-after-runtime-path-correction",
+    "exit_code": 1,
+    "outer_script": "repair_and_finish.py",
+    "outer_exit_code": 1,
+    "finding": "checkpoint_stale: registered-records and local-files; all three research activities remained effectively done.",
+    "explanation": "Expected consequence of replacing RECOVERY artifact after the previous checkpoint; repair helper incorrectly required zero at this intermediate inspection.",
+    "remediation": "Reviewed actual findings and activity states, retained the result, then saved a new checkpoint after recording corrections."
+  },
+  "recording_correction": "Init actual cwd was stage A, not project: logger originally evaluated existence after init; uncorrected command log retained.",
+  "scientific_impact": "No original PDF, calculator, parameter, canonical JSON/table/summary or source card changed.",
+  "actor": "AI execution; no fabricated human review or formal proof."
+}

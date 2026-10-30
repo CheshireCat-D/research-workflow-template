@@ -1,0 +1,26 @@
+{
+  "name": "P6-batch-invalid-version",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P6/batch-invalid-version/project/scripts/guarded_state_update.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P6/batch-invalid-version/project",
+    "--candidate",
+    "STUDY_ROOT/mechanical-audit/P6/batch-invalid-version/P6-batch-invalid-version.json",
+    "--expected-version",
+    "3",
+    "--expected-sha256",
+    "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+    "--reason",
+    "independent audit probe"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P6/batch-invalid-version/project",
+  "exit_code": 2,
+  "stdout": "{\"updated\": false, \"error\": \"ValueError\", \"message\": \"Record version conflict: D-REL\"}\n",
+  "stderr": "",
+  "project_identical_bytes_mtime_directory_mtime": true,
+  "changed_files": [],
+  "changed_directories": []
+}

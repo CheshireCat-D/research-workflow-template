@@ -1,0 +1,19 @@
+{
+  "label": "rejected",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "PROJECT_ROOT/scripts/compute.py",
+    "--root",
+    "PROJECT_ROOT",
+    "--spec",
+    "PROJECT_ROOT/notes/rejected-parameters.json",
+    "--output",
+    "STUDY_ROOT/runs/P5/A/output/validation-rejected"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times\"}\n"
+}

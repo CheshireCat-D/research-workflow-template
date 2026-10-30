@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "submission_id": "Bd8970e",
+  "task_id": "Q24",
+  "report_sha256": "f029474d3c1ec50ed705ef72d1b82645a49f6f770f4473f616975907eb7e81b0",
+  "judge_context": "fresh single-report adjudication; inspected only task.md, report.md, reference.json and template.json in this submission directory; no arm map, execution log, other reports, memory or skills accessed",
+  "arm_visibility": "hidden-by-instruction",
+  "os_audited": false,
+  "scored": true,
+  "verdict": "unsupported",
+  "criteria": [
+    {
+      "id": "decision",
+      "score": 2,
+      "evidence": "报告首段：“主张不成立，稿件证明存在实质性错误。给定条件不能保证一致极限在0可微，也不能据此推出导数为0。”",
+      "rationale": "正确拒绝原主张，并明确给定条件既不能保证极限在0可微，也不能推出所称导数结论。"
+    },
+    {
+      "id": "failed_step",
+      "score": 2,
+      "evidence": "报告第二段：“固定 ε>0 后，N 随之固定；当 h→0 时，2ε/|h| 反而趋于无穷。”以及“证明没有控制一致逼近误差相对于 |h| 的大小”。",
+      "rationale": "准确定位最后的极限推断；固定正ε时误差上界随h趋零发散，另取ε会改变N及相应差商控制邻域，原证明没有所需的相对于|h|的控制。报告同时正确承认前面的三角不等式成立。"
+    },
+    {
+      "id": "counterexample",
+      "score": 2,
+      "evidence": "报告反例段：“对整数 n≥1，令 f_n(x)=√(x²+n⁻²)，−1≤x≤1。”并给出 f_n′(x)=x/√(x²+n⁻²)。",
+      "rationale": "这是在整个指定闭区间定义的具体实函数列；根号内严格为正，每项在开区间可微。虽然与参考见证相差常数1/n，该路线同样有效。"
+    },
+    {
+      "id": "assumptions",
+      "score": 2,
+      "evidence": "报告反例段：“根号内严格为正，故 f_n 在闭区间上连续、在开区间上可微”，f_n′(0)=0；随后给出 0≤f_n(x)−|x|=n⁻²/(√(x²+n⁻²)+|x|)≤1/n，并指出x=0取等号。",
+      "rationale": "连续性和可微性说明正确，导数公式核实了原点导数为零。分母至少为1/n，因此统一误差界1/n成立；原点取等号也成立，足以证明在整个[-1,1]上一致收敛到|x|。全部假设均已实际核对。"
+    },
+    {
+      "id": "contradiction",
+      "score": 2,
+      "evidence": "报告差商段：(f(h)−f(0))/h=|h|/h，h>0时为1、h<0时为−1；接着写“左右极限不同，故 f 在0不可微，直接反驳了主要结论”。",
+      "rationale": "正确计算出极限函数在原点的左右差商极限分别为1和−1，由导数定义可知原点不可微，直接违反原结论。"
+    }
+  ],
+  "invented_major_objections": [],
+  "notes": "总分10/10。按题文独立核实，报告的函数列、统一误差界及左右差商均成立；未发现参考错误。更正建议和可选表述建议已与实质性错误区分，未捏造主要异议。"
+}

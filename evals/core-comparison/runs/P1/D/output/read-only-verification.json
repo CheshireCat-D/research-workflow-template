@@ -1,0 +1,68 @@
+{
+  "parameters_equal_approved": true,
+  "result_parameters_match": true,
+  "result_grid_matches": true,
+  "json_csv_existing_values_match": true,
+  "result_input_hashes_match": true,
+  "project_bytes_mtimes_unchanged": true,
+  "research_recomputed": false,
+  "project_snapshot_changes": [],
+  "preserved_history_manifest_checks": [
+    {
+      "path": "history/stage-a-initial/notes/parameters.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "history/stage-a-initial/results/result.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "history/stage-a-initial/results/table.csv",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "history/stage-a-initial/results/summary.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "history/stage-c-before-recompute/project.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "history/stage-c-before-recompute/RECOVERY.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "history/stage-c-before-recompute/records/registry.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "history/stage-c-before-recompute/results/result.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "history/stage-c-before-recompute/results/table.csv",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "history/stage-c-before-recompute/results/summary.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "history/stage-c-before-recompute/notes/parameters.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    }
+  ],
+  "preserved_history_complete": true
+}

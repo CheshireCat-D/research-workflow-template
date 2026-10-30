@@ -1,0 +1,23 @@
+{
+  "name": "P5-stale-file-write",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P5/file-CAS/project/scripts/manage.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+    "restore-initial",
+    "notes/parameters.json",
+    "--expected-current",
+    "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+    "--write"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"Conflict: current hash differs from explicitly expected current\"}\n",
+  "project_identical_bytes_mtime_directory_mtime": true,
+  "changed_files": [],
+  "changed_directories": []
+}

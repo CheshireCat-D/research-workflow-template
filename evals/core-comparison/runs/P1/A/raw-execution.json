@@ -1,0 +1,1986 @@
+{
+  "case_id": "T",
+  "stage": "A",
+  "commands": [
+    {
+      "tool_call": 1,
+      "argv": [
+        "cat",
+        "STUDY_ROOT/runs/P1/A/REQUEST.md"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "tool_call": 2,
+      "argv": [
+        "cat",
+        "input/PROTOCOL.md",
+        "input/RECORDING.md",
+        "input/STAGE-A.md",
+        "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md",
+        "TOOLKIT_ROOT/core/skill-bridge.md",
+        "TOOLKIT_ROOT/core/protocol.md"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "tool_call": 2,
+      "argv": [
+        "rg",
+        "--files",
+        "input",
+        "TOOLKIT_ROOT/core"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "tool_call": 3,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-c",
+        "import pathlib; roots=[pathlib.Path(\"input/initial\")]; files=[p for root in roots for p in root.rglob(\"*\") if p.is_file() and p.suffix != \".pdf\"]; files += [pathlib.Path(\"TOOLKIT_ROOT/core/schemas\") / (n+\".schema.json\") for n in [\"source\",\"statement\",\"evidence\",\"artifact\",\"activity\",\"decision\",\"relation\"]]; [(print(\"FILE: \"+str(p)),print(p.read_text())) for p in files]"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "tool_call": 4,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-c",
+        "import subprocess,json,pathlib,hashlib,re; t=pathlib.Path(\"TOOLKIT_ROOT\"); p=\"EVAL_PYTHON\"; args=[[p,\"-I\",\"-B\",str(t/\"tools/research.py\"),x,\"--help\"] for x in [\"init\",\"configure\",\"register-batch\",\"checkpoint\"]]; [(print(json.dumps({\"argv\":a,\"cwd\":str(pathlib.Path.cwd()),\"exit_code\":(r:=subprocess.run(a,capture_output=True,text=True)).returncode})),print(r.stdout),print(r.stderr)) for a in args]; b=pathlib.Path(\"input/initial/project_payload/sources/howard2021-arxiv-v9.pdf\").read_bytes(); print(json.dumps({\"pdf_sha256\":hashlib.sha256(b).hexdigest(),\"bytes\":len(b),\"header\":b[:20].decode(\"latin1\"),\"metadata_raw\":[v.decode(\"latin1\") for v in re.findall(rb\"/(?:Title|Author|CreationDate|Subject)\\s*(?:\\([^\\n]*?\\)|<[^>]*>)\",b)]},ensure_ascii=False))"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "tool_call": 5,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-c",
+        "import pathlib; t=pathlib.Path(\"TOOLKIT_ROOT\"); files=[t/\"tools/research.py\",t/\"tools/connect_skills.py\",t/\"skills/rw-validation/SKILL.md\"]; [(print(\"FILE: \"+str(p)),print(p.read_text())) for p in files]"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "tool_call": 6,
+      "argv": [
+        "cat",
+        "TOOLKIT_ROOT/profiles/methods/computational.md"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "tool_call": 7,
+      "argv": [
+        "rg",
+        "-n",
+        "-A",
+        "65",
+        "-B",
+        "8",
+        "register-batch|def register_batch|expected_version|batch",
+        "TOOLKIT_ROOT/core/cli.py",
+        "TOOLKIT_ROOT/core/project.py"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "tool_call": 10,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-c",
+        "import json,pathlib; o=pathlib.Path(\"OUTPUT_DIR\"); p=pathlib.Path(\"PROJECT_ROOT\"); c=json.loads((o/\"actual-commands.json\").read_text()); print(c[0][\"stdout\"]); print((o/\"final-recovery.json\").read_text()); print(\"RUNTIME LOCATIONS\"); print(\"\\n\".join(str(x.relative_to(p)) for x in p.rglob(\"research.py\"))); print(\"\\n\".join(str(x.relative_to(p)) for x in p.rglob(\"connect_skills.py\")))"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "TOOLKIT_ROOT/tools/research.py",
+        "init",
+        "--help"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "TOOLKIT_ROOT/tools/research.py",
+        "configure",
+        "--help"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "TOOLKIT_ROOT/tools/research.py",
+        "register-batch",
+        "--help"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "TOOLKIT_ROOT/tools/research.py",
+        "checkpoint",
+        "--help"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "recorded_after_execution": true
+    },
+    {
+      "tool_call": 9,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/run_stage_a.py"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 1
+    },
+    {
+      "tool_call": 12,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/repair_and_finish.py"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 1
+    },
+    {
+      "tool_call": 15,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/finalize.py"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0
+    },
+    {
+      "label": "initialize-and-connect",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "TOOLKIT_ROOT/tools/research.py",
+        "init",
+        "--output",
+        "PROJECT_ROOT",
+        "--title",
+        "固定精度正态混合边界的可恢复数值核对",
+        "--interest",
+        "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+        "--language",
+        "zh",
+        "--connect-skills"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "stdout": "{\n  \"initialized\": true,\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 0,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"skill_connection\": {\n    \"passed\": true,\n    \"installed\": true,\n    \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n    \"target\": \".agents/skills\",\n    \"skills\": [\n      \"rw-workflow\",\n      \"rw-question\",\n      \"rw-literature\",\n      \"rw-innovation\",\n      \"rw-candidates\",\n      \"rw-validation\",\n      \"rw-writing\",\n      \"rw-review\",\n      \"rw-figures\"\n    ],\n    \"files\": 67,\n    \"payload_sha256\": \"c2dd5fa54cee747ff61cb597779320ca498a9cb145c8fce422735091cdc5fcc1\",\n    \"global_installation\": false,\n    \"project_records_modified\": false\n  },\n  \"passed\": true\n}\n",
+      "stderr": "",
+      "recording_correction": "Initial helper recomputed cwd after init created project; actual cwd argument was the stage directory. Original log retained separately."
+    },
+    {
+      "label": "persist-configuration",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "TOOLKIT_ROOT/tools/research.py",
+        "configure",
+        "--root",
+        "PROJECT_ROOT",
+        "--interest",
+        "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+        "--deadline",
+        "2026-12-15",
+        "--budget",
+        "Offline Python standard library only; no new data collection or model refit",
+        "--venue",
+        "Undecided; do not invent a target journal",
+        "--add-capability",
+        "local Python standard library",
+        "--add-capability",
+        "fixed source cache",
+        "--add-capability",
+        "author-provided working notes"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"configured\": true,\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": \"Undecided; do not invent a target journal\"\n    },\n    \"disciplines\": [],\n    \"entry_activity\": \"question\",\n    \"governance\": {\n      \"applicability\": \"unknown\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"methods\": [],\n    \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n    \"resources\": {\n      \"available_capabilities\": [\n        \"local Python standard library\",\n        \"fixed source cache\",\n        \"author-provided working notes\"\n      ],\n      \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n      \"deadline\": \"2026-12-15\"\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"固定精度正态混合边界的可恢复数值核对\",\n    \"workflow_mode\": \"light\"\n  },\n  \"config_sha256\": \"524d57b3666e1ec2ca0224b04c33fd4b8f116e8bec20adb9ddf37619f8b80e5d\",\n  \"registry_revision\": 0,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "valid-current-parameters",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--output",
+        "OUTPUT_DIR/validation-normal"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"result\": \"OUTPUT_DIR/validation-normal/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+      "stderr": ""
+    },
+    {
+      "label": "controlled-invalid-alpha",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--spec",
+        "PROJECT_ROOT/notes/rejected-parameters.json",
+        "--output",
+        "OUTPUT_DIR/validation-rejected"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times\"}\n"
+    },
+    {
+      "label": "register-logical-records-and-dependencies",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "TOOLKIT_ROOT/tools/research.py",
+        "register-batch",
+        "--root",
+        "PROJECT_ROOT",
+        "--file",
+        "OUTPUT_DIR/registration-batch.json"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"registered_count\": 22,\n  \"records\": [\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"T-SRC\",\n      \"version\": 1,\n      \"revision\": 1,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"T-REMOTE\",\n      \"version\": 1,\n      \"revision\": 2,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"T-RAW\",\n      \"version\": 1,\n      \"revision\": 3,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"T-PARAM\",\n      \"version\": 1,\n      \"revision\": 4,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"T-CLAIM\",\n      \"version\": 1,\n      \"revision\": 5,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"T-REL\",\n      \"version\": 1,\n      \"revision\": 6,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"decision\",\n      \"id\": \"T-CHOICE\",\n      \"version\": 1,\n      \"revision\": 7,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-CODE\",\n      \"version\": 1,\n      \"revision\": 8,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-RESULT\",\n      \"version\": 1,\n      \"revision\": 9,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-TABLE\",\n      \"version\": 1,\n      \"revision\": 10,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-SUMMARY\",\n      \"version\": 1,\n      \"revision\": 11,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-SOURCE-NOTE\",\n      \"version\": 1,\n      \"revision\": 12,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-A-VALIDATION\",\n      \"version\": 1,\n      \"revision\": 13,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-INITIAL-SNAPSHOT\",\n      \"version\": 1,\n      \"revision\": 14,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-INITIAL-1\",\n      \"version\": 1,\n      \"revision\": 15,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-INITIAL-2\",\n      \"version\": 1,\n      \"revision\": 16,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-INITIAL-3\",\n      \"version\": 1,\n      \"revision\": 17,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-INITIAL-4\",\n      \"version\": 1,\n      \"revision\": 18,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-RECOVERY\",\n      \"version\": 1,\n      \"revision\": 19,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"T-SOURCE-CHECK\",\n      \"version\": 1,\n      \"revision\": 20,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"T-CALC\",\n      \"version\": 1,\n      \"revision\": 21,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"T-SYNTH\",\n      \"version\": 1,\n      \"revision\": 22,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    }\n  ],\n  \"revision\": 22,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "check-before-checkpoint",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "TOOLKIT_ROOT/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 22,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 3,\n    \"artifacts\": 12,\n    \"decisions\": 1,\n    \"evidence\": 2,\n    \"method_bindings\": 0,\n    \"relations\": 1,\n    \"sources\": 2,\n    \"statements\": 1\n  },\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": \"Undecided; do not invent a target journal\"\n    },\n    \"disciplines\": [],\n    \"entry_activity\": \"question\",\n    \"governance\": {\n      \"applicability\": \"unknown\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"methods\": [],\n    \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n    \"resources\": {\n      \"available_capabilities\": [\n        \"local Python standard library\",\n        \"fixed source cache\",\n        \"author-provided working notes\"\n      ],\n      \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n      \"deadline\": \"2026-12-15\"\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"固定精度正态混合边界的可恢复数值核对\",\n    \"workflow_mode\": \"light\"\n  },\n  \"file_tracking\": {\n    \"local_files\": [\n      \"RECOVERY.md\",\n      \"history/stage-a-initial/manifest.json\",\n      \"history/stage-a-initial/notes/parameters.json\",\n      \"history/stage-a-initial/results/result.json\",\n      \"history/stage-a-initial/results/summary.md\",\n      \"history/stage-a-initial/results/table.csv\",\n      \"notes/parameters.json\",\n      \"notes/source-check.md\",\n      \"notes/stage-a-validation.json\",\n      \"results/result.json\",\n      \"results/summary.md\",\n      \"results/table.csv\",\n      \"scripts/compute.py\",\n      \"sources/howard2021-arxiv-v9.pdf\"\n    ],\n    \"local_file_count\": 14,\n    \"source_ids_without_local_evidence\": [\n      \"T-REMOTE\"\n    ]\n  },\n  \"activities\": [\n    {\n      \"id\": \"T-CALC\",\n      \"title\": \"Evaluate supplied calculator and verify current result and companion table\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SOURCE-CHECK\",\n      \"title\": \"Verify supplied fixed source identity and card scope\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SYNTH\",\n      \"title\": \"Review supplied summary within current claim and verified numeric result\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"Clarify the current question, scope and next evidence check.\"\n  },\n  \"checkpoint\": {\n    \"recorded\": false,\n    \"status\": \"not-recorded\",\n    \"changed\": []\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "save-concrete-checkpoint",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "TOOLKIT_ROOT/tools/research.py",
+        "checkpoint",
+        "--root",
+        "PROJECT_ROOT",
+        "--next-action",
+        "先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。",
+        "--activity",
+        "T-SYNTH",
+        "--note",
+        "Actual normal/controlled-invalid computations and bounded content checks performed; registration is not scientific certification."
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"checkpoint_saved\": true,\n  \"revision\": 23,\n  \"cursor\": {\n    \"activity_id\": \"T-SYNTH\",\n    \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\"\n  },\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "read-final-recovery-state",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "TOOLKIT_ROOT/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 23,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 3,\n    \"artifacts\": 12,\n    \"decisions\": 1,\n    \"evidence\": 2,\n    \"method_bindings\": 0,\n    \"relations\": 1,\n    \"sources\": 2,\n    \"statements\": 1\n  },\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": \"Undecided; do not invent a target journal\"\n    },\n    \"disciplines\": [],\n    \"entry_activity\": \"question\",\n    \"governance\": {\n      \"applicability\": \"unknown\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"methods\": [],\n    \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n    \"resources\": {\n      \"available_capabilities\": [\n        \"local Python standard library\",\n        \"fixed source cache\",\n        \"author-provided working notes\"\n      ],\n      \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n      \"deadline\": \"2026-12-15\"\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"固定精度正态混合边界的可恢复数值核对\",\n    \"workflow_mode\": \"light\"\n  },\n  \"file_tracking\": {\n    \"local_files\": [\n      \"RECOVERY.md\",\n      \"history/stage-a-initial/manifest.json\",\n      \"history/stage-a-initial/notes/parameters.json\",\n      \"history/stage-a-initial/results/result.json\",\n      \"history/stage-a-initial/results/summary.md\",\n      \"history/stage-a-initial/results/table.csv\",\n      \"notes/parameters.json\",\n      \"notes/source-check.md\",\n      \"notes/stage-a-validation.json\",\n      \"results/result.json\",\n      \"results/summary.md\",\n      \"results/table.csv\",\n      \"scripts/compute.py\",\n      \"sources/howard2021-arxiv-v9.pdf\"\n    ],\n    \"local_file_count\": 14,\n    \"source_ids_without_local_evidence\": [\n      \"T-REMOTE\"\n    ]\n  },\n  \"activities\": [\n    {\n      \"id\": \"T-CALC\",\n      \"title\": \"Evaluate supplied calculator and verify current result and companion table\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SOURCE-CHECK\",\n      \"title\": \"Verify supplied fixed source identity and card scope\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SYNTH\",\n      \"title\": \"Review supplied summary within current claim and verified numeric result\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"T-SYNTH\",\n    \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  },\n  \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\",\n  \"needs_review\": false,\n  \"recovery_instruction\": \"Continue the recorded next action within its existing scope.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "check-portable-runtime",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/_rw-runtime/tools/connect_skills.py",
+        "check",
+        "--installed-only",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "EVAL_PYTHON: can't open file 'PROJECT_ROOT/_rw-runtime/tools/connect_skills.py': [Errno 2] No such file or directory\n"
+    },
+    {
+      "label": "read-recovery-artifact-version",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+        "show",
+        "--root",
+        "PROJECT_ROOT",
+        "--kind",
+        "artifact",
+        "--id",
+        "T-RECOVERY"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 23,\n  \"kind\": \"artifact\",\n  \"id\": \"T-RECOVERY\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"RECOVERY.md\": \"486b23fe202e616522e26c771ddd715ade314a490723a2c17e08a2b0e0c86896\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"description\": \"Portable local recovery, authority, limits and concrete next action.\",\n      \"id\": \"T-RECOVERY\",\n      \"path\": \"RECOVERY.md\",\n      \"type\": \"recovery-guide\"\n    },\n    \"registered_at\": \"2026-10-30T01:03:18.416638+00:00\",\n    \"version\": 1\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "replace-corrected-recovery-artifact",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT_ROOT",
+        "--kind",
+        "artifact",
+        "--file",
+        "OUTPUT_DIR/recovery-artifact-replacement.json",
+        "--replace",
+        "--expected-version",
+        "1"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"T-RECOVERY\",\n  \"version\": 2,\n  \"revision\": 24,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "verify-actual-installed-runtime",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+        "check",
+        "--installed-only",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"installed_integrity\": true,\n  \"source_version_matches\": null,\n  \"source_comparison_performed\": false,\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 67,\n  \"payload_sha256\": \"c2dd5fa54cee747ff61cb597779320ca498a9cb145c8fce422735091cdc5fcc1\",\n  \"findings\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "recheck-after-runtime-path-correction",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 1,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 24,\n  \"passed\": false,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [\n    {\n      \"code\": \"checkpoint_stale\",\n      \"changed\": [\n        \"registered-records\",\n        \"local-files\"\n      ]\n    }\n  ],\n  \"counts\": {\n    \"activities\": 3,\n    \"artifacts\": 12,\n    \"decisions\": 1,\n    \"evidence\": 2,\n    \"method_bindings\": 0,\n    \"relations\": 1,\n    \"sources\": 2,\n    \"statements\": 1\n  },\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": \"Undecided; do not invent a target journal\"\n    },\n    \"disciplines\": [],\n    \"entry_activity\": \"question\",\n    \"governance\": {\n      \"applicability\": \"unknown\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"methods\": [],\n    \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n    \"resources\": {\n      \"available_capabilities\": [\n        \"local Python standard library\",\n        \"fixed source cache\",\n        \"author-provided working notes\"\n      ],\n      \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n      \"deadline\": \"2026-12-15\"\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"固定精度正态混合边界的可恢复数值核对\",\n    \"workflow_mode\": \"light\"\n  },\n  \"file_tracking\": {\n    \"local_files\": [\n      \"RECOVERY.md\",\n      \"history/stage-a-initial/manifest.json\",\n      \"history/stage-a-initial/notes/parameters.json\",\n      \"history/stage-a-initial/results/result.json\",\n      \"history/stage-a-initial/results/summary.md\",\n      \"history/stage-a-initial/results/table.csv\",\n      \"notes/parameters.json\",\n      \"notes/source-check.md\",\n      \"notes/stage-a-validation.json\",\n      \"results/result.json\",\n      \"results/summary.md\",\n      \"results/table.csv\",\n      \"scripts/compute.py\",\n      \"sources/howard2021-arxiv-v9.pdf\"\n    ],\n    \"local_file_count\": 14,\n    \"source_ids_without_local_evidence\": [\n      \"T-REMOTE\"\n    ]\n  },\n  \"activities\": [\n    {\n      \"id\": \"T-CALC\",\n      \"title\": \"Evaluate supplied calculator and verify current result and companion table\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SOURCE-CHECK\",\n      \"title\": \"Verify supplied fixed source identity and card scope\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SYNTH\",\n      \"title\": \"Review supplied summary within current claim and verified numeric result\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"T-SYNTH\",\n    \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"stale\",\n    \"changed\": [\n      \"registered-records\",\n      \"local-files\"\n    ]\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "register-operational-corrections",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+        "register",
+        "--root",
+        "PROJECT_ROOT",
+        "--kind",
+        "artifact",
+        "--file",
+        "OUTPUT_DIR/operation-log-record.json"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"T-OPERATION-LOG\",\n  \"version\": 1,\n  \"revision\": 25,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "review-checkpoint-drift-before-saving",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+        "check",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 1,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 25,\n  \"passed\": false,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [\n    {\n      \"code\": \"checkpoint_stale\",\n      \"changed\": [\n        \"registered-records\",\n        \"local-files\"\n      ]\n    }\n  ],\n  \"counts\": {\n    \"activities\": 3,\n    \"artifacts\": 13,\n    \"decisions\": 1,\n    \"evidence\": 2,\n    \"method_bindings\": 0,\n    \"relations\": 1,\n    \"sources\": 2,\n    \"statements\": 1\n  },\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": \"Undecided; do not invent a target journal\"\n    },\n    \"disciplines\": [],\n    \"entry_activity\": \"question\",\n    \"governance\": {\n      \"applicability\": \"unknown\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"methods\": [],\n    \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n    \"resources\": {\n      \"available_capabilities\": [\n        \"local Python standard library\",\n        \"fixed source cache\",\n        \"author-provided working notes\"\n      ],\n      \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n      \"deadline\": \"2026-12-15\"\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"固定精度正态混合边界的可恢复数值核对\",\n    \"workflow_mode\": \"light\"\n  },\n  \"file_tracking\": {\n    \"local_files\": [\n      \"RECOVERY.md\",\n      \"history/stage-a-initial/manifest.json\",\n      \"history/stage-a-initial/notes/parameters.json\",\n      \"history/stage-a-initial/results/result.json\",\n      \"history/stage-a-initial/results/summary.md\",\n      \"history/stage-a-initial/results/table.csv\",\n      \"notes/parameters.json\",\n      \"notes/source-check.md\",\n      \"notes/stage-a-operational-corrections.json\",\n      \"notes/stage-a-validation.json\",\n      \"results/result.json\",\n      \"results/summary.md\",\n      \"results/table.csv\",\n      \"scripts/compute.py\",\n      \"sources/howard2021-arxiv-v9.pdf\"\n    ],\n    \"local_file_count\": 15,\n    \"source_ids_without_local_evidence\": [\n      \"T-REMOTE\"\n    ]\n  },\n  \"activities\": [\n    {\n      \"id\": \"T-CALC\",\n      \"title\": \"Evaluate supplied calculator and verify current result and companion table\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SOURCE-CHECK\",\n      \"title\": \"Verify supplied fixed source identity and card scope\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SYNTH\",\n      \"title\": \"Review supplied summary within current claim and verified numeric result\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"T-SYNTH\",\n    \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"stale\",\n    \"changed\": [\n      \"registered-records\",\n      \"local-files\"\n    ]\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "save-final-reviewed-checkpoint",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+        "checkpoint",
+        "--root",
+        "PROJECT_ROOT",
+        "--next-action",
+        "先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。",
+        "--activity",
+        "T-SYNTH",
+        "--note",
+        "Reviewed only RECOVERY and operational-note registration changes; research activity inputs and outputs unchanged. Installed runtime checked successfully. Preserve first operational errors."
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"checkpoint_saved\": true,\n  \"revision\": 26,\n  \"cursor\": {\n    \"activity_id\": \"T-SYNTH\",\n    \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\"\n  },\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "final-project-local-resume",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+        "resume",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 26,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 3,\n    \"artifacts\": 13,\n    \"decisions\": 1,\n    \"evidence\": 2,\n    \"method_bindings\": 0,\n    \"relations\": 1,\n    \"sources\": 2,\n    \"statements\": 1\n  },\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": \"Undecided; do not invent a target journal\"\n    },\n    \"disciplines\": [],\n    \"entry_activity\": \"question\",\n    \"governance\": {\n      \"applicability\": \"unknown\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"methods\": [],\n    \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n    \"resources\": {\n      \"available_capabilities\": [\n        \"local Python standard library\",\n        \"fixed source cache\",\n        \"author-provided working notes\"\n      ],\n      \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n      \"deadline\": \"2026-12-15\"\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"固定精度正态混合边界的可恢复数值核对\",\n    \"workflow_mode\": \"light\"\n  },\n  \"file_tracking\": {\n    \"local_files\": [\n      \"RECOVERY.md\",\n      \"history/stage-a-initial/manifest.json\",\n      \"history/stage-a-initial/notes/parameters.json\",\n      \"history/stage-a-initial/results/result.json\",\n      \"history/stage-a-initial/results/summary.md\",\n      \"history/stage-a-initial/results/table.csv\",\n      \"notes/parameters.json\",\n      \"notes/source-check.md\",\n      \"notes/stage-a-operational-corrections.json\",\n      \"notes/stage-a-validation.json\",\n      \"results/result.json\",\n      \"results/summary.md\",\n      \"results/table.csv\",\n      \"scripts/compute.py\",\n      \"sources/howard2021-arxiv-v9.pdf\"\n    ],\n    \"local_file_count\": 15,\n    \"source_ids_without_local_evidence\": [\n      \"T-REMOTE\"\n    ]\n  },\n  \"activities\": [\n    {\n      \"id\": \"T-CALC\",\n      \"title\": \"Evaluate supplied calculator and verify current result and companion table\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SOURCE-CHECK\",\n      \"title\": \"Verify supplied fixed source identity and card scope\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SYNTH\",\n      \"title\": \"Review supplied summary within current claim and verified numeric result\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"T-SYNTH\",\n    \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  },\n  \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\",\n  \"needs_review\": false,\n  \"recovery_instruction\": \"Continue the recorded next action within its existing scope.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "tool_call": 16,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/verify_delivery.py"
+      ],
+      "cwd": "STUDY_ROOT/runs/P1/A",
+      "exit_code": 0,
+      "note": "All assertions completed before recording success."
+    }
+  ],
+  "outer_tool_calls": 16,
+  "tool_calls": 16,
+  "outer_tool_call_types": {
+    "exec_command": 12,
+    "apply_patch": 4
+  },
+  "read_files": [
+    {
+      "path": "STUDY_ROOT/runs/P1/A/REQUEST.md",
+      "sha256": "bcf68a67ccb10b1e464fed83c05a3d9322729d16fe2b8c7f2af559c0cc036fbc",
+      "bytes": 2283,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/BRIEF.md",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/MANIFEST.json",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/constraints.json",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/obligations.json",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/rejected-parameters.json",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/source-check.md",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "INPUT_DIR/initial/source-identities.json",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/actual-commands-before-cwd-correction.json",
+      "sha256": "b0688cf4f00c09ef2ee63e7f008b2ce854518ded9152277f0b9e0a58e4640746",
+      "bytes": 34343,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/actual-commands.json",
+      "sha256": "5067c084a38fefcc9ca3eeabda4bc406e0dcf97175629b1169a2e27f46f91869",
+      "bytes": 46750,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/environment.json",
+      "sha256": "9aab17dd2d2de43d9a10f4122badab06e92c25ab74e3b0e9da15456b01c9fe87",
+      "bytes": 307,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/failure-and-remediation.json",
+      "sha256": "f1c33cc09c438d70cf8d3dfe528e6fd60dfe0f79b7230e3faf82fb7a6bb96c75",
+      "bytes": 1743,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/final-recovery.json",
+      "sha256": "ef851904f0a4bc71f12f25f713a9e8ec8d6a15f175b5381e7c38b8cd442a1939",
+      "bytes": 4056,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/finalize.py",
+      "sha256": "85ee2f1cedd4dc6334e9694f29c5964f90d44155c99afa6aa1d6fb19a4985a51",
+      "bytes": 19089,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/input-manifest-verification.json",
+      "sha256": "8ee3ef8f60b09a3002ebfe33441a7ddfcb6e8cb213e90b06f4cb10f5421e8ff3",
+      "bytes": 3889,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/installed-runtime-check.json",
+      "sha256": "a14b2896f01d0fc1f5dbd8126bf5840b9663294390d0d4ec08310e811b0dac40",
+      "bytes": 644,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/operation-log-record.json",
+      "sha256": "4d8cf014f8980e351e46c6b906f84584bd00930eb52af713fc7026038684bfa3",
+      "bytes": 262,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/recovery-artifact-replacement.json",
+      "sha256": "68a27d1e72ab1cce73da2fc2e7340a81d9bb64952100acd25f14a9b4bbe11042",
+      "bytes": 167,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/registration-batch.json",
+      "sha256": "de90490fb867ba64021e83b4366331896a5fa7eb39b3bce91a1dd694e3f1edfc",
+      "bytes": 9147,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/repair_and_finish.py",
+      "sha256": "8975f61ce74dd74f45c9beaf09417609f20878c9400b1d8c37d27d7b04d4704b",
+      "bytes": 3780,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/report.md",
+      "sha256": "c845187646b700eff21301fd8f39737c82dc857e737c4bdaa929fc6854250d71",
+      "bytes": 3722,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/reviewed-intermediate-check.json",
+      "sha256": "2eecd83018f56261c65ac5c75f300df923a9a3fca7f37b6f2aa68f921c4d25e4",
+      "bytes": 3775,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/run_stage_a.py",
+      "sha256": "795651cb977335b117713b14cedd81824780227833d450927a2fcc97ffff37aa",
+      "bytes": 17836,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/state-answer.json",
+      "sha256": "c90293f85d449eb51288a88812e250158f3a8d06b4f90bc78467045ee31beab0",
+      "bytes": 5231,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/valid-output-preservation.json",
+      "sha256": "0bddfff86e6baa075fe603ca023f499cd1792eabb8f64e2bfc905306b5bb0b15",
+      "bytes": 1204,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/validation-normal/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/validation-normal/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "OUTPUT_DIR/verify_delivery.py",
+      "sha256": "b70a861b75ccbed9fd407557b069581c008f7d2db0bd47263b9a5880e95df82d",
+      "bytes": 3183,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/bundle-manifest.json",
+      "sha256": "401eb2c41626b4e1f1d8933393e72f9d17d924525626c6217a615b9afa552627",
+      "bytes": 8036,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/__init__.py",
+      "sha256": "747401e8a3ec02843d8ab825c1322b786a8c0e39a13d6d28affc57bbd4d3fd04",
+      "bytes": 596,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/bundle.py",
+      "sha256": "3e2c08eba1ab540de1d0a807ffa5bafb0acd46a2bf00056f803554ec83de8cfa",
+      "bytes": 28639,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/cli.py",
+      "sha256": "62519288f0573073f3b1be69de8e7c1537f038d9ccf40bae5fa53005c1f9c3fb",
+      "bytes": 13573,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/model.py",
+      "sha256": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31",
+      "bytes": 16884,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/project.py",
+      "sha256": "6cd8d83a195565d512ee5d2e74a880d09adfdd60a850395cfcfee8f3e18796f5",
+      "bytes": 27732,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "bytes": 3841,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+      "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+      "bytes": 1479,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+      "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+      "bytes": 1067,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/decision.schema.json",
+      "sha256": "c3f913c83476a4d63ff6e34f9dc4a835a3547dbbb9feb8896773fc72ce0d6f49",
+      "bytes": 1365,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+      "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+      "bytes": 2889,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/method-binding.schema.json",
+      "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+      "bytes": 1204,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/project.schema.json",
+      "sha256": "d3aea9cc6055a5e97776be07cf101ad35d8b764405042372439c3445aa80a558",
+      "bytes": 3912,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/registry.schema.json",
+      "sha256": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
+      "bytes": 40973,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+      "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+      "bytes": 1255,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/source.schema.json",
+      "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+      "bytes": 1153,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+      "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+      "bytes": 3018,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "bytes": 7641,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/storage.py",
+      "sha256": "dc84e24536f6d3dc93762c414b334ac24765cbad41fc48bda05f5626a577c9d8",
+      "bytes": 10394,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/core/windows_storage.py",
+      "sha256": "2770971dc068eb3d670a17c9110aaeb53aa25c99950468a9b5c0985837735615",
+      "bytes": 12755,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/design/catalog.json",
+      "sha256": "c164def668d75f14a2d12d414fee6dcf287f96d33e293fbdaf8536c9cbe798c9",
+      "bytes": 25477,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/agriculture-life.md",
+      "sha256": "66d86ef5e1f6deaa2af354e36e188469f9e1cf3423c14d31b4b48c854d46d583",
+      "bytes": 1201,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/engineering.md",
+      "sha256": "0c776e883840960b7eeb6c4dcb6a3be4974c1834d8bb142d0b3cde2acf502e30",
+      "bytes": 1092,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/humanities.md",
+      "sha256": "4ca1a988537c0f006d0fc5ce33dc1f8dfbcd09733c396a24bd4d2390dd406114",
+      "bytes": 1527,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/law.md",
+      "sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+      "bytes": 1563,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md",
+      "sha256": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
+      "bytes": 1332,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/natural-sciences.md",
+      "sha256": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a",
+      "bytes": 1060,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/social-sciences.md",
+      "sha256": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8",
+      "bytes": 1214,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/governance.md",
+      "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+      "bytes": 2998,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/computational.md",
+      "sha256": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+      "bytes": 2282,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/conceptual-normative.md",
+      "sha256": "609f444f364e638a0e61c49f160a4912ecd56ab9310a6937cef9b7abadae8b72",
+      "bytes": 2079,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md",
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+      "bytes": 2986,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/engineering-design.md",
+      "sha256": "693c7a1a42001bdf87ce3684c866863c81b089af9bd6e521b813667de24423c8",
+      "bytes": 2161,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md",
+      "sha256": "0a9fccdfea15ffd8b30c30a56bcb8e5511d40d30bf8ea094ee47cf8ce8e4fbdc",
+      "bytes": 2605,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/formal-theory.md",
+      "sha256": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+      "bytes": 2389,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/historical-interpretive.md",
+      "sha256": "0894387de28c40bbf2e5913dbf260b1df15f6eaed45abdd8df2a9c1360c8f4d9",
+      "bytes": 2288,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/legal-analysis.md",
+      "sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+      "bytes": 5056,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/measurement-experiment.md",
+      "sha256": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd",
+      "bytes": 2593,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/qualitative.md",
+      "sha256": "069f3880300a754dc2e8dd26eb64290278045ce2cabadd394160c68d02efb2c6",
+      "bytes": 2421,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/selection.md",
+      "sha256": "0198e36085cec17ec7d3aa73220e90b33467c2e0c9d8d05af7952bce8ba21c49",
+      "bytes": 3249,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/sources.json",
+      "sha256": "b8a05f32aea861bff470abfeeef0dcd1943fcae7dda30a14619ffcd853bd12c7",
+      "bytes": 31107,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/templates/legal-research.md",
+      "sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+      "bytes": 3440,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/templates/legal-source.json",
+      "sha256": "e127852f1bb0a051e3aad083d29e54719866296d6830f3df5d8b0513afcbece4",
+      "bytes": 1212,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+      "sha256": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+      "bytes": 2242,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+      "sha256": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b",
+      "bytes": 405,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-candidates/SKILL.md",
+      "sha256": "1e63dd370770263d981ee03678c54a3cbba6c8add0ca85d8552ef2e98ba63005",
+      "bytes": 3467,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-figures/SKILL.md",
+      "sha256": "cc9c901bc9b516512d4d0ca5ee5efd68efd85dc243e60800ec2291287fd748fa",
+      "bytes": 4671,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-figures/agents/openai.yaml",
+      "sha256": "0a8e433abbb264ae4610be7692503db534b6dcffbe6a6188841de88b57556d98",
+      "bytes": 256,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-figures/assets/synthetic-figure-spec.json",
+      "sha256": "a6aa429fe76a185f726b2c3bcafb65ba131c89c130e9b1156bbbcb3ef6cea591",
+      "bytes": 1799,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-figures/assets/synthetic-workflow.svg",
+      "sha256": "ba843559b5be505b2b4e21540de2c3fb48c46b7dca4d2e22c42f5f32d7a77717",
+      "bytes": 2219,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-figures/examples/plot_demo.py",
+      "sha256": "63c482011529440d36dcbd1df9506ecad47b0d3e17508ad40282d35342ae17ed",
+      "bytes": 2803,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-figures/references/editable-schematics.md",
+      "sha256": "f76450491c138c6d6518a7dccabe3890f9768ddd21b656b18bcfa0aa40368acd",
+      "bytes": 3316,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-figures/scripts/audit_svg_schematic.py",
+      "sha256": "8c87f1819e8c7887a7b7b5432f2e6f7e983157e6980d17346c47908f2b069d87",
+      "bytes": 8571,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-innovation/SKILL.md",
+      "sha256": "3817216a0d99514e78f6c9520d51ea0b2b279d7d83c6f55d82ee8aaeed418a09",
+      "bytes": 3316,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-literature/SKILL.md",
+      "sha256": "2d008d633e71e1cd8d4a39d66ec78c6a6e8fb4ee7f4d9daf73a8aad0a34dfed3",
+      "bytes": 3320,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-literature/references/search-and-library.md",
+      "sha256": "f2a69e0ff59e0a4e426c3f0109b7fd28c62090a284b5def33c5426cc16bf4631",
+      "bytes": 7467,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-literature/scripts/search_crossref.py",
+      "sha256": "5cbf7b63dcc4f1b7062231eab812b821b1e6c149424888f9c5fca56573334997",
+      "bytes": 18385,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-question/SKILL.md",
+      "sha256": "cbfe1f537202d9cad995949458a5bbe496624f6cc926956ed80ad2be97e0239a",
+      "bytes": 3478,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-review/SKILL.md",
+      "sha256": "a3d18fd88c1e76abac2a46d7b86a6582624f47ec5cf5d8cad4bc26c2bc495c0d",
+      "bytes": 5231,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-review/references/cross-material-consistency.md",
+      "sha256": "ddc1d7de400cb83c8b8c4fc160f0afa070793525ad5fb5963fbe5313a651f0cc",
+      "bytes": 4396,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-review/references/review-modes.md",
+      "sha256": "0d6253160bc164a6d07f704fb1c8eb2338f01738ba99cef8d1af70d87968e3e3",
+      "bytes": 4393,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-review/references/review-response.md",
+      "sha256": "f08a84ba4bef293858d6931658e206e4b1484c715afe45b2d064fbab78dfa019",
+      "bytes": 7851,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-review/references/submission-delivery.md",
+      "sha256": "08e09b8fa45428aa1e05969c80178d088f7d0a9383060081154b7d7203165f5b",
+      "bytes": 5179,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-review/references/theory-review.md",
+      "sha256": "6b046232cd71cc8f8d36d04c249981081481e7d23ae719406b42655cd694669c",
+      "bytes": 2704,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-review/scripts/check_revision_plan.py",
+      "sha256": "54cd825ea0bc3d8d0c798cf535afef66c89a82d17f0d476ddca88dfd77c36bc9",
+      "bytes": 14922,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-validation/SKILL.md",
+      "sha256": "de2ac1484ac85bcdf64887ba93335b2443a3ac2f7d776cd3b3190eeec8837fb2",
+      "bytes": 3823,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-workflow/SKILL.md",
+      "sha256": "0fdbe0845d7fb4f67211edc8f72d81bb537d846ce8a1560eead5cf65bab1aebc",
+      "bytes": 4576,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.agents/skills/rw-writing/SKILL.md",
+      "sha256": "299efd19a165a38ca761306021befcc3c4f6ede959ed3da427aae199aa22a3b7",
+      "bytes": 4185,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.gitignore",
+      "sha256": "83635ddc1e038ac2d24f44694b0d0c5172efdd30d0907415b46c05a866435ea7",
+      "bytes": 120,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/.research/write.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/PROJECT.md",
+      "sha256": "8277c3ac5ac2f5782191d725d94083ab154145167e9b467168e45819f835e9db",
+      "bytes": 440,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVERY.md",
+      "sha256": "3fb28aa6f96520a6b131fb7a0d71eb4d798425975847c0fbcac837fcbc40f744",
+      "bytes": 2927,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/history/stage-a-initial/RECOVERY-before-runtime-path-fix.md",
+      "sha256": "486b23fe202e616522e26c771ddd715ade314a490723a2c17e08a2b0e0c86896",
+      "bytes": 2897,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/history/stage-a-initial/manifest.json",
+      "sha256": "7c29c49c73a4f7db23076c7fbc530886c16bbb7115c6e8d4d91ad95f1d880f0c",
+      "bytes": 933,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/history/stage-a-initial/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/history/stage-a-initial/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/history/stage-a-initial/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/history/stage-a-initial/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/notes/source-check.md",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/notes/stage-a-operational-corrections.json",
+      "sha256": "f1c33cc09c438d70cf8d3dfe528e6fd60dfe0f79b7230e3faf82fb7a6bb96c75",
+      "bytes": 1743,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/notes/stage-a-validation.json",
+      "sha256": "d786eff3467730579d8e30e5b334d7169206509c42f70c4683d803a5397e4af2",
+      "bytes": 6348,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/project.json",
+      "sha256": "524d57b3666e1ec2ca0224b04c33fd4b8f116e8bec20adb9ddf37619f8b80e5d",
+      "bytes": 995,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/BRIEF.md",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/MANIFEST.json",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/access-manifest.json",
+      "sha256": "c4a40e9c36a793b3dedd154a2953b9ee505339e6918bb2206b1e70aacab2819c",
+      "bytes": 4579,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/constraints.json",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/obligations.json",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/source-identities.json",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/records/registry.json",
+      "sha256": "d91b1bb3fa5c72ae9a813ef5f524337bd613a4d15bbebe4a3d84069b022bcc8c",
+      "bytes": 27648,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/validation/stage-a/commands.json",
+      "sha256": "b9a3b6e1fb48ac766231e7ff7e8d547208c004adb97a3b71b6e90ac03d0218b9",
+      "bytes": 1528,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/validation/stage-a/normal/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/validation/stage-a/normal/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "PROJECT_ROOT/validation/stage-a/preservation.json",
+      "sha256": "0bddfff86e6baa075fe603ca023f499cd1792eabb8f64e2bfc905306b5bb0b15",
+      "bytes": 1204,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/__init__.py",
+      "sha256": "747401e8a3ec02843d8ab825c1322b786a8c0e39a13d6d28affc57bbd4d3fd04",
+      "bytes": 596,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/bundle.py",
+      "sha256": "3e2c08eba1ab540de1d0a807ffa5bafb0acd46a2bf00056f803554ec83de8cfa",
+      "bytes": 28639,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/cli.py",
+      "sha256": "62519288f0573073f3b1be69de8e7c1537f038d9ccf40bae5fa53005c1f9c3fb",
+      "bytes": 13573,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/model.py",
+      "sha256": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31",
+      "bytes": 16884,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/project.py",
+      "sha256": "6cd8d83a195565d512ee5d2e74a880d09adfdd60a850395cfcfee8f3e18796f5",
+      "bytes": 27732,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "bytes": 3841,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/schemas/activity.schema.json",
+      "sha256": "8b672ca13da53899b971db30545d60c09feb00c9acb3f964675aa6efaa27fa3a",
+      "bytes": 1479,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/schemas/artifact.schema.json",
+      "sha256": "11c235c689d03de72107ec90732197729c6b2dceda2ab3e5715463e6272f262c",
+      "bytes": 1067,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/schemas/decision.schema.json",
+      "sha256": "c3f913c83476a4d63ff6e34f9dc4a835a3547dbbb9feb8896773fc72ce0d6f49",
+      "bytes": 1365,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/schemas/evidence.schema.json",
+      "sha256": "a8cc3e924c6e94ea28f90a206b5f9e73809359edc4efe47848c349e9319c6823",
+      "bytes": 2889,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/schemas/method-binding.schema.json",
+      "sha256": "c009df1979e33077ed5d2cac1c14cd6100f2c12c8ab6a8f45165225316ab247d",
+      "bytes": 1204,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/schemas/project.schema.json",
+      "sha256": "d3aea9cc6055a5e97776be07cf101ad35d8b764405042372439c3445aa80a558",
+      "bytes": 3912,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/schemas/registry.schema.json",
+      "sha256": "a2c27bea6edd17e233e4a73c05dff6d70494af252429861476de330dd97a291b",
+      "bytes": 40973,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/schemas/relation.schema.json",
+      "sha256": "54dc7913217ba718dd654e7729445733fe89d9bca123d13b000430f4f3f04f4f",
+      "bytes": 1255,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/schemas/source.schema.json",
+      "sha256": "e77c64f5b5b1333f376b2f7c6a00382274bf30cc397b7b05ebaac514eb71ed5e",
+      "bytes": 1153,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/schemas/statement.schema.json",
+      "sha256": "0d281be4bbf0d3d3585c5086fd43eef1d83b9159b615bb8e845601ca72a52f44",
+      "bytes": 3018,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/skill-bridge.md",
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "bytes": 7641,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/storage.py",
+      "sha256": "dc84e24536f6d3dc93762c414b334ac24765cbad41fc48bda05f5626a577c9d8",
+      "bytes": 10394,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/windows_storage.py",
+      "sha256": "2770971dc068eb3d670a17c9110aaeb53aa25c99950468a9b5c0985837735615",
+      "bytes": 12755,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/disciplines/agriculture-life.md",
+      "sha256": "66d86ef5e1f6deaa2af354e36e188469f9e1cf3423c14d31b4b48c854d46d583",
+      "bytes": 1201,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/disciplines/engineering.md",
+      "sha256": "0c776e883840960b7eeb6c4dcb6a3be4974c1834d8bb142d0b3cde2acf502e30",
+      "bytes": 1092,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/disciplines/humanities.md",
+      "sha256": "4ca1a988537c0f006d0fc5ce33dc1f8dfbcd09733c396a24bd4d2390dd406114",
+      "bytes": 1527,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/disciplines/law.md",
+      "sha256": "9c6901a87433bf256675fdfa0edb1cb4d8bfe7f81a31ed75d707dc9167ef68b1",
+      "bytes": 1563,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/disciplines/medicine-health.md",
+      "sha256": "3da1c45644fbf467939a56ce3c14996c182f7692d582a966cf18f59002af5223",
+      "bytes": 1332,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/disciplines/natural-sciences.md",
+      "sha256": "4d1cc4c1c8a66e58039f78a1166052124c7f7e7619d159411e0afaef0af0ea8a",
+      "bytes": 1060,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/disciplines/social-sciences.md",
+      "sha256": "02c50616fe53401b5e0ba4000285861cc6d5acad1786e2088bf910b563ecafc8",
+      "bytes": 1214,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/governance.md",
+      "sha256": "684b92be283bcd40b34cd626c42e3d67620f41a1348aa7a3f790451342584d4e",
+      "bytes": 2998,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/methods/computational.md",
+      "sha256": "d38314cd38cd320ab467a832973a2f8462169c5561152c1866c77eb4668935ab",
+      "bytes": 2282,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/methods/conceptual-normative.md",
+      "sha256": "609f444f364e638a0e61c49f160a4912ecd56ab9310a6937cef9b7abadae8b72",
+      "bytes": 2079,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/methods/empirical-quantitative.md",
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+      "bytes": 2986,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/methods/engineering-design.md",
+      "sha256": "693c7a1a42001bdf87ce3684c866863c81b089af9bd6e521b813667de24423c8",
+      "bytes": 2161,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/methods/evidence-synthesis.md",
+      "sha256": "0a9fccdfea15ffd8b30c30a56bcb8e5511d40d30bf8ea094ee47cf8ce8e4fbdc",
+      "bytes": 2605,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/methods/formal-theory.md",
+      "sha256": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+      "bytes": 2389,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/methods/historical-interpretive.md",
+      "sha256": "0894387de28c40bbf2e5913dbf260b1df15f6eaed45abdd8df2a9c1360c8f4d9",
+      "bytes": 2288,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/methods/legal-analysis.md",
+      "sha256": "428d19b86c28d07d5bec651eea420efcfcb64944917aed2d4ded73b71a16b4ea",
+      "bytes": 5056,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/methods/measurement-experiment.md",
+      "sha256": "521fc697ad01676b93d1d1dbc34c530e5d16bd02aab10fca027752e98cf8f4dd",
+      "bytes": 2593,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/methods/qualitative.md",
+      "sha256": "069f3880300a754dc2e8dd26eb64290278045ce2cabadd394160c68d02efb2c6",
+      "bytes": 2421,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/selection.md",
+      "sha256": "0198e36085cec17ec7d3aa73220e90b33467c2e0c9d8d05af7952bce8ba21c49",
+      "bytes": 3249,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/sources.json",
+      "sha256": "b8a05f32aea861bff470abfeeef0dcd1943fcae7dda30a14619ffcd853bd12c7",
+      "bytes": 31107,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/templates/legal-research.md",
+      "sha256": "c7799ac5e833a9fa575cc3dec2a7051da3761795a06ce333f435b44e15c8e1f2",
+      "bytes": 3440,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/profiles/templates/legal-source.json",
+      "sha256": "e127852f1bb0a051e3aad083d29e54719866296d6830f3df5d8b0513afcbece4",
+      "bytes": 1212,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-candidates/SKILL.md",
+      "sha256": "82e9930a22e5a5ba4ef61844ce9627da1763d5738f0f364dc3c9f3b9efa25c63",
+      "bytes": 3449,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-figures/SKILL.md",
+      "sha256": "6b25063c1ec423267546af8061dfa543abe770c33cd91514bdb5a2c01c292b43",
+      "bytes": 4662,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-figures/agents/openai.yaml",
+      "sha256": "0a8e433abbb264ae4610be7692503db534b6dcffbe6a6188841de88b57556d98",
+      "bytes": 256,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-figures/assets/synthetic-figure-spec.json",
+      "sha256": "a6aa429fe76a185f726b2c3bcafb65ba131c89c130e9b1156bbbcb3ef6cea591",
+      "bytes": 1799,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-figures/assets/synthetic-workflow.svg",
+      "sha256": "ba843559b5be505b2b4e21540de2c3fb48c46b7dca4d2e22c42f5f32d7a77717",
+      "bytes": 2219,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-figures/examples/plot_demo.py",
+      "sha256": "63c482011529440d36dcbd1df9506ecad47b0d3e17508ad40282d35342ae17ed",
+      "bytes": 2803,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-figures/references/editable-schematics.md",
+      "sha256": "f76450491c138c6d6518a7dccabe3890f9768ddd21b656b18bcfa0aa40368acd",
+      "bytes": 3316,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-figures/scripts/audit_svg_schematic.py",
+      "sha256": "8c87f1819e8c7887a7b7b5432f2e6f7e983157e6980d17346c47908f2b069d87",
+      "bytes": 8571,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-innovation/SKILL.md",
+      "sha256": "337c368c2ec48309027b3a2fc3724fab5e3c559e714c7293b19642588ae11575",
+      "bytes": 3298,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-literature/SKILL.md",
+      "sha256": "51d279a9b4112977fc346d99ce296a477458eed6b35c26abf10710c955d97a69",
+      "bytes": 3275,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-literature/references/search-and-library.md",
+      "sha256": "f2a69e0ff59e0a4e426c3f0109b7fd28c62090a284b5def33c5426cc16bf4631",
+      "bytes": 7467,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-literature/scripts/search_crossref.py",
+      "sha256": "5cbf7b63dcc4f1b7062231eab812b821b1e6c149424888f9c5fca56573334997",
+      "bytes": 18385,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-question/SKILL.md",
+      "sha256": "c0c613e004ec5eaaa1f1daf79033008ba46fbe6f677bde32fe88759e6d453f5f",
+      "bytes": 3442,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-review/SKILL.md",
+      "sha256": "add00067b6352eac9dc68a26196275768a5228b8cd0618e080b011404000735f",
+      "bytes": 5204,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-review/references/cross-material-consistency.md",
+      "sha256": "0f4249e358d75ba9ed318efb193283ec217a7b996300b598945a4124f45d676c",
+      "bytes": 4387,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-review/references/review-modes.md",
+      "sha256": "a3d47adf002cabee17b8b55bbfc99df50635d14da06a9740935f76168fcd90ce",
+      "bytes": 4384,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-review/references/review-response.md",
+      "sha256": "f08a84ba4bef293858d6931658e206e4b1484c715afe45b2d064fbab78dfa019",
+      "bytes": 7851,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-review/references/submission-delivery.md",
+      "sha256": "08e09b8fa45428aa1e05969c80178d088f7d0a9383060081154b7d7203165f5b",
+      "bytes": 5179,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-review/references/theory-review.md",
+      "sha256": "6b046232cd71cc8f8d36d04c249981081481e7d23ae719406b42655cd694669c",
+      "bytes": 2704,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-review/scripts/check_revision_plan.py",
+      "sha256": "54cd825ea0bc3d8d0c798cf535afef66c89a82d17f0d476ddca88dfd77c36bc9",
+      "bytes": 14922,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "bytes": 3697,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "bytes": 4540,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-writing/SKILL.md",
+      "sha256": "40ed93f923d2f35b9a047256c2a91238cc0642ce6771b2461f7a2bdeb962a15d",
+      "bytes": 4158,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/tools/connect_skills.py",
+      "sha256": "5dc616de2bc7d00b2f2f71513de67f20bf6d6c436a536f46a3f03f73895308cd",
+      "bytes": 2242,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    },
+    {
+      "path": "TOOLKIT_ROOT/tools/research.py",
+      "sha256": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b",
+      "bytes": 405,
+      "read_scope": "Complete bytes for identity; semantic scientific scope separately stated."
+    }
+  ],
+  "read_manifest_note": "Includes explicit reads, private-source full byte hashing, copied tool resources, actual installed-resource integrity reads, and final artifact hashing; stdlib runtime internals are runtime rather than task materials. Self-referential manifest/execution bookkeeping excluded.",
+  "network_calls": 0,
+  "install_calls": 0,
+  "other_agent_calls": 0,
+  "violations": [],
+  "failures_and_remediation": {
+    "controlled_invalid_input": {
+      "command_label": "controlled-invalid-alpha",
+      "exit_code": 2,
+      "expected": true,
+      "message": "Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times",
+      "scientific_scope": "Intentional input rejection only; canonical four files unchanged."
+    },
+    "unexpected_runtime_path_error": {
+      "command_label": "check-portable-runtime",
+      "exit_code": 2,
+      "outer_script": "run_stage_a.py",
+      "outer_exit_code": 1,
+      "message": "Project/_rw-runtime was absent; actual init installed .agents/skills/_rw-runtime.",
+      "remediation": "Retained old RECOVERY, corrected runtime paths, read artifact version, replaced using formal interface, successfully checked actual installed runtime."
+    },
+    "intermediate_checkpoint_review": {
+      "command_label": "recheck-after-runtime-path-correction",
+      "exit_code": 1,
+      "outer_script": "repair_and_finish.py",
+      "outer_exit_code": 1,
+      "finding": "checkpoint_stale: registered-records and local-files; all three research activities remained effectively done.",
+      "explanation": "Expected consequence of replacing RECOVERY artifact after the previous checkpoint; repair helper incorrectly required zero at this intermediate inspection.",
+      "remediation": "Reviewed actual findings and activity states, retained the result, then saved a new checkpoint after recording corrections."
+    },
+    "recording_correction": "Init actual cwd was stage A, not project: logger originally evaluated existence after init; uncorrected command log retained.",
+    "scientific_impact": "No original PDF, calculator, parameter, canonical JSON/table/summary or source card changed.",
+    "actor": "AI execution; no fabricated human review or formal proof."
+  },
+  "written_paths": [
+    "OUTPUT_DIR/actual-commands-before-cwd-correction.json",
+    "OUTPUT_DIR/actual-commands.json",
+    "OUTPUT_DIR/environment.json",
+    "OUTPUT_DIR/failure-and-remediation.json",
+    "OUTPUT_DIR/final-recovery.json",
+    "OUTPUT_DIR/finalize.py",
+    "OUTPUT_DIR/input-manifest-verification.json",
+    "OUTPUT_DIR/installed-runtime-check.json",
+    "OUTPUT_DIR/operation-log-record.json",
+    "OUTPUT_DIR/recovery-artifact-replacement.json",
+    "OUTPUT_DIR/registration-batch.json",
+    "OUTPUT_DIR/repair_and_finish.py",
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/reviewed-intermediate-check.json",
+    "OUTPUT_DIR/run_stage_a.py",
+    "OUTPUT_DIR/state-answer.json",
+    "OUTPUT_DIR/valid-output-preservation.json",
+    "OUTPUT_DIR/validation-normal/result.json",
+    "OUTPUT_DIR/validation-normal/table.csv",
+    "OUTPUT_DIR/verify_delivery.py",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/bundle-manifest.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/__init__.py",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/bundle.py",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/cli.py",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/model.py",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/project.py",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/protocol.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/activity.schema.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/artifact.schema.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/decision.schema.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/evidence.schema.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/method-binding.schema.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/project.schema.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/registry.schema.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/relation.schema.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/source.schema.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/schemas/statement.schema.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/skill-bridge.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/storage.py",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/core/windows_storage.py",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/design/catalog.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/agriculture-life.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/engineering.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/humanities.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/law.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/medicine-health.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/natural-sciences.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/disciplines/social-sciences.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/governance.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/computational.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/conceptual-normative.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/empirical-quantitative.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/engineering-design.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/evidence-synthesis.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/formal-theory.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/historical-interpretive.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/legal-analysis.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/measurement-experiment.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/methods/qualitative.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/selection.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/sources.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/templates/legal-research.md",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/profiles/templates/legal-source.json",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+    "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+    "PROJECT_ROOT/.agents/skills/rw-candidates/SKILL.md",
+    "PROJECT_ROOT/.agents/skills/rw-figures/SKILL.md",
+    "PROJECT_ROOT/.agents/skills/rw-figures/agents/openai.yaml",
+    "PROJECT_ROOT/.agents/skills/rw-figures/assets/synthetic-figure-spec.json",
+    "PROJECT_ROOT/.agents/skills/rw-figures/assets/synthetic-workflow.svg",
+    "PROJECT_ROOT/.agents/skills/rw-figures/examples/plot_demo.py",
+    "PROJECT_ROOT/.agents/skills/rw-figures/references/editable-schematics.md",
+    "PROJECT_ROOT/.agents/skills/rw-figures/scripts/audit_svg_schematic.py",
+    "PROJECT_ROOT/.agents/skills/rw-innovation/SKILL.md",
+    "PROJECT_ROOT/.agents/skills/rw-literature/SKILL.md",
+    "PROJECT_ROOT/.agents/skills/rw-literature/references/search-and-library.md",
+    "PROJECT_ROOT/.agents/skills/rw-literature/scripts/search_crossref.py",
+    "PROJECT_ROOT/.agents/skills/rw-question/SKILL.md",
+    "PROJECT_ROOT/.agents/skills/rw-review/SKILL.md",
+    "PROJECT_ROOT/.agents/skills/rw-review/references/cross-material-consistency.md",
+    "PROJECT_ROOT/.agents/skills/rw-review/references/review-modes.md",
+    "PROJECT_ROOT/.agents/skills/rw-review/references/review-response.md",
+    "PROJECT_ROOT/.agents/skills/rw-review/references/submission-delivery.md",
+    "PROJECT_ROOT/.agents/skills/rw-review/references/theory-review.md",
+    "PROJECT_ROOT/.agents/skills/rw-review/scripts/check_revision_plan.py",
+    "PROJECT_ROOT/.agents/skills/rw-validation/SKILL.md",
+    "PROJECT_ROOT/.agents/skills/rw-workflow/SKILL.md",
+    "PROJECT_ROOT/.agents/skills/rw-writing/SKILL.md",
+    "PROJECT_ROOT/.gitignore",
+    "PROJECT_ROOT/.research/write.lock",
+    "PROJECT_ROOT/PROJECT.md",
+    "PROJECT_ROOT/RECOVERY.md",
+    "PROJECT_ROOT/history/stage-a-initial/RECOVERY-before-runtime-path-fix.md",
+    "PROJECT_ROOT/history/stage-a-initial/manifest.json",
+    "PROJECT_ROOT/history/stage-a-initial/notes/parameters.json",
+    "PROJECT_ROOT/history/stage-a-initial/results/result.json",
+    "PROJECT_ROOT/history/stage-a-initial/results/summary.md",
+    "PROJECT_ROOT/history/stage-a-initial/results/table.csv",
+    "PROJECT_ROOT/notes/parameters.json",
+    "PROJECT_ROOT/notes/rejected-parameters.json",
+    "PROJECT_ROOT/notes/source-check.md",
+    "PROJECT_ROOT/notes/stage-a-operational-corrections.json",
+    "PROJECT_ROOT/notes/stage-a-validation.json",
+    "PROJECT_ROOT/notes/unregistered-scratch.md",
+    "PROJECT_ROOT/project.json",
+    "PROJECT_ROOT/provenance/initial/BRIEF.md",
+    "PROJECT_ROOT/provenance/initial/MANIFEST.json",
+    "PROJECT_ROOT/provenance/initial/PROTOCOL.md",
+    "PROJECT_ROOT/provenance/initial/RECORDING.md",
+    "PROJECT_ROOT/provenance/initial/STAGE-A.md",
+    "PROJECT_ROOT/provenance/initial/access-manifest.json",
+    "PROJECT_ROOT/provenance/initial/constraints.json",
+    "PROJECT_ROOT/provenance/initial/obligations.json",
+    "PROJECT_ROOT/provenance/initial/source-identities.json",
+    "PROJECT_ROOT/records/registry.json",
+    "PROJECT_ROOT/results/result.json",
+    "PROJECT_ROOT/results/summary.md",
+    "PROJECT_ROOT/results/table.csv",
+    "PROJECT_ROOT/scripts/compute.py",
+    "PROJECT_ROOT/sources/howard2021-arxiv-v9.pdf",
+    "PROJECT_ROOT/validation/stage-a/commands.json",
+    "PROJECT_ROOT/validation/stage-a/normal/result.json",
+    "PROJECT_ROOT/validation/stage-a/normal/table.csv",
+    "PROJECT_ROOT/validation/stage-a/preservation.json",
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/inputs-and-artifacts.json"
+  ],
+  "model": null,
+  "temperature": null,
+  "seed": null,
+  "token_usage": null,
+  "system_token_limit": null,
+  "sampling_settings": "Unknown; no equality assumption.",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "stdlib_only": true,
+    "network_calls": 0,
+    "randomness": "deterministic; no random generator used",
+    "model": null,
+    "temperature": null,
+    "model_seed": null,
+    "token_usage": null
+  },
+  "external_report_character_count": 1914,
+  "pending_final_delivery_check": false,
+  "final_delivery_assertions": "passed: required files, original identity, exact recoverable snapshots, current checkpoint, three effective activities, valid/invalid exits and installed runtime check."
+}

@@ -1,0 +1,360 @@
+{
+  "case_id": "D",
+  "stage": "A",
+  "inputs": [
+    {
+      "relative_path": "REQUEST.md",
+      "path": "STUDY_ROOT/runs/P2/A/REQUEST.md",
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "bytes": 2145
+    },
+    {
+      "relative_path": "input/PROTOCOL.md",
+      "path": "INPUT_DIR/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "relative_path": "input/RECORDING.md",
+      "path": "INPUT_DIR/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "relative_path": "input/STAGE-A.md",
+      "path": "INPUT_DIR/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214
+    },
+    {
+      "relative_path": "input/initial/BRIEF.md",
+      "path": "INPUT_DIR/initial/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078
+    },
+    {
+      "relative_path": "input/initial/MANIFEST.json",
+      "path": "INPUT_DIR/initial/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329
+    },
+    {
+      "relative_path": "input/initial/constraints.json",
+      "path": "INPUT_DIR/initial/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070
+    },
+    {
+      "relative_path": "input/initial/obligations.json",
+      "path": "INPUT_DIR/initial/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723
+    },
+    {
+      "relative_path": "input/initial/project_payload/data/hour_2011.csv",
+      "path": "INPUT_DIR/initial/project_payload/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    {
+      "relative_path": "input/initial/project_payload/model/frozen.json",
+      "path": "INPUT_DIR/initial/project_payload/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    {
+      "relative_path": "input/initial/project_payload/notes/parameters.json",
+      "path": "INPUT_DIR/initial/project_payload/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171
+    },
+    {
+      "relative_path": "input/initial/project_payload/notes/rejected-parameters.json",
+      "path": "INPUT_DIR/initial/project_payload/notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171
+    },
+    {
+      "relative_path": "input/initial/project_payload/notes/source-check.md",
+      "path": "INPUT_DIR/initial/project_payload/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474
+    },
+    {
+      "relative_path": "input/initial/project_payload/notes/unregistered-scratch.md",
+      "path": "INPUT_DIR/initial/project_payload/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132
+    },
+    {
+      "relative_path": "input/initial/project_payload/results/result.json",
+      "path": "INPUT_DIR/initial/project_payload/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    {
+      "relative_path": "input/initial/project_payload/results/summary.md",
+      "path": "INPUT_DIR/initial/project_payload/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280
+    },
+    {
+      "relative_path": "input/initial/project_payload/results/table.csv",
+      "path": "INPUT_DIR/initial/project_payload/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    {
+      "relative_path": "input/initial/project_payload/scripts/compute.py",
+      "path": "INPUT_DIR/initial/project_payload/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    {
+      "relative_path": "input/initial/source-identities.json",
+      "path": "INPUT_DIR/initial/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200
+    }
+  ],
+  "project_artifacts": [
+    {
+      "relative_path": "RECOVERY.md",
+      "path": "PROJECT_ROOT/RECOVERY.md",
+      "sha256": "065dac75fd841afc777180f5263c65748344c6448a1639ad8fd6d9630115548d",
+      "bytes": 3157
+    },
+    {
+      "relative_path": "data/hour_2011.csv",
+      "path": "PROJECT_ROOT/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    {
+      "relative_path": "management/BRIEF.md",
+      "path": "PROJECT_ROOT/management/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078
+    },
+    {
+      "relative_path": "management/MANIFEST.json",
+      "path": "PROJECT_ROOT/management/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329
+    },
+    {
+      "relative_path": "management/constraints.json",
+      "path": "PROJECT_ROOT/management/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070
+    },
+    {
+      "relative_path": "management/evidence/A/checks.json",
+      "path": "PROJECT_ROOT/management/evidence/A/checks.json",
+      "sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "bytes": 9234
+    },
+    {
+      "relative_path": "management/evidence/A/invalid-after.json",
+      "path": "PROJECT_ROOT/management/evidence/A/invalid-after.json",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553
+    },
+    {
+      "relative_path": "management/evidence/A/invalid-before.json",
+      "path": "PROJECT_ROOT/management/evidence/A/invalid-before.json",
+      "sha256": "8ffffa65d10830294021e63dec9116e132a76cfa9dc20a5d76b6948a1c631724",
+      "bytes": 5553
+    },
+    {
+      "relative_path": "management/evidence/A/normal-run/result.json",
+      "path": "PROJECT_ROOT/management/evidence/A/normal-run/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    {
+      "relative_path": "management/evidence/A/normal-run/table.csv",
+      "path": "PROJECT_ROOT/management/evidence/A/normal-run/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    {
+      "relative_path": "management/obligations.json",
+      "path": "PROJECT_ROOT/management/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723
+    },
+    {
+      "relative_path": "management/protocol/PROTOCOL.md",
+      "path": "PROJECT_ROOT/management/protocol/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279
+    },
+    {
+      "relative_path": "management/protocol/RECORDING.md",
+      "path": "PROJECT_ROOT/management/protocol/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300
+    },
+    {
+      "relative_path": "management/protocol/REQUEST.md",
+      "path": "PROJECT_ROOT/management/protocol/REQUEST.md",
+      "sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "bytes": 2145
+    },
+    {
+      "relative_path": "management/protocol/STAGE-A.md",
+      "path": "PROJECT_ROOT/management/protocol/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214
+    },
+    {
+      "relative_path": "management/source-identities.json",
+      "path": "PROJECT_ROOT/management/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200
+    },
+    {
+      "relative_path": "management/state.json",
+      "path": "PROJECT_ROOT/management/state.json",
+      "sha256": "78986837437208d8346c7a8b83ebe34d470234c840b5f2055284bba2480aaf77",
+      "bytes": 19166
+    },
+    {
+      "relative_path": "management/status.py",
+      "path": "PROJECT_ROOT/management/status.py",
+      "sha256": "686230798926b180ed03e5d75cc1e41e51c38f6911e0a5f8fdba0e0633c72d98",
+      "bytes": 3331
+    },
+    {
+      "relative_path": "management/versions/A-initial/notes/parameters.json",
+      "path": "PROJECT_ROOT/management/versions/A-initial/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171
+    },
+    {
+      "relative_path": "management/versions/A-initial/results/result.json",
+      "path": "PROJECT_ROOT/management/versions/A-initial/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    {
+      "relative_path": "management/versions/A-initial/results/summary.md",
+      "path": "PROJECT_ROOT/management/versions/A-initial/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280
+    },
+    {
+      "relative_path": "management/versions/A-initial/results/table.csv",
+      "path": "PROJECT_ROOT/management/versions/A-initial/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    {
+      "relative_path": "model/frozen.json",
+      "path": "PROJECT_ROOT/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    {
+      "relative_path": "notes/parameters.json",
+      "path": "PROJECT_ROOT/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171
+    },
+    {
+      "relative_path": "notes/rejected-parameters.json",
+      "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171
+    },
+    {
+      "relative_path": "notes/source-check.md",
+      "path": "PROJECT_ROOT/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474
+    },
+    {
+      "relative_path": "notes/unregistered-scratch.md",
+      "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132
+    },
+    {
+      "relative_path": "results/result.json",
+      "path": "PROJECT_ROOT/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    {
+      "relative_path": "results/summary.md",
+      "path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280
+    },
+    {
+      "relative_path": "results/table.csv",
+      "path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    {
+      "relative_path": "scripts/compute.py",
+      "path": "PROJECT_ROOT/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    }
+  ],
+  "output_artifacts": [
+    {
+      "relative_path": "build_stage_a.py",
+      "path": "OUTPUT_DIR/build_stage_a.py",
+      "sha256": "990e7df35cfe2fea23696624384947d95721eeadc57d1d8c2c43fc2397a12659",
+      "bytes": 29251
+    },
+    {
+      "relative_path": "execution.json",
+      "path": "OUTPUT_DIR/execution.json",
+      "sha256": "dec035edbc6c7d61b3128a74cfcc65d5b25b4017065dbe4a4947df70b11cd87c",
+      "bytes": 75255
+    },
+    {
+      "relative_path": "finalize_audit.py",
+      "path": "OUTPUT_DIR/finalize_audit.py",
+      "sha256": "867a6f2b862698c0b2d423e44cded304c8a73043b18f4a5b4cdfb2d4bbff8d0a",
+      "bytes": 8400
+    },
+    {
+      "relative_path": "report.md",
+      "path": "OUTPUT_DIR/report.md",
+      "sha256": "bb7342d2b2f4b554507020c0ca1a572a0d3a4e6e16b64ad715c5c979722a4c59",
+      "bytes": 3649
+    },
+    {
+      "relative_path": "state-answer.json",
+      "path": "OUTPUT_DIR/state-answer.json",
+      "sha256": "48bad06a03a116443011f09ebeb45e91ad1f40861f42da0f0a7401238686358a",
+      "bytes": 5950
+    },
+    {
+      "relative_path": "status-check.json",
+      "path": "OUTPUT_DIR/status-check.json",
+      "sha256": "b312caf12cc8c4dfd678adc0deffcfa15ed8ef12d117751bbd76d0a415ca763b",
+      "bytes": 4548
+    },
+    {
+      "relative_path": "verification-normal/result.json",
+      "path": "OUTPUT_DIR/verification-normal/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    {
+      "relative_path": "verification-normal/table.csv",
+      "path": "OUTPUT_DIR/verification-normal/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    }
+  ],
+  "hash_manifest_self_exclusion": "inputs-and-artifacts.json excludes its own hash to avoid recursion; it is an output path in execution. Execution is hashed here after finalization. Directory mtimes are operational evidence, not scientific content versions.",
+  "non_distribution_scope": "No remote/PDF/full original hour.csv acquired. Original supplied CSV is private cache only; do not publicly redistribute source data. Publish source identities and results only under supplied rule."
+}

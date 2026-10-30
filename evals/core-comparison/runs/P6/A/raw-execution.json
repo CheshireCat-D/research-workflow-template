@@ -1,0 +1,723 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--output",
+        "OUTPUT_DIR/validation-valid"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"result\": \"OUTPUT_DIR/validation-valid/result.json\", \"parameters_sha256\": \"16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--output",
+        "OUTPUT_DIR/validation-rejected",
+        "--spec",
+        "PROJECT_ROOT/notes/rejected-parameters.json"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"evaluation_start must be no later than evaluation_end\"}\n"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/project_status.py",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"root\": \"PROJECT_ROOT\",\n  \"authority\": \"PROJECT_ROOT/records/state.json\",\n  \"state_version\": 1,\n  \"state_sha256\": \"d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa\",\n  \"files\": {\n    \"data/hour_2011.csv\": {\n      \"record\": \"D-RAW\",\n      \"expected\": {\n        \"sha256\": \"294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115\",\n        \"bytes\": 568668\n      },\n      \"actual\": {\n        \"sha256\": \"294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115\",\n        \"bytes\": 568668\n      },\n      \"state\": \"current\"\n    },\n    \"notes/parameters.json\": {\n      \"record\": \"D-PARAM\",\n      \"expected\": {\n        \"sha256\": \"16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837\",\n        \"bytes\": 171\n      },\n      \"actual\": {\n        \"sha256\": \"16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837\",\n        \"bytes\": 171\n      },\n      \"state\": \"current\"\n    },\n    \"scripts/compute.py\": {\n      \"record\": \"D-CODE\",\n      \"expected\": {\n        \"sha256\": \"e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1\",\n        \"bytes\": 4157\n      },\n      \"actual\": {\n        \"sha256\": \"e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1\",\n        \"bytes\": 4157\n      },\n      \"state\": \"current\"\n    },\n    \"model/frozen.json\": {\n      \"record\": \"D-MODEL\",\n      \"expected\": {\n        \"sha256\": \"9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025\",\n        \"bytes\": 2320\n      },\n      \"actual\": {\n        \"sha256\": \"9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025\",\n        \"bytes\": 2320\n      },\n      \"state\": \"current\"\n    },\n    \"results/result.json\": {\n      \"record\": \"D-RESULT\",\n      \"expected\": {\n        \"sha256\": \"1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b\",\n        \"bytes\": 1000\n      },\n      \"actual\": {\n        \"sha256\": \"1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b\",\n        \"bytes\": 1000\n      },\n      \"state\": \"current\"\n    },\n    \"results/table.csv\": {\n      \"record\": \"D-TABLE\",\n      \"expected\": {\n        \"sha256\": \"16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589\",\n        \"bytes\": 205\n      },\n      \"actual\": {\n        \"sha256\": \"16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589\",\n        \"bytes\": 205\n      },\n      \"state\": \"current\"\n    },\n    \"results/summary.md\": {\n      \"record\": \"D-SUMMARY\",\n      \"expected\": {\n        \"sha256\": \"e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528\",\n        \"bytes\": 280\n      },\n      \"actual\": {\n        \"sha256\": \"e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528\",\n        \"bytes\": 280\n      },\n      \"state\": \"current\"\n    },\n    \"notes/source-check.md\": {\n      \"record\": \"D-SOURCE-NOTE\",\n      \"expected\": {\n        \"sha256\": \"34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48\",\n        \"bytes\": 474\n      },\n      \"actual\": {\n        \"sha256\": \"34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48\",\n        \"bytes\": 474\n      },\n      \"state\": \"current\"\n    }\n  },\n  \"changed_or_missing_paths\": [],\n  \"activities\": {\n    \"D-SOURCE-CHECK\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"D-CALC\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"D-SYNTH\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    }\n  },\n  \"checkpoint_freshness\": \"current\",\n  \"checkpoint_reasons\": [],\n  \"configuration_parameter_conflicts\": [],\n  \"configuration\": {\n    \"interest\": \"在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"D\",\n      \"evaluation_start\": \"2011-10-01\",\n      \"evaluation_end\": \"2011-12-31\",\n      \"model_policy\": \"frozen-2011-Jan-Sep\",\n      \"metric_weighting\": \"observed-hour\"\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"next_action\": \"将已核对的2011第四季度冻结模型指标与摘要交作者讨论；只比较指定观察小时，不重训、不外推2012。若材料或配置发生修订，先运行只读状态检查，定位D-CALC及D-SYNTH的失效范围，再显式复核和更新其版本。\",\n  \"coverage_limits\": {\n    \"source_only\": [\n      \"D-REMOTE\"\n    ],\n    \"unregistered\": [\n      \"notes/unregistered-scratch.md\"\n    ],\n    \"rejected_trial_not_current_input\": \"notes/rejected-parameters.json\",\n    \"untracked_files_not_automatically_scientific_dependencies\": true\n  },\n  \"scientific_validity\": \"not-certified by identity check\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/guarded_state_update.py",
+        "--root",
+        "OUTPUT_DIR/guarded-update-test",
+        "--candidate",
+        "OUTPUT_DIR/guarded-update-test/candidate.json",
+        "--expected-version",
+        "1",
+        "--expected-sha256",
+        "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+        "--reason",
+        "Controlled guard validation on isolated copy; no scientific revision"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\"updated\": true, \"state_version\": 2, \"old_state_snapshot\": \"OUTPUT_DIR/guarded-update-test/snapshots/authority/v1-d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa.json\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/guarded_state_update.py",
+        "--root",
+        "OUTPUT_DIR/guarded-update-test",
+        "--candidate",
+        "OUTPUT_DIR/guarded-update-test/candidate.json",
+        "--expected-version",
+        "1",
+        "--expected-sha256",
+        "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+        "--reason",
+        "Controlled stale state guard test"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 2,
+      "stdout": "{\"updated\": false, \"error\": \"ValueError\", \"message\": \"Conflict: authoritative state has changed; reread it before editing\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/project_status.py",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "{\n  \"root\": \"PROJECT_ROOT\",\n  \"authority\": \"PROJECT_ROOT/records/state.json\",\n  \"state_version\": 1,\n  \"state_sha256\": \"d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa\",\n  \"files\": {\n    \"data/hour_2011.csv\": {\n      \"record\": \"D-RAW\",\n      \"expected\": {\n        \"sha256\": \"294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115\",\n        \"bytes\": 568668\n      },\n      \"actual\": {\n        \"sha256\": \"294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115\",\n        \"bytes\": 568668\n      },\n      \"state\": \"current\"\n    },\n    \"notes/parameters.json\": {\n      \"record\": \"D-PARAM\",\n      \"expected\": {\n        \"sha256\": \"16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837\",\n        \"bytes\": 171\n      },\n      \"actual\": {\n        \"sha256\": \"16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837\",\n        \"bytes\": 171\n      },\n      \"state\": \"current\"\n    },\n    \"scripts/compute.py\": {\n      \"record\": \"D-CODE\",\n      \"expected\": {\n        \"sha256\": \"e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1\",\n        \"bytes\": 4157\n      },\n      \"actual\": {\n        \"sha256\": \"e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1\",\n        \"bytes\": 4157\n      },\n      \"state\": \"current\"\n    },\n    \"model/frozen.json\": {\n      \"record\": \"D-MODEL\",\n      \"expected\": {\n        \"sha256\": \"9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025\",\n        \"bytes\": 2320\n      },\n      \"actual\": {\n        \"sha256\": \"9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025\",\n        \"bytes\": 2320\n      },\n      \"state\": \"current\"\n    },\n    \"results/result.json\": {\n      \"record\": \"D-RESULT\",\n      \"expected\": {\n        \"sha256\": \"1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b\",\n        \"bytes\": 1000\n      },\n      \"actual\": {\n        \"sha256\": \"1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b\",\n        \"bytes\": 1000\n      },\n      \"state\": \"current\"\n    },\n    \"results/table.csv\": {\n      \"record\": \"D-TABLE\",\n      \"expected\": {\n        \"sha256\": \"16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589\",\n        \"bytes\": 205\n      },\n      \"actual\": {\n        \"sha256\": \"16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589\",\n        \"bytes\": 205\n      },\n      \"state\": \"current\"\n    },\n    \"results/summary.md\": {\n      \"record\": \"D-SUMMARY\",\n      \"expected\": {\n        \"sha256\": \"e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528\",\n        \"bytes\": 280\n      },\n      \"actual\": {\n        \"sha256\": \"e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528\",\n        \"bytes\": 280\n      },\n      \"state\": \"current\"\n    },\n    \"notes/source-check.md\": {\n      \"record\": \"D-SOURCE-NOTE\",\n      \"expected\": {\n        \"sha256\": \"34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48\",\n        \"bytes\": 474\n      },\n      \"actual\": {\n        \"sha256\": \"34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48\",\n        \"bytes\": 474\n      },\n      \"state\": \"current\"\n    }\n  },\n  \"changed_or_missing_paths\": [],\n  \"activities\": {\n    \"D-SOURCE-CHECK\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"D-CALC\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"D-SYNTH\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    }\n  },\n  \"checkpoint_freshness\": \"current\",\n  \"checkpoint_reasons\": [],\n  \"configuration_parameter_conflicts\": [],\n  \"configuration\": {\n    \"interest\": \"在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"D\",\n      \"evaluation_start\": \"2011-10-01\",\n      \"evaluation_end\": \"2011-12-31\",\n      \"model_policy\": \"frozen-2011-Jan-Sep\",\n      \"metric_weighting\": \"observed-hour\"\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"next_action\": \"将已核对的2011第四季度冻结模型指标与摘要交作者讨论；只比较指定观察小时，不重训、不外推2012。若材料或配置发生修订，先运行只读状态检查，定位D-CALC及D-SYNTH的失效范围，再显式复核和更新其版本。\",\n  \"coverage_limits\": {\n    \"source_only\": [\n      \"D-REMOTE\"\n    ],\n    \"unregistered\": [\n      \"notes/unregistered-scratch.md\"\n    ],\n    \"rejected_trial_not_current_input\": \"notes/rejected-parameters.json\",\n    \"untracked_files_not_automatically_scientific_dependencies\": true\n  },\n  \"scientific_validity\": \"not-certified by identity check\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "read_files": [
+    {
+      "path": "INPUT_DIR/initial/project_payload/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "access": "full-byte preservation; scientific parsing separately documented"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "access": "full-byte preservation; scientific parsing separately documented"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "access": "full-byte preservation; scientific parsing separately documented"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171,
+      "access": "full-byte preservation; scientific parsing separately documented"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "access": "full-byte preservation; scientific parsing separately documented"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "access": "full-byte preservation; scientific parsing separately documented"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "access": "full-byte preservation; scientific parsing separately documented"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "access": "full-byte preservation; scientific parsing separately documented"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "access": "full-byte preservation; scientific parsing separately documented"
+    },
+    {
+      "path": "INPUT_DIR/initial/project_payload/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "access": "full-byte preservation; scientific parsing separately documented"
+    },
+    {
+      "path": "INPUT_DIR/initial/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078,
+      "access": "full"
+    },
+    {
+      "path": "INPUT_DIR/initial/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070,
+      "access": "full"
+    },
+    {
+      "path": "INPUT_DIR/initial/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723,
+      "access": "full"
+    },
+    {
+      "path": "INPUT_DIR/initial/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200,
+      "access": "full"
+    },
+    {
+      "path": "INPUT_DIR/initial/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329,
+      "access": "full"
+    },
+    {
+      "path": "INPUT_DIR/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "access": "full"
+    },
+    {
+      "path": "INPUT_DIR/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "access": "full"
+    },
+    {
+      "path": "INPUT_DIR/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "access": "full"
+    },
+    {
+      "path": "STUDY_ROOT/runs/P6/A/REQUEST.md",
+      "sha256": "1ca741fca83b51d5d27f17bf58da8728d16a7935ddebbd8f6ba13214ef88d60c",
+      "bytes": 2370,
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "bytes": 4540,
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/skill-bridge.md",
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "bytes": 7641,
+      "access": "full"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "bytes": 3841,
+      "access": "full"
+    },
+    {
+      "path": "OUTPUT_DIR/build_project.py",
+      "sha256": "1a9476393eb19d2889e9cef5140bb528a1f0c2f2972c3a74bab9c4f9be94544c",
+      "bytes": 23528,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "OUTPUT_DIR/validation-valid/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/validation-valid/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "PROJECT_ROOT/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/project_status.py",
+      "sha256": "2403ad240e0642c67e0de548a817b4d3a72663c551c27f8a8188c6637eaaf7ab",
+      "bytes": 4080,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/guarded_state_update.py",
+      "sha256": "1459933f428b1cde70a7a475e7b41c74d3bd3e91a8a2ad46af821a94fac4206b",
+      "bytes": 2642,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/records/state.json",
+      "sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "bytes": 19212,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVER.md",
+      "sha256": "9c65a878750e658bd8e579b7fc6b64ad8232b227bf4e9f45e34fff18e4d6ba54",
+      "bytes": 2824,
+      "access": "full"
+    },
+    {
+      "path": "PROJECT_ROOT/records/initial-snapshots.json",
+      "sha256": "9c6d5ced3ada9f4a8071078abe15756f22ae88c2a7f6baccb74caf20164e8769",
+      "bytes": 527,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/.gitignore",
+      "sha256": "667251f02f98a2e7fb0aa017bfabcb3158cb09472d88d379ed47e11ca9dde3a7",
+      "bytes": 89,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVER.md",
+      "sha256": "bab3b3d04c66872ae1983f26856e56a95ccd80b6eaca38a789db1a09ce6c7a97",
+      "bytes": 2824,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-A/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-A/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-A/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/records/commands-A.json",
+      "sha256": "1b84466dea513e1514643b53fbefc77c3512396fb3adab26722a765dbcb07105",
+      "bytes": 16077,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/records/guard-validation-A.json",
+      "sha256": "04b88fdac1a4b08f30b5f172d0ddf67a8a4d112fe6ffe9e5eea87d1f261daaa9",
+      "bytes": 330,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/records/inputs-A.json",
+      "sha256": "86b090d5fae2349d64380c5b426aaab93373be47848bfc527e15a652c0213a9d",
+      "bytes": 11713,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/records/validation-A.json",
+      "sha256": "b891b76e2b0264ab71feafe5df5144a870c146205690a829e3b89e6da4b92dce",
+      "bytes": 8200,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "access": "full-byte inventory; scientific access separately documented"
+    },
+    {
+      "path": "OUTPUT_DIR/execution-data.json",
+      "sha256": "da1fecdabe5a2dfb02f52fb22233843d87c988b03ea6247af85b918df87eaf5c",
+      "bytes": 23777,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/finalize.py",
+      "sha256": "fe5960d30ac8238f54cc5bd507fd395a438660321f920d6915d2548be8b44e9d",
+      "bytes": 16889,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/guard-check.json",
+      "sha256": "04b88fdac1a4b08f30b5f172d0ddf67a8a4d112fe6ffe9e5eea87d1f261daaa9",
+      "bytes": 330,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/guarded-update-test/candidate.json",
+      "sha256": "292c0ea272ea02d1d4eb9c9ad9747b2ea4ed7cd86397ae216e0215a0880ecca1",
+      "bytes": 19212,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/guarded-update-test/records/.edit.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/guarded-update-test/records/state.json",
+      "sha256": "e16a5c01e9d7baa06cbf31133879dcc9986e232ce51f67e4644a499b41817324",
+      "bytes": 19645,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/guarded-update-test/snapshots/authority/v1-d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa.json",
+      "sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "bytes": 19212,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/report.md",
+      "sha256": "fc0ffe7d992593e413950b86daecb56f9b7305ab757395653721e5d38a1e1585",
+      "bytes": 4014,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/state-answer.json",
+      "sha256": "10cd0f3bc3232a29045317d0d5e33a90b8d2720a6c3309625baaf7141d8ab42f",
+      "bytes": 5378,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/status.json",
+      "sha256": "27998347cd4691107f2007dd5a29e73ff3cf50becbc1b8f7b98b39101526072b",
+      "bytes": 5442,
+      "access": "full-byte output inventory"
+    },
+    {
+      "path": "OUTPUT_DIR/validation.json",
+      "sha256": "b891b76e2b0264ab71feafe5df5144a870c146205690a829e3b89e6da4b92dce",
+      "bytes": 8200,
+      "access": "full-byte output inventory"
+    }
+  ],
+  "written_paths": [
+    "PROJECT_ROOT/.gitignore",
+    "PROJECT_ROOT/RECOVER.md",
+    "PROJECT_ROOT/data/hour_2011.csv",
+    "PROJECT_ROOT/model/frozen.json",
+    "PROJECT_ROOT/notes/parameters.json",
+    "PROJECT_ROOT/notes/rejected-parameters.json",
+    "PROJECT_ROOT/notes/source-check.md",
+    "PROJECT_ROOT/notes/unregistered-scratch.md",
+    "PROJECT_ROOT/provenance/initial/BRIEF.md",
+    "PROJECT_ROOT/provenance/initial/MANIFEST.json",
+    "PROJECT_ROOT/provenance/initial/constraints.json",
+    "PROJECT_ROOT/provenance/initial/obligations.json",
+    "PROJECT_ROOT/provenance/initial/source-identities.json",
+    "PROJECT_ROOT/provenance/task-A/PROTOCOL.md",
+    "PROJECT_ROOT/provenance/task-A/RECORDING.md",
+    "PROJECT_ROOT/provenance/task-A/STAGE-A.md",
+    "PROJECT_ROOT/records/commands-A.json",
+    "PROJECT_ROOT/records/guard-validation-A.json",
+    "PROJECT_ROOT/records/initial-snapshots.json",
+    "PROJECT_ROOT/records/inputs-A.json",
+    "PROJECT_ROOT/records/state.json",
+    "PROJECT_ROOT/records/validation-A.json",
+    "PROJECT_ROOT/results/result.json",
+    "PROJECT_ROOT/results/summary.md",
+    "PROJECT_ROOT/results/table.csv",
+    "PROJECT_ROOT/scripts/compute.py",
+    "PROJECT_ROOT/scripts/guarded_state_update.py",
+    "PROJECT_ROOT/scripts/project_status.py",
+    "PROJECT_ROOT/snapshots/initial/notes/parameters.json",
+    "PROJECT_ROOT/snapshots/initial/results/result.json",
+    "PROJECT_ROOT/snapshots/initial/results/summary.md",
+    "PROJECT_ROOT/snapshots/initial/results/table.csv",
+    "OUTPUT_DIR/build_project.py",
+    "OUTPUT_DIR/execution-data.json",
+    "OUTPUT_DIR/finalize.py",
+    "OUTPUT_DIR/guard-check.json",
+    "OUTPUT_DIR/guarded-update-test/candidate.json",
+    "OUTPUT_DIR/guarded-update-test/records/.edit.lock",
+    "OUTPUT_DIR/guarded-update-test/records/state.json",
+    "OUTPUT_DIR/guarded-update-test/snapshots/authority/v1-d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa.json",
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/state-answer.json",
+    "OUTPUT_DIR/status.json",
+    "OUTPUT_DIR/validation-valid/result.json",
+    "OUTPUT_DIR/validation-valid/table.csv",
+    "OUTPUT_DIR/validation.json",
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/inputs-and-artifacts.json"
+  ],
+  "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "observed_interpreter": "EVAL_PYTHON",
+  "network_calls": 0,
+  "violations": [],
+  "failures": [
+    {
+      "kind": "intentional controlled invalid input",
+      "exit_code": 2,
+      "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"evaluation_start must be no later than evaluation_end\"}\n",
+      "remediation": "None required: canonical tracked files unchanged, rejected output not created"
+    },
+    {
+      "kind": "controlled stale-ledger conflict on isolated copy",
+      "exit_code": 2,
+      "stdout": "{\"updated\": false, \"error\": \"ValueError\", \"message\": \"Conflict: authoritative state has changed; reread it before editing\"}\n",
+      "remediation": "No retry or overwrite; current test ledger and main project authority preserved"
+    }
+  ],
+  "unknown_settings": {
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "system_limits": null
+  },
+  "outer_commands": [
+    {
+      "tool_call": 1,
+      "tool": "exec_command",
+      "command": "cat STUDY_ROOT/runs/P6/A/REQUEST.md",
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdout_summary": "REQUEST.md content returned",
+      "stderr": "",
+      "argv": [
+        "/bin/zsh",
+        "-lc",
+        "cat STUDY_ROOT/runs/P6/A/REQUEST.md"
+      ],
+      "argv_note": "Submitted shell-source representation; tool backend wrapper argv is not exposed"
+    },
+    {
+      "tool_call": 2,
+      "tool": "exec_command",
+      "command": "ls -la INPUT_DIR\ncat INPUT_DIR/PROTOCOL.md INPUT_DIR/RECORDING.md INPUT_DIR/STAGE-A.md TOOLKIT_ROOT/skills/rw-workflow/SKILL.md TOOLKIT_ROOT/core/skill-bridge.md TOOLKIT_ROOT/core/protocol.md",
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdout_summary": "Input directory listing and six requested guidance documents returned",
+      "stderr": "",
+      "argv": [
+        "/bin/zsh",
+        "-lc",
+        "ls -la INPUT_DIR\ncat INPUT_DIR/PROTOCOL.md INPUT_DIR/RECORDING.md INPUT_DIR/STAGE-A.md TOOLKIT_ROOT/skills/rw-workflow/SKILL.md TOOLKIT_ROOT/core/skill-bridge.md TOOLKIT_ROOT/core/protocol.md"
+      ],
+      "argv_note": "Submitted shell-source representation; tool backend wrapper argv is not exposed"
+    },
+    {
+      "tool_call": 3,
+      "tool": "exec_command",
+      "command": "find INPUT_DIR/initial -type f -print",
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdout_summary": "15 initial file paths returned",
+      "stderr": "",
+      "argv": [
+        "/bin/zsh",
+        "-lc",
+        "find INPUT_DIR/initial -type f -print"
+      ],
+      "argv_note": "Submitted shell-source representation; tool backend wrapper argv is not exposed"
+    },
+    {
+      "tool_call": 4,
+      "tool": "exec_command",
+      "command": "cat INPUT_DIR/initial/BRIEF.md INPUT_DIR/initial/constraints.json INPUT_DIR/initial/obligations.json INPUT_DIR/initial/source-identities.json INPUT_DIR/initial/MANIFEST.json INPUT_DIR/initial/project_payload/notes/parameters.json INPUT_DIR/initial/project_payload/notes/rejected-parameters.json INPUT_DIR/initial/project_payload/notes/source-check.md INPUT_DIR/initial/project_payload/notes/unregistered-scratch.md INPUT_DIR/initial/project_payload/results/result.json INPUT_DIR/initial/project_payload/results/table.csv INPUT_DIR/initial/project_payload/results/summary.md INPUT_DIR/initial/project_payload/model/frozen.json INPUT_DIR/initial/project_payload/scripts/compute.py",
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "stdout_summary": "All listed scientific and project material contents returned; large raw CSV read by later calculator/inventory",
+      "stderr": "",
+      "argv": [
+        "/bin/zsh",
+        "-lc",
+        "cat INPUT_DIR/initial/BRIEF.md INPUT_DIR/initial/constraints.json INPUT_DIR/initial/obligations.json INPUT_DIR/initial/source-identities.json INPUT_DIR/initial/MANIFEST.json INPUT_DIR/initial/project_payload/notes/parameters.json INPUT_DIR/initial/project_payload/notes/rejected-parameters.json INPUT_DIR/initial/project_payload/notes/source-check.md INPUT_DIR/initial/project_payload/notes/unregistered-scratch.md INPUT_DIR/initial/project_payload/results/result.json INPUT_DIR/initial/project_payload/results/table.csv INPUT_DIR/initial/project_payload/results/summary.md INPUT_DIR/initial/project_payload/model/frozen.json INPUT_DIR/initial/project_payload/scripts/compute.py"
+      ],
+      "argv_note": "Submitted shell-source representation; tool backend wrapper argv is not exposed"
+    },
+    {
+      "tool_call": 5,
+      "tool": "exec_command",
+      "command": "mkdir -p OUTPUT_DIR\ncat > OUTPUT_DIR/build_project.py <<'PY'\nfrom pathlib import Path\nimport csv, hashlib, json, math, os, platform, shutil, subprocess, sys, datetime\nBASE=Path('STUDY_ROOT/runs/P6')\nIN=BASE/'A/input'; OUT=BASE/'A/output'; ROOT=BASE/'project'\nPYTHON='EVAL_PYTHON'\nTOOLKIT=Path('TOOLKIT_ROOT')\nreads=[]; commands=[]; written=[]\ndef digest(p):\n b=Path(p).read_bytes();return {'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}\ndef read(p,scope='full'):\n p=Path(p);b=p.read_bytes();reads.append({'path':str(p),'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b),'access':scope});return b\ndef load(p):return json.loads(read(p))\ndef save(p,v):\n p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\\n',encoding='utf-8');written.append(str(p))\ndef textfile(p,s):\n p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(s,encoding='utf-8');written.append(str(p))\ndef run(argv,cwd):\n p=subprocess.run(argv,cwd=str(cwd),text=True,capture_output=True)\n commands.append({'argv':argv,'cwd':str(cwd),'exit_code':p.returncode,'stdout':p.stdout,'stderr':p.stderr})\n return p\n# A new directory is created atomically; existing projects are never overwritten.\nROOT.mkdir()\nfor p in sorted((IN/'initial/project_payload').rglob('*')):\n if p.is_file():\n  content=read(p,'full-byte preservation; scientific parsing separately documented')\n  dest=ROOT/p.relative_to(IN/'initial/project_payload');dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(content);written.append(str(dest))\nfor name in ['BRIEF.md','constraints.json','obligations.json','source-identities.json','MANIFEST.json']:\n textfile(ROOT/'provenance/initial'/name,read(IN/'initial'/name).decode('utf-8'))\nfor name in ['PROTOCOL.md','RECORDING.md','STAGE-A.md']:\n textfile(ROOT/'provenance/task-A'/name,read(IN/name).decode('utf-8'))\nread(BASE/'A/REQUEST.md')\nfor name in ['skills/rw-workflow/SKILL.md','core/skill-bridge.md','core/protocol.md']:\n read(TOOLKIT/name)\nread(Path(__file__))\nconstraints=load(IN/'initial/constraints.json');obligations=load(IN/'initial/obligations.json');sources=load(IN/'initial/source-identities.json');manifest=load(IN/'initial/MANIFEST.json')\nmanifest_checks={}\nfor name, expected in manifest['files'].items():\n actual=digest(IN/'initial'/name);manifest_checks[name]={'actual':actual,'expected':expected,'matches':actual==expected}\nassert all(v['matches'] for v in manifest_checks.values())\n# Copy only four small, explicitly requested canonical versions. Large raw data remain a single private cache copy.\nfor rel in ['notes/parameters.json','results/result.json','results/table.csv','results/summary.md']:\n dest=ROOT/'snapshots/initial'/rel;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(read(ROOT/rel));written.append(str(dest))\ntracked=set(obligations['local_tracking_paths']+[obligations['companion_deliverable']])\nbefore={rel:digest(ROOT/rel) for rel in sorted(tracked)}\nvalid=run([PYTHON,'-I','-B',str(ROOT/'scripts/compute.py'),'--root',str(ROOT),'--output',str(OUT/'validation-valid')],ROOT)\nassert valid.returncode==0,valid.stderr\ncomputed=load(OUT/'validation-valid/result.json');canonical=load(ROOT/'results/result.json')\nresult_equal=computed==canonical\ncsv_equal=read(OUT/'validation-valid/table.csv')==read(ROOT/'results/table.csv')\nresult_byte_equal=read(OUT/'validation-valid/result.json')==read(ROOT/'results/result.json')\nassert result_equal and csv_equal and result_byte_equal\nbefore_invalid={rel:digest(ROOT/rel) for rel in sorted(tracked)}\ninvalid=run([PYTHON,'-I','-B',str(ROOT/'scripts/compute.py'),'--root',str(ROOT),'--output',str(OUT/'validation-rejected'),'--spec',str(ROOT/'notes/rejected-parameters.json')],ROOT)\nassert invalid.returncode==2,invalid.stdout\nassert not (OUT/'validation-rejected').exists()\nafter={rel:digest(ROOT/rel) for rel in sorted(tracked)}\nassert before==after and before_invalid==after\n# Read original scientific materials without re-fitting models.\ndata=read(ROOT/'data/hour_2011.csv')\nrows=list(csv.DictReader(data.decode('utf-8').splitlines()))\nspec=load(ROOT/'notes/parameters.json');model=load(ROOT/'model/frozen.json')\nsummary=read(ROOT/'results/summary.md').decode('utf-8');source_note=read(ROOT/'notes/source-check.md').decode('utf-8')\nread(ROOT/'scripts/compute.py');read(ROOT/'notes/rejected-parameters.json')\nassert len(rows)==sources['primary']['rows']==8645\nassert digest(ROOT/'data/hour_2011.csv')['sha256']==sources['primary']['sha256']\nassert all(r['yr']=='0' and r['dteday'].startswith('2011-') for r in rows)\nassert '2203' in summary and '92' in summary and '58.825190494512' in summary and '44.570832407532' in summary and '24.23172448%' in summary\nchecks={'input_manifest_matches':manifest_checks,'valid_exit_code':valid.returncode,'result_semantic_equal':result_equal,'result_byte_equal':result_byte_equal,'table_byte_equal':csv_equal,'row_count':len(rows),'date_min':min(r['dteday'] for r in rows),'date_max':max(r['dteday'] for r in rows),'all_2011_yr0':True,'invalid_exit_code':invalid.returncode,'invalid_stdout':invalid.stdout,'invalid_stderr':invalid.stderr,'invalid_output_directory_exists':False,'all_registered_files_unchanged_after_trials':before==after,'before_invalid':before_invalid,'after_invalid':after,'summary_numeric_fields_checked':['evaluation dates','observed hours','observed days','C0 MAE','C1 MAE','MAE reduction percent'],'source_limits':['Local slice identity and full row count verified against supplied identity card; original ZIP, full hour.csv and live UCI metadata not supplied or fetched.','Model training provenance is supplied metadata; no refit or independent training reconstruction.','The note claims 17379 original hour.csv rows versus 17389 website metadata; this discrepancy is retained but not rechecked remotely.']}\nsave(OUT/'validation.json',checks);save(ROOT/'records/validation-A.json',checks)\ntextfile(ROOT/'records/commands-A.json',json.dumps(commands,ensure_ascii=False,indent=2)+'\\n')\n# This is a project-specific ledger, with no dependency on any external research manager.\nrecords=[]\ndef add(id,kind,**kw):\n r={'id':id,'kind':kind,'version':1,**kw};records.append(r);return r\nadd('D-SRC','source',identity=sources['primary'],access={'level':'full local slice; metadata-only remote identity','local_range':'8645 2011 rows parsed; full file SHA verified','remote_fetched':False,'original_zip_or_full_hour_csv_read':False,'verification_scope':'Supplied cached identity, not independently established official provenance'})\nadd('D-REMOTE','source',identity=sources['source_only'],access={'level':'metadata-only','remote_fetched':False,'local_copy':None,'content_fingerprint':None})\nadd('D-RAW','material',path='data/hour_2011.csv',source_ids=['D-SRC'],immutable=True)\nadd('D-PARAM','material',path='notes/parameters.json',meaning='Author working specification, separate from original dataset',specification=spec,revision_reason='Initial author-supplied evaluation scope',recoverable_content='snapshots/initial/notes/parameters.json')\nadd('D-CLAIM','statement',text=constraints['interest'],scope='2011-10-01 through 2011-12-31; observed-hour weighting; supplied frozen C0/C1; descriptive time holdout',assessment={'scientific_certification':False,'formal_proof':'not-applicable','human_expert_approval':False})\nadd('D-REL','relation',from_id='D-PARAM',to_id='D-CLAIM',relation='qualifies scope',rationale='Evaluation parameters bound the current numerical comparison, not proof by registration')\nadd('D-CHOICE','decision',choice='Use supplied initial frozen-model parameters',rationale='Initial benchmark author specification',responsible='Benchmark author; executor only implements this supplied choice',decided_at=None,evidence=['D-PARAM'])\nadd('D-CODE','artifact',path='scripts/compute.py',description='Supplied calculator preserved byte for byte')\nadd('D-MODEL','artifact',path='model/frozen.json',derived_from=['D-RAW'],derivation_access='Supplied provenance only; frozen Jan-Sep model consumed without refit')\nadd('D-RESULT','artifact',path='results/result.json',derived_from=['D-PARAM','D-RAW','D-CODE','D-CHOICE','D-MODEL'],recoverable_content='snapshots/initial/results/result.json')\nadd('D-TABLE','artifact',path='results/table.csv',derived_from=['D-RESULT'],description='Explicitly tracked companion deliverable',recoverable_content='snapshots/initial/results/table.csv')\nadd('D-SUMMARY','artifact',path='results/summary.md',derived_from=['D-CLAIM','D-RESULT'],recoverable_content='snapshots/initial/results/summary.md')\nadd('D-SOURCE-NOTE','artifact',path='notes/source-check.md',description='Supplied fixed identity and coverage note; original remote counts remain supplied assertions')\nadd('D-SOURCE-CHECK','activity',title='Check supplied primary source identity and coverage card',status='done',inputs=['D-SRC','D-RAW'],outputs=['D-SOURCE-NOTE'],depends_on=[],executor='AI agent plus standard-library file/CSV checks',completion_scope='Local full SHA and 8645 yr=0 rows agree with supplied identity; note reviewed; no full-source or remote scientific certification')\nadd('D-CALC','activity',title='Evaluate supplied calculator and compare canonical outputs',status='done',inputs=['D-PARAM','D-RAW','D-CODE','D-CHOICE','D-MODEL'],outputs=['D-RESULT','D-TABLE'],depends_on=[],executor='AI agent running supplied Python calculator',completion_scope='Actual normal execution exit 0; generated result and table byte-identical to canonical artifacts',evidence=['records/validation-A.json','records/commands-A.json'])\nadd('D-SYNTH','activity',title='Verify supplied summary against current claim and numeric result',status='done',inputs=['D-CLAIM','D-RESULT'],outputs=['D-SUMMARY'],depends_on=['D-CALC'],executor='AI agent',completion_scope='Existing author-supplied summary read and checked against dates, counts, MAEs, reduction and stated scope; not authored from scratch or human-reviewed')\nbyid={r['id']:r for r in records}\nfor r in records:\n if 'path' in r:r['binding']=digest(ROOT/r['path'])\n# Completed activities freeze record versions and fingerprints across the full transitive dependency closure.\ndef closure(id,seen=None):\n seen=set() if seen is None else seen\n if id in seen:return seen\n seen.add(id);r=byid[id]\n for k in ['inputs','outputs','depends_on','derived_from','evidence']:\n  for dep in r.get(k,[]):\n   if dep in byid:closure(dep,seen)\n return seen\ndef signature(r):return hashlib.sha256(json.dumps({k:v for k,v in r.items() if k!='completion_bindings'},ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()\nfor r in records:\n if r['kind']=='activity':\n  r['completion_bindings']={dep:{'version':byid[dep]['version'],'record_sha256':signature(byid[dep]),**({'path':byid[dep]['path'],'file':byid[dep]['binding']} if 'path' in byid[dep] else {})} for dep in sorted(closure(r['id'])-{r['id']})}\nstate={'format':'local-research-ledger-v1','state_version':1,'authority':'This JSON contains current configuration and logical records. prose notes, source cards, command logs and old handoffs do not overwrite it. Bound material files remain scientific byte authority; mismatches are conflicts requiring explicit review.','configuration':constraints,'records':records,'history':[],'coverage_limits':{'source_only':['D-REMOTE'],'unregistered':['notes/unregistered-scratch.md'],'rejected_trial_not_current_input':'notes/rejected-parameters.json','untracked_files_not_automatically_scientific_dependencies':True},'checkpoint':{'state_version':1,'configuration_sha256':hashlib.sha256(json.dumps(constraints,ensure_ascii=False,sort_keys=True).encode()).hexdigest(),'record_signatures':{r['id']:signature(r) for r in records},'files':after,'next_action':'将已核对的2011第四季度冻结模型指标与摘要交作者讨论；只比较指定观察小时，不重训、不外推2012。若材料或配置发生修订，先运行只读状态检查，定位D-CALC及D-SYNTH的失效范围，再显式复核和更新其版本。','meaning':'Saved recovery context, not additional scientific validation'},'settings':{'model':None,'temperature':None,'seed':None,'token_budget':None,'system_limit':None}}\nsave(ROOT/'records/state.json',state)\n# A self-contained, strictly read-only status program; no bytecode writes when called with -I -B.\ntextfile(ROOT/'scripts/project_status.py',r'''from pathlib import Path\nimport argparse, hashlib, json, sys\np=argparse.ArgumentParser(description='Read-only local ledger identity/dependency check')\np.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[1]);a=p.parse_args();root=a.root.resolve()\ndef fp(path):\n if path.is_symlink() or not path.is_file():return None\n b=path.read_bytes();return {'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}\ndef sig(r):return hashlib.sha256(json.dumps({k:v for k,v in r.items() if k!='completion_bindings'},ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()\ntry:\n state_path=root/'records/state.json';state=json.loads(state_path.read_text(encoding='utf-8'));records={r['id']:r for r in state['records']}\n files={};changes=[]\n for id,r in records.items():\n  if 'path' not in r:continue\n  rel=Path(r['path'])\n  if rel.is_absolute() or '..' in rel.parts:raise ValueError('Unsafe relative path '+str(rel))\n  full=root/rel\n  if any(v.is_symlink() for v in [full,*list(full.parents)[:len(rel.parts)-1]]):raise ValueError('Symlink in tracked path '+str(rel))\n  actual=fp(full);files[str(rel)]={'record':id,'expected':r.get('binding'),'actual':actual,'state':'missing' if actual is None else ('current' if actual==r.get('binding') else 'changed')}\n  if files[str(rel)]['state']!='current':changes.append(str(rel))\n activities={}\n for id,r in records.items():\n  if r['kind']!='activity':continue\n  reasons=[]\n  for dep,b in r.get('completion_bindings',{}).items():\n   current=records.get(dep)\n   if current is None:reasons.append('missing record '+dep);continue\n   if current['version']!=b['version'] or sig(current)!=b['record_sha256']:reasons.append('changed record '+dep)\n   if 'path' in b and fp(root/b['path'])!=b['file']:reasons.append('changed or missing file '+b['path'])\n  activities[id]={'declared_status':r['status'],'effective_status':'stale' if r['status']=='done' and reasons else r['status'],'reasons':reasons}\n for _ in activities:\n  for id,v in activities.items():\n   for dep in records[id].get('depends_on',[]):\n    if activities.get(dep,{}).get('effective_status')!='done':\n     reason='dependency activity not current: '+dep\n     if reason not in v['reasons']:v['reasons'].append(reason)\n     if v['declared_status']=='done':v['effective_status']='stale'\n cp=state.get('checkpoint',{});cp_reasons=[]\n if state['state_version']!=cp.get('state_version'):cp_reasons.append('ledger version changed')\n config_sha=hashlib.sha256(json.dumps(state['configuration'],ensure_ascii=False,sort_keys=True).encode()).hexdigest()\n if config_sha!=cp.get('configuration_sha256'):cp_reasons.append('configuration changed')\n if cp.get('record_signatures')!={id:sig(r) for id,r in records.items()}:cp_reasons.append('logical records changed')\n for rel,expected in cp.get('files',{}).items():\n  if fp(root/rel)!=expected:cp_reasons.append('changed or missing checkpoint file '+rel)\n mismatch=[]\n param=next((r for r in records.values() if r['id']=='D-PARAM'),None)\n if param and (root/param['path']).is_file():\n  spec=json.loads((root/param['path']).read_text(encoding='utf-8'))\n  for key,val in state['configuration'].get('current_scope',{}).items():\n   if key in spec and spec[key]!=val:mismatch.append(key)\n out={'root':str(root),'authority':str(state_path),'state_version':state['state_version'],'state_sha256':fp(state_path)['sha256'],'files':files,'changed_or_missing_paths':changes,'activities':activities,'checkpoint_freshness':'stale' if cp_reasons else 'current','checkpoint_reasons':cp_reasons,'configuration_parameter_conflicts':mismatch,'configuration':state['configuration'],'next_action':cp.get('next_action'),'coverage_limits':state['coverage_limits'],'scientific_validity':'not-certified by identity check'}\n print(json.dumps(out,ensure_ascii=False,indent=2));sys.exit(1 if changes or cp_reasons or mismatch or any(x['effective_status']=='stale' for x in activities.values()) else 0)\nexcept (OSError,ValueError,KeyError,TypeError) as e:\n print(json.dumps({'error':type(e).__name__,'message':str(e)},ensure_ascii=False));sys.exit(2)\n''')\ntextfile(ROOT/'RECOVER.md',f'''# 恢复与权威状态\n\n当前配置、逻辑记录与版本的唯一权威表示为 `records/state.json`。作者笔记或旧handoff不得覆盖较新配置；文件的实际字节如果不同于绑定值，应当报告冲突，而不是悄悄接受。原始初始约束和身份材料保留在 `provenance/initial/`，当前配置以后显式修订后以state.json为准。\n\n只读恢复命令（迁移时将ROOT替换为新项目绝对路径，使用可用的Python 3标准库解释器）：\n\n```sh\n{PYTHON} -I -B ROOT/scripts/project_status.py --root ROOT\n```\n\n脚本完全自包含，不需要外部工具包或本阶段OUTPUT_DIR。退出0表示登记的身份/依赖与检查点一致；退出1表示有漂移/陈旧活动；退出2为读取/格式错误。它不重算、不写项目、不自动接受变化、不认证科学正确性。跟踪9个材料路径，未登记scratch和无本地绑定的来源不在自动文件检查中。\n\n## 当前具体下一步\n\n将已核对的2011第四季度冻结模型指标与摘要交作者讨论；不重新训练，不外推2012。本阶段未发送、未提交，也未获得人类专家批准。材料若变化，先定位具体改变，沿依赖复核D-CALC及D-SYNTH；D-SOURCE-CHECK独立于评价参数，只有其来源、原始数据或来源卡本身变化才需要重做。\n\n## 实际执行和科学边界\n\n`records/validation-A.json`及`records/commands-A.json`保留正常执行与受控无效输入测试。有效计算和预制result/table逐字节相等；summary按其声明的日期、样本量、MAE和降低比例复核。未重训模型，也未核验完整原始hour.csv、ZIP或远端论文/官网内容。8645行2011切片SHA与提供的来源身份一致。原始完整hour.csv 17379行与网站metadata 17389行的差异只按来源卡保留，没有联网核实。\n\n## 版本保留和并发修订\n\n初始参数、result、table、summary的原字节在`snapshots/initial/`，可恢复被覆盖内容；恢复前先保留当前版本，不能无条件覆盖。`scripts/guarded_state_update.py`只提交一个已经准备并审阅的完整新state候选。要求同时提供实际读取的旧state SHA与旧state_version，新state_version须恰增1，修改记录的version须恰增1，并给出reason。旧state完整保留在`snapshots/authority/`，不允许旧handoff覆盖新state。该工具只更新权威元数据；科学文件和活动完成绑定应由执行者在真实复核后显式准备。不要仅刷新checkpoint来掩盖陈旧活动。\n\n四个初始快照完整SHA在`records/initial-snapshots.json`。大型CSV只保留项目内私有缓存一份，原始PDF/CSV禁止随公开仓库分发；可以公开身份和本项目结果。没有新的目标期刊决定，venue保持未定。\n''')\ntextfile(ROOT/'scripts/guarded_state_update.py',r'''from pathlib import Path\nimport argparse, hashlib, json, os, sys\np=argparse.ArgumentParser(description='Guarded local ledger replacement; never executes research steps')\np.add_argument('--root',type=Path,required=True);p.add_argument('--candidate',type=Path,required=True);p.add_argument('--expected-version',type=int,required=True);p.add_argument('--expected-sha256',required=True);p.add_argument('--reason',required=True);a=p.parse_args()\nroot=a.root.resolve();state=root/'records/state.json';lock=root/'records/.edit.lock'\ntry:\n # POSIX flock is standard library on this project's actual macOS environment.\n import fcntl\n with lock.open('a+b') as f:\n  fcntl.flock(f.fileno(),fcntl.LOCK_EX|fcntl.LOCK_NB)\n  old_bytes=state.read_bytes();old=json.loads(old_bytes);old_sha=hashlib.sha256(old_bytes).hexdigest()\n  if old['state_version']!=a.expected_version or old_sha!=a.expected_sha256:raise ValueError('Conflict: authoritative state has changed; reread it before editing')\n  new=json.loads(a.candidate.read_text(encoding='utf-8'))\n  if new['state_version']!=old['state_version']+1:raise ValueError('state_version must increase exactly by one')\n  prior={r['id']:r for r in old['records']}\n  for r in new['records']:\n   prev=prior.get(r['id'])\n   if prev is None and r['version']!=1:raise ValueError('New record version must be 1')\n   if prev is not None:\n    changed={k:v for k,v in prev.items() if k!='version'}!={k:v for k,v in r.items() if k!='version'}\n    if r['version']!=prev['version']+int(changed):raise ValueError('Record version conflict: '+r['id'])\n  new.setdefault('history',[]).append({'prior_state_version':old['state_version'],'prior_state_sha256':old_sha,'snapshot':'snapshots/authority/v'+str(old['state_version'])+'-'+old_sha+'.json','reason':a.reason,'executor':'current explicit local update; no implied human scientific approval'})\n  snap=root/new['history'][-1]['snapshot'];snap.parent.mkdir(parents=True,exist_ok=True)\n  if snap.exists() and snap.read_bytes()!=old_bytes:raise ValueError('Snapshot collision')\n  if not snap.exists():snap.write_bytes(old_bytes)\n  temp=state.with_name('.state.pending-'+str(os.getpid())+'.json')\n  try:\n   with temp.open('x',encoding='utf-8') as out:json.dump(new,out,ensure_ascii=False,indent=2,allow_nan=False);out.write('\\n');out.flush();os.fsync(out.fileno())\n   os.replace(temp,state)\n  finally:\n   if temp.exists():temp.unlink()\n  print(json.dumps({'updated':True,'state_version':new['state_version'],'old_state_snapshot':str(snap)}))\nexcept (OSError,ValueError,KeyError,TypeError) as e:\n print(json.dumps({'updated':False,'error':type(e).__name__,'message':str(e)}));sys.exit(2)\n''')\nsave(ROOT/'records/initial-snapshots.json',{rel:digest(ROOT/'snapshots/initial'/rel) for rel in ['notes/parameters.json','results/result.json','results/table.csv','results/summary.md']})\nstatus=run([PYTHON,'-I','-B',str(ROOT/'scripts/project_status.py'),'--root',str(ROOT)],ROOT)\nassert status.returncode==0,status.stdout\nstatus_obj=json.loads(status.stdout);save(OUT/'status.json',status_obj)\n# Keep actual persistent read identities and executed commands for subsequent recovery.\nfor rel in ['scripts/project_status.py','scripts/guarded_state_update.py','records/state.json','RECOVER.md','records/initial-snapshots.json']:\n read(ROOT/rel)\nsave(ROOT/'records/inputs-A.json',reads)\nsave(OUT/'execution-data.json',{'commands':commands,'read_files':reads,'written_paths':written,'python_version':sys.version,'platform':platform.platform(),'observed_interpreter':sys.executable,'network_calls':0,'violations':[],'failures':[{'kind':'intentional controlled invalid input','exit_code':invalid.returncode,'stderr':invalid.stderr,'remediation':'None required: canonical tracked files unchanged, rejected output not created'}],'unknown_settings':{'model':None,'temperature':None,'seed':None,'token_budget':None,'system_limits':None}})\nprint(json.dumps({'project':str(ROOT),'valid_exit':valid.returncode,'invalid_exit':invalid.returncode,'status_exit':status.returncode,'result_equal':result_equal,'table_equal':csv_equal,'tracked_count':len(tracked),'observed_hours':computed['observed_hours']},ensure_ascii=False))\nPY\nEVAL_PYTHON -I -B OUTPUT_DIR/build_project.py",
+      "cwd": "INPUT_DIR",
+      "exit_code": 0,
+      "stdout_summary": "Project built; valid exit 0, intentional invalid exit 2, status exit 0, exact result/table matches, 8 tracked paths",
+      "stderr": "",
+      "argv": [
+        "/bin/zsh",
+        "-c",
+        "mkdir -p OUTPUT_DIR\ncat > OUTPUT_DIR/build_project.py <<'PY'\nfrom pathlib import Path\nimport csv, hashlib, json, math, os, platform, shutil, subprocess, sys, datetime\nBASE=Path('STUDY_ROOT/runs/P6')\nIN=BASE/'A/input'; OUT=BASE/'A/output'; ROOT=BASE/'project'\nPYTHON='EVAL_PYTHON'\nTOOLKIT=Path('TOOLKIT_ROOT')\nreads=[]; commands=[]; written=[]\ndef digest(p):\n b=Path(p).read_bytes();return {'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}\ndef read(p,scope='full'):\n p=Path(p);b=p.read_bytes();reads.append({'path':str(p),'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b),'access':scope});return b\ndef load(p):return json.loads(read(p))\ndef save(p,v):\n p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\\n',encoding='utf-8');written.append(str(p))\ndef textfile(p,s):\n p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(s,encoding='utf-8');written.append(str(p))\ndef run(argv,cwd):\n p=subprocess.run(argv,cwd=str(cwd),text=True,capture_output=True)\n commands.append({'argv':argv,'cwd':str(cwd),'exit_code':p.returncode,'stdout':p.stdout,'stderr':p.stderr})\n return p\n# A new directory is created atomically; existing projects are never overwritten.\nROOT.mkdir()\nfor p in sorted((IN/'initial/project_payload').rglob('*')):\n if p.is_file():\n  content=read(p,'full-byte preservation; scientific parsing separately documented')\n  dest=ROOT/p.relative_to(IN/'initial/project_payload');dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(content);written.append(str(dest))\nfor name in ['BRIEF.md','constraints.json','obligations.json','source-identities.json','MANIFEST.json']:\n textfile(ROOT/'provenance/initial'/name,read(IN/'initial'/name).decode('utf-8'))\nfor name in ['PROTOCOL.md','RECORDING.md','STAGE-A.md']:\n textfile(ROOT/'provenance/task-A'/name,read(IN/name).decode('utf-8'))\nread(BASE/'A/REQUEST.md')\nfor name in ['skills/rw-workflow/SKILL.md','core/skill-bridge.md','core/protocol.md']:\n read(TOOLKIT/name)\nread(Path(__file__))\nconstraints=load(IN/'initial/constraints.json');obligations=load(IN/'initial/obligations.json');sources=load(IN/'initial/source-identities.json');manifest=load(IN/'initial/MANIFEST.json')\nmanifest_checks={}\nfor name, expected in manifest['files'].items():\n actual=digest(IN/'initial'/name);manifest_checks[name]={'actual':actual,'expected':expected,'matches':actual==expected}\nassert all(v['matches'] for v in manifest_checks.values())\n# Copy only four small, explicitly requested canonical versions. Large raw data remain a single private cache copy.\nfor rel in ['notes/parameters.json','results/result.json','results/table.csv','results/summary.md']:\n dest=ROOT/'snapshots/initial'/rel;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(read(ROOT/rel));written.append(str(dest))\ntracked=set(obligations['local_tracking_paths']+[obligations['companion_deliverable']])\nbefore={rel:digest(ROOT/rel) for rel in sorted(tracked)}\nvalid=run([PYTHON,'-I','-B',str(ROOT/'scripts/compute.py'),'--root',str(ROOT),'--output',str(OUT/'validation-valid')],ROOT)\nassert valid.returncode==0,valid.stderr\ncomputed=load(OUT/'validation-valid/result.json');canonical=load(ROOT/'results/result.json')\nresult_equal=computed==canonical\ncsv_equal=read(OUT/'validation-valid/table.csv')==read(ROOT/'results/table.csv')\nresult_byte_equal=read(OUT/'validation-valid/result.json')==read(ROOT/'results/result.json')\nassert result_equal and csv_equal and result_byte_equal\nbefore_invalid={rel:digest(ROOT/rel) for rel in sorted(tracked)}\ninvalid=run([PYTHON,'-I','-B',str(ROOT/'scripts/compute.py'),'--root',str(ROOT),'--output',str(OUT/'validation-rejected'),'--spec',str(ROOT/'notes/rejected-parameters.json')],ROOT)\nassert invalid.returncode==2,invalid.stdout\nassert not (OUT/'validation-rejected').exists()\nafter={rel:digest(ROOT/rel) for rel in sorted(tracked)}\nassert before==after and before_invalid==after\n# Read original scientific materials without re-fitting models.\ndata=read(ROOT/'data/hour_2011.csv')\nrows=list(csv.DictReader(data.decode('utf-8').splitlines()))\nspec=load(ROOT/'notes/parameters.json');model=load(ROOT/'model/frozen.json')\nsummary=read(ROOT/'results/summary.md').decode('utf-8');source_note=read(ROOT/'notes/source-check.md').decode('utf-8')\nread(ROOT/'scripts/compute.py');read(ROOT/'notes/rejected-parameters.json')\nassert len(rows)==sources['primary']['rows']==8645\nassert digest(ROOT/'data/hour_2011.csv')['sha256']==sources['primary']['sha256']\nassert all(r['yr']=='0' and r['dteday'].startswith('2011-') for r in rows)\nassert '2203' in summary and '92' in summary and '58.825190494512' in summary and '44.570832407532' in summary and '24.23172448%' in summary\nchecks={'input_manifest_matches':manifest_checks,'valid_exit_code':valid.returncode,'result_semantic_equal':result_equal,'result_byte_equal':result_byte_equal,'table_byte_equal':csv_equal,'row_count':len(rows),'date_min':min(r['dteday'] for r in rows),'date_max':max(r['dteday'] for r in rows),'all_2011_yr0':True,'invalid_exit_code':invalid.returncode,'invalid_stdout':invalid.stdout,'invalid_stderr':invalid.stderr,'invalid_output_directory_exists':False,'all_registered_files_unchanged_after_trials':before==after,'before_invalid':before_invalid,'after_invalid':after,'summary_numeric_fields_checked':['evaluation dates','observed hours','observed days','C0 MAE','C1 MAE','MAE reduction percent'],'source_limits':['Local slice identity and full row count verified against supplied identity card; original ZIP, full hour.csv and live UCI metadata not supplied or fetched.','Model training provenance is supplied metadata; no refit or independent training reconstruction.','The note claims 17379 original hour.csv rows versus 17389 website metadata; this discrepancy is retained but not rechecked remotely.']}\nsave(OUT/'validation.json',checks);save(ROOT/'records/validation-A.json',checks)\ntextfile(ROOT/'records/commands-A.json',json.dumps(commands,ensure_ascii=False,indent=2)+'\\n')\n# This is a project-specific ledger, with no dependency on any external research manager.\nrecords=[]\ndef add(id,kind,**kw):\n r={'id':id,'kind':kind,'version':1,**kw};records.append(r);return r\nadd('D-SRC','source',identity=sources['primary'],access={'level':'full local slice; metadata-only remote identity','local_range':'8645 2011 rows parsed; full file SHA verified','remote_fetched':False,'original_zip_or_full_hour_csv_read':False,'verification_scope':'Supplied cached identity, not independently established official provenance'})\nadd('D-REMOTE','source',identity=sources['source_only'],access={'level':'metadata-only','remote_fetched':False,'local_copy':None,'content_fingerprint':None})\nadd('D-RAW','material',path='data/hour_2011.csv',source_ids=['D-SRC'],immutable=True)\nadd('D-PARAM','material',path='notes/parameters.json',meaning='Author working specification, separate from original dataset',specification=spec,revision_reason='Initial author-supplied evaluation scope',recoverable_content='snapshots/initial/notes/parameters.json')\nadd('D-CLAIM','statement',text=constraints['interest'],scope='2011-10-01 through 2011-12-31; observed-hour weighting; supplied frozen C0/C1; descriptive time holdout',assessment={'scientific_certification':False,'formal_proof':'not-applicable','human_expert_approval':False})\nadd('D-REL','relation',from_id='D-PARAM',to_id='D-CLAIM',relation='qualifies scope',rationale='Evaluation parameters bound the current numerical comparison, not proof by registration')\nadd('D-CHOICE','decision',choice='Use supplied initial frozen-model parameters',rationale='Initial benchmark author specification',responsible='Benchmark author; executor only implements this supplied choice',decided_at=None,evidence=['D-PARAM'])\nadd('D-CODE','artifact',path='scripts/compute.py',description='Supplied calculator preserved byte for byte')\nadd('D-MODEL','artifact',path='model/frozen.json',derived_from=['D-RAW'],derivation_access='Supplied provenance only; frozen Jan-Sep model consumed without refit')\nadd('D-RESULT','artifact',path='results/result.json',derived_from=['D-PARAM','D-RAW','D-CODE','D-CHOICE','D-MODEL'],recoverable_content='snapshots/initial/results/result.json')\nadd('D-TABLE','artifact',path='results/table.csv',derived_from=['D-RESULT'],description='Explicitly tracked companion deliverable',recoverable_content='snapshots/initial/results/table.csv')\nadd('D-SUMMARY','artifact',path='results/summary.md',derived_from=['D-CLAIM','D-RESULT'],recoverable_content='snapshots/initial/results/summary.md')\nadd('D-SOURCE-NOTE','artifact',path='notes/source-check.md',description='Supplied fixed identity and coverage note; original remote counts remain supplied assertions')\nadd('D-SOURCE-CHECK','activity',title='Check supplied primary source identity and coverage card',status='done',inputs=['D-SRC','D-RAW'],outputs=['D-SOURCE-NOTE'],depends_on=[],executor='AI agent plus standard-library file/CSV checks',completion_scope='Local full SHA and 8645 yr=0 rows agree with supplied identity; note reviewed; no full-source or remote scientific certification')\nadd('D-CALC','activity',title='Evaluate supplied calculator and compare canonical outputs',status='done',inputs=['D-PARAM','D-RAW','D-CODE','D-CHOICE','D-MODEL'],outputs=['D-RESULT','D-TABLE'],depends_on=[],executor='AI agent running supplied Python calculator',completion_scope='Actual normal execution exit 0; generated result and table byte-identical to canonical artifacts',evidence=['records/validation-A.json','records/commands-A.json'])\nadd('D-SYNTH','activity',title='Verify supplied summary against current claim and numeric result',status='done',inputs=['D-CLAIM','D-RESULT'],outputs=['D-SUMMARY'],depends_on=['D-CALC'],executor='AI agent',completion_scope='Existing author-supplied summary read and checked against dates, counts, MAEs, reduction and stated scope; not authored from scratch or human-reviewed')\nbyid={r['id']:r for r in records}\nfor r in records:\n if 'path' in r:r['binding']=digest(ROOT/r['path'])\n# Completed activities freeze record versions and fingerprints across the full transitive dependency closure.\ndef closure(id,seen=None):\n seen=set() if seen is None else seen\n if id in seen:return seen\n seen.add(id);r=byid[id]\n for k in ['inputs','outputs','depends_on','derived_from','evidence']:\n  for dep in r.get(k,[]):\n   if dep in byid:closure(dep,seen)\n return seen\ndef signature(r):return hashlib.sha256(json.dumps({k:v for k,v in r.items() if k!='completion_bindings'},ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()\nfor r in records:\n if r['kind']=='activity':\n  r['completion_bindings']={dep:{'version':byid[dep]['version'],'record_sha256':signature(byid[dep]),**({'path':byid[dep]['path'],'file':byid[dep]['binding']} if 'path' in byid[dep] else {})} for dep in sorted(closure(r['id'])-{r['id']})}\nstate={'format':'local-research-ledger-v1','state_version':1,'authority':'This JSON contains current configuration and logical records. prose notes, source cards, command logs and old handoffs do not overwrite it. Bound material files remain scientific byte authority; mismatches are conflicts requiring explicit review.','configuration':constraints,'records':records,'history':[],'coverage_limits':{'source_only':['D-REMOTE'],'unregistered':['notes/unregistered-scratch.md'],'rejected_trial_not_current_input':'notes/rejected-parameters.json','untracked_files_not_automatically_scientific_dependencies':True},'checkpoint':{'state_version':1,'configuration_sha256':hashlib.sha256(json.dumps(constraints,ensure_ascii=False,sort_keys=True).encode()).hexdigest(),'record_signatures':{r['id']:signature(r) for r in records},'files':after,'next_action':'将已核对的2011第四季度冻结模型指标与摘要交作者讨论；只比较指定观察小时，不重训、不外推2012。若材料或配置发生修订，先运行只读状态检查，定位D-CALC及D-SYNTH的失效范围，再显式复核和更新其版本。','meaning':'Saved recovery context, not additional scientific validation'},'settings':{'model':None,'temperature':None,'seed':None,'token_budget':None,'system_limit':None}}\nsave(ROOT/'records/state.json',state)\n# A self-contained, strictly read-only status program; no bytecode writes when called with -I -B.\ntextfile(ROOT/'scripts/project_status.py',r'''from pathlib import Path\nimport argparse, hashlib, json, sys\np=argparse.ArgumentParser(description='Read-only local ledger identity/dependency check')\np.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[1]);a=p.parse_args();root=a.root.resolve()\ndef fp(path):\n if path.is_symlink() or not path.is_file():return None\n b=path.read_bytes();return {'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}\ndef sig(r):return hashlib.sha256(json.dumps({k:v for k,v in r.items() if k!='completion_bindings'},ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()\ntry:\n state_path=root/'records/state.json';state=json.loads(state_path.read_text(encoding='utf-8'));records={r['id']:r for r in state['records']}\n files={};changes=[]\n for id,r in records.items():\n  if 'path' not in r:continue\n  rel=Path(r['path'])\n  if rel.is_absolute() or '..' in rel.parts:raise ValueError('Unsafe relative path '+str(rel))\n  full=root/rel\n  if any(v.is_symlink() for v in [full,*list(full.parents)[:len(rel.parts)-1]]):raise ValueError('Symlink in tracked path '+str(rel))\n  actual=fp(full);files[str(rel)]={'record':id,'expected':r.get('binding'),'actual':actual,'state':'missing' if actual is None else ('current' if actual==r.get('binding') else 'changed')}\n  if files[str(rel)]['state']!='current':changes.append(str(rel))\n activities={}\n for id,r in records.items():\n  if r['kind']!='activity':continue\n  reasons=[]\n  for dep,b in r.get('completion_bindings',{}).items():\n   current=records.get(dep)\n   if current is None:reasons.append('missing record '+dep);continue\n   if current['version']!=b['version'] or sig(current)!=b['record_sha256']:reasons.append('changed record '+dep)\n   if 'path' in b and fp(root/b['path'])!=b['file']:reasons.append('changed or missing file '+b['path'])\n  activities[id]={'declared_status':r['status'],'effective_status':'stale' if r['status']=='done' and reasons else r['status'],'reasons':reasons}\n for _ in activities:\n  for id,v in activities.items():\n   for dep in records[id].get('depends_on',[]):\n    if activities.get(dep,{}).get('effective_status')!='done':\n     reason='dependency activity not current: '+dep\n     if reason not in v['reasons']:v['reasons'].append(reason)\n     if v['declared_status']=='done':v['effective_status']='stale'\n cp=state.get('checkpoint',{});cp_reasons=[]\n if state['state_version']!=cp.get('state_version'):cp_reasons.append('ledger version changed')\n config_sha=hashlib.sha256(json.dumps(state['configuration'],ensure_ascii=False,sort_keys=True).encode()).hexdigest()\n if config_sha!=cp.get('configuration_sha256'):cp_reasons.append('configuration changed')\n if cp.get('record_signatures')!={id:sig(r) for id,r in records.items()}:cp_reasons.append('logical records changed')\n for rel,expected in cp.get('files',{}).items():\n  if fp(root/rel)!=expected:cp_reasons.append('changed or missing checkpoint file '+rel)\n mismatch=[]\n param=next((r for r in records.values() if r['id']=='D-PARAM'),None)\n if param and (root/param['path']).is_file():\n  spec=json.loads((root/param['path']).read_text(encoding='utf-8'))\n  for key,val in state['configuration'].get('current_scope',{}).items():\n   if key in spec and spec[key]!=val:mismatch.append(key)\n out={'root':str(root),'authority':str(state_path),'state_version':state['state_version'],'state_sha256':fp(state_path)['sha256'],'files':files,'changed_or_missing_paths':changes,'activities':activities,'checkpoint_freshness':'stale' if cp_reasons else 'current','checkpoint_reasons':cp_reasons,'configuration_parameter_conflicts':mismatch,'configuration':state['configuration'],'next_action':cp.get('next_action'),'coverage_limits':state['coverage_limits'],'scientific_validity':'not-certified by identity check'}\n print(json.dumps(out,ensure_ascii=False,indent=2));sys.exit(1 if changes or cp_reasons or mismatch or any(x['effective_status']=='stale' for x in activities.values()) else 0)\nexcept (OSError,ValueError,KeyError,TypeError) as e:\n print(json.dumps({'error':type(e).__name__,'message':str(e)},ensure_ascii=False));sys.exit(2)\n''')\ntextfile(ROOT/'RECOVER.md',f'''# 恢复与权威状态\n\n当前配置、逻辑记录与版本的唯一权威表示为 `records/state.json`。作者笔记或旧handoff不得覆盖较新配置；文件的实际字节如果不同于绑定值，应当报告冲突，而不是悄悄接受。原始初始约束和身份材料保留在 `provenance/initial/`，当前配置以后显式修订后以state.json为准。\n\n只读恢复命令（迁移时将ROOT替换为新项目绝对路径，使用可用的Python 3标准库解释器）：\n\n```sh\n{PYTHON} -I -B ROOT/scripts/project_status.py --root ROOT\n```\n\n脚本完全自包含，不需要外部工具包或本阶段OUTPUT_DIR。退出0表示登记的身份/依赖与检查点一致；退出1表示有漂移/陈旧活动；退出2为读取/格式错误。它不重算、不写项目、不自动接受变化、不认证科学正确性。跟踪9个材料路径，未登记scratch和无本地绑定的来源不在自动文件检查中。\n\n## 当前具体下一步\n\n将已核对的2011第四季度冻结模型指标与摘要交作者讨论；不重新训练，不外推2012。本阶段未发送、未提交，也未获得人类专家批准。材料若变化，先定位具体改变，沿依赖复核D-CALC及D-SYNTH；D-SOURCE-CHECK独立于评价参数，只有其来源、原始数据或来源卡本身变化才需要重做。\n\n## 实际执行和科学边界\n\n`records/validation-A.json`及`records/commands-A.json`保留正常执行与受控无效输入测试。有效计算和预制result/table逐字节相等；summary按其声明的日期、样本量、MAE和降低比例复核。未重训模型，也未核验完整原始hour.csv、ZIP或远端论文/官网内容。8645行2011切片SHA与提供的来源身份一致。原始完整hour.csv 17379行与网站metadata 17389行的差异只按来源卡保留，没有联网核实。\n\n## 版本保留和并发修订\n\n初始参数、result、table、summary的原字节在`snapshots/initial/`，可恢复被覆盖内容；恢复前先保留当前版本，不能无条件覆盖。`scripts/guarded_state_update.py`只提交一个已经准备并审阅的完整新state候选。要求同时提供实际读取的旧state SHA与旧state_version，新state_version须恰增1，修改记录的version须恰增1，并给出reason。旧state完整保留在`snapshots/authority/`，不允许旧handoff覆盖新state。该工具只更新权威元数据；科学文件和活动完成绑定应由执行者在真实复核后显式准备。不要仅刷新checkpoint来掩盖陈旧活动。\n\n四个初始快照完整SHA在`records/initial-snapshots.json`。大型CSV只保留项目内私有缓存一份，原始PDF/CSV禁止随公开仓库分发；可以公开身份和本项目结果。没有新的目标期刊决定，venue保持未定。\n''')\ntextfile(ROOT/'scripts/guarded_state_update.py',r'''from pathlib import Path\nimport argparse, hashlib, json, os, sys\np=argparse.ArgumentParser(description='Guarded local ledger replacement; never executes research steps')\np.add_argument('--root',type=Path,required=True);p.add_argument('--candidate',type=Path,required=True);p.add_argument('--expected-version',type=int,required=True);p.add_argument('--expected-sha256',required=True);p.add_argument('--reason',required=True);a=p.parse_args()\nroot=a.root.resolve();state=root/'records/state.json';lock=root/'records/.edit.lock'\ntry:\n # POSIX flock is standard library on this project's actual macOS environment.\n import fcntl\n with lock.open('a+b') as f:\n  fcntl.flock(f.fileno(),fcntl.LOCK_EX|fcntl.LOCK_NB)\n  old_bytes=state.read_bytes();old=json.loads(old_bytes);old_sha=hashlib.sha256(old_bytes).hexdigest()\n  if old['state_version']!=a.expected_version or old_sha!=a.expected_sha256:raise ValueError('Conflict: authoritative state has changed; reread it before editing')\n  new=json.loads(a.candidate.read_text(encoding='utf-8'))\n  if new['state_version']!=old['state_version']+1:raise ValueError('state_version must increase exactly by one')\n  prior={r['id']:r for r in old['records']}\n  for r in new['records']:\n   prev=prior.get(r['id'])\n   if prev is None and r['version']!=1:raise ValueError('New record version must be 1')\n   if prev is not None:\n    changed={k:v for k,v in prev.items() if k!='version'}!={k:v for k,v in r.items() if k!='version'}\n    if r['version']!=prev['version']+int(changed):raise ValueError('Record version conflict: '+r['id'])\n  new.setdefault('history',[]).append({'prior_state_version':old['state_version'],'prior_state_sha256':old_sha,'snapshot':'snapshots/authority/v'+str(old['state_version'])+'-'+old_sha+'.json','reason':a.reason,'executor':'current explicit local update; no implied human scientific approval'})\n  snap=root/new['history'][-1]['snapshot'];snap.parent.mkdir(parents=True,exist_ok=True)\n  if snap.exists() and snap.read_bytes()!=old_bytes:raise ValueError('Snapshot collision')\n  if not snap.exists():snap.write_bytes(old_bytes)\n  temp=state.with_name('.state.pending-'+str(os.getpid())+'.json')\n  try:\n   with temp.open('x',encoding='utf-8') as out:json.dump(new,out,ensure_ascii=False,indent=2,allow_nan=False);out.write('\\n');out.flush();os.fsync(out.fileno())\n   os.replace(temp,state)\n  finally:\n   if temp.exists():temp.unlink()\n  print(json.dumps({'updated':True,'state_version':new['state_version'],'old_state_snapshot':str(snap)}))\nexcept (OSError,ValueError,KeyError,TypeError) as e:\n print(json.dumps({'updated':False,'error':type(e).__name__,'message':str(e)}));sys.exit(2)\n''')\nsave(ROOT/'records/initial-snapshots.json',{rel:digest(ROOT/'snapshots/initial'/rel) for rel in ['notes/parameters.json','results/result.json','results/table.csv','results/summary.md']})\nstatus=run([PYTHON,'-I','-B',str(ROOT/'scripts/project_status.py'),'--root',str(ROOT)],ROOT)\nassert status.returncode==0,status.stdout\nstatus_obj=json.loads(status.stdout);save(OUT/'status.json',status_obj)\n# Keep actual persistent read identities and executed commands for subsequent recovery.\nfor rel in ['scripts/project_status.py','scripts/guarded_state_update.py','records/state.json','RECOVER.md','records/initial-snapshots.json']:\n read(ROOT/rel)\nsave(ROOT/'records/inputs-A.json',reads)\nsave(OUT/'execution-data.json',{'commands':commands,'read_files':reads,'written_paths':written,'python_version':sys.version,'platform':platform.platform(),'observed_interpreter':sys.executable,'network_calls':0,'violations':[],'failures':[{'kind':'intentional controlled invalid input','exit_code':invalid.returncode,'stderr':invalid.stderr,'remediation':'None required: canonical tracked files unchanged, rejected output not created'}],'unknown_settings':{'model':None,'temperature':None,'seed':None,'token_budget':None,'system_limits':None}})\nprint(json.dumps({'project':str(ROOT),'valid_exit':valid.returncode,'invalid_exit':invalid.returncode,'status_exit':status.returncode,'result_equal':result_equal,'table_equal':csv_equal,'tracked_count':len(tracked),'observed_hours':computed['observed_hours']},ensure_ascii=False))\nPY\nEVAL_PYTHON -I -B OUTPUT_DIR/build_project.py"
+      ],
+      "argv_note": "Submitted shell-source representation; tool backend wrapper argv is not exposed"
+    },
+    {
+      "tool_call": 6,
+      "tool": "exec_command",
+      "command": "cat PROJECT_ROOT/scripts/guarded_state_update.py OUTPUT_DIR/status.json PROJECT_ROOT/records/commands-A.json",
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "stdout_summary": "Guard implementation, current status and actual scientific commands returned",
+      "stderr": "",
+      "argv": [
+        "/bin/zsh",
+        "-c",
+        "cat PROJECT_ROOT/scripts/guarded_state_update.py OUTPUT_DIR/status.json PROJECT_ROOT/records/commands-A.json"
+      ],
+      "argv_note": "Submitted shell-source representation; tool backend wrapper argv is not exposed"
+    },
+    {
+      "tool_call": 7,
+      "tool": "exec_command",
+      "command": "cat > OUTPUT_DIR/finalize.py <<'PY'\nfrom pathlib import Path\nimport hashlib,json,subprocess,sys,os,shlex\nBASE=Path('STUDY_ROOT/runs/P6');ROOT=BASE/'project';OUT=BASE/'A/output';IN=BASE/'A/input'\nPYTHON='EVAL_PYTHON'\ndef fp(p):\n b=Path(p).read_bytes();return {'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}\ndef load(p):return json.loads(Path(p).read_text(encoding='utf-8'))\ndef save(p,v):Path(p).write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\\n',encoding='utf-8')\nbase=load(OUT/'execution-data.json');reads=base['read_files'];cmds=base['commands'];repairs=[]\ndef record_read(p,access='full'):\n p=Path(p);reads.append({'path':str(p),**fp(p),'access':access});return p.read_bytes()\ndef run(argv,cwd):\n p=subprocess.run(argv,cwd=str(cwd),text=True,capture_output=True);entry={'argv':argv,'cwd':str(cwd),'exit_code':p.returncode,'stdout':p.stdout,'stderr':p.stderr};cmds.append(entry);return p\n# Correct an explanatory file count; no scientific material is changed.\np=ROOT/'RECOVER.md';old=record_read(p).decode();new=old.replace('跟踪9个材料路径','跟踪8个材料路径');p.write_text(new,encoding='utf-8');repairs.append({'path':'RECOVER.md','kind':'documentation count correction','from':9,'to':8,'scientific_material_changed':False})\n(ROOT/'.gitignore').write_text('# Private source cache: identities and derived results may be shared.\\ndata/hour_2011.csv\\n',encoding='utf-8')\n# Compile syntax in memory, without bytecode files, then test guarded writes only in OUTPUT_DIR.\nfor rel in ['scripts/project_status.py','scripts/guarded_state_update.py']:\n compile(record_read(ROOT/rel),str(ROOT/rel),'exec')\ntest=OUT/'guarded-update-test';(test/'records').mkdir(parents=True)\nstate_bytes=record_read(ROOT/'records/state.json');(test/'records/state.json').write_bytes(state_bytes)\ncandidate=json.loads(state_bytes);candidate['state_version']=2;save(test/'candidate.json',candidate)\nold_sha=hashlib.sha256(state_bytes).hexdigest()\nfirst=run([PYTHON,'-I','-B',str(ROOT/'scripts/guarded_state_update.py'),'--root',str(test),'--candidate',str(test/'candidate.json'),'--expected-version','1','--expected-sha256',old_sha,'--reason','Controlled guard validation on isolated copy; no scientific revision'],ROOT)\nassert first.returncode==0,first.stdout+first.stderr\nchanged_test=load(test/'records/state.json');assert changed_test['state_version']==2\nsafe_before=fp(test/'records/state.json')\nsecond=run([PYTHON,'-I','-B',str(ROOT/'scripts/guarded_state_update.py'),'--root',str(test),'--candidate',str(test/'candidate.json'),'--expected-version','1','--expected-sh256',old_sha,'--reason','Controlled stale state guard test'],ROOT) if False else run([PYTHON,'-I','-B',str(ROOT/'scripts/guarded_state_update.py'),'--root',str(test),'--candidate',str(test/'candidate.json'),'--expected-version','1','--expected-sha256',old_sha,'--reason','Controlled stale state guard test'],ROOT)\nassert second.returncode==2 and 'Conflict:' in second.stdout\nassert fp(test/'records/state.json')==safe_before\nassert fp(ROOT/'records/state.json')['sha256']==old_sha\nsave(OUT/'guard-check.json',{'isolated_test_root':str(test),'valid_update_exit':first.returncode,'json_readback_success':True,'conflict_exit':second.returncode,'conflict_preserved_current_bytes':True,'main_state_unchanged':True,'scope':'Metadata conflict guard only, no scientific validation'})\n# Final read-only recovery check, retaining command and exact output.\nstatus=run([PYTHON,'-I','-B',str(ROOT/'scripts/project_status.py'),'--root',str(ROOT)],ROOT);assert status.returncode==0,status.stdout\nstate=load(ROOT/'records/state.json');s=json.loads(status.stdout);save(OUT/'status.json',s)\nres=load(ROOT/'results/result.json');validation=load(OUT/'validation.json')\nanswer={'case_id':'D','stage':'A','active_constraints':state['configuration'],'next_action':state['checkpoint']['next_action'],'changed_or_missing_paths':s['changed_or_missing_paths'],'affected_activities':[],'unaffected_activities':['D-SOURCE-CHECK','D-CALC','D-SYNTH'],'activities':s['activities'],'checkpoint_freshness':s['checkpoint_freshness'],'scientific_scope':{'evaluation_start':res['evaluation_start'],'evaluation_end':res['evaluation_end'],'model_policy':res['model_policy'],'metric_weighting':'observed-hour','observed_hours':res['observed_hours'],'observed_days':res['observed_days'],'numeric_result':res,'result_origin':'Precomputed author-provided artifacts, independently rerun with supplied calculator and matched byte for byte','no_refit':True,'no_confidence_intervals':True,'no_causal_or_future_year_guarantee':True,'human_review':False,'formal_proof':'not-applicable'},'source_tracking_limits':{'primary_local':'8645 yr=0 rows read and complete SHA verified against supplied source identity; remote official origin and full hour.csv not independently re-established','source_only':['D-REMOTE'],'unregistered_file':['notes/unregistered-scratch.md'],'not_auto_checked':'All other project files are outside explicitly bound scientific dependencies','raw_distribution':'Private local cache only; do not redistribute original CSV/PDF'},'material_paths':{'project':str(ROOT),'authority':'records/state.json','recovery':'RECOVER.md','snapshots':['snapshots/initial/notes/parameters.json','snapshots/initial/results/result.json','snapshots/initial/results/table.csv','snapshots/initial/results/summary.md'],'original_constraints':'provenance/initial/constraints.json','original_obligations':'provenance/initial/obligations.json','source_identity':'provenance/initial/source-identities.json'},'notes':['Normal calculator exit 0; result.json and table.csv both byte-equal to supplied canonical files.','Intentional rejected range exit 2: evaluation_start must be no later than evaluation_end; no rejected output directory and eight bound file fingerprints unchanged.','D-SOURCE-CHECK is restricted to supplied identity card and local cache; evaluation-scope revisions alone do not invalidate it.','Current declared and effective activity states are done within their explicit scopes; checkpoint is current.','Checkpoint storage itself adds no scientific evidence.']}\nsave(OUT/'state-answer.json',answer)\nreport=f'''# 冻结自行车需求模型：初始状态与核对结果\n\n项目已在新目录建立；`records/state.json`为当前配置、记录版本与依赖的权威表示。原始约束、义务、来源卡及任务规则已留在项目`provenance/`。`scripts/project_status.py`可脱离外部工具包只读恢复。当前8个登记材料路径均与绑定SHA一致，三个活动的声明状态和有效状态均为done，检查点为current。\n\n本次实际运行提供的计算器，评价期2011-10-01至2011-12-31，使用2011年1月至9月的冻结C0/C1参数，按实际观察小时等权计算。正常命令退出0；新结果位于本答卷同目录的`validation-valid/`，其中result.json和table.csv与项目内预制成果逐字节一致。预制成果来自提供材料；本次完成的是重运行核对。\n\n| 指标 | C0 | C1 |\n|---|---:|---:|\n| MAE | {res['C0_MAE']:.12f} | {res['C1_MAE']:.12f} |\n| RMSE | {res['C0_RMSE']:.12f} | {res['C1_RMSE']:.12f} |\n| 偏差（预测减实际） | {res['C0_bias_prediction_minus_actual']:.12f} | {res['C1_bias_prediction_minus_actual']:.12f} |\n\n观察样本为2203小时、92日；C1的MAE相对降低24.23172448%。`results/summary.md`已按日期、样本量、两项MAE、降低比例与范围核对。此结论是指定2011留出范围的描述性比较；未重训，无置信区间，不作因果或2012表现保证。\n\n已实际使用`notes/rejected-parameters.json`运行受控无效试算，其起点2012-01-01晚于终点2011-12-31，退出2并给出`ValueError: evaluation_start must be no later than evaluation_end`。未创建无效输出目录。试算前后8个登记文件的完整SHA和字节数全部一致，包括有效result、table及summary；原有效成果未受影响。这是输入校验测试，不是实际科学分析失败。命令、stdout/stderr及前后摘要保留在`validation.json`，项目内亦保存`records/validation-A.json`和`records/commands-A.json`。\n\n本地`data/hour_2011.csv`共8645行，实际全表解析，均为2011/yr=0；完整SHA为`294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115`，568668字节，与给定来源身份及清单一致。来源卡中的官方完整hour.csv 17379行与网站metadata 17389行差异予以保留；原始ZIP、完整hour.csv、论文和当前远端页面均未取得或独立检查。冻结模型训练来源只按提供的元数据记录，本次不重新拟合验证。\n\n来源DOI/URL是身份信息；D-REMOTE仅登记DOI，未绑定或检查原文内容。`notes/unregistered-scratch.md`虽随材料保留并有读取清单，但不属于自动计算依赖或检查覆盖。自动状态检查只涉及显式登记的8个科学材料，不能声称全部项目文件均受覆盖。原始CSV保留为私有本地缓存，已写`.gitignore`排除项；禁止随公开仓库分发原始PDF/CSV。\n\n参数、result、table、summary四项初始原字节分别保存在`snapshots/initial/`对应路径，SHA与字节数见`records/initial-snapshots.json`；这些副本可恢复实际内容，不只是摘要。记录均为版本1；以后修订应保存旧内容和依据，依赖变化需要显式复核。`guarded_state_update.py`在答卷目录的隔离副本上完成有效更新/JSON回读及旧版本冲突拒绝测试，冲突退出2且未改当前字节；主项目state保持不变。该测试只验证元数据保护。\n\n恢复时用可用Python标准库解释器运行`python -I -B ROOT/scripts/project_status.py --root ROOT`，具体说明见`RECOVER.md`。目前没有需重做的活动；若评价参数改变，D-CALC及其下游D-SYNTH需重新核对，D-SOURCE-CHECK不因评价起点单独改变而失效。保存新检查点不能代替该复核。\n\n下一步：将已核对的2011第四季度冻结模型指标与摘要交作者讨论；不重训、不外推2012。截止日期2026-12-15是提供的项目约束，预算为离线Python标准库、不采集新数据，期刊未定。未发生人类专家审批或外部投稿。执行记录与输入/产物SHA分别见`execution.json`、`inputs-and-artifacts.json`。\n'''\nassert len(report)<10000\n(OUT/'report.md').write_text(report,encoding='utf-8')\n# Persistent records are sufficient for recovery without any external answer file.\nsave(ROOT/'records/commands-A.json',cmds)\nsave(ROOT/'records/guard-validation-A.json',load(OUT/'guard-check.json'))\nfor p in sorted(ROOT.rglob('*')):\n if p.is_file():record_read(p,'full-byte inventory; scientific access separately documented')\nfor p in sorted(OUT.rglob('*')):\n if p.is_file() and p.name not in ['execution.json','inputs-and-artifacts.json']:record_read(p,'full-byte output inventory')\nrecord_read(BASE/'A/REQUEST.md')\n# Record all initial outer commands; later shell heredoc wrappers are preserved verbatim by source content.\npayload=IN/'initial/project_payload';guides=Path('TOOLKIT_ROOT')\nouter=[]\ndef outer_entry(n,cmd,cwd,stdout):outer.append({'tool_call':n,'tool':'exec_command','command':cmd,'cwd':cwd,'exit_code':0,'stdout_summary':stdout,'stderr':''})\nouter_entry(1,'cat '+str(BASE/'A/REQUEST.md'),'TASK_WORKSPACE','REQUEST.md content returned')\nouter_entry(2,'ls -la '+str(IN)+'\\ncat '+' '.join(str(p) for p in [IN/'PROTOCOL.md',IN/'RECORDING.md',IN/'STAGE-A.md',guides/'skills/rw-workflow/SKILL.md',guides/'core/skill-bridge.md',guides/'core/protocol.md']),'TASK_WORKSPACE','Input directory listing and six requested guidance documents returned')\nouter_entry(3,'find '+str(IN/'initial')+' -type f -print','TASK_WORKSPACE','15 initial file paths returned')\ninitial_paths=[IN/'initial'/n for n in ['BRIEF.md','constraints.json','obligations.json','source-identities.json','MANIFEST.json']]+[payload/n for n in ['notes/parameters.json','notes/rejected-parameters.json','notes/source-check.md','notes/unregistered-scratch.md','results/result.json','results/table.csv','results/summary.md','model/frozen.json','scripts/compute.py']]\nouter_entry(4,'cat '+' '.join(map(str,initial_paths)),'TASK_WORKSPACE','All listed scientific and project material contents returned; large raw CSV read by later calculator/inventory')\nbuild=(OUT/'build_project.py').read_text(encoding='utf-8')\nouter_entry(5,'mkdir -p '+str(OUT)+'\\ncat > '+str(OUT/'build_project.py')+\" <<'PY'\\n\"+build+'PY\\n'+PYTHON+' -I -B '+str(OUT/'build_project.py'),str(IN),'Project built; valid exit 0, intentional invalid exit 2, status exit 0, exact result/table matches, 8 tracked paths')\nouter_entry(6,'cat '+' '.join(str(p) for p in [ROOT/'scripts/guarded_state_update.py',OUT/'status.json',ROOT/'records/commands-A.json']),str(OUT),'Guard implementation, current status and actual scientific commands returned')\nfinalizer=Path(__file__).read_text(encoding='utf-8')\nouter_entry(7,'cat > '+str(Path(__file__))+\" <<'PY'\\n\"+finalizer+'PY\\n'+PYTHON+' -I -B '+str(Path(__file__)),str(OUT),'Reports and manifests finalized; isolated guard update and conflict tests complete; final read-only status exit 0')\n# Exact process argument arrays for subprocesses and the actual submitted shell source for outer calls.\nfor x in outer:x['argv']=['/bin/zsh',('-lc' if x['tool_call']<=4 else '-c'),x['command']];x['argv_note']='Submitted shell-source representation; tool backend wrapper argv is not exposed'\n# Deduplicate identical input versions while preserving earlier read identities of changed owned files.\nunique={}\nfor x in reads:unique[(x['path'],x['sha256'])]=x\nexecution={**base,'commands':cmds,'outer_commands':outer,'tool_calls':7,'tool_call_count_unit':'functions.exec / nested exec_command pairs; 7 of each, no additional tools','read_files':list(unique.values()),'read_scope_note':'Includes explicit task/guidance/input and owned project/output byte reads. Automatically imported Python standard-library/runtime files and shell internals are execution dependencies, not inspected scientific inputs.','network_calls':0,'other_agent_calls':0,'violations':[],'repairs':repairs,'failures':base['failures']+[{'kind':'controlled stale-ledger conflict on isolated copy','exit_code':second.returncode,'stdout':second.stdout,'remediation':'No retry or overwrite; current test ledger and main project authority preserved'}],'written_paths':[str(p) for p in sorted(ROOT.rglob('*')) if p.is_file()]+[str(p) for p in sorted(OUT.rglob('*')) if p.is_file()]+[str(OUT/'execution.json'),str(OUT/'inputs-and-artifacts.json')],'unknown_settings':{'model':None,'temperature':None,'seed':None,'token_budget':None,'system_limits':None},'report_unicode_characters':len(report)}\nsave(OUT/'execution.json',execution)\n# Manifest excludes its own recursive hash. execution.json has a stable final hash here.\nitems=[]\nfor category,basepath in [('input',IN),('project',ROOT),('output',OUT)]:\n for p in sorted(basepath.rglob('*')):\n  if p.is_file() and p!=OUT/'inputs-and-artifacts.json':items.append({'category':category,'relative_path':p.relative_to(basepath).as_posix(),**fp(p),'distribution':'private original source cache; do not redistribute' if p.name=='hour_2011.csv' else 'project/task artifact'})\nsave(OUT/'inputs-and-artifacts.json',{'items':items,'self_hash_excluded':'inputs-and-artifacts.json','nonredistribution_scope':['Original PDF/CSV private cache; original raw CSV appears only in supplied input, project private data cache and local controlled test-free computation inputs. No remote fetch, upload or publication.'],'guidance_reads':[x for x in unique.values() if '/toolkits/' in x['path']]})\n# Final checks use exact delivered bytes and do not modify the project.\nassert all((ROOT/'snapshots/initial'/rel).read_bytes()==(ROOT/rel).read_bytes() for rel in ['notes/parameters.json','results/result.json','results/table.csv','results/summary.md'])\nassert (OUT/'validation-valid/result.json').read_bytes()==(ROOT/'results/result.json').read_bytes()\nassert (OUT/'validation-valid/table.csv').read_bytes()==(ROOT/'results/table.csv').read_bytes()\nassert not (OUT/'validation-rejected').exists()\nassert len(load(OUT/'execution.json')['outer_commands'])==7\nassert s['changed_or_missing_paths']==[] and s['checkpoint_freshness']=='current'\nprint(json.dumps({'report':str(OUT/'report.md'),'state_answer':str(OUT/'state-answer.json'),'execution':str(OUT/'execution.json'),'manifest':str(OUT/'inputs-and-artifacts.json'),'project':str(ROOT),'report_characters':len(report),'tool_calls':7,'final_status_exit':status.returncode,'guard_update_exit':first.returncode,'guard_conflict_exit':second.returncode,'snapshots_verified':4,'all_final_checks_passed':True},ensure_ascii=False))\nPY\nEVAL_PYTHON -I -B OUTPUT_DIR/finalize.py",
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 0,
+      "stdout_summary": "Reports and manifests finalized; isolated guard update and conflict tests complete; final read-only status exit 0",
+      "stderr": "",
+      "argv": [
+        "/bin/zsh",
+        "-c",
+        "cat > OUTPUT_DIR/finalize.py <<'PY'\nfrom pathlib import Path\nimport hashlib,json,subprocess,sys,os,shlex\nBASE=Path('STUDY_ROOT/runs/P6');ROOT=BASE/'project';OUT=BASE/'A/output';IN=BASE/'A/input'\nPYTHON='EVAL_PYTHON'\ndef fp(p):\n b=Path(p).read_bytes();return {'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}\ndef load(p):return json.loads(Path(p).read_text(encoding='utf-8'))\ndef save(p,v):Path(p).write_text(json.dumps(v,ensure_ascii=False,indent=2,allow_nan=False)+'\\n',encoding='utf-8')\nbase=load(OUT/'execution-data.json');reads=base['read_files'];cmds=base['commands'];repairs=[]\ndef record_read(p,access='full'):\n p=Path(p);reads.append({'path':str(p),**fp(p),'access':access});return p.read_bytes()\ndef run(argv,cwd):\n p=subprocess.run(argv,cwd=str(cwd),text=True,capture_output=True);entry={'argv':argv,'cwd':str(cwd),'exit_code':p.returncode,'stdout':p.stdout,'stderr':p.stderr};cmds.append(entry);return p\n# Correct an explanatory file count; no scientific material is changed.\np=ROOT/'RECOVER.md';old=record_read(p).decode();new=old.replace('跟踪9个材料路径','跟踪8个材料路径');p.write_text(new,encoding='utf-8');repairs.append({'path':'RECOVER.md','kind':'documentation count correction','from':9,'to':8,'scientific_material_changed':False})\n(ROOT/'.gitignore').write_text('# Private source cache: identities and derived results may be shared.\\ndata/hour_2011.csv\\n',encoding='utf-8')\n# Compile syntax in memory, without bytecode files, then test guarded writes only in OUTPUT_DIR.\nfor rel in ['scripts/project_status.py','scripts/guarded_state_update.py']:\n compile(record_read(ROOT/rel),str(ROOT/rel),'exec')\ntest=OUT/'guarded-update-test';(test/'records').mkdir(parents=True)\nstate_bytes=record_read(ROOT/'records/state.json');(test/'records/state.json').write_bytes(state_bytes)\ncandidate=json.loads(state_bytes);candidate['state_version']=2;save(test/'candidate.json',candidate)\nold_sha=hashlib.sha256(state_bytes).hexdigest()\nfirst=run([PYTHON,'-I','-B',str(ROOT/'scripts/guarded_state_update.py'),'--root',str(test),'--candidate',str(test/'candidate.json'),'--expected-version','1','--expected-sha256',old_sha,'--reason','Controlled guard validation on isolated copy; no scientific revision'],ROOT)\nassert first.returncode==0,first.stdout+first.stderr\nchanged_test=load(test/'records/state.json');assert changed_test['state_version']==2\nsafe_before=fp(test/'records/state.json')\nsecond=run([PYTHON,'-I','-B',str(ROOT/'scripts/guarded_state_update.py'),'--root',str(test),'--candidate',str(test/'candidate.json'),'--expected-version','1','--expected-sh256',old_sha,'--reason','Controlled stale state guard test'],ROOT) if False else run([PYTHON,'-I','-B',str(ROOT/'scripts/guarded_state_update.py'),'--root',str(test),'--candidate',str(test/'candidate.json'),'--expected-version','1','--expected-sha256',old_sha,'--reason','Controlled stale state guard test'],ROOT)\nassert second.returncode==2 and 'Conflict:' in second.stdout\nassert fp(test/'records/state.json')==safe_before\nassert fp(ROOT/'records/state.json')['sha256']==old_sha\nsave(OUT/'guard-check.json',{'isolated_test_root':str(test),'valid_update_exit':first.returncode,'json_readback_success':True,'conflict_exit':second.returncode,'conflict_preserved_current_bytes':True,'main_state_unchanged':True,'scope':'Metadata conflict guard only, no scientific validation'})\n# Final read-only recovery check, retaining command and exact output.\nstatus=run([PYTHON,'-I','-B',str(ROOT/'scripts/project_status.py'),'--root',str(ROOT)],ROOT);assert status.returncode==0,status.stdout\nstate=load(ROOT/'records/state.json');s=json.loads(status.stdout);save(OUT/'status.json',s)\nres=load(ROOT/'results/result.json');validation=load(OUT/'validation.json')\nanswer={'case_id':'D','stage':'A','active_constraints':state['configuration'],'next_action':state['checkpoint']['next_action'],'changed_or_missing_paths':s['changed_or_missing_paths'],'affected_activities':[],'unaffected_activities':['D-SOURCE-CHECK','D-CALC','D-SYNTH'],'activities':s['activities'],'checkpoint_freshness':s['checkpoint_freshness'],'scientific_scope':{'evaluation_start':res['evaluation_start'],'evaluation_end':res['evaluation_end'],'model_policy':res['model_policy'],'metric_weighting':'observed-hour','observed_hours':res['observed_hours'],'observed_days':res['observed_days'],'numeric_result':res,'result_origin':'Precomputed author-provided artifacts, independently rerun with supplied calculator and matched byte for byte','no_refit':True,'no_confidence_intervals':True,'no_causal_or_future_year_guarantee':True,'human_review':False,'formal_proof':'not-applicable'},'source_tracking_limits':{'primary_local':'8645 yr=0 rows read and complete SHA verified against supplied source identity; remote official origin and full hour.csv not independently re-established','source_only':['D-REMOTE'],'unregistered_file':['notes/unregistered-scratch.md'],'not_auto_checked':'All other project files are outside explicitly bound scientific dependencies','raw_distribution':'Private local cache only; do not redistribute original CSV/PDF'},'material_paths':{'project':str(ROOT),'authority':'records/state.json','recovery':'RECOVER.md','snapshots':['snapshots/initial/notes/parameters.json','snapshots/initial/results/result.json','snapshots/initial/results/table.csv','snapshots/initial/results/summary.md'],'original_constraints':'provenance/initial/constraints.json','original_obligations':'provenance/initial/obligations.json','source_identity':'provenance/initial/source-identities.json'},'notes':['Normal calculator exit 0; result.json and table.csv both byte-equal to supplied canonical files.','Intentional rejected range exit 2: evaluation_start must be no later than evaluation_end; no rejected output directory and eight bound file fingerprints unchanged.','D-SOURCE-CHECK is restricted to supplied identity card and local cache; evaluation-scope revisions alone do not invalidate it.','Current declared and effective activity states are done within their explicit scopes; checkpoint is current.','Checkpoint storage itself adds no scientific evidence.']}\nsave(OUT/'state-answer.json',answer)\nreport=f'''# 冻结自行车需求模型：初始状态与核对结果\n\n项目已在新目录建立；`records/state.json`为当前配置、记录版本与依赖的权威表示。原始约束、义务、来源卡及任务规则已留在项目`provenance/`。`scripts/project_status.py`可脱离外部工具包只读恢复。当前8个登记材料路径均与绑定SHA一致，三个活动的声明状态和有效状态均为done，检查点为current。\n\n本次实际运行提供的计算器，评价期2011-10-01至2011-12-31，使用2011年1月至9月的冻结C0/C1参数，按实际观察小时等权计算。正常命令退出0；新结果位于本答卷同目录的`validation-valid/`，其中result.json和table.csv与项目内预制成果逐字节一致。预制成果来自提供材料；本次完成的是重运行核对。\n\n| 指标 | C0 | C1 |\n|---|---:|---:|\n| MAE | {res['C0_MAE']:.12f} | {res['C1_MAE']:.12f} |\n| RMSE | {res['C0_RMSE']:.12f} | {res['C1_RMSE']:.12f} |\n| 偏差（预测减实际） | {res['C0_bias_prediction_minus_actual']:.12f} | {res['C1_bias_prediction_minus_actual']:.12f} |\n\n观察样本为2203小时、92日；C1的MAE相对降低24.23172448%。`results/summary.md`已按日期、样本量、两项MAE、降低比例与范围核对。此结论是指定2011留出范围的描述性比较；未重训，无置信区间，不作因果或2012表现保证。\n\n已实际使用`notes/rejected-parameters.json`运行受控无效试算，其起点2012-01-01晚于终点2011-12-31，退出2并给出`ValueError: evaluation_start must be no later than evaluation_end`。未创建无效输出目录。试算前后8个登记文件的完整SHA和字节数全部一致，包括有效result、table及summary；原有效成果未受影响。这是输入校验测试，不是实际科学分析失败。命令、stdout/stderr及前后摘要保留在`validation.json`，项目内亦保存`records/validation-A.json`和`records/commands-A.json`。\n\n本地`data/hour_2011.csv`共8645行，实际全表解析，均为2011/yr=0；完整SHA为`294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115`，568668字节，与给定来源身份及清单一致。来源卡中的官方完整hour.csv 17379行与网站metadata 17389行差异予以保留；原始ZIP、完整hour.csv、论文和当前远端页面均未取得或独立检查。冻结模型训练来源只按提供的元数据记录，本次不重新拟合验证。\n\n来源DOI/URL是身份信息；D-REMOTE仅登记DOI，未绑定或检查原文内容。`notes/unregistered-scratch.md`虽随材料保留并有读取清单，但不属于自动计算依赖或检查覆盖。自动状态检查只涉及显式登记的8个科学材料，不能声称全部项目文件均受覆盖。原始CSV保留为私有本地缓存，已写`.gitignore`排除项；禁止随公开仓库分发原始PDF/CSV。\n\n参数、result、table、summary四项初始原字节分别保存在`snapshots/initial/`对应路径，SHA与字节数见`records/initial-snapshots.json`；这些副本可恢复实际内容，不只是摘要。记录均为版本1；以后修订应保存旧内容和依据，依赖变化需要显式复核。`guarded_state_update.py`在答卷目录的隔离副本上完成有效更新/JSON回读及旧版本冲突拒绝测试，冲突退出2且未改当前字节；主项目state保持不变。该测试只验证元数据保护。\n\n恢复时用可用Python标准库解释器运行`python -I -B ROOT/scripts/project_status.py --root ROOT`，具体说明见`RECOVER.md`。目前没有需重做的活动；若评价参数改变，D-CALC及其下游D-SYNTH需重新核对，D-SOURCE-CHECK不因评价起点单独改变而失效。保存新检查点不能代替该复核。\n\n下一步：将已核对的2011第四季度冻结模型指标与摘要交作者讨论；不重训、不外推2012。截止日期2026-12-15是提供的项目约束，预算为离线Python标准库、不采集新数据，期刊未定。未发生人类专家审批或外部投稿。执行记录与输入/产物SHA分别见`execution.json`、`inputs-and-artifacts.json`。\n'''\nassert len(report)<10000\n(OUT/'report.md').write_text(report,encoding='utf-8')\n# Persistent records are sufficient for recovery without any external answer file.\nsave(ROOT/'records/commands-A.json',cmds)\nsave(ROOT/'records/guard-validation-A.json',load(OUT/'guard-check.json'))\nfor p in sorted(ROOT.rglob('*')):\n if p.is_file():record_read(p,'full-byte inventory; scientific access separately documented')\nfor p in sorted(OUT.rglob('*')):\n if p.is_file() and p.name not in ['execution.json','inputs-and-artifacts.json']:record_read(p,'full-byte output inventory')\nrecord_read(BASE/'A/REQUEST.md')\n# Record all initial outer commands; later shell heredoc wrappers are preserved verbatim by source content.\npayload=IN/'initial/project_payload';guides=Path('TOOLKIT_ROOT')\nouter=[]\ndef outer_entry(n,cmd,cwd,stdout):outer.append({'tool_call':n,'tool':'exec_command','command':cmd,'cwd':cwd,'exit_code':0,'stdout_summary':stdout,'stderr':''})\nouter_entry(1,'cat '+str(BASE/'A/REQUEST.md'),'TASK_WORKSPACE','REQUEST.md content returned')\nouter_entry(2,'ls -la '+str(IN)+'\\ncat '+' '.join(str(p) for p in [IN/'PROTOCOL.md',IN/'RECORDING.md',IN/'STAGE-A.md',guides/'skills/rw-workflow/SKILL.md',guides/'core/skill-bridge.md',guides/'core/protocol.md']),'TASK_WORKSPACE','Input directory listing and six requested guidance documents returned')\nouter_entry(3,'find '+str(IN/'initial')+' -type f -print','TASK_WORKSPACE','15 initial file paths returned')\ninitial_paths=[IN/'initial'/n for n in ['BRIEF.md','constraints.json','obligations.json','source-identities.json','MANIFEST.json']]+[payload/n for n in ['notes/parameters.json','notes/rejected-parameters.json','notes/source-check.md','notes/unregistered-scratch.md','results/result.json','results/table.csv','results/summary.md','model/frozen.json','scripts/compute.py']]\nouter_entry(4,'cat '+' '.join(map(str,initial_paths)),'TASK_WORKSPACE','All listed scientific and project material contents returned; large raw CSV read by later calculator/inventory')\nbuild=(OUT/'build_project.py').read_text(encoding='utf-8')\nouter_entry(5,'mkdir -p '+str(OUT)+'\\ncat > '+str(OUT/'build_project.py')+\" <<'PY'\\n\"+build+'PY\\n'+PYTHON+' -I -B '+str(OUT/'build_project.py'),str(IN),'Project built; valid exit 0, intentional invalid exit 2, status exit 0, exact result/table matches, 8 tracked paths')\nouter_entry(6,'cat '+' '.join(str(p) for p in [ROOT/'scripts/guarded_state_update.py',OUT/'status.json',ROOT/'records/commands-A.json']),str(OUT),'Guard implementation, current status and actual scientific commands returned')\nfinalizer=Path(__file__).read_text(encoding='utf-8')\nouter_entry(7,'cat > '+str(Path(__file__))+\" <<'PY'\\n\"+finalizer+'PY\\n'+PYTHON+' -I -B '+str(Path(__file__)),str(OUT),'Reports and manifests finalized; isolated guard update and conflict tests complete; final read-only status exit 0')\n# Exact process argument arrays for subprocesses and the actual submitted shell source for outer calls.\nfor x in outer:x['argv']=['/bin/zsh',('-lc' if x['tool_call']<=4 else '-c'),x['command']];x['argv_note']='Submitted shell-source representation; tool backend wrapper argv is not exposed'\n# Deduplicate identical input versions while preserving earlier read identities of changed owned files.\nunique={}\nfor x in reads:unique[(x['path'],x['sha256'])]=x\nexecution={**base,'commands':cmds,'outer_commands':outer,'tool_calls':7,'tool_call_count_unit':'functions.exec / nested exec_command pairs; 7 of each, no additional tools','read_files':list(unique.values()),'read_scope_note':'Includes explicit task/guidance/input and owned project/output byte reads. Automatically imported Python standard-library/runtime files and shell internals are execution dependencies, not inspected scientific inputs.','network_calls':0,'other_agent_calls':0,'violations':[],'repairs':repairs,'failures':base['failures']+[{'kind':'controlled stale-ledger conflict on isolated copy','exit_code':second.returncode,'stdout':second.stdout,'remediation':'No retry or overwrite; current test ledger and main project authority preserved'}],'written_paths':[str(p) for p in sorted(ROOT.rglob('*')) if p.is_file()]+[str(p) for p in sorted(OUT.rglob('*')) if p.is_file()]+[str(OUT/'execution.json'),str(OUT/'inputs-and-artifacts.json')],'unknown_settings':{'model':None,'temperature':None,'seed':None,'token_budget':None,'system_limits':None},'report_unicode_characters':len(report)}\nsave(OUT/'execution.json',execution)\n# Manifest excludes its own recursive hash. execution.json has a stable final hash here.\nitems=[]\nfor category,basepath in [('input',IN),('project',ROOT),('output',OUT)]:\n for p in sorted(basepath.rglob('*')):\n  if p.is_file() and p!=OUT/'inputs-and-artifacts.json':items.append({'category':category,'relative_path':p.relative_to(basepath).as_posix(),**fp(p),'distribution':'private original source cache; do not redistribute' if p.name=='hour_2011.csv' else 'project/task artifact'})\nsave(OUT/'inputs-and-artifacts.json',{'items':items,'self_hash_excluded':'inputs-and-artifacts.json','nonredistribution_scope':['Original PDF/CSV private cache; original raw CSV appears only in supplied input, project private data cache and local controlled test-free computation inputs. No remote fetch, upload or publication.'],'guidance_reads':[x for x in unique.values() if '/toolkits/' in x['path']]})\n# Final checks use exact delivered bytes and do not modify the project.\nassert all((ROOT/'snapshots/initial'/rel).read_bytes()==(ROOT/rel).read_bytes() for rel in ['notes/parameters.json','results/result.json','results/table.csv','results/summary.md'])\nassert (OUT/'validation-valid/result.json').read_bytes()==(ROOT/'results/result.json').read_bytes()\nassert (OUT/'validation-valid/table.csv').read_bytes()==(ROOT/'results/table.csv').read_bytes()\nassert not (OUT/'validation-rejected').exists()\nassert len(load(OUT/'execution.json')['outer_commands'])==7\nassert s['changed_or_missing_paths']==[] and s['checkpoint_freshness']=='current'\nprint(json.dumps({'report':str(OUT/'report.md'),'state_answer':str(OUT/'state-answer.json'),'execution':str(OUT/'execution.json'),'manifest':str(OUT/'inputs-and-artifacts.json'),'project':str(ROOT),'report_characters':len(report),'tool_calls':7,'final_status_exit':status.returncode,'guard_update_exit':first.returncode,'guard_conflict_exit':second.returncode,'snapshots_verified':4,'all_final_checks_passed':True},ensure_ascii=False))\nPY\nEVAL_PYTHON -I -B OUTPUT_DIR/finalize.py"
+      ],
+      "argv_note": "Submitted shell-source representation; tool backend wrapper argv is not exposed"
+    }
+  ],
+  "tool_calls": 7,
+  "tool_call_count_unit": "functions.exec / nested exec_command pairs; 7 of each, no additional tools",
+  "read_scope_note": "Includes explicit task/guidance/input and owned project/output byte reads. Automatically imported Python standard-library/runtime files and shell internals are execution dependencies, not inspected scientific inputs.",
+  "other_agent_calls": 0,
+  "repairs": [
+    {
+      "path": "RECOVER.md",
+      "kind": "documentation count correction",
+      "from": 9,
+      "to": 8,
+      "scientific_material_changed": false
+    }
+  ],
+  "report_unicode_characters": 2076
+}

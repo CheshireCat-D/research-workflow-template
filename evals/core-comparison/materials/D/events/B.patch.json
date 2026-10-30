@@ -1,0 +1,25 @@
+{
+  "case_id": "D",
+  "target": "notes/parameters.json",
+  "operation": "replace-complete-file",
+  "before_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+  "after_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+  "after_json": {
+    "case_id": "D",
+    "evaluation_start": "2011-11-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "metric_weighting": "observed-hour"
+  },
+  "semantic_change": "Author evaluation start: 2011-10-01 -> 2011-11-01; end/model/data unchanged",
+  "preserve_all_other_project_bytes": true,
+  "source_files_changed": false,
+  "before_json": {
+    "case_id": "D",
+    "evaluation_start": "2011-10-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "metric_weighting": "observed-hour"
+  },
+  "identity_rule": "Require strict semantic initial parameters; preserve actual before bytes/SHA, then apply frozen after_json. Formatting-only changes are not setup failures."
+}

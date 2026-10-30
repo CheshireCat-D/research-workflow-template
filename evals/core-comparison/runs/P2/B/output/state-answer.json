@@ -1,0 +1,163 @@
+{
+  "case_id": "D",
+  "stage": "B",
+  "active_constraints": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-10-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "current_authority": {
+    "lifecycle_state": "management/state.json",
+    "constraints": "management/constraints.json",
+    "actual_calculator_parameters": "notes/parameters.json",
+    "last_registered_start": "2011-10-01",
+    "observed_start": "2011-11-01",
+    "observed_end": "2011-12-31",
+    "revision_authorization": "unknown; no supporting revision event found; resolve before adopting or reverting"
+  },
+  "next_action": "先核实评价起点修订的作者依据和授权范围，保留当前与旧字节；本阶段不修改。获后续写入授权后，对D-CALC及D-SYNTH重新核验并同步状态、结果、表格与摘要。",
+  "changed_or_missing_paths": [
+    {
+      "path": "notes/parameters.json",
+      "state": "changed",
+      "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "current_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "current_bytes": 171
+    }
+  ],
+  "missing_registered_paths": [],
+  "affected_activities": [
+    {
+      "id": "D-CALC",
+      "impact": "direct parameter dependency; old done stale for current bytes"
+    },
+    {
+      "id": "D-SYNTH",
+      "impact": "transitive via D-RESULT and D-CALC; old summary still Q4"
+    }
+  ],
+  "affected_nodes": [
+    "D-PARAM",
+    "D-CHOICE",
+    "D-REL",
+    "D-RESULT",
+    "D-CALC",
+    "D-SUMMARY",
+    "D-SYNTH"
+  ],
+  "unaffected_activities": [
+    "D-SOURCE-CHECK"
+  ],
+  "checkpoint_freshness": {
+    "checkpoint": "A-verified-initial",
+    "recorded_label": "fresh-for-bound-local-files",
+    "observed_label": "stale-requires-reconciliation",
+    "historical_snapshots": [
+      {
+        "logical_path": "notes/parameters.json",
+        "snapshot_path": "management/versions/A-initial/notes/parameters.json",
+        "intact": true
+      },
+      {
+        "logical_path": "results/result.json",
+        "snapshot_path": "management/versions/A-initial/results/result.json",
+        "intact": true
+      },
+      {
+        "logical_path": "results/table.csv",
+        "snapshot_path": "management/versions/A-initial/results/table.csv",
+        "intact": true
+      },
+      {
+        "logical_path": "results/summary.md",
+        "snapshot_path": "management/versions/A-initial/results/summary.md",
+        "intact": true
+      }
+    ],
+    "interpretation": "historical evidence intact; not current-period verification"
+  },
+  "scientific_scope": {
+    "question": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "historical_result_scope": "2011-10-01至2011-12-31、2203实际观察小时/92日；固定2011年1至9月C0/C1模型；observed-hour MAE、RMSE、预测减实际偏差；描述性时间留出比较，无重训、置信区间、因果或2012/任意未来保证。",
+    "current_physical_parameters": {
+      "case_id": "D",
+      "evaluation_start": "2011-11-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "current_period_metrics_verified": false,
+    "file_change_not_scientific_falsification": true
+  },
+  "source_tracking_limits": {
+    "D-SRC": "已绑定本地2011切片全字节与8645行；来源标题、DOI、许可证和原hour.csv散列来自提供的身份文件。本阶段离线，未重取官方ZIP、全文或原完整CSV，不能独立确认远端版本及完整CSV行数。",
+    "D-REMOTE": "仅DOI身份，无本地文章副本，未读取文章内容或检查当前远端内容；不纳入本地依赖自动检查。",
+    "notes/unregistered-scratch.md": "已按原字节复制，但不登记为科学输入/输出/依赖，不纳入status自动变化检测。",
+    "source_card_discrepancy": "卡片称完整CSV17379行、官网metadata17389；该原始差异保留。当前仅可直接验证2011切片8645行。",
+    "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+  },
+  "material_paths": {
+    "D-SRC": [
+      "management/source-identities.json"
+    ],
+    "D-REMOTE": [],
+    "D-RAW": [
+      "data/hour_2011.csv"
+    ],
+    "D-PARAM": [
+      "notes/parameters.json"
+    ],
+    "D-CLAIM": [
+      "management/constraints.json"
+    ],
+    "D-REL": [],
+    "D-CHOICE": [
+      "notes/parameters.json"
+    ],
+    "D-CODE": [
+      "scripts/compute.py"
+    ],
+    "D-MODEL": [
+      "model/frozen.json"
+    ],
+    "D-RESULT": [
+      "results/result.json",
+      "results/table.csv"
+    ],
+    "D-SUMMARY": [
+      "results/summary.md"
+    ],
+    "D-SOURCE-NOTE": [
+      "notes/source-check.md"
+    ],
+    "D-SOURCE-CHECK": [],
+    "D-CALC": [],
+    "D-SYNTH": []
+  },
+  "notes": [
+    "No calculator execution or repair performed in this stage.",
+    "Table agrees with old canonical result; result input parameter hash mismatches current parameters.",
+    "No author decision, human approval, venue or new numerical conclusions invented.",
+    "Status script does not self-authenticate state.json."
+  ]
+}

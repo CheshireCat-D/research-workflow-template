@@ -1,0 +1,155 @@
+{
+  "scope": "No scientific prose, numeric or score changes; only absolute locator projections and explicit distribution omissions. Original source and execution bytes remain sealed.",
+  "files": [
+    {
+      "original_sha256": "fc0ffe7d992593e413950b86daecb56f9b7305ab757395653721e5d38a1e1585",
+      "path": "runs/P6/A/report.md",
+      "sha256": "fc0ffe7d992593e413950b86daecb56f9b7305ab757395653721e5d38a1e1585",
+      "changes": []
+    },
+    {
+      "original_sha256": "55f91c637ba1ef82665aee266c81ea31d97755abc1d4e615993c5e2dea0e7d49",
+      "path": "runs/P6/A/raw-execution.json",
+      "sha256": "a6802e352b4189697448f8dcf0b766e8b070d86408ae4a8b881665c4b564183c",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "bab3b3d04c66872ae1983f26856e56a95ccd80b6eaca38a789db1a09ce6c7a97",
+      "path": "runs/P6/A/project/RECOVER.md",
+      "sha256": "4d9c7e5f0e2f8ec3446dce69cbd3bd9dbe82eb61b9161aaad11b1a7eae6b6e7a",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "1b84466dea513e1514643b53fbefc77c3512396fb3adab26722a765dbcb07105",
+      "path": "runs/P6/A/project/records/commands-A.json",
+      "sha256": "5787c517a6177e9507b97067c3ad72a241212e5e3497cd8e4b76422612551242",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "04b88fdac1a4b08f30b5f172d0ddf67a8a4d112fe6ffe9e5eea87d1f261daaa9",
+      "path": "runs/P6/A/project/records/guard-validation-A.json",
+      "sha256": "034f358981bb9d990f953a2bf3be522299459e555a8b0941d8a7e0031f65a6d7",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "86b090d5fae2349d64380c5b426aaab93373be47848bfc527e15a652c0213a9d",
+      "path": "runs/P6/A/project/records/inputs-A.json",
+      "sha256": "d34767662c47238e024d13916e4fd344f6111c6b22a7ff7db5bccfd0de3a0483",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "1a9476393eb19d2889e9cef5140bb528a1f0c2f2972c3a74bab9c4f9be94544c",
+      "path": "runs/P6/A/output/build_project.py",
+      "sha256": "38ddfb813090c08b86fa88068f89f41bd600f81b2b66e45b13fadd7c9ea37878",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "da1fecdabe5a2dfb02f52fb22233843d87c988b03ea6247af85b918df87eaf5c",
+      "path": "runs/P6/A/output/execution-data.json",
+      "sha256": "63e26e41209511f1dcfe3dc39169366247063613ff7cf2f47b18be1006f9802d",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "fe5960d30ac8238f54cc5bd507fd395a438660321f920d6915d2548be8b44e9d",
+      "path": "runs/P6/A/output/finalize.py",
+      "sha256": "1660b8ec55d3e80041783db167268d63a7729a7c7a9eef66ca22914baf5e7f86",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "04b88fdac1a4b08f30b5f172d0ddf67a8a4d112fe6ffe9e5eea87d1f261daaa9",
+      "path": "runs/P6/A/output/guard-check.json",
+      "sha256": "034f358981bb9d990f953a2bf3be522299459e555a8b0941d8a7e0031f65a6d7",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "292c0ea272ea02d1d4eb9c9ad9747b2ea4ed7cd86397ae216e0215a0880ecca1",
+      "path": "runs/P6/A/output/guarded-update-test/candidate.json",
+      "sha256": "292c0ea272ea02d1d4eb9c9ad9747b2ea4ed7cd86397ae216e0215a0880ecca1",
+      "changes": []
+    },
+    {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "runs/P6/A/output/guarded-update-test/records/.edit.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "original_sha256": "e16a5c01e9d7baa06cbf31133879dcc9986e232ce51f67e4644a499b41817324",
+      "path": "runs/P6/A/output/guarded-update-test/records/state.json",
+      "sha256": "e16a5c01e9d7baa06cbf31133879dcc9986e232ce51f67e4644a499b41817324",
+      "changes": []
+    },
+    {
+      "original_sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "path": "runs/P6/A/output/guarded-update-test/snapshots/authority/v1-d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa.json",
+      "sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "changes": []
+    },
+    {
+      "original_sha256": "57f49416784665e9c8babc1252d8b7b6743fcd71aacddd1ee7f8b7c71940fcf2",
+      "path": "runs/P6/A/output/inputs-and-artifacts.json",
+      "sha256": "5f486f68a9e7df2f96ef21f3a2a47a947979b09058a3f5fe4b9d562e6537e21d",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "10cd0f3bc3232a29045317d0d5e33a90b8d2720a6c3309625baaf7141d8ab42f",
+      "path": "runs/P6/A/output/state-answer.json",
+      "sha256": "78cbc103b2d4ed3465645d8546868009f63b44d2616ee936b2dd2c1c02ccad0d",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "27998347cd4691107f2007dd5a29e73ff3cf50becbc1b8f7b98b39101526072b",
+      "path": "runs/P6/A/output/status.json",
+      "sha256": "5cc0d5c05c999b893f191e77c7d8d1fcbc1be846fa138d52ffe3902655a99bee",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "path": "runs/P6/A/output/validation-valid/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "changes": []
+    },
+    {
+      "original_sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "path": "runs/P6/A/output/validation-valid/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "changes": []
+    },
+    {
+      "original_sha256": "b891b76e2b0264ab71feafe5df5144a870c146205690a829e3b89e6da4b92dce",
+      "path": "runs/P6/A/output/validation.json",
+      "sha256": "b891b76e2b0264ab71feafe5df5144a870c146205690a829e3b89e6da4b92dce",
+      "changes": []
+    },
+    {
+      "original_sha256": "13456ab792f202fe13ab5f9792fc9ca29035992d05a82170f8f742c6de25247e",
+      "path": "runs/P6/A/seal.json",
+      "sha256": "13456ab792f202fe13ab5f9792fc9ca29035992d05a82170f8f742c6de25247e",
+      "changes": []
+    }
+  ]
+}

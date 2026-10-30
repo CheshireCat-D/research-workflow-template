@@ -1,0 +1,65 @@
+{
+  "submission_id": "S4a5bb2",
+  "task_id": "theory",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_conditions",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:3–8 identifies the fixed v7/v9 PDFs and separates author-version page indices from journal pages; report.md:29–33 gives the process-pair definition, S1 Theorem 1 line crossing, S2 normal mixture, and S2 Theorem 4. Directly checked S1 PDF pp.9–13 (Definition 1, (2.1)–(2.2), Theorem 1, (2.7), Ville (2.11)); S2 PDF pp.9–10 (Lemma 2, (13), (14)), p.12 (Proposition 3, (21)), p.14 (Theorem 4, (23)), p.28 (Proposition 5, (51)), p.35 ((89)–(90)).",
+      "rationale": "Subitems 4/4 + 4/4 + 4/4 + 6/6. Both identities and principal page/equation locators match the supplied fixed PDFs, whose hashes independently match the manifest. The table correctly requires a sub-psi certificate for the pair (S,V), allows adapted V, distinguishes S1 infinite-time linear crossing from the curved S2 result, and accurately gives bounded predictable forecasts, changing target average conditional means, residual-squares intrinsic time, scale b-a, and two-tail error 2 eta. No iid, fixed-n, or Gaussian-data restriction is invented."
+    },
+    {
+      "id": "gaussian_mixture",
+      "score": 15,
+      "max_points": 15,
+      "evidence": "report.md:37–48 shows E_{t-1}L_t=L_{t-1} exp(-lambda^2 Delta V_t/2) E_{t-1}exp(lambda(X_t-mu))<=L_{t-1}, initial value one, joint measurability, fixed F_rho and conditional Tonelli. report.md:50–59 completes the square including sqrt(rho/(2 pi)); report.md:63–67 inverts M>=alpha^{-1} into |S|>=b and handles two tails and [0,1] truncation.",
+      "rationale": "Subitems 7/7 + 4/4 + 4/4. All Gaussian precision and exponent constants are correct. Predictability makes the one-step factorization valid; nonnegative conditional integration preserves the supermartingale and initial wealth one. The resulting real-line mixture is already two-sided at total alpha, and closed intervals/truncation preserve coverage."
+    },
+    {
+      "id": "finite_counterexample",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:71–84 uses iid Bernoulli(1/2), alpha=1/16, rho=1/4 and E={0000,1111} with the specified predictor. On E, Vhat_4=1/4, |S_4|=2 and b^2=(1/2)log512=(9/2)log2<27/8<4, proved using exp(3/4)>65/32>2; P(E)=1/8>1/16. report.md:86 distinguishes the A factorization issue from the more general missing sub-Gaussian process-pair certificate. judge-checks/independent-checks.json independently verifies the event arithmetic and all 16 length-four paths.",
+      "rationale": "Subitems 6/6 + 6/6 + 6/6. This is a fully correct alternative finite-time witness, not the reference n=280 witness, and earns full credit. It meets boundedness/common conditional mean, uses exactly the prescribed initialization and past mean, forces strict exclusion, and gives analytic event probability strictly exceeding alpha. The report explicitly permits adapted intrinsic time while requiring the applicable certificate, and does not invalidate fixed-rho normal mixtures in general."
+    },
+    {
+      "id": "moving_precision",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:90–101 derives g(x)=(1+1/x)[k+log(1+x)], g prime=[x-log(1+x)-k]/x^2, the unique root x_alpha-log(1+x_alpha)=2log(1/alpha), rho_*=v/x_alpha and inf b=sqrt((1+x_alpha)v); it notes the unattained zero infimum at v=0. report.md:103–109 applies the supplied Rademacher LIL to iid Bernoulli(1/2), legal deterministic V_t=t/4, and separately describes S2 Proposition 3 fixed-m tuning.",
+      "rationale": "Subitems 6/6 + 4/4 + 6/6 + 2/2. The derivative and global minimizer argument are correct. The optimized envelope has constant times sqrt(t) growth, whereas the stated LIL entails infinitely many crossings almost surely and hence zero simultaneous coverage. The argument isolates moving precision failure even for a proven deterministic variance proxy and correctly separates it from fixed-target optimization. The v=0 endpoint is treated as a secondary issue."
+    },
+    {
+      "id": "valid_repairs",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:113 derives the conditional Hoeffding proxy V_t=t/4 via f double-prime<=1/4 and invokes A with fixed rho. report.md:117–131 gives psi_E=-log(1-lambda)-lambda on [0,1), bounded predictable forecasts, the integral proof of exp(lambda xi-psi_E xi^2)<=1+lambda xi, and E_{t-1}exp(lambda Y-psi_E(Y-delta)^2)<=exp(lambda delta)(1-lambda delta)<=1. report.md:133–143 specifies a fixed uniform mixing law on [0,1), its unique inverse at 2/alpha, and P(all t coverage)>=1-alpha. report.md:145–150 uses rho_j=2^{j-1}, alpha_j=alpha 2^{-j}, and a countable union bound.",
+      "rationale": "Subitems 7/7 + 8/8 + 3/3. The fixed-rho repair has a proven legal proxy and inherits the explicit simultaneous guarantee proved under A. The EB one-step inequality is algebraically valid for xi>=-1; applying it to both signs gives the same residual squares and the correct alpha/2 tail allocation. The uniform mixture is a legitimate fixed probability distribution, finite for v>=0, continuous and strictly increasing in s, with a finite unique crossing root; it supplies an actual usable boundary rather than merely naming a construction. The countable precision grid allocates a summable budget and validly allows intersections or later selection with each allocated alpha_j retained."
+    },
+    {
+      "id": "reviewable_short_memo",
+      "score": 13,
+      "max_points": 13,
+      "evidence": "report.md:3 explicitly resolves A/E true and B/C/D false; report.md:154 and :163 accurately credit the prior framework and limit this constructed-memo audit to clarification and checking. report.md:156–161 proves E by G intersect {tau<infinity} subset {mu in C_tau}, without integrability or optional stopping. report.md:7–8, :29–33 and the numerical expressions at :73–84 provide traceable sources/calculations; :165 and work/checks.py describe code as checks rather than proof.",
+      "rationale": "Subitems 5/5 + 4/4 + 2/2 + 2/2. All five decisions are explicit and supported. The repaired conclusion is directly reusable, distinguishes the constructed draft from the real papers, and makes no unsupported global novelty claim. The event-containment proof handles the specified a.s.-finite positive integer index correctly and even notes stopping-time measurability is unnecessary. The artifact is self-contained with checkable formulas and source coordinates; no source fulltext is redistributed as an answer. No deduction is warranted for its choice of notation, alternative witness, or level of detail."
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "ready-to-use",
+  "notes": [
+    "source_check: pass. The critical theorem/definition/equation statements were checked against the actual supplied S1 and S2 fixed-version original texts/PDF pages, not accepted solely from locations.md or reference.md; both PDF SHA256 hashes match source-manifest.json.",
+    "The four-step Bernoulli(1/2) counterexample is a correct, simpler alternative to the designer reference witness. The rubric explicitly permits it. The EB uniform-[0,1) mixture is also mathematically valid and need not be replaced by a named gamma mixture.",
+    "No substantive false positive, major mathematical error, critical-cap trigger, or unresolved mathematical disagreement was found in the final repaired recommendation. The reference key did not require correction.",
+    "arm_hidden=true means only that no mapping was supplied. Wording did not permit a reliable inference of the submission source; no group mapping, execution logs, memory, personal skills, network sources, or other submissions were consulted.",
+    "Independent arithmetic/hash evidence is in judge-checks/independent-checks.json. Numerical enumeration corroborates the report; the report itself provides analytic strict inequalities and probabilities."
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification.",
+  "report_sha256": "8f675f1008ca53dff749216ce135d8431da8af264bbbb386f5cceea6eee53b5c"
+}

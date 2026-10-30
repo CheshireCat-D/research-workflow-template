@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "visibility": "adjudicators-only; never give to executors",
+  "scoring": "Five criteria per task, each 0/1/2. 2=correct and substantiated; 1=materially partial; 0=wrong, absent, or merely named. Accept mathematically equivalent valid routes. No keyword or length scoring. A verdict alone earns at most its decision criterion.",
+  "tasks": {
+    "Q11": {
+      "expected_verdict": "supported",
+      "max_score": 10,
+      "criteria": [
+        {
+          "id": "decision",
+          "max_score": 2,
+          "obligation": "认定给定条件足以推出一致收敛，未捏造实质缺陷。"
+        },
+        {
+          "id": "finite_cover",
+          "max_score": 2,
+          "obligation": "说明稠密有理中心可形成半径小于共同delta的开覆盖，并由紧致取有限子覆盖。"
+        },
+        {
+          "id": "uniform_index",
+          "max_score": 2,
+          "obligation": "共同delta对全部n有效；有限中心可取N=max N_i，与x无关。"
+        },
+        {
+          "id": "epsilon_bound",
+          "max_score": 2,
+          "obligation": "用三个epsilon/3误差明确控制任意x、全部n>=N；不混淆点态和一致量词。"
+        },
+        {
+          "id": "scope",
+          "max_score": 2,
+          "obligation": "区分可选文字补充与错误；不额外要求有理点上原本未假定的一致收敛或不必要数据。"
+        }
+      ],
+      "reference_reason": "For epsilon choose shared delta, rational finite delta-net and common N; sup error is bounded by three epsilon/3 terms. The provided proof is valid."
+    },
+    "Q24": {
+      "expected_verdict": "unsupported",
+      "max_score": 10,
+      "criteria": [
+        {
+          "id": "decision",
+          "max_score": 2,
+          "obligation": "判定原主张不成立，并拒绝稿件的导数结论。"
+        },
+        {
+          "id": "failed_step",
+          "max_score": 2,
+          "obligation": "指出固定epsilon时2epsilon/|h|不能趋于0；选择N依赖epsilon，不给出所需o(|h|)控制。"
+        },
+        {
+          "id": "counterexample",
+          "max_score": 2,
+          "obligation": "给出定义在整个[-1,1]且逐项可微的具体函数列；不能仅说极限不可交换。"
+        },
+        {
+          "id": "assumptions",
+          "max_score": 2,
+          "obligation": "实际核对逐项连续/可微、f_n'(0)=0与一致收敛的统一误差界。"
+        },
+        {
+          "id": "contradiction",
+          "max_score": 2,
+          "obligation": "证明极限在0不可微或导数非0；明确其怎样违反原结论。"
+        }
+      ],
+      "reference_witness": "f_n(x)=sqrt(x*x+1/(n*n))-1/n. Continuous and differentiable; derivative at0=0. -1/n <= f_n(x)-|x| <=0, so uniform convergence to |x|; one-sided derivatives of limit at0 are -1,+1."
+    },
+    "Q37": {
+      "expected_verdict": "supported",
+      "max_score": 10,
+      "criteria": [
+        {
+          "id": "decision",
+          "max_score": 2,
+          "obligation": "认定给定随机化检验计算与不拒绝/不等效的结论成立，未捏造实质错误。"
+        },
+        {
+          "id": "design",
+          "max_score": 2,
+          "obligation": "以实验单位为分配单位，全部20个三元子集等概率；尖锐零假设允许固定所有观测结果重分配。"
+        },
+        {
+          "id": "statistic",
+          "max_score": 2,
+          "obligation": "重算总和6、处理组和s与T=(2s-6)/3、观测T=4/3。"
+        },
+        {
+          "id": "tails",
+          "max_score": 2,
+          "obligation": "核对高尾两组{3,5,6},{4,5,6}及低尾两组{1,2,3},{1,2,4}，或等价完整计数；含相等尾部给4/20。"
+        },
+        {
+          "id": "inference",
+          "max_score": 2,
+          "obligation": "不拒绝尖锐零假设不等于证实零效应、等效或外推总体；无需增加正态/iid前提。"
+        }
+      ],
+      "reference_reason": "Sum y=6. Treatment sums <=1 or >=5 occur in exactly four labelled assignments among20. p=.2. The stated inference is appropriately confined."
+    },
+    "Q58": {
+      "expected_verdict": "unsupported",
+      "max_score": 10,
+      "criteria": [
+        {
+          "id": "decision",
+          "max_score": 2,
+          "obligation": "认定所报告规则未控制0.05错误率，本次不能据此宣称0.05显著提高。"
+        },
+        {
+          "id": "selection",
+          "max_score": 2,
+          "obligation": "明确问题是从同一S选择方向后仍用单侧尾部；预先写入这条规则不会使两尾总概率消失。"
+        },
+        {
+          "id": "reported_tail",
+          "max_score": 2,
+          "obligation": "核对S=6及固定正方向尾部(1+8)/256=9/256，区分这项算术正确与整体检验无效。"
+        },
+        {
+          "id": "actual_size",
+          "max_score": 2,
+          "obligation": "完整规则恰在S>=6或S<=-6时拒绝，零假设拒绝概率18/256=0.0703125。"
+        },
+        {
+          "id": "compatible_tail",
+          "max_score": 2,
+          "obligation": "用|S|或等价双侧/两倍较小单侧尾部得18/256；在0.05水平不拒绝，并保持尖锐零假设范围。"
+        }
+      ],
+      "reference_reason": "For S=2K-8, K~Bin(8,.5), selected single-tail p<=.05 iff K in{0,1,7,8}. Total count=1+8+8+1=18. Observed |S|=6 has exact two-tail probability18/256."
+    }
+  }
+}

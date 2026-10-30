@@ -1,0 +1,111 @@
+{
+  "scope": "No scientific prose, numeric or score changes; only absolute locator projections and explicit distribution omissions. Original source and execution bytes remain sealed.",
+  "files": [
+    {
+      "original_sha256": "ad43500842a8a46e372b18536171b08585f6dde81ba35df0b51a0fcc240e67d2",
+      "path": "runs/P2/B/report.md",
+      "sha256": "87da4bcfd0363261e95b263a638b5c66f38b2dea94d2d730da5e8e3bdce479fc",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "3eeb9ab71fb575543b891dbd2908acbdb58bdaf5b678c7ed30609ee34013c414",
+      "path": "runs/P2/B/raw-execution.json",
+      "sha256": "345e205061b97f653ec19b6b961ae5064ffe1b7dd13d42ed43be931fb0c847a4",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "path": "runs/P2/B/project/management/evidence/A/checks.json",
+      "sha256": "3c1af433062d5356007ee6811966ee1e208528759a75c496bf9634c91cc5f646",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "path": "runs/P2/B/project/management/protocol/REQUEST.md",
+      "sha256": "e4b6d59999db3824e06939cf3808685cda1cfd549f2ffeeac15c344d28b1b9a8",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "ad321162f76a5338417d1f1b14ed18c39e225cc4ef954e022b7ac8dbf7ce97d9",
+      "path": "runs/P2/B/output/baseline-project-snapshot.json",
+      "sha256": "ad321162f76a5338417d1f1b14ed18c39e225cc4ef954e022b7ac8dbf7ce97d9",
+      "changes": []
+    },
+    {
+      "original_sha256": "e40d7fb452c6fbd321e1220518473245988fdf444ac2d4334db22d6a9d85020d",
+      "path": "runs/P2/B/output/final-project-snapshot.json",
+      "sha256": "e40d7fb452c6fbd321e1220518473245988fdf444ac2d4334db22d6a9d85020d",
+      "changes": []
+    },
+    {
+      "original_sha256": "11012ea9d3d425f59780c120ce2e5cfafc165b9d68aac78a263ecf8ce1c59028",
+      "path": "runs/P2/B/output/independent-inspection.json",
+      "sha256": "11012ea9d3d425f59780c120ce2e5cfafc165b9d68aac78a263ecf8ce1c59028",
+      "changes": []
+    },
+    {
+      "original_sha256": "51fdc3b075603460395d9a34b6c648052d3337ce3506eb17361932358a06db25",
+      "path": "runs/P2/B/output/inputs-and-artifacts.json",
+      "sha256": "51fdc3b075603460395d9a34b6c648052d3337ce3506eb17361932358a06db25",
+      "changes": []
+    },
+    {
+      "original_sha256": "4fb6763b567354956db9e1e876e6b0d77e2e669758de9f174f78cfd651d750c5",
+      "path": "runs/P2/B/output/read-only-check.json",
+      "sha256": "4fb6763b567354956db9e1e876e6b0d77e2e669758de9f174f78cfd651d750c5",
+      "changes": []
+    },
+    {
+      "original_sha256": "71c5cd1618a6ad3e9940edf2f548100a7d7c6e701ca2abf376057ee529bd2308",
+      "path": "runs/P2/B/output/state-answer.json",
+      "sha256": "71c5cd1618a6ad3e9940edf2f548100a7d7c6e701ca2abf376057ee529bd2308",
+      "changes": []
+    },
+    {
+      "original_sha256": "cdec9a044d356980480cb37fb38c804093b50e96c23f84b7c8fbc00bd1d58b25",
+      "path": "runs/P2/B/output/status.command.json",
+      "sha256": "03153903be973152759d5fb8d328d31a577a5bbd4e6d88ee228aeb3ca43e7f40",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "runs/P2/B/output/status.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "original_sha256": "c745d525f7c610bb1ba5b4d3c7f5d8826fabd32091ca01041dd8e14984041361",
+      "path": "runs/P2/B/output/status.stdout.json",
+      "sha256": "c745d525f7c610bb1ba5b4d3c7f5d8826fabd32091ca01041dd8e14984041361",
+      "changes": []
+    },
+    {
+      "original_sha256": "ef5aea245bf92affc2a41f1a23732b6a1f8843033dc31dbaaf010a4e6105f02d",
+      "path": "runs/P2/B/readonly-audit.json",
+      "sha256": "ef5aea245bf92affc2a41f1a23732b6a1f8843033dc31dbaaf010a4e6105f02d",
+      "changes": []
+    },
+    {
+      "original_sha256": "954b52c96d1b67e8229d26db1b1227e5beb55e65064d6c747d6ec522db3590d6",
+      "path": "runs/P2/B/injection.json",
+      "sha256": "954b52c96d1b67e8229d26db1b1227e5beb55e65064d6c747d6ec522db3590d6",
+      "changes": []
+    },
+    {
+      "original_sha256": "ffd0dcb1e1a2bec34e6c02f1706c1a01d1240c87fc024835f2eb41dfcdd61663",
+      "path": "runs/P2/B/seal.json",
+      "sha256": "ffd0dcb1e1a2bec34e6c02f1706c1a01d1240c87fc024835f2eb41dfcdd61663",
+      "changes": []
+    }
+  ]
+}

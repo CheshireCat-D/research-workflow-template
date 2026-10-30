@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "evidence",
+    "--file",
+    "-"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"id\": \"T-C-AUTHOR\", \"type\": \"author-authorization\", \"description\": \"Author explicitly accepts rho=4 current working parameters; no original paper revision or expert approval.\", \"provenance\": \"Current supplied author revision, copied verbatim for future recovery.\", \"location\": {\"kind\": \"local\", \"path\": \"provenance/stage-c/AUTHOR-REVISION.md\"}}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"evidence\",\n  \"id\": \"T-C-AUTHOR\",\n  \"version\": 1,\n  \"revision\": 28,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

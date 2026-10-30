@@ -1,0 +1,7 @@
+
+STDERR:
+Traceback (most recent call last):
+  File "PROJECT_ROOT/validation/stage-C/verify.py", line 39, in <module>
+    table=dict(csv.reader(read(out/'recalculation/table.csv').decode().splitlines())[1:])
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^
+TypeError: '_csv.reader' object is not subscriptable

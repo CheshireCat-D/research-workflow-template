@@ -1,0 +1,99 @@
+{
+  "argv": [
+    "WORKSPACE/update2012.py",
+    "--input-dir",
+    "INPUT_DIR",
+    "--prior-input",
+    "PRIOR_INPUT_DIR",
+    "--model",
+    "WORKSPACE/results/model.json",
+    "--prior-results",
+    "WORKSPACE/results/results.json",
+    "--original-code",
+    "WORKSPACE/analyze.py",
+    "--output-dir",
+    "WORKSPACE/results_2012"
+  ],
+  "reads": [
+    {
+      "logical_name": "workspace/analyze.py",
+      "sha256": "9aa68881931fdb685b4c27ea5c5f976b9576e49fac937140b18cc396bad6f32b",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results/model.json",
+      "sha256": "f8a758c6c73cf7e0cfcfa0936b594afb8f23b1260610ecae15929f601dc8e5d4",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/INPUT_MANIFEST.json",
+      "sha256": "11b8827f74fc67af3b0e85c06a5e65b24d67ebfbacd7f93b66d3e7c4e24908f7",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/day_2011.csv",
+      "sha256": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b",
+      "access": "full"
+    },
+    {
+      "logical_name": "prior-input/data-a/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "access": "digest-only"
+    },
+    {
+      "logical_name": "prior-input/data-a/day_2011.csv",
+      "sha256": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b",
+      "access": "digest-only"
+    },
+    {
+      "logical_name": "input/data-b/hour_2012.csv",
+      "sha256": "d73ae7f2aba616d775b5bccb3540910a9de49fe88e7f5926f7bf0a3fe840602d",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/data-b/day_2012.csv",
+      "sha256": "75c2dd61bc5f8a3cd6ae5c787c74c0fbc1547201d47c5cba878d29f3083f09b6",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results/results.json",
+      "sha256": "900286e5e1937b477a53e90baecd88e61b1e57bd25065fdce3c894cc9601018d",
+      "access": "full"
+    },
+    {
+      "logical_name": "workspace/results/predictions.csv",
+      "sha256": "fdf3fda08ca4adec36ff62fd0b2850b24d51e9287b5a5ef110ca64f70e0d143b",
+      "access": "digest-only"
+    },
+    {
+      "logical_name": "workspace/results/daily_errors.csv",
+      "sha256": "f9a4086798d3e0e8f621d198349e3a0b8f99728aff9279a3da66fb5af2a0ee52",
+      "access": "digest-only"
+    },
+    {
+      "logical_name": "workspace/results/bootstrap_7.csv",
+      "sha256": "982c98b431c35db3c292f515e3d2f33743f4eca667dc67f26045fb512880faea",
+      "access": "digest-only"
+    },
+    {
+      "logical_name": "workspace/results/bootstrap_28.csv",
+      "sha256": "5fc3bcf61018ba1226ef6582459ee3cf078dae203d49366940e94a428d3a0e6b",
+      "access": "digest-only"
+    }
+  ],
+  "frozen_model_sha256": "f8a758c6c73cf7e0cfcfa0936b594afb8f23b1260610ecae15929f601dc8e5d4",
+  "frozen_scoring_code_sha256": "9aa68881931fdb685b4c27ea5c5f976b9576e49fac937140b18cc396bad6f32b",
+  "update_code_sha256": "d83980da17c54f116aa26da88b34ea5e1a1a1b4aae87c17e6427e00542d6a95f",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "seed": 20261029,
+  "B": 2000,
+  "retrained": false,
+  "network": false,
+  "elapsed_seconds": 0.3442859649658203
+}

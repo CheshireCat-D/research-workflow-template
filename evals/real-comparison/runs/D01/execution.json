@@ -1,0 +1,540 @@
+{
+  "status": "executed",
+  "requested": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "fork_turns": "none",
+    "max_tool_calls": 18,
+    "max_report_characters": 12000
+  },
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 10,
+  "network_calls": 0,
+  "violations": [],
+  "reads": [
+    {
+      "logical_name": "common/executor.md",
+      "path": "STUDY_ROOT/runs/D01/EXECUTOR.md",
+      "sha256": "316392fda85274a6b9a3ac7150125ef140d35d96edde46759348ef82020239fb"
+    },
+    {
+      "logical_name": "common/execution.template.json",
+      "path": "STUDY_ROOT/runs/D01/execution.template.json",
+      "sha256": "4202f4e551078d2e12ccd1e271ddb0eaba5bac56eb2cccc204cacf1e9b66330e"
+    },
+    {
+      "logical_name": "input/data-a/INPUT_MANIFEST.json",
+      "path": "INPUT_DIR/INPUT_MANIFEST.json",
+      "sha256": "84d74db7b66f0a45f407372553324591095abe121f784a1331ca9dfc4a252d8c"
+    },
+    {
+      "logical_name": "input/data-a/ORIGINAL_README.txt",
+      "path": "INPUT_DIR/ORIGINAL_README.txt",
+      "sha256": "b92c8628622948bf0828c43a1b315d1517c3d7fd63654730d0dea379b8e88175"
+    },
+    {
+      "logical_name": "input/data-a/SOURCES.md",
+      "path": "INPUT_DIR/SOURCES.md",
+      "sha256": "647a33e2683dbc60dfcbcf2e2873185aea94f7bfee49d6a3e3b3eacd6d85a786"
+    },
+    {
+      "logical_name": "input/data-a/TASK.md",
+      "path": "INPUT_DIR/TASK.md",
+      "sha256": "d27a3abf88230bc2b78833d573da380ba6260f83f6dbb077f26fa171e2042ceb"
+    },
+    {
+      "logical_name": "input/data-a/UCI_PAGE_EXCERPT.txt",
+      "path": "INPUT_DIR/UCI_PAGE_EXCERPT.txt",
+      "sha256": "06797117bf42c99729802c59237e8884610e8a7a9ad3e256ca6b0a7f5dff7115"
+    },
+    {
+      "logical_name": "input/data-a/data/day_2011.csv",
+      "path": "INPUT_DIR/data/day_2011.csv",
+      "sha256": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b"
+    },
+    {
+      "logical_name": "input/data-a/data/hour_2011.csv",
+      "path": "INPUT_DIR/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115"
+    },
+    {
+      "logical_name": "workspace/RUN.md",
+      "path": "WORKSPACE/RUN.md",
+      "sha256": "363c00a347fc3c2aa862c678fee4ab7c12c502221bf48ff0ae41182eec3119a2"
+    },
+    {
+      "logical_name": "workspace/analysis.py",
+      "path": "WORKSPACE/analysis.py",
+      "sha256": "e22ae01683059c937d53ac0f1342cf8d7ae0b1b0fb8905a680eb35144d3735e6"
+    },
+    {
+      "logical_name": "workspace/bootstrap_L28.csv",
+      "path": "WORKSPACE/bootstrap_L28.csv",
+      "sha256": "17bd9a3c5f7663b67544e692d79231b6f9a8fc49cff94c8210e5a0a2813a10eb"
+    },
+    {
+      "logical_name": "workspace/bootstrap_L7.csv",
+      "path": "WORKSPACE/bootstrap_L7.csv",
+      "sha256": "f41d65b2854caa123da3ca74c2facdaf1a61cd539f59f0c5b780afbae15ebf09"
+    },
+    {
+      "logical_name": "workspace/daily_count_mismatches.csv",
+      "path": "WORKSPACE/daily_count_mismatches.csv",
+      "sha256": "50f7603165b2b0a3df3a176cc7002095c57639bbacd5aa7de5d6175cdb3e0ca4"
+    },
+    {
+      "logical_name": "workspace/daily_errors.csv",
+      "path": "WORKSPACE/daily_errors.csv",
+      "sha256": "df9b1b6044a2a4aca8b6076d4a95e0547857399b566926712a425fa783ffcd5f"
+    },
+    {
+      "logical_name": "workspace/data_audit.json",
+      "path": "WORKSPACE/data_audit.json",
+      "sha256": "d50467a894d2d1017f87ebcd998740ba5dfd37142b8edb40f911c2aca48d4c86"
+    },
+    {
+      "logical_name": "workspace/date_coverage.csv",
+      "path": "WORKSPACE/date_coverage.csv",
+      "sha256": "b8295bbadf582bb17f46a1089c2db5970127cd30a6bd0875453aab5c6c8b7da2"
+    },
+    {
+      "logical_name": "workspace/handoff.md",
+      "path": "WORKSPACE/handoff.md",
+      "sha256": "896f8443b8782768d22b0173802c97ea815f79057081dbe050d9af31706aea36"
+    },
+    {
+      "logical_name": "workspace/model.json",
+      "path": "WORKSPACE/model.json",
+      "sha256": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47"
+    },
+    {
+      "logical_name": "workspace/predictions.csv",
+      "path": "WORKSPACE/predictions.csv",
+      "sha256": "38d967436201dce3400a4aa0f1f5919ec78ce8fc2614975107190708b3ad093f"
+    },
+    {
+      "logical_name": "workspace/report.md",
+      "path": "WORKSPACE/report.md",
+      "sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57"
+    },
+    {
+      "logical_name": "workspace/results.json",
+      "path": "WORKSPACE/results.json",
+      "sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb"
+    },
+    {
+      "logical_name": "workspace/run.log",
+      "path": "WORKSPACE/run.log",
+      "sha256": "a7ac8a7780531e8603f09b5a2e40e019f2a1111bfb1b24d84c4972f8d2db7707"
+    },
+    {
+      "logical_name": "workspace/run_summary.json",
+      "path": "WORKSPACE/run_summary.json",
+      "sha256": "1b1375dd324ed675415d50d1a23ab8e829f85ef5f9988778f0ab1227f79fdd8c"
+    },
+    {
+      "logical_name": "workspace/score_replay/bootstrap_L28.csv",
+      "path": "WORKSPACE/score_replay/bootstrap_L28.csv",
+      "sha256": "17bd9a3c5f7663b67544e692d79231b6f9a8fc49cff94c8210e5a0a2813a10eb"
+    },
+    {
+      "logical_name": "workspace/score_replay/bootstrap_L7.csv",
+      "path": "WORKSPACE/score_replay/bootstrap_L7.csv",
+      "sha256": "f41d65b2854caa123da3ca74c2facdaf1a61cd539f59f0c5b780afbae15ebf09"
+    },
+    {
+      "logical_name": "workspace/score_replay/daily_errors.csv",
+      "path": "WORKSPACE/score_replay/daily_errors.csv",
+      "sha256": "df9b1b6044a2a4aca8b6076d4a95e0547857399b566926712a425fa783ffcd5f"
+    },
+    {
+      "logical_name": "workspace/score_replay/predictions.csv",
+      "path": "WORKSPACE/score_replay/predictions.csv",
+      "sha256": "38d967436201dce3400a4aa0f1f5919ec78ce8fc2614975107190708b3ad093f"
+    },
+    {
+      "logical_name": "workspace/score_replay/results.json",
+      "path": "WORKSPACE/score_replay/results.json",
+      "sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb"
+    },
+    {
+      "logical_name": "workspace/score_replay/score_provenance.json",
+      "path": "WORKSPACE/score_replay/score_provenance.json",
+      "sha256": "de777f4e4b1c68deb2dc311aa5533b53fd41f9923b0ea09a873cb40ed77aad14"
+    },
+    {
+      "logical_name": "workspace/score_replay.log",
+      "path": "WORKSPACE/score_replay.log",
+      "sha256": "6b9240830dd4d96dfb943259cdc75766ac77e3596bf3adc715510422ee090bc8"
+    },
+    {
+      "logical_name": "workspace/score_replay_check.json",
+      "path": "WORKSPACE/score_replay_check.json",
+      "sha256": "339789628bd86f6f9dc8be026bfd7ce8ba802239a6b40319c90d95f457d62850"
+    },
+    {
+      "logical_name": "workspace/validation_input/data/hour_holdout.csv",
+      "path": "WORKSPACE/validation_input/data/hour_holdout.csv",
+      "sha256": "499f2058be51843378f2a3d2c63ad4e1481100ab2a3a49a23b455cdc0c032c6f"
+    },
+    {
+      "logical_name": "workspace/verification.json",
+      "path": "WORKSPACE/verification.json",
+      "sha256": "9ed3a758a629f00193273e661e8542d3902d8c51ee36e78d58c05225840857f6"
+    },
+    {
+      "logical_name": "workspace/verify.py",
+      "path": "WORKSPACE/verify.py",
+      "sha256": "3262b123f8172ee66061020aa28172f0e754a4d5023024055dfe5c35c02b88e2"
+    }
+  ],
+  "commands": [
+    {
+      "outer_call": 1,
+      "type": "exec_command",
+      "commands": [
+        "cat EXECUTOR.md",
+        "cat execution.template.json"
+      ],
+      "purpose": "Read common execution instructions and template",
+      "exit_codes": [
+        0
+      ]
+    },
+    {
+      "outer_call": 2,
+      "type": "exec_command",
+      "commands": [
+        "pwd",
+        "rg --files input",
+        "cat input/TASK.md"
+      ],
+      "exit_codes": [
+        0
+      ]
+    },
+    {
+      "outer_call": 3,
+      "type": "exec_command",
+      "commands": [
+        "cat input/SOURCES.md",
+        "cat input/ORIGINAL_README.txt",
+        "cat input/UCI_PAGE_EXCERPT.txt",
+        "cat input/INPUT_MANIFEST.json",
+        "head -n 4 input/data/hour_2011.csv",
+        "head -n 4 input/data/day_2011.csv"
+      ],
+      "exit_codes": [
+        0
+      ]
+    },
+    {
+      "outer_call": 4,
+      "types": [
+        "exec_command",
+        "apply_patch"
+      ],
+      "commands": [
+        "mkdir -p workspace",
+        "apply_patch: create workspace/analysis.py"
+      ],
+      "exit_codes": [
+        0
+      ],
+      "patch_success": true
+    },
+    {
+      "outer_call": 5,
+      "type": "exec_command",
+      "commands": [
+        "EVAL_PYTHON -I -B workspace/analysis.py --input-dir input --output-dir workspace > workspace/run.log",
+        "cat workspace/run.log"
+      ],
+      "exit_codes": [
+        0,
+        0
+      ],
+      "purpose": "First actual numerical run; outputs shown in tool transcript"
+    },
+    {
+      "outer_call": 6,
+      "type": "exec_command",
+      "commands": [
+        "cat workspace/model.json",
+        "cat workspace/report.md"
+      ],
+      "exit_codes": [
+        0
+      ]
+    },
+    {
+      "outer_call": 7,
+      "types": [
+        "apply_patch",
+        "exec_command"
+      ],
+      "commands": [
+        "apply_patch: create workspace/verify.py",
+        "EVAL_PYTHON -I -B workspace/verify.py input"
+      ],
+      "exit_codes": [
+        0
+      ],
+      "patch_success": true
+    },
+    {
+      "outer_call": 8,
+      "types": [
+        "apply_patch",
+        "exec_command"
+      ],
+      "commands": [
+        "apply_patch: clarify report conclusion within 2011 holdout and bootstrap threshold interpretation",
+        "EVAL_PYTHON -I -B workspace/analysis.py --input-dir input --output-dir workspace > workspace/run.log",
+        "EVAL_PYTHON -I -B workspace/verify.py input"
+      ],
+      "exit_codes": [
+        0
+      ],
+      "patch_success": true,
+      "purpose": "Regenerate report after prose clarification; model hash and all numerical results unchanged"
+    },
+    {
+      "outer_call": 9,
+      "types": [
+        "apply_patch",
+        "exec_command"
+      ],
+      "commands": [
+        "apply_patch: create workspace/handoff.md and workspace/RUN.md",
+        "EVAL_PYTHON -I -B stdin: copy original 2011 held-out rows to workspace/validation_input/data/hour_holdout.csv",
+        "EVAL_PYTHON -I -B workspace/analysis.py --mode score --input-dir workspace/validation_input --hour-file hour_holdout.csv --model workspace/model.json --output-dir workspace/score_replay > workspace/score_replay.log",
+        "EVAL_PYTHON -I -B stdin: byte-compare frozen score replay files and write workspace/score_replay_check.json"
+      ],
+      "exit_codes": [
+        0
+      ],
+      "patch_success": true
+    },
+    {
+      "outer_call": 10,
+      "type": "exec_command",
+      "commands": [
+        "EVAL_PYTHON -I -B stdin: hash all read inputs and own outputs, validate required artifacts, save workspace/execution.json"
+      ],
+      "exit_codes": [
+        0
+      ]
+    }
+  ],
+  "duration_seconds": null,
+  "scope": "instruction-only; no OS audit",
+  "failure": null,
+  "artifacts": [
+    {
+      "logical_name": "workspace/RUN.md",
+      "path": "WORKSPACE/RUN.md",
+      "sha256": "363c00a347fc3c2aa862c678fee4ab7c12c502221bf48ff0ae41182eec3119a2",
+      "bytes": 2495
+    },
+    {
+      "logical_name": "workspace/analysis.py",
+      "path": "WORKSPACE/analysis.py",
+      "sha256": "e22ae01683059c937d53ac0f1342cf8d7ae0b1b0fb8905a680eb35144d3735e6",
+      "bytes": 23938
+    },
+    {
+      "logical_name": "workspace/bootstrap_L28.csv",
+      "path": "WORKSPACE/bootstrap_L28.csv",
+      "sha256": "17bd9a3c5f7663b67544e692d79231b6f9a8fc49cff94c8210e5a0a2813a10eb",
+      "bytes": 176358
+    },
+    {
+      "logical_name": "workspace/bootstrap_L7.csv",
+      "path": "WORKSPACE/bootstrap_L7.csv",
+      "sha256": "f41d65b2854caa123da3ca74c2facdaf1a61cd539f59f0c5b780afbae15ebf09",
+      "bytes": 176514
+    },
+    {
+      "logical_name": "workspace/daily_count_mismatches.csv",
+      "path": "WORKSPACE/daily_count_mismatches.csv",
+      "sha256": "50f7603165b2b0a3df3a176cc7002095c57639bbacd5aa7de5d6175cdb3e0ca4",
+      "bytes": 32
+    },
+    {
+      "logical_name": "workspace/daily_errors.csv",
+      "path": "WORKSPACE/daily_errors.csv",
+      "sha256": "df9b1b6044a2a4aca8b6076d4a95e0547857399b566926712a425fa783ffcd5f",
+      "bytes": 8372
+    },
+    {
+      "logical_name": "workspace/data_audit.json",
+      "path": "WORKSPACE/data_audit.json",
+      "sha256": "d50467a894d2d1017f87ebcd998740ba5dfd37142b8edb40f911c2aca48d4c86",
+      "bytes": 2309
+    },
+    {
+      "logical_name": "workspace/date_coverage.csv",
+      "path": "WORKSPACE/date_coverage.csv",
+      "sha256": "b8295bbadf582bb17f46a1089c2db5970127cd30a6bd0875453aab5c6c8b7da2",
+      "bytes": 7165
+    },
+    {
+      "logical_name": "workspace/handoff.md",
+      "path": "WORKSPACE/handoff.md",
+      "sha256": "896f8443b8782768d22b0173802c97ea815f79057081dbe050d9af31706aea36",
+      "bytes": 6390
+    },
+    {
+      "logical_name": "workspace/model.json",
+      "path": "WORKSPACE/model.json",
+      "sha256": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47",
+      "bytes": 6830
+    },
+    {
+      "logical_name": "workspace/predictions.csv",
+      "path": "WORKSPACE/predictions.csv",
+      "sha256": "38d967436201dce3400a4aa0f1f5919ec78ce8fc2614975107190708b3ad093f",
+      "bytes": 295344
+    },
+    {
+      "logical_name": "workspace/report.md",
+      "path": "WORKSPACE/report.md",
+      "sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57",
+      "bytes": 8743
+    },
+    {
+      "logical_name": "workspace/results.json",
+      "path": "WORKSPACE/results.json",
+      "sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb",
+      "bytes": 3898
+    },
+    {
+      "logical_name": "workspace/run.log",
+      "path": "WORKSPACE/run.log",
+      "sha256": "a7ac8a7780531e8603f09b5a2e40e019f2a1111bfb1b24d84c4972f8d2db7707",
+      "bytes": 6715
+    },
+    {
+      "logical_name": "workspace/run_summary.json",
+      "path": "WORKSPACE/run_summary.json",
+      "sha256": "1b1375dd324ed675415d50d1a23ab8e829f85ef5f9988778f0ab1227f79fdd8c",
+      "bytes": 246
+    },
+    {
+      "logical_name": "workspace/score_replay/bootstrap_L28.csv",
+      "path": "WORKSPACE/score_replay/bootstrap_L28.csv",
+      "sha256": "17bd9a3c5f7663b67544e692d79231b6f9a8fc49cff94c8210e5a0a2813a10eb",
+      "bytes": 176358
+    },
+    {
+      "logical_name": "workspace/score_replay/bootstrap_L7.csv",
+      "path": "WORKSPACE/score_replay/bootstrap_L7.csv",
+      "sha256": "f41d65b2854caa123da3ca74c2facdaf1a61cd539f59f0c5b780afbae15ebf09",
+      "bytes": 176514
+    },
+    {
+      "logical_name": "workspace/score_replay/daily_errors.csv",
+      "path": "WORKSPACE/score_replay/daily_errors.csv",
+      "sha256": "df9b1b6044a2a4aca8b6076d4a95e0547857399b566926712a425fa783ffcd5f",
+      "bytes": 8372
+    },
+    {
+      "logical_name": "workspace/score_replay/predictions.csv",
+      "path": "WORKSPACE/score_replay/predictions.csv",
+      "sha256": "38d967436201dce3400a4aa0f1f5919ec78ce8fc2614975107190708b3ad093f",
+      "bytes": 295344
+    },
+    {
+      "logical_name": "workspace/score_replay/results.json",
+      "path": "WORKSPACE/score_replay/results.json",
+      "sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb",
+      "bytes": 3898
+    },
+    {
+      "logical_name": "workspace/score_replay/score_provenance.json",
+      "path": "WORKSPACE/score_replay/score_provenance.json",
+      "sha256": "de777f4e4b1c68deb2dc311aa5533b53fd41f9923b0ea09a873cb40ed77aad14",
+      "bytes": 216
+    },
+    {
+      "logical_name": "workspace/score_replay.log",
+      "path": "WORKSPACE/score_replay.log",
+      "sha256": "6b9240830dd4d96dfb943259cdc75766ac77e3596bf3adc715510422ee090bc8",
+      "bytes": 700
+    },
+    {
+      "logical_name": "workspace/score_replay_check.json",
+      "path": "WORKSPACE/score_replay_check.json",
+      "sha256": "339789628bd86f6f9dc8be026bfd7ce8ba802239a6b40319c90d95f457d62850",
+      "bytes": 314
+    },
+    {
+      "logical_name": "workspace/validation_input/data/hour_holdout.csv",
+      "path": "WORKSPACE/validation_input/data/hour_holdout.csv",
+      "sha256": "499f2058be51843378f2a3d2c63ad4e1481100ab2a3a49a23b455cdc0c032c6f",
+      "bytes": 146345
+    },
+    {
+      "logical_name": "workspace/verification.json",
+      "path": "WORKSPACE/verification.json",
+      "sha256": "9ed3a758a629f00193273e661e8542d3902d8c51ee36e78d58c05225840857f6",
+      "bytes": 426
+    },
+    {
+      "logical_name": "workspace/verify.py",
+      "path": "WORKSPACE/verify.py",
+      "sha256": "3262b123f8172ee66061020aa28172f0e754a4d5023024055dfe5c35c02b88e2",
+      "bytes": 4012
+    }
+  ],
+  "runtime": {
+    "python_executable": "EVAL_PYTHON",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "python_version": "3.12.14",
+    "third_party_libraries_used": []
+  },
+  "path_conventions": {
+    "base": "STUDY_ROOT/runs/D01",
+    "input": "INPUT_DIR",
+    "workspace": "WORKSPACE",
+    "EVAL_PYTHON": "EVAL_PYTHON",
+    "logical_input_prefix": "input/data-a/"
+  },
+  "completed_at_utc": "2026-10-29T23:51:43.049893+00:00",
+  "failures": [],
+  "first_run_observed": {
+    "MAE_C0": 58.825190494512434,
+    "MAE_C1": 44.570832407531775,
+    "absolute_improvement": 14.254358086980659,
+    "relative_improvement": 0.24231724482575867,
+    "model_sha256": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47",
+    "report_characters": 4163
+  },
+  "final_report_characters": 4216,
+  "rerun_explanation": "Only report prose clarified after first run. No tuning, feature changes or numeric changes. The frozen model SHA remained identical.",
+  "notes": [
+    "No model or reasoning override requested; effective model settings not supplied by host and remain null.",
+    "Tool count means outer functions.exec calls, including the call saving this record. Native subcalls are itemized in commands.",
+    "Duration was not measured from the initial instruction read; null is retained.",
+    "File SHA inventory covers supplied payloads and own artifacts, not individual standard-library imports.",
+    "Scope is instruction-level self-report, not an operating system audit.",
+    "No 2012 observation, other trial, memory, personal skill or network source was accessed."
+  ],
+  "publication_projection": {
+    "raw_execution_sha256": "cf24b4eceb2b267a3413d519f47efc1720ec347e1166ba596720f0d5bb37d1c0",
+    "changes": [
+      "absolute paths mapped to logical locators"
+    ],
+    "scope": "Administrative labels/locators only; effective unknowns and scientific content retained."
+  }
+}

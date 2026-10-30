@@ -1,0 +1,229 @@
+{
+  "case_id": "T",
+  "stage": "D",
+  "project_root": "PROJECT_ROOT",
+  "project_id": "P7f7d33fec3a3404cb09bbea7b8f8419c",
+  "revision": 46,
+  "current_question": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+  "authority": {
+    "configuration": "project.json",
+    "records_versions_checkpoint": "records/registry.json",
+    "notes_and_historical_snapshots": "subordinate; initial rho=1 does not override approved rho=4"
+  },
+  "active_constraints": {
+    "alpha": 0.05,
+    "rho": 4.0,
+    "rho_selection": "fixed-before-observation",
+    "intrinsic_time_grid": [
+      0,
+      1,
+      10,
+      100
+    ],
+    "l0": 1,
+    "two_sided_alpha_total": true,
+    "same_intrinsic_time_for_S_and_negative_S": true,
+    "intrinsic_time_nonnegative": true,
+    "process_condition": "corresponding sub-Gaussian exponential control; arbitrary empirical variance substitution not authorized",
+    "language": "zh",
+    "deadline": "2026-12-15",
+    "deadline_provenance": "task-author supplied; not an observed real research deadline",
+    "budget": "Offline Python standard library; no new data collection/model training/refit",
+    "venue": "undecided",
+    "human_expert_content_approval": false,
+    "external_submission_authorized": false
+  },
+  "next_action": {
+    "text": "将rho=4、alpha=0.05、v=[0,1,10,100]的边界表与更新摘要交作者内容复核；暂不扩展到事后选择rho。",
+    "materials": [
+      "results/table.csv",
+      "results/summary.md",
+      "results/result.json"
+    ],
+    "scope": "Only approved alpha=.05, preselected rho=4, v=[0,1,10,100]; author content review; no post-observation rho selection",
+    "executed_in_stage_D": false
+  },
+  "changed_or_missing_paths": [],
+  "affected_activities": [],
+  "unaffected_activities": [
+    "T-SOURCE-CHECK",
+    "T-CALC",
+    "T-SYNTH"
+  ],
+  "activity_status": [
+    {
+      "id": "T-CALC",
+      "title": "Evaluate supplied calculator and verify current result and companion table",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "T-SOURCE-CHECK",
+      "title": "Verify supplied fixed source identity and card scope",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "T-SYNTH",
+      "title": "Review supplied summary within current claim and verified numeric result",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "historical_parameter_revision": {
+    "rho_before": 1.0,
+    "rho_after": 4.0,
+    "affected_then": [
+      "T-CALC",
+      "T-SYNTH"
+    ],
+    "unaffected_then": [
+      "T-SOURCE-CHECK"
+    ],
+    "revalidated_in_saved_C_record": true,
+    "D_recomputed": false
+  },
+  "checkpoint_freshness": {
+    "status": "current",
+    "changed": [],
+    "created_at": "2026-10-30T01:16:43.863363+00:00",
+    "saved_checkpoint_alone_is_reverification": false
+  },
+  "scientific_scope": {
+    "current_values": [
+      {
+        "v": 0,
+        "boundary": 4.895493661361633
+      },
+      {
+        "v": 1,
+        "boundary": 5.57431973357386
+      },
+      {
+        "v": 10,
+        "boundary": 10.070709270872976
+      },
+      {
+        "v": 100,
+        "boundary": 31.015388968276124
+      }
+    ],
+    "assessment": "Numerical formula evaluation under stated fixed-parameter assumptions; state freshness only rechecked in D",
+    "D_checks": {
+      "parameters_equal_approved": true,
+      "result_parameters_match": true,
+      "result_grid_matches": true,
+      "json_csv_existing_values_match": true,
+      "result_input_hashes_match": true,
+      "project_bytes_mtimes_unchanged": true,
+      "research_recomputed": false,
+      "project_snapshot_changes": [],
+      "preserved_history_manifest_checks": [
+        {
+          "path": "history/stage-a-initial/notes/parameters.json",
+          "sha256_matches": true,
+          "bytes_match": true
+        },
+        {
+          "path": "history/stage-a-initial/results/result.json",
+          "sha256_matches": true,
+          "bytes_match": true
+        },
+        {
+          "path": "history/stage-a-initial/results/table.csv",
+          "sha256_matches": true,
+          "bytes_match": true
+        },
+        {
+          "path": "history/stage-a-initial/results/summary.md",
+          "sha256_matches": true,
+          "bytes_match": true
+        },
+        {
+          "path": "history/stage-c-before-recompute/project.json",
+          "sha256_matches": true,
+          "bytes_match": true
+        },
+        {
+          "path": "history/stage-c-before-recompute/RECOVERY.md",
+          "sha256_matches": true,
+          "bytes_match": true
+        },
+        {
+          "path": "history/stage-c-before-recompute/records/registry.json",
+          "sha256_matches": true,
+          "bytes_match": true
+        },
+        {
+          "path": "history/stage-c-before-recompute/results/result.json",
+          "sha256_matches": true,
+          "bytes_match": true
+        },
+        {
+          "path": "history/stage-c-before-recompute/results/table.csv",
+          "sha256_matches": true,
+          "bytes_match": true
+        },
+        {
+          "path": "history/stage-c-before-recompute/results/summary.md",
+          "sha256_matches": true,
+          "bytes_match": true
+        },
+        {
+          "path": "history/stage-c-before-recompute/notes/parameters.json",
+          "sha256_matches": true,
+          "bytes_match": true
+        }
+      ],
+      "preserved_history_complete": true
+    },
+    "no_new_proof": true,
+    "no_coverage_simulation": true,
+    "no_novelty_assessment": true,
+    "no_formal_verification": true
+  },
+  "source_tracking_limits": {
+    "primary": {
+      "id": "T-SRC",
+      "version": "1810.08240v9",
+      "doi": "10.1214/20-AOS1991",
+      "local_path": "sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "D_access": "full bytes hashed only; source card read; no PDF page/theorem reading or remote access"
+    },
+    "source_only": "T-REMOTE: arxiv 1808.03204v7 identity only; no local content binding, no current remote-content check",
+    "unregistered": "notes/unregistered-scratch.md excluded from registered scientific dependency tracking; D inventory hash is not registration",
+    "bound_local_file_count": 22,
+    "not_all_files_automatically_covered": true,
+    "redistribution": "Original source PDF is private cache and not redistributed"
+  },
+  "material_paths": {
+    "project.json": "project.json",
+    "records/registry.json": "records/registry.json",
+    "RECOVERY.md": "RECOVERY.md",
+    "notes/parameters.json": "notes/parameters.json",
+    "provenance/stage-c/AUTHOR-REVISION.md": "provenance/stage-c/AUTHOR-REVISION.md",
+    "provenance/stage-c/approved-parameters.json": "provenance/stage-c/approved-parameters.json",
+    "scripts/compute.py": "scripts/compute.py",
+    "sources/howard2021-arxiv-v9.pdf": "sources/howard2021-arxiv-v9.pdf",
+    "notes/source-check.md": "notes/source-check.md",
+    "notes/stage-c-validation.json": "notes/stage-c-validation.json",
+    "results/result.json": "results/result.json",
+    "results/table.csv": "results/table.csv",
+    "results/summary.md": "results/summary.md",
+    "history/stage-a-initial/manifest.json": "history/stage-a-initial/manifest.json",
+    "history/stage-c-before-recompute/manifest.json": "history/stage-c-before-recompute/manifest.json",
+    "validation/stage-c/check-drift.json": "validation/stage-c/check-drift.json"
+  },
+  "notes": [
+    "Migration changes directory location, not scientific evidence version.",
+    "Project-local read-only runtime worked at migrated root without original toolkit.",
+    "Prior absolute paths inside historical logs were treated only as historical strings; none accessed.",
+    "PROJECT.md initialization line is historical prose; current registry and revision prevail.",
+    "No project writes, result recomputation, registration, initialization, checkpoint save, repair or next-action execution."
+  ]
+}

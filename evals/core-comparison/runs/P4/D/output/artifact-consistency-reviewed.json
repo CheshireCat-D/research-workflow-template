@@ -1,0 +1,43 @@
+{
+  "scope": "Existing-artifact metadata/format consistency only; no calculator or independent scientific metric execution",
+  "prior_check_preserved": "artifact-consistency.json",
+  "prior_check_issue": "The first result_matches_parameters assertion incorrectly required every parameter key to occur in result.json. metric_weighting is absent from that result format; no contradictory value was found.",
+  "matching_shared_parameter_fields": {
+    "case_id": true,
+    "evaluation_start": true,
+    "evaluation_end": true,
+    "model_policy": true
+  },
+  "parameter_fields_absent_from_result": [
+    "metric_weighting"
+  ],
+  "weighting_evidence": [
+    "notes/parameters.json: metric_weighting=observed-hour",
+    "results/result.json: exact parameters input SHA binds current parameter bytes",
+    "results/summary.md: equal observed-hour weighting stated",
+    "scripts/compute.py: unweighted means over filtered observed rows, inspected without execution"
+  ],
+  "table_matches_result": {
+    "observed_hours": true,
+    "observed_days": true,
+    "C0_MAE": true,
+    "C1_MAE": true,
+    "C0_RMSE": true,
+    "C1_RMSE": true,
+    "MAE_reduction_fraction": true
+  },
+  "summary_rounding_tokens": {
+    "C0_MAE": true,
+    "C1_MAE": true,
+    "C0_RMSE": true,
+    "C1_RMSE": true,
+    "C0_bias_prediction_minus_actual": true,
+    "C1_bias_prediction_minus_actual": true
+  },
+  "input_hash_matches": {
+    "parameters": true,
+    "calculator": true,
+    "hour_2011": true,
+    "frozen_model": true
+  }
+}

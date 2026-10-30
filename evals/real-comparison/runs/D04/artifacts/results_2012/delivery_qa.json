@@ -1,0 +1,28 @@
+{
+  "report_unicode_characters": 6622,
+  "all_2012_source_keys_and_targets_match": true,
+  "frozen_model_unchanged": true,
+  "2011_holdout_five_files_byte_identical": true,
+  "all_first_2012_results_preserved": true,
+  "independent_verification": {
+    "all_predictions_equal_frozen_lookup": true,
+    "all_all_metrics": true,
+    "complete_24h_dates_all_metrics": true,
+    "workingday_0_all_metrics": true,
+    "workingday_1_all_metrics": true,
+    "bootstrap_7_all_2000_replicates_and_intervals": true,
+    "bootstrap_28_all_2000_replicates_and_intervals": true,
+    "all_pass": true
+  },
+  "exact_reproduction": {
+    "results.json": true,
+    "audit.json": true,
+    "annual_summary.json": true,
+    "model_recovery.json": true,
+    "comparison_metrics.csv": true,
+    "predictions.csv": true,
+    "daily_errors.csv": true,
+    "bootstrap_7.csv": true,
+    "bootstrap_28.csv": true
+  }
+}

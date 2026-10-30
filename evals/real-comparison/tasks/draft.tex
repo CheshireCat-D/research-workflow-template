@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{candidate}{Candidate claim}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prb}{\mathbb P}
+\newcommand{\F}{\mathcal F}
+\newcommand{\R}{\mathbb R}
+\title{Empirical variance, moving mixture precision, and optional stopping}
+\author{Constructed research memo for benchmark T-CS-01}
+\date{}
+\begin{document}
+\maketitle
+\paragraph{Benchmark disclosure.}
+This is an original constructed audit draft for this benchmark. It is not an excerpt from a published paper. The candidate claims below are intentionally unaudited. They must not be attributed to the authors of the two cited source papers.
+
+Let $(\F_t)_{t\geq 0}$ be a filtration and let $(X_t)$ be an adapted process with $X_t\in[0,1]$ and $\E[X_t\mid\F_{t-1}]=\mu$ for a constant $\mu\in[0,1]$. Write
+\begin{align*}
+S_t&=\sum_{i=1}^t(X_i-\mu), & \bar X_t&=t^{-1}\sum_{i=1}^tX_i,\\
+\widehat X_1&=\tfrac12, & \widehat X_t&=\bar X_{t-1}\quad(t\geq2), &
+\widehat V_t&=\sum_{i=1}^t(X_i-\widehat X_i)^2.
+\end{align*}
+For $0<\alpha<1$, $\rho>0$, and $v\geq0$, define
+\begin{equation}\label{eq:normal-boundary}
+b_{\rho,\alpha}(v)=\sqrt{(v+\rho)\log\frac{v+\rho}{\alpha^2\rho}}.
+\end{equation}
+
+\begin{candidate}[A: baseline]
+Suppose a nondecreasing predictable process $V_t$, with $V_0=0$, satisfies, for every $\lambda\in\R$ and $t\geq1$,
+\begin{equation}\label{eq:sg}
+\E[\exp\{\lambda(X_t-\mu)\}\mid\F_{t-1}]
+\leq\exp\{\lambda^2(V_t-V_{t-1})/2\}.
+\end{equation}
+For a fixed $\rho>0$, let $F_\rho=N(0,1/\rho)$. Then
+\begin{equation}\label{eq:normal-mixture}
+M_t^\rho=\int_{\R}\exp\{\lambda S_t-\lambda^2V_t/2\}\,dF_\rho(\lambda)
+=\sqrt{\frac{\rho}{V_t+\rho}}\exp\left\{\frac{S_t^2}{2(V_t+\rho)}\right\}.
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:cs}
+C_t^\rho=\left[\bar X_t-\frac{b_{\rho,\alpha}(V_t)}t,\bar X_t+\frac{b_{\rho,\alpha}(V_t)}t\right]\cap[0,1]
+\quad\text{satisfies}\quad
+\Prb(\forall t\geq1:\mu\in C_t^\rho)\geq1-\alpha.
+\end{equation}
+\end{candidate}
+
+\begin{candidate}[B: empirical substitution]
+The sub-$\psi$ definition of Howard et al.~\cite{H2020} permits adapted intrinsic time. Since $\widehat V_t$ is adapted, boundedness and the common conditional mean suffice to replace $V_t$ by $\widehat V_t$ in the baseline, retaining the same normal-mixture boundary and the same simultaneous coverage probability.
+\end{candidate}
+
+\begin{candidate}[C: moving precision]
+Howard et al.~\cite{H2021} allow optimization of mixture precision. Therefore one may choose, at every time,
+\begin{equation}\label{eq:moving-rho}
+\rho_t\in\operatorname*{arg\,min}_{\rho>0}b_{\rho,\alpha}(V_t)
+\end{equation}
+and use the resulting intervals $C_t^*$ without changing the simultaneous coverage guarantee. This remains true even with the valid deterministic intrinsic time $V_t=t/4$.
+\end{candidate}
+
+\begin{candidate}[D: positioning]
+Howard et al.~\cite{H2020} only provide fixed-sample bounds for independent identically distributed observations. The confidence sequences of Howard et al.~\cite{H2021} require a common mean and normally distributed errors. Thus B and C provide the first adaptive, nonparametric confidence sequences valid over an infinite time horizon.
+\end{candidate}
+
+\begin{candidate}[E: stopping]
+If a construction has in fact established simultaneous coverage, then for any almost surely finite stopping time $\tau$ taking values in $\{1,2,\ldots\}$,
+\begin{equation}\label{eq:stop}
+\Prb(\mu\in C_\tau)\geq1-\alpha,
+\end{equation}
+without a requirement that $\E\tau<\infty$.
+\end{candidate}
+
+\paragraph{Required audit addendum.}
+In addition to assessing the candidate claims and providing valid normal-mixture and empirical-Bernstein repairs, the audit must give a valid method using multiple mixture precisions with an explicit error budget.
+
+\begin{thebibliography}{9}
+\bibitem{H2020}
+S.~R. Howard, A.~Ramdas, J.~McAuliffe, and J.~Sekhon.
+\emph{Time-uniform Chernoff bounds via nonnegative supermartingales}.
+Probability Surveys, 17:257--317, 2020.
+\href{https://doi.org/10.1214/18-PS321}{doi:10.1214/18-PS321}.
+The source version for this audit is \href{https://arxiv.org/abs/1808.03204v7}{arXiv:1808.03204v7}.
+\bibitem{H2021}
+S.~R. Howard, A.~Ramdas, J.~McAuliffe, and J.~Sekhon.
+\emph{Time-uniform, nonparametric, nonasymptotic confidence sequences}.
+The Annals of Statistics, 49(2):1055--1080, 2021.
+\href{https://doi.org/10.1214/20-AOS1991}{doi:10.1214/20-AOS1991}.
+The source version for this audit is \href{https://arxiv.org/abs/1810.08240v9}{arXiv:1810.08240v9}.
+\end{thebibliography}
+\end{document}

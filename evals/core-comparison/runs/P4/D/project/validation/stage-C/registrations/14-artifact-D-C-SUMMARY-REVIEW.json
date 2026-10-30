@@ -1,0 +1,12 @@
+{
+  "id": "D-C-SUMMARY-REVIEW",
+  "type": "summary-consistency-review",
+  "description": "Actual interval/counts/metric-rounding review of revised summary; author content review remains pending",
+  "path": "validation/stage-C/summary-review.json",
+  "derived_from": [
+    "statement:D-CLAIM",
+    "artifact:D-RESULT",
+    "artifact:D-TABLE",
+    "artifact:D-SUMMARY"
+  ]
+}

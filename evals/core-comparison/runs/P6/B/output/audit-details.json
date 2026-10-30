@@ -1,0 +1,254 @@
+{
+  "parameter_difference": {
+    "evaluation_start": {
+      "registered_and_initial": "2011-10-01",
+      "current_file": "2011-11-01"
+    }
+  },
+  "initial_manifest_checks": [
+    {
+      "path": "provenance/initial/BRIEF.md",
+      "expected": {
+        "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+        "bytes": 1078
+      },
+      "actual": {
+        "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+        "bytes": 1078
+      },
+      "matches": true
+    },
+    {
+      "path": "provenance/initial/constraints.json",
+      "expected": {
+        "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+        "bytes": 1070
+      },
+      "actual": {
+        "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+        "bytes": 1070
+      },
+      "matches": true
+    },
+    {
+      "path": "provenance/initial/obligations.json",
+      "expected": {
+        "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+        "bytes": 4723
+      },
+      "actual": {
+        "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+        "bytes": 4723
+      },
+      "matches": true
+    },
+    {
+      "path": "data/hour_2011.csv",
+      "expected": {
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "bytes": 568668
+      },
+      "actual": {
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "bytes": 568668
+      },
+      "matches": true
+    },
+    {
+      "path": "model/frozen.json",
+      "expected": {
+        "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+        "bytes": 2320
+      },
+      "actual": {
+        "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+        "bytes": 2320
+      },
+      "matches": true
+    },
+    {
+      "path": "notes/parameters.json",
+      "expected": {
+        "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+        "bytes": 171
+      },
+      "actual": {
+        "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+        "bytes": 171
+      },
+      "matches": false
+    },
+    {
+      "path": "notes/rejected-parameters.json",
+      "expected": {
+        "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+        "bytes": 171
+      },
+      "actual": {
+        "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+        "bytes": 171
+      },
+      "matches": true
+    },
+    {
+      "path": "notes/source-check.md",
+      "expected": {
+        "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+        "bytes": 474
+      },
+      "actual": {
+        "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+        "bytes": 474
+      },
+      "matches": true
+    },
+    {
+      "path": "notes/unregistered-scratch.md",
+      "expected": {
+        "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+        "bytes": 132
+      },
+      "actual": {
+        "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+        "bytes": 132
+      },
+      "matches": true
+    },
+    {
+      "path": "results/result.json",
+      "expected": {
+        "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+        "bytes": 1000
+      },
+      "actual": {
+        "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+        "bytes": 1000
+      },
+      "matches": true
+    },
+    {
+      "path": "results/summary.md",
+      "expected": {
+        "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+        "bytes": 280
+      },
+      "actual": {
+        "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+        "bytes": 280
+      },
+      "matches": true
+    },
+    {
+      "path": "results/table.csv",
+      "expected": {
+        "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+        "bytes": 205
+      },
+      "actual": {
+        "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+        "bytes": 205
+      },
+      "matches": true
+    },
+    {
+      "path": "scripts/compute.py",
+      "expected": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      },
+      "actual": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      },
+      "matches": true
+    },
+    {
+      "path": "provenance/initial/source-identities.json",
+      "expected": {
+        "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+        "bytes": 1200
+      },
+      "actual": {
+        "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+        "bytes": 1200
+      },
+      "matches": true
+    }
+  ],
+  "snapshot_checks": [
+    {
+      "path": "snapshots/initial/notes/parameters.json",
+      "expected": {
+        "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+        "bytes": 171
+      },
+      "actual": {
+        "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+        "bytes": 171
+      },
+      "matches": true
+    },
+    {
+      "path": "snapshots/initial/results/result.json",
+      "expected": {
+        "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+        "bytes": 1000
+      },
+      "actual": {
+        "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+        "bytes": 1000
+      },
+      "matches": true
+    },
+    {
+      "path": "snapshots/initial/results/table.csv",
+      "expected": {
+        "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+        "bytes": 205
+      },
+      "actual": {
+        "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+        "bytes": 205
+      },
+      "matches": true
+    },
+    {
+      "path": "snapshots/initial/results/summary.md",
+      "expected": {
+        "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+        "bytes": 280
+      },
+      "actual": {
+        "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+        "bytes": 280
+      },
+      "matches": true
+    }
+  ],
+  "local_data_read_check": {
+    "rows": 8645,
+    "yr_values": [
+      "0"
+    ],
+    "minimum_date": "2011-01-01",
+    "maximum_date": "2011-12-31",
+    "metrics_recomputed": false
+  },
+  "table_agreement_with_historical_result": {
+    "observed_hours": true,
+    "observed_days": true,
+    "C0_MAE": true,
+    "C1_MAE": true,
+    "C0_RMSE": true,
+    "C1_RMSE": true,
+    "MAE_reduction_fraction": true
+  },
+  "summary_historical_scope": {
+    "evaluation_start": "2011-10-01",
+    "evaluation_end": "2011-12-31",
+    "observed_hours": 2203,
+    "observed_days": 92,
+    "basis": "current summary text and historic result; no new metric calculation"
+  },
+  "missing_tracked_paths": []
+}

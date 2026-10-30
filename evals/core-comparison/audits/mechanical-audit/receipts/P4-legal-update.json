@@ -1,0 +1,30 @@
+{
+  "name": "P4-legal-update",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P4/record-CAS/project/.agents/skills/_rw-runtime/tools/research.py",
+    "register",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P4/record-CAS/project",
+    "--kind",
+    "evidence",
+    "--file",
+    "STUDY_ROOT/mechanical-audit/P4/record-CAS/legal.json",
+    "--replace",
+    "--expected-version",
+    "2"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P4/record-CAS/project",
+  "exit_code": 0,
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"evidence\",\n  \"id\": \"D-PARAM\",\n  \"version\": 3,\n  \"revision\": 44,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": "",
+  "project_identical_bytes_mtime_directory_mtime": false,
+  "changed_files": [
+    "records/registry.json"
+  ],
+  "changed_directories": [
+    "records"
+  ]
+}

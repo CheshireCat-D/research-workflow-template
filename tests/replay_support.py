@@ -16,8 +16,9 @@ def reviewed_resource(relative, expected_sha256, historical=None):
     if saved is None:
         history = json.loads((ROOT/'evals/current/guidance-history.json').read_text(encoding='utf-8'))
         candidate = history['resources'].get(relative)
-        if candidate and candidate['sha256'] == expected_sha256:
-            saved = candidate
+        if candidate:
+            saved = next((version for version in [candidate, *candidate.get('versions', [])]
+                          if version['sha256'] == expected_sha256), None)
     data = saved['source_text'].encode('utf-8') if saved else (ROOT/relative).read_bytes()
     actual = hashlib.sha256(data).hexdigest()
     # Early legal snapshots store text only; their independent review supplies

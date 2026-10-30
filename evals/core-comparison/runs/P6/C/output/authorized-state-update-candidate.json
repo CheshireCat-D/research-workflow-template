@@ -1,0 +1,548 @@
+{
+  "format": "local-research-ledger-v1",
+  "state_version": 3,
+  "authority": "This JSON contains current configuration and logical records. prose notes, source cards, command logs and old handoffs do not overwrite it. Bound material files remain scientific byte authority; mismatches are conflicts requiring explicit review.",
+  "configuration": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-11-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "records": [
+    {
+      "id": "D-SRC",
+      "kind": "source",
+      "version": 1,
+      "identity": {
+        "id": "D-SRC",
+        "title": "UCI Bike Sharing dataset",
+        "uri": "https://archive.ics.uci.edu/dataset/275/bike%2Bsharing%2Bdataset",
+        "version": "Official ZIP member hour.csv; yr=0 slice retained 2026-10-29",
+        "doi": "https://doi.org/10.24432/C5W894",
+        "license": "CC-BY-4.0",
+        "local_path": "data/hour_2011.csv",
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "rows": 8645,
+        "original_hour_csv_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+        "slice_origin": "Exact unchanged 2011 rows of official hour.csv, previously independently audited."
+      },
+      "access": {
+        "level": "full local slice; metadata-only remote identity",
+        "local_range": "8645 2011 rows parsed; full file SHA verified",
+        "remote_fetched": false,
+        "original_zip_or_full_hour_csv_read": false,
+        "verification_scope": "Supplied cached identity, not independently established official provenance"
+      }
+    },
+    {
+      "id": "D-REMOTE",
+      "kind": "source",
+      "version": 1,
+      "identity": {
+        "id": "D-REMOTE",
+        "title": "Original Bike Sharing research article DOI identity",
+        "uri": "https://doi.org/10.1007/s13748-013-0040-3",
+        "version": "DOI identity only; no article copy supplied",
+        "local_copy_supplied": false,
+        "access": "metadata-only",
+        "tracking_limit": "No local article content binding; no current remote-content check."
+      },
+      "access": {
+        "level": "metadata-only",
+        "remote_fetched": false,
+        "local_copy": null,
+        "content_fingerprint": null
+      }
+    },
+    {
+      "id": "D-RAW",
+      "kind": "material",
+      "version": 1,
+      "path": "data/hour_2011.csv",
+      "source_ids": [
+        "D-SRC"
+      ],
+      "immutable": true,
+      "binding": {
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "bytes": 568668
+      }
+    },
+    {
+      "id": "D-PARAM",
+      "kind": "material",
+      "version": 2,
+      "path": "notes/parameters.json",
+      "meaning": "Author working specification, separate from original dataset",
+      "specification": {
+        "case_id": "D",
+        "evaluation_start": "2011-11-01",
+        "evaluation_end": "2011-12-31",
+        "model_policy": "frozen-2011-Jan-Sep",
+        "metric_weighting": "observed-hour"
+      },
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor.",
+      "recoverable_content": "snapshots/initial/notes/parameters.json",
+      "binding": {
+        "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+        "bytes": 171
+      },
+      "authorization": "provenance/task-C/author-revision/AUTHOR-REVISION.md"
+    },
+    {
+      "id": "D-CLAIM",
+      "kind": "statement",
+      "version": 2,
+      "text": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+      "scope": "2011-11-01 through 2011-12-31; observed-hour weighting; supplied Jan–Sep frozen C0/C1; descriptive time holdout; no model-training-improvement conclusion",
+      "assessment": {
+        "scientific_certification": false,
+        "formal_proof": "not-applicable",
+        "human_expert_approval": false
+      },
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    },
+    {
+      "id": "D-REL",
+      "kind": "relation",
+      "version": 2,
+      "from_id": "D-PARAM",
+      "to_id": "D-CLAIM",
+      "relation": "qualifies scope",
+      "rationale": "Approved November–December parameters qualify the numerical comparison; source and frozen model unchanged.",
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    },
+    {
+      "id": "D-CHOICE",
+      "kind": "decision",
+      "version": 2,
+      "choice": "Use author-approved November–December 2011 evaluation window with unchanged frozen model",
+      "rationale": "Explicit authorization in provenance/task-C/author-revision/; original Q4 content remains in snapshots/initial and drift snapshot.",
+      "responsible": "Benchmark author authorizes; AI executor implemented; no human content approval inferred",
+      "decided_at": null,
+      "evidence": [
+        "D-PARAM"
+      ],
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor.",
+      "authorization": "provenance/task-C/author-revision/AUTHOR-REVISION.md"
+    },
+    {
+      "id": "D-CODE",
+      "kind": "artifact",
+      "version": 1,
+      "path": "scripts/compute.py",
+      "description": "Supplied calculator preserved byte for byte",
+      "binding": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      }
+    },
+    {
+      "id": "D-MODEL",
+      "kind": "artifact",
+      "version": 1,
+      "path": "model/frozen.json",
+      "derived_from": [
+        "D-RAW"
+      ],
+      "derivation_access": "Supplied provenance only; frozen Jan-Sep model consumed without refit",
+      "binding": {
+        "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+        "bytes": 2320
+      }
+    },
+    {
+      "id": "D-RESULT",
+      "kind": "artifact",
+      "version": 2,
+      "path": "results/result.json",
+      "derived_from": [
+        "D-PARAM",
+        "D-RAW",
+        "D-CODE",
+        "D-CHOICE",
+        "D-MODEL"
+      ],
+      "recoverable_content": "snapshots/initial/results/result.json",
+      "binding": {
+        "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+        "bytes": 999
+      },
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    },
+    {
+      "id": "D-TABLE",
+      "kind": "artifact",
+      "version": 2,
+      "path": "results/table.csv",
+      "derived_from": [
+        "D-RESULT"
+      ],
+      "description": "Explicitly tracked companion deliverable",
+      "recoverable_content": "snapshots/initial/results/table.csv",
+      "binding": {
+        "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+        "bytes": 203
+      },
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    },
+    {
+      "id": "D-SUMMARY",
+      "kind": "artifact",
+      "version": 2,
+      "path": "results/summary.md",
+      "derived_from": [
+        "D-CLAIM",
+        "D-RESULT"
+      ],
+      "recoverable_content": "snapshots/initial/results/summary.md",
+      "binding": {
+        "sha256": "0c178129e75f928b92f184ecb65231fbb0c96d333e7b43d1089dcc3908bdfe3d",
+        "bytes": 905
+      },
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    },
+    {
+      "id": "D-SOURCE-NOTE",
+      "kind": "artifact",
+      "version": 1,
+      "path": "notes/source-check.md",
+      "description": "Supplied fixed identity and coverage note; original remote counts remain supplied assertions",
+      "binding": {
+        "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+        "bytes": 474
+      }
+    },
+    {
+      "id": "D-SOURCE-CHECK",
+      "kind": "activity",
+      "version": 1,
+      "title": "Check supplied primary source identity and coverage card",
+      "status": "done",
+      "inputs": [
+        "D-SRC",
+        "D-RAW"
+      ],
+      "outputs": [
+        "D-SOURCE-NOTE"
+      ],
+      "depends_on": [],
+      "executor": "AI agent plus standard-library file/CSV checks",
+      "completion_scope": "Local full SHA and 8645 yr=0 rows agree with supplied identity; note reviewed; no full-source or remote scientific certification",
+      "completion_bindings": {
+        "D-RAW": {
+          "version": 1,
+          "record_sha256": "7645be90cd713b9f371d0f9f74e68b91a5401fc260be8630e16a116b698a4749",
+          "path": "data/hour_2011.csv",
+          "file": {
+            "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "bytes": 568668
+          }
+        },
+        "D-SOURCE-NOTE": {
+          "version": 1,
+          "record_sha256": "524485300468c6355f2bc7ea96000b155a1e43de1faa2289738ab1885be9491f",
+          "path": "notes/source-check.md",
+          "file": {
+            "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+            "bytes": 474
+          }
+        },
+        "D-SRC": {
+          "version": 1,
+          "record_sha256": "207d67dc133e11bc3b4bfe29f50257bd84449fd22cecc3dee03f8eccb3fc651e"
+        }
+      }
+    },
+    {
+      "id": "D-CALC",
+      "kind": "activity",
+      "version": 2,
+      "title": "Evaluate supplied calculator and compare canonical outputs",
+      "status": "done",
+      "inputs": [
+        "D-PARAM",
+        "D-RAW",
+        "D-CODE",
+        "D-CHOICE",
+        "D-MODEL"
+      ],
+      "outputs": [
+        "D-RESULT",
+        "D-TABLE"
+      ],
+      "depends_on": [],
+      "executor": "AI agent running supplied Python calculator",
+      "completion_scope": "Actual supplied-script execution exit 0 on approved November–December window; canonical result/table match actual output; independent fixed-prediction metrics agree; no retraining.",
+      "evidence": [
+        "records/validation-C.json",
+        "records/commands-C.json"
+      ],
+      "completion_bindings": {
+        "D-CHOICE": {
+          "version": 2,
+          "record_sha256": "8c5f54bc27ed989bde8af57d932aab935fb9c8de70b45e1e842edce667fe3b6a"
+        },
+        "D-CODE": {
+          "version": 1,
+          "record_sha256": "646a88ae8d16a248a5080f63569283fe6a808287c0b7bf2d03215d6e5eefb592",
+          "path": "scripts/compute.py",
+          "file": {
+            "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "bytes": 4157
+          }
+        },
+        "D-MODEL": {
+          "version": 1,
+          "record_sha256": "ad1ac0226d44710231bced55f47deadd77a073c8a7b80826be495d057ebc9745",
+          "path": "model/frozen.json",
+          "file": {
+            "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "bytes": 2320
+          }
+        },
+        "D-PARAM": {
+          "version": 2,
+          "record_sha256": "885250aef02f50efdd569c72bbc6203ac5c69a440fd8ab471e64df2c9813a245",
+          "path": "notes/parameters.json",
+          "file": {
+            "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+            "bytes": 171
+          }
+        },
+        "D-RAW": {
+          "version": 1,
+          "record_sha256": "7645be90cd713b9f371d0f9f74e68b91a5401fc260be8630e16a116b698a4749",
+          "path": "data/hour_2011.csv",
+          "file": {
+            "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "bytes": 568668
+          }
+        },
+        "D-RESULT": {
+          "version": 2,
+          "record_sha256": "da5e0558fa0610120ae1da96f6ca04afce3c5ec58d039d24f7062ca510857906",
+          "path": "results/result.json",
+          "file": {
+            "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+            "bytes": 999
+          }
+        },
+        "D-TABLE": {
+          "version": 2,
+          "record_sha256": "c2d14009ee6d0bf92eb9327427c71734638ecd6e38dc5d2dbea19b4838b7a6df",
+          "path": "results/table.csv",
+          "file": {
+            "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+            "bytes": 203
+          }
+        }
+      },
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    },
+    {
+      "id": "D-SYNTH",
+      "kind": "activity",
+      "version": 2,
+      "title": "Verify supplied summary against current claim and numeric result",
+      "status": "done",
+      "inputs": [
+        "D-CLAIM",
+        "D-RESULT"
+      ],
+      "outputs": [
+        "D-SUMMARY"
+      ],
+      "depends_on": [
+        "D-CALC"
+      ],
+      "executor": "AI agent",
+      "completion_scope": "AI executor revised and checked dates, counts, MAE/RMSE/bias/reduction, Q4-history comparison and scope against recomputed canonical result; awaiting author content review.",
+      "completion_bindings": {
+        "D-CALC": {
+          "version": 2,
+          "record_sha256": "8dd7771c07f901c78b590ee177dc8d11854fc7dcd74dc9e337f838766364a797"
+        },
+        "D-CHOICE": {
+          "version": 2,
+          "record_sha256": "8c5f54bc27ed989bde8af57d932aab935fb9c8de70b45e1e842edce667fe3b6a"
+        },
+        "D-CLAIM": {
+          "version": 2,
+          "record_sha256": "84d0f5727279aad646b60193bef7bd9684c240114b9c9ab2f55297fe5857a7e0"
+        },
+        "D-CODE": {
+          "version": 1,
+          "record_sha256": "646a88ae8d16a248a5080f63569283fe6a808287c0b7bf2d03215d6e5eefb592",
+          "path": "scripts/compute.py",
+          "file": {
+            "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "bytes": 4157
+          }
+        },
+        "D-MODEL": {
+          "version": 1,
+          "record_sha256": "ad1ac0226d44710231bced55f47deadd77a073c8a7b80826be495d057ebc9745",
+          "path": "model/frozen.json",
+          "file": {
+            "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+            "bytes": 2320
+          }
+        },
+        "D-PARAM": {
+          "version": 2,
+          "record_sha256": "885250aef02f50efdd569c72bbc6203ac5c69a440fd8ab471e64df2c9813a245",
+          "path": "notes/parameters.json",
+          "file": {
+            "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+            "bytes": 171
+          }
+        },
+        "D-RAW": {
+          "version": 1,
+          "record_sha256": "7645be90cd713b9f371d0f9f74e68b91a5401fc260be8630e16a116b698a4749",
+          "path": "data/hour_2011.csv",
+          "file": {
+            "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+            "bytes": 568668
+          }
+        },
+        "D-RESULT": {
+          "version": 2,
+          "record_sha256": "da5e0558fa0610120ae1da96f6ca04afce3c5ec58d039d24f7062ca510857906",
+          "path": "results/result.json",
+          "file": {
+            "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+            "bytes": 999
+          }
+        },
+        "D-SUMMARY": {
+          "version": 2,
+          "record_sha256": "e15a3965c0d477274404ec00045ca82fb9093859b06fb5dae7496278f96f947c",
+          "path": "results/summary.md",
+          "file": {
+            "sha256": "0c178129e75f928b92f184ecb65231fbb0c96d333e7b43d1089dcc3908bdfe3d",
+            "bytes": 905
+          }
+        },
+        "D-TABLE": {
+          "version": 2,
+          "record_sha256": "c2d14009ee6d0bf92eb9327427c71734638ecd6e38dc5d2dbea19b4838b7a6df",
+          "path": "results/table.csv",
+          "file": {
+            "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+            "bytes": 203
+          }
+        }
+      },
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor.",
+      "evidence": [
+        "records/validation-C.json",
+        "results/summary.md"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "prior_state_version": 1,
+      "prior_state_sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "snapshot": "snapshots/authority/v1-d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa.json",
+      "reason": "Save drifted snapshot and fresh checkpoint before any recomputation; no material rebind and no activity revalidation",
+      "executor": "current explicit local update; no implied human scientific approval"
+    }
+  ],
+  "coverage_limits": {
+    "source_only": [
+      "D-REMOTE"
+    ],
+    "unregistered": [
+      "notes/unregistered-scratch.md"
+    ],
+    "rejected_trial_not_current_input": "notes/rejected-parameters.json",
+    "untracked_files_not_automatically_scientific_dependencies": true
+  },
+  "checkpoint": {
+    "state_version": 3,
+    "configuration_sha256": "b9c4a2113cc2316b236149c00198d98368868592b86538797c44cf752779b54a",
+    "record_signatures": {
+      "D-SRC": "207d67dc133e11bc3b4bfe29f50257bd84449fd22cecc3dee03f8eccb3fc651e",
+      "D-REMOTE": "baff8d098ab62069f5dc4b17e5a81c7eddafcc89be9c27962e49fc2a778e2b9c",
+      "D-RAW": "7645be90cd713b9f371d0f9f74e68b91a5401fc260be8630e16a116b698a4749",
+      "D-PARAM": "885250aef02f50efdd569c72bbc6203ac5c69a440fd8ab471e64df2c9813a245",
+      "D-CLAIM": "84d0f5727279aad646b60193bef7bd9684c240114b9c9ab2f55297fe5857a7e0",
+      "D-REL": "d6ffc91e836a8685ab173977878e1d6fe2084d3b3588aaeb34c4fd612762fded",
+      "D-CHOICE": "8c5f54bc27ed989bde8af57d932aab935fb9c8de70b45e1e842edce667fe3b6a",
+      "D-CODE": "646a88ae8d16a248a5080f63569283fe6a808287c0b7bf2d03215d6e5eefb592",
+      "D-MODEL": "ad1ac0226d44710231bced55f47deadd77a073c8a7b80826be495d057ebc9745",
+      "D-RESULT": "da5e0558fa0610120ae1da96f6ca04afce3c5ec58d039d24f7062ca510857906",
+      "D-TABLE": "c2d14009ee6d0bf92eb9327427c71734638ecd6e38dc5d2dbea19b4838b7a6df",
+      "D-SUMMARY": "e15a3965c0d477274404ec00045ca82fb9093859b06fb5dae7496278f96f947c",
+      "D-SOURCE-NOTE": "524485300468c6355f2bc7ea96000b155a1e43de1faa2289738ab1885be9491f",
+      "D-SOURCE-CHECK": "9fb9caa1b2674ceb6c623cc7862a40573933b63d8b643288bfb10885e07d91f9",
+      "D-CALC": "8dd7771c07f901c78b590ee177dc8d11854fc7dcd74dc9e337f838766364a797",
+      "D-SYNTH": "ee83dc15af6f6a6117a8c9bcf6e82b0b79289922ade5df30e11d981a9e79cc89"
+    },
+    "files": {
+      "data/hour_2011.csv": {
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "bytes": 568668
+      },
+      "notes/parameters.json": {
+        "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+        "bytes": 171
+      },
+      "scripts/compute.py": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      },
+      "model/frozen.json": {
+        "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+        "bytes": 2320
+      },
+      "results/result.json": {
+        "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+        "bytes": 999
+      },
+      "results/table.csv": {
+        "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+        "bytes": 203
+      },
+      "results/summary.md": {
+        "sha256": "0c178129e75f928b92f184ecb65231fbb0c96d333e7b43d1089dcc3908bdfe3d",
+        "bytes": 905
+      },
+      "notes/source-check.md": {
+        "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+        "bytes": 474
+      }
+    },
+    "next_action": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。不重训、不外推2012；尚未有人类专家认可，也没有投稿授权。",
+    "meaning": "Saved current context only; completion binding validity is checked separately."
+  },
+  "settings": {
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "system_limit": null
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "status": "complete",
+  "scope": "record closure, file identity and score arithmetic only; scientific validity not assessed",
+  "counts": {
+    "expected": 12,
+    "recorded": 12,
+    "scored": 12,
+    "executed": 12,
+    "failed": 0,
+    "not-run": 0,
+    "terminal_failures": 0
+  },
+  "errors": [],
+  "missing": [],
+  "observations": [
+    {
+      "provenance_publication_projection": "references/design-provenance.md",
+      "original_sha256": "51192e434e9f184bd3270f93b9221c3c027325f967ae409ca33c88d6ef56ea67",
+      "public_sha256": "f548bcfd3e1d467b118fada526a314e56a0a8a2ad2c64f922082b83640bd22e1"
+    },
+    {
+      "trial_id": "T01",
+      "execution_status": "executed",
+      "tool_calls": 12,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [
+        "Initial directory inventory listed sibling directory names under the parent runs directory before reading the correctly located common request; no sibling file contents were opened. The attempt to read common files at that wrong parent path failed.",
+        "One progress-only collaboration.send_message was sent to the parent agent despite the instruction against calling other agents. No agent was spawned, no work was delegated, and no reply or research content from another agent was used."
+      ],
+      "mutable_workspace_paths_with_multiple_versions": []
+    },
+    {
+      "trial_id": "T02",
+      "execution_status": "executed",
+      "tool_calls": 10,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": []
+    },
+    {
+      "trial_id": "T03",
+      "execution_status": "executed",
+      "tool_calls": 12,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": []
+    },
+    {
+      "trial_id": "T04",
+      "execution_status": "executed",
+      "tool_calls": 12,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": []
+    },
+    {
+      "trial_id": "T05",
+      "execution_status": "executed",
+      "tool_calls": 9,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": []
+    },
+    {
+      "trial_id": "T06",
+      "execution_status": "executed",
+      "tool_calls": 11,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": []
+    },
+    {
+      "trial_id": "D01",
+      "execution_status": "executed",
+      "tool_calls": 10,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": []
+    },
+    {
+      "trial_id": "D02",
+      "execution_status": "executed",
+      "tool_calls": 9,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": []
+    },
+    {
+      "trial_id": "D03",
+      "execution_status": "executed",
+      "tool_calls": 12,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": []
+    },
+    {
+      "trial_id": "D04",
+      "execution_status": "executed",
+      "tool_calls": 9,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": [
+        "workspace/RUN.md",
+        "workspace/handoff.md",
+        "workspace/report.md"
+      ]
+    },
+    {
+      "trial_id": "D05",
+      "execution_status": "executed",
+      "tool_calls": 9,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": [
+        "workspace/RUN.md",
+        "workspace/handoff.md",
+        "workspace/report.md"
+      ]
+    },
+    {
+      "trial_id": "D06",
+      "execution_status": "executed",
+      "tool_calls": 10,
+      "requested_tool_budget_exceeded": false,
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "violations": [],
+      "mutable_workspace_paths_with_multiple_versions": []
+    }
+  ],
+  "effective_model_equality": "not-inferred"
+}

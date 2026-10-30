@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "approved_parameters_match": true,
+    "alpha_unchanged": true,
+    "rho_policy_unchanged": true,
+    "grid_unchanged": true,
+    "result_parameters_match": true,
+    "grid_matches": true,
+    "direct_formula_matches": true,
+    "csv_matches_result": true,
+    "result_parameters_sha_matches": true,
+    "calculator_unchanged": true
+  },
+  "values": [
+    {
+      "v": 0,
+      "boundary": 4.895493661361633
+    },
+    {
+      "v": 1,
+      "boundary": 5.57431973357386
+    },
+    {
+      "v": 10,
+      "boundary": 10.070709270872976
+    },
+    {
+      "v": 100,
+      "boundary": 31.015388968276124
+    }
+  ],
+  "scientific_limit": "Only current fixed-parameter arithmetic checked; no proof, simulation coverage, novelty, human approval or submission."
+}

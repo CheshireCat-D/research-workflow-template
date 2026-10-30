@@ -1,0 +1,193 @@
+{
+  "P1": {
+    "original_relation": {
+      "evidence_id": "T-PARAM",
+      "id": "T-REL",
+      "notes": "Replaces rho=1 working scope after explicit author authorization; prior relation retained in version history.",
+      "rationale": "Author-approved alpha=.05, preselected rho=4 and four v points qualify the numerical claim; material registration and recomputation are not coverage proofs.",
+      "relation": "qualifies",
+      "scope": "alpha=.05, rho=4 fixed-before-observation, v=[0,1,10,100].",
+      "statement_id": "T-CLAIM"
+    },
+    "candidate_relation": {
+      "evidence_id": "T-PARAM",
+      "id": "AUDIT-DANGLING-STATEMENT",
+      "notes": "Replaces rho=1 working scope after explicit author authorization; prior relation retained in version history.",
+      "rationale": "Author-approved alpha=.05, preselected rho=4 and four v points qualify the numerical claim; material registration and recomputation are not coverage proofs.",
+      "relation": "qualifies",
+      "scope": "alpha=.05, rho=4 fixed-before-observation, v=[0,1,10,100].",
+      "statement_id": "AUDIT-MISSING"
+    },
+    "existing_target_field": "statement_id",
+    "unknown_id": "AUDIT-MISSING",
+    "unknown_id_absent_before": true,
+    "standalone_write_saved_relation": null,
+    "batch_write_saved_relation": null,
+    "batch_first_operation": {
+      "kind": "source",
+      "record": {
+        "content_access": "metadata-only",
+        "id": "AUDIT-VALID-SOURCE",
+        "limitations": "Only source identity; no local content binding and no current remote-content check.",
+        "locator": "https://arxiv.org/abs/1808.03204v7",
+        "title": "Time-uniform Chernoff bounds via nonnegative supermartingales",
+        "version": "1808.03204v7"
+      }
+    },
+    "original_evidence_endpoint_probe_retained": "STUDY_ROOT/mechanical-audit/receipts/P1-dangling-reference.json"
+  },
+  "P4": {
+    "original_relation": {
+      "evidence_id": "D-PARAM",
+      "id": "D-REL",
+      "rationale": "Approved parameter revision restricts the descriptive comparison to observed hours from 2011-11-01 to 2011-12-31, with model and weighting unchanged",
+      "relation": "qualifies",
+      "scope": "Current revised-window numerical/descriptive claim; parameter authorization and registration do not prove scientific validity",
+      "statement_id": "D-CLAIM"
+    },
+    "candidate_relation": {
+      "evidence_id": "D-PARAM",
+      "id": "AUDIT-DANGLING-STATEMENT",
+      "rationale": "Approved parameter revision restricts the descriptive comparison to observed hours from 2011-11-01 to 2011-12-31, with model and weighting unchanged",
+      "relation": "qualifies",
+      "scope": "Current revised-window numerical/descriptive claim; parameter authorization and registration do not prove scientific validity",
+      "statement_id": "AUDIT-MISSING"
+    },
+    "existing_target_field": "statement_id",
+    "unknown_id": "AUDIT-MISSING",
+    "unknown_id_absent_before": true,
+    "standalone_write_saved_relation": null,
+    "batch_write_saved_relation": null,
+    "batch_first_operation": {
+      "kind": "source",
+      "record": {
+        "content_access": "metadata-only",
+        "id": "AUDIT-VALID-SOURCE",
+        "limitations": "No local article content binding; no current remote-content check.",
+        "locator": "https://doi.org/10.1007/s13748-013-0040-3",
+        "title": "Original Bike Sharing research article DOI identity",
+        "version": "DOI identity only; no article copy supplied"
+      }
+    },
+    "original_evidence_endpoint_probe_retained": "STUDY_ROOT/mechanical-audit/receipts/P4-dangling-reference.json"
+  },
+  "P3": {
+    "original_relation": {
+      "id": "T-REL",
+      "entity": "relation",
+      "from": "T-PARAM",
+      "to": "T-CLAIM",
+      "meaning": "作者批准的预先固定 rho=4 参数限定当前数值主张；参数更改并非原论文修订，也非覆盖证明。",
+      "parameter_version": 2,
+      "claim_version": 2
+    },
+    "candidate_relation": {
+      "id": "T-REL",
+      "entity": "relation",
+      "from": "T-PARAM",
+      "to": "AUDIT-MISSING",
+      "meaning": "作者批准的预先固定 rho=4 参数限定当前数值主张；参数更改并非原论文修订，也非覆盖证明。",
+      "parameter_version": 2,
+      "claim_version": 2
+    },
+    "existing_target_field": "to",
+    "unknown_id": "AUDIT-MISSING",
+    "unknown_id_absent_before": true,
+    "standalone_write_saved_relation": {
+      "id": "T-REL",
+      "entity": "relation",
+      "from": "T-PARAM",
+      "to": "AUDIT-MISSING",
+      "meaning": "作者批准的预先固定 rho=4 参数限定当前数值主张；参数更改并非原论文修订，也非覆盖证明。",
+      "parameter_version": 2,
+      "claim_version": 2
+    },
+    "batch_write_saved_relation": {
+      "id": "T-REL",
+      "entity": "relation",
+      "from": "T-PARAM",
+      "to": "AUDIT-MISSING",
+      "meaning": "作者批准的预先固定 rho=4 参数限定当前数值主张；参数更改并非原论文修订，也非覆盖证明。",
+      "parameter_version": 2,
+      "claim_version": 2
+    },
+    "batch_first_operation": {
+      "expected_version": 2,
+      "data": {
+        "id": "T-CLAIM",
+        "entity": "statement",
+        "meaning": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。 [audit first operation]",
+        "scope": {
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ],
+          "claim_limit": "Only supplied formula arithmetic under stated sub-Gaussian process conditions; no new coverage proof."
+        }
+      }
+    }
+  },
+  "P6": {
+    "original_relation": {
+      "id": "D-REL",
+      "kind": "relation",
+      "version": 2,
+      "from_id": "D-PARAM",
+      "to_id": "D-CLAIM",
+      "relation": "qualifies scope",
+      "rationale": "Approved November–December parameters qualify the numerical comparison; source and frozen model unchanged.",
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    },
+    "candidate_relation": {
+      "id": "D-REL",
+      "kind": "relation",
+      "version": 3,
+      "from_id": "D-PARAM",
+      "to_id": "AUDIT-MISSING",
+      "relation": "qualifies scope",
+      "rationale": "Approved November–December parameters qualify the numerical comparison; source and frozen model unchanged.",
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    },
+    "existing_target_field": "to_id",
+    "unknown_id": "AUDIT-MISSING",
+    "unknown_id_absent_before": true,
+    "standalone_write_saved_relation": {
+      "id": "D-REL",
+      "kind": "relation",
+      "version": 3,
+      "from_id": "D-PARAM",
+      "to_id": "AUDIT-MISSING",
+      "relation": "qualifies scope",
+      "rationale": "Approved November–December parameters qualify the numerical comparison; source and frozen model unchanged.",
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    },
+    "batch_write_saved_relation": {
+      "id": "D-REL",
+      "kind": "relation",
+      "version": 3,
+      "from_id": "D-PARAM",
+      "to_id": "AUDIT-MISSING",
+      "relation": "qualifies scope",
+      "rationale": "Approved November–December parameters qualify the numerical comparison; source and frozen model unchanged.",
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    },
+    "batch_first_operation": {
+      "id": "D-CLAIM",
+      "kind": "statement",
+      "version": 3,
+      "text": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。 [audit first operation]",
+      "scope": "2011-11-01 through 2011-12-31; observed-hour weighting; supplied Jan–Sep frozen C0/C1; descriptive time holdout; no model-training-improvement conclusion",
+      "assessment": {
+        "scientific_certification": false,
+        "formal_proof": "not-applicable",
+        "human_expert_approval": false
+      },
+      "revision_reason": "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+    }
+  }
+}

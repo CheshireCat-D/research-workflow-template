@@ -1,0 +1,765 @@
+{
+  "status": "final-independent-pre-execution-audit-ready-to-freeze",
+  "scope": "Independent material/key audit with separate invented toy CLI feasibility; not formal comparison or product changes.",
+  "audit_workdir": "KEY_AUDIT_WORK",
+  "report": "STUDY_ROOT/core-key-audit.md",
+  "forbidden_access": {
+    "network_calls": 0,
+    "personal_skills_accessed": false,
+    "memory_accessed": false,
+    "other_agents_invoked": false,
+    "formal_arm_execution_contents_read": false,
+    "formal_arm_scores_read": false,
+    "design_originals_modified_by_auditor": false,
+    "formal_comparison_runs_executed": 0
+  },
+  "runtime": {
+    "audit_root": "KEY_AUDIT_WORK",
+    "python": "EVAL_PYTHON",
+    "archive_sha256": "1bf658b7895711bf786b3cf415a3c47dc2b214a31bace1d82e5b22ef00849ff2",
+    "archive_file_count": 81,
+    "archive_core_comparison": {
+      "project.py": {
+        "repository_sha256": "6cd8d83a195565d512ee5d2e74a880d09adfdd60a850395cfcfee8f3e18796f5",
+        "archive_sha256": "6cd8d83a195565d512ee5d2e74a880d09adfdd60a850395cfcfee8f3e18796f5",
+        "equal": true
+      },
+      "model.py": {
+        "repository_sha256": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31",
+        "archive_sha256": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31",
+        "equal": true
+      },
+      "protocol.md": {
+        "repository_sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+        "archive_sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+        "equal": true
+      },
+      "skill-bridge.md": {
+        "repository_sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+        "archive_sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+        "equal": true
+      },
+      "cli.py": {
+        "repository_sha256": "62519288f0573073f3b1be69de8e7c1537f038d9ccf40bae5fa53005c1f9c3fb",
+        "archive_sha256": "62519288f0573073f3b1be69de8e7c1537f038d9ccf40bae5fa53005c1f9c3fb",
+        "equal": true
+      }
+    },
+    "runtime_entries": [
+      "research-workflow-template/USER-PACKAGE-MANIFEST.json",
+      "research-workflow-template/core/__init__.py",
+      "research-workflow-template/core/bundle.py",
+      "research-workflow-template/core/cli.py",
+      "research-workflow-template/core/model.py",
+      "research-workflow-template/core/project.py",
+      "research-workflow-template/core/protocol.md",
+      "research-workflow-template/core/schemas/activity.schema.json",
+      "research-workflow-template/core/schemas/artifact.schema.json",
+      "research-workflow-template/core/schemas/decision.schema.json",
+      "research-workflow-template/core/schemas/evidence.schema.json",
+      "research-workflow-template/core/schemas/method-binding.schema.json",
+      "research-workflow-template/core/schemas/project.schema.json",
+      "research-workflow-template/core/schemas/registry.schema.json",
+      "research-workflow-template/core/schemas/relation.schema.json",
+      "research-workflow-template/core/schemas/source.schema.json",
+      "research-workflow-template/core/schemas/statement.schema.json",
+      "research-workflow-template/core/skill-bridge.md",
+      "research-workflow-template/core/storage.py",
+      "research-workflow-template/core/windows_storage.py",
+      "research-workflow-template/tools/connect_skills.py",
+      "research-workflow-template/tools/research.py"
+    ]
+  },
+  "numeric": {
+    "checks_passed": 83,
+    "checks_total": 83,
+    "all_checks_passed": true,
+    "valid_run_exit_codes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "invalid_run_exit_codes": [
+      2,
+      2
+    ],
+    "approved_input_keys_correct": true,
+    "raw_data_model_code_and_existing_results_preserved": true,
+    "max_independent_T_absolute_difference": 8.881784197001252e-16,
+    "max_independent_D_absolute_difference": 1.4210854715202004e-14,
+    "D_training_hours_independently_checked": 6442,
+    "T_source_scalar_l0": 1,
+    "all_results": {
+      "T": {
+        "initial": {
+          "supplied_result": {
+            "case_id": "T",
+            "alpha": 0.05,
+            "rho": 1.0,
+            "rho_selection": "fixed-before-observation",
+            "values": [
+              {
+                "v": 0,
+                "boundary": 2.4477468306808166
+              },
+              {
+                "v": 1,
+                "boundary": 3.6563948713638483
+              },
+              {
+                "v": 10,
+                "boundary": 9.606401928868575
+              },
+              {
+                "v": 100,
+                "boundary": 32.73018624234933
+              }
+            ],
+            "interpretation": "Numerical boundary evaluation under the supplied fixed-parameter theorem; no new proof or coverage simulation.",
+            "input_sha256": {
+              "parameters": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+              "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+            }
+          },
+          "independent_values": [
+            {
+              "v": 0,
+              "boundary": 2.4477468306808166
+            },
+            {
+              "v": 1,
+              "boundary": 3.6563948713638483
+            },
+            {
+              "v": 10,
+              "boundary": 9.606401928868575
+            },
+            {
+              "v": 100,
+              "boundary": 32.73018624234933
+            }
+          ],
+          "result_path": "KEY_AUDIT_WORK/T-initial-result/result.json",
+          "table_path": "KEY_AUDIT_WORK/T-initial-result/table.csv"
+        },
+        "revised": {
+          "supplied_result": {
+            "case_id": "T",
+            "alpha": 0.05,
+            "rho": 4.0,
+            "rho_selection": "fixed-before-observation",
+            "values": [
+              {
+                "v": 0,
+                "boundary": 4.895493661361633
+              },
+              {
+                "v": 1,
+                "boundary": 5.57431973357386
+              },
+              {
+                "v": 10,
+                "boundary": 10.070709270872976
+              },
+              {
+                "v": 100,
+                "boundary": 31.015388968276124
+              }
+            ],
+            "interpretation": "Numerical boundary evaluation under the supplied fixed-parameter theorem; no new proof or coverage simulation.",
+            "input_sha256": {
+              "parameters": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+              "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+            }
+          },
+          "independent_values": [
+            {
+              "v": 0,
+              "boundary": 4.895493661361633
+            },
+            {
+              "v": 1,
+              "boundary": 5.574319733573861
+            },
+            {
+              "v": 10,
+              "boundary": 10.070709270872976
+            },
+            {
+              "v": 100,
+              "boundary": 31.015388968276124
+            }
+          ],
+          "result_path": "KEY_AUDIT_WORK/T-revised-result/result.json",
+          "table_path": "KEY_AUDIT_WORK/T-revised-result/table.csv"
+        }
+      },
+      "D": {
+        "initial": {
+          "supplied_result": {
+            "case_id": "D",
+            "evaluation_start": "2011-10-01",
+            "evaluation_end": "2011-12-31",
+            "model_policy": "frozen-2011-Jan-Sep",
+            "observed_hours": 2203,
+            "observed_days": 92,
+            "C0_MAE": 58.825190494512434,
+            "C1_MAE": 44.570832407531775,
+            "C0_RMSE": 86.08056895633848,
+            "C1_RMSE": 67.99996906089847,
+            "C0_bias_prediction_minus_actual": 1.078965171773347,
+            "C1_bias_prediction_minus_actual": 0.9871531155146787,
+            "MAE_reduction_fraction": 0.24231724482575867,
+            "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+            "input_sha256": {
+              "parameters": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+              "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+              "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+              "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+            }
+          },
+          "independent_values": {
+            "observed_hours": 2203,
+            "observed_days": 92,
+            "C0_MAE": 58.825190494512434,
+            "C0_RMSE": 86.08056895633848,
+            "C0_bias_prediction_minus_actual": 1.0789651717733457,
+            "C1_MAE": 44.570832407531775,
+            "C1_RMSE": 67.99996906089845,
+            "C1_bias_prediction_minus_actual": 0.9871531155146785,
+            "MAE_reduction_fraction": 0.24231724482575867
+          },
+          "result_path": "KEY_AUDIT_WORK/D-initial-result/result.json",
+          "table_path": "KEY_AUDIT_WORK/D-initial-result/table.csv"
+        },
+        "revised": {
+          "supplied_result": {
+            "case_id": "D",
+            "evaluation_start": "2011-11-01",
+            "evaluation_end": "2011-12-31",
+            "model_policy": "frozen-2011-Jan-Sep",
+            "observed_hours": 1460,
+            "observed_days": 61,
+            "C0_MAE": 56.64127430990882,
+            "C1_MAE": 41.252622564018566,
+            "C0_RMSE": 81.70038360631688,
+            "C1_RMSE": 64.15826564867794,
+            "C0_bias_prediction_minus_actual": 13.433264561295244,
+            "C1_bias_prediction_minus_actual": 13.347664992606457,
+            "MAE_reduction_fraction": 0.2716861852664598,
+            "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+            "input_sha256": {
+              "parameters": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+              "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+              "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+              "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+            }
+          },
+          "independent_values": {
+            "observed_hours": 1460,
+            "observed_days": 61,
+            "C0_MAE": 56.64127430990883,
+            "C0_RMSE": 81.70038360631688,
+            "C0_bias_prediction_minus_actual": 13.433264561295244,
+            "C1_MAE": 41.25262256401857,
+            "C1_RMSE": 64.15826564867794,
+            "C1_bias_prediction_minus_actual": 13.347664992606457,
+            "MAE_reduction_fraction": 0.2716861852664597
+          },
+          "result_path": "KEY_AUDIT_WORK/D-revised-result/result.json",
+          "table_path": "KEY_AUDIT_WORK/D-revised-result/table.csv"
+        }
+      }
+    }
+  },
+  "final_design_refresh": {
+    "all_checks_passed": true,
+    "checks": {
+      "T_numeric_key_still_identical": true,
+      "T_approved_sha_still_identical": true,
+      "T_payload_bytes_still_identical": true,
+      "D_numeric_key_still_identical": true,
+      "D_approved_sha_still_identical": true,
+      "D_payload_bytes_still_identical": true,
+      "final_A_explicit_original_content_preservation": true,
+      "final_D_window_not_refit": true
+    },
+    "changed_files_after_numeric_audit": [
+      "D/reference/answer.json",
+      "D/stage-C/AUTHOR-REVISION.md",
+      "T/reference/answer.json",
+      "T/stage-C/AUTHOR-REVISION.md",
+      "build_materials.py",
+      "shared/STAGE-A.md"
+    ],
+    "scientific_payload_and_numeric_answers_unchanged": true,
+    "design_changes_by_auditor": false
+  },
+  "cli_feasibility": {
+    "actual_cli_operations_in_successful_retry": 19,
+    "checks_passed": 14,
+    "checks_total": 14,
+    "all_checks_passed": true,
+    "checks": [
+      {
+        "label": "actual user ZIP CLI initializes and installs project runtime",
+        "passed": true
+      },
+      {
+        "label": "declared graph can be registered with existing CLI",
+        "passed": true
+      },
+      {
+        "label": "toy initial state fully done",
+        "passed": true
+      },
+      {
+        "label": "parameter drift direct and transitive state, independent source survives",
+        "passed": true,
+        "states": {
+          "TOY-CALC": "stale",
+          "TOY-SOURCE-CHECK": "done",
+          "TOY-SYNTH": "stale"
+        }
+      },
+      {
+        "label": "source-only is disclosed instead of invented automatic coverage",
+        "passed": true
+      },
+      {
+        "label": "dirty checkpoint is current but cannot launder done activities",
+        "passed": true,
+        "states": {
+          "TOY-CALC": "stale",
+          "TOY-SOURCE-CHECK": "done",
+          "TOY-SYNTH": "stale"
+        },
+        "checkpoint": {
+          "recorded": true,
+          "status": "current",
+          "changed": []
+        }
+      },
+      {
+        "label": "check status resume and show preserve file bytes and all directory/file mtimes",
+        "passed": true
+      },
+      {
+        "label": "CLI can rebind in dependency order without touching independent branch",
+        "passed": true
+      },
+      {
+        "label": "final checkpoint and state current",
+        "passed": true
+      },
+      {
+        "label": "CLI retains old record content in history",
+        "passed": true
+      },
+      {
+        "label": "installed project runtime actually executes after migration",
+        "passed": true,
+        "original_paths_absent": true,
+        "active_runtime": "KEY_AUDIT_WORK/cli-retry/migrated-toy-project/.agents/skills/_rw-runtime/tools/research.py"
+      },
+      {
+        "label": "migration resume preserves file bytes and every file/directory mtime",
+        "passed": true
+      },
+      {
+        "label": "old version write can be exercised and refuses without registry change",
+        "passed": true
+      },
+      {
+        "label": "bad later batch item rejects atomically",
+        "passed": true
+      }
+    ],
+    "dirty_checkpoint_current_but_CALC_SYNTH_stale": true,
+    "source_branch_remains_done": true,
+    "requires_explicit_declared_local_dependencies": true,
+    "does_not_automatically_archive_research_file_bytes": true,
+    "toy_migration_old_exact_paths_absent": true,
+    "toy_migration_OS_cache_denial_enforced": false,
+    "first_harness_error_retained": "KEY_AUDIT_WORK/cli-first-attempt-error.json",
+    "formal_study_score_awarded": false
+  },
+  "resolved_during_design_finalization": [
+    {
+      "issue": "Recoverable original small research-file bytes must be explicit for all arms; core record history alone does not supply overwritten file bytes.",
+      "resolution": "Final STAGE-A explicitly requires parameters/result/table/summary recoverable initial content; hash alone insufficient; no organizer archives added later."
+    },
+    {
+      "issue": "New D relative MAE reduction must not imply model retraining/improvement.",
+      "resolution": "Final D AUTHOR-REVISION and reference scientific_update_limit explicitly restrict change to evaluation window."
+    }
+  ],
+  "answer_numeric_corrections_required": [],
+  "core_implementation_blockers_found": [],
+  "findings": [
+    {
+      "id": "F01",
+      "category": "conditional-answer-and-grading",
+      "severity": "medium",
+      "blocking_before_formal_freeze": false,
+      "status": "resolved-pre-freeze",
+      "locations": [
+        "design/T/reference/answer.json:B_checkpoint_freshness",
+        "design/D/reference/answer.json:B_checkpoint_freshness",
+        "design/T/reference/answer.json:D_final_next_action",
+        "design/D/reference/answer.json:D_final_next_action",
+        "design/shared/rubric.json"
+      ],
+      "finding": "Successful upstream chain is the only explicit answer-key branch, while retained actual failures can leave no checkpoint or incomplete C work. A truthful B/D report must reflect actual persisted state, not fabricate standard successful end state.",
+      "required_change": "Mark keys as upstream-success expected answers and freeze a common conditional rule for not-recorded/stale/incomplete recovery and corresponding partial credit. Do not repair upstream missing state or change rules after seeing a failing arm.",
+      "original_status": "needs-clarification",
+      "resolution": "Latest T/D keys add standard_success_path and exact common conditional_grading_rules."
+    },
+    {
+      "id": "F02",
+      "category": "rubric-reproducibility",
+      "severity": "medium",
+      "blocking_before_formal_freeze": false,
+      "status": "resolved-pre-freeze",
+      "locations": [
+        "design/shared/rubric.json:scoring_notes",
+        "design/shared/rubric.json:critical_errors_separately_reported"
+      ],
+      "finding": "Weights are correct and representation-neutral, but within-item partial-credit anchors and critical-error score effects are unspecified.",
+      "required_change": "Freeze shared full/partial/zero anchors, inherited-failure handling, semantic rather than literal next-action matching, and double-penalty policy before formal outputs.",
+      "original_status": "needs-codebook",
+      "resolution": "score-codebook fixes component sums, partial credit, critical error/no-extra-cap and inherited-gap rules; all subpoints match rubric total100."
+    },
+    {
+      "id": "F03",
+      "category": "event-injection-representation-fairness",
+      "severity": "medium",
+      "blocking_before_formal_freeze": false,
+      "status": "resolved-pre-freeze",
+      "locations": [
+        "design/shared/inject_event.py",
+        "design/T/events/B.patch.json",
+        "design/D/events/B.patch.json"
+      ],
+      "finding": "Both T and D compact/reordered initial parameter JSON fixtures are semantically initial but the original-byte SHA check prevents the common B intervention. No task requirement requires original working-parameter formatting.",
+      "required_change": "Freeze strict duplicate-free finite type-aware JSON equality to initial parameters; permit whitespace/key order and equal JSON-number notation. Record actual old bytes/SHA, inject common canonical after_json. Reject missing/nonregular/link/escaped/semantically changed setup without repair. Score input_sha against actual input bytes instead of canonical key hashes when formatting is permitted.",
+      "counterexamples_to_naive_json_equality": [
+        "Python bool true equals numeric1",
+        "float parsing can collapse1.0000000000000001 to1.0",
+        "Duplicate keys can be silently discarded"
+      ],
+      "evidence": "KEY_AUDIT_WORK/event-injection-audit.json",
+      "original_status": "reproduced-needs-injector-rule-fix",
+      "resolution": "Latest strict standalone injector and helper accept semantic reformatting and preserve actual beforeSHA; both case fixtures inject successfully."
+    },
+    {
+      "id": "P01",
+      "category": "execution-prerequisite",
+      "severity": "medium",
+      "blocking_before_formal_freeze": false,
+      "status": "resolved-in-planned-frozen-configuration",
+      "finding": "Budget, exact arm guidance/tool identities, stage-only distribution, read-only snapshots and strong D isolation are not yet frozen. The independent toy migration probe does not enforce OS denial of all external caches.",
+      "required_change": "Lock the actual environment, quotas, allowed paths/resources, stage distribution, identities and cross-arm engineering interface policy; do not expose future tasks or answer keys.",
+      "original_status": "explicitly-pending-in-design-readme",
+      "resolution": "Actual budgets/arm tool scopes/target identities and instruction-only isolation limitations are fixed in helper for freeze; no OS access audit claimed."
+    },
+    {
+      "id": "Q01",
+      "category": "scientific-scope-clarity",
+      "severity": "low",
+      "blocking_before_formal_freeze": false,
+      "finding": "T calculator simplifies source equation51 to scalar l0=1; source card could make scalar and both-tail hypotheses explicit. Numerical answers are correct in that scope.",
+      "suggestion": "Add scalar l0=1 and both S and -S sub-Gaussian with same V to source-note wording; do not infer arbitrary empirical V is valid.",
+      "original_status": "first-audit-suggestion",
+      "status": "resolved-pre-freeze",
+      "resolution": "Latest T BRIEF explicitly fixes scalar l0=1 and both-tail same-V sub-Gaussian control; updated manifest valid."
+    },
+    {
+      "id": "F04",
+      "category": "organizer-failed-setup-continuation",
+      "severity": "medium",
+      "blocking_before_formal_freeze": false,
+      "status": "resolved-pre-freeze",
+      "locations": [
+        "study_ops.py:stage B branch",
+        "study_ops.py:unconditional final snapshot"
+      ],
+      "finding": "Changed semantic parameters, missing parameter file and symlink fixtures all raise before injection.json and B REQUEST.md are generated, after stage directory creation. No structured event-not-applied record exists and rerun would collide with existing stage folder. This conflicts with retained-failure/no-repair downstream recovery protocol.",
+      "required_change": "Freeze an orchestration catch-and-continue branch (or explicit frozen outer runner): record event_applied=false, original failure/path and available identities; preserve project bytes and initial stage output; generate read-only B request without repair or deletion. Handle snapshot rejection administratively without following links.",
+      "evidence": "KEY_AUDIT_WORK/followup-clarification-audit.json",
+      "original_status": "reproduced-needs-defined-catch-and-continue",
+      "resolution": "Latest helper preserves structured event_applied=false/error/actual differences and unchanged project on rejection, then continues B request preparation. Snapshot records link itself without dereference. Three organizer preflights match the actual code."
+    }
+  ],
+  "fairness_confirmed": [
+    "Common weights sum to100: A20 B35 C30 D15.",
+    "Any equivalent durable schema and baseline hash/version/recovery scripts are allowed.",
+    "Engineering probes carry no common research points.",
+    "Unknown dependencies, unregistered scratch and source-only locator content are outside automatic detection coverage.",
+    "Extra valid declared dependencies are accepted instead of enforcing exactly three IDs.",
+    "Scientific scope and no invented human/formal review are retained."
+  ],
+  "evidence_files": [
+    {
+      "path": "KEY_AUDIT_WORK/archive-identity.json",
+      "sha256": "cd81fa1a48c069f85b1a5dbe0350cec1932b2810fe369283eb9679486e539cc8",
+      "bytes": 2791
+    },
+    {
+      "path": "KEY_AUDIT_WORK/numeric-audit.py",
+      "sha256": "daf6731d221c6e534023be9f14c36a2139169091e306b634b9e5424cc1b96b63",
+      "bytes": 9724
+    },
+    {
+      "path": "KEY_AUDIT_WORK/numeric-audit.json",
+      "sha256": "75ef70974a03f1af7da3ede22b003373f4e180445b062e62c990958ebd6c0eff",
+      "bytes": 20580
+    },
+    {
+      "path": "KEY_AUDIT_WORK/design-before.json",
+      "sha256": "521a311d454ce9f3e7f14649166c17cf0f2272ab55f84e1beefaf677edaf3e09",
+      "bytes": 9273
+    },
+    {
+      "path": "KEY_AUDIT_WORK/design-after.json",
+      "sha256": "521a311d454ce9f3e7f14649166c17cf0f2272ab55f84e1beefaf677edaf3e09",
+      "bytes": 9273
+    },
+    {
+      "path": "KEY_AUDIT_WORK/final-design-refresh.json",
+      "sha256": "5f5b873e880f41ce3ae43c17cc94469c26ca547a4297d98d716e6298e6d41e2e",
+      "bytes": 12692
+    },
+    {
+      "path": "KEY_AUDIT_WORK/cli-first-attempt-error.json",
+      "sha256": "23834dfd1cca3e56570ae4f478203f907c91993095861d5054f384d1ac2475ca",
+      "bytes": 537
+    },
+    {
+      "path": "KEY_AUDIT_WORK/cli-probe-first-attempt.py",
+      "sha256": "6e104363bd5656f1be805e97a3734b537843f137933e8c9f66d2cae1515bf8d4",
+      "bytes": 10878
+    },
+    {
+      "path": "KEY_AUDIT_WORK/cli-retry/cli-probe.py",
+      "sha256": "c0aec37bb12cba8cd19001ac2528294e257414f9dfb2549f99dc899f247faceb",
+      "bytes": 10958
+    },
+    {
+      "path": "KEY_AUDIT_WORK/cli-retry/cli-probe.json",
+      "sha256": "665f3dc370d3271f0d5e37418c1bb0c71aef1388f0de66b017aeaeee454bd541",
+      "bytes": 68334
+    },
+    {
+      "path": "KEY_AUDIT_WORK/cli-retry/commands-progress.json",
+      "sha256": "560e956cacc2b5290568a71eb9b9ba32a5d4ccb0487f21fd37deb309cbbfb3e1",
+      "bytes": 51300
+    },
+    {
+      "path": "KEY_AUDIT_WORK/event-injection-audit.json",
+      "sha256": "e07f22bad7db27f53562fd22437698c67c2c9543fcb12144dcf51f9730938a30",
+      "bytes": 4179
+    },
+    {
+      "path": "KEY_AUDIT_WORK/followup-clarification-audit.json",
+      "sha256": "309347ba81ba03a426199de9efc4b3265a84d1e78313d5701f6ddc69675bb241",
+      "bytes": 3998
+    },
+    {
+      "path": "KEY_AUDIT_WORK/followup-updated-injector.json",
+      "sha256": "383045737dee1f871eb1c8aa2ab6aac356fc8b10241ecd08f26bf1e8be8cd964",
+      "bytes": 2594
+    },
+    {
+      "path": "STUDY_ROOT/design/shared/score-codebook.json",
+      "sha256": "0703b02209e59c1f4f6e34b2cec78ce708b02466f8372f8a7b862833a36be5d7",
+      "bytes": 7852
+    },
+    {
+      "path": "STUDY_ROOT/design/shared/inject_event.py",
+      "sha256": "08b6ede67122d64371eee6e38269345c245323e30bd9bbba4ecb3f6dc41e96e1",
+      "bytes": 1981
+    },
+    {
+      "path": "STUDY_ROOT/study_ops.py",
+      "sha256": "1aa86d3a294172ef11e344bd7c7a79d327974708a9b7732c26162c34e777f343",
+      "bytes": 13482
+    },
+    {
+      "path": "STUDY_ROOT/study_ops.py",
+      "sha256": "8b01b1de33e72ca7c498122e6c9d84b860e3b082c702cb981640b44ad34b137d",
+      "bytes": 14484
+    },
+    {
+      "path": "STUDY_ROOT/F04-preflight.json",
+      "sha256": "1856ca8e25f4dd76eaaf5e78fd67e5d8a8a7ed1c855986ac90b53a371ca6453e",
+      "bytes": 925
+    }
+  ],
+  "limitations": [
+    "Offline identity validation against supplied fixed caches/reference metadata, not fresh public downloads.",
+    "Toy API feasibility is not a formal T/D arm execution, broad platform validation, or comparison result.",
+    "The toy migration uses absent old exact paths and installed runtime, without an OS sandbox denying every external cache.",
+    "The actual formal study environment and scoring codebook remain to be frozen."
+  ],
+  "event_injection_fairness_probe": {
+    "all_expected_probe_results_observed": true,
+    "checks": [
+      {
+        "case_id": "T",
+        "semantics_equal_to_initial": true,
+        "actual_before_sha256": "5e8cb69be289ae4fd096aead957dab0cc85b2f277ab3f4629e49a61379c24e8c",
+        "canonical_before_sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+        "existing_injector_rejects_only_reformat": true,
+        "reject_keeps_bytes": true,
+        "receipt_absent": true
+      },
+      {
+        "case_id": "D",
+        "semantics_equal_to_initial": true,
+        "actual_before_sha256": "3725e6f5979335b04bde5655b0523226d177eff4af9fe426e76d619f7c21dc1b",
+        "canonical_before_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+        "existing_injector_rejects_only_reformat": true,
+        "reject_keeps_bytes": true,
+        "receipt_absent": true
+      }
+    ],
+    "strict_semantic_comparison_examples": [
+      {
+        "label": "numeric notation allowed",
+        "actual": true,
+        "expected": true,
+        "passed": true
+      },
+      {
+        "label": "bool not number",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "label": "decimal difference not erased",
+        "actual": false,
+        "expected": false,
+        "passed": true
+      },
+      {
+        "label": "key reordering allowed",
+        "actual": true,
+        "expected": true,
+        "passed": true
+      },
+      {
+        "label": "duplicate keys",
+        "rejected": true,
+        "passed": true
+      },
+      {
+        "label": "nonfinite",
+        "rejected": true,
+        "passed": true
+      }
+    ],
+    "formal_study_interventions_performed": 0
+  },
+  "can_freeze_now": true,
+  "remaining_necessary_blockers": [],
+  "ready_to_freeze_after": null,
+  "followup_review": {
+    "scope": "Only added clarification files and helper-related code reviewed. No formal executors, answer records or scores read; no freeze or actual chain preparation executed. Helper functions extracted through AST and called only under invented AUDIT fixtures.",
+    "clarification_checks_total": 13,
+    "all_clarification_checks_passed": true,
+    "helper_sha256": "1aa86d3a294172ef11e344bd7c7a79d327974708a9b7732c26162c34e777f343",
+    "updated_standalone_injector_sha256": "08b6ede67122d64371eee6e38269345c245323e30bd9bbba4ecb3f6dc41e96e1",
+    "updated_standalone_injector_all_formatted_cases_passed": true,
+    "negative_helper_fixtures": [
+      {
+        "scenario": "changed-semantic",
+        "raised": {
+          "type": "AssertionError",
+          "message": "Unexpected semantic parameters; do not silently repair"
+        },
+        "request_generated": false,
+        "injection_receipt_generated": false,
+        "target_bytes_preserved": true,
+        "printed": ""
+      },
+      {
+        "scenario": "missing-parameter",
+        "raised": {
+          "type": "FileNotFoundError",
+          "message": "[Errno 2] No such file or directory: 'KEY_AUDIT_WORK/helper-followup-fixtures/missing-parameter/runs/AUDIT/project/notes/parameters.json'"
+        },
+        "request_generated": false,
+        "injection_receipt_generated": false,
+        "target_bytes_preserved": true,
+        "printed": ""
+      },
+      {
+        "scenario": "symlink-parameter",
+        "raised": {
+          "type": "RuntimeError",
+          "message": "Unexpected symlink KEY_AUDIT_WORK/helper-followup-fixtures/symlink-parameter/runs/AUDIT/project/notes/parameters.json"
+        },
+        "request_generated": false,
+        "injection_receipt_generated": false,
+        "target_bytes_preserved": true,
+        "printed": ""
+      }
+    ],
+    "old_findings_preserved": true
+  },
+  "final_F04_review": {
+    "review_method": "Read-only inspection of latest related helper code and organizer isolated preflight evidence; no new fixtures or formal chain preparation/execution.",
+    "all_three_preflights_passed": true,
+    "preflight_results": [
+      {
+        "condition": "semantic-changed",
+        "fixture": "PREFLIGHT_FIXTURE_2",
+        "request_generated": true,
+        "event_applied": false,
+        "project_unchanged": true,
+        "recorded_error": {
+          "type": "AssertionError",
+          "message": "Unexpected semantic parameters; do not silently repair"
+        }
+      },
+      {
+        "condition": "missing",
+        "fixture": "PREFLIGHT_FIXTURE_3",
+        "request_generated": true,
+        "event_applied": false,
+        "project_unchanged": true,
+        "recorded_error": {
+          "type": "AssertionError",
+          "message": "Unsafe/missing parameter path"
+        }
+      },
+      {
+        "condition": "link",
+        "fixture": "PREFLIGHT_FIXTURE_1",
+        "request_generated": true,
+        "event_applied": false,
+        "project_unchanged": true,
+        "recorded_error": {
+          "type": "AssertionError",
+          "message": "Unsafe/missing parameter path"
+        }
+      }
+    ],
+    "helper_identity": {
+      "path": "STUDY_ROOT/study_ops.py",
+      "sha256": "8b01b1de33e72ca7c498122e6c9d84b860e3b082c702cb981640b44ad34b137d",
+      "bytes": 14484
+    },
+    "preflight_identity": {
+      "path": "STUDY_ROOT/F04-preflight.json",
+      "sha256": "1856ca8e25f4dd76eaaf5e78fd67e5d8a8a7ed1c855986ac90b53a371ca6453e",
+      "bytes": 925
+    },
+    "original_F04_finding_and_evidence_preserved": true,
+    "formal_study_runs_executed_by_auditor": 0,
+    "conclusion": "Can freeze current declared design; no necessary blockers remain."
+  }
+}

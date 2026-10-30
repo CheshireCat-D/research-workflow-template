@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "metrics": {
+    "observed_hours": 1460,
+    "observed_days": 61,
+    "C0_MAE": 56.64127430990882,
+    "C0_RMSE": 81.70038360631688,
+    "C0_bias_prediction_minus_actual": 13.433264561295244,
+    "C1_MAE": 41.252622564018566,
+    "C1_RMSE": 64.15826564867794,
+    "C1_bias_prediction_minus_actual": 13.347664992606457,
+    "MAE_reduction_fraction": 0.2716861852664598
+  },
+  "commands": [
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--output",
+        "PROJECT_ROOT/validation/stage-C/recalculation-retry"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout": "03-normal-recalculation.stdout",
+      "stderr": "03-normal-recalculation.stderr"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--output",
+        "PROJECT_ROOT/validation/stage-C/invalid-output",
+        "--spec",
+        "PROJECT_ROOT/notes/rejected-parameters.json"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 2,
+      "stdout": "04-controlled-invalid-recheck.stdout",
+      "stderr": "04-controlled-invalid-recheck.stderr"
+    }
+  ]
+}
+
+STDERR:

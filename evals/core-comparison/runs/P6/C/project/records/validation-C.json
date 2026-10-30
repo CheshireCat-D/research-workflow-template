@@ -1,0 +1,77 @@
+{
+  "case_id": "D",
+  "stage": "C",
+  "executed_calculator_exit": 0,
+  "approved_parameters_match": true,
+  "observed_hours": 1460,
+  "observed_days": 61,
+  "independent_metrics": {
+    "C0_MAE": 56.64127430990882,
+    "C0_RMSE": 81.70038360631688,
+    "C0_bias_prediction_minus_actual": 13.433264561295244,
+    "C1_MAE": 41.252622564018566,
+    "C1_RMSE": 64.15826564867794,
+    "C1_bias_prediction_minus_actual": 13.347664992606457,
+    "MAE_reduction_fraction": 0.2716861852664598
+  },
+  "independent_metric_comparison": "Exact float agreement using supplied fixed predictions; no refit",
+  "companion_table_agrees": true,
+  "canonical_matches_actual_run": true,
+  "summary_dates_counts_metrics_scope_checked": true,
+  "immutable_before": {
+    "data/hour_2011.csv": {
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    "model/frozen.json": {
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "scripts/project_status.py": {
+      "sha256": "2403ad240e0642c67e0de548a817b4d3a72663c551c27f8a8188c6637eaaf7ab",
+      "bytes": 4080
+    },
+    "scripts/guarded_state_update.py": {
+      "sha256": "1459933f428b1cde70a7a475e7b41c74d3bd3e91a8a2ad46af821a94fac4206b",
+      "bytes": 2642
+    },
+    "notes/source-check.md": {
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474
+    }
+  },
+  "immutable_after": {
+    "data/hour_2011.csv": {
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    "model/frozen.json": {
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "scripts/project_status.py": {
+      "sha256": "2403ad240e0642c67e0de548a817b4d3a72663c551c27f8a8188c6637eaaf7ab",
+      "bytes": 4080
+    },
+    "scripts/guarded_state_update.py": {
+      "sha256": "1459933f428b1cde70a7a475e7b41c74d3bd3e91a8a2ad46af821a94fac4206b",
+      "bytes": 2642
+    },
+    "notes/source-check.md": {
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474
+    }
+  },
+  "source_branch": "Unchanged identity, inputs, output and completion bindings; no repeat of source activity required",
+  "executor": "AI agent and standard-library numerical checks",
+  "human_expert_approval": false,
+  "submission_authorized": false
+}

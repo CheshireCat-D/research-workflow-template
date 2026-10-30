@@ -1,0 +1,540 @@
+{
+  "format": "local-research-state-v1",
+  "case_id": "T",
+  "metadata_revision": 3,
+  "authority": "research/state.json; notes, provenance and checkpoints do not override current configuration or records",
+  "configuration": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 4.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "records": {
+    "T-SRC": {
+      "version": 1,
+      "data": {
+        "id": "T-SRC",
+        "entity": "source",
+        "meaning": "Primary real source identity from source-identities.json; record actual access scope",
+        "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+        "uri": "https://arxiv.org/abs/1810.08240v9",
+        "version": "1810.08240v9",
+        "doi": "https://doi.org/10.1214/20-AOS1991",
+        "local_path": "sources/howard2021-arxiv-v9.pdf",
+        "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+        "access_instruction": "记录自己实际读取范围；来源核验活动只要求核对所给固定版本身份，不要求宣称全文独立审阅。",
+        "content_access": "partial: full bytes hashed against supplied manifest and source card read; selected PDF streams inspected for textual identity context, no page/formula/theorem review"
+      }
+    },
+    "T-REMOTE": {
+      "version": 1,
+      "data": {
+        "id": "T-REMOTE",
+        "entity": "source",
+        "meaning": "Source identity only; no supplied local copy or live content inspection",
+        "title": "Time-uniform Chernoff bounds via nonnegative supermartingales",
+        "uri": "https://arxiv.org/abs/1808.03204v7",
+        "version": "1808.03204v7",
+        "local_copy_supplied": false,
+        "access": "metadata-only",
+        "tracking_limit": "Only source identity; no local content binding and no current remote-content check."
+      }
+    },
+    "T-RAW": {
+      "version": 1,
+      "data": {
+        "id": "T-RAW",
+        "entity": "local material",
+        "path": "sources/howard2021-arxiv-v9.pdf",
+        "source": "T-SRC",
+        "meaning": "Immutable primary local material and its full SHA"
+      }
+    },
+    "T-PARAM": {
+      "version": 2,
+      "data": {
+        "id": "T-PARAM",
+        "entity": "local material",
+        "path": "notes/parameters.json",
+        "meaning": "Author working parameters; a separate local material, not the original paper/dataset",
+        "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+        "bytes": 161,
+        "approved_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "revision_basis": "provenance/stage-C/AUTHOR-REVISION.md"
+      }
+    },
+    "T-CLAIM": {
+      "version": 2,
+      "data": {
+        "id": "T-CLAIM",
+        "entity": "statement",
+        "meaning": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+        "scope": {
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ],
+          "claim_limit": "Only supplied formula arithmetic under stated sub-Gaussian process conditions; no new coverage proof."
+        }
+      }
+    },
+    "T-REL": {
+      "version": 2,
+      "data": {
+        "id": "T-REL",
+        "entity": "relation",
+        "from": "T-PARAM",
+        "to": "T-CLAIM",
+        "meaning": "作者批准的预先固定 rho=4 参数限定当前数值主张；参数更改并非原论文修订，也非覆盖证明。",
+        "parameter_version": 2,
+        "claim_version": 2
+      }
+    },
+    "T-CHOICE": {
+      "version": 2,
+      "data": {
+        "id": "T-CHOICE",
+        "entity": "decision",
+        "meaning": "Use author-approved rho=4 fixed before observation; retain alpha .05 and other constraints.",
+        "evidence": [
+          "T-PARAM"
+        ],
+        "responsible": "benchmark material author supplied revision; assistant executed arithmetic and record revision",
+        "rationale": "provenance/stage-C/AUTHOR-REVISION.md accepts current parameters; not new theorem or post-observation tuning.",
+        "decided_at": null,
+        "approval_path": "provenance/stage-C/approved-parameters.json",
+        "approval_sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117"
+      }
+    },
+    "T-CODE": {
+      "version": 1,
+      "data": {
+        "id": "T-CODE",
+        "entity": "artifact",
+        "path": "scripts/compute.py",
+        "meaning": "Supplied scientific calculator; preserve byte identity"
+      }
+    },
+    "T-RESULT": {
+      "version": 2,
+      "data": {
+        "id": "T-RESULT",
+        "entity": "artifact",
+        "path": "results/result.json",
+        "meaning": "Current canonical numeric result; the companion results/table.csv is delivered and must agree",
+        "derived_from": [
+          "T-PARAM",
+          "T-RAW",
+          "T-CODE",
+          "T-CHOICE"
+        ],
+        "companion_paths": [
+          "results/table.csv"
+        ],
+        "parameter_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "revision_basis": "validation/stage-C.json",
+        "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280"
+      }
+    },
+    "T-SUMMARY": {
+      "version": 2,
+      "data": {
+        "id": "T-SUMMARY",
+        "entity": "artifact",
+        "path": "results/summary.md",
+        "meaning": "Current summary consistent with canonical numeric result",
+        "derived_from": [
+          "T-CLAIM",
+          "T-RESULT"
+        ],
+        "parameter_scope": {
+          "case_id": "T",
+          "alpha": 0.05,
+          "rho": 4.0,
+          "rho_selection": "fixed-before-observation",
+          "intrinsic_time_grid": [
+            0,
+            1,
+            10,
+            100
+          ]
+        },
+        "revision_basis": "validation/stage-C.json",
+        "sha256": "d4bfd0eaba49bb6a45dc5579ff0d14ad2bbbd3364ea9718f9ea48c6abad298fd"
+      }
+    },
+    "T-SOURCE-NOTE": {
+      "version": 1,
+      "data": {
+        "id": "T-SOURCE-NOTE",
+        "entity": "artifact",
+        "path": "notes/source-check.md",
+        "meaning": "Fixed source identity/coverage note; independent of chosen numeric/evaluation parameter"
+      }
+    },
+    "T-SOURCE-CHECK": {
+      "version": 1,
+      "data": {
+        "id": "T-SOURCE-CHECK",
+        "entity": "activity",
+        "meaning": "Verify supplied primary source identity/version and note, not full scientific certification",
+        "inputs": [
+          "T-SRC",
+          "T-RAW"
+        ],
+        "outputs": [
+          "T-SOURCE-NOTE"
+        ],
+        "status": "done"
+      }
+    },
+    "T-CALC": {
+      "version": 2,
+      "data": {
+        "id": "T-CALC",
+        "entity": "activity",
+        "meaning": "Evaluate the supplied calculator under current author parameters and verify provided result",
+        "inputs": [
+          "T-PARAM",
+          "T-RAW",
+          "T-CODE",
+          "T-CHOICE"
+        ],
+        "outputs": [
+          "T-RESULT"
+        ],
+        "status": "done",
+        "execution_evidence": "validation/stage-C.json",
+        "scope": "Actual recomputation with approved rho=4; full result/CSV and direct formula comparison; no proof."
+      }
+    },
+    "T-SYNTH": {
+      "version": 2,
+      "data": {
+        "id": "T-SYNTH",
+        "entity": "activity",
+        "meaning": "Prepare summary within current claim and verified result",
+        "inputs": [
+          "T-CLAIM",
+          "T-RESULT"
+        ],
+        "outputs": [
+          "T-SUMMARY"
+        ],
+        "depends_on": [
+          "T-CALC"
+        ],
+        "status": "done",
+        "execution_evidence": "validation/stage-C.json",
+        "scope": "Summary revised and read against actual rho=4 values and unchanged conditional scope; awaits author content review."
+      }
+    }
+  },
+  "activities": {
+    "T-SOURCE-CHECK": {
+      "declared_status": "done",
+      "executor": "AI assistant; no independent human review",
+      "scientific_certification": false,
+      "inputs": [
+        "T-SRC",
+        "T-RAW"
+      ],
+      "outputs": [
+        "T-SOURCE-NOTE"
+      ],
+      "depends_on": [],
+      "captured_files": {
+        "sources/howard2021-arxiv-v9.pdf": {
+          "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+          "bytes": 1494142
+        },
+        "notes/source-check.md": {
+          "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+          "bytes": 521
+        }
+      },
+      "captured_records": {
+        "T-SRC": {
+          "version": 1,
+          "content_sha256": "ef9f613908982d8c639b77cf9041bdebed88c774d0d06138ca0dcde37f14d796"
+        },
+        "T-RAW": {
+          "version": 1,
+          "content_sha256": "5cb92c1029fcf8ad1b4bde89be5d70d8704453b794ca687de523653701a836ec"
+        },
+        "T-SOURCE-NOTE": {
+          "version": 1,
+          "content_sha256": "26d65589e8df358d743ef9806511760af1e719f5a0fc713f99ee7d7cc86093eb"
+        }
+      },
+      "evidence": "validation/stage-A.json",
+      "scope": "Verify supplied primary source identity/version and note, not full scientific certification"
+    },
+    "T-CALC": {
+      "declared_status": "done",
+      "executor": "AI assistant; no independent human review",
+      "scientific_certification": false,
+      "inputs": [
+        "T-PARAM",
+        "T-RAW",
+        "T-CODE",
+        "T-CHOICE"
+      ],
+      "outputs": [
+        "T-RESULT"
+      ],
+      "depends_on": [],
+      "captured_files": {
+        "notes/parameters.json": {
+          "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+          "bytes": 161
+        },
+        "sources/howard2021-arxiv-v9.pdf": {
+          "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+          "bytes": 1494142
+        },
+        "scripts/compute.py": {
+          "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+          "bytes": 4157
+        },
+        "results/result.json": {
+          "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+          "bytes": 704
+        },
+        "results/table.csv": {
+          "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+          "bytes": 101
+        }
+      },
+      "captured_records": {
+        "T-PARAM": {
+          "version": 1,
+          "content_sha256": "39391314fa69f1709cbad7df063c0f733fd27192ae4100bbbf2b2e32c4f40c2e"
+        },
+        "T-RAW": {
+          "version": 1,
+          "content_sha256": "5cb92c1029fcf8ad1b4bde89be5d70d8704453b794ca687de523653701a836ec"
+        },
+        "T-CODE": {
+          "version": 1,
+          "content_sha256": "788dc0ae3b84d94ecf629a220939f948f23f15519990b889de15361c97503cfd"
+        },
+        "T-CHOICE": {
+          "version": 1,
+          "content_sha256": "f95031962bd08e963f16183533439ae8a49b81565705eff4413ed1e1534c0c9d"
+        },
+        "T-RESULT": {
+          "version": 1,
+          "content_sha256": "db4446d10500e66a5c0ed4ee53d2b994cbfae3219fea798e1b71d48de0872c44"
+        }
+      },
+      "evidence": "validation/stage-A.json",
+      "scope": "Evaluate the supplied calculator under current author parameters and verify provided result"
+    },
+    "T-SYNTH": {
+      "declared_status": "done",
+      "executor": "AI assistant; no independent human review",
+      "scientific_certification": false,
+      "inputs": [
+        "T-CLAIM",
+        "T-RESULT"
+      ],
+      "outputs": [
+        "T-SUMMARY"
+      ],
+      "depends_on": [
+        "T-CALC"
+      ],
+      "captured_files": {
+        "notes/parameters.json": {
+          "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+          "bytes": 161
+        },
+        "results/result.json": {
+          "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+          "bytes": 704
+        },
+        "results/table.csv": {
+          "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+          "bytes": 101
+        },
+        "results/summary.md": {
+          "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+          "bytes": 295
+        }
+      },
+      "captured_records": {
+        "T-CLAIM": {
+          "version": 1,
+          "content_sha256": "d07bb4414968811c6c9a7291dd6132b985d686d1776cfb3b17801c417fa3debf"
+        },
+        "T-RESULT": {
+          "version": 1,
+          "content_sha256": "db4446d10500e66a5c0ed4ee53d2b994cbfae3219fea798e1b71d48de0872c44"
+        },
+        "T-SUMMARY": {
+          "version": 1,
+          "content_sha256": "4a76c887c1db9cac0c5a1b1d1716bf0e95317d6f80206df45c85c5a935c8d94d"
+        }
+      },
+      "evidence": "validation/stage-A.json",
+      "scope": "Prepare summary within current claim and verified result"
+    }
+  },
+  "tracked_files": {
+    "sources/howard2021-arxiv-v9.pdf": {
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    "notes/parameters.json": {
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "results/result.json": {
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "results/summary.md": {
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    },
+    "notes/source-check.md": {
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    "results/table.csv": {
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    }
+  },
+  "tracking_exclusions": {
+    "source_only": [
+      "T-REMOTE"
+    ],
+    "unregistered_file": [
+      "notes/unregistered-scratch.md"
+    ],
+    "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked."
+  },
+  "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.",
+  "scientific_scope": {
+    "formula": "sqrt((v+rho)*(log(1+v/rho)+2*log(1/alpha)))",
+    "l0": 1,
+    "process_conditions": "S and -S have the required sub-Gaussian exponential control for the same nonnegative intrinsic time V; alpha is the total two-sided error budget",
+    "rho_rule": "fixed before observation",
+    "assessment": "specified numerical values and summary checked; proof, simulation coverage, novelty and human approval not assessed",
+    "formal_verification": "not-started; not required in this numerical task"
+  },
+  "next_action": "将 alpha=0.05、预先固定 rho=4 的四点边界表（results/table.csv）与更新摘要（results/summary.md）交作者内容复核，确认 V 与给定过程控制条件；暂不扩展到事后选择 rho；没有投稿授权。",
+  "checkpoint": {
+    "stage": "C-drift",
+    "metadata_revision": 2,
+    "configuration_sha256": "20ce3612e01041fc2f3219b6ac7828f8e5213e445f49777444944c5ce5476e82",
+    "records_sha256": "d8e7415a7ce12b18d9381c7cc565355080144761b6f160d32f39ceffe6c1539b",
+    "activities_sha256": "bd2a8a57913b4307d01bfaeb34fcb2fe9f1deb5f1a95f0c4edcc94dc7088fec3",
+    "tracked_files": {
+      "sources/howard2021-arxiv-v9.pdf": {
+        "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+        "bytes": 1494142
+      },
+      "notes/parameters.json": {
+        "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+        "bytes": 161
+      },
+      "scripts/compute.py": {
+        "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "bytes": 4157
+      },
+      "results/result.json": {
+        "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+        "bytes": 704
+      },
+      "results/summary.md": {
+        "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+        "bytes": 295
+      },
+      "notes/source-check.md": {
+        "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+        "bytes": 521
+      },
+      "results/table.csv": {
+        "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+        "bytes": 101
+      }
+    },
+    "next_action": "先只读检查漂移断点；仅随后按作者批准的 rho=4 参数真实复算并修订摘要。",
+    "note": "Recovery snapshot only; does not rebind old activities or establish scientific validity."
+  },
+  "history": [
+    {
+      "revision": 1,
+      "basis": "provenance/initial/BRIEF.md and constraints.json; original four small files recoverable from .history/A-initial/files",
+      "event": "initial project and completed bounded numerical verification"
+    },
+    {
+      "revision": 2,
+      "rationale": "保存未重算漂移态：参数文件已为rho=4，但活动仍绑定rho=1旧指纹；本次保存不构成复核。",
+      "previous_state": ".history/metadata/revision-1.json"
+    },
+    {
+      "revision": 3,
+      "rationale": "作者明确批准 rho=4；已真实重算并核对数值/CSV、改写和读取摘要；保留旧成果和漂移检查，不重做独立来源身份核验。",
+      "previous_state": ".history/metadata/revision-2.json"
+    }
+  ]
+}

@@ -1,0 +1,644 @@
+{
+  "case_id": "D",
+  "stage": "B",
+  "commands": [
+    {
+      "outer_tool_call": 1,
+      "tool": "exec_command",
+      "argv": [
+        "cat",
+        "STUDY_ROOT/runs/P6/B/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "output": "REQUEST.md content returned to model"
+    },
+    {
+      "outer_tool_call": 2,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "STUDY_ROOT/runs/P6/B",
+      "exit_code": 0,
+      "stdin_program": "Read and SHA256 REQUEST/common protocols/three permitted guidance Markdown files; inventory stage input and own project; create external output/reads.json",
+      "outputs": [
+        "reads.json"
+      ],
+      "output": "Full instruction text and project/input inventory returned"
+    },
+    {
+      "outer_tool_call": 3,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "STUDY_ROOT/runs/P6/B",
+      "exit_code": 0,
+      "stdin_program": "Fingerprint all own project files and lstat all files/directories; save baseline; inspect selected recovery, authority, provenance, snapshot, note, result and project script contents",
+      "outputs": [
+        "project-before.json",
+        "reads.json"
+      ],
+      "output": "Content output truncated by transport; completed program not failed"
+    },
+    {
+      "outer_tool_call": 4,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "STUDY_ROOT/runs/P6/B",
+      "exit_code": 0,
+      "stdin_program": "Run inspected read-only project status via subprocess; preserve stdout/stderr and command; selectively reread truncated provenance/configuration/checkpoint content",
+      "outputs": [
+        "status.stdout.json",
+        "status.stderr.txt",
+        "status-command.json",
+        "reads.json"
+      ],
+      "output": "Status findings and untruncated selected content returned"
+    },
+    {
+      "parent_outer_tool_call": 4,
+      "tool": "subprocess.run",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/project_status.py",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "OUTPUT_DIR",
+      "exit_code": 1,
+      "stdout_path": "status.stdout.json",
+      "stderr_path": "status.stderr.txt",
+      "meaning": "Expected finding exit: parameter drift, stale D-CALC/D-SYNTH and checkpoint; not a repair or scientific verdict"
+    },
+    {
+      "outer_tool_call": 5,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "STUDY_ROOT/runs/P6/B",
+      "exit_code": 0,
+      "stdin_program": "Independently compare current/old parameters, initial manifest and four snapshots; parse local CSV row coverage without metric recalculation; compare existing companion table with historical result; write report/state answer/audit details/read log",
+      "outputs": [
+        "report.md",
+        "state-answer.json",
+        "audit-details.json",
+        "reads.json"
+      ],
+      "output": "2979 report characters; all snapshot/table checks true; 8645 yr=0 rows"
+    },
+    {
+      "outer_tool_call": 6,
+      "tool": "exec_command",
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "STUDY_ROOT/runs/P6/B",
+      "exit_code": 0,
+      "stdin_program": "Final full project identity/mtime/path-set comparison; deduplicate explicit input reads with full SHA256/bytes; write execution record and inputs/artifacts manifest; verify JSON and report length",
+      "outputs": [
+        "project-after.json",
+        "project-readonly-verification.json",
+        "execution.json",
+        "inputs-and-artifacts.json"
+      ],
+      "output": "Final artifact paths/counts and immutable-project check returned"
+    }
+  ],
+  "tool_calls": 6,
+  "tool_call_breakdown": {
+    "functions.exec": 6,
+    "exec_command_nested": 6,
+    "subprocess_project_status": 1,
+    "network": 0,
+    "agents": 0
+  },
+  "network_calls": 0,
+  "violations": [],
+  "failures_and_remedies": [
+    {
+      "event": "Call 3 tool display truncated part of long content output",
+      "exit_code": 0,
+      "remedy": "Call 4 selectively reread initial constraints/brief/obligations/manifest/snapshots and state tail; all input reads fingerprinted",
+      "resolved": true
+    },
+    {
+      "event": "Read-only status exit 1",
+      "meaning": "Detected drift, not execution malfunction",
+      "remedy": "Report unchanged evidence and suspend old next action; no repair/rebind/checkpoint",
+      "resolved": "findings preserved, not repaired"
+    }
+  ],
+  "read_files": [
+    {
+      "path": "STUDY_ROOT/runs/P6/B/REQUEST.md",
+      "sha256": "2ccfdbf2b84e52fa2201575f47aec25e68327715f7a853ee25fd0227ba1f2223",
+      "bytes": 2370,
+      "purposes": [
+        "instruction/content read"
+      ],
+      "origin": "stage_request",
+      "relative_path": "REQUEST.md"
+    },
+    {
+      "path": "INPUT_DIR/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "purposes": [
+        "instruction/content read"
+      ],
+      "origin": "stage_input",
+      "relative_path": "PROTOCOL.md"
+    },
+    {
+      "path": "INPUT_DIR/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "purposes": [
+        "instruction/content read"
+      ],
+      "origin": "stage_input",
+      "relative_path": "RECORDING.md"
+    },
+    {
+      "path": "INPUT_DIR/STAGE-B.md",
+      "sha256": "03b613592f1272691a11d47f5f0cb1f69a39b34801448a46b7d65b7cb482294b",
+      "bytes": 746,
+      "purposes": [
+        "instruction/content read"
+      ],
+      "origin": "stage_input",
+      "relative_path": "STAGE-B.md"
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "bytes": 4540,
+      "purposes": [
+        "instruction/content read"
+      ],
+      "origin": "permitted_guidance",
+      "relative_path": "skills/rw-workflow/SKILL.md"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/skill-bridge.md",
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "bytes": 7641,
+      "purposes": [
+        "instruction/content read"
+      ],
+      "origin": "permitted_guidance",
+      "relative_path": "core/skill-bridge.md"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "bytes": 3841,
+      "purposes": [
+        "instruction/content read"
+      ],
+      "origin": "permitted_guidance",
+      "relative_path": "core/protocol.md"
+    },
+    {
+      "path": "PROJECT_ROOT/.gitignore",
+      "sha256": "667251f02f98a2e7fb0aa017bfabcb3158cb09472d88d379ed47e11ca9dde3a7",
+      "bytes": 89,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed"
+      ],
+      "origin": "project",
+      "relative_path": ".gitignore"
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVER.md",
+      "sha256": "bab3b3d04c66872ae1983f26856e56a95ccd80b6eaca38a789db1a09ce6c7a97",
+      "bytes": 2824,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected"
+      ],
+      "origin": "project",
+      "relative_path": "RECOVER.md"
+    },
+    {
+      "path": "PROJECT_ROOT/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "data/hour_2011.csv"
+    },
+    {
+      "path": "PROJECT_ROOT/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "model/frozen.json"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "notes/parameters.json"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "notes/rejected-parameters.json"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "notes/source-check.md"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "notes/unregistered-scratch.md"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "content inspected untruncated",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "provenance/initial/BRIEF.md"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "content inspected untruncated",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "provenance/initial/MANIFEST.json"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "content inspected untruncated",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "provenance/initial/constraints.json"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "content inspected untruncated",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "provenance/initial/obligations.json"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "provenance/initial/source-identities.json"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-A/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed"
+      ],
+      "origin": "project",
+      "relative_path": "provenance/task-A/PROTOCOL.md"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-A/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed"
+      ],
+      "origin": "project",
+      "relative_path": "provenance/task-A/RECORDING.md"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-A/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed"
+      ],
+      "origin": "project",
+      "relative_path": "provenance/task-A/STAGE-A.md"
+    },
+    {
+      "path": "PROJECT_ROOT/records/commands-A.json",
+      "sha256": "1b84466dea513e1514643b53fbefc77c3512396fb3adab26722a765dbcb07105",
+      "bytes": 16077,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed"
+      ],
+      "origin": "project",
+      "relative_path": "records/commands-A.json"
+    },
+    {
+      "path": "PROJECT_ROOT/records/guard-validation-A.json",
+      "sha256": "04b88fdac1a4b08f30b5f172d0ddf67a8a4d112fe6ffe9e5eea87d1f261daaa9",
+      "bytes": 330,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "content inspected untruncated"
+      ],
+      "origin": "project",
+      "relative_path": "records/guard-validation-A.json"
+    },
+    {
+      "path": "PROJECT_ROOT/records/initial-snapshots.json",
+      "sha256": "9c6d5ced3ada9f4a8071078abe15756f22ae88c2a7f6baccb74caf20164e8769",
+      "bytes": 527,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "content inspected untruncated",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "records/initial-snapshots.json"
+    },
+    {
+      "path": "PROJECT_ROOT/records/inputs-A.json",
+      "sha256": "86b090d5fae2349d64380c5b426aaab93373be47848bfc527e15a652c0213a9d",
+      "bytes": 11713,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed"
+      ],
+      "origin": "project",
+      "relative_path": "records/inputs-A.json"
+    },
+    {
+      "path": "PROJECT_ROOT/records/state.json",
+      "sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "bytes": 19212,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "records/state.json"
+    },
+    {
+      "path": "PROJECT_ROOT/records/validation-A.json",
+      "sha256": "b891b76e2b0264ab71feafe5df5144a870c146205690a829e3b89e6da4b92dce",
+      "bytes": 8200,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed"
+      ],
+      "origin": "project",
+      "relative_path": "records/validation-A.json"
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "results/result.json"
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "results/summary.md"
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "results/table.csv"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "scripts/compute.py"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/guarded_state_update.py",
+      "sha256": "1459933f428b1cde70a7a475e7b41c74d3bd3e91a8a2ad46af821a94fac4206b",
+      "bytes": 2642,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected"
+      ],
+      "origin": "project",
+      "relative_path": "scripts/guarded_state_update.py"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/project_status.py",
+      "sha256": "2403ad240e0642c67e0de548a817b4d3a72663c551c27f8a8188c6637eaaf7ab",
+      "bytes": 4080,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected"
+      ],
+      "origin": "project",
+      "relative_path": "scripts/project_status.py"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "snapshots/initial/notes/parameters.json"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "content inspected",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "snapshots/initial/results/result.json"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "snapshots/initial/results/summary.md"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "purposes": [
+        "full-file fingerprint; content inspection only when separately listed",
+        "independent audit"
+      ],
+      "origin": "project",
+      "relative_path": "snapshots/initial/results/table.csv"
+    }
+  ],
+  "read_coverage_note": "Explicit task/guidance/project material reads are listed with full-file SHA256 and bytes, including fingerprint-only files; Python standard-library/runtime imports are not research inputs. Self-generated external bookkeeping is reflected in artifact hashes. No external A execution record or old chat was read.",
+  "written_paths": [
+    "OUTPUT_DIR/audit-details.json",
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/inputs-and-artifacts.json",
+    "OUTPUT_DIR/project-after.json",
+    "OUTPUT_DIR/project-before.json",
+    "OUTPUT_DIR/project-readonly-verification.json",
+    "OUTPUT_DIR/reads.json",
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/state-answer.json",
+    "OUTPUT_DIR/status-command.json",
+    "OUTPUT_DIR/status.stderr.txt",
+    "OUTPUT_DIR/status.stdout.json"
+  ],
+  "project_unchanged": {
+    "project_root": "PROJECT_ROOT",
+    "comparison": "full SHA256 and byte length for every regular file, lstat mtime_ns/mode/size and complete path sets including root and all directories",
+    "unchanged": true,
+    "file_count": 32,
+    "directory_count": 14,
+    "differences": [],
+    "baseline": "project-before.json captured before running project status program",
+    "final": "project-after.json",
+    "atime_not_a_requested_invariant": true
+  },
+  "settings": {
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "token_usage": null,
+    "system_limit": null
+  },
+  "runtime_observed": {
+    "python_executable": "EVAL_PYTHON",
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "isolation_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  "actual_actions_not_taken": [
+    "No calculator execution or model refit",
+    "No guarded updater execution",
+    "No project-byte/mtime/directory-mtime writes",
+    "No reinitialization/rebinding/registration/checkpoint",
+    "No network, installations, other-agent contact, memory/personal-skill reads",
+    "No reading toolkit Python engine source, design/, evals/ or future/reference materials"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "status": "executed",
+  "started_at_utc": null,
+  "finished_at_utc": "2026-10-29T22:38:53.343483+00:00",
+  "duration_seconds": null,
+  "requested_configuration": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "context": "fork_turns=none for every task/arm",
+    "requested_output_unicode_limit": 5000,
+    "requested_tool_call_limit": 8,
+    "temperature": null,
+    "seed": null
+  },
+  "effective_configuration": {
+    "model": {
+      "value": null,
+      "source": "unknown"
+    },
+    "reasoning_effort": {
+      "value": null,
+      "source": "unknown"
+    },
+    "temperature": {
+      "value": null,
+      "source": "unknown"
+    },
+    "seed": {
+      "value": null,
+      "source": "unknown"
+    },
+    "hard_output_token_limit": {
+      "value": null,
+      "source": "unknown"
+    }
+  },
+  "context_isolation": {
+    "requested": "fresh context, fork_turns=none",
+    "evidence": "instruction-only",
+    "os_audited": false,
+    "same_metadata_catalogue_visible": true
+  },
+  "actual_reads": [
+    {
+      "sha256": "997698cfd2edaf430c25b5e987982ef81bfb6075db3ba3cf6d542016cc863025",
+      "logical_name": "tasks/Q37.md"
+    },
+    {
+      "sha256": "2e9a4c72860f3e33fa5cc37e053a6dc60421cc380153ced9c265e333ec77fe09",
+      "logical_name": "executor-prompt.md"
+    },
+    {
+      "sha256": "d5b17b5e6df5b0c797377460f7803aa8d87b7e5ba442b13b3714d73aecc9dcc1",
+      "logical_name": "templates/execution.template.json"
+    },
+    {
+      "sha256": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+      "logical_name": "rwt/skills/rw-review/SKILL.md"
+    },
+    {
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "logical_name": "rwt/core/skill-bridge.md"
+    },
+    {
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "logical_name": "rwt/core/protocol.md"
+    },
+    {
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "logical_name": "rwt/skills/rw-validation/SKILL.md"
+    },
+    {
+      "sha256": "2214938622ea2fd2134d1d96e7915fcbbc8883263408de177a85404ca5368e2b",
+      "logical_name": "rwt/profiles/methods/empirical-quantitative.md"
+    }
+  ],
+  "tool_calls": 3,
+  "output_tokens": null,
+  "network_calls": 0,
+  "output_unicode_characters": 998,
+  "output_bytes": 2450,
+  "violations": [],
+  "uncertainties": [
+    "开始时未采集墙钟时间，开始时间与完整耗时未知。",
+    "宿主未报告模型、推理强度、温度、种子或硬性输出限制；输出 token 数未知。",
+    "5000 字符和 8 次工具调用是请求限制，未确认宿主硬限制。"
+  ],
+  "failure": null,
+  "tool_call_accounting": {
+    "model_visible_functions_exec_calls": 3,
+    "nested_exec_command_calls": 3,
+    "total_including_nested": 6
+  },
+  "outputs": [
+    {
+      "path": "report.md",
+      "sha256": "82e2763afce8f0f4e5a2d74bc59213a4534f4d410f0b7bdf3ad16b433febb3f2",
+      "unicode_characters": 998,
+      "bytes": 2450
+    },
+    {
+      "path": "execution.json"
+    }
+  ],
+  "publication_projection": {
+    "raw_execution_sha256": "c0ef6e903aac23a12cc65f3e1eef928f9d35a485447e006aebcc3ed0517b074d",
+    "changes": [
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name",
+      "read entry field path mapped to logical_name"
+    ],
+    "scope": "Administrative fields only; report bytes, effective unknowns and scientific content unchanged."
+  }
+}

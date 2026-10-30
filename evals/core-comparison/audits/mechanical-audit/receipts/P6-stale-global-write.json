@@ -1,0 +1,26 @@
+{
+  "name": "P6-stale-global-write",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P6/record-CAS/project/scripts/guarded_state_update.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P6/record-CAS/project",
+    "--candidate",
+    "STUDY_ROOT/mechanical-audit/P6/record-CAS/P6-stale-global-write.json",
+    "--expected-version",
+    "3",
+    "--expected-sha256",
+    "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+    "--reason",
+    "independent audit probe"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P6/record-CAS/project",
+  "exit_code": 2,
+  "stdout": "{\"updated\": false, \"error\": \"ValueError\", \"message\": \"Conflict: authoritative state has changed; reread it before editing\"}\n",
+  "stderr": "",
+  "project_identical_bytes_mtime_directory_mtime": true,
+  "changed_files": [],
+  "changed_directories": []
+}

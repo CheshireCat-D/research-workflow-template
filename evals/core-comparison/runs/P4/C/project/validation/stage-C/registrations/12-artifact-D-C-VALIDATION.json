@@ -1,0 +1,15 @@
+{
+  "id": "D-C-VALIDATION",
+  "type": "validation-record",
+  "description": "Actual revised-window rerun, independent metrics, table/input checks and protected-file identity comparison",
+  "path": "validation/stage-C/verification.json",
+  "derived_from": [
+    "evidence:D-PARAM",
+    "evidence:D-RAW",
+    "artifact:D-CODE",
+    "artifact:D-MODEL",
+    "artifact:D-RESULT",
+    "artifact:D-TABLE",
+    "artifact:D-C-VERIFY-CODE"
+  ]
+}

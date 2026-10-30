@@ -1,0 +1,718 @@
+{
+  "scope": "No scientific prose, numeric or score changes; only absolute locator projections and explicit distribution omissions. Original source and execution bytes remain sealed.",
+  "files": [
+    {
+      "original_sha256": "a35c5083f3645a09f9fcbdc7ce0a23c6f96256e368875216672a786f651cd708",
+      "path": "runs/P5/C/report.md",
+      "sha256": "a35c5083f3645a09f9fcbdc7ce0a23c6f96256e368875216672a786f651cd708",
+      "changes": []
+    },
+    {
+      "original_sha256": "93dfc48e6c50457110c623341790bb60d93435782cb6f1fd05a75b90703903c5",
+      "path": "runs/P5/C/raw-execution.json",
+      "sha256": "3b4cb4352986e3f30370f9cecbfcb049762b498538a3c76d6a99a5fbefdad89c",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/evidence/A/current-status.json",
+      "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/evidence/A/normal/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/evidence/A/normal/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/evidence/A/normal-execution.json",
+      "sha256": "eb5496105db7d2828317169534e8734694595c077094867f6c58ff5e577d1a41",
+      "changes": [
+        "absolute-paths-to-logical-locators",
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/evidence/A/rejected-execution.json",
+      "sha256": "8787c7b667f4272fa7861a4bf2bce180d6ff912fc7db3a02967200fb002ac0e2",
+      "changes": [
+        "absolute-paths-to-logical-locators",
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/evidence/A/status-execution.json",
+      "sha256": "8591e61cb3ae92f202ea481ad3b7e9d37cfdade4099fc4f0bd6d3c5bcb86aaac",
+      "changes": [
+        "absolute-paths-to-logical-locators",
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/evidence/A/validation-checks.json",
+      "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/provenance/initial/BRIEF.md",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/provenance/initial/MANIFEST.json",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/provenance/initial/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/provenance/initial/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/provenance/initial/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/provenance/initial/constraints.json",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/provenance/initial/obligations.json",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/provenance/initial/source-identities.json",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "826f355ae1301c9c879b4440b78edbe93f173cb696df00b28c1c26a6de338a95",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/state.json",
+      "sha256": "826f355ae1301c9c879b4440b78edbe93f173cb696df00b28c1c26a6de338a95",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/versions/A-draft/RECOVERY.md",
+      "sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/versions/A-initial/index.json",
+      "sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/versions/A-initial/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/versions/A-initial/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/versions/A-initial/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/recorded-research-state/versions/A-initial/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "98608a9d3ce937ba87d7fd2689f8935798f641988ddf85b1f0c94f3a29d8153e",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/RECOVERY.md",
+      "sha256": "98608a9d3ce937ba87d7fd2689f8935798f641988ddf85b1f0c94f3a29d8153e",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/notes/parameters.json",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/notes/rejected-parameters.json",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/notes/source-check.md",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "1dfc49a50e7a029ee6e91715cb7942be5d90869d66495ea84281efe3dcaf4655",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/files/scripts/manage.py",
+      "sha256": "1dfc49a50e7a029ee6e91715cb7942be5d90869d66495ea84281efe3dcaf4655",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "eb89ecd91b670ce1815cfae321d001f746f078fc0893a6d9b8c1d3c17daf9bb6",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-drift-before-recompute/index.json",
+      "sha256": "eb89ecd91b670ce1815cfae321d001f746f078fc0893a6d9b8c1d3c17daf9bb6",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "68cf475ed8d8b5c8fececdcdfc3eb9083cb0f5a78b00af9daa5647510fe2108d",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-final-verified/files/recorded-research-state/state.json",
+      "sha256": "68cf475ed8d8b5c8fececdcdfc3eb9083cb0f5a78b00af9daa5647510fe2108d",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "807fd2ffaa3968615fb191e1a13c16009c3d130b14fd8cecaa85b08bde62ee24",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-final-verified/files/RECOVERY.md",
+      "sha256": "807fd2ffaa3968615fb191e1a13c16009c3d130b14fd8cecaa85b08bde62ee24",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-final-verified/files/notes/parameters.json",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-final-verified/files/results/result.json",
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "d10158c47c54bdf88673606ca136716b97b65e042317bd17082dd6db7e2e5b27",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-final-verified/files/results/summary.md",
+      "sha256": "d10158c47c54bdf88673606ca136716b97b65e042317bd17082dd6db7e2e5b27",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-final-verified/files/results/table.csv",
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "da859bc9249cc203ee1cc23b20b2c0dbefb263ceddd26e9a7f94e1bf7461816b",
+      "path": "runs/P5/C/project/recorded-research-state/checkpoints/C-final-verified/index.json",
+      "sha256": "da859bc9249cc203ee1cc23b20b2c0dbefb263ceddd26e9a7f94e1bf7461816b",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/A/current-status.json",
+      "sha256": "e8c2906e8c2236ff2baacfe4ce5e967717c19dd2996f284169c1fc85ecd989a5",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/A/normal/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/A/normal/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "e3c9b21e0c7a8800d7a3f67562d00000160635f464cd4c063cea9594bd6651b2",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/A/normal-execution.json",
+      "sha256": "eb5496105db7d2828317169534e8734694595c077094867f6c58ff5e577d1a41",
+      "changes": [
+        "absolute-paths-to-logical-locators",
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "21748e29c1574fa93efcb1ee047876546a1126652b2395296ed21bc8a77ee888",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/A/rejected-execution.json",
+      "sha256": "8787c7b667f4272fa7861a4bf2bce180d6ff912fc7db3a02967200fb002ac0e2",
+      "changes": [
+        "absolute-paths-to-logical-locators",
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "448b32da482c47569a09aa7892b14fd51bd0f38d2073530466f7eef1a6fcbebb",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/A/status-execution.json",
+      "sha256": "8591e61cb3ae92f202ea481ad3b7e9d37cfdade4099fc4f0bd6d3c5bcb86aaac",
+      "changes": [
+        "absolute-paths-to-logical-locators",
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/A/validation-checks.json",
+      "sha256": "11056e08d191289893c2107af7513b8dd892f93d21decc8988c9e69a7b8b688e",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "84bc25ab9ebf3948d0b68a4eaebcb77faf26ef7e259e7ef752c32d94902ea202",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/C/final-status-execution.json",
+      "sha256": "e8d2479c1f3d585adec3dc79a59a61cf4565d9701be973dcdb205a10abb37447",
+      "changes": [
+        "absolute-paths-to-logical-locators",
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "469b3beb0908533381bab178d77ceeffe7540f73cf8dbb9451c9256a76aa12e0",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/C/intermediate-read-only-check.json",
+      "sha256": "469b3beb0908533381bab178d77ceeffe7540f73cf8dbb9451c9256a76aa12e0",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "6e06b9ab9990be07a2ae47614656a146a3a7c0959fb2f6518d5abd6e29a71eeb",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/C/intermediate-status-execution.json",
+      "sha256": "304d05abdff17312a362e3b71ffa92c9c93b00451562fd7f0e2f3368cb5320dd",
+      "changes": [
+        "absolute-paths-to-logical-locators",
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "87c10f5f6d4be7c4223aefde29718c08aeff5d20fd54d20fb4567bd932206767",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/C/pre-recompute-state.json",
+      "sha256": "87c10f5f6d4be7c4223aefde29718c08aeff5d20fd54d20fb4567bd932206767",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "85eaae10f1a32ad0d7b2126565665a437bbd72d87feb6e08284eb60426ab0026",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/C/recompute-execution.json",
+      "sha256": "5d406c2f203b00e42c884692ca368a58deb3f9ac2f0bcdceda01e570f445024b",
+      "changes": [
+        "absolute-paths-to-logical-locators",
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/C/recomputed/result.json",
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/C/recomputed/table.csv",
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "fdf3e919a78089c6c9e9c086188f40936b7c1a4023d19540843f438e17a707a5",
+      "path": "runs/P5/C/project/recorded-research-state/evidence/C/validation-checks.json",
+      "sha256": "fdf3e919a78089c6c9e9c086188f40936b7c1a4023d19540843f438e17a707a5",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/C/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/C/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/C/STAGE-C.md",
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/C/author-revision/AUTHOR-REVISION.md",
+      "sha256": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/C/author-revision/approved-parameters.json",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/initial/BRIEF.md",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/initial/MANIFEST.json",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/initial/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/initial/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/initial/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/initial/constraints.json",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/initial/obligations.json",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "path": "runs/P5/C/project/recorded-research-state/provenance/initial/source-identities.json",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "68cf475ed8d8b5c8fececdcdfc3eb9083cb0f5a78b00af9daa5647510fe2108d",
+      "path": "runs/P5/C/project/recorded-research-state/state.json",
+      "sha256": "68cf475ed8d8b5c8fececdcdfc3eb9083cb0f5a78b00af9daa5647510fe2108d",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0",
+      "path": "runs/P5/C/project/recorded-research-state/versions/A-draft/RECOVERY.md",
+      "sha256": "fc42db21351def880298dc4c6aea5cf136c4ccb1a2e1a404888f636be0b8a2d0",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3",
+      "path": "runs/P5/C/project/recorded-research-state/versions/A-initial/index.json",
+      "sha256": "1d8a530fed8ae84e9a78a7043ecdb6f8a9b7634f310a8e4880efd633871ea3c3",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "path": "runs/P5/C/project/recorded-research-state/versions/A-initial/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "path": "runs/P5/C/project/recorded-research-state/versions/A-initial/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "path": "runs/P5/C/project/recorded-research-state/versions/A-initial/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "path": "runs/P5/C/project/recorded-research-state/versions/A-initial/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "changes": [
+        "reserved-state-directory-to-recorded-source-path"
+      ]
+    },
+    {
+      "original_sha256": "93dfc48e6c50457110c623341790bb60d93435782cb6f1fd05a75b90703903c5",
+      "path": "runs/P5/C/output/audit-ledger.json",
+      "sha256": "3b4cb4352986e3f30370f9cecbfcb049762b498538a3c76d6a99a5fbefdad89c",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "84bc25ab9ebf3948d0b68a4eaebcb77faf26ef7e259e7ef752c32d94902ea202",
+      "path": "runs/P5/C/output/final-status-execution.json",
+      "sha256": "e8d2479c1f3d585adec3dc79a59a61cf4565d9701be973dcdb205a10abb37447",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "1ba75489513d1de22c02424e1ae080019dad14e18d967fce651afec9dd17e2ad",
+      "path": "runs/P5/C/output/final-status.stdout.json",
+      "sha256": "1ba75489513d1de22c02424e1ae080019dad14e18d967fce651afec9dd17e2ad",
+      "changes": []
+    },
+    {
+      "original_sha256": "71b563b04f1216c9f739142f26c249fb3a96b4ead488b27a7c12f7c2aedae36c",
+      "path": "runs/P5/C/output/inputs-and-artifacts.json",
+      "sha256": "71b563b04f1216c9f739142f26c249fb3a96b4ead488b27a7c12f7c2aedae36c",
+      "changes": []
+    },
+    {
+      "original_sha256": "2febf123da0544ed9757215df9a3c5955c8d95a856a35eacef93f5b242d9cd9f",
+      "path": "runs/P5/C/output/intermediate-read-only-check.json",
+      "sha256": "2febf123da0544ed9757215df9a3c5955c8d95a856a35eacef93f5b242d9cd9f",
+      "changes": []
+    },
+    {
+      "original_sha256": "6e06b9ab9990be07a2ae47614656a146a3a7c0959fb2f6518d5abd6e29a71eeb",
+      "path": "runs/P5/C/output/intermediate-status-execution.json",
+      "sha256": "304d05abdff17312a362e3b71ffa92c9c93b00451562fd7f0e2f3368cb5320dd",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "runs/P5/C/output/intermediate-status.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "original_sha256": "426eacc21dfc47ef508f478b67a0951df16730bd44baff1d8751d1772f92b313",
+      "path": "runs/P5/C/output/intermediate-status.stdout.json",
+      "sha256": "426eacc21dfc47ef508f478b67a0951df16730bd44baff1d8751d1772f92b313",
+      "changes": []
+    },
+    {
+      "original_sha256": "85eaae10f1a32ad0d7b2126565665a437bbd72d87feb6e08284eb60426ab0026",
+      "path": "runs/P5/C/output/recompute-execution.json",
+      "sha256": "5d406c2f203b00e42c884692ca368a58deb3f9ac2f0bcdceda01e570f445024b",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "cd2d42194b2737c70bd18a6fb9d9a55c1a4c395c87a12bc041f64dbf720b2dbf",
+      "path": "runs/P5/C/output/stage-c.py",
+      "sha256": "77eeaa20750e0540f4279f2c2d1bc88507e882cb088dbda3e34e66d374a18be5",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "43e4d7e6c6771de797d8824952db5bfac00516a0bf0c06c6e0fcd73aa5dbff11",
+      "path": "runs/P5/C/output/state-answer.json",
+      "sha256": "f2d4bfa9c3615edcad591004fa1738a8e568519fed626f02d680d78ca2fa81b3",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "90bce0aba52a36b6b86ce7534e758ba6d570c521f9ab20ff4497a66ea3b428d0",
+      "path": "runs/P5/C/output/validation-checks.json",
+      "sha256": "90bce0aba52a36b6b86ce7534e758ba6d570c521f9ab20ff4497a66ea3b428d0",
+      "changes": []
+    },
+    {
+      "original_sha256": "c0e5f0d2b6420dd04de34a885483e2ee6639a016abc61012c5cfea9855bbeccb",
+      "path": "runs/P5/C/seal.json",
+      "sha256": "c0e5f0d2b6420dd04de34a885483e2ee6639a016abc61012c5cfea9855bbeccb",
+      "changes": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "artifact",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"derived_from\": [\"artifact:T-RESULT\"], \"description\": \"Current rho=4 companion table copied from actual calculation; every numeric row matches canonical JSON.\", \"id\": \"T-TABLE\", \"path\": \"results/table.csv\", \"type\": \"numeric-table\", \"notes\": \"Old full bytes in history/stage-c-before-recompute/results and history/stage-a-initial; revision reason in notes/stage-c-validation.json.\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"T-TABLE\",\n  \"version\": 2,\n  \"revision\": 35,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

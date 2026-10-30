@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "PROJECT_ROOT/scripts/project_status.py",
+    "--root",
+    "PROJECT_ROOT"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout_path": "status-D.json",
+  "stderr": ""
+}

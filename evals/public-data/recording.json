@@ -584,8 +584,8 @@
       "bytes": 7568
     },
     "examples/public-penguins/README.md": {
-      "sha256": "19383584c6d1c67270024b48efe3b1e8667c697c6ca7d6529762dd88afbb4ccc",
-      "bytes": 6181
+      "sha256": "9091ae07e0f39c8c33daafa92d1ba1e417e2c9593ddbf5a3600dc2a1c4975d42",
+      "bytes": 9496
     },
     "examples/public-penguins/analyze.py": {
       "sha256": "a7c4cbb6c8c8455b1dc2293298d962ae9ec198c5ff17524444f75e8d2703d9e0",
@@ -623,6 +623,10 @@
       "sha256": "046aded14f582bf53a876422ccd528c19ad8fc0b499158c3d11066b61b9d0016",
       "bytes": 2406
     },
+    "examples/public-penguins/run_project.py": {
+      "sha256": "2348f6c6c0571d00cb2521e3ae2ecb1afabc130e0249bb1fa3874ef460178227",
+      "bytes": 20097
+    },
     "examples/public-penguins/source.json": {
       "sha256": "6289e3269feca85d38e9c0cbb56ac7f095389d8b098d2fb2b104847b2ddaca60",
       "bytes": 683
@@ -635,5 +639,6 @@
       "sha256": "6268e3f004c0133014e5ca71666c96505524a2ebe78a345334ee8572196b0c34",
       "bytes": 7996
     }
-  }
+  },
+  "current_wrapper_note": "Current public example adds run_project.py and one-command documentation; the old scientific task and independent R review retain their original executed resource identities. This wrapper is separately tested and executed."
 }

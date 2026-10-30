@@ -1,0 +1,501 @@
+{
+  "scope": "Self-reported outer calls and declared whole-file identity sizes. Hash-only reads may be included: these are not token/context counts. Saved unique Python content includes setup, tracking and optional scientific validation scripts; not all code is overhead, nor the total coding effort (inline snippets may not be files). Provided compute.py and installed runtime excluded from custom code; duplicate snapshots deduplicated by bytes. Installed files are actual delivered resources, not authored code. No time/cost/speed inference.",
+  "chains": [
+    {
+      "chain_id": "P1",
+      "case_id": "T",
+      "arm": "core",
+      "phases": [
+        {
+          "phase": "A",
+          "outer_tool_calls_self_reported": 16,
+          "report_unicode_characters": 1914,
+          "declared_guidance_markdown_file_identities": 76,
+          "declared_guidance_whole_file_bytes": 256422,
+          "deviations": []
+        },
+        {
+          "phase": "B",
+          "outer_tool_calls_self_reported": 7,
+          "report_unicode_characters": 3647,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": [
+            {
+              "tool_call": 2,
+              "kind": "interpreter_path_deviation",
+              "description": "Used python3 -I -B instead of the designated EVAL_PYTHON for an instruction-read/hash command. The command succeeded and did not write project files.",
+              "remediation": "All subsequent Python commands use the designated interpreter with -I -B; original deviation retained."
+            }
+          ]
+        },
+        {
+          "phase": "C",
+          "outer_tool_calls_self_reported": 14,
+          "report_unicode_characters": 2559,
+          "declared_guidance_markdown_file_identities": 43,
+          "declared_guidance_whole_file_bytes": 150392,
+          "deviations": []
+        },
+        {
+          "phase": "D",
+          "outer_tool_calls_self_reported": 9,
+          "report_unicode_characters": 3026,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        }
+      ],
+      "sum_outer_tool_calls": 46,
+      "saved_custom_python_unique_contents": 4,
+      "saved_custom_python_unique_bytes": 43888,
+      "saved_custom_python_unique_lines": 464,
+      "custom_python_examples": [
+        {
+          "bytes": 3780,
+          "example_path": "sealed-output/repair_and_finish.py",
+          "lines": 52
+        },
+        {
+          "bytes": 17836,
+          "example_path": "sealed-output/run_stage_a.py",
+          "lines": 184
+        },
+        {
+          "bytes": 19089,
+          "example_path": "sealed-output/finalize.py",
+          "lines": 177
+        },
+        {
+          "bytes": 3183,
+          "example_path": "sealed-output/verify_delivery.py",
+          "lines": 51
+        }
+      ],
+      "final_installed_runtime_files": 68,
+      "final_installed_runtime_bytes": 414713,
+      "git_repository_delivered": false
+    },
+    {
+      "chain_id": "P2",
+      "case_id": "D",
+      "arm": "baseline",
+      "phases": [
+        {
+          "phase": "A",
+          "outer_tool_calls_self_reported": 7,
+          "report_unicode_characters": 1842,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        },
+        {
+          "phase": "B",
+          "outer_tool_calls_self_reported": 7,
+          "report_unicode_characters": 3261,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        },
+        {
+          "phase": "C",
+          "outer_tool_calls_self_reported": 8,
+          "report_unicode_characters": 2269,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        },
+        {
+          "phase": "D",
+          "outer_tool_calls_self_reported": 7,
+          "report_unicode_characters": 3174,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        }
+      ],
+      "sum_outer_tool_calls": 29,
+      "saved_custom_python_unique_contents": 4,
+      "saved_custom_python_unique_bytes": 45180,
+      "saved_custom_python_unique_lines": 405,
+      "custom_python_examples": [
+        {
+          "bytes": 3331,
+          "example_path": "sealed-project/management/status.py",
+          "lines": 40
+        },
+        {
+          "bytes": 29251,
+          "example_path": "sealed-output/build_stage_a.py",
+          "lines": 242
+        },
+        {
+          "bytes": 8400,
+          "example_path": "sealed-output/finalize_audit.py",
+          "lines": 77
+        },
+        {
+          "bytes": 4198,
+          "example_path": "sealed-project/management/verify_current.py",
+          "lines": 46
+        }
+      ],
+      "final_installed_runtime_files": 0,
+      "final_installed_runtime_bytes": 0,
+      "git_repository_delivered": false
+    },
+    {
+      "chain_id": "P3",
+      "case_id": "T",
+      "arm": "guidance",
+      "phases": [
+        {
+          "phase": "A",
+          "outer_tool_calls_self_reported": 13,
+          "report_unicode_characters": 2344,
+          "declared_guidance_markdown_file_identities": 3,
+          "declared_guidance_whole_file_bytes": 16022,
+          "deviations": [
+            {
+              "action": "Attempted ps process inventory solely to clean own stalled PDF inspection",
+              "status": "sandbox denied before process data obtained",
+              "scope_note": "Process inspection was outside the strictly named input/project file workflow; retained as an attempted scope deviation, not silently omitted."
+            }
+          ]
+        },
+        {
+          "phase": "B",
+          "outer_tool_calls_self_reported": 8,
+          "report_unicode_characters": 2473,
+          "declared_guidance_markdown_file_identities": 3,
+          "declared_guidance_whole_file_bytes": 16022,
+          "deviations": []
+        },
+        {
+          "phase": "C",
+          "outer_tool_calls_self_reported": 9,
+          "report_unicode_characters": 2662,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        },
+        {
+          "phase": "D",
+          "outer_tool_calls_self_reported": 8,
+          "report_unicode_characters": 2993,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        }
+      ],
+      "sum_outer_tool_calls": 38,
+      "saved_custom_python_unique_contents": 8,
+      "saved_custom_python_unique_bytes": 96119,
+      "saved_custom_python_unique_lines": 754,
+      "custom_python_examples": [
+        {
+          "bytes": 3168,
+          "example_path": "sealed-project/resume.py",
+          "lines": 39
+        },
+        {
+          "bytes": 2929,
+          "example_path": "sealed-project/update-state.py",
+          "lines": 44
+        },
+        {
+          "bytes": 15362,
+          "example_path": "sealed-output/finalize.py",
+          "lines": 67
+        },
+        {
+          "bytes": 15461,
+          "example_path": "sealed-output/build_project.py",
+          "lines": 156
+        },
+        {
+          "bytes": 18154,
+          "example_path": "sealed-output/finalize.py",
+          "lines": 127
+        },
+        {
+          "bytes": 12513,
+          "example_path": "sealed-output/finalize.py",
+          "lines": 103
+        },
+        {
+          "bytes": 20733,
+          "example_path": "sealed-output/stage_c.py",
+          "lines": 170
+        },
+        {
+          "bytes": 7799,
+          "example_path": "sealed-output/finish.py",
+          "lines": 48
+        }
+      ],
+      "final_installed_runtime_files": 0,
+      "final_installed_runtime_bytes": 0,
+      "git_repository_delivered": false
+    },
+    {
+      "chain_id": "P4",
+      "case_id": "D",
+      "arm": "core",
+      "phases": [
+        {
+          "phase": "A",
+          "outer_tool_calls_self_reported": 22,
+          "report_unicode_characters": 1932,
+          "declared_guidance_markdown_file_identities": 44,
+          "declared_guidance_whole_file_bytes": 153378,
+          "deviations": [
+            {
+              "type": "implicit-tool-resource-access",
+              "path": "TOOLKIT_ROOT/design/catalog.json",
+              "reason": "Mandatory init --connect-skills and core validation internally read the stable catalog under design/. This runtime access conflicts with a literal no-design-read interpretation. No manual content inspection, evaluator material or eval directory access occurred. Required official interface was retained; the exception is disclosed rather than hidden."
+            }
+          ]
+        },
+        {
+          "phase": "B",
+          "outer_tool_calls_self_reported": 12,
+          "report_unicode_characters": 3658,
+          "declared_guidance_markdown_file_identities": 41,
+          "declared_guidance_whole_file_bytes": 144413,
+          "deviations": [
+            {
+              "call": 3,
+              "kind": "forbidden_path_content_read",
+              "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/design/catalog.json",
+              "bytes": 25477,
+              "sha256": "c164def668d75f14a2d12d414fee6dcf287f96d33e293fbdaf8536c9cbe798c9",
+              "description": "Initial broad SHA inventory read forbidden design content solely to hash; no semantic content displayed/used. Not repeated."
+            }
+          ]
+        },
+        {
+          "phase": "C",
+          "outer_tool_calls_self_reported": 11,
+          "report_unicode_characters": 2815,
+          "declared_guidance_markdown_file_identities": 43,
+          "declared_guidance_whole_file_bytes": 150392,
+          "deviations": [
+            {
+              "type": "recording",
+              "detail": "First calculator stdout/stderr names overwritten by retry; numeric output and first verifier failure preserved, exact first calculator raw stdout not recoverable."
+            }
+          ]
+        },
+        {
+          "phase": "D",
+          "outer_tool_calls_self_reported": 10,
+          "report_unicode_characters": 3557,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        }
+      ],
+      "sum_outer_tool_calls": 55,
+      "saved_custom_python_unique_contents": 7,
+      "saved_custom_python_unique_bytes": 66325,
+      "saved_custom_python_unique_lines": 583,
+      "custom_python_examples": [
+        {
+          "bytes": 18324,
+          "example_path": "sealed-output/perform-first-failed.py",
+          "lines": 141
+        },
+        {
+          "bytes": 6232,
+          "example_path": "sealed-output/final_check.py",
+          "lines": 58
+        },
+        {
+          "bytes": 12974,
+          "example_path": "sealed-output/finalize.py",
+          "lines": 102
+        },
+        {
+          "bytes": 1114,
+          "example_path": "sealed-output/auditrun.py",
+          "lines": 36
+        },
+        {
+          "bytes": 18384,
+          "example_path": "sealed-output/perform.py",
+          "lines": 141
+        },
+        {
+          "bytes": 4734,
+          "example_path": "sealed-project/validation/stage-C/verify.py",
+          "lines": 53
+        },
+        {
+          "bytes": 4563,
+          "example_path": "sealed-project/history/stage-C-verification-failure/verify.py",
+          "lines": 52
+        }
+      ],
+      "final_installed_runtime_files": 68,
+      "final_installed_runtime_bytes": 414713,
+      "git_repository_delivered": false
+    },
+    {
+      "chain_id": "P5",
+      "case_id": "T",
+      "arm": "baseline",
+      "phases": [
+        {
+          "phase": "A",
+          "outer_tool_calls_self_reported": 8,
+          "report_unicode_characters": 2757,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        },
+        {
+          "phase": "B",
+          "outer_tool_calls_self_reported": 8,
+          "report_unicode_characters": 3105,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        },
+        {
+          "phase": "C",
+          "outer_tool_calls_self_reported": 10,
+          "report_unicode_characters": 3164,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        },
+        {
+          "phase": "D",
+          "outer_tool_calls_self_reported": 8,
+          "report_unicode_characters": 3834,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        }
+      ],
+      "sum_outer_tool_calls": 34,
+      "saved_custom_python_unique_contents": 6,
+      "saved_custom_python_unique_bytes": 104462,
+      "saved_custom_python_unique_lines": 1120,
+      "custom_python_examples": [
+        {
+          "bytes": 5383,
+          "example_path": "sealed-project/scripts/manage.py",
+          "lines": 90
+        },
+        {
+          "bytes": 21730,
+          "example_path": "sealed-output/stage_driver.py",
+          "lines": 285
+        },
+        {
+          "bytes": 18332,
+          "example_path": "sealed-output/finalize.py",
+          "lines": 141
+        },
+        {
+          "bytes": 21604,
+          "example_path": "sealed-output/stage_driver.executed.py",
+          "lines": 285
+        },
+        {
+          "bytes": 4922,
+          "example_path": "sealed-output/audit.py",
+          "lines": 64
+        },
+        {
+          "bytes": 32491,
+          "example_path": "sealed-output/stage-c.py",
+          "lines": 255
+        }
+      ],
+      "final_installed_runtime_files": 0,
+      "final_installed_runtime_bytes": 0,
+      "git_repository_delivered": false
+    },
+    {
+      "chain_id": "P6",
+      "case_id": "D",
+      "arm": "guidance",
+      "phases": [
+        {
+          "phase": "A",
+          "outer_tool_calls_self_reported": 7,
+          "report_unicode_characters": 2076,
+          "declared_guidance_markdown_file_identities": 3,
+          "declared_guidance_whole_file_bytes": 16022,
+          "deviations": []
+        },
+        {
+          "phase": "B",
+          "outer_tool_calls_self_reported": 6,
+          "report_unicode_characters": 2939,
+          "declared_guidance_markdown_file_identities": 3,
+          "declared_guidance_whole_file_bytes": 16022,
+          "deviations": []
+        },
+        {
+          "phase": "C",
+          "outer_tool_calls_self_reported": 12,
+          "report_unicode_characters": 2115,
+          "declared_guidance_markdown_file_identities": 3,
+          "declared_guidance_whole_file_bytes": 16022,
+          "deviations": []
+        },
+        {
+          "phase": "D",
+          "outer_tool_calls_self_reported": 8,
+          "report_unicode_characters": 3320,
+          "declared_guidance_markdown_file_identities": 0,
+          "declared_guidance_whole_file_bytes": 0,
+          "deviations": []
+        }
+      ],
+      "sum_outer_tool_calls": 33,
+      "saved_custom_python_unique_contents": 6,
+      "saved_custom_python_unique_bytes": 73709,
+      "saved_custom_python_unique_lines": 679,
+      "custom_python_examples": [
+        {
+          "bytes": 2642,
+          "example_path": "sealed-project/scripts/guarded_state_update.py",
+          "lines": 34
+        },
+        {
+          "bytes": 4080,
+          "example_path": "sealed-project/scripts/project_status.py",
+          "lines": 53
+        },
+        {
+          "bytes": 16889,
+          "example_path": "sealed-output/finalize.py",
+          "lines": 109
+        },
+        {
+          "bytes": 23528,
+          "example_path": "sealed-output/build_project.py",
+          "lines": 234
+        },
+        {
+          "bytes": 7686,
+          "example_path": "sealed-output/stage_c_driver.snapshot.py",
+          "lines": 85
+        },
+        {
+          "bytes": 18884,
+          "example_path": "sealed-output/stage_c_driver.py",
+          "lines": 164
+        }
+      ],
+      "final_installed_runtime_files": 0,
+      "final_installed_runtime_bytes": 0,
+      "git_repository_delivered": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "read_only": true,
+  "scope": "Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.",
+  "installed_integrity": true,
+  "source_version_matches": null,
+  "source_comparison_performed": false,
+  "target": ".agents/skills",
+  "skills": [
+    "rw-workflow",
+    "rw-question",
+    "rw-literature",
+    "rw-innovation",
+    "rw-candidates",
+    "rw-validation",
+    "rw-writing",
+    "rw-review",
+    "rw-figures"
+  ],
+  "files": 67,
+  "payload_sha256": "c2dd5fa54cee747ff61cb597779320ca498a9cb145c8fce422735091cdc5fcc1",
+  "findings": []
+}

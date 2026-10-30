@@ -1,0 +1,1282 @@
+{
+  "checkpoint": {
+    "config_sha256": "524d57b3666e1ec2ca0224b04c33fd4b8f116e8bec20adb9ddf37619f8b80e5d",
+    "created_at": "2026-10-30T01:16:43.863363+00:00",
+    "files": {
+      "RECOVERY.md": "3457bf941d469813c12d8e274e42164ddf2f1df89394ac5b05d8042f6eaa8610",
+      "history/stage-a-initial/manifest.json": "7c29c49c73a4f7db23076c7fbc530886c16bbb7115c6e8d4d91ad95f1d880f0c",
+      "history/stage-a-initial/notes/parameters.json": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "history/stage-a-initial/results/result.json": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "history/stage-a-initial/results/summary.md": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "history/stage-a-initial/results/table.csv": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "history/stage-c-before-recompute/manifest.json": "952d95b51a6b63a5594b798693029d653b9503eef7cb77ea3cc2fa590d713e80",
+      "notes/parameters.json": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "notes/source-check.md": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "notes/stage-a-operational-corrections.json": "f1c33cc09c438d70cf8d3dfe528e6fd60dfe0f79b7230e3faf82fb7a6bb96c75",
+      "notes/stage-a-validation.json": "d786eff3467730579d8e30e5b334d7169206509c42f70c4683d803a5397e4af2",
+      "notes/stage-c-operational-corrections.json": "4ca3e56da857596cd7de946d482066c02a1244849710d232b0dcba33a8bc5973",
+      "notes/stage-c-validation.json": "874b0608c67dd861197c35ce93eca1bc5c614ae95d3fe8a9ce1708409f481f4c",
+      "provenance/stage-c/AUTHOR-REVISION.md": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+      "provenance/stage-c/approved-parameters.json": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "results/result.json": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "results/summary.md": "3cb32dfae5a57c807be103be48130efc9b6eaf3a0709bc5394dbd19b0da9d038",
+      "results/table.csv": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "sources/howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "validation/stage-c/check-drift.json": "018c0057403f13506a315bd2e010f6ea779e23f12030e6cc67242df5aecca7a1",
+      "validation/stage-c/checkpoint-drift.json": "3726ae9fd97fdd76373b36f8ce32b2eb3d22c5623a33e3da9adad821a70f4abd"
+    },
+    "note": "Recovery checkpoint; not scientific certification.",
+    "records_sha256": "2092c2ea8cc85d35ebf3590c1481985eafa5abe1087ad4bd0454233922c71e00"
+  },
+  "cursor": {
+    "activity_id": "T-SYNTH",
+    "next_action": "将rho=4、alpha=0.05、v=[0,1,10,100]的边界表与更新摘要交作者内容复核；暂不扩展到事后选择rho。"
+  },
+  "history": [
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.397857+00:00",
+      "id": "T-SRC",
+      "kind": "source",
+      "previous": null,
+      "revision": 1
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.398213+00:00",
+      "id": "T-REMOTE",
+      "kind": "source",
+      "previous": null,
+      "revision": 2
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.399235+00:00",
+      "id": "T-RAW",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 3
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.399837+00:00",
+      "id": "T-PARAM",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 4
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.400433+00:00",
+      "id": "T-CLAIM",
+      "kind": "statement",
+      "previous": null,
+      "revision": 5
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.401083+00:00",
+      "id": "T-REL",
+      "kind": "relation",
+      "previous": null,
+      "revision": 6
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.401793+00:00",
+      "id": "T-CHOICE",
+      "kind": "decision",
+      "previous": null,
+      "revision": 7
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.402588+00:00",
+      "id": "T-CODE",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 8
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.403487+00:00",
+      "id": "T-RESULT",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 9
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.404458+00:00",
+      "id": "T-TABLE",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 10
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.405522+00:00",
+      "id": "T-SUMMARY",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 11
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.406693+00:00",
+      "id": "T-SOURCE-NOTE",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 12
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.408095+00:00",
+      "id": "T-A-VALIDATION",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 13
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.409529+00:00",
+      "id": "T-INITIAL-SNAPSHOT",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 14
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.411025+00:00",
+      "id": "T-INITIAL-1",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 15
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.412567+00:00",
+      "id": "T-INITIAL-2",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 16
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.414231+00:00",
+      "id": "T-INITIAL-3",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 17
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.416006+00:00",
+      "id": "T-INITIAL-4",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 18
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.417879+00:00",
+      "id": "T-RECOVERY",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 19
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.420416+00:00",
+      "id": "T-SOURCE-CHECK",
+      "kind": "activity",
+      "previous": null,
+      "revision": 20
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.423646+00:00",
+      "id": "T-CALC",
+      "kind": "activity",
+      "previous": null,
+      "revision": 21
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:03:18.427661+00:00",
+      "id": "T-SYNTH",
+      "kind": "activity",
+      "previous": null,
+      "revision": 22
+    },
+    {
+      "action": "checkpoint",
+      "at": "2026-10-30T01:03:18.494575+00:00",
+      "id": null,
+      "kind": null,
+      "previous": null,
+      "revision": 23
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:04:06.270432+00:00",
+      "id": "T-RECOVERY",
+      "kind": "artifact",
+      "previous": {
+        "bindings": {
+          "files": {
+            "RECOVERY.md": "486b23fe202e616522e26c771ddd715ade314a490723a2c17e08a2b0e0c86896"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Portable local recovery, authority, limits and concrete next action.",
+          "id": "T-RECOVERY",
+          "path": "RECOVERY.md",
+          "type": "recovery-guide"
+        },
+        "registered_at": "2026-10-30T01:03:18.416638+00:00",
+        "version": 1
+      },
+      "revision": 24
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:06:52.475560+00:00",
+      "id": "T-OPERATION-LOG",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 25
+    },
+    {
+      "action": "checkpoint",
+      "at": "2026-10-30T01:06:52.542784+00:00",
+      "id": null,
+      "kind": null,
+      "previous": null,
+      "revision": 26
+    },
+    {
+      "action": "checkpoint",
+      "at": "2026-10-30T01:12:35.883793+00:00",
+      "id": null,
+      "kind": null,
+      "previous": null,
+      "revision": 27
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:15:10.745318+00:00",
+      "id": "T-C-AUTHOR",
+      "kind": "evidence",
+      "previous": null,
+      "revision": 28
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:15:10.780387+00:00",
+      "id": "T-C-APPROVED-SPEC",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 29
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:15:10.814703+00:00",
+      "id": "T-PARAM",
+      "kind": "evidence",
+      "previous": {
+        "bindings": {
+          "files": {
+            "notes/parameters.json": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Current alpha=0.05 rho=1 and intrinsic time grid [0,1,10,100]; rho fixed before observation.",
+          "id": "T-PARAM",
+          "location": {
+            "kind": "local",
+            "path": "notes/parameters.json"
+          },
+          "provenance": "Benchmark author initial working parameters, separate from original paper.",
+          "type": "author-parameters"
+        },
+        "registered_at": "2026-10-30T01:03:18.399436+00:00",
+        "version": 1
+      },
+      "revision": 30
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:15:10.849238+00:00",
+      "id": "T-CLAIM",
+      "kind": "statement",
+      "previous": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "Fresh run exactly matches canonical JSON and numeric CSV; equivalent-form and v=0 arithmetic checks; underlying coverage theorem not assessed.",
+            "reviewer": "AI agent in stage A",
+            "scope": "Only supplied calculator numerical reproduction on v=[0,1,10,100], alpha=.05 rho=1.",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "No formal or new manual theorem proof performed.",
+            "status": "not-started",
+            "tool": "none"
+          },
+          "id": "T-CLAIM",
+          "scope": "Current declared parameters and supplied sources only; scalar l0=1; two-sided alpha total; same V for S and -S.",
+          "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+          "type": "interpretive"
+        },
+        "registered_at": "2026-10-30T01:03:18.400032+00:00",
+        "version": 1
+      },
+      "revision": 31
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:15:10.883957+00:00",
+      "id": "T-REL",
+      "kind": "relation",
+      "previous": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "T-PARAM",
+          "id": "T-REL",
+          "rationale": "Author parameters restrict the numerical claim; file registration is not a mathematical proof.",
+          "relation": "qualifies",
+          "scope": "Current fixed alpha, rho selection and four intrinsic-time points.",
+          "statement_id": "T-CLAIM"
+        },
+        "registered_at": "2026-10-30T01:03:18.400657+00:00",
+        "version": 1
+      },
+      "revision": 32
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:15:10.920392+00:00",
+      "id": "T-CHOICE",
+      "kind": "decision",
+      "previous": {
+        "bindings": null,
+        "data": {
+          "choice": "Use the supplied initial alpha=.05 rho=1 fixed before observation, grid [0,1,10,100].",
+          "decided_at": "Original decision timestamp not supplied",
+          "evidence_refs": [
+            "T-PARAM"
+          ],
+          "id": "T-CHOICE",
+          "notes": "No invented human expert approval.",
+          "rationale": "Initial benchmark-author choice; task authorizes reproducing these supplied parameters.",
+          "responsible": "Benchmark author, as identified in supplied initial material; recorded by AI agent.",
+          "revisit_when": "Explicit author parameter revision; preserve previous content and rationale."
+        },
+        "registered_at": "2026-10-30T01:03:18.401333+00:00",
+        "version": 1
+      },
+      "revision": 33
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:15:10.955966+00:00",
+      "id": "T-RESULT",
+      "kind": "artifact",
+      "previous": {
+        "bindings": {
+          "files": {
+            "results/result.json": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:T-PARAM",
+            "evidence:T-RAW",
+            "artifact:T-CODE",
+            "decision:T-CHOICE"
+          ],
+          "description": "Canonical provided result, verified by fresh normal execution.",
+          "id": "T-RESULT",
+          "path": "results/result.json",
+          "type": "numeric-result"
+        },
+        "registered_at": "2026-10-30T01:03:18.402904+00:00",
+        "version": 1
+      },
+      "revision": 34
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:15:10.991658+00:00",
+      "id": "T-TABLE",
+      "kind": "artifact",
+      "previous": {
+        "bindings": {
+          "files": {
+            "results/table.csv": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "artifact:T-RESULT"
+          ],
+          "description": "Companion delivered table; all numeric rows match fresh result.",
+          "id": "T-TABLE",
+          "path": "results/table.csv",
+          "type": "numeric-table"
+        },
+        "registered_at": "2026-10-30T01:03:18.403832+00:00",
+        "version": 1
+      },
+      "revision": 35
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:15:11.027521+00:00",
+      "id": "T-SUMMARY",
+      "kind": "artifact",
+      "previous": {
+        "bindings": {
+          "files": {
+            "results/summary.md": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "statement:T-CLAIM",
+            "artifact:T-RESULT"
+          ],
+          "description": "Provided summary reviewed for current parameters, rounding and bounded conclusion.",
+          "id": "T-SUMMARY",
+          "path": "results/summary.md",
+          "type": "summary"
+        },
+        "registered_at": "2026-10-30T01:03:18.404838+00:00",
+        "version": 1
+      },
+      "revision": 36
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:15:11.063850+00:00",
+      "id": "T-C-HISTORY",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 37
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:15:11.100667+00:00",
+      "id": "T-C-DRIFT-CHECK",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 38
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:15:11.137394+00:00",
+      "id": "T-C-DRIFT-CHECKPOINT",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 39
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:15:11.174359+00:00",
+      "id": "T-C-VALIDATION",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 40
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:15:11.211496+00:00",
+      "id": "T-RECOVERY",
+      "kind": "artifact",
+      "previous": {
+        "bindings": {
+          "files": {
+            "RECOVERY.md": "3fb28aa6f96520a6b131fb7a0d71eb4d798425975847c0fbcac837fcbc40f744"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Portable local recovery, authority, limits and concrete next action.",
+          "id": "T-RECOVERY",
+          "path": "RECOVERY.md",
+          "type": "recovery-guide"
+        },
+        "registered_at": "2026-10-30T01:04:06.268857+00:00",
+        "version": 2
+      },
+      "revision": 41
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:15:11.251557+00:00",
+      "id": "T-CALC",
+      "kind": "activity",
+      "previous": {
+        "bindings": {
+          "files": {
+            "notes/parameters.json": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+            "notes/stage-a-validation.json": "d786eff3467730579d8e30e5b334d7169206509c42f70c4683d803a5397e4af2",
+            "results/result.json": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+            "results/table.csv": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "sources/howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+          },
+          "records": {
+            "artifact:T-A-VALIDATION": "0cd18f8e3e51da1c9efcc183259ba9171989a0b642a30013b8fc1159e3aeb413",
+            "artifact:T-CODE": "15c6f4685db3723176021f1e2ba0cd0190c6b6ac023d3a657b40891362f3c2ce",
+            "artifact:T-RESULT": "7784efa1a47b9d8497b268d6dc1e0ca4fe16ba945c11e306c752e2bf460455df",
+            "artifact:T-TABLE": "846dd963f52d29e98a3a55417ab67221305f10f135abcb5c66da598d05b7ebb6",
+            "decision:T-CHOICE": "1890565576898bbb6f7a4f36a1f1cf49ab2562106c41a2567100bcd81116a6ff",
+            "evidence:T-PARAM": "b376b58358a47bb0c48ea0958fb3a3b6efebe7ec44628da2486d15b58273699f",
+            "evidence:T-RAW": "ee6f739763307ec7bb182bc932cb9baa16b63276ee3259ddbb4e70cd309694bd",
+            "source:T-SRC": "ab82116316befe189365fe3e98f9922c2ab5aeb2ba12ffb35d4302a803a02267"
+          }
+        },
+        "data": {
+          "id": "T-CALC",
+          "inputs": [
+            "evidence:T-PARAM",
+            "evidence:T-RAW",
+            "artifact:T-CODE",
+            "decision:T-CHOICE"
+          ],
+          "note": "AI execution, normal exit0; exact JSON/numeric CSV comparison and special-case arithmetic checked. Controlled alpha=1 exit2 preserved; effective originals unchanged.",
+          "outputs": [
+            "artifact:T-RESULT",
+            "artifact:T-TABLE",
+            "artifact:T-A-VALIDATION"
+          ],
+          "status": "done",
+          "title": "Evaluate supplied calculator and verify current result and companion table"
+        },
+        "registered_at": "2026-10-30T01:03:18.421685+00:00",
+        "version": 1
+      },
+      "revision": 42
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:15:11.292909+00:00",
+      "id": "T-SYNTH",
+      "kind": "activity",
+      "previous": {
+        "bindings": {
+          "files": {
+            "notes/parameters.json": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+            "notes/stage-a-validation.json": "d786eff3467730579d8e30e5b334d7169206509c42f70c4683d803a5397e4af2",
+            "results/result.json": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+            "results/summary.md": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+            "results/table.csv": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "sources/howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+          },
+          "records": {
+            "activity:T-CALC": "c5a9c7ec31297a3aad9aace2c568e3ad4842ed4ec42d2c726f102a2f19590966",
+            "artifact:T-A-VALIDATION": "0cd18f8e3e51da1c9efcc183259ba9171989a0b642a30013b8fc1159e3aeb413",
+            "artifact:T-CODE": "15c6f4685db3723176021f1e2ba0cd0190c6b6ac023d3a657b40891362f3c2ce",
+            "artifact:T-RESULT": "7784efa1a47b9d8497b268d6dc1e0ca4fe16ba945c11e306c752e2bf460455df",
+            "artifact:T-SUMMARY": "1d6821f96895e8aaf3cb881b5f3ea76d92e5cc463c8c03264700368b8312889a",
+            "artifact:T-TABLE": "846dd963f52d29e98a3a55417ab67221305f10f135abcb5c66da598d05b7ebb6",
+            "decision:T-CHOICE": "1890565576898bbb6f7a4f36a1f1cf49ab2562106c41a2567100bcd81116a6ff",
+            "evidence:T-PARAM": "b376b58358a47bb0c48ea0958fb3a3b6efebe7ec44628da2486d15b58273699f",
+            "evidence:T-RAW": "ee6f739763307ec7bb182bc932cb9baa16b63276ee3259ddbb4e70cd309694bd",
+            "relation:T-REL": "082082bd043f07ccf160d4195404d8d6e9d0083e4b4cafbf04563ea3a2cc39f0",
+            "source:T-SRC": "ab82116316befe189365fe3e98f9922c2ab5aeb2ba12ffb35d4302a803a02267",
+            "statement:T-CLAIM": "919984da4c758136f474dab026ff1405057a348b5d95dc911473bfdff5594fdd"
+          }
+        },
+        "data": {
+          "depends_on": [
+            "T-CALC"
+          ],
+          "id": "T-SYNTH",
+          "inputs": [
+            "statement:T-CLAIM",
+            "artifact:T-RESULT",
+            "artifact:T-TABLE"
+          ],
+          "note": "AI read provided summary and checked parameters, pre-observation rho, v10 rounding and no new-proof scope. Not human expert approval.",
+          "outputs": [
+            "artifact:T-SUMMARY"
+          ],
+          "status": "done",
+          "title": "Review supplied summary within current claim and verified numeric result"
+        },
+        "registered_at": "2026-10-30T01:03:18.425622+00:00",
+        "version": 1
+      },
+      "revision": 43
+    },
+    {
+      "action": "register",
+      "at": "2026-10-30T01:16:10.798443+00:00",
+      "id": "T-C-OPS",
+      "kind": "artifact",
+      "previous": null,
+      "revision": 44
+    },
+    {
+      "action": "replace",
+      "at": "2026-10-30T01:16:43.826389+00:00",
+      "id": "T-C-OPS",
+      "kind": "artifact",
+      "previous": {
+        "bindings": {
+          "files": {
+            "notes/stage-c-operational-corrections.json": "e6f0e098d8dbde78f7a82f41ea2073c24757277ddfca7a7f78b29e1c7837c1ff"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Preserved actual input-path error, mistaken checkpoint-field assertion and their remedies; no calculator or content result failure.",
+          "id": "T-C-OPS",
+          "path": "notes/stage-c-operational-corrections.json",
+          "type": "operational-corrections"
+        },
+        "registered_at": "2026-10-30T01:16:10.795424+00:00",
+        "version": 1
+      },
+      "revision": 45
+    },
+    {
+      "action": "checkpoint",
+      "at": "2026-10-30T01:16:43.863693+00:00",
+      "id": null,
+      "kind": null,
+      "previous": null,
+      "revision": 46
+    }
+  ],
+  "project_id": "P7f7d33fec3a3404cb09bbea7b8f8419c",
+  "records": {
+    "activities": {
+      "T-CALC": {
+        "bindings": {
+          "files": {
+            "notes/parameters.json": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+            "notes/stage-c-validation.json": "874b0608c67dd861197c35ce93eca1bc5c614ae95d3fe8a9ce1708409f481f4c",
+            "provenance/stage-c/AUTHOR-REVISION.md": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+            "provenance/stage-c/approved-parameters.json": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+            "results/result.json": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+            "results/table.csv": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "sources/howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+          },
+          "records": {
+            "artifact:T-C-APPROVED-SPEC": "9c013f1ee122c313e9141db309921acde145dbe5539b596e87e6c839e34c628a",
+            "artifact:T-C-VALIDATION": "eab8971d611a4c0bf6183e3c2b69f543e127cdc3013319cdefa938bf66d10e2b",
+            "artifact:T-CODE": "15c6f4685db3723176021f1e2ba0cd0190c6b6ac023d3a657b40891362f3c2ce",
+            "artifact:T-RESULT": "14662c1ac89e76d3620cb1702dd81811bc2bb4b4c81a4a5600c2066a0edf639a",
+            "artifact:T-TABLE": "3b084d325f7223fbe92ee89f684de06d67552e70a5973f9be7349d83b14838ff",
+            "decision:T-CHOICE": "6c1e184dddc85ee96052462ee4c0d39aaa40a1fb8aab27c0e90f91549a429db3",
+            "evidence:T-C-AUTHOR": "901f803ac3ab8576dafb1db15e9f8ecf3089ecee3fdfc984a5a0603dc370e0b3",
+            "evidence:T-PARAM": "d1bf8de5ca724e0a635711db2f7728ab8d970a9765689d939df6cae3218ba39a",
+            "evidence:T-RAW": "ee6f739763307ec7bb182bc932cb9baa16b63276ee3259ddbb4e70cd309694bd",
+            "source:T-SRC": "ab82116316befe189365fe3e98f9922c2ab5aeb2ba12ffb35d4302a803a02267"
+          }
+        },
+        "data": {
+          "id": "T-CALC",
+          "inputs": [
+            "evidence:T-PARAM",
+            "evidence:T-RAW",
+            "artifact:T-CODE",
+            "decision:T-CHOICE",
+            "evidence:T-C-AUTHOR",
+            "artifact:T-C-APPROVED-SPEC"
+          ],
+          "note": "AI actually ran unchanged calculator at approved rho=4, exit0; equivalent-form arithmetic (1e-14), v=0, exact CSV/JSON rows and parameter/code SHA checks passed. Original PDF/code/config/source card unchanged. Old results and prior failed alpha=1 trial retained. This is numerical work only.",
+          "outputs": [
+            "artifact:T-RESULT",
+            "artifact:T-TABLE",
+            "artifact:T-C-VALIDATION"
+          ],
+          "status": "done",
+          "title": "Evaluate supplied calculator and verify current result and companion table"
+        },
+        "registered_at": "2026-10-30T01:15:11.248332+00:00",
+        "version": 2
+      },
+      "T-SOURCE-CHECK": {
+        "bindings": {
+          "files": {
+            "notes/source-check.md": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+            "sources/howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+          },
+          "records": {
+            "artifact:T-SOURCE-NOTE": "39aed04092a951142f35efc0219b781b149a376828136945af2881f0b33e2a96",
+            "evidence:T-RAW": "ee6f739763307ec7bb182bc932cb9baa16b63276ee3259ddbb4e70cd309694bd",
+            "source:T-SRC": "ab82116316befe189365fe3e98f9922c2ab5aeb2ba12ffb35d4302a803a02267"
+          }
+        },
+        "data": {
+          "id": "T-SOURCE-CHECK",
+          "inputs": [
+            "source:T-SRC",
+            "evidence:T-RAW"
+          ],
+          "note": "AI agent verified full supplied SHA/bytes and metadata, read card; mathematical pages not examined. Source-only remote not current-content checked.",
+          "outputs": [
+            "artifact:T-SOURCE-NOTE"
+          ],
+          "status": "done",
+          "title": "Verify supplied fixed source identity and card scope"
+        },
+        "registered_at": "2026-10-30T01:03:18.418591+00:00",
+        "version": 1
+      },
+      "T-SYNTH": {
+        "bindings": {
+          "files": {
+            "notes/parameters.json": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+            "notes/stage-c-validation.json": "874b0608c67dd861197c35ce93eca1bc5c614ae95d3fe8a9ce1708409f481f4c",
+            "provenance/stage-c/AUTHOR-REVISION.md": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+            "provenance/stage-c/approved-parameters.json": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+            "results/result.json": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+            "results/summary.md": "3cb32dfae5a57c807be103be48130efc9b6eaf3a0709bc5394dbd19b0da9d038",
+            "results/table.csv": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+            "sources/howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+          },
+          "records": {
+            "activity:T-CALC": "5f7d470c583f2424cbb5a9ba70e51f59a24f8ba599ea1263b55d23d1d626bae3",
+            "artifact:T-C-APPROVED-SPEC": "9c013f1ee122c313e9141db309921acde145dbe5539b596e87e6c839e34c628a",
+            "artifact:T-C-VALIDATION": "eab8971d611a4c0bf6183e3c2b69f543e127cdc3013319cdefa938bf66d10e2b",
+            "artifact:T-CODE": "15c6f4685db3723176021f1e2ba0cd0190c6b6ac023d3a657b40891362f3c2ce",
+            "artifact:T-RESULT": "14662c1ac89e76d3620cb1702dd81811bc2bb4b4c81a4a5600c2066a0edf639a",
+            "artifact:T-SUMMARY": "f2d1576ad966286c31c79d59099cd127a34f8e2ce8b8a0fc87c018e12549390c",
+            "artifact:T-TABLE": "3b084d325f7223fbe92ee89f684de06d67552e70a5973f9be7349d83b14838ff",
+            "decision:T-CHOICE": "6c1e184dddc85ee96052462ee4c0d39aaa40a1fb8aab27c0e90f91549a429db3",
+            "evidence:T-C-AUTHOR": "901f803ac3ab8576dafb1db15e9f8ecf3089ecee3fdfc984a5a0603dc370e0b3",
+            "evidence:T-PARAM": "d1bf8de5ca724e0a635711db2f7728ab8d970a9765689d939df6cae3218ba39a",
+            "evidence:T-RAW": "ee6f739763307ec7bb182bc932cb9baa16b63276ee3259ddbb4e70cd309694bd",
+            "relation:T-REL": "f06137290dc057c28e28fe3861ec9e9b5702735895df653cb2f1527198a701c8",
+            "source:T-SRC": "ab82116316befe189365fe3e98f9922c2ab5aeb2ba12ffb35d4302a803a02267",
+            "statement:T-CLAIM": "39693272ced6a0ab1eaa8e3581359bad0300d8b07a361cc92eadd6975320ff2f"
+          }
+        },
+        "data": {
+          "depends_on": [
+            "T-CALC"
+          ],
+          "id": "T-SYNTH",
+          "inputs": [
+            "statement:T-CLAIM",
+            "artifact:T-RESULT",
+            "artifact:T-TABLE",
+            "relation:T-REL"
+          ],
+          "note": "AI revised and reviewed current summary: alpha=.05 rho=4 preselected, grid, all 12-decimal table values and v10 match actual result; explanation remains conditional formula evaluation, no new coverage guarantee. No human expert approval. Depends on newly revalidated T-CALC.",
+          "outputs": [
+            "artifact:T-SUMMARY"
+          ],
+          "status": "done",
+          "title": "Review supplied summary within current claim and verified numeric result"
+        },
+        "registered_at": "2026-10-30T01:15:11.289122+00:00",
+        "version": 2
+      }
+    },
+    "artifacts": {
+      "T-A-VALIDATION": {
+        "bindings": {
+          "files": {
+            "notes/stage-a-validation.json": "d786eff3467730579d8e30e5b334d7169206509c42f70c4683d803a5397e4af2"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Actual commands/exits, values, identity scope, before/after hashes and bounded scientific audit.",
+          "id": "T-A-VALIDATION",
+          "path": "notes/stage-a-validation.json",
+          "type": "execution-evidence"
+        },
+        "registered_at": "2026-10-30T01:03:18.407136+00:00",
+        "version": 1
+      },
+      "T-C-APPROVED-SPEC": {
+        "bindings": {
+          "files": {
+            "provenance/stage-c/approved-parameters.json": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:T-C-AUTHOR"
+          ],
+          "description": "Verbatim stage C approved parameter JSON; matches notes/parameters.json.",
+          "id": "T-C-APPROVED-SPEC",
+          "path": "provenance/stage-c/approved-parameters.json",
+          "type": "approved-parameters"
+        },
+        "registered_at": "2026-10-30T01:15:10.778522+00:00",
+        "version": 1
+      },
+      "T-C-DRIFT-CHECK": {
+        "bindings": {
+          "files": {
+            "validation/stage-c/check-drift.json": "018c0057403f13506a315bd2e010f6ea779e23f12030e6cc67242df5aecca7a1"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Raw check immediately after new drift checkpoint: checkpoint current but T-PARAM file changed and T-CALC/T-SYNTH stale.",
+          "id": "T-C-DRIFT-CHECK",
+          "path": "validation/stage-c/check-drift.json",
+          "type": "workflow-check"
+        },
+        "registered_at": "2026-10-30T01:15:11.098185+00:00",
+        "version": 1
+      },
+      "T-C-DRIFT-CHECKPOINT": {
+        "bindings": {
+          "files": {
+            "validation/stage-c/checkpoint-drift.json": "3726ae9fd97fdd76373b36f8ce32b2eb3d22c5623a33e3da9adad821a70f4abd"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Actual intermediate checkpoint save output, before any recomputation; this save did not revalidate activities.",
+          "id": "T-C-DRIFT-CHECKPOINT",
+          "path": "validation/stage-c/checkpoint-drift.json",
+          "type": "workflow-checkpoint-log"
+        },
+        "registered_at": "2026-10-30T01:15:11.134889+00:00",
+        "version": 1
+      },
+      "T-C-HISTORY": {
+        "bindings": {
+          "files": {
+            "history/stage-c-before-recompute/manifest.json": "952d95b51a6b63a5594b798693029d653b9503eef7cb77ea3cc2fa590d713e80"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Pre-recompute full-byte snapshot manifest and explicit revision reason; original initial content retained.",
+          "id": "T-C-HISTORY",
+          "path": "history/stage-c-before-recompute/manifest.json",
+          "type": "revision-history"
+        },
+        "registered_at": "2026-10-30T01:15:11.061394+00:00",
+        "version": 1
+      },
+      "T-C-OPS": {
+        "bindings": {
+          "files": {
+            "notes/stage-c-operational-corrections.json": "4ca3e56da857596cd7de946d482066c02a1244849710d232b0dcba33a8bc5973"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Preserved actual path error, wrong checkpoint-field assertion, unsupported CLI option failure and corrections; no scientific-computation failure.",
+          "id": "T-C-OPS",
+          "path": "notes/stage-c-operational-corrections.json",
+          "type": "operational-corrections"
+        },
+        "registered_at": "2026-10-30T01:16:43.823280+00:00",
+        "version": 2
+      },
+      "T-C-VALIDATION": {
+        "bindings": {
+          "files": {
+            "notes/stage-c-validation.json": "874b0608c67dd861197c35ce93eca1bc5c614ae95d3fe8a9ce1708409f481f4c"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Actual approved recomputation command, independent arithmetic/CSV checks, immutable fingerprints, preserved failure and scope.",
+          "id": "T-C-VALIDATION",
+          "path": "notes/stage-c-validation.json",
+          "type": "validation-record"
+        },
+        "registered_at": "2026-10-30T01:15:11.171798+00:00",
+        "version": 1
+      },
+      "T-CODE": {
+        "bindings": {
+          "files": {
+            "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Unmodified supplied standard-library calculator; SHA preserved.",
+          "id": "T-CODE",
+          "path": "scripts/compute.py",
+          "type": "scientific-calculator"
+        },
+        "registered_at": "2026-10-30T01:03:18.402069+00:00",
+        "version": 1
+      },
+      "T-INITIAL-1": {
+        "bindings": {
+          "files": {
+            "history/stage-a-initial/notes/parameters.json": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Exact initial bytes retained for notes/parameters.json",
+          "id": "T-INITIAL-1",
+          "path": "history/stage-a-initial/notes/parameters.json",
+          "type": "initial-version-content"
+        },
+        "registered_at": "2026-10-30T01:03:18.410048+00:00",
+        "version": 1
+      },
+      "T-INITIAL-2": {
+        "bindings": {
+          "files": {
+            "history/stage-a-initial/results/result.json": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Exact initial bytes retained for results/result.json",
+          "id": "T-INITIAL-2",
+          "path": "history/stage-a-initial/results/result.json",
+          "type": "initial-version-content"
+        },
+        "registered_at": "2026-10-30T01:03:18.411565+00:00",
+        "version": 1
+      },
+      "T-INITIAL-3": {
+        "bindings": {
+          "files": {
+            "history/stage-a-initial/results/table.csv": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Exact initial bytes retained for results/table.csv",
+          "id": "T-INITIAL-3",
+          "path": "history/stage-a-initial/results/table.csv",
+          "type": "initial-version-content"
+        },
+        "registered_at": "2026-10-30T01:03:18.413143+00:00",
+        "version": 1
+      },
+      "T-INITIAL-4": {
+        "bindings": {
+          "files": {
+            "history/stage-a-initial/results/summary.md": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Exact initial bytes retained for results/summary.md",
+          "id": "T-INITIAL-4",
+          "path": "history/stage-a-initial/results/summary.md",
+          "type": "initial-version-content"
+        },
+        "registered_at": "2026-10-30T01:03:18.414858+00:00",
+        "version": 1
+      },
+      "T-INITIAL-SNAPSHOT": {
+        "bindings": {
+          "files": {
+            "history/stage-a-initial/manifest.json": "7c29c49c73a4f7db23076c7fbc530886c16bbb7115c6e8d4d91ad95f1d880f0c"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Manifest locating exact recoverable contents of four initial small files.",
+          "id": "T-INITIAL-SNAPSHOT",
+          "path": "history/stage-a-initial/manifest.json",
+          "type": "version-manifest"
+        },
+        "registered_at": "2026-10-30T01:03:18.408591+00:00",
+        "version": 1
+      },
+      "T-OPERATION-LOG": {
+        "bindings": {
+          "files": {
+            "notes/stage-a-operational-corrections.json": "f1c33cc09c438d70cf8d3dfe528e6fd60dfe0f79b7230e3faf82fb7a6bb96c75"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Retained runtime-path error, intermediate stale checkpoint and correction scope; separate from scientific result.",
+          "id": "T-OPERATION-LOG",
+          "path": "notes/stage-a-operational-corrections.json",
+          "type": "operational-execution-record"
+        },
+        "registered_at": "2026-10-30T01:06:52.473771+00:00",
+        "version": 1
+      },
+      "T-RECOVERY": {
+        "bindings": {
+          "files": {
+            "RECOVERY.md": "3457bf941d469813c12d8e274e42164ddf2f1df89394ac5b05d8042f6eaa8610"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Current portable recovery guide for rho=4 author-approved results, pre-recompute drift evidence, preserved history and next author review.",
+          "id": "T-RECOVERY",
+          "path": "RECOVERY.md",
+          "type": "recovery-guide"
+        },
+        "registered_at": "2026-10-30T01:15:11.208986+00:00",
+        "version": 3
+      },
+      "T-RESULT": {
+        "bindings": {
+          "files": {
+            "results/result.json": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "evidence:T-PARAM",
+            "evidence:T-RAW",
+            "artifact:T-CODE",
+            "decision:T-CHOICE"
+          ],
+          "description": "Canonical rho=4 result from actual original calculator execution; input SHA and equivalent-form arithmetic checked.",
+          "id": "T-RESULT",
+          "notes": "Old full bytes in history/stage-c-before-recompute/results and history/stage-a-initial; revision reason in notes/stage-c-validation.json.",
+          "path": "results/result.json",
+          "type": "numeric-result"
+        },
+        "registered_at": "2026-10-30T01:15:10.953767+00:00",
+        "version": 2
+      },
+      "T-SOURCE-NOTE": {
+        "bindings": {
+          "files": {
+            "notes/source-check.md": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "source:T-SRC",
+            "evidence:T-RAW"
+          ],
+          "description": "Fixed provided source card; full text read, independent of numerical parameter.",
+          "id": "T-SOURCE-NOTE",
+          "notes": "Card is author-supplied paraphrase; no independent page/theorem confirmation claimed.",
+          "path": "notes/source-check.md",
+          "type": "source-identity-note"
+        },
+        "registered_at": "2026-10-30T01:03:18.405933+00:00",
+        "version": 1
+      },
+      "T-SUMMARY": {
+        "bindings": {
+          "files": {
+            "results/summary.md": "3cb32dfae5a57c807be103be48130efc9b6eaf3a0709bc5394dbd19b0da9d038"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "statement:T-CLAIM",
+            "artifact:T-RESULT"
+          ],
+          "description": "Revised rho=4 Chinese summary; parameters, four rounded values, v10 and restricted interpretation checked.",
+          "id": "T-SUMMARY",
+          "notes": "Old full bytes in history/stage-c-before-recompute/results and history/stage-a-initial; revision reason in notes/stage-c-validation.json.",
+          "path": "results/summary.md",
+          "type": "summary"
+        },
+        "registered_at": "2026-10-30T01:15:11.025183+00:00",
+        "version": 2
+      },
+      "T-TABLE": {
+        "bindings": {
+          "files": {
+            "results/table.csv": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d"
+          },
+          "records": {}
+        },
+        "data": {
+          "derived_from": [
+            "artifact:T-RESULT"
+          ],
+          "description": "Current rho=4 companion table copied from actual calculation; every numeric row matches canonical JSON.",
+          "id": "T-TABLE",
+          "notes": "Old full bytes in history/stage-c-before-recompute/results and history/stage-a-initial; revision reason in notes/stage-c-validation.json.",
+          "path": "results/table.csv",
+          "type": "numeric-table"
+        },
+        "registered_at": "2026-10-30T01:15:10.989456+00:00",
+        "version": 2
+      }
+    },
+    "decisions": {
+      "T-CHOICE": {
+        "bindings": null,
+        "data": {
+          "choice": "Use author-approved alpha=.05 rho=4 fixed before observation, grid [0,1,10,100].",
+          "decided_at": "Author decision timestamp not supplied; no date invented.",
+          "evidence_refs": [
+            "T-PARAM",
+            "T-C-AUTHOR"
+          ],
+          "id": "T-CHOICE",
+          "notes": "No human expert content approval or submission authorization. Not original-source revision; no post-observation rho optimization.",
+          "rationale": "AUTHOR-REVISION.md explicitly accepts current working parameters as revised numerical scope; alpha and preselection policy unchanged. Old rho=1 parameter/result/table/summary bytes retained.",
+          "responsible": "Benchmark author as explicitly stated in supplied revision; choice recorded and calculation executed by AI agent.",
+          "revisit_when": "Explicit author parameter revision; preserve previous content and rationale."
+        },
+        "registered_at": "2026-10-30T01:15:10.918336+00:00",
+        "version": 2
+      }
+    },
+    "evidence": {
+      "T-C-AUTHOR": {
+        "bindings": {
+          "files": {
+            "provenance/stage-c/AUTHOR-REVISION.md": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Author explicitly accepts rho=4 current working parameters; no original paper revision or expert approval.",
+          "id": "T-C-AUTHOR",
+          "location": {
+            "kind": "local",
+            "path": "provenance/stage-c/AUTHOR-REVISION.md"
+          },
+          "provenance": "Current supplied author revision, copied verbatim for future recovery.",
+          "type": "author-authorization"
+        },
+        "registered_at": "2026-10-30T01:15:10.743337+00:00",
+        "version": 1
+      },
+      "T-PARAM": {
+        "bindings": {
+          "files": {
+            "notes/parameters.json": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Current alpha=0.05, rho=4, grid [0,1,10,100]; rho fixed before observation.",
+          "id": "T-PARAM",
+          "location": {
+            "kind": "local",
+            "path": "notes/parameters.json"
+          },
+          "provenance": "Author revision explicitly accepts existing working parameters; original paper unchanged. See provenance/stage-c/AUTHOR-REVISION.md and approved-parameters.json. Initial rho=1 bytes and rationale preserved in history/stage-a-initial and registry history.",
+          "type": "author-parameters"
+        },
+        "registered_at": "2026-10-30T01:15:10.812826+00:00",
+        "version": 2
+      },
+      "T-RAW": {
+        "bindings": {
+          "files": {
+            "sources/howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8"
+          },
+          "records": {}
+        },
+        "data": {
+          "description": "Supplied fixed primary PDF; exact bytes matched initial manifest.",
+          "id": "T-RAW",
+          "limitations": "Only file identity, header/raw metadata; no theorem-content audit.",
+          "location": {
+            "kind": "local",
+            "path": "sources/howard2021-arxiv-v9.pdf"
+          },
+          "provenance": "Supplied source-identities.json and MANIFEST.json, not fetched remotely.",
+          "source_ids": [
+            "T-SRC"
+          ],
+          "type": "immutable-source-cache"
+        },
+        "registered_at": "2026-10-30T01:03:18.398333+00:00",
+        "version": 1
+      }
+    },
+    "method_bindings": {},
+    "relations": {
+      "T-REL": {
+        "bindings": null,
+        "data": {
+          "evidence_id": "T-PARAM",
+          "id": "T-REL",
+          "notes": "Replaces rho=1 working scope after explicit author authorization; prior relation retained in version history.",
+          "rationale": "Author-approved alpha=.05, preselected rho=4 and four v points qualify the numerical claim; material registration and recomputation are not coverage proofs.",
+          "relation": "qualifies",
+          "scope": "alpha=.05, rho=4 fixed-before-observation, v=[0,1,10,100].",
+          "statement_id": "T-CLAIM"
+        },
+        "registered_at": "2026-10-30T01:15:10.882007+00:00",
+        "version": 2
+      }
+    },
+    "sources": {
+      "T-REMOTE": {
+        "bindings": null,
+        "data": {
+          "content_access": "metadata-only",
+          "id": "T-REMOTE",
+          "limitations": "Only source identity; no local content binding and no current remote-content check.",
+          "locator": "https://arxiv.org/abs/1808.03204v7",
+          "title": "Time-uniform Chernoff bounds via nonnegative supermartingales",
+          "version": "1808.03204v7"
+        },
+        "registered_at": "2026-10-30T01:03:18.397949+00:00",
+        "version": 1
+      },
+      "T-SRC": {
+        "bindings": null,
+        "data": {
+          "content_access": "metadata-only",
+          "id": "T-SRC",
+          "limitations": "No live remote check or mathematical page reading; identity checked against supplied full local hash.",
+          "locator": "https://arxiv.org/abs/1810.08240v9",
+          "notes": "DOI https://doi.org/10.1214/20-AOS1991; private cache, do not redistribute original PDF.",
+          "rights": "restricted",
+          "title": "Time-uniform, nonparametric, nonasymptotic confidence sequences",
+          "version": "1810.08240v9"
+        },
+        "registered_at": "2026-10-30T01:03:18.397522+00:00",
+        "version": 1
+      }
+    },
+    "statements": {
+      "T-CLAIM": {
+        "bindings": null,
+        "data": {
+          "assessment": {
+            "rationale": "Real recomputation, equivalent algebraic formula with 1e-14 tolerance, v=0 special case and exact numeric CSV/JSON comparison all passed; notes/stage-c-validation.json. No theorem or coverage validation.",
+            "reviewer": "AI agent in stage C",
+            "scope": "Four supplied calculator values, v=[0,1,10,100], alpha=.05 rho=4 fixed before observation.",
+            "status": "supported-in-scope"
+          },
+          "formal_verification": {
+            "scope": "No formal or new manual theorem proof performed.",
+            "status": "not-started",
+            "tool": "none"
+          },
+          "id": "T-CLAIM",
+          "scope": "Current declared parameters and supplied sources only; scalar l0=1; two-sided alpha total; same V for S and -S.",
+          "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+          "type": "interpretive"
+        },
+        "registered_at": "2026-10-30T01:15:10.847307+00:00",
+        "version": 2
+      }
+    }
+  },
+  "revision": 46,
+  "schema_version": "0.1"
+}

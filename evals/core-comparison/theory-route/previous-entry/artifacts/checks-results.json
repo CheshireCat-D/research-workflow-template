@@ -1,0 +1,43 @@
+{
+  "scope": "finite deterministic numerical checks; no simulation or formal proof",
+  "B": {
+    "alpha": 0.05,
+    "rho": 0.25,
+    "v_on_event": 0.25,
+    "n": 20,
+    "p": 0.1,
+    "boundary_squared_formula": "log(800)/2",
+    "boundary_squared": 3.3423058638339636,
+    "boundary": 1.8281974356819242,
+    "absolute_S_on_event": 2.0,
+    "event_probability_formula": "(9/10)**20",
+    "event_probability": 0.12157665459056935,
+    "exact_integer_probability_check": true,
+    "left_integer": 243153309181138576020,
+    "right_integer": 100000000000000000000,
+    "analytic_log_bound_integer_check": true
+  },
+  "C": {
+    "q_equation": "q-log(1+q)=2*log(1/alpha)",
+    "q": 8.211968062068255,
+    "rho_star": 0.030443372174664224,
+    "minimum_squared_formula": "(1+q)*v",
+    "minimum_squared": 2.302992015517064,
+    "direct_minimum_squared": 2.302992015517063,
+    "absolute_difference": 8.881784197001252e-16
+  },
+  "EB": {
+    "lambdas": [
+      0.01,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      0.99
+    ],
+    "z_grid": "-1+j/100, j=0,...,200",
+    "max_numerical_excess_exp_over_linear": 0.0,
+    "does_not_establish_universal_inequality": true
+  }
+}

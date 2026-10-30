@@ -1,0 +1,166 @@
+{
+  "performer": "assistant agent and supplied calculator",
+  "preparation": "Prebuilt results were supplied by material builder; this is a rerun and consistency check, not an analysis from scratch.",
+  "canonical_result_identical_bytes": true,
+  "canonical_table_identical_bytes": true,
+  "all_table_rows_match_result": true,
+  "summary_rounding_and_scope_match": true,
+  "result": {
+    "case_id": "D",
+    "evaluation_start": "2011-10-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "observed_hours": 2203,
+    "observed_days": 92,
+    "C0_MAE": 58.825190494512434,
+    "C1_MAE": 44.570832407531775,
+    "C0_RMSE": 86.08056895633848,
+    "C1_RMSE": 67.99996906089847,
+    "C0_bias_prediction_minus_actual": 1.078965171773347,
+    "C1_bias_prediction_minus_actual": 0.9871531155146787,
+    "MAE_reduction_fraction": 0.24231724482575867,
+    "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+    "input_sha256": {
+      "parameters": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    }
+  },
+  "normal_command": {
+    "name": "03-normal-calculation",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/A/output/auditrun.py",
+      "STUDY_ROOT/runs/P4/A/output/logs/03-normal-calculation.reads.json",
+      "STUDY_ROOT/runs/P4/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--output",
+      "STUDY_ROOT/runs/P4/A/output/validation-normal"
+    ],
+    "target_argv": [
+      "STUDY_ROOT/runs/P4/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--output",
+      "STUDY_ROOT/runs/P4/A/output/validation-normal"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/runs/P4/A/output/validation-normal/result.json\", \"parameters_sha256\": \"16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837\"}\n",
+    "stderr": "",
+    "expected_exit_code": 0
+  },
+  "controlled_invalid_command": {
+    "name": "04-controlled-invalid-calculation",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/A/output/auditrun.py",
+      "STUDY_ROOT/runs/P4/A/output/logs/04-controlled-invalid-calculation.reads.json",
+      "STUDY_ROOT/runs/P4/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--output",
+      "STUDY_ROOT/runs/P4/A/output/validation-invalid",
+      "--spec",
+      "STUDY_ROOT/runs/P4/project/notes/rejected-parameters.json"
+    ],
+    "target_argv": [
+      "STUDY_ROOT/runs/P4/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--output",
+      "STUDY_ROOT/runs/P4/A/output/validation-invalid",
+      "--spec",
+      "STUDY_ROOT/runs/P4/project/notes/rejected-parameters.json"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"evaluation_start must be no later than evaluation_end\"}\n",
+    "expected_exit_code": 2
+  },
+  "controlled_invalid_test": {
+    "expected_failure": true,
+    "exit_code": 2,
+    "error": "ValueError",
+    "message": "evaluation_start must be no later than evaluation_end",
+    "is_scientific_analysis_failure": false,
+    "invalid_output_created": false
+  },
+  "protected_before": {
+    "notes/parameters.json": {
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171
+    },
+    "notes/rejected-parameters.json": {
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171
+    },
+    "model/frozen.json": {
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "data/hour_2011.csv": {
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    "results/result.json": {
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    "results/table.csv": {
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    "results/summary.md": {
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280
+    }
+  },
+  "protected_after": {
+    "notes/parameters.json": {
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171
+    },
+    "notes/rejected-parameters.json": {
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171
+    },
+    "model/frozen.json": {
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "data/hour_2011.csv": {
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    "results/result.json": {
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    "results/table.csv": {
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    "results/summary.md": {
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280
+    }
+  },
+  "all_protected_bytes_unchanged": true,
+  "scope": "Actual observed-hour descriptive comparison over 2011 Q4 using supplied Jan-Sep fixed coefficients; no refit, confidence interval, causal conclusion or 2012 extrapolation."
+}

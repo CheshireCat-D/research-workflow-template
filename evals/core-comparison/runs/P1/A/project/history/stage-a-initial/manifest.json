@@ -1,0 +1,25 @@
+{
+  "purpose": "Exact recoverable initial bytes; retain before future revision",
+  "files": {
+    "notes/parameters.json": {
+      "snapshot_path": "history/stage-a-initial/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161
+    },
+    "results/result.json": {
+      "snapshot_path": "history/stage-a-initial/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704
+    },
+    "results/table.csv": {
+      "snapshot_path": "history/stage-a-initial/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101
+    },
+    "results/summary.md": {
+      "snapshot_path": "history/stage-a-initial/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "activity",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"depends_on\": [\"T-CALC\"], \"id\": \"T-SYNTH\", \"inputs\": [\"statement:T-CLAIM\", \"artifact:T-RESULT\", \"artifact:T-TABLE\", \"relation:T-REL\"], \"note\": \"AI revised and reviewed current summary: alpha=.05 rho=4 preselected, grid, all 12-decimal table values and v10 match actual result; explanation remains conditional formula evaluation, no new coverage guarantee. No human expert approval. Depends on newly revalidated T-CALC.\", \"outputs\": [\"artifact:T-SUMMARY\"], \"status\": \"done\", \"title\": \"Review supplied summary within current claim and verified numeric result\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"T-SYNTH\",\n  \"version\": 2,\n  \"revision\": 43,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

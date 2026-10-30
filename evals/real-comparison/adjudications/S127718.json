@@ -1,0 +1,64 @@
+{
+  "submission_id": "S127718",
+  "task_id": "data-b",
+  "report_sha256": "847f2ebf504b89270f2cf3e4de1817caf64ffa6e0a4238ad86037855ef5b2387",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_units",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "report.md:19-52准确交代UCI单系统、hour/day观测单位、8645/365及8734/366行日期数、重复/空单元格/计数恒等式和三项小时-日汇总；报告区分缺小时与空值，保留17379/17389、season、temp/atemp元信息冲突。report.md:43、50不补零、不归因具体事件，年度总数1243103/2049576、日均3405.761644/5599.934426及增长64.875799%/64.425318%正确。work/results2012/quality_2011/audit.json、quality_2012/audit.json及annual.json均有实值；judge_verification/independent_checks.json核验年度计数、聚合、覆盖与闰年分母通过。",
+      "rationale": "满足阶段2数据来源、覆盖、单位与年度增长全部实质检查。少至1或11小时的日期仅按观察记录处理；没有把无空单元格混为完整日历，也没有擅自选择冲突元数据或作缺行机制推断。"
+    },
+    {
+      "id": "temporal_design",
+      "score": 7,
+      "max_points": 7,
+      "evidence": "report.md:9-15给出273日6442小时的2011 Jan-Sep训练与92日2203小时Q4留出，明示C0/C1均值、回退及不取整；work/analyze.py:110-142实际只以hr、workingday读取保存均值，cnt仅评分。work/update_2012.py:107-145读取原模型、从2011前九个月精确核对72组参数、重播历史后直接评估2012，无拟合调用。judge_verification/independent_checks.json证明analyze.py、模型及历史结果符合stage1_snapshot/artifacts.sha256。previous-report.md的构造草稿逐项结论反驳随机行拆分可代替未来检验，并说明casual/registered标签泄漏、同小时天气日前不可用。",
+      "rationale": "原2011模型和评分代码确实保留；2012未用于训练、重估或特征选择，历史Q4未加入训练。预测输入与发布时可用日历信息一致，已保存的旧报告仍明确保留对随机拆分、泄漏和天气可用性的纠正。"
+    },
+    {
+      "id": "metrics_sensitivity",
+      "score": 12,
+      "max_points": 12,
+      "evidence": "report.md:56-96给出两期C0/C1的MAE/RMSE/预测减真实偏差、绝对差与相对降幅、两模型日期等权MAE及其差/降幅、workingday分组和完整24h日期敏感性。2012主MAE118.11827620046033/108.70812150008842、R=0.07966722003631166；日期等权117.77586740335869/108.3607464606273；完整350日8400小时R=0.07776923135594593。work/results2012/results.json、metric_comparison.csv和预测CSV包含完整精度；独立检查同时核对两期总体、两组及完整日指标，参考数值全部在1e-6内。",
+      "rationale": "所有必需总体与敏感性指标均由可复跑代码产生，符号和单位正确。报告明确日期等权是日内小时MAE的均值，非日总数预测MAE；完整日等权关系、工作日组别百分比不可简单平均的解释也正确，无实质算术缺陷。"
+    },
+    {
+      "id": "uncertainty",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "work/analyze.py:161-185实现排序日期、配对循环移动块、random.Random(20261029)、randrange(D)、抽至至少D后截D、B=2000和(B-1)p线性百分位；每块长重新同seed，按抽中日期全部小时合并误差总和/小时数。report.md:100-111完整陈述算法与时间稳定性、跨块依赖、固定训练参数和缺小时限制。2012 7日R区间[0.06476413180843968,0.09967438859012917]，28日[0.05709841034889167,0.11589625362630877]；judge_verification/check.py独立重算两期两个块长，均匹配参考且复跑CSV字节相同。",
+      "rationale": "协议、配对单位、依赖处理、B/seed/截断/分位数全部符合要求。没有把小时当独立重复，未挑有利块长；正确保留7日上限略低于10%、28日跨10%的差别，并明确这种敏感性不允许断言真实改善必定低于10%或已达到10%。"
+    },
+    {
+      "id": "conclusion_update",
+      "score": 9,
+      "max_points": 9,
+      "evidence": "report.md:3、63-65、109-118保留2011 Q4 R=24.231724%的有限历史结论，更新为2012仍改善但点估计7.966722%未达10%，并判定现有证据不足部署。MAE/RMSE上升和C1平均偏差-91.613465得到量化；与年度观察计数增长相符但不识别原因，并指出Q4/全年窗口不可混为纯年份效应。report.md:111、117保留非跨年保证/非因果边界；118提出过去56日、每28日更新的新候选，并清楚说尚未拟合或测试，若用2012开发需另留未来时期。",
+      "rationale": "新证据只修正受影响的跨年10%可用性主张，没有抹去仍成立的历史结果，也没有把未达门槛说成C1完全无效。改善、门槛、区间敏感性和部署判断被精确区分，未来改模没有冒充本次实测成果。"
+    },
+    {
+      "id": "reproducibility",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "work/update_2012.py加载原analyze.py与results/model.json并核对输入、72组参数、历史JSON及4份CSV；work/RUN.md给出可替换输入与新输出目录的完整复跑及独立score命令。work/handoff.md保存训练范围、预测规则、完整精度结果、seed/B/块长、限制与后续安排。评审用指定env/bin/python -I -B实际执行update_2012.py至judge_verification/reproduce_2012成功；两期results.json、predictions.csv、daily_errors.csv、bootstrap_7d.csv、bootstrap_28d.csv均与交付逐字节一致。judge_verification/check.py及independent_checks.json还独立验证原代码/模型哈希和132项数值，最大差2.842170943040401e-14。",
+      "rationale": "不依赖聊天即可恢复并成功重跑；代码、模型、结果与handoff彼此一致，参数未改写，实际科学结果证据充分。评分依据是恢复与执行的实质，未因文件数量、命名或格式加分；未查看禁止的执行记录。"
+    }
+  ],
+  "raw_score": 50,
+  "effective_score": 50,
+  "max_score": 50,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "usable",
+  "notes": [
+    "只按本包允许材料独立评分；未读取其他盲包、arm_map、执行记录、个人skills、memory、网络或其他agent。组织者未给方法映射，arm_hidden=true只表示映射被隐藏，不能宣称完美盲；未据产物猜测方法组别。",
+    "未发现导致扣分的实质科学缺陷或核心失败。参考数值经独立计算核对，未发现需要报告的参考数值错误；numbers.json中的reference模型文件哈希属于参考模型序列化，不要求与作者不同JSON结构的文件哈希相同。",
+    "按组织者说明，公开发行省略的大CSV已补齐；评分以原报告、代码、输入与补齐产物的一致性为准，未就发行时省略大CSV扣分。",
+    "无额外data cap；effective_score=raw_score=50，caps_applied=[]。本阶段满分50；不将此结果解释为跨任务科研能力认证。"
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification."
+}

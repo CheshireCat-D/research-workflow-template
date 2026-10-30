@@ -1,0 +1,39 @@
+{
+  "status": "executed",
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 12,
+  "tool_call_count_basis": "tool_calls",
+  "network_calls": 0,
+  "violations": [
+    {
+      "call": 3,
+      "kind": "forbidden_path_content_read",
+      "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/design/catalog.json",
+      "bytes": 25477,
+      "sha256": "c164def668d75f14a2d12d414fee6dcf287f96d33e293fbdaf8536c9cbe798c9",
+      "description": "Initial broad SHA inventory read forbidden design content solely to hash; no semantic content displayed/used. Not repeated."
+    }
+  ],
+  "scope": "instruction-only; no OS audit",
+  "raw_execution": {
+    "path": "runs/P4/B/raw-execution.json",
+    "sha256": "fcee5333329fb29cbe3219b161c33b91d4093f4cfeee20cf231d8c5fdd9673b3",
+    "original_sha256": "994e376df901abcfb146e5d3c545252548864562a0d05c744669bcdd78e1115e"
+  },
+  "publication_projection": [
+    "Administrative status/configuration shape; unknown effective settings retained. Full self-report preserved separately."
+  ],
+  "requested": {
+    "max_outer_tool_calls": 16,
+    "max_report_characters": 10000,
+    "model_override": null,
+    "reasoning_override": null,
+    "fork_turns": "none"
+  }
+}

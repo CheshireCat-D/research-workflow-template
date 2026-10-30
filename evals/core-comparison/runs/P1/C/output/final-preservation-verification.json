@@ -1,0 +1,52 @@
+{
+  "source_activity_envelope_unchanged": true,
+  "configuration_bytes_unchanged": true,
+  "initial_rho1_parameter_result_retained": true,
+  "protected_inputs": {
+    "sources/howard2021-arxiv-v9.pdf": {
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "notes/source-check.md": {
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    "project.json": {
+      "sha256": "524d57b3666e1ec2ca0224b04c33fd4b8f116e8bec20adb9ddf37619f8b80e5d",
+      "bytes": 995
+    }
+  },
+  "final_revision": 46,
+  "final_checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "activities": [
+    {
+      "id": "T-CALC",
+      "title": "Evaluate supplied calculator and verify current result and companion table",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "T-SOURCE-CHECK",
+      "title": "Verify supplied fixed source identity and card scope",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "T-SYNTH",
+      "title": "Review supplied summary within current claim and verified numeric result",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "case_id": "T",
+  "authoritative_state": ".research/state.json",
+  "revision": 1,
+  "active_constraints": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 1.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "在交作者讨论前运行只读状态核对，确认当前 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的结果与摘要仍对应；向作者报告四点数值、sub-Gaussian/V 条件和未作证明/模拟覆盖验证的范围，等待作者实际决定。未经内容复核不投稿。",
+  "changed_paths": [
+    "notes/parameters.json"
+  ],
+  "missing_paths": [],
+  "activities": {
+    "T-SOURCE-CHECK": {
+      "recorded_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "T-CALC": {
+      "recorded_status": "done",
+      "effective_status": "needs_recheck",
+      "reasons": [
+        "missing or changed material: notes/parameters.json"
+      ]
+    },
+    "T-SYNTH": {
+      "recorded_status": "done",
+      "effective_status": "needs_recheck",
+      "reasons": [
+        "dependency needs recheck: T-CALC"
+      ]
+    }
+  },
+  "checkpoint_freshness": "fresh_for_registered_bytes",
+  "coverage_limits": {
+    "source_only": [
+      "T-REMOTE"
+    ],
+    "excluded_unregistered_paths": [
+      "notes/unregistered-scratch.md"
+    ],
+    "all_project_files_covered": false,
+    "note": "Scratch is retained but is not a declared scientific dependency. Hash inventory is not scientific review. Remote identity metadata does not monitor content."
+  },
+  "source_access": {
+    "T-SRC": {
+      "status": "local_fixed_identity_checked",
+      "local_path": "sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "actual_read_scope": "Whole local PDF read as bytes for SHA256 and manifest binding only. No PDF text extraction, page inspection, or independent theorem review. Title/version/DOI and page references are supplied metadata/card assertions."
+    },
+    "T-REMOTE": {
+      "status": "metadata-only",
+      "local_copy": null,
+      "live_access": false,
+      "content_binding": false
+    }
+  },
+  "scientific_scope": {
+    "id": "T-CLAIM",
+    "text": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "scope": "l0=1; S and -S satisfy the relevant sub-Gaussian exponential control at the same nonnegative intrinsic V; alpha is the total two-sided budget; rho fixed before observations; numerical evaluation only."
+  },
+  "author_review": {
+    "status": "not_occurred",
+    "submission_authorized": false,
+    "venue": null
+  }
+}

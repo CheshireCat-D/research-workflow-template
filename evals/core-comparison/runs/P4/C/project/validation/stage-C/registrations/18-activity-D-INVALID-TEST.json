@@ -1,0 +1,13 @@
+{
+  "id": "D-INVALID-TEST",
+  "inputs": [
+    "evidence:D-INVALID-PARAM",
+    "artifact:D-CODE"
+  ],
+  "note": "Actually reran controlled start-after-end input: exit 2, output absent, canonical old Q4 files unchanged at test time. Replaced shared historical validation output by dedicated negative-test record; independent frozen source branch untouched.",
+  "outputs": [
+    "artifact:D-C-INVALID-VALIDATION"
+  ],
+  "status": "done",
+  "title": "Controlled invalid parameter rejection and canonical preservation check"
+}

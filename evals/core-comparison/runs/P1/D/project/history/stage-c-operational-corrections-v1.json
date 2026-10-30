@@ -1,0 +1,34 @@
+{
+  "operation": "Pre-final Python assertion expected checkpoint changed field records",
+  "outer_exit_code": 1,
+  "error": "AssertionError",
+  "expected": [
+    {
+      "code": "checkpoint_stale",
+      "changed": [
+        "records",
+        "local-files"
+      ]
+    }
+  ],
+  "actual": [
+    {
+      "code": "checkpoint_stale",
+      "changed": [
+        "registered-records",
+        "local-files"
+      ]
+    }
+  ],
+  "raw_check_output": "validation/stage-c/check-after-revalidation-before-final-checkpoint.json",
+  "scientific_failure": false,
+  "remedy": "Accept actual documented output field registered-records. All three activities were effective done; save final checkpoint after runtime/preservation checks.",
+  "original_input_inspection_failure": {
+    "outer_exit_code": 1,
+    "error": "FileNotFoundError",
+    "wrong_path": "input/AUTHOR-REVISION.md",
+    "actual_path": "input/author-revision/AUTHOR-REVISION.md",
+    "remedy": "Read actual observed nested path."
+  },
+  "interim_checkpoint_id_wording": "Informal T1/T2/T5/T6/T3 checkpoint shorthand was corrected to actual T-PARAM/T-RESULT/T-SUMMARY/T-CALC/T-SYNTH/T-SOURCE-CHECK in final records; original output preserved."
+}

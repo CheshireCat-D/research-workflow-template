@@ -1,0 +1,17 @@
+{
+  "label": "normal",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/runs/P5/project/scripts/compute.py",
+    "--root",
+    "STUDY_ROOT/runs/P5/project",
+    "--output",
+    "STUDY_ROOT/runs/P5/A/output/validation-normal"
+  ],
+  "cwd": "STUDY_ROOT/runs/P5/project",
+  "exit_code": 0,
+  "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/runs/P5/A/output/validation-normal/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+  "stderr": ""
+}

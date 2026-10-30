@@ -1,0 +1,19 @@
+{
+  "depends_on": [
+    "D-CALC"
+  ],
+  "id": "D-SYNTH",
+  "inputs": [
+    "statement:D-CLAIM",
+    "artifact:D-RESULT",
+    "artifact:D-TABLE"
+  ],
+  "note": "Assistant revised and reviewed 2011 November-December summary, metric precision, unchanged model and historical Q4 comparison; content review by author remains next action.",
+  "outputs": [
+    "artifact:D-SUMMARY",
+    "artifact:D-C-SUMMARY-REVIEW",
+    "artifact:D-C-REVISION-NOTE"
+  ],
+  "status": "done",
+  "title": "Check supplied summary within current claim and verified result"
+}

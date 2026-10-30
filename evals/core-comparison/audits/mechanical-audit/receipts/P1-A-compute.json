@@ -1,0 +1,17 @@
+{
+  "name": "P1-A-compute",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P1/numeric-A/project/scripts/compute.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P1/numeric-A/project",
+    "--output",
+    "STUDY_ROOT/mechanical-audit/P1/numeric-A/fresh-calculation"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P1/numeric-A/project",
+  "exit_code": 0,
+  "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P1/numeric-A/fresh-calculation/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+  "stderr": ""
+}

@@ -1,0 +1,169 @@
+{
+  "scope": "No scientific prose, numeric or score changes; only absolute locator projections and explicit distribution omissions. Original source and execution bytes remain sealed.",
+  "files": [
+    {
+      "original_sha256": "6ae458665ff4cb5562116a0aedb10c05770959dc9e0025095e679b57d878684a",
+      "path": "runs/P2/C/report.md",
+      "sha256": "6ae458665ff4cb5562116a0aedb10c05770959dc9e0025095e679b57d878684a",
+      "changes": []
+    },
+    {
+      "original_sha256": "a8f2e903f00e8be0db520c095238f3f4ce7ef1c87f1a772c046ee2ff1bc09a3b",
+      "path": "runs/P2/C/raw-execution.json",
+      "sha256": "841e808e1569edd8736df28178b5f26018d2fe89e08910adbc5a022d3b285a1d",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "32f1a61b60a7dea8ec5ab6ad342ac17f50201f30d48becc9783cca16bdd3a54f",
+      "path": "runs/P2/C/project/management/checkpoints/C-final/verification.json",
+      "sha256": "4b80fb09064f5495f22599442999885e0a86f3522146284d7e5b9a24c61af434",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "path": "runs/P2/C/project/management/checkpoints/C-pre-recompute/tree/management/evidence/A/checks.json",
+      "sha256": "3c1af433062d5356007ee6811966ee1e208528759a75c496bf9634c91cc5f646",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "path": "runs/P2/C/project/management/checkpoints/C-pre-recompute/tree/management/protocol/REQUEST.md",
+      "sha256": "e4b6d59999db3824e06939cf3808685cda1cfd549f2ffeeac15c344d28b1b9a8",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "db551faaed26d2ac7ce327996252305a61a4a0494a36e337cf4fe0b79b3aa1dd",
+      "path": "runs/P2/C/project/management/evidence/A/checks.json",
+      "sha256": "3c1af433062d5356007ee6811966ee1e208528759a75c496bf9634c91cc5f646",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "61fd4a33242e0010c34c9fa5344e43060477a8617af76b77600bda361999e204",
+      "path": "runs/P2/C/project/management/evidence/C/compute-run.json",
+      "sha256": "33d186fcb92e78f5cf95f41f270894d6ae095a9472d9eb51dab76b7044922eab",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "32f1a61b60a7dea8ec5ab6ad342ac17f50201f30d48becc9783cca16bdd3a54f",
+      "path": "runs/P2/C/project/management/evidence/C/final-check.json",
+      "sha256": "4b80fb09064f5495f22599442999885e0a86f3522146284d7e5b9a24c61af434",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "d464618d2f1d2e55f702e790955db6c9fefd3653bb9edbd4f7429bb9e07e350b",
+      "path": "runs/P2/C/project/management/evidence/C/intermediate-check.json",
+      "sha256": "8992dcaf9895b5ea8d4dd5de5617536afd87c79c1a250c159a490dc8e3bb72ba",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "ab9909b6263e9fa2a4045236615c01f4b1514eac0eef33290d1ce1ab32a2d358",
+      "path": "runs/P2/C/project/management/protocol/REQUEST.md",
+      "sha256": "e4b6d59999db3824e06939cf3808685cda1cfd549f2ffeeac15c344d28b1b9a8",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "61fd4a33242e0010c34c9fa5344e43060477a8617af76b77600bda361999e204",
+      "path": "runs/P2/C/output/compute-run.json",
+      "sha256": "33d186fcb92e78f5cf95f41f270894d6ae095a9472d9eb51dab76b7044922eab",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "32f1a61b60a7dea8ec5ab6ad342ac17f50201f30d48becc9783cca16bdd3a54f",
+      "path": "runs/P2/C/output/final-check.json",
+      "sha256": "4b80fb09064f5495f22599442999885e0a86f3522146284d7e5b9a24c61af434",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "runs/P2/C/output/final-numerical-verification.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "original_sha256": "2bc5c50ab5fd344e26a03475961e57eb237f6cb6f67ab6144479797d4ef69c17",
+      "path": "runs/P2/C/output/final-numerical-verification.stdout.json",
+      "sha256": "2bc5c50ab5fd344e26a03475961e57eb237f6cb6f67ab6144479797d4ef69c17",
+      "changes": []
+    },
+    {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "runs/P2/C/output/final-status.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "original_sha256": "4ef934a248d93ba35ad5b4bd3321cbe9a7c5cd04deefa8e1b84f3a969a65cee9",
+      "path": "runs/P2/C/output/final-status.stdout.json",
+      "sha256": "4ef934a248d93ba35ad5b4bd3321cbe9a7c5cd04deefa8e1b84f3a969a65cee9",
+      "changes": []
+    },
+    {
+      "original_sha256": "ca122d88fc31824699ae1939066624fca5c134e554beb2efe5216decf9c5dffa",
+      "path": "runs/P2/C/output/inputs-and-artifacts.json",
+      "sha256": "ca122d88fc31824699ae1939066624fca5c134e554beb2efe5216decf9c5dffa",
+      "changes": []
+    },
+    {
+      "original_sha256": "d464618d2f1d2e55f702e790955db6c9fefd3653bb9edbd4f7429bb9e07e350b",
+      "path": "runs/P2/C/output/intermediate-check.json",
+      "sha256": "8992dcaf9895b5ea8d4dd5de5617536afd87c79c1a250c159a490dc8e3bb72ba",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "runs/P2/C/output/intermediate-status.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": []
+    },
+    {
+      "original_sha256": "c745d525f7c610bb1ba5b4d3c7f5d8826fabd32091ca01041dd8e14984041361",
+      "path": "runs/P2/C/output/intermediate-status.stdout.json",
+      "sha256": "c745d525f7c610bb1ba5b4d3c7f5d8826fabd32091ca01041dd8e14984041361",
+      "changes": []
+    },
+    {
+      "original_sha256": "f6a42fe5a5a30065f7e8f267af44357396ca5ed6e9cd9a321686d943931c7d4b",
+      "path": "runs/P2/C/output/read-ledger.json",
+      "sha256": "a013bea7b35a39d95a16ab1e2afef07dc940a97571e017fded013ba65fbd7d1e",
+      "changes": [
+        "absolute-paths-to-logical-locators"
+      ]
+    },
+    {
+      "original_sha256": "e6a730b290cc39df93e58dbcad0ec1c785b261fe38c4e529413a29e942f0061a",
+      "path": "runs/P2/C/output/state-answer.json",
+      "sha256": "e6a730b290cc39df93e58dbcad0ec1c785b261fe38c4e529413a29e942f0061a",
+      "changes": []
+    },
+    {
+      "original_sha256": "d483d1e17b4ce86dc2a1c79f961e76170bd88744a0db65c753ef4d8da06c5dd8",
+      "path": "runs/P2/C/seal.json",
+      "sha256": "d483d1e17b4ce86dc2a1c79f961e76170bd88744a0db65c753ef4d8da06c5dd8",
+      "changes": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "relation",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"evidence_id\": \"T-PARAM\", \"id\": \"T-REL\", \"rationale\": \"Author-approved alpha=.05, preselected rho=4 and four v points qualify the numerical claim; material registration and recomputation are not coverage proofs.\", \"relation\": \"qualifies\", \"scope\": \"alpha=.05, rho=4 fixed-before-observation, v=[0,1,10,100].\", \"statement_id\": \"T-CLAIM\", \"notes\": \"Replaces rho=1 working scope after explicit author authorization; prior relation retained in version history.\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"relation\",\n  \"id\": \"T-REL\",\n  \"version\": 2,\n  \"revision\": 32,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

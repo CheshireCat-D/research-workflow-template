@@ -1,0 +1,236 @@
+{
+  "status": "executed",
+  "requested": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "fork_turns": "none",
+    "max_tool_calls": 18,
+    "max_report_characters": 12000
+  },
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 10,
+  "network_calls": 0,
+  "violations": [],
+  "reads": [
+    {
+      "logical_name": "common/executor.md",
+      "path": "STUDY_ROOT/runs/T02/EXECUTOR.md",
+      "sha256": "316392fda85274a6b9a3ac7150125ef140d35d96edde46759348ef82020239fb",
+      "access": "full"
+    },
+    {
+      "logical_name": "common/execution.template.json",
+      "path": "STUDY_ROOT/runs/T02/execution.template.json",
+      "sha256": "4202f4e551078d2e12ccd1e271ddb0eaba5bac56eb2cccc204cacf1e9b66330e",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/skills/rw-review/SKILL.md",
+      "path": "GUIDANCE_ROOT/skills/rw-review/SKILL.md",
+      "sha256": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/skills/rw-validation/SKILL.md",
+      "path": "GUIDANCE_ROOT/skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/skills/rw-literature/SKILL.md",
+      "path": "GUIDANCE_ROOT/skills/rw-literature/SKILL.md",
+      "sha256": "51d279a9b4112977fc346d99ce296a477458eed6b35c26abf10710c955d97a69",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/core/skill-bridge.md",
+      "path": "GUIDANCE_ROOT/core/skill-bridge.md",
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/core/protocol.md",
+      "path": "GUIDANCE_ROOT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/profiles/methods/formal-theory.md",
+      "path": "GUIDANCE_ROOT/profiles/methods/formal-theory.md",
+      "sha256": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/theory/TASK.md",
+      "path": "INPUT_DIR/TASK.md",
+      "sha256": "56d7eff3d121991ac8a907a8f285fe822e26e2627715fd2863180aadd96b51cd",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/theory/draft.tex",
+      "path": "INPUT_DIR/draft.tex",
+      "sha256": "8550d8ea0188a72384bf5a4d596cdc23b3c8fa58cddeb30350c71adb26a2ba63",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2020-arxiv-v7.pdf",
+      "path": "INPUT_DIR/sources/howard2020-arxiv-v7.pdf",
+      "sha256": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e",
+      "access": "all-page locator search plus selected-page close reading"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2021-arxiv-v9.pdf",
+      "path": "INPUT_DIR/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "access": "all-page locator search plus selected-page close reading"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2020-arxiv-v7.txt",
+      "path": "INPUT_DIR/sources/howard2020-arxiv-v7.txt",
+      "sha256": "674f6bf98e64159aa294b114ba765f19ee40b5b89f1fab7c25a9419f86f8ce99",
+      "access": "keyword search and selected relevant ranges"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2021-arxiv-v9.txt",
+      "path": "INPUT_DIR/sources/howard2021-arxiv-v9.txt",
+      "sha256": "7826e3691e725d8017655d2be40aaf1a37c1aa2969b7344f3e0b4060f50141da",
+      "access": "keyword search and selected relevant ranges"
+    }
+  ],
+  "commands": [
+    {
+      "call": 1,
+      "command": "cat STUDY_ROOT/runs/T02/EXECUTOR.md STUDY_ROOT/runs/T02/execution.template.json",
+      "exit_code": 0
+    },
+    {
+      "call": 2,
+      "command": "cat GUIDANCE_ROOT/skills/rw-review/SKILL.md GUIDANCE_ROOT/skills/rw-validation/SKILL.md GUIDANCE_ROOT/skills/rw-literature/SKILL.md GUIDANCE_ROOT/core/skill-bridge.md GUIDANCE_ROOT/core/protocol.md GUIDANCE_ROOT/profiles/methods/formal-theory.md INPUT_DIR/TASK.md INPUT_DIR/draft.tex",
+      "exit_code": 0
+    },
+    {
+      "call": 3,
+      "command": "ls -l INPUT_DIR/sources",
+      "exit_code": 0
+    },
+    {
+      "call": 4,
+      "command": "rg -n 'Definition 1|Theorem 1|Theorem 4|normal mixture|Normal mixture|empirical Bernstein|Empirical Bernstein|rho|tuning|optim|psi|predictable' INPUT_DIR/sources/howard2020-arxiv-v7.txt INPUT_DIR/sources/howard2021-arxiv-v9.txt",
+      "exit_code": 0,
+      "output_truncated": true
+    },
+    {
+      "call": 5,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_summary": "Read S1 text lines 475-553 and 607-682; S2 lines 225-335, 550-632, 695-765, 805-856, 1766-1788, 2434-2474, 2630-2674. Extract PDF page text to locate definitions, main theorems, mixture propositions and empirical-Bernstein proof.",
+      "exit_code": 0
+    },
+    {
+      "call": 6,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_summary": "Read PDF pages S1 9,10,12,13,25,26; S2 4,28,29,35 with pypdf.",
+      "exit_code": 0
+    },
+    {
+      "call": 7,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_summary": "Read first 2600 extracted characters from PDF page 1 of each source.",
+      "exit_code": 0
+    },
+    {
+      "call": 8,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_summary": "Create workspace and write report.md, identical audit.md, checks.py and RUN.md; report first saved at 7254 Unicode characters.",
+      "exit_code": 0
+    },
+    {
+      "call": 9,
+      "command": "EVAL_PYTHON -I -B WORKSPACE/checks.py --input-dir INPUT_DIR --output-dir WORKSPACE/results",
+      "exit_code": 0,
+      "result_file": "results/results.json",
+      "first_result_retained": true
+    },
+    {
+      "call": 10,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_summary": "Verify report character count, formula escaping, audit/report equality and actual check result; hash all read inputs and guidance; save execution.json.",
+      "exit_code": 0
+    }
+  ],
+  "duration_seconds": null,
+  "scope": "instruction-only; no OS audit",
+  "failure": null,
+  "timing_note": "Whole-run start time was not instrumented; elapsed duration is unknown rather than estimated.",
+  "scientific_scope": "Manual theorem and source audit, finite exact counterexample, analytic LIL argument, numerical constant checks; no formal prover, TeX build, online metadata verification or comprehensive novelty search.",
+  "source_access": {
+    "S1": {
+      "version": "arXiv:1808.03204v7",
+      "close_read_pdf_pages": [
+        1,
+        9,
+        10,
+        11,
+        12,
+        13,
+        25,
+        26
+      ]
+    },
+    "S2": {
+      "version": "arXiv:1810.08240v9",
+      "close_read_pdf_pages": [
+        1,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        28,
+        29,
+        35,
+        37
+      ]
+    }
+  },
+  "report_characters": 7254,
+  "outputs": [
+    {
+      "path": "WORKSPACE/report.md",
+      "sha256": "a4cb40a155bd5107d53cfac40eaf203abc410fe8b5be275b4ad4077857fd42d9"
+    },
+    {
+      "path": "WORKSPACE/audit.md",
+      "sha256": "a4cb40a155bd5107d53cfac40eaf203abc410fe8b5be275b4ad4077857fd42d9"
+    },
+    {
+      "path": "WORKSPACE/checks.py",
+      "sha256": "79cb1debb074c7ada45bf26737b7a17be40af956c06b232416f4a19e5c4fd059"
+    },
+    {
+      "path": "WORKSPACE/RUN.md",
+      "sha256": "96b3d078885a5d66ad9a2766d01be3f22dcb94446f58f197ea2c4d0eb660ce61"
+    },
+    {
+      "path": "WORKSPACE/results/results.json",
+      "sha256": "c148583ff2628b712a81117b033baf27230db519815c57e38f25d3d2ccf4f537"
+    }
+  ],
+  "publication_projection": {
+    "raw_execution_sha256": "d68fc91355a2327b3a02eb2d985a99d0b9a7a69068cab9a873c0b7707f938520",
+    "changes": [
+      "completed status label mapped to executed",
+      "absolute paths mapped to logical locators"
+    ],
+    "scope": "Administrative labels/locators only; effective unknowns and scientific content retained."
+  }
+}

@@ -1,0 +1,1441 @@
+{
+  "scope": "Independent post-execution mechanical and content audits; original full records kept locally. Only absolute locators projected, no score/numeric/scientific changes. Scripts preserve actual temporary layout, need provisioned verified inputs to rerun.",
+  "files": [
+    {
+      "original_relative_name": "mechanical-audit.json",
+      "original_sha256": "42737a44c7256b01f62adba21792023247d746068d694ba6b4e65b96f92b312d",
+      "public_path": "audits/mechanical-audit.json",
+      "public_sha256": "ea5aed3dfad268d653b58dfd5a4f9166015f5939f066c8ed76ba6fc51f0b2526",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit.md",
+      "original_sha256": "1dccf854525e104449dc5898e2c6c72c7ad68e0c866ef4b3460cb909ddb58bd2",
+      "public_path": "audits/mechanical-audit.md",
+      "public_sha256": "1dccf854525e104449dc5898e2c6c72c7ad68e0c866ef4b3460cb909ddb58bd2",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/all-receipts.json",
+      "original_sha256": "f96bef4561ec7cffd8102a29e53b39f7ae7380490471e98c4a22288a01c10bdf",
+      "public_path": "audits/mechanical-audit/all-receipts.json",
+      "public_sha256": "e12ba1d9c7ec945b2471f818de8f847af2afd8151723fa2074c3fd9b6624fb7c",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/archive.json",
+      "original_sha256": "3ff6a4bba04862a1453e2438a6f6e023e2af86241e35e76264c46e23ee982293",
+      "public_path": "audits/mechanical-audit/archive.json",
+      "public_sha256": "e9f7604b0f4346cc61d51ec40e7bdf2a9c8383d4f711778fe08bbfdea0028b28",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/adaptation-receipts.json",
+      "original_sha256": "c899a282fa954539f06ddf58da89b2bf763086dd1a688b0338a758d14215a59e",
+      "public_path": "audits/mechanical-audit/adaptation-receipts.json",
+      "public_sha256": "12383becd2a0607bd8b4643c282bed3a3eca9378dc9f83fa5bdf225257a93cd0",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/audit.py",
+      "original_sha256": "b900380dfe2025e4143cdc4545eefb1d1334c058e64b9da311730367bfe7b517",
+      "public_path": "audits/mechanical-audit/audit.py",
+      "public_sha256": "089ecc5f32a8bbd0aff79e3310aa309a0cbccf2f47360847f5bcdc97c29fa396",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/attempt_notes.json",
+      "original_sha256": "c62d58f0aed325ad1938b6055f6a0c4f12e8603768549d8dd2effc239f3ff8ff",
+      "public_path": "audits/mechanical-audit/attempt_notes.json",
+      "public_sha256": "c62d58f0aed325ad1938b6055f6a0c4f12e8603768549d8dd2effc239f3ff8ff",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/engineering.json",
+      "original_sha256": "92625475f8dfb2f0a41586338224490586b77e7034e2ebc539d1bc50f5410f72",
+      "public_path": "audits/mechanical-audit/engineering.json",
+      "public_sha256": "795e030e5eb9530d2fcaa5518eb3ff896ebbb633eb3fb6e5903aee6133066608",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/probe_adaptation.py",
+      "original_sha256": "34e6899343e0da01f0531b33c89b9f0d17e937500f200ff8581c88343b905f45",
+      "public_path": "audits/mechanical-audit/probe_adaptation.py",
+      "public_sha256": "34e6899343e0da01f0531b33c89b9f0d17e937500f200ff8581c88343b905f45",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/finish_report.py",
+      "original_sha256": "3b1c5f1560e42c4ae80cc4a7e2e59e0caae97853639cf26b9ec1c5a3b9febd79",
+      "public_path": "audits/mechanical-audit/finish_report.py",
+      "public_sha256": "3b1c5f1560e42c4ae80cc4a7e2e59e0caae97853639cf26b9ec1c5a3b9febd79",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/probes.py",
+      "original_sha256": "9cae7227f83cfa66e41dfa7c5903bfec6a15f13551e3351fb3bfec4c38be76e6",
+      "public_path": "audits/mechanical-audit/probes.py",
+      "public_sha256": "9cae7227f83cfa66e41dfa7c5903bfec6a15f13551e3351fb3bfec4c38be76e6",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/engineering-receipts.json",
+      "original_sha256": "9100f27e4e5ecfbd2bf2124629d35159875b8e59c817cdd88ba8c20667d5b90c",
+      "public_path": "audits/mechanical-audit/engineering-receipts.json",
+      "public_sha256": "f4cc6357547778936da4731500aae4f2324e5a4d3bf6d676ef137d9917b2a515",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/numeric.json",
+      "original_sha256": "f61de522a41cc59c2315e2528332375e2c8c88b3400a63becc561be72961d676",
+      "public_path": "audits/mechanical-audit/numeric.json",
+      "public_sha256": "cc04fe87bfd3502d41272adade88064709cadd35450745425e5f3567cee897c0",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/relation-adaptations.json",
+      "original_sha256": "64d9bff57c8c64d2e518b6faaced8e1e317c7110e94932f369624096aed1e3df",
+      "public_path": "audits/mechanical-audit/relation-adaptations.json",
+      "public_sha256": "39bc7c8ff62e989a1805251b495257f9a54e2255fa162dab454c3722d21b6bcb",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-A-compute.json",
+      "original_sha256": "babf3665711298f622dde26486d359a1fee1523461bf6630b5af6a0af157c4bc",
+      "public_path": "audits/mechanical-audit/receipts/P4-A-compute.json",
+      "public_sha256": "1fc4abca9f7919e89b2a984688ea7f0a0f8343cc01f5a54087c6a1435215be37",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-dirty-save-checkpoint.before.json",
+      "original_sha256": "c5b73677fbd7c2784121009a24024c0a1b1508bc617c694d8058b73ebe1528fd",
+      "public_path": "audits/mechanical-audit/receipts/P1-dirty-save-checkpoint.before.json",
+      "public_sha256": "c5b73677fbd7c2784121009a24024c0a1b1508bc617c694d8058b73ebe1528fd",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-dirty-checkpoint-replay.before.json",
+      "original_sha256": "1f8efb7034bb81d48a24ae57279ed1daae1469448baeb527bb78c64bfa0d96c3",
+      "public_path": "audits/mechanical-audit/receipts/P3-dirty-checkpoint-replay.before.json",
+      "public_sha256": "1f8efb7034bb81d48a24ae57279ed1daae1469448baeb527bb78c64bfa0d96c3",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-invalid-unpreserved-path.after.json",
+      "original_sha256": "e5bff6a72dbc846d293a53ad63fbd7ab6c4c622131bec1a0575bc4d92f59e40e",
+      "public_path": "audits/mechanical-audit/receipts/P5-invalid-unpreserved-path.after.json",
+      "public_sha256": "e5bff6a72dbc846d293a53ad63fbd7ab6c4c622131bec1a0575bc4d92f59e40e",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-B-readonly.before.json",
+      "original_sha256": "5b058362c1184aa7d7432c87fb9dd6b614d832ede397362fe263349af9f97068",
+      "public_path": "audits/mechanical-audit/receipts/P4-B-readonly.before.json",
+      "public_sha256": "5b058362c1184aa7d7432c87fb9dd6b614d832ede397362fe263349af9f97068",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-dirty-status-after-checkpoint.before.json",
+      "original_sha256": "799b161516a38f0cd1ae0adfdca1fb5d5b03b4058b0ba9af5e0fb6c17690435a",
+      "public_path": "audits/mechanical-audit/receipts/P4-dirty-status-after-checkpoint.before.json",
+      "public_sha256": "799b161516a38f0cd1ae0adfdca1fb5d5b03b4058b0ba9af5e0fb6c17690435a",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-migration-readonly.json",
+      "original_sha256": "5779d180001161ae7d9c9859ed0483a4bce6c790cc4331ae53e9c812ffa1f182",
+      "public_path": "audits/mechanical-audit/receipts/P6-migration-readonly.json",
+      "public_sha256": "3ac653113a3aabe9a215c6e466a86ca1a3f839b9fdaded5d38f42a5bbbed2cf8",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-B-readonly.after.json",
+      "original_sha256": "982f759bfe008731c442b7a1c3a102309e67b42edf9d2b57f6c04228d4af5f5d",
+      "public_path": "audits/mechanical-audit/receipts/P6-B-readonly.after.json",
+      "public_sha256": "982f759bfe008731c442b7a1c3a102309e67b42edf9d2b57f6c04228d4af5f5d",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-dirty-save-checkpoint.after.json",
+      "original_sha256": "bb612c87032f984d84364641f6aaece4fdb91e79967519f546c6ad2b4da02a72",
+      "public_path": "audits/mechanical-audit/receipts/P1-dirty-save-checkpoint.after.json",
+      "public_sha256": "bb612c87032f984d84364641f6aaece4fdb91e79967519f546c6ad2b4da02a72",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-batch-invalid-later-reference.before.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-batch-invalid-later-reference.before.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-B-readonly.json",
+      "original_sha256": "e6fbf53bdc48f0cec6aa0013380580008977f27fee697bb2f261e6a270d7fc6d",
+      "public_path": "audits/mechanical-audit/receipts/P6-B-readonly.json",
+      "public_sha256": "fe82dad39d25822d6346406136055f6ce80cd8a91d9cafafe705978509d0c137",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-A-compute.json",
+      "original_sha256": "66785c7f485152eb7745ea4f50f00cd95d947da17dc0b17424f2a2dbd40a6953",
+      "public_path": "audits/mechanical-audit/receipts/P3-A-compute.json",
+      "public_sha256": "b384e7190c960ebb12a1686f5067bb7bdb1bf8024f0a55cccfd20b88acc9161c",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-batch-invalid-later-reference.after.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-batch-invalid-later-reference.after.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-dangling-reference.after.json",
+      "original_sha256": "0f7f4a7ff74f6dc4363eb3fce9cfbc14e4b61e75acd135e9122945f1f3317de0",
+      "public_path": "audits/mechanical-audit/receipts/P6-dangling-reference.after.json",
+      "public_sha256": "0f7f4a7ff74f6dc4363eb3fce9cfbc14e4b61e75acd135e9122945f1f3317de0",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-stale-global-write.before.json",
+      "original_sha256": "7e5ed6bddd2d4fda475b15b232d736537f1cda6bd925fb7b578301be7620151c",
+      "public_path": "audits/mechanical-audit/receipts/P3-stale-global-write.before.json",
+      "public_sha256": "7e5ed6bddd2d4fda475b15b232d736537f1cda6bd925fb7b578301be7620151c",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-stale-global-write.json",
+      "original_sha256": "6b3e26f104a8831ef087f8572d105ba1824d8f8c781f2ace1b8ad3433945fdc5",
+      "public_path": "audits/mechanical-audit/receipts/P6-stale-global-write.json",
+      "public_sha256": "62984b83210199e382254635ee78721494b453a1fc05883632f1981de3f454fc",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-stale-file-write.before.json",
+      "original_sha256": "e5bff6a72dbc846d293a53ad63fbd7ab6c4c622131bec1a0575bc4d92f59e40e",
+      "public_path": "audits/mechanical-audit/receipts/P5-stale-file-write.before.json",
+      "public_sha256": "e5bff6a72dbc846d293a53ad63fbd7ab6c4c622131bec1a0575bc4d92f59e40e",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-migration-readonly.before.json",
+      "original_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "public_path": "audits/mechanical-audit/receipts/P6-migration-readonly.before.json",
+      "public_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-dirty-status-after-checkpoint.after.json",
+      "original_sha256": "bb612c87032f984d84364641f6aaece4fdb91e79967519f546c6ad2b4da02a72",
+      "public_path": "audits/mechanical-audit/receipts/P1-dirty-status-after-checkpoint.after.json",
+      "public_sha256": "bb612c87032f984d84364641f6aaece4fdb91e79967519f546c6ad2b4da02a72",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-B-readonly.before.json",
+      "original_sha256": "0a42e40ef2b6ef396274d8860b03aebe30fa73338220ade1efb4bfdee92bf538",
+      "public_path": "audits/mechanical-audit/receipts/P3-B-readonly.before.json",
+      "public_sha256": "0a42e40ef2b6ef396274d8860b03aebe30fa73338220ade1efb4bfdee92bf538",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-statement-dangling.after.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-statement-dangling.after.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-migration-readonly.after.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-migration-readonly.after.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-batch-dangling.after.json",
+      "original_sha256": "8d7a4055ea6badbdebb2b7ee6ff1a22b03971d7225f9ec11470087893bb08520",
+      "public_path": "audits/mechanical-audit/receipts/P3-batch-dangling.after.json",
+      "public_sha256": "8d7a4055ea6badbdebb2b7ee6ff1a22b03971d7225f9ec11470087893bb08520",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-dirty-checkpoint-replay.after.json",
+      "original_sha256": "1f8efb7034bb81d48a24ae57279ed1daae1469448baeb527bb78c64bfa0d96c3",
+      "public_path": "audits/mechanical-audit/receipts/P3-dirty-checkpoint-replay.after.json",
+      "public_sha256": "1f8efb7034bb81d48a24ae57279ed1daae1469448baeb527bb78c64bfa0d96c3",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-legal-restore.after.json",
+      "original_sha256": "e5bff6a72dbc846d293a53ad63fbd7ab6c4c622131bec1a0575bc4d92f59e40e",
+      "public_path": "audits/mechanical-audit/receipts/P5-legal-restore.after.json",
+      "public_sha256": "e5bff6a72dbc846d293a53ad63fbd7ab6c4c622131bec1a0575bc4d92f59e40e",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-legal-update.before.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-legal-update.before.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-dirty-checkpoint-replay.after.json",
+      "original_sha256": "4a8ed6f434350cbc2a3b9cf4a3cfa3cb59eee5f77f509d4583fcc13570d66dd1",
+      "public_path": "audits/mechanical-audit/receipts/P5-dirty-checkpoint-replay.after.json",
+      "public_sha256": "4a8ed6f434350cbc2a3b9cf4a3cfa3cb59eee5f77f509d4583fcc13570d66dd1",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-B-readonly.after.json",
+      "original_sha256": "5b058362c1184aa7d7432c87fb9dd6b614d832ede397362fe263349af9f97068",
+      "public_path": "audits/mechanical-audit/receipts/P4-B-readonly.after.json",
+      "public_sha256": "5b058362c1184aa7d7432c87fb9dd6b614d832ede397362fe263349af9f97068",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-migration-readonly.json",
+      "original_sha256": "5faf7647216b0a99501e66038e83c1e4dbf58603ae20e78760dd2d8ee6abc2de",
+      "public_path": "audits/mechanical-audit/receipts/P2-migration-readonly.json",
+      "public_sha256": "de7c19a34f21f19afae6b3b36b689d362507df446949d2e5efb9f83f2527eac0",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-A-compute.json",
+      "original_sha256": "76b9747a1309de412dfac7520d3506d8c0032f3ff4705b426d30d76f6ec3716d",
+      "public_path": "audits/mechanical-audit/receipts/P2-A-compute.json",
+      "public_sha256": "10675443bd9b907ba4d3fac31d95634fe3912070cc2f5190f3382621c1180f22",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-dangling-reference.before.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-dangling-reference.before.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-stale-record-write.before.json",
+      "original_sha256": "f0e380616a960cd381943f39d2af39fd2ea134b91ae3459dd696c7d14f9854bc",
+      "public_path": "audits/mechanical-audit/receipts/P1-stale-record-write.before.json",
+      "public_sha256": "f0e380616a960cd381943f39d2af39fd2ea134b91ae3459dd696c7d14f9854bc",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-numeric-verifier.after.json",
+      "original_sha256": "c8dda8c2697465267f86edfb1f275e3c6852d56bce30defa1da37fea91f0424f",
+      "public_path": "audits/mechanical-audit/receipts/P2-numeric-verifier.after.json",
+      "public_sha256": "c8dda8c2697465267f86edfb1f275e3c6852d56bce30defa1da37fea91f0424f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-B-readonly.json",
+      "original_sha256": "7bad258f2b29de84d0fbba47ad712f8a2eb9be295ff2c3bf6c58fbf21029ad32",
+      "public_path": "audits/mechanical-audit/receipts/P1-B-readonly.json",
+      "public_sha256": "ce8f59fe6ebf0a6cc056fc591144aa388e3c96eaa7e12f5b4b3dc0fd651b393b",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-stale-record-write.json",
+      "original_sha256": "6842fa7bc0ad780d21cc0089aa9c24af43c7adf75e04bfe1cc23706a9d851ce2",
+      "public_path": "audits/mechanical-audit/receipts/P4-stale-record-write.json",
+      "public_sha256": "7aa33c80a0be9285a44ded4beda4c5dbd3f7a587dd76a0bc8b1d7a0c91245d3a",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-dangling-reference.after.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-dangling-reference.after.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-migration-readonly.after.json",
+      "original_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "public_path": "audits/mechanical-audit/receipts/P6-migration-readonly.after.json",
+      "public_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-A-compute.json",
+      "original_sha256": "e0307eeffe66e5522e52a3570e98e37ff60ed332a3462ba6002b6d2106a2e94b",
+      "public_path": "audits/mechanical-audit/receipts/P5-A-compute.json",
+      "public_sha256": "d2f3b0cae123ebed0149a60ed5f4cf65ac8c507d8fae4ec59443d707413968ab",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-stale-global-write.after.json",
+      "original_sha256": "7e5ed6bddd2d4fda475b15b232d736537f1cda6bd925fb7b578301be7620151c",
+      "public_path": "audits/mechanical-audit/receipts/P3-stale-global-write.after.json",
+      "public_sha256": "7e5ed6bddd2d4fda475b15b232d736537f1cda6bd925fb7b578301be7620151c",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-legal-update.after.json",
+      "original_sha256": "f0e380616a960cd381943f39d2af39fd2ea134b91ae3459dd696c7d14f9854bc",
+      "public_path": "audits/mechanical-audit/receipts/P1-legal-update.after.json",
+      "public_sha256": "f0e380616a960cd381943f39d2af39fd2ea134b91ae3459dd696c7d14f9854bc",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-batch-statement-dangling.json",
+      "original_sha256": "30b3a0cc86c554ee89a6ebd592b567881d66386d380b4eaf86e1718be2a534f6",
+      "public_path": "audits/mechanical-audit/receipts/P4-batch-statement-dangling.json",
+      "public_sha256": "00f95fdec5900f2e56b2c5c01d2068812a946420d43ae18d32d762211de06803",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-dangling-reference.json",
+      "original_sha256": "29fd4cafe3a3cc0352c2100579be84f6cae940b98e1526002781ef9d66eb7de7",
+      "public_path": "audits/mechanical-audit/receipts/P1-dangling-reference.json",
+      "public_sha256": "45fb7124f89f8a0b6314f8457d126b611623538fd6643761d388a0a44f35d21c",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-valid-prefix-positive.after.json",
+      "original_sha256": "5f6830a61c1bd3773aa654caef9c3faee4994bdf95da9e95c7721d998ff4f324",
+      "public_path": "audits/mechanical-audit/receipts/P4-valid-prefix-positive.after.json",
+      "public_sha256": "5f6830a61c1bd3773aa654caef9c3faee4994bdf95da9e95c7721d998ff4f324",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-dirty-checkpoint-replay.json",
+      "original_sha256": "6543807c21a20bc241507479a4e2305aad44270c403d77078920b7452f381252",
+      "public_path": "audits/mechanical-audit/receipts/P2-dirty-checkpoint-replay.json",
+      "public_sha256": "554ca32048e1be833b7f6c57baa30fdb733e333cb66b37717f47f62c05e07497",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-B-readonly.before.json",
+      "original_sha256": "982f759bfe008731c442b7a1c3a102309e67b42edf9d2b57f6c04228d4af5f5d",
+      "public_path": "audits/mechanical-audit/receipts/P6-B-readonly.before.json",
+      "public_sha256": "982f759bfe008731c442b7a1c3a102309e67b42edf9d2b57f6c04228d4af5f5d",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-dirty-checkpoint-replay.before.json",
+      "original_sha256": "4a8ed6f434350cbc2a3b9cf4a3cfa3cb59eee5f77f509d4583fcc13570d66dd1",
+      "public_path": "audits/mechanical-audit/receipts/P5-dirty-checkpoint-replay.before.json",
+      "public_sha256": "4a8ed6f434350cbc2a3b9cf4a3cfa3cb59eee5f77f509d4583fcc13570d66dd1",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-valid-prefix-positive.json",
+      "original_sha256": "9aeaa5a8d3126a94ed6f08b5e6658bcee63171dabaf7ce72a9f2a971562d47ed",
+      "public_path": "audits/mechanical-audit/receipts/P3-valid-prefix-positive.json",
+      "public_sha256": "4913a85b9c4479c5e3cb0742cbe62ef4ab4f6acf9407baa91cd1dc8892ec2e21",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-batch-invalid-later-reference.json",
+      "original_sha256": "ec8957fe366d920f7f402364526635d6c704bbe5d2426bd0f1665ef9476033b5",
+      "public_path": "audits/mechanical-audit/receipts/P1-batch-invalid-later-reference.json",
+      "public_sha256": "246a55d92ed5298b39991eba1b1d67d1bf6a5d4cfa759ad589b6450235a224a1",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-valid-prefix-positive.after.json",
+      "original_sha256": "1b4d5e1f2bb2567f3e0cc6c4f79687e18a921da24fb849e20518ca306a6e8f2a",
+      "public_path": "audits/mechanical-audit/receipts/P3-valid-prefix-positive.after.json",
+      "public_sha256": "1b4d5e1f2bb2567f3e0cc6c4f79687e18a921da24fb849e20518ca306a6e8f2a",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-legal-update.before.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-legal-update.before.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-stale-file-write.after.json",
+      "original_sha256": "e5bff6a72dbc846d293a53ad63fbd7ab6c4c622131bec1a0575bc4d92f59e40e",
+      "public_path": "audits/mechanical-audit/receipts/P5-stale-file-write.after.json",
+      "public_sha256": "e5bff6a72dbc846d293a53ad63fbd7ab6c4c622131bec1a0575bc4d92f59e40e",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-batch-invalid-version.before.json",
+      "original_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "public_path": "audits/mechanical-audit/receipts/P3-batch-invalid-version.before.json",
+      "public_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-dirty-save-checkpoint.json",
+      "original_sha256": "6e54b3e7ecddb928c08ec2a9a7324b99c5777f7312141f2e0739550928fc7096",
+      "public_path": "audits/mechanical-audit/receipts/P1-dirty-save-checkpoint.json",
+      "public_sha256": "8506c0e70e4f635e58452c22d60e4e530d71ecd9c331760d8b557c7529e534f9",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-stale-record-write.after.json",
+      "original_sha256": "f0e380616a960cd381943f39d2af39fd2ea134b91ae3459dd696c7d14f9854bc",
+      "public_path": "audits/mechanical-audit/receipts/P1-stale-record-write.after.json",
+      "public_sha256": "f0e380616a960cd381943f39d2af39fd2ea134b91ae3459dd696c7d14f9854bc",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-B-readonly.before.json",
+      "original_sha256": "c5b73677fbd7c2784121009a24024c0a1b1508bc617c694d8058b73ebe1528fd",
+      "public_path": "audits/mechanical-audit/receipts/P1-B-readonly.before.json",
+      "public_sha256": "c5b73677fbd7c2784121009a24024c0a1b1508bc617c694d8058b73ebe1528fd",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-valid-prefix-positive.before.json",
+      "original_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "public_path": "audits/mechanical-audit/receipts/P3-valid-prefix-positive.before.json",
+      "public_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-migration-readonly.json",
+      "original_sha256": "0cf6b2a73a1fc52c004eb6f52299ff0cced702c634e80c7c9bda00adc071dc02",
+      "public_path": "audits/mechanical-audit/receipts/P1-migration-readonly.json",
+      "public_sha256": "b195dfdc2dafa5950634e041678cb0d9ac3eaa2aca8ae4d1ec2d55fff4f03751",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-statement-dangling.before.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-statement-dangling.before.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-migration-readonly.before.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-migration-readonly.before.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-invalid-unpreserved-path.json",
+      "original_sha256": "c58bb992acc27657c6de0de58061fb3f4f05bdacf6bc58e8ba498df75f1daf81",
+      "public_path": "audits/mechanical-audit/receipts/P5-invalid-unpreserved-path.json",
+      "public_sha256": "685110650f30589a06a9bae6da69a8e804ebfd6f9add29a033c5e0804917f03a",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-numeric-verifier.json",
+      "original_sha256": "3aebfd6026d1296cc6afca93c5da840953c8e5a518df918edc086e0b51db5854",
+      "public_path": "audits/mechanical-audit/receipts/P2-numeric-verifier.json",
+      "public_sha256": "d8f731cc7e8e000a6c726f2d042595c714d4cf520714b15d76fcc4bb43a81486",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-dirty-checkpoint-replay.after.json",
+      "original_sha256": "f9446d61589df217f9f4dbb0f9631c78c32ce0f4b88856102980ba1611052d64",
+      "public_path": "audits/mechanical-audit/receipts/P2-dirty-checkpoint-replay.after.json",
+      "public_sha256": "f9446d61589df217f9f4dbb0f9631c78c32ce0f4b88856102980ba1611052d64",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-B-readonly.after.json",
+      "original_sha256": "6fd1536cc503a762e1044518789672ddc988c839347fed1363d88dd802a4fb98",
+      "public_path": "audits/mechanical-audit/receipts/P2-B-readonly.after.json",
+      "public_sha256": "6fd1536cc503a762e1044518789672ddc988c839347fed1363d88dd802a4fb98",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-dirty-checkpoint-replay.before.json",
+      "original_sha256": "11a3a4208755e5aa61371b4d7b929ec5097a28ebfa7c5cf4f79471f1612e313e",
+      "public_path": "audits/mechanical-audit/receipts/P6-dirty-checkpoint-replay.before.json",
+      "public_sha256": "11a3a4208755e5aa61371b4d7b929ec5097a28ebfa7c5cf4f79471f1612e313e",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-batch-dangling.after.json",
+      "original_sha256": "d119cb206ee14f7ab3b580fa0f8ac1afb594cdc97be752b0d6dfffa091b6ed0a",
+      "public_path": "audits/mechanical-audit/receipts/P6-batch-dangling.after.json",
+      "public_sha256": "d119cb206ee14f7ab3b580fa0f8ac1afb594cdc97be752b0d6dfffa091b6ed0a",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-legal-update.after.json",
+      "original_sha256": "d8511d0e506f93c5dececbc9920feb7bd50de5baf3da3bf8ef8293946d0d1b75",
+      "public_path": "audits/mechanical-audit/receipts/P6-legal-update.after.json",
+      "public_sha256": "d8511d0e506f93c5dececbc9920feb7bd50de5baf3da3bf8ef8293946d0d1b75",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-numeric-verifier.before.json",
+      "original_sha256": "c8dda8c2697465267f86edfb1f275e3c6852d56bce30defa1da37fea91f0424f",
+      "public_path": "audits/mechanical-audit/receipts/P2-numeric-verifier.before.json",
+      "public_sha256": "c8dda8c2697465267f86edfb1f275e3c6852d56bce30defa1da37fea91f0424f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-A-compute.json",
+      "original_sha256": "861661ecdf9d9c369ad656427d5c82ba5202e44ca1d532413fa8f1d0a76cb197",
+      "public_path": "audits/mechanical-audit/receipts/P1-A-compute.json",
+      "public_sha256": "714562ee44a6aa70cb5833413b98010853e901c5b04562c3822e61b25dbea99e",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-dangling-reference.json",
+      "original_sha256": "70386470b7d308a101732ac9c8a0a388fe90de6b7d39368827b9c63b16558929",
+      "public_path": "audits/mechanical-audit/receipts/P6-dangling-reference.json",
+      "public_sha256": "3b8d5f94c9b4440a0643820a6c820f7daf923efbae85f51d65057973c19c2f8e",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-B-readonly.before.json",
+      "original_sha256": "6fd1536cc503a762e1044518789672ddc988c839347fed1363d88dd802a4fb98",
+      "public_path": "audits/mechanical-audit/receipts/P2-B-readonly.before.json",
+      "public_sha256": "6fd1536cc503a762e1044518789672ddc988c839347fed1363d88dd802a4fb98",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-valid-prefix-positive.before.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-valid-prefix-positive.before.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-stale-record-write.after.json",
+      "original_sha256": "d8511d0e506f93c5dececbc9920feb7bd50de5baf3da3bf8ef8293946d0d1b75",
+      "public_path": "audits/mechanical-audit/receipts/P6-stale-record-write.after.json",
+      "public_sha256": "d8511d0e506f93c5dececbc9920feb7bd50de5baf3da3bf8ef8293946d0d1b75",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-statement-dangling.json",
+      "original_sha256": "d1d351f9321beecaf53fc0895d73cd0578665d576c85041d6839937e05b1a8b9",
+      "public_path": "audits/mechanical-audit/receipts/P4-statement-dangling.json",
+      "public_sha256": "b11f0632391f1ba6d84f7bf581cdc43a32f5844fc6444e552cc3c1c754ae7b4d",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-batch-invalid-version.json",
+      "original_sha256": "25ee1e24e81d7397198ae1dcc106c46d86c5aa1ded34269ebfddc92d5b2fa79f",
+      "public_path": "audits/mechanical-audit/receipts/P3-batch-invalid-version.json",
+      "public_sha256": "48d18a752f26e19a09bd93cae10462e1667b0c06e52c909777fcd0e9726a1e84",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-stale-record-write.before.json",
+      "original_sha256": "d8511d0e506f93c5dececbc9920feb7bd50de5baf3da3bf8ef8293946d0d1b75",
+      "public_path": "audits/mechanical-audit/receipts/P6-stale-record-write.before.json",
+      "public_sha256": "d8511d0e506f93c5dececbc9920feb7bd50de5baf3da3bf8ef8293946d0d1b75",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-dangling-reference.before.json",
+      "original_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "public_path": "audits/mechanical-audit/receipts/P6-dangling-reference.before.json",
+      "public_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-batch-invalid-version.after.json",
+      "original_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "public_path": "audits/mechanical-audit/receipts/P3-batch-invalid-version.after.json",
+      "public_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-stale-record-write.json",
+      "original_sha256": "156e641c9c4bbb58d45efbcc6102393687eedc31327e3cbaf674c84dd2908679",
+      "public_path": "audits/mechanical-audit/receipts/P3-stale-record-write.json",
+      "public_sha256": "4173c0cc378ca07cfdd317423942cccb46b0f757a7c14d168d000ebb91aa6369",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-batch-statement-dangling.before.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-batch-statement-dangling.before.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-batch-dangling.before.json",
+      "original_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "public_path": "audits/mechanical-audit/receipts/P6-batch-dangling.before.json",
+      "public_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-A-compute.json",
+      "original_sha256": "74aa8a50a6b3490428c76e3dc0e747b48294d3e9bd5abee9af7d4abda6d9a52b",
+      "public_path": "audits/mechanical-audit/receipts/P6-A-compute.json",
+      "public_sha256": "5951fd2e0655184492052a34e4f80e299f77c9db36225ec88a60ab64981c7eba",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-legal-restore.json",
+      "original_sha256": "13096b4a3d4a8bd54a40cca8182a05548deb042841604d927bff438c1d7c9cc0",
+      "public_path": "audits/mechanical-audit/receipts/P5-legal-restore.json",
+      "public_sha256": "957218648d00d64687e762ab4dd9ce53613cb12cc5c81a6f45b40658a65dfe52",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-B-readonly.before.json",
+      "original_sha256": "bf4b3a05dad2f6a6a168bcf8b2e500b2a233589b4917982619758008bf08cb71",
+      "public_path": "audits/mechanical-audit/receipts/P5-B-readonly.before.json",
+      "public_sha256": "bf4b3a05dad2f6a6a168bcf8b2e500b2a233589b4917982619758008bf08cb71",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-valid-prefix-positive.json",
+      "original_sha256": "c641bbabf75bec44d930fa3edd0137e645052cac9897fdb9e560e2155c624b38",
+      "public_path": "audits/mechanical-audit/receipts/P4-valid-prefix-positive.json",
+      "public_sha256": "d5c875f1c740cd5b66bdd54a6a41231b6a7fe284de5ddaa3011ed1b55e1eebf7",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-dirty-status-after-checkpoint.json",
+      "original_sha256": "a93835cfa000eb1c98891175c1699447a3d85e948fe86bd17a90a7a53780ee32",
+      "public_path": "audits/mechanical-audit/receipts/P1-dirty-status-after-checkpoint.json",
+      "public_sha256": "f411ec5c249aa65593c17bf368c85581a172cba6e725fc12fbafa292929045b3",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-migration-readonly.json",
+      "original_sha256": "f1201687f015f9a174177e1691f228462f578c2cf5a5164cf87caf4a5209a253",
+      "public_path": "audits/mechanical-audit/receipts/P5-migration-readonly.json",
+      "public_sha256": "2f24d3d378a71ef239e5a4dacd382d0587e9fa837a237e84df62de7c74303e68",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-statement-dangling.after.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-statement-dangling.after.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-statement-dangling.before.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-statement-dangling.before.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-batch-dangling.before.json",
+      "original_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "public_path": "audits/mechanical-audit/receipts/P3-batch-dangling.before.json",
+      "public_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-migration-readonly.after.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-migration-readonly.after.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-C-compute.json",
+      "original_sha256": "e410ba1b9b016dabb89841876184f099f654e8425a1f93eb0b7d66339519a100",
+      "public_path": "audits/mechanical-audit/receipts/P1-C-compute.json",
+      "public_sha256": "a1c905a5ecf444388b655366630cc7b99dcf338c1da67a8a15c3006793bb6981",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-B-readonly.json",
+      "original_sha256": "dc94cc69605dc2a26dc69b3024289f475475e907e4c339edf777148606badf94",
+      "public_path": "audits/mechanical-audit/receipts/P2-B-readonly.json",
+      "public_sha256": "3a154e4dc19d33d30df6676aa82fa39d5d912ac6a3f267e936c65f4321a1f373",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-migration-readonly.before.json",
+      "original_sha256": "c8dda8c2697465267f86edfb1f275e3c6852d56bce30defa1da37fea91f0424f",
+      "public_path": "audits/mechanical-audit/receipts/P2-migration-readonly.before.json",
+      "public_sha256": "c8dda8c2697465267f86edfb1f275e3c6852d56bce30defa1da37fea91f0424f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-dirty-status-after-checkpoint.json",
+      "original_sha256": "1e4ee646c8437bdbaa2d05531f47d2ea14eba4be12439ee835785e3f578f8c96",
+      "public_path": "audits/mechanical-audit/receipts/P4-dirty-status-after-checkpoint.json",
+      "public_sha256": "daa5e1c31d40d195bc50dcfeb269952815d51f52bcdf5db864b87b48c45f6114",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-legal-update.json",
+      "original_sha256": "fcadcf0e90d08dcb74d2e7fd55f210d55ed639ee5f332942376bb0a4929bd222",
+      "public_path": "audits/mechanical-audit/receipts/P4-legal-update.json",
+      "public_sha256": "e84ec3c3165d55b3b6b2d786560af16ceb54c90ea0018a661b049348547a9116",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-dirty-save-checkpoint.before.json",
+      "original_sha256": "5b058362c1184aa7d7432c87fb9dd6b614d832ede397362fe263349af9f97068",
+      "public_path": "audits/mechanical-audit/receipts/P4-dirty-save-checkpoint.before.json",
+      "public_sha256": "5b058362c1184aa7d7432c87fb9dd6b614d832ede397362fe263349af9f97068",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-dirty-checkpoint-replay.before.json",
+      "original_sha256": "f9446d61589df217f9f4dbb0f9631c78c32ce0f4b88856102980ba1611052d64",
+      "public_path": "audits/mechanical-audit/receipts/P2-dirty-checkpoint-replay.before.json",
+      "public_sha256": "f9446d61589df217f9f4dbb0f9631c78c32ce0f4b88856102980ba1611052d64",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-batch-dangling.json",
+      "original_sha256": "0019b3f10ffbc86e13d6d0ce86e3023e6444608c5f4899ae949b159c09b46ccb",
+      "public_path": "audits/mechanical-audit/receipts/P6-batch-dangling.json",
+      "public_sha256": "a056a88f83944ab11380993763251bc14f326e4a2fe1d7175b2f7b5f85de898d",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-valid-prefix-positive.json",
+      "original_sha256": "45a8da8c43f85750b22c7263320fac88a521ac4a2d31e433286cc890b36e859f",
+      "public_path": "audits/mechanical-audit/receipts/P1-valid-prefix-positive.json",
+      "public_sha256": "77e479f19809f59d7ae39eb89d7ba625ab3646531bff3435c602618a996d64f3",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-stale-global-write.json",
+      "original_sha256": "6585a836949579957304691879876734efcb1a2e689e0920c16c2846cd393108",
+      "public_path": "audits/mechanical-audit/receipts/P3-stale-global-write.json",
+      "public_sha256": "f41bec62a5b8bfd03f6d29b64bee990bc7d351ca9dfce4472507e0a03eac7bf5",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-migration-readonly.before.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-migration-readonly.before.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-dangling-reference.after.json",
+      "original_sha256": "2f8f4e8e906e1db5ed68fa3e99649f3ecf1889a269307106d870ee8202c4c8ed",
+      "public_path": "audits/mechanical-audit/receipts/P3-dangling-reference.after.json",
+      "public_sha256": "2f8f4e8e906e1db5ed68fa3e99649f3ecf1889a269307106d870ee8202c4c8ed",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-valid-prefix-positive.after.json",
+      "original_sha256": "e128ed7c3152d7bda767384a573d7af6c9a57ce7870cb0a2c4c230cea4bc0f43",
+      "public_path": "audits/mechanical-audit/receipts/P1-valid-prefix-positive.after.json",
+      "public_sha256": "e128ed7c3152d7bda767384a573d7af6c9a57ce7870cb0a2c4c230cea4bc0f43",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-C-compute.json",
+      "original_sha256": "707bffcf8ea64cd39f369150192ba00f9e8f959f55ebd60445926565c077ddf4",
+      "public_path": "audits/mechanical-audit/receipts/P6-C-compute.json",
+      "public_sha256": "1ccf879c98f2a59cbf8de968db6ea2835762c27a7fcfc4f112c4f955c58cc551",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-batch-statement-dangling.before.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-batch-statement-dangling.before.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-legal-update.json",
+      "original_sha256": "f6eb292dc9334b2c9d9f411283b1e0afa1d942658fd0b53b82a0056199a0a466",
+      "public_path": "audits/mechanical-audit/receipts/P1-legal-update.json",
+      "public_sha256": "b58028271b4f5f88ac41ac59d3fd88883a00929dbf260ddfc670abe9cdc9454d",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-migration-readonly.json",
+      "original_sha256": "7429bea5b1ac0e785e653758441f439bb123473cd208640e5d6442ab8c469d5c",
+      "public_path": "audits/mechanical-audit/receipts/P3-migration-readonly.json",
+      "public_sha256": "d4471ee73c2b95eb0de91ceca015b20d9b2750f1cd50e76991f20492a8aee75a",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-legal-update.before.json",
+      "original_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "public_path": "audits/mechanical-audit/receipts/P3-legal-update.before.json",
+      "public_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-batch-invalid-version.json",
+      "original_sha256": "36417e525f20586213d2877d5eb1210f5de07e0ac47712d9bb5c817291b11d3a",
+      "public_path": "audits/mechanical-audit/receipts/P6-batch-invalid-version.json",
+      "public_sha256": "1b5bf8110562f7bc11c58671d2b9238a6eb4a29b762b7ba4fd7f4b32eb402d77",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-stale-record-write.json",
+      "original_sha256": "40781ec2b9da51f2320251ef7047330d90b652f50a160c785c18b82576aee639",
+      "public_path": "audits/mechanical-audit/receipts/P1-stale-record-write.json",
+      "public_sha256": "2b9fdd6a6d2de5c46c313a5c75bf5b46b3c983203a611429370e6ba282c067f9",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-dirty-status-after-checkpoint.before.json",
+      "original_sha256": "bb612c87032f984d84364641f6aaece4fdb91e79967519f546c6ad2b4da02a72",
+      "public_path": "audits/mechanical-audit/receipts/P1-dirty-status-after-checkpoint.before.json",
+      "public_sha256": "bb612c87032f984d84364641f6aaece4fdb91e79967519f546c6ad2b4da02a72",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-batch-statement-dangling.json",
+      "original_sha256": "c55d01bae668005708c8dc21982b04bea8b65b332b8a485d7989d1944e4ec972",
+      "public_path": "audits/mechanical-audit/receipts/P1-batch-statement-dangling.json",
+      "public_sha256": "0377cc3ddf09ed9da6ebbec6713e43f9637151302a1d2a3164aaf2836110012b",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-migration-readonly.after.json",
+      "original_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "public_path": "audits/mechanical-audit/receipts/P3-migration-readonly.after.json",
+      "public_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-stale-global-write.after.json",
+      "original_sha256": "d8511d0e506f93c5dececbc9920feb7bd50de5baf3da3bf8ef8293946d0d1b75",
+      "public_path": "audits/mechanical-audit/receipts/P6-stale-global-write.after.json",
+      "public_sha256": "d8511d0e506f93c5dececbc9920feb7bd50de5baf3da3bf8ef8293946d0d1b75",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-legal-update.after.json",
+      "original_sha256": "a4a4259c92653a229c61b0dcf7163eacfa84cba4afb737d37be5b6ca85de91b2",
+      "public_path": "audits/mechanical-audit/receipts/P4-legal-update.after.json",
+      "public_sha256": "a4a4259c92653a229c61b0dcf7163eacfa84cba4afb737d37be5b6ca85de91b2",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-batch-dangling.json",
+      "original_sha256": "90046d1b6d89852264ebeb90c596829e61b79c2d44f061f53495ae50d1c275fc",
+      "public_path": "audits/mechanical-audit/receipts/P3-batch-dangling.json",
+      "public_sha256": "08bdaa2a79cf8b5ca5373cc0adac7b130657589bf24f1e8a5f98a7c0d025dae2",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-dangling-reference.json",
+      "original_sha256": "bc66374503e96e88b9bde5fb06bad9a1eaaf371b895ee534d83081899ee75f72",
+      "public_path": "audits/mechanical-audit/receipts/P4-dangling-reference.json",
+      "public_sha256": "a3f270ac8220ddfce543269c3d379ce69671ccf44331371e262edde56cbda1e9",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-dangling-reference.after.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-dangling-reference.after.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-batch-statement-dangling.after.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-batch-statement-dangling.after.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-dirty-checkpoint-replay.json",
+      "original_sha256": "0b3dac9d23be43c711c36707d89c86b4161a09ac8da79a5e357cc87875efcef9",
+      "public_path": "audits/mechanical-audit/receipts/P3-dirty-checkpoint-replay.json",
+      "public_sha256": "563a319cdcf60e349c2d9aa27f1e2837a2358958bb374b10656a0db8abec7b7d",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-valid-prefix-positive.json",
+      "original_sha256": "6bfdf6a2bd97e132ada6bc29e1fcbbe414697ee995699b4fbd8fcd9bd4368e7a",
+      "public_path": "audits/mechanical-audit/receipts/P6-valid-prefix-positive.json",
+      "public_sha256": "694b211bcc5fe8381c2cb7ca9cd55fd7c5f42ef4cf723473554d7036fcfebb7d",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-B-readonly.after.json",
+      "original_sha256": "bf4b3a05dad2f6a6a168bcf8b2e500b2a233589b4917982619758008bf08cb71",
+      "public_path": "audits/mechanical-audit/receipts/P5-B-readonly.after.json",
+      "public_sha256": "bf4b3a05dad2f6a6a168bcf8b2e500b2a233589b4917982619758008bf08cb71",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-dirty-status-after-checkpoint.after.json",
+      "original_sha256": "799b161516a38f0cd1ae0adfdca1fb5d5b03b4058b0ba9af5e0fb6c17690435a",
+      "public_path": "audits/mechanical-audit/receipts/P4-dirty-status-after-checkpoint.after.json",
+      "public_sha256": "799b161516a38f0cd1ae0adfdca1fb5d5b03b4058b0ba9af5e0fb6c17690435a",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-dirty-save-checkpoint.json",
+      "original_sha256": "8c5ae8af0294bcbdf6ada6bd89d8b92c579925554e321da1107494271e5c9594",
+      "public_path": "audits/mechanical-audit/receipts/P4-dirty-save-checkpoint.json",
+      "public_sha256": "409ceb9b3fc3d654296fae5128bc8efb0f7120bc6dedf1bf8ff7f45cc25f30f8",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-stale-record-write.before.json",
+      "original_sha256": "7e5ed6bddd2d4fda475b15b232d736537f1cda6bd925fb7b578301be7620151c",
+      "public_path": "audits/mechanical-audit/receipts/P3-stale-record-write.before.json",
+      "public_sha256": "7e5ed6bddd2d4fda475b15b232d736537f1cda6bd925fb7b578301be7620151c",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-dangling-reference.before.json",
+      "original_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "public_path": "audits/mechanical-audit/receipts/P3-dangling-reference.before.json",
+      "public_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-batch-invalid-later-reference.before.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-batch-invalid-later-reference.before.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-B-readonly.json",
+      "original_sha256": "bb8a19f550abedd1143e91b00fbbd6c3cfafc22885f86faf7a405e6e5dbb0b35",
+      "public_path": "audits/mechanical-audit/receipts/P5-B-readonly.json",
+      "public_sha256": "c6fc0ecae45622874513efc4a8c61102f29602d8ecc07be917d33ab8b88f0554",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-batch-invalid-later-reference.after.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-batch-invalid-later-reference.after.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-dirty-save-checkpoint.after.json",
+      "original_sha256": "799b161516a38f0cd1ae0adfdca1fb5d5b03b4058b0ba9af5e0fb6c17690435a",
+      "public_path": "audits/mechanical-audit/receipts/P4-dirty-save-checkpoint.after.json",
+      "public_sha256": "799b161516a38f0cd1ae0adfdca1fb5d5b03b4058b0ba9af5e0fb6c17690435a",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-batch-invalid-later-reference.json",
+      "original_sha256": "79fae0d71fb2bb1fe8e7dce6ab45749d969d582bcf06219c52ceaa73898a0bd1",
+      "public_path": "audits/mechanical-audit/receipts/P4-batch-invalid-later-reference.json",
+      "public_sha256": "8fcb1f3c1466130e8b84165e0d3e0f33e1fda774220130f97cd35100597182dc",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-dirty-checkpoint-replay.json",
+      "original_sha256": "bdeb49d018a98b9f598a5c08bd6771d543f7e1d63a59a010f100aa85f4eab3e8",
+      "public_path": "audits/mechanical-audit/receipts/P5-dirty-checkpoint-replay.json",
+      "public_sha256": "ff878e04cc825351835856b74dc098fda959947ae509a3cdf6e243217c6e8a03",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-migration-readonly.json",
+      "original_sha256": "33813795484119cc12621dbc4c2802f6ce4c6f026e9d5eb83d5f109c917a3eeb",
+      "public_path": "audits/mechanical-audit/receipts/P4-migration-readonly.json",
+      "public_sha256": "7951e9d07cbc58fc740872bb2065a3805923dd15547b14bea2e18d872173b6b8",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-stale-global-write.before.json",
+      "original_sha256": "d8511d0e506f93c5dececbc9920feb7bd50de5baf3da3bf8ef8293946d0d1b75",
+      "public_path": "audits/mechanical-audit/receipts/P6-stale-global-write.before.json",
+      "public_sha256": "d8511d0e506f93c5dececbc9920feb7bd50de5baf3da3bf8ef8293946d0d1b75",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-batch-invalid-version.after.json",
+      "original_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "public_path": "audits/mechanical-audit/receipts/P6-batch-invalid-version.after.json",
+      "public_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-migration-readonly.before.json",
+      "original_sha256": "f42abe1c09bc5d32d2ef7ff2957335a38d852dd7a9ffc26a5385a5f8cdb9372f",
+      "public_path": "audits/mechanical-audit/receipts/P5-migration-readonly.before.json",
+      "public_sha256": "f42abe1c09bc5d32d2ef7ff2957335a38d852dd7a9ffc26a5385a5f8cdb9372f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-legal-update.json",
+      "original_sha256": "fedaf8dffbe1d49256436906eec15cae9a2cf98fd65805c72fb980ad5cb87755",
+      "public_path": "audits/mechanical-audit/receipts/P6-legal-update.json",
+      "public_sha256": "5e4d3dcb0f9a3acb26cbd3838095eb978e6bf7f383b1d1ba8a754915f2f3105a",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-batch-invalid-version.before.json",
+      "original_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "public_path": "audits/mechanical-audit/receipts/P6-batch-invalid-version.before.json",
+      "public_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-B-readonly.after.json",
+      "original_sha256": "0a42e40ef2b6ef396274d8860b03aebe30fa73338220ade1efb4bfdee92bf538",
+      "public_path": "audits/mechanical-audit/receipts/P3-B-readonly.after.json",
+      "public_sha256": "0a42e40ef2b6ef396274d8860b03aebe30fa73338220ade1efb4bfdee92bf538",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-batch-statement-dangling.after.json",
+      "original_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "public_path": "audits/mechanical-audit/receipts/P1-batch-statement-dangling.after.json",
+      "public_sha256": "effbc0d00eda46c3e508ed2ef62332b4b592bd947af82f1a498cc3754c8e0a77",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-C-compute.json",
+      "original_sha256": "c1cd4083631bc34ad0c7ee0f9f1914938ad7f9c09d8ba75e12449194f99ffdc2",
+      "public_path": "audits/mechanical-audit/receipts/P2-C-compute.json",
+      "public_sha256": "7cb81addfcef5b37a43daf8fa6a28fde607b5251508a0c644f663b6657104c80",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-migration-readonly.before.json",
+      "original_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "public_path": "audits/mechanical-audit/receipts/P3-migration-readonly.before.json",
+      "public_sha256": "e3cbefc59c6f35190a95b18ed91e7dfdff04a1a5933ac5c92e7732096ae7874d",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-stale-record-write.after.json",
+      "original_sha256": "a4a4259c92653a229c61b0dcf7163eacfa84cba4afb737d37be5b6ca85de91b2",
+      "public_path": "audits/mechanical-audit/receipts/P4-stale-record-write.after.json",
+      "public_sha256": "a4a4259c92653a229c61b0dcf7163eacfa84cba4afb737d37be5b6ca85de91b2",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-legal-update.json",
+      "original_sha256": "98ad9771a46eeebd00456882892abe624c607fd4aa01a5a79ab3009c0da2daed",
+      "public_path": "audits/mechanical-audit/receipts/P3-legal-update.json",
+      "public_sha256": "d624203603ea0c1fca0725cbe7a26ff3a6a0fb94365fc52ee5798171cd2d3f8f",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-legal-restore.before.json",
+      "original_sha256": "f42abe1c09bc5d32d2ef7ff2957335a38d852dd7a9ffc26a5385a5f8cdb9372f",
+      "public_path": "audits/mechanical-audit/receipts/P5-legal-restore.before.json",
+      "public_sha256": "f42abe1c09bc5d32d2ef7ff2957335a38d852dd7a9ffc26a5385a5f8cdb9372f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-valid-prefix-positive.before.json",
+      "original_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "public_path": "audits/mechanical-audit/receipts/P6-valid-prefix-positive.before.json",
+      "public_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-B-readonly.json",
+      "original_sha256": "e40a5380919895242c6383ab25614f2969f42b73ee26c3e8874d9b0b8b92b9ea",
+      "public_path": "audits/mechanical-audit/receipts/P4-B-readonly.json",
+      "public_sha256": "5be774e66aa693add1b385d78ddc88d63322446fd6de6552c94d1a8738d4240a",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-C-compute.json",
+      "original_sha256": "70b4e39d1fb926c0de29bc709d3eda3aa35465f0bd87e09a362b62587399e198",
+      "public_path": "audits/mechanical-audit/receipts/P5-C-compute.json",
+      "public_sha256": "c783aa4211c35158d04b2eea7e2fac627f0e4b8311fd4b5524b4e0fa49452eab",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-migration-readonly.after.json",
+      "original_sha256": "f42abe1c09bc5d32d2ef7ff2957335a38d852dd7a9ffc26a5385a5f8cdb9372f",
+      "public_path": "audits/mechanical-audit/receipts/P5-migration-readonly.after.json",
+      "public_sha256": "f42abe1c09bc5d32d2ef7ff2957335a38d852dd7a9ffc26a5385a5f8cdb9372f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-B-readonly.after.json",
+      "original_sha256": "c5b73677fbd7c2784121009a24024c0a1b1508bc617c694d8058b73ebe1528fd",
+      "public_path": "audits/mechanical-audit/receipts/P1-B-readonly.after.json",
+      "public_sha256": "c5b73677fbd7c2784121009a24024c0a1b1508bc617c694d8058b73ebe1528fd",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-valid-prefix-positive.before.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-valid-prefix-positive.before.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-dirty-checkpoint-replay.after.json",
+      "original_sha256": "11a3a4208755e5aa61371b4d7b929ec5097a28ebfa7c5cf4f79471f1612e313e",
+      "public_path": "audits/mechanical-audit/receipts/P6-dirty-checkpoint-replay.after.json",
+      "public_sha256": "11a3a4208755e5aa61371b4d7b929ec5097a28ebfa7c5cf4f79471f1612e313e",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-B-readonly.json",
+      "original_sha256": "5dced9b1f75ecd6dc1ceb020bf2286133b9aa9883528455e27803a7586dc26dd",
+      "public_path": "audits/mechanical-audit/receipts/P3-B-readonly.json",
+      "public_sha256": "386f90c95ea2a6063eef2579ea762de8f0f9a96094eecccf8aea1a9fe9c79977",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-C-compute.json",
+      "original_sha256": "a3dca12e3f529e824c47258b8be70c393f35076f4b1b91688a2682b4d3dcb336",
+      "public_path": "audits/mechanical-audit/receipts/P4-C-compute.json",
+      "public_sha256": "a7f1a63467dfd2abac701f747f0a93b04652aee816aadc3c372d597dc941d245",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-valid-prefix-positive.after.json",
+      "original_sha256": "56e6a82326ae58f3cb3b158daa63cdf3393a94c90727f5d66d09c69b86a88f24",
+      "public_path": "audits/mechanical-audit/receipts/P6-valid-prefix-positive.after.json",
+      "public_sha256": "56e6a82326ae58f3cb3b158daa63cdf3393a94c90727f5d66d09c69b86a88f24",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-stale-file-write.json",
+      "original_sha256": "a27e25df5e527bc96382069c79606805a0ee4f2b705781ec8d0f492e311c446c",
+      "public_path": "audits/mechanical-audit/receipts/P5-stale-file-write.json",
+      "public_sha256": "3345998436f09498103c0d1cce3ffd827aaa0a5a5bd4730e5e02d7f01a430eeb",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P5-invalid-unpreserved-path.before.json",
+      "original_sha256": "e5bff6a72dbc846d293a53ad63fbd7ab6c4c622131bec1a0575bc4d92f59e40e",
+      "public_path": "audits/mechanical-audit/receipts/P5-invalid-unpreserved-path.before.json",
+      "public_sha256": "e5bff6a72dbc846d293a53ad63fbd7ab6c4c622131bec1a0575bc4d92f59e40e",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-legal-update.after.json",
+      "original_sha256": "7e5ed6bddd2d4fda475b15b232d736537f1cda6bd925fb7b578301be7620151c",
+      "public_path": "audits/mechanical-audit/receipts/P3-legal-update.after.json",
+      "public_sha256": "7e5ed6bddd2d4fda475b15b232d736537f1cda6bd925fb7b578301be7620151c",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-dangling-reference.json",
+      "original_sha256": "7ac028c8e9260dbb503638fa90f43c56ebd7f534831f3421502b68a2d2088c9b",
+      "public_path": "audits/mechanical-audit/receipts/P3-dangling-reference.json",
+      "public_sha256": "8cb3277daf72767f18546687136c18d8a18bb27a060a295621f546c428f4e4e3",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-stale-record-write.after.json",
+      "original_sha256": "7e5ed6bddd2d4fda475b15b232d736537f1cda6bd925fb7b578301be7620151c",
+      "public_path": "audits/mechanical-audit/receipts/P3-stale-record-write.after.json",
+      "public_sha256": "7e5ed6bddd2d4fda475b15b232d736537f1cda6bd925fb7b578301be7620151c",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P3-C-compute.json",
+      "original_sha256": "59bf003c2bae1df7e1f44423b15bc57bd89178c1ba838bbc79177a6734be9a32",
+      "public_path": "audits/mechanical-audit/receipts/P3-C-compute.json",
+      "public_sha256": "712ab6b279ef5003f601d48c2fce12f25686a1db98a33b54b85ebbf3e33d73f3",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-dirty-checkpoint-replay.json",
+      "original_sha256": "4f09fab0efecd6ac196d954d161eb95807b4f449391d857432a58f4307c5a413",
+      "public_path": "audits/mechanical-audit/receipts/P6-dirty-checkpoint-replay.json",
+      "public_sha256": "df768a211ab6cadfde1aa384adc4fad61ad886556ee951d1e2e74f34fb09c1cb",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-stale-record-write.json",
+      "original_sha256": "023c07db41bdff6d51f28fd503e826661ac6211167b37bea53804f225f12f524",
+      "public_path": "audits/mechanical-audit/receipts/P6-stale-record-write.json",
+      "public_sha256": "4de57d0f388f363d0ec2fbafa1a356f302ed0d4700b67b9cd6a5750bd41b548d",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P2-migration-readonly.after.json",
+      "original_sha256": "c8dda8c2697465267f86edfb1f275e3c6852d56bce30defa1da37fea91f0424f",
+      "public_path": "audits/mechanical-audit/receipts/P2-migration-readonly.after.json",
+      "public_sha256": "c8dda8c2697465267f86edfb1f275e3c6852d56bce30defa1da37fea91f0424f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-dangling-reference.before.json",
+      "original_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "public_path": "audits/mechanical-audit/receipts/P4-dangling-reference.before.json",
+      "public_sha256": "ebe71dbe26faa4b7515a9f0e54808f94b8e7fc37c355f89c7050b1f730e338f5",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P4-stale-record-write.before.json",
+      "original_sha256": "a4a4259c92653a229c61b0dcf7163eacfa84cba4afb737d37be5b6ca85de91b2",
+      "public_path": "audits/mechanical-audit/receipts/P4-stale-record-write.before.json",
+      "public_sha256": "a4a4259c92653a229c61b0dcf7163eacfa84cba4afb737d37be5b6ca85de91b2",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P6-legal-update.before.json",
+      "original_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "public_path": "audits/mechanical-audit/receipts/P6-legal-update.before.json",
+      "public_sha256": "9619e89223c1dc17423fbb733521e7f01c1d40cbe29a28eb7112a1ee83867a1f",
+      "changes": []
+    },
+    {
+      "original_relative_name": "mechanical-audit/receipts/P1-statement-dangling.json",
+      "original_sha256": "ed3d7e65b3d7fbea3e23467081632b60f3e94a6a1d6e28b9b70d6206f3316fa4",
+      "public_path": "audits/mechanical-audit/receipts/P1-statement-dangling.json",
+      "public_sha256": "a8613ec9e75d14d4e0d433dce4a5a2e3257c9663d342a9834f1aadead820274c",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "content-consistency-review.json",
+      "original_sha256": "eec4dacb970e650a70485849c73e76dd385fde6382cf6a94571a48785c995b5d",
+      "public_path": "audits/content-consistency-review.json",
+      "public_sha256": "154867f7f304cd174fde7bf85adbfcf65b45a40e3d36abdd00f3c5fc0fdfb185",
+      "changes": [
+        "absolute-locators-to-logical-paths"
+      ]
+    },
+    {
+      "original_relative_name": "content-consistency-review.md",
+      "original_sha256": "8ae2ed617745389940ba82a12dfc97cee0d73b9cc158bc519890250c4d5d0cd4",
+      "public_path": "audits/content-consistency-review.md",
+      "public_sha256": "8ae2ed617745389940ba82a12dfc97cee0d73b9cc158bc519890250c4d5d0cd4",
+      "changes": []
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "submission_id": "S733011",
+  "task_id": "data-a",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_units",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "report.md:9-21；work/analysis.py:39-103；work/data_audit.json 的 hour_rows/day_rows、hour_count_distribution、missing_calendar_hours、manifest_checks、daily_count_mismatches。",
+      "rationale": "正确识别UCI单系统来源、8645小时行/365日行及2011日期范围；核对哈希、重复/空单元、计数恒等式和小时到日的三列合计。明确305个完整日期、115个缺失名义小时，未补零。准确保留行数、season与两种温度公式的文档冲突，未擅改观测。复跑data_audit.json与提交逐字节一致。"
+    },
+    {
+      "id": "temporal_design",
+      "score": 9,
+      "max_points": 9,
+      "evidence": "report.md:25、60-66；work/analysis.py:106-139、325-344；work/model.json 的 train_start/train_end/train_n_rows/train_n_dates、C0、C1。",
+      "rationale": "训练严格date<2011-10-01（273天6442行），Q4留出92天2203小时；72个查找单元的sum/n与未舍入均值正确，未见组合回退C0，实际回退0。仅hr和workingday作预测输入；准确解释同期类别计数泄漏、实际天气事前不可用及随机拆行不能代替未来检验。score分支仅加载既有模型，不调用fit；本次冻结评分复跑与已保存结果完全一致。"
+    },
+    {
+      "id": "metrics_sensitivity",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "report.md:27-43；work/analysis.py:143-165、204-227；work/results.json 的 overall、complete_24h_dates、by_workingday。",
+      "rationale": "C0/C1的MAE 58.825190494512434/44.570832407531775、RMSE与预测减真实偏差正确；绝对改善14.254358086980659、相对改善0.24231724482575867。两个日等权MAE、差及相对降幅均正确且清楚区分小时权重。完整24h留出87天2088小时、workingday两组742/1461小时均使用原模型计算，数值与参考一致。主指标、完整日、分组及区间共56项比较最大绝对差1.4210854715202004e-14。"
+    },
+    {
+      "id": "uncertainty",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "report.md:45-56；work/analysis.py:168-201、213-216；work/results.json/bootstrap/7、/28；work/verify.py:39-69。",
+      "rationale": "实现排序日期配对、循环连续7/28天块、randrange(D)、抽至至少D天后截断、保留抽中日内所有小时并按总小时重算MAE；每块长重置random.Random(20261029)，B=2000，(B-1)p线性分位数均合协议。7日绝对区间[10.800923355912134,17.578081630439435]、28日[9.815819623823897,18.33421270659497]及相对区间与参考相符；4000次展开小时复核通过。说明固定模型的误差波动、未含重训不确定性、时间稳定性/相关长度和循环边界近似，不作跨年保证。"
+    },
+    {
+      "id": "conclusion_update",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "report.md:5、43、54-68；work/handoff.md:24-30。",
+      "rationale": "正确以实际2011 Q4已记录小时回答改善且超过10%两个问题，保留预先指定的点估计实务判据，并将区间解释限制在所述重采样假设。明确不代表未记录小时、个体行为、工作日安排的因果效果或2012性能。逐项审核构造草稿，无需且未因未提供2012实际结果扣分。"
+    },
+    {
+      "id": "reproducibility",
+      "score": 9,
+      "max_points": 9,
+      "evidence": "work/analysis.py:314-349；work/model.json；work/results.json；work/handoff.md:7-38；work/RUN.md:3-28、30-40；work/verify.py:19-69。",
+      "rationale": "标准库主程序在独立输出目录实际复跑，model.json/results.json/data_audit.json及report.md与提交逐字节一致；72组均值、2203行预测、4000次展开小时bootstrap数值核验通过，冻结score分支重放results.json亦逐字节一致，模型SHA保持84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47。handoff包含输入摘要、训练/留出、规则、指标、限制、冻结模型载入命令，科学结果足以恢复。匿名work未附部分可再生中间CSV，直接verify命令需先按主流程生成依赖；这一运行顺序瑕疵不妨碍主分析与冻结评分恢复，不按文件数量扣分。"
+    }
+  ],
+  "raw_score": 50,
+  "effective_score": 50,
+  "max_score": 50,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "usable",
+  "notes": [
+    "仅评价阶段A及其2011证据；未用2012结果反向否定2011有限结论。数值参考未发现错误。",
+    "未获得分组映射；没有按措辞、术语、目录结构或台账字段推断组别或赋分。",
+    "报告SHA-256已核对为e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57，正文4216字符。",
+    "匿名work目录未含handoff所列date_coverage.csv、predictions.csv及bootstrap_L7/L28.csv；原样运行verify.py在第25行因predictions.csv缺失而退出。未将目录缺项视作捏造或按文件数量扣分：主analysis.py可完整再生它们，将未经修改的verify.py放入独立再生输出目录后核验通过，最大绝对改善差2.1316282072803006e-14。",
+    "独立核验输出目录为AUDITOR_TEMP_DIR/S733011-adjudication-nm_zggsj；未修改作者代码或输入，未读取执行日志。"
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification.",
+  "report_sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57"
+}

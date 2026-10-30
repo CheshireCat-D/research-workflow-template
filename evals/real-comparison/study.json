@@ -1,0 +1,101 @@
+{
+  "format_version": 1,
+  "study_id": "RWT-real-materials-v1",
+  "freeze_sha256": "a4f6b970d95c96a9472ce47265e78a1b70ec0af1783b7b927848a0ac0bfaca48",
+  "expected_trials": [
+    {
+      "trial_id": "T01",
+      "task_id": "theory",
+      "arm": "baseline",
+      "replicate": 1,
+      "predecessor": null
+    },
+    {
+      "trial_id": "T02",
+      "task_id": "theory",
+      "arm": "rwt",
+      "replicate": 1,
+      "predecessor": null
+    },
+    {
+      "trial_id": "T03",
+      "task_id": "theory",
+      "arm": "matched",
+      "replicate": 1,
+      "predecessor": null
+    },
+    {
+      "trial_id": "T04",
+      "task_id": "theory",
+      "arm": "matched",
+      "replicate": 2,
+      "predecessor": null
+    },
+    {
+      "trial_id": "T05",
+      "task_id": "theory",
+      "arm": "baseline",
+      "replicate": 2,
+      "predecessor": null
+    },
+    {
+      "trial_id": "T06",
+      "task_id": "theory",
+      "arm": "rwt",
+      "replicate": 2,
+      "predecessor": null
+    },
+    {
+      "trial_id": "D01",
+      "task_id": "data-a",
+      "arm": "baseline",
+      "replicate": 1,
+      "predecessor": null
+    },
+    {
+      "trial_id": "D02",
+      "task_id": "data-a",
+      "arm": "rwt",
+      "replicate": 1,
+      "predecessor": null
+    },
+    {
+      "trial_id": "D03",
+      "task_id": "data-a",
+      "arm": "matched",
+      "replicate": 1,
+      "predecessor": null
+    },
+    {
+      "trial_id": "D04",
+      "task_id": "data-b",
+      "arm": "rwt",
+      "replicate": 1,
+      "predecessor": "D02"
+    },
+    {
+      "trial_id": "D05",
+      "task_id": "data-b",
+      "arm": "matched",
+      "replicate": 1,
+      "predecessor": "D03"
+    },
+    {
+      "trial_id": "D06",
+      "task_id": "data-b",
+      "arm": "baseline",
+      "replicate": 1,
+      "predecessor": "D01"
+    }
+  ],
+  "scope": "Two independent theory contexts per arm and one two-stage real-data chain per arm; no overall ranking or population accuracy estimate.",
+  "publication_projections": {
+    "references/design-provenance.md": {
+      "original_sha256": "51192e434e9f184bd3270f93b9221c3c027325f967ae409ca33c88d6ef56ea67",
+      "public_sha256": "f548bcfd3e1d467b118fada526a314e56a0a8a2ad2c64f922082b83640bd22e1",
+      "changes": [
+        "machine-path-redaction"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "profile": "user-runtime",
+  "maintained_files_excluding_manifest": 80,
+  "zip_entries_including_manifest": 81,
+  "archive_sha256": "1bf658b7895711bf786b3cf415a3c47dc2b214a31bace1d82e5b22ef00849ff2",
+  "deterministic_two_builds_byte_identical": true,
+  "verify_passed": true,
+  "clean_smoke": {
+    "passed": true,
+    "profile": "user-runtime",
+    "sha256": "1bf658b7895711bf786b3cf415a3c47dc2b214a31bace1d82e5b22ef00849ff2",
+    "commands_executed": 12,
+    "empty_home_and_tmp": true,
+    "extracted_user_runtime_evaluation_scope_preserved": true,
+    "source_bytes_and_mtime_unchanged": true,
+    "read_only_project_bytes_and_mtime_unchanged": true,
+    "moved_runtime_without_source_dependency": true,
+    "scope": "Clean current user-package engineering execution; no research certification."
+  },
+  "scope": "Current local package; no hosted CI, remote release, or scientific certification."
+}

@@ -1,0 +1,310 @@
+{
+  "format_version": 1,
+  "study_id": "RWT-core-lifecycle-v1",
+  "status": "record-complete",
+  "checked_at_utc": "2026-10-30T10:06:09.506781+00:00",
+  "freeze_sha256": "bd6922d8655be77ff13941c6bc9ca0ccd578a3dd8e48543a092d173eb1c361f6",
+  "first_attempt_contexts": 24,
+  "dependent_project_chains": 6,
+  "independent_material_scenarios": 2,
+  "human_participants_or_experts": 0,
+  "chain_results": [
+    {
+      "chain_id": "P1",
+      "case_id": "T",
+      "arm": "core",
+      "submission_id": "K95a485",
+      "stage_scores": {
+        "A": 20,
+        "B": 35,
+        "C": 30,
+        "D": 15
+      },
+      "score": 100,
+      "max_score": 100,
+      "critical_errors": [],
+      "usability": "usable: 当前状态、证据、历史内容和项目内恢复入口足以支持下一位恢复者在限定范围内继续。",
+      "adjudication": {
+        "path": "adjudications/K95a485.json",
+        "sha256": "a033725fdc50914c25f2e6dc043466c9cf50bfca6fccf1a0a3f600c8ab6baac8"
+      },
+      "stage_reports": {
+        "A": {
+          "path": "runs/P1/A/report.md",
+          "sha256": "c845187646b700eff21301fd8f39737c82dc857e737c4bdaa929fc6854250d71"
+        },
+        "B": {
+          "path": "runs/P1/B/report.md",
+          "sha256": "f82b762719fba7a7d87bbc7fb5f05e2ab26e9303912e89b99fe6fc940f4e305b"
+        },
+        "C": {
+          "path": "runs/P1/C/report.md",
+          "sha256": "a6e1f4e2debe4f12dd326a2ba49335288c3ab404b653a0d85b98c67781155967"
+        },
+        "D": {
+          "path": "runs/P1/D/report.md",
+          "sha256": "1d9300c5fe8a1f11003a690f8a932891cfc74b8dd21c48f81a8e7bf1edda59bb"
+        }
+      }
+    },
+    {
+      "chain_id": "P2",
+      "case_id": "D",
+      "arm": "baseline",
+      "submission_id": "Kc5f7b6",
+      "stage_scores": {
+        "A": 20,
+        "B": 35,
+        "C": 30,
+        "D": 15
+      },
+      "score": 100,
+      "max_score": 100,
+      "critical_errors": [],
+      "usability": "usable",
+      "adjudication": {
+        "path": "adjudications/Kc5f7b6.json",
+        "sha256": "e2ac30adca70343bc1eb7fb0209afbe3ac3995d33af4e7d0bfa05ad91ad13037"
+      },
+      "stage_reports": {
+        "A": {
+          "path": "runs/P2/A/report.md",
+          "sha256": "443e1ed249ae53715cd9417df013f6e5b7066cb6363eb3182c26833c25d0045e"
+        },
+        "B": {
+          "path": "runs/P2/B/report.md",
+          "sha256": "87da4bcfd0363261e95b263a638b5c66f38b2dea94d2d730da5e8e3bdce479fc"
+        },
+        "C": {
+          "path": "runs/P2/C/report.md",
+          "sha256": "6ae458665ff4cb5562116a0aedb10c05770959dc9e0025095e679b57d878684a"
+        },
+        "D": {
+          "path": "runs/P2/D/report.md",
+          "sha256": "d33238663c7b3bcd49b8ea98384d6f1fef08b88914193b285ff8a3e5c352e01a"
+        }
+      }
+    },
+    {
+      "chain_id": "P3",
+      "case_id": "T",
+      "arm": "guidance",
+      "submission_id": "K673d66",
+      "stage_scores": {
+        "A": 20,
+        "B": 35,
+        "C": 30,
+        "D": 15
+      },
+      "score": 100,
+      "max_score": 100,
+      "critical_errors": [],
+      "usability": "usable",
+      "adjudication": {
+        "path": "adjudications/K673d66.json",
+        "sha256": "9af01bf71776b1ed6bb60f91ec98d67ec5a483c8d0d09ac7f9b183dd09aef214"
+      },
+      "stage_reports": {
+        "A": {
+          "path": "runs/P3/A/report.md",
+          "sha256": "32bdfb3b2798658f8cb945980d8074b4ae9aa286de6b10cc93f4356eeb8585fa"
+        },
+        "B": {
+          "path": "runs/P3/B/report.md",
+          "sha256": "a0ccc617164e4c4306ff9bbddf36af95adde58d63eb9529ed968ddafdfebbae4"
+        },
+        "C": {
+          "path": "runs/P3/C/report.md",
+          "sha256": "c5a2017337e36d27bb5a9926a5d32a2d0f6b9611f210216a77f934cb76fd645e"
+        },
+        "D": {
+          "path": "runs/P3/D/report.md",
+          "sha256": "5d65f4eec8ff3355ed464ca22ac235613d56b45f4e972d4cdcd5dadc75632e8e"
+        }
+      }
+    },
+    {
+      "chain_id": "P4",
+      "case_id": "D",
+      "arm": "core",
+      "submission_id": "K6409fe",
+      "stage_scores": {
+        "A": 20,
+        "B": 35,
+        "C": 30,
+        "D": 15
+      },
+      "score": 100,
+      "max_score": 100,
+      "critical_errors": [],
+      "usability": "usable",
+      "adjudication": {
+        "path": "adjudications/K6409fe.json",
+        "sha256": "eaa1d5f9d6a55dc495700f8a88241ae66743d7852e138d11a1890b1cc0a83d47"
+      },
+      "stage_reports": {
+        "A": {
+          "path": "runs/P4/A/report.md",
+          "sha256": "a080b7e37bc62c95bb8ed5272f1e68397fdb5da3d34ac25be27d37ee17756c26"
+        },
+        "B": {
+          "path": "runs/P4/B/report.md",
+          "sha256": "f5720f4c5b5a1e4d7a3a0f76634ce404de1f07f921ee1ac8f2b1daad36870a2a"
+        },
+        "C": {
+          "path": "runs/P4/C/report.md",
+          "sha256": "d1ae900c2b6c199210bd14d0aa64531ee000e7a89c0ce7be6b56ab88f6ed2f63"
+        },
+        "D": {
+          "path": "runs/P4/D/report.md",
+          "sha256": "51c97c7f1b9d3076895c18f00cabccae5fb24a01fa68b34dfd52e27252f6aee1"
+        }
+      }
+    },
+    {
+      "chain_id": "P5",
+      "case_id": "T",
+      "arm": "baseline",
+      "submission_id": "K0dd86b",
+      "stage_scores": {
+        "A": 20,
+        "B": 35,
+        "C": 30,
+        "D": 15
+      },
+      "score": 100,
+      "max_score": 100,
+      "critical_errors": [],
+      "usability": "usable",
+      "adjudication": {
+        "path": "adjudications/K0dd86b.json",
+        "sha256": "818394f34c9c55852e1e46496d449010f3a6e61713d272686dc9859aed37d8b7"
+      },
+      "stage_reports": {
+        "A": {
+          "path": "runs/P5/A/report.md",
+          "sha256": "fa98b41175eba9085540cdcbd3b3f43cf76d1f914aeae112e014abcabfdb2bc3"
+        },
+        "B": {
+          "path": "runs/P5/B/report.md",
+          "sha256": "fd9092ceed2e237751135ef1c68753e8d32fe8b1ee380513e698622a8d00a1ef"
+        },
+        "C": {
+          "path": "runs/P5/C/report.md",
+          "sha256": "a35c5083f3645a09f9fcbdc7ce0a23c6f96256e368875216672a786f651cd708"
+        },
+        "D": {
+          "path": "runs/P5/D/report.md",
+          "sha256": "da6bc9b48c22c25fddf106b1d07ae3dcdb78ac3106d1cca51651f93bcc7ea757"
+        }
+      }
+    },
+    {
+      "chain_id": "P6",
+      "case_id": "D",
+      "arm": "guidance",
+      "submission_id": "K7dc50a",
+      "stage_scores": {
+        "A": 20,
+        "B": 35,
+        "C": 30,
+        "D": 15
+      },
+      "score": 100,
+      "max_score": 100,
+      "critical_errors": [],
+      "usability": "usable",
+      "adjudication": {
+        "path": "adjudications/K7dc50a.json",
+        "sha256": "01b1f89a1e577342318c9f2606e5b8f20b2180387e18dc6233464e22feaeeb18"
+      },
+      "stage_reports": {
+        "A": {
+          "path": "runs/P6/A/report.md",
+          "sha256": "fc0ffe7d992593e413950b86daecb56f9b7305ab757395653721e5d38a1e1585"
+        },
+        "B": {
+          "path": "runs/P6/B/report.md",
+          "sha256": "b192cd2d73950b30dc1b984e46ed41757c11ae67e5134cc02506d8e571cf20b9"
+        },
+        "C": {
+          "path": "runs/P6/C/report.md",
+          "sha256": "21ac053d997eaf7b3a7e4d5cbc8c50885a92aa6eabbcc4a39829567158fbcb38"
+        },
+        "D": {
+          "path": "runs/P6/D/report.md",
+          "sha256": "c65aad5bc51b8babd060384f375da3bc0586732cd1c99a5ba094f6dff31934dc"
+        }
+      }
+    }
+  ],
+  "record_validation": {
+    "path": "record-validation.json",
+    "sha256": "27fc75b0525e9c5082532eb011f5ffb3b7a696b6da1c5e03b9032860f3d8b1a1"
+  },
+  "theory_entry": {
+    "path": "theory-route/summary.json",
+    "sha256": "0669c6a629c2ca8ff9f6512584d2830a459732e5409e566afa2ee47754a090bf"
+  },
+  "primary_grade_publication": {
+    "path": "adjudications/publication.json",
+    "sha256": "6063a1d7e3be02bfbb741e65391bce8ec6d8f38b232daf43efbd8dd38986ebd0"
+  },
+  "independent_mechanical_audit": {
+    "path": "audits/mechanical-audit.json",
+    "sha256": "ea5aed3dfad268d653b58dfd5a4f9166015f5939f066c8ed76ba6fc51f0b2526"
+  },
+  "independent_blind_content_consistency": {
+    "path": "audits/content-consistency-review.json",
+    "sha256": "154867f7f304cd174fde7bf85adbfcf65b45a40e3d36abdd00f3c5fc0fdfb185"
+  },
+  "score_comparison": {
+    "path": "audits/score-consistency.json",
+    "sha256": "89f86039b7d550699772cfea8ba889c881f9ae6f773c13b0410b7fc7817e28f1"
+  },
+  "burden": {
+    "path": "burden.json",
+    "sha256": "2429971d8ce03f842b572c9eaff131b9bf2ad8d47d80b93605daa94392bd0973"
+  },
+  "interpretation": {
+    "observed_workflow_or_recovery_accuracy_advantage_for_core": false,
+    "observed_automatic_referential_integrity_difference": true,
+    "observed_core_advantage_scope": "Two native core interfaces rejected unknown relationship endpoints and rolled back the mixed invalid batches; two delivered guidance-group update scripts accepted the same invalid endpoints despite real version protection. No claim controls cannot implement these checks.",
+    "missing_control_interfaces": "Not provided/not comparable, not scored as scientific failure.",
+    "core_native_resume_interference": {
+      "chain": "P4",
+      "stage": "B",
+      "original_exit_code": 2,
+      "cause": "Executor read guard interpreted an ambiguous design-directory prohibition to include allowed runtime catalog; actual recovery continued manually.",
+      "original_failure_preserved": true,
+      "not_counted_as_successful_native_resume": true,
+      "later_independent_replay_does_not_replace_original": true
+    },
+    "core_more_outer_calls_in_these_small_projects": true,
+    "token_or_time_advantage_measured": false,
+    "fieldwide_or_statistical_ranking": null,
+    "effective_model_equality": "not-inferred"
+  },
+  "preserved_limits": [
+    "Core record history/hash is not an archive of overwritten research-file bytes.",
+    "Only declared bindings/dependencies are monitored; remote/source-only and unknown dependencies remain outside automatic coverage.",
+    "Core integrity checks do not certify scientific truth, proof, novelty or human approval.",
+    "Instruction/self-report isolation, no OS audit; source/toolkit paths actually moved but global cache denial not proven.",
+    "AI execution and adjudication may share blind spots; two purposive projects with strong common instructions.",
+    "Original context failures/retries and logging issues retained; no hidden replacement runs.",
+    "All project groups delivered self-written file workflows; no Git repository was delivered, correcting an earlier organizer inference.",
+    "Current changes are local, no hosted CI or remote release claimed."
+  ],
+  "preservation": {
+    "path": "audits/preservation.json",
+    "sha256": "3f2b0bf5b8e1584699c7146a93c1d337f42dd0c61dfd9aff8f12b43462f13987"
+  },
+  "software_validation": {
+    "path": "audits/software-check.json",
+    "sha256": "873b7ef97ede6c6d35658bc4c8961b222a978f534099d110e0e5f3811c478437"
+  },
+  "user_package_validation": {
+    "path": "audits/user-package-check.json",
+    "sha256": "9506052b310448db06b86403e8c9425d544bf97118bc39f59c50cdc1b797ff0f"
+  }
+}

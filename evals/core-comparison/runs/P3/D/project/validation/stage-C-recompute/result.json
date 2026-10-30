@@ -1,0 +1,29 @@
+{
+  "case_id": "T",
+  "alpha": 0.05,
+  "rho": 4.0,
+  "rho_selection": "fixed-before-observation",
+  "values": [
+    {
+      "v": 0,
+      "boundary": 4.895493661361633
+    },
+    {
+      "v": 1,
+      "boundary": 5.57431973357386
+    },
+    {
+      "v": 10,
+      "boundary": 10.070709270872976
+    },
+    {
+      "v": 100,
+      "boundary": 31.015388968276124
+    }
+  ],
+  "interpretation": "Numerical boundary evaluation under the supplied fixed-parameter theorem; no new proof or coverage simulation.",
+  "input_sha256": {
+    "parameters": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+    "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1"
+  }
+}

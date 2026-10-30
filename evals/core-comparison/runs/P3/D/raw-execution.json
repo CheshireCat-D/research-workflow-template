@@ -1,0 +1,864 @@
+{
+  "case_id": "T",
+  "stage": "D",
+  "commands": [
+    {
+      "tool_call": 1,
+      "argv": [
+        "cat",
+        "STUDY_ROOT/runs/P3/D/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "Read only current stage request"
+    },
+    {
+      "tool_call": 2,
+      "argv": [
+        "cat",
+        "INPUT_DIR/PROTOCOL.md",
+        "INPUT_DIR/RECORDING.md",
+        "INPUT_DIR/STAGE-D.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "Read current allowed protocols"
+    },
+    {
+      "tool_call": 3,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "Stdin Python: inventory and hash all migrated project/input files, save initial snapshot outside project"
+    },
+    {
+      "tool_call": 4,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "Stdin Python: read current state, local scripts, sources identity card, constraints and results; outer output was truncated"
+    },
+    {
+      "tool_call": 5,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "Stdin Python: run inspected read-only resume.py, save stdout/stderr and command; inspect prior evidence and historical values"
+    },
+    {
+      "tool_call": 6,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "Stdin Python: inspect local guarded writer and historical validation; compare existing result/CSV and checkpoint without recalculation"
+    },
+    {
+      "tool_call": 7,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "Stdin Python: write report, state answer and this finalizer to external output"
+    },
+    {
+      "tool_call": 8,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/finish.py"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "purpose": "Run external finalizer: final hash/mtime comparison and execution/artifact manifests"
+    },
+    {
+      "parent_tool_call": 5,
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "resume.py"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout_path": "resume.stdout.json",
+      "stderr_path": "resume.stderr.txt"
+    }
+  ],
+  "tool_calls": 8,
+  "tool_call_count_convention": "Eight functions.exec calls, each containing one exec_command; nested read-only resume is separately recorded.",
+  "network_calls": 0,
+  "agent_calls": 0,
+  "violations": [],
+  "failures": [
+    {
+      "tool_call": 4,
+      "kind": "tool output truncation",
+      "exit_code": 0,
+      "remedy": "Tool calls 5 and 6 printed selected omitted state sections and retained structured resume output; original truncation is disclosed."
+    }
+  ],
+  "historical_nonzero_results_not_executed_this_stage": [
+    {
+      "path": "validation/stage-A.json",
+      "exit_code": 2,
+      "meaning": "Controlled rejection of alpha=1 invalid input, not a scientific failure"
+    },
+    {
+      "path": "validation/stage-C.json",
+      "exit_code": 1,
+      "meaning": "Intermediate new checkpoint did not revalidate stale calculation/synthesis"
+    }
+  ],
+  "read_files": [
+    {
+      "root": "request",
+      "path": "REQUEST.md",
+      "absolute_path": "STUDY_ROOT/runs/P3/D/REQUEST.md",
+      "sha256": "964729f2a35d1f58cbceb5b3e41baa0e7d0ff92473a6417f9a2784f977a10368",
+      "bytes": 2070,
+      "access": "text read"
+    },
+    {
+      "root": "project",
+      "path": "PROJECT.md",
+      "absolute_path": "PROJECT_ROOT/PROJECT.md",
+      "sha256": "d0c22d4a5b575701b6f891cb85155634891de89966d244784debac69638cd659",
+      "bytes": 2357,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "resume.py",
+      "absolute_path": "PROJECT_ROOT/resume.py",
+      "sha256": "9fc48a77f1f3c0cc6094e7205d6debfebe44e2ba1d7c46263c4b634214faba4e",
+      "bytes": 3168,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "update-state.py",
+      "absolute_path": "PROJECT_ROOT/update-state.py",
+      "sha256": "4fd4ab75762f99b3fb7be55f309c189af76afb93608568a7e7504af226832441",
+      "bytes": 2929,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "research/state.json",
+      "absolute_path": "PROJECT_ROOT/research/state.json",
+      "sha256": "60e8182caa623e246749cee8445683655a0a43e71cd0c849cf112c7ee21ce061",
+      "bytes": 19846,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "research/write.lock",
+      "absolute_path": "PROJECT_ROOT/research/write.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "research/checkpoints/C-final.json",
+      "absolute_path": "PROJECT_ROOT/research/checkpoints/C-final.json",
+      "sha256": "0a7ad0d3deb541039418f7fbd7a512a9636c181a669512c9ecdf1a2eab512c6f",
+      "bytes": 1697,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/checkpoint.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/checkpoint.json",
+      "sha256": "47a2f288571484b006d5f59ec9412952e43ee48cfa6b15a4e756ddbfcb85c0eb",
+      "bytes": 1562,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/manifest.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/manifest.json",
+      "sha256": "9aeb437d1441b3385b0ae3400b277e6db28e2c570678ab0ba04f641e90ffcbb1",
+      "bytes": 5343,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/PROJECT.md",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/PROJECT.md",
+      "sha256": "82756fffd7df67dabf0889f3a8e36996083d043cda78e8266415cb6d915cc6bc",
+      "bytes": 2205,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/resume.py",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/resume.py",
+      "sha256": "9fc48a77f1f3c0cc6094e7205d6debfebe44e2ba1d7c46263c4b634214faba4e",
+      "bytes": 3168,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/update-state.py",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/update-state.py",
+      "sha256": "4fd4ab75762f99b3fb7be55f309c189af76afb93608568a7e7504af226832441",
+      "bytes": 2929,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/research/state.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/research/state.json",
+      "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+      "bytes": 16515,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/.history/A-initial/manifest.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/manifest.json",
+      "sha256": "c5154b88f6fb1ab3becff5fc8fd93849ab004db20110623b7ab7ea5828940667",
+      "bytes": 1008,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/.history/A-initial/state.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/state.json",
+      "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+      "bytes": 16515,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/.history/A-initial/files/results/result.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/.history/A-initial/files/results/summary.md",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/.history/A-initial/files/results/table.csv",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/.history/A-initial/files/notes/parameters.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/.history/A-initial/files/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/results/result.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/results/summary.md",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/results/table.csv",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/notes/parameters.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/notes/parameters.json",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/notes/rejected-parameters.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/notes/rejected-parameters.json",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/notes/source-check.md",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/notes/source-check.md",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/notes/unregistered-scratch.md",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/provenance/initial/BRIEF.md",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/provenance/initial/BRIEF.md",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/provenance/initial/MANIFEST.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/provenance/initial/MANIFEST.json",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/provenance/initial/constraints.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/provenance/initial/constraints.json",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/provenance/initial/obligations.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/provenance/initial/obligations.json",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/provenance/initial/source-identities.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/provenance/initial/source-identities.json",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/provenance/stage-A/PROTOCOL.md",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/provenance/stage-A/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/provenance/stage-A/RECORDING.md",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/provenance/stage-A/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/provenance/stage-A/STAGE-A.md",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/provenance/stage-A/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/scripts/compute.py",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/sources/howard2021-arxiv-v9.pdf",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/validation/stage-A.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/validation/stage-A.json",
+      "sha256": "339e302cf75cbd5ac43e0380f79ceada6dc0c2abe9c25359be6996961c526b8e",
+      "bytes": 5003,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/validation/stage-A-normal/result.json",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/validation/stage-A-normal/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/C-drift/files/validation/stage-A-normal/table.csv",
+      "absolute_path": "PROJECT_ROOT/.history/C-drift/files/validation/stage-A-normal/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/A-initial/manifest.json",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/manifest.json",
+      "sha256": "c5154b88f6fb1ab3becff5fc8fd93849ab004db20110623b7ab7ea5828940667",
+      "bytes": 1008,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/A-initial/state.json",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/state.json",
+      "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+      "bytes": 16515,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/A-initial/files/results/result.json",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/files/results/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": ".history/A-initial/files/results/summary.md",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/files/results/summary.md",
+      "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+      "bytes": 295,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": ".history/A-initial/files/results/table.csv",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/files/results/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": ".history/A-initial/files/notes/parameters.json",
+      "absolute_path": "PROJECT_ROOT/.history/A-initial/files/notes/parameters.json",
+      "sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+      "bytes": 161,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": ".history/metadata/revision-1.json",
+      "absolute_path": "PROJECT_ROOT/.history/metadata/revision-1.json",
+      "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+      "bytes": 16515,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": ".history/metadata/revision-2.json",
+      "absolute_path": "PROJECT_ROOT/.history/metadata/revision-2.json",
+      "sha256": "55897b629e416348492855307da45c23ed1f2b459b340d41d5d33019cfca072e",
+      "bytes": 16571,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": ".history/metadata/revision-3.json",
+      "absolute_path": "PROJECT_ROOT/.history/metadata/revision-3.json",
+      "sha256": "12c9264eee940d192124ffb04fc4c4d7432ae906cbcfd8a72631cf41f349844c",
+      "bytes": 19196,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "results/result.json",
+      "absolute_path": "PROJECT_ROOT/results/result.json",
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "bytes": 703,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "results/summary.md",
+      "absolute_path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "d4bfd0eaba49bb6a45dc5579ff0d14ad2bbbd3364ea9718f9ea48c6abad298fd",
+      "bytes": 1233,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "results/table.csv",
+      "absolute_path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "bytes": 100,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "notes/parameters.json",
+      "absolute_path": "PROJECT_ROOT/notes/parameters.json",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "notes/rejected-parameters.json",
+      "absolute_path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "sha256": "be6e5d2e3bcd5ce128e090cc31d54adf8896616b4e8a8566d99aaaffdea26908",
+      "bytes": 160,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "notes/source-check.md",
+      "absolute_path": "PROJECT_ROOT/notes/source-check.md",
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "notes/unregistered-scratch.md",
+      "absolute_path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "provenance/stage-C/AUTHOR-REVISION.md",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-C/AUTHOR-REVISION.md",
+      "sha256": "5eed5b8cc1c902bbc679ddf0031c627ec3c6475d2736bd9e28ad8592db070673",
+      "bytes": 1371,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "provenance/stage-C/PROTOCOL.md",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-C/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "provenance/stage-C/RECORDING.md",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-C/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "provenance/stage-C/STAGE-C.md",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-C/STAGE-C.md",
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "bytes": 761,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "provenance/stage-C/approved-parameters.json",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-C/approved-parameters.json",
+      "sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+      "bytes": 161,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "provenance/stage-C/metadata-patch.json",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-C/metadata-patch.json",
+      "sha256": "d4cd9003cadfb984eac0b6637d044860381a817112efdf0776b10c4d43d4e2c5",
+      "bytes": 7041,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "provenance/initial/BRIEF.md",
+      "absolute_path": "PROJECT_ROOT/provenance/initial/BRIEF.md",
+      "sha256": "bed8d00c16d04efd8125c5d5c86c240430ffdb69edd78829ce36c11d2a680e2a",
+      "bytes": 1267,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "provenance/initial/MANIFEST.json",
+      "absolute_path": "PROJECT_ROOT/provenance/initial/MANIFEST.json",
+      "sha256": "c2f91d7c0328dad662d6da75682fc47ff6f9bbcfebd222513b4a9783b54b233b",
+      "bytes": 2188,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "provenance/initial/constraints.json",
+      "absolute_path": "PROJECT_ROOT/provenance/initial/constraints.json",
+      "sha256": "6b62322c5d9f8205bdc1468f3da64f7c778e3dbfdf7c7697662c69bbbca541ec",
+      "bytes": 1064,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "provenance/initial/obligations.json",
+      "absolute_path": "PROJECT_ROOT/provenance/initial/obligations.json",
+      "sha256": "63476386e49fc44054c532e4038b0b97bd916f972db521e917cf0cd76c442214",
+      "bytes": 4478,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "provenance/initial/source-identities.json",
+      "absolute_path": "PROJECT_ROOT/provenance/initial/source-identities.json",
+      "sha256": "66046276eeb7d8ee9d231912e84981aedd2f7230733c76d58091af629f4e5ee3",
+      "bytes": 1074,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "provenance/stage-A/PROTOCOL.md",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-A/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "provenance/stage-A/RECORDING.md",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-A/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "provenance/stage-A/STAGE-A.md",
+      "absolute_path": "PROJECT_ROOT/provenance/stage-A/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "scripts/compute.py",
+      "absolute_path": "PROJECT_ROOT/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "sources/howard2021-arxiv-v9.pdf",
+      "absolute_path": "PROJECT_ROOT/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-A.json",
+      "absolute_path": "PROJECT_ROOT/validation/stage-A.json",
+      "sha256": "339e302cf75cbd5ac43e0380f79ceada6dc0c2abe9c25359be6996961c526b8e",
+      "bytes": 5003,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-C-final-resume.stderr",
+      "absolute_path": "PROJECT_ROOT/validation/stage-C-final-resume.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-C-final-resume.stdout",
+      "absolute_path": "PROJECT_ROOT/validation/stage-C-final-resume.stdout",
+      "sha256": "d36864844c4ef28c18f67c39c5c1301d342d9cc8b89b39aad52e48f8a62551ff",
+      "bytes": 3181,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-C-intermediate-interpretation.json",
+      "absolute_path": "PROJECT_ROOT/validation/stage-C-intermediate-interpretation.json",
+      "sha256": "db5ebf6d0061cad76f879962fd2d8d946e3594b3a45b100e366a13ed5ce73620",
+      "bytes": 392,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-C-intermediate-resume.stderr",
+      "absolute_path": "PROJECT_ROOT/validation/stage-C-intermediate-resume.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-C-intermediate-resume.stdout",
+      "absolute_path": "PROJECT_ROOT/validation/stage-C-intermediate-resume.stdout",
+      "sha256": "af76613d2dc0ef4faaf06fdd7205ed54d39fcf2b5c2a94cc6b6a972e7acb1ce7",
+      "bytes": 3875,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-C-recompute-verification.json",
+      "absolute_path": "PROJECT_ROOT/validation/stage-C-recompute-verification.json",
+      "sha256": "f4075a3df508eef1b3d92159fc58dbada35fb4cd93128ecd8a79ec08f54733a7",
+      "bytes": 777,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-C.json",
+      "absolute_path": "PROJECT_ROOT/validation/stage-C.json",
+      "sha256": "f8ef2d3b58d5ea7269db4b81ac7a1edf1b361e524591713868f4ed96b5910f93",
+      "bytes": 4083,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-A-normal/result.json",
+      "absolute_path": "PROJECT_ROOT/validation/stage-A-normal/result.json",
+      "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+      "bytes": 704,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-A-normal/table.csv",
+      "absolute_path": "PROJECT_ROOT/validation/stage-A-normal/table.csv",
+      "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+      "bytes": 101,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-C-recompute/result.json",
+      "absolute_path": "PROJECT_ROOT/validation/stage-C-recompute/result.json",
+      "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+      "bytes": 703,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "project",
+      "path": "validation/stage-C-recompute/table.csv",
+      "absolute_path": "PROJECT_ROOT/validation/stage-C-recompute/table.csv",
+      "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+      "bytes": 100,
+      "access": "full-byte hash only"
+    },
+    {
+      "root": "input",
+      "path": "PROTOCOL.md",
+      "absolute_path": "INPUT_DIR/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "input",
+      "path": "RECORDING.md",
+      "absolute_path": "INPUT_DIR/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "access": "full-byte hash plus text or structured inspection"
+    },
+    {
+      "root": "input",
+      "path": "STAGE-D.md",
+      "absolute_path": "INPUT_DIR/STAGE-D.md",
+      "sha256": "dfa746cb14e0f020d64aa8306241a5be177b56246b1f343be79144990c5674f2",
+      "bytes": 638,
+      "access": "full-byte hash plus text or structured inspection"
+    }
+  ],
+  "python_runtime_file_access": "The allowed common Python executable and standard-library runtime were used. OS/interpreter-internal runtime file opens were not traced; input/project full-byte reads are inventoried.",
+  "written_paths": [
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/existing-content-checks.json",
+    "OUTPUT_DIR/final-snapshot.json",
+    "OUTPUT_DIR/finish.py",
+    "OUTPUT_DIR/initial-snapshot.json",
+    "OUTPUT_DIR/inputs-and-artifacts.json",
+    "OUTPUT_DIR/read-only-audit.json",
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/resume-command.json",
+    "OUTPUT_DIR/resume.stderr.txt",
+    "OUTPUT_DIR/resume.stdout.json",
+    "OUTPUT_DIR/state-answer.json"
+  ],
+  "read_only_audit": {
+    "project_file_bytes_hashes_and_mtimes_unchanged": true,
+    "project_directory_mtimes_unchanged": true,
+    "changes": [],
+    "atime_excluded": "Read access can affect atime; byte hashes and file/directory mtimes are protected.",
+    "no_project_writes_executed": true
+  },
+  "scientific_calculator_executed": false,
+  "state_or_checkpoint_written": false,
+  "next_action_executed": false,
+  "model": null,
+  "temperature": null,
+  "seed": null,
+  "token_count": null,
+  "token_limit": null,
+  "system_limit": null,
+  "notes": [
+    "Command argv/cwd/exit_code are actual; stdin payload purpose is recorded, not represented as a saved script.",
+    "All project resources are migrated project files; no original project, toolkit, cache, source tree, personal skills, memory, other phase external answers, network or agent was accessed.",
+    "Prior absolute command paths appear solely inside project historical evidence and were not opened."
+  ]
+}

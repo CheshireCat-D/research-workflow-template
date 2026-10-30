@@ -1,0 +1,116 @@
+{
+  "scope": "Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.",
+  "schema_version": "0.1",
+  "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+  "revision": 22,
+  "passed": true,
+  "read_only": true,
+  "scientific_validity": "not-assessed",
+  "governance_approval": "not-assessed",
+  "venue_compliance": "not-assessed",
+  "errors": [],
+  "warnings": [],
+  "findings": [],
+  "counts": {
+    "activities": 4,
+    "artifacts": 8,
+    "decisions": 1,
+    "evidence": 3,
+    "method_bindings": 1,
+    "relations": 1,
+    "sources": 2,
+    "statements": 1
+  },
+  "configuration": {
+    "deliverable": {
+      "contribution_benchmarks": [],
+      "kind": "undecided",
+      "language": "zh",
+      "venue": null
+    },
+    "disciplines": [],
+    "entry_activity": "question",
+    "governance": {
+      "applicability": "unknown",
+      "relevant_requirements": []
+    },
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "methods": [
+      "computational"
+    ],
+    "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+    "resources": {
+      "available_capabilities": [
+        "local Python standard library",
+        "fixed source cache",
+        "author-provided working notes"
+      ],
+      "budget": "Offline Python standard library only; no new data collection or model refit",
+      "deadline": "2026-12-15"
+    },
+    "schema_version": "0.1",
+    "title": "冻结自行车需求模型的评价范围修订",
+    "workflow_mode": "reproducible"
+  },
+  "file_tracking": {
+    "local_files": [
+      "data/hour_2011.csv",
+      "model/frozen.json",
+      "notes/parameters.json",
+      "notes/rejected-parameters.json",
+      "notes/source-check.md",
+      "results/result.json",
+      "results/summary.md",
+      "results/table.csv",
+      "scripts/compute.py",
+      "validation/stage-A/comparison.json",
+      "validation/stage-A/source-verification.json"
+    ],
+    "local_file_count": 11,
+    "source_ids_without_local_evidence": [
+      "D-REMOTE"
+    ]
+  },
+  "activities": [
+    {
+      "id": "D-CALC",
+      "title": "Rerun supplied calculator and verify canonical numeric result and companion table",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "D-INVALID-TEST",
+      "title": "Controlled invalid parameter rejection and canonical preservation check",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "D-SOURCE-CHECK",
+      "title": "Verify supplied source identity, local slice and source card",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "D-SYNTH",
+      "title": "Check supplied summary within current claim and verified result",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "cursor": {
+    "activity_id": "D-SYNTH",
+    "next_action": "2011第四季度指标与摘要已逐项核对；下一步由作者讨论该描述性比较的解释与用途。恢复先运行项目内 resume，核对当前 parameters/result/table/summary 及依赖；若有漂移，保留旧字节与原因并复核 D-CALC、D-SYNTH 后显式重登，不重训或外推2012。"
+  },
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "next_action": "2011第四季度指标与摘要已逐项核对；下一步由作者讨论该描述性比较的解释与用途。恢复先运行项目内 resume，核对当前 parameters/result/table/summary 及依赖；若有漂移，保留旧字节与原因并复核 D-CALC、D-SYNTH 后显式重登，不重训或外推2012。",
+  "needs_review": false,
+  "recovery_instruction": "Continue the recorded next action within its existing scope."
+}

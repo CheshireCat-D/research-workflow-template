@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "evidence",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"description\": \"Current alpha=0.05, rho=4, grid [0,1,10,100]; rho fixed before observation.\", \"id\": \"T-PARAM\", \"location\": {\"kind\": \"local\", \"path\": \"notes/parameters.json\"}, \"provenance\": \"Author revision explicitly accepts existing working parameters; original paper unchanged. See provenance/stage-c/AUTHOR-REVISION.md and approved-parameters.json. Initial rho=1 bytes and rationale preserved in history/stage-a-initial and registry history.\", \"type\": \"author-parameters\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"evidence\",\n  \"id\": \"T-PARAM\",\n  \"version\": 2,\n  \"revision\": 30,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

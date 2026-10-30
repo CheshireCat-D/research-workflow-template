@@ -1,0 +1,78 @@
+{
+  "files": {
+    "RECOVER.md": {
+      "sha256": "bab3b3d04c66872ae1983f26856e56a95ccd80b6eaca38a789db1a09ce6c7a97",
+      "bytes": 2824,
+      "mtime_ns": 1793325950974646433
+    },
+    "data/hour_2011.csv": {
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "mtime_ns": 1793325950975056936
+    },
+    "manifest.json": {
+      "sha256": "461ae0254f138cf9ccb23f6846bb024c7dfbcfb7f30dbe07bec6eb44619015fe",
+      "bytes": 1532,
+      "mtime_ns": 1793325950976712118
+    },
+    "model/frozen.json": {
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "mtime_ns": 1793325950976107195
+    },
+    "notes/parameters.json": {
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "mtime_ns": 1793325950975760067
+    },
+    "notes/source-check.md": {
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "mtime_ns": 1793325950976578325
+    },
+    "records/state.json": {
+      "sha256": "24e5cb54999269c52773e5a38a32864ba58a28230bb1c53c6b235fa73a59d0f5",
+      "bytes": 19141,
+      "mtime_ns": 1793326970436444358
+    },
+    "results/result.json": {
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "mtime_ns": 1793325950976240530
+    },
+    "results/summary.md": {
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "mtime_ns": 1793325950976459282
+    },
+    "results/table.csv": {
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "mtime_ns": 1793325950976353740
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "mtime_ns": 1793325950975938611
+    },
+    "scripts/guarded_state_update.py": {
+      "sha256": "1459933f428b1cde70a7a475e7b41c74d3bd3e91a8a2ad46af821a94fac4206b",
+      "bytes": 2642,
+      "mtime_ns": 1793325289381593953
+    },
+    "scripts/project_status.py": {
+      "sha256": "2403ad240e0642c67e0de548a817b4d3a72663c551c27f8a8188c6637eaaf7ab",
+      "bytes": 4080,
+      "mtime_ns": 1793325289381457535
+    }
+  },
+  "directories": {
+    ".": 1793325950976684451,
+    "data": 1793325950974999018,
+    "model": 1793325950976075654,
+    "notes": 1793325950976545825,
+    "records": 1793325950974074094,
+    "results": 1793325950976433574,
+    "scripts": 1793326970435998687
+  }
+}

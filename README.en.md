@@ -4,6 +4,8 @@
 
 A local toolkit for research-agent workflows across sciences, engineering, health, agriculture, humanities, social sciences and law. Nine skills guide question formation, literature work, innovation, candidate comparison, method validation, writing, figures and review. A standard-library Python CLI records statements, sources, evidence, artifacts and recovery state; the host assistant performs the research work.
 
+Start below, run the [complete public-data project](examples/public-penguins/README.md), use the [Crossref metadata search](skills/rw-literature/references/search-and-library.md), or inspect the [controlled skill-comparison pilot](evals/comparison/README.md).
+
 The [English user guide](USER_GUIDE.en.md) covers first use, all nine skills, daily commands, recovery, and upgrades. Detailed technical documents under `docs/` are currently in Chinese.
 
 [Subfield navigation](profiles/selection.md) maps education, economics/management, psychology, philosophy and arts to existing methods and states untested areas. `options` separates declared guidance from explicit variant bindings in recorded tasks; these records do not certify a whole specialty.
@@ -19,24 +21,30 @@ Download the [current user runtime](https://github.com/CheshireCat-D/research-wo
 Use Python 3.11+ on Windows, macOS or Linux. See the [platform validation record](docs/11-linux-validation.md) for actual execution evidence. The commands below use macOS/Linux syntax.
 
 ```sh
-python3 tools/research.py init --output ../my-research --title 'My research question'
-python3 tools/connect_skills.py install --root ../my-research
-python3 tools/connect_skills.py check --root ../my-research
+python3 tools/research.py init --output ../my-research --title 'My research question' --connect-skills
 ```
 
 On Windows PowerShell, run the same tools with the Python launcher:
 
 ```powershell
-py -3 -X utf8 tools/research.py init --output "../my-research" --title "My research question"
-py -3 -X utf8 tools/connect_skills.py install --root "../my-research"
-py -3 -X utf8 tools/connect_skills.py check --root "../my-research"
+py -3 -X utf8 tools/research.py init --output "../my-research" --title "My research question" --connect-skills
 ```
 
 Check `py -3 --version` for Python 3.11 or later. If the launcher is unavailable, replace `py -3` with the installed `python`. Project-root arguments may use native paths; material paths stored inside project records use `/` on every platform.
 
 Choose a new output directory. Open that project in a compatible skill host and describe the current task. Existing research can resume at the relevant activity. Initial installation refuses existing targets; explicit upgrades preserve local edits by refusing a modified bundle. Global skills and the separate personal package remain independent.
 
-Use `show` for complete envelopes and record versions, `register --file -` or `register-batch` for bounded stdin imports, and `configure` for supported settings. [CLI usage](docs/07-core-usage.md) and [skill connection](docs/08-skills-and-methods.md) document the contracts and directory-switch recovery limits.
+`--connect-skills` installs into this new project only. If initialization succeeds but connection fails, inspect the returned error and run `connect_skills.py install` on the existing project; do not initialize it again. The separate setup commands remain supported.
+
+To create a complete example, including analysis, editable figures, registered evidence and recovery state, run:
+
+```sh
+python3 -B examples/public-penguins/run_project.py --output ../penguins-project
+```
+
+This downloads one pinned CC0 CSV. Use `--input FILE` for an offline local CSV; the output records whether it matches the pinned public input. The example's required resources are included in the user ZIP.
+
+From the project root, use `resume --format markdown` once to recover context. Use `show --edit evidence:E1 activity:A1` to export several editable records with their versions, then `register-batch --file EDIT.json --next-action "..."` to save registrations, a checkpoint and an inspected recovery summary together. Existing projects must explicitly upgrade their project-local runtime to use these options. Use `configure` for supported settings. [CLI usage](docs/07-core-usage.md) and [skill connection](docs/08-skills-and-methods.md) document the contracts and directory-switch recovery limits.
 
 An agent with local file and command access can read the user guide, then start from:
 

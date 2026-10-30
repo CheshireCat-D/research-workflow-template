@@ -1,0 +1,363 @@
+{
+  "study_id": "RWT-four-task-pilot-v1",
+  "status": "complete",
+  "meaning_of_complete": "record closure only; no general accuracy estimate",
+  "expected_trials": 12,
+  "recorded_trials": 12,
+  "scored_trials": 12,
+  "missing": [],
+  "incomplete_trials": [],
+  "known_effective_configuration_mismatches": [],
+  "configuration_evidence": "reported observations; unknown values preserved",
+  "context_isolation_evidence": "instruction-only; no OS audit",
+  "results": [
+    {
+      "trial_id": "t01",
+      "task_id": "Q11",
+      "arm": "baseline",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 2,
+      "output_tokens": null,
+      "output_bytes": 1612,
+      "output_unicode_characters": 720,
+      "criteria": {
+        "decision": 2,
+        "finite_cover": 2,
+        "uniform_index": 2,
+        "epsilon_bound": 2,
+        "scope": 2
+      },
+      "reported_verdict": "supported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t09",
+      "task_id": "Q11",
+      "arm": "critical-thinking",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 2,
+      "output_tokens": null,
+      "output_bytes": 1611,
+      "output_unicode_characters": 727,
+      "criteria": {
+        "decision": 2,
+        "finite_cover": 2,
+        "uniform_index": 2,
+        "epsilon_bound": 2,
+        "scope": 2
+      },
+      "reported_verdict": "supported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t05",
+      "task_id": "Q11",
+      "arm": "rwt",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 3,
+      "output_tokens": null,
+      "output_bytes": 2052,
+      "output_unicode_characters": 1154,
+      "criteria": {
+        "decision": 2,
+        "finite_cover": 2,
+        "uniform_index": 2,
+        "epsilon_bound": 2,
+        "scope": 2
+      },
+      "reported_verdict": "supported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t10",
+      "task_id": "Q24",
+      "arm": "baseline",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 2,
+      "output_tokens": null,
+      "output_bytes": 2267,
+      "output_unicode_characters": 1155,
+      "criteria": {
+        "decision": 2,
+        "failed_step": 2,
+        "counterexample": 2,
+        "assumptions": 2,
+        "contradiction": 2
+      },
+      "reported_verdict": "unsupported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t06",
+      "task_id": "Q24",
+      "arm": "critical-thinking",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 5,
+      "output_tokens": null,
+      "output_bytes": 1994,
+      "output_unicode_characters": 1066,
+      "criteria": {
+        "decision": 2,
+        "failed_step": 2,
+        "counterexample": 2,
+        "assumptions": 2,
+        "contradiction": 2
+      },
+      "reported_verdict": "unsupported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t02",
+      "task_id": "Q24",
+      "arm": "rwt",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 2,
+      "output_tokens": null,
+      "output_bytes": 1760,
+      "output_unicode_characters": 844,
+      "criteria": {
+        "decision": 2,
+        "failed_step": 2,
+        "counterexample": 2,
+        "assumptions": 2,
+        "contradiction": 2
+      },
+      "reported_verdict": "unsupported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t07",
+      "task_id": "Q37",
+      "arm": "baseline",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 4,
+      "output_tokens": null,
+      "output_bytes": 2156,
+      "output_unicode_characters": 908,
+      "criteria": {
+        "decision": 2,
+        "design": 2,
+        "statistic": 2,
+        "tails": 2,
+        "inference": 2
+      },
+      "reported_verdict": "supported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t03",
+      "task_id": "Q37",
+      "arm": "critical-thinking",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 3,
+      "output_tokens": null,
+      "output_bytes": 3089,
+      "output_unicode_characters": 1255,
+      "criteria": {
+        "decision": 2,
+        "design": 2,
+        "statistic": 2,
+        "tails": 2,
+        "inference": 2
+      },
+      "reported_verdict": "supported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t11",
+      "task_id": "Q37",
+      "arm": "rwt",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 3,
+      "output_tokens": null,
+      "output_bytes": 2450,
+      "output_unicode_characters": 998,
+      "criteria": {
+        "decision": 2,
+        "design": 2,
+        "statistic": 2,
+        "tails": 2,
+        "inference": 2
+      },
+      "reported_verdict": "supported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t04",
+      "task_id": "Q58",
+      "arm": "baseline",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 2,
+      "output_tokens": null,
+      "output_bytes": 2054,
+      "output_unicode_characters": 912,
+      "criteria": {
+        "decision": 2,
+        "selection": 2,
+        "reported_tail": 2,
+        "actual_size": 2,
+        "compatible_tail": 2
+      },
+      "reported_verdict": "unsupported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t12",
+      "task_id": "Q58",
+      "arm": "critical-thinking",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 3,
+      "output_tokens": null,
+      "output_bytes": 2459,
+      "output_unicode_characters": 1165,
+      "criteria": {
+        "decision": 2,
+        "selection": 2,
+        "reported_tail": 2,
+        "actual_size": 2,
+        "compatible_tail": 2
+      },
+      "reported_verdict": "unsupported",
+      "invented_major_objections": []
+    },
+    {
+      "trial_id": "t08",
+      "task_id": "Q58",
+      "arm": "rwt",
+      "execution_status": "executed",
+      "score": 10,
+      "max_score": 10,
+      "effective_configuration_unknown": [
+        "hard_output_token_limit",
+        "model",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ],
+      "duration_seconds": null,
+      "tool_calls": 3,
+      "output_tokens": null,
+      "output_bytes": 2687,
+      "output_unicode_characters": 1265,
+      "criteria": {
+        "decision": 2,
+        "selection": 2,
+        "reported_tail": 2,
+        "actual_size": 2,
+        "compatible_tail": 2
+      },
+      "reported_verdict": "unsupported",
+      "invented_major_objections": []
+    }
+  ]
+}

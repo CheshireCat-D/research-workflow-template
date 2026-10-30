@@ -1,0 +1,58 @@
+{
+  "scope": "Arithmetic and supplied PDF identity checks; not proof certification",
+  "B": {
+    "alpha": "1/20",
+    "mu": "1/10",
+    "rho": "1/4",
+    "time": 20,
+    "event": "X_1=...=X_20=0 for iid Bernoulli(1/10)",
+    "probability_formula": "(9/10)^20",
+    "probability_exact": "12157665459056928801/100000000000000000000",
+    "probability_decimal": 0.1215766545905693,
+    "b_squared_formula": "log(800)/2",
+    "b_squared": 3.3423058638339636,
+    "b": 1.8281974356819242,
+    "ci_upper_endpoint": 0.09140987178409621,
+    "strict_probability_inequality": true
+  },
+  "C": {
+    "root_equation": "x-log(1+x)=2*log(20)",
+    "x_alpha_numeric": 8.211968062068255,
+    "root_residual": 8.881784197001252e-16,
+    "envelope_formula": "sqrt((1+x_alpha)*v)",
+    "scope": "Root arithmetic only; infinite-time failure proved using stipulated LIL in report"
+  },
+  "source_pdf_identity": [
+    {
+      "file": "howard2020-arxiv-v7.pdf",
+      "sha256": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e",
+      "pages": 63,
+      "inspected_page_text_lengths": {
+        "9": 2854,
+        "10": 3229,
+        "12": 1925,
+        "13": 2446
+      }
+    },
+    {
+      "file": "howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "pages": 48,
+      "inspected_page_text_lengths": {
+        "4": 4247,
+        "5": 4303,
+        "6": 3917,
+        "9": 3816,
+        "10": 3704,
+        "12": 3532,
+        "14": 4178,
+        "19": 4882,
+        "28": 2765,
+        "29": 2892,
+        "30": 2835,
+        "35": 3543,
+        "37": 2040
+      }
+    }
+  ]
+}

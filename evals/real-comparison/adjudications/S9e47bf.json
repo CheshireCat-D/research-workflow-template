@@ -1,0 +1,65 @@
+{
+  "submission_id": "S9e47bf",
+  "task_id": "theory",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_conditions",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:5–17 标明两个固定 arXiv 版本并逐项给出 S1 定义 1 p.9 (2.1)–(2.2)、定理 1(a) p.12 (2.7)、S2 正态混合 p.10 (14)/p.28 命题 5 (51)、经验 Bernstein p.14 定理 4 (23) 的证据表；report.md:25、63、89、102–124 补充混合及自归一化原文定位。",
+      "rationale": "子项：4/4、4/4、4/4、6/6。已直接核对固定来源文本的相应原文，PDF 哈希与 source-manifest.json 一致。表中准确说明 sub-psi 是 (S,V) 的支配关系，适应性本身不够；S1 的无限时域线性 crossing 与 S2 曲线边界有明确区分。定理 4 的有界观测、可预测且同范围的预测、平均条件均值目标、残差平方和、尺度 b-a 及双尾 2 delta 均正确，没有强加 iid 或正态误差。"
+    },
+    {
+      "id": "gaussian_mixture",
+      "score": 15,
+      "max_points": 15,
+      "evidence": "report.md:19–25 从 SG 和可预测增量得到 E_{t-1}L_t(lambda)<=L_{t-1}(lambda)，说明联合可测、固定概率混合、条件 Tonelli 及 M_0=1；report.md:27–46 展开高斯密度、完成平方，得到 sqrt(rho/(v+rho))*exp(s^2/[2(v+rho)])，再逐步反演 M>=1/alpha。",
+      "rationale": "子项：7/7、4/4、4/4。配方、密度精度和所有常数正确；非负混合及可积性理由充分。一次实轴高斯混合已经给出总双尾 alpha，报告没有额外错误拆分；闭区间及与 [0,1] 相交的覆盖论证正确，A 的接受有完整依据。"
+    },
+    {
+      "id": "finite_counterexample",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:48–61 采用 iid Bernoulli(1/10)、alpha=1/20、rho=1/4、n=20 及全零事件，给出指定预测器 (1/2,0,...,0)、Vhat=1/4、S=-2、b^2=(1/2)log(800)<4；事件概率 (9/10)^20=0.12157665459056928801>1/20，并给出精确整数比较。report.md:63 解释 pair-based 指数控制缺失；work/checks.py 与 work/results/results.json 含相应数值式。",
+      "rationale": "子项：6/6、6/6、6/6。这是数学正确的替代有限时间见证，无需采用参考的 n=280 例子。预测器、边界和失覆盖事件完全符合任务。独立算术复核还以 exp(8)>sum_{k=0}^8 8^k/k!>800 确认边界严格比较，概率比较为精确有理数。报告将不可预测性仅用于指出 A 的证明不能直接代入，并明确核心是未建立 (S,Vhat) 的 psi_N 支配，没有误把所有适应内在时间或固定 rho 混合判为非法。"
+    },
+    {
+      "id": "moving_precision",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:65–79 给出对 rho 的导数 log((1+x)/alpha^2)-x、唯一方程 x-log(1+x)=log(alpha^-2)、rho*=v/x_alpha、inf b=sqrt((1+x_alpha)v)，并处理 v=0 无正 rho 极小点。report.md:81–87 在 X=(1+R)/2、合法 V=t/4 下写出题给 LIL 并比较尺度；report.md:89 区分固定目标 m 的优化。",
+      "rationale": "子项：6/6、4/4、6/6、2/2。导数和唯一极小点推导正确，方程等价于参考 r 方程，端点也完整。LIL 使正向越界几乎必然且无穷多次，故无校正下包络的同时覆盖为零；反例明确使用合法确定性 V，与经验方差误替换独立。固定 m 与逐时选择整族下包络的概率差异解释准确。"
+    },
+    {
+      "id": "valid_repairs",
+      "score": 18,
+      "max_points": 18,
+      "evidence": "report.md:91–96 以条件 Hoeffding mgf 和固定 rho 使用 A，V=t/4；report.md:98–113 定义 psi_E=-log(1-lambda)-lambda、0<=lambda<1，要求可预测 [0,1] 预测，证明 u-log(1+u) 的积分恒等式及 E exp(lambda Y-psi_E(Y-delta)^2)<=exp(lambda delta)(1-lambda delta)<=1。report.md:115–124 以 (0,1) 均匀固定混合定义 EB 边界，并用 alpha/2 分配两尾；report.md:126–131 给出 rho_k=rho_0*2^k、w_k=2^(-k-1) 和交集的统一错误预算。",
+      "rationale": "子项：7/7、8/8、3/3。正态混合修复的方差代理已独立证明，不要求独立。EB 积分不等式对 xi 属于 [-1,1] 完全成立，条件期望步骤、另一尾的符号变换及总 alpha 预算正确；均匀混合反演的存在唯一性也说明充分，是允许的严格替代构造，未冒称原文 gamma 混合。多 rho 方案通过固定可数预算和 union bound 同时覆盖全部 k,t，允许后选 k 时保留该预算，没有无校正极值。"
+    },
+    {
+      "id": "reviewable_short_memo",
+      "score": 13,
+      "max_points": 13,
+      "evidence": "report.md:3 明确 A/E 真、B/C/D 假；report.md:133–139 通过 G={forall t:mu in C_t} 包含于随机有限正整数索引的覆盖事件论证 E，并给出可直接替换的研究结论。report.md:5–17 的版本/坐标表及 report.md:48–61、65–89 的计算表达式可复核；report.md:124、141 和 checks.py 首行说明代码仅数值校验。",
+      "rationale": "子项：5/5、4/4、2/2、2/2。五项判断齐全且正确。结论准确将方法归于已有非负超鞅与 CS/EB 框架，把本次成果限定为构造备忘录核查及修复，没有两篇文献外的首创主张。E 使用路径事件包含，无不必要的 E tau 或可选停止条件。交付自包含、来源可追溯，未将全文作为报告复制，证明与计算校验清楚区分。"
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "usable without substantive mathematical revision",
+  "notes": [
+    "source-check: PASS。独立核对 S1 p.9–13、p.26 和 S2 p.4–5、p.9–10、p.12、p.14、p.27–28、p.35 的相关原文，报告核心定位及内容相符。S2 首页正文日期确为 August 9, 2022；边栏 arXiv 上传日期为 6 Aug 2022，报告的首页日期表述并无错误。",
+    "无发现实质误报或主要数学错误；没有适用的 critical cap。参考数学键与本次独立推导无未解决分歧。",
+    "B 的 Bernoulli(1/10)、n=20、rho=1/4 反例与参考见证不同，但解析失覆盖概率和严格边界比较均成立，应获满分。EB 均匀混合也是合法替代。",
+    "arm_hidden=true 仅表示未提供组别映射。未读取父目录、其他报告、映射、执行日志、memory 或个人 skills，亦未联网；没有从报告措辞可靠识别其执行条件。",
+    "独立计算证据保存在 judge-checks/verification.json；实际匿名报告 SHA-256 已核对与模板一致。"
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification.",
+  "report_sha256": "a4cb40a155bd5107d53cfac40eaf203abc410fe8b5be275b4ad4077857fd42d9"
+}

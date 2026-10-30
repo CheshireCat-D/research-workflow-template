@@ -1,0 +1,31 @@
+{
+  "attempts": [
+    {
+      "directory": "accepted-run",
+      "outcome": "runner invocation exposed a CLI usability trap",
+      "detail": "Repeated --edit options retained only the final group; save correctly reported file_changed and passed=false. Full receipts remain unchanged.",
+      "candidate_sha256": "36954350ccd0e7a938e639bd64378198a6b039179404d4ed9256a7549d8f690d",
+      "commands_receipt_sha256": "6da68a76275a3892bf41404962f61033949790884fc9e504d472fd15a1806a89"
+    },
+    {
+      "directory": "accepted-run-2",
+      "outcome": "passed using documented single --edit with multiple refs",
+      "detail": "Previous candidate and all successful receipts retained.",
+      "candidate_sha256": "36954350ccd0e7a938e639bd64378198a6b039179404d4ed9256a7549d8f690d",
+      "commands_receipt_sha256": "a9d8f4de1f0314a10bc21890d51a4a431aed4cea9b836651dc0d8b11626dd4d9",
+      "summary_sha256": "4f9e097427afbc950637671dd674f8f4fbdf7437e6e5fdca9b2f486de1f48f3a"
+    },
+    {
+      "directory": "accepted-final",
+      "outcome": "passed using the original repeated --edit options",
+      "detail": "Final candidate adds argparse action=extend; both requested references were preserved, and all journey assertions passed.",
+      "candidate_sha256": "d410a4d0a18b41ab49527da58da041416af7150cdf94c4180f93e8008c1390e1",
+      "commands_receipt_sha256": "67d2cc51f4e630b7abab3b7b88260a9c105a8b386df88a9fd76435b5916cfd44",
+      "summary_sha256": "db7dcbe9fa4814dd708cb26d6b1ebfe5f2514fd1c85cd1c2d8dddfc42e0d9b13"
+    }
+  ],
+  "final_runner_sha256": "93b6b2f9f970e068650e87d5ec83b35f5d617cadbfb169474c4c3acabfbe2389",
+  "scope": "Offline deterministic software journey; not a human-user or scientific-accuracy benchmark.",
+  "original_attempt_history_sha256": "36e6cfc750c9971668aa32e8ee75a3e09dc69ea22f04f562b378224260d07e54",
+  "raw_evidence_availability": "Original command receipts and project snapshots retained locally; local machine paths are not published. Relative directory names are evidence identifiers, not public source directories."
+}

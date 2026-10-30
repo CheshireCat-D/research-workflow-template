@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "register",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "statement",
+    "--file",
+    "-",
+    "--replace",
+    "--expected-version",
+    "1"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdin": "{\"assessment\": {\"status\": \"supported-in-scope\", \"scope\": \"Four supplied calculator values, v=[0,1,10,100], alpha=.05 rho=4 fixed before observation.\", \"rationale\": \"Real recomputation, equivalent algebraic formula with 1e-14 tolerance, v=0 special case and exact numeric CSV/JSON comparison all passed; notes/stage-c-validation.json. No theorem or coverage validation.\", \"reviewer\": \"AI agent in stage C\"}, \"formal_verification\": {\"scope\": \"No formal or new manual theorem proof performed.\", \"status\": \"not-started\", \"tool\": \"none\"}, \"id\": \"T-CLAIM\", \"scope\": \"Current declared parameters and supplied sources only; scalar l0=1; two-sided alpha total; same V for S and -S.\", \"text\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\", \"type\": \"interpretive\"}",
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"statement\",\n  \"id\": \"T-CLAIM\",\n  \"version\": 2,\n  \"revision\": 31,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": ""
+}

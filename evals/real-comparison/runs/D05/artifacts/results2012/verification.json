@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "training_parameters_verified": 72,
+  "history_results_equal": true,
+  "history_csv_byte_equality": {
+    "predictions.csv": true,
+    "daily_errors.csv": true,
+    "bootstrap_7d.csv": true,
+    "bootstrap_28d.csv": true
+  },
+  "sklearn_version": "1.9.1",
+  "independent_2012_metric_values": {
+    "C0_MAE": 118.11827620046033,
+    "C0_RMSE": 174.1113410765217,
+    "C1_MAE": 108.70812150008844,
+    "C1_RMSE": 157.21107535855683
+  },
+  "model_hash_unchanged": true,
+  "model_sha256": "dba591a44fff2d14514b4b38d00c8985e93f41cf2b1ab684a6abd2f2620d078d"
+}

@@ -1,0 +1,172 @@
+{
+  "submission_id": "K7dc50a",
+  "chain_id": "P6",
+  "case_id": "D",
+  "scored": true,
+  "arm_hidden": true,
+  "report_sha256_by_stage": {
+    "A": "fc0ffe7d992593e413950b86daecb56f9b7305ab757395653721e5d38a1e1585",
+    "B": "b192cd2d73950b30dc1b984e46ed41757c11ae67e5134cc02506d8e571cf20b9",
+    "C": "21ac053d997eaf7b3a7e4d5cbc8c50885a92aa6eabbcc4a39829567158fbcb38",
+    "D": "c65aad5bc51b8babd060384f375da3bc0586732cd1c99a5ba094f6dff31934dc"
+  },
+  "criteria": [
+    {
+      "id": "A-materials",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "A/project/records/state.json contains D-SRC/D-REMOTE access scope, D-RAW/D-PARAM identities, D-REL, D-CHOICE, supplied code/model, result/table/summary and CALC→SYNTH dependencies with complete bindings. A/project/provenance/initial/ retains supplied identities, obligations and constraints. audit/verification.json confirms actual immutable-input bytes, version-1 bindings and initial snapshot contents.",
+      "rationale": "2/2 actual local/source identity and truthful local-slice versus metadata-only access; 2/2 required associations and direct/transitive dependency records; 2/2 durable actual version identity. Performer and certification scope are explicit. No credit is based on schema, branding or file count."
+    },
+    {
+      "id": "A-results",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "A/project/records/commands-A.json records supplied compute.py normal execution exit 0; A/deliverables/validation-valid/{result.json,table.csv} and A/project/records/validation-A.json retain the actual output/checks. Canonical initial result has 2203 hours, 92 days, MAEs 58.825190494512434 and 44.570832407531775. audit/verification.json independently reproduces result/table bytes and checks all reference values and actual-input SHA metadata.",
+      "rationale": "2/2 actual normal-parameter execution; 2/2 numeric/table agreement and valid observed-hour frozen-model scope. The report identifies the supplied precomputed origin and does not claim a refit or scientific certification."
+    },
+    {
+      "id": "A-constraints",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "A/project/records/state.json.configuration and provenance/initial/constraints.json retain interest, deadline, offline standard-library budget, capabilities, venue undecided, language, initial evaluation scope, unknown approval/submission and deadline provenance. state.json.checkpoint.next_action and RECOVER.md give the checked Q4 metrics/summary discussion step, with no retraining or 2012 extrapolation.",
+      "rationale": "2/2 supplied constraints actually persisted; 2/2 concrete next purpose and necessary scope persisted after actual initial verification."
+    },
+    {
+      "id": "A-recovery",
+      "score": 3,
+      "max_points": 3,
+      "evidence": "A/project/RECOVER.md identifies records/state.json as the current authority and provides an explicit ROOT-based read-only command. A/project/scripts/project_status.py uses only standard-library/project-relative resources. audit/A-status.stdout.json recovers version 1, no drift, three effective done activities and current checkpoint from the copied project.",
+      "rationale": "2/2 discoverable authoritative current state; 1/1 usable self-contained recovery instructions. No prior chat is needed."
+    },
+    {
+      "id": "A-failure",
+      "score": 3,
+      "max_points": 3,
+      "evidence": "A/project/records/commands-A.json retains the rejected-parameters command, exit 2 and ValueError evaluation_start must be no later than evaluation_end. A/project/records/validation-A.json preserves stderr and before_invalid/after_invalid fingerprints showing all eight bound files unchanged and no rejected output directory. All canonical result/table/summary bytes match supplied originals; audit/verification.json reproduces the invalid rejection on a copy.",
+      "rationale": "1/1 actual invalid-input nonzero/error; 1/1 retained truthful failure evidence; 1/1 valid canonical results unchanged. The controlled rejection is not misrepresented as a scientific-analysis failure."
+    },
+    {
+      "id": "B-drift",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "B/report.md, deliverables/state-answer.json, status.stdout.json and audit-details.json identify only notes/parameters.json: evaluation_start 2011-10-01→2011-11-01, old SHA 16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837, current SHA 86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864, both 171 bytes; all eight paths exist. audit/B-status.stdout.json independently finds that exact mismatch against unchanged version-1 authority.",
+      "rationale": "4/4 correct changed path and no invented missing path; 3/3 actual old/current identity; 3/3 precise hash, initial-snapshot and semantic evidential basis."
+    },
+    {
+      "id": "B-dependencies",
+      "score": 12,
+      "max_points": 12,
+      "evidence": "B/report.md gives D-PARAM→D-CALC→result/table→D-SYNTH→summary, marks CALC directly stale and SYNTH transitively stale, and preserves D-SOURCE-CHECK done because its source/raw/note branch is unchanged. B/project/records/state.json retains the actual graph; status.stdout.json and audit/B-status.stdout.json agree. The report explicitly excludes D-REMOTE content and unregistered scratch from automatic coverage.",
+      "rationale": "4/4 direct CALC effect; 4/4 transitive SYNTH effect; 4/4 independent SOURCE-CHECK preserved without blanket staleness or unsupported remote/unregistered coverage."
+    },
+    {
+      "id": "B-cursor",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "B/report.md and status.stdout.json recover the existing version-1 checkpoint and mark it stale because the current parameter bytes differ. The report suspends the old author-discussion step and requires establishing the change decision, preserving old/current content, and then authorized calculator and dependent-summary revalidation before a fresh final checkpoint.",
+      "rationale": "2/2 actual checkpoint existence/freshness; 2/2 no reuse of Q4 results as approved November–December outputs; 1/1 concrete safe continuation without inventing author acceptance."
+    },
+    {
+      "id": "B-boundaries",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "B/report.md separates local binding/freshness from scientific truth: old Q4 numbers may remain valid for their original window but do not certify the new one. It states no refit, causal/CI/future guarantee or scientific certification; D-REMOTE is DOI-only with no current remote-content check; notes/unregistered-scratch.md is outside automatic dependency/checkpoint coverage.",
+      "rationale": "2/2 local staleness distinguished from scientific truth; 2/2 actual source-only and scratch coverage limits correctly reported."
+    },
+    {
+      "id": "B-readonly",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "B/readonly-audit.json reports no file or directory-mtime differences. B/deliverables/project-before.json and project-after.json are identical; project-readonly-verification.json retains the full path/SHA/mtime comparison. audit/verification.json confirms every recorded B file SHA matches the actual packet. The answer and audits reside in B/deliverables outside project.",
+      "rationale": "2/2 project file bytes unchanged; 2/2 file and directory mtimes unchanged. No repair, recomputation, rebind or checkpoint write is evidenced."
+    },
+    {
+      "id": "C-dirty-snapshot",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "C/project/snapshots/stage-C-before-recompute/ retains actual approved-parameter bytes alongside initial Q4 result/table/summary and old state, with a matching manifest. Version-2 authority snapshot and records/drift-checkpoint-C.json retain the new checkpoint with old completion bindings. C/deliverables/intermediate-check.stdout.json, intermediate-check.exit.json and project/records/intermediate-check-C.json record exit 1: checkpoint current, CALC/SYNTH stale, SOURCE-CHECK done. Audit reconstruction of archived version 2 reproduces that state.",
+      "rationale": "2/2 actual intermediate dirty snapshot/checkpoint; 2/2 actual post-save inspection retained separately; 2/2 no checkpoint-as-revalidation claim or laundering of old done activities."
+    },
+    {
+      "id": "C-recompute",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "C/project/records/commands-C.json and C/deliverables/approved-recomputation.stdout.json retain actual unchanged compute.py execution with approved parameters, exit 0. Canonical result/table bytes equal results-evaluations/C-approved/ and independent audit recomputation. C/project/results/result.json matches all reference numbers within 1e-10: 1460 hours, 61 days, C0/C1 MAE 56.64127430990882/41.252622564018566 and reduction 0.2716861852664598; its metadata hashes the actual input bytes. Updated summary includes RMSE/bias and the window-change/no-training-improvement interpretation.",
+      "rationale": "2/2 actual unchanged calculator on approved parameters; 2/2 correct canonical numeric result and actual-input metadata; 2/2 correct companion table; 2/2 correct summary and scientific scope. CSV, model, code and source-note bytes remain original."
+    },
+    {
+      "id": "C-revalidate",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "C/project/records/state.json version 3 updates PARAM/CLAIM/REL/CHOICE/result/table/summary and CALC/SYNTH to record version 2, with authorization and matching current file bindings. stage_c_driver.py and validation-C.json show real calculation then result/table checks, summary update/check and completion bindings built in CALC then SYNTH order. SOURCE-CHECK record and completion bindings remain byte-semantically identical to stage A; final-check-C.json and audit/C-status.stdout.json report all current.",
+      "rationale": "2/2 affected material/version/choice bindings addressed; 2/2 explicit dependency-order activity recheck after actual work; 2/2 independent source branch remains valid without spurious failure."
+    },
+    {
+      "id": "C-history",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "C/project/snapshots/initial/ contains recoverable original parameter/result/table/summary bytes exactly matching initial-input. snapshots/stage-C-before-recompute/ retains the drifted pre-recompute state. snapshots/authority/ contains complete version-1 and version-2 state content; current state history hashes both correctly and states the snapshot-only reason and authorized Q4→November–December revision reason, retaining old decision and scope content.",
+      "rationale": "2/2 recoverable old parameters and result; 2/2 recoverable old table and summary; 1/1 actual revision/version rationale and old decision content retained."
+    },
+    {
+      "id": "C-final-cursor",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "C/project/records/state.json version 3 and checkpoint-C-final.json save the current November–December scope and next action: send these frozen-model metrics and updated summary for author content review while retaining Q4 history. final-check-C.json and audit/C-status.stdout.json have no drift/conflict and current checkpoint. RECOVER.md agrees. Other configuration fields exactly match the final reference constraints; author review and submission remain unapproved.",
+      "rationale": "2/2 actual final saved freshness; 2/2 concrete next action with author content review still pending and Q4 preservation; 1/1 all other constraints preserved."
+    },
+    {
+      "id": "D-portability",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "D/report.md, state-answer.json and status-run.json recover from the relocated project using its own scripts/project_status.py and common Python only. Its read-manifest.json identifies project resources; no unavailable toolkit/old-source path is used as a live dependency. D/project contains current authority version 3 SHA 18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc, author revision, history and complete constraints. audit/D-status.stdout.json recovers the same state from another copied location; all C/D project bytes agree.",
+      "rationale": "2/2 project-only relocated-resource recovery; 2/2 actual current authority/version; 2/2 actual constraints recovered. Historical absolute strings are treated as logs, not accessed resources; initial Q4 notes do not override version 3."
+    },
+    {
+      "id": "D-next",
+      "score": 5,
+      "max_points": 5,
+      "evidence": "D/report.md and state-answer.json identify the latest November–December metric/summary author-content review and Q4-history retention step, explicitly unexecuted. They report current effective done CALC/SYNTH version 2 and independent SOURCE-CHECK version 1, current checkpoint and preserved stale intermediate state; no current stale work is invented. Scope remains observed-hour frozen-model descriptive comparison without refit, CI, causal/future guarantee or human/external approval.",
+      "rationale": "2/2 latest actual next action; 2/2 accurate completed versus pending work and necessary conditions; 1/1 scientific scope and no invented human approval."
+    },
+    {
+      "id": "D-readonly",
+      "score": 4,
+      "max_points": 4,
+      "evidence": "D/readonly-audit.json reports no file differences, no directory-mtime changes and unchanged project existence. D/deliverables/project-baseline.json and readonly-verification.json retain file-byte plus file/directory mtime verification. status-run.json records only the read-only project-status script; report/recovery-checks explicitly distinguish reading historical computation evidence from new recomputation and do not execute the next step. Answers are outside project.",
+      "rationale": "2/2 file bytes unchanged; 2/2 file and directory mtimes unchanged. No init, registration, snapshot, repair, recomputation or automatic next action is evidenced."
+    }
+  ],
+  "raw_score": 100,
+  "effective_score": 100,
+  "max_score": 100,
+  "critical_errors": [],
+  "usability": "usable",
+  "notes": [
+    "No substantive rubric-scored defect found. The chain preserves the real drifted state, revalidates only affected work after actual computation, and remains recoverable from the migrated project.",
+    "Anonymous chain ID retained. Arm mapping and external execution history were not accessed. Blinding is non-perfect: file layout, embedded historical paths and method references may reveal implementation style; no arm assignment was inferred or used.",
+    "All 264 supplied packet files were read as bytes for the audit index; semantic review focused on tasks, reports, authority, actual scientific materials and retained execution/state evidence. No network, memory, personal skills, other chains or parent-directory resources were consulted.",
+    "Adjudicator verification ran only explicitly rooted project copies inside audit/ using the permitted shared Python with -I -B. It reproduced A/C numbers and tables, invalid-input rejection, B drift and the archived C intermediate state. This corroborates supplied execution evidence; it is not a substitute for the original recorded executions.",
+    "Supplied B/D readonly-audit records and retained baselines support the read-only findings. This is content-level review, not an OS access audit or human scientific certification.",
+    "Engineering guard/probe features, names, formats, file counts and brands received no extra weighted points. No critical cap or additional penalty was applied.",
+    "The common execution.json files are referenced but not separately included in this blinded packet. Scored execution obligations remain evidenced by project command records, raw calculation/status outputs and validation artifacts; no missing critical execution fact was inferred.",
+    "Full report SHAs verified against actual reports. Original packet file bytes were unchanged by adjudication; audit/verification.json and audit/packet-file-index.json retain the verification evidence."
+  ],
+  "scope": "Independent fresh chain-level AI review; organizer withheld arm mapping and external execution history. Layout may reveal method; no human certification.",
+  "stage_scores": {
+    "A": 20,
+    "B": 35,
+    "C": 30,
+    "D": 15
+  },
+  "publication_projection": {
+    "original_chain_id": "anonymous-K7dc50a",
+    "original_grade_sha256": "079d735a237a6603242a8aee1a710eee40e67f0abd977043a8c3295a7f43536a",
+    "changes": [
+      "opaque-chain-label-to-plan-label",
+      "absolute-locators-to-logical-paths"
+    ],
+    "scope": "Administrative identity/locator mapping only; scores, rationales, critical errors and original report bindings unchanged."
+  }
+}

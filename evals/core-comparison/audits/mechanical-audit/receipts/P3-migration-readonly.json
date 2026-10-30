@@ -1,0 +1,18 @@
+{
+  "name": "P3-migration-readonly",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P3/迁移后 科研项目/resume.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P3/迁移后 科研项目"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P3/迁移后 科研项目",
+  "exit_code": 0,
+  "stdout": "{\n  \"case_id\": \"T\",\n  \"authority\": \"research/state.json; notes, provenance and checkpoints do not override current configuration or records\",\n  \"metadata_revision\": 4,\n  \"active_constraints\": {\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"deadline\": \"2026-12-15\",\n    \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n    \"available_capabilities\": [\n      \"local Python standard library\",\n      \"fixed source cache\",\n      \"author-provided working notes\"\n    ],\n    \"venue\": \"Undecided; do not invent a target journal\",\n    \"language\": \"zh\",\n    \"current_scope\": {\n      \"case_id\": \"T\",\n      \"alpha\": 0.05,\n      \"rho\": 4.0,\n      \"rho_selection\": \"fixed-before-observation\",\n      \"intrinsic_time_grid\": [\n        0,\n        1,\n        10,\n        100\n      ]\n    },\n    \"unknowns\": [\n      \"No human expert approval has occurred\",\n      \"No external submission authorized\"\n    ],\n    \"initial_next_action\": \"核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。\",\n    \"deadline_provenance\": \"Benchmark author-supplied, not an observed real research deadline\"\n  },\n  \"next_action\": \"将 alpha=0.05、预先固定 rho=4 的四点边界表（results/table.csv）与更新摘要（results/summary.md）交作者内容复核，确认 V 与给定过程控制条件；暂不扩展到事后选择 rho；没有投稿授权。\",\n  \"changed_or_missing_paths\": [],\n  \"activities\": {\n    \"T-SOURCE-CHECK\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-CALC\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    },\n    \"T-SYNTH\": {\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"reasons\": []\n    }\n  },\n  \"checkpoint_freshness\": {\n    \"fresh\": true,\n    \"reasons\": []\n  },\n  \"scientific_scope\": {\n    \"formula\": \"sqrt((v+rho)*(log(1+v/rho)+2*log(1/alpha)))\",\n    \"l0\": 1,\n    \"process_conditions\": \"S and -S have the required sub-Gaussian exponential control for the same nonnegative intrinsic time V; alpha is the total two-sided error budget\",\n    \"rho_rule\": \"fixed before observation\",\n    \"assessment\": \"rho=4 specified numerical values, result/CSV correspondence and revised summary checked by AI assistant; proof, simulation coverage, novelty and human approval not assessed\",\n    \"formal_verification\": \"not-started; not required in this numerical task\"\n  },\n  \"source_tracking_limits\": {\n    \"source_only\": [\n      \"T-REMOTE\"\n    ],\n    \"unregistered_file\": [\n      \"notes/unregistered-scratch.md\"\n    ],\n    \"meaning\": \"Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked.\"\n  },\n  \"publication_rule\": \"Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results.\",\n  \"resume_is_read_only\": true,\n  \"no_scientific_certification\": true\n}\n",
+  "stderr": "",
+  "project_identical_bytes_mtime_directory_mtime": true,
+  "changed_files": [],
+  "changed_directories": []
+}

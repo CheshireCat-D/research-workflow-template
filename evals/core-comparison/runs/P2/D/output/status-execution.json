@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "management/status.py",
+    "--root",
+    "."
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0
+}

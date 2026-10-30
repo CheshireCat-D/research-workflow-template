@@ -1,0 +1,18 @@
+{
+  "id": "D-CALC",
+  "inputs": [
+    "evidence:D-PARAM",
+    "evidence:D-RAW",
+    "artifact:D-CODE",
+    "decision:D-CHOICE",
+    "artifact:D-MODEL"
+  ],
+  "note": "Executed unchanged supplied calculator on current approved parameters, exit 0; independent observed-hour metrics and input identities match; first verifier TypeError preserved then corrected in own code only. Assistant-executed computation, no human expert acceptance.",
+  "outputs": [
+    "artifact:D-RESULT",
+    "artifact:D-TABLE",
+    "artifact:D-C-VALIDATION"
+  ],
+  "status": "done",
+  "title": "Rerun supplied calculator and verify canonical numeric result and companion table"
+}

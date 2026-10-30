@@ -1,0 +1,64 @@
+{
+  "tasks": {
+    "data-a": {
+      "max_score": 50,
+      "items": [
+        {
+          "id": "source_units",
+          "points": 8
+        },
+        {
+          "id": "temporal_design",
+          "points": 9
+        },
+        {
+          "id": "metrics_sensitivity",
+          "points": 10
+        },
+        {
+          "id": "uncertainty",
+          "points": 8
+        },
+        {
+          "id": "conclusion_update",
+          "points": 6
+        },
+        {
+          "id": "reproducibility",
+          "points": 9
+        }
+      ]
+    },
+    "data-b": {
+      "max_score": 50,
+      "items": [
+        {
+          "id": "source_units",
+          "points": 8
+        },
+        {
+          "id": "temporal_design",
+          "points": 7
+        },
+        {
+          "id": "metrics_sensitivity",
+          "points": 12
+        },
+        {
+          "id": "uncertainty",
+          "points": 10
+        },
+        {
+          "id": "conclusion_update",
+          "points": 9
+        },
+        {
+          "id": "reproducibility",
+          "points": 4
+        }
+      ]
+    }
+  },
+  "detail": "data.md",
+  "critical_errors": "No execution, test-label refit while claiming frozen evaluation, target-leaking features claimed usable, or fabricated result/source. Preserve item scores; no extra cap; cannot call usable."
+}

@@ -1,0 +1,65 @@
+{
+  "submission_id": "S3f44a8",
+  "task_id": "data-a",
+  "scored": true,
+  "arm_hidden": true,
+  "criteria": [
+    {
+      "id": "source_units",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "report.md“数据身份与完整性”；work/analyze.py: schema_audit/audit_inputs；work/results/audit.json；input/SOURCES.md、ORIGINAL_README.txt、UCI_PAGE_EXCERPT.txt。8645小时/365日、305个24小时完整日、115个缺失日历小时、空单元格及重复键为0；逐日casual/registered/cnt共1095项汇总一致，全年cnt=1243103。评审实跑audit与保存版本逐字节一致。",
+      "rationale": "数据身份、系统/小时/日期单位与来源披露准确；清楚区分空单元格和缺少整行；未补零，也未把日表作为独立重复。README与页面的总行数、season、temp/atemp冲突均保留并正确处理，未改编码或反归一化。满足该维度全部要求。"
+    },
+    {
+      "id": "temporal_design",
+      "score": 9,
+      "max_points": 9,
+      "evidence": "report.md“冻结模型和指标口径”；work/analyze.py: fit_model/predict/main；work/results/model.json；work/handoff.md。训练2011-01-01至09-30共6442小时/273日，Q4留出2203小时/92日。C0按hr均值，C1按workingday,hr均值且未见组合回退；24+48组参数均为训练整数和/样本数。",
+      "rationale": "切分、冻结点和预测规则与任务一致，未四舍五入；代码只按hr及workingday取参数，cnt仅作为训练目标及评分真值，没有类别计数或天气泄漏。报告正确反驳随机小时拆分替代未来检验及日前使用实测天气。评审独立重算全部72个均值并与保存模型精确一致。"
+    },
+    {
+      "id": "metrics_sensitivity",
+      "score": 10,
+      "max_points": 10,
+      "evidence": "report.md主指标、日期等权、“敏感性与分组”；work/analyze.py: summarize/evaluate；work/results/results.json。主MAE C0=58.825190494512434，C1=44.570832407531775，差=14.254358086980659，R=0.24231724482575867；日等权MAE=58.848612994531926/44.62015379783553。87完整日/2088小时R=0.25549971431189；workingday 0/1的R=0.37618608960904465/0.12611712674255904。",
+      "rationale": "MAE/RMSE/预测减真实偏差、绝对差、相对降幅、两个日等权MAE及其比较、full24敏感性和workingday分组均实际计算且与参考容差内一致。报告明确日内MAE的日期等权不同于日总量误差，解释权重及偏差抵消。评审复跑results.json逐字节一致；没有实质算术或单位错误。"
+    },
+    {
+      "id": "uncertainty",
+      "score": 8,
+      "max_points": 8,
+      "evidence": "report.md“成对循环移动块bootstrap”；work/analyze.py: bootstrap/quantile；work/results/bootstrap_7d.csv、bootstrap_28d.csv。7日块Δ区间[10.800923355912134,17.578081630439435]、R区间[0.17071940679252828,0.3148328823524696]；28日块Δ区间[9.815819623823897,18.33421270659497]、R区间[0.15571346410314052,0.325449081470458]。",
+      "rationale": "实际实现排序日期成对循环块、randrange(D)、截断D、日内全部小时合并、B=2000、每个块长重新seed=20261029及指定线性分位数。评审以独立逐小时合并实现核对两个区间，误差<1e-10；复跑重采样CSV逐字节一致。解释保留的依赖、固定模型而不包括训练不确定性、缺失小时不可恢复及稳定性/循环拼接近似，未把小时当独立重复。"
+    },
+    {
+      "id": "conclusion_update",
+      "score": 6,
+      "max_points": 6,
+      "evidence": "report.md首段、bootstrap解释及“构造草稿逐项结论”；work/handoff.md“当前证据”。明确区分改善和10%门槛，本次2011 Q4点估计R=24.231724%，两块长区间均在10%以上；限定该系统该期已观测小时，尚无2012检验。",
+      "rationale": "给定2011留出数据的结论准确，10%判定与实际计算一致。草稿的缺小时、结果泄漏、实测天气、独立性、因果与跨年外推错误逐项纠正或判为未获支持；没有冒充原论文观点。对区间和跨年迁移作了必要限定，没有因尚未提供2012而遗漏本阶段要求。"
+    },
+    {
+      "id": "reproducibility",
+      "score": 9,
+      "max_points": 9,
+      "evidence": "work/analyze.py、work/results/model.json、results/results.json、daily_errors.csv、predictions.csv、两份bootstrap CSV、work/RUN.md、work/handoff.md、work/verification.json及replay_check。评审在本包adjudicator_check_fit/与adjudicator_check_score/实际运行fit及加载现有模型的score；模型、审计及所有评分/预测/逐日/bootstrap结果与保存版本逐字节一致。模型SHA256=dba591a44fff2d14514b4b38d00c8985e93f41cf2b1ab684a6abd2f2620d078d。",
+      "rationale": "具有可运行标准库入口、完整冻结参数和足够的新上下文交接；训练范围、输入哈希、规则、指标、边界及无需重训评分步骤均明确。已有结果与代码/参数一致，评审恢复运行成功且不修改提交源码。报告5409字符符合正文上限；不按文件数量、字段格式或工具品牌加分。"
+    }
+  ],
+  "raw_score": 50,
+  "effective_score": 50,
+  "max_score": 50,
+  "critical_errors": [],
+  "caps_applied": [],
+  "usability": "usable",
+  "notes": [
+    "仅对data-a阶段A评分，六项满分8/9/10/8/6/9；effective_score=raw_score，未加额外data cap。没有因尚未提供2012观测而扣分。",
+    "评分基于本包任务、rubric、输入、报告及产物；未使用网络、个人skills、memory或其他盲包。参考文档对本阶段数值未发现错误。",
+    "组织者告知最初盲包误裁剪生成CSV并已恢复；本次最终评分基于恢复后的完整包。评分前已实核生成CSV与独立复跑精确一致，未将组织者漏投算作者错误；没有先前已落盘初评。",
+    "arm_hidden=true仅表示组织者未提供arm映射，不代表已证明完美盲法；未推断或标注方法身份。",
+    "未发现核心科学失败或实质问题。评审复跑仅写入本包新子目录adjudicator_check_fit及adjudicator_check_score，未修改提交源码。"
+  ],
+  "scope": "Fresh AI content adjudication; coordinator withheld arm map; no OS audit or human expert certification.",
+  "report_sha256": "37f9bab62244549f2898aad4d2612bb762bee63f8b94b5960a6e8e14ba0223a6"
+}

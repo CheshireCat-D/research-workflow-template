@@ -36,7 +36,8 @@ class UserPackage(unittest.TestCase):
             shutil.copytree(ROOT / name, self.source / name,
                             ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
         for name in ('LICENSE', 'SECURITY.md', 'design/catalog.json',
-                     'tools/research.py', 'tools/connect_skills.py', *package.GUIDES):
+                     'tools/research.py', 'tools/connect_skills.py',
+                     *package.EXAMPLE_FILES, *package.GUIDES):
             target = self.source / name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / name, target)
@@ -45,6 +46,34 @@ class UserPackage(unittest.TestCase):
         archive = self.base / name
         package.build(archive, self.source)
         return archive
+
+    def test_new_setup_search_and_complete_example_run_from_user_zip(self):
+        archive = self.build()
+        with zipfile.ZipFile(archive) as source:
+            source.extractall(self.base / 'download')
+        toolkit = self.base / 'download' / package.ARCHIVE_ROOT
+        project = self.base / 'new project'
+        setup = subprocess.run(
+            [sys.executable, '-I', '-B', str(toolkit / 'tools/research.py'),
+             'init', '--output', str(project), '--title', 'Question', '--connect-skills'],
+            capture_output=True, text=True, encoding='utf-8', timeout=30)
+        self.assertEqual(setup.returncode, 0, setup.stdout + setup.stderr)
+        self.assertTrue(json.loads(setup.stdout)['skill_connection']['installed'])
+        search = project / '.agents/skills/rw-literature/scripts/search_crossref.py'
+        help_result = subprocess.run([sys.executable, '-I', '-B', str(search), '--help'],
+                                     capture_output=True, text=True, encoding='utf-8', timeout=30)
+        self.assertEqual(help_result.returncode, 0, help_result.stderr)
+        self.assertIn('--query', help_result.stdout)
+        demo = subprocess.run(
+            [sys.executable, '-I', '-B', str(toolkit / 'examples/public-penguins/run_project.py'),
+             '--input', str(ROOT / 'examples/public-penguins/synthetic.csv'),
+             '--output', str(self.base / 'offline demonstration')],
+            capture_output=True, text=True, encoding='utf-8', timeout=60)
+        self.assertEqual(demo.returncode, 0, demo.stdout + demo.stderr)
+        receipt = json.loads(demo.stdout)
+        self.assertFalse(receipt['matches_pinned_public_input'])
+        self.assertEqual(receipt['checkpoint_status'], 'current')
+        self.assertTrue(Path(receipt['first_deliverable']).is_file())
 
     def rewrite(self, original, target, changes):
         """Simulate edits that also update the outer list of file hashes."""
@@ -81,7 +110,8 @@ class UserPackage(unittest.TestCase):
         self.assertEqual(entries['skills/rw-review/SKILL.md'],
                          (self.source / 'skills/rw-review/SKILL.md').read_bytes())
         self.assertIn('skills/rw-review/references/cross-material-consistency.md', entries)
-        for name in ('review-modes.md', 'review-response.md', 'submission-delivery.md'):
+        for name in ('review-modes.md', 'review-response.md', 'submission-delivery.md',
+                     'theory-review.md'):
             self.assertIn('skills/rw-review/references/' + name, entries)
         self.assertFalse(package.payload_link_errors(entries))
         catalog = json.loads(entries['design/catalog.json'])
@@ -193,6 +223,7 @@ class UserPackage(unittest.TestCase):
     def test_missing_runtime_or_linked_reference_blocks_output(self):
         for name in ('core/storage.py', 'profiles/templates/legal-research.md',
                      'skills/rw-review/references/cross-material-consistency.md',
+                     'skills/rw-review/references/theory-review.md',
                      'skills/rw-review/scripts/check_revision_plan.py',
                      'docs/user-package-guide.en.md'):
             with self.subTest(name=name):
@@ -242,6 +273,7 @@ class UserPackage(unittest.TestCase):
             {'skills/rw-review/references/review-modes.md': None},
             {'skills/rw-review/references/review-response.md': None},
             {'skills/rw-review/references/submission-delivery.md': None},
+            {'skills/rw-review/references/theory-review.md': None},
             {'evals/current/history.json': b'{}\n'},
             {'skills/rw-review/tests/test_old_revision.py': b'# Development only.\n'},
             {'profiles/methods/revisions/old.md': b'# Earlier guidance.\n'},

@@ -1,0 +1,99 @@
+{
+  "hour": {
+    "rows": 8734,
+    "columns": [
+      "instant",
+      "dteday",
+      "season",
+      "yr",
+      "mnth",
+      "hr",
+      "holiday",
+      "weekday",
+      "workingday",
+      "weathersit",
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed",
+      "casual",
+      "registered",
+      "cnt"
+    ],
+    "duplicate_keys": 0,
+    "duplicate_key_examples": [],
+    "blank_cells": 0,
+    "blank_examples": [],
+    "extra_cell_rows": [],
+    "duplicate_instant": 0,
+    "dates": [
+      "2012-01-01",
+      "2012-12-31"
+    ],
+    "years": [
+      "1"
+    ],
+    "count_identity_failures": 0,
+    "expected_calendar_hours": 8784,
+    "missing_calendar_hours": 50,
+    "hours_per_day_distribution": {
+      "1": 1,
+      "11": 1,
+      "23": 14,
+      "24": 350
+    },
+    "complete_24h_dates": 350,
+    "missing_calendar_dates": [],
+    "invalid_hours": 0,
+    "chronological_order": true,
+    "cnt_total": 2049576,
+    "cnt_min": 1,
+    "cnt_max": 977
+  },
+  "day": {
+    "rows": 366,
+    "columns": [
+      "instant",
+      "dteday",
+      "season",
+      "yr",
+      "mnth",
+      "holiday",
+      "weekday",
+      "workingday",
+      "weathersit",
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed",
+      "casual",
+      "registered",
+      "cnt"
+    ],
+    "duplicate_keys": 0,
+    "duplicate_key_examples": [],
+    "blank_cells": 0,
+    "blank_examples": [],
+    "extra_cell_rows": [],
+    "duplicate_instant": 0,
+    "dates": [
+      "2012-01-01",
+      "2012-12-31"
+    ],
+    "years": [
+      "1"
+    ],
+    "count_identity_failures": 0,
+    "cnt_total": 2049576,
+    "missing_calendar_dates": [],
+    "daily_mean": 5599.934426229508
+  },
+  "hour_day_discrepancies": [],
+  "calendar_field_conflicts": [],
+  "calendar_fields_constant_within_date": true,
+  "hour_day_calendar_conflicts": 0,
+  "input_hashes": {
+    "hour": "d73ae7f2aba616d775b5bccb3540910a9de49fe88e7f5926f7bf0a3fe840602d",
+    "day": "75c2dd61bc5f8a3cd6ae5c787c74c0fbc1547201d47c5cba878d29f3083f09b6"
+  }
+}

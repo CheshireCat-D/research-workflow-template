@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "submission_id": "B28eb75",
+  "task_id": "Q24",
+  "report_sha256": "d7584c8c2b099fb71a3599a182a4937cac55ee2a19048b64e654a8b497fc636b",
+  "judge_context": "全新单报告裁定上下文；仅阅读本目录 task.md、report.md、reference.json、template.json，独立核实原题、参考及报告；未接触其他报告、组别映射或执行日志。",
+  "arm_visibility": "hidden-by-instruction",
+  "os_audited": false,
+  "scored": true,
+  "verdict": "unsupported",
+  "criteria": [
+    {
+      "id": "decision",
+      "score": 2,
+      "evidence": "report.md:1 明确写“主张不成立”，并说明不能保证在 0 可微；report.md:30 要求撤回原导数结论。",
+      "rationale": "正确拒绝原主张。报告既指出证明失效，也用满足原条件的具体反例否定结论，没有把证明有缺口直接等同于命题错误。"
+    },
+    {
+      "id": "failed_step",
+      "score": 2,
+      "evidence": "report.md:28 指出固定 ε 后 2ε/|h| 随 h→0 趋于无穷，并解释 ε=o(|h|) 会使 N 依赖 h，缺少所有 N 共用的 h 邻域。",
+      "rationale": "准确定位三角不等式之后的错误推论，并说明先固定 ε、再选 N、最后令 h→0 的量词顺序为何无法给出所需差商控制。"
+    },
+    {
+      "id": "counterexample",
+      "score": 2,
+      "evidence": "report.md:3-9 给出 f_n(x)=√(x²+n⁻²)，n 为正整数，定义域为整个 [-1,1]，并列出导数 x/√(x²+n⁻²)。",
+      "rationale": "这是具体且有效的函数列；因 n⁻²>0，整个定义域内根号项严格为正，逐项可微。它与参考反例相差常数 1/n，不影响作为正确反例。"
+    },
+    {
+      "id": "assumptions",
+      "score": 2,
+      "evidence": "report.md:7-9 核对闭区间连续、开区间可微及 f_n′(0)=0；report.md:11-21 证明 |x|≤√(x²+n⁻²)≤|x|+1/n，因此 sup|f_n−|x||≤1/n→0。",
+      "rationale": "连续性和可微性的核验成立，导数公式及零点导数正确。统一误差界独立于 x，并有非负两边平方比较的实际推导，充分证明一致收敛。"
+    },
+    {
+      "id": "contradiction",
+      "score": 2,
+      "evidence": "report.md:21-26 将极限识别为 f(x)=|x|，计算差商 |h|/h 在 h>0 时为 1、h<0 时为 −1，得出左右极限不同。",
+      "rationale": "差商的两侧极限确实分别为 1 和 −1，故极限函数在 0 不可微，直接违反原结论所要求的导数存在且为 0。"
+    }
+  ],
+  "invented_major_objections": [],
+  "notes": "总分 10/10。独立核实参考成立：其函数列 √(x²+n⁻²)−1/n 的误差位于 [−1/n,0]，零点导数为 0，极限为 |x|；参考无须更正。报告采用不减 1/n 的同样正确路线，误差位于 [0,1/n]。报告提出的统一差商条件及固定 h 后令 n→∞ 的修复推理正确，并明确标注为新增假设；末段属于可选表述建议，不计入主要异议。"
+}

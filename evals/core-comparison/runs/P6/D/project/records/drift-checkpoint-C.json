@@ -1,0 +1,58 @@
+{
+  "state_version": 2,
+  "configuration_sha256": "b5dbf74d35f3725b8ee1d3eb3cf68dce0eb47f30f0f5ec262d58a6eb27775dc5",
+  "record_signatures": {
+    "D-SRC": "207d67dc133e11bc3b4bfe29f50257bd84449fd22cecc3dee03f8eccb3fc651e",
+    "D-REMOTE": "baff8d098ab62069f5dc4b17e5a81c7eddafcc89be9c27962e49fc2a778e2b9c",
+    "D-RAW": "7645be90cd713b9f371d0f9f74e68b91a5401fc260be8630e16a116b698a4749",
+    "D-PARAM": "d0777371b25bd11812aaf8f8db1aa9c5d6e23f5d5c719c54f705d785ba9d5d3b",
+    "D-CLAIM": "c1f600e3a19d69f2fb4611592e679ea39c8a2a4e6071bbd81502486178d61773",
+    "D-REL": "2d4dc40d2a15619e6866a1fc13e1f3fe5a211cb78c1367cefd2dc25c62b50992",
+    "D-CHOICE": "50c99c6742481e64331e17a1ec02c07909e67b6f5ea0f23c135be5fc2aded4f9",
+    "D-CODE": "646a88ae8d16a248a5080f63569283fe6a808287c0b7bf2d03215d6e5eefb592",
+    "D-MODEL": "ad1ac0226d44710231bced55f47deadd77a073c8a7b80826be495d057ebc9745",
+    "D-RESULT": "89f8e8ecbba9a55d59255a763bbde57473dd7add4b0df1e0444ea56e1496b6c3",
+    "D-TABLE": "cdb4d092ef5ef692a7a72c90b236bfbe12259e4fda4b2d6c013fa682abd37e17",
+    "D-SUMMARY": "44f5af6b46de40d74c9edfaa1bb05a8af2a6b971980d02b4ff1112c087e8fb04",
+    "D-SOURCE-NOTE": "524485300468c6355f2bc7ea96000b155a1e43de1faa2289738ab1885be9491f",
+    "D-SOURCE-CHECK": "9fb9caa1b2674ceb6c623cc7862a40573933b63d8b643288bfb10885e07d91f9",
+    "D-CALC": "a3b3d965279c2d1479f07bc5c25c0ac805347ba8ba3da4c32bb4ee163f12d623",
+    "D-SYNTH": "2a023ed8a1c6377c2f7ec19443144e6687777a36ec61aef4df9fb268ef1be7b2"
+  },
+  "files": {
+    "data/hour_2011.csv": {
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668
+    },
+    "notes/parameters.json": {
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "model/frozen.json": {
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320
+    },
+    "results/result.json": {
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000
+    },
+    "results/table.csv": {
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205
+    },
+    "results/summary.md": {
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280
+    },
+    "notes/source-check.md": {
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474
+    }
+  },
+  "next_action": "接受参数前先检查漂移：现参数为11月至12月，旧成果仍为Q4；保存断点不能恢复D-CALC或D-SYNTH的有效性。按授权真实复算后交作者内容复核。",
+  "meaning": "Saved current context only; completion binding validity is checked separately."
+}

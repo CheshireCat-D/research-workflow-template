@@ -18,6 +18,7 @@ import sys
 import tempfile
 import unittest
 import zipfile
+from replay_support import reviewed_resource
 
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,11 +63,13 @@ class FirstUse(unittest.TestCase):
                     if p.is_file() and p.name != 'recording.json'}
         expected.add('tests/test_first_use.py')
         self.assertEqual(set(published), expected)
+        historical = json.loads((ROOT / 'evals/current/regression-history.json').read_text(encoding='utf-8'))
         for name, identity in published.items():
             path = ROOT / name
             self.assertFalse(path.is_symlink(), name)
-            self.assertEqual(path.stat().st_size, identity['bytes'], name)
-            self.assertEqual(digest(path.read_bytes()), identity['sha256'], name)
+            data = reviewed_resource(name, identity['sha256'], historical['resources'])
+            self.assertEqual(len(data), identity['bytes'], name)
+            self.assertEqual(digest(data), identity['sha256'], name)
         originals = record['original_case_identities']
         self.assertEqual(set(originals), set(ORIGINAL_IDENTITIES))
         for name, checksum in ORIGINAL_IDENTITIES.items():
@@ -162,7 +165,7 @@ class FirstUse(unittest.TestCase):
                     self.assertIsNotNone(following, 'JSON example needs its actual CLI commands')
                     documented = [shlex.split(line) for line in following.group(1).splitlines()
                                   if line.strip()]
-                    self.assertEqual(len(documented), 2)
+                    self.assertEqual(len(documented), 1)
                     project = base / language / 'new project'
                     environment = dict(os.environ, PYTHONDONTWRITEBYTECODE='1')
 
@@ -185,15 +188,19 @@ class FirstUse(unittest.TestCase):
                     registered = guide_command(documented[0], 'register-batch')
                     self.assertTrue(registered['registered'])
                     self.assertEqual(registered['registered_count'], len(batch))
-                    next_action = 'Continue after reading the saved synthetic record.'
-                    invoke(toolkit / 'tools/research.py', 'checkpoint', '--root', project,
-                           '--next-action', next_action)
+                    self.assertTrue(registered['checkpoint_saved'])
+                    self.assertTrue(registered['passed'])
+                    next_action = documented[0][documented[0].index('--next-action') + 1]
+                    self.assertEqual(registered['recovery']['next_action'], next_action)
+                    self.assertEqual(registered['recovery']['checkpoint']['status'], 'current')
                     before = snapshot(project)
-                    shown = guide_command(documented[1], 'show')
+                    shown = invoke(toolkit / 'tools/research.py', 'show', '--root', project,
+                                   '--kind', 'statement', '--id', statement['id'])
                     self.assertEqual(shown['envelope']['data'], statement)
                     self.assertTrue(shown['read_only'])
                     local = project / '.agents/skills/_rw-runtime/tools'
                     resumed = invoke(local / 'research.py', 'resume', '--root', project)
+                    self.assertEqual(resumed, registered['recovery'])
                     self.assertTrue(resumed['passed'])
                     self.assertTrue(resumed['read_only'])
                     self.assertEqual(resumed['checkpoint']['status'], 'current')

@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "decision",
+    "--id",
+    "T-CHOICE"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 27,\n  \"kind\": \"decision\",\n  \"id\": \"T-CHOICE\",\n  \"envelope\": {\n    \"bindings\": null,\n    \"data\": {\n      \"choice\": \"Use the supplied initial alpha=.05 rho=1 fixed before observation, grid [0,1,10,100].\",\n      \"decided_at\": \"Original decision timestamp not supplied\",\n      \"evidence_refs\": [\n        \"T-PARAM\"\n      ],\n      \"id\": \"T-CHOICE\",\n      \"notes\": \"No invented human expert approval.\",\n      \"rationale\": \"Initial benchmark-author choice; task authorizes reproducing these supplied parameters.\",\n      \"responsible\": \"Benchmark author, as identified in supplied initial material; recorded by AI agent.\",\n      \"revisit_when\": \"Explicit author parameter revision; preserve previous content and rationale.\"\n    },\n    \"registered_at\": \"2026-10-30T01:03:18.401333+00:00\",\n    \"version\": 1\n  }\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,22 @@
+{
+  "scope": "Protected source/configuration bytes and exact original sealed project bytes/mtime. Personal pre-existing environment was outside initial source snapshot; no environment chronology inferred.",
+  "personal_source_files_checked": 516,
+  "personal_changed_or_missing": [],
+  "previous_comparison_files_checked": 406,
+  "previous_comparison_changed_or_missing": [],
+  "registry_checkpoint_recovery_logic_files_checked": [
+    "core/cli.py",
+    "core/model.py",
+    "core/project.py",
+    "core/storage.py",
+    "core/windows_storage.py",
+    "core/protocol.md",
+    "core/skill-bridge.md"
+  ],
+  "logic_changed_during_this_task": [],
+  "sealed_stages_checked": 24,
+  "sealed_stage_differences": [],
+  "previous_user_archive_sha256": "55ef076d58a7b15865093ba6d2713ebf453c12bf8901a68ad6e517e9b3fcea8b",
+  "new_user_archive_sha256": "1bf658b7895711bf786b3cf415a3c47dc2b214a31bace1d82e5b22ef00849ff2",
+  "new_archive_equals_frozen_test_target": true
+}

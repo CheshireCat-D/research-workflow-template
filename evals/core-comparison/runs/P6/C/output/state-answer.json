@@ -1,0 +1,108 @@
+{
+  "case_id": "D",
+  "stage": "C",
+  "active_constraints": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-11-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。不重训、不外推2012；尚未有人类专家认可，也没有投稿授权。",
+  "changed_or_missing_paths": [],
+  "affected_activities": {
+    "D-CALC": {
+      "before": "stale",
+      "now": "done",
+      "version": 2
+    },
+    "D-SYNTH": {
+      "before": "stale",
+      "now": "done",
+      "version": 2
+    }
+  },
+  "unaffected_activities": {
+    "D-SOURCE-CHECK": {
+      "status": "done",
+      "version": 1,
+      "reason": "Source identity, immutable local raw data and source note and completion bindings unchanged; independent of evaluation parameters"
+    }
+  },
+  "checkpoint_freshness": {
+    "intermediate": "current, while affected activities remained stale",
+    "final": "current"
+  },
+  "scientific_scope": "AI-executed frozen-model observed-hour descriptive comparison, 2011-11-01 to 2011-12-31; no refit, confidence interval, causal claim, future-year guarantee or human expert approval",
+  "source_tracking_limits": {
+    "source_only": [
+      "D-REMOTE"
+    ],
+    "unregistered": [
+      "notes/unregistered-scratch.md"
+    ],
+    "rejected_trial_not_current_input": "notes/rejected-parameters.json",
+    "untracked_files_not_automatically_scientific_dependencies": true
+  },
+  "material_paths": {
+    "parameters": "notes/parameters.json",
+    "data": "data/hour_2011.csv",
+    "model": "model/frozen.json",
+    "calculator": "scripts/compute.py",
+    "result": "results/result.json",
+    "table": "results/table.csv",
+    "summary": "results/summary.md",
+    "initial_history": "snapshots/initial/",
+    "drift_snapshot": "snapshots/stage-C-before-recompute/",
+    "author_authorization": "provenance/task-C/author-revision/",
+    "state": "records/state.json",
+    "recovery": "RECOVER.md"
+  },
+  "state_version": 3,
+  "metrics": {
+    "case_id": "D",
+    "evaluation_start": "2011-11-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "observed_hours": 1460,
+    "observed_days": 61,
+    "C0_MAE": 56.64127430990882,
+    "C1_MAE": 41.252622564018566,
+    "C0_RMSE": 81.70038360631688,
+    "C1_RMSE": 64.15826564867794,
+    "C0_bias_prediction_minus_actual": 13.433264561295244,
+    "C1_bias_prediction_minus_actual": 13.347664992606457,
+    "MAE_reduction_fraction": 0.2716861852664598,
+    "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+    "input_sha256": {
+      "parameters": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    }
+  },
+  "notes": [
+    "Original Q4 preserved; window change cannot demonstrate training improvement.",
+    "Source activity retained unchanged.",
+    "Intermediate exit1 and preparation syntax error retained separately from final exit0.",
+    "No network or external submission."
+  ]
+}

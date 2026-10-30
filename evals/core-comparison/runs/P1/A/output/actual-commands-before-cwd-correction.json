@@ -1,0 +1,256 @@
+[
+  {
+    "label": "initialize-and-connect",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "TOOLKIT_ROOT/tools/research.py",
+      "init",
+      "--output",
+      "PROJECT_ROOT",
+      "--title",
+      "固定精度正态混合边界的可恢复数值核对",
+      "--interest",
+      "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+      "--language",
+      "zh",
+      "--connect-skills"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\n  \"initialized\": true,\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 0,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"skill_connection\": {\n    \"passed\": true,\n    \"installed\": true,\n    \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n    \"target\": \".agents/skills\",\n    \"skills\": [\n      \"rw-workflow\",\n      \"rw-question\",\n      \"rw-literature\",\n      \"rw-innovation\",\n      \"rw-candidates\",\n      \"rw-validation\",\n      \"rw-writing\",\n      \"rw-review\",\n      \"rw-figures\"\n    ],\n    \"files\": 67,\n    \"payload_sha256\": \"c2dd5fa54cee747ff61cb597779320ca498a9cb145c8fce422735091cdc5fcc1\",\n    \"global_installation\": false,\n    \"project_records_modified\": false\n  },\n  \"passed\": true\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "persist-configuration",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "TOOLKIT_ROOT/tools/research.py",
+      "configure",
+      "--root",
+      "PROJECT_ROOT",
+      "--interest",
+      "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+      "--deadline",
+      "2026-12-15",
+      "--budget",
+      "Offline Python standard library only; no new data collection or model refit",
+      "--venue",
+      "Undecided; do not invent a target journal",
+      "--add-capability",
+      "local Python standard library",
+      "--add-capability",
+      "fixed source cache",
+      "--add-capability",
+      "author-provided working notes"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"configured\": true,\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": \"Undecided; do not invent a target journal\"\n    },\n    \"disciplines\": [],\n    \"entry_activity\": \"question\",\n    \"governance\": {\n      \"applicability\": \"unknown\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"methods\": [],\n    \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n    \"resources\": {\n      \"available_capabilities\": [\n        \"local Python standard library\",\n        \"fixed source cache\",\n        \"author-provided working notes\"\n      ],\n      \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n      \"deadline\": \"2026-12-15\"\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"固定精度正态混合边界的可恢复数值核对\",\n    \"workflow_mode\": \"light\"\n  },\n  \"config_sha256\": \"524d57b3666e1ec2ca0224b04c33fd4b8f116e8bec20adb9ddf37619f8b80e5d\",\n  \"registry_revision\": 0,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "valid-current-parameters",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/scripts/compute.py",
+      "--root",
+      "PROJECT_ROOT",
+      "--output",
+      "OUTPUT_DIR/validation-normal"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"OUTPUT_DIR/validation-normal/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+    "stderr": ""
+  },
+  {
+    "label": "controlled-invalid-alpha",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/scripts/compute.py",
+      "--root",
+      "PROJECT_ROOT",
+      "--spec",
+      "PROJECT_ROOT/notes/rejected-parameters.json",
+      "--output",
+      "OUTPUT_DIR/validation-rejected"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"Require 0<alpha<1, rho>0 and finite nonnegative intrinsic times\"}\n"
+  },
+  {
+    "label": "register-logical-records-and-dependencies",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "TOOLKIT_ROOT/tools/research.py",
+      "register-batch",
+      "--root",
+      "PROJECT_ROOT",
+      "--file",
+      "OUTPUT_DIR/registration-batch.json"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"registered_count\": 22,\n  \"records\": [\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"T-SRC\",\n      \"version\": 1,\n      \"revision\": 1,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"source\",\n      \"id\": \"T-REMOTE\",\n      \"version\": 1,\n      \"revision\": 2,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"T-RAW\",\n      \"version\": 1,\n      \"revision\": 3,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"evidence\",\n      \"id\": \"T-PARAM\",\n      \"version\": 1,\n      \"revision\": 4,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"statement\",\n      \"id\": \"T-CLAIM\",\n      \"version\": 1,\n      \"revision\": 5,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"relation\",\n      \"id\": \"T-REL\",\n      \"version\": 1,\n      \"revision\": 6,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"decision\",\n      \"id\": \"T-CHOICE\",\n      \"version\": 1,\n      \"revision\": 7,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-CODE\",\n      \"version\": 1,\n      \"revision\": 8,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-RESULT\",\n      \"version\": 1,\n      \"revision\": 9,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-TABLE\",\n      \"version\": 1,\n      \"revision\": 10,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-SUMMARY\",\n      \"version\": 1,\n      \"revision\": 11,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-SOURCE-NOTE\",\n      \"version\": 1,\n      \"revision\": 12,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-A-VALIDATION\",\n      \"version\": 1,\n      \"revision\": 13,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-INITIAL-SNAPSHOT\",\n      \"version\": 1,\n      \"revision\": 14,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-INITIAL-1\",\n      \"version\": 1,\n      \"revision\": 15,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-INITIAL-2\",\n      \"version\": 1,\n      \"revision\": 16,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-INITIAL-3\",\n      \"version\": 1,\n      \"revision\": 17,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-INITIAL-4\",\n      \"version\": 1,\n      \"revision\": 18,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"artifact\",\n      \"id\": \"T-RECOVERY\",\n      \"version\": 1,\n      \"revision\": 19,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"T-SOURCE-CHECK\",\n      \"version\": 1,\n      \"revision\": 20,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"T-CALC\",\n      \"version\": 1,\n      \"revision\": 21,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    },\n    {\n      \"registered\": true,\n      \"kind\": \"activity\",\n      \"id\": \"T-SYNTH\",\n      \"version\": 1,\n      \"revision\": 22,\n      \"scientific_validity\": \"not-assessed\",\n      \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n    }\n  ],\n  \"revision\": 22,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "check-before-checkpoint",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "TOOLKIT_ROOT/tools/research.py",
+      "check",
+      "--root",
+      "PROJECT_ROOT"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 22,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 3,\n    \"artifacts\": 12,\n    \"decisions\": 1,\n    \"evidence\": 2,\n    \"method_bindings\": 0,\n    \"relations\": 1,\n    \"sources\": 2,\n    \"statements\": 1\n  },\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": \"Undecided; do not invent a target journal\"\n    },\n    \"disciplines\": [],\n    \"entry_activity\": \"question\",\n    \"governance\": {\n      \"applicability\": \"unknown\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"methods\": [],\n    \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n    \"resources\": {\n      \"available_capabilities\": [\n        \"local Python standard library\",\n        \"fixed source cache\",\n        \"author-provided working notes\"\n      ],\n      \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n      \"deadline\": \"2026-12-15\"\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"固定精度正态混合边界的可恢复数值核对\",\n    \"workflow_mode\": \"light\"\n  },\n  \"file_tracking\": {\n    \"local_files\": [\n      \"RECOVERY.md\",\n      \"history/stage-a-initial/manifest.json\",\n      \"history/stage-a-initial/notes/parameters.json\",\n      \"history/stage-a-initial/results/result.json\",\n      \"history/stage-a-initial/results/summary.md\",\n      \"history/stage-a-initial/results/table.csv\",\n      \"notes/parameters.json\",\n      \"notes/source-check.md\",\n      \"notes/stage-a-validation.json\",\n      \"results/result.json\",\n      \"results/summary.md\",\n      \"results/table.csv\",\n      \"scripts/compute.py\",\n      \"sources/howard2021-arxiv-v9.pdf\"\n    ],\n    \"local_file_count\": 14,\n    \"source_ids_without_local_evidence\": [\n      \"T-REMOTE\"\n    ]\n  },\n  \"activities\": [\n    {\n      \"id\": \"T-CALC\",\n      \"title\": \"Evaluate supplied calculator and verify current result and companion table\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SOURCE-CHECK\",\n      \"title\": \"Verify supplied fixed source identity and card scope\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SYNTH\",\n      \"title\": \"Review supplied summary within current claim and verified numeric result\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": null,\n    \"next_action\": \"Clarify the current question, scope and next evidence check.\"\n  },\n  \"checkpoint\": {\n    \"recorded\": false,\n    \"status\": \"not-recorded\",\n    \"changed\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "save-concrete-checkpoint",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "TOOLKIT_ROOT/tools/research.py",
+      "checkpoint",
+      "--root",
+      "PROJECT_ROOT",
+      "--next-action",
+      "先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。",
+      "--activity",
+      "T-SYNTH",
+      "--note",
+      "Actual normal/controlled-invalid computations and bounded content checks performed; registration is not scientific certification."
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\n  \"checkpoint_saved\": true,\n  \"revision\": 23,\n  \"cursor\": {\n    \"activity_id\": \"T-SYNTH\",\n    \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\"\n  },\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "read-final-recovery-state",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "TOOLKIT_ROOT/tools/research.py",
+      "resume",
+      "--root",
+      "PROJECT_ROOT"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 23,\n  \"passed\": true,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [],\n  \"counts\": {\n    \"activities\": 3,\n    \"artifacts\": 12,\n    \"decisions\": 1,\n    \"evidence\": 2,\n    \"method_bindings\": 0,\n    \"relations\": 1,\n    \"sources\": 2,\n    \"statements\": 1\n  },\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": \"Undecided; do not invent a target journal\"\n    },\n    \"disciplines\": [],\n    \"entry_activity\": \"question\",\n    \"governance\": {\n      \"applicability\": \"unknown\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"methods\": [],\n    \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n    \"resources\": {\n      \"available_capabilities\": [\n        \"local Python standard library\",\n        \"fixed source cache\",\n        \"author-provided working notes\"\n      ],\n      \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n      \"deadline\": \"2026-12-15\"\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"固定精度正态混合边界的可恢复数值核对\",\n    \"workflow_mode\": \"light\"\n  },\n  \"file_tracking\": {\n    \"local_files\": [\n      \"RECOVERY.md\",\n      \"history/stage-a-initial/manifest.json\",\n      \"history/stage-a-initial/notes/parameters.json\",\n      \"history/stage-a-initial/results/result.json\",\n      \"history/stage-a-initial/results/summary.md\",\n      \"history/stage-a-initial/results/table.csv\",\n      \"notes/parameters.json\",\n      \"notes/source-check.md\",\n      \"notes/stage-a-validation.json\",\n      \"results/result.json\",\n      \"results/summary.md\",\n      \"results/table.csv\",\n      \"scripts/compute.py\",\n      \"sources/howard2021-arxiv-v9.pdf\"\n    ],\n    \"local_file_count\": 14,\n    \"source_ids_without_local_evidence\": [\n      \"T-REMOTE\"\n    ]\n  },\n  \"activities\": [\n    {\n      \"id\": \"T-CALC\",\n      \"title\": \"Evaluate supplied calculator and verify current result and companion table\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SOURCE-CHECK\",\n      \"title\": \"Verify supplied fixed source identity and card scope\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SYNTH\",\n      \"title\": \"Review supplied summary within current claim and verified numeric result\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"T-SYNTH\",\n    \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"current\",\n    \"changed\": []\n  },\n  \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\",\n  \"needs_review\": false,\n  \"recovery_instruction\": \"Continue the recorded next action within its existing scope.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "check-portable-runtime",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/_rw-runtime/tools/connect_skills.py",
+      "check",
+      "--installed-only",
+      "--root",
+      "PROJECT_ROOT"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "EVAL_PYTHON: can't open file 'PROJECT_ROOT/_rw-runtime/tools/connect_skills.py': [Errno 2] No such file or directory\n"
+  },
+  {
+    "label": "read-recovery-artifact-version",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+      "show",
+      "--root",
+      "PROJECT_ROOT",
+      "--kind",
+      "artifact",
+      "--id",
+      "T-RECOVERY"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 23,\n  \"kind\": \"artifact\",\n  \"id\": \"T-RECOVERY\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"RECOVERY.md\": \"486b23fe202e616522e26c771ddd715ade314a490723a2c17e08a2b0e0c86896\"\n      },\n      \"records\": {}\n    },\n    \"data\": {\n      \"description\": \"Portable local recovery, authority, limits and concrete next action.\",\n      \"id\": \"T-RECOVERY\",\n      \"path\": \"RECOVERY.md\",\n      \"type\": \"recovery-guide\"\n    },\n    \"registered_at\": \"2026-10-30T01:03:18.416638+00:00\",\n    \"version\": 1\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "replace-corrected-recovery-artifact",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "PROJECT_ROOT",
+      "--kind",
+      "artifact",
+      "--file",
+      "OUTPUT_DIR/recovery-artifact-replacement.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"T-RECOVERY\",\n  \"version\": 2,\n  \"revision\": 24,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "verify-actual-installed-runtime",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/connect_skills.py",
+      "check",
+      "--installed-only",
+      "--root",
+      "PROJECT_ROOT"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Project-local instruction/runtime copies and their integrity only; not host discovery, scientific validation or authorship authentication.\",\n  \"installed_integrity\": true,\n  \"source_version_matches\": null,\n  \"source_comparison_performed\": false,\n  \"target\": \".agents/skills\",\n  \"skills\": [\n    \"rw-workflow\",\n    \"rw-question\",\n    \"rw-literature\",\n    \"rw-innovation\",\n    \"rw-candidates\",\n    \"rw-validation\",\n    \"rw-writing\",\n    \"rw-review\",\n    \"rw-figures\"\n  ],\n  \"files\": 67,\n  \"payload_sha256\": \"c2dd5fa54cee747ff61cb597779320ca498a9cb145c8fce422735091cdc5fcc1\",\n  \"findings\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "recheck-after-runtime-path-correction",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/.agents/skills/_rw-runtime/tools/research.py",
+      "check",
+      "--root",
+      "PROJECT_ROOT"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 1,
+    "stdout": "{\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"schema_version\": \"0.1\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 24,\n  \"passed\": false,\n  \"read_only\": true,\n  \"scientific_validity\": \"not-assessed\",\n  \"governance_approval\": \"not-assessed\",\n  \"venue_compliance\": \"not-assessed\",\n  \"errors\": [],\n  \"warnings\": [],\n  \"findings\": [\n    {\n      \"code\": \"checkpoint_stale\",\n      \"changed\": [\n        \"registered-records\",\n        \"local-files\"\n      ]\n    }\n  ],\n  \"counts\": {\n    \"activities\": 3,\n    \"artifacts\": 12,\n    \"decisions\": 1,\n    \"evidence\": 2,\n    \"method_bindings\": 0,\n    \"relations\": 1,\n    \"sources\": 2,\n    \"statements\": 1\n  },\n  \"configuration\": {\n    \"deliverable\": {\n      \"contribution_benchmarks\": [],\n      \"kind\": \"undecided\",\n      \"language\": \"zh\",\n      \"venue\": \"Undecided; do not invent a target journal\"\n    },\n    \"disciplines\": [],\n    \"entry_activity\": \"question\",\n    \"governance\": {\n      \"applicability\": \"unknown\",\n      \"relevant_requirements\": []\n    },\n    \"interest\": \"对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。\",\n    \"methods\": [],\n    \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n    \"resources\": {\n      \"available_capabilities\": [\n        \"local Python standard library\",\n        \"fixed source cache\",\n        \"author-provided working notes\"\n      ],\n      \"budget\": \"Offline Python standard library only; no new data collection or model refit\",\n      \"deadline\": \"2026-12-15\"\n    },\n    \"schema_version\": \"0.1\",\n    \"title\": \"固定精度正态混合边界的可恢复数值核对\",\n    \"workflow_mode\": \"light\"\n  },\n  \"file_tracking\": {\n    \"local_files\": [\n      \"RECOVERY.md\",\n      \"history/stage-a-initial/manifest.json\",\n      \"history/stage-a-initial/notes/parameters.json\",\n      \"history/stage-a-initial/results/result.json\",\n      \"history/stage-a-initial/results/summary.md\",\n      \"history/stage-a-initial/results/table.csv\",\n      \"notes/parameters.json\",\n      \"notes/source-check.md\",\n      \"notes/stage-a-validation.json\",\n      \"results/result.json\",\n      \"results/summary.md\",\n      \"results/table.csv\",\n      \"scripts/compute.py\",\n      \"sources/howard2021-arxiv-v9.pdf\"\n    ],\n    \"local_file_count\": 14,\n    \"source_ids_without_local_evidence\": [\n      \"T-REMOTE\"\n    ]\n  },\n  \"activities\": [\n    {\n      \"id\": \"T-CALC\",\n      \"title\": \"Evaluate supplied calculator and verify current result and companion table\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SOURCE-CHECK\",\n      \"title\": \"Verify supplied fixed source identity and card scope\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    },\n    {\n      \"id\": \"T-SYNTH\",\n      \"title\": \"Review supplied summary within current claim and verified numeric result\",\n      \"declared_status\": \"done\",\n      \"effective_status\": \"done\",\n      \"stale_reasons\": []\n    }\n  ],\n  \"cursor\": {\n    \"activity_id\": \"T-SYNTH\",\n    \"next_action\": \"先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。\"\n  },\n  \"checkpoint\": {\n    \"recorded\": true,\n    \"status\": \"stale\",\n    \"changed\": [\n      \"registered-records\",\n      \"local-files\"\n    ]\n  }\n}\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "errors": [],
+  "independent_metrics": {
+    "observed_hours": 1460,
+    "observed_days": 61,
+    "C0_MAE": 56.64127430990882,
+    "C0_RMSE": 81.70038360631688,
+    "C0_bias_prediction_minus_actual": 13.433264561295244,
+    "C1_MAE": 41.252622564018566,
+    "C1_RMSE": 64.15826564867794,
+    "C1_bias_prediction_minus_actual": 13.347664992606457,
+    "MAE_reduction_fraction": 0.2716861852664598
+  },
+  "table_agrees": true,
+  "activities_checked": [
+    "D-SOURCE-CHECK",
+    "D-CALC",
+    "D-SYNTH"
+  ],
+  "writes_project": false,
+  "interpretation": "Numeric and local binding verification only; author content review remains pending."
+}

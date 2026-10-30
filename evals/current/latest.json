@@ -1,9 +1,9 @@
 {
   "format_version": 1,
   "edition": "current",
-  "status": "passed-in-checked-software-and-recorded-task-scope",
-  "checked_at_utc": "2026-10-29T22:01:22.956882+00:00",
-  "scope": "Final maintained runtime with shared rules kept in one protocol and necessary original resource bytes retained; current distribution/regression and earlier research tasks have separate identities.",
+  "status": "passed-in-recorded-scope",
+  "checked_at_utc": "2026-10-30T10:54:26.902971+00:00",
+  "scope": "Final maintained source and user runtime with explicit local acceptance; scientific comparison tasks keep their original frozen identities. Exact commit CI and remote publication state are recorded separately in the release attachment.",
   "scientific_validity": "not-assessed",
   "publication_style": {
     "archive_name": "research-workflow-template.zip",
@@ -24,11 +24,11 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 277,
+      "test_methods": 437,
       "check_groups": 7,
       "receipt": {
-        "identifier": "local-evidence:check-core.json",
-        "sha256": "d5fa3821f18f22d584d765fc8cf5fe70dd1da97bf24dff81341c8c0eb058093b"
+        "identifier": "local-evidence:check-core-complete.json",
+        "sha256": "ccdf7d27d9cb4af333162e428b3313a1ac7888efa6c5c3648f0872e6a5858dd9"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,8 +36,8 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "5aa667039e84fbfc359b4f8c5295c66cae0678c01f7cc6ac9fa7bd45cffddc22",
-        "files": 39
+        "sha256": "5c18c179148c895d9108f75a24d5e33d656e15dfe9f184315c9a73f7f70287c4",
+        "files": 47
       }
     }
   },
@@ -89,11 +89,18 @@
     "current_discovery_validation": "tools/check_core.py: skill-and-method-connection-contract"
   },
   "preservation": {
-    "frozen_d2_d3_legal_files_byte_identical": 424,
-    "scope": "Original case inputs, scientific programs, authored results and independent reviews remain unchanged. Required historical source bytes stay in guidance-history; the workflow snapshot identical to current source was removed. Personal package excluded.",
-    "previous_evaluation_files_byte_identical": 579,
-    "current_baseline_case_and_example_files_byte_identical": 614,
-    "current_baseline_commit": "cb2da7cee5819f5d7003b2d6bccc1235573b72ac"
+    "baseline_commit": "dbe09bf65a59f5d7fb093b11e423f4bde0ec7a1a",
+    "frozen_groups_unchanged": {
+      "evals/d2": 53,
+      "evals/d3": 331,
+      "evals/legal": 40,
+      "evals/disciplinary": 130
+    },
+    "public_penguin_observed_outputs_unchanged": 6,
+    "personal_package_protected_source_files": 516,
+    "personal_package_source_hashes_unchanged": true,
+    "personal_hash_scope": "All regular non-symlink files except environment, VCS and caches; no personal package writes performed.",
+    "old_task_guidance_preserved_in": "evals/current/guidance-history.json"
   },
   "hosted_ci": {
     "source_of_truth": "https://github.com/CheshireCat-D/research-workflow-template/actions",
@@ -173,11 +180,11 @@
   "user_distribution": {
     "profile": "user-runtime",
     "archive_name": "research-workflow-template.zip",
-    "maintained_runtime_and_guide_files": 72,
+    "maintained_runtime_and_guide_files": 80,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "fe1d4d543586c536ae5a0f6dde4c58627f3c737fb188f87478b2428bf81f77a4",
+    "sha256": "36d5c25d9c74bddb2aa39656bb0617916c4ece6fe79c8850839d750c03cc86e3",
     "deterministic_builds_byte_identical": true,
-    "explicit_reviewed_runtime_resources": 65,
+    "explicit_reviewed_runtime_resources": 67,
     "development_history_or_previous_editions_included": false,
     "nested_unreviewed_resources_rejected": true,
     "portable_evidence_availability": "not-included-in-project-runtime",
@@ -185,7 +192,9 @@
     "source_and_readonly_project_unchanged": true,
     "public_download_entry": "https://github.com/CheshireCat-D/research-workflow-template/releases/latest",
     "source_evaluation_evidence_retained_separately": true,
-    "scope": "Software distribution and declared file identity; no renewed disciplinary content review or certification."
+    "scope": "Software distribution and declared file identity; no renewed disciplinary content review or certification.",
+    "included_complete_example": "examples/public-penguins",
+    "remote_publication": "Exact commit, hosted CI and published asset identities are recorded in release-validation.json attached to the current GitHub Release; this source record captures pre-publication local acceptance."
   },
   "platform_implementation": {
     "targets": [
@@ -228,12 +237,12 @@
   },
   "user_guidance": {
     "startup_paths": "Manual initialization and assistant-created initialization are alternatives; existing projects resume.",
-    "case_access": "Source repository or GitHub Source code archive; examples are excluded from user runtime.",
+    "case_access": "The complete public-penguins runner and required resources are in the user runtime. Other evaluation cases remain in the source repository or Source code archive.",
     "actual_forward_commands": 6,
     "moved_project_recovery_checked": true,
     "scope": "Current guide and local engineering execution; no new research content review or UI skill-trigger validation.",
     "project_root_recovery": {
-      "command": "python3 .agents/skills/_rw-runtime/tools/research.py resume --root . --format markdown",
+      "command": "python3 .agents/skills/_rw-runtime/tools/research.py resume --format markdown",
       "actual_exit_code": 0,
       "project_bytes_and_mtime_unchanged": true
     },
@@ -262,7 +271,7 @@
       "actual_packaged_test_methods": 3,
       "existing_materials": "Preserved originals, explicit project working copies and external/controlled locator boundaries.",
       "saved_constraints": "Existing configuration fields: interest, discipline/method, deadline, budget, capabilities and venue.",
-      "editable_records": "Normal show retains envelope.version; show --data-only exports register input, with explicit version replacement.",
+      "editable_records": "show --edit exports an ordered editable batch with fixed expected versions; legacy envelopes/data-only exports remain available.",
       "tracking_coverage": "Local bound paths and source IDs without local evidence; locators are not read or guessed as file paths.",
       "first_deliverable": "Existing rw-workflow/skill-bridge handoff: saved path, conclusion, registration state and next action.",
       "readonly_json_markdown_and_moved_runtime_checked": true,
@@ -284,7 +293,14 @@
       },
       "scope": "Bounded AI-agent follow-through and recovery, not a human trial, automatic-host invocation test or new research-content review.",
       "source_commit": "cb2da7cee5819f5d7003b2d6bccc1235573b72ac"
-    }
+    },
+    "one_command_setup": {
+      "command": "init --connect-skills",
+      "regression": "tests/test_quickstart.py",
+      "partial_connection_failure_reported": true,
+      "global_skills_modified": false
+    },
+    "earlier_forward_counts_scope": "The earlier 6 guide commands and 10 query executions retain their previous execution scope; current streamlined journey counts are recorded separately in core_workflow_simplification."
   },
   "public_worked_examples": {
     "paired_pens": "examples/paired-pens/README.md",
@@ -341,5 +357,273 @@
     "parent_final_records": 36,
     "parent_final_revision": 39,
     "ci_scope": "Original synthetic arithmetic/input fixture and publication identity; no network, R or model/visual review in CI."
+  },
+  "practical_upgrade": {
+    "entrypoints": 9,
+    "new_runtime_dependencies": 0,
+    "literature_adapter": {
+      "script": "skills/rw-literature/scripts/search_crossref.py",
+      "scope": "Crossref metadata only",
+      "tests": 29,
+      "actual_final_user_runtime_network_request": true,
+      "query": "rough paths",
+      "pages_completed": 2,
+      "retained_records": 4,
+      "truncated": true,
+      "local_receipt_sha256": "aa07d35e225fbc4775c82da430bd6cb15b99e79abbb3d0e37350bab2b60506a3",
+      "response_sha256": [
+        "abfd6849f301dd8c95138dd82223e651e648e72437f12bf8f6d5dce0a87f3efe",
+        "276180f990dd81ccd0919362001eedf0af9d0e9c0f44f4bce946d3ccacd4d3fa"
+      ]
+    },
+    "complete_public_project": {
+      "runner": "examples/public-penguins/run_project.py",
+      "actual_final_user_zip_executed": true,
+      "initial_pinned_download_executed": true,
+      "final_zip_run_input": "Previously downloaded pinned CC0 input, supplied locally and hash-verified",
+      "rows": 344,
+      "complete_rows": 333,
+      "registration_count": 25,
+      "checkpoint_status": "current",
+      "readonly_bytes_and_mtime_unchanged": true,
+      "original_observed_outputs_byte_identical": 6,
+      "local_receipt_sha256": "1392e16bf1c62522c7be2b6347e6623439fcedde804fdfabba0b369b69776a7e",
+      "pending_human_content_and_visual_review_retained": true
+    },
+    "comparison": {
+      "record": "evals/comparison/summary.json",
+      "sha256": "05cb946bca344da683c0e438e5434c1b9d248570d07b454aff840b06421a363f",
+      "executions": 12,
+      "fresh_single_report_ai_adjudications": 12,
+      "status": "complete",
+      "all_arms_all_four_tasks_score": 10,
+      "max_score_per_task": 10,
+      "observed_accuracy_advantage": false,
+      "effective_host_configuration": "unknown",
+      "isolation": "instruction-only; no OS audit",
+      "human_participants": 0,
+      "scope": "Four purposive small tasks with ceiling effect; no superiority or global ranking claim."
+    },
+    "independent_code_review": {
+      "confirmed_issues_fixed": 3,
+      "issues": [
+        "HTTP short body incorrectly complete",
+        "Public API pagination interval",
+        "Partial initialization directory incorrectly absent"
+      ],
+      "regression_tests_added": true
+    },
+    "skill_creator_validation": {
+      "rw-literature": "passed",
+      "validator_dependency": "PyYAML installed only in temporary validation directory; not a product dependency"
+    },
+    "local_distribution": {
+      "files": 79,
+      "sha256": "55ef076d58a7b15865093ba6d2713ebf453c12bf8901a68ad6e517e9b3fcea8b",
+      "verify_passed": true,
+      "smoke_passed": true,
+      "scope": "Earlier practical-upgrade receipt; exact original package bytes retained in that record. Current distribution is user_distribution."
+    },
+    "remaining_external_evidence": [
+      "No human first-use participants or feedback yet",
+      "No independent human expert grading or long-running real-project benefit measurement",
+      "Current unpublished changes have not run hosted CI"
+    ]
+  },
+  "real_materials_comparison": {
+    "record": "evals/real-comparison/summary.json",
+    "sha256": "547bd0fd182a51ba0e09512980c178b4feaf459207ddd43ff99d140ef40a8105",
+    "report": "evals/real-comparison/README.md",
+    "status": "record-complete",
+    "first_attempt_executions": 12,
+    "independent_theory_questions": 1,
+    "theory_replicates_per_arm": 2,
+    "independent_real_data_studies": 1,
+    "data_chains": 3,
+    "primary_anonymous_ai_reviews": 12,
+    "secondary_blinded_ai_consistency_reviews": 2,
+    "independent_numeric_entrypoint_replays": 6,
+    "all_three_arms_met_frozen_obligations": true,
+    "observed_research_accuracy_advantage_for_rwt": false,
+    "effective_host_configuration": "unknown",
+    "runtime_core_incremental_benefit": "not-tested; plain-file handoffs",
+    "personal_source_files_protected_and_unchanged": 516,
+    "runtime_and_prior_pilot_files_protected_and_unchanged": 156,
+    "user_archive_unchanged": true,
+    "source_only": true,
+    "hosted_ci": "not-run-for-current-unpublished-changes",
+    "human_participants_or_experts": 0,
+    "scope": "Two purposive real-material scenarios with ceiling effects; AI adjudication and instructed isolation, not OS audit, superiority or field-wide certification.",
+    "publication_correction": "Large generated CSVs restored uniformly to six private grading packets; initial grades retained."
+  },
+  "theory_entry_and_core_comparison": {
+    "report": "evals/core-comparison/README.md",
+    "record": "evals/core-comparison/summary.json",
+    "sha256": "79a321c50364a4cdaaee055e350df5a97366f734a3424477a06ef9ae58f22f65",
+    "target_user_zip_sha256": "1bf658b7895711bf786b3cf415a3c47dc2b214a31bace1d82e5b22ef00849ff2",
+    "maintained_user_files": 80,
+    "new_skill_entrypoints": 0,
+    "skills": 9,
+    "new_conditional_reference": "skills/rw-review/references/theory-review.md",
+    "theory_route": {
+      "executions": 2,
+      "blind_ai_reviews": 2,
+      "task_scores": [
+        100,
+        100
+      ],
+      "actual_guidance_files": [
+        6,
+        2
+      ],
+      "actual_guidance_bytes": [
+        25513,
+        7908
+      ],
+      "read_byte_reduction_fraction": 0.6900403715752754,
+      "scope": "One fresh execution per entry on the same real-material constructed theory task; not token/time/equivalence or auto-selection validation."
+    },
+    "core_lifecycle": {
+      "independent_material_scenarios": 2,
+      "dependent_four_stage_chains": 6,
+      "fresh_contexts": 24,
+      "primary_blind_ai_chain_reviews": 6,
+      "independent_blind_consistency_reviews": 1,
+      "independent_mechanical_audits": 1,
+      "all_normal_workflow_scores": 100,
+      "observed_recovery_accuracy_advantage_for_core": false,
+      "typed_dangling_reference_and_invalid_batch_difference_observed": true,
+      "native_resume_original_failure": "P4 B executor read guard blocked allowed runtime catalog under ambiguous instruction; manual fallback preserved, not counted as native-command success.",
+      "readonly_file_and_directory_mtime_checks_passed": 12,
+      "scientific_replays": 12,
+      "current_effective_model": "unknown",
+      "isolation": "instruction-only; no OS audit",
+      "core_engine_scientific_record_logic_changed_for_this_test": false,
+      "source_only_evaluation": true,
+      "human_participants_or_experts": 0
+    },
+    "personal_package_source_files_protected": 516,
+    "scope": "Local bounded AI evaluations and byte/engineering evidence, not global ranking or scientific certification."
+  },
+  "core_workflow_simplification": {
+    "report": "evals/current/core-streamline/README.md",
+    "record": "evals/current/core-streamline/summary.json",
+    "record_sha256": "db7dcbe9fa4814dd708cb26d6b1ebfe5f2514fd1c85cd1c2d8dddfc42e0d9b13",
+    "runner": "evals/current/core-streamline/run_forward.py",
+    "runner_sha256": "93b6b2f9f970e068650e87d5ec83b35f5d617cadbfb169474c4c3acabfbe2389",
+    "archive_sha256": "d410a4d0a18b41ab49527da58da041416af7150cdf94c4180f93e8008c1390e1",
+    "prior_local_archive_sha256": "1bf658b7895711bf786b3cf415a3c47dc2b214a31bace1d82e5b22ef00849ff2",
+    "workflow_cli_counts": {
+      "initial": {
+        "new": 1,
+        "old": 3
+      },
+      "moved-resume": {
+        "new": 1,
+        "old": 1
+      },
+      "refresh": {
+        "new": 2,
+        "old": 5
+      },
+      "save-report": {
+        "new": 1,
+        "old": 2
+      }
+    },
+    "readonly_commands_checked": 9,
+    "real_public_input_rows": 344,
+    "derived_sensitivity_subset_rows": 343,
+    "initial_complete_observations": 333,
+    "derived_complete_observations": 332,
+    "scientific_summaries_and_bound_fingerprints_equal": true,
+    "checkpoint_does_not_refresh_old_bindings": true,
+    "fixed_export_version_conflicts_rejected": true,
+    "combined_registration_lock_count": 1,
+    "combined_registry_write_count": 1,
+    "new_regression_tests": 22,
+    "backward_interfaces_preserved": true,
+    "default_root": "current-directory-only; no parent search or auto-initialization",
+    "skills": 9,
+    "new_skill_entrypoints": 0,
+    "personal_package_source_files_checked": 516,
+    "personal_package_source_hashes_unchanged": true,
+    "historical_evaluation_files_unchanged": 3105,
+    "prior_guidance_preserved_in": "evals/current/guidance-history.json",
+    "prior_first_use_regression_preserved_in": "evals/current/regression-history.json",
+    "attempts": "evals/current/core-streamline/attempt-history.json",
+    "independent_code_and_document_review": "AI-agent review and independent CLI probes; no unresolved confirmed issue",
+    "scope": "Final frozen user archives and deterministic real-public-data software journeys; no human efficiency, scientific accuracy or cross-package ranking measurement."
+  },
+  "final_release_review": {
+    "status": "passed-local-acceptance",
+    "independent_ai_audit_scopes": [
+      "runtime-and-error-paths",
+      "distribution-documentation-and-licensing",
+      "frozen-evidence-and-comparison-arithmetic"
+    ],
+    "confirmed_issues_fixed": [
+      "Stale user-archive SHA sidecar",
+      "Unconfirmed initialization ownership must not write project receipts",
+      "Crossref body and EOF reads must recheck the overall deadline"
+    ],
+    "new_regression_test_methods": 3,
+    "no_new_skill_or_runtime_dependency": true,
+    "runtime_files": {
+      "examples/public-penguins/run_project.py": "2348f6c6c0571d00cb2521e3ae2ecb1afabc130e0249bb1fa3874ef460178227",
+      "skills/rw-literature/scripts/search_crossref.py": "db8caefb71751f28ee4306d606912d4c964cc0b5276192f8b29461c101dc03c6"
+    },
+    "actual_final_user_archive_executed": true,
+    "archive_sha256": "36d5c25d9c74bddb2aa39656bb0617916c4ece6fe79c8850839d750c03cc86e3",
+    "clean_runtime_commands_executed": 12,
+    "deterministic_rebuild_byte_identical": true,
+    "core_journey": {
+      "source_runner": "evals/current/core-streamline/run_forward.py",
+      "local_summary_identifier": "local-evidence:final-core-journey/summary.json",
+      "local_summary_sha256": "b927f72bbd1db417483abe3cc857f01604f026b5f7029684b198abda9af67c8c",
+      "workflow_cli_counts": {
+        "initial": {
+          "new": 1,
+          "old": 3
+        },
+        "moved-resume": {
+          "new": 1,
+          "old": 1
+        },
+        "refresh": {
+          "new": 2,
+          "old": 5
+        },
+        "save-report": {
+          "new": 1,
+          "old": 2
+        }
+      },
+      "readonly_checks": 9,
+      "results_and_fingerprints_equal": true
+    },
+    "public_data_example": {
+      "source": "examples/public-penguins/source.json",
+      "input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+      "input_rows": 344,
+      "complete_rows": 333,
+      "registered_records": 25,
+      "checkpoint_status": "current",
+      "readonly_bytes_and_mtime_unchanged": true,
+      "local_receipt_identifier": "local-evidence:final-public-project/notes/run-receipt.json",
+      "local_receipt_sha256": "f0e0421acf852e5b13976632584039cd222740f943de744ed9921e049e0cfcfa",
+      "scientific_or_visual_review_recorded_done": false
+    },
+    "live_metadata_search": {
+      "query": "rough paths",
+      "access": "Crossref metadata only",
+      "pages_completed": 1,
+      "retained_records": 2,
+      "truncated": true,
+      "local_receipt_identifier": "local-evidence:live-crossref/search.json",
+      "local_receipt_sha256": "4c8f969ee3dbf88917a84f6320885c9de0075bbd5103513dd691da76cebe8372"
+    },
+    "personal_package_unchanged": true,
+    "scope": "Engineering, bounded real-data replay and real metadata request; no claim of human efficiency, scientific certification, journal acceptance or GitHub ranking."
   }
 }

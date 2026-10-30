@@ -1,0 +1,32 @@
+[
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      ".agents/skills/_rw-runtime/tools/research.py",
+      "check",
+      "--root",
+      "."
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "check.stdout.json",
+    "stderr": "check.stderr.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      ".agents/skills/_rw-runtime/tools/research.py",
+      "resume",
+      "--root",
+      "."
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 0,
+    "stdout": "resume.stdout.json",
+    "stderr": "resume.stderr.txt"
+  }
+]

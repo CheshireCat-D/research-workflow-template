@@ -1,0 +1,206 @@
+[
+  {
+    "name": "P1-A-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P1/numeric-A/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P1/numeric-A/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P1/numeric-A/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P1/numeric-A/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P1/numeric-A/fresh-calculation/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P1-C-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P1/numeric-C/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P1/numeric-C/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P1/numeric-C/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P1/numeric-C/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P1/numeric-C/fresh-calculation/result.json\", \"parameters_sha256\": \"340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P2-A-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P2/numeric-A/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P2/numeric-A/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P2/numeric-A/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P2/numeric-A/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P2/numeric-A/fresh-calculation/result.json\", \"parameters_sha256\": \"16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P2-C-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P2/numeric-C/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P2/numeric-C/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P2/numeric-C/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P2/numeric-C/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P2/numeric-C/fresh-calculation/result.json\", \"parameters_sha256\": \"86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P3-A-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P3/numeric-A/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P3/numeric-A/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P3/numeric-A/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P3/numeric-A/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P3/numeric-A/fresh-calculation/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P3-C-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P3/numeric-C/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P3/numeric-C/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P3/numeric-C/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P3/numeric-C/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P3/numeric-C/fresh-calculation/result.json\", \"parameters_sha256\": \"340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P4-A-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P4/numeric-A/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P4/numeric-A/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P4/numeric-A/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P4/numeric-A/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P4/numeric-A/fresh-calculation/result.json\", \"parameters_sha256\": \"16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P4-C-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P4/numeric-C/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P4/numeric-C/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P4/numeric-C/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P4/numeric-C/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P4/numeric-C/fresh-calculation/result.json\", \"parameters_sha256\": \"86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P5-A-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P5/numeric-A/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P5/numeric-A/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P5/numeric-A/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P5/numeric-A/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P5/numeric-A/fresh-calculation/result.json\", \"parameters_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P5-C-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P5/numeric-C/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P5/numeric-C/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P5/numeric-C/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P5/numeric-C/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P5/numeric-C/fresh-calculation/result.json\", \"parameters_sha256\": \"340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P6-A-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P6/numeric-A/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P6/numeric-A/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P6/numeric-A/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P6/numeric-A/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P6/numeric-A/fresh-calculation/result.json\", \"parameters_sha256\": \"16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "P6-C-compute",
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/mechanical-audit/P6/numeric-C/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/mechanical-audit/P6/numeric-C/project",
+      "--output",
+      "STUDY_ROOT/mechanical-audit/P6/numeric-C/fresh-calculation"
+    ],
+    "cwd": "STUDY_ROOT/mechanical-audit/P6/numeric-C/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/mechanical-audit/P6/numeric-C/fresh-calculation/result.json\", \"parameters_sha256\": \"86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864\"}\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "case_id": "D",
+  "stage": "D",
+  "project_root": "PROJECT_ROOT",
+  "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+  "authority": {
+    "configuration": "project.json",
+    "registry": "records/registry.json",
+    "revision": 43,
+    "superseding_authorization": "context/stage-C/AUTHOR-REVISION.md",
+    "current_parameters": "notes/parameters.json"
+  },
+  "active_constraints": {
+    "evaluation_start": "2011-11-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "metric_weighting": "observed-hour",
+    "offline": true,
+    "python_standard_library_only": true,
+    "new_data_collection": false,
+    "refit": false,
+    "extrapolate_2012": false,
+    "deadline": "2026-12-15",
+    "deadline_provenance": "supplied author constraint",
+    "language": "zh",
+    "venue": null,
+    "deliverable_kind": "undecided",
+    "governance_applicability": "unknown",
+    "human_expert_acceptance": false,
+    "external_submission_authorized": false,
+    "raw_material_redistribution": false
+  },
+  "current_results": {
+    "case_id": "D",
+    "evaluation_start": "2011-11-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "observed_hours": 1460,
+    "observed_days": 61,
+    "C0_MAE": 56.64127430990882,
+    "C1_MAE": 41.252622564018566,
+    "C0_RMSE": 81.70038360631688,
+    "C1_RMSE": 64.15826564867794,
+    "C0_bias_prediction_minus_actual": 13.433264561295244,
+    "C1_bias_prediction_minus_actual": 13.347664992606457,
+    "MAE_reduction_fraction": 0.2716861852664598,
+    "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+    "input_sha256": {
+      "parameters": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+    }
+  },
+  "next_action": {
+    "text": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。恢复先核对当前2011-11-01至12-31参数与1460小时结果的依赖；不重训，不外推2012。",
+    "executed": false,
+    "review_materials": [
+      "results/result.json",
+      "results/table.csv",
+      "results/summary.md"
+    ],
+    "scope": "Author content review of current frozen-model observed-hour comparison and summary; retain original Q4 historical bytes."
+  },
+  "changed_or_missing_paths": [],
+  "affected_activities": [],
+  "previous_revision_affected_activities": [
+    "D-CALC",
+    "D-INVALID-TEST",
+    "D-SYNTH"
+  ],
+  "unaffected_activities": [
+    "D-SOURCE-CHECK"
+  ],
+  "activities": [
+    {
+      "id": "D-CALC",
+      "title": "Rerun supplied calculator and verify canonical numeric result and companion table",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "D-INVALID-TEST",
+      "title": "Controlled invalid parameter rejection and canonical preservation check",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "D-SOURCE-CHECK",
+      "title": "Verify supplied source identity, local slice and source card",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "D-SYNTH",
+      "title": "Check supplied summary within current claim and verified result",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "checkpoint_freshness": {
+    "recorded": true,
+    "status": "current",
+    "changed": [],
+    "created_at": "2026-10-30T02:06:41.422287+00:00",
+    "scientific_certification": false
+  },
+  "scientific_scope": "Descriptive comparison of supplied frozen C0/C1 on 1460 observed hours / 61 days; no recomputation in D; existing C execution evidence inspected and current SHA/metadata/companion consistency checked.",
+  "source_tracking_limits": {
+    "D-SRC": "Partial local 2011 slice; D hashes bytes only, earlier project evidence records 8645 rows. No fresh remote verification, original full CSV/ZIP or website inspection.",
+    "D-REMOTE": "DOI identity only, no local content binding/current remote inspection",
+    "unregistered_scratch": "notes/unregistered-scratch.md excluded from registered automatic dependency tracking",
+    "raw_content": "Private cache only; no original CSV/PDF redistributed",
+    "original_row_counts": "17379 full CSV vs 17389 metadata is supplied provenance, not newly resolved"
+  },
+  "material_paths": {
+    "current": [
+      "project.json",
+      "records/registry.json",
+      "notes/parameters.json",
+      "results/result.json",
+      "results/table.csv",
+      "results/summary.md"
+    ],
+    "authorization": [
+      "context/stage-C/AUTHOR-REVISION.md",
+      "context/stage-C/approved-parameters.json"
+    ],
+    "history": [
+      "history/stage-A-initial/",
+      "history/stage-C-before-recalculation/",
+      "history/stage-C-verification-failure/"
+    ],
+    "verification": [
+      "validation/stage-C/verification.json",
+      "validation/stage-C/revision-review.json",
+      "validation/stage-C/invalid-test.json",
+      "validation/stage-A/source-verification.json"
+    ],
+    "project_local_runtime": ".agents/skills/_rw-runtime/tools/research.py"
+  },
+  "notes": [
+    "Runtime check/resume exit 0 at migrated root, 19 tracked local files, four effective done activities.",
+    "Checkpoint persistence alone did not revalidate the earlier drift state; current validity follows the saved actual C re-evaluation and intact bindings.",
+    "First C verifier TypeError preserved; first calculator raw stdout/stderr overwritten by retry, original numeric output retained.",
+    "First D metadata assertion false due absent metric_weighting output key preserved and reviewed separately.",
+    "No project write, scientific calculator run, checkpoint, author communication, external access or next action execution in D."
+  ]
+}

@@ -1,0 +1,158 @@
+"""Render the research report and handoff from saved executed results."""
+import argparse
+import csv
+import json
+from pathlib import Path
+p=argparse.ArgumentParser();p.add_argument('--workspace',type=Path,required=True);p.add_argument('--result-dir',type=Path,required=True)
+a=p.parse_args();w=a.workspace;d=a.result_dir
+load=lambda p:json.loads(p.read_text(encoding='utf-8'))
+r=load(d/'results.json');old=load(w/'stage_a_snapshot/results.json');audit=load(d/'data_audit.json');growth=load(d/'annual_growth.json');prov=load(d/'score_provenance.json');ver=load(d/'verification.json')
+assert ver['status']=='passed'
+f=lambda x:f'{x:.6f}'
+pct=lambda x:f'{100*x:.4f}%'
+o=r['overall'];s=old['overall']
+annual='\n'.join(f"|{y}|{q['hour_rows']}|{q['day_rows']}|{q['annual_count_day_sum']:,}|{f(q['mean_daily_count'])}|" for y,q in audit.items())
+mainrows='\n'.join(f"|{label}|{m}|{f(z[m]['MAE'])}|{f(z[m]['RMSE'])}|{f(z[m]['bias_prediction_minus_actual'])}|{f(z[m]['day_equal_MAE'])}|" for label,z in [('2011年Q4留出',s),('2012年全年',o)] for m in ['C0','C1'])
+subsetrows='\n'.join(f"|{label}|{z['n_dates']}|{z['n_hours']}|{f(z['C0']['MAE'])}|{f(z['C1']['MAE'])}|{f(z['hour_weighted_absolute_improvement'])}|{pct(z['hour_weighted_relative_improvement'])}|" for label,z in [('2012全部小时',o),('2012仅完整24小时日',r['complete_24h_dates'])]+[(f'2012 workingday={k}',v) for k,v in r['by_workingday'].items()])
+subfull='\n'.join(f"|{label}|{m}|{f(z[m]['RMSE'])}|{f(z[m]['bias_prediction_minus_actual'])}|{f(z[m]['day_equal_MAE'])}|" for label,z in [('仅完整24小时日',r['complete_24h_dates'])]+[(f'workingday={k}',v) for k,v in r['by_workingday'].items()] for m in ['C0','C1'])
+boot='\n'.join(f"|{period}|{L}|[{f(z['absolute_improvement_95ci'][0])}, {f(z['absolute_improvement_95ci'][1])}]|[{pct(z['relative_improvement_95ci'][0])}, {pct(z['relative_improvement_95ci'][1])}]|" for period,res in [('2011年Q4',old),('2012年',r)] for L,z in res['bootstrap'].items())
+rare=[]
+with (d/'date_coverage_2012.csv').open(newline='') as fi:
+    for q in csv.DictReader(fi):
+        if int(q['n_rows'])<23:rare.append(f"{q['date']}有{q['n_rows']}行")
+report=f'''# 冻结日历模型的跨年更新审查
+
+2012年全部8734个已观察小时中，C1小时MAE为{f(o['C1']['MAE'])}，C0为{f(o['C0']['MAE'])}，减少{f(o['hour_weighted_absolute_improvement'])}辆/小时，相对改善{pct(o['hour_weighted_relative_improvement'])}。新数据支持C1较C0改善，但点估计未达到预定10%门槛。两种块长的改善区间都高于0；对10%门槛的区间判断有块长敏感性，不能选较有利的结果。两个模型均出现约−91.6辆/小时的系统性低估，现有证据不足以部署。
+
+2011年10月至12月的有限结论仍成立：当时C1的MAE为44.570832，较C0的58.825190降低24.2317%；该历史时期达到10%门槛。新结果推翻的是将这一幅度直接外推至下一年的主张，没有抹去原历史数值。
+
+## 模型如何恢复及冻结
+
+读取原交接、RUN.md、analysis.py、model.json、results.json和原报告；完整保存在stage_a_snapshot/。model.json SHA-256为`{prov['model_sha256_before']}`，与交接一致，执行前后相同，无需重建模型。
+
+冻结时点为2011-09-30日终。实际训练使用2011-01-01至09-30的273个日期、6442个小时；2011-10-01至12-31的92天、2203小时始终留出。C0(h)是训练集中同小时cnt均值；C1(w,h)是同(workingday,hr)组合cnt均值。72个单元（C0为24、C1为48）的整数sum、n及未舍入mean均已从提供的原2011数据逐项核验，完全一致；原2011输入哈希也与model.json的training_source_sha256一致。原2011留出总体指标用冻结参数重放，与原results.json完全相同。
+
+举例：C0在hr=8使用70327/271=259.5092250922509；C1非工作日hr=8使用6299/84=74.98809523809524，工作日hr=8使用64028/187=342.39572192513367。C1未见组合回退同小时C0；未见小时报错。2012回退0次。预测不取整，输入仅hr、workingday；日期用于索引与评价。天气、同期casual和registered、yr等不作特征。workingday须来自预测前可获得的日历。此次只载入原模型，未用2012重训、重估均值、挑选特征或调参，也未把2011留出期加入训练。重算训练统计只用于参数核验。
+
+## 数据身份与完整性
+
+来源为Fanaee-T, H. (2013), Bike Sharing [Dataset]，UCI，DOI [10.24432/C5W894](https://doi.org/10.24432/C5W894)，Capital Bikeshare单一系统。[UCI官方页](https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset)和[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)使用随附2026-10-29离线材料核对；没有联网下载。CSV只按年份切片，原始2012观测未修改，四份文件的SHA和行数都与本次INPUT_MANIFEST.json匹配。原README所请求的介绍论文是Fanaee-T and Gama, “Event labeling combining ensemble detectors and background knowledge”, DOI 10.1007/s13748-013-0040-3；本次没有核验其正文。
+
+|年份|小时表行数|日表行数及日期数|年度cnt总数|每日日计数均值|
+|---|---:|---:|---:|---:|
+{annual}
+
+2011两表日期均覆盖01-01至12-31的365天，2012均覆盖01-01至12-31的366天；两年均无整日缺口、无两表日期集合差异。小时(date,hr)和日(date)键重复均为0，整行重复均为0，空单元格均为0；各表cnt=casual+registered失败均为0，负计数和小时范围异常均为0。yr分别仅为0和1，与日期一致；小时内及小时/日之间workingday、weekday、holiday、yr、mnth不一致均为0。逐日casual、registered、cnt小时加总与日表差异均为0；年度小时加总也与日表相同。
+
+2011每日期小时数分布为8小时1天、12小时1天、16小时1天、17小时1天、18小时2天、22小时6天、23小时48天、24小时305天，共少115个名义小时键。2012分布为1小时1天、11小时1天、23小时14天、24小时350天，共少50个名义小时键；{';'.join(rare)}。逐日具体小时见stage_b_results/date_coverage_2011.csv和date_coverage_2012.csv。没有空单元格不等于每日期有24行；少行不能解释为零需求。这里只有已记录计数，未插补或补零，也未把少小时归因于具体事件。README的一般事件示例不足以解释每个缺行。
+
+年度总数增长=2049576/1243103−1={pct(growth['total_growth'])}；每日日计数均值增长=(2049576/366)/(1243103/365)−1={pct(growth['mean_daily_growth'])}。2012是366天，2011为365天，故总数增长同时包含多一天的日历暴露；日均增长调整了天数，二者并不相同。日均是日表已有年度计数的均值，不能据此补出缺小时需求。
+
+两年小时切片合计17379行，与README的小时数一致，当前页面摘录则写17389，仍差10。原2011阶段仅凭单年无法检验此总数，现更新为“两份提供切片支持17379”；未重新取得完整ZIP，不把页面差异自动修正成某个原因。season标签次序和温度归一化在README/页面摘录间仍有冲突，原字段保留，不作反归一化，且不进入模型。
+
+## 相同模型的评价结果
+
+偏差定义为预测−真实。小时MAE=Σ|e|/N，RMSE=√(Σe²/N)，偏差=Σe/N；日期等权MAE先在每个日期的已有小时内求MAE，再对日期求等权均值。绝对改善Δ=MAE0−MAE1，相对改善r=1−MAE1/MAE0。所有数值用未舍入预测计算，表中仅展示舍入。
+
+|时期|模型|小时MAE|小时RMSE|平均偏差|日期等权MAE|
+|---|---|---:|---:|---:|---:|
+{mainrows}
+
+2012日期等权MAE差为{f(o['day_equal_absolute_improvement'])}，降幅{pct(o['day_equal_relative_improvement'])}；2011留出对应为{f(s['day_equal_absolute_improvement'])}及{pct(s['day_equal_relative_improvement'])}。日期等权和小时加权给出一致的方向与低于10%的2012点估计，但不是同一统计量。
+
+|2012评价集合|日期数|小时数|C0 MAE|C1 MAE|绝对改善|相对改善|
+|---|---:|---:|---:|---:|---:|---:|
+{subsetrows}
+
+|2012子集|模型|RMSE|平均偏差|日期等权MAE|
+|---|---|---:|---:|---:|
+{subfull}
+
+完整日分析仅限制评价日期，不变更模型，350天8400小时上仍改善7.7769%，未达到10%。非工作日改善17.4089%，工作日仅3.0072%，说明总体改善不能直接代表两个组。工作日分组日期等权MAE差/降幅分别为22.242867/17.4135%（w=0）、3.463047/3.0604%（w=1）。这些是聚合观察关联，没有因果或个体解释。
+
+原2011留出完整日为87天2088小时，MAE为58.255512/43.371245，降幅25.5500%；w=0为742小时，MAE81.156014/50.626251，改善37.6186%；w=1为1461小时，MAE47.484005/41.495459，改善12.6117%。其余历史分组指标保存在stage_a_snapshot/results.json，并与新结果并列导出至comparison_metrics.csv。
+
+与2011年Q4留出相比，2012年的C0 MAE从58.825190增至118.118276，C1从44.570832增至108.708122；绝对改善从14.254358缩至9.410155，相对改善从24.2317%缩至7.9667%。偏差从约+1转为约−91.6，两模型都明显低估，C1虽降低绝对误差却没有消除水平偏差。2012年度日均计数增大与这一现象相符，但全年与Q4评价期的季节组成不同，不能将误差变化全部因果归于增长，也不能将这组比较当成同季节的独立重复试验。
+
+## 原样保留的日期块bootstrap
+
+直接调用阶段1analysis.py的evaluate、block_bootstrap、quantile，算法和参数未改：排序D个日期，random.Random(20261029)，每个块长分别重置seed，B=2000，L=7与28。等概率抽循环连续日期块起点，抽至至少D天后截断到D；两个模型共享同一抽样日期，保留日期内全部小时，按抽样总绝对误差/抽样总小时数求MAE。95%百分位区间在排序的2000个值的(B−1)p处线性插值，不是重采样单小时，也不是以日期等权MAE代替主MAE。
+
+|时期|块长/天|Δ的95%区间|r的95%区间|
+|---|---:|---|---|
+{boot}
+
+两块长2012的Δ及r区间下端均大于0，支持C1改善。2012的7天r区间上端9.9674%，略低于10%；28天r区间[5.7098%,11.5896%]包含10%。因此可以说：实际2012点估计未达门槛，7天方案的区间也低于门槛，但“可排除真实改善达到10%”对块长不稳健；28天方案不能排除10%，也不证明达到10%。不选择一个块长替代另一个，7天上端接近10%也不应显示四舍五入成10.0%后作判断。两种区间下端都未超过10%，没有稳健支持“改善至少10%”。
+
+区间条件是固定模型、评价期日期块经验分布能近似代表误差过程，并且所选块长能覆盖主要时间依赖。循环连接年末与年初，季节变化和长期漂移可能破坏稳定性；区间不含参数重训不确定性，也不给后续年份保证。新数据展示的增长与偏差正说明部署判断不能只看相对降幅或单个区间。
+
+## 结论更新、验证及下一步
+
+保留“2011年Q4特定留出上改善约24.23%并达到10%”这一有限结论；更新为“2012年仍有改善，但仅约7.97%，未达到点估计门槛，且工作日改善约3%”。不能继续声称跨年已稳定达到10%、预测准确到足够部署，或把同期组成恒等式、随机拆小时、实际天气当作日前预测证据。
+
+执行验证：四份输入SHA及行数均匹配清单；72个训练统计单元与冻结模型一致，原2203行留出总体指标精确复现；新8734行预测及总体MAE/RMSE/偏差独立重算通过。verify_b.py按原seed重新逐小时展开全部4000次配对块重采样并核对区间，通过，Δ最大数值差{ver['max_absolute_delta_discrepancy']:.3g}。这些是代码及数值一致性验证，不是原采集过程或因果机制的证明。
+
+下一步可单独研究一个“日历形状加近期水平更新”的新候选模型：保留小时和workingday结构，用过去已观察周的计数估计随时间变化的总体水平，并用季节日历描述年内变化；候选特征、回看窗口和收缩规则先以滚动起点验证固定。2012已用于本次外推审查，后续可用于该新模型开发，但必须标成新版本，不能称为此次冻结C1。最终保留未观察过的后续年份（例如2013）作一次前瞻评价，同时报告本次原冻结基线、新模型的绝对误差、偏差、两组表现与同口径7/28天区间。部署前另需预定可接受的绝对计数误差/偏差、运行成本和数据缺行处理规则，并检验稳定性；当前大幅低估及未达门槛不满足部署依据。
+
+主结果在stage_b_results/results.json；年度审查、覆盖表、增长率、预测、日误差、两种bootstrap明细、跨期结果表及验证记录均在同目录。旧报告、结果与执行证据完整保存在stage_a_snapshot/，原model.json从未覆盖。RUN.md给出指定输入和新输出目录的复跑命令。
+'''
+assert len(report)<=12000,len(report)
+(w/'report.md').write_text(report,encoding='utf-8')
+(w/'handoff.md').write_text(f'''# 跨年更新交接
+
+首先读report.md。原2011证据保存在stage_a_snapshot/；stage_b_results/是2012实际执行结果。root results.json等旧结果仍为2011文件，请勿误当新年份。原model.json是两阶段共同冻结模型，SHA-256 `{prov['model_sha256_before']}`，前后未变。
+
+## 模型与恢复核验
+
+训练2011-01-01至09-30，共6442小时、273天，未加入2011Q4，也未用2012重训。C0同小时均值，C1同(workingday,hr)均值，72个sum/n/mean单元全部核验一致。预测不取整；C1未见组合回退C0，未知小时报错；2012回退0次。种子20261029，B=2000，7及28天循环日期配对块，分别重置seed；按总小时误差求MAE，分位数使用(B−1)p线性插值。stage_b.py直接载入stage_a_snapshot/analysis.py的原评价函数，不调用fit。
+
+## 更新后的结论
+
+2011Q4 MAE0/1=58.825190/44.570832，改善24.2317%，原结论保留。2012 MAE0/1={f(o['C0']['MAE'])}/{f(o['C1']['MAE'])}，改善{pct(o['hour_weighted_relative_improvement'])}，未达到10%点估计门槛；日等权改善{pct(o['day_equal_relative_improvement'])}。两块长区间均支持正改善；7天相对区间[6.4764%,9.9674%]，28天[5.7098%,11.5896%]，对是否能排除10%有敏感性，必须同时呈现。偏差−91.533694/−91.613465，不足以部署。完整日改善7.7769%，非工作日17.4089%，工作日3.0072%。
+
+2011/2012年度计数1243103/2049576，日均3405.761644/5599.934426，总数增长64.8758%，日均增长64.4253%；365/366天造成二者差异。2012有8734小时、366日，350日完整、14日23小时、1日11小时、1日1小时，共少50小时键。没有空单元格、重复键、恒等式或小时/日计数差异；少行原因未确定，绝不补零。
+
+## 复现与文件
+
+- stage_b.py：可指定input-dir、prior-dir、model、output-dir的冻结评价和双年度审查。
+- verify_b.py：独立展开4000次bootstrap验证，stage_b_results/verification.json标记passed。
+- publish_b.py：从已执行结果渲染report.md、handoff.md；不计算新模型。
+- stage_b_results/results.json、comparison_metrics.csv：全精度总体、日期等权、完整日和workingday结果及区间。
+- data_audit.json、annual_growth.json、date_coverage_2011.csv、date_coverage_2012.csv：审查和年度汇总。
+- predictions.csv、daily_errors.csv、bootstrap_L7.csv、bootstrap_L28.csv：全部预测和重采样结果。
+- score_provenance.json：trained:false、模型前后hash、72单元核验及输入SHA。
+- stage_b_run.log、stage_b_verify.log：实际执行日志。execution.json是本阶段记录；旧执行记录在stage_a_snapshot/execution.json。
+
+后续的新模型可以研究近期水平/季节更新，但应另编号，开发中用过2012后，新的效果主张需未观察过的后续数据。不可把该候选替换成此次测试过的冻结C1。原数据来自Fanaee-T (2013), Bike Sharing, UCI, DOI 10.24432/C5W894，CC BY 4.0；切片保留原始行，随附来源冲突没有靠猜测改值。
+''',encoding='utf-8')
+(w/'RUN.md').write_text('''# 冻结模型的两年审查复跑
+
+共同Python 3.12.14，全部运行用`-I -B`，只需标准库，不安装包。先确认原model.json的SHA-256为`84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47`。
+
+把下面输出目录替换为可写的新目录。代码读取指定INPUT内的四份2011/2012 CSV及清单，原参数和原2011结果只读。不会调用fit；核对2011训练sum/n/mean不是重训。
+
+```sh
+EVAL_PYTHON -I -B \\
+ WORKSPACE/stage_b.py \\
+ --input-dir INPUT_DIR \\
+ --prior-dir WORKSPACE/stage_a_snapshot \\
+ --model WORKSPACE/model.json \\
+ --output-dir /absolute/path/to/new-output
+```
+
+独立核对新输出（实际已对stage_b_results执行通过）：
+
+```sh
+EVAL_PYTHON -I -B \\
+ WORKSPACE/verify_b.py \\
+ --result-dir /absolute/path/to/new-output \\
+ --model WORKSPACE/model.json
+```
+
+成功标识为verification.json中的`"status": "passed"`；该验证器检查本次8734小时/366日输入的预定评价规模，并逐小时展开所有4000次bootstrap。评价脚本stage_b.py本身可指定合法输入目录，冻结模型SHA和原训练恢复条件保持固定。
+
+本次实际输出在stage_b_results/；原2011结果和原RUN.md在stage_a_snapshot/，原model.json从未覆盖。主报告更新在report.md；新交接在handoff.md，执行日志stage_b_run.log、stage_b_verify.log。publish_b.py可从已保存结果重写根目录报告/交接，其参数为`--workspace WORKSPACE --result-dir /absolute/path/to/new-output`；运行会覆盖两份文稿，只在要更新文稿时执行。
+
+stage_b_results中的comparison_metrics.csv并列提供2011Q4和2012所有总体/分组指标；results.json为2012全精度指标，根目录旧results.json仍是2011原始结果。
+''',encoding='utf-8')
+print(json.dumps({'report_characters':len(report),'status':'documents_written','verification':ver},ensure_ascii=False,indent=2))

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "submission_id": "B44846f",
+  "task_id": "Q58",
+  "report_sha256": "d004f6467fb56f8579878d94d3b7b216d5683066d746dab8fc25a690636a912e",
+  "judge_context": "Fresh single-report context. Read only this submission task.md, report.md, reference.json and template.json; no other reports, arm map, execution logs, memory, personal packages, skills, network or other agents were consulted. Independently checked the finite null distribution.",
+  "arm_visibility": "hidden-by-instruction",
+  "os_audited": false,
+  "scored": true,
+  "verdict": "unsupported",
+  "criteria": [
+    {
+      "id": "decision",
+      "score": 2,
+      "evidence": "report.md:3 states the main conclusion is unsupported and the actual null rejection probability is 18/256 = 0.0703125 > 0.05; report.md:42 states the observation cannot support rejection of the sharp null or the claimed 0.05-level increase.",
+      "rationale": "The report correctly rejects both the claimed size control and its use to justify the observed directional significance claim, while keeping the conclusion about this specified test."
+    },
+    {
+      "id": "selection",
+      "score": 2,
+      "evidence": "report.md:13 says the complete rule also rejects in the negative direction; report.md:32 identifies the error as treating a prespecified, observation-dependent choice of tail as a direction fixed independently of the data, and explains that prespecification does not change the rejection region.",
+      "rationale": "This explains the selection mechanism and why writing it into the plan does not remove the second tail from the null rejection probability. The argument addresses the substantive issue rather than merely labeling the rule data dependent."
+    },
+    {
+      "id": "reported_tail",
+      "score": 2,
+      "evidence": "report.md:7 gives S = 2K - 8 with K binomial; report.md:9-11 verifies P0(S prime >= 6) = [C(8,7) + C(8,8)]/256 = 9/256 = 0.03515625 and states that this is the fixed upper-tail probability; report.md:36 identifies the observed absolute sum as 6.",
+      "rationale": "The observed seven positive and one negative differences give S = 6. The report uses this value and correctly confirms the original upper-tail arithmetic, separately from the invalid size claim for the direction-selecting test."
+    },
+    {
+      "id": "actual_size",
+      "score": 2,
+      "evidence": "report.md:17-25 tabulates the complete support and selected-tail probabilities; report.md:27-30 gives p <= 0.05 iff S is in {-8,-6,6,8}, or K <= 1 or K >= 7, and computes [1+8+8+1]/256 = 0.0703125.",
+      "rationale": "The rejection set and count are exact, include ties as required, and account for both disjoint tails. Independent enumeration of the 256 equally likely sign vectors yields the same 18 rejections."
+    },
+    {
+      "id": "compatible_tail",
+      "score": 2,
+      "evidence": "report.md:36-40 uses T = |S| and computes P0(|S prime| >= 6) = P0(S prime >= 6) + P0(S prime <= -6) = 18/256; report.md:42 relates this to the distribution of the selected single-tail p value and concludes no 0.05-level rejection of the sharp null, without asserting no effect.",
+      "rationale": "The corrected tail repeats the direction selection under the null and is equivalent here to twice the observed selected tail. The report draws the appropriate non-rejection conclusion and retains the sharp-null scope. Its optional calibrated-rule observation at line 44 is also correct."
+    }
+  ],
+  "invented_major_objections": [],
+  "notes": "The reference is correct. Independent enumeration gives observed S = 6, fixed upper tail 9/256, selected-rule rejection values {-8,-6,6,8}, actual size 18/256 = 0.0703125, and compatible absolute-sum tail 18/256. The report introduces no unsupported major objection. Its assertion that it ran Python was not independently audited as an execution-provenance claim; scoring relies on the displayed derivation and independently verified finite distribution."
+}

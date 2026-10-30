@@ -1,0 +1,123 @@
+{
+  "case_id": "D",
+  "stage": "A",
+  "active_constraints": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-10-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "将已核对的2011第四季度冻结模型指标与摘要交作者讨论；只比较指定观察小时，不重训、不外推2012。若材料或配置发生修订，先运行只读状态检查，定位D-CALC及D-SYNTH的失效范围，再显式复核和更新其版本。",
+  "changed_or_missing_paths": [],
+  "affected_activities": [],
+  "unaffected_activities": [
+    "D-SOURCE-CHECK",
+    "D-CALC",
+    "D-SYNTH"
+  ],
+  "activities": {
+    "D-SOURCE-CHECK": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "D-CALC": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    },
+    "D-SYNTH": {
+      "declared_status": "done",
+      "effective_status": "done",
+      "reasons": []
+    }
+  },
+  "checkpoint_freshness": "current",
+  "scientific_scope": {
+    "evaluation_start": "2011-10-01",
+    "evaluation_end": "2011-12-31",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "metric_weighting": "observed-hour",
+    "observed_hours": 2203,
+    "observed_days": 92,
+    "numeric_result": {
+      "case_id": "D",
+      "evaluation_start": "2011-10-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "observed_hours": 2203,
+      "observed_days": 92,
+      "C0_MAE": 58.825190494512434,
+      "C1_MAE": 44.570832407531775,
+      "C0_RMSE": 86.08056895633848,
+      "C1_RMSE": 67.99996906089847,
+      "C0_bias_prediction_minus_actual": 1.078965171773347,
+      "C1_bias_prediction_minus_actual": 0.9871531155146787,
+      "MAE_reduction_fraction": 0.24231724482575867,
+      "interpretation": "Observed-hour descriptive comparison under the supplied frozen model; no refit, no confidence interval, causal or future-year guarantee.",
+      "input_sha256": {
+        "parameters": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+        "calculator": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+        "hour_2011": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "frozen_model": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025"
+      }
+    },
+    "result_origin": "Precomputed author-provided artifacts, independently rerun with supplied calculator and matched byte for byte",
+    "no_refit": true,
+    "no_confidence_intervals": true,
+    "no_causal_or_future_year_guarantee": true,
+    "human_review": false,
+    "formal_proof": "not-applicable"
+  },
+  "source_tracking_limits": {
+    "primary_local": "8645 yr=0 rows read and complete SHA verified against supplied source identity; remote official origin and full hour.csv not independently re-established",
+    "source_only": [
+      "D-REMOTE"
+    ],
+    "unregistered_file": [
+      "notes/unregistered-scratch.md"
+    ],
+    "not_auto_checked": "All other project files are outside explicitly bound scientific dependencies",
+    "raw_distribution": "Private local cache only; do not redistribute original CSV/PDF"
+  },
+  "material_paths": {
+    "project": "PROJECT_ROOT",
+    "authority": "records/state.json",
+    "recovery": "RECOVER.md",
+    "snapshots": [
+      "snapshots/initial/notes/parameters.json",
+      "snapshots/initial/results/result.json",
+      "snapshots/initial/results/table.csv",
+      "snapshots/initial/results/summary.md"
+    ],
+    "original_constraints": "provenance/initial/constraints.json",
+    "original_obligations": "provenance/initial/obligations.json",
+    "source_identity": "provenance/initial/source-identities.json"
+  },
+  "notes": [
+    "Normal calculator exit 0; result.json and table.csv both byte-equal to supplied canonical files.",
+    "Intentional rejected range exit 2: evaluation_start must be no later than evaluation_end; no rejected output directory and eight bound file fingerprints unchanged.",
+    "D-SOURCE-CHECK is restricted to supplied identity card and local cache; evaluation-scope revisions alone do not invalidate it.",
+    "Current declared and effective activity states are done within their explicit scopes; checkpoint is current.",
+    "Checkpoint storage itself adds no scientific evidence."
+  ]
+}

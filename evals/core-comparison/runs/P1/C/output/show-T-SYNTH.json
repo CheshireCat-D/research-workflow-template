@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "TOOLKIT_ROOT/tools/research.py",
+    "show",
+    "--root",
+    "PROJECT_ROOT",
+    "--kind",
+    "activity",
+    "--id",
+    "T-SYNTH"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "exit_code": 0,
+  "stdout": "{\n  \"passed\": true,\n  \"read_only\": true,\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\",\n  \"scientific_validity\": \"not-assessed\",\n  \"project_id\": \"P7f7d33fec3a3404cb09bbea7b8f8419c\",\n  \"revision\": 27,\n  \"kind\": \"activity\",\n  \"id\": \"T-SYNTH\",\n  \"envelope\": {\n    \"bindings\": {\n      \"files\": {\n        \"notes/parameters.json\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\",\n        \"notes/stage-a-validation.json\": \"d786eff3467730579d8e30e5b334d7169206509c42f70c4683d803a5397e4af2\",\n        \"results/result.json\": \"ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460\",\n        \"results/summary.md\": \"66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc\",\n        \"results/table.csv\": \"e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8\",\n        \"scripts/compute.py\": \"e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1\",\n        \"sources/howard2021-arxiv-v9.pdf\": \"eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8\"\n      },\n      \"records\": {\n        \"activity:T-CALC\": \"c5a9c7ec31297a3aad9aace2c568e3ad4842ed4ec42d2c726f102a2f19590966\",\n        \"artifact:T-A-VALIDATION\": \"0cd18f8e3e51da1c9efcc183259ba9171989a0b642a30013b8fc1159e3aeb413\",\n        \"artifact:T-CODE\": \"15c6f4685db3723176021f1e2ba0cd0190c6b6ac023d3a657b40891362f3c2ce\",\n        \"artifact:T-RESULT\": \"7784efa1a47b9d8497b268d6dc1e0ca4fe16ba945c11e306c752e2bf460455df\",\n        \"artifact:T-SUMMARY\": \"1d6821f96895e8aaf3cb881b5f3ea76d92e5cc463c8c03264700368b8312889a\",\n        \"artifact:T-TABLE\": \"846dd963f52d29e98a3a55417ab67221305f10f135abcb5c66da598d05b7ebb6\",\n        \"decision:T-CHOICE\": \"1890565576898bbb6f7a4f36a1f1cf49ab2562106c41a2567100bcd81116a6ff\",\n        \"evidence:T-PARAM\": \"b376b58358a47bb0c48ea0958fb3a3b6efebe7ec44628da2486d15b58273699f\",\n        \"evidence:T-RAW\": \"ee6f739763307ec7bb182bc932cb9baa16b63276ee3259ddbb4e70cd309694bd\",\n        \"relation:T-REL\": \"082082bd043f07ccf160d4195404d8d6e9d0083e4b4cafbf04563ea3a2cc39f0\",\n        \"source:T-SRC\": \"ab82116316befe189365fe3e98f9922c2ab5aeb2ba12ffb35d4302a803a02267\",\n        \"statement:T-CLAIM\": \"919984da4c758136f474dab026ff1405057a348b5d95dc911473bfdff5594fdd\"\n      }\n    },\n    \"data\": {\n      \"depends_on\": [\n        \"T-CALC\"\n      ],\n      \"id\": \"T-SYNTH\",\n      \"inputs\": [\n        \"statement:T-CLAIM\",\n        \"artifact:T-RESULT\",\n        \"artifact:T-TABLE\"\n      ],\n      \"note\": \"AI read provided summary and checked parameters, pre-observation rho, v10 rounding and no new-proof scope. Not human expert approval.\",\n      \"outputs\": [\n        \"artifact:T-SUMMARY\"\n      ],\n      \"status\": \"done\",\n      \"title\": \"Review supplied summary within current claim and verified numeric result\"\n    },\n    \"registered_at\": \"2026-10-30T01:03:18.425622+00:00\",\n    \"version\": 1\n  }\n}\n",
+  "stderr": ""
+}

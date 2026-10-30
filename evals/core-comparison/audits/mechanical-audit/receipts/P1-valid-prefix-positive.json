@@ -1,0 +1,27 @@
+{
+  "name": "P1-valid-prefix-positive",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P1/valid-prefix-positive/project/.agents/skills/_rw-runtime/tools/research.py",
+    "register",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P1/valid-prefix-positive/project",
+    "--kind",
+    "source",
+    "--file",
+    "STUDY_ROOT/mechanical-audit/P1/valid-prefix-positive/valid-source.json"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P1/valid-prefix-positive/project",
+  "exit_code": 0,
+  "stdout": "{\n  \"registered\": true,\n  \"kind\": \"source\",\n  \"id\": \"AUDIT-VALID-SOURCE\",\n  \"version\": 1,\n  \"revision\": 47,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+  "stderr": "",
+  "project_identical_bytes_mtime_directory_mtime": false,
+  "changed_files": [
+    "records/registry.json"
+  ],
+  "changed_directories": [
+    "records"
+  ]
+}

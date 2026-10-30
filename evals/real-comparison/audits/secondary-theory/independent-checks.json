@@ -1,0 +1,296 @@
+{
+  "scope": "Independent deterministic corroboration; no author code executed; no simulation or proof certification.",
+  "finite_witnesses": [
+    {
+      "package": "S113cb0",
+      "n": 20,
+      "mu": "1/10",
+      "alpha": "1/10",
+      "rho": "1/4",
+      "Vhat": "1/4",
+      "absS": "2",
+      "boundary_squared_formula": "1/2 * log(200)",
+      "boundary": 1.6276236307187293,
+      "event_probability_exact": "12157665459056928801/100000000000000000000",
+      "event_probability": 0.1215766545905693,
+      "probability_gt_alpha_exact": true,
+      "boundary_squared_lt_S_squared": true
+    },
+    {
+      "package": "S4a5bb2",
+      "n": 4,
+      "mu": "1/2",
+      "alpha": "1/16",
+      "rho": "1/4",
+      "Vhat": "1/4",
+      "absS": "2",
+      "boundary_squared_formula": "1/2 * log(512)",
+      "boundary": 1.766115033773212,
+      "event_probability_exact": "1/8",
+      "event_probability": 0.125,
+      "probability_gt_alpha_exact": true,
+      "boundary_squared_lt_S_squared": true
+    },
+    {
+      "package": "S92c2fa",
+      "n": 200,
+      "mu": "1/100",
+      "alpha": "1/20",
+      "rho": "1/4",
+      "Vhat": "1/4",
+      "absS": "2",
+      "boundary_squared_formula": "1/2 * log(800)",
+      "boundary": 1.8281974356819242,
+      "event_probability_exact": "1339796748579619517147032159215430178362084428898366480084249587254237308409861497539130253746795804959086289781716605234492437287939557313616238671566899446252226111406499794665232894003037467046251150801410441877611075747140237111799036659132121281429809314723162598305357236171014802046195255265400931815639888760607641742972928464230179343135042999967869581021665864088699201734066266781798980001/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "event_probability": 0.13397967485796194,
+      "probability_gt_alpha_exact": true,
+      "boundary_squared_lt_S_squared": true
+    },
+    {
+      "package": "S9e47bf",
+      "n": 20,
+      "mu": "1/10",
+      "alpha": "1/20",
+      "rho": "1/4",
+      "Vhat": "1/4",
+      "absS": "2",
+      "boundary_squared_formula": "1/2 * log(800)",
+      "boundary": 1.8281974356819242,
+      "event_probability_exact": "12157665459056928801/100000000000000000000",
+      "event_probability": 0.1215766545905693,
+      "probability_gt_alpha_exact": true,
+      "boundary_squared_lt_S_squared": true
+    },
+    {
+      "package": "S9f4d01",
+      "n": 200,
+      "mu": "1/100",
+      "alpha": "1/20",
+      "rho": "1/4",
+      "Vhat": "1/4",
+      "absS": "2",
+      "boundary_squared_formula": "1/2 * log(800)",
+      "boundary": 1.8281974356819242,
+      "event_probability_exact": "1339796748579619517147032159215430178362084428898366480084249587254237308409861497539130253746795804959086289781716605234492437287939557313616238671566899446252226111406499794665232894003037467046251150801410441877611075747140237111799036659132121281429809314723162598305357236171014802046195255265400931815639888760607641742972928464230179343135042999967869581021665864088699201734066266781798980001/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "event_probability": 0.13397967485796194,
+      "probability_gt_alpha_exact": true,
+      "boundary_squared_lt_S_squared": true
+    },
+    {
+      "package": "Sdd4c61",
+      "n": 20,
+      "mu": "1/10",
+      "alpha": "1/20",
+      "rho": "1/4",
+      "Vhat": "1/4",
+      "absS": "2",
+      "boundary_squared_formula": "1/2 * log(800)",
+      "boundary": 1.8281974356819242,
+      "event_probability_exact": "12157665459056928801/100000000000000000000",
+      "event_probability": 0.1215766545905693,
+      "probability_gt_alpha_exact": true,
+      "boundary_squared_lt_S_squared": true
+    }
+  ],
+  "exact_auxiliary_checks": {
+    "e8_taylor_lower_exact": "42037/45",
+    "e8_taylor_lower_gt800": true,
+    "log2_lt_three_quarters_via_Taylor": true,
+    "strict_Bernoulli_chain_in_S92c2fa": true
+  },
+  "primary_pdf_pages": [
+    {
+      "source": "howard2020-arxiv-v7.pdf",
+      "pdf_page_1based": 9,
+      "text_sha256": "796899615f48fc875de5f17e7d3b9bddb791aa561afc5d8d2206ea88d2712f35",
+      "anchors": [
+        {
+          "anchor": "Definition 1",
+          "present": false,
+          "literal_present": false,
+          "present_after_unicode_normalization": true
+        },
+        {
+          "anchor": "(2.1)",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        }
+      ],
+      "literal_anchor_caveat": "PDF extraction uses ligatures or fused spaces; underlying numbered source statement manually checked against supplied fulltext."
+    },
+    {
+      "source": "howard2020-arxiv-v7.pdf",
+      "pdf_page_1based": 11,
+      "text_sha256": "18b3dd11ee53210e16f3ff8663bcd7983ccd5f5e24f00204cb0a144dc1fc7221",
+      "anchors": [
+        {
+          "anchor": "adapted rather than predictable",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        }
+      ]
+    },
+    {
+      "source": "howard2020-arxiv-v7.pdf",
+      "pdf_page_1based": 12,
+      "text_sha256": "4e9f1e7fdb3eb551dd4955cd99d84cf4bbd0dfee5d27f32bfd074c5f4c316013",
+      "anchors": [
+        {
+          "anchor": "Theorem 1",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        },
+        {
+          "anchor": "(2.7)",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        }
+      ]
+    },
+    {
+      "source": "howard2020-arxiv-v7.pdf",
+      "pdf_page_1based": 28,
+      "text_sha256": "c440d520768dd9ff346df0dd4f67beb2f63de389a9e41460091d66664eb491ec",
+      "anchors": [
+        {
+          "anchor": "Hoeffding I",
+          "present": false,
+          "literal_present": false,
+          "present_after_unicode_normalization": true
+        }
+      ],
+      "literal_anchor_caveat": "PDF extraction uses ligatures or fused spaces; underlying numbered source statement manually checked against supplied fulltext."
+    },
+    {
+      "source": "howard2021-arxiv-v9.pdf",
+      "pdf_page_1based": 5,
+      "text_sha256": "481b41e876a2e5dad3eb1c6699b6582f062fa604c1816df4c3a1bf0467cb6eac",
+      "anchors": [
+        {
+          "anchor": "Sub-",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        },
+        {
+          "anchor": "(4)",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        }
+      ]
+    },
+    {
+      "source": "howard2021-arxiv-v9.pdf",
+      "pdf_page_1based": 9,
+      "text_sha256": "a8a8eefd976712c4d167e4af2efe66f40d6f5a940c744b74f37b357b09b0962b",
+      "anchors": [
+        {
+          "anchor": "Lemma 2",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        },
+        {
+          "anchor": "(13)",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        }
+      ]
+    },
+    {
+      "source": "howard2021-arxiv-v9.pdf",
+      "pdf_page_1based": 12,
+      "text_sha256": "a4bbc5730325da9c839ecfebb7d5f804bb1b20dd748ca93a633f0f5d22704c50",
+      "anchors": [
+        {
+          "anchor": "Proposition 3",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        },
+        {
+          "anchor": "(21)",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        }
+      ]
+    },
+    {
+      "source": "howard2021-arxiv-v9.pdf",
+      "pdf_page_1based": 14,
+      "text_sha256": "4aca500d4d998bf46f40c3920498a710883b9dab246f903d271a84f06ea97c18",
+      "anchors": [
+        {
+          "anchor": "Theorem 4",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        },
+        {
+          "anchor": "(23)",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        }
+      ]
+    },
+    {
+      "source": "howard2021-arxiv-v9.pdf",
+      "pdf_page_1based": 19,
+      "text_sha256": "4a679771e689ac74b32dadb9c1457593d3ff37b84996c41b0b60a7ce0a057bfc",
+      "anchors": [
+        {
+          "anchor": "Lemma 3",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        }
+      ]
+    },
+    {
+      "source": "howard2021-arxiv-v9.pdf",
+      "pdf_page_1based": 28,
+      "text_sha256": "a1b76f721c103a3ad3574e1ecff3be56426894159fb772a04d6d51b0b6d99325",
+      "anchors": [
+        {
+          "anchor": "Proposition 5",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        },
+        {
+          "anchor": "(51)",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        }
+      ]
+    },
+    {
+      "source": "howard2021-arxiv-v9.pdf",
+      "pdf_page_1based": 35,
+      "text_sha256": "167651f117a6c5378263bb7359ee5eddbc6b174d0a9b393f38df39678bbe8869",
+      "anchors": [
+        {
+          "anchor": "(89)",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        },
+        {
+          "anchor": "(90)",
+          "present": true,
+          "literal_present": true,
+          "present_after_unicode_normalization": true
+        }
+      ]
+    }
+  ]
+}

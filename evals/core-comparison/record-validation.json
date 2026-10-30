@@ -1,0 +1,395 @@
+{
+  "status": "complete",
+  "scope": "record closure, file identity and score arithmetic only; scientific validity not assessed",
+  "counts": {
+    "expected_chains": 6,
+    "expected_stages": 24,
+    "recorded": 6,
+    "stages_recorded": 24,
+    "scored": 6,
+    "executed": 24,
+    "failed": 0,
+    "not-run": 0,
+    "readonly_failures": 0
+  },
+  "errors": [],
+  "missing": [],
+  "observations": [
+    {
+      "administrative_audit_projection": "audits/key-audit.json",
+      "original_sha256": "7e1606390953400306e9e8af2b311ff12cb53bfc7c47bd85059cbf99d57a7cf1",
+      "public_sha256": "7b916d1664dd5daeb3ac453e3d2460c408336e693e85ce0e6e8271a9f5fab81b"
+    },
+    {
+      "stage": "P1.A",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P1.B",
+      "violations": [
+        {
+          "tool_call": 2,
+          "kind": "interpreter_path_deviation",
+          "description": "Used python3 -I -B instead of the designated EVAL_PYTHON for an instruction-read/hash command. The command succeeded and did not write project files.",
+          "remediation": "All subsequent Python commands use the designated interpreter with -I -B; original deviation retained."
+        }
+      ],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P1.B",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P1.C",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P1.D",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P1.D",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P2.A",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P2.B",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P2.B",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P2.C",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P2.D",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P2.D",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P3.A",
+      "violations": [
+        {
+          "action": "Attempted ps process inventory solely to clean own stalled PDF inspection",
+          "status": "sandbox denied before process data obtained",
+          "scope_note": "Process inspection was outside the strictly named input/project file workflow; retained as an attempted scope deviation, not silently omitted."
+        }
+      ],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P3.B",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P3.B",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P3.C",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P3.D",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P3.D",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P4.A",
+      "violations": [
+        {
+          "type": "implicit-tool-resource-access",
+          "path": "TOOLKIT_ROOT/design/catalog.json",
+          "reason": "Mandatory init --connect-skills and core validation internally read the stable catalog under design/. This runtime access conflicts with a literal no-design-read interpretation. No manual content inspection, evaluator material or eval directory access occurred. Required official interface was retained; the exception is disclosed rather than hidden."
+        }
+      ],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P4.B",
+      "violations": [
+        {
+          "call": 3,
+          "kind": "forbidden_path_content_read",
+          "path": "PROJECT_ROOT/.agents/skills/_rw-runtime/design/catalog.json",
+          "bytes": 25477,
+          "sha256": "c164def668d75f14a2d12d414fee6dcf287f96d33e293fbdaf8536c9cbe798c9",
+          "description": "Initial broad SHA inventory read forbidden design content solely to hash; no semantic content displayed/used. Not repeated."
+        }
+      ],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P4.B",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P4.C",
+      "violations": [
+        {
+          "type": "recording",
+          "detail": "First calculator stdout/stderr names overwritten by retry; numeric output and first verifier failure preserved, exact first calculator raw stdout not recoverable."
+        }
+      ],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P4.D",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P4.D",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P5.A",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P5.B",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P5.B",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P5.C",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P5.D",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P5.D",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P6.A",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P6.B",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P6.B",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    },
+    {
+      "stage": "P6.C",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P6.D",
+      "violations": [],
+      "unknown_effective_fields": [
+        "model",
+        "output_token_limit",
+        "reasoning_effort",
+        "seed",
+        "temperature"
+      ]
+    },
+    {
+      "stage": "P6.D",
+      "readonly_passed": true,
+      "file_differences": [],
+      "directory_mtime_differences": []
+    }
+  ],
+  "effective_model_equality": "not-inferred",
+  "independent_replicates": "not-inferred; four dependent stages per project"
+}

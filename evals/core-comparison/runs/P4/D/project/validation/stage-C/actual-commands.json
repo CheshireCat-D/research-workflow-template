@@ -1,0 +1,586 @@
+[
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "TOOLKIT_ROOT/tools/research.py",
+      "resume",
+      "--root",
+      "STUDY_ROOT/runs/P4/project"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 1,
+    "output": "00-resume-drift.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "TOOLKIT_ROOT/tools/research.py",
+      "checkpoint",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--next-action",
+      "保留当前未重算漂移态；按阶段C作者修订及已批准参数复核受影响计算、稿件和登记，保存旧结果。"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "output": "01-drift-checkpoint.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "TOOLKIT_ROOT/tools/research.py",
+      "check",
+      "--root",
+      "STUDY_ROOT/runs/P4/project"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 1,
+    "output": "02-check-after-drift-checkpoint.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "TOOLKIT_ROOT/tools/research.py",
+      "register",
+      "--help"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "usage: research.py register [-h] --root ROOT --kind\n                            {source,statement,evidence,relation,activity,decision,artifact,method-binding}\n                            --file FILE [--replace]\n                            [--expected-version EXPECTED_VERSION]\n\noptions:\n  -h, --help            show this help message and exit\n  --root ROOT\n  --kind {source,statement,evidence,relation,activity,decision,artifact,method-binding}\n  --file FILE           JSON record file, or - to read bounded JSON from stdin\n  --replace\n  --expected-version EXPECTED_VERSION\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/verify.py"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 1,
+    "output": "03-verification-run.txt",
+    "source_snapshot": "STUDY_ROOT/runs/P4/project/history/stage-C-verification-failure/verify.py"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--output",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/recalculation"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "validation/stage-C/03-normal-recalculation.stdout",
+    "stderr": "validation/stage-C/03-normal-recalculation.stderr",
+    "recording_note": "Actual first calculator invocation completed before verifier TypeError; output retained."
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/verify.py"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "output": "04-verification-retry.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--output",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/recalculation-retry"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "03-normal-recalculation.stdout",
+    "stderr": "03-normal-recalculation.stderr"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--output",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/invalid-output",
+      "--spec",
+      "STUDY_ROOT/runs/P4/project/notes/rejected-parameters.json"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 2,
+    "stdout": "04-controlled-invalid-recheck.stdout",
+    "stderr": "04-controlled-invalid-recheck.stderr"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "evidence",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/01-evidence-D-AUTHOR-REVISION.json"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"evidence\",\n  \"id\": \"D-AUTHOR-REVISION\",\n  \"version\": 1,\n  \"revision\": 24,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "evidence",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/02-evidence-D-APPROVED-PARAM.json"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"evidence\",\n  \"id\": \"D-APPROVED-PARAM\",\n  \"version\": 1,\n  \"revision\": 25,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "evidence",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/03-evidence-D-PARAM.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"evidence\",\n  \"id\": \"D-PARAM\",\n  \"version\": 2,\n  \"revision\": 26,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "statement",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/04-statement-D-CLAIM.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"statement\",\n  \"id\": \"D-CLAIM\",\n  \"version\": 2,\n  \"revision\": 27,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "relation",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/05-relation-D-REL.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"relation\",\n  \"id\": \"D-REL\",\n  \"version\": 2,\n  \"revision\": 28,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "decision",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/06-decision-D-CHOICE.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"decision\",\n  \"id\": \"D-CHOICE\",\n  \"version\": 2,\n  \"revision\": 29,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "artifact",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/07-artifact-D-RESULT.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"D-RESULT\",\n  \"version\": 2,\n  \"revision\": 30,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "artifact",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/08-artifact-D-TABLE.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"D-TABLE\",\n  \"version\": 2,\n  \"revision\": 31,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "artifact",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/09-artifact-D-SUMMARY.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"D-SUMMARY\",\n  \"version\": 2,\n  \"revision\": 32,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "artifact",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/10-artifact-D-VALIDATION.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"D-VALIDATION\",\n  \"version\": 2,\n  \"revision\": 33,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "artifact",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/11-artifact-D-C-VERIFY-CODE.json"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"D-C-VERIFY-CODE\",\n  \"version\": 1,\n  \"revision\": 34,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "artifact",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/12-artifact-D-C-VALIDATION.json"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"D-C-VALIDATION\",\n  \"version\": 1,\n  \"revision\": 35,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "artifact",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/13-artifact-D-C-INVALID-VALIDATION.json"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"D-C-INVALID-VALIDATION\",\n  \"version\": 1,\n  \"revision\": 36,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "artifact",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/14-artifact-D-C-SUMMARY-REVIEW.json"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"D-C-SUMMARY-REVIEW\",\n  \"version\": 1,\n  \"revision\": 37,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "artifact",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/15-artifact-D-C-REVISION-REVIEW.json"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"D-C-REVISION-REVIEW\",\n  \"version\": 1,\n  \"revision\": 38,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "artifact",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/16-artifact-D-C-REVISION-NOTE.json"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"artifact\",\n  \"id\": \"D-C-REVISION-NOTE\",\n  \"version\": 1,\n  \"revision\": 39,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "activity",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/17-activity-D-CALC.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"D-CALC\",\n  \"version\": 2,\n  \"revision\": 40,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "activity",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/18-activity-D-INVALID-TEST.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"D-INVALID-TEST\",\n  \"version\": 2,\n  \"revision\": 41,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "register",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--kind",
+      "activity",
+      "--file",
+      "STUDY_ROOT/runs/P4/project/validation/stage-C/registrations/19-activity-D-SYNTH.json",
+      "--replace",
+      "--expected-version",
+      "1"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "stdout": "{\n  \"registered\": true,\n  \"kind\": \"activity\",\n  \"id\": \"D-SYNTH\",\n  \"version\": 2,\n  \"revision\": 42,\n  \"scientific_validity\": \"not-assessed\",\n  \"scope\": \"Local registration, references, fingerprints and workflow state only; no scientific, ethics, venue or submission certification.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "check",
+      "--root",
+      "STUDY_ROOT/runs/P4/project"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 1,
+    "output": "05-check-before-final-checkpoint.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "checkpoint",
+      "--root",
+      "STUDY_ROOT/runs/P4/project",
+      "--next-action",
+      "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。恢复先核对当前2011-11-01至12-31参数与1460小时结果的依赖；不重训，不外推2012。"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "output": "06-final-checkpoint.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "check",
+      "--root",
+      "STUDY_ROOT/runs/P4/project"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "output": "07-final-check.txt"
+  },
+  {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P4/project/.agents/skills/_rw-runtime/tools/research.py",
+      "resume",
+      "--root",
+      "STUDY_ROOT/runs/P4/project"
+    ],
+    "cwd": "STUDY_ROOT/runs/P4/project",
+    "exit_code": 0,
+    "output": "08-final-resume.txt"
+  }
+]

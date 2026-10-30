@@ -1,0 +1,159 @@
+{
+  "case_id": "D",
+  "stage": "C",
+  "active_constraints": {
+    "evaluation_start": "2011-11-01",
+    "evaluation_end": "2011-12-31",
+    "metric_weighting": "observed-hour",
+    "model_policy": "frozen-2011-Jan-Sep",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "venue": null,
+    "language": "zh",
+    "human_expert_approval": false,
+    "external_submission_authorized": false,
+    "parameter_authorization": "context/stage-C/AUTHOR-REVISION.md and approved-parameters.json; original constraints preserved in context/"
+  },
+  "next_action": "将2011年11月至12月的冻结模型指标与更新摘要交作者内容复核；保留原Q4结果作历史记录。恢复先核对当前2011-11-01至12-31参数与1460小时结果的依赖；不重训，不外推2012。",
+  "initial_detected_changes": [
+    {
+      "path": "notes/parameters.json",
+      "old_start": "2011-10-01",
+      "current_start": "2011-11-01",
+      "old_results_still_Q4": true
+    }
+  ],
+  "changed_or_missing_paths": {
+    "revised_existing": [
+      "results/result.json",
+      "results/table.csv",
+      "results/summary.md",
+      "PROJECT.md",
+      "RECOVERY.md",
+      "records/registry.json"
+    ],
+    "accepted_existing_parameter_drift": "notes/parameters.json",
+    "added": [
+      "context/stage-C/",
+      "notes/stage-C-revision.md",
+      "history/stage-C-before-recalculation/",
+      "history/stage-C-verification-failure/",
+      "validation/stage-C/"
+    ],
+    "missing_required": [],
+    "protected_unchanged_sha256": {
+      "data/hour_2011.csv": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "scripts/compute.py": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "model/frozen.json": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "notes/source-check.md": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "validation/stage-A/source-verification.json": "d9c06d6c76df3d0e689ac2aad52b3dec4498d197081cdb2081cbfa916f3db919"
+    }
+  },
+  "affected_activities": [
+    {
+      "id": "D-CALC",
+      "after_drift_checkpoint": "stale",
+      "final": "done",
+      "action": "Actual unchanged calculator rerun and independent metric/table/hash verification; explicitly re-registered version 2"
+    },
+    {
+      "id": "D-SYNTH",
+      "after_drift_checkpoint": "stale",
+      "final": "done",
+      "action": "Revised and checked interval/counts/metrics/interpretation, explicitly re-registered version 2"
+    },
+    {
+      "id": "D-INVALID-TEST",
+      "after_drift_checkpoint": "stale",
+      "final": "done",
+      "action": "Actual negative-input rerun, expected exit 2; dedicated validation dependency replaces incidental shared historical result binding; version 2"
+    }
+  ],
+  "unaffected_activities": [
+    {
+      "id": "D-SOURCE-CHECK",
+      "status": "done",
+      "version": 1,
+      "envelope_unchanged": true,
+      "reason": "Source/local CSV/source note/source verification bytes unchanged; no dependency on evaluation start"
+    }
+  ],
+  "checkpoint_freshness": {
+    "drift_save": {
+      "revision": 23,
+      "checkpoint": "current",
+      "check_exit_code": 1,
+      "stale_activities": [
+        "D-CALC",
+        "D-INVALID-TEST",
+        "D-SYNTH"
+      ],
+      "old_work_revalidated": false,
+      "raw_output": "02-check-after-drift-checkpoint.txt",
+      "durable_snapshot": "history/stage-C-before-recalculation/"
+    },
+    "final": {
+      "revision": 43,
+      "checkpoint": "current",
+      "check_exit_code": 0,
+      "resume_exit_code": 0,
+      "findings": [],
+      "effective_status": {
+        "D-CALC": "done",
+        "D-INVALID-TEST": "done",
+        "D-SOURCE-CHECK": "done",
+        "D-SYNTH": "done"
+      }
+    }
+  },
+  "scientific_scope": {
+    "reviewer": "assistant agent",
+    "evaluation": "Supplied frozen C0/C1 on 1460 observed hours, 61 days, November-December 2011; independent arithmetic/table/input identity check",
+    "metrics": {
+      "observed_hours": 1460,
+      "observed_days": 61,
+      "C0_MAE": 56.64127430990882,
+      "C1_MAE": 41.252622564018566,
+      "C0_RMSE": 81.70038360631688,
+      "C1_RMSE": 64.15826564867794,
+      "C0_bias_prediction_minus_actual": 13.433264561295244,
+      "C1_bias_prediction_minus_actual": 13.347664992606457,
+      "MAE_reduction_fraction": 0.2716861852664598
+    },
+    "old_Q4_MAE_reduction_fraction": 0.24231724482575867,
+    "interpretation": "Evaluation windows differ, unchanged model; larger reduction is not evidence of retraining improvement or improvement due to window choice. No confidence interval, causal inference, future-year guarantee, human expert approval or submission acceptance.",
+    "core_scientific_validity": "not-assessed"
+  },
+  "source_tracking_limits": {
+    "primary": {
+      "id": "D-SRC",
+      "local_path": "data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "scope": "Supplied 2011 slice; no original ZIP/full CSV/site re-acquisition"
+    },
+    "source_only": "D-REMOTE: DOI metadata only, no supplied article/local evidence/current remote-content check",
+    "unregistered": "notes/unregistered-scratch.md remains excluded from dependency tracking",
+    "automatically_bound_local_file_count": 19,
+    "scope_limit": "Only registered bindings/dependencies monitored automatically; snapshot manifests and other unregistered files require explicit review.",
+    "distribution": "Private cache only; no original CSV/PDF copied to output or externally distributed"
+  },
+  "material_paths": {
+    "authorization": "context/stage-C/",
+    "current_results": "results/",
+    "original_Q4": "history/stage-A-initial/",
+    "drift_state": "history/stage-C-before-recalculation/",
+    "real_verification": "validation/stage-C/verification.json",
+    "failed_first_verifier": "history/stage-C-verification-failure/",
+    "authority": [
+      "project.json",
+      "records/registry.json"
+    ],
+    "recovery": "RECOVERY.md"
+  },
+  "notes": [
+    "The first self-written verifier failed with TypeError; preserved then corrected and rerun in a fresh directory. Scientific calculator unchanged.",
+    "Outer recording then failed on absent verification.json; recovered actual execution facts without pretending verification had succeeded.",
+    "Retry overwrote first calculator raw stdout/stderr names; first numeric output and verifier failure remain, original raw first calculator stdout cannot be recovered.",
+    "No network, installation, retraining, future-event, other-project, memory, personal-skill or agent access."
+  ]
+}

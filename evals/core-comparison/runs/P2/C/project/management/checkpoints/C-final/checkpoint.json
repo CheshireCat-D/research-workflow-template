@@ -1,0 +1,39 @@
+{
+  "stage": "C",
+  "content_review": "pending author review",
+  "scientific_approval": false,
+  "basis": "actual recompute, independent numeric check, revised summary",
+  "manifest": [
+    {
+      "path": "management/constraints.json",
+      "sha256": "06f10fae9ecc9bdcb91b69666bb84e26439b8a2c11258d3778f4168098cf446d",
+      "bytes": 1070
+    },
+    {
+      "path": "management/state.json",
+      "sha256": "be49d09c6ae1c69c058bfa9b9926cb4e4b76a90b52126096f484f7400b01b2fa",
+      "bytes": 25965
+    },
+    {
+      "path": "notes/parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171
+    },
+    {
+      "path": "results/result.json",
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999
+    },
+    {
+      "path": "results/summary.md",
+      "sha256": "b7b9af6a4cb12e1e30c5ef6c9b19f92a2513d0bb31f511d350110203abc45705",
+      "bytes": 1124
+    },
+    {
+      "path": "results/table.csv",
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203
+    }
+  ],
+  "next_action": "将2011年11月至12月的冻结模型指标（1460观察小时、61日）与更新摘要交作者内容复核；保留原Q4结果作历史记录。尚无内容认可或投稿授权；继续前运行management/status.py和management/verify_current.py，不重训、不外推2012。"
+}

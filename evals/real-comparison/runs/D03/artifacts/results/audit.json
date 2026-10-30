@@ -1,0 +1,106 @@
+{
+  "inputs": {
+    "hour": {
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115"
+    },
+    "day": {
+      "sha256": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b"
+    }
+  },
+  "hour": {
+    "rows": 8645,
+    "columns": [
+      "instant",
+      "dteday",
+      "season",
+      "yr",
+      "mnth",
+      "hr",
+      "holiday",
+      "weekday",
+      "workingday",
+      "weathersit",
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed",
+      "casual",
+      "registered",
+      "cnt"
+    ],
+    "duplicate_keys": 0,
+    "duplicate_key_examples": [],
+    "blank_cells": 0,
+    "blank_examples": [],
+    "extra_cell_rows": [],
+    "duplicate_instant": 0,
+    "dates": [
+      "2011-01-01",
+      "2011-12-31"
+    ],
+    "years": [
+      "0"
+    ],
+    "count_identity_failures": 0,
+    "expected_calendar_hours": 8760,
+    "missing_calendar_hours": 115,
+    "hours_per_day_distribution": {
+      "8": 1,
+      "12": 1,
+      "16": 1,
+      "17": 1,
+      "18": 2,
+      "22": 6,
+      "23": 48,
+      "24": 305
+    },
+    "complete_24h_dates": 305,
+    "missing_calendar_dates": [],
+    "invalid_hours": 0,
+    "chronological_order": true,
+    "cnt_total": 1243103,
+    "cnt_min": 1,
+    "cnt_max": 651
+  },
+  "day": {
+    "rows": 365,
+    "columns": [
+      "instant",
+      "dteday",
+      "season",
+      "yr",
+      "mnth",
+      "holiday",
+      "weekday",
+      "workingday",
+      "weathersit",
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed",
+      "casual",
+      "registered",
+      "cnt"
+    ],
+    "duplicate_keys": 0,
+    "duplicate_key_examples": [],
+    "blank_cells": 0,
+    "blank_examples": [],
+    "extra_cell_rows": [],
+    "duplicate_instant": 0,
+    "dates": [
+      "2011-01-01",
+      "2011-12-31"
+    ],
+    "years": [
+      "0"
+    ],
+    "count_identity_failures": 0,
+    "cnt_total": 1243103,
+    "missing_calendar_dates": []
+  },
+  "hour_day_discrepancies": [],
+  "calendar_field_conflicts": [],
+  "calendar_fields_constant_within_date": true,
+  "hour_day_calendar_conflicts": 0
+}

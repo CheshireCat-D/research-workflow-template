@@ -1,0 +1,28 @@
+{
+  "trial_id": "D05",
+  "task_id": "data-b",
+  "arm": "matched",
+  "replicate": 1,
+  "predecessor": "D03",
+  "freeze_sha256": "a4f6b970d95c96a9472ce47265e78a1b70ec0af1783b7b927848a0ac0bfaca48",
+  "report": {
+    "path": "runs/D05/report.md",
+    "sha256": "847f2ebf504b89270f2cf3e4de1817caf64ffa6e0a4238ad86037855ef5b2387"
+  },
+  "execution": {
+    "path": "runs/D05/execution.json",
+    "sha256": "2a3772a8311fad4358b270e701406adb2790a8bad7c202c42a066fd29710000e"
+  },
+  "artifacts": {
+    "path": "runs/D05/artifacts.json",
+    "sha256": "ed677718cd53efa25fb091abc4099fe198351b639f2828dfdc614e27fd737224"
+  },
+  "adjudication": {
+    "path": "adjudications/S127718.json",
+    "sha256": "0bdee24f594df1aceb2fa45c83b3f971f6e4e6e1e59c8f94d309851fe95d9ad2"
+  },
+  "raw_report_sha256": "847f2ebf504b89270f2cf3e4de1817caf64ffa6e0a4238ad86037855ef5b2387",
+  "public_report_sha256": "847f2ebf504b89270f2cf3e4de1817caf64ffa6e0a4238ad86037855ef5b2387",
+  "raw_report_characters": 7172,
+  "public_report_characters": 7172
+}

@@ -1,0 +1,311 @@
+{
+  "status": "executed",
+  "audit": {
+    "2011": {
+      "year": 2011,
+      "hour_rows": 8645,
+      "day_rows": 365,
+      "hour_date_count": 365,
+      "day_date_count": 365,
+      "hour_date_start": "2011-01-01",
+      "hour_date_end": "2011-12-31",
+      "day_date_start": "2011-01-01",
+      "day_date_end": "2011-12-31",
+      "hour_duplicate_keys": 0,
+      "day_duplicate_keys": 0,
+      "hour_duplicate_full_rows": 0,
+      "day_duplicate_full_rows": 0,
+      "hour_empty_cells": 0,
+      "day_empty_cells": 0,
+      "hour_count_identity_failures": 0,
+      "day_count_identity_failures": 0,
+      "hour_negative_counts": 0,
+      "day_negative_counts": 0,
+      "hour_out_of_range": 0,
+      "workingday_out_of_range": 0,
+      "hour_wrong_calendar_year": 0,
+      "day_wrong_calendar_year": 0,
+      "hour_yr_values": [
+        0
+      ],
+      "day_yr_values": [
+        0
+      ],
+      "hour_count_distribution": {
+        "8": 1,
+        "12": 1,
+        "16": 1,
+        "17": 1,
+        "18": 2,
+        "22": 6,
+        "23": 48,
+        "24": 305
+      },
+      "complete_24h_dates": 305,
+      "missing_calendar_hours": 115,
+      "missing_whole_hour_dates": [],
+      "missing_whole_day_dates": [],
+      "hour_only_dates": [],
+      "day_only_dates": [],
+      "daily_count_mismatches": [],
+      "calendar_field_mismatches": [],
+      "annual_count_hour_sum": 1243103,
+      "annual_count_day_sum": 1243103,
+      "mean_daily_count": 3405.7616438356163
+    },
+    "2012": {
+      "year": 2012,
+      "hour_rows": 8734,
+      "day_rows": 366,
+      "hour_date_count": 366,
+      "day_date_count": 366,
+      "hour_date_start": "2012-01-01",
+      "hour_date_end": "2012-12-31",
+      "day_date_start": "2012-01-01",
+      "day_date_end": "2012-12-31",
+      "hour_duplicate_keys": 0,
+      "day_duplicate_keys": 0,
+      "hour_duplicate_full_rows": 0,
+      "day_duplicate_full_rows": 0,
+      "hour_empty_cells": 0,
+      "day_empty_cells": 0,
+      "hour_count_identity_failures": 0,
+      "day_count_identity_failures": 0,
+      "hour_negative_counts": 0,
+      "day_negative_counts": 0,
+      "hour_out_of_range": 0,
+      "workingday_out_of_range": 0,
+      "hour_wrong_calendar_year": 0,
+      "day_wrong_calendar_year": 0,
+      "hour_yr_values": [
+        1
+      ],
+      "day_yr_values": [
+        1
+      ],
+      "hour_count_distribution": {
+        "1": 1,
+        "11": 1,
+        "23": 14,
+        "24": 350
+      },
+      "complete_24h_dates": 350,
+      "missing_calendar_hours": 50,
+      "missing_whole_hour_dates": [],
+      "missing_whole_day_dates": [],
+      "hour_only_dates": [],
+      "day_only_dates": [],
+      "daily_count_mismatches": [],
+      "calendar_field_mismatches": [],
+      "annual_count_hour_sum": 2049576,
+      "annual_count_day_sum": 2049576,
+      "mean_daily_count": 5599.934426229508
+    }
+  },
+  "growth": {
+    "total_growth": 0.6487579870694544,
+    "mean_daily_growth": 0.6442531838260952
+  },
+  "results_2012": {
+    "overall": {
+      "n_hours": 8734,
+      "n_dates": 366,
+      "date_start": "2012-01-01",
+      "date_end": "2012-12-31",
+      "C0": {
+        "MAE": 118.11827620046033,
+        "RMSE": 174.1113410765217,
+        "bias_prediction_minus_actual": -91.53369361340616,
+        "day_equal_MAE": 117.77586740335869
+      },
+      "C1": {
+        "MAE": 108.70812150008842,
+        "RMSE": 157.21107535855683,
+        "bias_prediction_minus_actual": -91.61346537392994,
+        "day_equal_MAE": 108.3607464606273
+      },
+      "hour_weighted_absolute_improvement": 9.410154700371905,
+      "hour_weighted_relative_improvement": 0.07966722003631166,
+      "day_equal_absolute_improvement": 9.415120942731392,
+      "day_equal_relative_improvement": 0.07994100277339922,
+      "C1_fallback_rows": 0
+    },
+    "complete_24h_dates": {
+      "n_hours": 8400,
+      "n_dates": 350,
+      "date_start": "2012-01-01",
+      "date_end": "2012-12-31",
+      "C0": {
+        "MAE": 119.73153807694626,
+        "RMSE": 176.15551073192114,
+        "bias_prediction_minus_actual": -95.13925215742204,
+        "day_equal_MAE": 119.73153807694626
+      },
+      "C1": {
+        "MAE": 110.42010839163699,
+        "RMSE": 159.1104439662443,
+        "bias_prediction_minus_actual": -95.21599113080177,
+        "day_equal_MAE": 110.420108391637
+      },
+      "hour_weighted_absolute_improvement": 9.311429685309278,
+      "hour_weighted_relative_improvement": 0.07776923135594593,
+      "day_equal_absolute_improvement": 9.311429685309264,
+      "day_equal_relative_improvement": 0.07776923135594571,
+      "C1_fallback_rows": 0
+    },
+    "by_workingday": {
+      "0": {
+        "n_hours": 2780,
+        "n_dates": 116,
+        "date_start": "2012-01-01",
+        "date_end": "2012-12-30",
+        "C0": {
+          "MAE": 127.79515436169565,
+          "RMSE": 180.7607778469249,
+          "bias_prediction_minus_actual": -77.61185682825932,
+          "day_equal_MAE": 127.73314599464054
+        },
+        "C1": {
+          "MAE": 105.54742684421791,
+          "RMSE": 153.24457464118237,
+          "bias_prediction_minus_actual": -78.39138747102314,
+          "day_equal_MAE": 105.49027918177995
+        },
+        "hour_weighted_absolute_improvement": 22.247727517477742,
+        "hour_weighted_relative_improvement": 0.17408897566264925,
+        "day_equal_absolute_improvement": 22.242866812860584,
+        "day_equal_relative_improvement": 0.17413543399137654,
+        "C1_fallback_rows": 0
+      },
+      "1": {
+        "n_hours": 5954,
+        "n_dates": 250,
+        "date_start": "2012-01-03",
+        "date_end": "2012-12-31",
+        "C0": {
+          "MAE": 113.600015990814,
+          "RMSE": 170.9180640499784,
+          "bias_prediction_minus_actual": -98.03398018759297,
+          "day_equal_MAE": 113.1556901370039
+        },
+        "C1": {
+          "MAE": 110.1838909228832,
+          "RMSE": 159.02920931705486,
+          "bias_prediction_minus_actual": -97.78702542936844,
+          "day_equal_MAE": 109.69264327801245
+        },
+        "hour_weighted_absolute_improvement": 3.416125067930807,
+        "hour_weighted_relative_improvement": 0.030071519252312773,
+        "day_equal_absolute_improvement": 3.463046858991447,
+        "day_equal_relative_improvement": 0.030604266164596217,
+        "C1_fallback_rows": 0
+      }
+    },
+    "bootstrap": {
+      "7": {
+        "block_length_days": 7,
+        "B": 2000,
+        "seed": 20261029,
+        "D": 366,
+        "quantile_rule": "sorted linear interpolation at (B-1)*p",
+        "absolute_improvement_95ci": [
+          8.083961388811428,
+          10.825502808133045
+        ],
+        "relative_improvement_95ci": [
+          0.06476413180843968,
+          0.09967438859012917
+        ]
+      },
+      "28": {
+        "block_length_days": 28,
+        "B": 2000,
+        "seed": 20261029,
+        "D": 366,
+        "quantile_rule": "sorted linear interpolation at (B-1)*p",
+        "absolute_improvement_95ci": [
+          7.667939814729385,
+          11.466770540309213
+        ],
+        "relative_improvement_95ci": [
+          0.05709841034889167,
+          0.11589625362630877
+        ]
+      }
+    }
+  },
+  "verification": {
+    "trained": false,
+    "model_sha256_before": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47",
+    "model_sha256_after": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47",
+    "stage_a_code_sha256": "e22ae01683059c937d53ac0f1342cf8d7ae0b1b0fb8905a680eb35144d3735e6",
+    "stage_b_code_sha256": "09d153bcc9f812204adc590adfed0a321ccb4ca9245b81e8aeacce48299addf0",
+    "training_verification": {
+      "rows": 6442,
+      "dates": 273,
+      "exact_sum_n_mean_cells": 72,
+      "historical_overall_metrics_exact_replay": true
+    },
+    "2012_prediction_rows_independently_checked": 8734,
+    "bootstrap_seed": 20261029,
+    "bootstrap_B": 2000,
+    "bootstrap_implementation": "unchanged stage-A analysis.py evaluate/block_bootstrap/quantile",
+    "python_version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "manifest_checks": {
+      "data/hour_2011.csv": {
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+        "hash_matches": true,
+        "rows_match": true
+      },
+      "data/day_2011.csv": {
+        "sha256": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b",
+        "hash_matches": true,
+        "rows_match": true
+      },
+      "data/hour_2012.csv": {
+        "sha256": "d73ae7f2aba616d775b5bccb3540910a9de49fe88e7f5926f7bf0a3fe840602d",
+        "hash_matches": true,
+        "rows_match": true
+      },
+      "data/day_2012.csv": {
+        "sha256": "75c2dd61bc5f8a3cd6ae5c787c74c0fbc1547201d47c5cba878d29f3083f09b6",
+        "hash_matches": true,
+        "rows_match": true
+      }
+    },
+    "reads": [
+      {
+        "logical_name": "workspace/stage_a_snapshot/analysis.py",
+        "sha256": "e22ae01683059c937d53ac0f1342cf8d7ae0b1b0fb8905a680eb35144d3735e6"
+      },
+      {
+        "logical_name": "workspace/model.json",
+        "sha256": "84c6c80033718b1c0b7c0333d90ebe66c0978fd305b44d65ffd5ca9fd6f19a47"
+      },
+      {
+        "logical_name": "workspace/stage_a_snapshot/results.json",
+        "sha256": "69ed17f67e6c6910656cd57a7ab0856c13f40b1f7c63033a33908fcea2af7ccb"
+      },
+      {
+        "logical_name": "input/data-b/INPUT_MANIFEST.json",
+        "sha256": "11b8827f74fc67af3b0e85c06a5e65b24d67ebfbacd7f93b66d3e7c4e24908f7"
+      },
+      {
+        "logical_name": "input/data-b/data/hour_2011.csv",
+        "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115"
+      },
+      {
+        "logical_name": "input/data-b/data/day_2011.csv",
+        "sha256": "a15d6536bae4f15ec0b27ccef8b510a9fd7caf46b2f1dbe1ffd00c6a32920d5b"
+      },
+      {
+        "logical_name": "input/data-b/data/hour_2012.csv",
+        "sha256": "d73ae7f2aba616d775b5bccb3540910a9de49fe88e7f5926f7bf0a3fe840602d"
+      },
+      {
+        "logical_name": "input/data-b/data/day_2012.csv",
+        "sha256": "75c2dd61bc5f8a3cd6ae5c787c74c0fbc1547201d47c5cba878d29f3083f09b6"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "case_id": "D",
+  "stage": "A",
+  "passed": true,
+  "checkpoint": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "findings": [],
+  "all_activities_done": true,
+  "normal_result_and_table_byte_identical": true,
+  "all_four_initial_snapshots_match_initial_current_bytes": true,
+  "invalid_output_absent": true,
+  "portable_resume_read_only_bytes_and_file_and_directory_mtimes": true,
+  "runtime_relative_path": ".agents/skills/_rw-runtime/tools/research.py",
+  "report_unicode_characters": 1972,
+  "execution": {
+    "sha256": "0296831b12c2250abfefd69ad6f25619fa2ceab1d5f5b329af6802d86102cf05",
+    "bytes": 136047
+  },
+  "tool_calls": 22,
+  "final_check_read_audit": {
+    "sha256": "cdc03bbf1f981092537d47d6e1f2374c6702e19927536486045fbe79044c63aa",
+    "bytes": 39173
+  }
+}

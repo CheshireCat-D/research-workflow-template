@@ -1,0 +1,22 @@
+{
+  "name": "P3-stale-global-write",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P3/record-CAS/project/update-state.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P3/record-CAS/project",
+    "--expected-revision",
+    "4",
+    "--patch",
+    "STUDY_ROOT/mechanical-audit/P3/record-CAS/legal.json"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P3/record-CAS/project",
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "{\"error\": \"ValueError\", \"message\": \"Conflict: current metadata revision differs; reread current state\"}\n",
+  "project_identical_bytes_mtime_directory_mtime": true,
+  "changed_files": [],
+  "changed_directories": []
+}

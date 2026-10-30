@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "scope": "All allowed project file bytes, byte lengths, file mtime_ns, directory entries and directory mtime_ns; atime intentionally excluded.",
+  "file_count": 103,
+  "directory_count": 44,
+  "changes": [],
+  "before": "project-before.json",
+  "after": "project-after.json",
+  "excluded_directory_names": [
+    "design",
+    "evals"
+  ],
+  "writes_to_project": []
+}

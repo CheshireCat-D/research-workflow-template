@@ -1,0 +1,93 @@
+{
+  "snapshot": ".history/C-drift/manifest.json",
+  "initial_retained": ".history/A-initial/files/",
+  "unchanged_primary_sha256": {
+    "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+    "bytes": 1494142
+  },
+  "unchanged_calculator_sha256": {
+    "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+    "bytes": 4157
+  },
+  "changed_original_paths": [
+    {
+      "path": "PROJECT.md",
+      "change": "bytes changed",
+      "before": {
+        "sha256": "82756fffd7df67dabf0889f3a8e36996083d043cda78e8266415cb6d915cc6bc",
+        "bytes": 2205
+      },
+      "after": {
+        "sha256": "d0c22d4a5b575701b6f891cb85155634891de89966d244784debac69638cd659",
+        "bytes": 2357
+      }
+    },
+    {
+      "path": "research/state.json",
+      "change": "bytes changed",
+      "before": {
+        "sha256": "3db37390730a05e5da80055fb74e38ee2da9ae914c0be64358ce3cd119fb725a",
+        "bytes": 16515
+      },
+      "after": {
+        "sha256": "60e8182caa623e246749cee8445683655a0a43e71cd0c849cf112c7ee21ce061",
+        "bytes": 19846
+      }
+    },
+    {
+      "path": "results/result.json",
+      "change": "bytes changed",
+      "before": {
+        "sha256": "ba9899e21f4b055f0df61285446a99c73e1415e996a1d22fb08b217e092bb460",
+        "bytes": 704
+      },
+      "after": {
+        "sha256": "aea6ae7f7b6fd3dbd17f9d8816c1cb760bd7cd2ccffa302ad2b00bd585741280",
+        "bytes": 703
+      }
+    },
+    {
+      "path": "results/summary.md",
+      "change": "bytes changed",
+      "before": {
+        "sha256": "66024d7a76f48f8b3bbfee728c97c8bf7a523d7df6edb9ac7eba8f16c4ca5dcc",
+        "bytes": 295
+      },
+      "after": {
+        "sha256": "d4bfd0eaba49bb6a45dc5579ff0d14ad2bbbd3364ea9718f9ea48c6abad298fd",
+        "bytes": 1233
+      }
+    },
+    {
+      "path": "results/table.csv",
+      "change": "bytes changed",
+      "before": {
+        "sha256": "e73ef5b853b25f1d38ad7538f7024f97d54b461d2655f44fd4e62912146ec6f8",
+        "bytes": 101
+      },
+      "after": {
+        "sha256": "7b9ccf7d82c6b5e67cf70bb97342787b7b79b1634a5dd364c86c9557bfb0650d",
+        "bytes": 100
+      }
+    }
+  ],
+  "final_metadata_revision": 4,
+  "record_versions": {
+    "T-SRC": 1,
+    "T-REMOTE": 1,
+    "T-RAW": 1,
+    "T-PARAM": 2,
+    "T-CLAIM": 2,
+    "T-REL": 2,
+    "T-CHOICE": 2,
+    "T-CODE": 1,
+    "T-RESULT": 2,
+    "T-SUMMARY": 2,
+    "T-SOURCE-NOTE": 1,
+    "T-SOURCE-CHECK": 1,
+    "T-CALC": 2,
+    "T-SYNTH": 2
+  },
+  "final_check_exit_code": 0,
+  "mid_check_exit_code": 1
+}

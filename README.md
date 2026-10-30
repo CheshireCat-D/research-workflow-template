@@ -4,6 +4,13 @@
 
 一套面向理工医农、人文社科与法学的本地科研工作流：从研究兴趣、文献定位、创新与候选比较，到最小验证、证明或实验、写作、图件与审阅。九个技能由宿主助手执行实际任务，标准库 Python 工具保存主张、材料、引用、进度和恢复状态。
 
+| 现在想做什么 | 直接入口 |
+|---|---|
+| 开始自己的研究 | 下方一条初始化与接入命令，再向助手说明任务 |
+| 先跑通一个完整案例 | [公开企鹅数据：下载、分析、图件、登记与恢复](examples/public-penguins/README.md) |
+| 查询论文题录并保留检索依据 | [Crossref 元数据检索](skills/rw-literature/references/search-and-library.md) |
+| 判断技能是否实际改善结果 | [固定题目与匿名评分的对照试验](evals/comparison/README.md) |
+
 本仓库维护当前源码、测试和必要的冻结评估证据。面向用户的发行包固定为 `research-workflow-template.zip`，只含当前运行资源、双语指南、许可与来源归属，不含测试、评估过程、开发修改记录或旧版。源码与用户包分别检查，更新由清单和 SHA-256 内容指纹标识；项目数据格式、记录与依赖的必要版本字段继续保留。
 
 ## 开始使用
@@ -13,22 +20,30 @@
 需要 Python 3.11 或更新版本。核心提供 Windows、macOS 与 Linux 本地项目支持；各平台的实际执行记录见[平台核验](docs/11-linux-validation.md)。macOS/Linux 在本目录运行：
 
 ```sh
-python3 tools/research.py init --output ../my-research --title '我的研究问题'
-python3 tools/connect_skills.py install --root ../my-research
-python3 tools/connect_skills.py check --root ../my-research
+python3 tools/research.py init --output ../my-research --title '我的研究问题' --connect-skills
 ```
 
 Windows PowerShell 可运行同一组命令：
 
 ```powershell
-py -3 -X utf8 tools/research.py init --output "../我的研究" --title "我的研究问题"
-py -3 -X utf8 tools/connect_skills.py install --root "../我的研究"
-py -3 -X utf8 tools/connect_skills.py check --root "../我的研究"
+py -3 -X utf8 tools/research.py init --output "../我的研究" --title "我的研究问题" --connect-skills
 ```
 
 先用 `py -3 --version` 确认 Python 为 3.11 或更新版本；若没有 `py` 启动器，把 `py -3` 换成已安装的 `python`。命令中的项目根路径可使用系统惯用路径，登记材料的项目相对路径统一用 `/`。
 
 将输出路径换成尚不存在的新目录。然后在 Codex 等兼容宿主中打开新项目，描述研究兴趣或当前任务即可。已有项目先运行 `resume`。首次接入和显式升级分别保护已有目录与本地修改；不改全局技能或个人完整版。
+
+日常在项目根运行一次 `resume --format markdown` 恢复上下文；用 `show --edit evidence:E1 activity:A1` 一次导出带版本的待修改记录，再用 `register-batch --file EDIT.json --next-action "…"` 一次保存登记、检查点及恢复摘要。已有项目需显式升级项目内运行时后才能使用这些选项。完整命令见[核心用法](docs/07-core-usage.md)。
+
+`--connect-skills` 只把技能接入这个新项目。若报告初始化成功而接入失败，按返回信息修复后对现有项目运行 `connect_skills.py install`，不重复初始化。原来的分步命令仍可使用。
+
+想先看完整产物，可以运行随用户包附带的公开数据案例（联网下载固定的 CC0 输入）：
+
+```sh
+python3 -B examples/public-penguins/run_project.py --output ../penguins-project
+```
+
+它实际生成结果、可编辑图件、研究登记与恢复状态。已有本地 CSV 时可加 `--input FILE` 离线运行；输入是否匹配固定公开数据会单独记录。
 
 也可以让具备本地文件与执行能力的 Agent 先读中文指南，再发送：
 

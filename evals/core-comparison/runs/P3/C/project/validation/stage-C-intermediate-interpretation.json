@@ -1,0 +1,16 @@
+{
+  "saved_new_checkpoint": true,
+  "checkpoint_fresh": true,
+  "old_work_revalidated": false,
+  "changed_paths": [
+    "notes/parameters.json"
+  ],
+  "affected": [
+    "T-CALC",
+    "T-SYNTH"
+  ],
+  "unaffected": [
+    "T-SOURCE-CHECK"
+  ],
+  "reason": "New snapshot captures current drifted files; old completed activities still reference old parameter bytes and therefore remain stale."
+}

@@ -1,0 +1,42 @@
+{
+  "input_sha256": {
+    "TASK.md": "56d7eff3d121991ac8a907a8f285fe822e26e2627715fd2863180aadd96b51cd",
+    "draft.tex": "8550d8ea0188a72384bf5a4d596cdc23b3c8fa58cddeb30350c71adb26a2ba63",
+    "source-manifest.json": "ab51a486e3bed01f34e863a7221c58481d288bef2efde8b7dbb10ef2001994c4",
+    "sources/howard2020-arxiv-v7.pdf": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e",
+    "sources/howard2020-arxiv-v7.txt": "674f6bf98e64159aa294b114ba765f19ee40b5b89f1fab7c25a9419f86f8ce99",
+    "sources/howard2021-arxiv-v9.pdf": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+    "sources/howard2021-arxiv-v9.txt": "7826e3691e725d8017655d2be40aaf1a37c1aa2969b7344f3e0b4060f50141da"
+  },
+  "B": {
+    "alpha": "1/20",
+    "rho": "1/4",
+    "n": 20,
+    "mu": "1/10",
+    "event": "X_1=...=X_20=0 with iid Bernoulli(1/10)",
+    "probability_formula": "(9/10)^20",
+    "probability_exact": "12157665459056928801/100000000000000000000",
+    "probability_decimal": 0.1215766545905693,
+    "boundary_formula": "sqrt(log(800)/2)",
+    "boundary": 1.8281974356819242,
+    "endpoint": 0.09140987178409621,
+    "e8_rational_lower_bound": "42037/45",
+    "analytic_strict_inequalities": true
+  },
+  "C": {
+    "q_equation": "q-log(1+q)=log(400)",
+    "q": 8.211968062068255,
+    "K": 9.211968062068255,
+    "v": 0.25,
+    "rho_opt": 0.030443372174664224,
+    "minimum_formula": "sqrt((1+q)*v)",
+    "minimum": 1.5175612065142756,
+    "finite_grid_minimum": 1.5175612065142754
+  },
+  "EB": {
+    "finite_grid_only": true,
+    "max_log_inequality_excess": 0.0,
+    "tail_budget": "alpha/[2*k*(k+1)] for each sign, k>=1"
+  },
+  "scope": "Exact rational arithmetic and numerical consistency checks; analytic proofs are in report.md."
+}

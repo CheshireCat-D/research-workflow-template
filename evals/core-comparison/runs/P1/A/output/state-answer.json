@@ -1,0 +1,130 @@
+{
+  "case_id": "T",
+  "stage": "A",
+  "active_constraints": {
+    "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "T",
+      "alpha": 0.05,
+      "rho": 1.0,
+      "rho_selection": "fixed-before-observation",
+      "intrinsic_time_grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对当前参数的边界表与摘要，再交作者讨论；未经内容复核不投稿。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "先运行项目内恢复检查并读取当前参数、结果和表；若身份与活动仍新鲜，将 alpha=0.05、rho=1（观察前固定）、v=[0,1,10,100] 的已核对表及摘要交作者讨论。若文件或登记变化，先定位并实质复核 T-CALC/T-SYNTH，再显式更新登记；未经内容复核不投稿。",
+  "changed_or_missing_paths": [],
+  "affected_activities": [],
+  "unaffected_activities": [
+    "T-SOURCE-CHECK",
+    "T-CALC",
+    "T-SYNTH"
+  ],
+  "checkpoint_freshness": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "activity_statuses": [
+    {
+      "id": "T-CALC",
+      "title": "Evaluate supplied calculator and verify current result and companion table",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "T-SOURCE-CHECK",
+      "title": "Verify supplied fixed source identity and card scope",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    },
+    {
+      "id": "T-SYNTH",
+      "title": "Review supplied summary within current claim and verified numeric result",
+      "declared_status": "done",
+      "effective_status": "done",
+      "stale_reasons": []
+    }
+  ],
+  "scientific_scope": "Reproduction of supplied deterministic calculator and bounded arithmetic checks for the four initial parameters only. No new proof, coverage simulation, novelty assessment, human expert approval, or submission.",
+  "scientific_conditions": "scalar l0=1; S and -S controlled for the same nonnegative intrinsic time V; alpha is total two-sided budget; rho fixed before observation",
+  "source_tracking_limits": {
+    "T-SRC": "metadata-only: complete local bytes hashed; PDF header and raw metadata inspected; supplied version identity matched by full SHA; no mathematical pages or theorem proof read",
+    "T-REMOTE": "metadata-only supplied identity, no local copy or live content check",
+    "unregistered_path": "notes/unregistered-scratch.md",
+    "coverage": "Only registered resources and recorded dependencies; URL identity is not live content verification."
+  },
+  "material_paths": {
+    "project_root": "PROJECT_ROOT",
+    "authoritative_configuration": "project.json",
+    "authoritative_registry": "records/registry.json",
+    "parameters": "notes/parameters.json",
+    "numeric_result": "results/result.json",
+    "companion_table": "results/table.csv",
+    "summary": "results/summary.md",
+    "source_card": "notes/source-check.md",
+    "source_identity": "provenance/initial/source-identities.json",
+    "obligations": "provenance/initial/obligations.json",
+    "initial_content_snapshots": "history/stage-a-initial/",
+    "validation": "notes/stage-a-validation.json",
+    "portable_runtime": ".agents/skills/_rw-runtime/",
+    "recovery": "RECOVERY.md"
+  },
+  "numeric_values": [
+    {
+      "v": 0,
+      "boundary": 2.4477468306808166
+    },
+    {
+      "v": 1,
+      "boundary": 3.6563948713638483
+    },
+    {
+      "v": 10,
+      "boundary": 9.606401928868575
+    },
+    {
+      "v": 100,
+      "boundary": 32.73018624234933
+    }
+  ],
+  "normal_run_exit_code": 0,
+  "invalid_run_exit_code": 2,
+  "canonical_preserved_after_invalid": true,
+  "notes": [
+    "Initial project created without replacing any prior directory; no changed/missing tracked paths at final inspection.",
+    "All required logical IDs preserved; companion table registered separately.",
+    "Initial exact four-file bytes retained, not hashes alone.",
+    "Two operational helper exits1 retained and remediated; scientific originals unchanged.",
+    "No human expert review, formal verification, full-source scientific review or external submission occurred."
+  ],
+  "unresolved_scientific_work": [
+    "Author discussion and content review before any submission.",
+    "Underlying theorem and coverage proof not independently assessed."
+  ],
+  "model": null,
+  "temperature": null,
+  "seed": null,
+  "token_usage": null
+}

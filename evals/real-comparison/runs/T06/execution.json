@@ -1,0 +1,232 @@
+{
+  "status": "executed",
+  "requested": {
+    "model_override": null,
+    "reasoning_effort_override": null,
+    "fork_turns": "none",
+    "max_tool_calls": 18,
+    "max_report_characters": 12000
+  },
+  "effective": {
+    "model": null,
+    "reasoning_effort": null,
+    "temperature": null,
+    "seed": null,
+    "output_token_limit": null
+  },
+  "tool_calls": 11,
+  "network_calls": 0,
+  "violations": [],
+  "reads": [
+    {
+      "logical_name": "common/executor.md",
+      "sha256": "316392fda85274a6b9a3ac7150125ef140d35d96edde46759348ef82020239fb",
+      "access": "full"
+    },
+    {
+      "logical_name": "common/execution.template.json",
+      "sha256": "4202f4e551078d2e12ccd1e271ddb0eaba5bac56eb2cccc204cacf1e9b66330e",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/skills/rw-review/SKILL.md",
+      "sha256": "dbc5494a341829bcb64d512757ae7a3432023f8e503a2eefddd67b5496bef0d5",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/skills/rw-validation/SKILL.md",
+      "sha256": "57032551e35cd00a1af5e95c61d14fce20735e9851c090d087237ad595bb67b5",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/skills/rw-literature/SKILL.md",
+      "sha256": "51d279a9b4112977fc346d99ce296a477458eed6b35c26abf10710c955d97a69",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/core/skill-bridge.md",
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "access": "full"
+    },
+    {
+      "logical_name": "guidance/rwt/profiles/methods/formal-theory.md",
+      "sha256": "d8e00be253826fdd6c278890aba49669f12466a8848e60261b6278c65c899f3c",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/theory/TASK.md",
+      "sha256": "56d7eff3d121991ac8a907a8f285fe822e26e2627715fd2863180aadd96b51cd",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/theory/draft.tex",
+      "sha256": "8550d8ea0188a72384bf5a4d596cdc23b3c8fa58cddeb30350c71adb26a2ba63",
+      "access": "full"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2020-arxiv-v7.pdf",
+      "sha256": "e893683657ed89a92173f076e7b132d46300f32ddcf5eb574fa61a3a943b958e",
+      "access": "relevant-sections"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2020-arxiv-v7.txt",
+      "sha256": "674f6bf98e64159aa294b114ba765f19ee40b5b89f1fab7c25a9419f86f8ce99",
+      "access": "relevant-sections"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2021-arxiv-v9.pdf",
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "access": "relevant-sections"
+    },
+    {
+      "logical_name": "input/theory/sources/howard2021-arxiv-v9.txt",
+      "sha256": "7826e3691e725d8017655d2be40aaf1a37c1aa2969b7344f3e0b4060f50141da",
+      "access": "relevant-sections"
+    }
+  ],
+  "commands": [
+    {
+      "outer_tool_call": 1,
+      "command": "cat",
+      "stdin_operation": "Read common executor, execution template, and six prescribed guidance entry files.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 2,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_operation": "Create workspace; hash eight already-read common/guidance files; read and hash TASK.md and draft.tex; inventory sources; save read_log.json and initialization clock.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 3,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_operation": "Hash both source PDFs and text files; initial form-feed page index; read opening text; inspect PDF page counts and metadata with pypdf.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 4,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_operation": "Use PDF PAGE markers; identify relevant pages; print S1 PDF 4-9 and S2 PDF 2-4,8-14.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 5,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_operation": "Read S1 PDF 10-13 and S2 PDF 5,6,9 from supplied full-text extraction.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 6,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_operation": "Locate normal mixture and empirical-Bernstein proofs; read S2 matching PDF pages including 10,12-14,18-19,35.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 7,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_operation": "Read S2 Lemma 2 and Proposition 5, PDF 27-28; extract original PDF 35 directly.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 8,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_operation": "Direct PDF checks of S1 9,12,13 and S2 12,14,28.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 9,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_operation": "Write report.md, audit.md, checks.py and RUN.md; assert report length 7993 at this stage.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 10,
+      "command": "EVAL_PYTHON -I -B WORKSPACE/checks.py --input INPUT_DIR --output WORKSPACE/results",
+      "stdin_operation": "First and only numerical self-check execution; saves initial results.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 10,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_operation": "Independent artifact length/equality inspection and NFKC-normalized original S1 PDF p9 Definition 1 check.",
+      "exit_code": 0
+    },
+    {
+      "outer_tool_call": 11,
+      "command": "EVAL_PYTHON -I -B -",
+      "stdin_operation": "Add self-contained notation; verify original input/guidance hashes unchanged; validate artifacts and report limits; save final execution.json.",
+      "exit_code": 0
+    }
+  ],
+  "duration_seconds": null,
+  "scope": "instruction-only; no OS audit",
+  "failure": null,
+  "analysis_scope": "Manual mathematical audit of constructed memo; relevant source text and direct PDF extraction; exact rational/numerical self-checks; no TeX build or formal prover.",
+  "observed_runtime": "EVAL_PYTHON -I -B",
+  "tool_call_counting": "11 outer functions.exec calls, including this final write; 12 nested exec_command calls.",
+  "duration_note": "Full-turn duration was not instrumented; elapsed time since workspace initialization is recorded separately.",
+  "seconds_since_workspace_initialization": 342.393648147583,
+  "first_result_preserved": "results/checks_results.json",
+  "outputs": {
+    "report.md": {
+      "sha256": "4f17f0013a905dc225cfb3d2367f7621536fa74de419d98114053c55b7e6d8a6",
+      "bytes": 13039
+    },
+    "audit.md": {
+      "sha256": "4f17f0013a905dc225cfb3d2367f7621536fa74de419d98114053c55b7e6d8a6",
+      "bytes": 13039
+    },
+    "checks.py": {
+      "sha256": "5ccd8b370c1cf9486e9a3ee0a459ccd6f94e500ba16a1157e6c0a65bba9e00f6",
+      "bytes": 2716
+    },
+    "RUN.md": {
+      "sha256": "55667576fd0fe728e30b6b4388a24135675247304f946206100dc37bd5f4a8f9",
+      "bytes": 737
+    },
+    "results/checks_results.json": {
+      "sha256": "55fae824bba857c4c3c9be1ecbb665d25f52063e2bd00979641592c3d8670951",
+      "bytes": 1751
+    }
+  },
+  "diagnostics": [
+    {
+      "outer_tool_call": 3,
+      "issue": "Source extraction uses PDF PAGE markers rather than form feeds; initial page-count index yielded one chunk.",
+      "resolution": "Marker-aware indexing used in call 4 and thereafter; actual PDF page counts are 63 and 48."
+    },
+    {
+      "outer_tool_call": 4,
+      "issue": "Displayed output truncated.",
+      "resolution": "Critical definitions, theorem pages, and appendices were read again in focused calls 5-8."
+    },
+    {
+      "outer_tool_call": 8,
+      "issue": "ASCII Definition search missed S1 PDF p9 due to the fi ligature.",
+      "resolution": "Call 10 NFKC-normalized direct original PDF text matched Definition 1 and (2.1)."
+    }
+  ],
+  "report_characters": 8393,
+  "self_checks": {
+    "source_hashes_unchanged": true,
+    "report_under_limit": true,
+    "audit_matches_report": true,
+    "first_numerical_run_exit_code": 0,
+    "numerical_assertions_passed": true,
+    "manual_proofs_in_report": true,
+    "formal_verification_performed": false,
+    "source_fulltext_copied_to_output": false
+  },
+  "publication_projection": {
+    "raw_execution_sha256": "0860d7e5e378d0527c3c7386620fd6ef39444fa5d1e3ce71be67bda2a3afe99a",
+    "changes": [
+      "absolute paths mapped to logical locators"
+    ],
+    "scope": "Administrative labels/locators only; effective unknowns and scientific content retained."
+  }
+}

@@ -1,0 +1,813 @@
+{
+  "case_id": "D",
+  "stage": "C",
+  "commands": [
+    {
+      "argv": [
+        "cat",
+        "STUDY_ROOT/runs/P6/C/REQUEST.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 1
+    },
+    {
+      "argv": [
+        "cat",
+        "INPUT_DIR/PROTOCOL.md",
+        "INPUT_DIR/RECORDING.md",
+        "INPUT_DIR/STAGE-C.md",
+        "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md",
+        "TOOLKIT_ROOT/core/skill-bridge.md",
+        "TOOLKIT_ROOT/core/protocol.md"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 2
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 3,
+      "stdin_description": "List only own project and current input; try root-level revision filenames (absent); no file contents from absent files."
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 4,
+      "stdin_description": "Read current C author files, RECOVER, initial brief/constraints/obligations/source identities, state, three project scripts, parameters, source note, three results. Tool output was truncated; state record subset reread next."
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 5,
+      "stdin_description": "Read state D-CHOICE/D-RESULT/D-TABLE/D-SUMMARY/D-SOURCE-NOTE/three activities and frozen model."
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 6,
+      "stdin_description": "Create output directory and this controller using standard-library Path.write_text; controller full bytes retained."
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/guarded_state_update.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--candidate",
+        "OUTPUT_DIR/drift-checkpoint-save-candidate.json",
+        "--expected-version",
+        "1",
+        "--expected-sha256",
+        "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+        "--reason",
+        "Save drifted snapshot and fresh checkpoint before any recomputation; no material rebind and no activity revalidation"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout_path": "OUTPUT_DIR/drift-checkpoint-save.stdout.json",
+      "stderr_path": "OUTPUT_DIR/drift-checkpoint-save.stderr.txt"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/project_status.py",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 1,
+      "stdout_path": "OUTPUT_DIR/intermediate-check.stdout.json",
+      "stderr_path": "OUTPUT_DIR/intermediate-check.stderr.txt"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/stage_c_driver.py",
+        "snapshot"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 7,
+      "stdin_description": "Execute snapshot driver; actual pre-recomputation status preserved"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 1,
+      "tool_call": 8,
+      "stdin_description": "Attempt controller extension; Python parser rejected nested triple-quoted snippet before executing any writes"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 9,
+      "stdin_description": "Preserve snapshot driver and correct extension quoting; retain preceding failure"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/compute.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--spec",
+        "PROJECT_ROOT/notes/parameters.json",
+        "--output",
+        "PROJECT_ROOT/results-evaluations/C-approved"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout_path": "OUTPUT_DIR/approved-recomputation.stdout.json",
+      "stderr_path": "OUTPUT_DIR/approved-recomputation.stderr.txt"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/guarded_state_update.py",
+        "--root",
+        "PROJECT_ROOT",
+        "--candidate",
+        "OUTPUT_DIR/authorized-state-update-candidate.json",
+        "--expected-version",
+        "2",
+        "--expected-sha256",
+        "d686169299fbbaa8ac8b39f246340f1c931a8b7fb66702d12295bee538b6fc43",
+        "--reason",
+        "Author-authorized Q4 to November–December window change, unchanged frozen model; actual recomputation and summary review completed by AI executor."
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout_path": "OUTPUT_DIR/authorized-state-update.stdout.json",
+      "stderr_path": "OUTPUT_DIR/authorized-state-update.stderr.txt"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "PROJECT_ROOT/scripts/project_status.py",
+        "--root",
+        "PROJECT_ROOT"
+      ],
+      "cwd": "PROJECT_ROOT",
+      "exit_code": 0,
+      "stdout_path": "OUTPUT_DIR/final-check.stdout.json",
+      "stderr_path": "OUTPUT_DIR/final-check.stderr.txt"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "OUTPUT_DIR/stage_c_driver.py",
+        "recompute"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 10,
+      "stdin_description": "Actual authorized recomputation and explicit state revision"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 11,
+      "stdin_description": "Inspect final summary/recovery text, initial snapshots manifest and current record versions/status"
+    },
+    {
+      "argv": [
+        "EVAL_PYTHON",
+        "-I",
+        "-B",
+        "-"
+      ],
+      "cwd": "TASK_WORKSPACE",
+      "exit_code": 0,
+      "tool_call": 12,
+      "stdin_description": "Verify retained history and immutable identities, write final report/state answer, finalize execution and full input/artifact manifests"
+    }
+  ],
+  "reads": [
+    {
+      "path": "OUTPUT_DIR/stage_c_driver.py",
+      "sha256": "a3f044be31acc39c1a7242ed4e3c112fc532987af4c7cb42f3850aad92460fe9",
+      "bytes": 7686,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "STUDY_ROOT/runs/P6/C/REQUEST.md",
+      "sha256": "5923ab6becce1da5a76f13eba49242e3f263009359c9f42c83cffc2e94b30854",
+      "bytes": 2370,
+      "access": "full bytes"
+    },
+    {
+      "path": "INPUT_DIR/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "access": "full bytes"
+    },
+    {
+      "path": "INPUT_DIR/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "access": "full bytes"
+    },
+    {
+      "path": "INPUT_DIR/STAGE-C.md",
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "bytes": 761,
+      "access": "full bytes"
+    },
+    {
+      "path": "INPUT_DIR/author-revision/AUTHOR-REVISION.md",
+      "sha256": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6",
+      "bytes": 1443,
+      "access": "full bytes"
+    },
+    {
+      "path": "INPUT_DIR/author-revision/approved-parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "access": "full bytes"
+    },
+    {
+      "path": "TOOLKIT_ROOT/skills/rw-workflow/SKILL.md",
+      "sha256": "3ea18930017f5a906106f6c8cb40a201b9ee2c3756f089cb5a005189f2f8f4ad",
+      "bytes": 4540,
+      "access": "full bytes"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/skill-bridge.md",
+      "sha256": "2ec77a88527b8b08d102792ca07068e663c981178b0a1a48b80dc702eec8ba8a",
+      "bytes": 7641,
+      "access": "full bytes"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/protocol.md",
+      "sha256": "08f45f324a35342578704b4cf3f68dc6204fe58c27c668daf2f9e15ca626ccc9",
+      "bytes": 3841,
+      "access": "full bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/.gitignore",
+      "sha256": "667251f02f98a2e7fb0aa017bfabcb3158cb09472d88d379ed47e11ca9dde3a7",
+      "bytes": 89,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVER.md",
+      "sha256": "bab3b3d04c66872ae1983f26856e56a95ccd80b6eaca38a789db1a09ce6c7a97",
+      "bytes": 2824,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/rejected-parameters.json",
+      "sha256": "ecd5fb87ac9777ac69da9826a3a32db67821452d1370be9e4dad8c22b4bf56d1",
+      "bytes": 171,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/notes/unregistered-scratch.md",
+      "sha256": "94b599a60094be35e435fde232d56bf24e43c82577bf7308fd91ff5f0a9e266a",
+      "bytes": 132,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/BRIEF.md",
+      "sha256": "e853d4f00362050c89636686592fde0919b52535244182dcd8fd94fd1949db80",
+      "bytes": 1078,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/MANIFEST.json",
+      "sha256": "9ff23869bc925064fdf513ea91deb393ebd664fdc2a2897e7dfcc768b6b52072",
+      "bytes": 2329,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/constraints.json",
+      "sha256": "ddc7c2eb407fee510fd92916fbf8954cebb2a0d816eecca4c48a91e2569d8502",
+      "bytes": 1070,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/obligations.json",
+      "sha256": "bd8dc8f100e5f956be29fbc4252d859ab919b6d174c4d1928b473343e18347c8",
+      "bytes": 4723,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/initial/source-identities.json",
+      "sha256": "e7a0f82557ad807e3c9fd23ca29bdbec28696e5e5c9034fe412f19af69195de5",
+      "bytes": 1200,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-A/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-A/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-A/STAGE-A.md",
+      "sha256": "90d01568162dabb51bcd7a79ec98c802518aa8407414d8ae2769a3c96e6bf3d7",
+      "bytes": 1214,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/commands-A.json",
+      "sha256": "1b84466dea513e1514643b53fbefc77c3512396fb3adab26722a765dbcb07105",
+      "bytes": 16077,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/guard-validation-A.json",
+      "sha256": "04b88fdac1a4b08f30b5f172d0ddf67a8a4d112fe6ffe9e5eea87d1f261daaa9",
+      "bytes": 330,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/initial-snapshots.json",
+      "sha256": "9c6d5ced3ada9f4a8071078abe15756f22ae88c2a7f6baccb74caf20164e8769",
+      "bytes": 527,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/inputs-A.json",
+      "sha256": "86b090d5fae2349d64380c5b426aaab93373be47848bfc527e15a652c0213a9d",
+      "bytes": 11713,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/state.json",
+      "sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "bytes": 19212,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/validation-A.json",
+      "sha256": "b891b76e2b0264ab71feafe5df5144a870c146205690a829e3b89e6da4b92dce",
+      "bytes": 8200,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/guarded_state_update.py",
+      "sha256": "1459933f428b1cde70a7a475e7b41c74d3bd3e91a8a2ad46af821a94fac4206b",
+      "bytes": 2642,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/scripts/project_status.py",
+      "sha256": "2403ad240e0642c67e0de548a817b4d3a72663c551c27f8a8188c6637eaaf7ab",
+      "bytes": 4080,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/notes/parameters.json",
+      "sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "bytes": 171,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/initial/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/records/state.json",
+      "sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "bytes": 19212,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/RECOVER.md",
+      "sha256": "bab3b3d04c66872ae1983f26856e56a95ccd80b6eaca38a789db1a09ce6c7a97",
+      "bytes": 2824,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/data/hour_2011.csv",
+      "sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+      "bytes": 568668,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/notes/parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/scripts/compute.py",
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/model/frozen.json",
+      "sha256": "9642962f82483eded749138c58ead59c51e1aa2c8a7e99c2185ec33474f11025",
+      "bytes": 2320,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/results/result.json",
+      "sha256": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "bytes": 1000,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/results/table.csv",
+      "sha256": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "bytes": 205,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/results/summary.md",
+      "sha256": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528",
+      "bytes": 280,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/notes/source-check.md",
+      "sha256": "34ff621a7c1f7f3ed98baafb8491e5d453aca25c5bea7d3e054c6c52368b2d48",
+      "bytes": 474,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "OUTPUT_DIR/drift-checkpoint-save-candidate.json",
+      "sha256": "24e5cb54999269c52773e5a38a32864ba58a28230bb1c53c6b235fa73a59d0f5",
+      "bytes": 19141,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/state.json",
+      "sha256": "d686169299fbbaa8ac8b39f246340f1c931a8b7fb66702d12295bee538b6fc43",
+      "bytes": 19622,
+      "access": "full bytes"
+    },
+    {
+      "path": "OUTPUT_DIR/stage_c_driver.py",
+      "sha256": "1a8d91aa266a8fc73fcd1078273b5df4a5c7485db5bc60c32b982bc408cc027c",
+      "bytes": 18884,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/results-evaluations/C-approved/result.json",
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999,
+      "access": "full bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/results-evaluations/C-approved/table.csv",
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203,
+      "access": "full bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/results/result.json",
+      "sha256": "04ca95ef6b2a7a8f198c1c7088fadc243541e628f4c8e166fb9076b6129b6d8b",
+      "bytes": 999,
+      "access": "full bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/results/table.csv",
+      "sha256": "35b74ce16971444e982d0d6a5b8f399096c4a2db10c2c131dca4d27237ff7288",
+      "bytes": 203,
+      "access": "full bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/results/summary.md",
+      "sha256": "0c178129e75f928b92f184ecb65231fbb0c96d333e7b43d1089dcc3908bdfe3d",
+      "bytes": 905,
+      "access": "full bytes"
+    },
+    {
+      "path": "OUTPUT_DIR/authorized-state-update-candidate.json",
+      "sha256": "30b7f2b23ae1e44c95f9aa3b69c2b93344e2f6597264bd47aea77e66e428e32c",
+      "bytes": 21755,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/state.json",
+      "sha256": "18acf19e64447854c55c57b369ad4795eade5180d4f268bfbe0c8266a69a42cc",
+      "bytes": 22266,
+      "access": "full bytes"
+    },
+    {
+      "path": "OUTPUT_DIR/stage_c_driver.snapshot.py",
+      "sha256": "a3f044be31acc39c1a7242ed4e3c112fc532987af4c7cb42f3850aad92460fe9",
+      "bytes": 7686,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/RECOVER.md",
+      "sha256": "666302d1b0bdc26d605f635fb4bc814490bb375a16d32ea37188ee9c0889be81",
+      "bytes": 2283,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "OUTPUT_DIR/final-check.stdout.json",
+      "sha256": "20ae9a0c6c248e9459caca664793cd97bbc5e2d10a511e319ca8e158ea1bbeef",
+      "bytes": 5367,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "OUTPUT_DIR/intermediate-check.stdout.json",
+      "sha256": "d7f484d177b2de418297e9988b501d0d13488891df51708b6113ba051862883b",
+      "bytes": 5589,
+      "access": "full bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/authority/v1-d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa.json",
+      "sha256": "d3cfbd73a9db614a5024fbdc975d5817294966562a92c5d3d3951e62c4edfdfa",
+      "bytes": 19212,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/authority/v2-d686169299fbbaa8ac8b39f246340f1c931a8b7fb66702d12295bee538b6fc43.json",
+      "sha256": "d686169299fbbaa8ac8b39f246340f1c931a8b7fb66702d12295bee538b6fc43",
+      "bytes": 19622,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/validation-C.json",
+      "sha256": "680dc9bf34912de58d9f7a536151975e512c44b2930a363a33a3587d368bc93a",
+      "bytes": 2742,
+      "access": "full bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-C/PROTOCOL.md",
+      "sha256": "ec30c4c7de1ac5235f2b91184b98500eeff1d3f289ddf52c232db69543e053b4",
+      "bytes": 2279,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-C/RECORDING.md",
+      "sha256": "979099829be57ab11c0a4d41ba973ae01a130e9b31c110e07c1c2f7e60bad4a8",
+      "bytes": 1300,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-C/STAGE-C.md",
+      "sha256": "de15f16674b40bb17f8e96abab5cbb2989d7b9ed8e3e037d8b7bc789fc99224a",
+      "bytes": 761,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-C/author-revision/AUTHOR-REVISION.md",
+      "sha256": "25499b4afaf90566b42adeff46c85ffd2a86c754a2ad8ca4f8465dc8aeffbfd6",
+      "bytes": 1443,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/provenance/task-C/author-revision/approved-parameters.json",
+      "sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "bytes": 171,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/.edit.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/checkpoint-C-final.json",
+      "sha256": "199bbb0d4a5b12d87e82888cc9faa36364a3d82ea2570d084be542a42623bb5b",
+      "bytes": 2933,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/commands-C.json",
+      "sha256": "76bdf9be427278c573fad8bd52e0876afc95ef8f9ce15082ea1f20e6edd4a4ce",
+      "bytes": 8683,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/drift-checkpoint-C.json",
+      "sha256": "3e77c5b5d884f320e944912b18717e9c1bda618d62179a96db75db66ecc6c611",
+      "bytes": 2918,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/final-check-C.json",
+      "sha256": "20ae9a0c6c248e9459caca664793cd97bbc5e2d10a511e319ca8e158ea1bbeef",
+      "bytes": 5367,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/records/intermediate-check-C.json",
+      "sha256": "d7f484d177b2de418297e9988b501d0d13488891df51708b6113ba051862883b",
+      "bytes": 5589,
+      "access": "full SHA256 bytes"
+    },
+    {
+      "path": "PROJECT_ROOT/snapshots/stage-C-before-recompute/manifest.json",
+      "sha256": "461ae0254f138cf9ccb23f6846bb024c7dfbcfb7f30dbe07bec6eb44619015fe",
+      "bytes": 1532,
+      "access": "full SHA256 bytes"
+    }
+  ],
+  "writes": [
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/records/state.json",
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/RECOVER.md",
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/data/hour_2011.csv",
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/notes/parameters.json",
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/scripts/compute.py",
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/model/frozen.json",
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/results/result.json",
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/results/table.csv",
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/results/summary.md",
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/notes/source-check.md",
+    "PROJECT_ROOT/snapshots/stage-C-before-recompute/manifest.json",
+    "OUTPUT_DIR/drift-checkpoint-save-candidate.json",
+    "OUTPUT_DIR/drift-checkpoint-save.stdout.json",
+    "OUTPUT_DIR/drift-checkpoint-save.stderr.txt",
+    "OUTPUT_DIR/execution.json",
+    "OUTPUT_DIR/intermediate-check.stdout.json",
+    "OUTPUT_DIR/intermediate-check.stderr.txt",
+    "OUTPUT_DIR/intermediate-check.exit.json",
+    "PROJECT_ROOT/provenance/task-C/PROTOCOL.md",
+    "PROJECT_ROOT/provenance/task-C/RECORDING.md",
+    "PROJECT_ROOT/provenance/task-C/STAGE-C.md",
+    "PROJECT_ROOT/provenance/task-C/author-revision/AUTHOR-REVISION.md",
+    "PROJECT_ROOT/provenance/task-C/author-revision/approved-parameters.json",
+    "PROJECT_ROOT/records/intermediate-check-C.json",
+    "PROJECT_ROOT/records/drift-checkpoint-C.json",
+    "OUTPUT_DIR/approved-recomputation.stdout.json",
+    "OUTPUT_DIR/approved-recomputation.stderr.txt",
+    "PROJECT_ROOT/results/result.json",
+    "PROJECT_ROOT/results/table.csv",
+    "PROJECT_ROOT/results/summary.md",
+    "PROJECT_ROOT/records/validation-C.json",
+    "OUTPUT_DIR/validation-C.json",
+    "OUTPUT_DIR/authorized-state-update-candidate.json",
+    "OUTPUT_DIR/authorized-state-update.stdout.json",
+    "OUTPUT_DIR/authorized-state-update.stderr.txt",
+    "PROJECT_ROOT/RECOVER.md",
+    "OUTPUT_DIR/final-check.stdout.json",
+    "OUTPUT_DIR/final-check.stderr.txt",
+    "PROJECT_ROOT/records/commands-C.json",
+    "PROJECT_ROOT/records/checkpoint-C-final.json",
+    "PROJECT_ROOT/records/final-check-C.json",
+    "OUTPUT_DIR/recomputed-result.json",
+    "OUTPUT_DIR/report.md",
+    "OUTPUT_DIR/state-answer.json",
+    "OUTPUT_DIR/inputs-and-artifacts.json"
+  ],
+  "tool_calls": 12,
+  "network_calls": 0,
+  "violations": [],
+  "failures": [
+    {
+      "kind": "expected pre-recomputation validity failure",
+      "exit_code": 1,
+      "output": "intermediate-check.stdout.json",
+      "details": "Fresh checkpoint; changed parameters; D-CALC/D-SYNTH stale; independent D-SOURCE-CHECK done."
+    },
+    {
+      "kind": "controller-preparation syntax error",
+      "tool_call": 8,
+      "exit_code": 1,
+      "stderr": "  File \"<stdin>\", line 79\n    final=status('final-check')\nIndentationError: unexpected indent\n",
+      "impact": "Parse failed before all script execution; no project bytes changed by failed call"
+    }
+  ],
+  "remedies": [
+    {
+      "for": "controller-preparation syntax error",
+      "action": "Replace nested triple-quoted recovery text with a line list; prepare corrected controller before execution",
+      "tool_call": 9
+    },
+    {
+      "for": "pre-recomputation stale activities",
+      "action": "Actual authorized recomputation, metric/table/summary review, explicit affected-record and completion binding updates; final checkpoint saved",
+      "evidence": "final-check.stdout.json"
+    }
+  ],
+  "settings": {
+    "model": null,
+    "temperature": null,
+    "seed": null,
+    "token_budget": null,
+    "system_limit": null
+  }
+}

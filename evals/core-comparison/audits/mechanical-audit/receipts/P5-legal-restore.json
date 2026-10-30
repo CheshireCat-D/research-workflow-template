@@ -1,0 +1,31 @@
+{
+  "name": "P5-legal-restore",
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "STUDY_ROOT/mechanical-audit/P5/file-CAS/project/scripts/manage.py",
+    "--root",
+    "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+    "restore-initial",
+    "notes/parameters.json",
+    "--expected-current",
+    "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+    "--write"
+  ],
+  "cwd": "STUDY_ROOT/mechanical-audit/P5/file-CAS/project",
+  "exit_code": 0,
+  "stdout": "{\"operation\": \"restore-initial\", \"written\": true, \"target\": \"notes/parameters.json\", \"previous_sha256\": \"340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117\", \"restored_sha256\": \"230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67\", \"note\": \"Restoration does not mark activities completed or revise authoritative metadata.\"}\n",
+  "stderr": "",
+  "project_identical_bytes_mtime_directory_mtime": false,
+  "changed_files": [
+    ".research/versions/pre-restore/340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117/notes/parameters.json",
+    "notes/parameters.json"
+  ],
+  "changed_directories": [
+    ".research/versions",
+    ".research/versions/pre-restore",
+    ".research/versions/pre-restore/340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+    ".research/versions/pre-restore/340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117/notes"
+  ]
+}

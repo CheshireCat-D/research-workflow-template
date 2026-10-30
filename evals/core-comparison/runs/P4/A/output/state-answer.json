@@ -1,0 +1,91 @@
+{
+  "case_id": "D",
+  "stage": "A",
+  "active_constraints": {
+    "interest": "在当前指定2011评价范围的实际观察小时上，比较固定C0/C1的MAE、RMSE与偏差；这是描述性时间留出比较，不是因果或任意未来表现保证。",
+    "deadline": "2026-12-15",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "venue": "Undecided; do not invent a target journal",
+    "language": "zh",
+    "current_scope": {
+      "case_id": "D",
+      "evaluation_start": "2011-10-01",
+      "evaluation_end": "2011-12-31",
+      "model_policy": "frozen-2011-Jan-Sep",
+      "metric_weighting": "observed-hour"
+    },
+    "unknowns": [
+      "No human expert approval has occurred",
+      "No external submission authorized"
+    ],
+    "initial_next_action": "核对2011第四季度的冻结模型指标与摘要，再交作者讨论；不重新训练或外推到2012。",
+    "deadline_provenance": "Benchmark author-supplied, not an observed real research deadline"
+  },
+  "next_action": "2011第四季度指标与摘要已逐项核对；下一步由作者讨论该描述性比较的解释与用途。恢复先运行项目内 resume，核对当前 parameters/result/table/summary 及依赖；若有漂移，保留旧字节与原因并复核 D-CALC、D-SYNTH 后显式重登，不重训或外推2012。",
+  "changed_or_missing_paths": [],
+  "affected_activities": [],
+  "unaffected_activities": [
+    "D-SOURCE-CHECK",
+    "D-CALC",
+    "D-SYNTH",
+    "D-INVALID-TEST"
+  ],
+  "checkpoint_freshness": {
+    "recorded": true,
+    "status": "current",
+    "changed": []
+  },
+  "scientific_scope": {
+    "evaluation_start": "2011-10-01",
+    "evaluation_end": "2011-12-31",
+    "observed_hours": 2203,
+    "observed_days": 92,
+    "model_policy": "frozen-2011-Jan-Sep",
+    "metric_weighting": "observed-hour",
+    "no_refit": true,
+    "confidence_interval": null,
+    "human_expert_approval": false,
+    "formal_verification": "not-applicable",
+    "causal_or_future_year_guarantee": false,
+    "prebuilt_provenance": "Supplied by material builder; rerun and compared in this stage"
+  },
+  "source_tracking_limits": {
+    "D-SRC": "Full local 2011 slice parsed; partial coverage of identified original dataset; no remote verification",
+    "D-REMOTE": "Metadata-only DOI identity, no supplied local copy or content binding",
+    "unregistered_paths": [
+      "notes/unregistered-scratch.md"
+    ],
+    "original_full_csv_and_web_counts": "Supplied provenance only; 17379 vs 17389 discrepancy retained",
+    "publication_rule": "Original PDF/CSV only for private research cache. Do not redistribute in the repository; retain identities and project results."
+  },
+  "material_paths": {
+    "project_root": "PROJECT_ROOT",
+    "authoritative_configuration": "project.json",
+    "authoritative_registry": "records/registry.json",
+    "constraints": "context/constraints.json",
+    "source_identities": "context/source-identities.json",
+    "obligations": "context/obligations.json",
+    "initial_snapshots": "history/stage-A-initial",
+    "validation": "validation/stage-A",
+    "recovery": "RECOVERY.md",
+    "normal_rerun": "OUTPUT_DIR/validation-normal"
+  },
+  "controlled_invalid_test": {
+    "exit_code": 2,
+    "error": "ValueError",
+    "message": "evaluation_start must be no later than evaluation_end",
+    "protected_valid_artifacts_unchanged": true,
+    "scientific_failure": false,
+    "output_directory_created": false
+  },
+  "notes": [
+    "Initial stage has no prior checkpoint or revision-induced stale work to compare.",
+    "All required activities have actually been checked; author discussion remains next action.",
+    "Checkpoint current is not scientific certification."
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "format_version": 1,
+  "study_id": "RWT-real-materials-v1",
+  "status": "record-complete",
+  "checked_at_utc": "2026-10-30T00:23:23.501117+00:00",
+  "freeze_sha256": "a4f6b970d95c96a9472ce47265e78a1b70ec0af1783b7b927848a0ac0bfaca48",
+  "record_validation": {
+    "path": "record-validation.json",
+    "sha256": "df6bb525667d25363da123bc878ba04bc6e9a568e635e8e9d7227344354134f1"
+  },
+  "first_attempts_executed": 12,
+  "hidden_replacement_runs": 0,
+  "theory_independent_questions": 1,
+  "theory_replicates_per_arm": 2,
+  "real_data_independent_studies": 1,
+  "data_chains": 3,
+  "human_experts_or_participants": 0,
+  "groups": [
+    {
+      "arm": "baseline",
+      "theory_scores": [
+        100,
+        100
+      ],
+      "theory_maximum_per_trial": 100,
+      "data_a": 50,
+      "data_b": 50,
+      "data_chain": 100,
+      "data_chain_maximum": 100
+    },
+    {
+      "arm": "rwt",
+      "theory_scores": [
+        100,
+        100
+      ],
+      "theory_maximum_per_trial": 100,
+      "data_a": 50,
+      "data_b": 50,
+      "data_chain": 100,
+      "data_chain_maximum": 100
+    },
+    {
+      "arm": "matched",
+      "theory_scores": [
+        100,
+        100
+      ],
+      "theory_maximum_per_trial": 100,
+      "data_a": 50,
+      "data_b": 50,
+      "data_chain": 100,
+      "data_chain_maximum": 100
+    }
+  ],
+  "trials": [
+    {
+      "trial_id": "T01",
+      "task_id": "theory",
+      "arm": "baseline",
+      "replicate": 1,
+      "predecessor": null,
+      "report": {
+        "path": "runs/T01/report.md",
+        "sha256": "3c08114f4573775e9c316b78f60fa47a9b4cc403b1e1b491fab7e699a74f74e2"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/S92c2fa.json",
+        "sha256": "b3db998f02a7ea275b86c42776b3458af7ba09b6702a084a91eb021c9ad348e5"
+      },
+      "submission_id": "S92c2fa",
+      "score": 100,
+      "maximum": 100,
+      "critical_errors": [],
+      "usability_literal": "usable"
+    },
+    {
+      "trial_id": "T02",
+      "task_id": "theory",
+      "arm": "rwt",
+      "replicate": 1,
+      "predecessor": null,
+      "report": {
+        "path": "runs/T02/report.md",
+        "sha256": "a4cb40a155bd5107d53cfac40eaf203abc410fe8b5be275b4ad4077857fd42d9"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/S9e47bf.json",
+        "sha256": "b5c665a4d26d67234428a6be6cd5373cfd86b1ccdeb032864d4b78d25fd173b9"
+      },
+      "submission_id": "S9e47bf",
+      "score": 100,
+      "maximum": 100,
+      "critical_errors": [],
+      "usability_literal": "usable without substantive mathematical revision"
+    },
+    {
+      "trial_id": "T03",
+      "task_id": "theory",
+      "arm": "matched",
+      "replicate": 1,
+      "predecessor": null,
+      "report": {
+        "path": "runs/T03/report.md",
+        "sha256": "8f675f1008ca53dff749216ce135d8431da8af264bbbb386f5cceea6eee53b5c"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/S4a5bb2.json",
+        "sha256": "76265027312f6c2416a6809e62ae70c9f7c3574cacfa7f7554342563184ca627"
+      },
+      "submission_id": "S4a5bb2",
+      "score": 100,
+      "maximum": 100,
+      "critical_errors": [],
+      "usability_literal": "ready-to-use"
+    },
+    {
+      "trial_id": "T04",
+      "task_id": "theory",
+      "arm": "matched",
+      "replicate": 2,
+      "predecessor": null,
+      "report": {
+        "path": "runs/T04/report.md",
+        "sha256": "7d64c3b6e896244508076f2ad1a5fd03ba098cfbeea08acc5be6b759625e5d9a"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/S9f4d01.json",
+        "sha256": "cb62b6c59828f91fbf23ec4e6fa537db2653cd2b6be545cf303310e660e87a1c"
+      },
+      "submission_id": "S9f4d01",
+      "score": 100,
+      "maximum": 100,
+      "critical_errors": [],
+      "usability_literal": "usable"
+    },
+    {
+      "trial_id": "T05",
+      "task_id": "theory",
+      "arm": "baseline",
+      "replicate": 2,
+      "predecessor": null,
+      "report": {
+        "path": "runs/T05/report.md",
+        "sha256": "68dedc503d65e67c9e36253fa32c2d2ee92daf99f718fb687c49b4f41415b24d"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/S113cb0.json",
+        "sha256": "7569641f0692f76c24cb39b3208eb44b8433fb99c3298b548a97529e1a639cbe"
+      },
+      "submission_id": "S113cb0",
+      "score": 100,
+      "maximum": 100,
+      "critical_errors": [],
+      "usability_literal": "ready-to-use"
+    },
+    {
+      "trial_id": "T06",
+      "task_id": "theory",
+      "arm": "rwt",
+      "replicate": 2,
+      "predecessor": null,
+      "report": {
+        "path": "runs/T06/report.md",
+        "sha256": "4f17f0013a905dc225cfb3d2367f7621536fa74de419d98114053c55b7e6d8a6"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/Sdd4c61.json",
+        "sha256": "166acd686e65ad21979866c7517310c6120f151a504f92e66c6873ad0effbbce"
+      },
+      "submission_id": "Sdd4c61",
+      "score": 100,
+      "maximum": 100,
+      "critical_errors": [],
+      "usability_literal": "usable"
+    },
+    {
+      "trial_id": "D01",
+      "task_id": "data-a",
+      "arm": "baseline",
+      "replicate": 1,
+      "predecessor": null,
+      "report": {
+        "path": "runs/D01/report.md",
+        "sha256": "e2c29c0e94d13ff0faea30ac14bfa032623d18c27e2831905d536943d929be57"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/S733011.json",
+        "sha256": "2eb16b98213f66e2526ef4b2352bce90c89c665088e39895e5136073a5a2353e"
+      },
+      "submission_id": "S733011",
+      "score": 50,
+      "maximum": 50,
+      "critical_errors": [],
+      "usability_literal": "usable"
+    },
+    {
+      "trial_id": "D02",
+      "task_id": "data-a",
+      "arm": "rwt",
+      "replicate": 1,
+      "predecessor": null,
+      "report": {
+        "path": "runs/D02/report.md",
+        "sha256": "a27e12ef0cdaa5d3a64a4eee21820fc9431945921bad02d048427c05580c3698"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/Sdfb334.json",
+        "sha256": "4691e3f18b2158e88329bf6ffea5bd772aa734d6f16dc536d5fa18421dd16e16"
+      },
+      "submission_id": "Sdfb334",
+      "score": 50,
+      "maximum": 50,
+      "critical_errors": [],
+      "usability_literal": "usable"
+    },
+    {
+      "trial_id": "D03",
+      "task_id": "data-a",
+      "arm": "matched",
+      "replicate": 1,
+      "predecessor": null,
+      "report": {
+        "path": "runs/D03/report.md",
+        "sha256": "37f9bab62244549f2898aad4d2612bb762bee63f8b94b5960a6e8e14ba0223a6"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/S3f44a8.json",
+        "sha256": "81d9c74d65739dfdbefdad8de6bbabca12eb384ebf05037a532b5b287ef0efbb"
+      },
+      "submission_id": "S3f44a8",
+      "score": 50,
+      "maximum": 50,
+      "critical_errors": [],
+      "usability_literal": "usable"
+    },
+    {
+      "trial_id": "D04",
+      "task_id": "data-b",
+      "arm": "rwt",
+      "replicate": 1,
+      "predecessor": "D02",
+      "report": {
+        "path": "runs/D04/report.md",
+        "sha256": "68fa8a9122156dadbb012aff70f179d73051906f677d32ab21ec0968b60c036e"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/S924971.json",
+        "sha256": "c7ff5cbadce584d89b0686eedae8287b30e395f6ada01b45f3ab2d46837d3bb8"
+      },
+      "submission_id": "S924971",
+      "score": 50,
+      "maximum": 50,
+      "critical_errors": [],
+      "usability_literal": "usable"
+    },
+    {
+      "trial_id": "D05",
+      "task_id": "data-b",
+      "arm": "matched",
+      "replicate": 1,
+      "predecessor": "D03",
+      "report": {
+        "path": "runs/D05/report.md",
+        "sha256": "847f2ebf504b89270f2cf3e4de1817caf64ffa6e0a4238ad86037855ef5b2387"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/S127718.json",
+        "sha256": "0bdee24f594df1aceb2fa45c83b3f971f6e4e6e1e59c8f94d309851fe95d9ad2"
+      },
+      "submission_id": "S127718",
+      "score": 50,
+      "maximum": 50,
+      "critical_errors": [],
+      "usability_literal": "usable"
+    },
+    {
+      "trial_id": "D06",
+      "task_id": "data-b",
+      "arm": "baseline",
+      "replicate": 1,
+      "predecessor": "D01",
+      "report": {
+        "path": "runs/D06/report.md",
+        "sha256": "4ce7fec7be22bf7a148f7f7736ee59bb3424800dede803cd8d9c1dfacf7d7f68"
+      },
+      "primary_adjudication": {
+        "path": "adjudications/Sb68670.json",
+        "sha256": "2d24f1523eb0937f85c1a5723cb56e4cfacd0cbda9a1ff41870ce006e80e2283"
+      },
+      "submission_id": "Sb68670",
+      "score": 50,
+      "maximum": 50,
+      "critical_errors": [],
+      "usability_literal": "usable"
+    }
+  ],
+  "secondary_reviews": {
+    "theory": {
+      "status": "complete",
+      "record": {
+        "path": "audits/theory-consistency-review.json",
+        "sha256": "f30651f0280627012f22e689826b2827bd784a0cef5be8c3f50e0a275dc8f31c"
+      },
+      "scope": "New blinded review without primary scores or group mapping; AI only."
+    },
+    "data": {
+      "status": "complete",
+      "record": {
+        "path": "audits/data-consistency-review.json",
+        "sha256": "d64511f7efd9f2e6a770ef537a6c16be0cf74993dc3812b3f31df9ec040f3260"
+      },
+      "scope": "New blinded review without primary scores or group mapping; AI only."
+    }
+  },
+  "numeric_replay": {
+    "path": "audits/numeric-replay-audit.json",
+    "sha256": "388c6d94d31a9e163c274b542ab161f396b59f83f72383e429fd598515f1d85f"
+  },
+  "burden": {
+    "path": "burden.json",
+    "sha256": "8a83db6df1d43b0d28e398b339184c51eb8539cf5bc1aad638572f0a9fa27e3e"
+  },
+  "preservation": {
+    "path": "audits/preservation-audit.json",
+    "sha256": "17a50bfe8b94293b3bd1185f8804ebe91dd24d41fabd48827247b18109abaf4c"
+  },
+  "primary_publication": {
+    "path": "adjudications/publication.json",
+    "sha256": "fb8b0d1050d29bc65455b374e08b17af199e3b6d522bcbc2b342fbef7d0b1335"
+  },
+  "interpretation": {
+    "observed_research_accuracy_advantage_for_rwt": false,
+    "population_equivalence_established": false,
+    "overall_ranking": null,
+    "effective_model_equality": "not-inferred",
+    "runtime_core_incremental_benefit": "not-tested; RWT delivered plain-file handoffs without project.json/.agents activation",
+    "whole_file_guidance_bytes_are_tokens": false
+  },
+  "corrections_and_deviations": {
+    "anonymous_packet_csv_restoration": {
+      "path": "audits/blind-packet-correction.json",
+      "sha256": "24a61d0995f71ab84688647f941c19c8e1dbb663bd9d11c8c0ceeb819fe03a91"
+    },
+    "initial_grades_preserved": true,
+    "one_primary_data_packet_score_before_and_after": [
+      49,
+      50
+    ],
+    "mutable_read_versions_and_literal_usable_labels": "Record validator accepts distinct SHA versions only for mutable workspace reads and retains exact reviewer usable-label synonyms. New tests guard frozen read conflicts and critical-error gates; original records/scores unchanged.",
+    "design_personal_statistical_guidance_read": "Read-only design-stage deviation disclosed in references/design-provenance.md; not sent to executors/judges.",
+    "execution_deviations": "T01 original wrong-path inventory and progress message retained; no research reply used. Instruction/self-report isolation only.",
+    "organizer_note_publication_projection": "Machine path in design-provenance.md only; original freeze retained and scientific files unchanged."
+  },
+  "limits": [
+    "Only two purposive scenarios; one repeated theory question and three dependent data chains.",
+    "Strong shared protocol and fixed algorithms can reduce marginal guidance differences; not an unrestricted research tournament.",
+    "Execution and adjudication are AI processes with possible shared blind spots; no human certification.",
+    "Host effective model/temperature/seed/token limits unavailable; budgets requested, not enforced.",
+    "No OS access auditing; source fingerprints alone do not prove access isolation.",
+    "Historical public material and constructed draft; no new scientific discovery or field-wide superiority claim.",
+    "Product runtime, prior pilot and personal skill source files preserved; local source evaluation not remotely published."
+  ]
+}

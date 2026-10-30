@@ -1,0 +1,29 @@
+{
+  "deliverable": {
+    "contribution_benchmarks": [],
+    "kind": "undecided",
+    "language": "zh",
+    "venue": "Undecided; do not invent a target journal"
+  },
+  "disciplines": [],
+  "entry_activity": "question",
+  "governance": {
+    "applicability": "unknown",
+    "relevant_requirements": []
+  },
+  "interest": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+  "methods": [],
+  "project_id": "P7f7d33fec3a3404cb09bbea7b8f8419c",
+  "resources": {
+    "available_capabilities": [
+      "local Python standard library",
+      "fixed source cache",
+      "author-provided working notes"
+    ],
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "deadline": "2026-12-15"
+  },
+  "schema_version": "0.1",
+  "title": "固定精度正态混合边界的可恢复数值核对",
+  "workflow_mode": "light"
+}

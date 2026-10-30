@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "study_id": "RWT-core-lifecycle-v1",
+  "freeze_sha256": "bd6922d8655be77ff13941c6bc9ca0ccd578a3dd8e48543a092d173eb1c361f6",
+  "expected_chains": [
+    {
+      "chain_id": "P1",
+      "case_id": "T",
+      "arm": "core"
+    },
+    {
+      "chain_id": "P2",
+      "case_id": "D",
+      "arm": "baseline"
+    },
+    {
+      "chain_id": "P3",
+      "case_id": "T",
+      "arm": "guidance"
+    },
+    {
+      "chain_id": "P4",
+      "case_id": "D",
+      "arm": "core"
+    },
+    {
+      "chain_id": "P5",
+      "case_id": "T",
+      "arm": "baseline"
+    },
+    {
+      "chain_id": "P6",
+      "case_id": "D",
+      "arm": "guidance"
+    }
+  ],
+  "scope": "Two purposive real-material projects; six dependent four-stage chains. Separate content and engineering results.",
+  "publication_projections": {
+    "audits/key-audit.json": {
+      "original_sha256": "7e1606390953400306e9e8af2b311ff12cb53bfc7c47bd85059cbf99d57a7cf1",
+      "public_sha256": "7b916d1664dd5daeb3ac453e3d2460c408336e693e85ce0e6e8271a9f5fab81b",
+      "changes": [
+        "machine-path-redaction"
+      ]
+    }
+  }
+}

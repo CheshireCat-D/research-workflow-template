@@ -1,0 +1,188 @@
+{
+  "case_id": "D",
+  "stage": "B",
+  "project_root": "PROJECT_ROOT",
+  "authority": {
+    "configuration": "project.json",
+    "registry": "records/registry.json",
+    "revision": 22,
+    "record_versions": 1,
+    "current_declared_scope": "2011-10-01 to 2011-12-31; observed-hour; frozen-2011-Jan-Sep",
+    "working_file_scope": "2011-11-01 to 2011-12-31; authorization and rationale unknown"
+  },
+  "active_constraints": {
+    "deadline": "2026-12-15",
+    "deadline_provenance": "given project constraint",
+    "budget": "Offline Python standard library only; no new data collection or model refit",
+    "language": "zh",
+    "venue": null,
+    "no_refit": true,
+    "no_causal_claim": true,
+    "no_2012_extrapolation": true,
+    "human_expert_approval": false,
+    "external_submission_authorized": false,
+    "read_only_stage": true,
+    "private_source_cache_only": true
+  },
+  "next_action": {
+    "first": "Resolve whether the changed evaluation start is intentional and authorized; preserve both parameter versions and actual rationale.",
+    "if_revision_authorized": "In a later write-authorized stage, formally revise parameter/scope/decision records; recalculate with frozen model into a new independent directory; verify canonical result, table and summary; re-review affected activities before explicit re-registration and checkpoint.",
+    "if_accidental": "An authorized writer may select retained old bytes and then verify all bindings.",
+    "not_executed": true
+  },
+  "changed_or_missing_paths": [
+    {
+      "record": "evidence:D-PARAM",
+      "path": "notes/parameters.json",
+      "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "actual_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "kind": "changed"
+    }
+  ],
+  "missing_registered_paths": [],
+  "affected_activities": [
+    {
+      "id": "D-CALC",
+      "declared_status": "done",
+      "effective_status_derived_from_saved_bindings": "stale",
+      "changed_bound_files": [
+        {
+          "path": "notes/parameters.json",
+          "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+          "actual_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+        }
+      ],
+      "depends_on": [],
+      "inputs": [
+        "evidence:D-PARAM",
+        "evidence:D-RAW",
+        "artifact:D-CODE",
+        "decision:D-CHOICE",
+        "artifact:D-MODEL"
+      ],
+      "outputs": [
+        "artifact:D-RESULT",
+        "artifact:D-TABLE"
+      ]
+    },
+    {
+      "id": "D-INVALID-TEST",
+      "declared_status": "done",
+      "effective_status_derived_from_saved_bindings": "stale",
+      "changed_bound_files": [
+        {
+          "path": "notes/parameters.json",
+          "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+          "actual_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+        }
+      ],
+      "depends_on": [],
+      "inputs": [
+        "evidence:D-INVALID-PARAM",
+        "artifact:D-CODE"
+      ],
+      "outputs": [
+        "artifact:D-VALIDATION"
+      ]
+    },
+    {
+      "id": "D-SYNTH",
+      "declared_status": "done",
+      "effective_status_derived_from_saved_bindings": "stale",
+      "changed_bound_files": [
+        {
+          "path": "notes/parameters.json",
+          "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+          "actual_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+        }
+      ],
+      "depends_on": [
+        "D-CALC"
+      ],
+      "inputs": [
+        "statement:D-CLAIM",
+        "artifact:D-RESULT",
+        "artifact:D-TABLE"
+      ],
+      "outputs": [
+        "artifact:D-SUMMARY"
+      ]
+    }
+  ],
+  "unaffected_activities": [
+    {
+      "id": "D-SOURCE-CHECK",
+      "declared_status": "done",
+      "effective_status_derived_from_saved_bindings": "done",
+      "changed_bound_files": [],
+      "depends_on": [],
+      "inputs": [
+        "source:D-SRC",
+        "evidence:D-RAW"
+      ],
+      "outputs": [
+        "artifact:D-SOURCE-NOTE",
+        "artifact:D-SOURCE-VERIFICATION"
+      ]
+    }
+  ],
+  "checkpoint_freshness": {
+    "recorded_at": "2026-10-30T01:47:24.754327+00:00",
+    "config_matches": true,
+    "records_match": true,
+    "local_files_match": false,
+    "status": "stale"
+  },
+  "scientific_scope": {
+    "claim": "Observed-hour descriptive frozen C0/C1 comparison in declared 2011 range",
+    "old_results_period": "2011-10-01 to 2011-12-31",
+    "old_observed_hours": 2203,
+    "old_observed_days": 92,
+    "old_results_are_not_new_range_results": true,
+    "scientific_validity": "not-assessed",
+    "current_stage_recalculation": false,
+    "negative_test": "Historical expected exit 2; effective registration stale through D-VALIDATION normal-result dependencies, not evidence of scientific failure."
+  },
+  "source_tracking_limits": {
+    "tracked_local_files": 11,
+    "D-SRC": "Supplied 2011 slice only; current bytes checked; no remote reacquisition",
+    "D-REMOTE": "metadata-only; no local content binding or remote check",
+    "scratch": "notes/unregistered-scratch.md unregistered; no activity dependency; not automatically monitored",
+    "unregistered_dependencies": "Not automatically covered",
+    "original_csv_pdf": "Private cache; not redistributed"
+  },
+  "material_paths": [
+    "project.json",
+    "records/registry.json",
+    "context/constraints.json",
+    "context/obligations.json",
+    "context/source-identities.json",
+    "history/stage-A-initial/notes/parameters.json",
+    "notes/parameters.json",
+    "data/hour_2011.csv",
+    "model/frozen.json",
+    "scripts/compute.py",
+    "results/result.json",
+    "results/table.csv",
+    "results/summary.md",
+    "notes/source-check.md",
+    "validation/stage-A/comparison.json",
+    "validation/stage-A/source-verification.json"
+  ],
+  "preservation": {
+    "file_count_before": 107,
+    "file_count_after": 107,
+    "directory_count": 45,
+    "changed_files": [],
+    "directories_identical_mtime_and_paths": true,
+    "content_rechecked_count": 106,
+    "forbidden_content_not_reread": [
+      "PROJECT_ROOT/.agents/skills/_rw-runtime/design/catalog.json"
+    ]
+  },
+  "notes": [
+    "Official resume failed with exit 2 because catalog access was blocked by stage exclusion; manual inspection is not full CLI/schema validation.",
+    "One forbidden installed design/catalog.json was inadvertently read for SHA during initial inventory; recorded in execution violations, content not used.",
+    "No project modifications or scientific next action executed."
+  ]
+}

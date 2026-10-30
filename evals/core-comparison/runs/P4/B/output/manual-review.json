@@ -1,0 +1,118 @@
+{
+  "revision": 22,
+  "project_id": "P429d69ff49bc4160bf1b573ea3b3676e",
+  "registered_file_count": 11,
+  "file_changes": [
+    {
+      "record": "evidence:D-PARAM",
+      "path": "notes/parameters.json",
+      "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+      "actual_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864",
+      "kind": "changed"
+    }
+  ],
+  "record_binding_changes": [],
+  "activities": [
+    {
+      "id": "D-CALC",
+      "declared_status": "done",
+      "effective_status_derived_from_saved_bindings": "stale",
+      "changed_bound_files": [
+        {
+          "path": "notes/parameters.json",
+          "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+          "actual_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+        }
+      ],
+      "depends_on": [],
+      "inputs": [
+        "evidence:D-PARAM",
+        "evidence:D-RAW",
+        "artifact:D-CODE",
+        "decision:D-CHOICE",
+        "artifact:D-MODEL"
+      ],
+      "outputs": [
+        "artifact:D-RESULT",
+        "artifact:D-TABLE"
+      ]
+    },
+    {
+      "id": "D-INVALID-TEST",
+      "declared_status": "done",
+      "effective_status_derived_from_saved_bindings": "stale",
+      "changed_bound_files": [
+        {
+          "path": "notes/parameters.json",
+          "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+          "actual_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+        }
+      ],
+      "depends_on": [],
+      "inputs": [
+        "evidence:D-INVALID-PARAM",
+        "artifact:D-CODE"
+      ],
+      "outputs": [
+        "artifact:D-VALIDATION"
+      ]
+    },
+    {
+      "id": "D-SOURCE-CHECK",
+      "declared_status": "done",
+      "effective_status_derived_from_saved_bindings": "done",
+      "changed_bound_files": [],
+      "depends_on": [],
+      "inputs": [
+        "source:D-SRC",
+        "evidence:D-RAW"
+      ],
+      "outputs": [
+        "artifact:D-SOURCE-NOTE",
+        "artifact:D-SOURCE-VERIFICATION"
+      ]
+    },
+    {
+      "id": "D-SYNTH",
+      "declared_status": "done",
+      "effective_status_derived_from_saved_bindings": "stale",
+      "changed_bound_files": [
+        {
+          "path": "notes/parameters.json",
+          "expected_sha256": "16a467c8e7004e611dcd1c94498b9c769a1b07bd5ad534fb7571e0da18b0c837",
+          "actual_sha256": "86afdf878f53587677cd4913aee2389558f87f0784ab2c079f888e362524e864"
+        }
+      ],
+      "depends_on": [
+        "D-CALC"
+      ],
+      "inputs": [
+        "statement:D-CLAIM",
+        "artifact:D-RESULT",
+        "artifact:D-TABLE"
+      ],
+      "outputs": [
+        "artifact:D-SUMMARY"
+      ]
+    }
+  ],
+  "checkpoint": {
+    "recorded_at": "2026-10-30T01:47:24.754327+00:00",
+    "config_matches": true,
+    "records_match": true,
+    "local_files_match": false,
+    "status": "stale"
+  },
+  "preservation": {
+    "file_count_before": 107,
+    "file_count_after": 107,
+    "directory_count": 45,
+    "changed_files": [],
+    "directories_identical_mtime_and_paths": true,
+    "content_rechecked_count": 106,
+    "forbidden_content_not_reread": [
+      "PROJECT_ROOT/.agents/skills/_rw-runtime/design/catalog.json"
+    ]
+  },
+  "scope": "Manual JSON and hash inspection after resume was blocked by excluded catalog access; no schema/catalog validation and no scientific recalculation."
+}

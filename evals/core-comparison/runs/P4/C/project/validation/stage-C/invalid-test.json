@@ -1,0 +1,38 @@
+{
+  "negative_test": {
+    "expected_exit": 2,
+    "actual_exit": 2,
+    "output_absent": true,
+    "canonical_unchanged": true,
+    "canonical_before_sha256": {
+      "results/result.json": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "results/table.csv": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "results/summary.md": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+    },
+    "canonical_after_sha256": {
+      "results/result.json": "1433bce2c8bf9ea3987ded161c54473b1077bd5468a31401e0fafef62ae4cd2b",
+      "results/table.csv": "16546638515b312d868bb007f2f9db32a161ec78621494bd94266ee0b1e2c589",
+      "results/summary.md": "e32b0cf9bfd7e8d9c8ac9a88128cfaeb5b9ad203fdfaa3b700e62b07faba9528"
+    },
+    "error": "{\"passed\": false, \"error\": \"ValueError\", \"message\": \"evaluation_start must be no later than evaluation_end\"}\n"
+  },
+  "command": {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "PROJECT_ROOT/scripts/compute.py",
+      "--root",
+      "PROJECT_ROOT",
+      "--output",
+      "PROJECT_ROOT/validation/stage-C/invalid-output",
+      "--spec",
+      "PROJECT_ROOT/notes/rejected-parameters.json"
+    ],
+    "cwd": "PROJECT_ROOT",
+    "exit_code": 2,
+    "stdout": "04-controlled-invalid-recheck.stdout",
+    "stderr": "04-controlled-invalid-recheck.stderr"
+  },
+  "scope": "Expected invalid start-after-end rejection; successful negative-input test, not a scientific-analysis failure."
+}

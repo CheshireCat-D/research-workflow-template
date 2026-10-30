@@ -1,0 +1,161 @@
+{
+  "case_id": "T",
+  "stage": "C",
+  "actor": "AI execution; no human expert approval",
+  "authorization": "provenance/stage-c/AUTHOR-REVISION.md",
+  "scope": {
+    "case_id": "T",
+    "alpha": 0.05,
+    "rho": 4.0,
+    "rho_selection": "fixed-before-observation",
+    "intrinsic_time_grid": [
+      0,
+      1,
+      10,
+      100
+    ]
+  },
+  "pre_recompute": {
+    "resume_exit": 1,
+    "checkpoint_saved": true,
+    "checkpoint_after_save": "current",
+    "check_exit": 1,
+    "still_changed": [
+      "notes/parameters.json"
+    ],
+    "stale_activities": [
+      "T-CALC",
+      "T-SYNTH"
+    ],
+    "unaffected_done": [
+      "T-SOURCE-CHECK"
+    ],
+    "saving_is_reverification": false,
+    "raw_outputs": [
+      "validation/stage-c/resume.json",
+      "validation/stage-c/checkpoint-drift.json",
+      "validation/stage-c/check-drift.json"
+    ]
+  },
+  "execution": {
+    "argv": [
+      "EVAL_PYTHON",
+      "-I",
+      "-B",
+      "STUDY_ROOT/runs/P1/project/scripts/compute.py",
+      "--root",
+      "STUDY_ROOT/runs/P1/project",
+      "--output",
+      "STUDY_ROOT/runs/P1/project/validation/stage-c/rho4"
+    ],
+    "cwd": "STUDY_ROOT/runs/P1/project",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"result\": \"STUDY_ROOT/runs/P1/project/validation/stage-c/rho4/result.json\", \"parameters_sha256\": \"340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117\"}\n",
+    "stderr": ""
+  },
+  "numerical_checks": {
+    "parameters_match_approval": true,
+    "result_scope": true,
+    "grid": true,
+    "independent_equivalent_formula": true,
+    "csv_rows_match_json": true,
+    "v0_check": true,
+    "parameter_sha": true,
+    "calculator_sha": true
+  },
+  "expected_equivalent_formula": [
+    {
+      "v": 0,
+      "boundary": 4.895493661361633
+    },
+    {
+      "v": 1,
+      "boundary": 5.57431973357386
+    },
+    {
+      "v": 10,
+      "boundary": 10.070709270872976
+    },
+    {
+      "v": 100,
+      "boundary": 31.015388968276124
+    }
+  ],
+  "computed_values": [
+    {
+      "v": 0,
+      "boundary": 4.895493661361633
+    },
+    {
+      "v": 1,
+      "boundary": 5.57431973357386
+    },
+    {
+      "v": 10,
+      "boundary": 10.070709270872976
+    },
+    {
+      "v": 100,
+      "boundary": 31.015388968276124
+    }
+  ],
+  "summary_review": {
+    "read": true,
+    "params_grid_match": true,
+    "v10_rounding": true,
+    "no_post_observation_rho": true,
+    "scope_preserved": true
+  },
+  "immutable_before": {
+    "sources/howard2021-arxiv-v9.pdf": {
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "notes/source-check.md": {
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    "project.json": {
+      "sha256": "524d57b3666e1ec2ca0224b04c33fd4b8f116e8bec20adb9ddf37619f8b80e5d",
+      "bytes": 995
+    }
+  },
+  "immutable_after": {
+    "sources/howard2021-arxiv-v9.pdf": {
+      "sha256": "eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8",
+      "bytes": 1494142
+    },
+    "scripts/compute.py": {
+      "sha256": "e7b2f754ed7a449ee76a45c80ce3888a36be20f5c783f9a67c630fc7c25c74a1",
+      "bytes": 4157
+    },
+    "notes/source-check.md": {
+      "sha256": "41e17f5b9a82cbe6bbc712756791b1f627ac17b155b600381423b78c89fc9c7d",
+      "bytes": 521
+    },
+    "project.json": {
+      "sha256": "524d57b3666e1ec2ca0224b04c33fd4b8f116e8bec20adb9ddf37619f8b80e5d",
+      "bytes": 995
+    }
+  },
+  "preserved_old_content": [
+    "history/stage-a-initial",
+    "history/stage-c-before-recompute"
+  ],
+  "independent_source_branch": "Source identity/card inputs unchanged; T-SOURCE-CHECK not replaced or rerun. PDF hashed only, no theorem pages read.",
+  "failures": [
+    {
+      "operation": "First input inspection used incorrect direct input/AUTHOR-REVISION.md path",
+      "exit_code": 1,
+      "error": "FileNotFoundError",
+      "remedy": "Read observed input/author-revision/AUTHOR-REVISION.md; source bytes not changed."
+    }
+  ],
+  "checkpoint_shorthand_correction": "Original interim checkpoint informal T1/T2/T5/T6/T3 wording retained in raw history; canonical IDs are used in authoritative records.",
+  "scope_limits": "Equivalent-form arithmetic and file comparisons cover four values only; not coverage proof, simulation, full source review, human expert approval or submission authorization.",
+  "next_action": "将rho=4的边界表与更新摘要交作者内容复核；暂不扩展到事后选择rho。"
+}

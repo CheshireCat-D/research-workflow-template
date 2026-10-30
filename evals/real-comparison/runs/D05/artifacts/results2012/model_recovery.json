@@ -1,0 +1,53 @@
+{
+  "format": "calendar-mean-v1",
+  "frozen_at": "2011-09-30 end of day",
+  "training_start": "2011-01-01",
+  "training_end": "2011-09-30",
+  "training_rows": 6442,
+  "training_dates": 273,
+  "training_input_sha256": "294d25e98ef1c9c9cec746e17ba3ff9818627ba5aa14baf1b93db7ae218de115",
+  "predictors": {
+    "C0": [
+      "hr"
+    ],
+    "C1": [
+      "workingday",
+      "hr"
+    ]
+  },
+  "prediction_rule": "arithmetic training mean; unseen C1 group falls back to C0; no rounding",
+  "model_sha256": "dba591a44fff2d14514b4b38d00c8985e93f41cf2b1ab684a6abd2f2620d078d",
+  "parameter_groups": {
+    "C0": 24,
+    "C1": 48
+  },
+  "training_count_total": 930102,
+  "all_72_sums_counts_means_verified": true,
+  "C0_n_range": [
+    247,
+    273
+  ],
+  "C1_n_range": [
+    75,
+    189
+  ],
+  "parameter_examples": {
+    "C0_08": {
+      "sum": 70327,
+      "n": 271,
+      "mean": 259.5092250922509
+    },
+    "C1_0_08": {
+      "sum": 6299,
+      "n": 84,
+      "mean": 74.98809523809524
+    },
+    "C1_1_08": {
+      "sum": 64028,
+      "n": 187,
+      "mean": 342.39572192513367
+    }
+  },
+  "parameter_update": false,
+  "2012_used_to_recover_parameters": false
+}

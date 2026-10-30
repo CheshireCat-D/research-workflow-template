@@ -1,0 +1,160 @@
+{
+  "case_id": "T",
+  "stage": "B",
+  "active_constraints": {
+    "question": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+    "language": "zh",
+    "deadline": "2026-12-15",
+    "deadline_provenance": "organizer-supplied",
+    "offline_stdlib_only": true,
+    "no_new_data_or_refit": true,
+    "venue": "undecided",
+    "human_expert_approval": false,
+    "external_submission_authorized": false,
+    "private_original_source_no_redistribution": true,
+    "scientific_conditions": [
+      "scalar l0=1",
+      "S and -S controlled for same nonnegative V",
+      "alpha is total two-sided budget",
+      "rho fixed before observation"
+    ],
+    "working_parameters": {
+      "alpha": 0.05,
+      "rho": 4,
+      "rho_selection": "fixed-before-observation",
+      "grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    },
+    "registered_verified_parameters": {
+      "alpha": 0.05,
+      "rho": 1,
+      "grid": [
+        0,
+        1,
+        10,
+        100
+      ]
+    }
+  },
+  "authoritative_state": {
+    "configuration": "project.json",
+    "registry": "records/registry.json",
+    "revision": 26,
+    "current_parameter_record_version": 1,
+    "new_rho_decision_or_rationale_found": false,
+    "notes_override_authority": false
+  },
+  "next_action": {
+    "current_stage": "Deliver external read-only findings; no project repair, recalculation, rebinding, registration or checkpoint.",
+    "future_authorized_write_stage": [
+      "Preserve current rho=4 content and determine intended author revision and rationale; do not blindly revert.",
+      "If rho=4 confirmed, rerun existing calculator into a new independent directory and reconcile result/table/summary.",
+      "Substantively recheck T-CALC then T-SYNTH, use current versions and official replacement registration, checkpoint only afterward."
+    ]
+  },
+  "changed_or_missing_paths": {
+    "changed": [
+      {
+        "path": "notes/parameters.json",
+        "bytes": 161,
+        "previous_sha256": "230aea31e1afab3553088d8a6ff08e36a9155828c775681f69737c79b7c39b67",
+        "current_sha256": "340d3d94ab2386c9716d3fb134933347adaf630424483a7206abca8074cda117",
+        "semantic_change": {
+          "rho": [
+            1,
+            4
+          ]
+        },
+        "retained_old_content": "history/stage-a-initial/notes/parameters.json"
+      }
+    ],
+    "missing_checkpoint_bound_paths": [],
+    "unchanged_but_no_longer_current": [
+      "results/result.json",
+      "results/table.csv",
+      "results/summary.md"
+    ]
+  },
+  "affected_activities": [
+    {
+      "id": "T-CALC",
+      "declared_status": "done",
+      "effective_status": "stale",
+      "impact": "direct T-PARAM input drift"
+    },
+    {
+      "id": "T-SYNTH",
+      "declared_status": "done",
+      "effective_status": "stale",
+      "impact": "transitive dependency T-CALC and inherited parameter binding"
+    }
+  ],
+  "unaffected_activities": [
+    {
+      "id": "T-SOURCE-CHECK",
+      "declared_status": "done",
+      "effective_status": "done",
+      "scope": "fixed PDF identity and supplied card only; no mathematical content audit"
+    }
+  ],
+  "checkpoint_freshness": {
+    "recorded": true,
+    "created_at": "2026-10-30T01:06:52.542533+00:00",
+    "status": "stale",
+    "changed": [
+      "local-files"
+    ],
+    "configuration_matches": true,
+    "checkpoint_bound_local_files": 15,
+    "changed_checkpoint_files": 1,
+    "missing_checkpoint_files": 0,
+    "saved_next_action_condition_met": false
+  },
+  "scientific_scope": {
+    "assessed": "file identity, current versus historical parameter/result consistency, recorded dependency state",
+    "not_assessed": [
+      "new rho=4 calculation",
+      "proof correctness",
+      "coverage theorem",
+      "simulation coverage",
+      "novelty",
+      "human expert review",
+      "submission readiness"
+    ],
+    "scientific_validity": "not-assessed",
+    "drift_is_theorem_falsification": false,
+    "historical_claim_assessment_scope": "four initial rho=1 numeric points only"
+  },
+  "source_tracking_limits": {
+    "T-SRC": "local full-file hash matches supplied identity; no mathematical pages inspected",
+    "T-REMOTE": "metadata-only source identity, no local binding or live remote check",
+    "unregistered_scratch": "notes/unregistered-scratch.md not in automatic coverage; current bytes separately hashed, equal initial supplied manifest",
+    "coverage": "15 registered local files; this stage also inventories all allowed project files, without expanding automatic registry coverage"
+  },
+  "material_paths": {
+    "project_root": "PROJECT_ROOT",
+    "configuration": "project.json",
+    "registry": "records/registry.json",
+    "working_parameters": "notes/parameters.json",
+    "original_parameters": "history/stage-a-initial/notes/parameters.json",
+    "result": "results/result.json",
+    "table": "results/table.csv",
+    "summary": "results/summary.md",
+    "source": "sources/howard2021-arxiv-v9.pdf",
+    "source_note": "notes/source-check.md",
+    "constraints": "provenance/initial/constraints.json",
+    "obligations": "provenance/initial/obligations.json",
+    "resume_output": "resume.stdout.txt",
+    "checkpoint_comparison": "checkpoint-comparison.json"
+  },
+  "notes": [
+    "Read-only resume exit1 reports expected review-needed findings, no structural errors or warnings.",
+    "Installed-only integrity exit0; no source version comparison.",
+    "No new scientific calculator execution or project registration was performed.",
+    "Project preservation verification is in project-readonly-verification.json."
+  ]
+}

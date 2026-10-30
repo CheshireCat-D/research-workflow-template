@@ -1,0 +1,134 @@
+{
+  "argv": [
+    "EVAL_PYTHON",
+    "-I",
+    "-B",
+    "-"
+  ],
+  "tool_argv": [
+    "TOOLKIT_ROOT/tools/research.py",
+    "resume",
+    "--root",
+    "PROJECT_ROOT"
+  ],
+  "cwd": "TASK_WORKSPACE",
+  "exit_code": 2,
+  "denied": [
+    {
+      "event": "open",
+      "path": "TOOLKIT_ROOT/design/catalog.json"
+    }
+  ],
+  "reads": [
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/__future__.cpython-312.pyc",
+      "bytes": 4812,
+      "sha256": "172afe8c65e4756d5fd7037e4771124af67ae31ef283f6518719b4eccfadc4fd"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/_compression.cpython-312.pyc",
+      "bytes": 7586,
+      "sha256": "d431486229d255f3177a1284e643abc5ac8bcc6bb9edce883a1cb0187858f571"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/_weakrefset.cpython-312.pyc",
+      "bytes": 11845,
+      "sha256": "85c90001bce52730914629247affcc0fa9f31a283f8eaa1507be9b565225ca8b"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/argparse.cpython-312.pyc",
+      "bytes": 101126,
+      "sha256": "b38f90f3c0abe2f721860cfdf462dfd697ec84c7dd1ea3c541ea1186ec87d249"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/bz2.cpython-312.pyc",
+      "bytes": 15241,
+      "sha256": "0348ede096afba44cbeeffe49c615edf0c9fcb8e7ff72a64216e30185fe0c1c4"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/copy.cpython-312.pyc",
+      "bytes": 9865,
+      "sha256": "300e0c129e82ba0539fd3d8e062f099b1075dda1ef1f2aedd32536b9986277a6"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/datetime.cpython-312.pyc",
+      "bytes": 517,
+      "sha256": "bb758523fb9b11f1dc49b85c5ef69c9b2396f0431d4ba9da6c670971c5ca617d"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/gettext.cpython-312.pyc",
+      "bytes": 21891,
+      "sha256": "277e07bf8f5f84dc45b511890e4003e0e4707542f73646e7d04ae7e82d08909f"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/locale.cpython-312.pyc",
+      "bytes": 59596,
+      "sha256": "50eb78bcc41e648e61823e9d094178ea41638d9b4fd9fafa99345b324a33638f"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/lzma.cpython-312.pyc",
+      "bytes": 15963,
+      "sha256": "44809775131fed77c4983e81e4f69a712afb4f47656f583e55b289faa5f03feb"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/pkgutil.cpython-312.pyc",
+      "bytes": 19995,
+      "sha256": "5e48577fb28407fb2396feaa164c13c04b0b6d2c5ae04810927e32a24e1bee09"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/shutil.cpython-312.pyc",
+      "bytes": 65423,
+      "sha256": "3e1083ba0aae1ba436dd0e1037e8796b9f84aa9677775cade841e9d55bbd46d3"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/typing.cpython-312.pyc",
+      "bytes": 142494,
+      "sha256": "64f521057c9cff96af9dd8f8c5c6c87f2e95c68c47790ab12bb2e4438dc19631"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/uuid.cpython-312.pyc",
+      "bytes": 33094,
+      "sha256": "765fc8dc438e71675ce4c249a935ba63fdf8ebfefb55808956dffebd661c6148"
+    },
+    {
+      "path": "SHARED_RUNTIME_CACHE/codex-primary-runtime/dependencies/python/lib/python3.12/__pycache__/weakref.cpython-312.pyc",
+      "bytes": 31319,
+      "sha256": "1938b3d769a8aab5af0a9a69cd7bd1a9c7bbe516f7cab862f65644fa9227ea5c"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/__init__.py",
+      "bytes": 596,
+      "sha256": "747401e8a3ec02843d8ab825c1322b786a8c0e39a13d6d28affc57bbd4d3fd04"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/bundle.py",
+      "bytes": 28639,
+      "sha256": "3e2c08eba1ab540de1d0a807ffa5bafb0acd46a2bf00056f803554ec83de8cfa"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/cli.py",
+      "bytes": 13573,
+      "sha256": "62519288f0573073f3b1be69de8e7c1537f038d9ccf40bae5fa53005c1f9c3fb"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/model.py",
+      "bytes": 16884,
+      "sha256": "688608c8ec499ee930ba32cdc7e84d1655665966c5abe76d750e7bd8dec68e31"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/project.py",
+      "bytes": 27732,
+      "sha256": "6cd8d83a195565d512ee5d2e74a880d09adfdd60a850395cfcfee8f3e18796f5"
+    },
+    {
+      "path": "TOOLKIT_ROOT/core/storage.py",
+      "bytes": 10394,
+      "sha256": "dc84e24536f6d3dc93762c414b334ac24765cbad41fc48bda05f5626a577c9d8"
+    },
+    {
+      "path": "TOOLKIT_ROOT/tools/research.py",
+      "bytes": 405,
+      "sha256": "fd83721f2cd0c5d7709af56599428b0745374b715ab1988d8f6863070604726b"
+    }
+  ]
+}

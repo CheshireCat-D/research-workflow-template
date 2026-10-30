@@ -1,0 +1,157 @@
+{
+  "case_id": "T",
+  "storage_contract": "Any equivalent durable representation is accepted. These entity labels/IDs are common task semantics, not a required product JSON schema.",
+  "nodes": [
+    {
+      "id": "T-SRC",
+      "entity": "source",
+      "meaning": "Primary real source identity from source-identities.json; record actual access scope"
+    },
+    {
+      "id": "T-REMOTE",
+      "entity": "source",
+      "meaning": "Source identity only; no supplied local copy or live content inspection"
+    },
+    {
+      "id": "T-RAW",
+      "entity": "local material",
+      "path": "sources/howard2021-arxiv-v9.pdf",
+      "source": "T-SRC",
+      "meaning": "Immutable primary local material and its full SHA"
+    },
+    {
+      "id": "T-PARAM",
+      "entity": "local material",
+      "path": "notes/parameters.json",
+      "meaning": "Author working parameters; a separate local material, not the original paper/dataset"
+    },
+    {
+      "id": "T-CLAIM",
+      "entity": "statement",
+      "meaning": "对规定 sub-Gaussian 过程，固定 alpha 和预先选定 rho 的 normal-mixture 边界可按所给公式计算；本项目只核对当前指定参数的数值，不重做理论证明。",
+      "scope": "Current declared parameters and supplied sources only"
+    },
+    {
+      "id": "T-REL",
+      "entity": "relation",
+      "from": "T-PARAM",
+      "to": "T-CLAIM",
+      "meaning": "Parameters qualify the scope of the current numerical/descriptive claim, not a mathematical proof by file registration"
+    },
+    {
+      "id": "T-CHOICE",
+      "entity": "decision",
+      "meaning": "Use the initial parameters fixed by this benchmark author; later explicit revisions retain old content and rationale",
+      "evidence": [
+        "T-PARAM"
+      ]
+    },
+    {
+      "id": "T-CODE",
+      "entity": "artifact",
+      "path": "scripts/compute.py",
+      "meaning": "Supplied scientific calculator; preserve byte identity"
+    },
+    {
+      "id": "T-RESULT",
+      "entity": "artifact",
+      "path": "results/result.json",
+      "meaning": "Current canonical numeric result; the companion results/table.csv is delivered and must agree",
+      "derived_from": [
+        "T-PARAM",
+        "T-RAW",
+        "T-CODE",
+        "T-CHOICE"
+      ]
+    },
+    {
+      "id": "T-SUMMARY",
+      "entity": "artifact",
+      "path": "results/summary.md",
+      "meaning": "Current summary consistent with canonical numeric result",
+      "derived_from": [
+        "T-CLAIM",
+        "T-RESULT"
+      ]
+    },
+    {
+      "id": "T-SOURCE-NOTE",
+      "entity": "artifact",
+      "path": "notes/source-check.md",
+      "meaning": "Fixed source identity/coverage note; independent of chosen numeric/evaluation parameter"
+    },
+    {
+      "id": "T-SOURCE-CHECK",
+      "entity": "activity",
+      "meaning": "Verify supplied primary source identity/version and note, not full scientific certification",
+      "inputs": [
+        "T-SRC",
+        "T-RAW"
+      ],
+      "outputs": [
+        "T-SOURCE-NOTE"
+      ],
+      "status": "done"
+    },
+    {
+      "id": "T-CALC",
+      "entity": "activity",
+      "meaning": "Evaluate the supplied calculator under current author parameters and verify provided result",
+      "inputs": [
+        "T-PARAM",
+        "T-RAW",
+        "T-CODE",
+        "T-CHOICE"
+      ],
+      "outputs": [
+        "T-RESULT"
+      ],
+      "status": "done"
+    },
+    {
+      "id": "T-SYNTH",
+      "entity": "activity",
+      "meaning": "Prepare summary within current claim and verified result",
+      "inputs": [
+        "T-CLAIM",
+        "T-RESULT"
+      ],
+      "outputs": [
+        "T-SUMMARY"
+      ],
+      "depends_on": [
+        "T-CALC"
+      ],
+      "status": "done"
+    }
+  ],
+  "required_completed_activities": [
+    "T-SOURCE-CHECK",
+    "T-CALC",
+    "T-SYNTH"
+  ],
+  "dependency_edges": [
+    [
+      "T-CALC",
+      "T-SYNTH"
+    ]
+  ],
+  "local_tracking_paths": [
+    "sources/howard2021-arxiv-v9.pdf",
+    "notes/parameters.json",
+    "scripts/compute.py",
+    "results/result.json",
+    "results/summary.md",
+    "notes/source-check.md"
+  ],
+  "companion_deliverable": "results/table.csv",
+  "tracking_exclusions": {
+    "source_only": [
+      "T-REMOTE"
+    ],
+    "unregistered_file": [
+      "notes/unregistered-scratch.md"
+    ],
+    "meaning": "Report these coverage limits. Do not infer source content is current from metadata identity or claim all project files/dependencies are automatically checked."
+  }
+}
