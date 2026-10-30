@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-recorded-scope",
-  "checked_at_utc": "2026-10-30T10:54:26.902971+00:00",
+  "checked_at_utc": "2026-10-30T11:02:07.680028+00:00",
   "scope": "Final maintained source and user runtime with explicit local acceptance; scientific comparison tasks keep their original frozen identities. Exact commit CI and remote publication state are recorded separately in the release attachment.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -24,11 +24,11 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 437,
+      "test_methods": 438,
       "check_groups": 7,
       "receipt": {
-        "identifier": "local-evidence:check-core-complete.json",
-        "sha256": "ccdf7d27d9cb4af333162e428b3313a1ac7888efa6c5c3648f0872e6a5858dd9"
+        "identifier": "local-evidence:check-core-final-csv.json",
+        "sha256": "55b217a094394a6a7315d71d0eaabdd101b38a58506345ae16cc82f690008f8e"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,7 +36,7 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "5c18c179148c895d9108f75a24d5e33d656e15dfe9f184315c9a73f7f70287c4",
+        "sha256": "0738b31e29927c9681075043cb5bf2c456340a74a079c54ec019dbede6487ad2",
         "files": 47
       }
     }
@@ -565,9 +565,10 @@
     "confirmed_issues_fixed": [
       "Stale user-archive SHA sidecar",
       "Unconfirmed initialization ownership must not write project receipts",
-      "Crossref body and EOF reads must recheck the overall deadline"
+      "Crossref body and EOF reads must recheck the overall deadline",
+      "Preserve raw CSV evidence bytes through Git index and checkout instead of newline normalization"
     ],
-    "new_regression_test_methods": 3,
+    "new_regression_test_methods": 4,
     "no_new_skill_or_runtime_dependency": true,
     "runtime_files": {
       "examples/public-penguins/run_project.py": "2348f6c6c0571d00cb2521e3ae2ecb1afabc130e0249bb1fa3874ef460178227",
@@ -624,6 +625,26 @@
       "local_receipt_sha256": "4c8f969ee3dbf88917a84f6320885c9de0075bbd5103513dd691da76cebe8372"
     },
     "personal_package_unchanged": true,
-    "scope": "Engineering, bounded real-data replay and real metadata request; no claim of human efficiency, scientific certification, journal acceptance or GitHub ranking."
+    "scope": "Engineering, bounded real-data replay and real metadata request; no claim of human efficiency, scientific certification, journal acceptance or GitHub ranking.",
+    "git_checkout_validation": {
+      "csv_policy": "*.csv -text; preserve recorded LF or CRLF bytes",
+      "source_files_compared_to_git_index": 3273,
+      "index_byte_mismatches": 0,
+      "raw_crlf_files_restored_in_index": 146,
+      "actual_exported_git_snapshot_comparison_tests_passed": 95,
+      "actual_exported_git_snapshot_packaging_tests_passed": 19,
+      "new_checkout_test_autocrlf_modes": [
+        "true",
+        "input",
+        "false"
+      ],
+      "original_scientific_files_and_expected_hashes_unchanged": true,
+      "first_hosted_failure_retained": {
+        "commit": "c67a566f930819b53437e74c9d6314eb8ac36012",
+        "run_id": 41044275284,
+        "url": "https://github.com/CheshireCat-D/research-workflow-template/actions/runs/41044275284",
+        "observed_cause": "Git newline normalization changed committed CSV bytes; frozen reference hashes were retained and raw bytes restored."
+      }
+    }
   }
 }

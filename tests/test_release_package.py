@@ -4,6 +4,7 @@ import hashlib
 import importlib.util
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -36,6 +37,28 @@ class ReleasePackages(unittest.TestCase):
 
     def tearDown(self):
         self.temp.cleanup()
+
+    @unittest.skipUnless(shutil.which('git'), 'Git is required only for checkout byte-preservation validation')
+    def test_git_add_and_checkout_preserve_lf_and_crlf_csv_evidence(self):
+        for autocrlf in ('true', 'input', 'false'):
+            with self.subTest(autocrlf=autocrlf):
+                repository=self.base/('git-'+autocrlf);repository.mkdir()
+                (repository/'.gitattributes').write_bytes((ROOT/'.gitattributes').read_bytes())
+                contents={'crlf.csv':b'id,value\r\n1,2\r\n', 'lf.csv':b'id,value\n1,2\n'}
+                for name,data in contents.items():(repository/name).write_bytes(data)
+                def git(*args):
+                    result=subprocess.run(['git','-c','core.autocrlf='+autocrlf,
+                                           '-c','core.safecrlf=false',*args],cwd=repository,
+                                          capture_output=True,timeout=20)
+                    self.assertEqual(result.returncode,0,result.stderr.decode('utf-8',errors='replace'))
+                    return result.stdout
+                git('init','--quiet')
+                git('add','.gitattributes',*contents)
+                for name,data in contents.items():
+                    self.assertEqual(git('show',':'+name),data)
+                    (repository/name).unlink()
+                git('checkout','--',*contents)
+                for name,data in contents.items():self.assertEqual((repository/name).read_bytes(),data)
 
     def test_inventory_check_is_read_only_and_matches_explicit_public_files(self):
         before=snapshot(self.source)

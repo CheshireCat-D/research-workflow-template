@@ -1,2 +1,3 @@
-# Keep text bytes stable without treating future binary figure assets as text.
+# Keep authored text portable while retaining byte-bound CSV evidence.
 * text=auto eol=lf
+*.csv -text
