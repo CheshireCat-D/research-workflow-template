@@ -57,11 +57,12 @@ class ComparisonIntegrity(unittest.TestCase):
             run = self.base / 'runs' / trial_id
             run.mkdir(parents=True, exist_ok=True)
             report = run / 'report.md'
-            report.write_text('Synthetic integrity-test fixture only.\n', encoding='utf-8')
+            # Exercise native Windows line endings on every test platform.
+            report.write_text('Synthetic integrity-test fixture only.\n', encoding='utf-8', newline='\r\n')
             execution = read(self.base / 'templates/execution.template.json')
             execution.update(status='executed', tool_calls=2, network_calls=0,
                              duration_seconds=1.0, output_bytes=report.stat().st_size,
-                             output_unicode_characters=len(report.read_text()))
+                             output_unicode_characters=len(report.read_bytes().decode('utf-8')))
             names = {'tasks/' + task + '.md',
                      *self.freeze['required_guidance'][arm]}
             if arm == 'rwt':

@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-recorded-scope",
-  "checked_at_utc": "2026-10-30T11:02:07.680028+00:00",
+  "checked_at_utc": "2026-10-30T11:06:50.623394+00:00",
   "scope": "Final maintained source and user runtime with explicit local acceptance; scientific comparison tasks keep their original frozen identities. Exact commit CI and remote publication state are recorded separately in the release attachment.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -27,8 +27,8 @@
       "test_methods": 438,
       "check_groups": 7,
       "receipt": {
-        "identifier": "local-evidence:check-core-final-csv.json",
-        "sha256": "55b217a094394a6a7315d71d0eaabdd101b38a58506345ae16cc82f690008f8e"
+        "identifier": "local-evidence:check-core-final-platforms.json",
+        "sha256": "f1fa6704cc3b23316db29fc6096be0612ff1b6e8fcf9ee09666fc6bb70abd0fc"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -36,7 +36,7 @@
       },
       "checked_source_basis": {
         "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "0738b31e29927c9681075043cb5bf2c456340a74a079c54ec019dbede6487ad2",
+        "sha256": "dd7354815a2ab4f1fd0479d362495594ff95da565ffffddee3c31b3f4cdee3a6",
         "files": 47
       }
     }
@@ -566,7 +566,8 @@
       "Stale user-archive SHA sidecar",
       "Unconfirmed initialization ownership must not write project receipts",
       "Crossref body and EOF reads must recheck the overall deadline",
-      "Preserve raw CSV evidence bytes through Git index and checkout instead of newline normalization"
+      "Preserve raw CSV evidence bytes through Git index and checkout instead of newline normalization",
+      "Synthetic comparison fixtures count serialized Unicode characters without newline normalization"
     ],
     "new_regression_test_methods": 4,
     "no_new_skill_or_runtime_dependency": true,
@@ -643,8 +644,10 @@
         "commit": "c67a566f930819b53437e74c9d6314eb8ac36012",
         "run_id": 41044275284,
         "url": "https://github.com/CheshireCat-D/research-workflow-template/actions/runs/41044275284",
-        "observed_cause": "Git newline normalization changed committed CSV bytes; frozen reference hashes were retained and raw bytes restored."
-      }
+        "observed_cause": "Git newline normalization changed committed CSV bytes; frozen reference hashes were retained and raw bytes restored.",
+        "additional_observed_cause": "Windows synthetic report fixture read_text normalized CRLF before counting characters; fixture now exercises CRLF explicitly and counts decoded raw bytes. Published trial data and validators remain unchanged."
+      },
+      "windows_crlf_fixture_exercised_on_all_platforms": true
     }
   }
 }
