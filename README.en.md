@@ -1,24 +1,34 @@
-# Research Workflow Template
+<div align="center">
 
-[中文](README.md) · [English user guide](USER_GUIDE.en.md) · [中文使用说明](中文介绍与使用说明.md)
+[简体中文](README.md) · [English](README.en.md) · [Русский](docs/i18n/README.ru.md) · [日本語](docs/i18n/README.ja.md)
 
-A local toolkit for research-agent workflows across sciences, engineering, health, agriculture, humanities, social sciences and law. Nine skills guide question formation, literature work, innovation, candidate comparison, method validation, writing, figures and review. A standard-library Python CLI records statements, sources, evidence, artifacts and recovery state; the host assistant performs the research work.
+![RWT: pick up where your research left off.](docs/assets/rwt-hero-en.svg)
 
-Start below, run the [complete public-data project](examples/public-penguins/README.md), use the [Crossref metadata search](skills/rw-literature/references/search-and-library.md), or inspect the [controlled skill-comparison pilot](evals/comparison/README.md).
+# RWT · Research Workflow Template
 
-The [English user guide](USER_GUIDE.en.md) covers first use, all nine skills, daily commands, recovery, and upgrades. Detailed technical documents under `docs/` are currently in Chinese.
+**Keep your question, evidence, manuscript and next action in one local project.**
 
-[Subfield navigation](profiles/selection.md) maps education, economics/management, psychology, philosophy and arts to existing methods and states untested areas. `options` separates declared guidance from explicit variant bindings in recorded tasks; these records do not certify a whole specialty.
+[![Checks](https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml/badge.svg)](https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml) [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-316A56)](https://www.python.org/downloads/) [![License: MIT](https://img.shields.io/badge/License-MIT-D6EF93)](LICENSE)
 
-Legal research uses the shared skills with a [legal method profile](profiles/methods/legal-analysis.md) and [project template](profiles/templates/legal-research.md), covering jurisdiction, relevant dates, legal authority, judgments and citation pinpoints. The added task evidence uses fictional jurisdictions; it does not certify real legal conclusions.
+[Download the runtime](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) · [Quick start](#start-a-project) · [Full user guide](USER_GUIDE.en.md) · [Real example](#see-a-complete-research-record) · [External skill comparison](docs/13-research-skill-landscape.md)
 
-The repository maintains current sources, tests and required frozen evaluation evidence. The user distribution is named `research-workflow-template.zip` and contains only current runtime resources, bilingual guides, licensing and source attribution. Tests, evaluation processes, development change records and previous editions are excluded. Source and user packages are checked separately and identified by their manifests and SHA-256. Record, schema and dependency versions remain where required for compatibility and traceability. The final archive includes a concise [user-package guide](docs/user-package-guide.en.md).
+</div>
+
+RWT is an open-source research workflow toolkit for use with an AI assistant. Nine skills guide the research work; standard-library Python tools maintain claims, sources, evidence, artifacts and recovery state. It covers sciences, engineering, health, agriculture, humanities, social sciences and law.
+
+| Work from question to manuscript | Connect claims to evidence | Continue in a new session |
+|---|---|---|
+| Use one project for literature, validation, writing, figures and review. | Record supporting material and inspect changes to tracked files. | Recheck the saved state, see open issues, and recover the next action. |
+
+![RWT workflow: question, literature, validation, writing and review share a local record and checkpoint.](docs/assets/rwt-workflow-en.svg)
+
+Full user guides are available in Chinese and English; Russian and Japanese pages provide a quick start. The graphics illustrate the workflow; work is performed through your AI assistant and the CLI. Detailed technical documents currently remain in Chinese.
 
 ## Start a project
 
 Download the [current user runtime](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) and its [SHA-256 file](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip.sha256). One current release is maintained; GitHub's separate source download also contains development tests. See the [skill selection and design influences](docs/12-skills-selection.md) for integration choices.
 
-Use Python 3.11+ on Windows, macOS or Linux. See the [platform validation record](docs/11-linux-validation.md) for actual execution evidence. The commands below use macOS/Linux syntax.
+Verify the SHA-256, extract the ZIP, and open a terminal in the package root containing `tools/`. Use Python 3.11+ on Windows, macOS or Linux. See the [platform validation record](docs/11-linux-validation.md) for actual execution evidence. The commands below use macOS/Linux syntax.
 
 ```sh
 python3 tools/research.py init --output ../my-research --title 'My research question' --connect-skills
@@ -34,7 +44,7 @@ Check `py -3 --version` for Python 3.11 or later. If the launcher is unavailable
 
 Choose a new output directory. Open that project in a compatible skill host and describe the current task. Existing research can resume at the relevant activity. Initial installation refuses existing targets; explicit upgrades preserve local edits by refusing a modified bundle. Global skills and the separate personal package remain independent.
 
-`--connect-skills` installs into this new project only. If initialization succeeds but connection fails, inspect the returned error and run `connect_skills.py install` on the existing project; do not initialize it again. The separate setup commands remain supported.
+`--connect-skills` installs into this new project only. If initialization succeeds but connection fails, resolve the returned error, then run `python3 tools/connect_skills.py install --root ../my-research` from the original package directory, using the actual project path. On Windows, replace the Python launcher as described above. Do not initialize the project again. The separate setup commands remain supported.
 
 To create a complete example, including analysis, editable figures, registered evidence and recovery state, run:
 
@@ -44,7 +54,13 @@ python3 -B examples/public-penguins/run_project.py --output ../penguins-project
 
 This downloads one pinned CC0 CSV. Use `--input FILE` for an offline local CSV; the output records whether it matches the pinned public input. The example's required resources are included in the user ZIP.
 
-From the project root, use `resume --format markdown` once to recover context. Use `show --edit evidence:E1 activity:A1` to export several editable records with their versions, then `register-batch --file EDIT.json --next-action "..."` to save registrations, a checkpoint and an inspected recovery summary together. Existing projects must explicitly upgrade their project-local runtime to use these options. Use `configure` for supported settings. [CLI usage](docs/07-core-usage.md) and [skill connection](docs/08-skills-and-methods.md) document the contracts and directory-switch recovery limits.
+From the created research project's root, recover context with:
+
+```sh
+python3 .agents/skills/_rw-runtime/tools/research.py resume --format markdown
+```
+
+On Windows, replace `python3` with `py -3 -X utf8`. Under the same script entry point, use `show --edit evidence:E1 activity:A1` to export several editable records with their versions, then `register-batch --file EDIT.json --next-action "..."` to save registrations, a checkpoint and an inspected recovery summary together. Existing projects must explicitly upgrade their project-local runtime to use these options. Use `configure` for supported settings. [CLI usage](docs/07-core-usage.md) and [skill connection](docs/08-skills-and-methods.md) document the contracts and directory-switch recovery limits.
 
 An agent with local file and command access can read the user guide, then start from:
 
@@ -59,6 +75,30 @@ If the journal is undecided, write “undecided” and continue the research alr
 Follow the [paired-pen calculation](examples/paired-pens/README.md) to reproduce the promotional example, then generate [aligned tables and editable manuscript source](examples/submission-table/README.md). The [research-quality tasks](evals/quality/README.md) record real retrieval, correct/defective review controls and a recommendation revised after resources changed.
 
 The [first-use exercises](evals/usability/README.md) record two isolated AI-agent scenarios and the resulting offline-guide improvement; human feedback is collected separately. A [public penguin-data case](examples/public-penguins/README.md) adds an actual observational analysis, independent base-R checks and documented project recovery.
+
+## See a complete research record
+
+The [public penguin-data example](examples/public-penguins/README.md) produces analysis, SVG figures, a short results draft, registered sources and evidence, and a recoverable project in one command. The figure below is an existing descriptive-analysis artifact from that public-data example. Its source and reproduction steps are documented in the example.
+
+![Actual public penguin-data analysis artifact: body mass compared by species.](examples/public-penguins/observed/species-mass.svg)
+
+Explore the [paired-pen example](examples/paired-pens/README.md) and [aligned tables with LaTeX manuscript source](examples/submission-table/README.md) for further outputs. Each example states the scope of its results.
+
+## Nine focused research skills
+
+| Skill | Purpose |
+|---|---|
+| [`rw-workflow`](skills/rw-workflow/SKILL.md) | Coordinate work and resume projects |
+| [`rw-question`](skills/rw-question/SKILL.md) | Frame the question and constraints |
+| [`rw-literature`](skills/rw-literature/SKILL.md) | Find literature and position contributions |
+| [`rw-innovation`](skills/rw-innovation/SKILL.md) | Develop testable research ideas |
+| [`rw-candidates`](skills/rw-candidates/SKILL.md) | Compare candidate directions |
+| [`rw-validation`](skills/rw-validation/SKILL.md) | Plan proof, experiment and method checks |
+| [`rw-writing`](skills/rw-writing/SKILL.md) | Structure arguments and write manuscripts |
+| [`rw-figures`](skills/rw-figures/SKILL.md) | Create plots and editable schematics |
+| [`rw-review`](skills/rw-review/SKILL.md) | Review, revise and prepare submission materials |
+
+[Research skill landscape](docs/13-research-skill-landscape.md) compares PaperSpine5 and other external candidates by purpose, license and fit. The comparison is a discovery reference, not a list of bundled dependencies.
 
 ## Checks and evidence
 

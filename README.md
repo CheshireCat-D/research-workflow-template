@@ -1,23 +1,34 @@
-# 通用科研工作流模板
+<div align="center">
 
-[English](README.en.md) · [中文介绍与使用说明](中文介绍与使用说明.md) · [English user guide](USER_GUIDE.en.md)
+[简体中文](README.md) · [English](README.en.md) · [Русский](docs/i18n/README.ru.md) · [日本語](docs/i18n/README.ja.md)
 
-一套面向理工医农、人文社科与法学的本地科研工作流：从研究兴趣、文献定位、创新与候选比较，到最小验证、证明或实验、写作、图件与审阅。九个技能由宿主助手执行实际任务，标准库 Python 工具保存主张、材料、引用、进度和恢复状态。
+![RWT：让研究接得上，让证据找得到。](docs/assets/rwt-hero-zh.svg)
 
-| 现在想做什么 | 直接入口 |
-|---|---|
-| 开始自己的研究 | 下方一条初始化与接入命令，再向助手说明任务 |
-| 先跑通一个完整案例 | [公开企鹅数据：下载、分析、图件、登记与恢复](examples/public-penguins/README.md) |
-| 查询论文题录并保留检索依据 | [Crossref 元数据检索](skills/rw-literature/references/search-and-library.md) |
-| 判断技能是否实际改善结果 | [固定题目与匿名评分的对照试验](evals/comparison/README.md) |
+# RWT · 科研工作流工具包
 
-本仓库维护当前源码、测试和必要的冻结评估证据。面向用户的发行包固定为 `research-workflow-template.zip`，只含当前运行资源、双语指南、许可与来源归属，不含测试、评估过程、开发修改记录或旧版。源码与用户包分别检查，更新由清单和 SHA-256 内容指纹标识；项目数据格式、记录与依赖的必要版本字段继续保留。
+**配合 AI 助手，把研究问题、证据、稿件和下一步留在同一个项目里。**
+
+[![Checks](https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml/badge.svg)](https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml) [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-316A56)](https://www.python.org/downloads/) [![License: MIT](https://img.shields.io/badge/License-MIT-D6EF93)](LICENSE)
+
+[下载当前运行包](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) · [开始使用](#开始使用) · [完整中文指南](中文介绍与使用说明.md) · [实际案例](#看一次完整研究记录) · [外部技能对比](docs/13-research-skill-landscape.md)
+
+</div>
+
+研究推进到哪里、哪个结论由什么材料支持、换个会话从哪里继续——RWT 帮你把这些保存在本地。九个科研技能指导 AI 助手完成任务，Python 工具维护项目记录与检查点，适合理工医农、人文社科与法学研究。
+
+| 提出问题到完成稿件 | 材料与结论连得上 | 下次会话接着做 |
+|---|---|---|
+| 选题、文献、验证、写作、图件和审阅，共用同一个项目。 | 保存主张、来源、证据和产物，检查已登记材料的变化。 | 恢复前重查记录与文件，显示已保存的进度、待解决问题和下一步。 |
+
+![RWT 工作流程：问题、文献、验证、写作与审阅，通过本地记录和检查点连接。](docs/assets/rwt-workflow-zh.svg)
+
+中文与英文提供完整用户指南；俄语与日语提供入门页。上图为工作流示意，实际操作通过 AI 助手与命令行完成。
 
 ## 开始使用
 
 直接使用可下载[当前用户运行包](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip)与[SHA-256](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip.sha256)。发行入口只维护一个当前包；GitHub 的源码下载另含开发测试材料。
 
-需要 Python 3.11 或更新版本。核心提供 Windows、macOS 与 Linux 本地项目支持；各平台的实际执行记录见[平台核验](docs/11-linux-validation.md)。macOS/Linux 在本目录运行：
+下载后核对 SHA-256，解压 ZIP，再在包含 `tools/` 的目录打开终端。需要 Python 3.11 或更新版本。核心提供 Windows、macOS 与 Linux 本地项目支持；各平台的实际执行记录见[平台核验](docs/11-linux-validation.md)。macOS/Linux 在本目录运行：
 
 ```sh
 python3 tools/research.py init --output ../my-research --title '我的研究问题' --connect-skills
@@ -33,9 +44,15 @@ py -3 -X utf8 tools/research.py init --output "../我的研究" --title "我的�
 
 将输出路径换成尚不存在的新目录。然后在 Codex 等兼容宿主中打开新项目，描述研究兴趣或当前任务即可。已有项目先运行 `resume`。首次接入和显式升级分别保护已有目录与本地修改；不改全局技能或个人完整版。
 
-日常在项目根运行一次 `resume --format markdown` 恢复上下文；用 `show --edit evidence:E1 activity:A1` 一次导出带版本的待修改记录，再用 `register-batch --file EDIT.json --next-action "…"` 一次保存登记、检查点及恢复摘要。已有项目需显式升级项目内运行时后才能使用这些选项。完整命令见[核心用法](docs/07-core-usage.md)。
+日常在创建好的研究项目根目录运行以下命令，恢复上下文：
 
-`--connect-skills` 只把技能接入这个新项目。若报告初始化成功而接入失败，按返回信息修复后对现有项目运行 `connect_skills.py install`，不重复初始化。原来的分步命令仍可使用。
+```sh
+python3 .agents/skills/_rw-runtime/tools/research.py resume --format markdown
+```
+
+Windows 将 `python3` 换成 `py -3 -X utf8`。同一脚本入口下，`show --edit evidence:E1 activity:A1` 可一次导出带版本的待修改记录，`register-batch --file EDIT.json --next-action "…"` 可一次保存登记、检查点及恢复摘要。已有项目需显式升级项目内运行时后才能使用这些选项。完整命令见[核心用法](docs/07-core-usage.md)。
+
+`--connect-skills` 只把技能接入这个新项目。若报告初始化成功而接入失败，按返回信息修复后，从原工具包目录运行 `python3 tools/connect_skills.py install --root ../my-research`，路径换成实际已创建的项目；Windows 按上述方式替换启动器。不重复初始化。原来的分步命令仍可使用。
 
 想先看完整产物，可以运行随用户包附带的公开数据案例（联网下载固定的 CC0 输入）：
 
@@ -54,6 +71,30 @@ python3 -B examples/public-penguins/run_project.py --output ../penguins-project
 尚未确定期刊时可以填“待定”，先推进当前可开展的研究。目标期刊用于核对读者、研究范围和投稿要求，不代表录用承诺。
 
 `rw-review` 按需支持结构化评审、多视角隔离模拟审稿、逐条审稿回复和投稿材料准备。直接说明当前任务即可；具体用法见[完整指南](中文介绍与使用说明.md#审阅返修与投稿材料)。
+
+## 看一次完整研究记录
+
+[公开企鹅数据案例](examples/public-penguins/README.md)用一条命令生成分析结果、SVG 图件、结果简稿、来源与证据登记，以及可恢复的项目状态。下图是仓库已有的公开数据描述性分析产物，复算步骤与数据来源都在案例中。
+
+![公开企鹅数据案例的实际分析图：按物种比较体质量。](examples/public-penguins/observed/species-mass.svg)
+
+也可以查看[配对栏演示](examples/paired-pens/README.md)与[结果表、LaTeX 稿源交付](examples/submission-table/README.md)。这些案例展示具体任务产物，结果支持范围以各案例说明为准。
+
+## 九个技能，各有入口
+
+| 技能 | 负责什么 |
+|---|---|
+| [`rw-workflow`](skills/rw-workflow/SKILL.md) | 协调任务与跨会话恢复 |
+| [`rw-question`](skills/rw-question/SKILL.md) | 明确研究问题与约束 |
+| [`rw-literature`](skills/rw-literature/SKILL.md) | 文献检索、来源与贡献定位 |
+| [`rw-innovation`](skills/rw-innovation/SKILL.md) | 提出可检验的研究机制 |
+| [`rw-candidates`](skills/rw-candidates/SKILL.md) | 比较与筛选候选方向 |
+| [`rw-validation`](skills/rw-validation/SKILL.md) | 证明、实验与方法检查 |
+| [`rw-writing`](skills/rw-writing/SKILL.md) | 组织论证与撰写稿件 |
+| [`rw-figures`](skills/rw-figures/SKILL.md) | 数据图与可编辑示意图 |
+| [`rw-review`](skills/rw-review/SKILL.md) | 审阅、返修与投稿材料 |
+
+[科研技能来源与对比](docs/13-research-skill-landscape.md)整理 PaperSpine5 与其他候选项目的功能、许可和适用任务，供后续选择。它们是外部参考项目。
 
 ## 按需要查阅
 
