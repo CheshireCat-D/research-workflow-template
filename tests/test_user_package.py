@@ -137,8 +137,12 @@ class UserPackage(unittest.TestCase):
             prefix = package.ARCHIVE_ROOT + '/'
             self.assertEqual({name.split('/')[0] for name in archive.namelist()},
                              {package.ARCHIVE_ROOT})
-            self.assertEqual(archive.read(prefix + 'USER_GUIDE.en.md'),
-                             (self.source / 'docs/user-package-guide.en.md').read_bytes())
+            for source, destination in package.GUIDES.items():
+                source_text = (self.source / source).read_bytes()
+                installed = archive.read(prefix + destination)
+                self.assertEqual(installed, source_text.replace(b'](../skills/', b'](skills/'))
+                self.assertIn(b'](skills/rw-review/references/review-desk.md)', installed)
+                self.assertIn(prefix + 'skills/rw-review/references/review-desk.md', archive.namelist())
             self.assertIn(b'profiles/sources.json', archive.read(prefix + 'provenance/ORIGIN.md'))
         self.assertEqual({name: value[0] for name, value in snapshot(self.source).items()},
                          {name: value[0] for name, value in before.items()})

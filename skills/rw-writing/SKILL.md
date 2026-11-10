@@ -1,6 +1,6 @@
 ---
 name: rw-writing
-description: Draft, revise, translate or compress research prose while preserving claims, evidence and author voice. Use for 论文写作、润色、学术翻译、压缩 and requested venue style; checking proof or experiment validity uses rw-validation.
+description: Draft, revise, translate or compress research prose while preserving claims, evidence and author voice. Use for 论文写作、润色、学术翻译、压缩、中文学位论文与毕业设计交付 and requested venue style; checking proof or experiment validity uses rw-validation.
 ---
 
 # 科研写作
@@ -13,6 +13,10 @@ description: Draft, revise, translate or compress research prose while preservin
 - **润色**：保留作者的论证、词汇取向和确定程度，修正指代、衔接、冗余与含混。避免空泛评价、机械转折和无依据的优越性表述。
 - **翻译**：保持量词、条件、否定、术语、引用定位与数学符号的对应。术语有歧义时给出有限说明或待确认选择，不自行改变结论。
 - **压缩**：按交付长度删减重复与次要展开，保留使结论成立的条件、关键证据和限制。无法在目标长度内保留必要内容时指出取舍。
+
+中文学位论文、毕业设计的学校模板、双语摘要、Word/PDF 对照或交付材料核验，进入[学位论文交付](references/thesis-delivery-zh.md)。只改一句话继续使用上面的局部模式。
+
+按目标期刊的同类文章组织段落或图版时，使用[范文定位与适配](references/journal-exemplars.md)。需要从同一份稿源交付 Word、LaTeX 和 PDF 时，使用[可编辑稿与渲染交付](references/editable-delivery.md)。
 
 指定期刊风格只改变适用的表达与结构；具体格式要求以实际取得的指南为准。没有指南时不声称已满足最新投稿规范。局部修改不应扩展为整稿重写。
 

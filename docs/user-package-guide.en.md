@@ -203,3 +203,10 @@ The [first-use records](https://github.com/CheshireCat-D/research-workflow-templ
 The package contains the current `core/`, `skills/`, `profiles/`, catalog resources, two command entry points, bilingual guides, MIT license and source attribution. `USER-PACKAGE-MANIFEST.json` identifies the current file bytes. Evaluation cases, tests, development records and previous editions are outside this user package. Complete evidence and maintenance tools are in the [source repository](https://github.com/CheshireCat-D/research-workflow-template). Evaluation references shown by `options` belong to that repository; they are not local files in the user package.
 
 The tools register metadata offline. They do not execute commands found in sources, upload data or submit manuscripts. Scientific validity, novelty, ethics approval and actual submission status are checked separately. Keep actual manuscripts, private data, credentials and personal skills independent. Optional plotting programs depend on the task; the core requires no third-party Python packages.
+
+
+## Revising a deliverable
+
+Ask the assistant to reopen the project, rerun the analysis and report which estimates changed, keep the old figure available, and prepare the selected revision for a colleague. The [validation skill](../skills/rw-validation/SKILL.md) compares two existing result tables by stable estimate ID and scope. The [figure check](../skills/rw-figures/references/result-surfaces.md) checks labeled numbers against those results and can render a PDF page. The [local review desk](../skills/rw-review/references/review-desk.md) connects figure choices, feedback, revisions and a shareable package to the project's records. Use it when a reader needs to make or revisit a choice.
+
+For a Chinese degree thesis, give the assistant the institution's current requirements, the editable manuscript, its PDF and the requested submission materials. The [thesis delivery guide](../skills/rw-writing/references/thesis-delivery-zh.md) describes the checks and the evidence needed to report them. Existing projects can receive these resources using the skill upgrade command from the full toolkit.

@@ -75,7 +75,9 @@ Ask the assistant to save the research constraints and return the actual path to
 
 If the journal is undecided, write “undecided” and continue the research already possible. The target journal guides audience, scope and submission requirements; it is not an acceptance prediction.
 
-`rw-review` supports structured review, optional isolated simulated reviewers, point-by-point responses and submission preparation. State the task directly; see the [full guide](USER_GUIDE.en.md#review-revision-responses-and-submission-materials) for examples.
+`rw-review` supports structured review, optional isolated simulated reviewers, point-by-point responses and submission preparation. Open the [local review desk](skills/rw-review/references/review-desk.md) to compare figures, save feedback and share the selected manuscript and files. The [ozone revision example](examples/ozone-revision/README.md) shows which estimates and figures need updating after a measurement changes.
+
+For a Chinese degree thesis, use the [school-specific delivery check](skills/rw-writing/references/thesis-delivery-zh.md) to compare the editable manuscript, its PDF and the applicable requirements.
 
 Follow the [paired-pen calculation](examples/paired-pens/README.md) to reproduce the promotional example, then generate [aligned tables and editable manuscript source](examples/submission-table/README.md). The [research-quality tasks](evals/quality/README.md) record real retrieval, correct/defective review controls and a recommendation revised after resources changed.
 

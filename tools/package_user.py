@@ -58,15 +58,25 @@ SKILL_RESOURCES = (
     'rw-figures/assets/synthetic-workflow.svg',
     'rw-figures/examples/plot_demo.py',
     'rw-figures/references/editable-schematics.md',
+    'rw-figures/references/result-surfaces.md',
     'rw-figures/scripts/audit_svg_schematic.py',
+    'rw-figures/scripts/check_result_surfaces.py',
     'rw-literature/references/search-and-library.md',
     'rw-literature/scripts/search_crossref.py',
     'rw-review/references/cross-material-consistency.md',
+    'rw-review/references/review-desk.md',
     'rw-review/references/review-modes.md',
     'rw-review/references/review-response.md',
     'rw-review/references/submission-delivery.md',
     'rw-review/references/theory-review.md',
     'rw-review/scripts/check_revision_plan.py',
+    'rw-review/scripts/review_desk.py',
+    'rw-validation/scripts/compare_results.py',
+    'rw-writing/assets/thesis-delivery.example.json',
+    'rw-writing/references/editable-delivery.md',
+    'rw-writing/references/journal-exemplars.md',
+    'rw-writing/references/thesis-delivery-zh.md',
+    'rw-writing/scripts/check_thesis_delivery.py',
 )
 RUNTIME_FILES = frozenset((
     'design/catalog.json',
@@ -83,6 +93,8 @@ RUNTIME_FILES = frozenset((
 EXAMPLE_FILES = frozenset('examples/public-penguins/' + name for name in (
     'README.md', 'question-method.md', 'source.json', 'fetch_data.py',
     'analyze.py', 'run_project.py',
+)) | frozenset('examples/ozone-revision/' + name for name in (
+    'README.md', 'run_case.R', 'adapt_legacy.py',
 ))
 REQUIRED = RUNTIME_FILES | EXAMPLE_FILES | frozenset((
     'README.md', 'README.en.md', '中文介绍与使用说明.md', 'USER_GUIDE.en.md',
@@ -111,7 +123,7 @@ def readme(english=False):
                 'analysis, figures, registered evidence and recovery state in one command. The '
                 '[source repository](' + SOURCE_URL + ') provides development checks and '
                 'evaluation evidence separately. This runtime carries no evaluation cases, '
-                'development logs or previous editions.\n\n'
+                'development logs or previous editions. Try the [ozone revision](examples/ozone-revision/README.md) to compare reruns and check the resulting figures.\n\n'
                 '[MIT license](LICENSE) · [Source attribution](provenance/ORIGIN.md) · '
                 '[Data and security boundaries](SECURITY.md)\n')
     return ('# 通用科研工作流模板\n\n'
@@ -130,7 +142,7 @@ def readme(english=False):
             '指南说明已有材料接入、研究约束、登记纠错与升级。'
             '[完整公开数据示例](examples/public-penguins/README.md)一条命令生成分析、图件、登记和恢复状态。'
             '开发检查和评估证据另见'
-            '[源码仓库](' + SOURCE_URL + ')；用户包不携带评估案例、开发日志或旧版。\n\n'
+            '[源码仓库](' + SOURCE_URL + ')。用[臭氧返修案例](examples/ozone-revision/README.md)可练习检查新旧估计量及图件。\n\n'
             '[MIT许可证](LICENSE) · [来源归属](provenance/ORIGIN.md) · '
             '[数据与安全边界](SECURITY.md)\n')
 
@@ -144,7 +156,9 @@ def origin():
             'External methods and reviewed design influences are recorded in '
             '[profiles/sources.json](../profiles/sources.json). These include the '
             'conditional coding guidance, research figure practices, source indexing, '
-            'and Light-skills cross-material consistency idea. External works retain '
+            'and Light-skills cross-material consistency idea. PaperSpine5 informed the '
+            'local review and revision flow; thesis-delivery-zh informed thesis handoff. '
+            'The implementations are original to RWT. External works retain '
             'their own rights; no upstream skill, script, figure or full publication '
             'is copied into this package. Full attribution is maintained in the '
             '[public source record](' + SOURCE_URL + '/blob/main/provenance/ORIGIN.md).\n\n'
@@ -171,7 +185,8 @@ def inventory(root=ROOT):
         for name in ('LICENSE', 'SECURITY.md', *sorted(EXAMPLE_FILES)):
             entries[name] = files.read(name)
         for source, destination in GUIDES.items():
-            entries[destination] = files.read(source)
+            # A developer guide under docs/ is installed at the archive root.
+            entries[destination] = files.read(source).replace(b'](../skills/', b'](skills/')
     entries.update({
         'README.md': readme().encode('utf-8'),
         'README.en.md': readme(True).encode('utf-8'),

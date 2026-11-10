@@ -1,0 +1,14 @@
+{
+  "institution": "示例大学（使用前替换）",
+  "degree": "硕士（按本项目替换）",
+  "basis": {"file": "requirements/school-template.docx", "locator": "本届学位论文提交说明，第 3 节"},
+  "docx": "submission/thesis-R02.docx",
+  "pdf": "submission/thesis-R02.pdf",
+  "anchors": [
+    {"label": "中文摘要关键句", "text": "四个月的平均差为 40.16 ppb。"},
+    {"label": "英文摘要关键句", "text": "The four-month mean difference was 40.16 ppb."}
+  ],
+  "materials": [
+    {"file": "submission/data-statement.pdf", "use": "提交附件", "applies": null, "basis": "根据本届说明核对是否需另附数据声明"}
+  ]
+}

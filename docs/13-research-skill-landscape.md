@@ -1,20 +1,35 @@
 # 科研技能来源与对比
 
-检索日期：2026-11-10。范围：只读 GitHub 仓库元数据、README、LICENSE、选定 SKILL.md；没有安装技能、执行上游脚本、修改个人技能包，也没有实测这些上游工具的科研效果。下列能力是源码/文档所述定位，不等于效果认证。
+初次目录检索日期为 2026-11-10。当时的范围是只读 GitHub 仓库元数据、README、LICENSE、选定 SKILL.md；没有安装技能、执行上游脚本、修改个人技能包，也没有实测这些上游工具的科研效果。后续的同题实测和 RWT 集成另见下节。
 
 ## PaperSpine5 与 RWT
 
-[PaperSpine5 的原仓库是 WUBING2023/PaperSpine](https://github.com/WUBING2023/PaperSpine)。它以 `paper-spine` 为入口，提供研究、写作、配图、审阅与交付流程，并通过本地网页工作台选择方案、查看产物和反馈修改。[当前 README](https://github.com/WUBING2023/PaperSpine/blob/main/README.md)列出的发行版是 `v0.4.0-alpha.3`，根许可证为 MIT；这些是文档与仓库元数据的核对结果，本轮未安装套件。
+[PaperSpine5 的原仓库是 WUBING2023/PaperSpine](https://github.com/WUBING2023/PaperSpine)。它以 `paper-spine` 为入口，提供研究、写作、配图、审阅与交付流程，并通过本地网页工作台选择方案、查看产物和反馈修改。[当前 README](https://github.com/WUBING2023/PaperSpine/blob/main/README.md)列出的发行版是 `v0.4.0-alpha.3`，根许可证为 MIT；这些是文档与仓库元数据的核对结果，初次目录检索时未安装套件；后续同题实测使用了官方 macOS 完整套件。
 
 | 维度 | PaperSpine5（文档所述） | RWT（当前源码） |
 |---|---|---|
-| 使用入口 | `paper-spine` 与本地网页工作台 | 九个 `rw-*` 技能与 Python 命令行 |
+| 使用入口 | `paper-spine` 与本地网页工作台 | 九个 `rw-*` 技能、Python 命令行与按需打开的本地审阅页 |
 | 主要组织方式 | 论文任务、方案选择、图文预览与交付 | 主张、来源、证据、产物、活动与检查点 |
 | 展示与交付 | 文档强调 Word / LaTeX / PDF 与页面预览 | 可编辑产物由宿主与任务工具生成，项目记录贯穿全过程 |
 | 恢复入口 | 文档要求继续已有任务与配置 | `resume` 重新检查已登记文件与保存状态，再返回恢复摘要 |
 | 当前判断 | 值得参考图文呈现与论文交付体验 | 保留证据登记和恢复主线，按实际任务补充专项能力 |
 
 这不是同材料、同模型的性能测试，不能据此得出谁的论文质量、正确性或总体能力更高。PaperSpine5 是单独的项目；下面五组是其他候选技能库，不能未经核实称为 PaperSpine5 的内置组成。
+
+## 同题实测后接入的能力
+
+三个独立项目用 1973 年纽约空气质量日记录完成初稿，再由三个新会话接手返修。三组都得到全期合并差 +47.90 ppb、共同月份合并差 +45.38 ppb、等月差 +40.16 ppb。RWT 普通恢复识别输入文件漂移和依赖活动；PaperSpine5 在同一网页任务保存候选图、图件选择和返修意见；Nature Skills 给出了统计口径、复现入口和专门的图件审查。[可复跑的公开臭氧案例](../examples/ozone-revision/README.md)展示了本次吸收后新增的检查。单个案例不足以给科研质量排名。
+
+| 上游体现的优势 | 在 RWT 的入口和实际产物 |
+|---|---|
+| 同一任务保存配置、材料与证据 | 沿用项目配置、source/evidence/relation 和带指纹的原生恢复。全文写作、方法、动机与贡献分别从已有写作、验证、候选与创新入口进入。 |
+| 选方案、并排看图、反馈与同稿返修 | [本地审阅页](../skills/rw-review/references/review-desk.md)预览实际候选图，保存选择和理由，展示新旧稿件关系。原有[审稿意见与逐条回复](../skills/rw-review/references/review-response.md)记录意见、改动位置与证据。 |
+| 从目标期刊范例提炼段落与图版设计 | [范文定位与适配](../skills/rw-writing/references/journal-exemplars.md)将参考文献中的段落或图号、科学用途和自己稿件中的证据分开记录，可从写作与绘图两处进入。 |
+| 可分享的图文稿、材料指纹与交付状态 | 按[可编辑交付步骤](../skills/rw-writing/references/editable-delivery.md)从同一稿源生成 Word、LaTeX 和 PDF。审阅页归集实际文件、选图与反馈，离线阅读包可直接预览 Markdown 正文和图表。[交付说明](../skills/rw-review/references/submission-delivery.md) |
+| 数值、图注与小样本口径可复核 | [新旧结果比较](../skills/rw-validation/SKILL.md)读取真实复算表；[跨载体核对](../skills/rw-figures/references/result-surfaces.md)读取标明位置的数字、单位、分母，并可输出实际 PDF 页。 |
+| 学位论文按院校要求交付 | [中文学位论文交付](../skills/rw-writing/references/thesis-delivery-zh.md)核对学校和学位的依据、可编辑稿、PDF 与材料清单。学校格式和人工确认依据由当前项目提供。 |
+
+这里复用了既有九个研究入口。PaperSpine5 的宿主适配器、后台服务和更新器仍属于其原项目。
 
 ## 五组综合技能的对应关系
 
@@ -30,7 +45,7 @@
 
 | 类型 | 直接入口 | 核验到的能力/边界 |
 |---|---|---|
-| 中文毕业论文交付 | [sanipedro679-gif/thesis-delivery-zh](https://github.com/sanipedro679-gif/thesis-delivery-zh) | 学校要求与材料用途、来源台账、数字引用检查、DOCX 结构/样式检查、可验证经验维护。脚本只读稿件，引用脚本不联网核验，也不替代逐页渲染检查。根目录无 LICENSE，API license=null；当前仅适合作为外部参考入口，不能据此宣称已获再分发许可。 |
+| 中文毕业论文交付 | [sanipedro679-gif/thesis-delivery-zh](https://github.com/sanipedro679-gif/thesis-delivery-zh) | 学校要求与材料用途、来源台账、数字引用检查、DOCX 结构/样式检查、可验证经验维护。脚本只读稿件，引用脚本不联网核验，也不替代逐页渲染检查。根目录无 LICENSE，API license=null；上游文件仅作为外部参考。RWT 的中文学位论文分支独立实现，未分发该仓库的代码或模板。 |
 | 系统/范围/叙述综述 | [K-Dense literature-review](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/literature-review) | 记录检索字符串、日期与覆盖范围、筛选及全文取得、records/reports/studies 区分、引用核对。MIT；部分可选流程使用外部 API 或 Pandoc/XeLaTeX，不能说全部无依赖或离线。 |
 | 跨源文献检索 | [nature-academic-search](https://github.com/Yuan1z0825/nature-skills/tree/main/skills/nature-academic-search) | 多来源检索、引文核验、MeSH、RIS/BibTeX 管理、他引审计。仓库 Apache-2.0；MCP/部分 provider 有额外依赖或凭据。它本来就在 Nature 包中，不另算一个独立综合包。 |
 | 社科选题与论证 | [nature-social-science](https://github.com/Yuan1z0825/nature-skills/tree/main/skills/nature-social-science) | 研究问题、文献版图、证据路线、主张边界、可行性与审稿人攻击。覆盖定量/质性/民族志/档案等；社区改编技能，整合时核对其原始提示词与参考来源。 |

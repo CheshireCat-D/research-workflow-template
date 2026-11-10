@@ -204,3 +204,10 @@ python3 -B tools/package_user.py check
 The full checks run in temporary projects. After changing source content, review the changes, regenerate the source inventory, and repeat acceptance checks and archive construction. Do not edit hashes merely to hide an unexplained change. See the [recorded checks](evals/current/latest.json) and [distribution acceptance guide](docs/10-release-readiness.md) for their execution scope.
 
 Use this general toolkit directory for a public GitHub repository. Keep the separate personal package, actual manuscripts, private data, and local environments independent. The project uses the [MIT license](LICENSE); external works retain their own rights. Actual hosted CI results are established by the repository's run logs.
+
+
+## Revising a deliverable
+
+Ask the assistant to reopen the project, rerun the analysis and report which estimates changed, keep the old figure available, and prepare the selected revision for a colleague. The [validation skill](skills/rw-validation/SKILL.md) compares two existing result tables by stable estimate ID and scope. The [figure check](skills/rw-figures/references/result-surfaces.md) checks labeled numbers against those results and can render a PDF page. The [local review desk](skills/rw-review/references/review-desk.md) connects figure choices, feedback, revisions and a shareable package to the project's records. Use it when a reader needs to make or revisit a choice.
+
+For a Chinese degree thesis, give the assistant the institution's current requirements, the editable manuscript, its PDF and the requested submission materials. The [thesis delivery guide](skills/rw-writing/references/thesis-delivery-zh.md) describes the checks and the evidence needed to report them. Existing projects can receive these resources using the skill upgrade command from the full toolkit.

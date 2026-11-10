@@ -11,6 +11,8 @@ description: Coordinate research from an interest or existing project and resume
 
 已有项目先读取配置、登记与恢复摘要，确认哪些工作实际完成、哪些输入已变化。聊天中的旧计划只作线索；不要将其补写成已执行活动。存在过期活动时，定位变化及受影响范围，再决定复核或调整下一步。
 
+若输入变化，复算完成后可用[新旧结果对照](../rw-validation/SKILL.md)区分哪些数值改变、哪些结论仍有原依据。需要研究者选图、留下返修意见或分享本轮稿件时，沿用本项目的[审阅页与交付记录](../rw-review/references/review-desk.md)；中文学位论文从[院校要求与稿件核对](../rw-writing/references/thesis-delivery-zh.md)进入。
+
 从研究兴趣启动时，先明确一个可推进的问题及资源边界。已有稿件、数据或证明可直接从其缺口进入；不要求重做选题，也不要求每项研究走相同顺序。
 
 按本次缺口加载相邻技能，不一次加载全包：

@@ -436,11 +436,13 @@ def _saved_recovery(result, updated, recovery):
 
 
 def register(root, kind, data, *, replace=False, expected_version=None,
-             next_action=None, activity=None, note=None):
+             next_action=None, activity=None, note=None, precondition=None):
     require_record(kind, data)
     _checkpoint_request(next_action, activity, note)
     with ProjectFiles(root) as files, files.lock():
         project, registry, project_raw, registry_raw = load(files)
+        if precondition is not None:
+            precondition(files, project, registry)
         updated = deepcopy(registry)
         result = _apply_registration(files, project, updated, kind, data, replace=replace,
                                      expected_version=expected_version)

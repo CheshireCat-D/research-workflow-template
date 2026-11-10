@@ -2,8 +2,8 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-recorded-scope",
-  "checked_at_utc": "2026-10-30T11:06:50.623394+00:00",
-  "scope": "Final maintained source and user runtime with explicit local acceptance; scientific comparison tasks keep their original frozen identities. Exact commit CI and remote publication state are recorded separately in the release attachment.",
+  "checked_at_utc": "2026-11-10T22:36:47.499225+00:00",
+  "scope": "Local package acceptance for revision handoff and Chinese thesis delivery. The dated scientific comparisons and prior platform recordings retain their original scopes. Exact-commit hosted jobs are reported in the release receipt.",
   "scientific_validity": "not-assessed",
   "publication_style": {
     "archive_name": "research-workflow-template.zip",
@@ -24,20 +24,24 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 438,
+      "test_methods": 466,
       "check_groups": 7,
+      "check_names": [
+        "schema-source-consistency",
+        "design-reference-consistency",
+        "skill-and-method-connection-contract",
+        "minimum-python-syntax",
+        "local-document-links",
+        "installed-layout-document-links",
+        "actual-unit-and-cli-tests"
+      ],
       "receipt": {
-        "identifier": "local-evidence:check-core-final-platforms.json",
-        "sha256": "f1fa6704cc3b23316db29fc6096be0612ff1b6e8fcf9ee09666fc6bb70abd0fc"
+        "identifier": "local-evidence:check-core-delivery-update.json",
+        "sha256": "a227f914f2c67d3cc3b196503c228e799d0aee87e8e070117e1890bc8902c29d"
       },
       "platform_skips": {
         "native_windows_tests": 13,
-        "reason": "Must execute on real Windows; macOS success does not certify them."
-      },
-      "checked_source_basis": {
-        "scope": "Sorted relative UTF-8 Python paths in core/, tools/ and tests/ (excluding __pycache__), each followed by NUL and raw SHA-256 file digest; concatenation hashed with SHA-256.",
-        "sha256": "dd7354815a2ab4f1fd0479d362495594ff95da565ffffddee3c31b3f4cdee3a6",
-        "files": 47
+        "reason": "Local Darwin host; consult exact-commit CI for Windows results."
       }
     }
   },
@@ -89,18 +93,10 @@
     "current_discovery_validation": "tools/check_core.py: skill-and-method-connection-contract"
   },
   "preservation": {
-    "baseline_commit": "dbe09bf65a59f5d7fb093b11e423f4bde0ec7a1a",
-    "frozen_groups_unchanged": {
-      "evals/d2": 53,
-      "evals/d3": 331,
-      "evals/legal": 40,
-      "evals/disciplinary": 130
-    },
-    "public_penguin_observed_outputs_unchanged": 6,
-    "personal_package_protected_source_files": 516,
-    "personal_package_source_hashes_unchanged": true,
-    "personal_hash_scope": "All regular non-symlink files except environment, VCS and caches; no personal package writes performed.",
-    "old_task_guidance_preserved_in": "evals/current/guidance-history.json"
+    "baseline_commit": "24721862bc222400fb05775a2900be891b869210",
+    "prior_run_inputs_and_outputs": "Historic task bindings resolve to their recorded bytes. Updated guidance is tested separately.",
+    "old_task_guidance_preserved_in": "evals/current/guidance-history.json",
+    "personal_skill_package": "Outside all installation, build and test targets."
   },
   "hosted_ci": {
     "source_of_truth": "https://github.com/CheshireCat-D/research-workflow-template/actions",
@@ -180,11 +176,11 @@
   "user_distribution": {
     "profile": "user-runtime",
     "archive_name": "research-workflow-template.zip",
-    "maintained_runtime_and_guide_files": 80,
+    "maintained_runtime_and_guide_files": 93,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "36d5c25d9c74bddb2aa39656bb0617916c4ece6fe79c8850839d750c03cc86e3",
+    "sha256": "fc27a3b55c32e4b66d12575f378cb38229ab8ebb236258c3fbb89d6b2e3805b1",
     "deterministic_builds_byte_identical": true,
-    "explicit_reviewed_runtime_resources": 67,
+    "explicit_reviewed_runtime_resources": 77,
     "development_history_or_previous_editions_included": false,
     "nested_unreviewed_resources_rejected": true,
     "portable_evidence_availability": "not-included-in-project-runtime",
@@ -557,97 +553,72 @@
   },
   "final_release_review": {
     "status": "passed-local-acceptance",
-    "independent_ai_audit_scopes": [
-      "runtime-and-error-paths",
-      "distribution-documentation-and-licensing",
-      "frozen-evidence-and-comparison-arithmetic"
-    ],
-    "confirmed_issues_fixed": [
-      "Stale user-archive SHA sidecar",
-      "Unconfirmed initialization ownership must not write project receipts",
-      "Crossref body and EOF reads must recheck the overall deadline",
-      "Preserve raw CSV evidence bytes through Git index and checkout instead of newline normalization",
-      "Synthetic comparison fixtures count serialized Unicode characters without newline normalization"
-    ],
-    "new_regression_test_methods": 4,
-    "no_new_skill_or_runtime_dependency": true,
-    "runtime_files": {
-      "examples/public-penguins/run_project.py": "2348f6c6c0571d00cb2521e3ae2ecb1afabc130e0249bb1fa3874ef460178227",
-      "skills/rw-literature/scripts/search_crossref.py": "db8caefb71751f28ee4306d606912d4c964cc0b5276192f8b29461c101dc03c6"
+    "new_skill_entrypoints": 0,
+    "runtime_files": 93,
+    "archive_sha256": "fc27a3b55c32e4b66d12575f378cb38229ab8ebb236258c3fbb89d6b2e3805b1",
+    "installed_skills": 9,
+    "optional_tools": "Poppler pdftoppm for preview; pdftotext or pypdf for thesis PDF text. User-supplied editable artifacts and an actual renderer are used for a rendered page review.",
+    "clean_runtime_smoke": true,
+    "deterministic_rebuild": true,
+    "ozone_data": "R datasets::airquality; simulate May 1 ozone 41 to 42 in a separate run; shared source remains unchanged.",
+    "real_case": "examples/ozone-revision/README.md",
+    "result_changes": {
+      "changed": 1,
+      "unchanged": 2,
+      "not_comparable": 0,
+      "added": 0,
+      "removed": 0
     },
-    "actual_final_user_archive_executed": true,
-    "archive_sha256": "36d5c25d9c74bddb2aa39656bb0617916c4ece6fe79c8850839d750c03cc86e3",
-    "clean_runtime_commands_executed": 12,
-    "deterministic_rebuild_byte_identical": true,
-    "core_journey": {
-      "source_runner": "evals/current/core-streamline/run_forward.py",
-      "local_summary_identifier": "local-evidence:final-core-journey/summary.json",
-      "local_summary_sha256": "b927f72bbd1db417483abe3cc857f01604f026b5f7029684b198abda9af67c8c",
-      "workflow_cli_counts": {
-        "initial": {
-          "new": 1,
-          "old": 3
-        },
-        "moved-resume": {
-          "new": 1,
-          "old": 1
-        },
-        "refresh": {
-          "new": 2,
-          "old": 5
-        },
-        "save-report": {
-          "new": 1,
-          "old": 2
-        }
-      },
-      "readonly_checks": 9,
-      "results_and_fingerprints_equal": true
+    "surface_checks": {
+      "total": 5,
+      "matched": 5,
+      "rendered_pdf_pages": 1,
+      "stale_figure_negative_check": "One bound excerpt mismatch in the full-period estimate"
     },
-    "public_data_example": {
-      "source": "examples/public-penguins/source.json",
-      "input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
-      "input_rows": 344,
-      "complete_rows": 333,
-      "registered_records": 25,
-      "checkpoint_status": "current",
-      "readonly_bytes_and_mtime_unchanged": true,
-      "local_receipt_identifier": "local-evidence:final-public-project/notes/run-receipt.json",
-      "local_receipt_sha256": "f0e0421acf852e5b13976632584039cd222740f943de744ed9921e049e0cfcfa",
-      "scientific_or_visual_review_recorded_done": false
-    },
-    "live_metadata_search": {
-      "query": "rough paths",
-      "access": "Crossref metadata only",
-      "pages_completed": 1,
-      "retained_records": 2,
-      "truncated": true,
-      "local_receipt_identifier": "local-evidence:live-crossref/search.json",
-      "local_receipt_sha256": "4c8f969ee3dbf88917a84f6320885c9de0075bbd5103513dd691da76cebe8372"
-    },
-    "personal_package_unchanged": true,
-    "scope": "Engineering, bounded real-data replay and real metadata request; no claim of human efficiency, scientific certification, journal acceptance or GitHub ranking.",
-    "git_checkout_validation": {
-      "csv_policy": "*.csv -text; preserve recorded LF or CRLF bytes",
-      "source_files_compared_to_git_index": 3273,
-      "index_byte_mismatches": 0,
-      "raw_crlf_files_restored_in_index": 146,
-      "actual_exported_git_snapshot_comparison_tests_passed": 95,
-      "actual_exported_git_snapshot_packaging_tests_passed": 19,
-      "new_checkout_test_autocrlf_modes": [
-        "true",
-        "input",
-        "false"
+    "review_desk": "Native registry, browser feedback and choice on the ozone revision, checkpoint recovery, history and hash-checked ZIP exercised on a project copy. A saved choice does not certify review or submission.",
+    "thesis_delivery": "Synthetic institution criteria, editable bilingual DOCX and real LibreOffice PDF; the checker flagged a missing Chinese excerpt in the first render and passed the configured checks after a corrected export and an actual page review. Microsoft Word and any specific university were not tested.",
+    "editable_delivery": {
+      "source": "A real ozone brief with quantitative figure, caption and source bibliography",
+      "formats": [
+        "docx",
+        "tex",
+        "pdf"
       ],
-      "original_scientific_files_and_expected_hashes_unchanged": true,
-      "first_hosted_failure_retained": {
-        "commit": "c67a566f930819b53437e74c9d6314eb8ac36012",
-        "run_id": 41044275284,
-        "url": "https://github.com/CheshireCat-D/research-workflow-template/actions/runs/41044275284",
-        "observed_cause": "Git newline normalization changed committed CSV bytes; frozen reference hashes were retained and raw bytes restored.",
-        "additional_observed_cause": "Windows synthetic report fixture read_text normalized CRLF before counting characters; fixture now exercises CRLF explicitly and counts decoded raw bytes. Published trial data and validators remain unchanged."
-      },
-      "windows_crlf_fixture_exercised_on_all_platforms": true
-    }
-  }
+      "rendering": "Pandoc 3.10, XeLaTeX and LibreOffice; actual Word-export and TeX PDFs each one page and visually inspected; original figure source and portable asset retained."
+    },
+    "journal_exemplar": {
+      "source": "Gorman et al., PLOS ONE 2014, figure 3",
+      "doi": "10.1371/journal.pone.0090081",
+      "use": "Compare how a caption explains its measurement count. Ozone uses its own coverage and estimates."
+    },
+    "legacy_tables": {
+      "unchanged_in_tables": 1,
+      "added_to_tables": 2,
+      "new_to_whole_brief": 1,
+      "source_mapping": "examples/ozone-revision/adapt_legacy.py",
+      "basis": "Original two tables have different structures; the old brief already reported the equal-month result in prose."
+    },
+    "old_project_recovery": {
+      "connected_runtime_files_before": 67,
+      "connected_runtime_files_after": 77,
+      "registry_byte_identical_on_upgrade": true,
+      "existing_research_files_byte_identical": 32,
+      "recovered_before_new_choice": 46,
+      "recovered_after_choice_and_checkpoint": 48
+    },
+    "reader_delivery": {
+      "offline_entry": "index.html",
+      "hash_checked_members": true,
+      "feedback": "operator and latest decision feedback are optional; previous feedback stays in the project",
+      "example_in_runtime": true,
+      "markdown_preview": "Text, headings, tables and packaged images can be read on the offline index."
+    },
+    "sources": [
+      "docs/13-research-skill-landscape.md",
+      "skills/rw-writing/references/thesis-delivery-zh.md",
+      "skills/rw-review/references/review-desk.md"
+    ]
+  },
+  "previous_source_receipt": "https://github.com/CheshireCat-D/research-workflow-template/blob/24721862bc222400fb05775a2900be891b869210/evals/current/latest.json",
+  "recorded_studies_scope": "The fields for earlier scientific studies, platform scenarios and earlier workflow simplification refer to the archives and case hashes inside those records. The current runtime acceptance is in software_checks, user_distribution and final_release_review."
 }

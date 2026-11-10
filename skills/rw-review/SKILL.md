@@ -20,6 +20,7 @@ description: Review manuscripts and evidence, simulate requested peer review, pl
 | 结构化同行评审、明确要求隔离多评审或指定期刊风格 | [评审模式](references/review-modes.md)：证据定位、严重度、上下文隔离与冻结后汇总 |
 | 返修规划、逐条回复、rebuttal 或意见覆盖核对 | [回复与修改](references/review-response.md)：拆分意见、安排依赖与工作量，对应回复、实际改动和当前状态 |
 | 投稿前资料核对、整理交付目录或源文件包 | [投稿与交付](references/submission-delivery.md)：实际要求、选定文件、清单及未完成项 |
+| 同项目选图、留下返修意见、查看前后版本或导出可核验稿包 | [本地评阅页](references/review-desk.md)：读取登记材料，原生保存选择、理由、检查点与文件指纹 |
 | 相关稿件、图表、补充或幻灯片共享同一事实 | [跨材料核对](references/cross-material-consistency.md)：先辨认事实身份再判断差异 |
 
 这些是同一入口的工作模式，不要求依次全部执行。普通句子润色仍交给 `rw-writing`；研究问题的证明、实验或解释义务按需用 `rw-validation`。

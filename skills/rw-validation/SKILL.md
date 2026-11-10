@@ -33,3 +33,17 @@ description: Validate research arguments, designs and evidence with the applicab
 给出与依据相称的结论：有效范围内的证明、反例、局部计算结果、混合材料支持或尚缺论证均可成为有用产物。把实际发现交给 `rw-writing` 表达、`rw-review` 审查；不从 CLI 退出码推导科学有效性。
 
 持续项目将材料、验证产物、主张关系及活动登记。若需要更新 statement 的 assessment，明确本次评估者、范围、理由及仍存限制；使用形式化状态时只记录实际工具完成的范围。当前核心不会代替这些实质判断。
+
+## 返修后的估计值对照
+
+已实际复算且有两版结果 CSV 时，运行[结果对照工具](scripts/compare_results.py)。例如在已接入的项目根目录执行：
+
+```sh
+python3 .agents/skills/rw-validation/scripts/compare_results.py history/estimates.csv results/estimates.csv
+```
+
+默认读取 `estimate_id,value,unit,scope`，可选 `artifact` 列记录关联图表。标识应随估计量跨版保留；“主结果”这样的展示顺序或角色在返修时可能变化。口径列应覆盖人群、时间范围、加权方法及与该估计有关的定义。原表列名不同时可指定 `--id-column`、`--value-column`、`--unit-column` 和一个或多个 `--scope-column`。两表单位由数据说明固定时可用 `--unit ppb`。使用计算结果保留的精度；只有舍入后的表时，对照只到表中精度。
+
+旧版和新版使用不同的列名或行结构时，可从各自原表投影为两张规范表。根据原始方法说明明确两侧行键、取值列、单位和范围，保存来源指纹和未纳入的行。报告“新增”时说明依据的是所给表格还是同时包括旧正文。工具包的 `examples/ozone-revision/adapt_legacy.py` 演示了如何排除单组均值，只对照跨组差值。
+
+报告附两表的 SHA-256、前后值、口径、关联图表及比较状态。空值、`NA`、`N/A` 属于缺测；单位、口径变化或缺失值会列出原因。用 `--format json` 可交给后续审查。成功比较（包括发现变化）退出 0，重复或缺少标识、格式错误等输入问题退出 2。结合实质解释和敏感性分析写明哪些原结论保留、修订或仍有疑问，再按需把对照报告登记为返修证据。

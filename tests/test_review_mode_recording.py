@@ -22,31 +22,14 @@ class ReviewModeRecording(unittest.TestCase):
         self.assertEqual(historical['recovered_from_commit'],
                          '6843fbef19fceb06c0774f0f3d12cd992f46157a')
         sources = historical['sources']
-        later_changes = json.loads((ROOT / 'evals/current/guidance-history.json').read_text(encoding='utf-8'))
-        self.assertEqual(set(later_changes['resources']), {
-            'skills/rw-review/references/submission-delivery.md',
-            'core/skill-bridge.md',
-            'core/cli.py',
-            'core/project.py',
-            'skills/rw-literature/SKILL.md',
-            'skills/rw-literature/references/search-and-library.md',
-            'skills/rw-review/SKILL.md',
-        })
         self.assertEqual(set(sources), {
             'skills/rw-review/SKILL.md',
             'skills/rw-review/references/review-response.md',
         })
         for name, expected in record['guidance_sha256'].items():
-            # Bind the old task to the guidance actually read then. The
-            # snapshot keeps this check self-contained in a source archive.
-            if name in sources:
-                source = sources[name]['source_text'].encode('utf-8')
-            elif name in later_changes['resources']:
-                saved = later_changes['resources'][name]
-                source = saved['source_text'].encode('utf-8')
-                self.assertEqual(digest(source), saved['sha256'], name)
-            else:
-                source = (ROOT / name).read_bytes()
+            # Resolve exactly the reviewed bytes even as the history gains
+            # more versions or resources for unrelated later releases.
+            source = reviewed_resource(name, expected, sources)
             self.assertEqual(digest(source), expected, name)
         self.assertEqual(set(record['input_files']), set(record['input_sha256']))
         for name, content in record['input_files'].items():

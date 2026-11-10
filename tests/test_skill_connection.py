@@ -3,7 +3,6 @@ from pathlib import Path
 import hashlib
 import json
 import os
-import re
 import shutil
 import subprocess
 import sys
@@ -109,6 +108,8 @@ class ProjectSkillConnection(unittest.TestCase):
             self.assertTrue((folder / skill / 'SKILL.md').is_file())
 
     def test_copied_markdown_links_resolve_and_runtime_contains_no_personal_paths(self):
+        from tools.check_core import markdown_links
+
         self.install()
         folder = self.project / '.agents/skills'
         for path in folder.rglob('*'):
@@ -119,10 +120,11 @@ class ProjectSkillConnection(unittest.TestCase):
             self.assertNotIn('/Users/', content)
             self.assertNotIn('/home/', content)
             if path.suffix == '.md':
-                for link in re.findall(r'\]\(([^\s)]+)\)', content):
-                    if '://' in link or link.startswith('#'):
+                for link in markdown_links(content):
+                    url = urlsplit(link)
+                    if url.scheme or url.netloc or not url.path:
                         continue
-                    self.assertTrue((path.parent / link.split('#')[0]).exists(), (path, link))
+                    self.assertTrue((path.parent / unquote(url.path)).exists(), (path, link))
 
     def test_check_is_read_only_and_does_not_recreate_missing_project_lock(self):
         self.install()

@@ -201,3 +201,10 @@ python3 tools/connect_skills.py upgrade --root PROJECT
 包中保留当前 `core/`、`skills/`、`profiles/`、目录资源、两个命令入口、双语指南、MIT 许可和来源归属。清单 `USER-PACKAGE-MANIFEST.json` 标识当前文件字节。评估案例、测试、开发记录和旧发行内容在用户包之外；完整证据与维护工具见[源码仓库](https://github.com/CheshireCat-D/research-workflow-template)。`options` 中的评估引用属于源码仓库的材料，不是用户包中的本地文件。
 
 工具离线登记元数据，不执行来源中的命令，不上传数据或自动投稿。科学正确性、创新性、伦理批准和实际投稿状态分别核对。真实论文、私有数据、凭据与个人技能包独立保存；可选绘图工具由具体任务决定，核心没有第三方 Python 依赖。
+
+
+## 返修与学位论文交付
+
+可以直接说：“接着上次的项目，复算后告诉我哪些结论变了，保留旧图，让我看两个版本，再把选定的图和稿件打包。”[验证入口](../skills/rw-validation/SKILL.md)按估计量身份与适用范围比较新旧结果表。[图件核对](../skills/rw-figures/references/result-surfaces.md)检查图文中的数值，并可渲染指定 PDF 页。[本地审阅页](../skills/rw-review/references/review-desk.md)把选图、意见、修订和交付文件关联到同一研究项目。
+
+中文毕业论文可直接提供学校、学位与专业适用的要求、可编辑稿、PDF 和拟交材料，然后使用[学位论文交付分支](../skills/rw-writing/references/thesis-delivery-zh.md)。已接入旧版技能的项目可从完整新版工具包按本文的升级命令更新本地副本。

@@ -25,6 +25,8 @@ description: >-
 普通排版表格沿用表格工具。证明有效性、效应估计、样本量设计和统计检验的核心问题
 交给 `rw-validation`；图形排版不能自行补足这些依据。
 
+按目标期刊范例设计图版时，按[范文定位与适配](../rw-writing/references/journal-exemplars.md)记录参考面板的用途、定位和本研究自己的数据依据。
+
 需要可运行的数据图演示时，可按需看 [合成双面板示例](examples/plot_demo.py)。它需要
 环境中已有 Matplotlib，不自动安装依赖，演示结果不构成研究证据。
 
@@ -64,3 +66,5 @@ python3 SKILL_DIR/scripts/audit_svg_schematic.py figure.svg
 表示无法审计或输入错误；并不认证科学语义、排版无碰撞或图像数据真实性。
 持续项目仅登记实际生成的图件、代码和已执行检查；轻量示意图可参考
 [小型 FigureSpec 示例](assets/synthetic-figure-spec.json)，无需另建平台或强制登记每个图元。
+
+若同一项定量结果要出现在摘要、图和图注里，可按[结果表与交付核对](references/result-surfaces.md)检查具体数值、单位、分母与稀疏亚组，并渲染指定 PDF 页供目检。已有工具给出的“渲染成功”与读者实际看到的问题分别记录。

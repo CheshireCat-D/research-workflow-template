@@ -15,6 +15,7 @@ RWT is an open-source toolkit for working on a research project with an AI assis
 
 | Research question | What you can inspect |
 | --- | --- |
+| Which conclusions change after one ozone reading changes? | [Recompute three estimates, check the brief and figure, and render the revised PDF](examples/ozone-revision/README.md). |
 | Which sources support a claim about particle ejection from asteroid Bennu? | Follow an [English literature-screening example](docs/literature-screening/README.md). Record why each candidate was included, excluded or left open, then carry those decisions into a project checkpoint. The example and its helper are available in the source repository. |
 | How does penguin body mass vary between species in the observed sample? | Reproduce the [public-data analysis](examples/public-penguins/README.md), inspect its figure and registered evidence, then resume the project. The runtime ZIP includes this example. |
 
@@ -35,6 +36,8 @@ python3 .agents/skills/_rw-runtime/tools/research.py resume --format markdown
 ## Explore the project
 
 - [English workflow overview](README.en.md) and [complete user guide](USER_GUIDE.en.md)
+- [Review a manuscript revision, compare figures and package the selected files](skills/rw-review/references/review-desk.md)
+- [Check a Chinese degree thesis against its institution’s requirements](skills/rw-writing/references/thesis-delivery-zh.md)
 - [All nine research skills](skills), from framing a question to responding to review
 - [Validation records](evals/current/README.md), [platform checks](docs/11-linux-validation.md) and [source attribution](provenance/ORIGIN.md)
 - [External research skill comparison](docs/13-research-skill-landscape.md) (in Chinese)
