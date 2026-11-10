@@ -59,8 +59,14 @@
 3. 外链资源指南可以直接收录上述来源并标明用途。任何实际代码/提示词移植都应锁定提交、核对逐文件许可与依赖、保留归属、修改记录，并在同一 RWT 登记/恢复接口下验收。
 4. README 图文与多语言呈现可以独立完成，不应把“参考了项目主页样式”写成“已经集成这些技能”或能力排名。
 
+## 文献筛选如何接入 RWT
+
+[Bennu 文献筛选实例](literature-screening/README.md)采用文献综述技能中记录筛选理由的做法，接入 RWT 已有的证据登记与检查点。研究者在英文筛选表里填写检索范围、读到的位置和选择理由，配套脚本生成 `register-batch` 可读的数据。案例把任务团队的原始图像报告登记为一条证据，把重复介绍同一观测的新闻稿记为排除，并将尚待对照样本的后续研究留给下次会话。实现和案例均为 RWT 原创，脚本随源码提供。
+
 ## 主页呈现参考
 
 [REA 原仓库](https://github.com/morluto/rea)采用多语言入口、首屏图片、快速开始和案例展示；[PaperSpine5](https://github.com/WUBING2023/PaperSpine)采用产品封面和语言导航。本轮参考这些信息组织方式，RWT 的封面与流程图独立制作，案例图来自 RWT 已有公开企鹅数据分析。没有复制这些项目的商标、截图或技能实现。
 
-[返回中文主页](../README.md) · [English overview](../README.en.md)
+[英文互动星图](https://cheshirecat-d.github.io/research-workflow-template/)让访客选择九个科研技能，并查看上述小行星文献实例与企鹅数据分析。
+
+[返回中文主页](i18n/README.zh-CN.md) · [English overview](../README.md)

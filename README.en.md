@@ -1,8 +1,13 @@
 <div align="center">
 
-[简体中文](README.md) · [English](README.en.md) · [Русский](docs/i18n/README.ru.md) · [日本語](docs/i18n/README.ja.md)
+[简体中文](docs/i18n/README.zh-CN.md) · [English](README.en.md) · [Русский](docs/i18n/README.ru.md) · [日本語](docs/i18n/README.ja.md)
 
-![RWT: pick up where your research left off.](docs/assets/rwt-hero-en.svg)
+<a href="https://cheshirecat-d.github.io/research-workflow-template/">
+  <picture>
+    <source media="(prefers-reduced-motion: no-preference)" srcset="docs/assets/research-observatory.webp">
+    <img src="docs/assets/research-observatory.png" alt="Research Observatory. Open the orbital map to explore nine research skills." width="1280">
+  </picture>
+</a>
 
 # RWT · Research Workflow Template
 
@@ -10,7 +15,7 @@
 
 [![Checks](https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml/badge.svg)](https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml) [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-316A56)](https://www.python.org/downloads/) [![License: MIT](https://img.shields.io/badge/License-MIT-D6EF93)](LICENSE)
 
-[Download the runtime](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) · [Quick start](#start-a-project) · [Full user guide](USER_GUIDE.en.md) · [Real example](#see-a-complete-research-record) · [External skill comparison](docs/13-research-skill-landscape.md)
+[Explore the live observatory](https://cheshirecat-d.github.io/research-workflow-template/) · [Download the runtime](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) · [Quick start](#start-a-project) · [Full user guide](USER_GUIDE.en.md) · [Real example](#see-a-complete-research-record) · [External skill comparison](docs/13-research-skill-landscape.md)
 
 </div>
 

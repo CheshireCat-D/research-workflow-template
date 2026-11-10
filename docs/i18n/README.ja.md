@@ -1,4 +1,4 @@
-[中文](../../README.md) · [English](../../README.en.md) · [Русский](README.ru.md) · **日本語**
+[中文](README.zh-CN.md) · [English](../../README.en.md) · [Русский](README.ru.md) · **日本語**
 
 ![RWT — Research Workflow Template](../assets/rwt-hero-en.svg)
 

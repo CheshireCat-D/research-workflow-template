@@ -35,13 +35,17 @@ SKIP_DIRS = {'__pycache__', '.pytest_cache', '.mypy_cache', '.ruff_cache', '.git
 PRIVATE_DIRS = {'.agents', '.research', 'private-data', 'local-config', '.venv', 'venv'}
 MAX_FILE = 16 * 1024 * 1024
 MAX_TOTAL = 64 * 1024 * 1024
-# Only these reviewed original task images may bypass the UTF-8 source rule.
+# Only these reviewed original images may bypass the UTF-8 source rule.
 # New images or changed bytes require an explicit source review, not a glob.
 BINARY_SOURCE_ASSETS = {
     'evals/disciplinary/cases/artwork-versions/original.png':
         '7f0361e7758b68be296f54ffba34a67920627fa15202f79d80a767fc3c0fe2a7',
     'evals/disciplinary/cases/artwork-versions/reproduction.png':
         '2fdfdaaed9b8f759bd6025b377f2e5fcda2c4debe6362a3acd8a182e554c3247',
+    'docs/assets/research-observatory.png':
+        '02f73effb440cfec596fed1ffff24a65071a486a6a1a76f7691b44204b3a4680',
+    'docs/assets/research-observatory.webp':
+        'ef5f70be47ff4553362c74ad368d6720ab10f1493f35e553481a260b568ad095',
 }
 PATH_PATTERN = re.compile(r'/(?:Users|home|private/tmp|private/var|var/folders|opt/homebrew|Library/Frameworks)/[^\s\"\x27<>]+')
 TOKEN_PATTERN = re.compile(r'gh[pousr]_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')

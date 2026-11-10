@@ -1,0 +1,56 @@
+{
+  "id": "Bennu",
+  "question": "Which OSIRIS-REx source shows particle ejections at Bennu on 6 and 19 January 2019?",
+  "search": {
+    "date": "2026-11-10",
+    "channel": "Targeted public web search, followed by inspection of the sources listed below",
+    "query": "NASA Bennu observed episodic ejection particles Lauretta 2019 Chesley mechanism meteoroid thermal fracture paper Bennu particle ejection model 2020",
+    "coverage": "Three selected reports from one query. Database hit totals, exhaustive retrieval and independent double screening were outside this exercise."
+  },
+  "criterion": "Include an original research report after checking image-based evidence for the two specified events. Exclude public retellings from the evidence count. Defer a follow-up when its event coverage or observation overlap still needs checking.",
+  "claim": {
+    "text": "OSIRIS-REx navigation images recorded discrete particle ejections at Bennu on 6 and 19 January 2019.",
+    "type": "empirical",
+    "scope": "The two selected events and the images and motion analysis in the original report. Physical causes and event frequency remain outside this claim."
+  },
+  "reports": [
+    {
+      "key": "Lauretta",
+      "title": "Episodes of particle ejection from the surface of the active asteroid (101955) Bennu",
+      "locator": "https://doi.org/10.1126/science.aay3544",
+      "version": "Lauretta et al., Science 366, eaay3544 (2019)",
+      "access": "partial",
+      "read_at": "https://science.gsfc.nasa.gov/sed/content/uploadFiles/publication_files/LaurettaHergenrother2019.pdf",
+      "position": "Article p. 2 of 10, Fig. 1 panels A-D and caption, and the paragraphs describing the two NavCam image pairs and particle motion.",
+      "decision": "include",
+      "reason": "The research team presents its images for both selected dates and explains how the image pairs distinguish moving particles.",
+      "relation": {
+        "kind": "supports",
+        "rationale": "The January 6 and 19 sequences each contain particles whose positions shift relative to the asteroid. The paper associates their motion with discrete ejection events.",
+        "scope": "Two events imaged by the same mission. Other dates, detection completeness and a unique physical cause require separate evidence."
+      }
+    },
+    {
+      "key": "NASA",
+      "title": "NASA’s OSIRIS-REx Mission Explains Bennu’s Mysterious Particle Events",
+      "locator": "https://www.nasa.gov/missions/nasas-osiris-rex-mission-explains-bennus-mysterious-particle-events/",
+      "version": "William Steigerwald, NASA, 5 December 2019",
+      "access": "partial",
+      "read_at": "https://www.nasa.gov/missions/nasas-osiris-rex-mission-explains-bennus-mysterious-particle-events/",
+      "position": "Opening image caption and paragraph referring to the team's December 6 Science paper.",
+      "decision": "exclude",
+      "reason": "The mission news article summarizes the same observations as the included paper. Counting it again would duplicate those observations."
+    },
+    {
+      "key": "Chesley",
+      "title": "Trajectory Estimation for Particles Observed in the Vicinity of (101955) Bennu",
+      "locator": "https://doi.org/10.1029/2019JE006363",
+      "version": "Chesley et al., Journal of Geophysical Research: Planets (2020)",
+      "access": "partial",
+      "read_at": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019JE006363",
+      "position": "Abstract and Introduction paragraphs describing the extension of the 2019 analysis, the observation window and selection effects.",
+      "decision": "defer",
+      "reason": "The follow-up covers a wider time span and builds on the first paper. Matching its trajectory data to individual January images remains open, so this pass assigns no additional evidence for the two events."
+    }
+  ]
+}

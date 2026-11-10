@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Explore the nine skills of Research Workflow Template and follow a public research case through its sources, results and checkpoint.">
+  <title>Research Observatory · RWT</title>
+  <link rel="stylesheet" href="./universe.css">
+  <script src="./universe.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#skills">Skip to the skill atlas</a>
+<div class="header-wrap">
+<header class="site-header wrap">
+  <a class="brand" href="#top" aria-label="RWT Research Observatory home"><span class="orbit-mark" aria-hidden="true"></span><strong>RWT</strong><span class="brand-divider"></span><span class="brand-name">Research Observatory</span></a>
+  <nav aria-label="Main navigation"><a href="#skills">Skill atlas</a><a href="#field-notes">Field notes</a><a class="repo-link" href="https://github.com/CheshireCat-D/research-workflow-template">GitHub <span aria-hidden="true">↗</span></a></nav>
+</header>
+</div>
+<main id="top">
+  <section class="hero wrap" aria-labelledby="page-title">
+    <div class="intro">
+      <p class="kicker"><span class="signal" aria-hidden="true"></span>Research Workflow Template</p>
+      <h1 id="page-title">Research<br><em>Observatory</em></h1>
+      <p class="intro-text">Explore nine AI research skills that keep questions, evidence and manuscripts connected across sessions.</p>
+      <div class="hero-links"><a class="button primary" href="#skills">Explore the atlas <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/USER_GUIDE.en.md">User guide <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <figure class="observatory" aria-labelledby="map-title">
+      <div class="instrument-bar"><span id="map-title">Orbital map</span><button class="motion" id="motion" type="button" hidden>Pause motion</button></div>
+      <div class="map" id="map">
+        <div class="static-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+        <canvas id="universe" aria-hidden="true"></canvas>
+        <div id="markers" aria-label="Research skill planets"></div>
+      </div>
+      <figcaption><span class="map-key" aria-hidden="true"></span><span id="map-caption">Each planet represents a skill in the atlas below.</span></figcaption>
+    </figure>
+  </section>
+<div class="content wrap">
+  <section id="skills" aria-labelledby="skills-title">
+    <div class="section-heading"><div><p class="kicker">System index</p><h2 id="skills-title">Skill atlas</h2></div><p class="section-note">Select a skill to inspect its role.</p></div>
+    <div class="atlas-layout">
+      <nav class="skill-nav" id="skill-nav" aria-label="Choose a research skill">
+        <a href="#rw-workflow" data-key="workflow" style="--tone:#74e6d5">Workflow</a>
+        <a href="#rw-question" data-key="question" style="--tone:#a2c1ef">Question</a>
+        <a href="#rw-literature" data-key="literature" style="--tone:#a4a0ff">Literature</a>
+        <a href="#rw-innovation" data-key="innovation" style="--tone:#f5c67a">Innovation</a>
+        <a href="#rw-candidates" data-key="candidates" style="--tone:#8fc4d2">Candidates</a>
+        <a href="#rw-validation" data-key="validation" style="--tone:#e3a4f9">Validation</a>
+        <a href="#rw-writing" data-key="writing" style="--tone:#9acdf7">Writing</a>
+        <a href="#rw-figures" data-key="figures" style="--tone:#efa78b">Figures</a>
+        <a href="#rw-review" data-key="review" style="--tone:#c1c999">Review</a>
+      </nav>
+      <div class="skill-details" id="skill-details" aria-live="polite" aria-atomic="true">
+        <article id="rw-workflow"><code>rw-workflow</code><h3>Resume a research project</h3><p>Read the saved claims, evidence and checkpoint. Identify the next action and carry it into the next working session.</p><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/skills/rw-workflow/SKILL.md">Open skill source ↗</a></article>
+        <article id="rw-question"><code>rw-question</code><h3>Frame the question</h3><p>Turn an interest into a research question with a defined scope, resources, constraints and a first deliverable.</p><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/skills/rw-question/SKILL.md">Open skill source ↗</a></article>
+        <article id="rw-literature"><code>rw-literature</code><h3>Trace claims to sources</h3><p>Find relevant work, track search coverage and examine what each source supports. The source companion turns explicit screening decisions into an RWT registration batch.</p><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/docs/literature-screening/README.md">Explore the screening companion ↗</a><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/skills/rw-literature/SKILL.md">Open skill source ↗</a></article>
+        <article id="rw-innovation"><code>rw-innovation</code><h3>Develop a testable idea</h3><p>Formulate a mechanism or conjecture, state what it predicts and propose a check that could challenge it.</p><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/skills/rw-innovation/SKILL.md">Open skill source ↗</a></article>
+        <article id="rw-candidates"><code>rw-candidates</code><h3>Compare possible directions</h3><p>Weigh candidate questions against the available literature, evidence, time and resources, then record why one advances.</p><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/skills/rw-candidates/SKILL.md">Open skill source ↗</a></article>
+        <article id="rw-validation"><code>rw-validation</code><h3>Test a research claim</h3><p>Match the claim to a proof, experiment or method check. Record the assumptions, observations and unresolved limits.</p><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/skills/rw-validation/SKILL.md">Open skill source ↗</a></article>
+        <article id="rw-writing"><code>rw-writing</code><h3>Organize the manuscript</h3><p>Build sections around the research question and its supporting evidence. Preserve limitations when revising the argument.</p><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/skills/rw-writing/SKILL.md">Open skill source ↗</a></article>
+        <article id="rw-figures"><code>rw-figures</code><h3>Make the evidence visible</h3><p>Turn data and research designs into editable plots and schematics. Check labels, scale, layout and the scope of each caption.</p><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/skills/rw-figures/SKILL.md">Open skill source ↗</a></article>
+        <article id="rw-review"><code>rw-review</code><h3>Review and revise</h3><p>Audit claim support and consistency across the manuscript and its artifacts. Track reviewer comments, evidence and revisions together.</p><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/skills/rw-review/SKILL.md">Open skill source ↗</a></article>
+      </div>
+    </div>
+  </section>
+  <section class="field-notes" id="field-notes" aria-labelledby="bennu-title">
+    <div class="field-copy"><p class="kicker">Field notes · Literature screening</p><h2 id="bennu-title">Ejections from Bennu</h2><p>Can two reports count as independent evidence of the same asteroid event? Inspect the source selection and follow its decisions into a local RWT research record.</p><a class="text-link" href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/docs/literature-screening/README.md">Explore the Bennu case <span aria-hidden="true">↗</span></a></div>
+    <div class="screening"><h3>Source decisions</h3><ul><li><span>Original observation</span><strong>Include</strong></li><li><span>Secondary account</span><strong>Exclude</strong></li><li><span>Trajectory study</span><strong>Defer</strong></li></ul><p>Possible overlap in the trajectory observations needs a source check.</p></div>
+  </section>
+  <section class="field-notes additional-case" aria-labelledby="field-title">
+    <div class="field-copy"><p class="kicker">Field notes · Public case</p><h2 id="field-title">Palmer penguins</h2><p>Follow one observed dataset from its pinned source to a descriptive result, an editable figure and a saved project checkpoint.</p><a class="text-link" href="https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/public-penguins">Explore the case <span aria-hidden="true">↗</span></a></div>
+    <figure class="case-chart"><figcaption>Mean body mass difference <small>Male minus female, within species · grams</small></figcaption>
+      <div class="bars"><div><span>Adélie</span><i style="--length:74.96%"></i><b>675 g</b></div><div><span>Chinstrap</span><i style="--length:45.75%"></i><b>412 g</b></div><div><span>Gentoo</span><i style="--length:89.45%"></i><b>805 g</b></div></div>
+      <p>333 complete records of 344 observations. <a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/examples/public-penguins/observed/species_contrasts.csv">Result table ↗</a></p>
+    </figure>
+  </section>
+  <footer><a class="brand footer-brand" href="#top"><span class="orbit-mark" aria-hidden="true"></span><strong>RWT</strong></a><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/README.en.md#start-a-project">Start a project ↗</a><a href="https://github.com/CheshireCat-D/research-workflow-template/blob/main/LICENSE">MIT License ↗</a></footer>
+</div>
+</main>
+</body></html>
