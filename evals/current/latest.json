@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-recorded-scope",
-  "checked_at_utc": "2026-11-11T10:49:26.608207+00:00",
+  "checked_at_utc": "2026-11-11T11:01:21.860149+00:00",
   "scope": "Current literature intake, public-original retrieval, journal exemplars and claim-level citation workflows. Local software/archive checks and bounded forward tasks are recorded here. Earlier research and delivery studies retain their original scopes. Exact-commit hosted CI and publication are in the release attachment.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -24,7 +24,7 @@
         "python": "3.14.6",
         "platform": "darwin"
       },
-      "test_methods": 474,
+      "test_methods": 475,
       "check_groups": 7,
       "check_names": [
         "schema-source-consistency",
@@ -37,7 +37,7 @@
       ],
       "receipt": {
         "identifier": "local-evidence:literature-core.json",
-        "sha256": "c9d8fe659dd00f76bcd6a16c03e1b01f79fc0e304510dcf36c1bdeac0dd56d4b"
+        "sha256": "968a366ab7f4ebe9d4509ba8ffddbca976ef51822708b74de339a06807d1f354"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -178,7 +178,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 94,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "38d57ad03b852902455b8a812598f6faa85502f0c65832f634cc64cf7b5faafd",
+    "sha256": "b6f944621bf077a7336ac48a797698b7960f803744705a21a7cd24cbbc94bd42",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 78,
     "development_history_or_previous_editions_included": false,
@@ -554,7 +554,7 @@
   "final_release_review": {
     "status": "passed-local-acceptance",
     "runtime_files": 94,
-    "archive_sha256": "38d57ad03b852902455b8a812598f6faa85502f0c65832f634cc64cf7b5faafd",
+    "archive_sha256": "b6f944621bf077a7336ac48a797698b7960f803744705a21a7cd24cbbc94bd42",
     "installed_skills": 9,
     "new_skill_entrypoints": 0,
     "new_required_runtime_dependencies": 0,
@@ -563,7 +563,15 @@
     "new_helper": {
       "path": "skills/rw-literature/scripts/inspect_materials.py",
       "scope": "Read-only bounded file, directory and ZIP inventory with byte identities. It does not assign reading or claim-support judgments.",
-      "specific_regression_tests": 8,
+      "specific_regression_tests": 9,
+      "windows_directory_identity_regression_passed": true,
+      "repaired_hosted_failure": {
+        "commit": "07d956779f92496dbeee3320cf1c6fe5a797bee9",
+        "job_url": "https://github.com/CheshireCat-D/research-workflow-template/actions/runs/43006868967/job/130476419672",
+        "case": "test_unicode_duplicates_and_originals_remain_unchanged",
+        "cause": "Windows Python3.11 cached directory stat omits inode/device identity; compare fresh checked path metadata to descriptor metadata instead.",
+        "reference": "https://docs.python.org/3.11/library/os.html#os.DirEntry.stat"
+      },
       "crc_failures_preserve_read_budget": true,
       "zip_directory_metadata_preflight": true,
       "ascii_help_utf8_regression_passed": true,
@@ -574,7 +582,7 @@
         "inventoried_files": 2,
         "reading_status": "not-read",
         "citation_support": "not-checked",
-        "helper_sha256": "d30cf79af6a6f16d853591a2a00aa91c22f878087cba85e4aea412a4adda78f0",
+        "helper_sha256": "4907ce02556f54ce2070016cd74ef6630e920e54dfbcb7566cd141fc4781e76f",
         "ascii_help_passed": true
       }
     },
@@ -606,10 +614,10 @@
           "skills/rw-literature/references/search-and-library.md": "83d5bf0477928abdd66df3421b0ac913b39c31d3e2b0889163df8d187289da69",
           "skills/rw-writing/SKILL.md": "cacb43039182accc1d7e92e51a08405b211e4c27efdc69e53a7054842b3dfd8a",
           "skills/rw-writing/references/journal-exemplars.md": "cd89392c6a71d413a7c87080068fd055fed2cb035ff051277a02d3697f487f1e",
-          "skills/rw-literature/scripts/inspect_materials.py": "d30cf79af6a6f16d853591a2a00aa91c22f878087cba85e4aea412a4adda78f0"
+          "skills/rw-literature/scripts/inspect_materials.py": "4907ce02556f54ce2070016cd74ef6630e920e54dfbcb7566cd141fc4781e76f"
         },
-        "report_sha256": "d214a9fd65976b4565dc6d5ee0f16c1c6b6e8249758dedad24b563573357379e",
-        "execution_receipt_sha256": "fc9dbde2e130eca064db8bf7e9268bd3c96e83089a59c47eac897d75e57b2064",
+        "report_sha256": "820c74fb848e04a4174bedbef6d699cc7ca37dcf52589fd9aaeaf8748406a663",
+        "execution_receipt_sha256": "a5ceedff3ab62ec73371e2452574c1c4c0f2d7a9185599bed76676528450ce93",
         "scope": "Original checks reused after final relevant guidance was reread and the settled inventory tool was rerun. The execution record retains the observed interim guidance change and recheck."
       },
       "explicit_offline": {

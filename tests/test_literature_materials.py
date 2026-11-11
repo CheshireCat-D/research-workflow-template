@@ -1,5 +1,6 @@
 """Read-only inventories preserve original bytes and report partial access honestly."""
 import hashlib
+from contextlib import contextmanager
 import importlib.util
 import json
 import os
@@ -9,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from types import SimpleNamespace
 from unittest.mock import patch
 import zipfile
 
@@ -51,6 +53,31 @@ class LiteratureMaterialsTests(unittest.TestCase):
         (self.root / "nested").mkdir()
         (self.root / "nested/deep").mkdir()
         self.assertTrue(tool.inspect(self.root, max_depth=1)["truncated"])
+
+    def test_cached_directory_identity_does_not_mark_unchanged_files_changed(self):
+        source = self.root / "article.pdf"
+        source.write_bytes(b"original article")
+        original_scandir = os.scandir
+
+        def cached_entry(entry):
+            actual = entry.stat(follow_symlinks=False)
+            cached = SimpleNamespace(
+                st_mode=actual.st_mode, st_size=actual.st_size,
+                st_mtime_ns=actual.st_mtime_ns, st_ino=0, st_dev=0,
+                st_file_attributes=getattr(actual, "st_file_attributes", 0))
+            return SimpleNamespace(name=entry.name, path=entry.path,
+                                   stat=lambda **kwargs: cached)
+
+        @contextmanager
+        def cached_scandir(path):
+            with original_scandir(path) as entries:
+                yield (cached_entry(entry) for entry in entries)
+
+        with patch.object(tool.os, "scandir", side_effect=cached_scandir):
+            report = tool.inspect(self.root)
+        self.assertTrue(report["passed"], report["errors"])
+        self.assertEqual(report["files"][0]["status"], "inventoried")
+        self.assertEqual(report["files"][0]["sha256"], hashlib.sha256(source.read_bytes()).hexdigest())
 
     def test_zip_member_identity_and_unsafe_members_without_extraction(self):
         archive = self.root / "supplied.zip"

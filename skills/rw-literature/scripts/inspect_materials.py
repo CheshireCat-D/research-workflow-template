@@ -155,9 +155,10 @@ def inspect(source, *, max_files=200, max_depth=6, max_file_bytes=64*MIB,
                                 pending.clear()
                                 break
                             try:
-                                with open_regular(child)[0] as stream:
-                                    record(name, info.st_size, stream)
-                                    if identity(info) != identity(os.fstat(stream.fileno())):
+                                stream, opened_info = open_regular(child)
+                                with stream:
+                                    record(name, opened_info.st_size, stream)
+                                    if identity(opened_info) != identity(os.fstat(stream.fileno())):
                                         result["files"][-1].update(status="changed", sha256=None)
                                         skip(name, "File changed during inspection", error=True)
                             except (OSError, ValueError) as exc:
