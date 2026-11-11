@@ -2,7 +2,7 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-recorded-scope",
-  "checked_at_utc": "2026-11-11T10:38:24.595855+00:00",
+  "checked_at_utc": "2026-11-11T10:49:26.608207+00:00",
   "scope": "Current literature intake, public-original retrieval, journal exemplars and claim-level citation workflows. Local software/archive checks and bounded forward tasks are recorded here. Earlier research and delivery studies retain their original scopes. Exact-commit hosted CI and publication are in the release attachment.",
   "scientific_validity": "not-assessed",
   "publication_style": {
@@ -37,7 +37,7 @@
       ],
       "receipt": {
         "identifier": "local-evidence:literature-core.json",
-        "sha256": "a854393914fb0ce55eb7298a778b99f1f9f7ad2b7e689ffda24de4c6d45cea9e"
+        "sha256": "c9d8fe659dd00f76bcd6a16c03e1b01f79fc0e304510dcf36c1bdeac0dd56d4b"
       },
       "platform_skips": {
         "native_windows_tests": 13,
@@ -178,7 +178,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 94,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "a33b5ecffa3c8507549e2f0f5412d9ce2e2a6d00da1c9a7de30495ba151e04d7",
+    "sha256": "38d57ad03b852902455b8a812598f6faa85502f0c65832f634cc64cf7b5faafd",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 78,
     "development_history_or_previous_editions_included": false,
@@ -554,7 +554,7 @@
   "final_release_review": {
     "status": "passed-local-acceptance",
     "runtime_files": 94,
-    "archive_sha256": "a33b5ecffa3c8507549e2f0f5412d9ce2e2a6d00da1c9a7de30495ba151e04d7",
+    "archive_sha256": "38d57ad03b852902455b8a812598f6faa85502f0c65832f634cc64cf7b5faafd",
     "installed_skills": 9,
     "new_skill_entrypoints": 0,
     "new_required_runtime_dependencies": 0,
@@ -566,6 +566,7 @@
       "specific_regression_tests": 8,
       "crc_failures_preserve_read_budget": true,
       "zip_directory_metadata_preflight": true,
+      "ascii_help_utf8_regression_passed": true,
       "installed_execution": {
         "runtime_members": 78,
         "skills": 9,
@@ -573,7 +574,8 @@
         "inventoried_files": 2,
         "reading_status": "not-read",
         "citation_support": "not-checked",
-        "helper_sha256": "19f98f43551cff30e16a11e98d62da6f5ca8c61182122387a95c18b98848249f"
+        "helper_sha256": "d30cf79af6a6f16d853591a2a00aa91c22f878087cba85e4aea412a4adda78f0",
+        "ascii_help_passed": true
       }
     },
     "real_folder_inventory": {
@@ -604,10 +606,10 @@
           "skills/rw-literature/references/search-and-library.md": "83d5bf0477928abdd66df3421b0ac913b39c31d3e2b0889163df8d187289da69",
           "skills/rw-writing/SKILL.md": "cacb43039182accc1d7e92e51a08405b211e4c27efdc69e53a7054842b3dfd8a",
           "skills/rw-writing/references/journal-exemplars.md": "cd89392c6a71d413a7c87080068fd055fed2cb035ff051277a02d3697f487f1e",
-          "skills/rw-literature/scripts/inspect_materials.py": "19f98f43551cff30e16a11e98d62da6f5ca8c61182122387a95c18b98848249f"
+          "skills/rw-literature/scripts/inspect_materials.py": "d30cf79af6a6f16d853591a2a00aa91c22f878087cba85e4aea412a4adda78f0"
         },
-        "report_sha256": "4c2c3b51f2d19f698fec2d0d1bb54f9cb06c537c732205f2aa645b886b084dbd",
-        "execution_receipt_sha256": "7a5e5154b6b99a6fa6b2e09231c99bbad824aac47ddb3b157cb3134e170a1716",
+        "report_sha256": "d214a9fd65976b4565dc6d5ee0f16c1c6b6e8249758dedad24b563573357379e",
+        "execution_receipt_sha256": "fc9dbde2e130eca064db8bf7e9268bd3c96e83089a59c47eac897d75e57b2064",
         "scope": "Original checks reused after final relevant guidance was reread and the settled inventory tool was rerun. The execution record retains the observed interim guidance change and recheck."
       },
       "explicit_offline": {

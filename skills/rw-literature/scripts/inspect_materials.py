@@ -225,6 +225,7 @@ def inspect(source, *, max_files=200, max_depth=6, max_file_bytes=64*MIB,
 
 
 def main():
+    sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source")
     parser.add_argument("--max-files", type=int, default=200, help="1–10000; default 200")
@@ -237,7 +238,6 @@ def main():
         result = inspect(args.pop("source"), **args)
     except (OSError, ValueError, zipfile.BadZipFile) as exc:
         result = {"passed": False, "error": str(exc)}
-    sys.stdout.reconfigure(encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0 if result["passed"] else 2
 

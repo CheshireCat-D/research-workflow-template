@@ -136,6 +136,10 @@ class LiteratureMaterialsTests(unittest.TestCase):
                                  env={**os.environ, "PYTHONIOENCODING": "ascii"})
         self.assertEqual(process.returncode, 0)
         self.assertEqual(json.loads(process.stdout.decode("utf-8"))["files"][0]["path"], source.name)
+        help_result = subprocess.run([sys.executable, "-B", str(SCRIPT), "--help"], capture_output=True,
+                                     env={**os.environ, "PYTHONIOENCODING": "ascii"})
+        self.assertEqual(help_result.returncode, 0, help_result.stderr)
+        self.assertIn("max-files", help_result.stdout.decode("utf-8"))
         with self.assertRaises(ValueError):
             tool.inspect(source, max_total_bytes=0)
 
