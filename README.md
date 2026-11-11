@@ -21,6 +21,8 @@ RWT is an open-source toolkit for working on a research project with an AI assis
 
 ## Start a project
 
+Open RWT in an assistant with local file and command access and describe the work you want done. The assistant can set up the project, revise files and save a recoverable next action. The web review view is available when you want it. The command below is also available for manual setup.
+
 Download the [runtime ZIP](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) and [SHA-256 checksum](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip.sha256). Verify the checksum and extract the ZIP. In the directory containing `tools/`, run this with Python 3.11 or later.
 
 ```sh

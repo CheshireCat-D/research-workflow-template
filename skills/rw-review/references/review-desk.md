@@ -1,6 +1,6 @@
 # Same-project review and delivery
 
-Use the [review desk](../scripts/review_desk.py) when a researcher wants to compare actual figures, leave feedback, recover decisions or share a revised manuscript. An ordinary single report can use the existing review guidance directly.
+Handle review, revision and author feedback in the conversation. Use the [review desk tools](../scripts/review_desk.py) when the task needs project-bound figure choices, feedback history or a reading package. The assistant prepares the plan and saves the user's stated choices. Open the browser when requested or when side-by-side previews help the researcher decide.
 
 ## Prepare the review
 
@@ -25,21 +25,31 @@ Choose the deliverables for the intended reader. Include every supporting file n
 
 Each check records a label and one of `checked`, `pending`, `failed` or `not-run`, with an optional `note`. Use `checked` only for work actually done and supply its registered report as `evidence`. The optional `against` object maps material references to SHA-256 values from the actual check. Supply the report's own digest and the digests of the specific files it inspected. A matching report and at least one matching target are labeled `checked (bound files match)`; an incomplete baseline shows `file set unverified`, and any mismatch shows `needs recheck`. These are declared checks. The desk verifies file identity and leaves scientific assessment to the reviewer. For estimates shared by the brief, figure or caption, apply the [result-surface check](../../rw-figures/references/result-surfaces.md) and register its actual report before citing it here.
 
-## See the files and save a choice
+## Save a choice from the conversation
 
-From the project directory in a connected project, run:
+From the connected project directory, the assistant reads the current material references and token:
+
+```sh
+python3 .agents/skills/rw-review/scripts/review_desk.py manifest
+```
+
+Inspect the matching materials, use the choice and feedback already supplied in the conversation, then run `save --expect TOKEN --choice artifact:FIG2 --by NAME --feedback TEXT`. For feedback use `--choice request-changes`; with no candidates, `accept-materials` accepts the listed deliverables. Identify the user or delegated AI operator accurately. If the user delegated the choice, record the assistant's own reason. Ask for a choice only when it remains unresolved and affects the task.
+
+`save` writes the native decision and recovery checkpoint together. It binds the plan, registered material versions and hashes, and verifies the token inside the project lock. Reconcile changed material before saving a new decision. Exit 1 means the choice was saved and recovery found other project issues. Exit 2 signals an input, version or file error. A saved choice records the operator's decision; independent review follows the actual review evidence.
+
+From the source checkout or extracted toolkit, use `skills/rw-review/scripts/review_desk.py MODE --root PROJECT`. All modes accept `--plan` for another project-relative plan path.
+
+## Open the optional browser view
 
 ```sh
 python3 .agents/skills/rw-review/scripts/review_desk.py serve
 ```
 
-Open the loopback URL printed in the terminal. View the candidates, select one or request changes, enter the actual reviewer or delegated operator and the reason, then save. The same command later reads the saved decision, earlier choices, feedback, superseded paths and outstanding checks. Stop the local server with Ctrl-C. From the source checkout or extracted user ZIP, call `skills/rw-review/scripts/review_desk.py serve --root PROJECT` instead. All modes accept `--plan` for another project-relative plan path.
-
-The desk writes a native RWT decision and a recovery checkpoint in one transaction. Each decision carries the plan identity and exact registered versions and hashes viewed. Saving verifies the page token inside the native project lock. Reload a stale tab after files, the plan or the decision change. Reconcile changed material before recording a new decision. The web form records what the operator entered; identify a delegated AI or test operator honestly. Accepting a candidate and independently reviewing a paper are separate actions.
-
-For an authorized choice already made outside the browser, read the JSON from `manifest`, inspect the matching materials, then use `save --expect TOKEN --choice artifact:FIG2 --by NAME --feedback TEXT`. For feedback use `--choice request-changes`; with no candidates, `accept-materials` accepts the listed deliverables. `save` returning 1 means the decision was saved and native recovery found other project issues. Exit 2 signals an input, version or file error.
+Open the printed loopback URL to compare candidates, view earlier choices and feedback, and save a decision. Use the same project and plan for later revisions. Reload a stale tab after files, the plan or the decision change. Stop the server with Ctrl-C when finished.
 
 ## Export
+
+For a reading package, the assistant runs `pack` directly using the selected files. Choose another export only when its separate output is needed.
 
 ```sh
 python3 .agents/skills/rw-review/scripts/review_desk.py html > review-snapshot.html

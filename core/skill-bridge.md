@@ -2,20 +2,22 @@
 
 本协议供通用模板的 `rw-*` 技能按需读取。科研主张、方法结论和已执行动作写入同一项目；共用的版本、文件失效和只读边界见 [核心协议](protocol.md)。
 
+日常科研与改稿从当前对话直接执行。沿用用户已给出的材料、目标、工作稿和选择，由助手完成需要的命令、登记与保存。只有缺失信息会改变当前行动、现有要求确有冲突，或下一项行动需要尚未获得的授权时才提问。未知期刊、期限或学科可先留空，继续可开展的工作。网页适用于用户要求的交互预览或并排选择；对话中的反馈、已定选图和普通交付直接处理。
+
 ## 定位工具与项目
 
 以本文件所在的 `core/` 为基准，上一级就是工具包根目录；可运行命令在 [tools/research.py](../tools/research.py)，模式在 [schemas/](schemas/)。源码仓库与项目内生成的 `_rw-runtime` 采用相同布局。不要从个人技能路径寻找依赖，也不要把新项目误建在工具包目录里。
 
-用户给定的项目根优先；项目命令省略 `--root` 时只使用当前目录，不向上查找，也不自动初始化。已有项目先运行一次 `resume --format markdown`，读取配置、登记、下一步与变化，再选择眼下所需的技能；从工具包目录调用时显式加 `--root PROJECT`。不必再连跑 `status`、`check` 和逐条 `show`。`resume` 退出 1 时审阅发现；退出 2 时处理接口错误，不能假装已恢复。尚无项目且用户要求持续研究时，用 `init --output NEW --title TITLE` 创建新目录。单次解释或局部润色可以只交付文本，无须为了技能而建立项目。
+用户给定的项目根优先；项目命令省略 `--root` 时只使用当前目录，不向上查找，也不自动初始化。跨会话进入或切换已有项目时，运行一次 `resume --format markdown`，读取配置、登记、下一步与变化；从工具包目录调用时显式加 `--root PROJECT`。同一会话切换技能时沿用最新恢复摘要，组合保存返回的 `recovery` 也可直接复用。发现外部修改、写入冲突或状态不明时重新恢复；后续保存仍核对当前版本和文件指纹。单次解释或局部润色可直接处理给定文本。尚无项目且用户要求持续研究时，用 `init --output NEW --title TITLE --connect-skills` 一次创建并接入。`resume` 退出 1 时审阅发现；退出 2 时处理接口错误。
 
-已有材料目录不等于已初始化项目。需要持续管理时，在旁边创建 RWT 项目，保留原件，并与用户明确哪些工作副本以后在项目内更新；不要悄悄改为跟踪一份不再更新的副本。外部或受控材料可只登记定位和访问范围。
+已有材料目录不等于已初始化项目。局部修改沿用已指定的工作稿。需要新建持续管理项目时，在旁边创建 RWT 项目，保留原件，向用户说明实际材料和工作稿的位置；已有明确指定时直接复用，仅在多份材料无法确定主源时澄清。外部或受控材料可只登记定位和访问范围。
 
-若指定学科或方法，先运行 `tools/research.py options` 或读 [稳定 ID 目录](../design/catalog.json)：例如数学证明可选 `--discipline natural-sciences --method formal-theory`，计算工作可选 `--method computational`。该只读查询不需要项目。`proof` 等变体用于方法绑定，不能直接作为项目方法 ID。尚未确定时省略这些选项；后续经用户澄清后，用 `configure` 更新项目配置，不直接改 JSON 或猜测 CLI 接受中文标签。
+学科和方法 ID 沿用已核实的项目配置或本轮读过的目录；需要查找时运行 `tools/research.py options` 或读 [稳定 ID 目录](../design/catalog.json)。例如数学证明可选 `--discipline natural-sciences --method formal-theory`，计算工作可选 `--method computational`。`proof` 等变体用于方法绑定，不能直接作为项目方法 ID。尚未确定时省略；材料已能确定或用户补充后，用 `configure` 更新配置。
 
 已知的研究兴趣、期限、预算和可用能力分别用 `configure --interest`、`--deadline`、`--budget`、可重复的 `--add-capability` 保存，目标期刊用 `--venue`，学科与方法沿用稳定 ID。材料详情保留在实际笔记和来源记录中；未知项不补造。恢复时读取 `configuration`，不要只沿用旧聊天中的约束。
 
 ```text
-python3 TOOLKIT/tools/research.py init --output NEW --title TITLE
+python3 TOOLKIT/tools/research.py init --output NEW --title TITLE --connect-skills
 python3 TOOLKIT/tools/research.py resume --root PROJECT --format markdown
 python3 TOOLKIT/tools/research.py show --root PROJECT --edit evidence:E1 activity:A1
 python3 TOOLKIT/tools/research.py register-batch --root PROJECT --file BATCH.json --next-action TEXT --activity A1
@@ -28,7 +30,7 @@ python3 TOOLKIT/tools/research.py checkpoint --root PROJECT --next-action TEXT -
 
 ## 登记什么
 
-先产生可审阅的材料，再登记实际存在的相对路径。保留原始输入，修订稿或结果另存；外部或受控材料可仅登记定位和真实访问范围。
+先产生可审阅的材料，再登记实际存在的相对路径。保留原始数据和来源。沿用指定的工作稿编辑；首次覆盖原稿前保留可恢复副本，需要前后对照或交付时保存独立版本。外部或受控材料可仅登记定位和真实访问范围。
 
 | 类型 | 最小内容与用途 |
 |---|---|
@@ -53,7 +55,7 @@ python3 TOOLKIT/tools/research.py checkpoint --root PROJECT --next-action TEXT -
 
 组合保存或 `checkpoint --report` 返回退出 1 时，先看 `registered` / `checkpoint_saved` 与 `recovery`：记录可能已保存，只是仍有漂移或过期活动，不能盲目重试同一替换。提交前校验失败不会写回；遇到写入 I/O 异常则先读取当前状态确认是否已落盘，不承诺所有写入异常都能回滚。
 
-由助手完成所需登记。首次及后续交付都给出本轮已保存成果的实际路径、简短结论、保存／登记状态和具体下一步；尚未生成文件时直接说明。讨论或临时建议不必创建记录；需要留待后续使用的问题卡、分析结果、稿件或决定，按实际成果保存并关联现有记录，不另建一套台账。
+由助手完成持续任务所需的保存和登记，可自行概括具体下一步；这是本轮交付的一部分。交付时给出成果路径和简短结论，有恢复发现或关键后续事项时一并说明。讨论或临时建议可直接交付；需要留待后续使用的问题卡、分析结果、稿件或决定，按实际成果保存并关联现有记录。
 
 只读检查或仅给建议的请求不新增记录、不保存检查点。只有任务要求产物、登记或持续工作时才写入。项目内接入技能的生成副本有独立清单；其存在及完整性不等于宿主已选择某项技能，也不替代实际任务测试。
 

@@ -12,7 +12,15 @@ You do the research with an assistant in Codex or another compatible skill host.
 
 Only one current edition is maintained. Its distribution is named `research-workflow-template.zip`; older editions do not accumulate under numbered filenames. Updates are identified by the source inventory and SHA-256 content fingerprints. Data formats, individual records, Python, and external tools retain the version information needed for compatibility and traceability.
 
-## First use: create a separate research project
+## Work directly in the conversation
+
+In an assistant with project-file and command access, state the current task: “Continue the last proof,” “Revise section 3 while preserving formulas and citations,” or “Recompute these data and explain which results changed.” The assistant handles initialization, configuration, registration and checkpoints when needed, then gives the output path and next action. Actual deliverables in an ongoing project are saved as the work proceeds; you do not have to add “save and register” each round.
+
+Within the same conversation, the assistant reuses the project state, materials and authorization already established. It checks affected state when files change or the project changes. Known information is reused, and details such as venue or deadline are added when they affect the current action. The assistant asks when an unresolved choice changes the research direction, manuscript meaning or authorized scope.
+
+Use the web view for requested interactive previews or side-by-side figure choices, or when the comparison materially helps the task. The assistant can export a reading package directly from the conversation. Choices already given in the conversation carry forward. You can ask “Show these two figures side by side” or continue revising in the conversation.
+
+## Manual setup and first project
 
 Use Python 3.11 or later on Windows, macOS or Linux. Platform implementation and actually executed verification are recorded separately in the [platform guide](docs/11-linux-validation.md).
 
@@ -42,13 +50,13 @@ For a separate skill-copy diagnostic, use `python3 tools/connect_skills.py check
 
 ## Start with an interest, even without a topic
 
-If you have not created a project, the assistant can perform the initialization above for you. Open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
+For a fuller research brief, expand the description below with what you already know. An existing project retains its saved information; add missing details when the current task needs them.
 
 > Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step. After the first step, give the actual output path, a short conclusion, its saved / registered status and the next action.
 
 If the journal is undecided, write “undecided” and continue the research already possible. The target journal guides audience, scope and submission requirements; it is not an acceptance prediction.
 
-The assistant saves known interests, deadlines, resources and goals in project configuration, with material details in actual notes and source records. For a question card, analysis or manuscript you will continue using, ask: “Save and register this, and give me its file path.” A discussion or temporary sentence edit can simply return text. Configuration and correction commands are described under daily operations below.
+The assistant saves known interests, deadlines, resources and goals in project configuration, with material details in actual notes and source records. It saves question cards, analyses and manuscripts produced for ongoing work, links the relevant records and returns their paths. A discussion or temporary sentence edit can simply return text. Configuration and correction commands are described under daily operations below.
 
 A chat interface may use the guide for discussion or editing according to its actual attachment capabilities. Uploading a file does not establish skill installation or local execution. Initialization, registration and recovery require real directory and command access. A brand or model name alone does not establish one-click compatibility.
 

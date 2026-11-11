@@ -21,7 +21,7 @@
 python3 SKILL_DIR/scripts/search_crossref.py --query "rough paths regularity structures" --output literature/crossref-search --rows 20 --max-pages 3 --max-records 60
 ```
 
-检索文本会发送到 Crossref；确认其属于当前任务允许外部检索的内容。可显式加
+检索文本会发送到 Crossref。当前任务要求的公开主题可直接查询；拟发送私有或受限内容时，核对现有授权，只询问尚未明确的外发范围。可显式加
 `--mailto researcher@example.org` 进入官方建议的联系模式，该邮箱也会保存在请求 URL 中。
 不提供邮箱时使用公开接口，不读取账户或环境中的凭据。脚本只访问固定的 Crossref works
 元数据接口，不获取题录中的正文链接；`metadata-only` 不表示已读摘要、全文或核对主张支持。

@@ -5,7 +5,7 @@ description: Draft, revise, translate or compress research prose while preservin
 
 # 科研写作
 
-先读 [接入协议](../../core/skill-bridge.md)。持续项目的主张、证据与版本关系遵守 [核心协议](../../core/protocol.md)。文本语言、文类、目标读者与期刊风格由本次请求决定，不默认一种期刊或贡献等级。
+按当前请求直接修改已给出的文本或工作稿，沿用本轮明确的语言、文类和目标读者。单次润色、翻译或段落修改直接交付；持续项目按需读 [接入协议](../../core/skill-bridge.md)，并沿用 [核心协议](../../core/protocol.md) 的主张、证据与版本关系。已授权的改稿及其编译、核对和保存由助手继续完成。
 
 ## 选择写作模式
 

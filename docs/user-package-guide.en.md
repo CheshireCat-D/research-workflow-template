@@ -2,7 +2,15 @@
 
 This user package supports local research work. An assistant in Codex or another compatible skill host executes the nine skills; the Python tools save materials, statements, evidence relations, progress and recovery state. Use Python 3.11+ on Windows, macOS or Linux. The core provides native local project I/O, skill connection and recovery; actual platform verification is recorded separately in the source repository.
 
-## First use
+## Work directly in the conversation
+
+In an assistant with project-file and command access, state the current task: “Continue the last proof,” “Revise section 3 while preserving formulas and citations,” or “Recompute these data and explain which results changed.” The assistant handles initialization, configuration, registration and checkpoints when needed, then gives the output path and next action. Actual deliverables in an ongoing project are saved as the work proceeds; you do not have to add “save and register” each round.
+
+Within the same conversation, the assistant reuses the project state, materials and authorization already established. It checks affected state when files change or the project changes. Known information is reused, and details such as venue or deadline are added when they affect the current action. The assistant asks when an unresolved choice changes the research direction, manuscript meaning or authorized scope.
+
+Use the web view for requested interactive previews or side-by-side figure choices, or when the comparison materially helps the task. The assistant can export a reading package directly from the conversation. Choices already given in the conversation carry forward. You can ask “Show these two figures side by side” or continue revising in the conversation.
+
+## Manual setup and first project
 
 Extract the archive, enter `research-workflow-template`, and run:
 
@@ -28,13 +36,13 @@ If the discipline or method is known, add options such as `--discipline law --me
 
 ## Start with an interest, even without a topic
 
-If you have not created a project, the assistant can perform the initialization above for you. If you already ran those commands, describe your task in the new project. To ask the assistant to create the project, open the extracted toolkit in an agent that can read local directories and execute commands, then ask:
+For a fuller research brief, expand the description below with what you already know. An existing project retains its saved information; add missing details when the current task needs them.
 
 > Read the user guide, check the environment, and initialize a separate research project beside the toolkit with the required skills. My discipline / research area is […], my current interests and ideas are […], my existing knowledge, literature, materials and available resources are […], my time limit is […], and I hope to publish in the journal […]. If the topic is unsettled, help narrow the question. Compare the evidence, main objections and feasibility of suitable candidates, then choose one minimum check. Proceed when the information is sufficient; ask only about gaps that affect the next action. Preserve actual sources, outputs and a recoverable next step. After the first step, give the actual output path, a short conclusion, its saved / registered status and the next action.
 
 If the journal is undecided, write “undecided” and continue the research already possible. The target journal guides audience, scope and submission requirements; it is not an acceptance prediction.
 
-The assistant saves known interests, deadlines, resources and goals in the project, with material details in actual notes and source records. You do not need to write registration JSON. For a question card, analysis or manuscript that you will continue using, ask: “Save and register this, and give me its file path.” A discussion or temporary sentence edit can simply return text.
+The assistant saves known interests, deadlines, resources and goals in the project, with material details in actual notes and source records. It saves question cards, analyses and manuscripts produced for ongoing work, links the relevant records and returns their paths. A discussion or temporary sentence edit can simply return text.
 
 To save or revise startup information manually, run from the toolkit root and replace `PROJECT` with the project path. Omit unknown items:
 

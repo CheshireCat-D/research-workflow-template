@@ -5,11 +5,11 @@ description: Review manuscripts and evidence, simulate requested peer review, pl
 
 # 研究审阅与返修
 
-从当前材料和请求确定对象版本、审阅深度与交付目的；仅追问会改变当前工作的缺口。
+从当前材料和请求确定对象版本、审阅深度与交付目的，直接在对话中审阅和落实获授权的修改；仅追问会改变当前工作的缺口。
 
 **单次理论审查：** 用户只要求检查给定数学命题、证明或理论稿，且本次不涉及已有 RWT 项目状态时，读 [理论审查短入口](references/theory-review.md) 后直接检查材料。它已包含证明、反例和来源支持的必要检查，无须预先加载其他技能、方法画像或项目协议；需要额外研究工作时再按具体缺口扩展。
 
-**持续项目：** 用户指定已有 RWT 项目、当前目录含 `project.json`，或要求持续登记／恢复时，先读 [接入协议](../../core/skill-bridge.md) 与 [核心协议](../../core/protocol.md)，恢复实际项目后选择所需审阅模式。单次报告不自行初始化项目。
+**持续项目：** 用户指定已有 RWT 项目、当前目录含 `project.json`，或要求持续登记／恢复时，先读 [接入协议](../../core/skill-bridge.md) 与 [核心协议](../../core/protocol.md)，结合本轮有效恢复结果选择所需审阅模式。单次报告不自行初始化项目。
 
 ## 选择本次工作
 
@@ -20,7 +20,7 @@ description: Review manuscripts and evidence, simulate requested peer review, pl
 | 结构化同行评审、明确要求隔离多评审或指定期刊风格 | [评审模式](references/review-modes.md)：证据定位、严重度、上下文隔离与冻结后汇总 |
 | 返修规划、逐条回复、rebuttal 或意见覆盖核对 | [回复与修改](references/review-response.md)：拆分意见、安排依赖与工作量，对应回复、实际改动和当前状态 |
 | 投稿前资料核对、整理交付目录或源文件包 | [投稿与交付](references/submission-delivery.md)：实际要求、选定文件、清单及未完成项 |
-| 同项目选图、留下返修意见、查看前后版本或导出可核验稿包 | [本地评阅页](references/review-desk.md)：读取登记材料，原生保存选择、理由、检查点与文件指纹 |
+| 需要保留选图或反馈历史、查看前后版本或导出可核验稿包 | [选择与交付记录](references/review-desk.md)：由助手保存对话中已给出的选择与理由，网页按需打开 |
 | 相关稿件、图表、补充或幻灯片共享同一事实 | [跨材料核对](references/cross-material-consistency.md)：先辨认事实身份再判断差异 |
 
 这些是同一入口的工作模式，不要求依次全部执行。普通句子润色仍交给 `rw-writing`；研究问题的证明、实验或解释义务按需用 `rw-validation`。

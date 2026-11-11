@@ -31,6 +31,8 @@ Full user guides are available in Chinese and English; Russian and Japanese page
 
 ## Start a project
 
+Describe the research or revision task in your assistant. It can initialize a project, edit the working files and save recovery state as needed. Use the local web view when you want an interactive preview or figure comparison. The commands below are available for manual setup.
+
 Download the [current user runtime](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) and its [SHA-256 file](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip.sha256). One current release is maintained; GitHub's separate source download also contains development tests. See the [skill selection and design influences](docs/12-skills-selection.md) for integration choices.
 
 Verify the SHA-256, extract the ZIP, and open a terminal in the package root containing `tools/`. Use Python 3.11+ on Windows, macOS or Linux. See the [platform validation record](docs/11-linux-validation.md) for actual execution evidence. The commands below use macOS/Linux syntax.

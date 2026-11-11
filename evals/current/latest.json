@@ -2,8 +2,8 @@
   "format_version": 1,
   "edition": "current",
   "status": "passed-in-recorded-scope",
-  "checked_at_utc": "2026-11-10T22:36:47.499225+00:00",
-  "scope": "Local package acceptance for revision handoff and Chinese thesis delivery. The dated scientific comparisons and prior platform recordings retain their original scopes. Exact-commit hosted jobs are reported in the release receipt.",
+  "checked_at_utc": "2026-11-11T09:56:05.588817+00:00",
+  "scope": "Local software and archive checks plus two independent conversation-driven forward tasks. Earlier scientific and document-delivery checks keep their original scope and byte identities. Exact-commit hosted CI and publication are recorded in the release attachment.",
   "scientific_validity": "not-assessed",
   "publication_style": {
     "archive_name": "research-workflow-template.zip",
@@ -36,12 +36,12 @@
         "actual-unit-and-cli-tests"
       ],
       "receipt": {
-        "identifier": "local-evidence:check-core-delivery-update.json",
-        "sha256": "a227f914f2c67d3cc3b196503c228e799d0aee87e8e070117e1890bc8902c29d"
+        "identifier": "local-evidence:conversation-core.json",
+        "sha256": "46397456a78babf29ba84ad9b705922a05039d834bf21fa9e383a2aaffcd72d0"
       },
       "platform_skips": {
         "native_windows_tests": 13,
-        "reason": "Local Darwin host; consult exact-commit CI for Windows results."
+        "reason": "Local Darwin host. Exact-commit Windows jobs run separately."
       }
     }
   },
@@ -93,10 +93,10 @@
     "current_discovery_validation": "tools/check_core.py: skill-and-method-connection-contract"
   },
   "preservation": {
-    "baseline_commit": "24721862bc222400fb05775a2900be891b869210",
-    "prior_run_inputs_and_outputs": "Historic task bindings resolve to their recorded bytes. Updated guidance is tested separately.",
+    "baseline_commit": "49599557d4aef9b84ecb9ebba7a68400358086bb",
+    "historical_tasks": "Recorded resources resolve to their original byte-bound guidance. Previously observed tasks are not relabeled as new executions.",
     "old_task_guidance_preserved_in": "evals/current/guidance-history.json",
-    "personal_skill_package": "Outside all installation, build and test targets."
+    "personal_skill_package": "Outside all modification, installation, build and test targets."
   },
   "hosted_ci": {
     "source_of_truth": "https://github.com/CheshireCat-D/research-workflow-template/actions",
@@ -178,7 +178,7 @@
     "archive_name": "research-workflow-template.zip",
     "maintained_runtime_and_guide_files": 93,
     "manifest": "USER-PACKAGE-MANIFEST.json",
-    "sha256": "fc27a3b55c32e4b66d12575f378cb38229ab8ebb236258c3fbb89d6b2e3805b1",
+    "sha256": "32117672e89e5ef942059e579a2ba8c156caa9d3d9c733715b46a7634334a155",
     "deterministic_builds_byte_identical": true,
     "explicit_reviewed_runtime_resources": 77,
     "development_history_or_previous_editions_included": false,
@@ -553,72 +553,247 @@
   },
   "final_release_review": {
     "status": "passed-local-acceptance",
-    "new_skill_entrypoints": 0,
     "runtime_files": 93,
-    "archive_sha256": "fc27a3b55c32e4b66d12575f378cb38229ab8ebb236258c3fbb89d6b2e3805b1",
+    "archive_sha256": "32117672e89e5ef942059e579a2ba8c156caa9d3d9c733715b46a7634334a155",
     "installed_skills": 9,
-    "optional_tools": "Poppler pdftoppm for preview; pdftotext or pypdf for thesis PDF text. User-supplied editable artifacts and an actual renderer are used for a rendered page review.",
-    "clean_runtime_smoke": true,
+    "new_skill_entrypoints": 0,
+    "new_required_runtime_dependencies": 0,
     "deterministic_rebuild": true,
-    "ozone_data": "R datasets::airquality; simulate May 1 ozone 41 to 42 in a separate run; shared source remains unchanged.",
-    "real_case": "examples/ozone-revision/README.md",
-    "result_changes": {
-      "changed": 1,
-      "unchanged": 2,
-      "not_comparable": 0,
-      "added": 0,
-      "removed": 0
+    "clean_runtime_smoke": true,
+    "software_interface_changes": "Existing public CLI and native concurrency/file-identity checks retained. The package README no longer pairs initialization with an immediate redundant resume.",
+    "conversation_guidance": [
+      "Direct work on known material and author choices",
+      "One combined initialization and skill connection",
+      "Reuse the latest in-session recovery; refresh on actual drift or conflict",
+      "Assistant saves persistent outputs and a recoverable next action",
+      "Existing manifest/save/pack commands support chat decisions without a server",
+      "Public-topic retrieval within the requested research scope proceeds directly"
+    ],
+    "independent_forward_tasks": {
+      "local_tex": {
+        "request": "Polish the English explanation, preserve the proposition, proof and formulas, edit the working file and compile a PDF.",
+        "user_confirmations": 0,
+        "project_initialization": false,
+        "browser_or_server": false,
+        "pdf_pages": 1,
+        "real_render_inspected": true,
+        "preservation": {
+          "proposition": {
+            "identical": true,
+            "sha256": "932eaae5a1f6aaf31ed0d553e41fdd0db4aa460d8aa255f191da94c5fb7bce05"
+          },
+          "proof": {
+            "identical": true,
+            "sha256": "0d2f93896491f4d1bfc9e47b71a4b9435161a03140c6ef3a441c2900420dcc8a"
+          },
+          "inline_math": {
+            "identical": true,
+            "count": 6,
+            "sha256": "c31dd9c331fbbb61b15b4257ed1a280f25219677db2802feae46630f70c8f393"
+          },
+          "source_sha256": {
+            "original": "981daf105016098592be7d7239597b6e8709d74a7e96e963cf0a03cf0887506a",
+            "revised": "3d3aa74ad015fb966a1eccf33853e41836630059315c944de3ce6c7c66efb6a9"
+          }
+        },
+        "repair": "An existing missing amssymb import was added after the first compile failed on mathbb. Formula content was retained."
+      },
+      "ozone_revision": {
+        "case": "conversation-forward-ozone-coverage",
+        "scope": "Isolated project-local revision and offline reading delivery.",
+        "native_commands": [
+          {
+            "command": "research.py resume --format markdown",
+            "count": 2,
+            "result": "current; no findings"
+          },
+          {
+            "command": "research.py --help",
+            "count": 1
+          },
+          {
+            "command": "research.py show --edit",
+            "count": 2,
+            "result": "one rejected unknown artifact reference; one successful export"
+          },
+          {
+            "command": "research.py register-batch --help",
+            "count": 1
+          },
+          {
+            "command": "research.py register --help",
+            "count": 1
+          },
+          {
+            "command": "research.py register-batch --file ... --next-action ... --activity ...",
+            "count": 2,
+            "result": "saved; returned current clean recovery"
+          },
+          {
+            "command": "review_desk.py manifest",
+            "count": 2
+          },
+          {
+            "command": "review_desk.py --help",
+            "count": 1
+          },
+          {
+            "command": "review_desk.py save --help",
+            "count": 1
+          },
+          {
+            "command": "review_desk.py pack --help",
+            "count": 1
+          },
+          {
+            "command": "review_desk.py save --expect ... --choice artifact:FIG2 --by ... --feedback ...",
+            "count": 1,
+            "result": "existing user-authorized choice retained; no independent review approval"
+          },
+          {
+            "command": "review_desk.py pack --output delivery/ozone-reading-package.zip",
+            "count": 1,
+            "result": "created"
+          }
+        ],
+        "native_operation_counts": {
+          "total": 16,
+          "substantive": 10,
+          "help": 6,
+          "failed_read_only_export": 1,
+          "core": 9,
+          "review_desk": 7
+        },
+        "project_analysis_runs": {
+          "analysis/analyze.py": 2,
+          "analysis/check.R": 2,
+          "clean_directory_rebuild_byte_identical": true
+        },
+        "browser_use": false,
+        "server_use": false,
+        "external_service_use": false,
+        "new_user_confirmation_required": false,
+        "new_user_confirmation_requested": false,
+        "blockers": [],
+        "revision": {
+          "before": 48,
+          "after": 60,
+          "checkpoint_saved": true,
+          "checkpoint_status": "current",
+          "needs_review": false,
+          "findings": [],
+          "activities": {
+            "A1": "done",
+            "A2": "done",
+            "A3": "done",
+            "A4": "done"
+          },
+          "scientific_validity": "not-assessed"
+        },
+        "review": {
+          "selection": "artifact:FIG2",
+          "decision_version": 2,
+          "independent_review": "pending",
+          "new_approval_claimed": false,
+          "feedback_included_in_package": false
+        },
+        "text_change": {
+          "path": "round2.md",
+          "before_sha256": "148d05149ffc4463bd105f116ffb95a6f7f8f4ae1cf4fbe584e69f03e5095bec",
+          "after_sha256": "bbd177b0db312e694fb092aaa7a4780c1a662c7b4b24fcc2b8e70a13b8717b20",
+          "before": "June received the same weight as July, although June recorded ozone on only 2 hot and 7 other days.",
+          "after": "June received one-quarter of the primary estimate's weight, although ozone was measured on only 2 of 6 hot days (33.3%) and 7 of 24 other days (29.2%). Overall, only 9 of June's 30 days (30.0%) had an ozone measurement.",
+          "all_other_brief_bytes_unchanged": true,
+          "generator_updated": "analysis/analyze.py",
+          "estimates_ppb": [
+            40.16,
+            45.38,
+            47.9
+          ]
+        },
+        "preservation": {
+          "files": [
+            {
+              "path": "results/ozone.svg",
+              "before_sha256": "48534d815a8cd83e3c59b7439e833a4217a554501cc39519de81f9038edc7c2f",
+              "after_sha256": "48534d815a8cd83e3c59b7439e833a4217a554501cc39519de81f9038edc7c2f",
+              "unchanged": true
+            },
+            {
+              "path": "results/estimates.csv",
+              "before_sha256": "29d657bc04fb56e9fed4a2f76aeeeb070174822ce1f3eed860a2079555f53117",
+              "after_sha256": "29d657bc04fb56e9fed4a2f76aeeeb070174822ce1f3eed860a2079555f53117",
+              "unchanged": true
+            },
+            {
+              "path": "results/monthly.csv",
+              "before_sha256": "41ed5001d0a8c2883463be44e2161c3bff22711bb2269ae9574acdb82b3ffc62",
+              "after_sha256": "41ed5001d0a8c2883463be44e2161c3bff22711bb2269ae9574acdb82b3ffc62",
+              "unchanged": true
+            },
+            {
+              "path": "data/airquality.csv",
+              "before_sha256": "f1fb73129838bf406f114eb09c252a66f79b74aa7a916e4e38d4a8e23e1608c6",
+              "after_sha256": "f1fb73129838bf406f114eb09c252a66f79b74aa7a916e4e38d4a8e23e1608c6",
+              "unchanged": true
+            },
+            {
+              "path": "data/source.md",
+              "before_sha256": "2c14c22481071ff4c97ca5c0cc994c67927d808719040150e8702e04e40471d6",
+              "after_sha256": "2c14c22481071ff4c97ca5c0cc994c67927d808719040150e8702e04e40471d6",
+              "unchanged": true
+            },
+            {
+              "path": "analysis/check.R",
+              "before_sha256": "dd11988cc6f1ef2ab98911088febd34d35d2ec8f7578741e1a89a26adb132e06",
+              "after_sha256": "dd11988cc6f1ef2ab98911088febd34d35d2ec8f7578741e1a89a26adb132e06",
+              "unchanged": true
+            }
+          ],
+          "frozen_first_version_registered_files_checked": 8,
+          "pre_edit_backup": "history/coverage-before/"
+        },
+        "outputs": {
+          "archive": {
+            "path": "delivery/ozone-reading-package.zip",
+            "bytes": 7884,
+            "sha256": "ff5d5195765fd85f69767a87c12309bd9446768fe63a19494bd8abfaa7d16a36"
+          },
+          "reader": {
+            "path": "delivery/ozone-reading-package/index.html",
+            "sha256": "08159365cf26c1aadd7121ac5da28cd173044a3d267728b98e341dcc6408b325",
+            "relative_links_checked": true,
+            "visual_inspection": "not-run"
+          },
+          "content_check": {
+            "path": "delivery/package-content-check.json",
+            "sha256": "b761b48b7d2918b79252e951b3d3b072dc9f17f3ecedcde645e8b0124cf84962"
+          }
+        },
+        "raw_operation_evidence": [
+          "history/coverage-before/registration-result.json",
+          "history/coverage-before/selection-save-result.json",
+          "history/coverage-before/pack-result.json",
+          "history/coverage-before/final-registration-result.json"
+        ],
+        "guidance_sha256": {
+          "rw-workflow/SKILL.md": "fa1a5a738fefac55e506ce9c088eea75117b0a24313bed3b048e18a2fedd0487",
+          "rw-review/SKILL.md": "e291f6301371c34a6eb18a703eb7cee456de10326e8eaef7e213173cc0f687c0",
+          "rw-review/references/review-desk.md": "d10d9f2371678177b8aab90acaa42c9733f77f40462a6a2776beefbdf48c38cf",
+          "_rw-runtime/core/skill-bridge.md": "df42ac09706c20451896db9fbae53be95b8a9c792c6e022c8bb926095163e452"
+        },
+        "guidance_scope": "This actual project-local snapshot preceded a final clarification that ordinary text edits can use normal saving without a review plan. Final archive software and installed-link checks were run after that wording change."
+      },
+      "scope": "Two local forward cases with actual files and outputs. Interaction observations are case-specific and do not measure general research speed or scientific quality."
     },
-    "surface_checks": {
-      "total": 5,
-      "matched": 5,
-      "rendered_pdf_pages": 1,
-      "stale_figure_negative_check": "One bound excerpt mismatch in the full-period estimate"
-    },
-    "review_desk": "Native registry, browser feedback and choice on the ozone revision, checkpoint recovery, history and hash-checked ZIP exercised on a project copy. A saved choice does not certify review or submission.",
-    "thesis_delivery": "Synthetic institution criteria, editable bilingual DOCX and real LibreOffice PDF; the checker flagged a missing Chinese excerpt in the first render and passed the configured checks after a corrected export and an actual page review. Microsoft Word and any specific university were not tested.",
-    "editable_delivery": {
-      "source": "A real ozone brief with quantitative figure, caption and source bibliography",
-      "formats": [
-        "docx",
-        "tex",
-        "pdf"
-      ],
-      "rendering": "Pandoc 3.10, XeLaTeX and LibreOffice; actual Word-export and TeX PDFs each one page and visually inspected; original figure source and portable asset retained."
-    },
-    "journal_exemplar": {
-      "source": "Gorman et al., PLOS ONE 2014, figure 3",
-      "doi": "10.1371/journal.pone.0090081",
-      "use": "Compare how a caption explains its measurement count. Ozone uses its own coverage and estimates."
-    },
-    "legacy_tables": {
-      "unchanged_in_tables": 1,
-      "added_to_tables": 2,
-      "new_to_whole_brief": 1,
-      "source_mapping": "examples/ozone-revision/adapt_legacy.py",
-      "basis": "Original two tables have different structures; the old brief already reported the equal-month result in prose."
-    },
-    "old_project_recovery": {
-      "connected_runtime_files_before": 67,
-      "connected_runtime_files_after": 77,
-      "registry_byte_identical_on_upgrade": true,
-      "existing_research_files_byte_identical": 32,
-      "recovered_before_new_choice": 46,
-      "recovered_after_choice_and_checkpoint": 48
-    },
-    "reader_delivery": {
-      "offline_entry": "index.html",
-      "hash_checked_members": true,
-      "feedback": "operator and latest decision feedback are optional; previous feedback stays in the project",
-      "example_in_runtime": true,
-      "markdown_preview": "Text, headings, tables and packaged images can be read on the offline index."
-    },
+    "prior_delivery_validation": "https://github.com/CheshireCat-D/research-workflow-template/blob/49599557d4aef9b84ecb9ebba7a68400358086bb/evals/current/latest.json",
     "sources": [
-      "docs/13-research-skill-landscape.md",
-      "skills/rw-writing/references/thesis-delivery-zh.md",
-      "skills/rw-review/references/review-desk.md"
+      "core/skill-bridge.md",
+      "skills/rw-review/references/review-desk.md",
+      "docs/user-package-guide.en.md",
+      "docs/user-package-guide.md"
     ]
   },
-  "previous_source_receipt": "https://github.com/CheshireCat-D/research-workflow-template/blob/24721862bc222400fb05775a2900be891b869210/evals/current/latest.json",
+  "previous_source_receipt": "https://github.com/CheshireCat-D/research-workflow-template/blob/49599557d4aef9b84ecb9ebba7a68400358086bb/evals/current/latest.json",
   "recorded_studies_scope": "The fields for earlier scientific studies, platform scenarios and earlier workflow simplification refer to the archives and case hashes inside those records. The current runtime acceptance is in software_checks, user_distribution and final_release_review."
 }
