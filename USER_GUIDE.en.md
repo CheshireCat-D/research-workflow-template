@@ -118,6 +118,10 @@ For legal research, initialize with `--discipline law --method legal-analysis` a
 
 For a citation audit, say: “Check the source support for each claim in this passage, then find missing, partial or irrelevant citations and suggest specific corrections.” The assistant checks separately verifiable parts of compound claims and explains cross-source synthesis in the existing notes or review report.
 
+Give the assistant a literature folder path, PDFs, an existing bibliography or links; a ZIP is also supported for transferring several files. For example: “Read this folder, use the target-journal examples to improve the draft, and check the citations in section 2. Find accessible originals yourself and ask me only for the specific material still missing.” The assistant first reads the available notes, bibliography and relevant originals, then searches by DOI, title and author. Full-text HTML is usable alongside PDFs.
+
+Journal examples inform specific sections, theorem organization or figure panels. When their research supports a claim, the assistant checks the original assumptions and result. It reuses the manuscript's maintained bibliography and citation keys, reporting metadata and claim support separately. Requests for missing material name the paper, needed pages/theorem/attachment and attempted sources. A directory inventory records discovered files; reading coverage follows the text actually examined. [Literature and citation workflow](skills/rw-literature/references/search-and-library.md)
+
 See the [seven disciplinary examples](evals/disciplinary/README.md) for original synthetic inputs, actual analyses and short manuscripts, separate agent reviews, and reproducible checks. Use them as worked examples, then create a separate project for your own materials.
 
 For daily use, download `research-workflow-template.zip` from Releases. Cases and maintenance tests are in the source repository; download GitHub's `Source code` archive when you need them offline.

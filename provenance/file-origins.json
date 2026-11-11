@@ -59,7 +59,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "583c28363f8f1ea3da733d331112c287867dbd5d6ea17f4c64e3aadd126cf4f2"
+      "sha256": "fd9ef39707eeecf0093d223219bd08ce3f75ede33ec2cbd5216e131a568e9b35"
     },
     "SECURITY.md": {
       "classification": "original-project-content",
@@ -71,7 +71,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "36381d365b943bd5b6f1edaafb38494fb8bf343ad6be79464fd703e1d972c704"
+      "sha256": "fa76311809ca511a97ee8c4e1bd8ab9f5334058d01a9ffa66345009a2f750cba"
     },
     "core/__init__.py": {
       "classification": "original-project-content",
@@ -365,13 +365,13 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "09e3a171b7c9d3e6eba0633161986b16449e3a3207cf267575b7a473d4f3bf01"
+      "sha256": "455a7104c6a7be8c5f35a6fae8643d55f9fe2483c1a039e8427023c6dd8d3c66"
     },
     "docs/user-package-guide.md": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "44b16db52c6bf507f2d818e6133b46ec8d9e827adc67c99f29745e0e807e92e3"
+      "sha256": "54580c2c4f99f2a3797061383b87096e39d4a007f5829a6a1a6a7bbc3b3006fc"
     },
     "evals/comparison/README.md": {
       "classification": "original-project-content",
@@ -13463,7 +13463,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "f800462e89fd282e64c0952cdea15d14caea1e5b39bb7390e578af653a3b1344"
+      "sha256": "daabe43c1515e115e7fd87fcc205cc4a2f46c71066d35b0ec4c5f07fe96e8547"
     },
     "evals/current/regression-history.json": {
       "classification": "original-project-content",
@@ -19439,13 +19439,19 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "9519a5386495df8148a9ac76c1720e41b9ceb7d671c3d83729fe3eb572537057"
+      "sha256": "4a2cd14a10e7ac5193a2fd989acd534119592f46037d685cb97ee6ab21a1aadf"
     },
     "skills/rw-literature/references/search-and-library.md": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "d27e6b33199dc9e235af57418846fbf13ebe77af657998521986d358dc446e92"
+      "sha256": "83d5bf0477928abdd66df3421b0ac913b39c31d3e2b0889163df8d187289da69"
+    },
+    "skills/rw-literature/scripts/inspect_materials.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "19f98f43551cff30e16a11e98d62da6f5ca8c61182122387a95c18b98848249f"
     },
     "skills/rw-literature/scripts/search_crossref.py": {
       "classification": "original-project-content",
@@ -19529,13 +19535,13 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "692e976ac6fdde2599f240bd46e970000410ae33c2071941dec182d33b342813"
+      "sha256": "908a1f8180d53498858455cc579133f949d6a2732f44efd2a9d7bbaf9b862cbd"
     },
     "skills/rw-writing/SKILL.md": {
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "7d093270152245b578c2bb2d2c3a0514090cb28d013d68565adc17c37c8a2646"
+      "sha256": "cacb43039182accc1d7e92e51a08405b211e4c27efdc69e53a7054842b3dfd8a"
     },
     "skills/rw-writing/assets/thesis-delivery.example.json": {
       "classification": "original-project-content",
@@ -19553,7 +19559,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "08c4c9d1afb17bfa821b5f492e531cf0e24c78518d33ab52ff74eb80ea71bfc0"
+      "sha256": "cd89392c6a71d413a7c87080068fd055fed2cb035ff051277a02d3697f487f1e"
     },
     "skills/rw-writing/references/thesis-delivery-zh.md": {
       "classification": "original-project-content",
@@ -19662,6 +19668,12 @@
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
       "sha256": "73b4bd7378aece53238b4d2e9070974c9a1bfa955350c19fc360e0a37389295f"
+    },
+    "tests/test_literature_materials.py": {
+      "classification": "original-project-content",
+      "license": "MIT",
+      "origin": "authored-for-this-independent-template",
+      "sha256": "4f788109ada8d521dfa9b2b20f5b40a99ad5b0a21a87d0660895f849094089d4"
     },
     "tests/test_literature_screening.py": {
       "classification": "original-project-content",
@@ -19823,7 +19835,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "b82fa615936a3dd5c480af5086b85535bf1421b22b6188319d2356703edbb3de"
+      "sha256": "92693d0c50f252d280b4492963b7e43b84040b1fea39f03de34c3fca731d369d"
     },
     "tools/release_package.py": {
       "classification": "original-project-content",
@@ -19841,7 +19853,7 @@
       "classification": "original-project-content",
       "license": "MIT",
       "origin": "authored-for-this-independent-template",
-      "sha256": "a5f361d3f6ca64787ffa3d2c0c6526600910387b11c7c2a6b8f1ff11d835fe2b"
+      "sha256": "11b6f3cf98ce16cbcf5d7a136a3c787c3087749aa3a97e5870b81915e078a772"
     }
   },
   "format_version": 1,

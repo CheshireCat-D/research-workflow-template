@@ -16,7 +16,7 @@ description: Draft, revise, translate or compress research prose while preservin
 
 中文学位论文、毕业设计的学校模板、双语摘要、Word/PDF 对照或交付材料核验，进入[学位论文交付](references/thesis-delivery-zh.md)。只改一句话继续使用上面的局部模式。
 
-按目标期刊的同类文章组织段落或图版时，使用[范文定位与适配](references/journal-exemplars.md)。需要从同一份稿源交付 Word、LaTeX 和 PDF 时，使用[可编辑稿与渲染交付](references/editable-delivery.md)。
+参考目标期刊的例文文件夹、已有论文或公开文章改进段落、定理安排或图版时，使用[范文定位与适配](references/journal-exemplars.md)，由助手读取所给材料并按需查找适用原文。需要从同一份稿源交付 Word、LaTeX 和 PDF 时，使用[可编辑稿与渲染交付](references/editable-delivery.md)。
 
 指定期刊风格只改变适用的表达与结构；具体格式要求以实际取得的指南为准。没有指南时不声称已满足最新投稿规范。局部修改不应扩展为整稿重写。
 

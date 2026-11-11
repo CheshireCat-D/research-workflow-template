@@ -20,7 +20,7 @@ description: Coordinate research from an interest or existing project and resume
 | 当前工作 | 技能与任务 |
 |---|---|
 | 兴趣、研究问题或取舍未定 | `rw-question`：形成有范围的问题，确定下一项能改变决策的检查 |
-| 需要已有依据或来源定位 | `rw-literature`：查来源身份、访问范围及原文支持 |
+| 读取文献目录、补原文或核对引用 | `rw-literature`：先读本地材料，主动查公开原文，再列具体缺件，核对来源身份及主张支持 |
 | 已有问题卡在机制、构造或解释瓶颈 | `rw-innovation`：发展具体提议，列出成立义务和最小反驳检查 |
 | 多个实际候选需要对抗比较和取舍 | `rw-candidates`：比较最强论据、有效反驳、未知及关键下一项检查 |
 | 需要证明、计算或材料解释检查 | `rw-validation`：按适用方法开展有边界的验证 |

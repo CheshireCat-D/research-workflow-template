@@ -71,6 +71,7 @@ python3 .agents/skills/_rw-runtime/tools/research.py resume --format markdown
 ## Explore the project
 
 - [English workflow overview](README.en.md) and [complete user guide](USER_GUIDE.en.md)
+- [Read a literature folder, find original sources and verify citations](skills/rw-literature/references/search-and-library.md)
 - [Review a manuscript revision, compare figures and package the selected files](skills/rw-review/references/review-desk.md)
 - [Check a Chinese degree thesis against its institution’s requirements](skills/rw-writing/references/thesis-delivery-zh.md)
 - [All nine research skills](skills), from framing a question to responding to review

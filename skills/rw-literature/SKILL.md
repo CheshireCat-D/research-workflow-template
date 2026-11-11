@@ -1,6 +1,6 @@
 ---
 name: rw-literature
-description: Find, read and compare research sources with claim-level support and access boundaries. Use for 文献检索、原文核对、相关工作、史料来源、法源与判例核对 and novelty positioning; prose revision uses rw-writing.
+description: Find, read and compare research sources with claim-level support and access boundaries. Use for 文献文件夹读取、文献检索、引用核验、相关工作、史料来源、法源与判例核对 and novelty positioning; prose revision uses rw-writing.
 ---
 
 # 文献与来源定位
@@ -9,9 +9,11 @@ description: Find, read and compare research sources with claim-level support an
 
 ## 确认实际材料范围
 
-用户已提供文献或明确离线范围时，从给定材料开展工作。需要外部检索时，按当前可用工具和任务范围搜索；检索式、检索日期、渠道及筛选范围要能被复查。拟议检索和实际检索分开记录；工具不可用时交付可执行的查找方案及未核实部分。
+用户给出的文件夹路径、单篇文献、书目或链接均可直接接入。先检查本地材料和已有笔记，按当前问题读取相关原文；已有文件夹可原地读取。仅在用户明确要求离线时限定本地范围。需要补来源时，助手按 DOI、题名和作者主动查找出版社正文及可公开访问的存档版本，原文可以是 HTML 或 PDF。实际查找后仍缺关键材料，再向用户说明具体缺哪篇或哪些页，并继续可独立完成的部分。
 
-批量／跨库检索、反复查询项目资料或核对稿件引证时，按需读 [检索、索引与引证核对](references/search-and-library.md) 的对应部分。普通查找一篇或回答局部问题保留够用的记录即可，不要求建立资料库或系统综述。实际开展证据综合时，再读 [证据与文献综合](../../profiles/methods/evidence-synthesis.md)。
+接收文献文件夹或 ZIP、补取原文、批量检索或核对引证时，按需读 [检索、索引与引证核对](references/search-and-library.md) 的对应部分。沿用项目现有书目和阅读笔记。普通查找一篇或回答局部问题保留够用的记录即可。实际开展证据综合时，再读 [证据与文献综合](../../profiles/methods/evidence-synthesis.md)。
+
+材料的用途取自本轮任务和实际内容。目标期刊例文可按[范文定位与适配](../rw-writing/references/journal-exemplars.md)参考章节、论证与图版组织；要用于本稿某项学术主张时，另行核对该处原文支持。
 
 需要可重复的 Crossref 题录查询时，同一参考给出随包脚本：保存实际响应、分页范围、DOI 去重和截断状态。当前请求范围内的公开主题直接检索；查询涉及私有或受限材料且外发权限未明时，先解决该具体缺口。返回元数据仍需另行核对全文支持。
 

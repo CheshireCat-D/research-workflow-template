@@ -88,6 +88,10 @@ python3 -B examples/public-penguins/run_project.py --output ../penguins-project
 
 引证核对可说：“逐项检查这段话的来源支持，再找缺引、部分支持和无关引证，给出具体修改建议。”助手沿用现有笔记和报告核对复合主张与综合依据。
 
+用户可以直接给文献文件夹路径、PDF、已有书目或链接，也可使用 ZIP 传递多份材料。可以说：“读取这个目录，参考里面的目标期刊例文，并核对第 2 节的引用。缺的原文先自己查，仍取不到再列给我。”助手先读现有说明、书目和相关原文，再按 DOI、题名和作者补查公开正文；HTML 全文也可以使用。
+
+期刊例文按实际章节、定理或图版位置帮助改稿；用于支撑学术主张时核对原文条件与结论。助手沿用当前稿件的书目和引用键，分别报告题录及原文支持状态。补件请求列出具体文献、需要的页／定理／附件和已查渠道。目录清单表示发现了文件，阅读范围按实际正文核对记录。[文献与引证流程](../skills/rw-literature/references/search-and-library.md)
+
 可先看公开仓库的[七学科专项案例](https://github.com/CheshireCat-D/research-workflow-template/tree/main/evals/disciplinary)：合成输入、实际分析与短稿、独立代理复核及回归检查均在源码中。日常用户包不重复存放这些测试材料；需要离线查看时，下载 GitHub 的 `Source code` 源码归档。仿照案例时另建自己的项目。
 
 跟做介绍图的同一案例，可从源码运行[配对栏复算](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/paired-pens)，再生成[结果表与可编译稿源](https://github.com/CheshireCat-D/research-workflow-template/tree/main/examples/submission-table)。表格与稿源准备沿用 `rw-review` 的投稿交付分支；分析与源文件生成只需标准库 Python，PDF 编译另需示例列出的 TeX 包。

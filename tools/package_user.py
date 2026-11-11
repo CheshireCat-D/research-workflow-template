@@ -62,6 +62,7 @@ SKILL_RESOURCES = (
     'rw-figures/scripts/audit_svg_schematic.py',
     'rw-figures/scripts/check_result_surfaces.py',
     'rw-literature/references/search-and-library.md',
+    'rw-literature/scripts/inspect_materials.py',
     'rw-literature/scripts/search_crossref.py',
     'rw-review/references/cross-material-consistency.md',
     'rw-review/references/review-desk.md',
