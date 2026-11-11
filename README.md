@@ -1,6 +1,39 @@
-# RWT · Research Workflow Template
+<div align="center">
 
-[**Open the Research Observatory ↗**](https://cheshirecat-d.github.io/research-workflow-template/) · [Download RWT](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) · [English user guide](USER_GUIDE.en.md)
+<h1>RWT · Research Workflow Template</h1>
+
+<h3>One local workflow for research, writing and revision.</h3>
+
+<p>Work with your AI assistant. Keep your evidence, manuscript and next action in one resumable project.</p>
+
+<p>
+  <a href="https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml"><img src="https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml/badge.svg" alt="Platform checks"></a>
+  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&amp;logoColor=white" alt="Python 3.11 or later"></a>
+  <a href="skills"><img src="https://img.shields.io/badge/Research_skills-9-6951C6" alt="Nine research skills"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-EAB308" alt="MIT license"></a>
+</p>
+
+<p><strong>
+  <a href="https://cheshirecat-d.github.io/research-workflow-template/">Website</a> ·
+  <a href="USER_GUIDE.en.md">User guide</a> ·
+  <a href="https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip">Download</a> ·
+  <a href="#try-a-research-case">Research examples</a>
+</strong></p>
+
+<p>
+  <a href="README.md">English</a> ·
+  <a href="docs/i18n/README.zh-CN.md">简体中文</a> ·
+  <a href="docs/i18n/README.ru.md">Русский</a> ·
+  <a href="docs/i18n/README.ja.md">日本語</a>
+</p>
+
+<p>
+  <a href="#start-a-project">Quick start</a> ·
+  <a href="skills">Nine research skills</a> ·
+  <a href="evals/current/README.md">Validation</a>
+</p>
+
+</div>
 
 <a href="https://cheshirecat-d.github.io/research-workflow-template/">
   <picture>

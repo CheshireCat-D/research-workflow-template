@@ -1,6 +1,39 @@
 <div align="center">
 
-[简体中文](docs/i18n/README.zh-CN.md) · [English](README.en.md) · [Русский](docs/i18n/README.ru.md) · [日本語](docs/i18n/README.ja.md)
+<h1>RWT · Research Workflow Template</h1>
+
+<h3>One local workflow for research, writing and revision.</h3>
+
+<p>Work with your AI assistant. Keep your evidence, manuscript and next action in one resumable project.</p>
+
+<p>
+  <a href="https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml"><img src="https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml/badge.svg" alt="Platform checks"></a>
+  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&amp;logoColor=white" alt="Python 3.11 or later"></a>
+  <a href="skills"><img src="https://img.shields.io/badge/Research_skills-9-6951C6" alt="Nine research skills"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-EAB308" alt="MIT license"></a>
+</p>
+
+<p><strong>
+  <a href="https://cheshirecat-d.github.io/research-workflow-template/">Website</a> ·
+  <a href="USER_GUIDE.en.md">User guide</a> ·
+  <a href="https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip">Download</a> ·
+  <a href="#see-a-complete-research-record">Research examples</a>
+</strong></p>
+
+<p>
+  <a href="README.md">English</a> ·
+  <a href="docs/i18n/README.zh-CN.md">简体中文</a> ·
+  <a href="docs/i18n/README.ru.md">Русский</a> ·
+  <a href="docs/i18n/README.ja.md">日本語</a>
+</p>
+
+<p>
+  <a href="#start-a-project">Quick start</a> ·
+  <a href="skills">Nine research skills</a> ·
+  <a href="evals/current/README.md">Validation</a>
+</p>
+
+</div>
 
 <a href="https://cheshirecat-d.github.io/research-workflow-template/">
   <picture>
@@ -8,16 +41,6 @@
     <img src="docs/assets/research-observatory.png" alt="Research Observatory. Open the orbital map to explore nine research skills." width="1280">
   </picture>
 </a>
-
-# RWT · Research Workflow Template
-
-**Keep your question, evidence, manuscript and next action in one local project.**
-
-[![Checks](https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml/badge.svg)](https://github.com/CheshireCat-D/research-workflow-template/actions/workflows/check.yml) [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-316A56)](https://www.python.org/downloads/) [![License: MIT](https://img.shields.io/badge/License-MIT-D6EF93)](LICENSE)
-
-[Explore the live observatory](https://cheshirecat-d.github.io/research-workflow-template/) · [Download the runtime](https://github.com/CheshireCat-D/research-workflow-template/releases/latest/download/research-workflow-template.zip) · [Quick start](#start-a-project) · [Full user guide](USER_GUIDE.en.md) · [Real example](#see-a-complete-research-record) · [External skill comparison](docs/13-research-skill-landscape.md)
-
-</div>
 
 RWT is an open-source research workflow toolkit for use with an AI assistant. Nine skills guide the research work; standard-library Python tools maintain claims, sources, evidence, artifacts and recovery state. It covers sciences, engineering, health, agriculture, humanities, social sciences and law.
 
